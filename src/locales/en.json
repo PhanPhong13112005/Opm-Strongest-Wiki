@@ -1,0 +1,92 @@
+{
+  "home": {
+    "serverTrungFull": "CN SERVER",
+    "serverSeaFull": "SEA SERVER",
+    "release": "RELEASE",
+    "return": "RETURN",
+    "earlyMonth": "EARLY MONTH",
+    "midMonth": "MID MONTH",
+    "viewDetails": "View details"
+  },
+  "nav": {
+    "characters": "Characters",
+    "mastery": "Mastery",
+    "corelab": "Core Lab"
+  },
+  "footer": {
+    "desc": "OPM: The Strongest — community database · data extracted directly from game",
+    "privacy": "Privacy Policy"
+  },
+  "list": {
+    "title": "Character Library",
+    "search": "Search character name...",
+    "tier_all": "Tier: All",
+    "type_all": "Type: All",
+    "faction_all": "Faction: All",
+    "tier": "Tier",
+    "type": "Type",
+    "faction": "Faction"
+  },
+  "filters": {
+    "type": {
+      "duelist": "Duelist",
+      "grappler": "Grappler",
+      "esper": "Esper",
+      "hi_tech": "Hi-Tech"
+    },
+    "faction": {
+      "hero": "Hero",
+      "monster": "Monster",
+      "martial_artist": "Martial Artist",
+      "outlaw": "Outlaw"
+    }
+  },
+  "detail": {
+    "back": "Back",
+    "skills": "Skills",
+    "stats": "Stats",
+    "keepsake": "Keepsake",
+    "insignia": "Insignia",
+    "release": "Release Date",
+    "unknown": "Unknown",
+    "skill_categories": {
+      "basic": "BASIC",
+      "ultimate": "ULTIMATE",
+      "passive": "PASSIVE",
+      "awaken": "AWAKEN",
+      "awaken_v2": "AWAKEN V2"
+    },
+    "bond": "BOND",
+    "none": "None",
+    "baseStats": "BASE STATS",
+    "atk": "ATK",
+    "hp": "HP",
+    "def": "DEF",
+    "spd": "SPD",
+    "history": "HISTORY",
+    "serverTrung": "CN SERVER",
+    "serverSea": "SEA SERVER",
+    "releaseDate": "Release",
+    "returnDate": "Return",
+    "typeLabel": "TYPE",
+    "factionLabel": "FACTION",
+    "roleLabel": "ROLE",
+    "traitsLabel": "TRAITS",
+    "pvpStatsLabel": "PVP STATS",
+    "masteryLabel": "MASTERY",
+    "bioLabel": "BIOGRAPHY",
+    "skillsLabel": "SKILLS",
+    "effectsLabel": "EFFECTS ANNOTATION",
+    "animUpdating": "ANIMATION UPDATING",
+    "skill_tabs": {
+      "basic": "BASIC SKILL",
+      "ult": "ULTIMATE",
+      "passive": "PASSIVE",
+      "awaken": "AWAKEN"
+    },
+    "unlockedBy": "Unlocked By:",
+    "selectSkill": "Please select a skill",
+    "noData": "No data available for this section",
+    "animUpdatingSmall": "Animation updating"
+  }
+}

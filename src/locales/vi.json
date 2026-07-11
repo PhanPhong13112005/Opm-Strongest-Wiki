@@ -1,0 +1,92 @@
+{
+  "home": {
+    "serverTrungFull": "MÁY CHỦ TRUNG QUỐC",
+    "serverSeaFull": "MÁY CHỦ ĐÔNG NAM Á",
+    "release": "RA MẮT",
+    "return": "TRỞ LẠI",
+    "earlyMonth": "ĐẦU THÁNG",
+    "midMonth": "GIỮA THÁNG",
+    "viewDetails": "Xem chi tiết"
+  },
+  "nav": {
+    "characters": "Nhân vật",
+    "mastery": "Tinh Thông",
+    "corelab": "Phòng Nghiên Cứu"
+  },
+  "footer": {
+    "desc": "OPM: The Strongest — cơ sở dữ liệu cộng đồng · dữ liệu trích xuất trực tiếp từ game",
+    "privacy": "Chính sách bảo mật"
+  },
+  "list": {
+    "title": "Thư viện nhân vật",
+    "search": "Nhập tên nhân vật...",
+    "tier_all": "Bậc: Tất cả",
+    "type_all": "Hệ: Tất cả",
+    "faction_all": "Phe phái: Tất cả",
+    "tier": "Bậc",
+    "type": "Hệ",
+    "faction": "Phe phái"
+  },
+  "filters": {
+    "type": {
+      "duelist": "Vũ Trang",
+      "grappler": "Giác Đấu",
+      "esper": "Tâm Linh",
+      "hi_tech": "Công Nghệ"
+    },
+    "faction": {
+      "hero": "Anh Hùng",
+      "monster": "Quái Nhân",
+      "martial_artist": "Võ Thuật",
+      "outlaw": "Tội Phạm"
+    }
+  },
+  "detail": {
+    "back": "Quay lại",
+    "skills": "Kỹ Năng",
+    "stats": "Chỉ Số",
+    "keepsake": "Vật Phẩm",
+    "insignia": "Huy Hiệu",
+    "release": "Ngày Ra Mắt",
+    "unknown": "Không xác định",
+    "skill_categories": {
+      "basic": "KỸ NĂNG THƯỜNG",
+      "ultimate": "TUYỆT KĨ",
+      "passive": "NỘI TẠI",
+      "awaken": "THỨC TỈNH",
+      "awaken_v2": "THỨC TỈNH V2"
+    },
+    "bond": "DUYÊN",
+    "none": "Không có",
+    "baseStats": "CHỈ SỐ GỐC",
+    "atk": "Công",
+    "hp": "Máu",
+    "def": "Thủ",
+    "spd": "Tốc",
+    "history": "LỊCH SỬ",
+    "serverTrung": "SERVER TRUNG",
+    "serverSea": "SERVER SEA",
+    "releaseDate": "Ra Mắt",
+    "returnDate": "Trở Lại",
+    "typeLabel": "HỆ",
+    "factionLabel": "PHE",
+    "roleLabel": "VAI TRÒ",
+    "traitsLabel": "ĐẶC TÍNH",
+    "pvpStatsLabel": "CHỈ SỐ PVP",
+    "masteryLabel": "TINH THÔNG",
+    "bioLabel": "TIỂU SỬ",
+    "skillsLabel": "KỸ NĂNG",
+    "effectsLabel": "CHÚ THÍCH HIỆU ỨNG",
+    "animUpdating": "ĐANG CẬP NHẬT HOẠT ẢNH",
+    "skill_tabs": {
+      "basic": "KỸ NĂNG THƯỜNG",
+      "ult": "TUYỆT KĨ",
+      "passive": "NỘI TẠI",
+      "awaken": "THỨC TỈNH"
+    },
+    "unlockedBy": "Mở Khóa Bằng:",
+    "selectSkill": "Vui lòng chọn kỹ năng",
+    "noData": "Chưa có dữ liệu cho mục này",
+    "animUpdatingSmall": "Đang cập nhật hoạt ảnh"
+  }
+}
