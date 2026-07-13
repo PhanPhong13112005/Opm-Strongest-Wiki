@@ -1,0 +1,1102 @@
+{
+  "coreHeId": "he_100307",
+  "slug": "100109-ur",
+  "name": "Gyoro-Gyoro",
+  "tier": "UR",
+  "faction": "Monster",
+  "type": "Esper",
+  "art": "/characters/actor/100307.webp",
+  "portrait": "/characters/cn/100307.webp",
+  "iconSuffix": "307",
+  "maxLv": 20,
+  "milestones": [
+    4,
+    10,
+    17
+  ],
+  "gate_en": "1× Duelist + 1× Grappler + 2× Esper",
+  "gate_vi": "1× Vũ Trang + 1× Giác Đấu + 2× Tâm linh",
+  "coreName": "Eccentric Power",
+  "parts": [
+    {
+      "code": "it_215085",
+      "type": "Chip",
+      "tier": "I",
+      "en": "Chip I",
+      "vi": "Chip I",
+      "icon": "/game-icons/items/Item_215085.webp",
+      "maxLv": 20
+    },
+    {
+      "code": "it_215086",
+      "type": "Chip",
+      "tier": "II",
+      "en": "Chip II",
+      "vi": "Chip II",
+      "icon": "/game-icons/items/Item_215086.webp",
+      "maxLv": 20
+    },
+    {
+      "code": "it_215087",
+      "type": "Sigil",
+      "tier": "I",
+      "en": "Sigil I",
+      "vi": "Ấn Ký I",
+      "icon": "/game-icons/items/Item_215087.webp",
+      "maxLv": 20
+    },
+    {
+      "code": "it_215088",
+      "type": "Sigil",
+      "tier": "II",
+      "en": "Sigil II",
+      "vi": "Ấn Ký II",
+      "icon": "/game-icons/items/Item_215088.webp",
+      "maxLv": 20
+    },
+    {
+      "code": "it_215089",
+      "type": "Soul",
+      "tier": null,
+      "en": "Soul",
+      "vi": "Hồn",
+      "icon": "/game-icons/items/Item_215089.webp",
+      "maxLv": 20
+    },
+    {
+      "code": "it_215090",
+      "type": "Core",
+      "tier": null,
+      "en": "Core",
+      "vi": "Lõi",
+      "icon": "/game-icons/items/Item_215090.webp",
+      "maxLv": 20
+    }
+  ],
+  "levels": [
+    {
+      "lv": 1,
+      "reward_en": "Activate Core Skill to grant 80 Energy Gauge after allies take action",
+      "reward_vi": "Kích hoạt Kỹ năng Core: cấp 80 Thanh Năng Lượng sau khi đồng minh hành động",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          20
+        ],
+        [
+          "it_214002",
+          5
+        ],
+        [
+          "0",
+          1000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          1
+        ],
+        [
+          "it_215086",
+          1
+        ],
+        [
+          "it_215087",
+          1
+        ],
+        [
+          "it_215088",
+          1
+        ],
+        [
+          "it_215089",
+          1
+        ],
+        [
+          "it_215090",
+          1
+        ]
+      ]
+    },
+    {
+      "lv": 2,
+      "reward_en": "All characters CRIT +2%",
+      "reward_vi": "Toàn bộ nhân vật +2% Chí mạng (CRIT)",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          40
+        ],
+        [
+          "it_214002",
+          10
+        ],
+        [
+          "0",
+          1000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          3
+        ],
+        [
+          "it_215086",
+          2
+        ],
+        [
+          "it_215087",
+          2
+        ],
+        [
+          "it_215088",
+          2
+        ],
+        [
+          "it_215089",
+          1
+        ],
+        [
+          "it_215090",
+          1
+        ]
+      ]
+    },
+    {
+      "lv": 3,
+      "reward_en": "All characters CRIT +2%",
+      "reward_vi": "Toàn bộ nhân vật +2% Chí mạng (CRIT)",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          60
+        ],
+        [
+          "it_214002",
+          15
+        ],
+        [
+          "0",
+          1000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          5
+        ],
+        [
+          "it_215086",
+          2
+        ],
+        [
+          "it_215087",
+          2
+        ],
+        [
+          "it_215088",
+          2
+        ],
+        [
+          "it_215089",
+          1
+        ],
+        [
+          "it_215090",
+          1
+        ]
+      ]
+    },
+    {
+      "lv": 4,
+      "reward_en": "New Core Skill: Eccentric Power · II",
+      "reward_vi": "Kỹ năng Core mới: Eccentric Power · II",
+      "isMilestone": true,
+      "coreName_en": "Eccentric Power · II",
+      "coreName_vi": "Eccentric Power · II",
+      "coreEffect_en": "[Basic Effect] Gain 4 Energy per turn; grants allies [Non-Crit DMG Free] and Specialized Evasion vs [True Damage]; amplifies [Specialized HP] damage-reduction ×2.2; for the first 5 turns inflicts [Extreme Energy Drain] (−5 Energy, once/turn; after a drain the target can't be inflicted with [Fear/Specialized Fear] that turn and its Total Damage Bonus −25% for 1 turn). [Advanced Effect] On deployment, all allies gain [Specialized HP]; when [Specialized HP] is depleted, its damage-reduction effect keeps applying to the original HP for 8 turns. [Specialized HP]: grants [Specialized HP] equal to 250% base Max HP (cumulative max 700%), reducing all incoming damage by 30%.",
+      "coreEffect_vi": "[Cơ bản] Nhận 4 Năng lượng mỗi lượt; ban cho đồng minh [Non-Crit DMG Free] và Né tránh chuyên biệt chống [True Damage]; tăng giảm sát thương của [Specialized HP] ×2.2 lần; trong 5 lượt đầu gây [Extreme Energy Drain] (−5 Năng lượng, 1 lần/lượt; sau khi trừ, mục tiêu không bị [Fear/Specialized Fear] trong lượt đó và −25% Tổng Sát thương của nó trong 1 lượt). [Nâng cao] Khi vào trận, toàn đội nhận [Specialized HP]; khi [Specialized HP] cạn, hiệu ứng giảm sát thương vẫn tiếp tục áp lên Máu gốc trong 8 lượt. [Specialized HP]: cấp [Specialized HP] bằng 250% Máu Tối Đa gốc (tích lũy tối đa 700%), giảm 30% mọi sát thương nhận vào.",
+      "milestoneIcon": "/game-icons/skills/109_c1.webp",
+      "cost": [
+        [
+          "it_214001",
+          80
+        ],
+        [
+          "it_214002",
+          20
+        ],
+        [
+          "0",
+          3000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          8
+        ],
+        [
+          "it_215086",
+          5
+        ],
+        [
+          "it_215087",
+          4
+        ],
+        [
+          "it_215088",
+          4
+        ],
+        [
+          "it_215089",
+          3
+        ],
+        [
+          "it_215090",
+          3
+        ]
+      ]
+    },
+    {
+      "lv": 5,
+      "reward_en": "All characters CRIT DMG +3%",
+      "reward_vi": "Toàn bộ nhân vật +3% Sát thương Chí mạng (CRIT DMG)",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          100
+        ],
+        [
+          "it_214002",
+          30
+        ],
+        [
+          "0",
+          3000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          8
+        ],
+        [
+          "it_215086",
+          5
+        ],
+        [
+          "it_215087",
+          4
+        ],
+        [
+          "it_215088",
+          4
+        ],
+        [
+          "it_215089",
+          3
+        ],
+        [
+          "it_215090",
+          3
+        ]
+      ]
+    },
+    {
+      "lv": 6,
+      "reward_en": "All characters CRIT DMG +3%",
+      "reward_vi": "Toàn bộ nhân vật +3% Sát thương Chí mạng (CRIT DMG)",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          130
+        ],
+        [
+          "it_214002",
+          40
+        ],
+        [
+          "0",
+          3000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          8
+        ],
+        [
+          "it_215086",
+          5
+        ],
+        [
+          "it_215087",
+          4
+        ],
+        [
+          "it_215088",
+          4
+        ],
+        [
+          "it_215089",
+          3
+        ],
+        [
+          "it_215090",
+          3
+        ]
+      ]
+    },
+    {
+      "lv": 7,
+      "reward_en": "Activate Core Skill to grant 80 Energy Gauge after allies take action",
+      "reward_vi": "Kích hoạt Kỹ năng Core: cấp 80 Thanh Năng Lượng sau khi đồng minh hành động",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          160
+        ],
+        [
+          "it_214002",
+          50
+        ],
+        [
+          "0",
+          5000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          15
+        ],
+        [
+          "it_215086",
+          10
+        ],
+        [
+          "it_215087",
+          8
+        ],
+        [
+          "it_215088",
+          8
+        ],
+        [
+          "it_215089",
+          5
+        ],
+        [
+          "it_215090",
+          5
+        ]
+      ]
+    },
+    {
+      "lv": 8,
+      "reward_en": "All characters CRIT +2%",
+      "reward_vi": "Toàn bộ nhân vật +2% Chí mạng (CRIT)",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          190
+        ],
+        [
+          "it_214002",
+          60
+        ],
+        [
+          "0",
+          5000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          15
+        ],
+        [
+          "it_215086",
+          10
+        ],
+        [
+          "it_215087",
+          8
+        ],
+        [
+          "it_215088",
+          8
+        ],
+        [
+          "it_215089",
+          5
+        ],
+        [
+          "it_215090",
+          5
+        ]
+      ]
+    },
+    {
+      "lv": 9,
+      "reward_en": "All characters CRIT +2%",
+      "reward_vi": "Toàn bộ nhân vật +2% Chí mạng (CRIT)",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          220
+        ],
+        [
+          "it_214002",
+          70
+        ],
+        [
+          "0",
+          5000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          15
+        ],
+        [
+          "it_215086",
+          10
+        ],
+        [
+          "it_215087",
+          8
+        ],
+        [
+          "it_215088",
+          8
+        ],
+        [
+          "it_215089",
+          5
+        ],
+        [
+          "it_215090",
+          5
+        ]
+      ]
+    },
+    {
+      "lv": 10,
+      "reward_en": "New Core Skill: Eccentric Power · III",
+      "reward_vi": "Kỹ năng Core mới: Eccentric Power · III",
+      "isMilestone": true,
+      "coreName_en": "Eccentric Power · III",
+      "coreName_vi": "Eccentric Power · III",
+      "coreEffect_en": "[Basic Effect] Gain 4 Energy per turn; grants allies [Non-Crit DMG Free] and Specialized Evasion vs [True Damage]; amplifies [Specialized HP] damage-reduction ×2.2; for the first 5 turns inflicts [Extreme Energy Drain] (−5 Energy, once/turn; after a drain the target can't be inflicted with [Fear/Specialized Fear] that turn and its Total Damage Bonus −25% for 1 turn). [Advanced Effect] On deployment, all allies gain [Specialized HP]. For every cumulative consumption of [Specialized HP] equal to 175% of Max HP, gains [Extreme Unyielding] (become immune to all damage; removed after any 3 characters have acted). [Specialized HP]: grants [Specialized HP] equal to 250% base Max HP (cumulative max 700%), reducing all incoming damage by 30%.",
+      "coreEffect_vi": "[Cơ bản] Nhận 4 Năng lượng mỗi lượt; ban cho đồng minh [Non-Crit DMG Free] và Né tránh chuyên biệt chống [True Damage]; tăng giảm sát thương của [Specialized HP] ×2.2 lần; trong 5 lượt đầu gây [Extreme Energy Drain] (−5 Năng lượng, 1 lần/lượt; sau khi trừ, mục tiêu không bị [Fear/Specialized Fear] trong lượt đó và −25% Tổng Sát thương của nó trong 1 lượt). [Nâng cao] Khi vào trận, toàn đội nhận [Specialized HP]. Mỗi khi tiêu hao tích lũy [Specialized HP] bằng 175% Máu Tối Đa, nhận [Extreme Unyielding] (miễn nhiễm toàn bộ sát thương; bị gỡ sau khi 3 nhân vật bất kỳ hành động). [Specialized HP]: cấp [Specialized HP] bằng 250% Máu Tối Đa gốc (tích lũy tối đa 700%), giảm 30% mọi sát thương nhận vào.",
+      "milestoneIcon": "/game-icons/skills/109_c2.webp",
+      "cost": [
+        [
+          "it_214001",
+          300
+        ],
+        [
+          "it_214002",
+          90
+        ],
+        [
+          "0",
+          10000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          30
+        ],
+        [
+          "it_215086",
+          20
+        ],
+        [
+          "it_215087",
+          15
+        ],
+        [
+          "it_215088",
+          15
+        ],
+        [
+          "it_215089",
+          10
+        ],
+        [
+          "it_215090",
+          10
+        ]
+      ]
+    },
+    {
+      "lv": 11,
+      "reward_en": "All characters CRIT DMG +3%",
+      "reward_vi": "Toàn bộ nhân vật +3% Sát thương Chí mạng (CRIT DMG)",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          380
+        ],
+        [
+          "it_214002",
+          110
+        ],
+        [
+          "0",
+          10000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          30
+        ],
+        [
+          "it_215086",
+          20
+        ],
+        [
+          "it_215087",
+          15
+        ],
+        [
+          "it_215088",
+          15
+        ],
+        [
+          "it_215089",
+          10
+        ],
+        [
+          "it_215090",
+          10
+        ]
+      ]
+    },
+    {
+      "lv": 12,
+      "reward_en": "All characters CRIT DMG +3%",
+      "reward_vi": "Toàn bộ nhân vật +3% Sát thương Chí mạng (CRIT DMG)",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          460
+        ],
+        [
+          "it_214002",
+          130
+        ],
+        [
+          "0",
+          10000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          30
+        ],
+        [
+          "it_215086",
+          20
+        ],
+        [
+          "it_215087",
+          15
+        ],
+        [
+          "it_215088",
+          15
+        ],
+        [
+          "it_215089",
+          10
+        ],
+        [
+          "it_215090",
+          10
+        ]
+      ]
+    },
+    {
+      "lv": 13,
+      "reward_en": "Activate Core Skill to grant 80 Energy Gauge after allies take action",
+      "reward_vi": "Kích hoạt Kỹ năng Core: cấp 80 Thanh Năng Lượng sau khi đồng minh hành động",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          540
+        ],
+        [
+          "it_214002",
+          150
+        ],
+        [
+          "0",
+          20000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          60
+        ],
+        [
+          "it_215086",
+          40
+        ],
+        [
+          "it_215087",
+          30
+        ],
+        [
+          "it_215088",
+          30
+        ],
+        [
+          "it_215089",
+          16
+        ],
+        [
+          "it_215090",
+          16
+        ]
+      ]
+    },
+    {
+      "lv": 14,
+      "reward_en": "All characters CRIT +2%",
+      "reward_vi": "Toàn bộ nhân vật +2% Chí mạng (CRIT)",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          620
+        ],
+        [
+          "it_214002",
+          170
+        ],
+        [
+          "0",
+          20000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          60
+        ],
+        [
+          "it_215086",
+          40
+        ],
+        [
+          "it_215087",
+          30
+        ],
+        [
+          "it_215088",
+          30
+        ],
+        [
+          "it_215089",
+          16
+        ],
+        [
+          "it_215090",
+          16
+        ]
+      ]
+    },
+    {
+      "lv": 15,
+      "reward_en": "All characters CRIT +2%",
+      "reward_vi": "Toàn bộ nhân vật +2% Chí mạng (CRIT)",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          700
+        ],
+        [
+          "it_214002",
+          200
+        ],
+        [
+          "0",
+          20000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          60
+        ],
+        [
+          "it_215086",
+          40
+        ],
+        [
+          "it_215087",
+          30
+        ],
+        [
+          "it_215088",
+          30
+        ],
+        [
+          "it_215089",
+          16
+        ],
+        [
+          "it_215090",
+          16
+        ]
+      ]
+    },
+    {
+      "lv": 16,
+      "reward_en": "All characters CRIT +2%",
+      "reward_vi": "Toàn bộ nhân vật +2% Chí mạng (CRIT)",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          780
+        ],
+        [
+          "it_214002",
+          225
+        ],
+        [
+          "0",
+          20000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          60
+        ],
+        [
+          "it_215086",
+          40
+        ],
+        [
+          "it_215087",
+          30
+        ],
+        [
+          "it_215088",
+          30
+        ],
+        [
+          "it_215089",
+          16
+        ],
+        [
+          "it_215090",
+          16
+        ]
+      ]
+    },
+    {
+      "lv": 17,
+      "reward_en": "New Core Skill: Eccentric Power · IV",
+      "reward_vi": "Kỹ năng Core mới: Eccentric Power · IV",
+      "isMilestone": true,
+      "coreName_en": "Eccentric Power · IV",
+      "coreName_vi": "Eccentric Power · IV",
+      "coreEffect_en": "[Basic Effect] Gain 4 Energy per turn; grants allies [Non-Crit DMG Free] and Specialized Evasion vs [True Damage]; amplifies [Specialized HP] damage-reduction ×2.2; for the first 5 turns inflicts [Extreme Energy Drain] (−5 Energy, once/turn; after a drain the target can't be inflicted with [Fear/Specialized Fear] that turn and its Total Damage Bonus −25% for 1 turn). [Advanced Effect] On deployment, all allies gain [Specialized HP]; when depleted its damage-reduction persists on the original HP for 8 turns. For every 70% of Max HP consumed, applies [Extreme Field] to 1 random enemy (1000% ATK, 2 turns). For every 175% consumed, gains [Extreme Unyielding]. [Extreme Field]: hits before the target acts, can crit, stacks, ignores 45% Specialized Evasion / Non-Crit DMG Free. [Specialized HP]: grants [Specialized HP] equal to 250% base Max HP (cumulative max 700%), reducing all incoming damage by 30%.",
+      "coreEffect_vi": "[Cơ bản] Nhận 4 Năng lượng mỗi lượt; ban cho đồng minh [Non-Crit DMG Free] và Né tránh chuyên biệt chống [True Damage]; tăng giảm sát thương của [Specialized HP] ×2.2 lần; trong 5 lượt đầu gây [Extreme Energy Drain] (−5 Năng lượng, 1 lần/lượt; sau khi trừ, mục tiêu không bị [Fear/Specialized Fear] trong lượt đó và −25% Tổng Sát thương của nó trong 1 lượt). [Nâng cao] Khi vào trận, toàn đội nhận [Specialized HP]; khi cạn, giảm sát thương vẫn áp lên Máu gốc 8 lượt. Mỗi 70% Máu Tối Đa tiêu hao, gây [Extreme Field] lên 1 kẻ địch ngẫu nhiên (1000% ST, 2 lượt). Mỗi 175% tiêu hao, nhận [Extreme Unyielding]. [Extreme Field]: đánh trước khi mục tiêu hành động, có thể chí mạng, cộng dồn, bỏ qua 45% Specialized Evasion / Non-Crit DMG Free. [Specialized HP]: cấp [Specialized HP] bằng 250% Máu Tối Đa gốc (tích lũy tối đa 700%), giảm 30% mọi sát thương nhận vào.",
+      "milestoneIcon": "/game-icons/skills/109_c3.webp",
+      "cost": [
+        [
+          "it_214001",
+          860
+        ],
+        [
+          "it_214002",
+          250
+        ],
+        [
+          "0",
+          30000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          150
+        ],
+        [
+          "it_215086",
+          100
+        ],
+        [
+          "it_215087",
+          50
+        ],
+        [
+          "it_215088",
+          50
+        ],
+        [
+          "it_215089",
+          25
+        ],
+        [
+          "it_215090",
+          25
+        ]
+      ]
+    },
+    {
+      "lv": 18,
+      "reward_en": "All characters CRIT DMG +3%",
+      "reward_vi": "Toàn bộ nhân vật +3% Sát thương Chí mạng (CRIT DMG)",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          940
+        ],
+        [
+          "it_214002",
+          275
+        ],
+        [
+          "0",
+          30000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          150
+        ],
+        [
+          "it_215086",
+          100
+        ],
+        [
+          "it_215087",
+          50
+        ],
+        [
+          "it_215088",
+          50
+        ],
+        [
+          "it_215089",
+          25
+        ],
+        [
+          "it_215090",
+          25
+        ]
+      ]
+    },
+    {
+      "lv": 19,
+      "reward_en": "All characters CRIT DMG +3%",
+      "reward_vi": "Toàn bộ nhân vật +3% Sát thương Chí mạng (CRIT DMG)",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          1020
+        ],
+        [
+          "it_214002",
+          300
+        ],
+        [
+          "0",
+          30000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          150
+        ],
+        [
+          "it_215086",
+          100
+        ],
+        [
+          "it_215087",
+          50
+        ],
+        [
+          "it_215088",
+          50
+        ],
+        [
+          "it_215089",
+          25
+        ],
+        [
+          "it_215090",
+          25
+        ]
+      ]
+    },
+    {
+      "lv": 20,
+      "reward_en": "All characters CRIT DMG +3%",
+      "reward_vi": "Toàn bộ nhân vật +3% Sát thương Chí mạng (CRIT DMG)",
+      "isMilestone": false,
+      "coreName_en": null,
+      "coreName_vi": null,
+      "coreEffect_en": null,
+      "coreEffect_vi": null,
+      "milestoneIcon": null,
+      "cost": [
+        [
+          "it_214001",
+          1100
+        ],
+        [
+          "it_214002",
+          325
+        ],
+        [
+          "0",
+          30000
+        ]
+      ],
+      "comp": [
+        [
+          "it_215085",
+          150
+        ],
+        [
+          "it_215086",
+          100
+        ],
+        [
+          "it_215087",
+          50
+        ],
+        [
+          "it_215088",
+          50
+        ],
+        [
+          "it_215089",
+          25
+        ],
+        [
+          "it_215090",
+          25
+        ]
+      ]
+    }
+  ],
+  "gate_basic_en": "1x Duelist, 1x Grappler, 1x Esper",
+  "gate_basic_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Tâm Linh",
+  "gate_advanced_en": "1x Duelist, 1x Grappler, 2x Esper",
+  "gate_advanced_vi": "1 Vũ Trang, 1 Giác Đấu, 2 Tâm Linh"
+}

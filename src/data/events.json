@@ -1,7 +1,7 @@
 [
   {
     "id": "e3",
-    "titleVi": "Chiêu Mộ Giới Hạn: UR+ Atomic Samurai",
+    "titleVi": "Chiêu mộ Giới hạn / Thử nghiệm nhân vật (UR+ Atomic Samurai)",
     "titleEn": "Limited Recruitment: UR+ Atomic Samurai",
     "descriptionVi": "Tham gia sự kiện để có cơ hội chiêu mộ được UR+ Atomic Samurai cực kỳ mạnh mẽ. Đừng bỏ lỡ cơ hội sở hữu kiếm sĩ hàng đầu này!",
     "descriptionEn": "Participate in the event for a chance to recruit the incredibly powerful UR+ Atomic Samurai. Don't miss out on this top-tier swordsman!",
@@ -12,7 +12,7 @@
   },
   {
     "id": "e9",
-    "titleVi": "Chiêu Mộ Tinh Anh Đặc Biệt: Gale Wind",
+    "titleVi": "Chiêu mộ Tinh Anh Đặc Biệt (Gale Wind)",
     "titleEn": "Special Elite Recruitment (Gale Wind)",
     "descriptionVi": "Sự kiện chiêu mộ đặc biệt dành riêng cho Gale Wind. Tăng tỷ lệ nhận được nhân vật có tốc độ cực cao này.",
     "descriptionEn": "Special recruitment event dedicated to Gale Wind. Increased rates to obtain this ultra-fast character.",
@@ -23,7 +23,7 @@
   },
   {
     "id": "e10",
-    "titleVi": "Chiêu Mộ Độc Quyền: Kỷ vật UR+ Atomic Samurai",
+    "titleVi": "Chiêu mộ Độc quyền (Kỷ vật UR+ Atomic Samurai)",
     "titleEn": "Exclusive Recruitment (keepsake: UR+ Atomic Samurai)",
     "descriptionVi": "Vòng quay độc quyền mang đến cơ hội nhận Kỷ vật Thức tỉnh của UR+ Atomic Samurai. Nâng cấp tối đa sức mạnh cho Samurai của bạn!",
     "descriptionEn": "Exclusive draw bringing a chance to get the Keepsake for UR+ Atomic Samurai. Maximize your Samurai's power!",
@@ -34,7 +34,7 @@
   },
   {
     "id": "e11",
-    "titleVi": "Hộp Quà Bất Ngờ",
+    "titleVi": "Đặc quyền Rương / Rương Bất ngờ",
     "titleEn": "Box Perk \\ Surprise Box",
     "descriptionVi": "Mở Hộp Quà Bất Ngờ mỗi ngày để nhận vô số vật phẩm giá trị. Quà tặng ngẫu nhiên nhưng phần thưởng cực kỳ hấp dẫn.",
     "descriptionEn": "Open the Surprise Box every day to receive numerous valuable items. Random gifts but incredibly attractive rewards.",
@@ -45,7 +45,7 @@
   },
   {
     "id": "e12",
-    "titleVi": "Ngôi Nhà Cầu Nguyện",
+    "titleVi": "Ngôi nhà Nguyện ước",
     "titleEn": "House of Wishes",
     "descriptionVi": "Nơi những điều ước thành hiện thực. Cầu nguyện hàng ngày để tích lũy vật phẩm và đổi lấy các phần thưởng hiếm.",
     "descriptionEn": "Where wishes come true. Pray daily to accumulate items and exchange them for rare rewards.",
@@ -56,7 +56,7 @@
   },
   {
     "id": "e13",
-    "titleVi": "Nhân Đôi Lợi Ích (Nhiệm Vụ & Thử Thách)",
+    "titleVi": "Phúc lợi nhân đôi (Nhiệm vụ Ngày + Thử nghiệm)",
     "titleEn": "Double benefit (Daily + Trial)",
     "descriptionVi": "Cơ hội vàng để cày cuốc! Nhân đôi toàn bộ phần thưởng rơi ra từ Nhiệm vụ Hàng ngày và Thử thách trong thời gian sự kiện.",
     "descriptionEn": "Golden opportunity to farm! Double all drop rewards from Daily Quests and Trials during the event period.",
@@ -67,7 +67,7 @@
   },
   {
     "id": "e14",
-    "titleVi": "Hộp Quà Tự Chọn",
+    "titleVi": "Hộp quà Tự chọn",
     "titleEn": "Selection Giftbox",
     "descriptionVi": "Sự kiện đặc biệt cho phép bạn tự do chọn lựa những phần thưởng mong muốn trong các gói quà giới hạn.",
     "descriptionEn": "Special event allowing you to freely select your desired rewards from limited gift packs.",
@@ -78,7 +78,7 @@
   },
   {
     "id": "e15",
-    "titleVi": "Vòng Xoay Cầu Nguyện (Calm, Cruel, Defense, Assist)",
+    "titleVi": "Chạy nước rút Cầu Nguyện (Bình Tĩnh, Tàn Nhẫn, Phòng Thủ, Hỗ Trợ)",
     "titleEn": "Star Wish Rush (Calm, Cruel, Defense, Assist)",
     "descriptionVi": "Sự kiện Vòng Xoay mang đến các vật phẩm Cốt lõi hệ Calm, Cruel, Defense, và Assist. Xoay ngay để tăng cường đội hình của bạn!",
     "descriptionEn": "Rush event bringing Core items for Calm, Cruel, Defense, and Assist. Spin now to enhance your formation!",
@@ -998,5 +998,313 @@
       }
     ],
     "detailImages": []
+  },
+  {
+    "id": "e_july_201",
+    "category": "other",
+    "titleVi": "Kế hoạch nâng cấp",
+    "titleEn": "Upgrade Plan",
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-04",
+    "descriptionVi": "Sự kiện Kế hoạch nâng cấp đang diễn ra.",
+    "descriptionEn": "The Upgrade Plan event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_202",
+    "category": "other",
+    "titleVi": "Nhân đôi rớt đồ Boss",
+    "titleEn": "Boss Double Drop",
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-04",
+    "descriptionVi": "Sự kiện Nhân đôi rớt đồ Boss đang diễn ra.",
+    "descriptionEn": "The Boss Double Drop event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_203",
+    "category": "other",
+    "titleVi": "Cửa hàng Bí ẩn (Mảnh UR Pig God, Mảnh UR Atomic Samurai)",
+    "titleEn": "Mystery Store (UR Pig God[f], UR Atomic Samurai[f])",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-11",
+    "descriptionVi": "Sự kiện Cửa hàng Bí ẩn (Mảnh UR Pig God, Mảnh UR Atomic Samurai) đang diễn ra.",
+    "descriptionEn": "The Mystery Store (UR Pig God[f], UR Atomic Samurai[f]) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_204",
+    "category": "other",
+    "titleVi": "Nhân đôi Tinh Thông (Giác Đấu, Anh Hùng)",
+    "titleEn": "Mastery Double-drop (Duelist, Hero)",
+    "startDate": "2026-07-05",
+    "endDate": "2026-07-08",
+    "descriptionVi": "Sự kiện Nhân đôi Tinh Thông (Giác Đấu, Anh Hùng) đang diễn ra.",
+    "descriptionEn": "The Mastery Double-drop (Duelist, Hero) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_205",
+    "category": "main",
+    "titleVi": "Chạy nước rút Cầu Nguyện (Linh kiện Dị Thường, Siêu Năng, Tàn Bạo)",
+    "titleEn": "Star Wish Rush (Parts Supply (Eccentric, Drive Telekinetic, Brutal))",
+    "startDate": "2026-07-05",
+    "endDate": "2026-07-10",
+    "descriptionVi": "Sự kiện Chạy nước rút Cầu Nguyện (Linh kiện Dị Thường, Siêu Năng, Tàn Bạo) đang diễn ra.",
+    "descriptionEn": "The Star Wish Rush (Parts Supply (Eccentric, Drive Telekinetic, Brutal)) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_206",
+    "category": "main",
+    "titleVi": "Thử nghiệm Core",
+    "titleEn": "Core Trial",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-09",
+    "descriptionVi": "Sự kiện Thử nghiệm Core đang diễn ra.",
+    "descriptionEn": "The Core Trial event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_207",
+    "category": "other",
+    "titleVi": "Thẻ 7 Ngày (Kế hoạch Mùa hè)",
+    "titleEn": "7-Day Card (Summer Plan)",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-12",
+    "descriptionVi": "Sự kiện Thẻ 7 Ngày (Kế hoạch Mùa hè) đang diễn ra.",
+    "descriptionEn": "The 7-Day Card (Summer Plan) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_208",
+    "category": "main",
+    "titleVi": "Chiêu mộ Độc quyền (Kỷ vật Hellfire Flame)",
+    "titleEn": "Exclusive Recruitment (keepsake: Hellfire Flame)",
+    "startDate": "2026-07-13",
+    "endDate": "2026-07-19",
+    "descriptionVi": "Sự kiện Chiêu mộ Độc quyền (Kỷ vật Hellfire Flame) đang diễn ra.",
+    "descriptionEn": "The Exclusive Recruitment (keepsake: Hellfire Flame) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_209",
+    "category": "main",
+    "titleVi": "Chiêu mộ Giới hạn / Thử nghiệm nhân vật (UR+ Tornado)",
+    "titleEn": "Limited Recruitment\\Character Trial (UR+ Tornado)",
+    "startDate": "2026-07-15",
+    "endDate": "2026-07-21",
+    "descriptionVi": "Sự kiện Chiêu mộ Giới hạn / Thử nghiệm nhân vật (UR+ Tornado) đang diễn ra.",
+    "descriptionEn": "The Limited Recruitment\\Character Trial (UR+ Tornado) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_210",
+    "category": "other",
+    "titleVi": "Tích lũy Nạp thẻ",
+    "titleEn": "Total Top-up Rewards",
+    "startDate": "2026-07-15",
+    "endDate": "2026-07-21",
+    "descriptionVi": "Sự kiện Tích lũy Nạp thẻ đang diễn ra.",
+    "descriptionEn": "The Total Top-up Rewards event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_211",
+    "category": "other",
+    "titleVi": "Đặc quyền Chiến đấu",
+    "titleEn": "Battle Perk",
+    "startDate": "2026-07-16",
+    "endDate": "2026-07-18",
+    "descriptionVi": "Sự kiện Đặc quyền Chiến đấu đang diễn ra.",
+    "descriptionEn": "The Battle Perk event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_212",
+    "category": "other",
+    "titleVi": "Nhà máy Bánh Kem",
+    "titleEn": "Cake Factory",
+    "startDate": "2026-07-17",
+    "endDate": "2026-07-26",
+    "descriptionVi": "Sự kiện Nhà máy Bánh Kem đang diễn ra.",
+    "descriptionEn": "The Cake Factory event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_213",
+    "category": "other",
+    "titleVi": "Rương Giới hạn",
+    "titleEn": "Limited Chest",
+    "startDate": "2026-07-18",
+    "endDate": "2026-07-20",
+    "descriptionVi": "Sự kiện Rương Giới hạn đang diễn ra.",
+    "descriptionEn": "The Limited Chest event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_214",
+    "category": "other",
+    "titleVi": "Giảm gánh nặng (Thiên Phú + Chinh Phục)",
+    "titleEn": "Burden-cut (Talent + Conqueror's)",
+    "startDate": "2026-07-19",
+    "endDate": "2026-07-22",
+    "descriptionVi": "Sự kiện Giảm gánh nặng (Thiên Phú + Chinh Phục) đang diễn ra.",
+    "descriptionEn": "The Burden-cut (Talent + Conqueror's) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_215",
+    "category": "main",
+    "titleVi": "Chạy nước rút Cầu Nguyện (Mục tiêu Thức Tỉnh)",
+    "titleEn": "Starwish Rush (Ascend Supply Target)",
+    "startDate": "2026-07-19",
+    "endDate": "2026-07-24",
+    "descriptionVi": "Sự kiện Chạy nước rút Cầu Nguyện (Mục tiêu Thức Tỉnh) đang diễn ra.",
+    "descriptionEn": "The Starwish Rush (Ascend Supply Target) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_216",
+    "category": "main",
+    "titleVi": "Chiêu mộ Độc quyền (Kỷ vật UR+ Tornado)",
+    "titleEn": "Exclusive Recruitment (Keepsake: UR+ Tornado)",
+    "startDate": "2026-07-20",
+    "endDate": "2026-07-26",
+    "descriptionVi": "Sự kiện Chiêu mộ Độc quyền (Kỷ vật UR+ Tornado) đang diễn ra.",
+    "descriptionEn": "The Exclusive Recruitment (Keepsake: UR+ Tornado) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_217",
+    "category": "main",
+    "titleVi": "Chiêu mộ Tinh Anh Đặc Biệt (Geryuganshoop 1)",
+    "titleEn": "Special Elite Recruitment (Geryuganshoop 1)",
+    "startDate": "2026-07-20",
+    "endDate": "2026-07-26",
+    "descriptionVi": "Sự kiện Chiêu mộ Tinh Anh Đặc Biệt (Geryuganshoop 1) đang diễn ra.",
+    "descriptionEn": "The Special Elite Recruitment (Geryuganshoop 1) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_218",
+    "category": "other",
+    "titleVi": "Giải Đấu Đối Kháng",
+    "titleEn": "Tournament Battle",
+    "startDate": "2026-07-22",
+    "endDate": "2026-07-24",
+    "descriptionVi": "Sự kiện Giải Đấu Đối Kháng đang diễn ra.",
+    "descriptionEn": "The Tournament Battle event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_219",
+    "category": "other",
+    "titleVi": "Cửa hàng Bí ẩn (Thẻ Buff Gear/Gear S)",
+    "titleEn": "Mystery Store (BuffGear[s]/Gear[S])",
+    "startDate": "2026-07-22",
+    "endDate": "2026-07-26",
+    "descriptionVi": "Sự kiện Cửa hàng Bí ẩn (Thẻ Buff Gear/Gear S) đang diễn ra.",
+    "descriptionEn": "The Mystery Store (BuffGear[s]/Gear[S]) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_220",
+    "category": "other",
+    "titleVi": "Tăng Tỉ lệ Ấn Thạch (Trường Xuyên Tạc)",
+    "titleEn": "Emblem Supply UP (Distorted Field)",
+    "startDate": "2026-07-22",
+    "endDate": "2026-07-26",
+    "descriptionVi": "Sự kiện Tăng Tỉ lệ Ấn Thạch (Trường Xuyên Tạc) đang diễn ra.",
+    "descriptionEn": "The Emblem Supply UP (Distorted Field) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_221",
+    "category": "other",
+    "titleVi": "Cửa hàng Oden",
+    "titleEn": "Oden Shop",
+    "startDate": "2026-07-23",
+    "endDate": "2026-07-29",
+    "descriptionVi": "Sự kiện Cửa hàng Oden đang diễn ra.",
+    "descriptionEn": "The Oden Shop event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_222",
+    "category": "other",
+    "titleVi": "Tuần lễ Trang phục Mùa Hè (Đồ Bơi)",
+    "titleEn": "Summer Costume Week (Swimwear Series)",
+    "startDate": "2026-07-24",
+    "endDate": "2026-07-30",
+    "descriptionVi": "Sự kiện Tuần lễ Trang phục Mùa Hè (Đồ Bơi) đang diễn ra.",
+    "descriptionEn": "The Summer Costume Week (Swimwear Series) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_223",
+    "category": "other",
+    "titleVi": "Đấu Đỉnh Cao mở tất cả nhân vật",
+    "titleEn": "Live Clash all characters free",
+    "startDate": "2026-07-26",
+    "endDate": "2026-07-31",
+    "descriptionVi": "Sự kiện Đấu Đỉnh Cao mở tất cả nhân vật đang diễn ra.",
+    "descriptionEn": "The Live Clash all characters free event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_224",
+    "category": "main",
+    "titleVi": "Tăng tỉ lệ Tẩy luyện (Chạy nước rút Cầu Nguyện)",
+    "titleEn": "Refinement Supply UP (Starwish Rush)",
+    "startDate": "2026-07-26",
+    "endDate": "2026-07-31",
+    "descriptionVi": "Sự kiện Tăng tỉ lệ Tẩy luyện (Chạy nước rút Cầu Nguyện) đang diễn ra.",
+    "descriptionEn": "The Refinement Supply UP (Starwish Rush) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_225",
+    "category": "other",
+    "titleVi": "Lắp ghép Hỗn loạn (UR+ G5)",
+    "titleEn": "Puzzle Pandemonium (UR+G5)",
+    "startDate": "2026-07-27",
+    "endDate": "2026-07-31",
+    "descriptionVi": "Sự kiện Lắp ghép Hỗn loạn (UR+ G5) đang diễn ra.",
+    "descriptionEn": "The Puzzle Pandemonium (UR+G5) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_226",
+    "category": "main",
+    "titleVi": "Chiêu mộ Tinh Anh Đặc Biệt (Zombieman 1)",
+    "titleEn": "Special Elite Recruitment (Zombieman 1)",
+    "startDate": "2026-07-27",
+    "endDate": "2026-08-02",
+    "descriptionVi": "Sự kiện Chiêu mộ Tinh Anh Đặc Biệt (Zombieman 1) đang diễn ra.",
+    "descriptionEn": "The Special Elite Recruitment (Zombieman 1) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_227",
+    "category": "other",
+    "titleVi": "Máy Gắp Thú (Kỷ vật [SG] UR Atomic, [UW] UR MetalBat)",
+    "titleEn": "Claw Machine (Keepsake: [SG] UR Atomic, [UW] UR MetalBat)",
+    "startDate": "2026-07-28",
+    "endDate": "2026-07-31",
+    "descriptionVi": "Sự kiện Máy Gắp Thú (Kỷ vật [SG] UR Atomic, [UW] UR MetalBat) đang diễn ra.",
+    "descriptionEn": "The Claw Machine (Keepsake: [SG] UR Atomic, [UW] UR MetalBat) event is currently active.",
+    "imageUrl": ""
+  },
+  {
+    "id": "e_july_228",
+    "category": "other",
+    "titleVi": "Đặc quyền Cuối tháng",
+    "titleEn": "Month-end Perk",
+    "startDate": "2026-07-29",
+    "endDate": "2026-07-31",
+    "descriptionVi": "Sự kiện Đặc quyền Cuối tháng đang diễn ra.",
+    "descriptionEn": "The Month-end Perk event is currently active.",
+    "imageUrl": ""
   }
 ]

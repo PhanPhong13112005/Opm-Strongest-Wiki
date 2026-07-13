@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import charactersDataVi from '../data/characters.json'
 import charactersDataEn from '../data/characters_en.json'
+import coreLabData from '../data/coreLab.json'
 
 const props = defineProps({
   id: {
@@ -16,6 +17,65 @@ const router = useRouter()
 const { t, locale } = useI18n()
 const charactersData = computed(() => locale.value === 'en' ? charactersDataEn : charactersDataVi)
 const character = computed(() => charactersData.value.find(c => c.id === props.id) || null)
+
+const coreData = computed(() => {
+  if (!character.value) return null
+  return coreLabData.heroes.find(h => h.name === character.value.name && h.tier === character.value.tier)
+})
+
+const coreLevels = computed(() => {
+  if (!coreData.value) return []
+  const milestones = coreData.value.levels.filter(l => l.lv === 1 || l.isMilestone)
+  return milestones.slice(0, 2)
+})
+
+const suffixToFolder = {
+  '307': 'Psykos_V2',
+  '196': 'Child_Emperor_V2',
+  '184': 'Boros',
+  '078': 'Drive_Knight',
+  '159': 'Geryuganshoop',
+  '108': 'Bomb',
+  '045': 'Child_Emperor',
+  '003': 'SeaKing',
+  '109': 'Psykos',
+  '013': 'Zombie_Man',
+  '029': 'Amai',
+  '092': 'Bakuzan',
+  '083': 'Genus',
+  '001': 'Genos',
+  '008': 'Mosquito_Girl'
+}
+
+const getMilestoneIcon = (milestoneIconPath, hero) => {
+  if (!milestoneIconPath || !hero) return '';
+  const folder = suffixToFolder[hero.iconSuffix];
+  if (!folder) return milestoneIconPath;
+  
+  const match = milestoneIconPath.match(/\/([^/]+)\.webp$/);
+  if (match) {
+    return `/Core_Skill/${folder}/${match[1]}.png`;
+  }
+  return milestoneIconPath;
+}
+
+const getCoreSkillIcon = (lvl, hero) => {
+  if (lvl.milestoneIcon) {
+    return getMilestoneIcon(lvl.milestoneIcon, hero);
+  }
+  // Fallback to hero's core portrait for level 1 if needed
+  if (hero && hero.iconSuffix) {
+    const folder = suffixToFolder[hero.iconSuffix];
+    if (folder) {
+      return `/Core_Skill/${folder}/${hero.iconSuffix}_c.png`;
+    }
+  }
+  return '';
+}
+
+const goToCoreLab = (coreId) => {
+  router.push({ name: 'core-lab', query: { hero: coreId } })
+}
 
 const getCharacterImage = (filename) => {
   if (!filename) return ''
@@ -96,6 +156,12 @@ const toggleSkill = (skillName) => {
 }
 
 const currentExpandedSkillObj = computed(() => {
+  if (activeSkillTab.value === 'core' && coreData.value) {
+    return {
+      name: coreData.value['coreName_' + locale.value] || coreData.value.coreName || 'Core Skill',
+      animation: character.value.imageURL
+    }
+  }
   if (!character.value || !character.value.skills) return null
   const lastOpened = expandedSkills.value[expandedSkills.value.length - 1]
   if (!lastOpened) return null
@@ -189,16 +255,20 @@ const getSkillsByType = (category) => {
 
 const skillCategories = computed(() => {
   const tabs = [
-    { key: 'basic', label: t('detail.skill_tabs.basic') },
-    { key: 'ult', label: t('detail.skill_tabs.ult') },
-    { key: 'passive', label: t('detail.skill_tabs.passive') },
-    { key: 'awaken', label: t('detail.skill_tabs.awaken') }
+    { key: 'basic', label: t('detail.skill_tabs.basic') || 'Cơ bản' },
+    { key: 'ult', label: t('detail.skill_tabs.ult') || 'Tuyệt kĩ' },
+    { key: 'passive', label: t('detail.skill_tabs.passive') || 'Nội tại' },
+    { key: 'awaken', label: t('detail.skill_tabs.awaken') || 'Thức tỉnh' },
+    { key: 'core', label: t('detail.skill_tabs.core') || 'Cốt Lõi' }
   ]
-  return tabs.filter(tab => getSkillsByType(tab.key).length > 0)
+  return tabs.filter(tab => {
+    if (tab.key === 'core') return !!coreData.value
+    return getSkillsByType(tab.key).length > 0
+  })
 })
 
 const skillTransitionName = ref('fade')
-const availableSkillTabsList = ['basic', 'ult', 'passive', 'awaken']
+const availableSkillTabsList = ['basic', 'ult', 'passive', 'awaken', 'core']
 
 const switchTab = (category) => {
   const oldIndex = availableSkillTabsList.indexOf(activeSkillTab.value)
@@ -579,7 +649,38 @@ onMounted(() => {
 
         <!-- RIGHT: SKILL CARDS LIST -->
         <div class="lg:col-span-3 flex flex-col gap-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
-          <template v-if="getSkillsByType(activeSkillTab).length > 0">
+          <template v-if="activeSkillTab === 'core' && coreData">
+            <div 
+              v-for="(lvl, index) in coreLevels" 
+              :key="lvl.lv" 
+              class="border border-[color:var(--theme-color)]/30 rounded-lg flex flex-col relative overflow-hidden transition-all duration-300 bg-[#12131a] flex-shrink-0"
+            >
+              <div class="p-4 flex justify-between items-center bg-gradient-to-r from-[color:var(--theme-color)]/10 to-transparent">
+                <div class="flex items-center gap-4">
+                  <div class="w-14 h-14 flex-shrink-0 rounded-full border-2 border-[color:var(--theme-color)] flex items-center justify-center bg-gray-900 shadow-[0_0_10px_rgba(var(--theme-color-rgb),0.3)] overflow-hidden">
+                    <img v-if="getCoreSkillIcon(lvl, coreData)" :src="getCoreSkillIcon(lvl, coreData)" class="w-full h-full object-cover transform scale-110" />
+                    <span v-else class="text-[color:var(--theme-color)] font-black text-2xl">{{ lvl.lv }}</span>
+                  </div>
+                  <h3 class="font-bold text-lg text-[color:var(--theme-color)]">
+                    {{ lvl['coreName_' + $i18n.locale] || lvl.coreName_vi || (index === 0 ? 'Cơ bản' : 'Cột mốc Lv ' + lvl.lv) }}
+                  </h3>
+                </div>
+                <div class="bg-gray-800 border border-gray-700 text-gray-400 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest">
+                  Level {{ lvl.lv }}
+                </div>
+              </div>
+              <div class="p-4 pt-2">
+                <p class="text-sm text-gray-300 leading-relaxed" v-html="formatSkillDesc(lvl['coreEffect_' + $i18n.locale] || lvl.coreEffect_vi || lvl['reward_' + $i18n.locale] || lvl.reward_vi)"></p>
+              </div>
+            </div>
+            
+            <button @click="goToCoreLab(coreData.coreHeId)" class="w-full mt-2 py-4 bg-gradient-to-r from-[color:var(--theme-color)] to-yellow-600 text-[#000000] font-black text-sm uppercase tracking-widest rounded-lg shadow-[0_0_15px_rgba(var(--theme-color-rgb),0.3)] hover:brightness-110 hover:shadow-[0_0_25px_rgba(var(--theme-color-rgb),0.5)] transition-all flex items-center justify-center gap-2 flex-shrink-0">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3H5C3.89 3 3 3.89 3 5V19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V5C21 3.89 20.11 3 19 3ZM19 19H5V5H19V19ZM17 12H13V8H11V12H7V14H11V18H13V14H17V12Z"/></svg>
+              Xem chi tiết Phòng Nguyên Cứu
+            </button>
+          </template>
+          
+          <template v-else-if="getSkillsByType(activeSkillTab).length > 0">
             <div 
               v-for="skill in getSkillsByType(activeSkillTab)" 
               :key="skill.name" 

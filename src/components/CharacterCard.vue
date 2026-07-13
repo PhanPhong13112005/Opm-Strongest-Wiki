@@ -77,9 +77,20 @@ const factionBgColor = computed(() => {
 
 const classIcon = computed(() => {
   if (props.character.classIcon) return props.character.classIcon
-  if (props.character.classLevel) return `/Class/${props.character.classLevel}.png`
   
-  // Fallback
+  const f = props.character.faction?.toLowerCase() || ''
+  const isMonster = f.includes('quái vật') || f.includes('quái nhân') || f.includes('monster')
+  const isMartialArtist = f.includes('võ thuật') || f.includes('martial')
+  const isOutlaw = f.includes('tội phạm') || f.includes('outlaw')
+  
+  if (isMonster && props.character.classLevel && ['dragon', 'demon', 'tiger'].includes(props.character.classLevel.toLowerCase())) {
+    return `/Class/${props.character.classLevel}.png`
+  }
+  
+  if (isMartialArtist) return '/Class/Martial_Artist.png'
+  if (isOutlaw) return '/Class/Outlaw.png'
+  
+  // Fallback for Heroes and others
   const tier = props.character.tier?.toUpperCase() || ''
   if (tier.includes('UR+')) return '/Class/Class_SS.png'
   if (tier.includes('UR')) return '/Class/Class_S.png'

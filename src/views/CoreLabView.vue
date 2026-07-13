@@ -212,15 +212,17 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import coreLabData from '@/data/coreLab.json'
 
 const { t, locale } = useI18n()
+const route = useRoute()
 const heroes = coreLabData.heroes || []
 const items = coreLabData.items || {}
 
-const selectedHeroId = ref(heroes.length > 0 ? heroes[0].coreHeId : null)
+const selectedHeroId = ref(route.query.hero || (heroes.length > 0 ? heroes[0].coreHeId : null))
 const coreTransition = ref('fade')
 const fromLevel = ref(0)
 const toLevel = ref(4)

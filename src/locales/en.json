@@ -18,7 +18,7 @@
   },
   "footer": {
     "desc": "OPM: The Strongest — community database · data extracted directly from game",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy & Copyright"
   },
   "list": {
     "title": "Character Library",
@@ -86,7 +86,8 @@
       "basic": "BASIC SKILL",
       "ult": "ULTIMATE",
       "passive": "PASSIVE",
-      "awaken": "AWAKEN"
+      "awaken": "AWAKEN",
+      "core": "Core"
     },
     "unlockedBy": "Unlocked By:",
     "selectSkill": "Please select a skill",

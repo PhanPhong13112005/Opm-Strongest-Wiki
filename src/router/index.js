@@ -7,6 +7,7 @@ import CoreLabView from '../views/CoreLabView.vue'
 import EquipmentView from '../views/EquipmentView.vue'
 import EventsView from '../views/EventsView.vue'
 import EventDetailView from '../views/EventDetailView.vue'
+import PrivacyView from '../views/PrivacyView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -70,6 +71,11 @@ const router = createRouter({
       path: '/events/:id',
       name: 'event-detail',
       component: EventDetailView
+    },
+    {
+      path: '/privacy',
+      name: 'privacy',
+      component: PrivacyView
     }
   ],
   scrollBehavior(to, from, savedPosition) {
