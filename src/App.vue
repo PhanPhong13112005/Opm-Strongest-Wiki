@@ -105,7 +105,11 @@ const toggleMobileMenu = () => {
     <footer class="border-t border-white/5 bg-[#05060a] py-8 mt-auto">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 text-center">
         <p class="text-gray-500 text-xs mb-2">{{ t('footer.desc') }}</p>
-        <RouterLink to="/privacy" class="text-gray-400 hover:text-white text-xs underline decoration-gray-600 underline-offset-4">{{ t('footer.privacy') }}</RouterLink>
+        <div class="flex justify-center gap-4 text-xs">
+          <RouterLink to="/history" class="text-gray-400 hover:text-white underline decoration-gray-600 underline-offset-4">{{ t('footer.history') || 'Lịch sử' }}</RouterLink>
+          <span class="text-gray-600">|</span>
+          <RouterLink to="/privacy" class="text-gray-400 hover:text-white underline decoration-gray-600 underline-offset-4">{{ t('footer.privacy') || 'Chính sách bảo mật' }}</RouterLink>
+        </div>
       </div>
     </footer>
   </div>

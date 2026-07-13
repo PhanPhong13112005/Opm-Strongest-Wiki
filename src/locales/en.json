@@ -18,7 +18,8 @@
   },
   "footer": {
     "desc": "OPM: The Strongest — community database · data extracted directly from game",
-    "privacy": "Privacy Policy & Copyright"
+    "privacy": "Privacy Policy & Copyright",
+    "history": "Site History"
   },
   "list": {
     "title": "Character Library",

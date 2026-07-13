@@ -8,6 +8,7 @@ import EquipmentView from '../views/EquipmentView.vue'
 import EventsView from '../views/EventsView.vue'
 import EventDetailView from '../views/EventDetailView.vue'
 import PrivacyView from '../views/PrivacyView.vue'
+import HistoryView from '../views/HistoryView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -76,6 +77,11 @@ const router = createRouter({
       path: '/privacy',
       name: 'privacy',
       component: PrivacyView
+    },
+    {
+      path: '/history',
+      name: 'history',
+      component: HistoryView
     }
   ],
   scrollBehavior(to, from, savedPosition) {
