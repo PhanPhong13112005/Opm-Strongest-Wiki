@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import charactersDataVi from '../data/characters.json'
 import charactersDataEn from '../data/characters_en.json'
@@ -60,6 +60,32 @@ const filteredCharacters = computed(() => {
     return true
   })
 })
+
+const currentPage = ref(1)
+const itemsPerPage = 12
+
+const transitionName = ref('fade')
+
+watch([searchQuery, selectedTier, selectedType, selectedFaction], () => {
+  transitionName.value = 'fade'
+  currentPage.value = 1
+})
+
+const totalPages = computed(() => Math.ceil(filteredCharacters.value.length / itemsPerPage))
+
+const paginatedCharacters = computed(() => {
+  const start = (currentPage.value - 1) * itemsPerPage
+  const end = start + itemsPerPage
+  return filteredCharacters.value.slice(start, end)
+})
+
+const goToPage = (page) => {
+  if (page >= 1 && page <= totalPages.value && page !== currentPage.value) {
+    transitionName.value = page > currentPage.value ? 'slide-left' : 'slide-right'
+    currentPage.value = page
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+}
 </script>
 
 <template>
@@ -103,14 +129,85 @@ const filteredCharacters = computed(() => {
     </div>
 
     <!-- Character Grid -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-      <router-link 
-        v-for="char in filteredCharacters" 
-        :key="char.id" 
-        :to="'/character/' + char.id"
+    <transition :name="transitionName" mode="out-in">
+      <div :key="currentPage" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 min-h-[600px] content-start">
+        <router-link 
+          v-for="char in paginatedCharacters" 
+          :key="char.id" 
+          :to="'/character/' + char.id"
+        >
+          <CharacterCard :character="char" />
+        </router-link>
+      </div>
+    </transition>
+
+    <!-- Pagination -->
+    <div v-if="totalPages > 1" class="flex justify-center items-center space-x-2 mt-12 mb-4">
+      <button 
+        @click="goToPage(currentPage - 1)" 
+        :disabled="currentPage === 1"
+        class="px-4 py-2 bg-[#1a1c23] border border-gray-700 text-white rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-800 transition-colors"
       >
-        <CharacterCard :character="char" />
-      </router-link>
+        &laquo;
+      </button>
+      
+      <div class="flex space-x-1">
+        <template v-for="page in totalPages" :key="page">
+          <button 
+            v-if="page === 1 || page === totalPages || Math.abs(page - currentPage) <= 1"
+            @click="goToPage(page)"
+            class="w-10 h-10 rounded-md flex items-center justify-center font-bold transition-colors border border-gray-700"
+            :class="currentPage === page ? 'bg-opm-gold text-black border-opm-gold' : 'bg-[#1a1c23] text-white hover:bg-gray-800'"
+          >
+            {{ page }}
+          </button>
+          <span v-else-if="page === currentPage - 2 || page === currentPage + 2" class="w-10 h-10 flex items-center justify-center text-gray-500">
+            ...
+          </span>
+        </template>
+      </div>
+
+      <button 
+        @click="goToPage(currentPage + 1)" 
+        :disabled="currentPage === totalPages"
+        class="px-4 py-2 bg-[#1a1c23] border border-gray-700 text-white rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-800 transition-colors"
+      >
+        &raquo;
+      </button>
     </div>
   </main>
 </template>
+
+<style scoped>
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active,
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-left-enter-from {
+  opacity: 0;
+  transform: translateX(30px);
+}
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.slide-right-enter-from {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+</style>

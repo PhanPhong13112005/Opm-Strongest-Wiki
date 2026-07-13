@@ -36,12 +36,12 @@
       "icon": "/game-icons/items/Item_215090.webp"
     },
     "it_214001": {
-      "en": "Research Insight",
+      "en": "Research Notes",
       "vi": "Tâm Đắc Nghiên Cứu",
       "icon": "/game-icons/items/Item_214001.webp"
     },
     "it_214002": {
-      "en": "Research Notes",
+      "en": "Research Materials",
       "vi": "Ghi Chép Nghiên Cứu",
       "icon": "/game-icons/items/Item_214002.webp"
     },
@@ -1563,7 +1563,11 @@
             ]
           ]
         }
-      ]
+      ],
+      "gate_basic_en": "1x Duelist, 1x Grappler, 1x Esper",
+      "gate_basic_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Tâm Linh",
+      "gate_advanced_en": "1x Duelist, 1x Grappler, 2x Esper",
+      "gate_advanced_vi": "1 Vũ Trang, 1 Giác Đấu, 2 Tâm Linh"
     },
     {
       "coreHeId": "he_100196",
@@ -2661,7 +2665,11 @@
             ]
           ]
         }
-      ]
+      ],
+      "gate_basic_en": "1x Duelist, 1x Grappler, 1x Hi-Tech",
+      "gate_basic_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ",
+      "gate_advanced_en": "1x Duelist, 1x Grappler, 1x Hi-Tech, 1x Esper",
+      "gate_advanced_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ, 1 Tâm Linh"
     },
     {
       "coreHeId": "he_100184",
@@ -3759,7 +3767,11 @@
             ]
           ]
         }
-      ]
+      ],
+      "gate_basic_en": "1x Duelist, 2x Grappler",
+      "gate_basic_vi": "1 Vũ Trang, 2 Giác Đấu",
+      "gate_advanced_en": "1x Duelist, 3x Grappler",
+      "gate_advanced_vi": "1 Vũ Trang, 3 Giác Đấu"
     },
     {
       "coreHeId": "he_100078",
@@ -4857,7 +4869,11 @@
             ]
           ]
         }
-      ]
+      ],
+      "gate_basic_en": "1x Duelist, 1x Grappler, 1x Hi-Tech",
+      "gate_basic_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ",
+      "gate_advanced_en": "1x Duelist, 1x Grappler, 1x Hi-Tech, 1x Esper",
+      "gate_advanced_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ, 1 Tâm Linh"
     },
     {
       "coreHeId": "he_100159",
@@ -5955,7 +5971,11 @@
             ]
           ]
         }
-      ]
+      ],
+      "gate_basic_en": "1x Grappler, 2x Esper",
+      "gate_basic_vi": "1 Giác Đấu, 2 Tâm Linh",
+      "gate_advanced_en": "2x Grappler, 2x Esper",
+      "gate_advanced_vi": "2 Giác Đấu, 2 Tâm Linh"
     },
     {
       "coreHeId": "he_100108",
@@ -7053,7 +7073,11 @@
             ]
           ]
         }
-      ]
+      ],
+      "gate_basic_en": "1x Duelist, 1x Grappler, 1x Hi-Tech",
+      "gate_basic_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ",
+      "gate_advanced_en": "1x Duelist, 1x Grappler, 1x Hi-Tech, 1x Esper",
+      "gate_advanced_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ, 1 Tâm Linh"
     },
     {
       "coreHeId": "he_100045",
@@ -8151,7 +8175,11 @@
             ]
           ]
         }
-      ]
+      ],
+      "gate_basic_en": "1x Duelist, 1x Grappler, 1x Hi-Tech",
+      "gate_basic_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ",
+      "gate_advanced_en": "1x Duelist, 1x Grappler, 1x Hi-Tech, 1x Esper",
+      "gate_advanced_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ, 1 Tâm Linh"
     },
     {
       "coreHeId": "he_100003",
@@ -9249,7 +9277,11 @@
             ]
           ]
         }
-      ]
+      ],
+      "gate_basic_en": "1x Duelist, 1x Grappler, 1x Hi-Tech",
+      "gate_basic_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ",
+      "gate_advanced_en": "1x Duelist, 1x Grappler, 1x Hi-Tech, 1x Esper",
+      "gate_advanced_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ, 1 Tâm Linh"
     },
     {
       "coreHeId": "he_100109",
@@ -10347,7 +10379,11 @@
             ]
           ]
         }
-      ]
+      ],
+      "gate_basic_en": "1x Grappler, 2x Esper",
+      "gate_basic_vi": "1 Giác Đấu, 2 Tâm Linh",
+      "gate_advanced_en": "1x Grappler, 3x Esper",
+      "gate_advanced_vi": "1 Giác Đấu, 3 Tâm Linh"
     },
     {
       "coreHeId": "he_100013",
@@ -11445,7 +11481,11 @@
             ]
           ]
         }
-      ]
+      ],
+      "gate_basic_en": "1x Grappler, 2x Esper",
+      "gate_basic_vi": "1 Giác Đấu, 2 Tâm Linh",
+      "gate_advanced_en": "1x Duelist, 1x Grappler, 2x Esper",
+      "gate_advanced_vi": "1 Vũ Trang, 1 Giác Đấu, 2 Tâm Linh"
     },
     {
       "coreHeId": "he_100029",
@@ -12543,7 +12583,11 @@
             ]
           ]
         }
-      ]
+      ],
+      "gate_basic_en": "1x Duelist, 1x Grappler, 1x Hi-Tech",
+      "gate_basic_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ",
+      "gate_advanced_en": "1x Duelist, 1x Grappler, 1x Hi-Tech, 1x Esper",
+      "gate_advanced_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ, 1 Tâm Linh"
     },
     {
       "coreHeId": "he_100092",
@@ -13641,7 +13685,11 @@
             ]
           ]
         }
-      ]
+      ],
+      "gate_basic_en": "1x Duelist, 1x Grappler, 1x Hi-Tech",
+      "gate_basic_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ",
+      "gate_advanced_en": "1x Duelist, 1x Grappler, 1x Hi-Tech, 1x Esper",
+      "gate_advanced_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ, 1 Tâm Linh"
     },
     {
       "coreHeId": "he_100083",
@@ -14739,7 +14787,11 @@
             ]
           ]
         }
-      ]
+      ],
+      "gate_basic_en": "1x Duelist, 1x Grappler, 1x Hi-Tech",
+      "gate_basic_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ",
+      "gate_advanced_en": "1x Duelist, 1x Grappler, 1x Hi-Tech, 1x Esper",
+      "gate_advanced_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ, 1 Tâm Linh"
     },
     {
       "coreHeId": "he_100001",
@@ -15837,7 +15889,11 @@
             ]
           ]
         }
-      ]
+      ],
+      "gate_basic_en": "1x Duelist, 1x Grappler, 1x Hi-Tech",
+      "gate_basic_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ",
+      "gate_advanced_en": "1x Duelist, 1x Grappler, 1x Hi-Tech, 1x Esper",
+      "gate_advanced_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ, 1 Tâm Linh"
     },
     {
       "coreHeId": "he_100008",
@@ -16935,7 +16991,11 @@
             ]
           ]
         }
-      ]
+      ],
+      "gate_basic_en": "1x Duelist, 1x Grappler, 1x Hi-Tech",
+      "gate_basic_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ",
+      "gate_advanced_en": "1x Duelist, 1x Grappler, 1x Hi-Tech, 1x Esper",
+      "gate_advanced_vi": "1 Vũ Trang, 1 Giác Đấu, 1 Công Nghệ, 1 Tâm Linh"
     }
   ]
 }

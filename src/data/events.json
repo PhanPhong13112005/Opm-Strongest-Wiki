@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "e3",
+    "titleVi": "Chiêu Mộ Giới Hạn: UR+ Atomic Samurai",
+    "titleEn": "Limited Recruitment: UR+ Atomic Samurai",
+    "descriptionVi": "Tham gia sự kiện để có cơ hội chiêu mộ được UR+ Atomic Samurai cực kỳ mạnh mẽ. Đừng bỏ lỡ cơ hội sở hữu kiếm sĩ hàng đầu này!",
+    "descriptionEn": "Participate in the event for a chance to recruit the incredibly powerful UR+ Atomic Samurai. Don't miss out on this top-tier swordsman!",
+    "imageUrl": "/Event/Recruitment/Limited Recruitment UR+ Atomic Samurai.png",
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-12",
+    "category": "main"
+  },
+  {
+    "id": "e9",
+    "titleVi": "Chiêu Mộ Tinh Anh Đặc Biệt: Gale Wind",
+    "titleEn": "Special Elite Recruitment (Gale Wind)",
+    "descriptionVi": "Sự kiện chiêu mộ đặc biệt dành riêng cho Gale Wind. Tăng tỷ lệ nhận được nhân vật có tốc độ cực cao này.",
+    "descriptionEn": "Special recruitment event dedicated to Gale Wind. Increased rates to obtain this ultra-fast character.",
+    "imageUrl": "/Event/Special Elite Recruitment/Special Elite Recruitment (Gale Wind).png",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-12",
+    "category": "main"
+  },
+  {
+    "id": "e10",
+    "titleVi": "Chiêu Mộ Độc Quyền: Kỷ vật UR+ Atomic Samurai",
+    "titleEn": "Exclusive Recruitment (keepsake: UR+ Atomic Samurai)",
+    "descriptionVi": "Vòng quay độc quyền mang đến cơ hội nhận Kỷ vật Thức tỉnh của UR+ Atomic Samurai. Nâng cấp tối đa sức mạnh cho Samurai của bạn!",
+    "descriptionEn": "Exclusive draw bringing a chance to get the Keepsake for UR+ Atomic Samurai. Maximize your Samurai's power!",
+    "imageUrl": "/Event/keepsake/keepsake UR+ Atomic Samurai.png",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-13",
+    "category": "main"
+  },
+  {
+    "id": "e11",
+    "titleVi": "Hộp Quà Bất Ngờ",
+    "titleEn": "Box Perk \\ Surprise Box",
+    "descriptionVi": "Mở Hộp Quà Bất Ngờ mỗi ngày để nhận vô số vật phẩm giá trị. Quà tặng ngẫu nhiên nhưng phần thưởng cực kỳ hấp dẫn.",
+    "descriptionEn": "Open the Surprise Box every day to receive numerous valuable items. Random gifts but incredibly attractive rewards.",
+    "imageUrl": "/Event/Surprise_Box.png",
+    "startDate": "2026-07-10",
+    "endDate": "2026-07-13",
+    "category": "other"
+  },
+  {
+    "id": "e12",
+    "titleVi": "Ngôi Nhà Cầu Nguyện",
+    "titleEn": "House of Wishes",
+    "descriptionVi": "Nơi những điều ước thành hiện thực. Cầu nguyện hàng ngày để tích lũy vật phẩm và đổi lấy các phần thưởng hiếm.",
+    "descriptionEn": "Where wishes come true. Pray daily to accumulate items and exchange them for rare rewards.",
+    "imageUrl": "/Event/House_of_Wishes.png",
+    "startDate": "2026-07-10",
+    "endDate": "2026-07-16",
+    "category": "other"
+  },
+  {
+    "id": "e13",
+    "titleVi": "Nhân Đôi Lợi Ích (Nhiệm Vụ & Thử Thách)",
+    "titleEn": "Double benefit (Daily + Trial)",
+    "descriptionVi": "Cơ hội vàng để cày cuốc! Nhân đôi toàn bộ phần thưởng rơi ra từ Nhiệm vụ Hàng ngày và Thử thách trong thời gian sự kiện.",
+    "descriptionEn": "Golden opportunity to farm! Double all drop rewards from Daily Quests and Trials during the event period.",
+    "imageUrl": "/Event/Double_benefit.png",
+    "startDate": "2026-07-12",
+    "endDate": "2026-07-17",
+    "category": "other"
+  },
+  {
+    "id": "e14",
+    "titleVi": "Hộp Quà Tự Chọn",
+    "titleEn": "Selection Giftbox",
+    "descriptionVi": "Sự kiện đặc biệt cho phép bạn tự do chọn lựa những phần thưởng mong muốn trong các gói quà giới hạn.",
+    "descriptionEn": "Special event allowing you to freely select your desired rewards from limited gift packs.",
+    "imageUrl": "/Event/Selection_Giftbox.png",
+    "startDate": "2026-07-12",
+    "endDate": "2026-07-14",
+    "category": "other"
+  },
+  {
+    "id": "e15",
+    "titleVi": "Vòng Xoay Cầu Nguyện (Calm, Cruel, Defense, Assist)",
+    "titleEn": "Star Wish Rush (Calm, Cruel, Defense, Assist)",
+    "descriptionVi": "Sự kiện Vòng Xoay mang đến các vật phẩm Cốt lõi hệ Calm, Cruel, Defense, và Assist. Xoay ngay để tăng cường đội hình của bạn!",
+    "descriptionEn": "Rush event bringing Core items for Calm, Cruel, Defense, and Assist. Spin now to enhance your formation!",
+    "imageUrl": "/Event/Star Wish Rush 2/Calm, Cruel, Defense, Assist.png",
+    "detailImages": [
+      "/Event/Star Wish Rush 2/detail_1.png",
+      "/Event/Star Wish Rush 2/detail_2.png",
+      "/Event/Star Wish Rush 2/detail_3.png",
+      "/Event/Star Wish Rush 2/detail_4.png",
+      "/Event/Star Wish Rush 2/detail_5.png",
+      "/Event/Star Wish Rush 2/detail_6.png",
+      "/Event/Star Wish Rush 2/detail_7.png"
+    ],
+    "startDate": "2026-07-12",
+    "endDate": "2026-07-17",
+    "category": "main"
+  },
+  {
+    "id": "e17",
+    "titleVi": "Chiêu Mộ Giới Hạn: UR+ Tornado",
+    "titleEn": "Limited Recruitment: UR+ Tornado",
+    "descriptionVi": "Tâm điểm bão tố đã đến! Tham gia chiêu mộ để nhận ngay UR+ Terrible Tornado với sức mạnh tâm linh hủy diệt.",
+    "descriptionEn": "The eye of the storm has arrived! Participate in recruitment to get UR+ Terrible Tornado with devastating psychic power.",
+    "imageUrl": "/Event/Recruitment/Limited Recruitment UR+ Tornado.png",
+    "startDate": "2026-07-15",
+    "endDate": "2026-07-21",
+    "category": "main"
+  },
+  {
+    "id": "e_other_100",
+    "titleVi": "Bingo",
+    "titleEn": "Bingo",
+    "descriptionVi": "Hoàn thành các nhiệm vụ hàng ngày để lật mở bảng Bingo. Nối liền các hàng dọc và ngang để nhận ngay thưởng lớn!",
+    "descriptionEn": "Complete daily tasks to uncover the Bingo board. Clear rows and columns for massive rewards!",
+    "category": "other",
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-31",
+    "imageUrl": "/Event_other/Bingo/Main.png",
+    "sections": [
+      {
+        "id": "General",
+        "titleVi": "Thông tin chung",
+        "titleEn": "General Information",
+        "images": [
+          "/Event_other/Bingo/Detail.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Có thể thay đổi các vị trí mà bạn đã mở ra bằng cách nhấn vào con số ý để đổi vị trí",
+              "descEn": "You can switch positions of activated numbers by clicking on them"
+            }
+          ]
+        ]
+      }
+    ],
+    "detailImages": []
+  },
+  {
+    "id": "e_other_101",
+    "titleVi": "Carnival Gift",
+    "titleEn": "Carnival Gift",
+    "descriptionVi": "Lễ hội ngập tràn quà tặng! Hoàn thành nhiệm vụ từng tuần để nhận điểm năng động và đổi lấy vé chiêu mộ cùng vô số phần quà giới hạn.",
+    "descriptionEn": "A festival full of gifts! Complete weekly tasks to earn activity points and exchange them for recruit vouchers and limited rewards.",
+    "category": "other",
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-31",
+    "imageUrl": "/Event_other/Carnival_Gift/Main.png",
+    "sections": [
+      {
+        "id": "Week",
+        "titleVi": "Tuần 1",
+        "titleEn": "Week 1",
+        "images": [
+          "/Event_other/Carnival_Gift/Week1_1.png",
+          "/Event_other/Carnival_Gift/Week1_2.png",
+          "/Event_other/Carnival_Gift/Week1_3.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Vào Game 2 Ngày",
+              "descEn": "Log in for 2/2d in total"
+            },
+            {
+              "descVi": "Tổng Thương lượng 5 lần",
+              "descEn": "Total participation in club bargaining: 5/5 times"
+            },
+            {
+              "descVi": "Mua hàng tại cửa hàng bí ẩn 5 lần",
+              "descEn": "Total purchases in the mysterious shop: 5/5 times"
+            },
+            {
+              "descVi": "Tham gia Thử thách kẻ chinh phục 100 lần",
+              "descEn": "Total participation in Conqueror Challenge: 100/100 times"
+            }
+          ],
+          [
+            {
+              "descVi": "Tiêu hao tổng cộng 20 Vé Đỏ",
+              "descEn": "Consumed a total of 20/20 Elite Vouchers"
+            },
+            {
+              "descVi": "Đạt tổng năng động 500",
+              "descEn": "Total Activity reaches 500/500"
+            }
+          ],
+          [
+            {
+              "descVi": "Chiêu mộ Lễ hội (USD3.99)",
+              "descEn": "Carnival Recruitment (USD3.99)"
+            },
+            {
+              "descVi": "Carnival Ascension (USD0.99)",
+              "descEn": "Carnival Ascension (USD0.99)"
+            },
+            {
+              "descVi": "Thưởng Lễ hội (600 Kim Cương)",
+              "descEn": "Carnival Bonus (600 Gems)"
+            }
+          ]
+        ]
+      },
+      {
+        "id": "Week",
+        "titleVi": "Tuần 2",
+        "titleEn": "Week 2",
+        "images": [
+          "/Event_other/Carnival_Gift/Week2_1.png",
+          "/Event_other/Carnival_Gift/Week2_2.png",
+          "/Event_other/Carnival_Gift/Week2_3.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Tham gia Đấu trường 50 lần",
+              "descEn": "Total participation in Tournament: 50 times"
+            },
+            {
+              "descVi": "Vào Game 7 Ngày",
+              "descEn": "Log in for 7/7d in total"
+            },
+            {
+              "descVi": "Tổng Thương lượng 15 lần",
+              "descEn": "Total participation in club bargaining: 15 times"
+            },
+            {
+              "descVi": "Huấn luyện khắc nghiệt 15 lần",
+              "descEn": "Total participation in extreme training: 15 times"
+            }
+          ],
+          [
+            {
+              "descVi": "Tiêu hao tổng cộng 40 Vé Đỏ",
+              "descEn": "Consumed a total of 40/40 Elite Vouchers"
+            },
+            {
+              "descVi": "Đạt tổng năng động 1500",
+              "descEn": "Total Activity reaches 1500/1500"
+            }
+          ],
+          [
+            {
+              "descVi": "Chiêu mộ Lễ hội (USD9.99)",
+              "descEn": "Carnival Recruitment (USD9.99)"
+            },
+            {
+              "descVi": "Mở rộng Lễ hội (USD3.99)",
+              "descEn": "Carnival Expansion (USD3.99)"
+            },
+            {
+              "descVi": "Thưởng Lễ hội (600 Kim Cương)",
+              "descEn": "Carnival Bonus (600 Gems)"
+            }
+          ]
+        ]
+      },
+      {
+        "id": "Week",
+        "titleVi": "Tuần 3",
+        "titleEn": "Week 3",
+        "images": [
+          "/Event_other/Carnival_Gift/Week3_1.png",
+          "/Event_other/Carnival_Gift/Week3_2.png",
+          "/Event_other/Carnival_Gift/Week3_3.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Hoàn thành Ải Anh hùng/Ác mộng 50 lần",
+              "descEn": "Total clearance of heroic/nightmare stages: 50 times"
+            },
+            {
+              "descVi": "Vượt Ải Tinh Thông Phái 20 lần",
+              "descEn": "Total clearance of Faction Mastery Trial: 20 times"
+            },
+            {
+              "descVi": "Tiêu hao tổng cộng 60 Vé Đỏ",
+              "descEn": "Consumed a total of 60/60 Elite Vouchers"
+            },
+            {
+              "descVi": "Đạt tổng năng động 1500",
+              "descEn": "Total Activity reaches 1500/1500"
+            }
+          ],
+          [
+            {
+              "descVi": "Vào Game 14 Ngày",
+              "descEn": "Log in for 14d in total"
+            },
+            {
+              "descVi": "Tổng Thương lượng 15 lần",
+              "descEn": "Total participation in club bargaining: 15 times"
+            }
+          ],
+          [
+            {
+              "descVi": "Thưởng Lễ hội (1500 Kim Cương)",
+              "descEn": "Carnival Bonus (1500 Gems)"
+            },
+            {
+              "descVi": "Carnival Ascension (USD9.99)",
+              "descEn": "Carnival Ascension (USD9.99)"
+            },
+            {
+              "descVi": "Carnival Formation (USD17.99)",
+              "descEn": "Carnival Formation (USD17.99)"
+            }
+          ]
+        ]
+      }
+    ],
+    "detailImages": [],
+    "serverLaunchDay": 3
+  },
+  {
+    "id": "e_other_102",
+    "titleVi": "Frenzy Martial Artist",
+    "titleEn": "Frenzy Martial Artist",
+    "descriptionVi": "Thử thách võ thuật đỉnh cao! Thu thập huy hiệu qua các hoạt động để đổi lấy những nguyên liệu bồi dưỡng cực hiếm.",
+    "descriptionEn": "Ultimate martial arts challenge! Collect badges through activities to exchange for extremely rare materials.",
+    "category": "other",
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-31",
+    "imageUrl": "/Event_other/Frenzy_Martial_Artist/Main.png",
+    "sections": [
+      {
+        "id": "General",
+        "titleVi": "Thông tin chung",
+        "titleEn": "General Information",
+        "images": [
+          "/Event_other/Frenzy_Martial_Artist/Character details.png",
+          "/Event_other/Frenzy_Martial_Artist/Detail_core.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Đây là các Vật Phẩm quan trọng bạn có thể nhận",
+              "descEn": "These are the important items you can receive"
+            }
+          ],
+          [
+            {
+              "descVi": "Đá Thức Tỉnh SSR+",
+              "descEn": "SSR+ Awakening Stone"
+            }
+          ]
+        ]
+      },
+      {
+        "id": "Week",
+        "titleVi": "Tuần 1",
+        "titleEn": "Week 1",
+        "images": [
+          "/Event_other/Frenzy_Martial_Artist/Week1_1.png",
+          "/Event_other/Frenzy_Martial_Artist/Week1_2.png",
+          "/Event_other/Frenzy_Martial_Artist/Week1_3.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Mua Thể Lực 20 lần",
+              "descEn": "Purchase Vitality 20x"
+            },
+            {
+              "descVi": "Hoàn thành Huấn luyện khắc nghiệt 18 lần",
+              "descEn": "Clear Extreme Training 18x"
+            },
+            {
+              "descVi": "Tiêu hao tổng cộng 20 Vé Đỏ",
+              "descEn": "Consumed a total of 20 Elite Vouchers"
+            },
+            {
+              "descVi": "Tiêu hao tổng cộng 5000 Kim Cương",
+              "descEn": "Cost a total of 5000 Gems"
+            }
+          ],
+          [
+            {
+              "descVi": "Đạt tổng năng động 500",
+              "descEn": "Total Activity reaches 500"
+            },
+            {
+              "descVi": "Vào Game 1 Ngày",
+              "descEn": "Log in for 1d in total"
+            }
+          ],
+          [
+            {
+              "descVi": "Evolution Stone (1750 Kim Cương)",
+              "descEn": "Evolution Stone (1750 Gems)"
+            },
+            {
+              "descVi": "Martial Artist (USD7.99)",
+              "descEn": "Martial Artist (USD7.99)"
+            },
+            {
+              "descVi": "Martial Artist (USD23.99)",
+              "descEn": "Martial Artist (USD23.99)"
+            }
+          ]
+        ]
+      },
+      {
+        "id": "Week",
+        "titleVi": "Tuần 2",
+        "titleEn": "Week 2",
+        "images": [
+          "/Event_other/Frenzy_Martial_Artist/Week2_1.png",
+          "/Event_other/Frenzy_Martial_Artist/Week2_2.png",
+          "/Event_other/Frenzy_Martial_Artist/Week2_3.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Tiêu hao tổng cộng 10 Vé Tím",
+              "descEn": "Consumed a total of 10 Superb Vouchers"
+            },
+            {
+              "descVi": "Vào Game 6 Ngày",
+              "descEn": "Total log in: 6d"
+            },
+            {
+              "descVi": "Mua Thể Lực 20 lần",
+              "descEn": "Purchase Vitality 20x"
+            },
+            {
+              "descVi": "Tham gia Thử thách kẻ chinh phục 200 lần",
+              "descEn": "Clear Conqueror Challenge 200x"
+            }
+          ],
+          [
+            {
+              "descVi": "Tiêu hao tổng cộng 10000 Kim Cương",
+              "descEn": "Cost a total of 10000 Gems"
+            },
+            {
+              "descVi": "Đạt tổng năng động 1000",
+              "descEn": "Total Activity reaches 1000"
+            }
+          ],
+          [
+            {
+              "descVi": "Evolution Stone (1750 Kim Cương)",
+              "descEn": "Evolution Stone (1750 Gems)"
+            },
+            {
+              "descVi": "Martial Artist (USD14.99)",
+              "descEn": "Martial Artist (USD14.99)"
+            },
+            {
+              "descVi": "Martial Artist (USD30.99)",
+              "descEn": "Martial Artist (USD30.99)"
+            }
+          ]
+        ]
+      }
+    ],
+    "detailImages": [],
+    "serverLaunchDay": 5
+  },
+  {
+    "id": "e_other_103",
+    "titleVi": "Gale Wind Special Training",
+    "titleEn": "Gale Wind Special Training",
+    "descriptionVi": "Khóa huấn luyện đặc biệt của Gale Wind. Vượt qua 7 chặng thử thách khắt khe để nhận vô vàn rương phần thưởng giá trị.",
+    "descriptionEn": "Gale Wind's special training course. Overcome 7 rigorous stages of challenges to receive countless valuable reward chests.",
+    "category": "other",
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-31",
+    "imageUrl": "/Event_other/Gale Wind Special Traning/Main.png",
+    "sections": [
+      {
+        "id": "Part",
+        "titleVi": "Phần 1",
+        "titleEn": "Part 1",
+        "images": [
+          "/Event_other/Gale Wind Special Traning/Special_Training 1_1.png",
+          "/Event_other/Gale Wind Special Traning/Special_Training 1_2.png",
+          "/Event_other/Gale Wind Special Traning/Special_Training 1_3.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Hoàn thành Chương 8 Ải Chính",
+              "descEn": "Complete Chapter 8 of the Main Stage"
+            },
+            {
+              "descVi": "Người chơi đạt Cấp 35",
+              "descEn": "Player reaches Lv. 35"
+            },
+            {
+              "descVi": "Ít nhất một nhân vật đạt Cấp 30",
+              "descEn": "At least one character reaches Lv. 30"
+            },
+            {
+              "descVi": "Có 10 bạn bè",
+              "descEn": "Own 10 friends"
+            }
+          ],
+          [
+            {
+              "descVi": "Gia nhập Câu lạc bộ",
+              "descEn": "Join a Club"
+            },
+            {
+              "descVi": "Kích hoạt Kỹ năng Cốt lõi Nâng cao",
+              "descEn": "Activate Advanced Core Skill"
+            }
+          ],
+          [
+            {
+              "descVi": "Rương phần thưởng 1",
+              "descEn": "Reward Chest 1"
+            }
+          ]
+        ]
+      },
+      {
+        "id": "Part",
+        "titleVi": "Phần 2",
+        "titleEn": "Part 2",
+        "images": [
+          "/Event_other/Gale Wind Special Traning/Special_Training 2_1.png",
+          "/Event_other/Gale Wind Special Traning/Special_Training 2_2.png",
+          "/Event_other/Gale Wind Special Traning/Special_Training 2_3.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Câu lạc bộ đạt Cấp 2",
+              "descEn": "The Club belonged reaches Lv. 2"
+            },
+            {
+              "descVi": "Người chơi đạt Cấp 40",
+              "descEn": "Player reaches Lv. 40"
+            },
+            {
+              "descVi": "Hoàn thành Chương 9 Ải Chính",
+              "descEn": "Complete Chapter 9 of the Main Stage"
+            },
+            {
+              "descVi": "Ít nhất một nhân vật đạt Cấp 35",
+              "descEn": "At least one character reaches Lv. 35"
+            }
+          ],
+          [
+            {
+              "descVi": "Nâng cấp vật phẩm độc quyền của bất kỳ nhân vật nào lên 3 sao",
+              "descEn": "Upgrade any character's exclusive item to 3 stars"
+            },
+            {
+              "descVi": "Hoàn thành Anh hùng x Quái vật Vòng 1 Ải 5",
+              "descEn": "Clear Hero x Monster Round 1 Stage 5"
+            }
+          ],
+          [
+            {
+              "descVi": "Rương phần thưởng 2",
+              "descEn": "Reward Chest 2"
+            }
+          ]
+        ]
+      },
+      {
+        "id": "Part",
+        "titleVi": "Phần 3",
+        "titleEn": "Part 3",
+        "images": [
+          "/Event_other/Gale Wind Special Traning/Special_Training 3_1.png",
+          "/Event_other/Gale Wind Special Traning/Special_Training 3_2.png",
+          "/Event_other/Gale Wind Special Traning/Special_Training 3_3.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Người chơi đạt Cấp 45",
+              "descEn": "Player reaches Lv. 45"
+            },
+            {
+              "descVi": "Hoàn thành Chương 10 Ải Chính",
+              "descEn": "Complete Chapter 10 of the Main Stage"
+            },
+            {
+              "descVi": "Cấp độ Huấn luyện đạt Cấp 40",
+              "descEn": "Training Level reaches Lv. 40"
+            },
+            {
+              "descVi": "Đạt 300 điểm năng động cá nhân trong Câu lạc bộ",
+              "descEn": "Reach 300 personal activity points in the Club belonged"
+            }
+          ],
+          [
+            {
+              "descVi": "Huấn luyện Tinh Thông Phái của bất kỳ nhân vật nào lên bậc 1",
+              "descEn": "Train any character Faction Mastery to 1 tier"
+            },
+            {
+              "descVi": "Hoàn thành Viện Gen Phòng 306",
+              "descEn": "Clear Institute of Genetics Room 306"
+            }
+          ],
+          [
+            {
+              "descVi": "Rương phần thưởng 3",
+              "descEn": "Reward Chest 3"
+            }
+          ]
+        ]
+      },
+      {
+        "id": "Part",
+        "titleVi": "Phần 4",
+        "titleEn": "Part 4",
+        "images": [
+          "/Event_other/Gale Wind Special Traning/Special_Training 4_1.png",
+          "/Event_other/Gale Wind Special Traning/Special_Training 4_2.png",
+          "/Event_other/Gale Wind Special Traning/Special_Training 4_3.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Người chơi đạt Cấp 50",
+              "descEn": "Player reaches Lv. 50"
+            },
+            {
+              "descVi": "Hoàn thành Chương 1 Ải Ác mộng Chính",
+              "descEn": "Complete Chapter 1 of the Main Nightmare Stage"
+            },
+            {
+              "descVi": "Cấp độ Huấn luyện đạt Cấp 45",
+              "descEn": "Training Level reaches Lv. 45"
+            },
+            {
+              "descVi": "Tham gia Cung cấp Đội hình 3 lần",
+              "descEn": "Participate in Formation Supplies 3x"
+            }
+          ],
+          [
+            {
+              "descVi": "Nhận 1 booster bất kỳ",
+              "descEn": "Obtain any 1 booster"
+            },
+            {
+              "descVi": "Bộ sưu tập Đội hình đạt Cấp 1",
+              "descEn": "Formation Catalog reaches Lv. 1"
+            }
+          ],
+          [
+            {
+              "descVi": "Rương phần thưởng 4",
+              "descEn": "Reward Chest 4"
+            }
+          ]
+        ]
+      },
+      {
+        "id": "Part",
+        "titleVi": "Phần 5",
+        "titleEn": "Part 5",
+        "images": [
+          "/Event_other/Gale Wind Special Traning/Special_Training 5_1.png",
+          "/Event_other/Gale Wind Special Traning/Special_Training 5_2.png",
+          "/Event_other/Gale Wind Special Traning/Special_Training 5_3.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Cấp độ Huấn luyện đạt Cấp 50",
+              "descEn": "Training Level reaches Lv. 50"
+            },
+            {
+              "descVi": "Người chơi đạt Cấp 55",
+              "descEn": "Player reaches Lv. 55"
+            },
+            {
+              "descVi": "Hoàn thành Chương 2 Ải Ác mộng Chính",
+              "descEn": "Complete Chapter 2 of the Main Nightmare Stage"
+            },
+            {
+              "descVi": "Câu lạc bộ đạt Cấp 3",
+              "descEn": "The Club belonged reaches Lv. 3"
+            }
+          ],
+          [
+            {
+              "descVi": "Trang bị cho bất kỳ nhân vật nào 1 Thẻ trang bị Cam hoặc cao hơn",
+              "descEn": "Equip any character with 1 Orange or higher Gear Card"
+            },
+            {
+              "descVi": "Thức tỉnh của bất kỳ nhân vật nào đạt 2 sao",
+              "descEn": "Awakening of any character reaches 2 stars"
+            }
+          ],
+          [
+            {
+              "descVi": "Rương phần thưởng 5",
+              "descEn": "Reward Chest 5"
+            }
+          ]
+        ]
+      },
+      {
+        "id": "Part",
+        "titleVi": "Phần 6",
+        "titleEn": "Part 6",
+        "images": [
+          "/Event_other/Gale Wind Special Traning/Special_Training 6_1.png",
+          "/Event_other/Gale Wind Special Traning/Special_Training 6_2.png",
+          "/Event_other/Gale Wind Special Traning/Special_Training 6_3.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Người chơi đạt Cấp 65",
+              "descEn": "Player reaches Lv. 65"
+            },
+            {
+              "descVi": "Hoàn thành Chương 6 Ải Ác mộng Chính",
+              "descEn": "Complete Chapter 6 of the Main Nightmare Stage"
+            },
+            {
+              "descVi": "Cấp độ Huấn luyện đạt Cấp 60",
+              "descEn": "Training Level reaches Lv. 60"
+            },
+            {
+              "descVi": "Trang bị cho bất kỳ nhân vật nào 3 Thẻ Buff Tím hoặc cao hơn",
+              "descEn": "Equip any character with 3 Purple or higher Buff"
+            }
+          ],
+          [
+            {
+              "descVi": "Sở hữu bất kỳ Thẻ Buff nào có 5 dòng thuộc tính",
+              "descEn": "Own any Buff with 5 affixes"
+            },
+            {
+              "descVi": "Sở hữu bất kỳ Thẻ Buff nào có 1 hiệu ứng chuyển hóa Tốc độ (SPD Bonus)",
+              "descEn": "Own any Buff with 1 SPD Bonus transform effect"
+            }
+          ],
+          [
+            {
+              "descVi": "Rương phần thưởng 6",
+              "descEn": "Reward Chest 6"
+            }
+          ]
+        ]
+      },
+      {
+        "id": "Part",
+        "titleVi": "Phần 7",
+        "titleEn": "Part 7",
+        "images": [
+          "/Event_other/Gale Wind Special Traning/Special_Training 7_1.png",
+          "/Event_other/Gale Wind Special Traning/Special_Training 7_2.png",
+          "/Event_other/Gale Wind Special Traning/Special_Training 7_3.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Người chơi đạt Cấp 70",
+              "descEn": "Player reaches Lv. 70"
+            },
+            {
+              "descVi": "Hoàn thành Chương 7 Ải Ác mộng Chính",
+              "descEn": "Complete Chapter 7 of the Main Nightmare Stage"
+            },
+            {
+              "descVi": "Cấp độ Huấn luyện đạt Cấp 65",
+              "descEn": "Training Level reaches Lv. 65"
+            },
+            {
+              "descVi": "Kích hoạt Khiên xanh",
+              "descEn": "Activate Undying Shield"
+            }
+          ],
+          [
+            {
+              "descVi": "Kích hoạt Kiếm sắc",
+              "descEn": "Activate Sharp Blade"
+            },
+            {
+              "descVi": "Kích hoạt Tuyệt chiêu - Kiếm sắc",
+              "descEn": "Activate Ultimate - Sharp Blade"
+            }
+          ],
+          [
+            {
+              "descVi": "Rương phần thưởng 7",
+              "descEn": "Reward Chest 7"
+            }
+          ]
+        ]
+      }
+    ],
+    "detailImages": [],
+    "serverLaunchDay": 8
+  },
+  {
+    "id": "e_other_104",
+    "titleVi": "Monday Gifts",
+    "titleEn": "Monday Gifts",
+    "descriptionVi": "Khởi đầu tuần mới đầy hứng khởi với phần quà đặc biệt khi đăng nhập vào mỗi Thứ Hai hàng tuần!",
+    "descriptionEn": "Start the new week with excitement by claiming special login gifts every Monday!",
+    "category": "other",
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-31",
+    "imageUrl": "/Event_other/Monday_Gìts/Main.png",
+    "sections": [],
+    "detailImages": []
+  },
+  {
+    "id": "e_other_105",
+    "titleVi": "Star Wish Sprint",
+    "titleEn": "Star Wish Sprint",
+    "descriptionVi": "Chỉ Ra mắt 1 lần",
+    "descriptionEn": "Launches only once",
+    "category": "other",
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-31",
+    "imageUrl": "/Event_other/Star_Wish_Sprint/Main.png",
+    "sections": [
+      {
+        "id": "General",
+        "titleVi": "Thông tin chung",
+        "titleEn": "General Information",
+        "images": [
+          "/Event_other/Star_Wish_Sprint/Detail_1.png",
+          "/Event_other/Star_Wish_Sprint/Detail_2.png",
+          "/Event_other/Star_Wish_Sprint/Detail_3.png",
+          "/Event_other/Star_Wish_Sprint/Detail_4.png",
+          "/Event_other/Star_Wish_Sprint/Detail_5.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Tiêu hao Vé Tím đạt mốc 60, 80, 100 vé.",
+              "descEn": "Consume 60, 80, 100 Superb Vouchers."
+            }
+          ],
+          [
+            {
+              "descVi": "Tiêu hao Vé Tím đạt mốc 40, 60, 80 vé.",
+              "descEn": "Consume 40, 60, 80 Superb Vouchers."
+            }
+          ],
+          [
+            {
+              "descVi": "Gói Nạp Đặc Biệt: Nhận miễn phí 300 kim cương mỗi ngày và mua các gói giới hạn giá rẻ.",
+              "descEn": "Special Packs: Claim 300 free diamonds daily and purchase cheap limited packs."
+            }
+          ],
+          [
+            {
+              "descVi": "Gói Nạp Cao Cấp: Ưu đãi cực lớn với lượng Kim cương và Vé Tím khổng lồ.",
+              "descEn": "Premium Packs: Massive discounts with huge amounts of Diamonds and Superb Vouchers."
+            }
+          ],
+          [
+            {
+              "descVi": "Đua Top Bảng Xếp Hạng: Tích lũy điểm để lọt vào Top và nhận Sao Cầu Nguyện, Thẻ Chọn Nhân Vật và hàng ngàn Kim Cương.",
+              "descEn": "Leaderboard Ranking: Accumulate points to rank up and receive Wish Stars, Character Cards, and thousands of Diamonds."
+            }
+          ]
+        ]
+      }
+    ],
+    "detailImages": [],
+    "serverLaunchDay": 8
+  },
+  {
+    "id": "e_other_106",
+    "titleVi": "Supershare",
+    "titleEn": "Supershare",
+    "descriptionVi": "Chia sẻ sự kiện lên mạng xã hội để nhận ngay lượng lớn kim cương và phần quà miễn phí mỗi ngày.",
+    "descriptionEn": "Share the event on social media to instantly receive gems and free daily gifts.",
+    "category": "other",
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-31",
+    "imageUrl": "/Event_other/Supershare/Main.png",
+    "sections": [
+      {
+        "id": "General",
+        "titleVi": "Nhiệm vụ Sự kiện",
+        "titleEn": "Event Tasks",
+        "images": [],
+        "tasks": [
+          [
+            {
+              "descVi": "Chia sẻ Game 1 lần Lên Mạng Xã Hội",
+              "descEn": "Share the game 1 time on Social Media"
+            },
+            {
+              "descVi": "Chia sẻ 1 Lần khi mở tranh",
+              "descEn": "Combine and share Memories 1x"
+            },
+            {
+              "descVi": "Chia sẻ 3 Lần khi mở tranh",
+              "descEn": "Combine and share Memories 3x"
+            },
+            {
+              "descVi": "Chia sẻ 1 Lần khi Ra tướng SR",
+              "descEn": "Recruit and share SR characters 1x"
+            },
+            {
+              "descVi": "Chia sẻ 3 Lần khi Ra tướng SR",
+              "descEn": "Recruit and share SR characters 3x"
+            }
+          ]
+        ]
+      }
+    ],
+    "detailImages": []
+  },
+  {
+    "id": "e_other_107",
+    "titleVi": "Terrible Tornado's Blessing",
+    "titleEn": "Terrible Tornado's Blessing",
+    "descriptionVi": "Nhận 1 Rương Miễn Phí mỗi ngày trong suốt thời gian diễn ra sự kiện.\n\nDùng Coupon hoặc nạp thường sẽ được tính",
+    "descriptionEn": "Claim 1 free chest every day during event.\n\nUsing Coupons or normal top-up will be counted",
+    "category": "other",
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-31",
+    "imageUrl": "/Event_other/Terrible_Tornado's_Blessing/Main.png",
+    "sections": [
+      {
+        "id": "General",
+        "titleVi": "Thông tin chung",
+        "titleEn": "General Information",
+        "images": [
+          "/Event_other/Terrible_Tornado's_Blessing/Detail_1.png",
+          "/Event_other/Terrible_Tornado's_Blessing/Detail_2.png",
+          "/Event_other/Terrible_Tornado's_Blessing/Detail_3.png",
+          "/Event_other/Terrible_Tornado's_Blessing/Detail_4.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Tích lũy nạp đạt mốc 6, 30, 98, 168 Funds.",
+              "descEn": "Accumulate recharge of 6, 30, 98, 168 Funds."
+            }
+          ],
+          [
+            {
+              "descVi": "Tích lũy nạp đạt mốc 168, 288, 688, 1188 Funds.",
+              "descEn": "Accumulate recharge of 168, 288, 688, 1188 Funds."
+            }
+          ],
+          [
+            {
+              "descVi": "Tích lũy nạp đạt mốc 1188, 1688, 2288, 2888 Funds.",
+              "descEn": "Accumulate recharge of 1188, 1688, 2288, 2888 Funds."
+            }
+          ],
+          [
+            {
+              "descVi": "Tổng fund bạn cần tiêu là: 2888 Funds.",
+              "descEn": "The total funds you need to spend is: 2888 Funds."
+            }
+          ]
+        ]
+      }
+    ],
+    "detailImages": [],
+    "serverLaunchDay": 1
+  },
+  {
+    "id": "e_other_108",
+    "titleVi": "Whac-A Mole",
+    "titleEn": "Whac-A Mole",
+    "descriptionVi": "Trò chơi Đập Chuột vui nhộn đã quay trở lại. Nhanh tay đập trúng mục tiêu để tích lũy điểm và đổi quà thả ga!",
+    "descriptionEn": "The fun Whac-A-Mole game is back. Quickly hit the targets to accumulate points and exchange for unlimited rewards!",
+    "category": "other",
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-31",
+    "imageUrl": "/Event_other/Whac-A_Mole/Main.png",
+    "sections": [
+      {
+        "id": "General",
+        "titleVi": "Thông tin chung",
+        "titleEn": "General Information",
+        "images": [
+          "/Event_other/Whac-A_Mole/Detail.png"
+        ],
+        "tasks": [
+          [
+            {
+              "descVi": "Chọn tối đa 2 vật phẩm để đập",
+              "descEn": "Choose up to 2 items to whack"
+            },
+            {
+              "descVi": "Mỗi khi Tiêu 7 fund sẽ được x1 đập chuột (Búa đỏ). Mỗi khi Tiêu Trên 14 fund sẽ được x2 Đập chuột (Búa Vàng).",
+              "descEn": "Every 7 Funds spent gives x1 whack (Red Hammer). Every 14+ Funds spent gives x2 whacks (Gold Hammer)."
+            }
+          ]
+        ]
+      }
+    ],
+    "detailImages": []
+  }
+]

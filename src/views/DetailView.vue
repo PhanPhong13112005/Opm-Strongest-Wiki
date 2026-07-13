@@ -197,7 +197,21 @@ const skillCategories = computed(() => {
   return tabs.filter(tab => getSkillsByType(tab.key).length > 0)
 })
 
+const skillTransitionName = ref('fade')
+const availableSkillTabsList = ['basic', 'ult', 'passive', 'awaken']
+
 const switchTab = (category) => {
+  const oldIndex = availableSkillTabsList.indexOf(activeSkillTab.value)
+  const newIndex = availableSkillTabsList.indexOf(category)
+  
+  if (newIndex > oldIndex) {
+    skillTransitionName.value = 'slide-left'
+  } else if (newIndex < oldIndex) {
+    skillTransitionName.value = 'slide-right'
+  } else {
+    skillTransitionName.value = 'fade'
+  }
+
   activeSkillTab.value = category
   const skillsInTab = getSkillsByType(category)
   if (skillsInTab.length > 0) {
@@ -538,7 +552,8 @@ onMounted(() => {
       </div>
 
       <!-- TAB CONTENT -->
-      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 bg-[#0d0e14] p-6 rounded-2xl border border-gray-800 shadow-inner">
+      <transition :name="skillTransitionName" mode="out-in">
+        <div :key="activeSkillTab" class="grid grid-cols-1 lg:grid-cols-5 gap-8 bg-[#0d0e14] p-6 rounded-2xl border border-gray-800 shadow-inner">
         
         <!-- LEFT: ANIMATION PLAYER -->
         <div class="lg:col-span-2 relative w-full aspect-video bg-[#05060a] rounded-xl border border-gray-800 overflow-hidden shadow-2xl flex items-center justify-center group">
@@ -630,6 +645,7 @@ onMounted(() => {
         </div>
 
       </div>
+    </transition>
     </div>
   
     <!-- EFFECT GLOSSARY -->
@@ -665,14 +681,46 @@ onMounted(() => {
   width: 6px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #12131a;
-  border-radius: 4px;
+  background: #0b0c10;
+  border-radius: 8px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: #333;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active,
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-left-enter-from {
+  opacity: 0;
+  transform: translateX(30px);
+}
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.slide-right-enter-from {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
 }
 </style>

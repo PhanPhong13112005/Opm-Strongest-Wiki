@@ -3293,7 +3293,7 @@
     "name": "Hellfire Flame",
     "tier": "UR",
     "type": "Vũ Trang",
-    "faction": "Tội Phạm",
+    "faction": "Quái Nhân",
     "roles": [
       "Sát Thương (Công)",
       "Hồi Phục",
@@ -3398,7 +3398,7 @@
         "desc": "Bậc PvP của Thiêu Đốt — sát thương liên tục mạnh hơn, khó giải hơn."
       }
     ],
-    "classLevel": "Outlaw",
+    "classLevel": "Demon",
     "releaseSea": "01/03/2025"
   },
   {
@@ -3542,7 +3542,7 @@
     "imageURL": "/Characters/Gale Wind (UR)/UR.png",
     "tier": "UR",
     "type": "Giác Đấu",
-    "faction": "Tội Phạm",
+    "faction": "Quái Nhân",
     "roles": [
       "Khống Chế"
     ],
@@ -3657,7 +3657,7 @@
       "Debuff",
       "Tạo Khiên"
     ],
-    "classLevel": "Outlaw",
+    "classLevel": "Demon",
     "releaseSea": "01/01/2025"
   },
   {
@@ -8496,7 +8496,7 @@
     "keepsakeIcon": "/Characters/Gale Wind (SSR)/Keepsake_SSR.png",
     "releaseDate": "01/04/2022",
     "class": "Demon",
-    "classLevel": "Dragon",
+    "classLevel": "Demon",
     "releaseSea": "01/01/2022",
     "releaseTrung": "01/09/2021"
   },
@@ -9118,7 +9118,7 @@
     "keepsakeIcon": "/Characters/Hellfire Flame (SSR)/Keepsake_SSR.png",
     "releaseDate": "01/07/2022",
     "class": "Demon",
-    "classLevel": "Dragon"
+    "classLevel": "Demon"
   },
   {
     "id": "100009-ssr",
@@ -13356,7 +13356,7 @@
     ],
     "effects": [],
     "keepsakeIcon": "/Characters/Eyelashes (R)/Keepsake_R.png",
-    "classLevel": "Demon"
+    "classLevel": "B"
   },
   {
     "id": "100033-r",
@@ -14152,7 +14152,7 @@
     "tier": "N",
     "imageURL": "/Characters/Clone (N)/N.png",
     "type": "Công Nghệ",
-    "faction": "Anh Hùng",
+    "faction": "Tội Phạm",
     "debut": null,
     "keepsakeIcon": "/Characters/Clone (N)/Keepsake_N.png",
     "effects": [],
@@ -14360,7 +14360,7 @@
     "tier": "N",
     "imageURL": "/Characters/Don Pacino (N)/N.png",
     "type": "Vũ Trang",
-    "faction": "Anh Hùng",
+    "faction": "Tội Phạm",
     "debut": null,
     "keepsakeIcon": "/Characters/Don Pacino (N)/Keepsake_N.png",
     "effects": [],
@@ -14476,7 +14476,7 @@
     "imageURL": "/Characters/Paradiser Footsoldier (N)/N.png",
     "tier": "N",
     "type": "Công Nghệ",
-    "faction": "Anh Hùng",
+    "faction": "Tội Phạm",
     "roles": [
       "Đa Dụng"
     ],
@@ -14567,7 +14567,7 @@
     "tier": "N",
     "imageURL": "/Characters/Paradiser Thug (N)/N.png",
     "type": "Công Nghệ",
-    "faction": "Anh Hùng",
+    "faction": "Tội Phạm",
     "debut": null,
     "keepsakeIcon": "/Characters/Paradiser Thug (N)/Keepsake_N.png",
     "effects": [],
@@ -14619,7 +14619,7 @@
     "tier": "N",
     "imageURL": "/Characters/Paradiser Trooper (N)/N.png",
     "type": "Công Nghệ",
-    "faction": "Anh Hùng",
+    "faction": "Tội Phạm",
     "debut": null,
     "keepsakeIcon": "/Characters/Paradiser Trooper (N)/Keepsake_N.png",
     "effects": [],

@@ -3,10 +3,10 @@
     <div class="mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
       <div>
         <h1 class="text-3xl font-black uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-opm-gold to-yellow-200 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
-          Phòng Nghiên Cứu
+          {{ $t('corelab.title') }}
         </h1>
         <p class="text-gray-400 mt-2 text-sm max-w-2xl">
-          Hệ Core (Phòng thí nghiệm) — tài nguyên cần để nâng core và các buff mở ra ở từng level.
+          {{ $t('corelab.desc') }}
         </p>
       </div>
       
@@ -15,7 +15,7 @@
         <button 
           v-for="hero in heroes" 
           :key="hero.coreHeId"
-          @click="selectedHeroId = hero.coreHeId"
+          @click="selectHero(hero)"
           class="relative w-12 h-12 sm:w-14 sm:h-14 rounded-lg overflow-hidden border-2 transition-all duration-200 focus:outline-none bg-[#05060a]"
           :class="selectedHeroId === hero.coreHeId ? 'border-opm-gold scale-110 shadow-[0_0_10px_rgba(255,215,0,0.5)] z-10' : 'border-gray-700 opacity-60 hover:opacity-100 hover:border-gray-500'"
           :title="hero.name"
@@ -26,7 +26,9 @@
     </div>
 
     <!-- Active Hero Card -->
-    <div v-if="activeHero" class="bg-gradient-to-r from-[#1a1c23] to-[#0f111a] rounded-2xl p-6 mb-8 border border-gray-800 shadow-2xl relative overflow-hidden flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+    <transition :name="coreTransition" mode="out-in">
+      <div :key="selectedHeroId" v-if="activeHero">
+        <div class="bg-gradient-to-r from-[#1a1c23] to-[#0f111a] rounded-2xl p-6 mb-8 border border-gray-800 shadow-2xl relative overflow-hidden flex flex-col sm:flex-row gap-6 items-center sm:items-start">
       <!-- Glow effect -->
       <div class="absolute -top-20 -left-20 w-64 h-64 bg-opm-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -37,25 +39,25 @@
         <h2 class="text-2xl font-bold text-white uppercase tracking-wider mb-2 flex flex-wrap items-center justify-center sm:justify-start gap-2">
           {{ activeHero.name }}
           <span v-if="activeHero.type" class="px-2 py-0.5 rounded text-[10px] font-bold tracking-widest bg-gray-800 border border-gray-600 text-gray-300">
-            {{ activeHero.type }}
+            {{ getTypeTranslation(activeHero.type) }}
           </span>
           <span v-if="activeHero.faction" class="px-2 py-0.5 rounded text-[10px] font-bold tracking-widest bg-gray-800 border border-gray-600 text-gray-300">
-            {{ activeHero.faction }}
+            {{ getFactionTranslation(activeHero.faction) }}
           </span>
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 w-full">
           <div class="bg-[#05060a]/50 p-3 rounded-lg border border-gray-800/50 backdrop-blur-sm">
-            <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-1">Kỹ Năng Core</div>
-            <div class="text-sm font-bold text-opm-gold">{{ activeHero.coreName }}</div>
+            <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-1">{{ $t('corelab.coreSkill') }}</div>
+            <div class="text-sm font-bold text-opm-gold">{{ activeHero['coreName_' + $i18n.locale] || activeHero.coreName }}</div>
           </div>
           <div class="bg-[#05060a]/50 p-3 rounded-lg border border-gray-800/50 backdrop-blur-sm">
-            <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-1">Đ.Kiện Kích Hoạt Cơ Bản</div>
-            <div class="text-sm text-gray-300">{{ formatUnlockCondition(activeHero.gate_vi) }}</div>
+            <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-1">{{ $t('corelab.basicCondition') }}</div>
+            <div class="text-sm text-gray-300">{{ formatUnlockCondition(activeHero['gate_basic_' + $i18n.locale]) }}</div>
           </div>
           <div class="bg-[#05060a]/50 p-3 rounded-lg border border-gray-800/50 backdrop-blur-sm">
-            <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-1">Đ.Kiện Kích Hoạt Nâng Cao</div>
-            <div class="text-sm text-gray-300">{{ formatUnlockCondition(activeHero.gate_vi) }}</div>
+            <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-1">{{ $t('corelab.advancedCondition') }}</div>
+            <div class="text-sm text-gray-300">{{ formatUnlockCondition(activeHero['gate_advanced_' + $i18n.locale]) }}</div>
           </div>
         </div>
       </div>
@@ -70,12 +72,12 @@
         <div class="bg-[#1a1c23] rounded-2xl p-6 border border-gray-800 shadow-xl">
           <h3 class="text-sm font-black uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2">
             <div class="w-1.5 h-1.5 bg-opm-gold rounded-full"></div>
-            Cấp Độ Tính Toán
+            {{ $t('corelab.calcLevel') }}
           </h3>
 
           <div class="flex items-center gap-2 sm:gap-4 mb-6">
             <div class="flex-1">
-              <label class="block text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-2">Từ Level</label>
+              <label class="block text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-2">{{ $t('corelab.fromLevel') }}</label>
               <div class="flex items-center bg-[#05060a] rounded-lg border border-gray-700 overflow-hidden">
                 <button @click="fromLevel = Math.max(0, fromLevel - 1)" class="px-2 sm:px-3 py-2 text-gray-400 hover:text-white hover:bg-gray-800 transition-colors">-</button>
                 <input type="number" v-model.number="fromLevel" class="w-full bg-transparent text-center text-white font-bold py-2 focus:outline-none" min="0" :max="toLevel">
@@ -84,7 +86,7 @@
             </div>
             <div class="text-gray-600 font-bold mt-6">→</div>
             <div class="flex-1">
-              <label class="block text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-2">Đến Level</label>
+              <label class="block text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-2">{{ $t('corelab.toLevel') }}</label>
               <div class="flex items-center bg-[#05060a] rounded-lg border border-gray-700 overflow-hidden">
                 <button @click="toLevel = Math.max(fromLevel, toLevel - 1)" class="px-2 sm:px-3 py-2 text-gray-400 hover:text-white hover:bg-gray-800 transition-colors">-</button>
                 <input type="number" v-model.number="toLevel" class="w-full bg-transparent text-center text-white font-bold py-2 focus:outline-none" :min="fromLevel" :max="activeHero.maxLv">
@@ -95,7 +97,7 @@
 
           <!-- Quick Jump Buttons -->
           <div>
-            <label class="block text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-3">Mốc Nâng Cấp Nhanh</label>
+            <label class="block text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-3">{{ $t('corelab.quickUpgrade') }}</label>
             <div class="flex flex-wrap gap-2">
               <button 
                 v-for="lv in [...activeHero.milestones, activeHero.maxLv]" 
@@ -114,11 +116,11 @@
         <div class="bg-[#1a1c23] rounded-2xl p-6 border border-gray-800 shadow-xl">
           <h3 class="text-sm font-black uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2">
             <div class="w-1.5 h-1.5 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.8)]"></div>
-            Tổng Tài Nguyên Cần
+            {{ $t('corelab.totalResources') }}
           </h3>
           
           <div v-if="totalResources.length === 0" class="text-center py-8 text-sm text-gray-500">
-            Chưa chọn khoảng cấp độ để tính toán.
+            {{ $t('corelab.noResources') }}
           </div>
           
           <div v-else class="grid grid-cols-2 gap-3">
@@ -139,7 +141,7 @@
         <div class="bg-[#1a1c23] rounded-2xl p-6 border border-gray-800 shadow-xl">
           <h3 class="text-sm font-black uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2">
             <div class="w-1.5 h-1.5 bg-blue-500 rounded-full shadow-[0_0_8px_rgba(59,130,246,0.8)]"></div>
-            Linh Kiện Cần (6 Loại)
+            {{ $t('corelab.partsRequired') }}
           </h3>
           
           <div class="grid grid-cols-3 gap-3">
@@ -158,11 +160,11 @@
         <div class="bg-[#1a1c23] rounded-2xl p-6 border border-gray-800 shadow-xl h-full">
           <h3 class="text-sm font-black uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2">
             <div class="w-1.5 h-1.5 bg-purple-500 rounded-full shadow-[0_0_8px_rgba(168,85,247,0.8)]"></div>
-            Buff Nhận Được
+            {{ $t('corelab.buffsReceived') }}
           </h3>
 
           <div v-if="unlockedLevels.length === 0" class="text-center py-12 text-gray-500 bg-[#05060a] rounded-xl border border-gray-800 border-dashed">
-            Chưa có buff nào được mở khóa trong khoảng cấp độ này.
+            {{ $t('corelab.noBuffs') }}
           </div>
 
           <div v-else class="space-y-4 max-h-[800px] overflow-y-auto pr-2 custom-scrollbar">
@@ -184,19 +186,19 @@
                   <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2 mb-1">
                     <div class="flex items-center gap-2 sm:gap-3">
                       <div v-if="lvl.isMilestone && lvl.milestoneIcon" class="w-8 h-8 rounded bg-gray-900 border border-gray-700 flex items-center justify-center overflow-hidden flex-shrink-0 shadow-[0_0_8px_rgba(168,85,247,0.3)]">
-                        <img :src="getMilestoneIcon(lvl.milestoneIcon, activeHero)" :alt="lvl.coreName_vi" class="w-full h-full object-cover">
+                        <img :src="getMilestoneIcon(lvl.milestoneIcon, activeHero)" :alt="lvl['coreName_' + $i18n.locale] || lvl.coreName_vi" class="w-full h-full object-cover">
                       </div>
                       <span class="font-bold text-sm sm:text-base" :class="lvl.isMilestone ? 'text-purple-300' : 'text-gray-300'">
-                        {{ lvl.reward_vi }}
+                        {{ lvl['reward_' + $i18n.locale] || lvl.reward_vi }}
                       </span>
                     </div>
                     <span v-if="lvl.isMilestone" class="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-purple-400 bg-purple-900/50 px-2 py-0.5 rounded border border-purple-500/30 self-start sm:self-auto flex-shrink-0">
-                      Mốc Quan Trọng
+                      {{ $t('corelab.milestone') }}
                     </span>
                   </div>
 
                   <!-- Description Box -->
-                  <div v-if="lvl.coreEffect_vi" class="mt-3 text-[13px] sm:text-sm text-[#d1d5db] bg-[#121318] p-3 sm:p-4 rounded border border-gray-700/60 leading-relaxed shadow-inner break-words" v-html="formatCoreEffect(lvl.coreEffect_vi, activeHero.gate_vi)"></div>
+                  <div v-if="lvl['coreEffect_' + $i18n.locale] || lvl.coreEffect_vi" class="mt-3 text-[13px] sm:text-sm text-[#d1d5db] bg-[#121318] p-3 sm:p-4 rounded border border-gray-700/60 leading-relaxed shadow-inner break-words" v-html="formatCoreEffect(lvl['coreEffect_' + $i18n.locale] || lvl.coreEffect_vi, activeHero['gate_basic_' + $i18n.locale], activeHero['gate_advanced_' + $i18n.locale])"></div>
                 </div>
               </div>
             </div>
@@ -204,17 +206,22 @@
         </div>
       </div>
     </div>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script setup>
 import { ref, computed, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 import coreLabData from '@/data/coreLab.json'
 
+const { t, locale } = useI18n()
 const heroes = coreLabData.heroes || []
 const items = coreLabData.items || {}
 
 const selectedHeroId = ref(heroes.length > 0 ? heroes[0].coreHeId : null)
+const coreTransition = ref('fade')
 const fromLevel = ref(0)
 const toLevel = ref(4)
 
@@ -245,6 +252,14 @@ const activeHero = computed(() => {
   return heroes.find(h => h.coreHeId === selectedHeroId.value) || null
 })
 
+const selectHero = (hero) => {
+  if (hero.coreHeId === selectedHeroId.value) return
+  const oldIdx = heroes.findIndex(h => h.coreHeId === selectedHeroId.value)
+  const newIdx = heroes.findIndex(h => h.coreHeId === hero.coreHeId)
+  coreTransition.value = newIdx > oldIdx ? 'slide-left' : 'slide-right'
+  selectedHeroId.value = hero.coreHeId
+}
+
 // Ensures fromLevel is always <= toLevel and toLevel <= maxLv
 watch(activeHero, (newHero) => {
   if (newHero) {
@@ -265,49 +280,54 @@ watch([fromLevel, toLevel], ([newFrom, newTo]) => {
 })
 
 // Calculate total resources for the selected level range
-const totalResources = computed(() => {
-  if (!activeHero.value || fromLevel.value >= toLevel.value) return []
-  
-  const resourceMap = {}
-  
-  // Levels in the hero's data are 1-indexed (lv: 1 is the cost from 0->1)
-  const levelsToCalculate = activeHero.value.levels.filter(
-    lvl => lvl.lv > fromLevel.value && lvl.lv <= toLevel.value
-  )
-  
-  levelsToCalculate.forEach(lvl => {
-    // Add up generic costs (like Gold, Research Notes, etc.)
-    if (lvl.cost) {
-      lvl.cost.forEach(([itemId, amount]) => {
-        resourceMap[itemId] = (resourceMap[itemId] || 0) + amount
+    const totalResources = computed(() => {
+      if (!activeHero.value || fromLevel.value >= toLevel.value) return []
+      
+      const resourceMap = {}
+      
+      unlockedLevels.value.forEach(lvl => {
+        // Add up Gold and general resources
+        if (lvl.cost) {
+          lvl.cost.forEach(([itemId, amount]) => {
+            resourceMap[itemId] = (resourceMap[itemId] || 0) + amount
+          })
+        }
+        
+        // Add up specific component costs
+        if (lvl.comp) {
+          lvl.comp.forEach(([itemId, amount]) => {
+            resourceMap[itemId] = (resourceMap[itemId] || 0) + amount
+          })
+        }
       })
-    }
-    // Add up specific component costs
-    if (lvl.comp) {
-      lvl.comp.forEach(([itemId, amount]) => {
-        resourceMap[itemId] = (resourceMap[itemId] || 0) + amount
+
+      const result = Object.keys(resourceMap).map(itemId => {
+        if (itemId === '0') {
+          return {
+            id: itemId,
+            name: t('corelab.gold'),
+            icon: '/Core_Skill/Items/gold.png',
+            amount: resourceMap[itemId]
+          }
+        }
+        
+        const itemData = items[itemId] || {}
+        return {
+          id: itemId,
+          name: itemData[locale.value] || itemData.vi || `Item ${itemId}`,
+          icon: getItemIcon(itemId, activeHero.value),
+          amount: resourceMap[itemId]
+        }
       })
-    }
-  })
-  
-  // Format into an array
-  const result = Object.keys(resourceMap).map(itemId => {
-    const itemData = items[itemId] || {}
-    return {
-      id: itemId,
-      name: itemData.vi || `Item ${itemId}`,
-      icon: getItemIcon(itemId, activeHero.value),
-      amount: resourceMap[itemId]
-    }
-  })
-  
-  // Sort: Gold ("0") last, then by amount descending
-  return result.sort((a, b) => {
-    if (a.id === '0') return 1
-    if (b.id === '0') return -1
-    return b.amount - a.amount
-  })
-})
+      
+      // Sort: Gold ("0") last, then by amount descending
+      return result.sort((a, b) => {
+        if (a.id === '0') return 1
+        if (b.id === '0') return -1
+        return b.amount - a.amount
+      })
+    })
+
 
 const unlockedLevels = computed(() => {
   if (!activeHero.value || fromLevel.value >= toLevel.value) return []
@@ -317,29 +337,38 @@ const unlockedLevels = computed(() => {
 })
 
 const formatUnlockCondition = (text) => {
-  if (!text) return '';
-  return text.replace(/([0-9]+)[x×]\s*/g, (match, p1) => {
+  if (!text) return t('corelab.tbd');
+  return text.replace(/([0-9]+)[x×]?\s*/g, (match, p1) => {
     if (p1 === '1') return '';
     return p1 + ' ';
   }).replace(/\s*\+\s*/g, ', ');
 }
 
-const formatCoreEffect = (text, unlockCondition) => {
-  if (!text) return 'Đang cập nhật';
+const formatCoreEffect = (text, basicCondition, advancedCondition) => {
+  if (!text) return t('corelab.tbd');
   
-  let formattedCondition = formatUnlockCondition(unlockCondition);
+  let formattedBasic = formatUnlockCondition(basicCondition);
+  let formattedAdvanced = formatUnlockCondition(advancedCondition);
 
+  const basicEffectStr = t('corelab.basicEffect');
+  const advancedEffectStr = t('corelab.advancedEffect');
+  const conditionStr = t('corelab.condition');
+  const deployStr = t('corelab.deploy');
   
-  const conditionHtml = formattedCondition 
-    ? `<br/><span class="text-[#c4774a] font-bold mt-1 inline-block">[Điều kiện]:</span><span class="text-[#a0a5b1] font-normal"> Ra trận ${formattedCondition}.</span>` 
+  const conditionBasicHtml = formattedBasic 
+    ? `<br/><span class="text-[#c4774a] font-bold mt-1 inline-block">${conditionStr}:</span><span class="text-[#a0a5b1] font-normal"> ${deployStr} ${formattedBasic}.</span>` 
+    : '';
+
+  const conditionAdvancedHtml = formattedAdvanced 
+    ? `<br/><span class="text-[#c4774a] font-bold mt-1 inline-block">${conditionStr}:</span><span class="text-[#a0a5b1] font-normal"> ${deployStr} ${formattedAdvanced}.</span>` 
     : '';
 
   let formatted = text
-    .replace(/\[(Cơ bản|Hiệu quả sơ cấp|Basic Effect|Hiệu ứng cơ bản|Basic)\]:?\s*/g, `<span class="text-[#c4774a] font-bold">[Hiệu quả sơ cấp]:</span> `)
-    .replace(/\s*\[(Nâng cao|Hiệu quả cao cấp|Advanced Effect|Advanced)\]:?\s*/g, `${conditionHtml}<br/><br/><span class="text-[#c4774a] font-bold">[Hiệu quả cao cấp]:</span> `);
+    .replace(/\[(Cơ bản|Hiệu quả sơ cấp|Basic Effect|Hiệu ứng cơ bản|Basic)\]:?\s*/g, `<span class="text-[#c4774a] font-bold">${basicEffectStr}:</span> `)
+    .replace(/\s*\[(Nâng cao|Hiệu quả cao cấp|Advanced Effect|Advanced)\]:?\s*/g, `${conditionAdvancedHtml}<br/><br/><span class="text-[#c4774a] font-bold">${advancedEffectStr}:</span> `);
     
-  if (formattedCondition && formatted.includes('[Hiệu quả sơ cấp]')) {
-    formatted += conditionHtml;
+  if (formattedBasic && formatted.includes(basicEffectStr)) {
+    formatted += conditionBasicHtml;
   }
   
   return formatted;
@@ -350,7 +379,7 @@ const getItemIcon = (itemId, hero) => {
   const folder = suffixToFolder[hero.iconSuffix];
   if (!folder) return '';
   
-  if (itemId === '0') return ''; // Gold
+  if (itemId === '0') return '/Core_Skill/Items/gold.png'; // Gold
   
   if (itemId.startsWith('it_215')) {
     const filename = itemId.replace('it_', 'Item_');
@@ -387,8 +416,38 @@ const getHeroPortrait = (hero) => {
 }
 
 const getItemName = (itemId) => {
-  const item = items[itemId]
-  return item?.vi || `Item ${itemId}`
+  if (itemId === '0') return t('corelab.gold');
+  const item = items[itemId];
+  return item?.[locale.value] || item?.vi || `Item ${itemId}`;
+}
+
+const getTypeTranslation = (typeStr) => {
+  if (!typeStr) return ''
+  let key = typeStr.toLowerCase().replace(' ', '_').replace('-', '_')
+  if (key === 'martial artist') key = 'martial_artist' // Just in case
+  const res = t(`filters.type.${key}`)
+  return res.includes('filters.type') ? typeStr.toUpperCase() : res.toUpperCase()
+}
+
+const getFactionTranslation = (factionStr) => {
+  if (!factionStr) return ''
+  
+  // Split the string by ' (' and ')' to translate individual parts
+  // e.g. "Outlaw (Villain)" -> ["Outlaw", "Villain"]
+  let parts = factionStr.split(/[()]/).filter(p => p.trim() !== '')
+  
+  let translatedParts = parts.map(part => {
+    let key = part.trim().toLowerCase().replace(' ', '_').replace('-', '_')
+    if (key === 'martial artist') key = 'martial_artist'
+    const res = t(`filters.faction.${key}`)
+    return res.includes('filters.faction') ? part.trim().toUpperCase() : res.toUpperCase()
+  })
+
+  if (translatedParts.length === 2) {
+    return `${translatedParts[0]} (${translatedParts[1]})`
+  }
+  
+  return translatedParts[0]
 }
 </script>
 
@@ -406,5 +465,37 @@ const getItemName = (itemId) => {
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active,
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-left-enter-from {
+  opacity: 0;
+  transform: translateX(30px);
+}
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.slide-right-enter-from {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
 }
 </style>

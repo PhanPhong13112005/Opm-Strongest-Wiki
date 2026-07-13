@@ -50,5 +50,15 @@ Dưới đây là toàn bộ hành trình chúng ta đã đồng hành cùng nha
 - **Tối ưu Responsive Tuyệt Đối:** Xử lý layout để trên Desktop các khối text dàn trải cân đối (side-by-side) không bị quá to, còn trên Mobile thì Icon và Tiêu đề gộp chung hàng, nhường toàn bộ chiều ngang cho hộp mô tả kỹ năng, giúp dễ đọc nhất có thể.
 - **Quản lý Tài nguyên Dùng chung:** Định tuyến lại các vật phẩm nâng cấp dùng chung (Tâm Đắc Nghiên Cứu, Ghi Chép Nghiên Cứu) vào thư mục `Core_Skill/Items/` để hệ thống tự động nhận diện và hiển thị.
 
+## 🎪 Giai đoạn 9: Hệ thống Sự Kiện (Events System) & Mobile UI Tối ưu
+- **Thiết kế Giao diện Sự Kiện (EventsView & EventDetailView):** Xây dựng module quản lý và hiển thị các sự kiện (Banner, Task, Điều kiện, Phần thưởng) cực kỳ trực quan với khả năng chuyển đổi ngôn ngữ (Việt - Anh) linh hoạt.
+- **Data Engineering Sự Kiện:** Tích hợp logic xử lý tinh vi cho từng loại sự kiện đặc thù:
+  - Cấu trúc hiển thị đa tầng cho *Gale Wind Special Training* (Từng tiến trình cụ thể).
+  - Ánh xạ hoàn hảo các mốc nạp (Recharge Milestones) và phần quà cho các sự kiện *Star Wish Sprint*, *Terrible Tornado's Blessing*, *Supershare*, và *Whac-A-Mole*.
+- **Tối ưu Hóa Giao Diện Điện Thoại (Mobile UX):** 
+  - Ẩn hoàn toàn thanh cuộn ngang (scrollbar) thô kệch.
+  - Tích hợp hiệu ứng cuộn mượt (Snap Scrolling).
+  - Thiết kế bộ nút mũi tên điều hướng (Left/Right Arrows) với nền gradient đổ bóng, giúp trải nghiệm vuốt Tab sự kiện trên smartphone mượt mà và trực quan nhất.
+
 ---
-*Dự án OPM Wiki đã trải qua vô số dòng code và script Python khác nhau. Thành quả hiện tại là một hệ thống web hiện đại, được tối ưu hoàn toàn tự động dựa trên 1 tệp JSON duy nhất, hiển thị chuẩn xác logic đặc thù nhất của OPM The Strongest.*
+*Dự án OPM Wiki đã trải qua vô số dòng code và script Python khác nhau. Thành quả hiện tại là một hệ thống web hiện đại, được tối ưu hoàn toàn tự động dựa trên tệp JSON, hiển thị chuẩn xác logic đặc thù nhất của OPM The Strongest.*

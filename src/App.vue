@@ -40,6 +40,15 @@ const toggleMobileMenu = () => {
           <RouterLink to="/core-lab" class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
             {{ t('nav.corelab') }}
           </RouterLink>
+          <RouterLink to="/keepsakes" class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
+            {{ t('nav.keepsakes') }}
+          </RouterLink>
+          <RouterLink to="/insignias" class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
+            {{ t('nav.insignias') }}
+          </RouterLink>
+          <RouterLink to="/events" class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
+            {{ t('nav.events') }}
+          </RouterLink>
           
           <div class="ml-4 flex items-center bg-[#1a1c23] rounded-full px-1 py-1 border border-gray-700 cursor-pointer relative" @click="toggleLang">
             <div class="absolute inset-y-1 w-1/2 rounded-full bg-opm-gold transition-all duration-300" :class="lang === 'VI' ? 'left-1' : 'left-[calc(50%-4px)]'"></div>
@@ -73,11 +82,24 @@ const toggleMobileMenu = () => {
         <RouterLink @click="toggleMobileMenu" to="/core-lab" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
           {{ t('nav.corelab') }}
         </RouterLink>
+        <RouterLink @click="toggleMobileMenu" to="/keepsakes" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
+          {{ t('nav.keepsakes') }}
+        </RouterLink>
+        <RouterLink @click="toggleMobileMenu" to="/insignias" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
+          {{ t('nav.insignias') }}
+        </RouterLink>
+        <RouterLink @click="toggleMobileMenu" to="/events" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
+          {{ t('nav.events') }}
+        </RouterLink>
       </div>
     </header>
 
     <!-- Khu vực hiển thị View tương ứng -->
-    <RouterView class="flex-grow" />
+    <RouterView class="flex-grow" v-slot="{ Component, route }">
+      <transition name="page" mode="out-in">
+        <component :is="Component" :key="route.path" />
+      </transition>
+    </RouterView>
 
     <!-- Footer -->
     <footer class="border-t border-white/5 bg-[#05060a] py-8 mt-auto">
@@ -93,5 +115,21 @@ const toggleMobileMenu = () => {
 /* CSS cho router-link-active nếu cần */
 .router-link-exact-active {
   @apply text-white;
+}
+
+/* Page Transitions */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-15px);
 }
 </style>

@@ -4,6 +4,9 @@ import DetailView from '../views/DetailView.vue'
 import CharacterListView from '../views/CharacterListView.vue'
 import MasteryView from '../views/MasteryView.vue'
 import CoreLabView from '../views/CoreLabView.vue'
+import EquipmentView from '../views/EquipmentView.vue'
+import EventsView from '../views/EventsView.vue'
+import EventDetailView from '../views/EventDetailView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +36,40 @@ const router = createRouter({
       path: '/core-lab',
       name: 'core-lab',
       component: CoreLabView
+    },
+    {
+      path: '/keepsakes',
+      name: 'keepsakes',
+      component: EquipmentView,
+      props: { kind: 'keepsake' }
+    },
+    {
+      path: '/keepsake/:id',
+      name: 'keepsake-detail',
+      component: EquipmentView,
+      props: route => ({ kind: 'keepsake', id: route.params.id })
+    },
+    {
+      path: '/insignias',
+      name: 'insignias',
+      component: EquipmentView,
+      props: { kind: 'insignia' }
+    },
+    {
+      path: '/insignia/:id',
+      name: 'insignia-detail',
+      component: EquipmentView,
+      props: route => ({ kind: 'insignia', id: route.params.id })
+    },
+    {
+      path: '/events',
+      name: 'events',
+      component: EventsView
+    },
+    {
+      path: '/events/:id',
+      name: 'event-detail',
+      component: EventDetailView
     }
   ],
   scrollBehavior(to, from, savedPosition) {
