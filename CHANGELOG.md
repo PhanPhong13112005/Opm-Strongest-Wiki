@@ -60,5 +60,21 @@ Dưới đây là toàn bộ hành trình chúng ta đã đồng hành cùng nha
   - Tích hợp hiệu ứng cuộn mượt (Snap Scrolling).
   - Thiết kế bộ nút mũi tên điều hướng (Left/Right Arrows) với nền gradient đổ bóng, giúp trải nghiệm vuốt Tab sự kiện trên smartphone mượt mà và trực quan nhất.
 
+## 🧬 Giai đoạn 10: Tích hợp Cốt Lõi (Core Skill) & Chính Sách Bảo Mật (13/07/2026)
+- **Tích hợp Core vào Trang Chi Tiết (Detail View):**
+  - Tự động hiển thị thêm tab "Cốt Lõi" đối với các nhân vật có sở hữu Core Skill trong `DetailView.vue`.
+  - Hiển thị tóm tắt hai mốc quan trọng nhất: Level 1 (Cơ bản) và Level 4 (Eccentric Power · II) cùng mô tả hiệu ứng chi tiết.
+  - Sửa logic xử lý đường dẫn hình ảnh cho Core Skill: tự động mapping linh hoạt sang thư mục `/Core_Skill/` tương ứng của từng nhân vật hoặc fallback về ảnh chân dung Core nếu thiếu ảnh mốc.
+  - Tích hợp nút điều hướng nhanh "Xem chi tiết Phòng Nghiên Cứu", tự động chuyển hướng và chọn đúng tướng đang xem trong Core Lab.
+- **Tối ưu Hóa Giao Diện và i18n:**
+  - Khắc phục triệt để lỗi hiển thị mã code dịch `DETAIL.SKILL_TABS.CORE` bằng cách cấu hình ngôn ngữ chính xác ở `vi.json` và `en.json`.
+  - Khắc phục lỗi hiển thị ảnh động xem trước (animation preview) của tab Core bằng cách liên kết trực tiếp với `imageURL` của nhân vật.
+  - Sửa lỗi layout trên danh sách thẻ kỹ năng phải bằng cách thêm `flex-shrink-0` cho các thẻ Core và nút chuyển trang, ngăn chặn việc giao diện bị co kéo hay cắt mất nội dung.
+- **Trang Chính sách Bảo mật & Bản quyền (Privacy Policy):**
+  - Tạo mới trang `/privacy` (`src/views/PrivacyView.vue`) hỗ trợ đầy đủ song ngữ Anh - Việt.
+  - Trình bày rõ ràng mục đích phi lợi nhuận (Fan-made Wiki), các chính sách bảo mật dữ liệu cơ bản (không lưu cookie cá nhân, không yêu cầu tài khoản), và tuyên bố sử dụng hợp lý (Fair Use) bản quyền hình ảnh của NPH và tác giả.
+  - Liên kết trực tiếp trang chính sách tại Footer (chân trang) của ứng dụng.
+- **Dọn dẹp mã nguồn:** Loại bỏ toàn bộ các script Python bổ trợ trung gian và các file văn bản tạm (`types.txt`, `log.txt`, `test.py`...) trước khi đẩy mã nguồn sạch lên GitHub.
+
 ---
 *Dự án OPM Wiki đã trải qua vô số dòng code và script Python khác nhau. Thành quả hiện tại là một hệ thống web hiện đại, được tối ưu hoàn toàn tự động dựa trên tệp JSON, hiển thị chuẩn xác logic đặc thù nhất của OPM The Strongest.*
