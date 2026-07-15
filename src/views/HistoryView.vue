@@ -71,9 +71,16 @@ const timelineVi = [
   {
     stage: 'Phiên bản 2.0',
     title: 'Cốt Lõi Tích Hợp & Chính Sách',
-    date: 'Ngày 86 - Hiện tại',
+    date: 'Ngày 86 - 95',
     desc: 'Tích hợp mốc Core gọn nhẹ ngay trong trang chi tiết nhân vật, sửa đổi toàn bộ liên kết hình ảnh tự động, sửa lỗi mã dịch i18n và phát hành chính thức trang Chính sách Bảo mật & Lịch sử phát triển.',
     icon: '🌟'
+  },
+  {
+    stage: 'Phiên bản 2.1',
+    title: 'Chiến Thuật & Huy Chương',
+    date: 'Ngày 96 - Hiện tại',
+    desc: 'Xây dựng trang Phòng Nghiên Cứu Chiến Thuật và Hệ Thống Huy Chương. Tích hợp thanh trượt mượt mà (cross-fade slider), khả năng phóng to ảnh, dọn dẹp mã nguồn rác và tối ưu hóa UI/UX cực kỳ hiện đại.',
+    icon: '🛠️'
   }
 ]
 
@@ -144,9 +151,16 @@ const timelineEn = [
   {
     stage: 'Version 2.0',
     title: 'Integrated Cores & Policies',
-    date: 'Day 86 - Present',
+    date: 'Day 86 - 95',
     desc: 'Integrated core skills in character detail view, resolved i18n translation bugs, cleaned codebase, and published privacy policies along with the official site history view.',
     icon: '🌟'
+  },
+  {
+    stage: 'Version 2.1',
+    title: 'Tactics & Emblem Systems',
+    date: 'Day 96 - Present',
+    desc: 'Built the Tactical Research and Emblem System pages. Integrated seamless cross-fade sliders, detailed image viewers, cleaned up junk code, and implemented modern UI/UX optimizations.',
+    icon: '🛠️'
   }
 ]
 </script>
