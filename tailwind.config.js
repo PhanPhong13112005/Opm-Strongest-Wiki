@@ -10,6 +10,7 @@ export default {
         'opm-dark': '#0b0c10',
         'opm-darker': '#050608',
         'opm-gray': '#1f2833',
+        'opm-card': '#1a1c23',
         'opm-red': '#ff3366',
         'opm-orange': '#f5a623',
         'opm-gold': '#ffc107',

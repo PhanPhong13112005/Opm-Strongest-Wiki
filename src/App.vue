@@ -37,15 +37,34 @@ const toggleMobileMenu = () => {
           <RouterLink to="/mastery" class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
             {{ t('nav.mastery') }}
           </RouterLink>
-          <RouterLink to="/core-lab" class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-            {{ t('nav.corelab') }}
-          </RouterLink>
-          <RouterLink to="/keepsakes" class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-            {{ t('nav.keepsakes') }}
-          </RouterLink>
-          <RouterLink to="/insignias" class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-            {{ t('nav.insignias') }}
-          </RouterLink>
+
+          <!-- Dropdown Features -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors focus:outline-none py-2">
+              {{ t('nav.features') }}
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-48 rounded-lg bg-[#0a0c10] border border-white/10 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top -translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+              <div class="flex flex-col">
+                <RouterLink to="/core-lab" class="px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5" exact-active-class="text-white bg-white/5">
+                  {{ t('nav.corelab') }}
+                </RouterLink>
+                <RouterLink to="/medals" class="px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5" exact-active-class="text-white bg-white/5">
+                  {{ t('nav.medals') }}
+                </RouterLink>
+                <RouterLink to="/tactics" class="px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5" exact-active-class="text-white bg-white/5">
+                  {{ t('nav.tactics') }}
+                </RouterLink>
+                <RouterLink to="/keepsakes" class="px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5" exact-active-class="text-white bg-white/5">
+                  {{ t('nav.keepsakes') }}
+                </RouterLink>
+                <RouterLink to="/insignias" class="px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white hover:bg-white/5 transition-colors" exact-active-class="text-white bg-white/5">
+                  {{ t('nav.insignias') }}
+                </RouterLink>
+              </div>
+            </div>
+          </div>
+
           <RouterLink to="/events" class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
             {{ t('nav.events') }}
           </RouterLink>
@@ -79,16 +98,30 @@ const toggleMobileMenu = () => {
         <RouterLink @click="toggleMobileMenu" to="/mastery" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
           {{ t('nav.mastery') }}
         </RouterLink>
-        <RouterLink @click="toggleMobileMenu" to="/core-lab" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-          {{ t('nav.corelab') }}
-        </RouterLink>
-        <RouterLink @click="toggleMobileMenu" to="/keepsakes" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-          {{ t('nav.keepsakes') }}
-        </RouterLink>
-        <RouterLink @click="toggleMobileMenu" to="/insignias" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-          {{ t('nav.insignias') }}
-        </RouterLink>
-        <RouterLink @click="toggleMobileMenu" to="/events" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
+
+        <!-- Features Group Header -->
+        <div class="text-xs font-bold text-gray-500 uppercase tracking-widest mt-2 px-2 border-b border-white/5 pb-2">
+          {{ t('nav.features') }}
+        </div>
+        <div class="flex flex-col gap-4 pl-4 border-l-2 border-white/5 ml-2">
+          <RouterLink @click="toggleMobileMenu" to="/core-lab" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
+            {{ t('nav.corelab') }}
+          </RouterLink>
+          <RouterLink @click="toggleMobileMenu" to="/medals" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
+            {{ t('nav.medals') }}
+          </RouterLink>
+          <RouterLink @click="toggleMobileMenu" to="/tactics" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
+            {{ t('nav.tactics') }}
+          </RouterLink>
+          <RouterLink @click="toggleMobileMenu" to="/keepsakes" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
+            {{ t('nav.keepsakes') }}
+          </RouterLink>
+          <RouterLink @click="toggleMobileMenu" to="/insignias" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
+            {{ t('nav.insignias') }}
+          </RouterLink>
+        </div>
+
+        <RouterLink @click="toggleMobileMenu" to="/events" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors mt-2" exact-active-class="text-white">
           {{ t('nav.events') }}
         </RouterLink>
       </div>

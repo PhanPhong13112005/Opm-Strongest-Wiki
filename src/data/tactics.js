@@ -1,0 +1,2396 @@
+export const tacticCards = [
+  {
+    "id": "tc_01",
+    "name": {
+      "vi": "Cường Công",
+      "en": "Assault"
+    },
+    "icon": "pic_tactic_atk.png",
+    "count": 144,
+    "eff": {
+      "vi": "+15% Tấn công cho Phe/Hệ đang kích hoạt",
+      "en": "+15% ATK to the active faction"
+    },
+    "scaling": {
+      "metric": "stat",
+      "statType": "attack_rate",
+      "label_en": "ATK",
+      "label_vi": "Tấn công",
+      "unit": "%",
+      "summable": true,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 2
+            },
+            {
+              "star": 1,
+              "value": 3
+            },
+            {
+              "star": 2,
+              "value": 4
+            },
+            {
+              "star": 3,
+              "value": 5
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 2
+            },
+            {
+              "star": 1,
+              "value": 3
+            },
+            {
+              "star": 2,
+              "value": 4
+            },
+            {
+              "star": 3,
+              "value": 5
+            },
+            {
+              "star": 4,
+              "value": 6
+            },
+            {
+              "star": 5,
+              "value": 7
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 4
+            },
+            {
+              "star": 1,
+              "value": 5
+            },
+            {
+              "star": 2,
+              "value": 6
+            },
+            {
+              "star": 3,
+              "value": 7
+            },
+            {
+              "star": 4,
+              "value": 8
+            },
+            {
+              "star": 5,
+              "value": 11
+            },
+            {
+              "star": 6,
+              "value": 13
+            },
+            {
+              "star": 7,
+              "value": 15
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_02",
+    "name": {
+      "vi": "Bất Động",
+      "en": "Still"
+    },
+    "icon": "pic_tactic_hp.png",
+    "count": 144,
+    "eff": {
+      "vi": "+15% Máu cho Phe/Hệ đang kích hoạt",
+      "en": "+15% HP to the active faction"
+    },
+    "scaling": {
+      "metric": "stat",
+      "statType": "hp_rate",
+      "label_en": "HP",
+      "label_vi": "Máu",
+      "unit": "%",
+      "summable": true,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 2
+            },
+            {
+              "star": 1,
+              "value": 3
+            },
+            {
+              "star": 2,
+              "value": 4
+            },
+            {
+              "star": 3,
+              "value": 5
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 2
+            },
+            {
+              "star": 1,
+              "value": 3
+            },
+            {
+              "star": 2,
+              "value": 4
+            },
+            {
+              "star": 3,
+              "value": 5
+            },
+            {
+              "star": 4,
+              "value": 6
+            },
+            {
+              "star": 5,
+              "value": 7
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 4
+            },
+            {
+              "star": 1,
+              "value": 5
+            },
+            {
+              "star": 2,
+              "value": 6
+            },
+            {
+              "star": 3,
+              "value": 7
+            },
+            {
+              "star": 4,
+              "value": 8
+            },
+            {
+              "star": 5,
+              "value": 11
+            },
+            {
+              "star": 6,
+              "value": 13
+            },
+            {
+              "star": 7,
+              "value": 15
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_03",
+    "name": {
+      "vi": "Thiện Thủ",
+      "en": "Defense"
+    },
+    "icon": "pic_tactic_def.png",
+    "count": 144,
+    "eff": {
+      "vi": "+15% Phòng thủ cho Phe/Hệ đang kích hoạt",
+      "en": "+15% DEF to the active faction"
+    },
+    "scaling": {
+      "metric": "stat",
+      "statType": "defense_rate",
+      "label_en": "DEF",
+      "label_vi": "Phòng thủ",
+      "unit": "%",
+      "summable": true,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 2
+            },
+            {
+              "star": 1,
+              "value": 3
+            },
+            {
+              "star": 2,
+              "value": 4
+            },
+            {
+              "star": 3,
+              "value": 5
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 2
+            },
+            {
+              "star": 1,
+              "value": 3
+            },
+            {
+              "star": 2,
+              "value": 4
+            },
+            {
+              "star": 3,
+              "value": 5
+            },
+            {
+              "star": 4,
+              "value": 6
+            },
+            {
+              "star": 5,
+              "value": 7
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 4
+            },
+            {
+              "star": 1,
+              "value": 5
+            },
+            {
+              "star": 2,
+              "value": 6
+            },
+            {
+              "star": 3,
+              "value": 7
+            },
+            {
+              "star": 4,
+              "value": 8
+            },
+            {
+              "star": 5,
+              "value": 11
+            },
+            {
+              "star": 6,
+              "value": 13
+            },
+            {
+              "star": 7,
+              "value": 15
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_04",
+    "name": {
+      "vi": "Siêu Tốc",
+      "en": "Rapid"
+    },
+    "icon": "pic_tactic_spd.png",
+    "count": 144,
+    "eff": {
+      "vi": "+15% Tốc độ cho Phe/Hệ đang kích hoạt",
+      "en": "+15% SPD to the active faction"
+    },
+    "scaling": {
+      "metric": "stat",
+      "statType": "speed_rate",
+      "label_en": "SPD",
+      "label_vi": "Tốc độ",
+      "unit": "%",
+      "summable": true,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 2
+            },
+            {
+              "star": 1,
+              "value": 3
+            },
+            {
+              "star": 2,
+              "value": 4
+            },
+            {
+              "star": 3,
+              "value": 5
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 2
+            },
+            {
+              "star": 1,
+              "value": 3
+            },
+            {
+              "star": 2,
+              "value": 4
+            },
+            {
+              "star": 3,
+              "value": 5
+            },
+            {
+              "star": 4,
+              "value": 6
+            },
+            {
+              "star": 5,
+              "value": 7
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 4
+            },
+            {
+              "star": 1,
+              "value": 5
+            },
+            {
+              "star": 2,
+              "value": 6
+            },
+            {
+              "star": 3,
+              "value": 7
+            },
+            {
+              "star": 4,
+              "value": 8
+            },
+            {
+              "star": 5,
+              "value": 11
+            },
+            {
+              "star": 6,
+              "value": 13
+            },
+            {
+              "star": 7,
+              "value": 15
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_05",
+    "name": {
+      "vi": "Chi Viện",
+      "en": "Assist"
+    },
+    "icon": "pic_tactic_pet.png",
+    "count": 144,
+    "eff": {
+      "vi": "+20% Thú cưng cho Phe/Hệ đang kích hoạt",
+      "en": "+20% Pet power to the active faction"
+    },
+    "scaling": {
+      "metric": "stat",
+      "statType": "summonpet_up",
+      "label_en": "Pet power",
+      "label_vi": "Thú cưng",
+      "unit": "%",
+      "summable": true,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            },
+            {
+              "star": 4,
+              "value": 9
+            },
+            {
+              "star": 5,
+              "value": 10
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 8
+            },
+            {
+              "star": 1,
+              "value": 9
+            },
+            {
+              "star": 2,
+              "value": 10
+            },
+            {
+              "star": 3,
+              "value": 11
+            },
+            {
+              "star": 4,
+              "value": 12
+            },
+            {
+              "star": 5,
+              "value": 17
+            },
+            {
+              "star": 6,
+              "value": 18
+            },
+            {
+              "star": 7,
+              "value": 20
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_06",
+    "name": {
+      "vi": "Cuồng Chiến",
+      "en": "Combat"
+    },
+    "icon": "pic_tactic_drain.png",
+    "count": 144,
+    "eff": {
+      "vi": "+20% Hút máu cho Phe/Hệ đang kích hoạt",
+      "en": "+20% Lifesteal to the active faction"
+    },
+    "scaling": {
+      "metric": "stat",
+      "statType": "drain_up",
+      "label_en": "Lifesteal",
+      "label_vi": "Hút máu",
+      "unit": "%",
+      "summable": true,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            },
+            {
+              "star": 4,
+              "value": 9
+            },
+            {
+              "star": 5,
+              "value": 10
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 8
+            },
+            {
+              "star": 1,
+              "value": 9
+            },
+            {
+              "star": 2,
+              "value": 10
+            },
+            {
+              "star": 3,
+              "value": 11
+            },
+            {
+              "star": 4,
+              "value": 12
+            },
+            {
+              "star": 5,
+              "value": 17
+            },
+            {
+              "star": 6,
+              "value": 18
+            },
+            {
+              "star": 7,
+              "value": 20
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_07",
+    "name": {
+      "vi": "Phản Đòn",
+      "en": "All Hurt"
+    },
+    "icon": "pic_tactic_anti.png",
+    "count": 144,
+    "eff": {
+      "vi": "+20% Phản Sát Thương cho Phe/Hệ đang kích hoạt",
+      "en": "+20% DMG Reflect to the active faction"
+    },
+    "scaling": {
+      "metric": "stat",
+      "statType": "antihurt_up",
+      "label_en": "DMG Reflect",
+      "label_vi": "Phản Sát Thương",
+      "unit": "%",
+      "summable": true,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            },
+            {
+              "star": 4,
+              "value": 9
+            },
+            {
+              "star": 5,
+              "value": 10
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 8
+            },
+            {
+              "star": 1,
+              "value": 9
+            },
+            {
+              "star": 2,
+              "value": 10
+            },
+            {
+              "star": 3,
+              "value": 11
+            },
+            {
+              "star": 4,
+              "value": 12
+            },
+            {
+              "star": 5,
+              "value": 17
+            },
+            {
+              "star": 6,
+              "value": 18
+            },
+            {
+              "star": 7,
+              "value": 20
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_08",
+    "name": {
+      "vi": "Trị Liệu",
+      "en": "Heal"
+    },
+    "icon": "pic_tactic_cure.png",
+    "count": 144,
+    "eff": {
+      "vi": "+20% Hồi phục cho Phe/Hệ đang kích hoạt",
+      "en": "+20% Healing to the active faction"
+    },
+    "scaling": {
+      "metric": "stat",
+      "statType": "cure_up",
+      "label_en": "Healing",
+      "label_vi": "Hồi phục",
+      "unit": "%",
+      "summable": true,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            },
+            {
+              "star": 4,
+              "value": 9
+            },
+            {
+              "star": 5,
+              "value": 10
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 8
+            },
+            {
+              "star": 1,
+              "value": 9
+            },
+            {
+              "star": 2,
+              "value": 10
+            },
+            {
+              "star": 3,
+              "value": 11
+            },
+            {
+              "star": 4,
+              "value": 12
+            },
+            {
+              "star": 5,
+              "value": 17
+            },
+            {
+              "star": 6,
+              "value": 18
+            },
+            {
+              "star": 7,
+              "value": 20
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_09",
+    "name": {
+      "vi": "Kiên Nghị",
+      "en": "Tenacity"
+    },
+    "icon": "pic_tactic_shield.png",
+    "count": 144,
+    "eff": {
+      "vi": "+20% Khiên cho Phe/Hệ đang kích hoạt",
+      "en": "+20% Shield to the active faction"
+    },
+    "scaling": {
+      "metric": "stat",
+      "statType": "shieldrate_up",
+      "label_en": "Shield",
+      "label_vi": "Khiên",
+      "unit": "%",
+      "summable": true,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            },
+            {
+              "star": 4,
+              "value": 9
+            },
+            {
+              "star": 5,
+              "value": 10
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 8
+            },
+            {
+              "star": 1,
+              "value": 9
+            },
+            {
+              "star": 2,
+              "value": 10
+            },
+            {
+              "star": 3,
+              "value": 11
+            },
+            {
+              "star": 4,
+              "value": 12
+            },
+            {
+              "star": 5,
+              "value": 17
+            },
+            {
+              "star": 6,
+              "value": 18
+            },
+            {
+              "star": 7,
+              "value": 20
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_10",
+    "name": {
+      "vi": "Cuồng Nộ",
+      "en": "Damaged"
+    },
+    "icon": "pic_tactic_hurtup.png",
+    "count": 144,
+    "eff": {
+      "vi": "+20% Phản Đòn Cuồng Nộ cho Phe/Hệ đang kích hoạt",
+      "en": "+20% Berserk Reflect to the active faction"
+    },
+    "scaling": {
+      "metric": "stat",
+      "statType": "hurtuprate_up",
+      "label_en": "Berserk Reflect",
+      "label_vi": "Phản Đòn Cuồng Nộ",
+      "unit": "%",
+      "summable": true,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            },
+            {
+              "star": 4,
+              "value": 9
+            },
+            {
+              "star": 5,
+              "value": 10
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 8
+            },
+            {
+              "star": 1,
+              "value": 9
+            },
+            {
+              "star": 2,
+              "value": 10
+            },
+            {
+              "star": 3,
+              "value": 11
+            },
+            {
+              "star": 4,
+              "value": 12
+            },
+            {
+              "star": 5,
+              "value": 17
+            },
+            {
+              "star": 6,
+              "value": 18
+            },
+            {
+              "star": 7,
+              "value": 20
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_11",
+    "name": {
+      "vi": "Tiên Cơ",
+      "en": "Chance"
+    },
+    "icon": "pic_tactic_hero.png",
+    "count": 24,
+    "eff": {
+      "vi": "Khi vào trận, nạp ngay điểm Thanh Năng Lượng (lượng tăng theo sao).",
+      "en": "On entry, instantly grant Energy Gauge points (amount scales with star)."
+    },
+    "scaling": {
+      "metric": "energy",
+      "statType": null,
+      "label_en": "Energy Gauge",
+      "label_vi": "Thanh Năng Lượng",
+      "unit": "flat",
+      "summable": false,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 100
+            },
+            {
+              "star": 1,
+              "value": 200
+            },
+            {
+              "star": 2,
+              "value": 300
+            },
+            {
+              "star": 3,
+              "value": 400
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 100
+            },
+            {
+              "star": 1,
+              "value": 200
+            },
+            {
+              "star": 2,
+              "value": 300
+            },
+            {
+              "star": 3,
+              "value": 400
+            },
+            {
+              "star": 4,
+              "value": 500
+            },
+            {
+              "star": 5,
+              "value": 600
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 200
+            },
+            {
+              "star": 1,
+              "value": 400
+            },
+            {
+              "star": 2,
+              "value": 600
+            },
+            {
+              "star": 3,
+              "value": 800
+            },
+            {
+              "star": 4,
+              "value": 1000
+            },
+            {
+              "star": 5,
+              "value": 1500
+            },
+            {
+              "star": 6,
+              "value": 1700
+            },
+            {
+              "star": 7,
+              "value": 2000
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_12",
+    "name": {
+      "vi": "Sục Sôi",
+      "en": "Passion"
+    },
+    "icon": "pic_tactic_monster.png",
+    "count": 24,
+    "eff": {
+      "vi": "Sau khi hành động, nhận điểm Thanh Năng Lượng (lượng tăng theo sao).",
+      "en": "After action, grant Energy Gauge points (amount scales with star)."
+    },
+    "scaling": {
+      "metric": "energy",
+      "statType": null,
+      "label_en": "Energy Gauge",
+      "label_vi": "Thanh Năng Lượng",
+      "unit": "flat",
+      "summable": false,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 10
+            },
+            {
+              "star": 1,
+              "value": 30
+            },
+            {
+              "star": 2,
+              "value": 50
+            },
+            {
+              "star": 3,
+              "value": 70
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 10
+            },
+            {
+              "star": 1,
+              "value": 30
+            },
+            {
+              "star": 2,
+              "value": 50
+            },
+            {
+              "star": 3,
+              "value": 70
+            },
+            {
+              "star": 4,
+              "value": 90
+            },
+            {
+              "star": 5,
+              "value": 110
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 30
+            },
+            {
+              "star": 1,
+              "value": 60
+            },
+            {
+              "star": 2,
+              "value": 90
+            },
+            {
+              "star": 3,
+              "value": 120
+            },
+            {
+              "star": 4,
+              "value": 150
+            },
+            {
+              "star": 5,
+              "value": 210
+            },
+            {
+              "star": 6,
+              "value": 250
+            },
+            {
+              "star": 7,
+              "value": 300
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_13",
+    "name": {
+      "vi": "Dâng Trào",
+      "en": "Flow"
+    },
+    "icon": "pic_tactic_gedou.png",
+    "count": 24,
+    "eff": {
+      "vi": "Sau khi hành động, hồi Máu bằng một phần Máu tối đa.",
+      "en": "After acting, recover HP equal to a % of Max HP."
+    },
+    "scaling": {
+      "metric": "hp_recover",
+      "statType": null,
+      "label_en": "HP recovery",
+      "label_vi": "Hồi Máu",
+      "unit": "%",
+      "summable": false,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 2
+            },
+            {
+              "star": 1,
+              "value": 4
+            },
+            {
+              "star": 2,
+              "value": 6
+            },
+            {
+              "star": 3,
+              "value": 8
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 2
+            },
+            {
+              "star": 1,
+              "value": 4
+            },
+            {
+              "star": 2,
+              "value": 6
+            },
+            {
+              "star": 3,
+              "value": 8
+            },
+            {
+              "star": 4,
+              "value": 10
+            },
+            {
+              "star": 5,
+              "value": 12
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 3
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 9
+            },
+            {
+              "star": 3,
+              "value": 12
+            },
+            {
+              "star": 4,
+              "value": 15
+            },
+            {
+              "star": 5,
+              "value": 18
+            },
+            {
+              "star": 6,
+              "value": 21
+            },
+            {
+              "star": 7,
+              "value": 25
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_14",
+    "name": {
+      "vi": "Tàn Bạo",
+      "en": "Cruel"
+    },
+    "icon": "pic_tactic_wuzhuang.png",
+    "count": 24,
+    "eff": {
+      "vi": "Sau khi một đồng minh hành động, tung đòn đánh đuổi gây ST bằng một phần ST Tuyệt Kĩ của đồng minh đó và hút năng lượng — mỗi hiệp một lần.",
+      "en": "After an ally acts, deal a follow-up attack for a % of that ally's Ultimate DMG and drain energy — once per round."
+    },
+    "scaling": {
+      "metric": "chase_ult",
+      "statType": null,
+      "label_en": "Follow-up DMG (of ULT)",
+      "label_vi": "ST đánh đuổi (theo Tuyệt Kĩ)",
+      "unit": "%",
+      "summable": false,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 3
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 9
+            },
+            {
+              "star": 3,
+              "value": 12
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 3
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 9
+            },
+            {
+              "star": 3,
+              "value": 12
+            },
+            {
+              "star": 4,
+              "value": 15
+            },
+            {
+              "star": 5,
+              "value": 18
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 6
+            },
+            {
+              "star": 1,
+              "value": 12
+            },
+            {
+              "star": 2,
+              "value": 18
+            },
+            {
+              "star": 3,
+              "value": 24
+            },
+            {
+              "star": 4,
+              "value": 30
+            },
+            {
+              "star": 5,
+              "value": 36
+            },
+            {
+              "star": 6,
+              "value": 42
+            },
+            {
+              "star": 7,
+              "value": 50
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_15",
+    "name": {
+      "vi": "Bộc Phát",
+      "en": "Burst"
+    },
+    "icon": "pic_tactic_keji.png",
+    "count": 24,
+    "eff": {
+      "vi": "Sau khi Ấn Ký (Trường Lực) kích hoạt, tung đòn đánh đuổi gây ST bằng một phần ST Tuyệt Kĩ và hút năng lượng.",
+      "en": "After your Signet (Distorted Field) releases, deal a follow-up attack for a % of Ultimate DMG and drain energy."
+    },
+    "scaling": {
+      "metric": "chase_ult",
+      "statType": null,
+      "label_en": "Follow-up DMG (of ULT)",
+      "label_vi": "ST đánh đuổi (theo Tuyệt Kĩ)",
+      "unit": "%",
+      "summable": false,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 15
+            },
+            {
+              "star": 1,
+              "value": 30
+            },
+            {
+              "star": 2,
+              "value": 45
+            },
+            {
+              "star": 3,
+              "value": 60
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 15
+            },
+            {
+              "star": 1,
+              "value": 30
+            },
+            {
+              "star": 2,
+              "value": 45
+            },
+            {
+              "star": 3,
+              "value": 60
+            },
+            {
+              "star": 4,
+              "value": 75
+            },
+            {
+              "star": 5,
+              "value": 90
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 25
+            },
+            {
+              "star": 1,
+              "value": 50
+            },
+            {
+              "star": 2,
+              "value": 75
+            },
+            {
+              "star": 3,
+              "value": 100
+            },
+            {
+              "star": 4,
+              "value": 125
+            },
+            {
+              "star": 5,
+              "value": 150
+            },
+            {
+              "star": 6,
+              "value": 175
+            },
+            {
+              "star": 7,
+              "value": 200
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_16",
+    "name": {
+      "vi": "Thức Tỉnh",
+      "en": "Revive"
+    },
+    "icon": "pic_tactic_chaoneng.png",
+    "count": 24,
+    "eff": {
+      "vi": "Sau khi Ấn Ký (Trường Lực) kích hoạt, hồi Máu bằng một phần Máu tối đa.",
+      "en": "After your Signet (Distorted Field) releases, recover HP equal to a % of Max HP."
+    },
+    "scaling": {
+      "metric": "hp_recover",
+      "statType": null,
+      "label_en": "HP recovery",
+      "label_vi": "Hồi Máu",
+      "unit": "%",
+      "summable": false,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 6
+            },
+            {
+              "star": 1,
+              "value": 12
+            },
+            {
+              "star": 2,
+              "value": 18
+            },
+            {
+              "star": 3,
+              "value": 24
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 6
+            },
+            {
+              "star": 1,
+              "value": 12
+            },
+            {
+              "star": 2,
+              "value": 18
+            },
+            {
+              "star": 3,
+              "value": 24
+            },
+            {
+              "star": 4,
+              "value": 30
+            },
+            {
+              "star": 5,
+              "value": 36
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 12
+            },
+            {
+              "star": 1,
+              "value": 24
+            },
+            {
+              "star": 2,
+              "value": 36
+            },
+            {
+              "star": 3,
+              "value": 48
+            },
+            {
+              "star": 4,
+              "value": 60
+            },
+            {
+              "star": 5,
+              "value": 72
+            },
+            {
+              "star": 6,
+              "value": 86
+            },
+            {
+              "star": 7,
+              "value": 100
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_17",
+    "name": {
+      "vi": "Xuyên Thấu",
+      "en": "Pierce"
+    },
+    "icon": "pic_tactic_chuanci.png",
+    "count": 72,
+    "eff": {
+      "vi": "Khi vào trận, gây ST Kiếm Xuyên Thấu bổ sung (theo Tấn công + Máu tối đa) với tỉ lệ Bạo Kích cao bỏ qua khiên, và hút 200 điểm Thanh Năng Lượng.",
+      "en": "On entry, deals Piercing Sword extra DMG (scales with ATK + Max HP) with high CRIT that ignores guards, and drains 200 Energy Gauge."
+    },
+    "scaling": {
+      "metric": "pierce",
+      "statType": null,
+      "label_en": "Piercing Sword (ATK)",
+      "label_vi": "Kiếm Xuyên Thấu (ATK)",
+      "unit": "%",
+      "summable": false,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 60
+            },
+            {
+              "star": 1,
+              "value": 105
+            },
+            {
+              "star": 2,
+              "value": 150
+            },
+            {
+              "star": 3,
+              "value": 195
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 60
+            },
+            {
+              "star": 1,
+              "value": 105
+            },
+            {
+              "star": 2,
+              "value": 150
+            },
+            {
+              "star": 3,
+              "value": 195
+            },
+            {
+              "star": 4,
+              "value": 240
+            },
+            {
+              "star": 5,
+              "value": 285
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 100
+            },
+            {
+              "star": 1,
+              "value": 175
+            },
+            {
+              "star": 2,
+              "value": 250
+            },
+            {
+              "star": 3,
+              "value": 325
+            },
+            {
+              "star": 4,
+              "value": 400
+            },
+            {
+              "star": 5,
+              "value": 475
+            },
+            {
+              "star": 6,
+              "value": 550
+            },
+            {
+              "star": 7,
+              "value": 625
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_18",
+    "name": {
+      "vi": "Phẫn Nộ",
+      "en": "Fury"
+    },
+    "icon": "pic_tactic_anger.png",
+    "count": 12,
+    "eff": {
+      "vi": "+20% Phẫn Nộ (Đấu Trường) cho Phe/Hệ đang kích hoạt",
+      "en": "+20% Fury (Arena) to the active faction"
+    },
+    "scaling": {
+      "metric": "stat",
+      "statType": "anger_up",
+      "label_en": "Fury (Arena)",
+      "label_vi": "Phẫn Nộ (Đấu Trường)",
+      "unit": "%",
+      "summable": true,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            },
+            {
+              "star": 4,
+              "value": 9
+            },
+            {
+              "star": 5,
+              "value": 10
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 8
+            },
+            {
+              "star": 1,
+              "value": 9
+            },
+            {
+              "star": 2,
+              "value": 10
+            },
+            {
+              "star": 3,
+              "value": 11
+            },
+            {
+              "star": 4,
+              "value": 12
+            },
+            {
+              "star": 5,
+              "value": 17
+            },
+            {
+              "star": 6,
+              "value": 18
+            },
+            {
+              "star": 7,
+              "value": 20
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tc_19",
+    "name": {
+      "vi": "Tĩnh Lặng",
+      "en": "Calm"
+    },
+    "icon": "pic_tactic_cold.png",
+    "count": 12,
+    "eff": {
+      "vi": "+20% Tĩnh Lặng (Đấu Trường) cho Phe/Hệ đang kích hoạt",
+      "en": "+20% Calm (Arena) to the active faction"
+    },
+    "scaling": {
+      "metric": "stat",
+      "statType": "cold_up",
+      "label_en": "Calm (Arena)",
+      "label_vi": "Tĩnh Lặng (Đấu Trường)",
+      "unit": "%",
+      "summable": true,
+      "rarities": [
+        {
+          "key": "blue",
+          "quality": 3,
+          "name_en": "Blue",
+          "name_vi": "Xanh",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            }
+          ]
+        },
+        {
+          "key": "purple",
+          "quality": 4,
+          "name_en": "Purple",
+          "name_vi": "Tím",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 5
+            },
+            {
+              "star": 1,
+              "value": 6
+            },
+            {
+              "star": 2,
+              "value": 7
+            },
+            {
+              "star": 3,
+              "value": 8
+            },
+            {
+              "star": 4,
+              "value": 9
+            },
+            {
+              "star": 5,
+              "value": 10
+            }
+          ]
+        },
+        {
+          "key": "orange",
+          "quality": 5,
+          "name_en": "Orange",
+          "name_vi": "Cam",
+          "tiers": [
+            {
+              "star": 0,
+              "value": 8
+            },
+            {
+              "star": 1,
+              "value": 9
+            },
+            {
+              "star": 2,
+              "value": 10
+            },
+            {
+              "star": 3,
+              "value": 11
+            },
+            {
+              "star": 4,
+              "value": 12
+            },
+            {
+              "star": 5,
+              "value": 17
+            },
+            {
+              "star": 6,
+              "value": 18
+            },
+            {
+              "star": 7,
+              "value": 20
+            }
+          ]
+        }
+      ]
+    }
+  }
+];
+
+export const tacticFrames = [
+  {
+    "id": "tf_01",
+    "name": "Standard I",
+    "icon": "pic_zsk_kuang_x_01_1.png",
+    "hp": 4200,
+    "def": 2100,
+    "colorClass": "text-[#4ade80]",
+    "borderClass": "border-[#4ade80]/50",
+    "bgClass": "bg-[#4ade80]/10"
+  },
+  {
+    "id": "tf_02",
+    "name": "Standard II",
+    "icon": "pic_zsk_kuang_x_01_2.png",
+    "hp": 6300,
+    "def": 3150,
+    "colorClass": "text-[#4ade80]",
+    "borderClass": "border-[#4ade80]/50",
+    "bgClass": "bg-[#4ade80]/10"
+  },
+  {
+    "id": "tf_03",
+    "name": "Exquisite I",
+    "icon": "pic_zsk_kuang_x_02_1.png",
+    "hp": 8400,
+    "def": 4200,
+    "colorClass": "text-[#38bdf8]",
+    "borderClass": "border-[#38bdf8]/50",
+    "bgClass": "bg-[#38bdf8]/10"
+  },
+  {
+    "id": "tf_04",
+    "name": "Exquisite II",
+    "icon": "pic_zsk_kuang_x_02_2.png",
+    "hp": 10500,
+    "def": 5250,
+    "colorClass": "text-[#38bdf8]",
+    "borderClass": "border-[#38bdf8]/50",
+    "bgClass": "bg-[#38bdf8]/10"
+  },
+  {
+    "id": "tf_05",
+    "name": "Exquisite III",
+    "icon": "pic_zsk_kuang_x_02_3.png",
+    "hp": 12600,
+    "def": 6300,
+    "colorClass": "text-[#38bdf8]",
+    "borderClass": "border-[#38bdf8]/50",
+    "bgClass": "bg-[#38bdf8]/10"
+  },
+  {
+    "id": "tf_06",
+    "name": "Treasured I",
+    "icon": "pic_zsk_kuang_x_03_1.png",
+    "hp": 14700,
+    "def": 7350,
+    "colorClass": "text-[#c084fc]",
+    "borderClass": "border-[#c084fc]/50",
+    "bgClass": "bg-[#c084fc]/10"
+  },
+  {
+    "id": "tf_07",
+    "name": "Treasured II",
+    "icon": "pic_zsk_kuang_x_03_2.png",
+    "hp": 16800,
+    "def": 8400,
+    "colorClass": "text-[#c084fc]",
+    "borderClass": "border-[#c084fc]/50",
+    "bgClass": "bg-[#c084fc]/10"
+  },
+  {
+    "id": "tf_08",
+    "name": "Treasured III",
+    "icon": "pic_zsk_kuang_x_03_3.png",
+    "hp": 18900,
+    "def": 9450,
+    "colorClass": "text-[#c084fc]",
+    "borderClass": "border-[#c084fc]/50",
+    "bgClass": "bg-[#c084fc]/10"
+  },
+  {
+    "id": "tf_09",
+    "name": "Treasured IV",
+    "icon": "pic_zsk_kuang_x_03_4.png",
+    "hp": 21000,
+    "def": 10500,
+    "colorClass": "text-[#c084fc]",
+    "borderClass": "border-[#c084fc]/50",
+    "bgClass": "bg-[#c084fc]/10"
+  },
+  {
+    "id": "tf_10",
+    "name": "Custom I",
+    "icon": "pic_zsk_kuang_x_04_1.png",
+    "hp": 23100,
+    "def": 11550,
+    "colorClass": "text-[#fbbf24]",
+    "borderClass": "border-[#fbbf24]/50",
+    "bgClass": "bg-[#fbbf24]/10"
+  },
+  {
+    "id": "tf_11",
+    "name": "Custom II",
+    "icon": "pic_zsk_kuang_x_04_2.png",
+    "hp": 25200,
+    "def": 12600,
+    "colorClass": "text-[#fbbf24]",
+    "borderClass": "border-[#fbbf24]/50",
+    "bgClass": "bg-[#fbbf24]/10"
+  },
+  {
+    "id": "tf_12",
+    "name": "Custom III",
+    "icon": "pic_zsk_kuang_x_04_3.png",
+    "hp": 27300,
+    "def": 13650,
+    "colorClass": "text-[#fbbf24]",
+    "borderClass": "border-[#fbbf24]/50",
+    "bgClass": "bg-[#fbbf24]/10"
+  },
+  {
+    "id": "tf_13",
+    "name": "Custom IV",
+    "icon": "pic_zsk_kuang_x_04_4.png",
+    "hp": 29400,
+    "def": 14700,
+    "colorClass": "text-[#fbbf24]",
+    "borderClass": "border-[#fbbf24]/50",
+    "bgClass": "bg-[#fbbf24]/10"
+  }
+];

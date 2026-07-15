@@ -9,10 +9,22 @@ import EventsView from '../views/EventsView.vue'
 import EventDetailView from '../views/EventDetailView.vue'
 import PrivacyView from '../views/PrivacyView.vue'
 import HistoryView from '../views/HistoryView.vue'
+import MedalsView from '../views/MedalsView.vue'
+import TacticsView from '../views/TacticsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/medals',
+      name: 'medals',
+      component: MedalsView
+    },
+    {
+      path: '/tactics',
+      name: 'tactics',
+      component: TacticsView
+    },
     {
       path: '/',
       name: 'home',

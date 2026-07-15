@@ -76,5 +76,15 @@ Dưới đây là toàn bộ lịch sử các phiên bản phát triển của d
   - Liên kết trực tiếp trang chính sách và lịch sử tại Footer (chân trang) của ứng dụng.
 - **Dọn dẹp mã nguồn:** Loại bỏ toàn bộ các script Python bổ trợ trung gian và các file văn bản tạm (`types.txt`, `log.txt`, `test.py`...) trước khi đẩy mã nguồn sạch lên GitHub.
 
+## 🛠️ Phiên bản 2.1 - Mở rộng Chiến Thuật (Tactics) & Huy Chương (Medals)
+- **Hệ thống Chiến Thuật (Tactical Research):**
+  - Xây dựng trang `/tactics` hiển thị toàn bộ Thẻ Chiến Thuật (Tactics Cards), Bộ Chiến Thuật (Tactic Suits), Khung viền và thông tin leo Tháp Trăng Khuyết.
+  - Tích hợp tính năng Zoom ảnh trực quan, thiết kế bộ lọc SubTab logic với hiệu ứng cross-fade mượt mà và bộ trượt ảnh (slider) tự động trình chiếu.
+- **Hệ thống Huy Chương (Emblem System):**
+  - Xây dựng trang `/medals` với bộ dữ liệu phân chia rõ ràng Ngọc Công (Offense Gems) và Ngọc Thủ (Defense Gems).
+  - Tự động hóa hệ thống tính toán tài nguyên nâng cấp ngọc (Level 0-7), hiển thị chi tiết các kỹ năng Huy Chương và phần thưởng Nhiệm Vụ Truy Nã (Bounty Mission).
+  - Hiệu ứng chuyển động (Fade-in/out) toàn diện cho tất cả các khối hiển thị (Accordion menu, Tab chuyển đổi).
+- **Tối ưu hóa & Dọn dẹp:** Loại bỏ hoàn toàn các tập tin script phân tích (parser) nháp (`parse.cjs`, `generate_data.cjs`...), cập nhật import Vue chuẩn xác nhằm tối ưu hiệu năng.
+
 ---
-*Dự án OPM Wiki đã trải qua vô số dòng code và script Python khác nhau. Thành quả hiện tại là một hệ thống web hiện đại, được tối ưu hoàn toàn tự động dựa trên tệp JSON, hiển thị chuẩn xác logic đặc thù nhất của OPM The Strongest.*
+*Dự án OPM Wiki đã trải qua vô số dòng code và script Python/NodeJS khác nhau. Thành quả hiện tại là một hệ thống web hiện đại, được tối ưu hoàn toàn tự động dựa trên tệp JSON, hiển thị chuẩn xác logic đặc thù nhất của OPM The Strongest.*

@@ -11,10 +11,13 @@
   "nav": {
     "characters": "Characters",
     "mastery": "Mastery",
-    "corelab": "Core Lab",
-    "keepsakes": "Keepsakes",
+    "corelab": "Core Skill",
+    "keepsakes": "Keepsake",
     "insignias": "Insignias",
-    "events": "Schedule"
+    "medals": "Emblems",
+    "tactics": "Tactics",
+    "features": "Features",
+    "events": "Event Schedule"
   },
   "footer": {
     "desc": "OPM: The Strongest — community database · data extracted directly from game",
@@ -96,8 +99,8 @@
     "animUpdatingSmall": "Animation updating"
   },
   "corelab": {
-    "title": "Core Lab",
-    "desc": "Core System (Laboratory) — resources needed to upgrade core and buffs unlocked at each level.",
+    "title": "Core Skill",
+    "desc": "Calculate materials for Core Skill upgrades.",
     "coreSkill": "Core Skill",
     "basicCondition": "Basic Activation Condition",
     "advancedCondition": "Advanced Activation Condition",
@@ -191,5 +194,32 @@
     "startsIn": "Starts in {days} days",
     "timeEnded": "Ended",
     "disclaimer": "The event schedule below may not be completely accurate and is intended for reference purposes only."
+  },
+  "medals": {
+    "title": "Emblem Feature",
+    "desc": "Unlocks at Level 70. Upgrade Emblems, Marks, inlay Gems, and activate Emblem Ultimate Skills to directly increase character power.",
+    "tabOverview": "Overview",
+    "tabMirage": "Mirage Trial",
+    "tabSkill": "Emblem Skill",
+    "tabGems": "All Gems",
+    "tabBounty": "Bounty Mission",
+    "emblemRules": "Emblem System Rules",
+    "mirageRules": "Mirage Trial Rules",
+    "skillRules": "Ultimate Skill Rules",
+    "gemRules": "Gem Types List",
+    "bountyRules": "Bounty Mission Rules",
+    "levelRequired": "Unlocks at Lv.70"
+  },
+  "tactics": {
+    "title": "Tactics Feature",
+    "desc": "Unlocks at Lv 75. Upgrade Tactic Cards based on type and faction. Challenge Crescent Tower to gather valuable tactics resources.",
+    "tabLab": "Research Lab",
+    "tabCrescentTower": "Crescent Tower",
+    "tabCards": "All Tactic Cards",
+    "tabFrames": "All Tactic Frames",
+    "labRules": "Research Lab Rules",
+    "crescentTowerRules": "Crescent Tower Rules",
+    "autoRules": "Continuous Challenge Rules",
+    "levelRequired": "Lv.75 Unlock"
   }
 }

@@ -14,6 +14,9 @@
     "corelab": "Phòng Nghiên Cứu",
     "keepsakes": "Kỷ Vật",
     "insignias": "Huy Hiệu",
+    "medals": "Huy Chương",
+    "tactics": "Chiến Thuật",
+    "features": "Hệ Thống",
     "events": "Lịch sự kiện"
   },
   "footer": {
@@ -96,7 +99,7 @@
   },
   "corelab": {
     "title": "Phòng Nghiên Cứu",
-    "desc": "Tính toán nguyên liệu nâng cấp Phòng Nghiên Cứu.",
+    "desc": "Tính toán nguyên liệu nâng cấp Phòng Nghiên Cứu (Core Skill).",
     "selectCore": "Chọn Lõi",
     "partSelection": "Chọn Bộ Phận Nâng Cấp",
     "part1": "1: Cường Hóa Kỹ Năng",
@@ -196,5 +199,32 @@
     "startsIn": "Bắt đầu sau {days} ngày",
     "timeEnded": "Đã kết thúc",
     "disclaimer": "Thông tin lịch trình dưới đây có thể không hoàn toàn chính xác và chỉ mang tính chất tham khảo."
+  },
+  "medals": {
+    "title": "Tính Năng Huy Chương",
+    "desc": "Mở khóa ở Cấp 70. Nâng cấp Huy chương, Ấn ký, khảm Ngọc và kích hoạt các Tuyệt kỹ Huy chương để gia tăng trực tiếp sức mạnh cho nhân vật.",
+    "tabOverview": "Tổng Quan",
+    "tabMirage": "Thử Thách Ảo Ảnh",
+    "tabSkill": "Kỹ Năng Huy Chương",
+    "tabGems": "Tất cả Ngọc",
+    "tabBounty": "Nhiệm Vụ Treo Thưởng",
+    "emblemRules": "Quy tắc Hệ thống Huy chương",
+    "mirageRules": "Quy tắc Thử Thách Ảo Ảnh (Mirage Trial)",
+    "skillRules": "Kỹ năng Tuyệt kỹ (Ultimate Skill)",
+    "gemRules": "Danh sách các loại Ngọc",
+    "bountyRules": "Quy tắc Nhiệm Vụ Treo Thưởng",
+    "levelRequired": "Cấp 70 mở khóa"
+  },
+  "tactics": {
+    "title": "Tính Năng Chiến Thuật",
+    "desc": "Mở khóa ở Cấp 75. Nâng cấp Thẻ Chiến thuật theo hệ và phe phái. Khiêu chiến Tháp Lưỡi Liềm để thu thập các tài nguyên chiến thuật quý giá.",
+    "tabLab": "Phòng Nghiên Cứu",
+    "tabCrescentTower": "Tháp Trăng Khuyết",
+    "tabCards": "Tất cả Thẻ Chiến Thuật",
+    "tabFrames": "Tất cả Viền Thẻ",
+    "labRules": "Quy tắc Phòng Nghiên Cứu",
+    "crescentTowerRules": "Quy tắc Tháp Trăng Khuyết",
+    "autoRules": "Quy tắc Khiêu chiến Tự động",
+    "levelRequired": "Cấp 75 mở khóa"
   }
 }
