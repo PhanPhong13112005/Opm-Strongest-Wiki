@@ -114,7 +114,7 @@
       }
     ],
     "keepsakeIcon": "/Characters/Zombieman (URplus)/Keepsake_URplus.png",
-    "bio": "A new UR+ awakening of Zombieman — the “Heavy Vanguard” (重装先锋): an undying Duelist frontline that cleanses crowd-control for the team, blinds and pierces enemy defenses, and revives with stacking ATK/HP. CV: Takahiro Sakurai.",
+    "bio": "A new URplus awakening of Zombieman — the “Heavy Vanguard” (重装先锋): an undying Duelist frontline that cleanses crowd-control for the team, blinds and pierces enemy defenses, and revives with stacking ATK/HP. CV: Takahiro Sakurai.",
     "pvpStats": {
       "atk": 30,
       "hp": 30,
@@ -300,7 +300,7 @@
         "name": "Cơ bản",
         "desc": "Gây ST trực tiếp bằng 40% ST lên mục tiêu đơn.",
         "icon": "/Skill/Bang & Bomb (URplus)/Skill_base.png",
-        "animation": "/Animation/Bang_UR+/Base.gif",
+        "animation": "/Animation/Bang_URplus/Base.gif",
         "type": "Kỹ năng thường",
         "keepsakeIcon": null
       },
@@ -309,7 +309,7 @@
         "desc": "Gây ST trực tiếp lên toàn bộ kẻ địch bằng 500% HP tối đa của đơn vị này, tăng thêm 15% mỗi lớp [Combo] (tối đa 2 lớp, lên đến 650%). Giảm [Dodge] và [Giảm Sát Thương Chí Mạng] của mục tiêu 45%. Sau đó tung [Endless Chase] vào một kẻ địch còn sống ngẫu nhiên (đuổi 1 lần). Nhận 1 lớp [Combo] khi thi triển.",
         "icon": "/Skill/Bang & Bomb (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Bang_UR+/ult.gif",
+        "animation": "/Animation/Bang_URplus/ult.gif",
         "keepsakeIcon": null
       },
       {
@@ -318,13 +318,13 @@
         "keepsakeIcon": "/Skill/Bang & Bomb (URplus)/Keepsake-Urplus.png",
         "icon": "/Skill/Bang & Bomb (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Bang_UR+/ult.gif"
+        "animation": "/Animation/Bang_URplus/ult.gif"
       },
       {
         "name": "Bị động",
         "desc": "Nhận +20% HP. Khi vào trận, nhận +60% [Giảm Sát Thương Chí Mạng], đặt lại lớp [Combo] về 0, và [Nullify] các nội tại quan trọng của kẻ địch ([UnhurtToShield] và hiệu ứng chuyển hồi máu). Giải trừ cho toàn bộ đồng minh khi vào trận và cuối lượt của bản thân.",
         "icon": "/Skill/Bang & Bomb (URplus)/Skill_pas.png",
-        "animation": "/Animation/Bang_UR+/Passive.gif",
+        "animation": "/Animation/Bang_URplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -332,7 +332,7 @@
         "name": "Bị động cực hạn",
         "desc": "[Giảm Sát Thương Chí Mạng] khi vào trận 60% > 70%.",
         "icon": "/Skill/Bang & Bomb (URplus)/Skill_pas.png",
-        "animation": "/Animation/Bang_UR+/Passive.gif",
+        "animation": "/Animation/Bang_URplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -340,7 +340,7 @@
         "name": "Bị động 5 sao",
         "desc": "[Giảm Sát Thương Chí Mạng] khi vào trận 70% > 80%.",
         "icon": "/Skill/Bang & Bomb (URplus)/Skill_pas.png",
-        "animation": "/Animation/Bang_UR+/Passive.gif",
+        "animation": "/Animation/Bang_URplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -348,7 +348,7 @@
         "name": "Bị động thức tỉnh",
         "desc": "Vĩnh viễn tăng 60% Máu tối đa của bản thân. Khi bắt đầu trận đấu, ban cho bản thân [Increased DMG from Resistance] và [Reduced DMG from Resistance]. Khi Máu/[Máu Chuyên Biệt] của đồng minh chịu sát thương, sát thương này được giảm 99%, và 99% sát thương gốc được chuyển hóa thành [Kiên Cường Năng Lượng] (tổng lượng [Kiên Cường Năng Lượng] nhận được theo cách này tối đa bằng 28 lần Máu tối đa gốc của Silverfang & Bomb. Hiệu ứng này và [Hồi Sinh] chỉ có thể hoạt động một cái tại một thời điểm. Khi [Kiên Cường Năng Lượng] đạt mức tối đa, hiệu ứng Giảm sát thương sẽ không còn hiệu lực).\n[Tăng Kháng Sát Thương]: Tăng 30% sát thương gây ra và tăng thêm lên 1.5 lần khi máu gốc cao hơn của kẻ tấn công. [Giảm Kháng Sát Thương]: Giảm 30% sát thương phải chịu, và tăng thêm lên 1.5 lần khi máu gốc cao hơn của kẻ tấn công.",
         "icon": "/Skill/Bang & Bomb (URplus)/skill_awk.png",
-        "animation": "/Animation/Bang_UR+/awken.gif",
+        "animation": "/Animation/Bang_URplus/awken.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
@@ -356,7 +356,7 @@
         "name": "Thức tỉnh 2",
         "desc": "Tăng Máu tối đa của bản thân 60% > 80% Chuyển hóa 10% [Kiên Cường Năng Lượng] mà đồng minh nhận được thành [Máu Chuyên Biệt] (tỉ lệ tự chuyển hóa tăng thêm 50%) [Tăng Kháng Sát Thương]+[Giảm Kháng Sát Thương]: 30% > 50%, Tăng thêm 1.5 > 1.7",
         "icon": "/Skill/Bang & Bomb (URplus)/skill_awk.png",
-        "animation": "/Animation/Bang_UR+/awken.gif",
+        "animation": "/Animation/Bang_URplus/awken.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
@@ -364,7 +364,7 @@
         "name": "Thức tỉnh 3",
         "desc": "• Restores 150 Energy (when attacking)",
         "icon": "/Skill/Bang & Bomb (URplus)/skill_awk.png",
-        "animation": "/Animation/Bang_UR+/awken.gif",
+        "animation": "/Animation/Bang_URplus/awken.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       }
