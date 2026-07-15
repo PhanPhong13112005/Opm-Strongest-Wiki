@@ -57,7 +57,7 @@ const scheduleData = {
       items: [
         {
           id: '100316-urplus',
-          bannerImage: '/Characters/Full_Background/Rover_UR+.png',
+          bannerImage: '/Characters/Full_Background/Rover_URplus.png',
           tag: t('home.release'),
           tagBg: 'bg-opm-gold text-black',
           tagText: 'text-opm-gold',
@@ -68,7 +68,7 @@ const scheduleData = {
         },
         {
           id: '100314-urplus',
-          bannerImage: '/Characters/Full_Background/G5_UR+.png',
+          bannerImage: '/Characters/Full_Background/G5_URplus.png',
           tag: t('home.return'),
           tagBg: 'bg-opm-red text-black',
           tagText: 'text-opm-red',
@@ -86,7 +86,7 @@ const scheduleData = {
       items: [
         {
           id: '100312-urplus',
-          bannerImage: '/Characters/Full_Background/Nyan_UR+.png',
+          bannerImage: '/Characters/Full_Background/Nyan_URplus.png',
           tag: t('home.release'),
           tagBg: 'bg-opm-gold text-black',
           tagText: 'text-opm-gold',
@@ -97,7 +97,7 @@ const scheduleData = {
         },
         {
           id: '100029-urplus',
-          bannerImage: '/Characters/Full_Background/Amai_Mask_Ur+.png',
+          bannerImage: '/Characters/Full_Background/Amai_Mask_Urplus.png',
           tag: t('home.return'),
           tagBg: 'bg-[#b861ff] text-black',
           tagText: 'text-[#b861ff]',
@@ -117,7 +117,7 @@ const scheduleData = {
       items: [
         {
           id: '100013-urplus',
-          bannerImage: '/Characters/Full_Background/ZombIeMan_UR+.png',
+          bannerImage: '/Characters/Full_Background/ZombIeMan_URplus.png',
           tag: t('home.release'),
           tagBg: 'bg-opm-gold text-black',
           tagText: 'text-opm-gold',
@@ -128,7 +128,7 @@ const scheduleData = {
         },
         {
           id: '100315-urplus',
-          bannerImage: '/Characters/Full_Background/Bang&Bomb_Ur+.png',
+          bannerImage: '/Characters/Full_Background/Bang&Bomb_Urplus.png',
           tag: t('home.return'),
           tagBg: 'bg-opm-red text-black',
           tagText: 'text-opm-red',
@@ -146,7 +146,7 @@ const scheduleData = {
       items: [
         {
           id: '100313-urplus',
-          bannerImage: '/Characters/Full_Background/Atomic Samurai_UR+.png',
+          bannerImage: '/Characters/Full_Background/Atomic Samurai_URplus.png',
           tag: t('home.release'),
           tagBg: 'bg-opm-gold text-black',
           tagText: 'text-opm-gold',
@@ -157,7 +157,7 @@ const scheduleData = {
         },
         {
           id: '100180-urplus',
-          bannerImage: '/Characters/Full_Background/Tatsumaki_UR+.png',
+          bannerImage: '/Characters/Full_Background/Tatsumaki_URplus.png',
           tag: t('home.return'),
           tagBg: 'bg-[#b861ff] text-black',
           tagText: 'text-[#b861ff]',
@@ -193,7 +193,7 @@ const scheduleData = {
         },
         {
           id: '100316-urplus',
-          bannerImage: '/Characters/Full_Background/Rover_UR+.png',
+          bannerImage: '/Characters/Full_Background/Rover_URplus.png',
           tag: t('home.return'),
           tagBg: 'bg-opm-red text-black',
           tagText: 'text-opm-red',
@@ -211,7 +211,7 @@ const scheduleData = {
       items: [
         {
           id: '100314-urplus',
-          bannerImage: '/Characters/Full_Background/G5_UR+.png',
+          bannerImage: '/Characters/Full_Background/G5_URplus.png',
           tag: t('home.release'),
           tagBg: 'bg-opm-gold text-black',
           tagText: 'text-opm-gold',
@@ -222,7 +222,7 @@ const scheduleData = {
         },
         {
           id: '100312-urplus',
-          bannerImage: '/Characters/Full_Background/Nyan_UR+.png',
+          bannerImage: '/Characters/Full_Background/Nyan_URplus.png',
           tag: t('home.return'),
           tagBg: 'bg-[#b861ff] text-black',
           tagText: 'text-[#b861ff]',

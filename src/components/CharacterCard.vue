@@ -108,10 +108,27 @@ const classIcon = computed(() => {
 const keepsakeIcon = computed(() => {
   return props.character.keepsakeIcon || null
 })
+
+const preloadDetails = () => {
+  if (!props.character) return;
+  const url = props.character.imageURL;
+  if (url) {
+    let finalUrl = url;
+    const match = url.match(/\/Characters\/(.+?)\//);
+    if (match) {
+      const folderName = match[1];
+      const baseName = folderName.replace(' (URplus)', '_UR+').replace(' (UR)', '_Ur').replace(' (SSR+)', '_SSR+').replace(' (SSR)', '').replace(' (SR)', '');
+      finalUrl = `/Characters/Full_Background/${baseName}.png`;
+    }
+    const safeFullUrl = safeUrl(finalUrl);
+    const img = new Image();
+    img.src = safeFullUrl;
+  }
+}
 </script>
 
 <template>
-  <div class="relative group cursor-pointer w-full bg-[#161719] border border-white/5 rounded-xl p-2 transition-transform duration-300 hover:scale-[1.03] hover:border-white/10 hover:shadow-xl">
+  <div @mouseenter="preloadDetails" class="relative group cursor-pointer w-full bg-[#161719] border border-white/5 rounded-xl p-2 transition-transform duration-300 hover:scale-[1.03] hover:border-white/10 hover:shadow-xl">
     
     <div class="flex gap-2">
       <!-- Left side: Avatar with frame -->
@@ -120,6 +137,7 @@ const keepsakeIcon = computed(() => {
         <img 
           v-if="frameBg"
           :src="frameBg"
+          loading="lazy"
           class="absolute inset-0 w-full h-full object-fill z-0 pointer-events-none"
           alt="Frame Background"
         />
@@ -129,6 +147,7 @@ const keepsakeIcon = computed(() => {
           <img 
             :src="resolvedImage" 
             :alt="character.name" 
+            loading="lazy"
             class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
             onerror="this.src='https://placehold.co/400x400/222/555?text=OPM'"
           />
@@ -138,6 +157,7 @@ const keepsakeIcon = computed(() => {
         <img 
           v-if="foregroundFrame"
           :src="foregroundFrame"
+          loading="lazy"
           class="absolute inset-0 w-full h-full object-fill z-20 pointer-events-none"
           alt="Frame Overlay"
         />
@@ -146,20 +166,20 @@ const keepsakeIcon = computed(() => {
       <!-- Right side: Icons Stack -->
       <div class="w-[50px] flex flex-col items-center justify-start space-y-2 py-1 shrink-0 z-20">
         <!-- Tier Image -->
-        <img v-if="tierIcon" :src="tierIcon" class="w-[110%] h-auto object-contain drop-shadow-md mb-1" :alt="character.tier" />
+        <img v-if="tierIcon" :src="tierIcon" loading="lazy" class="w-[110%] h-auto object-contain drop-shadow-md mb-1" :alt="character.tier" />
         
         <!-- Icons (with dynamic backgrounds like screenshot) -->
         <div :class="['w-10 h-10 rounded-lg p-0.5 flex items-center justify-center border border-white/10', typeBgColor]">
-          <img v-if="typeIcon" :src="typeIcon" class="w-full h-full object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" title="Hệ" />
+          <img v-if="typeIcon" :src="typeIcon" loading="lazy" class="w-full h-full object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" title="Hệ" />
         </div>
         <div :class="['w-10 h-10 rounded-lg p-0.5 flex items-center justify-center border border-white/10', factionBgColor]">
-          <img v-if="factionIcon" :src="factionIcon" class="w-full h-full object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" title="Phe phái" />
+          <img v-if="factionIcon" :src="factionIcon" loading="lazy" class="w-full h-full object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" title="Phe phái" />
         </div>
         <div class="w-10 h-10 bg-black rounded-lg p-1 flex items-center justify-center border border-white/10">
-          <img v-if="classIcon" :src="classIcon" class="w-full h-full object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" title="Class (Lớp)" />
+          <img v-if="classIcon" :src="classIcon" loading="lazy" class="w-full h-full object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" title="Class (Lớp)" />
         </div>
         <div class="w-10 h-10 bg-black rounded-lg p-1.5 flex items-center justify-center border border-white/10">
-          <img v-if="keepsakeIcon" :src="keepsakeIcon" class="w-full h-full object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" title="Kỷ vật (Keepsake)" />
+          <img v-if="keepsakeIcon" :src="keepsakeIcon" loading="lazy" class="w-full h-full object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" title="Kỷ vật (Keepsake)" />
         </div>
       </div>
     </div>

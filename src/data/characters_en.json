@@ -2,7 +2,7 @@
   {
     "id": "100013-urplus",
     "name": "Zombieman",
-    "imageURL": "/Characters/Zombieman (UR+)/UR+.png",
+    "imageURL": "/Characters/Zombieman (URplus)/URplus.png",
     "tier": "UR+",
     "type": "Duelist",
     "faction": "Hero",
@@ -21,7 +21,7 @@
       {
         "name": "Basic",
         "desc": "Deals 40% ST damage directly to single target.",
-        "animation": "/Animation/Zombie_Man_Ur+/Base.gif",
+        "animation": "/Animation/Zombie_Man_Urplus/Base.gif",
         "type": "Kỹ năng thường",
         "icon": null,
         "keepsakeIcon": null
@@ -29,64 +29,64 @@
       {
         "name": "Great Skills",
         "desc": "Marks self, then deals additional Direct Damage to the target's entire row. Also inflicts [Blind] on the target and 1 random enemy (only before Round 7), and the [Blind] target loses 20% PvP damage reduction.",
-        "icon": "/Skill/Zombieman (UR+)/Skill_ult.png",
+        "icon": "/Skill/Zombieman (URplus)/Skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Zombie_Man_Ur+/ult.gif",
+        "animation": "/Animation/Zombie_Man_Urplus/ult.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Super Great Technique",
         "desc": "Additionally buffs all allies (two buff effects). The [Blind] window lasts for Round 7 > Round 8, and the [Blind] target loses PvP damage reduction by 20% > 30%.",
-        "keepsakeIcon": "/Skill/Zombieman (UR+)/Keepsake_UR+.png",
-        "icon": "/Skill/Zombieman (UR+)/Skill_ult.png",
+        "keepsakeIcon": "/Skill/Zombieman (URplus)/Keepsake_URplus.png",
+        "icon": "/Skill/Zombieman (URplus)/Skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Zombie_Man_Ur+/ult.gif"
+        "animation": "/Animation/Zombie_Man_Urplus/ult.gif"
       },
       {
         "name": "Passive",
         "desc": "When entering battle, gain +20% Health and +60% Crit DMG Reduction, and become immune to [Blind]. At the start of your turn, remove up to 4 debuffs from all allies. From Round 3 onwards, remove [Link] from all enemies. When entering battle, grants allies in the same column one free skill cast.",
-        "icon": "/Skill/Zombieman (UR+)/Skill_pas.png",
-        "animation": "/Animation/Zombie_Man_Ur+/Passive.gif",
+        "icon": "/Skill/Zombieman (URplus)/Skill_pas.png",
+        "animation": "/Animation/Zombie_Man_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Extremely passive",
         "desc": "Crit DMG Reduction 60% > 70%.",
-        "icon": "/Skill/Zombieman (UR+)/Skill_pas.png",
-        "animation": "/Animation/Zombie_Man_Ur+/Passive.gif",
+        "icon": "/Skill/Zombieman (URplus)/Skill_pas.png",
+        "animation": "/Animation/Zombie_Man_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Passive 5 stars",
         "desc": "Crit DMG Reduction 70% > 80%.",
-        "icon": "/Skill/Zombieman (UR+)/Skill_pas.png",
-        "animation": "/Animation/Zombie_Man_Ur+/Passive.gif",
+        "icon": "/Skill/Zombieman (URplus)/Skill_pas.png",
+        "animation": "/Animation/Zombie_Man_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Passive awakening",
         "desc": "When suffering critical damage, activate [Special Regeneration]. ———- [Special Regeneration]: When entering battle, permanently reduce damage taken by 30%. While you have allies, before your next action, heal to full health and continue fighting, increasing your own ST by 30% and Max HP by 30% (stacked), up to 3 activations.",
-        "icon": "/Skill/Zombieman (UR+)/zombie_skill_awk.png",
-        "animation": "/Animation/Zombie_Man_Ur+/awken+.gif",
+        "icon": "/Skill/Zombieman (URplus)/zombie_skill_awk.png",
+        "animation": "/Animation/Zombie_Man_Urplus/awken+.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 2",
         "desc": "Reduce damage by 30% > 60%. Maximum number of activations 3 > 4. Additionally, when an ally in the same row activates [Revival] while you have [Specialized Regeneration], cast [Challenge] with 120% skill power.",
-        "icon": "/Skill/Zombieman (UR+)/zombie_skill_awk.png",
-        "animation": "/Animation/Zombie_Man_Ur+/awken+.gif",
+        "icon": "/Skill/Zombieman (URplus)/zombie_skill_awk.png",
+        "animation": "/Animation/Zombie_Man_Urplus/awken+.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/Zombieman (UR+)/zombie_skill_awk.png",
-        "animation": "/Animation/Zombie_Man_Ur+/awken+.gif",
+        "icon": "/Skill/Zombieman (URplus)/zombie_skill_awk.png",
+        "animation": "/Animation/Zombie_Man_Urplus/awken+.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       }
@@ -113,7 +113,7 @@
         "desc": "When entering battle, permanently reduces damage; While allies remain, heal to full health and continue fighting a limited number of times."
       }
     ],
-    "keepsakeIcon": "/Characters/Zombieman (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Zombieman (URplus)/Keepsake_URplus.png",
     "bio": "A new UR+ awakening of Zombieman — the “Heavy Vanguard” (重装先锋): an undying Duelist frontline that cleanses crowd-control for the team, blinds and pierces enemy defenses, and revives with stacking ATK/HP. CV: Takahiro Sakurai.",
     "pvpStats": {
       "atk": 30,
@@ -137,7 +137,7 @@
   {
     "id": "100316-urplus",
     "name": "Overgrown Rover",
-    "imageURL": "/Characters/Overgrown Rover (UR+)/UR+.png",
+    "imageURL": "/Characters/Overgrown Rover (URplus)/URplus.png",
     "tier": "UR+",
     "type": "Esper",
     "faction": "Monster",
@@ -155,63 +155,63 @@
       {
         "name": "Basic",
         "desc": "Deals 120% ST to single target.",
-        "icon": "/Skill/Overgrown Rover (UR+)/Skill_base.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
         "keepsakeIcon": null
       },
       {
         "name": "Great Skills",
         "desc": "Unleash a 3-hit combo on all enemies, each hit dealing 7000% ST [Specialized Direct ST] (only affected by enhanced ST multipliers). Ignores 45% of [Special Evasion] and [Non-Crit Damage Reduction], pierces [Unyielding] and [Special Indomitable]. The 1st attack has a 150% chance of causing [Disturb] for 3 turns. — [Disturb]: Before any character acts, if the target does not have [Unique Indomitable] or [Extreme Indomitable], deal 4000% [Disturb Damage] based on Rover's ST; disappears after activation, can stack; ignores 100% [DoT DMG Reduction], passes through [Special Evasion] and [Non-Crit Damage Reduction].",
-        "icon": "/Skill/Overgrown Rover (UR+)/skill_ult.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
         "keepsakeIcon": null
       },
       {
         "name": "Super Great Technique",
         "desc": "ST per attack 7000% > 9000%. Ignore [Special Evasion] and [Non-Crit Damage Reduction] 45% > 60%. [Confusion Damage] 4000% > 5500%.",
-        "keepsakeIcon": "/Skill/Overgrown Rover (UR+)/Keepsake-UR+.png",
-        "icon": "/Skill/Overgrown Rover (UR+)/skill_ult.png",
+        "keepsakeIcon": "/Skill/Overgrown Rover (URplus)/Keepsake-URplus.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ"
       },
       {
         "name": "Passive",
         "desc": "When battle begins, gain 60% [Non-Crit Damage Reduction]. All allies receive 70% [True Damage Reduction]. Removes [DoT DMG Bonus Reduction] from all allies for the duration of the match. When [Refight] activates, the power of this unit's Ultimate attack [Gathering Pursuit] increases by 1.1x.",
-        "icon": "/Skill/Overgrown Rover (UR+)/Skill_pas.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/Skill_pas.png",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Extremely passive",
         "desc": "[Non-Crit Damage Reduction] 60% > 70%. [True Damage Reduction] of all allies 70% > 75%. Power of [Gathering Pursuit] when [Recombat] 1.1x > 1.2x.",
-        "icon": "/Skill/Overgrown Rover (UR+)/Skill_pas.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/Skill_pas.png",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Passive 5 stars",
         "desc": "[Non-Crit Damage Reduction] 70% > 80%. [True Damage Reduction] of all allies 75% > 80%. Power of [Gathering Pursuit] when [Recombat] 1.2x > 1.25x.",
-        "icon": "/Skill/Overgrown Rover (UR+)/Skill_pas.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/Skill_pas.png",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Passive awakening",
         "desc": "When entering battle, permanently reduces the number of times the ST bypass effect [Ultimate Unyielding] of all enemies takes effect by 1. Gains 4 layers of [Refight]. — [Rematch]: Permanently reduces damage received by 75% (+2.5% each time you return to battle). When an ally of the same rank (or all allies) is defeated and this unit is defeated, consume 1 layer of [Refight] to return, restore 100% HP, and perform [Gathering Pursuit] on a random target with 120% Ultimate power; Other fallen allies in the same row have a 70% chance of also activating.",
-        "icon": "/Skill/Overgrown Rover (UR+)/skill_awk.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 2",
         "desc": "Reduces the number of actions of the [Ultimate Indomitable] ST bypass effect of all enemies 1 > 2. Number of [Rematch] classes 4 > 5. Reduces the ST of [Rematch] by 75% > 78% (+2.5% > 2.8% per return). Power [Gathering Pursuit] 120% > 135%. Activation chance of other allies in the same row 70% > 100%.",
-        "icon": "/Skill/Overgrown Rover (UR+)/skill_awk.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 3",
         "desc": "Additionally, when attacking, self gains <b>+150 Energy</b>.",
-        "icon": "/Skill/Overgrown Rover (UR+)/skill_awk.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       }
@@ -258,7 +258,7 @@
         "desc": "Permanently reduces damage taken; When defeated, spend a layer to return to 100% Health and pursue."
       }
     ],
-    "keepsakeIcon": "/Characters/Overgrown Rover (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Overgrown Rover (URplus)/Keepsake_URplus.png",
     "pvpStats": {
       "atk": 30,
       "hp": 30,
@@ -280,7 +280,7 @@
   {
     "id": "100315-urplus",
     "name": "Bang & Bomb",
-    "imageURL": "/Characters/Bang & Bomb (UR+)/Ur+.png",
+    "imageURL": "/Characters/Bang & Bomb (URplus)/Urplus.png",
     "tier": "UR+",
     "type": "Grappler",
     "faction": "Hero",
@@ -299,7 +299,7 @@
       {
         "name": "Basic",
         "desc": "Inflicts direct damage equal to 40% of damage to a single target.",
-        "icon": "/Skill/Bang & Bomb (UR+)/Skill_base.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/Skill_base.png",
         "animation": "/Animation/Bang_UR+/Base.gif",
         "type": "Kỹ năng thường",
         "keepsakeIcon": null
@@ -307,7 +307,7 @@
       {
         "name": "Great Skills",
         "desc": "Inflicts direct ST to all enemies equal to 500% of this unit's maximum HP, increased by 15% per layer [Combo] (maximum 2 layers, up to 650%). Reduces target's [Dodge] and [Crit Damage Reduction] by 45%. Then cast [Endless Chase] on a random living enemy (chase 1 time). Gain 1 [Combo] class when cast.",
-        "icon": "/Skill/Bang & Bomb (UR+)/skill_ult.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
         "animation": "/Animation/Bang_UR+/ult.gif",
         "keepsakeIcon": null
@@ -315,15 +315,15 @@
       {
         "name": "Super Great Technique",
         "desc": "Deals direct ST to all enemies equal to 500% > 700% of this unit's maximum HP, increased by 15% > 20% per layer [Combo] (maximum 2 layers, up to 650% > 980%). Reduces target's [Dodge] and [Crit Damage Reduction] by 45% > 60%. [Endless Chase] now chases 1 > 3 times. Additionally, gives all allies +35% [Arena DMG Dealt] and gives all enemies -35% [Arena DMG Reduction], dispelling their buffs.",
-        "keepsakeIcon": "/Skill/Bang & Bomb (UR+)/Keepsake-Ur+.png",
-        "icon": "/Skill/Bang & Bomb (UR+)/skill_ult.png",
+        "keepsakeIcon": "/Skill/Bang & Bomb (URplus)/Keepsake-Urplus.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
         "animation": "/Animation/Bang_UR+/ult.gif"
       },
       {
         "name": "Passive",
         "desc": "Get +20% HP. When entering battle, gain +60% [Crit Damage Reduction], reset [Combo] class to 0, and [Nullify] key enemy passives ([UnhurtToShield] and healing transfer effects). Dispels all allies upon entering battle and at the end of your turn.",
-        "icon": "/Skill/Bang & Bomb (UR+)/Skill_pas.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/Skill_pas.png",
         "animation": "/Animation/Bang_UR+/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
@@ -331,7 +331,7 @@
       {
         "name": "Extremely passive",
         "desc": "[Crit Damage Reduction] when entering battle 60% > 70%.",
-        "icon": "/Skill/Bang & Bomb (UR+)/Skill_pas.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/Skill_pas.png",
         "animation": "/Animation/Bang_UR+/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
@@ -339,7 +339,7 @@
       {
         "name": "Passive 5 stars",
         "desc": "[Crit Damage Reduction] when entering battle 70% > 80%.",
-        "icon": "/Skill/Bang & Bomb (UR+)/Skill_pas.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/Skill_pas.png",
         "animation": "/Animation/Bang_UR+/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
@@ -347,7 +347,7 @@
       {
         "name": "Passive awakening",
         "desc": "Permanently increases own Maximum Health by 60%. At the start of battle, grant yourself [Increased DMG from Resistance] and [Reduced DMG from Resistance]. When an ally's Health/[Specialized Blood] takes damage, this damage is reduced by 99%, and 99% of the original damage is converted into [Resilient Energy] (the total amount of [Resilient Energy] gained this way is at most 28 times Silverfang & Bomb's original maximum Health. This effect and [Revival] can only be active one at a time. When [Resilient Energy] reaches its maximum level, the Kill effect is applied. will no longer be valid).\n[Increased Damage Resistance]: Increases damage dealt by 30% and increases by 1.5 times when the attacker's base health is higher. [Damage Resistance Reduction]: Reduces damage taken by 30%, and increases by 1.5 times when base health is higher than the attacker's.",
-        "icon": "/Skill/Bang & Bomb (UR+)/skill_awk.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/skill_awk.png",
         "animation": "/Animation/Bang_UR+/awken.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
@@ -355,7 +355,7 @@
       {
         "name": "Awakening 2",
         "desc": "Increases own maximum Health by 60% > 80% Converts 10% of [Resilient Energy] received by allies into [Specialized Health] (self-conversion rate increases by 50%) [Increases Damage Resistance]+[Reduces Damage Resistance]: 30% > 50%, Increases by 1.5 > 1.7",
-        "icon": "/Skill/Bang & Bomb (UR+)/skill_awk.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/skill_awk.png",
         "animation": "/Animation/Bang_UR+/awken.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
@@ -363,7 +363,7 @@
       {
         "name": "Awakening 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/Bang & Bomb (UR+)/skill_awk.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/skill_awk.png",
         "animation": "/Animation/Bang_UR+/awken.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
@@ -395,7 +395,7 @@
         "desc": "Increases damage dealt by 30%, increased by 1.5 times when the bearer's base HP is higher than the attacker's."
       }
     ],
-    "keepsakeIcon": "/Characters/Bang & Bomb (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Bang & Bomb (URplus)/Keepsake_URplus.png",
     "pvpStats": {
       "atk": 30,
       "hp": 30,
@@ -437,68 +437,68 @@
       {
         "name": "Basic",
         "desc": "Deals 120% ST to single target.",
-        "icon": "/Skill/G5 (UR+)/Skill_base.png",
+        "icon": "/Skill/G5 (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
         "keepsakeIcon": null
       },
       {
         "name": "Great Skills",
         "desc": "Deals 12000% Specialized direct damage scaling to an entire row of enemies for 4 consecutive hits (affected by Enhanced Damage Reduction only), ignores 45% Specialized Evasion and Non-Crit damage reduction, and penetrates [Indomitable] and [Specialized Indomitable]. This damage is not dealt to targets that cannot be damaged; For each target that can be dealt, damage increases by 30%.",
-        "icon": "/Skill/G5 (UR+)/Skill_ult.png",
+        "icon": "/Skill/G5 (URplus)/Skill_ult.png",
         "type": "Tuyệt kĩ",
         "keepsakeIcon": null
       },
       {
         "name": "Super Great Technique",
         "desc": "Attack 12000% > 15000%. For each target that can be divided, ST 30% > 40%. Reduce the number of [Revival] turns of all enemies by 2 > 3. Reduce the number of [Revenge] turns of all enemies by 5.",
-        "icon": "/Skill/G5 (UR+)/Skill_ult.png",
+        "icon": "/Skill/G5 (URplus)/Skill_ult.png",
         "type": "Tuyệt kĩ",
         "keepsakeIcon": null
       },
       {
         "name": "Passive",
         "desc": "Gain 60% Unique Evasion at the start of the match. When entering the field, reduce all enemies' [Revival] turns by 2 and [Non-Critical Hit Invincibility] by 4 turns.",
-        "icon": "/Skill/G5 (UR+)/Skill_pas.png",
+        "icon": "/Skill/G5 (URplus)/Skill_pas.png",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Extremely passive",
         "desc": "Special evasion 60% > 70%.",
-        "icon": "/Skill/G5 (UR+)/Skill_pas.png",
+        "icon": "/Skill/G5 (URplus)/Skill_pas.png",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Passive 5 stars",
         "desc": "Special avoidance 70% > 78%. Reduces [Non-Critical Hit Invincibility] turns by 4 > 5. Reduces all enemies' [Revenge] turns by 5 > 7.",
-        "icon": "/Skill/G5 (UR+)/Skill_pas.png",
+        "icon": "/Skill/G5 (URplus)/Skill_pas.png",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Passive awakening",
         "desc": "Permanently reduces damage taken by 60%, and 60% of original damage is converted into [Resilient Energy]. Before any character's turn, G5 has a 40% chance to perform [Charged follow-up] at 80% ability power (will not occur if there are no targets on the field capable of dealing damage), up to twice per turn. Chance to launch a counter attack increases by 40% each time an enemy character is defeated. [Charging follow-up]: Use group damage/healing skills to pursue random targets. Does not consume energy.",
-        "icon": "/Skill/G5 (UR+)/Skill_Awken.png",
+        "icon": "/Skill/G5 (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 2",
         "desc": "Permanently reduces damage taken by 60% > 80%} 60% > 80% of base damage is converted into [Resilient Energy] chance to perform [Charged follow-up] 40% > 60%, with skill power 80% > 100%, maximum 2x > 3x per round",
-        "icon": "/Skill/G5 (UR+)/Skill_Awken.png",
+        "icon": "/Skill/G5 (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/G5 (UR+)/Skill_Awken.png",
+        "icon": "/Skill/G5 (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       }
     ],
-    "imageURL": "/Characters/G5 (UR+)/UR+.png",
+    "imageURL": "/Characters/G5 (URplus)/URplus.png",
     "debut": "04 / 2026",
     "class": "Demon",
     "classIcon": "/Class/Demon.png",
@@ -537,7 +537,7 @@
         "desc": "The counterattack state can extend the duration on yourself or shorten it on enemies, granting retaliatory effects."
       }
     ],
-    "keepsakeIcon": "/Characters/G5 (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/G5 (URplus)/Keepsake_URplus.png",
     "classLevel": "Dragon",
     "releaseSea": "01/08/2026",
     "releaseTrung": "01/04/2026"
@@ -560,82 +560,82 @@
       {
         "name": "Basic",
         "desc": "Deals 60% damage to single target.",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_base.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
-        "animation": "/Animation/Sam_Ur+/Base.gif",
+        "animation": "/Animation/Sam_Urplus/Base.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Great Skills",
         "desc": "Atomic Samurai deals 30 slashes, then swings a powerful slash that deals 5000% ST Specialized Direct DMG to all enemies, ignoring 55% Specialized Evasion and 55% [Non-Crit Damage Reduction]. Additionally reduces the [Special Health] of all enemies by 100%.",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_ult.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Sam_Ur+/ult.gif",
+        "animation": "/Animation/Sam_Urplus/ult.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Super Great Technique",
         "desc": "Slash 30 > 50 times. ST 5000% > 7000%. Ignore Specialized Evasion and [Non-Crit Damage Reduction] 55% > 80%. Reduces [Special Health] of all enemies by 100% > 150%.",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_ult.png",
-        "keepsakeIcon": "/Skill/Atomic Samurai (UR+)/Keepsake-Ur+.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_ult.png",
+        "keepsakeIcon": "/Skill/Atomic Samurai (URplus)/Keepsake-Urplus.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Sam_Ur+/ult.gif"
+        "animation": "/Animation/Sam_Urplus/ult.gif"
       },
       {
         "name": "Passive",
         "desc": "Get +20% HP. Gain 60% [Non-Crit Damage Reduction] when entering battle. Removes all debuffs [Increase Overpower ST] and [Reduce Overpower ST] of enemies. When dealing [Specialized Direct Damage], ignore 40% of enemy's [Non-Crit Damage Reduction].",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_pas.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Extremely passive",
         "desc": "[Non-Crit Damage Reduction] 60% > 70%. Ignore enemy's [Non-Crit Damage Reduction] by 40% > 60%.",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_pas.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Passive 5 stars",
         "desc": "[Non-Crit Damage Reduction] 70% > 80%. Ignore enemy's [Non-Crit Damage Reduction] by 60% > 80%.",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_pas.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Passive awakening",
         "desc": "At the start of battle, grants Atomic Samurai a 20% unique Speed ​​boost. When taking damage, has a chance to reduce that damage by 40% (chance equal to twice your current Critical Rate). If you are among the first two allies to act, you will receive 30% Critical Chance and 50% Critical Damage.",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_Awken.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Sam_Ur+/awken.gif",
+        "animation": "/Animation/Sam_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 2",
         "desc": "Increase Speed ​​20% > 30% Reduce Damage 40% > 70% Critical Rate 30% > 50% Critical Damage 50% > 80%",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_Awken.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Sam_Ur+/awken.gif",
+        "animation": "/Animation/Sam_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_Awken.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Sam_Ur+/awken.gif",
+        "animation": "/Animation/Sam_Urplus/awken.gif",
         "keepsakeIcon": null
       }
     ],
     "tier": "UR+",
-    "imageURL": "/Characters/Atomic Samurai (UR+)/UR+.png",
+    "imageURL": "/Characters/Atomic Samurai (URplus)/URplus.png",
     "type": "Duelist",
     "faction": "Hero",
     "debut": "03 / 2026",
-    "keepsakeIcon": "/Characters/Atomic Samurai (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Atomic Samurai (URplus)/Keepsake_URplus.png",
     "pvpStats": {
       "atk": 30,
       "hp": 30,
@@ -699,79 +699,79 @@
       {
         "name": "Basic",
         "desc": "Deals 120% ST to single target.",
-        "icon": "/Skill/Nyan (UR+)/Skill_base.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
-        "animation": "/Animation/Nyan_Ur+/Base.gif",
+        "animation": "/Animation/Nyan_Urplus/Base.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Great Skills",
         "desc": "Deals 1500% [Specialized Direct Damage] to a back row enemy target in a chain of 4 attacks (affected by enhanced ST reduction only), ignores 45% of [Specialized Evasion] and [Non-Crit Damage Reduction], and pierces [Unyielding] and [Specialized Indomitable]. Permanently bestows [Special Speed ​​Boost] to other allies. When using your ultimate during the first 6 turns, apply [Specialized Charm] to the main target. — [Special Acceleration]: Speed ​​is increased to 94% of Nyan's speed; If the ally's speed is higher, keep it the same. [Specialized Charm]: The target immediately leaves combat, uses some special skills and internal effects to attack a random enemy, then returns and ignores the next active action; Enemies affected by [Specialized Charm] have [All DMG Reduction] reduced by 20% for 1 turn.",
-        "icon": "/Skill/Nyan (UR+)/Skill_ult.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Nyan_Ur+/ult.gif",
+        "animation": "/Animation/Nyan_Urplus/ult.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Super Great Technique",
         "desc": "Deals 1500% > 2400% DMG [Special Direct DMG]. Ignore [Special Evasion] and [Non-Crit Damage Reduction] 45% > 60%. [Exclusive Speed ​​Boost] increases Nyan's speed by 94% > 98%.",
-        "icon": "/Skill/Nyan (UR+)/Skill_ult.png",
-        "keepsakeIcon": "/Skill/Nyan (UR+)/Keepsake-UR+.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_ult.png",
+        "keepsakeIcon": "/Skill/Nyan (URplus)/Keepsake-URplus.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Nyan_Ur+/ult.gif"
+        "animation": "/Animation/Nyan_Urplus/ult.gif"
       },
       {
         "name": "Passive",
         "desc": "Gain 60% [Special Evasion] when entering battle. Immune to [Charm]/[Specialized Charm]. Reduces mana loss by 2 when allies suffer additional mana loss for the first 5 turns. Self has [Monster Affinity]. — [Monster Affinity]: When a Monster character's core skill is activated, Nyan can be counted as whatever character element is missing (for example, missing a duelist slot for Gyoro Core — Nyan is counted as a duelist so Core activates, even though Nyan is a grappler).",
-        "icon": "/Skill/Nyan (UR+)/Skill_pas.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Nyan_Ur+/Passive.gif",
+        "animation": "/Animation/Nyan_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Extremely passive",
         "desc": "[Special Evasion] when entering battle 60% > 70%. Reduces the amount of energy deducted by 2 > 3 when allies suffer additional energy loss in the first 5 turns.",
-        "icon": "/Skill/Nyan (UR+)/Skill_pas.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Nyan_Ur+/Passive.gif",
+        "animation": "/Animation/Nyan_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Passive 5 stars",
         "desc": "[Special Evasion] when entering battle 70% > 80%. Reduced mana loss by 3 when allies suffer additional mana loss for the first 5 turns.",
-        "icon": "/Skill/Nyan (UR+)/Skill_pas.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Nyan_Ur+/Passive.gif",
+        "animation": "/Animation/Nyan_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Passive awakening",
         "desc": "When entering battle, receive 46% [Specialized Speed]. Apply [HP Link] to the ally with the highest ST for 6 turns. After Nyan actively uses a skill, the ally carrying [HP Link] casts [Charge Pursuit] with 80% of the skill's power, up to once per turn. — [HP Link]: Nyan will not be defeated as long as the teammate carrying [HP Link] is alive; If they are defeated, [HP Link] switches to the ally with the next highest ST, up to 3 times. [Charge Pursuit]: Perform an ultimate move that deals ST or heals a large area as a pursuit attack; Random target, no energy consumed.",
-        "icon": "/Skill/Nyan (UR+)/Skill_Awken.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Nyan_Ur+/awken.gif",
+        "animation": "/Animation/Nyan_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 2",
         "desc": "When entering battle, receive [Specialized Speed] 46% > 54%. Allies carrying [HP Link] cast [Charge Pursuit] with 80% > 120% skill power.",
-        "icon": "/Skill/Nyan (UR+)/Skill_Awken.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Nyan_Ur+/awken.gif",
+        "animation": "/Animation/Nyan_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 3",
         "desc": "Additional gains +150 [Energy] to self when attacking.",
-        "icon": "/Skill/Nyan (UR+)/Skill_Awken.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Nyan_Ur+/awken.gif",
+        "animation": "/Animation/Nyan_Urplus/awken.gif",
         "keepsakeIcon": null
       }
     ],
-    "imageURL": "/Characters/Nyan (UR+)/UR+.png",
+    "imageURL": "/Characters/Nyan (URplus)/URplus.png",
     "debut": "02 / 2026",
-    "keepsakeIcon": "/Characters/Nyan (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Nyan (URplus)/Keepsake_URplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "pvpStats": {
@@ -821,7 +821,7 @@
   {
     "id": "100180-urplus",
     "name": "Tatsumaki/Terrible Tornado",
-    "imageURL": "/Characters/TatsumakiTerrible Tornado (UR+)/UR+.png",
+    "imageURL": "/Characters/TatsumakiTerrible Tornado (URplus)/URplus.png",
     "tier": "UR+",
     "type": "Esper",
     "faction": "Hero",
@@ -840,73 +840,73 @@
       {
         "name": "Basic",
         "desc": "Deals 200% damage to single target.",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/Skill_base.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
-        "animation": "/Animation/Tat_Ur+/Base.gif",
+        "animation": "/Animation/Tat_Urplus/Base.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Great Skills",
         "desc": "Deals 5000% ST specialized direct damage (affected by Advanced Damage Reduction only) to all enemies, ignoring 45% of [Special Evasion] and [Non-Critical Damage Immunity], passing through [Indomitable] and [Special Indomitable]. Deals [Energy Suppression] to the 3 enemies with the highest ST, lasting 2 turns.——— [Energy Suppression]: When dealing ST to Blood/[Specialized Blood], causes the target to activate [Energy Conversion] 1 time (reduces ST taken and converts to [Create Shield]).",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/skill_ult.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Tat_Ur+/ult.gif",
+        "animation": "/Animation/Tat_Urplus/ult.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Super Great Technique",
         "desc": "Gain 20% [Rage] and [Shield Break]. ST 5000% > 7000%. Ignore [Special Evasion] and [Non-Crit Damage Immunity] 45% > 60%. Deals [Energy Suppression] to 3 enemies > all enemies (check 3 turns).——— [Shield Break]: While attacking, ignores 30% of enemies' Damage Reduction and Special Defense.",
-        "keepsakeIcon": "/Skill/TatsumakiTerrible Tornado (UR+)/Keepsake-UR+.png",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/skill_ult.png",
+        "keepsakeIcon": "/Skill/TatsumakiTerrible Tornado (URplus)/Keepsake-URplus.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Tat_Ur+/ult.gif"
+        "animation": "/Animation/Tat_Urplus/ult.gif"
       },
       {
         "name": "Passive",
         "desc": "Permanently increases own Health by 20%. When entering battle, gain 60% [Crit Damage Reduction], and reduce to 0 the mana used by the ally with the highest ST when using Ultimate.",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/Skill_pas.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Tat_Ur+/Passive.gif",
+        "animation": "/Animation/Tat_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Extremely passive",
         "desc": "[Crit Damage Reduction] when entering battle 60% > 70%.",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/Skill_pas.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Tat_Ur+/Passive.gif",
+        "animation": "/Animation/Tat_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Passive 5 stars",
         "desc": "[Crit Damage Reduction] when entering battle 70% > 80%.",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/Skill_pas.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Tat_Ur+/Passive.gif",
+        "animation": "/Animation/Tat_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Passive awakening",
         "desc": "Allows Hero/Warrior allies to gain [Energy Conversion]. Self receives 2.5 times the [Energy Conversion] effect of allies, and when activating [Energy Conversion] does not require [Energy Suppression]. ——— [Energy Conversion]: When an enemy with [Energy Suppression] inflicts damage on you, reduces damage by 20%, 20% of original damage is converted into [Energy Resilience]",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/skill_awk.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Tat_Ur+/awken.gif",
+        "animation": "/Animation/Tat_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 2",
         "desc": "When battle begins, inflict [Energy Suppression] on all enemies, lasting 1 turn. [Energy Conversion]: reduces ST by 20% > 30% Original ST is converted into [Energy Resilience] by 20% > 30%",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/skill_awk.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Tat_Ur+/awken.gif",
+        "animation": "/Animation/Tat_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/skill_awk.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Tat_Ur+/awken.gif",
+        "animation": "/Animation/Tat_Urplus/awken.gif",
         "keepsakeIcon": null
       }
     ],
@@ -960,7 +960,7 @@
         "desc": "When dealing damage to health, forces the target to activate Energy Conversion, reducing the damage they deal and choking their mana source."
       }
     ],
-    "keepsakeIcon": "/Characters/Tatsumaki/Terrible Tornado (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Tatsumaki/Terrible Tornado (URplus)/Keepsake_URplus.png",
     "pvpStats": {
       "atk": 30,
       "hp": 30,
@@ -981,7 +981,7 @@
   {
     "id": "100029-urplus",
     "name": "Amai Mask",
-    "imageURL": "/Characters/Amai Mask (UR+)/UR+.png",
+    "imageURL": "/Characters/Amai Mask (URplus)/URplus.png",
     "tier": "UR+",
     "type": "Grappler",
     "faction": "Hero",
@@ -999,73 +999,73 @@
       {
         "name": "Basic",
         "desc": "Unleash a 2-hit combo on a single target, dealing 60% ST Direct DMG.",
-        "icon": "/Skill/Amai Mask (UR+)/Skill_base.png",
+        "icon": "/Skill/Amai Mask (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
-        "animation": "/Animation/Amai_Ur+/Base.gif",
+        "animation": "/Animation/Amai_Urplus/Base.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Great Skills",
         "desc": "Unleash a 3-hit combo on a single target, dealing 500% [Specialized Direct ST] damage (only affected by advanced damage increase/decrease), ignoring 45% of [Specialized Evasion] and 45% non-crit damage reduction (non-crit DMG RED) of the target, and piercing [Unyielding] and [Specialized Indomitable]. Heals all allies for 10% of their maximum Health as [Specialized Health] (can critically strike).",
-        "icon": "/Skill/Amai Mask (UR+)/skill_ult.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Amai_Ur+/ult.gif",
+        "animation": "/Animation/Amai_Urplus/ult.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Super Great Technique",
         "desc": "Unleash a 3-hit combo on a single target, dealing 500% > 800% [Specialized Direct ST] damage (only affected by advanced damage increase/decrease), ignoring 45% > 60% [Specialized Evasion] and 45% > 60% non-crit DMG RED damage reduction of the target, and piercing [Undaunted] and [Specialized Indomitable]. Heals all allies for 10% > 15% of their own maximum Health as [Specialized Health] (can critically strike), and grants all allies 15% of [Armor] and [Armor Break] for 3 turns. [Armor]: when attacked, receive 15% damage reduction and condensed defense. [Armor Break]: when attacking, ignores 15% damage reduction and enemy's special defense.",
-        "keepsakeIcon": "/Skill/Amai Mask (UR+)/Keepsake-UR+.png",
-        "icon": "/Skill/Amai Mask (UR+)/skill_ult.png",
+        "keepsakeIcon": "/Skill/Amai Mask (URplus)/Keepsake-URplus.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Amai_Ur+/ult.gif"
+        "animation": "/Animation/Amai_Urplus/ult.gif"
       },
       {
         "name": "Passive",
         "desc": "Permanently increases own Maximum Health by 20%. When entering battle, you receive 60% [Special Evasion]; All enemies have their [Super Speed ​​Field·Attack] and [Super Speed ​​Field·Defense] reduced by 40%. Before any character acts, dispel [Stun], [Special Stun], and [Threat] from all allies.",
-        "icon": "/Skill/Amai Mask (UR+)/skill_pas.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Amai_Ur+/Passive.gif",
+        "animation": "/Animation/Amai_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Extremely passive",
         "desc": "[Special Evasion] 60% > 70%. Reduces enemy's [Super Speed ​​Field·Attack]/[Super Speed ​​Field·Defense] by 40% > 60%.",
-        "icon": "/Skill/Amai Mask (UR+)/skill_pas.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Amai_Ur+/Passive.gif",
+        "animation": "/Animation/Amai_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Passive 5 stars",
         "desc": "[Special Evasion] 70% > 80%. Reduces enemy's [Super Speed ​​Field·Attack]/[Super Speed ​​Field·Defense] by 60% > 70%.",
-        "icon": "/Skill/Amai Mask (UR+)/skill_pas.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Amai_Ur+/Passive.gif",
+        "animation": "/Animation/Amai_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Passive awakening",
         "desc": "If an ally's Max Health is less than 70% of Amai Mask's Max Health, permanently increase Max Health by 30%, when battle starts, gain 30% [Resistance Immunity]. ——— [Resistant Damage Immunity]: reduces incoming damage by 30%, if Base Health is higher than the attacker's, it increases to 150%",
-        "icon": "/Skill/Amai Mask (UR+)/skill_awk.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Amai_Ur+/awken.gif",
+        "animation": "/Animation/Amai_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 2",
         "desc": "Max Health 30% > 50% Resistance DMG Free 30% > 40% At the start of turn 2, recover 20% of Specialized HP's max Health [Immune to Resistance]: Reduces damage taken by 30% > 40% If Health is higher, increases to 150% > 170%",
-        "icon": "/Skill/Amai Mask (UR+)/skill_awk.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Amai_Ur+/awken.gif",
+        "animation": "/Animation/Amai_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/Amai Mask (UR+)/skill_awk.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Amai_Ur+/awken.gif",
+        "animation": "/Animation/Amai_Urplus/awken.gif",
         "keepsakeIcon": null
       }
     ],
@@ -1123,7 +1123,7 @@
         "desc": "The stun control effect renders the target unable to act and reduces its overall damage immunity by 30%."
       }
     ],
-    "keepsakeIcon": "/Characters/Amai Mask (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Amai Mask (URplus)/Keepsake_URplus.png",
     "releaseTrung": "01/12/2025",
     "pvpStats": {
       "atk": 50,
@@ -1141,7 +1141,7 @@
   {
     "id": "100184-urplus",
     "name": "Boros",
-    "imageURL": "/Characters/Boros (UR+)/UR+.png",
+    "imageURL": "/Characters/Boros (URplus)/URplus.png",
     "tier": "UR+",
     "type": "Esper",
     "faction": "Monster",
@@ -1159,73 +1159,73 @@
       {
         "name": "Basic",
         "desc": "Deals 120% ST damage directly to a single target.",
-        "icon": "/Skill/Boros (UR+)/Skill_base.png",
+        "icon": "/Skill/Boros (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
-        "animation": "/Animation/Boros_Ur+/Base.gif",
+        "animation": "/Animation/Boros_Urplus/Base.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Great Skills",
         "desc": "Removes beneficial buffs from yourself so that you cannot die and are immune to [Crit]. Then deals 70% more damage directly to the target in one hit, while reducing that target's Dodge and Crit DMG Reduction by 45%.",
-        "icon": "/Skill/Boros (UR+)/skill_ult.png",
+        "icon": "/Skill/Boros (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Boros_Ur+/ult.gif",
+        "animation": "/Animation/Boros_Urplus/ult.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Super Great Technique",
         "desc": "Additionally receive +50% Crit. Direct damage bonus increased to 70% > 100%, Evasion and Crit DMG Reduction increased to 45% > 60%, and now applies on one attack > each attack.",
-        "keepsakeIcon": "/Skill/Boros (UR+)/Keepsake-UR+.png",
-        "icon": "/Skill/Boros (UR+)/skill_ult.png",
+        "keepsakeIcon": "/Skill/Boros (URplus)/Keepsake-URplus.png",
+        "icon": "/Skill/Boros (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Boros_Ur+/ult.gif"
+        "animation": "/Animation/Boros_Urplus/ult.gif"
       },
       {
         "name": "Passive",
         "desc": "When entering battle, gain +20% HP and +60% Crit DMG Reduction, and receive up to 2 additional Chase DMG activations.",
-        "icon": "/Skill/Boros (UR+)/Skill_pas.png",
+        "icon": "/Skill/Boros (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Boros_Ur+/Passive.gif",
+        "animation": "/Animation/Boros_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Extremely passive",
         "desc": "Crit DMG Reduction 60% > 70%.",
-        "icon": "/Skill/Boros (UR+)/Skill_pas.png",
+        "icon": "/Skill/Boros (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Boros_Ur+/Passive.gif",
+        "animation": "/Animation/Boros_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Passive 5 stars",
         "desc": "Crit DMG Reduction 70% > 80%. Number of Chase DMG activations added 2 > 3.",
-        "icon": "/Skill/Boros (UR+)/Skill_pas.png",
+        "icon": "/Skill/Boros (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Boros_Ur+/Passive.gif",
+        "animation": "/Animation/Boros_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Passive awakening",
         "desc": "When near death, enter [Revival] state, absorb all types of ST, next turn restore 50% Health and receive [Resilient Energy] equal to the amount absorbed, up to 3 times. At the start of the battle, receive 30% [Free from Restraint Damage]. ———- [Immune to Restraint ST]: Reduces incoming ST by 30%, when Attack is higher than the attacker, reduces by 150%.",
-        "icon": "/Skill/Boros (UR+)/skill_awk.png",
+        "icon": "/Skill/Boros (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Boros_Ur+/awken.gif",
+        "animation": "/Animation/Boros_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 2",
         "desc": "Get [Immunity to Restraint Damage] 30% > 40% [Immune to Restraint Damage]: -Reduces Damage received by 30% > 40% -When Attacking higher than the attacker, reduce it by 150% > 170%",
-        "icon": "/Skill/Boros (UR+)/skill_awk.png",
+        "icon": "/Skill/Boros (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Boros_Ur+/awken.gif",
+        "animation": "/Animation/Boros_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/Boros (UR+)/skill_awk.png",
+        "icon": "/Skill/Boros (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Boros_Ur+/awken.gif",
+        "animation": "/Animation/Boros_Urplus/awken.gif",
         "keepsakeIcon": null
       }
     ],
@@ -1247,7 +1247,7 @@
         "desc": "The defensive effect reduces damage taken (30–40%), increasing to a 150–170% reduction when the bearer's ST is higher than the attacker's."
       }
     ],
-    "keepsakeIcon": "/Characters/Boros (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Boros (URplus)/Keepsake_URplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "releaseTrung": "01/11/2025",
@@ -1267,7 +1267,7 @@
   {
     "id": "100308-urplus",
     "name": "Genos",
-    "imageURL": "/Characters/Genos (UR+)/UR+.png",
+    "imageURL": "/Characters/Genos (URplus)/URplus.png",
     "tier": "UR+",
     "type": "Hi-Tech",
     "faction": "Hero",
@@ -1285,73 +1285,73 @@
       {
         "name": "Basic",
         "desc": "Deals direct damage equal to 60% of Attack to one target.",
-        "icon": "/Skill/Genos (UR+)/Skill_base.png",
+        "icon": "/Skill/Genos (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
-        "animation": "/Animation/Genos_Ur+/Base.gif",
+        "animation": "/Animation/Genos_Urplus/Base.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Great Skills",
         "desc": "Deals additional direct damage equal to 1000% Attack to all enemies. Attacks strip the target of 45% Critical Damage Reduction (Crit DMG Reduction) and 45% Evasion (Instant Miss).",
-        "icon": "/Skill/Genos (UR+)/skill_ult.png",
+        "icon": "/Skill/Genos (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Genos_Ur+/ult.gif",
+        "animation": "/Animation/Genos_Urplus/ult.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Super Great Technique",
         "desc": "Additionally, gain +30% Crit for yourself. To all enemies with lower Attack than yourself, apply a weakening effect based on Maximum Health (base 130%, stacks up to 4 times). Additional direct damage 1000% > 1400% Attack, and the reduction of Critical Damage / Evasion 45% > 60%.",
-        "keepsakeIcon": "/Skill/Genos (UR+)/Keepsake-UR+.png",
-        "icon": "/Skill/Genos (UR+)/skill_ult.png",
+        "keepsakeIcon": "/Skill/Genos (URplus)/Keepsake-URplus.png",
+        "icon": "/Skill/Genos (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Genos_Ur+/ult.gif"
+        "animation": "/Animation/Genos_Urplus/ult.gif"
       },
       {
         "name": "Passive",
         "desc": "Gain +20% Health. When entering battle, gain +60% Critical Damage Reduction (Crit DMG Reduction) and taunt enemies ([Damage Focus]), drawing their attacks to yourself.",
-        "icon": "/Skill/Genos (UR+)/Skill_pas.png",
+        "icon": "/Skill/Genos (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Genos_Ur+/Passive.gif",
+        "animation": "/Animation/Genos_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Extremely passive",
         "desc": "Crit DMG Reduction 60% > 70%.",
-        "icon": "/Skill/Genos (UR+)/Skill_pas.png",
+        "icon": "/Skill/Genos (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Genos_Ur+/Passive.gif",
+        "animation": "/Animation/Genos_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Passive 5 stars",
         "desc": "Crit DMG Reduction 70% > 80%. Taunt power ([Damage Focus]) increased.",
-        "icon": "/Skill/Genos (UR+)/Skill_pas.png",
+        "icon": "/Skill/Genos (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Genos_Ur+/Passive.gif",
+        "animation": "/Animation/Genos_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Passive awakening",
         "desc": "Get 30% (40%) [Immune to Overpower Damage]. Allies have [Immunity to Restraint ST] and Genos increases by 30% (40%) [Increases Restraint ST] ———- [Immune to Restraint ST]: Reduces ST received by 30% (40%) when Attacking higher than attacker, reduces by 150% (170%) [Increases Resist ST]: Increases 30% (40%) ST, when Attacking is higher than target, increases by 150% (170%)",
-        "icon": "/Skill/Genos (UR+)/skill_awk.png",
+        "icon": "/Skill/Genos (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Genos_Ur+/awken.gif",
+        "animation": "/Animation/Genos_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 2",
         "desc": "[Immune to Restraint ST]: -Receive 30% > 40% -Reduce ST received by 30% > 40% -When Attacking higher than the attacker, reduce by 150% > 170% [Increase Resist ST]: -Receive 30% > 40% -Increase ST by 30% > 40% -When Attack is higher than the target, increase by 150% > 170%",
-        "icon": "/Skill/Genos (UR+)/skill_awk.png",
+        "icon": "/Skill/Genos (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Genos_Ur+/awken.gif",
+        "animation": "/Animation/Genos_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Awakening 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/Genos (UR+)/skill_awk.png",
+        "icon": "/Skill/Genos (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Genos_Ur+/awken.gif",
+        "animation": "/Animation/Genos_Urplus/awken.gif",
         "keepsakeIcon": null
       }
     ],
@@ -1365,7 +1365,7 @@
         "desc": "Attack buff gives 30-40% mana and increases damage, increasing by 150-170% when the bearer's Attack is higher than the target."
       }
     ],
-    "keepsakeIcon": "/Characters/Genos (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Genos (URplus)/Keepsake_URplus.png",
     "releaseTrung": "01/10/2025",
     "pvpStats": {
       "atk": 50,
@@ -3703,7 +3703,7 @@
         "name": "Passive",
         "desc": "Grant yourself 50% Non-Critical ST Reduction (valid on all STs, cannot exist with [Agility]), lasting 4 turns. After receiving fatal ST, revive with 50% of your maximum Health.",
         "icon": "/Skill/Atomic Samurai (UR)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -3711,7 +3711,7 @@
         "name": "Extremely passive",
         "desc": "Reduces No Crit STD by 50% → 60% Revived 1 time → 2 times",
         "icon": "/Skill/Atomic Samurai (UR)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -3719,7 +3719,7 @@
         "name": "Passive 5 stars",
         "desc": "Non-Crit ST Reduction Time 4 turns → 5 turns Health revived 50% → 100%",
         "icon": "/Skill/Atomic Samurai (UR)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -3727,7 +3727,7 @@
         "name": "Passive awakening",
         "desc": "At the start of battle, reduce all enemies' Attack by 30%, gain 20% Lifesteal Rate, lasts 2 rounds. Before any character acts, cast [Ultimate Pursuit] (60% ATK and 100% effect), once per round.",
         "icon": "/Skill/Atomic Samurai (UR)/Skill_Awken.png",
-        "animation": "/Animation/Sam_Ur+/awken.gif",
+        "animation": "/Animation/Sam_Urplus/awken.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
@@ -3735,7 +3735,7 @@
         "name": "Awakening 2",
         "desc": "Reduce enemy's Attack 30% > 40% Gain 20% Collapse Rate Lifesteal Rate 20% > 30% Charge Attack 60% > 100%",
         "icon": "/Skill/Atomic Samurai (UR)/Skill_Awken.png",
-        "animation": "/Animation/Sam_Ur+/awken.gif",
+        "animation": "/Animation/Sam_Urplus/awken.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
@@ -3743,7 +3743,7 @@
         "name": "Awakening 3",
         "desc": "• Restores 150 Energy (when attacking)",
         "icon": "/Skill/Atomic Samurai (UR)/Skill_Awken.png",
-        "animation": "/Animation/Sam_Ur+/awken.gif",
+        "animation": "/Animation/Sam_Urplus/awken.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       }
@@ -6707,7 +6707,7 @@
         "name": "Passive",
         "desc": "+20% HP. When entering battle, gain an additional 60% Crit ST reduction. At the beginning of your turn, heal yourself for a portion of your maximum HP.",
         "icon": "/Skill/Atomic Samurai (SSR+)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -6715,7 +6715,7 @@
         "name": "Extremely passive",
         "desc": "Reduces Critical Damage by 60% > 70%.",
         "icon": "/Skill/Atomic Samurai (SSR+)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -6723,7 +6723,7 @@
         "name": "Passive 5 stars",
         "desc": "Reduces Critical Damage by 70% > 80%.",
         "icon": "/Skill/Atomic Samurai (SSR+)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       }
@@ -7627,7 +7627,7 @@
         "name": "Passive",
         "desc": "Permanently increases (+20) Health for yourself. After an Armed-type ally attacks, Atomic Samurai immediately performs [Charge] (attacks with basic attack damage and effects, up to 3 times per turn).",
         "icon": "/Skill/Atomic Samurai (SSR)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -7635,7 +7635,7 @@
         "name": "Extremely passive",
         "desc": "Permanently increases (+20) Health for yourself. After an Armed-type ally attacks, Atomic Samurai immediately performs [Charge] (attacks with basic attack damage and effects, up to 3 times per turn).",
         "icon": "/Skill/Atomic Samurai (SSR)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -7643,7 +7643,7 @@
         "name": "Passive 5 stars",
         "desc": "Permanently increases (+20) Health for yourself. After an Armed-type ally attacks, Atomic Samurai immediately performs [Charge] (attacks with basic attack damage and effects, up to 3 times per turn).",
         "icon": "/Skill/Atomic Samurai (SSR)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       }

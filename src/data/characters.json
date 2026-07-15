@@ -2,7 +2,7 @@
   {
     "id": "100013-urplus",
     "name": "Zombieman",
-    "imageURL": "/Characters/Zombieman (UR+)/UR+.png",
+    "imageURL": "/Characters/Zombieman (URplus)/URplus.png",
     "tier": "UR+",
     "type": "Vũ Trang",
     "faction": "Anh Hùng",
@@ -21,7 +21,7 @@
       {
         "name": "Cơ bản",
         "desc": "Gây 40% ST sát thương trực tiếp lên mục tiêu đơn.",
-        "animation": "/Animation/Zombie_Man_Ur+/Base.gif",
+        "animation": "/Animation/Zombie_Man_Urplus/Base.gif",
         "type": "Kỹ năng thường",
         "icon": null,
         "keepsakeIcon": null
@@ -29,64 +29,64 @@
       {
         "name": "Tuyệt Kĩ",
         "desc": "Đánh dấu bản thân, sau đó gây Sát thương trực tiếp bổ sung lên toàn bộ hàng của mục tiêu. Đồng thời gây [Gây Mù] lên mục tiêu và 1 kẻ địch ngẫu nhiên (chỉ khi còn trước Round 7), và mục tiêu [Gây Mù] mất 20% giảm sát thương PvP.",
-        "icon": "/Skill/Zombieman (UR+)/Skill_ult.png",
+        "icon": "/Skill/Zombieman (URplus)/Skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Zombie_Man_Ur+/ult.gif",
+        "animation": "/Animation/Zombie_Man_Urplus/ult.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Siêu Tuyệt Kĩ",
         "desc": "Thêm vào đó buff toàn bộ đồng minh (hai hiệu ứng buff). Cửa sổ [Gây Mù] kéo dài Round 7 > Round 8, và mục tiêu [Gây Mù] mất giảm sát thương PvP 20% > 30%.",
-        "keepsakeIcon": "/Skill/Zombieman (UR+)/Keepsake_UR+.png",
-        "icon": "/Skill/Zombieman (UR+)/Skill_ult.png",
+        "keepsakeIcon": "/Skill/Zombieman (URplus)/Keepsake_URplus.png",
+        "icon": "/Skill/Zombieman (URplus)/Skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Zombie_Man_Ur+/ult.gif"
+        "animation": "/Animation/Zombie_Man_Urplus/ult.gif"
       },
       {
         "name": "Bị động",
         "desc": "Khi vào trận, nhận +20% Máu và +60% Crit DMG Reduction, đồng thời miễn nhiễm [Gây Mù]. Vào đầu lượt của bản thân, giải tối đa 4 hiệu ứng bất lợi khỏi toàn bộ đồng minh. Từ Round 3 trở đi, xóa [Liên Kết] khỏi toàn bộ kẻ địch. Khi vào trận, ban cho đồng minh cùng cột một lần thi triển kỹ năng miễn phí.",
-        "icon": "/Skill/Zombieman (UR+)/Skill_pas.png",
-        "animation": "/Animation/Zombie_Man_Ur+/Passive.gif",
+        "icon": "/Skill/Zombieman (URplus)/Skill_pas.png",
+        "animation": "/Animation/Zombie_Man_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động cực hạn",
         "desc": "Crit DMG Reduction 60% > 70%.",
-        "icon": "/Skill/Zombieman (UR+)/Skill_pas.png",
-        "animation": "/Animation/Zombie_Man_Ur+/Passive.gif",
+        "icon": "/Skill/Zombieman (URplus)/Skill_pas.png",
+        "animation": "/Animation/Zombie_Man_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động 5 sao",
         "desc": "Crit DMG Reduction 70% > 80%.",
-        "icon": "/Skill/Zombieman (UR+)/Skill_pas.png",
-        "animation": "/Animation/Zombie_Man_Ur+/Passive.gif",
+        "icon": "/Skill/Zombieman (URplus)/Skill_pas.png",
+        "animation": "/Animation/Zombie_Man_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động thức tỉnh",
         "desc": "Khi chịu sát thương chí mạng, kích hoạt [Tái Sinh Chuyên Biệt]. ———- [Tái Sinh Chuyên Biệt]: Khi vào trận, vĩnh viễn giảm 30% sát thương phải chịu. Khi còn đồng minh, trước hành động kế tiếp của bản thân, hồi đầy máu và tiếp tục chiến đấu, tăng 30% ST bản thân và 30% HP Tối đa (cộng dồn), tối đa 3 lần kích hoạt.",
-        "icon": "/Skill/Zombieman (UR+)/zombie_skill_awk.png",
-        "animation": "/Animation/Zombie_Man_Ur+/awken+.gif",
+        "icon": "/Skill/Zombieman (URplus)/zombie_skill_awk.png",
+        "animation": "/Animation/Zombie_Man_Urplus/awken+.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 2",
         "desc": "Giảm sát thương 30% > 60%. Số lần kích hoạt tối đa 3 > 4. Ngoài ra, khi một đồng minh cùng hàng kích hoạt [Hồi Sinh] trong lúc bản thân đang có [Tái Sinh Chuyên Biệt], tung [Truy Kích] với 120% sức mạnh kỹ năng.",
-        "icon": "/Skill/Zombieman (UR+)/zombie_skill_awk.png",
-        "animation": "/Animation/Zombie_Man_Ur+/awken+.gif",
+        "icon": "/Skill/Zombieman (URplus)/zombie_skill_awk.png",
+        "animation": "/Animation/Zombie_Man_Urplus/awken+.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/Zombieman (UR+)/zombie_skill_awk.png",
-        "animation": "/Animation/Zombie_Man_Ur+/awken+.gif",
+        "icon": "/Skill/Zombieman (URplus)/zombie_skill_awk.png",
+        "animation": "/Animation/Zombie_Man_Urplus/awken+.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       }
@@ -113,7 +113,7 @@
         "desc": "Khi vào trận, vĩnh viễn giảm sát thương; khi còn đồng minh, hồi đầy máu và tiếp tục chiến đấu một số lần giới hạn."
       }
     ],
-    "keepsakeIcon": "/Characters/Zombieman (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Zombieman (URplus)/Keepsake_URplus.png",
     "bio": "A new UR+ awakening of Zombieman — the “Heavy Vanguard” (重装先锋): an undying Duelist frontline that cleanses crowd-control for the team, blinds and pierces enemy defenses, and revives with stacking ATK/HP. CV: Takahiro Sakurai.",
     "pvpStats": {
       "atk": 30,
@@ -137,7 +137,7 @@
   {
     "id": "100316-urplus",
     "name": "Overgrown Rover",
-    "imageURL": "/Characters/Overgrown Rover (UR+)/UR+.png",
+    "imageURL": "/Characters/Overgrown Rover (URplus)/URplus.png",
     "tier": "UR+",
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
@@ -155,63 +155,63 @@
       {
         "name": "Cơ bản",
         "desc": "Gây 120% ST lên mục tiêu đơn.",
-        "icon": "/Skill/Overgrown Rover (UR+)/Skill_base.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
         "keepsakeIcon": null
       },
       {
         "name": "Tuyệt Kĩ",
         "desc": "Tung liên hoàn 3 đòn lên toàn bộ kẻ địch, mỗi đòn 7000% ST [ST Trực Tiếp Chuyên Biệt] (chỉ chịu ảnh hưởng bởi các hệ số ST nâng cao). Bỏ qua 45% [Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Chí Mạng], xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Đòn thứ 1 có 150% khả năng gây [Nhiễu Loạn] trong 3 lượt. — [Nhiễu Loạn]: Trước khi bất kỳ nhân vật nào hành động, nếu mục tiêu không có [Bất Khuất Chuyên Biệt] hoặc [Bất Khuất Cực Hạn], gây 4000% [Sát Thương Nhiễu Loạn] dựa trên ST của Rover; biến mất sau khi kích hoạt, có thể cộng dồn; bỏ qua 100% [DoT DMG Reduction], xuyên [Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Chí Mạng].",
-        "icon": "/Skill/Overgrown Rover (UR+)/skill_ult.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
         "keepsakeIcon": null
       },
       {
         "name": "Siêu Tuyệt Kĩ",
         "desc": "ST mỗi đòn 7000% > 9000%. Bỏ qua [Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Chí Mạng] 45% > 60%. [Sát Thương Nhiễu Loạn] 4000% > 5500%.",
-        "keepsakeIcon": "/Skill/Overgrown Rover (UR+)/Keepsake-UR+.png",
-        "icon": "/Skill/Overgrown Rover (UR+)/skill_ult.png",
+        "keepsakeIcon": "/Skill/Overgrown Rover (URplus)/Keepsake-URplus.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ"
       },
       {
         "name": "Bị động",
         "desc": "Khi trận đấu bắt đầu, nhận 60% [Giảm Sát Thương Không Chí Mạng]. Toàn bộ đồng minh nhận 70% [Giảm Sát Thương Chuẩn]. Gỡ bỏ [DoT DMG Bonus Reduction] khỏi toàn bộ đồng minh trong suốt trận đấu. Khi [Tái Chiến] kích hoạt, uy lực đòn Tối Thượng [Truy Kích Tụ Lực] của đơn vị này tăng lên 1.1x.",
-        "icon": "/Skill/Overgrown Rover (UR+)/Skill_pas.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/Skill_pas.png",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động cực hạn",
         "desc": "[Giảm Sát Thương Không Chí Mạng] 60% > 70%. [Giảm Sát Thương Chuẩn] của toàn bộ đồng minh 70% > 75%. Uy lực [Truy Kích Tụ Lực] khi [Tái Chiến] 1.1x > 1.2x.",
-        "icon": "/Skill/Overgrown Rover (UR+)/Skill_pas.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/Skill_pas.png",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động 5 sao",
         "desc": "[Giảm Sát Thương Không Chí Mạng] 70% > 80%. [Giảm Sát Thương Chuẩn] của toàn bộ đồng minh 75% > 80%. Uy lực [Truy Kích Tụ Lực] khi [Tái Chiến] 1.2x > 1.25x.",
-        "icon": "/Skill/Overgrown Rover (UR+)/Skill_pas.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/Skill_pas.png",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động thức tỉnh",
         "desc": "Khi vào trận, vĩnh viễn giảm số lần hành động của hiệu ứng bỏ qua ST [Bất Khuất Cực Hạn] của toàn bộ kẻ địch đi 1. Nhận 4 lớp [Tái Chiến]. — [Tái Chiến]: Vĩnh viễn giảm ST nhận vào 75% (+2.5% mỗi lần trở lại trận đấu). Khi đồng minh cùng hàng (hoặc toàn bộ đồng minh) bị hạ và đơn vị này đã bị hạ, tiêu hao 1 lớp [Tái Chiến] để trở lại, hồi phục 100% HP, và thực hiện [Truy Kích Tụ Lực] lên mục tiêu ngẫu nhiên với 120% uy lực Tối Thượng; các đồng minh cùng hàng đã bị hạ khác có 70% khả năng cũng kích hoạt.",
-        "icon": "/Skill/Overgrown Rover (UR+)/skill_awk.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 2",
         "desc": "Giảm số lần hành động của hiệu ứng bỏ qua ST [Bất Khuất Cực Hạn] của toàn bộ kẻ địch 1 > 2. Số lớp [Tái Chiến] 4 > 5. Giảm ST của [Tái Chiến] 75% > 78% (+2.5% > 2.8% mỗi lần trở lại). Uy lực [Truy Kích Tụ Lực] 120% > 135%. Khả năng kích hoạt của đồng minh cùng hàng khác 70% > 100%.",
-        "icon": "/Skill/Overgrown Rover (UR+)/skill_awk.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 3",
         "desc": "Additionally, when attacking, self gains <b>+150 Energy</b>.",
-        "icon": "/Skill/Overgrown Rover (UR+)/skill_awk.png",
+        "icon": "/Skill/Overgrown Rover (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       }
@@ -258,7 +258,7 @@
         "desc": "Vĩnh viễn giảm sát thương phải chịu; khi bị hạ, tiêu một lớp để trở lại với 100% Máu và truy kích."
       }
     ],
-    "keepsakeIcon": "/Characters/Overgrown Rover (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Overgrown Rover (URplus)/Keepsake_URplus.png",
     "pvpStats": {
       "atk": 30,
       "hp": 30,
@@ -280,7 +280,7 @@
   {
     "id": "100315-urplus",
     "name": "Bang & Bomb",
-    "imageURL": "/Characters/Bang & Bomb (UR+)/Ur+.png",
+    "imageURL": "/Characters/Bang & Bomb (URplus)/Urplus.png",
     "tier": "UR+",
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
@@ -299,7 +299,7 @@
       {
         "name": "Cơ bản",
         "desc": "Gây ST trực tiếp bằng 40% ST lên mục tiêu đơn.",
-        "icon": "/Skill/Bang & Bomb (UR+)/Skill_base.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/Skill_base.png",
         "animation": "/Animation/Bang_UR+/Base.gif",
         "type": "Kỹ năng thường",
         "keepsakeIcon": null
@@ -307,7 +307,7 @@
       {
         "name": "Tuyệt Kĩ",
         "desc": "Gây ST trực tiếp lên toàn bộ kẻ địch bằng 500% HP tối đa của đơn vị này, tăng thêm 15% mỗi lớp [Combo] (tối đa 2 lớp, lên đến 650%). Giảm [Dodge] và [Giảm Sát Thương Chí Mạng] của mục tiêu 45%. Sau đó tung [Endless Chase] vào một kẻ địch còn sống ngẫu nhiên (đuổi 1 lần). Nhận 1 lớp [Combo] khi thi triển.",
-        "icon": "/Skill/Bang & Bomb (UR+)/skill_ult.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
         "animation": "/Animation/Bang_UR+/ult.gif",
         "keepsakeIcon": null
@@ -315,15 +315,15 @@
       {
         "name": "Siêu Tuyệt Kĩ",
         "desc": "Gây ST trực tiếp lên toàn bộ kẻ địch bằng 500% > 700% HP tối đa của đơn vị này, tăng thêm 15% > 20% mỗi lớp [Combo] (tối đa 2 lớp, lên đến 650% > 980%). Giảm [Dodge] và [Giảm Sát Thương Chí Mạng] của mục tiêu 45% > 60%. [Endless Chase] nay đuổi 1 > 3 lần. Ngoài ra, tăng cho toàn bộ đồng minh +35% [Arena DMG Dealt] và gây cho toàn bộ kẻ địch -35% [Arena DMG Reduction], giải trừ buff của chúng.",
-        "keepsakeIcon": "/Skill/Bang & Bomb (UR+)/Keepsake-Ur+.png",
-        "icon": "/Skill/Bang & Bomb (UR+)/skill_ult.png",
+        "keepsakeIcon": "/Skill/Bang & Bomb (URplus)/Keepsake-Urplus.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
         "animation": "/Animation/Bang_UR+/ult.gif"
       },
       {
         "name": "Bị động",
         "desc": "Nhận +20% HP. Khi vào trận, nhận +60% [Giảm Sát Thương Chí Mạng], đặt lại lớp [Combo] về 0, và [Nullify] các nội tại quan trọng của kẻ địch ([UnhurtToShield] và hiệu ứng chuyển hồi máu). Giải trừ cho toàn bộ đồng minh khi vào trận và cuối lượt của bản thân.",
-        "icon": "/Skill/Bang & Bomb (UR+)/Skill_pas.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/Skill_pas.png",
         "animation": "/Animation/Bang_UR+/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
@@ -331,7 +331,7 @@
       {
         "name": "Bị động cực hạn",
         "desc": "[Giảm Sát Thương Chí Mạng] khi vào trận 60% > 70%.",
-        "icon": "/Skill/Bang & Bomb (UR+)/Skill_pas.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/Skill_pas.png",
         "animation": "/Animation/Bang_UR+/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
@@ -339,7 +339,7 @@
       {
         "name": "Bị động 5 sao",
         "desc": "[Giảm Sát Thương Chí Mạng] khi vào trận 70% > 80%.",
-        "icon": "/Skill/Bang & Bomb (UR+)/Skill_pas.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/Skill_pas.png",
         "animation": "/Animation/Bang_UR+/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
@@ -347,7 +347,7 @@
       {
         "name": "Bị động thức tỉnh",
         "desc": "Vĩnh viễn tăng 60% Máu tối đa của bản thân. Khi bắt đầu trận đấu, ban cho bản thân [Increased DMG from Resistance] và [Reduced DMG from Resistance]. Khi Máu/[Máu Chuyên Biệt] của đồng minh chịu sát thương, sát thương này được giảm 99%, và 99% sát thương gốc được chuyển hóa thành [Kiên Cường Năng Lượng] (tổng lượng [Kiên Cường Năng Lượng] nhận được theo cách này tối đa bằng 28 lần Máu tối đa gốc của Silverfang & Bomb. Hiệu ứng này và [Hồi Sinh] chỉ có thể hoạt động một cái tại một thời điểm. Khi [Kiên Cường Năng Lượng] đạt mức tối đa, hiệu ứng Giảm sát thương sẽ không còn hiệu lực).\n[Tăng Kháng Sát Thương]: Tăng 30% sát thương gây ra và tăng thêm lên 1.5 lần khi máu gốc cao hơn của kẻ tấn công. [Giảm Kháng Sát Thương]: Giảm 30% sát thương phải chịu, và tăng thêm lên 1.5 lần khi máu gốc cao hơn của kẻ tấn công.",
-        "icon": "/Skill/Bang & Bomb (UR+)/skill_awk.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/skill_awk.png",
         "animation": "/Animation/Bang_UR+/awken.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
@@ -355,7 +355,7 @@
       {
         "name": "Thức tỉnh 2",
         "desc": "Tăng Máu tối đa của bản thân 60% > 80% Chuyển hóa 10% [Kiên Cường Năng Lượng] mà đồng minh nhận được thành [Máu Chuyên Biệt] (tỉ lệ tự chuyển hóa tăng thêm 50%) [Tăng Kháng Sát Thương]+[Giảm Kháng Sát Thương]: 30% > 50%, Tăng thêm 1.5 > 1.7",
-        "icon": "/Skill/Bang & Bomb (UR+)/skill_awk.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/skill_awk.png",
         "animation": "/Animation/Bang_UR+/awken.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
@@ -363,7 +363,7 @@
       {
         "name": "Thức tỉnh 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/Bang & Bomb (UR+)/skill_awk.png",
+        "icon": "/Skill/Bang & Bomb (URplus)/skill_awk.png",
         "animation": "/Animation/Bang_UR+/awken.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
@@ -395,7 +395,7 @@
         "desc": "Tăng 30% sát thương gây ra, tăng lên 1.5 lần khi HP gốc của người mang cao hơn của kẻ tấn công."
       }
     ],
-    "keepsakeIcon": "/Characters/Bang & Bomb (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Bang & Bomb (URplus)/Keepsake_URplus.png",
     "pvpStats": {
       "atk": 30,
       "hp": 30,
@@ -437,68 +437,68 @@
       {
         "name": "Cơ bản",
         "desc": "Gây 120% ST lên mục tiêu đơn.",
-        "icon": "/Skill/G5 (UR+)/Skill_base.png",
+        "icon": "/Skill/G5 (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
         "keepsakeIcon": null
       },
       {
         "name": "Tuyệt Kĩ",
         "desc": "Gây 12000% ST trực tiếp chuyên biệt theo tỉ lệ chia lên cả một hàng kẻ địch với 4 đòn liên tiếp (chỉ chịu ảnh hưởng bởi Giảm sát thương nâng cao), bỏ qua 45% Né tránh chuyên biệt và giảm sát thương Non-Crit, đồng thời xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt].Sát thương này không được chia cho các mục tiêu không thể bị gây sát thương; với mỗi mục tiêu có thể được chia, sát thương tăng thêm 30%.",
-        "icon": "/Skill/G5 (UR+)/Skill_ult.png",
+        "icon": "/Skill/G5 (URplus)/Skill_ult.png",
         "type": "Tuyệt kĩ",
         "keepsakeIcon": null
       },
       {
         "name": "Siêu Tuyệt Kĩ",
         "desc": "Tấn công 12000% > 15000%. Với mỗi mục tiêu có thể được chia, ST 30% > 40%. Giảm số lượt [Hồi Sinh] của toàn bộ kẻ địch 2 > 3. Giảm số lượt [Trả Thù] của toàn bộ kẻ địch đi 5.",
-        "icon": "/Skill/G5 (UR+)/Skill_ult.png",
+        "icon": "/Skill/G5 (URplus)/Skill_ult.png",
         "type": "Tuyệt kĩ",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động",
         "desc": "Nhận 60% Né tránh chuyên biệt khi bắt đầu trận đấu. Khi tiến vào sân đấu, giảm 2 lượt [Hồi Sinh] của toàn bộ kẻ địch và giảm 4 lượt [Non-Critical Hit Invincibility].",
-        "icon": "/Skill/G5 (UR+)/Skill_pas.png",
+        "icon": "/Skill/G5 (URplus)/Skill_pas.png",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động cực hạn",
         "desc": "Né tránh chuyên biệt 60% > 70%.",
-        "icon": "/Skill/G5 (UR+)/Skill_pas.png",
+        "icon": "/Skill/G5 (URplus)/Skill_pas.png",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động 5 sao",
         "desc": "Né tránh chuyên biệt 70% > 78%. Giảm số lượt [Non-Critical Hit Invincibility] đi 4 > 5. Giảm số lượt [Trả Thù] của toàn bộ kẻ địch 5 > 7.",
-        "icon": "/Skill/G5 (UR+)/Skill_pas.png",
+        "icon": "/Skill/G5 (URplus)/Skill_pas.png",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động thức tỉnh",
         "desc": "Vĩnh viễn giảm 60% sát thương phải chịu, và 60% sát thương gốc được chuyển hóa thành [Kiên Cường Năng Lượng]. Trước lượt của bất kỳ nhân vật nào, G5 có 40% cơ hội thực hiện [Charged follow-up] với 80% sức mạnh kỹ năng (sẽ không xảy ra nếu không có mục tiêu nào trên sân có khả năng gây sát thương), tối đa hai lần mỗi lượt. Cơ hội tung đòn truy kích tăng thêm 40% sau mỗi khi một nhân vật kẻ địch bị đánh bại. [Charging follow-up]: Dùng kỹ năng gây sát thương/hồi máu nhóm để truy kích các mục tiêu ngẫu nhiên. Không tiêu hao năng lượng.",
-        "icon": "/Skill/G5 (UR+)/Skill_Awken.png",
+        "icon": "/Skill/G5 (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 2",
         "desc": "Vĩnh viễn giảm sát thương phải chịu 60% > 80%} 60% > 80% sát thương gốc được chuyển hóa thành [Kiên Cường Năng Lượng] cơ hội thực hiện [Charged follow-up] 40% > 60%, với sức mạnh kỹ năng 80% > 100%, tối đa 2x > 3x mỗi vòng",
-        "icon": "/Skill/G5 (UR+)/Skill_Awken.png",
+        "icon": "/Skill/G5 (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/G5 (UR+)/Skill_Awken.png",
+        "icon": "/Skill/G5 (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       }
     ],
-    "imageURL": "/Characters/G5 (UR+)/UR+.png",
+    "imageURL": "/Characters/G5 (URplus)/URplus.png",
     "debut": "04 / 2026",
     "class": "Demon",
     "classIcon": "/Class/Demon.png",
@@ -537,7 +537,7 @@
         "desc": "Trạng thái phản đòn có thể kéo dài thời gian trên bản thân hoặc rút ngắn trên kẻ địch, cấp sức cho các hiệu ứng trả đũa."
       }
     ],
-    "keepsakeIcon": "/Characters/G5 (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/G5 (URplus)/Keepsake_URplus.png",
     "classLevel": "Dragon",
     "releaseSea": "01/08/2026",
     "releaseTrung": "01/04/2026"
@@ -560,82 +560,82 @@
       {
         "name": "Cơ bản",
         "desc": "Gây 60% ST lên mục tiêu đơn.",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_base.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
-        "animation": "/Animation/Sam_Ur+/Base.gif",
+        "animation": "/Animation/Sam_Urplus/Base.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Tuyệt Kĩ",
         "desc": "Atomic Samurai tung ra 30 nhát chém, sau đó vung một nhát chém mạnh gây 5000% ST Specialized Direct DMG lên toàn bộ kẻ địch, bỏ qua 55% Specialized Evasion và 55% [Giảm Sát Thương Không Chí Mạng]. Ngoài ra giảm 100% [Máu Chuyên Biệt] của toàn bộ kẻ địch.",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_ult.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Sam_Ur+/ult.gif",
+        "animation": "/Animation/Sam_Urplus/ult.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Siêu Tuyệt Kĩ",
         "desc": "Chém 30 > 50 lần. ST 5000% > 7000%. Bỏ qua Specialized Evasion và [Giảm Sát Thương Không Chí Mạng] 55% > 80%. Giảm [Máu Chuyên Biệt] của toàn bộ kẻ địch 100% > 150%.",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_ult.png",
-        "keepsakeIcon": "/Skill/Atomic Samurai (UR+)/Keepsake-Ur+.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_ult.png",
+        "keepsakeIcon": "/Skill/Atomic Samurai (URplus)/Keepsake-Urplus.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Sam_Ur+/ult.gif"
+        "animation": "/Animation/Sam_Urplus/ult.gif"
       },
       {
         "name": "Bị động",
         "desc": "Nhận +20% HP. Nhận 60% [Giảm Sát Thương Không Chí Mạng] khi vào trận. Xóa toàn bộ debuff [Tăng ST Chế Ngự] và [Giảm ST Chế Ngự] của kẻ địch. Khi gây [ST Trực Tiếp Chuyên Biệt], bỏ qua 40% [Giảm Sát Thương Không Chí Mạng] của kẻ địch.",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_pas.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động cực hạn",
         "desc": "[Giảm Sát Thương Không Chí Mạng] 60% > 70%. Bỏ qua [Giảm Sát Thương Không Chí Mạng] của kẻ địch 40% > 60%.",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_pas.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động 5 sao",
         "desc": "[Giảm Sát Thương Không Chí Mạng] 70% > 80%. Bỏ qua [Giảm Sát Thương Không Chí Mạng] của kẻ địch 60% > 80%.",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_pas.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động thức tỉnh",
         "desc": "Khi bắt đầu trận đấu, ban cho Atomic Samurai 20% tăng Tốc độ chuyên biệt. Khi chịu sát thương, có cơ hội giảm 40% sát thương đó (cơ hội bằng hai lần tỉ lệ Chí mạng hiện tại của bản thân). Nếu bản thân nằm trong hai đồng minh hành động đầu tiên, sẽ nhận 30% tỉ lệ Chí mạng và 50% Sát thương chí mạng.",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_Awken.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Sam_Ur+/awken.gif",
+        "animation": "/Animation/Sam_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 2",
         "desc": "Tăng Tốc độ 20% > 30% Giảm sát thương 40% > 70% Tỉ lệ Chí mạng 30% > 50% Sát thương chí mạng 50% > 80%",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_Awken.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Sam_Ur+/awken.gif",
+        "animation": "/Animation/Sam_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/Atomic Samurai (UR+)/Skill_Awken.png",
+        "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Sam_Ur+/awken.gif",
+        "animation": "/Animation/Sam_Urplus/awken.gif",
         "keepsakeIcon": null
       }
     ],
     "tier": "UR+",
-    "imageURL": "/Characters/Atomic Samurai (UR+)/UR+.png",
+    "imageURL": "/Characters/Atomic Samurai (URplus)/URplus.png",
     "type": "Vũ Trang",
     "faction": "Anh Hùng",
     "debut": "03 / 2026",
-    "keepsakeIcon": "/Characters/Atomic Samurai (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Atomic Samurai (URplus)/Keepsake_URplus.png",
     "pvpStats": {
       "atk": 30,
       "hp": 30,
@@ -699,79 +699,79 @@
       {
         "name": "Cơ bản",
         "desc": "Gây 120% ST lên mục tiêu đơn.",
-        "icon": "/Skill/Nyan (UR+)/Skill_base.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
-        "animation": "/Animation/Nyan_Ur+/Base.gif",
+        "animation": "/Animation/Nyan_Urplus/Base.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Tuyệt Kĩ",
         "desc": "Gây 1500% ST [ST Trực Tiếp Chuyên Biệt] lên một mục tiêu địch ở hàng sau bằng chuỗi 4 đòn (chỉ chịu ảnh hưởng bởi giảm ST nâng cao), bỏ qua 45% [Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Chí Mạng], đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Vĩnh viễn ban [Tăng Tốc Chuyên Biệt] cho đồng minh khác hàng. Khi dùng chiêu cuối trong 6 lượt đầu, áp thêm [Specialized Charm] lên mục tiêu chính. — [Tăng Tốc Chuyên Biệt]: Tốc độ được tăng lên 94% tốc độ của Nyan; nếu tốc độ của đồng minh cao hơn thì giữ nguyên. [Specialized Charm]: Mục tiêu lập tức rời khỏi giao tranh, dùng một số kỹ năng đặc biệt và hiệu ứng nội tại để tấn công một kẻ địch ngẫu nhiên, sau đó quay về và bỏ qua hành động chủ động kế tiếp; kẻ địch dính [Specialized Charm] bị giảm 20% [All DMG Reduction] trong 1 lượt.",
-        "icon": "/Skill/Nyan (UR+)/Skill_ult.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Nyan_Ur+/ult.gif",
+        "animation": "/Animation/Nyan_Urplus/ult.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Siêu Tuyệt Kĩ",
         "desc": "Gây 1500% > 2400% ST [ST Trực Tiếp Chuyên Biệt]. Bỏ qua [Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Chí Mạng] 45% > 60%. [Tăng Tốc Chuyên Biệt] tăng tốc độ lên 94% > 98% tốc độ của Nyan.",
-        "icon": "/Skill/Nyan (UR+)/Skill_ult.png",
-        "keepsakeIcon": "/Skill/Nyan (UR+)/Keepsake-UR+.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_ult.png",
+        "keepsakeIcon": "/Skill/Nyan (URplus)/Keepsake-URplus.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Nyan_Ur+/ult.gif"
+        "animation": "/Animation/Nyan_Urplus/ult.gif"
       },
       {
         "name": "Bị động",
         "desc": "Nhận 60% [Né Tránh Chuyên Biệt] khi vào trận. Miễn nhiễm [Charm]/[Specialized Charm]. Giảm lượng năng lượng bị trừ đi 2 khi đồng minh chịu mất năng lượng thêm trong 5 lượt đầu. Bản thân có [Monster Affinity]. — [Monster Affinity]: Khi kỹ năng core của một nhân vật Monster được kích hoạt, Nyan có thể được tính là bất kỳ nguyên tố nhân vật nào đang thiếu (ví dụ thiếu một suất duelist cho Gyoro Core — Nyan được tính là duelist nên Core kích hoạt, dù Nyan là grappler).",
-        "icon": "/Skill/Nyan (UR+)/Skill_pas.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Nyan_Ur+/Passive.gif",
+        "animation": "/Animation/Nyan_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động cực hạn",
         "desc": "[Né Tránh Chuyên Biệt] khi vào trận 60% > 70%. Giảm lượng năng lượng bị trừ 2 > 3 khi đồng minh chịu mất năng lượng thêm trong 5 lượt đầu.",
-        "icon": "/Skill/Nyan (UR+)/Skill_pas.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Nyan_Ur+/Passive.gif",
+        "animation": "/Animation/Nyan_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động 5 sao",
         "desc": "[Né Tránh Chuyên Biệt] khi vào trận 70% > 80%. Giảm lượng năng lượng bị trừ 3 khi đồng minh chịu mất năng lượng thêm trong 5 lượt đầu.",
-        "icon": "/Skill/Nyan (UR+)/Skill_pas.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Nyan_Ur+/Passive.gif",
+        "animation": "/Animation/Nyan_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động thức tỉnh",
         "desc": "Khi vào trận, nhận 46% [Specialized Speed]. Áp [HP Link] lên đồng minh có ST cao nhất trong 6 lượt. Sau khi Nyan chủ động dùng kỹ năng, đồng minh mang [HP Link] tung [Charge Pursuit] với 80% sức mạnh kỹ năng, tối đa một lần mỗi lượt. — [HP Link]: Nyan sẽ không bị hạ gục chừng nào đồng đội mang [HP Link] còn sống; nếu họ bị hạ, [HP Link] chuyển sang đồng đội có ST cao kế tiếp, tối đa 3 lần. [Charge Pursuit]: Thực hiện một chiêu cuối gây ST hoặc hồi máu diện rộng như một đòn truy kích; mục tiêu ngẫu nhiên, không tốn năng lượng.",
-        "icon": "/Skill/Nyan (UR+)/Skill_Awken.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Nyan_Ur+/awken.gif",
+        "animation": "/Animation/Nyan_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 2",
         "desc": "Khi vào trận, nhận [Specialized Speed] 46% > 54%. Đồng minh mang [HP Link] tung [Charge Pursuit] với 80% > 120% sức mạnh kỹ năng.",
-        "icon": "/Skill/Nyan (UR+)/Skill_Awken.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Nyan_Ur+/awken.gif",
+        "animation": "/Animation/Nyan_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 3",
         "desc": "Additionally gains +150 [Energy] to self when attacking.",
-        "icon": "/Skill/Nyan (UR+)/Skill_Awken.png",
+        "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Nyan_Ur+/awken.gif",
+        "animation": "/Animation/Nyan_Urplus/awken.gif",
         "keepsakeIcon": null
       }
     ],
-    "imageURL": "/Characters/Nyan (UR+)/UR+.png",
+    "imageURL": "/Characters/Nyan (URplus)/URplus.png",
     "debut": "02 / 2026",
-    "keepsakeIcon": "/Characters/Nyan (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Nyan (URplus)/Keepsake_URplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "pvpStats": {
@@ -821,7 +821,7 @@
   {
     "id": "100180-urplus",
     "name": "Tatsumaki/Terrible Tornado",
-    "imageURL": "/Characters/TatsumakiTerrible Tornado (UR+)/UR+.png",
+    "imageURL": "/Characters/TatsumakiTerrible Tornado (URplus)/URplus.png",
     "tier": "UR+",
     "type": "Tâm Linh",
     "faction": "Anh Hùng",
@@ -840,73 +840,73 @@
       {
         "name": "Cơ bản",
         "desc": "Gây 200% ST cho mục tiêu đơn.",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/Skill_base.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
-        "animation": "/Animation/Tat_Ur+/Base.gif",
+        "animation": "/Animation/Tat_Urplus/Base.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Tuyệt Kĩ",
         "desc": "Gây 5000% ST sát thương trực tiếp chuyên biệt (chỉ chịu ảnh hưởng bởi Giảm sát thương cấp cao) cho toàn bộ kẻ địch, bỏ qua 45% [Né Tránh Chuyên Biệt] và [Miễn Sát Thương Không Chí Mạng], xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt].Gây [Áp Chế Năng Lượng] cho 3 kẻ địch có ST cao nhất, kéo dài 2 lượt.——— [Áp Chế Năng Lượng]: Khi gây ST lên Máu/[Máu Chuyên Biệt], khiến mục tiêu kích hoạt 1 lần [Chuyển Hóa Năng Lượng] (giảm ST nhận vào và chuyển hóa thành [Tạo Khiên]).",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/skill_ult.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Tat_Ur+/ult.gif",
+        "animation": "/Animation/Tat_Urplus/ult.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Siêu Tuyệt Kĩ",
         "desc": "Nhận 20% [Thịnh Nộ] và [Phá Khiên]. ST 5000% > 7000%. Bỏ qua [Né Tránh Chuyên Biệt] và [Miễn Sát Thương Không Chí Mạng] 45% > 60%. Gây [Áp Chế Năng Lượng] cho 3 kẻ địch > toàn bộ kẻ địch (đánh dấu 3 lượt).——— [Phá Khiên]: Trong lúc tấn công, bỏ qua 30% Giảm sát thương và Phòng thủ chuyên biệt của kẻ địch.",
-        "keepsakeIcon": "/Skill/TatsumakiTerrible Tornado (UR+)/Keepsake-UR+.png",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/skill_ult.png",
+        "keepsakeIcon": "/Skill/TatsumakiTerrible Tornado (URplus)/Keepsake-URplus.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Tat_Ur+/ult.gif"
+        "animation": "/Animation/Tat_Urplus/ult.gif"
       },
       {
         "name": "Bị động",
         "desc": "Tăng vĩnh viễn 20% Máu bản thân. Khi vào trận, nhận 60% [Giảm Sát Thương Chí Mạng], và giảm xuống 0 năng lượng mà đồng minh có ST cao nhất sử dụng khi dùng Tối Thượng.",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/Skill_pas.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Tat_Ur+/Passive.gif",
+        "animation": "/Animation/Tat_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động cực hạn",
         "desc": "[Giảm Sát Thương Chí Mạng] khi vào trận 60% > 70%.",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/Skill_pas.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Tat_Ur+/Passive.gif",
+        "animation": "/Animation/Tat_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động 5 sao",
         "desc": "[Giảm Sát Thương Chí Mạng] khi vào trận 70% > 80%.",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/Skill_pas.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Tat_Ur+/Passive.gif",
+        "animation": "/Animation/Tat_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động thức tỉnh",
         "desc": "Cho phép đồng minh Anh hùng/Võ sĩ nhận được [Chuyển Hóa Năng Lượng]. Bản thân nhận 2.5 lần hiệu ứng [Chuyển Hóa Năng Lượng] của đồng minh, và khi kích hoạt [Chuyển Hóa Năng Lượng] không cần [Áp Chế Năng Lượng]. ——— [Chuyển Hóa Năng Lượng]: Khi một kẻ địch có [Áp Chế Năng Lượng] gây ST cho ta, giảm 20% ST, 20% ST gốc được chuyển hóa thành [Kiên Cường Năng Lượng]",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/skill_awk.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Tat_Ur+/awken.gif",
+        "animation": "/Animation/Tat_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 2",
         "desc": "Khi trận đấu bắt đầu, gây [Áp Chế Năng Lượng] cho toàn bộ kẻ địch, kéo dài 1 lượt. [Chuyển Hóa Năng Lượng]: giảm ST 20% > 30% ST gốc được chuyển hóa thành [Kiên Cường Năng Lượng] 20% > 30%",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/skill_awk.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Tat_Ur+/awken.gif",
+        "animation": "/Animation/Tat_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/TatsumakiTerrible Tornado (UR+)/skill_awk.png",
+        "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Tat_Ur+/awken.gif",
+        "animation": "/Animation/Tat_Urplus/awken.gif",
         "keepsakeIcon": null
       }
     ],
@@ -960,7 +960,7 @@
         "desc": "Khi gây sát thương lên máu, buộc mục tiêu kích hoạt Chuyển Hóa Năng Lượng, làm giảm sát thương chúng gây ra và bóp nghẹt nguồn năng lượng của chúng."
       }
     ],
-    "keepsakeIcon": "/Characters/Tatsumaki/Terrible Tornado (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Tatsumaki/Terrible Tornado (URplus)/Keepsake_URplus.png",
     "pvpStats": {
       "atk": 30,
       "hp": 30,
@@ -981,7 +981,7 @@
   {
     "id": "100029-urplus",
     "name": "Amai Mask",
-    "imageURL": "/Characters/Amai Mask (UR+)/UR+.png",
+    "imageURL": "/Characters/Amai Mask (URplus)/URplus.png",
     "tier": "UR+",
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
@@ -999,73 +999,73 @@
       {
         "name": "Cơ bản",
         "desc": "Tung combo 2 đòn vào mục tiêu đơn, gây 60% ST sát thương Trực Tiếp (Direct DMG).",
-        "icon": "/Skill/Amai Mask (UR+)/Skill_base.png",
+        "icon": "/Skill/Amai Mask (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
-        "animation": "/Animation/Amai_Ur+/Base.gif",
+        "animation": "/Animation/Amai_Urplus/Base.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Tuyệt Kĩ",
         "desc": "Tung combo 3 đòn vào mục tiêu đơn, gây 500% ST [ST Trực Tiếp Chuyên Biệt] (chỉ chịu ảnh hưởng của tăng/giảm sát thương cao cấp), bỏ qua 45% [Né Tránh Chuyên Biệt] và 45% giảm sát thương phi chí mạng (non-crit DMG RED) của mục tiêu, đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Hồi cho toàn bộ đồng minh 10% Máu tối đa của chính họ dưới dạng [Máu Chuyên Biệt] (có thể chí mạng).",
-        "icon": "/Skill/Amai Mask (UR+)/skill_ult.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Amai_Ur+/ult.gif",
+        "animation": "/Animation/Amai_Urplus/ult.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Siêu Tuyệt Kĩ",
         "desc": "Tung combo 3 đòn vào mục tiêu đơn, gây 500% > 800% ST [ST Trực Tiếp Chuyên Biệt] (chỉ chịu ảnh hưởng của tăng/giảm sát thương cao cấp), bỏ qua 45% > 60% [Né Tránh Chuyên Biệt] và 45% > 60% giảm sát thương phi chí mạng (non-crit DMG RED) của mục tiêu, đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Hồi cho toàn bộ đồng minh 10% > 15% Máu tối đa của chính họ dưới dạng [Máu Chuyên Biệt] (có thể chí mạng), và ban cho toàn bộ đồng minh 15% [Giáp] cùng [Phá Giáp] trong 3 lượt. [Giáp]: khi bị tấn công, nhận 15% giảm sát thương và phòng thủ đặc hóa. [Phá Giáp]: khi tấn công, bỏ qua 15% giảm sát thương và phòng thủ đặc hóa của kẻ địch.",
-        "keepsakeIcon": "/Skill/Amai Mask (UR+)/Keepsake-UR+.png",
-        "icon": "/Skill/Amai Mask (UR+)/skill_ult.png",
+        "keepsakeIcon": "/Skill/Amai Mask (URplus)/Keepsake-URplus.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Amai_Ur+/ult.gif"
+        "animation": "/Animation/Amai_Urplus/ult.gif"
       },
       {
         "name": "Bị động",
         "desc": "Vĩnh viễn tăng 20% Máu tối đa bản thân. Khi vào trận, bản thân nhận 60% [Né Tránh Chuyên Biệt]; toàn bộ kẻ địch bị giảm 40% [Trường Siêu Tốc·Công] và [Trường Siêu Tốc·Thủ]. Trước khi bất kỳ nhân vật nào hành động, giải trừ [Choáng], [Choáng Chuyên Biệt] và [Uy Hiếp] cho toàn bộ đồng minh.",
-        "icon": "/Skill/Amai Mask (UR+)/skill_pas.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Amai_Ur+/Passive.gif",
+        "animation": "/Animation/Amai_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động cực hạn",
         "desc": "[Né Tránh Chuyên Biệt] 60% > 70%. Giảm [Trường Siêu Tốc·Công]/[Trường Siêu Tốc·Thủ] của kẻ địch 40% > 60%.",
-        "icon": "/Skill/Amai Mask (UR+)/skill_pas.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Amai_Ur+/Passive.gif",
+        "animation": "/Animation/Amai_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động 5 sao",
         "desc": "[Né Tránh Chuyên Biệt] 70% > 80%. Giảm [Trường Siêu Tốc·Công]/[Trường Siêu Tốc·Thủ] của kẻ địch 60% > 70%.",
-        "icon": "/Skill/Amai Mask (UR+)/skill_pas.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Amai_Ur+/Passive.gif",
+        "animation": "/Animation/Amai_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động thức tỉnh",
         "desc": "Nếu Máu tối đa của đồng minh thấp hơn 70% Máu tối đa của Amai Mask, vĩnh viễn tăng Máu tối đa thêm 30%, khi trận đấu bắt đầu, nhận 30% [Miễn ST Kháng]. ——— [Miễn ST Kháng]: giảm 30% ST nhận vào, nếu Máu gốc cao hơn kẻ tấn công thì tăng lên 150%",
-        "icon": "/Skill/Amai Mask (UR+)/skill_awk.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Amai_Ur+/awken.gif",
+        "animation": "/Animation/Amai_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 2",
         "desc": "Máu tối đa 30% > 50% Resistance DMG Free 30% > 40% Khi bắt đầu lượt 2, hồi phục 20% Máu tối đa của Specialized HP [Miễn ST Kháng]: Giảm ST nhận vào 30% > 40% Nếu Máu cao hơn, tăng lên 150% > 170%",
-        "icon": "/Skill/Amai Mask (UR+)/skill_awk.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Amai_Ur+/awken.gif",
+        "animation": "/Animation/Amai_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/Amai Mask (UR+)/skill_awk.png",
+        "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Amai_Ur+/awken.gif",
+        "animation": "/Animation/Amai_Urplus/awken.gif",
         "keepsakeIcon": null
       }
     ],
@@ -1123,7 +1123,7 @@
         "desc": "Hiệu ứng khống chế dạng choáng khiến mục tiêu không thể hành động và giảm toàn bộ khả năng miễn sát thương của nó đi 30%."
       }
     ],
-    "keepsakeIcon": "/Characters/Amai Mask (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Amai Mask (URplus)/Keepsake_URplus.png",
     "releaseTrung": "01/12/2025",
     "pvpStats": {
       "atk": 50,
@@ -1141,7 +1141,7 @@
   {
     "id": "100184-urplus",
     "name": "Boros",
-    "imageURL": "/Characters/Boros (UR+)/UR+.png",
+    "imageURL": "/Characters/Boros (URplus)/URplus.png",
     "tier": "UR+",
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
@@ -1159,73 +1159,73 @@
       {
         "name": "Cơ bản",
         "desc": "Gây 120% ST sát thương trực tiếp lên mục tiêu đơn.",
-        "icon": "/Skill/Boros (UR+)/Skill_base.png",
+        "icon": "/Skill/Boros (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
-        "animation": "/Animation/Boros_Ur+/Base.gif",
+        "animation": "/Animation/Boros_Urplus/Base.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Tuyệt Kĩ",
         "desc": "Giải trừ các buff có lợi của bản thân để không thể chết và miễn nhiễm [Chí Mạng]. Sau đó gây thêm 70% sát thương trực tiếp lên mục tiêu ở một đòn, đồng thời giảm Né và Crit DMG Reduction của mục tiêu đó đi 45%.",
-        "icon": "/Skill/Boros (UR+)/skill_ult.png",
+        "icon": "/Skill/Boros (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Boros_Ur+/ult.gif",
+        "animation": "/Animation/Boros_Urplus/ult.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Siêu Tuyệt Kĩ",
         "desc": "Ngoài ra nhận thêm +50% Crit. Sát thương trực tiếp cộng thêm tăng lên 70% > 100%, mức giảm Né và Crit DMG Reduction tăng lên 45% > 60%, và nay áp dụng trên một đòn > mỗi đòn.",
-        "keepsakeIcon": "/Skill/Boros (UR+)/Keepsake-UR+.png",
-        "icon": "/Skill/Boros (UR+)/skill_ult.png",
+        "keepsakeIcon": "/Skill/Boros (URplus)/Keepsake-URplus.png",
+        "icon": "/Skill/Boros (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Boros_Ur+/ult.gif"
+        "animation": "/Animation/Boros_Urplus/ult.gif"
       },
       {
         "name": "Bị động",
         "desc": "Khi vào trận, nhận +20% HP và +60% Crit DMG Reduction, đồng thời nhận tối đa 2 lần kích hoạt Chase DMG thêm.",
-        "icon": "/Skill/Boros (UR+)/Skill_pas.png",
+        "icon": "/Skill/Boros (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Boros_Ur+/Passive.gif",
+        "animation": "/Animation/Boros_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động cực hạn",
         "desc": "Crit DMG Reduction 60% > 70%.",
-        "icon": "/Skill/Boros (UR+)/Skill_pas.png",
+        "icon": "/Skill/Boros (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Boros_Ur+/Passive.gif",
+        "animation": "/Animation/Boros_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động 5 sao",
         "desc": "Crit DMG Reduction 70% > 80%. Số lần kích hoạt Chase DMG thêm 2 > 3.",
-        "icon": "/Skill/Boros (UR+)/Skill_pas.png",
+        "icon": "/Skill/Boros (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Boros_Ur+/Passive.gif",
+        "animation": "/Animation/Boros_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động thức tỉnh",
         "desc": "Khi cận tử, vào trạng thái [Hồi Sinh], hấp thụ mọi loại ST, lượt kế tiếp hồi 50% Máu và nhận lượng [Kiên Cường Năng Lượng] bằng lượng đã hấp thụ, tối đa 3 lần. Khi bắt đầu trận đấu, nhận 30% [Miễn ST Chế Ngự]. ———- [Miễn ST Chế Ngự]: Giảm 30% ST nhận vào, khi Tấn công cao hơn kẻ tấn công, giảm thêm 150%.",
-        "icon": "/Skill/Boros (UR+)/skill_awk.png",
+        "icon": "/Skill/Boros (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Boros_Ur+/awken.gif",
+        "animation": "/Animation/Boros_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 2",
         "desc": "Nhận [Miễn ST Chế Ngự] 30% > 40% [Miễn ST Chế Ngự]: -Giảm ST nhận vào 30% > 40% -Khi Tấn công cao hơn kẻ tấn công, giảm thêm 150% > 170%",
-        "icon": "/Skill/Boros (UR+)/skill_awk.png",
+        "icon": "/Skill/Boros (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Boros_Ur+/awken.gif",
+        "animation": "/Animation/Boros_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/Boros (UR+)/skill_awk.png",
+        "icon": "/Skill/Boros (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Boros_Ur+/awken.gif",
+        "animation": "/Animation/Boros_Urplus/awken.gif",
         "keepsakeIcon": null
       }
     ],
@@ -1247,7 +1247,7 @@
         "desc": "Hiệu ứng phòng thủ giảm sát thương nhận vào (30–40%), tăng lên mức giảm 150–170% khi ST của người mang cao hơn kẻ tấn công."
       }
     ],
-    "keepsakeIcon": "/Characters/Boros (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Boros (URplus)/Keepsake_URplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "releaseTrung": "01/11/2025",
@@ -1267,7 +1267,7 @@
   {
     "id": "100308-urplus",
     "name": "Genos",
-    "imageURL": "/Characters/Genos (UR+)/UR+.png",
+    "imageURL": "/Characters/Genos (URplus)/URplus.png",
     "tier": "UR+",
     "type": "Công Nghệ",
     "faction": "Anh Hùng",
@@ -1285,73 +1285,73 @@
       {
         "name": "Cơ bản",
         "desc": "Gây sát thương trực tiếp bằng 60% Tấn công lên một mục tiêu.",
-        "icon": "/Skill/Genos (UR+)/Skill_base.png",
+        "icon": "/Skill/Genos (URplus)/Skill_base.png",
         "type": "Kỹ năng thường",
-        "animation": "/Animation/Genos_Ur+/Base.gif",
+        "animation": "/Animation/Genos_Urplus/Base.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Tuyệt Kĩ",
         "desc": "Gây sát thương trực tiếp bổ sung bằng 1000% Tấn công lên toàn bộ kẻ địch. Đòn đánh tước của mục tiêu 45% Giảm Sát thương Chí mạng (Crit DMG Reduction) và 45% Né tránh (Instant Miss).",
-        "icon": "/Skill/Genos (UR+)/skill_ult.png",
+        "icon": "/Skill/Genos (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Genos_Ur+/ult.gif",
+        "animation": "/Animation/Genos_Urplus/ult.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Siêu Tuyệt Kĩ",
         "desc": "Thêm vào đó nhận +30% Chí mạng cho bản thân. Với toàn bộ kẻ địch có Tấn công thấp hơn bản thân, gây hiệu ứng suy yếu theo Máu Tối đa (gốc 130%, cộng dồn tối đa 4 lần). Sát thương trực tiếp bổ sung 1000% > 1400% Tấn công, và mức tước Giảm Sát thương Chí mạng / Né tránh 45% > 60%.",
-        "keepsakeIcon": "/Skill/Genos (UR+)/Keepsake-UR+.png",
-        "icon": "/Skill/Genos (UR+)/skill_ult.png",
+        "keepsakeIcon": "/Skill/Genos (URplus)/Keepsake-URplus.png",
+        "icon": "/Skill/Genos (URplus)/skill_ult.png",
         "type": "Tuyệt kĩ",
-        "animation": "/Animation/Genos_Ur+/ult.gif"
+        "animation": "/Animation/Genos_Urplus/ult.gif"
       },
       {
         "name": "Bị động",
         "desc": "Nhận +20% Máu. Khi vào trận, nhận +60% Giảm Sát thương Chí mạng (Crit DMG Reduction) và khiêu khích kẻ địch ([Damage Focus]), hút đòn tấn công của chúng về bản thân.",
-        "icon": "/Skill/Genos (UR+)/Skill_pas.png",
+        "icon": "/Skill/Genos (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Genos_Ur+/Passive.gif",
+        "animation": "/Animation/Genos_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động cực hạn",
         "desc": "Giảm Sát thương Chí mạng (Crit DMG Reduction) 60% > 70%.",
-        "icon": "/Skill/Genos (UR+)/Skill_pas.png",
+        "icon": "/Skill/Genos (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Genos_Ur+/Passive.gif",
+        "animation": "/Animation/Genos_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động 5 sao",
         "desc": "Giảm Sát thương Chí mạng (Crit DMG Reduction) 70% > 80%. Sức mạnh khiêu khích ([Damage Focus]) tăng lên.",
-        "icon": "/Skill/Genos (UR+)/Skill_pas.png",
+        "icon": "/Skill/Genos (URplus)/Skill_pas.png",
         "type": "Nội tại",
-        "animation": "/Animation/Genos_Ur+/Passive.gif",
+        "animation": "/Animation/Genos_Urplus/Passive.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Bị động thức tỉnh",
         "desc": "Nhận 30% (40%) [Miễn ST Chế Ngự]. Đồng minh có [Miễn ST Chế Ngự] và Genos tăng 30% (40%) [Tăng ST Chế Ngự] ———- [Miễn ST Chế Ngự]: Giảm 30% (40%) ST nhận vào, khi Tấn công cao hơn kẻ tấn công, giảm thêm 150% (170%) [Tăng ST Chế Ngự]: Tăng 30% (40%) ST, khi Tấn công cao hơn mục tiêu, tăng thêm 150% (170%)",
-        "icon": "/Skill/Genos (UR+)/skill_awk.png",
+        "icon": "/Skill/Genos (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Genos_Ur+/awken.gif",
+        "animation": "/Animation/Genos_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 2",
         "desc": "[Miễn ST Chế Ngự]: -Nhận 30% > 40% -Giảm ST nhận vào 30% > 40% -Khi Tấn công cao hơn kẻ tấn công, giảm thêm 150% > 170% [Tăng ST Chế Ngự]: -Nhận 30% > 40% -Tăng ST 30% > 40% -Khi Tấn công cao hơn mục tiêu, tăng thêm 150% > 170%",
-        "icon": "/Skill/Genos (UR+)/skill_awk.png",
+        "icon": "/Skill/Genos (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Genos_Ur+/awken.gif",
+        "animation": "/Animation/Genos_Urplus/awken.gif",
         "keepsakeIcon": null
       },
       {
         "name": "Thức tỉnh 3",
         "desc": "• Restores 150 Energy (when attacking)",
-        "icon": "/Skill/Genos (UR+)/skill_awk.png",
+        "icon": "/Skill/Genos (URplus)/skill_awk.png",
         "type": "Thức tỉnh",
-        "animation": "/Animation/Genos_Ur+/awken.gif",
+        "animation": "/Animation/Genos_Urplus/awken.gif",
         "keepsakeIcon": null
       }
     ],
@@ -1365,7 +1365,7 @@
         "desc": "Buff tấn công cho 30-40% năng lượng và tăng sát thương, tăng thêm 150-170% khi Tấn công của người mang cao hơn mục tiêu."
       }
     ],
-    "keepsakeIcon": "/Characters/Genos (UR+)/Keepsake_UR+.png",
+    "keepsakeIcon": "/Characters/Genos (URplus)/Keepsake_URplus.png",
     "releaseTrung": "01/10/2025",
     "pvpStats": {
       "atk": 50,
@@ -3703,7 +3703,7 @@
         "name": "Bị động",
         "desc": "Tự nhận 50% Giảm ST Không Chí Mạng (hiệu lực với mọi loại ST, không thể tồn tại cùng [Nhanh Nhẹn]), kéo dài 4 lượt.Sau khi nhận ST chí tử, hồi sinh với 50% Máu tối đa.",
         "icon": "/Skill/Atomic Samurai (UR)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -3711,7 +3711,7 @@
         "name": "Bị động cực hạn",
         "desc": "Giảm ST Không Chí Mạng 50% → 60%Hồi sinh 1 lần → 2 lần",
         "icon": "/Skill/Atomic Samurai (UR)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -3719,7 +3719,7 @@
         "name": "Bị động 5 sao",
         "desc": "Thời gian Giảm ST Không Chí Mạng 4 lượt → 5 lượtMáu hồi sinh 50% → 100%",
         "icon": "/Skill/Atomic Samurai (UR)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -3727,7 +3727,7 @@
         "name": "Bị động thức tỉnh",
         "desc": "Khi bắt đầu trận đấu, giảm 30% Tấn công của toàn bộ kẻ địch, nhận 20% Tỉ lệ Hút máu, kéo dài 2 vòng. Trước khi bất kỳ nhân vật nào hành động, tung [Truy Kích Tối Thượng] (60% ST và 100% hiệu ứng), một lần mỗi vòng.",
         "icon": "/Skill/Atomic Samurai (UR)/Skill_Awken.png",
-        "animation": "/Animation/Sam_Ur+/awken.gif",
+        "animation": "/Animation/Sam_Urplus/awken.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
@@ -3735,7 +3735,7 @@
         "name": "Thức tỉnh 2",
         "desc": "Giảm Tấn công của kẻ địch 30% > 40% Nhận 20% Tỉ lệ Suy Sụp Tỉ lệ Hút máu 20% > 30% ST Truy Kích 60% > 100%",
         "icon": "/Skill/Atomic Samurai (UR)/Skill_Awken.png",
-        "animation": "/Animation/Sam_Ur+/awken.gif",
+        "animation": "/Animation/Sam_Urplus/awken.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       },
@@ -3743,7 +3743,7 @@
         "name": "Thức tỉnh 3",
         "desc": "• Restores 150 Energy (when attacking)",
         "icon": "/Skill/Atomic Samurai (UR)/Skill_Awken.png",
-        "animation": "/Animation/Sam_Ur+/awken.gif",
+        "animation": "/Animation/Sam_Urplus/awken.gif",
         "type": "Thức tỉnh",
         "keepsakeIcon": null
       }
@@ -6707,7 +6707,7 @@
         "name": "Bị động",
         "desc": "+20% HP. Khi vào trận, nhận thêm 60% giảm ST Chí mạng. Vào đầu lượt của bản thân, hồi máu cho bản thân theo một phần HP tối đa.",
         "icon": "/Skill/Atomic Samurai (SSR+)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -6715,7 +6715,7 @@
         "name": "Bị động cực hạn",
         "desc": "Giảm ST Chí mạng 60% > 70%.",
         "icon": "/Skill/Atomic Samurai (SSR+)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -6723,7 +6723,7 @@
         "name": "Bị động 5 sao",
         "desc": "Giảm ST Chí mạng 70% > 80%.",
         "icon": "/Skill/Atomic Samurai (SSR+)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       }
@@ -7627,7 +7627,7 @@
         "name": "Bị động",
         "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh hệ Vũ Trang tấn công, Atomic Samurai lập tức thực hiện [Truy Kích] (tấn công với sát thương và hiệu ứng của đòn cơ bản, tối đa 3 lần mỗi lượt).",
         "icon": "/Skill/Atomic Samurai (SSR)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -7635,7 +7635,7 @@
         "name": "Bị động cực hạn",
         "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh hệ Vũ Trang tấn công, Atomic Samurai lập tức thực hiện [Truy Kích] (tấn công với sát thương và hiệu ứng của đòn cơ bản, tối đa 3 lần mỗi lượt).",
         "icon": "/Skill/Atomic Samurai (SSR)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       },
@@ -7643,7 +7643,7 @@
         "name": "Bị động 5 sao",
         "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh hệ Vũ Trang tấn công, Atomic Samurai lập tức thực hiện [Truy Kích] (tấn công với sát thương và hiệu ứng của đòn cơ bản, tối đa 3 lần mỗi lượt).",
         "icon": "/Skill/Atomic Samurai (SSR)/Skill_pas.png",
-        "animation": "/Animation/Sam_Ur+/Passive.gif",
+        "animation": "/Animation/Sam_Urplus/Passive.gif",
         "type": "Nội tại",
         "keepsakeIcon": null
       }
