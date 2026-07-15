@@ -123,7 +123,8 @@ const typeIcon = computed(() => {
 
 const tierIcon = computed(() => {
   if (character.value?.tier) {
-    return `/Quality/${character.value.tier}.png`
+    const safeTier = character.value.tier.replace('UR+', 'URplus')
+    return `/Quality/${safeTier}.png`
   }
   return ''
 })
