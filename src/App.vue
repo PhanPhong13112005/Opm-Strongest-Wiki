@@ -2,8 +2,12 @@
 import { ref, watch } from 'vue'
 import { RouterView, RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import { inject } from '@vercel/analytics'
 
 const { t, locale } = useI18n()
+
+// Initialize Vercel Analytics
+inject()
 
 // Use a ref for the UI toggle but sync it with vue-i18n locale
 const lang = ref(locale.value.toUpperCase())
