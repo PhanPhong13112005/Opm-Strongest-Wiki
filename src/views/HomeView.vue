@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import charactersDataVi from '../data/characters.json'
 import charactersDataEn from '../data/characters_en.json'
@@ -46,6 +46,26 @@ const prevMonthStr = computed(() => {
   const y = d.getFullYear()
   const m = String(d.getMonth() + 1).padStart(2, '0')
   return `${y}-${m}`
+})
+
+onMounted(() => {
+  const banners = [];
+  Object.values(scheduleData).forEach(month => {
+    month.forEach(sv => {
+       sv.items.forEach(item => {
+          if (item.bannerImage) {
+            banners.push(safeUrl(item.bannerImage));
+          }
+       })
+    })
+  })
+  
+  setTimeout(() => {
+      banners.forEach(url => {
+          const img = new window.Image();
+          img.src = url;
+      })
+  }, 1000);
 })
 
 const scheduleData = {

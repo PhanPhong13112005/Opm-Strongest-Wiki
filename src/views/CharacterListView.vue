@@ -86,6 +86,35 @@ const goToPage = (page) => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 }
+
+const safeUrl = (url) => {
+  if (!url) return ''
+  return encodeURI(url).replace(/\+/g, '%2B').replace(/#/g, '%23')
+}
+
+const preloadedDetails = new Set()
+
+watch(paginatedCharacters, (newChars) => {
+  setTimeout(() => {
+    newChars.forEach(char => {
+      if (!preloadedDetails.has(char.id)) {
+        preloadedDetails.add(char.id);
+        const url = char.imageURL;
+        if (url) {
+          let finalUrl = url;
+          const match = url.match(/\/Characters\/(.+?)\//);
+          if (match) {
+            const folderName = match[1];
+            const baseName = folderName.replace(' (URplus)', '_URplus').replace(' (UR+)', '_URplus').replace(' (UR)', '_Ur').replace(' (SSR+)', '_SSR+').replace(' (SSR)', '').replace(' (SR)', '');
+            finalUrl = `/Characters/Full_Background/${baseName}.png`;
+          }
+          const img = new Image();
+          img.src = safeUrl(finalUrl);
+        }
+      }
+    })
+  }, 500)
+}, { immediate: true })
 </script>
 
 <template>
