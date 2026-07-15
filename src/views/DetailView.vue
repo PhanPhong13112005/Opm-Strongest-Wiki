@@ -14,6 +14,11 @@ const props = defineProps({
 })
 
 const router = useRouter()
+
+const safeUrl = (url) => {
+  if (!url) return ''
+  return encodeURI(url).replace(/\+/g, '%2B').replace(/#/g, '%23')
+}
 const { t, locale } = useI18n()
 const charactersData = computed(() => locale.value === 'en' ? charactersDataEn : charactersDataVi)
 const character = computed(() => charactersData.value.find(c => c.id === props.id) || null)
@@ -377,7 +382,7 @@ onMounted(() => {
       
       <!-- Background Character Image -->
       <img 
-        :src="getCharacterImage(character.imageURL)" 
+        :src="safeUrl(getCharacterImage(character.imageURL))" 
         class="absolute right-0 bottom-0 h-[90%] max-w-[60%] lg:max-w-[50%] object-contain object-right-bottom opacity-60 z-0 pointer-events-none drop-shadow-2xl"
         style="mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%), linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); mask-composite: intersect; -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%), linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); -webkit-mask-composite: source-in;"
         alt="Hero Background"
@@ -629,8 +634,8 @@ onMounted(() => {
         <div class="lg:col-span-2 relative w-full aspect-video bg-[#05060a] rounded-xl border border-gray-800 overflow-hidden shadow-2xl flex items-center justify-center group">
           
           <template v-if="currentExpandedSkillObj?.animation">
-            <video v-if="currentExpandedSkillObj.animation.endsWith('.mp4')" :src="currentExpandedSkillObj.animation.startsWith('/') ? currentExpandedSkillObj.animation : getCharacterImage(currentExpandedSkillObj.animation)" autoplay loop muted class="absolute inset-0 w-full h-full object-cover z-0"></video>
-            <img v-else :src="currentExpandedSkillObj.animation.startsWith('/') ? currentExpandedSkillObj.animation : getCharacterImage(currentExpandedSkillObj.animation)" class="absolute inset-0 w-full h-full object-cover z-0" />
+            <video v-if="currentExpandedSkillObj.animation.endsWith('.mp4')" :src="safeUrl(currentExpandedSkillObj.animation.startsWith('/') ? currentExpandedSkillObj.animation : getCharacterImage(currentExpandedSkillObj.animation))" autoplay loop muted class="absolute inset-0 w-full h-full object-cover z-0"></video>
+            <img v-else :src="safeUrl(currentExpandedSkillObj.animation.startsWith('/') ? currentExpandedSkillObj.animation : getCharacterImage(currentExpandedSkillObj.animation))" class="absolute inset-0 w-full h-full object-cover z-0" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 pointer-events-none"></div>
           </template>
           <template v-else>
@@ -658,7 +663,7 @@ onMounted(() => {
               <div class="p-4 flex justify-between items-center bg-gradient-to-r from-[color:var(--theme-color)]/10 to-transparent">
                 <div class="flex items-center gap-4">
                   <div class="w-14 h-14 flex-shrink-0 rounded-full border-2 border-[color:var(--theme-color)] flex items-center justify-center bg-gray-900 shadow-[0_0_10px_rgba(var(--theme-color-rgb),0.3)] overflow-hidden">
-                    <img v-if="getCoreSkillIcon(lvl, coreData)" :src="getCoreSkillIcon(lvl, coreData)" class="w-full h-full object-cover transform scale-110" />
+                    <img v-if="getCoreSkillIcon(lvl, coreData)" :src="safeUrl(getCoreSkillIcon(lvl, coreData))" class="w-full h-full object-cover transform scale-110" />
                     <span v-else class="text-[color:var(--theme-color)] font-black text-2xl">{{ lvl.lv }}</span>
                   </div>
                   <h3 class="font-bold text-lg text-[color:var(--theme-color)]">
@@ -693,7 +698,7 @@ onMounted(() => {
               <div class="p-4 flex justify-between items-center">
                 <div class="flex items-center gap-4">
                   <div class="w-14 h-14 flex-shrink-0 rounded-full border-2 border-[color:var(--theme-color)] flex items-center justify-center bg-gray-900 shadow-[0_0_10px_rgba(var(--theme-color-rgb),0.3)] overflow-hidden">
-                    <img v-if="skill.icon" :src="skill.icon" class="w-full h-full object-cover transform scale-110" />
+                    <img v-if="skill.icon" :src="safeUrl(skill.icon)" class="w-full h-full object-cover transform scale-110" />
                     <span v-else class="text-2xl opacity-80">💥</span>
                   </div>
                   <div class="flex flex-wrap items-center gap-2">
@@ -702,7 +707,7 @@ onMounted(() => {
                     <!-- KEEPSAKE BADGE -->
                     <router-link v-if="skill.keepsakeIcon" :to="`/keepsake/${character.id}`" class="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-red-900/80 to-red-600/50 border border-red-500/50 rounded-full ml-2 shadow-[0_0_10px_rgba(255,0,0,0.4)] cursor-pointer hover:scale-105 hover:shadow-[0_0_15px_rgba(255,0,0,0.6)] transition-all duration-300">
                       <span class="text-xs text-red-100 uppercase tracking-wider font-bold">{{ t("detail.unlockedBy") }}</span>
-                      <img :src="skill.keepsakeIcon" class="h-10 w-auto object-contain drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] animate-pulse" alt="Keepsake" title="Xem chi tiết Vũ Khí Duyên" />
+                      <img :src="safeUrl(skill.keepsakeIcon)" class="h-10 w-auto object-contain drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] animate-pulse" alt="Keepsake" title="Xem chi tiết Vũ Khí Duyên" />
                     </router-link>
 
                     <!-- Stars for Extreme Passives -->

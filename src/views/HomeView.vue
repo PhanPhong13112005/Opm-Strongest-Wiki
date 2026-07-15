@@ -7,10 +7,15 @@ import charactersDataEn from '../data/characters_en.json'
 const { t, locale } = useI18n()
 const charactersData = computed(() => locale.value === 'en' ? charactersDataEn : charactersDataVi)
 
+const safeUrl = (url) => {
+  if (!url) return ''
+  return encodeURI(url).replace(/\+/g, '%2B').replace(/#/g, '%23')
+}
+
 const getCharacterImage = (filename) => {
   if (!filename) return ''
-  if (filename.startsWith('/')) return filename
-  return new URL(`../assets/characters/${filename}`, import.meta.url).href
+  if (filename.startsWith('/')) return safeUrl(filename)
+  return safeUrl(new URL(`../assets/characters/${filename}`, import.meta.url).href)
 }
 
 const getChar = (id) => charactersData.value.find(c => c.id === id) || {}

@@ -8,11 +8,16 @@ const props = defineProps({
   }
 })
 
+const safeUrl = (url) => {
+  if (!url) return ''
+  return encodeURI(url).replace(/\+/g, '%2B').replace(/#/g, '%23')
+}
+
 const resolvedImage = computed(() => {
   const filename = props.character.avatarURL || props.character.imageURL
   if (!filename) return ''
-  if (filename.startsWith('/')) return filename
-  return new URL(`../assets/characters/${filename}`, import.meta.url).href
+  if (filename.startsWith('/')) return safeUrl(filename)
+  return safeUrl(new URL(`../assets/characters/${filename}`, import.meta.url).href)
 })
 
 // Frame background based on tier
