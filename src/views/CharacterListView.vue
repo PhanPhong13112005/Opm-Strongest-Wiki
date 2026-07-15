@@ -101,15 +101,8 @@ watch(paginatedCharacters, (newChars) => {
         preloadedDetails.add(char.id);
         const url = char.imageURL;
         if (url) {
-          let finalUrl = url;
-          const match = url.match(/\/Characters\/(.+?)\//);
-          if (match) {
-            const folderName = match[1];
-            const baseName = folderName.replace(' (URplus)', '_URplus').replace(' (UR+)', '_URplus').replace(' (UR)', '_Ur').replace(' (SSR+)', '_SSR+').replace(' (SSR)', '').replace(' (SR)', '');
-            finalUrl = `/Characters/Full_Background/${baseName}.png`;
-          }
           const img = new Image();
-          img.src = safeUrl(finalUrl);
+          img.src = safeUrl(url);
         }
       }
     })
