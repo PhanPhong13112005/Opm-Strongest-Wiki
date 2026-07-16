@@ -12,6 +12,7 @@ Sử dụng thư viện `vue-router` phiên bản 4 để thiết lập lịch s
 *   `/core-lab`: Trang Phòng Nghiên Cứu Core (`CoreLabView.vue`).
 *   `/keepsakes`: Trang Kỷ Vật.
 *   `/insignias`: Trang Huy Hiệu.
+*   `/backgear`: Trang Thẻ Hình nền và Bộ Sưu Tập.
 *   `/events`: Trang Danh Sách Sự Kiện.
 *   `/events/:id`: Trang Chi Tiết Sự Kiện cụ thể.
 *   `/privacy`: Trang Chính Sách Bảo Mật.

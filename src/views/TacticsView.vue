@@ -5,7 +5,7 @@ import { tacticCards, tacticFrames } from '../data/tactics.js'
 import { upperRewards, lowerRewards } from '../data/towerRewards.js'
 
 const { t, locale } = useI18n()
-const activeTab = ref('lab')
+const activeTab = ref('cards')
 const subTabTower = ref('overview')
 
 const towerSliders = {
@@ -85,10 +85,38 @@ const visibleCards = computed(() => {
   return tacticCards.slice(start, start + itemsPerPage)
 })
 
+const maxRarityTier = rarity => rarity?.tiers?.at(-1) || null
+const rarityTextClass = key => key === 'orange'
+  ? 'text-orange-400'
+  : key === 'purple'
+    ? 'text-purple-400'
+    : 'text-sky-400'
+const scalingValue = (card, value) => card.scaling?.unit === 'flat'
+  ? `+${value} ${locale.value === 'vi' ? 'năng lượng' : 'energy'}`
+  : `+${value}${card.scaling?.unit || ''}`
+
+// Flat attributes granted by every tactic card when it is equipped.
+// The four slots share ATK and differ by their slot-specific secondary ATK.
+const equippedSlots = [
+  { numeral: 'I', secondary: 'S.ATK' },
+  { numeral: 'II', secondary: 'C.ATK' },
+  { numeral: 'III', secondary: 'R.ATK' },
+  { numeral: 'IV', secondary: 'G.ATK' }
+]
+const equippedMaxValues = {
+  blue: 800,
+  purple: 2400,
+  orange: 6400
+}
+
 // Modal logic
 const selectedCard = ref(null)
 const activeRarityTab = ref('orange')
 const zoomedImage = ref(null)
+const activeRarity = computed(() => selectedCard.value?.scaling?.rarities?.find(
+  rarity => rarity.key === activeRarityTab.value
+))
+const activeEquippedValue = computed(() => equippedMaxValues[activeRarityTab.value] || 0)
 
 const zoomImage = (src) => {
   zoomedImage.value = src
@@ -411,6 +439,11 @@ const scrollTabs = (direction) => {
 
           <!-- TAB 3: CARDS -->
           <div v-if="activeTab === 'cards'" class="space-y-6 animate-fade-in">
+            <div class="rounded-xl border border-[#e8c37a]/25 bg-[#e8c37a]/5 px-4 py-3 text-sm text-gray-300">
+              {{ locale === 'vi'
+                ? 'Mỗi thẻ hiển thị chỉ số tối đa theo phẩm chất. Nhấn vào thẻ để xem đầy đủ chỉ số của từng sao.'
+                : 'Each card shows its maximum stat by rarity. Select a card to view the complete stat table for every star.' }}
+            </div>
             <transition name="fade" mode="out-in">
               <div :key="currentPage" class="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
                 <div v-for="card in visibleCards" :key="card.id" 
@@ -425,6 +458,24 @@ const scrollTabs = (direction) => {
                   <div class="font-black uppercase tracking-wide text-white text-sm sm:text-base mb-1">{{ card.name[locale] }}</div>
                   <div class="text-xs text-gray-500 font-bold mb-2">{{ card.count }} {{ locale === 'vi' ? 'thẻ' : 'cards' }}</div>
                   <div class="text-xs text-gray-300 leading-relaxed">{{ card.eff[locale] }}</div>
+                  <div v-if="card.scaling?.rarities?.length" class="mt-3 grid w-full grid-cols-3 gap-1.5 border-t border-white/10 pt-3">
+                    <div
+                      v-for="rarity in card.scaling.rarities"
+                      :key="rarity.key"
+                      class="rounded-lg border border-white/5 bg-black/20 px-1.5 py-2"
+                    >
+                      <div class="text-[10px] font-black uppercase tracking-wide" :class="rarityTextClass(rarity.key)">
+                        {{ locale === 'vi' ? rarity.name_vi : rarity.name_en }}
+                      </div>
+                      <template v-if="maxRarityTier(rarity)">
+                        <div class="mt-1 text-[10px] text-gray-500">★{{ maxRarityTier(rarity).star }}</div>
+                        <div class="text-xs font-black text-white">{{ scalingValue(card, maxRarityTier(rarity).value) }}</div>
+                      </template>
+                    </div>
+                  </div>
+                  <div class="mt-2 text-[10px] font-bold uppercase tracking-wider text-[#e8c37a]/70">
+                    {{ locale === 'vi' ? 'Nhấn để xem từng sao' : 'Select for every star' }}
+                  </div>
                 </div>
               </div>
             </transition>
@@ -583,6 +634,54 @@ const scrollTabs = (direction) => {
                   {{ locale === 'vi' ? rarity.name_vi : rarity.name_en }}
                 </button>
               </div>
+
+              <!-- Flat stats granted while the four tactic-card slots are equipped -->
+              <section class="space-y-3 rounded-xl border border-white/10 bg-black/20 p-3 sm:p-4">
+                <div class="flex flex-wrap items-end justify-between gap-2">
+                  <div>
+                    <h4 class="text-sm font-black uppercase tracking-wider text-white">
+                      {{ locale === 'vi' ? 'Chỉ số khi lắp' : 'Equipped Stats' }}
+                    </h4>
+                    <p class="mt-1 text-xs text-gray-500">
+                      {{ locale === 'vi' ? 'Giá trị ở cấp sao tối đa của phẩm chất đang chọn.' : 'Values at the selected rarity\'s maximum star level.' }}
+                    </p>
+                  </div>
+                  <span class="rounded-full border border-yellow-400/25 bg-yellow-400/10 px-2.5 py-1 text-xs font-black text-yellow-300">
+                    ★{{ maxRarityTier(activeRarity)?.star ?? 0 }}
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
+                  <article
+                    v-for="slot in equippedSlots"
+                    :key="slot.numeral"
+                    class="rounded-lg border bg-[#0b0d13] p-2.5"
+                    :class="activeRarityTab === 'orange' ? 'border-orange-500/30' : activeRarityTab === 'purple' ? 'border-purple-500/30' : 'border-blue-500/30'"
+                  >
+                    <div class="mb-2 flex items-center gap-2 border-b border-white/5 pb-2">
+                      <div class="relative h-10 w-10 shrink-0 overflow-hidden rounded-full border border-white/10 bg-black/40">
+                        <img :src="`/Feature/tactics/Card/${selectedCard.icon}`" alt="" class="h-full w-full object-cover" />
+                      </div>
+                      <div>
+                        <div class="text-[0.65rem] font-bold uppercase tracking-wider text-gray-500">
+                          {{ locale === 'vi' ? 'Vị trí' : 'Slot' }}
+                        </div>
+                        <div class="font-black" :class="rarityTextClass(activeRarityTab)">{{ slot.numeral }}</div>
+                      </div>
+                    </div>
+                    <dl class="space-y-1 text-xs tabular-nums">
+                      <div class="flex items-center justify-between gap-2">
+                        <dt class="text-gray-400">ATK</dt>
+                        <dd class="font-black text-sky-400">+{{ formatNumber(activeEquippedValue) }}</dd>
+                      </div>
+                      <div class="flex items-center justify-between gap-2">
+                        <dt class="text-gray-400">{{ slot.secondary }}</dt>
+                        <dd class="font-black text-sky-400">+{{ formatNumber(activeEquippedValue) }}</dd>
+                      </div>
+                    </dl>
+                  </article>
+                </div>
+              </section>
 
               <!-- Tab Body -->
               <div v-for="rarity in selectedCard.scaling.rarities" :key="rarity.key" 

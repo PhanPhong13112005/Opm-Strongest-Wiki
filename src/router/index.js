@@ -11,6 +11,7 @@ import PrivacyView from '../views/PrivacyView.vue'
 import HistoryView from '../views/HistoryView.vue'
 import MedalsView from '../views/MedalsView.vue'
 import TacticsView from '../views/TacticsView.vue'
+import BackgearView from '../views/BackgearView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,6 +25,11 @@ const router = createRouter({
       path: '/tactics',
       name: 'tactics',
       component: TacticsView
+    },
+    {
+      path: '/backgear',
+      name: 'backgear',
+      component: BackgearView
     },
     {
       path: '/',
@@ -97,6 +103,11 @@ const router = createRouter({
     }
   ],
   scrollBehavior(to, from, savedPosition) {
+    // Preserve the current scroll position when only query parameters change
+    // (for example, selecting a Backgear character updates ?character=...).
+    if (to.path === from.path && to.hash === from.hash) {
+      return false
+    }
     if (savedPosition) {
       return savedPosition
     } else {

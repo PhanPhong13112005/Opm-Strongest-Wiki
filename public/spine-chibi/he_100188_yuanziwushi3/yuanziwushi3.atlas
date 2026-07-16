@@ -1,0 +1,1241 @@
+
+yuanziwushi34.webp
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+l_xiongdai_yuanziwushi3XT
+	rotate: false
+	xy: 0, 0
+	size: 81, 30
+	orig: 81, 30
+	offset: 0, 0
+	index: -1
+F_a_shenti_yuanziwushi3XT
+	rotate: 270
+	xy: 0, 31
+	size: 75, 79
+	orig: 75, 79
+	offset: 0, 0
+	index: -1
+F_h_zuoxiaobi_yuanziwushi3XT
+	rotate: 270
+	xy: 316, 0
+	size: 47, 69
+	orig: 47, 69
+	offset: 0, 0
+	index: -1
+shengli_toufa_yuanziwushi3XT
+	rotate: false
+	xy: 453, 137
+	size: 54, 52
+	orig: 54, 52
+	offset: 0, 0
+	index: -1
+F_a_zuojiao_yuanziwushi3XT
+	rotate: 270
+	xy: 238, 58
+	size: 50, 64
+	orig: 50, 64
+	offset: 0, 0
+	index: -1
+F_k_kaijia_yuanziwushi3XT
+	rotate: false
+	xy: 70, 145
+	size: 48, 38
+	orig: 48, 38
+	offset: 0, 0
+	index: -1
+c_zuojiao_yuanziwushi3XT
+	rotate: 270
+	xy: 240, 0
+	size: 57, 75
+	orig: 57, 75
+	offset: 0, 0
+	index: -1
+g_youshou_yuanziwushi3XT
+	rotate: 270
+	xy: 210, 153
+	size: 30, 24
+	orig: 30, 24
+	offset: 0, 0
+	index: -1
+d_youdabi_yuanziwushi3XT
+	rotate: 270
+	xy: 80, 81
+	size: 32, 74
+	orig: 32, 74
+	offset: 0, 0
+	index: -1
+e_zuopifeng_yuanziwushi3XT
+	rotate: false
+	xy: 82, 0
+	size: 80, 80
+	orig: 80, 80
+	offset: 0, 0
+	index: -1
+c_yaodai_yuanziwushi3XT
+	rotate: false
+	xy: 455, 0
+	size: 57, 22
+	orig: 57, 22
+	offset: 0, 0
+	index: -1
+a_xiongdai_yuanziwushi3XT
+	rotate: false
+	xy: 385, 57
+	size: 68, 32
+	orig: 68, 32
+	offset: 0, 0
+	index: -1
+F_k_zuoxiaobi_yuanziwushi3XT
+	rotate: false
+	xy: 163, 55
+	size: 74, 50
+	orig: 74, 50
+	offset: 0, 0
+	index: -1
+F_q_youshou_yuanziwushi3XT
+	rotate: false
+	xy: 291, 143
+	size: 24, 22
+	orig: 24, 22
+	offset: 0, 0
+	index: -1
+F_a_qunhou1_yuanziwushi3XT
+	rotate: false
+	xy: 70, 114
+	size: 49, 30
+	orig: 49, 30
+	offset: 0, 0
+	index: -1
+e_zuojiao_yuanziwushi3XT
+	rotate: 270
+	xy: 155, 106
+	size: 50, 54
+	orig: 50, 54
+	offset: 0, 0
+	index: -1
+a_zuojiao_yuanziwushi3XT
+	rotate: 270
+	xy: 453, 100
+	size: 36, 55
+	orig: 36, 55
+	offset: 0, 0
+	index: -1
+p_zuoshou_yuanziwushi3XT
+	rotate: 270
+	xy: 210, 130
+	size: 22, 27
+	orig: 22, 27
+	offset: 0, 0
+	index: -1
+F_b_zuodabi_yuanziwushi3XT
+	rotate: false
+	xy: 303, 94
+	size: 62, 48
+	orig: 62, 48
+	offset: 0, 0
+	index: -1
+c_youjiao2_yuanziwushi3XT
+	rotate: false
+	xy: 386, 0
+	size: 68, 56
+	orig: 68, 56
+	offset: 0, 0
+	index: -1
+F_a_zuodabi_yuanziwushi3XT
+	rotate: 270
+	xy: 238, 142
+	size: 36, 52
+	orig: 36, 52
+	offset: 0, 0
+	index: -1
+q_zuoshou_yuanziwushi3XT
+	rotate: false
+	xy: 340, 143
+	size: 21, 21
+	orig: 21, 21
+	offset: 0, 0
+	index: -1
+d_youpifeng_yuanziwushi3XT
+	rotate: 270
+	xy: 385, 90
+	size: 54, 67
+	orig: 54, 67
+	offset: 0, 0
+	index: -1
+F_g_zuoshou_yuanziwushi3XT
+	rotate: false
+	xy: 210, 106
+	size: 27, 23
+	orig: 27, 23
+	offset: 0, 0
+	index: -1
+a_jianbing2_yuanziwushi3XT
+	rotate: 270
+	xy: 47, 156
+	size: 46, 22
+	orig: 46, 22
+	offset: 0, 0
+	index: -1
+F_j_zuoshou_yuanziwushi3XT
+	rotate: false
+	xy: 316, 143
+	size: 23, 21
+	orig: 23, 21
+	offset: 0, 0
+	index: -1
+p_jianbing_yuanziwushi3XT
+	rotate: 270
+	xy: 155, 157
+	size: 36, 47
+	orig: 36, 47
+	offset: 0, 0
+	index: -1
+a_kaijia_yuanziwushi3XT
+	rotate: false
+	xy: 0, 201
+	size: 40, 37
+	orig: 40, 37
+	offset: 0, 0
+	index: -1
+q_zuoxiaobi_yuanziwushi3XT
+	rotate: false
+	xy: 0, 107
+	size: 69, 48
+	orig: 69, 48
+	offset: 0, 0
+	index: -1
+a_youshou_yuanziwushi3XT
+	rotate: 270
+	xy: 41, 203
+	size: 23, 24
+	orig: 23, 24
+	offset: 0, 0
+	index: -1
+F_a_youdabi_yuanziwushi3XT
+	rotate: 270
+	xy: 238, 109
+	size: 32, 54
+	orig: 32, 54
+	offset: 0, 0
+	index: -1
+F_a_youxiaobi_yuanziwushi3XT
+	rotate: 270
+	xy: 119, 155
+	size: 44, 35
+	orig: 44, 35
+	offset: 0, 0
+	index: -1
+F_k_jian_yuanziwushi3XT
+	rotate: false
+	xy: 454, 62
+	size: 58, 37
+	orig: 58, 37
+	offset: 0, 0
+	index: -1
+a_youdabi_yuanziwushi3XT
+	rotate: 270
+	xy: 316, 48
+	size: 45, 68
+	orig: 45, 68
+	offset: 0, 0
+	index: -1
+F_b_zuoxiaobi_yuanziwushi3XT
+	rotate: 270
+	xy: 163, 0
+	size: 54, 76
+	orig: 54, 76
+	offset: 0, 0
+	index: -1
+p_zuoxiaobi_yuanziwushi3XT
+	rotate: false
+	xy: 70, 184
+	size: 37, 37
+	orig: 37, 37
+	offset: 0, 0
+	index: -1
+e_kaijia_yuanziwushi3XT
+	rotate: 270
+	xy: 0, 156
+	size: 44, 46
+	orig: 44, 46
+	offset: 0, 0
+	index: -1
+q_jianbing_yuanziwushi3XT
+	rotate: 270
+	xy: 120, 114
+	size: 40, 32
+	orig: 40, 32
+	offset: 0, 0
+	index: -1
+F_b_youjiao_yuanziwushi3XT
+	rotate: 270
+	xy: 455, 23
+	size: 38, 56
+	orig: 38, 56
+	offset: 0, 0
+	index: -1
+
+yuanziwushi31.webp
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+l_kaijia_yuanziwushi3XT
+	rotate: false
+	xy: 235, 469
+	size: 21, 43
+	orig: 21, 43
+	offset: 0, 0
+	index: -1
+F_a_fadai_yuanziwushi3XT
+	rotate: 270
+	xy: 59, 345
+	size: 100, 120
+	orig: 100, 120
+	offset: 0, 0
+	index: -1
+a_youpifeng_yuanziwushi3XT
+	rotate: false
+	xy: 150, 446
+	size: 29, 64
+	orig: 29, 64
+	offset: 0, 0
+	index: -1
+a_toufa3_yuanziwushi3XT
+	rotate: false
+	xy: 0, 469
+	size: 58, 43
+	orig: 58, 43
+	offset: 0, 0
+	index: -1
+d_jian1_yuanziwushi3XT
+	rotate: 270
+	xy: 0, 345
+	size: 112, 58
+	orig: 112, 58
+	offset: 0, 0
+	index: -1
+F_g_zuodabi_yuanziwushi3XT
+	rotate: false
+	xy: 438, 469
+	size: 74, 37
+	orig: 74, 37
+	offset: 0, 0
+	index: -1
+d_youxiaobi_yuanziwushi3XT
+	rotate: 270
+	xy: 357, 469
+	size: 41, 80
+	orig: 41, 80
+	offset: 0, 0
+	index: -1
+F_m1_yuanziwushi3XT
+	rotate: 270
+	xy: 180, 250
+	size: 218, 323
+	orig: 218, 323
+	offset: 0, 0
+	index: -1
+nn_yuanziwushi3XT
+	rotate: false
+	xy: 0, 0
+	size: 179, 344
+	orig: 179, 344
+	offset: 0, 0
+	index: -1
+F_a_kaijia_yuanziwushi3XT
+	rotate: 270
+	xy: 319, 469
+	size: 42, 37
+	orig: 42, 37
+	offset: 0, 0
+	index: -1
+m_youjiao_yuanziwushi3XT
+	rotate: 270
+	xy: 257, 469
+	size: 42, 61
+	orig: 42, 61
+	offset: 0, 0
+	index: -1
+F_b_youxiaobi_yuanziwushi3XT
+	rotate: false
+	xy: 208, 469
+	size: 26, 43
+	orig: 26, 43
+	offset: 0, 0
+	index: -1
+F_k_youxiaobi_yuanziwushi3XT
+	rotate: false
+	xy: 180, 469
+	size: 27, 43
+	orig: 27, 43
+	offset: 0, 0
+	index: -1
+F_n_yuanziwushi3XR
+	rotate: 270
+	xy: 180, 0
+	size: 249, 328
+	orig: 249, 328
+	offset: 0, 0
+	index: -1
+e_shenti_yuanziwushi3XT
+	rotate: 270
+	xy: 59, 446
+	size: 66, 90
+	orig: 66, 90
+	offset: 0, 0
+	index: -1
+
+yuanziwushi30.webp
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+e_zuoxiaobi_yuanziwushi3XT
+	rotate: 270
+	xy: 487, 445
+	size: 40, 24
+	orig: 40, 24
+	offset: 0, 0
+	index: -1
+F_b_yaodai_yuanziwushi3XT
+	rotate: false
+	xy: 402, 486
+	size: 70, 26
+	orig: 70, 26
+	offset: 0, 0
+	index: -1
+F_l_yuanziwushi3XT
+	rotate: 270
+	xy: 192, 234
+	size: 238, 294
+	orig: 238, 294
+	offset: 0, 0
+	index: -1
+l_zuoshou_yuanziwushi3XT
+	rotate: false
+	xy: 492, 81
+	size: 20, 24
+	orig: 20, 24
+	offset: 0, 0
+	index: -1
+a_biyan_yuanziwushi3XT
+	rotate: 270
+	xy: 473, 473
+	size: 38, 13
+	orig: 38, 13
+	offset: 0, 0
+	index: -1
+d_xiongdai_yuanziwushi3XT
+	rotate: 270
+	xy: 492, 222
+	size: 71, 17
+	orig: 71, 17
+	offset: 0, 0
+	index: -1
+l_zuoqun_yuanziwushi3XT
+	rotate: false
+	xy: 121, 349
+	size: 70, 150
+	orig: 70, 150
+	offset: 0, 0
+	index: -1
+f_zuoshou_yuanziwushi3XT
+	rotate: 270
+	xy: 487, 294
+	size: 37, 25
+	orig: 37, 25
+	offset: 0, 0
+	index: -1
+q_youshou_yuanziwushi3XT
+	rotate: 270
+	xy: 492, 192
+	size: 29, 19
+	orig: 29, 19
+	offset: 0, 0
+	index: -1
+r_zuoxiaobi_yuanziwushi3XT
+	rotate: false
+	xy: 487, 363
+	size: 25, 29
+	orig: 25, 29
+	offset: 0, 0
+	index: -1
+p_youdabi_yuanziwushi3XT
+	rotate: 270
+	xy: 352, 473
+	size: 39, 49
+	orig: 39, 49
+	offset: 0, 0
+	index: -1
+h_youshou_yuanziwushi3XT
+	rotate: false
+	xy: 487, 486
+	size: 24, 24
+	orig: 24, 24
+	offset: 0, 0
+	index: -1
+p_youxiaobi_yuanziwushi3XT
+	rotate: 270
+	xy: 192, 473
+	size: 39, 83
+	orig: 39, 83
+	offset: 0, 0
+	index: -1
+a_yaqian_yuanziwushi3XT
+	rotate: false
+	xy: 121, 500
+	size: 22, 11
+	orig: 22, 11
+	offset: 0, 0
+	index: -1
+F_o1_yuanziwushi3XT
+	rotate: 270
+	xy: 192, 0
+	size: 233, 299
+	orig: 233, 299
+	offset: 0, 0
+	index: -1
+a_yaodai_yuanziwushi3XT
+	rotate: 270
+	xy: 492, 124
+	size: 67, 19
+	orig: 67, 19
+	offset: 0, 0
+	index: -1
+a_youxiaobi_yuanziwushi3XT
+	rotate: 270
+	xy: 276, 473
+	size: 39, 75
+	orig: 39, 75
+	offset: 0, 0
+	index: -1
+c_youshou_yuanziwushi3XT
+	rotate: false
+	xy: 487, 332
+	size: 25, 30
+	orig: 25, 30
+	offset: 0, 0
+	index: -1
+F_k_zuoshou_yuanziwushi3XT
+	rotate: 270
+	xy: 487, 393
+	size: 27, 25
+	orig: 27, 25
+	offset: 0, 0
+	index: -1
+F_b_zuoshou1_yuanziwushi3XT
+	rotate: false
+	xy: 492, 106
+	size: 20, 17
+	orig: 20, 17
+	offset: 0, 0
+	index: -1
+o1_yuanziwushi3XT
+	rotate: false
+	xy: 0, 0
+	size: 191, 348
+	orig: 191, 348
+	offset: 0, 0
+	index: -1
+F_h_zuoshou_yuanziwushi3XT
+	rotate: 270
+	xy: 487, 421
+	size: 23, 25
+	orig: 23, 25
+	offset: 0, 0
+	index: -1
+d_zuoshou_yuanziwushi3XT
+	rotate: 270
+	xy: 492, 30
+	size: 25, 20
+	orig: 25, 20
+	offset: 0, 0
+	index: -1
+h_youshou1_yuanziwushi3XT
+	rotate: false
+	xy: 492, 56
+	size: 20, 24
+	orig: 20, 24
+	offset: 0, 0
+	index: -1
+F_a_pifeng_yuanziwushi3XT
+	rotate: 270
+	xy: 0, 349
+	size: 157, 120
+	orig: 157, 120
+	offset: 0, 0
+	index: -1
+F_b_zuoshou2_yuanziwushi3XT
+	rotate: false
+	xy: 492, 0
+	size: 20, 29
+	orig: 20, 29
+	offset: 0, 0
+	index: -1
+
+yuanziwushi33.webp
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+a_jian_yuanziwushi3XT
+	rotate: 270
+	xy: 483, 55
+	size: 48, 29
+	orig: 48, 29
+	offset: 0, 0
+	index: -1
+F_a_youjiao_yuanziwushi3XT
+	rotate: 270
+	xy: 374, 468
+	size: 44, 58
+	orig: 44, 58
+	offset: 0, 0
+	index: -1
+l_youpifeng_yuanziwushi3XT
+	rotate: false
+	xy: 173, 198
+	size: 75, 61
+	orig: 75, 61
+	offset: 0, 0
+	index: -1
+F_k_xiongdai_yuanziwushi3XT
+	rotate: false
+	xy: 249, 188
+	size: 27, 71
+	orig: 27, 71
+	offset: 0, 0
+	index: -1
+a_shenti_yuanziwushi3XT
+	rotate: false
+	xy: 98, 109
+	size: 72, 100
+	orig: 72, 100
+	offset: 0, 0
+	index: -1
+c_youxiaobi_yuanziwushi3XT
+	rotate: 270
+	xy: 293, 347
+	size: 37, 70
+	orig: 37, 70
+	offset: 0, 0
+	index: -1
+F_b_jian1_yuanziwushi3XT
+	rotate: false
+	xy: 451, 236
+	size: 31, 48
+	orig: 31, 48
+	offset: 0, 0
+	index: -1
+r_zuoshou_yuanziwushi3XT
+	rotate: false
+	xy: 483, 468
+	size: 27, 24
+	orig: 27, 24
+	offset: 0, 0
+	index: -1
+e_youshou_yuanziwushi3XT
+	rotate: 270
+	xy: 483, 348
+	size: 30, 28
+	orig: 30, 28
+	offset: 0, 0
+	index: -1
+c_youjiao1_yuanziwushi3XT
+	rotate: false
+	xy: 264, 260
+	size: 60, 86
+	orig: 60, 86
+	offset: 0, 0
+	index: -1
+a_zuoxiaobi_yuanziwushi3XT
+	rotate: 270
+	xy: 481, 379
+	size: 38, 31
+	orig: 38, 31
+	offset: 0, 0
+	index: -1
+F_k_zuodabi_yuanziwushi3XT
+	rotate: 270
+	xy: 395, 105
+	size: 46, 67
+	orig: 46, 67
+	offset: 0, 0
+	index: -1
+k_zuojiao_yuanziwushi3XT
+	rotate: 270
+	xy: 314, 94
+	size: 57, 80
+	orig: 57, 80
+	offset: 0, 0
+	index: -1
+F_e_zuoshou_yuanziwushi3XT
+	rotate: false
+	xy: 483, 152
+	size: 29, 27
+	orig: 29, 27
+	offset: 0, 0
+	index: -1
+l_youqun_yuanziwushi3XT
+	rotate: false
+	xy: 244, 385
+	size: 67, 87
+	orig: 67, 87
+	offset: 0, 0
+	index: -1
+r_zuopijian_yuanziwushi3XT
+	rotate: false
+	xy: 409, 285
+	size: 51, 59
+	orig: 51, 59
+	offset: 0, 0
+	index: -1
+c_pijian_yuanziwushi3XT
+	rotate: false
+	xy: 409, 0
+	size: 73, 54
+	orig: 73, 54
+	offset: 0, 0
+	index: -1
+F_a_xiongdai_yuanziwushi3XT
+	rotate: 270
+	xy: 0, 260
+	size: 129, 75
+	orig: 129, 75
+	offset: 0, 0
+	index: -1
+F_k_youpifeng_yuanziwushi3XT
+	rotate: 270
+	xy: 72, 390
+	size: 109, 68
+	orig: 109, 68
+	offset: 0, 0
+	index: -1
+c_youdabi_yuanziwushi3XT
+	rotate: false
+	xy: 440, 418
+	size: 67, 49
+	orig: 67, 49
+	offset: 0, 0
+	index: -1
+F_q_youxiaobi_yuanziwushi3XT
+	rotate: false
+	xy: 176, 350
+	size: 44, 34
+	orig: 44, 34
+	offset: 0, 0
+	index: -1
+F_b_youpifeng_yuanziwushi3XT
+	rotate: false
+	xy: 393, 180
+	size: 57, 78
+	orig: 57, 78
+	offset: 0, 0
+	index: -1
+r_youshou_yuanziwushi3XT
+	rotate: false
+	xy: 483, 260
+	size: 27, 24
+	orig: 27, 24
+	offset: 0, 0
+	index: -1
+F_e_zuoxiaobi_yuanziwushi3XT
+	rotate: 270
+	xy: 312, 385
+	size: 85, 50
+	orig: 85, 50
+	offset: 0, 0
+	index: -1
+F_a_qunhou2_yuanziwushi3XT
+	rotate: false
+	xy: 338, 0
+	size: 70, 27
+	orig: 70, 27
+	offset: 0, 0
+	index: -1
+r_youdabi_yuanziwushi3XT
+	rotate: false
+	xy: 461, 285
+	size: 51, 62
+	orig: 51, 62
+	offset: 0, 0
+	index: -1
+d_jian_yuanziwushi3XT
+	rotate: 270
+	xy: 463, 105
+	size: 46, 16
+	orig: 46, 16
+	offset: 0, 0
+	index: -1
+a_zuodabi_yuanziwushi3XT
+	rotate: false
+	xy: 483, 0
+	size: 29, 54
+	orig: 29, 54
+	offset: 0, 0
+	index: -1
+c_zuoqun_yuanziwushi3XT
+	rotate: false
+	xy: 0, 130
+	size: 97, 129
+	orig: 97, 129
+	offset: 0, 0
+	index: -1
+c_zuoqun222_yuanziwushi3XT
+	rotate: false
+	xy: 0, 0
+	size: 97, 129
+	orig: 97, 129
+	offset: 0, 0
+	index: -1
+d_jianjia_yuanziwushi3XT
+	rotate: 270
+	xy: 248, 350
+	size: 33, 44
+	orig: 33, 44
+	offset: 0, 0
+	index: -1
+d_zuopifeng_yuanziwushi3XT
+	rotate: 270
+	xy: 98, 210
+	size: 49, 74
+	orig: 49, 74
+	offset: 0, 0
+	index: -1
+a_qunhou_yuanziwushi3XT
+	rotate: false
+	xy: 325, 259
+	size: 83, 85
+	orig: 83, 85
+	offset: 0, 0
+	index: -1
+m_zuojiao_yuanziwushi3XT
+	rotate: 270
+	xy: 314, 152
+	size: 35, 78
+	orig: 35, 78
+	offset: 0, 0
+	index: -1
+F_b_youqun_yuanziwushi3XT
+	rotate: false
+	xy: 141, 385
+	size: 102, 123
+	orig: 102, 123
+	offset: 0, 0
+	index: -1
+a_tou_yuanziwushi3XT
+	rotate: false
+	xy: 242, 94
+	size: 71, 93
+	orig: 71, 93
+	offset: 0, 0
+	index: -1
+F_k_zuopifeng_yuanziwushi3XT
+	rotate: false
+	xy: 176, 260
+	size: 87, 89
+	orig: 87, 89
+	offset: 0, 0
+	index: -1
+F_e_jianjia_yuanziwushi3XT
+	rotate: false
+	xy: 483, 180
+	size: 28, 47
+	orig: 28, 47
+	offset: 0, 0
+	index: -1
+F_a_zuoxiaobi_yuanziwushi3XT
+	rotate: 270
+	xy: 244, 473
+	size: 38, 75
+	orig: 38, 75
+	offset: 0, 0
+	index: -1
+e_youxiaobi_yuanziwushi3XT
+	rotate: 270
+	xy: 364, 345
+	size: 38, 75
+	orig: 38, 75
+	offset: 0, 0
+	index: -1
+F_k_youshou_yuanziwushi3XT
+	rotate: 270
+	xy: 409, 259
+	size: 24, 31
+	orig: 24, 31
+	offset: 0, 0
+	index: -1
+F_g_zuoxiaobi_yuanziwushi3XT
+	rotate: 270
+	xy: 409, 55
+	size: 49, 73
+	orig: 49, 73
+	offset: 0, 0
+	index: -1
+p_youshou_yuanziwushi3XT
+	rotate: false
+	xy: 221, 350
+	size: 26, 34
+	orig: 26, 34
+	offset: 0, 0
+	index: -1
+F_k_youdabi_yuanziwushi3XT
+	rotate: 270
+	xy: 451, 180
+	size: 55, 31
+	orig: 55, 31
+	offset: 0, 0
+	index: -1
+F_j_zuodabi_yuanziwushi3XT
+	rotate: false
+	xy: 433, 468
+	size: 49, 44
+	orig: 49, 44
+	offset: 0, 0
+	index: -1
+c_tou_yuanziwushi3XT
+	rotate: 270
+	xy: 363, 385
+	size: 82, 76
+	orig: 82, 76
+	offset: 0, 0
+	index: -1
+F_g_jian_yuanziwushi3XT
+	rotate: false
+	xy: 98, 0
+	size: 67, 108
+	orig: 67, 108
+	offset: 0, 0
+	index: -1
+F_k_yaodai_yuanziwushi3XT
+	rotate: 270
+	xy: 483, 104
+	size: 47, 29
+	orig: 47, 29
+	offset: 0, 0
+	index: -1
+a_youqun_yuanziwushi3XT
+	rotate: false
+	xy: 0, 390
+	size: 71, 121
+	orig: 71, 121
+	offset: 0, 0
+	index: -1
+a_baozou_yuanziwushi3XT
+	rotate: false
+	xy: 266, 0
+	size: 70, 93
+	orig: 70, 93
+	offset: 0, 0
+	index: -1
+e_youpifeng_yuanziwushi3XT
+	rotate: 270
+	xy: 337, 28
+	size: 64, 59
+	orig: 64, 59
+	offset: 0, 0
+	index: -1
+e_youdabi_yuanziwushi3XT
+	rotate: 270
+	xy: 338, 188
+	size: 68, 54
+	orig: 68, 54
+	offset: 0, 0
+	index: -1
+r_youpijian_yuanziwushi3XT
+	rotate: false
+	xy: 277, 188
+	size: 60, 70
+	orig: 60, 70
+	offset: 0, 0
+	index: -1
+a_zuoshou_yuanziwushi3XT
+	rotate: 270
+	xy: 483, 228
+	size: 31, 28
+	orig: 31, 28
+	offset: 0, 0
+	index: -1
+F_b_youdabi_yuanziwushi3XT
+	rotate: false
+	xy: 440, 348
+	size: 40, 52
+	orig: 40, 52
+	offset: 0, 0
+	index: -1
+shengli_tou_yuanziwushi3XT
+	rotate: false
+	xy: 191, 0
+	size: 74, 93
+	orig: 74, 93
+	offset: 0, 0
+	index: -1
+a_jianqiao2_yuanziwushi3XT
+	rotate: 270
+	xy: 166, 0
+	size: 99, 24
+	orig: 99, 24
+	offset: 0, 0
+	index: -1
+r_shenti_yuanziwushi3XT
+	rotate: false
+	xy: 171, 100
+	size: 70, 97
+	orig: 70, 97
+	offset: 0, 0
+	index: -1
+F_e_zuodabi_yuanziwushi3XT
+	rotate: false
+	xy: 320, 471
+	size: 53, 40
+	orig: 53, 40
+	offset: 0, 0
+	index: -1
+F_j_zuoxiaobi_yuanziwushi3XT
+	rotate: 270
+	xy: 393, 152
+	size: 27, 75
+	orig: 27, 75
+	offset: 0, 0
+	index: -1
+a_zuoqun_yuanziwushi3XT
+	rotate: false
+	xy: 76, 260
+	size: 99, 124
+	orig: 99, 124
+	offset: 0, 0
+	index: -1
+
+yuanziwushi32.webp
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+F_h_zuodabi_yuanziwushi3XT
+	rotate: false
+	xy: 0, 364
+	size: 72, 53
+	orig: 72, 53
+	offset: 0, 0
+	index: -1
+a_jianbing_yuanziwushi3XT
+	rotate: false
+	xy: 133, 364
+	size: 58, 38
+	orig: 58, 38
+	offset: 0, 0
+	index: -1
+d_shenti_yuanziwushi3XT
+	rotate: false
+	xy: 0, 277
+	size: 75, 86
+	orig: 75, 86
+	offset: 0, 0
+	index: -1
+F_k_jianqiao_yuanziwushi3XT
+	rotate: false
+	xy: 376, 237
+	size: 132, 83
+	orig: 132, 83
+	offset: 0, 0
+	index: -1
+c_shenti_yuanziwushi3XT
+	rotate: 270
+	xy: 396, 418
+	size: 52, 115
+	orig: 52, 115
+	offset: 0, 0
+	index: -1
+a_pifeng_yuanziwushi3XT
+	rotate: false
+	xy: 0, 56
+	size: 146, 136
+	orig: 146, 136
+	offset: 0, 0
+	index: -1
+F_a_yaodai_yuanziwushi3XT
+	rotate: false
+	xy: 237, 72
+	size: 139, 102
+	orig: 139, 102
+	offset: 0, 0
+	index: -1
+c_youqun_yuanziwushi3XT
+	rotate: false
+	xy: 284, 175
+	size: 91, 136
+	orig: 91, 136
+	offset: 0, 0
+	index: -1
+l_zuopifeng_yuanziwushi3XT
+	rotate: 270
+	xy: 199, 364
+	size: 53, 63
+	orig: 53, 63
+	offset: 0, 0
+	index: -1
+a_jianqiao_yuanziwushi3XT
+	rotate: false
+	xy: 0, 193
+	size: 132, 83
+	orig: 132, 83
+	offset: 0, 0
+	index: -1
+butu_yuanziwushi3XT
+	rotate: 270
+	xy: 147, 175
+	size: 91, 136
+	orig: 91, 136
+	offset: 0, 0
+	index: -1
+p_jian_yuanziwushi3XT
+	rotate: false
+	xy: 377, 112
+	size: 135, 124
+	orig: 135, 124
+	offset: 0, 0
+	index: -1
+canying_yuanziwushi3XT
+	rotate: 270
+	xy: 133, 267
+	size: 96, 131
+	orig: 96, 131
+	offset: 0, 0
+	index: -1
+d_youshou_yuanziwushi3XT
+	rotate: 270
+	xy: 449, 394
+	size: 23, 32
+	orig: 23, 32
+	offset: 0, 0
+	index: -1
+c_xiongdai_yuanziwushi3XT
+	rotate: false
+	xy: 377, 72
+	size: 66, 34
+	orig: 66, 34
+	offset: 0, 0
+	index: -1
+l_shenti_yuanziwushi3XT
+	rotate: 270
+	xy: 305, 418
+	size: 93, 90
+	orig: 93, 90
+	offset: 0, 0
+	index: -1
+biaoqing1_yuanziwushi3XT
+	rotate: false
+	xy: 376, 321
+	size: 72, 96
+	orig: 72, 96
+	offset: 0, 0
+	index: -1
+e_jian_yuanziwushi3XT
+	rotate: false
+	xy: 0, 0
+	size: 236, 55
+	orig: 236, 55
+	offset: 0, 0
+	index: -1
+F_b_xiongdai_yuanziwushi3XT
+	rotate: false
+	xy: 0, 418
+	size: 108, 94
+	orig: 108, 94
+	offset: 0, 0
+	index: -1
+l_youjiao_yuanziwushi3XT
+	rotate: 270
+	xy: 396, 471
+	size: 41, 77
+	orig: 41, 77
+	offset: 0, 0
+	index: -1
+a_youjiao_yuanziwushi3XT
+	rotate: 270
+	xy: 76, 352
+	size: 51, 56
+	orig: 51, 56
+	offset: 0, 0
+	index: -1
+F_h_jian_yuanziwushi3XT
+	rotate: false
+	xy: 445, 0
+	size: 67, 111
+	orig: 67, 111
+	offset: 0, 0
+	index: -1
+q_youxiaobi_yuanziwushi3XT
+	rotate: false
+	xy: 76, 277
+	size: 56, 74
+	orig: 56, 74
+	offset: 0, 0
+	index: -1
+F_e_youxiaobi_yuanziwushi3XT
+	rotate: 270
+	xy: 474, 471
+	size: 41, 28
+	orig: 41, 28
+	offset: 0, 0
+	index: -1
+c_jian_yuanziwushi3XT
+	rotate: false
+	xy: 237, 0
+	size: 207, 71
+	orig: 207, 71
+	offset: 0, 0
+	index: -1
+q_jian_yuanziwushi3XT
+	rotate: false
+	xy: 265, 312
+	size: 110, 105
+	orig: 110, 105
+	offset: 0, 0
+	index: -1
+k_pifeng_yuanziwushi3XT
+	rotate: 270
+	xy: 199, 418
+	size: 94, 105
+	orig: 94, 105
+	offset: 0, 0
+	index: -1
+F_e_xiongdai_yuanziwushi3XT
+	rotate: 270
+	xy: 147, 56
+	size: 118, 89
+	orig: 118, 89
+	offset: 0, 0
+	index: -1
+a_zuopifeng_yuanziwushi3XT
+	rotate: false
+	xy: 449, 321
+	size: 62, 72
+	orig: 62, 72
+	offset: 0, 0
+	index: -1
+F_e_youshou_yuanziwushi3XT
+	rotate: 270
+	xy: 265, 267
+	size: 36, 17
+	orig: 36, 17
+	offset: 0, 0
+	index: -1
+F_b_zuoqun_yuanziwushi3XT
+	rotate: false
+	xy: 109, 404
+	size: 89, 108
+	orig: 89, 108
+	offset: 0, 0
+	index: -1
+c_zuoshou_yuanziwushi3XT
+	rotate: false
+	xy: 482, 394
+	size: 28, 23
+	orig: 28, 23
+	offset: 0, 0
+	index: -1

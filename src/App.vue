@@ -55,6 +55,9 @@ const toggleMobileMenu = () => {
                 <RouterLink to="/tactics" class="px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5" exact-active-class="text-white bg-white/5">
                   {{ t('nav.tactics') }}
                 </RouterLink>
+                <RouterLink to="/backgear" class="px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5" exact-active-class="text-white bg-white/5">
+                  {{ t('nav.backgear') }}
+                </RouterLink>
                 <RouterLink to="/keepsakes" class="px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5" exact-active-class="text-white bg-white/5">
                   {{ t('nav.keepsakes') }}
                 </RouterLink>
@@ -112,6 +115,9 @@ const toggleMobileMenu = () => {
           </RouterLink>
           <RouterLink @click="toggleMobileMenu" to="/tactics" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
             {{ t('nav.tactics') }}
+          </RouterLink>
+          <RouterLink @click="toggleMobileMenu" to="/backgear" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
+            {{ t('nav.backgear') }}
           </RouterLink>
           <RouterLink @click="toggleMobileMenu" to="/keepsakes" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
             {{ t('nav.keepsakes') }}

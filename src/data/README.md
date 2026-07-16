@@ -26,3 +26,5 @@ Thư mục này chứa toàn bộ dữ liệu cấu trúc dưới dạng JSON, h
             *   `levels`: Danh sách mốc nâng cấp từ lv 1 đến lv 17, bao gồm chi tiết tài nguyên tiêu hao (`cost`), hiệu quả sơ cấp (`coreEffect`), hiệu quả cao cấp (`reward`), điều kiện kích hoạt (`condition`), và biểu tượng mốc nâng cấp (`milestoneIcon`).
 3.  **`events.json`**:
     *   **Nhiệm vụ**: Quản lý lịch trình sự kiện trong tháng (Banner chiêu mộ, Sự kiện huấn luyện, Quà nạp mốc).
+4.  **`backgear.json`**:
+    *   **Nhiệm vụ**: Chứa tên song ngữ, nguồn nhận, ảnh, chỉ số theo cấp, chi phí nâng và dữ liệu Bộ Sưu Tập Thẻ Hình nền.

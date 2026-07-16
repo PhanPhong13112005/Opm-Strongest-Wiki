@@ -1,0 +1,1352 @@
+{
+  "gears": [
+    {
+      "id": "BD_P1",
+      "nameEn": "Cherry Blossom Meadow",
+      "nameVi": "Đồng Cỏ Anh Đào",
+      "theme": "spring",
+      "rarity": "Superb",
+      "rarityVi": "Siêu Hạng",
+      "acquireEn": "Spring seasonal event — 30 event currency",
+      "acquireVi": "Sự kiện mùa xuân — 30 tiền sự kiện",
+      "levelMax": 5,
+      "icon": "/BackGear/optimized/pic_beishi_bstp_1_display.webp",
+      "thumbnail": "/BackGear/optimized/pic_beishi_bstp_1_thumb.webp",
+      "seniorIcon": "/BackGear/optimized/pic_beishi_bstp_1_display.webp",
+      "changeLevel": null,
+      "levels": [
+        {
+          "level": 1,
+          "senior": false,
+          "costEn": "unlock",
+          "costVi": "mở khoá",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+3%"
+            },
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+3%"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+72,000"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "senior": false,
+          "costEn": "1× Cherry Blossom Meadow + 1,000 gold",
+          "costVi": "1× Đồng Cỏ Anh Đào + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+6%"
+            },
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+3%"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+144,000"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "senior": false,
+          "costEn": "1× Cherry Blossom Meadow + 1,000 gold",
+          "costVi": "1× Đồng Cỏ Anh Đào + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+6%"
+            },
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+6%"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+216,000"
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "senior": true,
+          "costEn": "1× Cherry Blossom Meadow + 1,000 gold",
+          "costVi": "1× Đồng Cỏ Anh Đào + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+6%"
+            },
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+6%"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+288,000"
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "senior": true,
+          "costEn": "1× Cherry Blossom Meadow + 1,000 gold",
+          "costVi": "1× Đồng Cỏ Anh Đào + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+9%"
+            },
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+9%"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+360,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BD_P3",
+      "nameEn": "Golden Autumn Gift",
+      "nameVi": "Quà Thu Vàng",
+      "theme": "autumn",
+      "rarity": "Superb",
+      "rarityVi": "Siêu Hạng",
+      "acquireEn": "Autumn seasonal event — 30 event currency",
+      "acquireVi": "Sự kiện mùa thu — 30 tiền sự kiện",
+      "levelMax": 1,
+      "icon": "/BackGear/optimized/pic_beishi_bstp_3_display.webp",
+      "thumbnail": "/BackGear/optimized/pic_beishi_bstp_3_thumb.webp",
+      "seniorIcon": "/BackGear/optimized/pic_beishi_bstp_3_display.webp",
+      "changeLevel": null,
+      "levels": [
+        {
+          "level": 1,
+          "senior": false,
+          "costEn": "unlock",
+          "costVi": "mở khoá",
+          "effects": [
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+2,000"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+1,000"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+12,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BD_P4",
+      "nameEn": "Silver Snow Winter",
+      "nameVi": "Đông Tuyết Bạc",
+      "theme": "winter",
+      "rarity": "Superb",
+      "rarityVi": "Siêu Hạng",
+      "acquireEn": "Winter seasonal event — 30 event currency",
+      "acquireVi": "Sự kiện mùa đông — 30 tiền sự kiện",
+      "levelMax": 5,
+      "icon": "/BackGear/optimized/pic_beishi_bstp_4_display.webp",
+      "thumbnail": "/BackGear/optimized/pic_beishi_bstp_4_thumb.webp",
+      "seniorIcon": "/BackGear/optimized/pic_beishi_bstp_4_display.webp",
+      "changeLevel": null,
+      "levels": [
+        {
+          "level": 1,
+          "senior": false,
+          "costEn": "unlock",
+          "costVi": "mở khoá",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+3%"
+            },
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+3%"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+12,000"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "senior": false,
+          "costEn": "1× Silver Snow Winter + 1,000 gold",
+          "costVi": "1× Đông Tuyết Bạc + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+6%"
+            },
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+3%"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+24,000"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "senior": false,
+          "costEn": "1× Silver Snow Winter + 1,000 gold",
+          "costVi": "1× Đông Tuyết Bạc + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+6%"
+            },
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+6%"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+36,000"
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "senior": true,
+          "costEn": "1× Silver Snow Winter + 1,000 gold",
+          "costVi": "1× Đông Tuyết Bạc + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+6%"
+            },
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+6%"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+48,000"
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "senior": true,
+          "costEn": "1× Silver Snow Winter + 1,000 gold",
+          "costVi": "1× Đông Tuyết Bạc + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+9%"
+            },
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+9%"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+60,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BD_R1",
+      "nameEn": "Neon Beat",
+      "nameVi": "Nhịp Neon",
+      "theme": "DJ booth",
+      "rarity": "Superb",
+      "rarityVi": "Siêu Hạng",
+      "acquireEn": "Backgear shop — 60 Star Diamond (dup refunds 50)",
+      "acquireVi": "Cửa hàng Thẻ Hình nền — 60 Sao Kim Cương (trùng hoàn 50)",
+      "levelMax": 5,
+      "icon": "/BackGear/optimized/pic_beishi_bstp_5_display.webp",
+      "thumbnail": "/BackGear/optimized/pic_beishi_bstp_5_thumb.webp",
+      "seniorIcon": "/BackGear/optimized/pic_beishi_bstp_5_display.webp",
+      "changeLevel": null,
+      "levels": [
+        {
+          "level": 1,
+          "senior": false,
+          "costEn": "unlock",
+          "costVi": "mở khoá",
+          "effects": [
+            {
+              "type": "pvphurt_up",
+              "en": "Arena DMG Bonus",
+              "vi": "Tăng ST Đấu Trường",
+              "text": "+6%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+20,000"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+40,000"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "senior": false,
+          "costEn": "1× Neon Beat + 1,000 gold",
+          "costVi": "1× Nhịp Neon + 1,000 vàng",
+          "effects": [
+            {
+              "type": "pvphurt_up",
+              "en": "Arena DMG Bonus",
+              "vi": "Tăng ST Đấu Trường",
+              "text": "+12%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+40,000"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+40,000"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "senior": false,
+          "costEn": "1× Neon Beat + 1,000 gold",
+          "costVi": "1× Nhịp Neon + 1,000 vàng",
+          "effects": [
+            {
+              "type": "pvphurt_up",
+              "en": "Arena DMG Bonus",
+              "vi": "Tăng ST Đấu Trường",
+              "text": "+18%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+40,000"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+80,000"
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "senior": true,
+          "costEn": "1× Neon Beat + 1,000 gold",
+          "costVi": "1× Nhịp Neon + 1,000 vàng",
+          "effects": [
+            {
+              "type": "pvphurt_up",
+              "en": "Arena DMG Bonus",
+              "vi": "Tăng ST Đấu Trường",
+              "text": "+24%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+40,000"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+80,000"
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "senior": true,
+          "costEn": "1× Neon Beat + 1,000 gold",
+          "costVi": "1× Nhịp Neon + 1,000 vàng",
+          "effects": [
+            {
+              "type": "pvphurt_up",
+              "en": "Arena DMG Bonus",
+              "vi": "Tăng ST Đấu Trường",
+              "text": "+30%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+60,000"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+120,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BD_R2",
+      "nameEn": "Fiery Dance Shadow",
+      "nameVi": "Vũ Ảnh Rực Lửa",
+      "theme": "stage",
+      "rarity": "Superb",
+      "rarityVi": "Siêu Hạng",
+      "acquireEn": "Backgear shop — 60 Star Diamond (dup refunds 50)",
+      "acquireVi": "Cửa hàng Thẻ Hình nền — 60 Sao Kim Cương (trùng hoàn 50)",
+      "levelMax": 5,
+      "icon": "/BackGear/optimized/pic_beishi_bstp_6_display.webp",
+      "thumbnail": "/BackGear/optimized/pic_beishi_bstp_6_thumb.webp",
+      "seniorIcon": "/BackGear/optimized/pic_beishi_bstp_6_display.webp",
+      "changeLevel": null,
+      "levels": [
+        {
+          "level": 1,
+          "senior": false,
+          "costEn": "unlock",
+          "costVi": "mở khoá",
+          "effects": [
+            {
+              "type": "pvpunhurt_up",
+              "en": "Arena DMG Reduction",
+              "vi": "Giảm ST Đấu Trường nhận",
+              "text": "+6%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+20,000"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+240,000"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "senior": false,
+          "costEn": "1× Fiery Dance Shadow + 1,000 gold",
+          "costVi": "1× Vũ Ảnh Rực Lửa + 1,000 vàng",
+          "effects": [
+            {
+              "type": "pvpunhurt_up",
+              "en": "Arena DMG Reduction",
+              "vi": "Giảm ST Đấu Trường nhận",
+              "text": "+12%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+40,000"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+240,000"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "senior": false,
+          "costEn": "1× Fiery Dance Shadow + 1,000 gold",
+          "costVi": "1× Vũ Ảnh Rực Lửa + 1,000 vàng",
+          "effects": [
+            {
+              "type": "pvpunhurt_up",
+              "en": "Arena DMG Reduction",
+              "vi": "Giảm ST Đấu Trường nhận",
+              "text": "+18%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+40,000"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+480,000"
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "senior": true,
+          "costEn": "1× Fiery Dance Shadow + 1,000 gold",
+          "costVi": "1× Vũ Ảnh Rực Lửa + 1,000 vàng",
+          "effects": [
+            {
+              "type": "pvpunhurt_up",
+              "en": "Arena DMG Reduction",
+              "vi": "Giảm ST Đấu Trường nhận",
+              "text": "+24%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+40,000"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+480,000"
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "senior": true,
+          "costEn": "1× Fiery Dance Shadow + 1,000 gold",
+          "costVi": "1× Vũ Ảnh Rực Lửa + 1,000 vàng",
+          "effects": [
+            {
+              "type": "pvpunhurt_up",
+              "en": "Arena DMG Reduction",
+              "vi": "Giảm ST Đấu Trường nhận",
+              "text": "+30%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+60,000"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+720,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BD_R3",
+      "nameEn": "Cyber Space",
+      "nameVi": "Không Gian Ảo",
+      "theme": "cyber",
+      "rarity": "Superb",
+      "rarityVi": "Siêu Hạng",
+      "acquireEn": "Backgear shop — 60 Star Diamond (dup refunds 50)",
+      "acquireVi": "Cửa hàng Thẻ Hình nền — 60 Sao Kim Cương (trùng hoàn 50)",
+      "levelMax": 5,
+      "icon": "/BackGear/optimized/pic_beishi_bstp_7_display.webp",
+      "thumbnail": "/BackGear/optimized/pic_beishi_bstp_7_thumb.webp",
+      "seniorIcon": "/BackGear/optimized/pic_beishi_bstp_7_display.webp",
+      "changeLevel": null,
+      "levels": [
+        {
+          "level": 1,
+          "senior": false,
+          "costEn": "unlock",
+          "costVi": "mở khoá",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+2%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+20,000"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+240,000"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "senior": false,
+          "costEn": "1× Cyber Space + 1,000 gold",
+          "costVi": "1× Không Gian Ảo + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+4%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+40,000"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+240,000"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "senior": false,
+          "costEn": "1× Cyber Space + 1,000 gold",
+          "costVi": "1× Không Gian Ảo + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+6%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+40,000"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+480,000"
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "senior": true,
+          "costEn": "1× Cyber Space + 1,000 gold",
+          "costVi": "1× Không Gian Ảo + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+8%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+40,000"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+480,000"
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "senior": true,
+          "costEn": "1× Cyber Space + 1,000 gold",
+          "costVi": "1× Không Gian Ảo + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+10%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+60,000"
+            },
+            {
+              "type": "hp_up",
+              "en": "HP",
+              "vi": "Máu",
+              "text": "+720,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BD_R4",
+      "nameEn": "Arcade Realm",
+      "nameVi": "Thế Giới Điện Tử",
+      "theme": "pixel city",
+      "rarity": "Superb",
+      "rarityVi": "Siêu Hạng",
+      "acquireEn": "Backgear shop — 60 Star Diamond (dup refunds 50)",
+      "acquireVi": "Cửa hàng Thẻ Hình nền — 60 Sao Kim Cương (trùng hoàn 50)",
+      "levelMax": 5,
+      "icon": "/BackGear/optimized/pic_beishi_bstp_8_display.webp",
+      "thumbnail": "/BackGear/optimized/pic_beishi_bstp_8_thumb.webp",
+      "seniorIcon": "/BackGear/optimized/pic_beishi_bstp_8_display.webp",
+      "changeLevel": null,
+      "levels": [
+        {
+          "level": 1,
+          "senior": false,
+          "costEn": "unlock",
+          "costVi": "mở khoá",
+          "effects": [
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+2%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+20,000"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+40,000"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "senior": false,
+          "costEn": "1× Arcade Realm + 1,000 gold",
+          "costVi": "1× Thế Giới Điện Tử + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+4%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+40,000"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+40,000"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "senior": false,
+          "costEn": "1× Arcade Realm + 1,000 gold",
+          "costVi": "1× Thế Giới Điện Tử + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+6%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+40,000"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+80,000"
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "senior": true,
+          "costEn": "1× Arcade Realm + 1,000 gold",
+          "costVi": "1× Thế Giới Điện Tử + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+8%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+40,000"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+80,000"
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "senior": true,
+          "costEn": "1× Arcade Realm + 1,000 gold",
+          "costVi": "1× Thế Giới Điện Tử + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+10%"
+            },
+            {
+              "type": "defense_up",
+              "en": "DEF",
+              "vi": "Phòng Thủ",
+              "text": "+60,000"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+120,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BD_R5",
+      "nameEn": "Green Field Arena",
+      "nameVi": "Sân Cỏ Xanh",
+      "theme": "sports",
+      "rarity": "Superb",
+      "rarityVi": "Siêu Hạng",
+      "acquireEn": "Source under investigation (not shop/set)",
+      "acquireVi": "Nguồn đang xác minh (không phải shop/set)",
+      "levelMax": 5,
+      "icon": "/BackGear/optimized/pic_beishi_bstp_9_display.webp",
+      "thumbnail": "/BackGear/optimized/pic_beishi_bstp_9_thumb.webp",
+      "seniorIcon": "/BackGear/optimized/pic_beishi_bstp_9_display.webp",
+      "changeLevel": null,
+      "levels": [
+        {
+          "level": 1,
+          "senior": false,
+          "costEn": "unlock",
+          "costVi": "mở khoá",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+3%"
+            },
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+3%"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+12,000"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "senior": false,
+          "costEn": "1× Green Field Arena + 1,000 gold",
+          "costVi": "1× Sân Cỏ Xanh + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+6%"
+            },
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+3%"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+24,000"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "senior": false,
+          "costEn": "1× Green Field Arena + 1,000 gold",
+          "costVi": "1× Sân Cỏ Xanh + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+6%"
+            },
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+6%"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+36,000"
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "senior": true,
+          "costEn": "1× Green Field Arena + 1,000 gold",
+          "costVi": "1× Sân Cỏ Xanh + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+6%"
+            },
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+6%"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+48,000"
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "senior": true,
+          "costEn": "1× Green Field Arena + 1,000 gold",
+          "costVi": "1× Sân Cỏ Xanh + 1,000 vàng",
+          "effects": [
+            {
+              "type": "combatoa_up",
+              "en": "Specialized ATK",
+              "vi": "Đặc Công",
+              "text": "+9%"
+            },
+            {
+              "type": "combatda_up",
+              "en": "Specialized DEF",
+              "vi": "Đặc Thủ",
+              "text": "+9%"
+            },
+            {
+              "type": "attack_up",
+              "en": "ATK",
+              "vi": "Tấn Công",
+              "text": "+60,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BD_R6",
+      "nameEn": "Racing Blaze",
+      "nameVi": "Sắc Màu Tốc Độ",
+      "theme": "racing",
+      "rarity": "Superb",
+      "rarityVi": "Siêu Hạng",
+      "acquireEn": "Set reward — own Neon Beat + Fiery Dance Shadow + Cyber Space + Arcade Realm",
+      "acquireVi": "Thưởng bộ — sở hữu Neon Beat + Fiery Dance Shadow + Cyber Space + Arcade Realm",
+      "levelMax": 5,
+      "icon": "/BackGear/optimized/pic_beishi_bstp_10_display.webp",
+      "thumbnail": "/BackGear/optimized/pic_beishi_bstp_10_thumb.webp",
+      "seniorIcon": "/BackGear/optimized/pic_beishi_bstp_10_display.webp",
+      "changeLevel": null,
+      "levels": [
+        {
+          "level": 1,
+          "senior": false,
+          "costEn": "unlock",
+          "costVi": "mở khoá",
+          "effects": [
+            {
+              "type": "speed_up",
+              "en": "SPD",
+              "vi": "Tốc Độ",
+              "text": "+5"
+            },
+            {
+              "type": "attack_rate",
+              "en": "ATK%",
+              "vi": "Tấn Công %",
+              "text": "+2%"
+            },
+            {
+              "type": "hp_rate",
+              "en": "HP%",
+              "vi": "Máu %",
+              "text": "+2%"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "senior": false,
+          "costEn": "1× Racing Blaze + 1,000 gold",
+          "costVi": "1× Sắc Màu Tốc Độ + 1,000 vàng",
+          "effects": [
+            {
+              "type": "speed_up",
+              "en": "SPD",
+              "vi": "Tốc Độ",
+              "text": "+10"
+            },
+            {
+              "type": "attack_rate",
+              "en": "ATK%",
+              "vi": "Tấn Công %",
+              "text": "+4%"
+            },
+            {
+              "type": "hp_rate",
+              "en": "HP%",
+              "vi": "Máu %",
+              "text": "+4%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "senior": false,
+          "costEn": "1× Racing Blaze + 1,000 gold",
+          "costVi": "1× Sắc Màu Tốc Độ + 1,000 vàng",
+          "effects": [
+            {
+              "type": "speed_up",
+              "en": "SPD",
+              "vi": "Tốc Độ",
+              "text": "+15"
+            },
+            {
+              "type": "attack_rate",
+              "en": "ATK%",
+              "vi": "Tấn Công %",
+              "text": "+6%"
+            },
+            {
+              "type": "hp_rate",
+              "en": "HP%",
+              "vi": "Máu %",
+              "text": "+6%"
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "senior": true,
+          "costEn": "1× Racing Blaze + 1,000 gold",
+          "costVi": "1× Sắc Màu Tốc Độ + 1,000 vàng",
+          "effects": [
+            {
+              "type": "speed_up",
+              "en": "SPD",
+              "vi": "Tốc Độ",
+              "text": "+20"
+            },
+            {
+              "type": "attack_rate",
+              "en": "ATK%",
+              "vi": "Tấn Công %",
+              "text": "+8%"
+            },
+            {
+              "type": "hp_rate",
+              "en": "HP%",
+              "vi": "Máu %",
+              "text": "+8%"
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "senior": true,
+          "costEn": "1× Racing Blaze + 1,000 gold",
+          "costVi": "1× Sắc Màu Tốc Độ + 1,000 vàng",
+          "effects": [
+            {
+              "type": "speed_up",
+              "en": "SPD",
+              "vi": "Tốc Độ",
+              "text": "+25"
+            },
+            {
+              "type": "attack_rate",
+              "en": "ATK%",
+              "vi": "Tấn Công %",
+              "text": "+10%"
+            },
+            {
+              "type": "hp_rate",
+              "en": "HP%",
+              "vi": "Máu %",
+              "text": "+10%"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sets": [
+    {
+      "id": "BDSet_R1",
+      "nameEn": "Computer World",
+      "nameVi": "Thế Giới Máy Tính",
+      "rarity": "Superb",
+      "rarityVi": "Siêu Hạng",
+      "rewardEn": "Racing Blaze",
+      "rewardVi": "Sắc Màu Tốc Độ",
+      "rewardIcon": "/BackGear/optimized/pic_beishi_bstp_10_thumb.webp",
+      "needs": [
+        {
+          "id": "BD_R4",
+          "nameEn": "Arcade Realm",
+          "nameVi": "Thế Giới Điện Tử",
+          "icon": "/BackGear/optimized/pic_beishi_bstp_8_thumb.webp",
+          "count": 1
+        },
+        {
+          "id": "BD_R2",
+          "nameEn": "Fiery Dance Shadow",
+          "nameVi": "Vũ Ảnh Rực Lửa",
+          "icon": "/BackGear/optimized/pic_beishi_bstp_6_thumb.webp",
+          "count": 1
+        },
+        {
+          "id": "BD_R3",
+          "nameEn": "Cyber Space",
+          "nameVi": "Không Gian Ảo",
+          "icon": "/BackGear/optimized/pic_beishi_bstp_7_thumb.webp",
+          "count": 1
+        },
+        {
+          "id": "BD_R1",
+          "nameEn": "Neon Beat",
+          "nameVi": "Nhịp Neon",
+          "icon": "/BackGear/optimized/pic_beishi_bstp_5_thumb.webp",
+          "count": 1
+        }
+      ],
+      "levels": [
+        {
+          "setLevel": 1,
+          "effects": [
+            {
+              "type": "alldamagehurt_up",
+              "en": "All DMG Bonus",
+              "vi": "Tăng ST toàn bộ",
+              "text": "+7.5%"
+            },
+            {
+              "type": "alldamageunhurt_up",
+              "en": "All DMG Reduction",
+              "vi": "Giảm ST nhận toàn bộ",
+              "text": "+7.5%"
+            }
+          ]
+        },
+        {
+          "setLevel": 2,
+          "effects": [
+            {
+              "type": "alldamagehurt_up",
+              "en": "All DMG Bonus",
+              "vi": "Tăng ST toàn bộ",
+              "text": "+7.5%"
+            },
+            {
+              "type": "alldamageunhurt_up",
+              "en": "All DMG Reduction",
+              "vi": "Giảm ST nhận toàn bộ",
+              "text": "+7.5%"
+            }
+          ]
+        },
+        {
+          "setLevel": 3,
+          "effects": [
+            {
+              "type": "alldamagehurt_up",
+              "en": "All DMG Bonus",
+              "vi": "Tăng ST toàn bộ",
+              "text": "+15%"
+            },
+            {
+              "type": "alldamageunhurt_up",
+              "en": "All DMG Reduction",
+              "vi": "Giảm ST nhận toàn bộ",
+              "text": "+15%"
+            }
+          ]
+        },
+        {
+          "setLevel": 4,
+          "effects": [
+            {
+              "type": "alldamagehurt_up",
+              "en": "All DMG Bonus",
+              "vi": "Tăng ST toàn bộ",
+              "text": "+15%"
+            },
+            {
+              "type": "alldamageunhurt_up",
+              "en": "All DMG Reduction",
+              "vi": "Giảm ST nhận toàn bộ",
+              "text": "+15%"
+            }
+          ]
+        },
+        {
+          "setLevel": 5,
+          "effects": [
+            {
+              "type": "alldamagehurt_up",
+              "en": "All DMG Bonus",
+              "vi": "Tăng ST toàn bộ",
+              "text": "+15%"
+            },
+            {
+              "type": "alldamageunhurt_up",
+              "en": "All DMG Reduction",
+              "vi": "Giảm ST nhận toàn bộ",
+              "text": "+15%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

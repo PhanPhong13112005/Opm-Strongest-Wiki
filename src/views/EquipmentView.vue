@@ -19,6 +19,9 @@ const pageSize = 12
 const isKeepsake = computed(() => props.kind === 'keepsake')
 const title = computed(() => t(isKeepsake.value ? 'equipment.keepsakeTitle' : 'equipment.insigniaTitle'))
 const description = computed(() => t(isKeepsake.value ? 'equipment.keepsakeDesc' : 'equipment.insigniaDesc'))
+const guideRoot = '/Class/Hướng dẫn'
+const safeUrl = (url) => encodeURI(url).replace(/\+/g, '%2B').replace(/#/g, '%23')
+const guideImage = (filename) => `${guideRoot}/${filename}`
 const insigniaClasses = ['A', 'B', 'C', 'Class_S', 'Class_SS', 'Demon', 'Dragon', 'Martial_Artist', 'Outlaw', 'Tiger']
 const insigniaItems = insigniaClasses.map(classLevel => ({
   id: `insignia-${classLevel}`,
@@ -75,12 +78,6 @@ const getImage = (character) => {
     : new URL(`../assets/characters/${character.imageURL}`, import.meta.url).href
 }
 
-const sourceFor = (character) => {
-  const isUr = character.tier?.includes('UR')
-  if (isKeepsake.value) return isUr ? t('equipment.keepsakeSourceUr') : t('equipment.keepsakeSource')
-  return isUr ? t('equipment.insigniaSourceUr') : t('equipment.insigniaSource')
-}
-
 const baseItems = computed(() => {
   const base = isKeepsake.value
     ? charactersVi.filter(character => character.keepsakeIcon)
@@ -121,6 +118,64 @@ const itemName = computed(() => {
   if (!item.value) return ''
   return isKeepsake.value ? `${displayName(item.value)} ${t('detail.keepsake')}` : displayName(item.value)
 })
+
+const insigniaGuides = computed(() => {
+  if (isKeepsake.value || !item.value) return []
+
+  const dailyRequests = {
+    title: t('equipment.guideDailyRequests'),
+    description: t('equipment.guideDailyRequestsDesc'),
+    images: [guideImage('Request_1.webp'), guideImage('Request_2.webp')]
+  }
+  const randomChest = {
+    title: t('equipment.guideRandomChest'),
+    description: t('equipment.guideRandomChestDesc'),
+    images: [guideImage('Chest.webp')]
+  }
+  const randomChestSource = {
+    title: t('equipment.guideRandomChestSource'),
+    description: t('equipment.guideRandomChestSourceDesc'),
+    images: [guideImage('Request_1.webp'), guideImage('Request_2.webp')]
+  }
+  const classAShop = {
+    title: t('equipment.guideClassAShop'),
+    description: t('equipment.guideClassAShopDesc'),
+    images: [guideImage('Shop_3.webp')]
+  }
+  const demonShop = {
+    title: t('equipment.guideDemonShop'),
+    description: t('equipment.guideDemonShopDesc'),
+    images: [guideImage('Shop.webp')]
+  }
+  const badgeChest = {
+    title: t('equipment.guideBadgeChest'),
+    description: t('equipment.guideBadgeChestDesc'),
+    images: [guideImage('Shop_2.webp'), guideImage('Detal_Shop_2.webp')]
+  }
+  const monthlyCard = {
+    title: t('equipment.guideMonthlyCard'),
+    description: t('equipment.guideMonthlyCardDesc'),
+    images: [guideImage('Nap.webp')]
+  }
+  const unavailable = {
+    title: t('equipment.guideUnavailable'),
+    description: t('equipment.guideUnavailableDesc'),
+    images: []
+  }
+
+  return {
+    A: [classAShop],
+    B: [randomChestSource, randomChest],
+    C: [randomChestSource, randomChest],
+    Class_S: [badgeChest, monthlyCard],
+    Class_SS: [badgeChest, monthlyCard],
+    Demon: [dailyRequests, demonShop],
+    Dragon: [dailyRequests, badgeChest, monthlyCard],
+    Martial_Artist: [badgeChest, monthlyCard],
+    Outlaw: [badgeChest, monthlyCard],
+    Tiger: [randomChestSource, randomChest]
+  }[item.value.classLevel] || [unavailable]
+})
 </script>
 
 <template>
@@ -138,10 +193,35 @@ const itemName = computed(() => {
             <span v-if="isKeepsake" class="rounded-full border border-gray-700 bg-[#0b0c10] px-3 py-1 text-gray-300">{{ localized(item).tier }}</span>
             <span v-if="isKeepsake" class="rounded-full border border-gray-700 bg-[#0b0c10] px-3 py-1 text-gray-300">{{ displayFaction(item.faction) }}</span>
           </div>
-          <div class="rounded-xl border border-opm-gold/30 bg-opm-gold/5 p-5">
-            <h2 class="mb-2 text-sm font-black uppercase tracking-wider text-opm-gold">{{ t('equipment.whereToGet') }}</h2>
-            <p class="text-gray-200">{{ sourceFor(item) }}</p>
-          </div>
+        </div>
+      </section>
+
+      <section v-if="!isKeepsake" class="mt-8 rounded-2xl border border-gray-800 bg-[#12131a] p-6 md:p-10">
+        <div class="mb-6">
+          <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-opm-gold">{{ t('equipment.acquisitionGuide') }}</p>
+          <h2 class="text-2xl font-black text-white">{{ t('equipment.insigniaHowToGet') }}</h2>
+        </div>
+
+        <div class="grid gap-5 lg:grid-cols-2">
+          <article v-for="guide in insigniaGuides" :key="guide.title" class="overflow-hidden rounded-xl border border-gray-800 bg-[#0b0c10]">
+            <div class="p-5">
+              <h3 class="font-black text-white">{{ guide.title }}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-gray-400">{{ guide.description }}</p>
+            </div>
+            <div v-if="guide.images.length" class="grid gap-3 border-t border-gray-800 p-3" :class="guide.images.length > 1 ? 'sm:grid-cols-2' : ''">
+              <a
+                v-for="image in guide.images"
+                :key="image"
+                :href="safeUrl(image)"
+                target="_blank"
+                rel="noopener"
+                class="group relative block overflow-hidden rounded-lg border border-gray-800 bg-black"
+              >
+                <img :src="safeUrl(image)" :alt="guide.title" loading="lazy" class="aspect-video h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:opacity-60" />
+                <span class="absolute inset-0 flex items-center justify-center text-xs font-black uppercase tracking-widest text-white opacity-0 transition-opacity group-hover:opacity-100">{{ t('equipment.openGuide') }}</span>
+              </a>
+            </div>
+          </article>
         </div>
       </section>
     </template>
@@ -169,6 +249,11 @@ const itemName = computed(() => {
             </div>
             <h2 class="line-clamp-2 text-sm font-black text-white group-hover:text-opm-gold">{{ displayName(character) }}</h2>
             <p v-if="isKeepsake" class="mt-1 text-xs text-gray-500">{{ localized(character).tier }}</p>
+            <div class="mt-3 flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.18em] text-opm-gold opacity-0 translate-y-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+              <span class="h-px flex-1 bg-opm-gold/40"></span>
+              <span>{{ t('home.viewDetails') }}</span>
+              <span class="h-px flex-1 bg-opm-gold/40"></span>
+            </div>
           </RouterLink>
         </div>
       </transition>

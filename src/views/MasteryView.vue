@@ -1,10 +1,12 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import charactersDataVi from '../data/characters.json'
 import charactersDataEn from '../data/characters_en.json'
 
 const { t, locale } = useI18n()
+const route = useRoute()
 
 const subTab = ref('phe') // 'phe', 'he', 'cap'
 const masteryTransition = ref('fade')
@@ -30,8 +32,17 @@ const showCharModal = ref(false)
 const modalTarget = ref('main')
 const searchQuery = ref('')
 
-const selectedChar = ref(charactersDataVi.find(c => c.name.includes('Zombieman') && c.tier === 'UR+') || charactersDataVi[0])
+const defaultChar = charactersDataVi.find(c => c.name.includes('Zombieman') && c.tier === 'UR+') || charactersDataVi[0]
+const selectedChar = ref(charactersDataVi.find(c => c.id === route.query.character) || defaultChar)
 const supportChar = ref(null)
+
+watch(() => route.query.character, (characterId) => {
+  if (!characterId) return
+  const character = charactersDataVi.find(c => c.id === characterId)
+  if (!character) return
+  selectedChar.value = character
+  supportChar.value = null
+})
 
 const getLocalizedCharacter = (character) => {
   if (!character || locale.value !== 'en') return character

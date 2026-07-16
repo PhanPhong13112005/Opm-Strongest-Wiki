@@ -1,0 +1,290 @@
+[
+  {
+    "heid": "100310",
+    "json": "/spine-chibi/he_100310_tianxinjiamian3/tianxinjiamian3.json",
+    "tag": "tianxinjiamian3",
+    "name": "Amai Mask",
+    "tier": "UR+",
+    "label": "Amai Mask",
+    "faction": "Hero"
+  },
+  {
+    "heid": "100188",
+    "json": "/spine-chibi/he_100188_yuanziwushi3/yuanziwushi3.json",
+    "tag": "yuanziwushi3",
+    "name": "Atomic Samurai",
+    "tier": "UR",
+    "label": "Atomic Samurai · UR",
+    "faction": "Hero"
+  },
+  {
+    "heid": "100313",
+    "json": "/spine-chibi/he_100313_yuanziwushi4/yuanziwushi4.json",
+    "tag": "yuanziwushi4",
+    "name": "Atomic Samurai",
+    "tier": "UR+",
+    "label": "Atomic Samurai · UR+",
+    "faction": "Hero"
+  },
+  {
+    "heid": "100315",
+    "json": "/spine-chibi/he_100315_banggubengpu/banggubengpu.json",
+    "tag": "banggubengpu",
+    "name": "Bomb/SF",
+    "tier": "UR+",
+    "label": "Bomb/SF",
+    "faction": "Hero"
+  },
+  {
+    "heid": "100309",
+    "json": "/spine-chibi/he_100309_boluosi4/boluosi4.json",
+    "tag": "boluosi4",
+    "name": "Boros",
+    "tier": "UR+",
+    "label": "Boros",
+    "faction": "Monster"
+  },
+  {
+    "heid": "100302",
+    "json": "/spine-chibi/he_100302_axiuluo3/axiuluo3.json",
+    "tag": "axiuluo3",
+    "name": "Carnage Kabuto",
+    "tier": "UR",
+    "label": "Carnage Kabuto",
+    "faction": "Monster"
+  },
+  {
+    "heid": "100196",
+    "json": "/spine-chibi/he_100196_tongdi3/tongdi3.json",
+    "tag": "tongdi3",
+    "name": "Child Emperor",
+    "tier": "UR",
+    "label": "Child Emperor",
+    "faction": "Hero"
+  },
+  {
+    "heid": "100198",
+    "json": "/spine-chibi/he_100198_shenhaiwang3/shenhaiwang3.json",
+    "tag": "shenhaiwang3",
+    "name": "Deep Sea King",
+    "tier": "UR",
+    "label": "Deep Sea King",
+    "faction": "Monster"
+  },
+  {
+    "heid": "100300",
+    "json": "/spine-chibi/he_100300_qudongqishi3/qudongqishi3.json",
+    "tag": "qudongqishi3",
+    "name": "Drive Knight",
+    "tier": "UR",
+    "label": "Drive Knight",
+    "faction": "Hero"
+  },
+  {
+    "heid": "100149",
+    "json": "/spine-chibi/he_100149_yanli/yanli.json",
+    "tag": "yanli",
+    "name": "Eyesight",
+    "tier": "SSR",
+    "label": "Eyesight",
+    "faction": "Monster"
+  },
+  {
+    "heid": "100194",
+    "json": "/spine-chibi/he_100194_shanguangfulaishi3/shanguangfulaishi3.json",
+    "tag": "shanguangfulaishi3",
+    "name": "Flashy Flash",
+    "tier": "UR",
+    "label": "Flashy Flash",
+    "faction": "Hero"
+  },
+  {
+    "heid": "100314",
+    "json": "/spine-chibi/he_100314_G5/G5.json",
+    "tag": "G5",
+    "name": "G5",
+    "tier": "UR+",
+    "label": "G5",
+    "faction": "Monster"
+  },
+  {
+    "heid": "100304",
+    "json": "/spine-chibi/he_100304_elang3/elang3.json",
+    "tag": "elang3",
+    "name": "Garou",
+    "tier": "UR",
+    "label": "Garou",
+    "faction": "Martial Artist"
+  },
+  {
+    "heid": "100192",
+    "json": "/spine-chibi/he_100192_jienuosi3/jienuosi3.json",
+    "tag": "jienuosi3",
+    "name": "Genos",
+    "tier": "UR",
+    "label": "Genos · UR",
+    "faction": "Hero"
+  },
+  {
+    "heid": "100308",
+    "json": "/spine-chibi/he_100308_jienuosi4/jienuosi4.json",
+    "tag": "jienuosi4",
+    "name": "Genos",
+    "tier": "UR+",
+    "label": "Genos · UR+",
+    "faction": "Hero"
+  },
+  {
+    "heid": "100159",
+    "json": "/spine-chibi/he_100159_geliuganxiupu2/geliuganxiupu2.json",
+    "tag": "geliuganxiupu2",
+    "name": "Geryuganshoop",
+    "tier": "SSR+",
+    "label": "Geryuganshoop",
+    "faction": "Villain"
+  },
+  {
+    "heid": "100193",
+    "json": "/spine-chibi/he_100193_haojie3/haojie3.json",
+    "tag": "haojie3",
+    "name": "Gouketsu",
+    "tier": "UR",
+    "label": "Gouketsu",
+    "faction": "Monster"
+  },
+  {
+    "heid": "100307",
+    "json": "/spine-chibi/he_100307_dajiongyan3/dajiongyan3.json",
+    "tag": "dajiongyan3",
+    "name": "Gyoro Gyoro",
+    "tier": "UR",
+    "label": "Gyoro Gyoro",
+    "faction": "Monster"
+  },
+  {
+    "heid": "100191",
+    "json": "/spine-chibi/he_100191_yehuo2/yehuo2.json",
+    "tag": "yehuo2",
+    "name": "Hellfire",
+    "tier": "UR",
+    "label": "Hellfire",
+    "faction": "Monster"
+  },
+  {
+    "heid": "100199",
+    "json": "/spine-chibi/he_100199_chuixue4/chuixue4.json",
+    "tag": "chuixue4",
+    "name": "Hellish Blizzard",
+    "tier": "UR",
+    "label": "Hellish Blizzard",
+    "faction": "Hero"
+  },
+  {
+    "heid": "100187",
+    "json": "/spine-chibi/he_100187_king3/king3.json",
+    "tag": "king3",
+    "name": "King",
+    "tier": "UR",
+    "label": "King",
+    "faction": "Hero"
+  },
+  {
+    "heid": "100190",
+    "json": "/spine-chibi/he_100190_meilu3/meilu3.json",
+    "tag": "meilu3",
+    "name": "Melzargard",
+    "tier": "UR",
+    "label": "Melzargard",
+    "faction": "Monster"
+  },
+  {
+    "heid": "100306",
+    "json": "/spine-chibi/he_100306_jinshuqiubang4/jinshuqiubang4.json",
+    "tag": "jinshuqiubang4",
+    "name": "Metal Bat",
+    "tier": "UR",
+    "label": "Metal Bat",
+    "faction": "Hero"
+  },
+  {
+    "heid": "100176",
+    "json": "/spine-chibi/he_100176_jinshuqishi2/jinshuqishi2.json",
+    "tag": "jinshuqishi2",
+    "name": "Metal Knight",
+    "tier": "SSR+",
+    "label": "Metal Knight",
+    "faction": "Hero"
+  },
+  {
+    "heid": "100195",
+    "json": "/spine-chibi/he_100195_wennv3/wennv3.json",
+    "tag": "wennv3",
+    "name": "Mosquito Girl",
+    "tier": "UR",
+    "label": "Mosquito Girl",
+    "faction": "Monster"
+  },
+  {
+    "heid": "100312",
+    "json": "/spine-chibi/he_100312_miaomiao/miaomiao.json",
+    "tag": "miaomiao",
+    "name": "Nyan",
+    "tier": "UR+",
+    "label": "Nyan",
+    "faction": "Monster"
+  },
+  {
+    "heid": "100303",
+    "json": "/spine-chibi/he_100303_zhushen3/zhushen3.json",
+    "tag": "zhushen3",
+    "name": "Pig God",
+    "tier": "UR",
+    "label": "Pig God",
+    "faction": "Hero"
+  },
+  {
+    "heid": "100175",
+    "json": "/spine-chibi/he_100175_xingganqiutu2/xingganqiutu2.json",
+    "tag": "xingganqiutu2",
+    "name": "Puri Puri Prisoner",
+    "tier": "SSR+",
+    "label": "Puri Puri Prisoner",
+    "faction": "S-Class"
+  },
+  {
+    "heid": "100316",
+    "json": "/spine-chibi/he_100316_boqi/boqi.json",
+    "tag": "boqi",
+    "name": "Rover",
+    "tier": "UR+",
+    "label": "Rover",
+    "faction": "Monster"
+  },
+  {
+    "heid": "100301",
+    "json": "/spine-chibi/he_100301_didiwang3/didiwang3.json",
+    "tag": "didiwang3",
+    "name": "Subterranean King",
+    "tier": "UR",
+    "label": "Subterranean King",
+    "faction": "Monster"
+  },
+  {
+    "heid": "100177",
+    "json": "/spine-chibi/he_100177_chaohejinheiguang2/chaohejinheiguang2.json",
+    "tag": "chaohejinheiguang2",
+    "name": "Superalloy Darkshine",
+    "tier": "SSR+",
+    "label": "Superalloy Darkshine",
+    "faction": "Hero"
+  },
+  {
+    "heid": "100197",
+    "json": "/spine-chibi/he_100197_jiangshinan3/jiangshinan3.json",
+    "tag": "jiangshinan3",
+    "name": "Zombieman",
+    "tier": "UR",
+    "label": "Zombieman",
+    "faction": "Hero"
+  }
+]

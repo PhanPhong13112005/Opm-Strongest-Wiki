@@ -1,0 +1,15 @@
+Request_1.webp: Cách lấy huy hiệu Rồng, Quỷ, Rương mở (chest).
+Request_2.webp: Chi tiết khi làm xong
+Chest.webp: Rương này mở ngẫu nhiên ra Huy hiệu Tiger,B,C.
+Shop.webp: Cách lấy huy hiệu Quỷ
+Shop_2.webp: Cách mua Hộp huy hiệu
+Detal_Shop_2.webp: Là chi tiết của Shop_2.webp
+Nap.webp: là mua gói tháng thì mỗi ngày nó tặng 1 Rương và 1 tặng mảnh bao gồm các mảnh sau:
+1. Mảnh Huy hiệu Rồng
+2. Mảnh Huy hiệu Võ sĩ
+3. Mảnh Cấp SS
+4. Mảnh Cấp S
+5. Mảnh Tội phạm
+Mystery_Shop.png: Shop bí ẩn bán
+Shop_3.webp: Cách lấy Huy hiệu Bậc A
+Tính lũy đủ 50 mảnh sẽ được 1 Huy hiệu

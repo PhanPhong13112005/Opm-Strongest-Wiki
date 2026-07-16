@@ -57,7 +57,33 @@ const { locale } = useI18n()
 
         <section class="space-y-4">
           <h2 class="text-xl font-bold text-white flex items-center gap-2">
-            <span class="text-[#ffb300]">4.</span> Liên Hệ
+            <span class="text-[#ffb300]">4.</span> Lời Cảm Ơn & Nguồn Tham Khảo
+          </h2>
+          <div class="rounded-xl border border-[#ffb300]/25 bg-[#ffb300]/5 p-5 leading-relaxed">
+            <p class="mb-3">Thông tin trên wiki được tổng hợp, tham khảo và đối chiếu từ nhiều nguồn cộng đồng:</p>
+            <ul class="list-disc space-y-2 pl-6 text-gray-300">
+              <li>Dữ liệu, hình ảnh và thông tin hiển thị trực tiếp trong game <em>One Punch Man: The Strongest</em>.</li>
+              <li>Video hướng dẫn, ghi hình lối chơi và nội dung chia sẻ trên YouTube.</li>
+              <li>Bài viết, hình ảnh hướng dẫn và trao đổi trong các group cộng đồng Facebook.</li>
+              <li>OPM Wiki và các wiki cộng đồng liên quan đến <em>One Punch Man: The Strongest</em>.</li>
+              <li>
+                Nội dung do
+                <a
+                  href="https://www.facebook.com/ParkSoongNak/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-bold text-[#ffb300] underline decoration-[#ffb300]/40 underline-offset-4 transition hover:text-yellow-300"
+                >ParkSoongNak</a>
+                chia sẻ và tổng hợp cho cộng đồng <span class="text-xs text-gray-500">(Facebook có thể yêu cầu đăng nhập)</span>.
+              </li>
+            </ul>
+            <p class="mt-4 text-sm text-gray-400">Chúng tôi trân trọng đóng góp của tất cả tác giả và thành viên cộng đồng. Quyền sở hữu đối với nội dung gốc vẫn thuộc về tác giả và các chủ sở hữu tương ứng.</p>
+          </div>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <span class="text-[#ffb300]">5.</span> Liên Hệ
           </h2>
           <p class="leading-relaxed">
             Nếu bạn là đại diện của nhà phát hành hoặc sở hữu bản quyền và có bất kỳ vấn đề nào liên quan đến hình ảnh/dữ liệu trên website, vui lòng liên hệ với ban quản trị thông qua các kênh cộng đồng. Chúng tôi luôn sẵn sàng hợp tác.
@@ -114,7 +140,33 @@ const { locale } = useI18n()
 
         <section class="space-y-4">
           <h2 class="text-xl font-bold text-white flex items-center gap-2">
-            <span class="text-[#ffb300]">4.</span> Contact
+            <span class="text-[#ffb300]">4.</span> Acknowledgements & References
+          </h2>
+          <div class="rounded-xl border border-[#ffb300]/25 bg-[#ffb300]/5 p-5 leading-relaxed">
+            <p class="mb-3">Information on this wiki is compiled, referenced, and cross-checked against several community sources:</p>
+            <ul class="list-disc space-y-2 pl-6 text-gray-300">
+              <li>Data, images, and information displayed directly in <em>One Punch Man: The Strongest</em>.</li>
+              <li>Guides, gameplay recordings, and community content published on YouTube.</li>
+              <li>Posts, guide images, and discussions from Facebook community groups.</li>
+              <li>OPM Wiki and other community wikis related to <em>One Punch Man: The Strongest</em>.</li>
+              <li>
+                Materials shared and compiled for the community by
+                <a
+                  href="https://www.facebook.com/ParkSoongNak/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-bold text-[#ffb300] underline decoration-[#ffb300]/40 underline-offset-4 transition hover:text-yellow-300"
+                >ParkSoongNak</a>
+                <span class="text-xs text-gray-500">(Facebook may require sign-in)</span>.
+              </li>
+            </ul>
+            <p class="mt-4 text-sm text-gray-400">We appreciate the contributions of every creator and community member. Ownership of original content remains with its respective authors and rights holders.</p>
+          </div>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <span class="text-[#ffb300]">5.</span> Contact
           </h2>
           <p class="leading-relaxed">
             If you represent a publisher or copyright holder and have any concerns regarding images/data on this website, please contact the administration through community channels. We are always ready to cooperate.

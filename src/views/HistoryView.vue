@@ -3,164 +3,79 @@ import { useI18n } from 'vue-i18n'
 
 const { locale } = useI18n()
 
-// Timeline data translated to look great
 const timelineVi = [
   {
-    stage: 'Phiên bản 1.0',
-    title: 'Khởi Tạo & Định Hình',
-    date: 'Ngày 1 - 5',
-    desc: 'Thiết lập nền tảng dự án bằng Vue 3, Vite và Tailwind CSS. Định hình phong cách thiết kế Cyberpunk/Dark Mode đặc trưng với tông màu tối huyền ảo, kết hợp hiệu ứng kính (glassmorphism) và viền sáng neon màu vàng/cam để tạo cảm giác cao cấp.',
+    stage: 'Khởi tạo dự án',
+    title: 'Nền Tảng OPM Strongest Wiki',
+    date: '11/07/2026',
+    desc: 'Đưa mã nguồn đầu tiên vào Git với Vue 3, Vite, Tailwind CSS, Vue Router và Vue I18n. Bản nền tảng đã có dữ liệu nhân vật tĩnh, thư viện nhân vật, trang chi tiết kỹ năng và giao diện tối responsive.',
     icon: '🚀'
   },
   {
-    stage: 'Phiên bản 1.1',
-    title: 'Cào & Chuẩn Hóa Dữ Liệu',
-    date: 'Ngày 6 - 15',
-    desc: 'Xây dựng hệ thống quét dữ liệu (scraper) bằng Python để cào thông tin chi tiết của hàng trăm nhân vật từ các nguồn uy tín. Làm sạch và chuẩn hóa toàn bộ các thuộc tính như HP, ATK, DEF, SPD, phe phái và hệ vào file JSON dùng chung.',
-    icon: '🕷️'
-  },
-  {
-    stage: 'Phiên bản 1.2',
-    title: 'Kỹ Năng & Hoạt Ảnh Thông Minh',
-    date: 'Ngày 16 - 25',
-    desc: 'Phân loại kỹ năng nhân vật thành: Cơ bản, Tuyệt kĩ, Nội tại và Thức tỉnh. Thiết kế cơ chế kế thừa hoạt ảnh (Smart Animation) tự động hiển thị video/gif kỹ năng nâng cấp từ kỹ năng gốc nếu không có file riêng.',
-    icon: '🎬'
-  },
-  {
-    stage: 'Phiên bản 1.3',
-    title: 'Hệ Thống Kỷ Vật & Ảnh Đại Diện',
-    date: 'Ngày 26 - 35',
-    desc: 'Tái cấu trúc toàn bộ hệ thống hình ảnh để Vue tự động ánh xạ Avatar dựa trên cấp bậc (N, R, SR, SSR, SSR+, UR, UR+). Tích hợp hiển thị Kỷ vật (vũ khí duyên) giúp người dùng dễ dàng theo dõi điều kiện nâng cấp Siêu Tuyệt Kĩ.',
-    icon: '🖼️'
-  },
-  {
-    stage: 'Phiên bản 1.4',
-    title: 'Đồng Bộ Hóa Logic Game',
-    date: 'Ngày 36 - 45',
-    desc: 'Chuẩn hóa việc hiển thị Huy hiệu phân lớp theo chuẩn game: phe Anh Hùng/Tội Phạm dùng cấp bậc (S-Class, A-Class...), phe Quái Nhân dùng Mức độ thảm họa (Dragon, Demon...). Xử lý các trường hợp đặc biệt như Gale Wind, Hellfire Flame và Sonic.',
-    icon: '🛡️'
-  },
-  {
-    stage: 'Phiên bản 1.5',
-    title: 'Lịch Trình Ra Mắt Nhân Vật',
-    date: 'Ngày 46 - 55',
-    desc: 'Tích hợp lịch sử ra mắt của tướng ở hai máy chủ Trung Quốc và Đông Nam Á (SEA). Sử dụng thuật toán tự động khớp ngày ra mắt và hiển thị dưới dạng fallback an toàn cho tất cả các tướng.',
-    icon: '📅'
-  },
-  {
-    stage: 'Phiên bản 1.6',
-    title: 'Chú Thích Hiệu Ứng Thuật Toán',
-    date: 'Ngày 56 - 65',
-    desc: 'Phát triển bộ quét chuỗi thông minh (Effect Glossary): Chỉ hiển thị định nghĩa hiệu ứng (như [Gây Mù], [Trọng Thương]) nếu từ khóa đó thực sự xuất hiện trong kỹ năng của nhân vật đang xem, tránh làm loãng thông tin.',
-    icon: '✨'
-  },
-  {
-    stage: 'Phiên bản 1.7',
-    title: 'Phòng Nghiên Cứu (Core Lab)',
-    date: 'Ngày 66 - 75',
-    desc: 'Xây dựng phân hệ Core Lab chuyên sâu, hiển thị chi tiết lộ trình nâng cấp Core Skill qua từng mốc Level (1 đến 17). Thiết kế giao diện responsive tối ưu giúp hiển thị rõ ràng trên cả điện thoại và máy tính.',
+    stage: 'Mở rộng hệ thống',
+    title: 'Sự Kiện, Core Lab & Trải Nghiệm Di Động',
+    date: '13/07/2026',
+    desc: 'Mở rộng hệ thống Sự kiện và Core Lab, cải thiện giao diện trên thiết bị di động, tích hợp Core vào chi tiết nhân vật, đồng thời bổ sung trang Chính sách bảo mật và Trang lịch sử phát triển.',
     icon: '🧬'
   },
   {
-    stage: 'Phiên bản 1.8',
-    title: 'Hệ Thống Sự Kiện & Tối Ưu Mobile',
-    date: 'Ngày 76 - 85',
-    desc: 'Tạo module quản lý sự kiện trong tháng trực quan. Tối ưu hóa toàn diện giao diện di động bằng bộ nút điều hướng nhanh dạng gradient, ẩn thanh cuộn thô cứng và thêm tính năng cuộn bắt điểm (Snap Scroll).',
-    icon: '🎪'
+    stage: 'Chuẩn hóa tài liệu',
+    title: 'Tài Liệu Theo Từng Khu Vực Mã Nguồn',
+    date: '14/07/2026',
+    desc: 'Bổ sung README cho thư mục gốc, src, router, components, data, locales, views và public để mô tả kiến trúc, luồng dữ liệu, quy ước tài nguyên và các quy tắc nghiệp vụ chính.',
+    icon: '📚'
   },
   {
-    stage: 'Phiên bản 2.0',
-    title: 'Cốt Lõi Tích Hợp & Chính Sách',
-    date: 'Ngày 86 - 95',
-    desc: 'Tích hợp mốc Core gọn nhẹ ngay trong trang chi tiết nhân vật, sửa đổi toàn bộ liên kết hình ảnh tự động, sửa lỗi mã dịch i18n và phát hành chính thức trang Chính sách Bảo mật & Lịch sử phát triển.',
-    icon: '🌟'
-  },
-  {
-    stage: 'Phiên bản 2.1',
-    title: 'Chiến Thuật & Huy Chương',
-    date: 'Ngày 96 - Hiện tại',
-    desc: 'Xây dựng trang Phòng Nghiên Cứu Chiến Thuật và Hệ Thống Huy Chương. Tích hợp thanh trượt mượt mà (cross-fade slider), khả năng phóng to ảnh, dọn dẹp mã nguồn rác và tối ưu hóa UI/UX cực kỳ hiện đại.',
+    stage: 'Mở rộng tính năng',
+    title: 'Chiến Thuật, Huy Chương & Ổn Định Triển Khai',
+    date: '15/07/2026',
+    desc: 'Bổ sung trang Chiến thuật và Huy chương. Cấu hình Vercel cho SPA, mã hóa URL tài nguyên, chuẩn hóa tên đường dẫn URplus, sửa các liên kết ảnh liên quan và thêm lazy loading/preload cho ảnh nhân vật.',
     icon: '🛠️'
+  },
+  {
+    stage: 'Đang phát triển',
+    title: 'Kỷ Vật, Huy Hiệu & Hoàn Thiện Song Ngữ',
+    date: '16/07/2026',
+    desc: 'Hoàn thiện danh sách Kỷ vật và 10 Huy hiệu hợp lệ với bộ lọc, phân trang 12 mục và trạng thái xem chi tiết khi rê chuột. Đồng thời sửa phản ứng i18n của lịch Trang Chủ và bổ sung lịch sử CN/SEA cho Garou UR, Pig God UR.',
+    icon: '🔧'
   }
 ]
 
 const timelineEn = [
   {
-    stage: 'Version 1.0',
-    title: 'Initialization & Design',
-    date: 'Day 1 - 5',
-    desc: 'Setup project with Vue 3, Vite, and Tailwind CSS. Established the signature Cyberpunk/Dark Mode design system with glowing elements, glassmorphism, and neon borders for a premium feel.',
+    stage: 'Project initialization',
+    title: 'OPM Strongest Wiki Foundation',
+    date: '11 Jul 2026',
+    desc: 'Added the first source revision with Vue 3, Vite, Tailwind CSS, Vue Router, and Vue I18n. The foundation already included static character data, a character library, skill details, and a responsive dark interface.',
     icon: '🚀'
   },
   {
-    stage: 'Version 1.1',
-    title: 'Scraping & Data Engineering',
-    date: 'Day 6 - 15',
-    desc: 'Built custom Python web scrapers to gather detail profiles for hundreds of characters. Cleaned, normalized, and unified all stats (HP, ATK, DEF, SPD), factions, and types into a single JSON file.',
-    icon: '🕷️'
-  },
-  {
-    stage: 'Version 1.2',
-    title: 'Skills & Smart Animations',
-    date: 'Day 16 - 25',
-    desc: 'Categorized character skills into Basic, Ultimate, Passive, and Awaken. Developed a smart inheritance engine to fetch original animations (video/gif) for upgraded skills if missing.',
-    icon: '🎬'
-  },
-  {
-    stage: 'Version 1.3',
-    title: 'Keepsakes & Dynamic Avatars',
-    date: 'Day 26 - 35',
-    desc: 'Re-structured images path mapping for automatic avatar loading based on character tier (N to UR+). Integrated Keepsake weapon icons next to ultimates to guide users on unlocking Super-Ultimates.',
-    icon: '🖼️'
-  },
-  {
-    stage: 'Version 1.4',
-    title: 'Game Logic Synchronization',
-    date: 'Day 36 - 45',
-    desc: 'Standardized class badges according to game standards: Hero/Outlaw use rank badges (S-Class, A-Class...), Monster uses Threat levels (Dragon, Demon...). Handled edge cases for special characters.',
-    icon: '🛡️'
-  },
-  {
-    stage: 'Version 1.5',
-    title: 'Release Timeline Integration',
-    date: 'Day 46 - 55',
-    desc: 'Embedded launch timelines for both China and SEA servers. Implemented fallback rendering for missing dates to maintain accuracy across all profiles.',
-    icon: '📅'
-  },
-  {
-    stage: 'Version 1.6',
-    title: 'Algorithmic Effect Glossary',
-    date: 'Day 56 - 65',
-    desc: 'Developed a string glossary: Only displaying definitions (like [Blind], [Internal Injury]) if the terms actually exist in the current character\'s skills.',
-    icon: '✨'
-  },
-  {
-    stage: 'Version 1.7',
-    title: 'Core Lab System',
-    date: 'Day 66 - 75',
-    desc: 'Built a comprehensive Core Lab module, highlighting Core upgrade milestones from Level 1 to 17. Optimised responsive rendering for mobile and desktop screens.',
+    stage: 'System expansion',
+    title: 'Events, Core Lab & Mobile Experience',
+    date: '13 Jul 2026',
+    desc: 'Expanded the Events and Core Lab systems, improved the mobile interface, integrated Core data into character details, and added the Privacy Policy and development history pages.',
     icon: '🧬'
   },
   {
-    stage: 'Version 1.8',
-    title: 'Events & Mobile UX Polish',
-    date: 'Day 76 - 85',
-    desc: 'Created a calendar event tracker page. Refined mobile navigation with custom-colored control arrows, hidden scrollbars, and snap-scroll features.',
-    icon: '🎪'
+    stage: 'Documentation',
+    title: 'Documentation by Source Area',
+    date: '14 Jul 2026',
+    desc: 'Added README files for the project root, src, router, components, data, locales, views, and public folders to document the architecture, data flow, asset conventions, and core business rules.',
+    icon: '📚'
   },
   {
-    stage: 'Version 2.0',
-    title: 'Integrated Cores & Policies',
-    date: 'Day 86 - 95',
-    desc: 'Integrated core skills in character detail view, resolved i18n translation bugs, cleaned codebase, and published privacy policies along with the official site history view.',
-    icon: '🌟'
-  },
-  {
-    stage: 'Version 2.1',
-    title: 'Tactics & Emblem Systems',
-    date: 'Day 96 - Present',
-    desc: 'Built the Tactical Research and Emblem System pages. Integrated seamless cross-fade sliders, detailed image viewers, cleaned up junk code, and implemented modern UI/UX optimizations.',
+    stage: 'Feature expansion',
+    title: 'Tactics, Emblems & Deployment Stability',
+    date: '15 Jul 2026',
+    desc: 'Added the Tactics and Emblems pages. Configured Vercel SPA routing, encoded asset URLs, standardized URplus paths, repaired related image references, and introduced lazy loading and image preloading.',
     icon: '🛠️'
+  },
+  {
+    stage: 'In development',
+    title: 'Keepsakes, Insignias & Bilingual Polish',
+    date: '16 Jul 2026',
+    desc: 'Refined the Keepsakes catalog and the 10 valid Insignias with filters, 12-item pagination, and hover detail states. Also fixed reactive translations on the Home schedule and added CN/SEA history for UR Garou and UR Pig God.',
+    icon: '🔧'
   }
 ]
 </script>
@@ -176,8 +91,14 @@ const timelineEn = [
       <div class="h-1 w-28 bg-[#ffb300] mx-auto rounded-full mb-6"></div>
       <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
         {{ locale === 'vi' 
-          ? 'Hành trình phát triển bách khoa toàn thư OPM Strongest Wiki từ những ngày đầu thiết kế cho tới một sản phẩm hoàn thiện dành cho cộng đồng.' 
-          : 'The development journey of OPM Strongest Wiki from the initial design days to a fully completed product for the community.' 
+          ? 'Các mốc phát triển được đối chiếu từ lịch sử Git và trạng thái mã nguồn hiện tại của OPM Strongest Wiki.'
+          : 'Development milestones verified against the Git history and the current OPM Strongest Wiki source tree.'
+        }}
+      </p>
+      <p class="mt-5 rounded-xl border border-[#ffb300]/20 bg-[#ffb300]/5 px-4 py-3 text-xs leading-relaxed text-gray-500">
+        {{ locale === 'vi'
+          ? 'Dự án hiện vẫn dùng package version 0.0.0 và chưa phát hành theo Semantic Versioning; timeline bên dưới sử dụng ngày thay đổi thực tế.'
+          : 'The project still uses package version 0.0.0 and has not adopted Semantic Versioning; the timeline below uses actual change dates.'
         }}
       </p>
     </div>
@@ -231,8 +152,8 @@ const timelineEn = [
     <!-- FOOTER NOTE -->
     <div class="text-center mt-20 border-t border-gray-800/60 pt-8 text-xs text-gray-500">
       {{ locale === 'vi' 
-        ? 'Dự án vẫn đang tiếp tục được cập nhật và tối ưu hóa dựa trên phản hồi của cộng đồng.' 
-        : 'The project continues to be updated and optimized based on community feedback.' 
+        ? 'Cập nhật lần cuối: 16/07/2026 · Các mục “Đang phát triển” phản ánh thay đổi hiện có nhưng chưa được phát hành chính thức.'
+        : 'Last updated: 16 Jul 2026 · “In development” entries reflect current changes that have not been formally released.'
       }}
     </div>
 

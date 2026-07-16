@@ -53,29 +53,18 @@ const suffixToFolder = {
 }
 
 const getMilestoneIcon = (milestoneIconPath, hero) => {
-  if (!milestoneIconPath || !hero) return '';
-  const folder = suffixToFolder[hero.iconSuffix];
-  if (!folder) return milestoneIconPath;
-  
-  const match = milestoneIconPath.match(/\/([^/]+)\.webp$/);
-  if (match) {
-    return `/Core_Skill/${folder}/${match[1]}.png`;
-  }
-  return milestoneIconPath;
+  if (!milestoneIconPath || !hero) return ''
+  const folder = suffixToFolder[hero.iconSuffix]
+  if (!folder) return milestoneIconPath
+
+  const match = milestoneIconPath.match(/\/([^/]+)\.webp$/)
+  return match ? `/Core_Skill/${folder}/${match[1]}.png` : milestoneIconPath
 }
 
 const getCoreSkillIcon = (lvl, hero) => {
-  if (lvl.milestoneIcon) {
-    return getMilestoneIcon(lvl.milestoneIcon, hero);
-  }
-  // Fallback to hero's core portrait for level 1 if needed
-  if (hero && hero.iconSuffix) {
-    const folder = suffixToFolder[hero.iconSuffix];
-    if (folder) {
-      return `/Core_Skill/${folder}/${hero.iconSuffix}_c.png`;
-    }
-  }
-  return '';
+  if (lvl.milestoneIcon) return getMilestoneIcon(lvl.milestoneIcon, hero)
+  const folder = hero?.iconSuffix ? suffixToFolder[hero.iconSuffix] : ''
+  return folder ? `/Core_Skill/${folder}/${hero.iconSuffix}_c.png` : ''
 }
 
 const goToCoreLab = (coreId) => {
@@ -164,8 +153,7 @@ const toggleSkill = (skillName) => {
 const currentExpandedSkillObj = computed(() => {
   if (activeSkillTab.value === 'core' && coreData.value) {
     return {
-      name: coreData.value['coreName_' + locale.value] || coreData.value.coreName || 'Core Skill',
-      animation: character.value.imageURL
+      name: coreData.value['coreName_' + locale.value] || coreData.value.coreName || 'Core Skill'
     }
   }
   if (!character.value || !character.value.skills) return null
@@ -589,8 +577,8 @@ onMounted(() => {
               <span class="text-gray-400 text-[11px] font-bold tracking-widest uppercase">SPD</span>
             </div>
           </div>
-          <router-link to="/mastery" class="block border border-gray-600 rounded-lg p-2 text-center text-gray-300 text-xs font-bold tracking-widest uppercase hover:border-[#ffb300] hover:text-[#ffb300] transition-colors">
-            ◆ TINH THÔNG →
+          <router-link :to="{ name: 'mastery', query: { character: character.id } }" class="block border border-gray-600 rounded-lg p-2 text-center text-gray-300 text-xs font-bold tracking-widest uppercase hover:border-[#ffb300] hover:text-[#ffb300] transition-colors">
+            ◆ {{ t("detail.masteryLabel") }} →
           </router-link>
         </div>
       </div>
@@ -632,7 +620,7 @@ onMounted(() => {
         <div :key="activeSkillTab" class="grid grid-cols-1 lg:grid-cols-5 gap-8 bg-[#0d0e14] p-6 rounded-2xl border border-gray-800 shadow-inner">
         
         <!-- LEFT: ANIMATION PLAYER -->
-        <div class="lg:col-span-2 relative w-full aspect-video bg-[#05060a] rounded-xl border border-gray-800 overflow-hidden shadow-2xl flex items-center justify-center group">
+        <div v-if="activeSkillTab !== 'core'" class="lg:col-span-2 relative w-full aspect-video bg-[#05060a] rounded-xl border border-gray-800 overflow-hidden shadow-2xl flex items-center justify-center group">
           
           <template v-if="currentExpandedSkillObj?.animation">
             <video v-if="currentExpandedSkillObj.animation.endsWith('.mp4')" :src="safeUrl(currentExpandedSkillObj.animation.startsWith('/') ? currentExpandedSkillObj.animation : getCharacterImage(currentExpandedSkillObj.animation))" autoplay loop muted class="absolute inset-0 w-full h-full object-cover z-0"></video>
@@ -654,7 +642,10 @@ onMounted(() => {
         </div>
 
         <!-- RIGHT: SKILL CARDS LIST -->
-        <div class="lg:col-span-3 flex flex-col gap-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+        <div
+          class="flex flex-col gap-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar"
+          :class="activeSkillTab === 'core' ? 'lg:col-span-5' : 'lg:col-span-3'"
+        >
           <template v-if="activeSkillTab === 'core' && coreData">
             <div 
               v-for="(lvl, index) in coreLevels" 
@@ -664,11 +655,11 @@ onMounted(() => {
               <div class="p-4 flex justify-between items-center bg-gradient-to-r from-[color:var(--theme-color)]/10 to-transparent">
                 <div class="flex items-center gap-4">
                   <div class="w-14 h-14 flex-shrink-0 rounded-full border-2 border-[color:var(--theme-color)] flex items-center justify-center bg-gray-900 shadow-[0_0_10px_rgba(var(--theme-color-rgb),0.3)] overflow-hidden">
-                    <img v-if="getCoreSkillIcon(lvl, coreData)" :src="safeUrl(getCoreSkillIcon(lvl, coreData))" class="w-full h-full object-cover transform scale-110" />
+                    <img v-if="getCoreSkillIcon(lvl, coreData)" :src="safeUrl(getCoreSkillIcon(lvl, coreData))" :alt="`Core Level ${lvl.lv}`" class="w-full h-full object-cover transform scale-110" />
                     <span v-else class="text-[color:var(--theme-color)] font-black text-2xl">{{ lvl.lv }}</span>
                   </div>
                   <h3 class="font-bold text-lg text-[color:var(--theme-color)]">
-                    {{ lvl['coreName_' + $i18n.locale] || lvl.coreName_vi || (index === 0 ? 'Cơ bản' : 'Cột mốc Lv ' + lvl.lv) }}
+                    {{ lvl['coreName_' + $i18n.locale] || lvl.coreName_vi || (index === 0 ? t('detail.coreBase') : t('detail.coreMilestone', { level: lvl.lv })) }}
                   </h3>
                 </div>
                 <div class="bg-gray-800 border border-gray-700 text-gray-400 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest">
@@ -682,7 +673,7 @@ onMounted(() => {
             
             <button @click="goToCoreLab(coreData.coreHeId)" class="w-full mt-2 py-4 bg-gradient-to-r from-[color:var(--theme-color)] to-yellow-600 text-[#000000] font-black text-sm uppercase tracking-widest rounded-lg shadow-[0_0_15px_rgba(var(--theme-color-rgb),0.3)] hover:brightness-110 hover:shadow-[0_0_25px_rgba(var(--theme-color-rgb),0.5)] transition-all flex items-center justify-center gap-2 flex-shrink-0">
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3H5C3.89 3 3 3.89 3 5V19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V5C21 3.89 20.11 3 19 3ZM19 19H5V5H19V19ZM17 12H13V8H11V12H7V14H11V18H13V14H17V12Z"/></svg>
-              Xem chi tiết Phòng Nguyên Cứu
+              {{ t('detail.viewCoreLab') }}
             </button>
           </template>
           

@@ -50,7 +50,7 @@ const prevMonthStr = computed(() => {
 
 onMounted(() => {
   const banners = [];
-  Object.values(scheduleData).forEach(month => {
+  Object.values(scheduleData.value).forEach(month => {
     month.forEach(sv => {
        sv.items.forEach(item => {
           if (item.bannerImage) {
@@ -68,7 +68,7 @@ onMounted(() => {
   }, 1000);
 })
 
-const scheduleData = {
+const scheduleData = computed(() => ({
   '2026-06': [
     {
       server: 'CN',
@@ -197,11 +197,11 @@ const scheduleData = {
       items: [
         {
           id: 'unknown',
-          overrideName: 'Nhân Vật Bí Ẩn',
+          overrideName: t('home.unknownCharacter'),
           overrideTier: 'UR+',
           overrideFaction: 'UNKNOWN',
           overrideType: 'UNKNOWN',
-          overrideRole: 'Sức Mạnh Tiềm Ẩn',
+          overrideRole: t('home.hiddenPotential'),
           bannerImage: '/Characters/Full_Background/Nhan_Vat_Bi_An.jpg',
           tag: t('home.release'),
           tagBg: 'bg-opm-gold text-black',
@@ -254,10 +254,10 @@ const scheduleData = {
       ]
     }
   ]
-}
+}))
 
-const hasNextMonth = computed(() => !!scheduleData[nextMonthStr.value])
-const hasPrevMonth = computed(() => !!scheduleData[prevMonthStr.value])
+const hasNextMonth = computed(() => !!scheduleData.value[nextMonthStr.value])
+const hasPrevMonth = computed(() => !!scheduleData.value[prevMonthStr.value])
 
 const transitionName = ref('fade')
 
@@ -276,7 +276,7 @@ const prevMonth = () => {
 }
 
 const servers = computed(() => {
-  return scheduleData[currentMonthStr.value] || []
+  return scheduleData.value[currentMonthStr.value] || []
 })
 </script>
 
@@ -291,7 +291,7 @@ const servers = computed(() => {
           :disabled="!hasPrevMonth"
           class="px-3 sm:px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-white font-bold transition-colors flex items-center justify-center min-w-[40px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-gray-800"
         >
-          <span>&larr;</span><span class="hidden sm:inline ml-2">Tháng trước</span>
+          <span>&larr;</span><span class="hidden sm:inline ml-2">{{ t('home.previousMonth') }}</span>
         </button>
         <div class="text-lg sm:text-xl md:text-2xl font-black text-opm-gold tracking-widest whitespace-nowrap">{{ displayDateStr }}</div>
         <button 
@@ -299,15 +299,15 @@ const servers = computed(() => {
           :disabled="!hasNextMonth"
           class="px-3 sm:px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-white font-bold transition-colors flex items-center justify-center min-w-[40px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-gray-800"
         >
-          <span class="hidden sm:inline mr-2">Tháng sau</span><span>&rarr;</span>
+          <span class="hidden sm:inline mr-2">{{ t('home.nextMonth') }}</span><span>&rarr;</span>
         </button>
       </div>
 
       <transition :name="transitionName" mode="out-in">
         <div :key="currentMonthStr">
           <div v-if="servers.length === 0" class="text-center py-20 bg-[#0b0c10] border border-gray-800 rounded-xl">
-            <div class="text-gray-500 text-lg mb-2">Chưa có dữ liệu banner cho {{ displayDateStr }}</div>
-            <div class="text-gray-600 text-sm">Vui lòng quay lại sau!</div>
+            <div class="text-gray-500 text-lg mb-2">{{ t('home.noBannerData', { date: displayDateStr }) }}</div>
+            <div class="text-gray-600 text-sm">{{ t('home.comeBackLater') }}</div>
           </div>
 
           <div v-else class="space-y-12">
