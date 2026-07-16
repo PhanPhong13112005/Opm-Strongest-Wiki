@@ -602,7 +602,7 @@ const scrollTabs = (direction) => {
     <transition name="fade-fast">
       <div v-if="selectedCard" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6" @click.self="closeModal">
         <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" @click="closeModal"></div>
-        <div class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto glass-card border border-white/10 shadow-2xl rounded-2xl flex flex-col pointer-events-auto">
+        <div class="tactic-detail-modal relative flex max-h-[90vh] w-full max-w-4xl flex-col rounded-2xl border border-white/10 shadow-2xl pointer-events-auto glass-card">
           <!-- Modal Header -->
           <div class="sticky top-0 z-10 bg-[#11131a]/90 backdrop-blur-md p-4 sm:p-6 border-b border-white/10 flex items-center gap-4">
             <button @click="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
@@ -761,5 +761,13 @@ const scrollTabs = (direction) => {
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 1rem;
   overflow: hidden;
+}
+
+.tactic-detail-modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  -webkit-overflow-scrolling: touch;
 }
 </style>
