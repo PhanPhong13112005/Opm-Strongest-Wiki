@@ -27,13 +27,14 @@ Thư mục này chứa tất cả các thành phần View (Trang) hoàn chỉnh 
 
 ### 5. `EquipmentView.vue` & `MasteryView.vue`
 *   Quản lý thông tin Kỷ vật (Keepsakes), Huy hiệu (Insignias) và các thuộc tính tinh thông tương ứng trong game.
+*   Ảnh hướng dẫn cách lấy Huy hiệu mở trong hộp phóng to ngay trên trang, không điều hướng người dùng sang tệp ảnh.
 
 ### 6. `BackgearView.vue`
 *   Tra cứu 9 Thẻ Hình nền, xem ảnh theo cấp, chỉ số, chi phí nâng, nguồn nhận và hiệu ứng Bộ Sưu Tập.
 
 ### 7. `TacticsView.vue`
 *   Hiển thị 19 Thẻ Chiến Thuật, chỉ số tối đa theo phẩm chất và bảng chỉ số đầy đủ theo từng sao.
-*   Chi tiết thẻ hiển thị chỉ số khi lắp ở cấp sao tối đa: ATK cùng S.ATK, C.ATK, R.ATK hoặc G.ATK theo vị trí I–IV.
+*   Chi tiết thẻ cho chọn từng cấp sao và hiển thị chỉ số khi lắp tương ứng: ATK cùng S.ATK, C.ATK, R.ATK hoặc G.ATK theo vị trí I–IV.
 *   Tra cứu Viền Thẻ, Phòng Nghiên Cứu và phần thưởng Tháp Trăng Khuyết.
 
 ### 8. `PrivacyView.vue` & `HistoryView.vue`

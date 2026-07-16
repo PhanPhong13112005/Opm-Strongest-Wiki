@@ -103,20 +103,29 @@ const equippedSlots = [
   { numeral: 'III', secondary: 'R.ATK' },
   { numeral: 'IV', secondary: 'G.ATK' }
 ]
-const equippedMaxValues = {
-  blue: 800,
-  purple: 2400,
-  orange: 6400
+const equippedBaseValues = {
+  blue: 200,
+  purple: 400,
+  orange: 800
 }
 
 // Modal logic
 const selectedCard = ref(null)
 const activeRarityTab = ref('orange')
+const activeEquippedStar = ref(0)
 const zoomedImage = ref(null)
 const activeRarity = computed(() => selectedCard.value?.scaling?.rarities?.find(
   rarity => rarity.key === activeRarityTab.value
 ))
-const activeEquippedValue = computed(() => equippedMaxValues[activeRarityTab.value] || 0)
+const activeEquippedValue = computed(() => (
+  equippedBaseValues[activeRarityTab.value] || 0
+) * (activeEquippedStar.value + 1))
+
+const selectRarity = (key) => {
+  activeRarityTab.value = key
+  const rarity = selectedCard.value?.scaling?.rarities?.find(item => item.key === key)
+  activeEquippedStar.value = maxRarityTier(rarity)?.star ?? 0
+}
 
 const zoomImage = (src) => {
   zoomedImage.value = src
@@ -125,7 +134,7 @@ const zoomImage = (src) => {
 const openModal = (card) => {
   selectedCard.value = card
   if (card.scaling && card.scaling.rarities && card.scaling.rarities.length > 0) {
-    activeRarityTab.value = card.scaling.rarities[card.scaling.rarities.length - 1].key
+    selectRarity(card.scaling.rarities[card.scaling.rarities.length - 1].key)
   }
 }
 
@@ -624,7 +633,7 @@ const scrollTabs = (direction) => {
               <!-- Tabs Header -->
               <div class="flex gap-2 border-b border-white/10 pb-2">
                 <button v-for="rarity in selectedCard.scaling.rarities" :key="rarity.key"
-                        @click="activeRarityTab = rarity.key"
+                        @click="selectRarity(rarity.key)"
                         class="px-5 py-2 rounded-t-lg font-bold text-sm uppercase transition-colors border-b-2"
                         :class="[
                           activeRarityTab === rarity.key 
@@ -643,12 +652,18 @@ const scrollTabs = (direction) => {
                       {{ locale === 'vi' ? 'Chỉ số khi lắp' : 'Equipped Stats' }}
                     </h4>
                     <p class="mt-1 text-xs text-gray-500">
-                      {{ locale === 'vi' ? 'Giá trị ở cấp sao tối đa của phẩm chất đang chọn.' : 'Values at the selected rarity\'s maximum star level.' }}
+                      {{ locale === 'vi' ? 'Chọn cấp sao để xem chỉ số khi lắp tương ứng.' : 'Choose a star level to view its equipped stats.' }}
                     </p>
                   </div>
-                  <span class="rounded-full border border-yellow-400/25 bg-yellow-400/10 px-2.5 py-1 text-xs font-black text-yellow-300">
-                    ★{{ maxRarityTier(activeRarity)?.star ?? 0 }}
-                  </span>
+                  <select
+                    v-model.number="activeEquippedStar"
+                    class="rounded-lg border border-yellow-400/25 bg-[#11131a] px-3 py-2 text-sm font-black text-yellow-300 outline-none transition focus:border-yellow-300"
+                    :aria-label="locale === 'vi' ? 'Chọn cấp sao' : 'Choose star level'"
+                  >
+                    <option v-for="tier in activeRarity?.tiers || []" :key="tier.star" :value="tier.star">
+                      ★{{ tier.star }}
+                    </option>
+                  </select>
                 </div>
 
                 <div class="grid grid-cols-2 gap-2 sm:grid-cols-4">

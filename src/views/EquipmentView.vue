@@ -15,6 +15,7 @@ const tierFilter = ref('')
 const factionFilter = ref('')
 const typeFilter = ref('')
 const currentPage = ref(1)
+const guidePreview = ref('')
 const pageSize = 12
 const isKeepsake = computed(() => props.kind === 'keepsake')
 const title = computed(() => t(isKeepsake.value ? 'equipment.keepsakeTitle' : 'equipment.insigniaTitle'))
@@ -209,17 +210,16 @@ const insigniaGuides = computed(() => {
               <p class="mt-2 text-sm leading-relaxed text-gray-400">{{ guide.description }}</p>
             </div>
             <div v-if="guide.images.length" class="grid gap-3 border-t border-gray-800 p-3" :class="guide.images.length > 1 ? 'sm:grid-cols-2' : ''">
-              <a
+              <button
                 v-for="image in guide.images"
                 :key="image"
-                :href="safeUrl(image)"
-                target="_blank"
-                rel="noopener"
-                class="group relative block overflow-hidden rounded-lg border border-gray-800 bg-black"
+                type="button"
+                class="group relative block w-full cursor-zoom-in overflow-hidden rounded-lg border border-gray-800 bg-black"
+                @click="guidePreview = safeUrl(image)"
               >
                 <img :src="safeUrl(image)" :alt="guide.title" loading="lazy" class="aspect-video h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:opacity-60" />
                 <span class="absolute inset-0 flex items-center justify-center text-xs font-black uppercase tracking-widest text-white opacity-0 transition-opacity group-hover:opacity-100">{{ t('equipment.openGuide') }}</span>
-              </a>
+              </button>
             </div>
           </article>
         </div>
@@ -292,6 +292,29 @@ const insigniaGuides = computed(() => {
         </button>
       </div>
     </template>
+
+    <transition name="fade">
+      <div
+        v-if="guidePreview"
+        class="fixed inset-0 z-[70] flex cursor-zoom-out items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+        role="dialog"
+        aria-modal="true"
+        :aria-label="locale === 'vi' ? 'Xem ảnh hướng dẫn' : 'View guide image'"
+        @click="guidePreview = ''"
+      >
+        <div class="relative flex max-h-[92vh] max-w-[96vw] items-center justify-center" @click.stop>
+          <img :src="guidePreview" alt="" class="max-h-[92vh] max-w-[96vw] rounded-lg border border-white/10 object-contain shadow-2xl" />
+          <button
+            type="button"
+            class="absolute right-2 top-2 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/75 text-2xl font-bold text-white transition hover:bg-opm-red"
+            :aria-label="locale === 'vi' ? 'Đóng ảnh' : 'Close image'"
+            @click="guidePreview = ''"
+          >
+            ×
+          </button>
+        </div>
+      </div>
+    </transition>
   </main>
 </template>
 
