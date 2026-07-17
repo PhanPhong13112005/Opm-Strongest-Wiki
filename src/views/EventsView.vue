@@ -1,7 +1,8 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import eventsData from '../data/events.json'
+import { getEvents } from '../services/eventApi'
 
 const { t, locale } = useI18n()
 
@@ -9,6 +10,8 @@ const { t, locale } = useI18n()
 const expandedEventId = ref(null)
 
 const currentCategory = ref('main') // 'main' or 'other'
+const apiEvents = ref(null)
+let activeRequest = 0
 
 const toggleEvent = (id) => {
   if (expandedEventId.value === id) {
@@ -32,12 +35,36 @@ const getDescription = (event) => {
   return locale.value === 'en' ? event.descriptionEn : event.descriptionVi
 }
 
-// Filter and Sort events
-const sortedEvents = computed(() => {
+const localEvents = computed(() => {
   return eventsData
     .filter(event => event.category === currentCategory.value)
     .sort((a, b) => new Date(a.startDate) - new Date(b.startDate))
 })
+
+const sortedEvents = computed(() => apiEvents.value || localEvents.value)
+
+const loadEvents = async () => {
+  const requestId = ++activeRequest
+  apiEvents.value = null
+
+  try {
+    const result = await getEvents({
+      language: locale.value,
+      category: currentCategory.value,
+      page: 1,
+      pageSize: 100,
+      localEvents: eventsData,
+    })
+    if (requestId === activeRequest) apiEvents.value = result.items
+  } catch {
+    // JSON local remains the visible source when the API is unavailable.
+  }
+}
+
+watch([locale, currentCategory], () => {
+  expandedEventId.value = null
+  loadEvents()
+}, { immediate: true })
 
 </script>
 

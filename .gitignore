@@ -10,3 +10,6 @@ dist-ssr/
 scratch/
 RawData/
 File_Mẫu/
+**/bin/
+**/obj/
+.vs/

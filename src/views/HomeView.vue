@@ -1,11 +1,29 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import charactersDataVi from '../data/characters.json'
 import charactersDataEn from '../data/characters_en.json'
+import { getAllCharacters } from '../services/characterApi'
 
 const { t, locale } = useI18n()
-const charactersData = computed(() => locale.value === 'en' ? charactersDataEn : charactersDataVi)
+const localCharactersData = computed(() => locale.value === 'en' ? charactersDataEn : charactersDataVi)
+const apiCharacters = ref(null)
+const charactersData = computed(() => apiCharacters.value || localCharactersData.value)
+let activeRequest = 0
+
+const loadCharacters = async () => {
+  const requestId = ++activeRequest
+  apiCharacters.value = null
+
+  try {
+    const result = await getAllCharacters(locale.value, localCharactersData.value)
+    if (requestId === activeRequest) apiCharacters.value = result
+  } catch {
+    // JSON local remains the visible source when the API is unavailable.
+  }
+}
+
+watch(locale, loadCharacters, { immediate: true })
 
 const safeUrl = (url) => {
   if (!url) return ''

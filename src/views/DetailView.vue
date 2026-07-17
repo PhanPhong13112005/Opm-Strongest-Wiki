@@ -5,6 +5,7 @@ import { useI18n } from 'vue-i18n'
 import charactersDataVi from '../data/characters.json'
 import charactersDataEn from '../data/characters_en.json'
 import coreLabData from '../data/coreLab.json'
+import { getCharacterById } from '../services/characterApi'
 
 const props = defineProps({
   id: {
@@ -21,7 +22,24 @@ const safeUrl = (url) => {
 }
 const { t, locale } = useI18n()
 const charactersData = computed(() => locale.value === 'en' ? charactersDataEn : charactersDataVi)
-const character = computed(() => charactersData.value.find(c => c.id === props.id) || null)
+const localCharacter = computed(() => charactersData.value.find(c => c.id === props.id) || null)
+const apiCharacter = ref(null)
+const character = computed(() => apiCharacter.value || localCharacter.value)
+let activeDetailRequest = 0
+
+const loadCharacter = async () => {
+  const requestId = ++activeDetailRequest
+  apiCharacter.value = null
+
+  try {
+    const result = await getCharacterById(props.id, locale.value, localCharacter.value)
+    if (requestId === activeDetailRequest) apiCharacter.value = result
+  } catch {
+    if (requestId === activeDetailRequest && !localCharacter.value) router.push('/')
+  }
+}
+
+watch([() => props.id, locale], loadCharacter, { immediate: true })
 
 const coreData = computed(() => {
   if (!character.value) return null
@@ -322,10 +340,6 @@ watch(() => character.value, (newChar) => {
 }, { immediate: true })
 
 onMounted(() => {
-  if (!character.value) {
-    router.push('/')
-  }
-  
   window.scrollToEffectDetail = (rawTerm) => {
     const cleanSearch = rawTerm.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
     let el = document.getElementById('effect-' + cleanSearch)

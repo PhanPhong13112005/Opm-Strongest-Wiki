@@ -1,0 +1,19 @@
+@OpmWiki_Api_HostAddress = http://localhost:5180
+
+GET {{OpmWiki_Api_HostAddress}}/api/health
+Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/characters?language=vi&page=1&pageSize=12
+Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/characters/100013-urplus?language=en
+Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/events?language=vi&category=main
+Accept: application/json
