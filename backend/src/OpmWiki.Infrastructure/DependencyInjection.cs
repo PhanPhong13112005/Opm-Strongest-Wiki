@@ -21,6 +21,7 @@ public static class DependencyInjection
         services.AddDbContext<OpmWikiDbContext>(options => options.UseNpgsql(connectionString));
         services.AddScoped<ICharacterRepository, CharacterRepository>();
         services.AddScoped<IEventRepository, EventRepository>();
+        services.AddScoped<IMasteryRepository, MasteryRepository>();
         services.AddScoped<IDataSeeder, JsonDataSeeder>();
 
         var configuredDataPath = configuration["SeedData:FrontendDataPath"] ?? "../../../src/data";

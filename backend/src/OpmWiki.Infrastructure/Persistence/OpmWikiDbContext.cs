@@ -9,11 +9,13 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
     public DbSet<CharacterSkill> CharacterSkills => Set<CharacterSkill>();
     public DbSet<CharacterEffect> CharacterEffects => Set<CharacterEffect>();
     public DbSet<GameEvent> Events => Set<GameEvent>();
+    public DbSet<MasteryTier> MasteryTiers => Set<MasteryTier>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         ConfigureCharacters(modelBuilder);
         ConfigureEvents(modelBuilder);
+        ConfigureMastery(modelBuilder);
     }
 
     public override int SaveChanges()
@@ -130,6 +132,19 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
         });
     }
 
+    private static void ConfigureMastery(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<MasteryTier>(entity =>
+        {
+            entity.ToTable("mastery_tiers");
+            entity.HasKey(x => new { x.Category, x.Tier });
+            entity.Property(x => x.Category).HasMaxLength(20);
+            entity.Property(x => x.CostsJson).HasColumnType("jsonb");
+            entity.Property(x => x.RequirementsJson).HasColumnType("jsonb");
+            entity.Property(x => x.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+        });
+    }
+
     private void UpdateTimestamps()
     {
         var now = DateTimeOffset.UtcNow;
@@ -142,6 +157,11 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
         foreach (var entry in ChangeTracker.Entries<GameEvent>())
         {
             if (entry.State == EntityState.Added) entry.Entity.CreatedAt = now;
+            if (entry.State is EntityState.Added or EntityState.Modified) entry.Entity.UpdatedAt = now;
+        }
+
+        foreach (var entry in ChangeTracker.Entries<MasteryTier>())
+        {
             if (entry.State is EntityState.Added or EntityState.Modified) entry.Entity.UpdatedAt = now;
         }
     }

@@ -16,6 +16,7 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
         await File.WriteAllTextAsync(Path.Combine(dataPath, "characters.json"), CharactersVi);
         await File.WriteAllTextAsync(Path.Combine(dataPath, "characters_en.json"), CharactersEn);
         await File.WriteAllTextAsync(Path.Combine(dataPath, "events.json"), Events);
+        await File.WriteAllTextAsync(Path.Combine(dataPath, "mastery.json"), Mastery);
     }
 
     public Task DisposeAsync()
@@ -41,6 +42,7 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
 
         Assert.Equal(1, first.Characters);
         Assert.Equal(1, first.Events);
+        Assert.Equal(1, first.MasteryTiers);
         Assert.Equal(first, second);
 
         var character = await dbContext.Characters
@@ -56,6 +58,7 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
         var gameEvent = await dbContext.Events.SingleAsync();
         Assert.Equal("Test Event", gameEvent.TitleEn);
         Assert.Contains("General", gameEvent.SectionsJson);
+        Assert.Equal(1, await dbContext.MasteryTiers.CountAsync());
     }
 
     [Fact]
@@ -78,9 +81,11 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
 
         Assert.Equal(176, result.Characters);
         Assert.Equal(46, result.Events);
+        Assert.Equal(33, result.MasteryTiers);
         Assert.Equal(result.Characters, await dbContext.Characters.CountAsync());
         Assert.Equal(result.Events, await dbContext.Events.CountAsync());
         Assert.True(await dbContext.CharacterSkills.CountAsync() > 0);
+        Assert.Equal(result.MasteryTiers, await dbContext.MasteryTiers.CountAsync());
     }
 
     private const string CharactersVi = """
@@ -117,5 +122,21 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
           "startDate":"2026-07-01","endDate":"2026-07-07",
           "sections":[{"id":"General","titleVi":"Chung","titleEn":"General"}]
         }]
+        """;
+
+    private const string Mastery = """
+        {
+          "version": 1,
+          "categories": {
+            "phe": [{
+              "tier": 0,
+              "stats": {"atk": 0, "hp": 0},
+              "costs": {},
+              "requirements": []
+            }],
+            "he": [],
+            "cap": []
+          }
+        }
         """;
 }

@@ -21,14 +21,17 @@ public sealed class JsonDataSeeder(
         var charactersViPath = Path.Combine(dataPath, "characters.json");
         var charactersEnPath = Path.Combine(dataPath, "characters_en.json");
         var eventsPath = Path.Combine(dataPath, "events.json");
+        var masteryPath = Path.Combine(dataPath, "mastery.json");
 
         EnsureFileExists(charactersViPath);
         EnsureFileExists(charactersEnPath);
         EnsureFileExists(eventsPath);
+        EnsureFileExists(masteryPath);
 
         using var charactersVi = await ReadJsonAsync(charactersViPath, cancellationToken);
         using var charactersEn = await ReadJsonAsync(charactersEnPath, cancellationToken);
         using var events = await ReadJsonAsync(eventsPath, cancellationToken);
+        using var mastery = await ReadJsonAsync(masteryPath, cancellationToken);
 
         var englishCharacters = charactersEn.RootElement.EnumerateArray()
             .ToDictionary(x => GetString(x, "id"), x => x, StringComparer.OrdinalIgnoreCase);
@@ -44,17 +47,19 @@ public sealed class JsonDataSeeder(
                 englishCharacters,
                 cancellationToken);
             var eventCount = await SeedEventsAsync(events.RootElement, cancellationToken);
+            var masteryTierCount = await SeedMasteryAsync(mastery.RootElement, cancellationToken);
             await dbContext.SaveChangesAsync(cancellationToken);
 
             if (transaction is not null)
                 await transaction.CommitAsync(cancellationToken);
 
             logger.LogInformation(
-                "Imported {CharacterCount} characters and {EventCount} events from {DataPath}",
+                "Imported {CharacterCount} characters, {EventCount} events and {MasteryTierCount} mastery tiers from {DataPath}",
                 characterCount,
                 eventCount,
+                masteryTierCount,
                 dataPath);
-            return new SeedResult(characterCount, eventCount);
+            return new SeedResult(characterCount, eventCount, masteryTierCount);
         }
         catch
         {
@@ -145,6 +150,46 @@ public sealed class JsonDataSeeder(
             dbContext.Events.RemoveRange(removedEvents);
 
         return importedIds.Count;
+    }
+
+    private async Task<int> SeedMasteryAsync(JsonElement masteryRoot, CancellationToken cancellationToken)
+    {
+        if (!masteryRoot.TryGetProperty("categories", out var categories) || categories.ValueKind != JsonValueKind.Object)
+            throw new InvalidDataException("Mastery data is missing its categories object.");
+
+        var existing = await dbContext.MasteryTiers
+            .ToDictionaryAsync(x => $"{x.Category}:{x.Tier}", StringComparer.OrdinalIgnoreCase, cancellationToken);
+        var importedKeys = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+        foreach (var category in categories.EnumerateObject())
+        {
+            if (category.Value.ValueKind != JsonValueKind.Array) continue;
+
+            foreach (var source in category.Value.EnumerateArray())
+            {
+                var tier = GetInt(source, "tier");
+                var key = $"{category.Name}:{tier}";
+                importedKeys.Add(key);
+
+                if (!existing.TryGetValue(key, out var masteryTier))
+                {
+                    masteryTier = new MasteryTier { Category = category.Name, Tier = tier };
+                    dbContext.MasteryTiers.Add(masteryTier);
+                }
+
+                if (source.TryGetProperty("stats", out var stats) && stats.ValueKind == JsonValueKind.Object)
+                {
+                    masteryTier.Atk = GetInt(stats, "atk");
+                    masteryTier.Hp = GetInt(stats, "hp");
+                }
+                masteryTier.CostsJson = GetRawJson(source, "costs", "{}");
+                masteryTier.RequirementsJson = GetRawJson(source, "requirements", "[]");
+            }
+        }
+
+        var removed = existing.Where(x => !importedKeys.Contains(x.Key)).Select(x => x.Value).ToArray();
+        if (removed.Length > 0) dbContext.MasteryTiers.RemoveRange(removed);
+        return importedKeys.Count;
     }
 
     private void ReplaceSkills(Character character, JsonElement vi, JsonElement en)

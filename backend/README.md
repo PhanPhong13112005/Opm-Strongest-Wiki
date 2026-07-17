@@ -55,6 +55,7 @@ docker compose exec api dotnet OpmWiki.Api.dll --seed-data
 | `GET` | `/api/characters/{id}` | Chi tiết nhân vật |
 | `GET` | `/api/events` | Danh sách, lọc thời gian và phân trang sự kiện |
 | `GET` | `/api/events/{id}` | Chi tiết sự kiện |
+| `GET` | `/api/mastery` | Cấu hình 3 nhánh và 33 mốc Tinh Thông |
 
 Các endpoint dữ liệu hỗ trợ `language=vi` hoặc `language=en`.
 
@@ -73,6 +74,7 @@ Migration nằm trong `src/OpmWiki.Infrastructure/Migrations`. Lệnh `--seed-da
 - `src/data/characters.json`
 - `src/data/characters_en.json`
 - `src/data/events.json`
+- `src/data/mastery.json`
 
 Quá trình nhập là idempotent: chạy lại sẽ cập nhật theo ID, thay thế kỹ năng/hiệu ứng cũ và xóa bản ghi không còn trong JSON nguồn.
 

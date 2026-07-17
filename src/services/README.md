@@ -15,6 +15,9 @@ Thư mục này chứa lớp giao tiếp giữa giao diện Vue và backend ASP.
 `eventApi.js` tải danh sách/chi tiết sự kiện và hợp nhất response API với metadata
 giao diện trong `events.json`, ví dụ ngày mở server và nội dung nhiệm vụ theo section.
 
+`masteryApi.js` tải cấu hình Tinh thông theo ba nhóm phe, hệ và cấp; giao diện dùng
+`mastery.json` làm nguồn dự phòng khi backend không khả dụng.
+
 Trong môi trường development, URL mặc định là `http://localhost:5180`. Khi triển khai,
 đặt biến `VITE_API_BASE_URL` thành URL public của backend. Nếu không cấu hình URL ở
 production, frontend sẽ tiếp tục dùng dữ liệu JSON được đóng gói sẵn.
