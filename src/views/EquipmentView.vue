@@ -1,8 +1,9 @@
 <script setup>
-import { computed, ref, watch } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import charactersVi from '../data/characters.json'
 import charactersEn from '../data/characters_en.json'
+import { getAllKeepsakes, getKeepsakeById } from '../services/keepsakeApi'
 
 const props = defineProps({
   kind: { type: String, required: true },
@@ -16,6 +17,8 @@ const factionFilter = ref('')
 const typeFilter = ref('')
 const currentPage = ref(1)
 const guidePreview = ref('')
+const localKeepsakes = charactersVi.filter(character => character.keepsakeIcon)
+const keepsakeCatalog = ref(localKeepsakes)
 const pageSize = 12
 const isKeepsake = computed(() => props.kind === 'keepsake')
 const title = computed(() => t(isKeepsake.value ? 'equipment.keepsakeTitle' : 'equipment.insigniaTitle'))
@@ -32,6 +35,23 @@ const insigniaItems = insigniaClasses.map(classLevel => ({
   faction: '',
   type: ''
 }))
+
+onMounted(async () => {
+  if (!isKeepsake.value) return
+
+  try {
+    if (props.id) {
+      const localKeepsake = localKeepsakes.find(item => item.id === props.id)
+      const detail = await getKeepsakeById(props.id, 'vi', localKeepsake)
+      keepsakeCatalog.value = localKeepsakes.map(item => item.id === detail.id ? detail : item)
+    } else {
+      const items = await getAllKeepsakes('vi', localKeepsakes)
+      if (items.length) keepsakeCatalog.value = items
+    }
+  } catch {
+    keepsakeCatalog.value = localKeepsakes
+  }
+})
 
 const localized = (character) => {
   if (locale.value !== 'en') return character
@@ -81,7 +101,7 @@ const getImage = (character) => {
 
 const baseItems = computed(() => {
   const base = isKeepsake.value
-    ? charactersVi.filter(character => character.keepsakeIcon)
+    ? keepsakeCatalog.value
     : insigniaItems
   return base
 })
@@ -112,12 +132,18 @@ watch([search, tierFilter, factionFilter, typeFilter, isKeepsake], () => { curre
 watch(totalPages, (total) => { if (currentPage.value > total) currentPage.value = total })
 
 const item = computed(() => isKeepsake.value
-  ? charactersVi.find(character => character.id === props.id)
+  ? keepsakeCatalog.value.find(character => character.id === props.id)
   : insigniaItems.find(insignia => insignia.id === props.id)
 )
 const itemName = computed(() => {
   if (!item.value) return ''
   return isKeepsake.value ? `${displayName(item.value)} ${t('detail.keepsake')}` : displayName(item.value)
+})
+const keepsakeAcquisition = computed(() => {
+  if (!isKeepsake.value || !item.value) return ''
+  const acquisitionType = item.value.acquisitionType ||
+    (item.value.tier?.includes('UR') ? 'limited-event' : 'related-event')
+  return t(acquisitionType === 'limited-event' ? 'equipment.keepsakeSourceUr' : 'equipment.keepsakeSource')
 })
 
 const insigniaGuides = computed(() => {
@@ -181,7 +207,7 @@ const insigniaGuides = computed(() => {
 
 <template>
   <main class="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6">
-    <template v-if="id && item">
+    <template v-if="props.id && item">
       <RouterLink :to="isKeepsake ? '/keepsakes' : '/insignias'" class="mb-6 inline-flex text-sm font-bold text-gray-400 hover:text-white">← {{ t('equipment.backToList') }}</RouterLink>
       <section class="grid gap-8 rounded-2xl border border-gray-800 bg-[#12131a] p-6 md:grid-cols-[280px_1fr] md:p-10">
         <div class="flex min-h-64 items-center justify-center rounded-xl bg-[#0b0c10] p-6">
@@ -195,6 +221,12 @@ const insigniaGuides = computed(() => {
             <span v-if="isKeepsake" class="rounded-full border border-gray-700 bg-[#0b0c10] px-3 py-1 text-gray-300">{{ displayFaction(item.faction) }}</span>
           </div>
         </div>
+      </section>
+
+      <section v-if="isKeepsake" class="mt-8 rounded-2xl border border-gray-800 bg-[#12131a] p-6 md:p-10">
+        <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-opm-gold">{{ t('equipment.acquisitionGuide') }}</p>
+        <h2 class="text-2xl font-black text-white">{{ t('equipment.keepsakeHowToGet') }}</h2>
+        <p class="mt-4 max-w-3xl text-sm leading-relaxed text-gray-300">{{ keepsakeAcquisition }}</p>
       </section>
 
       <section v-if="!isKeepsake" class="mt-8 rounded-2xl border border-gray-800 bg-[#12131a] p-6 md:p-10">

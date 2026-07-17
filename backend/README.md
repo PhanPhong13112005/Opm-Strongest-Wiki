@@ -56,6 +56,8 @@ docker compose exec api dotnet OpmWiki.Api.dll --seed-data
 | `GET` | `/api/events` | Danh sách, lọc thời gian và phân trang sự kiện |
 | `GET` | `/api/events/{id}` | Chi tiết sự kiện |
 | `GET` | `/api/mastery` | Cấu hình 3 nhánh và 33 mốc Tinh Thông |
+| `GET` | `/api/keepsakes` | Danh sách, tìm kiếm, lọc và phân trang Kỷ vật |
+| `GET` | `/api/keepsakes/{id}` | Chi tiết Kỷ vật theo nhân vật |
 
 Các endpoint dữ liệu hỗ trợ `language=vi` hoặc `language=en`.
 
@@ -65,6 +67,7 @@ Ví dụ:
 /api/characters?language=vi&tier=UR%2B&page=1&pageSize=12
 /api/characters/100013-urplus?language=en
 /api/events?language=vi&category=main&from=2026-07-01&to=2026-07-31
+/api/keepsakes?language=en&tier=UR%2B&page=1&pageSize=12
 ```
 
 ## Database và nhập dữ liệu

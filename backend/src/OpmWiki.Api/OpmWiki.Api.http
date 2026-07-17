@@ -22,3 +22,13 @@ Accept: application/json
 
 GET {{OpmWiki_Api_HostAddress}}/api/mastery
 Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/keepsakes?language=vi&tier=UR%2B&page=1&pageSize=12
+Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/keepsakes/100313-urplus?language=en
+Accept: application/json
