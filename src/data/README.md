@@ -28,3 +28,5 @@ Thư mục này chứa toàn bộ dữ liệu cấu trúc dưới dạng JSON, h
     *   **Nhiệm vụ**: Quản lý lịch trình sự kiện trong tháng (Banner chiêu mộ, Sự kiện huấn luyện, Quà nạp mốc).
 4.  **`backgear.json`**:
     *   **Nhiệm vụ**: Chứa tên song ngữ, nguồn nhận, ảnh, chỉ số theo cấp, chi phí nâng và dữ liệu Bộ Sưu Tập Thẻ Hình nền.
+5.  **`insignias.json`**:
+    *   **Nhiệm vụ**: Chứa đúng 10 Huy Hiệu hợp lệ, nội dung song ngữ và quan hệ tới các hướng dẫn nhận dùng chung. Đây là nguồn seed cho PostgreSQL và dữ liệu dự phòng của frontend.

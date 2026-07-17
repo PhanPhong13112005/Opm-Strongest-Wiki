@@ -10,12 +10,16 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
     public DbSet<CharacterEffect> CharacterEffects => Set<CharacterEffect>();
     public DbSet<GameEvent> Events => Set<GameEvent>();
     public DbSet<MasteryTier> MasteryTiers => Set<MasteryTier>();
+    public DbSet<Insignia> Insignias => Set<Insignia>();
+    public DbSet<InsigniaGuide> InsigniaGuides => Set<InsigniaGuide>();
+    public DbSet<InsigniaGuideLink> InsigniaGuideLinks => Set<InsigniaGuideLink>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         ConfigureCharacters(modelBuilder);
         ConfigureEvents(modelBuilder);
         ConfigureMastery(modelBuilder);
+        ConfigureInsignias(modelBuilder);
     }
 
     public override int SaveChanges()
@@ -145,6 +149,52 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
         });
     }
 
+    private static void ConfigureInsignias(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Insignia>(entity =>
+        {
+            entity.ToTable("insignias");
+            entity.HasKey(x => x.Id);
+            entity.Property(x => x.Id).HasMaxLength(80);
+            entity.Property(x => x.ClassLevel).HasMaxLength(80);
+            entity.Property(x => x.NameVi).HasMaxLength(200);
+            entity.Property(x => x.NameEn).HasMaxLength(200);
+            entity.Property(x => x.ImageUrl).HasMaxLength(500);
+            entity.Property(x => x.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+            entity.Property(x => x.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+            entity.HasIndex(x => x.ClassLevel).IsUnique();
+            entity.HasIndex(x => x.SortOrder).IsUnique();
+        });
+
+        modelBuilder.Entity<InsigniaGuide>(entity =>
+        {
+            entity.ToTable("insignia_guides");
+            entity.HasKey(x => x.Id);
+            entity.Property(x => x.Id).HasMaxLength(80);
+            entity.Property(x => x.TitleVi).HasMaxLength(200);
+            entity.Property(x => x.TitleEn).HasMaxLength(200);
+            entity.Property(x => x.ImageUrls).HasColumnType("text[]");
+            entity.Property(x => x.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+        });
+
+        modelBuilder.Entity<InsigniaGuideLink>(entity =>
+        {
+            entity.ToTable("insignia_guide_links");
+            entity.HasKey(x => new { x.InsigniaId, x.GuideId });
+            entity.Property(x => x.InsigniaId).HasMaxLength(80);
+            entity.Property(x => x.GuideId).HasMaxLength(80);
+            entity.HasIndex(x => new { x.InsigniaId, x.SortOrder }).IsUnique();
+            entity.HasOne(x => x.Insignia)
+                .WithMany(x => x.GuideLinks)
+                .HasForeignKey(x => x.InsigniaId)
+                .OnDelete(DeleteBehavior.Cascade);
+            entity.HasOne(x => x.Guide)
+                .WithMany(x => x.InsigniaLinks)
+                .HasForeignKey(x => x.GuideId)
+                .OnDelete(DeleteBehavior.Cascade);
+        });
+    }
+
     private void UpdateTimestamps()
     {
         var now = DateTimeOffset.UtcNow;
@@ -161,6 +211,17 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
         }
 
         foreach (var entry in ChangeTracker.Entries<MasteryTier>())
+        {
+            if (entry.State is EntityState.Added or EntityState.Modified) entry.Entity.UpdatedAt = now;
+        }
+
+        foreach (var entry in ChangeTracker.Entries<Insignia>())
+        {
+            if (entry.State == EntityState.Added) entry.Entity.CreatedAt = now;
+            if (entry.State is EntityState.Added or EntityState.Modified) entry.Entity.UpdatedAt = now;
+        }
+
+        foreach (var entry in ChangeTracker.Entries<InsigniaGuide>())
         {
             if (entry.State is EntityState.Added or EntityState.Modified) entry.Entity.UpdatedAt = now;
         }

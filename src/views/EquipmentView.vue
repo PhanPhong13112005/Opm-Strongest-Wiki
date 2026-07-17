@@ -3,7 +3,9 @@ import { computed, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import charactersVi from '../data/characters.json'
 import charactersEn from '../data/characters_en.json'
+import insigniaData from '../data/insignias.json'
 import { getAllKeepsakes, getKeepsakeById } from '../services/keepsakeApi'
+import { createLocalInsigniaCatalog, getAllInsignias, getInsigniaById } from '../services/insigniaApi'
 
 const props = defineProps({
   kind: { type: String, required: true },
@@ -18,38 +20,38 @@ const typeFilter = ref('')
 const currentPage = ref(1)
 const guidePreview = ref('')
 const localKeepsakes = charactersVi.filter(character => character.keepsakeIcon)
+const localInsignias = createLocalInsigniaCatalog(insigniaData)
 const keepsakeCatalog = ref(localKeepsakes)
+const insigniaCatalog = ref(localInsignias)
 const pageSize = 12
 const isKeepsake = computed(() => props.kind === 'keepsake')
 const title = computed(() => t(isKeepsake.value ? 'equipment.keepsakeTitle' : 'equipment.insigniaTitle'))
 const description = computed(() => t(isKeepsake.value ? 'equipment.keepsakeDesc' : 'equipment.insigniaDesc'))
-const guideRoot = '/Class/Hướng dẫn'
 const safeUrl = (url) => encodeURI(url).replace(/\+/g, '%2B').replace(/#/g, '%23')
-const guideImage = (filename) => `${guideRoot}/${filename}`
-const insigniaClasses = ['A', 'B', 'C', 'Class_S', 'Class_SS', 'Demon', 'Dragon', 'Martial_Artist', 'Outlaw', 'Tiger']
-const insigniaItems = insigniaClasses.map(classLevel => ({
-  id: `insignia-${classLevel}`,
-  classLevel,
-  name: classLevel,
-  tier: '',
-  faction: '',
-  type: ''
-}))
 
 onMounted(async () => {
-  if (!isKeepsake.value) return
-
   try {
-    if (props.id) {
-      const localKeepsake = localKeepsakes.find(item => item.id === props.id)
-      const detail = await getKeepsakeById(props.id, 'vi', localKeepsake)
-      keepsakeCatalog.value = localKeepsakes.map(item => item.id === detail.id ? detail : item)
+    if (isKeepsake.value) {
+      if (props.id) {
+        const localKeepsake = localKeepsakes.find(item => item.id === props.id)
+        const detail = await getKeepsakeById(props.id, 'vi', localKeepsake)
+        keepsakeCatalog.value = localKeepsakes.map(item => item.id === detail.id ? detail : item)
+      } else {
+        const items = await getAllKeepsakes('vi', localKeepsakes)
+        if (items.length) keepsakeCatalog.value = items
+      }
     } else {
-      const items = await getAllKeepsakes('vi', localKeepsakes)
-      if (items.length) keepsakeCatalog.value = items
+      const items = await getAllInsignias(locale.value, localInsignias)
+      if (items.length) insigniaCatalog.value = items
+      if (props.id) {
+        const localInsignia = insigniaCatalog.value.find(item => item.id === props.id)
+        const detail = await getInsigniaById(props.id, locale.value, localInsignia)
+        insigniaCatalog.value = insigniaCatalog.value.map(item => item.id === detail.id ? detail : item)
+      }
     }
   } catch {
-    keepsakeCatalog.value = localKeepsakes
+    if (isKeepsake.value) keepsakeCatalog.value = localKeepsakes
+    else insigniaCatalog.value = localInsignias
   }
 })
 
@@ -75,24 +77,12 @@ const displayType = (type) => ({
 
 const displayName = (item) => {
   if (isKeepsake.value) return localized(item).name
-  const names = {
-    A: ['Huy Hiệu A', 'A Insignia'],
-    B: ['Huy Hiệu B', 'B Insignia'],
-    C: ['Huy Hiệu C', 'C Insignia'],
-    Class_S: ['Huy Hiệu S', 'S Insignia'],
-    Class_SS: ['Huy Hiệu SS', 'SS Insignia'],
-    Demon: ['Huy Hiệu Quỷ', 'Demon Insignia'],
-    Dragon: ['Huy Hiệu Rồng', 'Dragon Insignia'],
-    Martial_Artist: ['Huy Hiệu Võ Thuật', 'Martial Artist Insignia'],
-    Outlaw: ['Huy Hiệu Tội Phạm', 'Outlaw Insignia'],
-    Tiger: ['Huy Hiệu Hổ', 'Tiger Insignia']
-  }
-  return names[item.classLevel]?.[locale.value === 'en' ? 1 : 0] || item.name
+  return locale.value === 'en' ? item.nameEn : item.nameVi
 }
 
 const getImage = (character) => {
   if (isKeepsake.value && character.keepsakeIcon) return character.keepsakeIcon
-  if (!isKeepsake.value) return `/Class/${character.classLevel || 'Other'}.png`
+  if (!isKeepsake.value) return character.imageUrl
   if (!character.imageURL) return ''
   return character.imageURL.startsWith('/')
     ? character.imageURL
@@ -102,7 +92,7 @@ const getImage = (character) => {
 const baseItems = computed(() => {
   const base = isKeepsake.value
     ? keepsakeCatalog.value
-    : insigniaItems
+    : insigniaCatalog.value
   return base
 })
 
@@ -133,7 +123,7 @@ watch(totalPages, (total) => { if (currentPage.value > total) currentPage.value 
 
 const item = computed(() => isKeepsake.value
   ? keepsakeCatalog.value.find(character => character.id === props.id)
-  : insigniaItems.find(insignia => insignia.id === props.id)
+  : insigniaCatalog.value.find(insignia => insignia.id === props.id)
 )
 const itemName = computed(() => {
   if (!item.value) return ''
@@ -148,60 +138,12 @@ const keepsakeAcquisition = computed(() => {
 
 const insigniaGuides = computed(() => {
   if (isKeepsake.value || !item.value) return []
-
-  const dailyRequests = {
-    title: t('equipment.guideDailyRequests'),
-    description: t('equipment.guideDailyRequestsDesc'),
-    images: [guideImage('Request_1.webp'), guideImage('Request_2.webp')]
-  }
-  const randomChest = {
-    title: t('equipment.guideRandomChest'),
-    description: t('equipment.guideRandomChestDesc'),
-    images: [guideImage('Chest.webp')]
-  }
-  const randomChestSource = {
-    title: t('equipment.guideRandomChestSource'),
-    description: t('equipment.guideRandomChestSourceDesc'),
-    images: [guideImage('Request_1.webp'), guideImage('Request_2.webp')]
-  }
-  const classAShop = {
-    title: t('equipment.guideClassAShop'),
-    description: t('equipment.guideClassAShopDesc'),
-    images: [guideImage('Shop_3.webp')]
-  }
-  const demonShop = {
-    title: t('equipment.guideDemonShop'),
-    description: t('equipment.guideDemonShopDesc'),
-    images: [guideImage('Shop.webp')]
-  }
-  const badgeChest = {
-    title: t('equipment.guideBadgeChest'),
-    description: t('equipment.guideBadgeChestDesc'),
-    images: [guideImage('Shop_2.webp'), guideImage('Detal_Shop_2.webp')]
-  }
-  const monthlyCard = {
-    title: t('equipment.guideMonthlyCard'),
-    description: t('equipment.guideMonthlyCardDesc'),
-    images: [guideImage('Nap.webp')]
-  }
-  const unavailable = {
-    title: t('equipment.guideUnavailable'),
-    description: t('equipment.guideUnavailableDesc'),
-    images: []
-  }
-
-  return {
-    A: [classAShop],
-    B: [randomChestSource, randomChest],
-    C: [randomChestSource, randomChest],
-    Class_S: [badgeChest, monthlyCard],
-    Class_SS: [badgeChest, monthlyCard],
-    Demon: [dailyRequests, demonShop],
-    Dragon: [dailyRequests, badgeChest, monthlyCard],
-    Martial_Artist: [badgeChest, monthlyCard],
-    Outlaw: [badgeChest, monthlyCard],
-    Tiger: [randomChestSource, randomChest]
-  }[item.value.classLevel] || [unavailable]
+  return (item.value.guides || []).map(guide => ({
+    id: guide.id,
+    title: locale.value === 'en' ? guide.titleEn : guide.titleVi,
+    description: locale.value === 'en' ? guide.descriptionEn : guide.descriptionVi,
+    images: guide.images || [],
+  }))
 })
 </script>
 
@@ -236,7 +178,7 @@ const insigniaGuides = computed(() => {
         </div>
 
         <div class="grid gap-5 lg:grid-cols-2">
-          <article v-for="guide in insigniaGuides" :key="guide.title" class="overflow-hidden rounded-xl border border-gray-800 bg-[#0b0c10]">
+          <article v-for="guide in insigniaGuides" :key="guide.id" class="overflow-hidden rounded-xl border border-gray-800 bg-[#0b0c10]">
             <div class="p-5">
               <h3 class="font-black text-white">{{ guide.title }}</h3>
               <p class="mt-2 text-sm leading-relaxed text-gray-400">{{ guide.description }}</p>

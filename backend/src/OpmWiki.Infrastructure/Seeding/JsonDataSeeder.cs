@@ -22,16 +22,19 @@ public sealed class JsonDataSeeder(
         var charactersEnPath = Path.Combine(dataPath, "characters_en.json");
         var eventsPath = Path.Combine(dataPath, "events.json");
         var masteryPath = Path.Combine(dataPath, "mastery.json");
+        var insigniasPath = Path.Combine(dataPath, "insignias.json");
 
         EnsureFileExists(charactersViPath);
         EnsureFileExists(charactersEnPath);
         EnsureFileExists(eventsPath);
         EnsureFileExists(masteryPath);
+        EnsureFileExists(insigniasPath);
 
         using var charactersVi = await ReadJsonAsync(charactersViPath, cancellationToken);
         using var charactersEn = await ReadJsonAsync(charactersEnPath, cancellationToken);
         using var events = await ReadJsonAsync(eventsPath, cancellationToken);
         using var mastery = await ReadJsonAsync(masteryPath, cancellationToken);
+        using var insignias = await ReadJsonAsync(insigniasPath, cancellationToken);
 
         var englishCharacters = charactersEn.RootElement.EnumerateArray()
             .ToDictionary(x => GetString(x, "id"), x => x, StringComparer.OrdinalIgnoreCase);
@@ -48,18 +51,20 @@ public sealed class JsonDataSeeder(
                 cancellationToken);
             var eventCount = await SeedEventsAsync(events.RootElement, cancellationToken);
             var masteryTierCount = await SeedMasteryAsync(mastery.RootElement, cancellationToken);
+            var insigniaCount = await SeedInsigniasAsync(insignias.RootElement, cancellationToken);
             await dbContext.SaveChangesAsync(cancellationToken);
 
             if (transaction is not null)
                 await transaction.CommitAsync(cancellationToken);
 
             logger.LogInformation(
-                "Imported {CharacterCount} characters, {EventCount} events and {MasteryTierCount} mastery tiers from {DataPath}",
+                "Imported {CharacterCount} characters, {EventCount} events, {MasteryTierCount} mastery tiers and {InsigniaCount} insignias from {DataPath}",
                 characterCount,
                 eventCount,
                 masteryTierCount,
+                insigniaCount,
                 dataPath);
-            return new SeedResult(characterCount, eventCount, masteryTierCount);
+            return new SeedResult(characterCount, eventCount, masteryTierCount, insigniaCount);
         }
         catch
         {
@@ -190,6 +195,106 @@ public sealed class JsonDataSeeder(
         var removed = existing.Where(x => !importedKeys.Contains(x.Key)).Select(x => x.Value).ToArray();
         if (removed.Length > 0) dbContext.MasteryTiers.RemoveRange(removed);
         return importedKeys.Count;
+    }
+
+    private async Task<int> SeedInsigniasAsync(JsonElement root, CancellationToken cancellationToken)
+    {
+        if (!root.TryGetProperty("guides", out var guidesRoot) || guidesRoot.ValueKind != JsonValueKind.Array)
+            throw new InvalidDataException("Insignia data is missing its guides array.");
+        if (!root.TryGetProperty("items", out var itemsRoot) || itemsRoot.ValueKind != JsonValueKind.Array)
+            throw new InvalidDataException("Insignia data is missing its items array.");
+
+        var existingGuides = await dbContext.InsigniaGuides
+            .ToDictionaryAsync(x => x.Id, StringComparer.OrdinalIgnoreCase, cancellationToken);
+        var importedGuideIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+        foreach (var source in guidesRoot.EnumerateArray())
+        {
+            var id = GetString(source, "id");
+            if (string.IsNullOrWhiteSpace(id))
+                throw new InvalidDataException("An insignia guide is missing its id.");
+            if (!importedGuideIds.Add(id))
+                throw new InvalidDataException($"Duplicate insignia guide id: '{id}'.");
+
+            if (!existingGuides.TryGetValue(id, out var guide))
+            {
+                guide = new InsigniaGuide { Id = id };
+                existingGuides.Add(id, guide);
+                dbContext.InsigniaGuides.Add(guide);
+            }
+
+            guide.TitleVi = GetString(source, "titleVi");
+            guide.TitleEn = Fallback(GetString(source, "titleEn"), guide.TitleVi);
+            guide.DescriptionVi = GetString(source, "descriptionVi");
+            guide.DescriptionEn = Fallback(GetString(source, "descriptionEn"), guide.DescriptionVi);
+            guide.ImageUrls = GetStringArray(source, "images");
+        }
+
+        var existingInsignias = await dbContext.Insignias
+            .Include(x => x.GuideLinks)
+            .ToDictionaryAsync(x => x.Id, StringComparer.OrdinalIgnoreCase, cancellationToken);
+        var importedInsigniaIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+        foreach (var source in itemsRoot.EnumerateArray())
+        {
+            var id = GetString(source, "id");
+            var classLevel = GetString(source, "classLevel");
+            if (string.IsNullOrWhiteSpace(id))
+                throw new InvalidDataException("An insignia is missing its id.");
+            if (!importedInsigniaIds.Add(id))
+                throw new InvalidDataException($"Duplicate insignia id: '{id}'.");
+            if (classLevel is "Other" or "Villain")
+                throw new InvalidDataException($"Excluded insignia class found: '{classLevel}'.");
+
+            if (!existingInsignias.TryGetValue(id, out var insignia))
+            {
+                insignia = new Insignia { Id = id };
+                dbContext.Insignias.Add(insignia);
+            }
+
+            insignia.ClassLevel = classLevel;
+            insignia.NameVi = GetString(source, "nameVi");
+            insignia.NameEn = Fallback(GetString(source, "nameEn"), insignia.NameVi);
+            insignia.ImageUrl = GetString(source, "imageUrl");
+            insignia.SortOrder = GetInt(source, "sortOrder");
+
+            var guideIds = GetStringArray(source, "guideIds");
+            var existingLinks = insignia.GuideLinks
+                .ToDictionary(x => x.GuideId, StringComparer.OrdinalIgnoreCase);
+            for (var index = 0; index < guideIds.Length; index++)
+            {
+                var guideId = guideIds[index];
+                if (!existingGuides.TryGetValue(guideId, out var guide) || !importedGuideIds.Contains(guideId))
+                    throw new InvalidDataException($"Insignia '{id}' references unknown guide '{guideId}'.");
+
+                if (!existingLinks.TryGetValue(guideId, out var link))
+                {
+                    link = new InsigniaGuideLink
+                    {
+                        InsigniaId = id,
+                        GuideId = guideId,
+                        Guide = guide,
+                    };
+                    insignia.GuideLinks.Add(link);
+                }
+                link.SortOrder = index;
+            }
+
+            var removedLinks = existingLinks.Values.Where(x => !guideIds.Contains(x.GuideId)).ToArray();
+            if (removedLinks.Length > 0) dbContext.InsigniaGuideLinks.RemoveRange(removedLinks);
+        }
+
+        var removedInsignias = existingInsignias.Values
+            .Where(x => !importedInsigniaIds.Contains(x.Id))
+            .ToArray();
+        if (removedInsignias.Length > 0) dbContext.Insignias.RemoveRange(removedInsignias);
+
+        var removedGuides = existingGuides.Values
+            .Where(x => !importedGuideIds.Contains(x.Id))
+            .ToArray();
+        if (removedGuides.Length > 0) dbContext.InsigniaGuides.RemoveRange(removedGuides);
+
+        return importedInsigniaIds.Count;
     }
 
     private void ReplaceSkills(Character character, JsonElement vi, JsonElement en)

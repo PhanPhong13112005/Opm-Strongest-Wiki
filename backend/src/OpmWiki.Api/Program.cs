@@ -44,10 +44,11 @@ if (seedRequested || migrateOnStartup)
     {
         var result = await scope.ServiceProvider.GetRequiredService<IDataSeeder>().SeedAsync();
         app.Logger.LogInformation(
-            "Seed completed: {Characters} characters, {Events} events, {MasteryTiers} mastery tiers.",
+            "Seed completed: {Characters} characters, {Events} events, {MasteryTiers} mastery tiers, {Insignias} insignias.",
             result.Characters,
             result.Events,
-            result.MasteryTiers);
+            result.MasteryTiers,
+            result.Insignias);
         return;
     }
 }

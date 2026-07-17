@@ -10,6 +10,6 @@ Nap.webp: là mua gói tháng thì mỗi ngày nó tặng 1 Rương và 1 tặng
 3. Mảnh Cấp SS
 4. Mảnh Cấp S
 5. Mảnh Tội phạm
-Mystery_Shop.png: Shop bí ẩn bán
+Mystery_Shop.png: Shop bí ẩn bán Tất cả Huy hiệu có trong game
 Shop_3.webp: Cách lấy Huy hiệu Bậc A
 Tính lũy đủ 50 mảnh sẽ được 1 Huy hiệu

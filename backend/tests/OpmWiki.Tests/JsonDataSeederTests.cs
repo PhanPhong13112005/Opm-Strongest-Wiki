@@ -17,6 +17,7 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
         await File.WriteAllTextAsync(Path.Combine(dataPath, "characters_en.json"), CharactersEn);
         await File.WriteAllTextAsync(Path.Combine(dataPath, "events.json"), Events);
         await File.WriteAllTextAsync(Path.Combine(dataPath, "mastery.json"), Mastery);
+        await File.WriteAllTextAsync(Path.Combine(dataPath, "insignias.json"), Insignias);
     }
 
     public Task DisposeAsync()
@@ -43,6 +44,7 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
         Assert.Equal(1, first.Characters);
         Assert.Equal(1, first.Events);
         Assert.Equal(1, first.MasteryTiers);
+        Assert.Equal(1, first.Insignias);
         Assert.Equal(first, second);
 
         var character = await dbContext.Characters
@@ -59,6 +61,12 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
         Assert.Equal("Test Event", gameEvent.TitleEn);
         Assert.Contains("General", gameEvent.SectionsJson);
         Assert.Equal(1, await dbContext.MasteryTiers.CountAsync());
+        var insignia = await dbContext.Insignias
+            .Include(x => x.GuideLinks)
+            .ThenInclude(x => x.Guide)
+            .SingleAsync();
+        Assert.Equal("Test Insignia", insignia.NameEn);
+        Assert.Equal("Mystery Shop", Assert.Single(insignia.GuideLinks).Guide.TitleEn);
     }
 
     [Fact]
@@ -82,10 +90,12 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
         Assert.Equal(176, result.Characters);
         Assert.Equal(46, result.Events);
         Assert.Equal(33, result.MasteryTiers);
+        Assert.Equal(10, result.Insignias);
         Assert.Equal(result.Characters, await dbContext.Characters.CountAsync());
         Assert.Equal(result.Events, await dbContext.Events.CountAsync());
         Assert.True(await dbContext.CharacterSkills.CountAsync() > 0);
         Assert.Equal(result.MasteryTiers, await dbContext.MasteryTiers.CountAsync());
+        Assert.Equal(result.Insignias, await dbContext.Insignias.CountAsync());
     }
 
     private const string CharactersVi = """
@@ -137,6 +147,20 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
             "he": [],
             "cap": []
           }
+        }
+        """;
+
+    private const string Insignias = """
+        {
+          "version": 1,
+          "guides": [{
+            "id":"mystery-shop","titleVi":"Cửa hàng Bí ẩn","titleEn":"Mystery Shop",
+            "descriptionVi":"Mô tả","descriptionEn":"Description","images":["/guide.png"]
+          }],
+          "items": [{
+            "id":"insignia-A","classLevel":"A","nameVi":"Huy Hiệu thử","nameEn":"Test Insignia",
+            "imageUrl":"/Class/A.png","sortOrder":1,"guideIds":["mystery-shop"]
+          }]
         }
         """;
 }

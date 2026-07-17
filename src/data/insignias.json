@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "guides": [
+    {
+      "id": "daily-requests",
+      "titleVi": "Nhiệm vụ Yêu cầu hằng ngày",
+      "titleEn": "Daily Requests",
+      "descriptionVi": "Hoàn thành các Yêu cầu hằng ngày có phần thưởng mảnh Huy Hiệu Rồng, Huy Hiệu Quỷ hoặc Rương Mảnh Huy Hiệu.",
+      "descriptionEn": "Complete Daily Requests that reward Dragon or Demon Insignia shards, or an Insignia Shard Box.",
+      "images": [
+        "/Class/Hướng dẫn/Request_1.webp",
+        "/Class/Hướng dẫn/Request_2.webp"
+      ]
+    },
+    {
+      "id": "random-shard-box",
+      "titleVi": "Rương Mảnh Huy Hiệu ngẫu nhiên",
+      "titleEn": "Random Insignia Shard Box",
+      "descriptionVi": "Mở rương để nhận ngẫu nhiên mảnh Huy Hiệu Hổ, Huy Hiệu B hoặc Huy Hiệu C.",
+      "descriptionEn": "Open the box to randomly receive Tiger, B-Class, or C-Class Insignia shards.",
+      "images": ["/Class/Hướng dẫn/Chest.webp"]
+    },
+    {
+      "id": "class-a-shop",
+      "titleVi": "Cửa hàng Bang hội",
+      "titleEn": "Club Shop",
+      "descriptionVi": "Mua mảnh Huy Hiệu A trong Cửa hàng Bang hội bằng tiền tệ tương ứng. Tích lũy đủ 50 mảnh để nhận 1 Huy Hiệu A.",
+      "descriptionEn": "Purchase A Insignia shards from the Club Shop with the corresponding currency. Collect 50 shards to obtain one A Insignia.",
+      "images": ["/Class/Hướng dẫn/Shop_3.webp"]
+    },
+    {
+      "id": "general-shop",
+      "titleVi": "Cửa hàng thường",
+      "titleEn": "General Store",
+      "descriptionVi": "Mảnh Huy Hiệu Quỷ có thể xuất hiện trong Cửa hàng thường và được mua bằng đơn vị tiền tệ tương ứng.",
+      "descriptionEn": "Demon Insignia shards may appear in the General Store and can be purchased with the corresponding currency.",
+      "images": ["/Class/Hướng dẫn/Shop.webp"]
+    },
+    {
+      "id": "insignia-shard-box-ii",
+      "titleVi": "Hộp Mảnh Huy Hiệu II",
+      "titleEn": "Insignia Shard Box II",
+      "descriptionVi": "Hộp cho phép chọn một trong các mảnh Huy Hiệu SS, S, Rồng, Tội Phạm hoặc Võ Thuật.",
+      "descriptionEn": "Select one shard type: SS-Class, S-Class, Dragon, Outlaw, or Martial Artist.",
+      "images": [
+        "/Class/Hướng dẫn/Shop_2.webp",
+        "/Class/Hướng dẫn/Detal_Shop_2.webp"
+      ]
+    },
+    {
+      "id": "association-backup",
+      "titleVi": "Gói tháng Association Backup",
+      "titleEn": "Association Backup monthly card",
+      "descriptionVi": "Gói tháng tặng Hộp Mảnh Huy Hiệu để chọn mảnh SS, S, Rồng, Tội Phạm hoặc Võ Thuật.",
+      "descriptionEn": "The monthly card provides an Insignia Shard Box for SS-Class, S-Class, Dragon, Outlaw, or Martial Artist shards.",
+      "images": ["/Class/Hướng dẫn/Nap.webp"]
+    },
+    {
+      "id": "mystery-shop",
+      "titleVi": "Cửa hàng Bí ẩn",
+      "titleEn": "Mystery Shop",
+      "descriptionVi": "Cửa hàng Bí ẩn có thể bán các loại Huy Hiệu đang có trong game. Vật phẩm xuất hiện tùy theo lượt làm mới cửa hàng.",
+      "descriptionEn": "The Mystery Shop may sell any Insignia currently available in the game. Stock depends on each shop refresh.",
+      "images": ["/Class/Hướng dẫn/Mystery_Shop.png"]
+    }
+  ],
+  "items": [
+    {
+      "id": "insignia-A",
+      "classLevel": "A",
+      "nameVi": "Huy Hiệu A",
+      "nameEn": "A Insignia",
+      "imageUrl": "/Class/A.png",
+      "sortOrder": 1,
+      "guideIds": ["class-a-shop", "mystery-shop"]
+    },
+    {
+      "id": "insignia-B",
+      "classLevel": "B",
+      "nameVi": "Huy Hiệu B",
+      "nameEn": "B Insignia",
+      "imageUrl": "/Class/B.png",
+      "sortOrder": 2,
+      "guideIds": ["daily-requests", "random-shard-box", "mystery-shop"]
+    },
+    {
+      "id": "insignia-C",
+      "classLevel": "C",
+      "nameVi": "Huy Hiệu C",
+      "nameEn": "C Insignia",
+      "imageUrl": "/Class/C.png",
+      "sortOrder": 3,
+      "guideIds": ["daily-requests", "random-shard-box", "mystery-shop"]
+    },
+    {
+      "id": "insignia-Class_S",
+      "classLevel": "Class_S",
+      "nameVi": "Huy Hiệu S",
+      "nameEn": "S Insignia",
+      "imageUrl": "/Class/Class_S.png",
+      "sortOrder": 4,
+      "guideIds": ["insignia-shard-box-ii", "association-backup", "mystery-shop"]
+    },
+    {
+      "id": "insignia-Class_SS",
+      "classLevel": "Class_SS",
+      "nameVi": "Huy Hiệu SS",
+      "nameEn": "SS Insignia",
+      "imageUrl": "/Class/Class_SS.png",
+      "sortOrder": 5,
+      "guideIds": ["insignia-shard-box-ii", "association-backup", "mystery-shop"]
+    },
+    {
+      "id": "insignia-Demon",
+      "classLevel": "Demon",
+      "nameVi": "Huy Hiệu Quỷ",
+      "nameEn": "Demon Insignia",
+      "imageUrl": "/Class/Demon.png",
+      "sortOrder": 6,
+      "guideIds": ["daily-requests", "general-shop", "mystery-shop"]
+    },
+    {
+      "id": "insignia-Dragon",
+      "classLevel": "Dragon",
+      "nameVi": "Huy Hiệu Rồng",
+      "nameEn": "Dragon Insignia",
+      "imageUrl": "/Class/Dragon.png",
+      "sortOrder": 7,
+      "guideIds": ["daily-requests", "insignia-shard-box-ii", "association-backup", "mystery-shop"]
+    },
+    {
+      "id": "insignia-Martial_Artist",
+      "classLevel": "Martial_Artist",
+      "nameVi": "Huy Hiệu Võ Thuật",
+      "nameEn": "Martial Artist Insignia",
+      "imageUrl": "/Class/Martial_Artist.png",
+      "sortOrder": 8,
+      "guideIds": ["insignia-shard-box-ii", "association-backup", "mystery-shop"]
+    },
+    {
+      "id": "insignia-Outlaw",
+      "classLevel": "Outlaw",
+      "nameVi": "Huy Hiệu Tội Phạm",
+      "nameEn": "Outlaw Insignia",
+      "imageUrl": "/Class/Outlaw.png",
+      "sortOrder": 9,
+      "guideIds": ["insignia-shard-box-ii", "association-backup", "mystery-shop"]
+    },
+    {
+      "id": "insignia-Tiger",
+      "classLevel": "Tiger",
+      "nameVi": "Huy Hiệu Hổ",
+      "nameEn": "Tiger Insignia",
+      "imageUrl": "/Class/Tiger.png",
+      "sortOrder": 10,
+      "guideIds": ["daily-requests", "random-shard-box", "mystery-shop"]
+    }
+  ]
+}

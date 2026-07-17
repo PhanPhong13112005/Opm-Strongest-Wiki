@@ -58,6 +58,8 @@ docker compose exec api dotnet OpmWiki.Api.dll --seed-data
 | `GET` | `/api/mastery` | Cấu hình 3 nhánh và 33 mốc Tinh Thông |
 | `GET` | `/api/keepsakes` | Danh sách, tìm kiếm, lọc và phân trang Kỷ vật |
 | `GET` | `/api/keepsakes/{id}` | Chi tiết Kỷ vật theo nhân vật |
+| `GET` | `/api/insignias` | Danh sách 10 Huy Hiệu hợp lệ, hỗ trợ tìm kiếm và phân trang |
+| `GET` | `/api/insignias/{id}` | Chi tiết Huy Hiệu và các hướng dẫn nhận theo thứ tự |
 
 Các endpoint dữ liệu hỗ trợ `language=vi` hoặc `language=en`.
 
@@ -68,6 +70,8 @@ Ví dụ:
 /api/characters/100013-urplus?language=en
 /api/events?language=vi&category=main&from=2026-07-01&to=2026-07-31
 /api/keepsakes?language=en&tier=UR%2B&page=1&pageSize=12
+/api/insignias?language=vi&page=1&pageSize=12
+/api/insignias/insignia-Class_SS?language=en
 ```
 
 ## Database và nhập dữ liệu
@@ -78,6 +82,7 @@ Migration nằm trong `src/OpmWiki.Infrastructure/Migrations`. Lệnh `--seed-da
 - `src/data/characters_en.json`
 - `src/data/events.json`
 - `src/data/mastery.json`
+- `src/data/insignias.json`
 
 Quá trình nhập là idempotent: chạy lại sẽ cập nhật theo ID, thay thế kỹ năng/hiệu ứng cũ và xóa bản ghi không còn trong JSON nguồn.
 
