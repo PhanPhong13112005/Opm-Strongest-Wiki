@@ -64,7 +64,7 @@ Các endpoint dữ liệu hỗ trợ `language=vi` hoặc `language=en`.
 Ví dụ:
 
 ```text
-/api/characters?language=vi&tier=UR%2B&page=1&pageSize=12
+/api/characters?language=vi&tier=UR%2B&sort=release_desc&page=1&pageSize=12
 /api/characters/100013-urplus?language=en
 /api/events?language=vi&category=main&from=2026-07-01&to=2026-07-31
 /api/keepsakes?language=en&tier=UR%2B&page=1&pageSize=12

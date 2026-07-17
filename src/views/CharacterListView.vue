@@ -47,6 +47,16 @@ const tierOptions = computed(() => {
   return TIER_ORDER.filter(t => tiers.has(t))
 })
 
+const parseReleaseDate = (value) => {
+  if (!value) return null
+  const match = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(value)
+  return match ? Date.UTC(Number(match[3]), Number(match[2]) - 1, Number(match[1])) : null
+}
+
+const getReleaseTime = (character) => parseReleaseDate(
+  character.releaseSea || character.releaseDate || character.releaseTrung,
+)
+
 const filteredLocalCharacters = computed(() => {
   const query = searchQuery.value.trim().toLowerCase()
 
@@ -65,6 +75,14 @@ const filteredLocalCharacters = computed(() => {
     }
     
     return true
+  }).sort((left, right) => {
+    const leftRelease = getReleaseTime(left)
+    const rightRelease = getReleaseTime(right)
+
+    if (leftRelease === null && rightRelease !== null) return 1
+    if (leftRelease !== null && rightRelease === null) return -1
+    if (leftRelease !== rightRelease) return rightRelease - leftRelease
+    return left.name.localeCompare(right.name, locale.value)
   })
 })
 
@@ -91,6 +109,7 @@ const loadCharacters = async () => {
       faction: selectedFaction.value ? factionMap[selectedFaction.value] : '',
       page: currentPage.value,
       pageSize: itemsPerPage,
+      sort: 'release_desc',
       localCharacters: localCharacters.value,
     })
 

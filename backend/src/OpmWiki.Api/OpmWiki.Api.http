@@ -5,7 +5,7 @@ Accept: application/json
 
 ###
 
-GET {{OpmWiki_Api_HostAddress}}/api/characters?language=vi&page=1&pageSize=12
+GET {{OpmWiki_Api_HostAddress}}/api/characters?language=vi&sort=release_desc&page=1&pageSize=12
 Accept: application/json
 
 ###

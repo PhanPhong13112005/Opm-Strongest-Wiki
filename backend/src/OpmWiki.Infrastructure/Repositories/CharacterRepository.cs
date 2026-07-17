@@ -38,9 +38,8 @@ public sealed class CharacterRepository(OpmWikiDbContext dbContext) : ICharacter
                 : characters.Where(x => x.TypeVi == query.Type);
 
         var totalCount = await characters.CountAsync(cancellationToken);
-        var rows = await (isEnglish
-                ? characters.OrderBy(x => x.NameEn)
-                : characters.OrderBy(x => x.NameVi))
+        var orderedCharacters = OrderCharacters(characters, query.Sort, isEnglish);
+        var rows = await orderedCharacters
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync(cancellationToken);
@@ -116,4 +115,25 @@ public sealed class CharacterRepository(OpmWikiDbContext dbContext) : ICharacter
 
     private static bool IsEnglish(string language) =>
         string.Equals(language, "en", StringComparison.OrdinalIgnoreCase);
+
+    private static IOrderedQueryable<Character> OrderCharacters(
+        IQueryable<Character> characters,
+        string sort,
+        bool isEnglish)
+    {
+        if (string.Equals(sort, "name_asc", StringComparison.OrdinalIgnoreCase))
+            return isEnglish
+                ? characters.OrderBy(x => x.NameEn)
+                : characters.OrderBy(x => x.NameVi);
+
+        // SEA is the primary schedule shown by the site. China is only used when
+        // a character has no SEA release date, and completely undated rows go last.
+        var byReleaseDate = characters
+            .OrderBy(x => (x.ReleaseSea ?? x.ReleaseChina) == null)
+            .ThenByDescending(x => x.ReleaseSea ?? x.ReleaseChina);
+
+        return isEnglish
+            ? byReleaseDate.ThenBy(x => x.NameEn)
+            : byReleaseDate.ThenBy(x => x.NameVi);
+    }
 }

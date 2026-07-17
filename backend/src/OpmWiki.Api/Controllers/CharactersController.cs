@@ -19,10 +19,11 @@ public sealed class CharactersController(ICharacterRepository repository) : Cont
         [FromQuery] string? type = null,
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 12,
+        [FromQuery] string sort = "release_desc",
         CancellationToken cancellationToken = default)
     {
         var result = await repository.ListAsync(
-            new CharacterQuery(language, search, tier, faction, type, page, pageSize),
+            new CharacterQuery(language, search, tier, faction, type, page, pageSize, sort),
             cancellationToken);
         return Ok(result);
     }

@@ -7,7 +7,8 @@ public sealed record CharacterQuery(
     string? Faction = null,
     string? Type = null,
     int Page = 1,
-    int PageSize = 12);
+    int PageSize = 12,
+    string Sort = "release_desc");
 
 public sealed record CharacterSummaryDto(
     string Id,

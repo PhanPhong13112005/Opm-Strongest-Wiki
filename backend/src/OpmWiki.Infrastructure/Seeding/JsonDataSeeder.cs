@@ -271,7 +271,8 @@ public sealed class JsonDataSeeder(
         character.BondListVi = GetString(vi, "bondList");
         character.BondListEn = Fallback(GetString(en, "bondList"), character.BondListVi);
         character.ClassLevel = GetString(vi, "classLevel");
-        character.ReleaseSea = ParseOptionalDate(GetString(vi, "releaseSea"));
+        character.ReleaseSea = ParseOptionalDate(
+            GetNullableString(vi, "releaseSea") ?? GetString(vi, "releaseDate"));
         character.ReleaseChina = ParseOptionalDate(GetString(vi, "releaseTrung"));
         MapStats(character.BaseStats, vi, "baseStats");
         MapStats(character.PvpStats, vi, "pvpStats");
