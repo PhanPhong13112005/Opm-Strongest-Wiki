@@ -4794,7 +4794,7 @@
         "desc": "Survival status keeps the bearer alive by drastically reducing damage taken (e.g. only taking 20%)."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/05/2023",
     "pvpStats": {
       "atk": 30,
@@ -4931,7 +4931,7 @@
         "desc": "Continuous corrosive damage over time gradually erodes Health, which can be blocked by zone immunity."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Metal Knight (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Metal Knight (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/04/2023",
     "pvpStats": {
       "atk": 30,
@@ -5032,7 +5032,7 @@
     "type": "Grappler",
     "faction": "Hero",
     "debut": "03 / 2023",
-    "keepsakeIcon": "/Keepsake/Puri-Puri Prisoner (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Puri-Puri Prisoner (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "03 / 2023",
     "pvpStats": {
       "atk": 30,
@@ -5146,7 +5146,7 @@
         "desc": "Speed ​​buff that while in effect allows the bearer and up to 6 allies to act against and overcome enemies with lower speed."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Zombieman (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Zombieman (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/03/2023",
     "pvpStats": {
       "atk": 30,
@@ -5264,7 +5264,7 @@
         "desc": "Corrosive damage over time applied to the target area, often accompanied by Nullity on all enemies."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Groribas (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Groribas (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "releaseTrung": "01/02/2023",
@@ -5379,7 +5379,7 @@
         "desc": "Disabled status applies to a target area/column, rendering affected units unable to act or be effective."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Watchdog Man (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Watchdog Man (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/01/2023",
     "pvpStats": {
       "atk": 30,
@@ -5503,7 +5503,7 @@
         "desc": "Restores Health over time or before the unit's next action."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Melzargard (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Melzargard (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "releaseTrung": "01/12/2022",
@@ -5592,7 +5592,7 @@
     "type": "Hi-Tech",
     "faction": "Hero",
     "debut": "10 / 2022",
-    "keepsakeIcon": "/Keepsake/Drive Knight (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Drive Knight (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/11/2022",
     "pvpStats": {
       "atk": 30,
@@ -5707,7 +5707,7 @@
         "desc": "Unfavorable effects negate the target's invincibility/anti-death effects, allowing it to be knocked down as normal."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Tank Top Master (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Tank Top Master (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/10/2022",
     "pvpStats": {
       "atk": 30,
@@ -5836,7 +5836,7 @@
         "desc": "Corrosive damage over time effect, each turn dealing damage equal to a percentage of ST (e.g. 300%) to the target."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Deep Sea King (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Deep Sea King (SSRplus)/Keepsake_SSRplus.png",
     "class": "Demon",
     "classIcon": "/Class/Demon.png",
     "releaseTrung": "01/09/2022",
@@ -5959,7 +5959,7 @@
         "desc": "Burning PvP tier — stronger burst damage, harder to deal with."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Subterranean King (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Subterranean King (SSRplus)/Keepsake_SSRplus.png",
     "class": "Demon",
     "classIcon": "/Class/Demon.png",
     "releaseTrung": "07 / 2022",
@@ -6084,7 +6084,7 @@
         "desc": "Activate revival: after receiving critical damage, if there are allies, restore 50% Health before acting, limited to a certain number of times."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "releaseTrung": "01/08/2022",
@@ -6181,7 +6181,7 @@
     "type": "Esper",
     "faction": "Hero",
     "debut": "06 / 2022",
-    "keepsakeIcon": "/Keepsake/Pig God (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Pig God (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "06 / 2022",
     "pvpStats": {
       "atk": 30,
@@ -6286,7 +6286,7 @@
     ],
     "imageURL": "/Characters/Flashy Flash (SSR+)/SSR+.png",
     "debut": "05 / 2022",
-    "keepsakeIcon": "/Keepsake/Flashy Flash (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Flashy Flash (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/07/2022",
     "pvpStats": {
       "atk": 30,
@@ -6426,7 +6426,7 @@
         "desc": "Status that causes the bearer to be unaffected by a certain effect or type of control, such as [Breakthrough], Stun, or Charm."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Gouketsu (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Gouketsu (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "releaseTrung": "01/06/2022",
@@ -6530,7 +6530,7 @@
     ],
     "imageURL": "/Characters/Phoenix Man (SSR+)/SSR+.png",
     "debut": "03 / 2022",
-    "keepsakeIcon": "/Keepsake/Phoenix Man (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Phoenix Man (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "releaseTrung": "03 / 2022",
@@ -6650,7 +6650,7 @@
         "desc": "Removes existing effects/buffs on all enemies."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Garou (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Garou (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/05/2022",
     "pvpStats": {
       "atk": 30,
@@ -6736,7 +6736,7 @@
         "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Atomic Samurai (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Atomic Samurai (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/04/2022",
     "pvpStats": {
       "atk": 30,
@@ -6814,7 +6814,7 @@
     ],
     "imageURL": "/Characters/Bang (SSR+)/SSR+.png",
     "debut": "12 / 2021",
-    "keepsakeIcon": "/Keepsake/Bang (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Bang (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/03/2022",
     "pvpStats": {
       "atk": 30,
@@ -6920,7 +6920,7 @@
         "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Geryuganshoop (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Geryuganshoop (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "releaseTrung": "01/02/2022",
@@ -7030,7 +7030,7 @@
         "desc": "The shield absorbs damage up to a portion of the subject's Health; Charge DMG ignores it."
       }
     ],
-    "keepsakeIcon": "/Keepsake/King (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/King (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "10 / 2021",
     "pvpStats": {
       "atk": 30,
@@ -7110,7 +7110,7 @@
     "type": "Esper",
     "faction": "Monster",
     "debut": null,
-    "keepsakeIcon": "/Keepsake/Boros (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Boros (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "pvpStats": {
@@ -7211,7 +7211,7 @@
         "desc": "Out of turn attacks deal 70% of the ultimate's damage and effects, without consuming mana, up to 3 times per round."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Carnage Kabuto (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Carnage Kabuto (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "pvpStats": {
@@ -7302,7 +7302,7 @@
       }
     ],
     "effects": [],
-    "keepsakeIcon": "/Keepsake/Child Emperor (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Child Emperor (SSRplus)/Keepsake_SSRplus.png",
     "pvpStats": {
       "atk": 30,
       "hp": 30,
@@ -7402,7 +7402,7 @@
         "desc": "Extra attacks outside of turn (usually after an ally acts) apply a portion of the ultimate's ST and effects to a random target, at no mana cost."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Metal Bat (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Metal Bat (SSRplus)/Keepsake_SSRplus.png",
     "pvpStats": {
       "atk": 30,
       "hp": 30,
@@ -7486,7 +7486,7 @@
         "desc": "Attack buffs increase damage based on conditions (e.g. each marked enemy), amplifying the amount of Fury-type damage the unit deals."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Monsterized Bakuzan (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Monsterized Bakuzan (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "pvpStats": {

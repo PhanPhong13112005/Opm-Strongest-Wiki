@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import path from 'node:path'
 import test from 'node:test'
+import { safeAssetUrl } from '../src/utils/assetUrl.js'
 
 const root = path.resolve(import.meta.dirname, '..')
 const readJson = (relativePath) => JSON.parse(fs.readFileSync(path.join(root, relativePath), 'utf8'))
@@ -74,6 +75,19 @@ test('Backgear catalog contains nine unique cards and one collection set', () =>
   }
 })
 
+test('Keepsake assets exist and reserved path characters are encoded safely', () => {
+  const keepsakes = charactersVi.filter(character => character.keepsakeIcon)
+  assert.ok(keepsakes.length > 0)
+
+  for (const keepsake of keepsakes) {
+    const assetPath = path.join(root, 'public', keepsake.keepsakeIcon.replace(/^\//, ''))
+    assert.ok(fs.existsSync(assetPath), `${keepsake.id} references missing Keepsake ${keepsake.keepsakeIcon}`)
+    assert.ok(!keepsake.keepsakeIcon.includes('+'), `${keepsake.id} uses a deploy-unsafe + in its Keepsake path`)
+    const browserUrl = safeAssetUrl(keepsake.keepsakeIcon)
+    assert.ok(!browserUrl.includes(' '), `${keepsake.id} contains an unescaped space in its browser URL`)
+  }
+})
+
 test('Tactics catalog exposes complete star ranges for every rarity', () => {
   assert.equal(tactics.cards.length, 19)
   assert.equal(tactics.frames.length, 13)
@@ -88,5 +102,11 @@ test('Tactics catalog exposes complete star ranges for every rarity', () => {
         `${card.id}/${rarity.key} has an incomplete star range`,
       )
     }
+  }
+})
+
+test('Tactic Frames expose valid accent colors for inline rendering', () => {
+  for (const frame of tactics.frames) {
+    assert.match(frame.colorClass, /#[0-9a-f]{6}/i, `${frame.id} has an invalid accent color`)
   }
 })

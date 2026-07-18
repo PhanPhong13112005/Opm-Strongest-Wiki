@@ -2,6 +2,8 @@
 import { ref, watch } from 'vue'
 import { RouterView, RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import { Analytics } from '@vercel/analytics/vue'
+import { SpeedInsights } from '@vercel/speed-insights/vue'
 
 const { t, locale } = useI18n()
 
@@ -151,6 +153,9 @@ const toggleMobileMenu = () => {
         </div>
       </div>
     </footer>
+
+    <Analytics />
+    <SpeedInsights />
   </div>
 </template>
 
