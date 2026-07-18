@@ -6,6 +6,7 @@ import charactersEn from '../data/characters_en.json'
 import insigniaData from '../data/insignias.json'
 import { getAllKeepsakes, getKeepsakeById } from '../services/keepsakeApi'
 import { createLocalInsigniaCatalog, getAllInsignias, getInsigniaById } from '../services/insigniaApi'
+import { safeAssetUrl } from '../utils/assetUrl'
 
 const props = defineProps({
   kind: { type: String, required: true },
@@ -27,7 +28,7 @@ const pageSize = 12
 const isKeepsake = computed(() => props.kind === 'keepsake')
 const title = computed(() => t(isKeepsake.value ? 'equipment.keepsakeTitle' : 'equipment.insigniaTitle'))
 const description = computed(() => t(isKeepsake.value ? 'equipment.keepsakeDesc' : 'equipment.insigniaDesc'))
-const safeUrl = (url) => encodeURI(url).replace(/\+/g, '%2B').replace(/#/g, '%23')
+const safeUrl = safeAssetUrl
 
 onMounted(async () => {
   try {
@@ -81,11 +82,11 @@ const displayName = (item) => {
 }
 
 const getImage = (character) => {
-  if (isKeepsake.value && character.keepsakeIcon) return character.keepsakeIcon
-  if (!isKeepsake.value) return character.imageUrl
+  if (isKeepsake.value && character.keepsakeIcon) return safeUrl(character.keepsakeIcon)
+  if (!isKeepsake.value) return safeUrl(character.imageUrl || '')
   if (!character.imageURL) return ''
   return character.imageURL.startsWith('/')
-    ? character.imageURL
+    ? safeUrl(character.imageURL)
     : new URL(`../assets/characters/${character.imageURL}`, import.meta.url).href
 }
 

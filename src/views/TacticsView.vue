@@ -81,6 +81,15 @@ onUnmounted(() => {
 
 const formatNumber = (num) => new Intl.NumberFormat('en-US').format(num)
 
+// Frame accents are supplied by JSON/the API. Render the hex value directly so
+// their colors do not depend on Tailwind discovering runtime-generated classes.
+const frameAccentColor = (frame) => {
+  const match = frame?.colorClass?.match(/#[0-9a-f]{6}/i)
+  return match?.[0] || '#f8fafc'
+}
+const frameCardStyle = (frame) => ({ borderLeftColor: frameAccentColor(frame) })
+const frameIconStyle = (frame) => ({ backgroundColor: `${frameAccentColor(frame)}1a` })
+
 const rewardCurrentPage = ref(1)
 
 const currentTowerData = computed(() => subTabTower.value === 'upper' ? upperRewards : lowerRewards)
@@ -537,12 +546,12 @@ const scrollTabs = (direction) => {
             </div>
             
             <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              <div v-for="frame in tacticFrames" :key="frame.id" class="glass-card flex items-center gap-3 rounded-lg border-l-2 p-3 sm:p-4 transition-colors hover:bg-white/5" :class="frame.borderClass">
-                <div :class="frame.bgClass" class="rounded-md p-1">
+              <div v-for="frame in tacticFrames" :key="frame.id" class="glass-card flex items-center gap-3 rounded-lg border-l-2 p-3 sm:p-4 transition-colors hover:bg-white/5" :style="frameCardStyle(frame)">
+                <div class="rounded-md p-1" :style="frameIconStyle(frame)">
                   <img :src="`/Feature/tactics/Card border/${frame.icon}`" :alt="frame.name" class="w-10 h-10 shrink-0 object-contain" />
                 </div>
                 <div class="min-w-0 flex-1">
-                  <div class="font-black text-sm uppercase tracking-wider" :class="frame.colorClass">
+                  <div class="font-black text-sm uppercase tracking-wider" :style="{ color: frameAccentColor(frame) }">
                     {{ locale === 'vi' ? frame.name.replace('Standard', 'Tiêu Chuẩn').replace('Exquisite', 'Tinh Xảo').replace('Treasured', 'Trân Bảo').replace('Custom', 'Cao Cấp') : frame.name }}
                   </div>
                   <div class="mt-1 flex gap-3 text-xs tracking-wide">
