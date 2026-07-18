@@ -64,14 +64,12 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_backgear_sets_SortOrder",
                 table: "backgear_sets",
-                column: "SortOrder",
-                unique: true);
+                column: "SortOrder");
 
             migrationBuilder.CreateIndex(
                 name: "IX_backgears_SortOrder",
                 table: "backgears",
-                column: "SortOrder",
-                unique: true);
+                column: "SortOrder");
         }
 
         /// <inheritdoc />

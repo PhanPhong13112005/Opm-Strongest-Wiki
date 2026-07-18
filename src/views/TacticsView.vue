@@ -1,12 +1,26 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { tacticCards, tacticFrames } from '../data/tactics.js'
+import tacticsFallback from '../data/tactics.json'
 import { upperRewards, lowerRewards } from '../data/towerRewards.js'
+import { getTacticCatalog } from '../services/tacticApi'
 
 const { t, locale } = useI18n()
 const activeTab = ref('cards')
 const subTabTower = ref('overview')
+const tacticCards = ref(tacticsFallback.cards)
+const tacticFrames = ref(tacticsFallback.frames)
+
+const loadTactics = async () => {
+  try {
+    const catalog = await getTacticCatalog(locale.value, tacticsFallback)
+    tacticCards.value = catalog.cards
+    tacticFrames.value = catalog.frames
+  } catch {
+    tacticCards.value = tacticsFallback.cards
+    tacticFrames.value = tacticsFallback.frames
+  }
+}
 
 const towerSliders = {
   upper: {
@@ -52,12 +66,14 @@ const prevSliderImage = () => {
 
 let sliderInterval = null
 onMounted(() => {
+  loadTactics()
   sliderInterval = setInterval(() => {
     if (activeTab.value === 'tower' && activeSlider.value && subTabTower.value !== 'overview') {
       nextSliderImage()
     }
   }, 5000)
 })
+watch(locale, loadTactics)
 
 onUnmounted(() => {
   if (sliderInterval) clearInterval(sliderInterval)
@@ -78,11 +94,11 @@ const totalRewardPages = computed(() => Math.ceil(currentTowerData.value.length 
 // Pagination logic
 const itemsPerPage = 6
 const currentPage = ref(1)
-const totalPages = computed(() => Math.ceil(tacticCards.length / itemsPerPage))
+const totalPages = computed(() => Math.ceil(tacticCards.value.length / itemsPerPage))
 
 const visibleCards = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage
-  return tacticCards.slice(start, start + itemsPerPage)
+  return tacticCards.value.slice(start, start + itemsPerPage)
 })
 
 const maxRarityTier = rarity => rarity?.tiers?.at(-1) || null

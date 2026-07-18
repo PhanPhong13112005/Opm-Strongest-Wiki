@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using OpmWiki.Infrastructure.Persistence;
@@ -11,9 +12,11 @@ using OpmWiki.Infrastructure.Persistence;
 namespace OpmWiki.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(OpmWikiDbContext))]
-    partial class OpmWikiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260718150431_AddTactics")]
+    partial class AddTactics
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -746,7 +749,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
 
                             b1.HasKey("CharacterId");
 
-                            b1.ToTable("characters", (string)null);
+                            b1.ToTable("characters");
 
                             b1.WithOwner()
                                 .HasForeignKey("CharacterId");
@@ -775,7 +778,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
 
                             b1.HasKey("CharacterId");
 
-                            b1.ToTable("characters", (string)null);
+                            b1.ToTable("characters");
 
                             b1.WithOwner()
                                 .HasForeignKey("CharacterId");

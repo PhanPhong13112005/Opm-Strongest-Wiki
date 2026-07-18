@@ -15,6 +15,8 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
     public DbSet<InsigniaGuideLink> InsigniaGuideLinks => Set<InsigniaGuideLink>();
     public DbSet<Backgear> Backgears => Set<Backgear>();
     public DbSet<BackgearSet> BackgearSets => Set<BackgearSet>();
+    public DbSet<TacticCard> TacticCards => Set<TacticCard>();
+    public DbSet<TacticFrame> TacticFrames => Set<TacticFrame>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -23,6 +25,7 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
         ConfigureMastery(modelBuilder);
         ConfigureInsignias(modelBuilder);
         ConfigureBackgears(modelBuilder);
+        ConfigureTactics(modelBuilder);
     }
 
     public override int SaveChanges()
@@ -216,7 +219,7 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
             entity.Property(x => x.LevelsJson).HasColumnType("jsonb");
             entity.Property(x => x.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
             entity.Property(x => x.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
-            entity.HasIndex(x => x.SortOrder).IsUnique();
+            entity.HasIndex(x => x.SortOrder);
         });
 
         modelBuilder.Entity<BackgearSet>(entity =>
@@ -233,7 +236,39 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
             entity.Property(x => x.LevelsJson).HasColumnType("jsonb");
             entity.Property(x => x.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
             entity.Property(x => x.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
-            entity.HasIndex(x => x.SortOrder).IsUnique();
+            entity.HasIndex(x => x.SortOrder);
+        });
+    }
+
+    private static void ConfigureTactics(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<TacticCard>(entity =>
+        {
+            entity.ToTable("tactic_cards");
+            entity.HasKey(x => x.Id);
+            entity.Property(x => x.Id).HasMaxLength(80);
+            entity.Property(x => x.NameVi).HasMaxLength(200);
+            entity.Property(x => x.NameEn).HasMaxLength(200);
+            entity.Property(x => x.Icon).HasMaxLength(300);
+            entity.Property(x => x.ScalingJson).HasColumnType("jsonb");
+            entity.Property(x => x.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+            entity.Property(x => x.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+            entity.HasIndex(x => x.SortOrder);
+        });
+
+        modelBuilder.Entity<TacticFrame>(entity =>
+        {
+            entity.ToTable("tactic_frames");
+            entity.HasKey(x => x.Id);
+            entity.Property(x => x.Id).HasMaxLength(80);
+            entity.Property(x => x.Name).HasMaxLength(200);
+            entity.Property(x => x.Icon).HasMaxLength(300);
+            entity.Property(x => x.ColorClass).HasMaxLength(100);
+            entity.Property(x => x.BorderClass).HasMaxLength(100);
+            entity.Property(x => x.BackgroundClass).HasMaxLength(100);
+            entity.Property(x => x.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+            entity.Property(x => x.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+            entity.HasIndex(x => x.SortOrder);
         });
     }
 
@@ -275,6 +310,18 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
         }
 
         foreach (var entry in ChangeTracker.Entries<BackgearSet>())
+        {
+            if (entry.State == EntityState.Added) entry.Entity.CreatedAt = now;
+            if (entry.State is EntityState.Added or EntityState.Modified) entry.Entity.UpdatedAt = now;
+        }
+
+        foreach (var entry in ChangeTracker.Entries<TacticCard>())
+        {
+            if (entry.State == EntityState.Added) entry.Entity.CreatedAt = now;
+            if (entry.State is EntityState.Added or EntityState.Modified) entry.Entity.UpdatedAt = now;
+        }
+
+        foreach (var entry in ChangeTracker.Entries<TacticFrame>())
         {
             if (entry.State == EntityState.Added) entry.Entity.CreatedAt = now;
             if (entry.State is EntityState.Added or EntityState.Modified) entry.Entity.UpdatedAt = now;

@@ -104,8 +104,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SortOrder")
-                        .IsUnique();
+                    b.HasIndex("SortOrder");
 
                     b.ToTable("backgears", (string)null);
                 });
@@ -172,8 +171,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SortOrder")
-                        .IsUnique();
+                    b.HasIndex("SortOrder");
 
                     b.ToTable("backgear_sets", (string)null);
                 });

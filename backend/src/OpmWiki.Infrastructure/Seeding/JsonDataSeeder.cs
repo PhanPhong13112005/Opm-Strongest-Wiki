@@ -24,6 +24,7 @@ public sealed class JsonDataSeeder(
         var masteryPath = Path.Combine(dataPath, "mastery.json");
         var insigniasPath = Path.Combine(dataPath, "insignias.json");
         var backgearsPath = Path.Combine(dataPath, "backgear.json");
+        var tacticsPath = Path.Combine(dataPath, "tactics.json");
 
         EnsureFileExists(charactersViPath);
         EnsureFileExists(charactersEnPath);
@@ -31,6 +32,7 @@ public sealed class JsonDataSeeder(
         EnsureFileExists(masteryPath);
         EnsureFileExists(insigniasPath);
         EnsureFileExists(backgearsPath);
+        EnsureFileExists(tacticsPath);
 
         using var charactersVi = await ReadJsonAsync(charactersViPath, cancellationToken);
         using var charactersEn = await ReadJsonAsync(charactersEnPath, cancellationToken);
@@ -38,6 +40,7 @@ public sealed class JsonDataSeeder(
         using var mastery = await ReadJsonAsync(masteryPath, cancellationToken);
         using var insignias = await ReadJsonAsync(insigniasPath, cancellationToken);
         using var backgears = await ReadJsonAsync(backgearsPath, cancellationToken);
+        using var tactics = await ReadJsonAsync(tacticsPath, cancellationToken);
 
         var englishCharacters = charactersEn.RootElement.EnumerateArray()
             .ToDictionary(x => GetString(x, "id"), x => x, StringComparer.OrdinalIgnoreCase);
@@ -58,19 +61,24 @@ public sealed class JsonDataSeeder(
             var (backgearCount, backgearSetCount) = await SeedBackgearsAsync(
                 backgears.RootElement,
                 cancellationToken);
+            var (tacticCardCount, tacticFrameCount) = await SeedTacticsAsync(
+                tactics.RootElement,
+                cancellationToken);
             await dbContext.SaveChangesAsync(cancellationToken);
 
             if (transaction is not null)
                 await transaction.CommitAsync(cancellationToken);
 
             logger.LogInformation(
-                "Imported {CharacterCount} characters, {EventCount} events, {MasteryTierCount} mastery tiers, {InsigniaCount} insignias, {BackgearCount} backgears and {BackgearSetCount} backgear sets from {DataPath}",
+                "Imported {CharacterCount} characters, {EventCount} events, {MasteryTierCount} mastery tiers, {InsigniaCount} insignias, {BackgearCount} backgears, {BackgearSetCount} backgear sets, {TacticCardCount} tactic cards and {TacticFrameCount} tactic frames from {DataPath}",
                 characterCount,
                 eventCount,
                 masteryTierCount,
                 insigniaCount,
                 backgearCount,
                 backgearSetCount,
+                tacticCardCount,
+                tacticFrameCount,
                 dataPath);
             return new SeedResult(
                 characterCount,
@@ -78,7 +86,9 @@ public sealed class JsonDataSeeder(
                 masteryTierCount,
                 insigniaCount,
                 backgearCount,
-                backgearSetCount);
+                backgearSetCount,
+                tacticCardCount,
+                tacticFrameCount);
         }
         catch
         {
@@ -397,6 +407,84 @@ public sealed class JsonDataSeeder(
         return (importedGearIds.Count, importedSetIds.Count);
     }
 
+    private async Task<(int Cards, int Frames)> SeedTacticsAsync(
+        JsonElement root,
+        CancellationToken cancellationToken)
+    {
+        if (!root.TryGetProperty("cards", out var cardsRoot) || cardsRoot.ValueKind != JsonValueKind.Array)
+            throw new InvalidDataException("Tactic data is missing its cards array.");
+        if (!root.TryGetProperty("frames", out var framesRoot) || framesRoot.ValueKind != JsonValueKind.Array)
+            throw new InvalidDataException("Tactic data is missing its frames array.");
+
+        var existingCards = await dbContext.TacticCards
+            .ToDictionaryAsync(x => x.Id, StringComparer.OrdinalIgnoreCase, cancellationToken);
+        var importedCardIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var cardIndex = 0;
+        foreach (var source in cardsRoot.EnumerateArray())
+        {
+            var id = GetString(source, "id");
+            if (string.IsNullOrWhiteSpace(id))
+                throw new InvalidDataException("A tactic card is missing its id.");
+            if (!importedCardIds.Add(id))
+                throw new InvalidDataException($"Duplicate tactic card id: '{id}'.");
+
+            if (!existingCards.TryGetValue(id, out var card))
+            {
+                card = new TacticCard { Id = id };
+                dbContext.TacticCards.Add(card);
+            }
+
+            card.NameVi = GetNestedString(source, "name", "vi");
+            card.NameEn = Fallback(GetNestedString(source, "name", "en"), card.NameVi);
+            card.Icon = GetString(source, "icon");
+            card.Count = GetInt(source, "count");
+            card.EffectVi = GetNestedString(source, "eff", "vi");
+            card.EffectEn = Fallback(GetNestedString(source, "eff", "en"), card.EffectVi);
+            card.ScalingJson = GetRawJson(source, "scaling", "{}");
+            card.SortOrder = cardIndex++;
+        }
+
+        var removedCards = existingCards.Values
+            .Where(x => !importedCardIds.Contains(x.Id))
+            .ToArray();
+        if (removedCards.Length > 0) dbContext.TacticCards.RemoveRange(removedCards);
+
+        var existingFrames = await dbContext.TacticFrames
+            .ToDictionaryAsync(x => x.Id, StringComparer.OrdinalIgnoreCase, cancellationToken);
+        var importedFrameIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var frameIndex = 0;
+        foreach (var source in framesRoot.EnumerateArray())
+        {
+            var id = GetString(source, "id");
+            if (string.IsNullOrWhiteSpace(id))
+                throw new InvalidDataException("A tactic frame is missing its id.");
+            if (!importedFrameIds.Add(id))
+                throw new InvalidDataException($"Duplicate tactic frame id: '{id}'.");
+
+            if (!existingFrames.TryGetValue(id, out var frame))
+            {
+                frame = new TacticFrame { Id = id };
+                dbContext.TacticFrames.Add(frame);
+            }
+
+            frame.Name = GetString(source, "name");
+            frame.Icon = GetString(source, "icon");
+            frame.Hp = GetInt(source, "hp");
+            frame.Def = GetInt(source, "def");
+            frame.ColorClass = GetString(source, "colorClass");
+            frame.BorderClass = GetString(source, "borderClass");
+            frame.BackgroundClass = GetString(source, "bgClass");
+            frame.SortOrder = frameIndex++;
+        }
+
+        var removedFrames = existingFrames.Values
+            .Where(x => !importedFrameIds.Contains(x.Id))
+            .ToArray();
+        if (removedFrames.Length > 0) dbContext.TacticFrames.RemoveRange(removedFrames);
+
+        return (importedCardIds.Count, importedFrameIds.Count);
+    }
+
     private void ReplaceSkills(Character character, JsonElement vi, JsonElement en)
     {
         var viSkills = GetArray(vi, "skills");
@@ -522,6 +610,13 @@ public sealed class JsonDataSeeder(
     {
         var value = GetString(source, propertyName);
         return string.IsNullOrWhiteSpace(value) ? null : value;
+    }
+
+    private static string GetNestedString(JsonElement source, string objectName, string propertyName)
+    {
+        if (!source.TryGetProperty(objectName, out var nested) || nested.ValueKind != JsonValueKind.Object)
+            return string.Empty;
+        return GetString(nested, propertyName);
     }
 
     private static int GetInt(JsonElement source, string propertyName)

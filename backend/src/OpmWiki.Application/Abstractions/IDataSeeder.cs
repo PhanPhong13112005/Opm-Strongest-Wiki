@@ -6,7 +6,9 @@ public sealed record SeedResult(
     int MasteryTiers,
     int Insignias,
     int Backgears,
-    int BackgearSets);
+    int BackgearSets,
+    int TacticCards,
+    int TacticFrames);
 
 public interface IDataSeeder
 {

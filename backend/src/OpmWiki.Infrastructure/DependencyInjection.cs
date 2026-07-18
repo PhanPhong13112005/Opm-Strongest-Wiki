@@ -25,6 +25,7 @@ public static class DependencyInjection
         services.AddScoped<IMasteryRepository, MasteryRepository>();
         services.AddScoped<IInsigniaRepository, InsigniaRepository>();
         services.AddScoped<IBackgearRepository, BackgearRepository>();
+        services.AddScoped<ITacticRepository, TacticRepository>();
         services.AddScoped<IDataSeeder, JsonDataSeeder>();
 
         var configuredDataPath = configuration["SeedData:FrontendDataPath"] ?? "../../../src/data";

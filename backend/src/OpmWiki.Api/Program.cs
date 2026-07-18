@@ -44,13 +44,15 @@ if (seedRequested || migrateOnStartup)
     {
         var result = await scope.ServiceProvider.GetRequiredService<IDataSeeder>().SeedAsync();
         app.Logger.LogInformation(
-            "Seed completed: {Characters} characters, {Events} events, {MasteryTiers} mastery tiers, {Insignias} insignias, {Backgears} backgears and {BackgearSets} backgear sets.",
+            "Seed completed: {Characters} characters, {Events} events, {MasteryTiers} mastery tiers, {Insignias} insignias, {Backgears} backgears, {BackgearSets} backgear sets, {TacticCards} tactic cards and {TacticFrames} tactic frames.",
             result.Characters,
             result.Events,
             result.MasteryTiers,
             result.Insignias,
             result.Backgears,
-            result.BackgearSets);
+            result.BackgearSets,
+            result.TacticCards,
+            result.TacticFrames);
         return;
     }
 }

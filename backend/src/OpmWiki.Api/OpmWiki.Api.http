@@ -47,3 +47,8 @@ Accept: application/json
 
 GET {{OpmWiki_Api_HostAddress}}/api/backgears?language=vi
 Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/tactics?language=en
+Accept: application/json
