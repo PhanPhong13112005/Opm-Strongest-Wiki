@@ -73,6 +73,17 @@ const toggleMobileMenu = () => {
           <RouterLink to="/events" class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
             {{ t('nav.events') }}
           </RouterLink>
+
+          <RouterLink
+            to="/admin/login"
+            class="flex items-center gap-2 rounded-lg border border-opm-gold/60 px-3 py-2 text-xs font-bold uppercase tracking-[0.12em] text-opm-gold transition-colors hover:bg-opm-gold hover:text-black"
+            exact-active-class="bg-opm-gold text-black"
+          >
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H3m0 0 4-4m-4 4 4 4m8 5v-2a4 4 0 0 0-4-4H7m8-6V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-2" />
+            </svg>
+            {{ t('nav.login') }}
+          </RouterLink>
           
           <div class="ml-4 flex items-center bg-[#1a1c23] rounded-full px-1 py-1 border border-gray-700 cursor-pointer relative" @click="toggleLang">
             <div class="absolute inset-y-1 w-1/2 rounded-full bg-opm-gold transition-all duration-300" :class="lang === 'VI' ? 'left-1' : 'left-[calc(50%-4px)]'"></div>
@@ -131,6 +142,17 @@ const toggleMobileMenu = () => {
 
         <RouterLink @click="toggleMobileMenu" to="/events" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors mt-2" exact-active-class="text-white">
           {{ t('nav.events') }}
+        </RouterLink>
+        <RouterLink
+          @click="toggleMobileMenu"
+          to="/admin/login"
+          class="flex items-center justify-center gap-2 rounded-lg border border-opm-gold/60 px-4 py-3 text-sm font-bold uppercase tracking-[0.15em] text-opm-gold transition-colors hover:bg-opm-gold hover:text-black"
+          exact-active-class="bg-opm-gold text-black"
+        >
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H3m0 0 4-4m-4 4 4 4m8 5v-2a4 4 0 0 0-4-4H7m8-6V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-2" />
+          </svg>
+          {{ t('nav.login') }}
         </RouterLink>
       </div>
     </header>

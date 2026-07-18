@@ -24,7 +24,8 @@
     "tactics": "Tactics",
     "backgear": "Backgear",
     "features": "Features",
-    "events": "Event Schedule"
+    "events": "Event Schedule",
+    "login": "Login"
   },
   "footer": {
     "desc": "OPM: The Strongest — community database · data extracted directly from game",
