@@ -2,21 +2,23 @@
 import { computed, defineAsyncComponent, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
-import backgearData from '../data/backgear.json'
+import backgearFallback from '../data/backgear.json'
 import backgearChibis from '../data/backgearChibis.json'
+import { getBackgearCatalog } from '../services/backgearApi'
 
 const SpineFigure = defineAsyncComponent(() => import('../components/SpineFigure.vue'))
 
 const { t, locale } = useI18n()
 const route = useRoute()
 const router = useRouter()
+const backgearData = ref(backgearFallback)
 const activeTab = ref('gears')
-const selectedId = ref(backgearData.gears[0]?.id || '')
+const selectedId = ref(backgearFallback.gears[0]?.id || '')
 const previewLevel = ref(1)
 const selectedCharacterId = ref(backgearChibis.some(character => character.heid === route.query.character) ? route.query.character : '')
 const failedCharacters = ref(new Set())
 const isEnglish = computed(() => locale.value === 'en')
-const selectedGear = computed(() => backgearData.gears.find(gear => gear.id === selectedId.value) || backgearData.gears[0])
+const selectedGear = computed(() => backgearData.value.gears.find(gear => gear.id === selectedId.value) || backgearData.value.gears[0])
 const previewCharacters = computed(() => backgearChibis.filter(character => !failedCharacters.value.has(character.heid)))
 const selectedCharacter = computed(() => backgearChibis.find(character => character.heid === selectedCharacterId.value) || null)
 const gearName = gear => isEnglish.value ? gear.nameEn : gear.nameVi
@@ -38,6 +40,17 @@ const handleSpineFail = () => {
   selectedCharacterId.value = ''
 }
 
+const loadCatalog = async () => {
+  try {
+    backgearData.value = await getBackgearCatalog(locale.value, backgearFallback)
+    if (!backgearData.value.gears.some(gear => gear.id === selectedId.value)) {
+      selectedId.value = backgearData.value.gears[0]?.id || ''
+    }
+  } catch {
+    backgearData.value = backgearFallback
+  }
+}
+
 watch(selectedId, () => { previewLevel.value = 1 })
 watch(selectedCharacterId, character => {
   const query = { ...route.query }
@@ -45,12 +58,14 @@ watch(selectedCharacterId, character => {
   else delete query.character
   router.replace({ query })
 })
+watch(locale, loadCatalog)
 onMounted(() => {
-  for (const gear of backgearData.gears) {
+  for (const gear of backgearFallback.gears) {
     const image = new Image()
     image.decoding = 'async'
     image.src = gear.icon
   }
+  loadCatalog()
 })
 </script>
 

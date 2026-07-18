@@ -1,17 +1,24 @@
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import charactersDataVi from '../data/characters.json'
 import charactersDataEn from '../data/characters_en.json'
 import CharacterCard from '../components/CharacterCard.vue'
+import { getCharacters } from '../services/characterApi'
 
 const { t, locale } = useI18n()
 
-const characters = computed(() => locale.value === 'en' ? charactersDataEn : charactersDataVi)
+const localCharacters = computed(() => locale.value === 'en' ? charactersDataEn : charactersDataVi)
 const searchQuery = ref('')
 const selectedTier = ref('')
 const selectedType = ref('')
 const selectedFaction = ref('')
+const currentPage = ref(1)
+const itemsPerPage = 12
+const paginatedCharacters = ref([])
+const totalItems = ref(0)
+let activeRequest = 0
+let refreshTimer
 
 const TIER_ORDER = ['UR+', 'UR', 'SSR+', 'SSR', 'SR', 'R', 'N']
 
@@ -36,14 +43,24 @@ const FACTION_OPTIONS = computed(() => [
 ])
 
 const tierOptions = computed(() => {
-  const tiers = new Set(characters.value.map(c => c.tier).filter(Boolean))
+  const tiers = new Set(localCharacters.value.map(c => c.tier).filter(Boolean))
   return TIER_ORDER.filter(t => tiers.has(t))
 })
 
-const filteredCharacters = computed(() => {
+const parseReleaseDate = (value) => {
+  if (!value) return null
+  const match = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(value)
+  return match ? Date.UTC(Number(match[3]), Number(match[2]) - 1, Number(match[1])) : null
+}
+
+const getReleaseTime = (character) => parseReleaseDate(
+  character.releaseSea || character.releaseDate || character.releaseTrung,
+)
+
+const filteredLocalCharacters = computed(() => {
   const query = searchQuery.value.trim().toLowerCase()
 
-  return characters.value.filter(c => {
+  return localCharacters.value.filter(c => {
     if (query && !c.name.toLowerCase().includes(query)) return false
     if (selectedTier.value && c.tier !== selectedTier.value) return false
     
@@ -58,26 +75,68 @@ const filteredCharacters = computed(() => {
     }
     
     return true
+  }).sort((left, right) => {
+    const leftRelease = getReleaseTime(left)
+    const rightRelease = getReleaseTime(right)
+
+    if (leftRelease === null && rightRelease !== null) return 1
+    if (leftRelease !== null && rightRelease === null) return -1
+    if (leftRelease !== rightRelease) return rightRelease - leftRelease
+    return left.name.localeCompare(right.name, locale.value)
   })
 })
 
-const currentPage = ref(1)
-const itemsPerPage = 12
-
 const transitionName = ref('fade')
 
-watch([searchQuery, selectedTier, selectedType, selectedFaction], () => {
-  transitionName.value = 'fade'
-  currentPage.value = 1
-})
-
-const totalPages = computed(() => Math.ceil(filteredCharacters.value.length / itemsPerPage))
-
-const paginatedCharacters = computed(() => {
+const applyLocalFallback = () => {
   const start = (currentPage.value - 1) * itemsPerPage
   const end = start + itemsPerPage
-  return filteredCharacters.value.slice(start, end)
+  totalItems.value = filteredLocalCharacters.value.length
+  paginatedCharacters.value = filteredLocalCharacters.value.slice(start, end)
+}
+
+const loadCharacters = async () => {
+  const requestId = ++activeRequest
+  const typeMap = locale.value === 'en' ? TYPE_MAP_EN : TYPE_MAP_VI
+  const factionMap = locale.value === 'en' ? FACTION_MAP_EN : FACTION_MAP_VI
+
+  try {
+    const result = await getCharacters({
+      language: locale.value,
+      search: searchQuery.value.trim(),
+      tier: selectedTier.value,
+      type: selectedType.value ? typeMap[selectedType.value] : '',
+      faction: selectedFaction.value ? factionMap[selectedFaction.value] : '',
+      page: currentPage.value,
+      pageSize: itemsPerPage,
+      sort: 'release_desc',
+      localCharacters: localCharacters.value,
+    })
+
+    if (requestId !== activeRequest) return
+    paginatedCharacters.value = result.items
+    totalItems.value = result.totalCount
+  } catch {
+    if (requestId !== activeRequest) return
+    applyLocalFallback()
+  }
+}
+
+const scheduleLoad = (delay = 0) => {
+  activeRequest += 1
+  window.clearTimeout(refreshTimer)
+  refreshTimer = window.setTimeout(loadCharacters, delay)
+}
+
+watch([locale, searchQuery, selectedTier, selectedType, selectedFaction], () => {
+  transitionName.value = 'fade'
+  if (currentPage.value !== 1) currentPage.value = 1
+  scheduleLoad(searchQuery.value.trim() ? 250 : 0)
 })
+
+watch(currentPage, () => scheduleLoad())
+
+const totalPages = computed(() => Math.ceil(totalItems.value / itemsPerPage))
 
 const goToPage = (page) => {
   if (page >= 1 && page <= totalPages.value && page !== currentPage.value) {
@@ -108,6 +167,8 @@ watch(paginatedCharacters, (newChars) => {
     })
   }, 500)
 }, { immediate: true })
+
+onMounted(loadCharacters)
 </script>
 
 <template>
@@ -147,7 +208,7 @@ watch(paginatedCharacters, (newChars) => {
           </select>
         </div>
       </div>
-      <div class="text-gray-500 text-sm mb-6">{{ filteredCharacters.length }}/{{ characters.length }}</div>
+      <div class="text-gray-500 text-sm mb-6">{{ totalItems }}/{{ localCharacters.length }}</div>
     </div>
 
     <!-- Character Grid -->

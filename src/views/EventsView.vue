@@ -1,7 +1,8 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import eventsData from '../data/events.json'
+import { getEvents } from '../services/eventApi'
 
 const { t, locale } = useI18n()
 
@@ -9,6 +10,8 @@ const { t, locale } = useI18n()
 const expandedEventId = ref(null)
 
 const currentCategory = ref('main') // 'main' or 'other'
+const apiEvents = ref(null)
+let activeRequest = 0
 
 const toggleEvent = (id) => {
   if (expandedEventId.value === id) {
@@ -32,12 +35,36 @@ const getDescription = (event) => {
   return locale.value === 'en' ? event.descriptionEn : event.descriptionVi
 }
 
-// Filter and Sort events
-const sortedEvents = computed(() => {
+const localEvents = computed(() => {
   return eventsData
     .filter(event => event.category === currentCategory.value)
     .sort((a, b) => new Date(a.startDate) - new Date(b.startDate))
 })
+
+const sortedEvents = computed(() => apiEvents.value || localEvents.value)
+
+const loadEvents = async () => {
+  const requestId = ++activeRequest
+  apiEvents.value = null
+
+  try {
+    const result = await getEvents({
+      language: locale.value,
+      category: currentCategory.value,
+      page: 1,
+      pageSize: 100,
+      localEvents: eventsData,
+    })
+    if (requestId === activeRequest) apiEvents.value = result.items
+  } catch {
+    // JSON local remains the visible source when the API is unavailable.
+  }
+}
+
+watch([locale, currentCategory], () => {
+  expandedEventId.value = null
+  loadEvents()
+}, { immediate: true })
 
 </script>
 
@@ -105,7 +132,7 @@ const sortedEvents = computed(() => {
                   class="inline-flex items-center gap-1 text-xs font-bold text-opm-gold uppercase tracking-wider bg-opm-gold/10 border border-opm-gold/30 px-2 py-1 rounded shadow-[0_0_10px_rgba(255,215,0,0.1)]"
                 >
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                  {{ locale === 'vi' ? `Ngày ${event.serverLaunchDay} Server Mới` : `Day ${event.serverLaunchDay} New Server` }}
+                  {{ t('events.newServerDay', { day: event.serverLaunchDay }) }}
                 </span>
               </div>
               <!-- Event Title -->
@@ -140,14 +167,21 @@ const sortedEvents = computed(() => {
             <div 
               @click="$router.push('/events/' + event.id)"
               class="rounded-xl overflow-hidden bg-black/30 border border-white/5 flex justify-center items-center cursor-pointer transition-all duration-300 hover:border-opm-gold/50 hover:shadow-[0_0_20px_rgba(255,215,0,0.15)] group/img"
-              title="Click to view details"
+              :title="t('events.openDetails')"
             >
               <img 
+                v-if="event.imageUrl"
                 :src="event.imageUrl" 
                 :alt="getTitle(event)"
                 class="max-w-full h-auto object-contain transition-transform duration-500 group-hover/img:scale-[1.02]"
                 loading="lazy"
               />
+              <div v-else class="min-h-40 w-full flex flex-col items-center justify-center gap-3 px-6 py-10 text-center text-gray-500">
+                <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m3 16 5-5 4 4 3-3 6 6m-2-14H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z" />
+                </svg>
+                <span class="text-sm font-semibold">{{ t('events.imageUpdating') }}</span>
+              </div>
             </div>
           </div>
         </div>

@@ -1,22 +1,39 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import eventsData from '../data/events.json'
+import { getEventById } from '../services/eventApi'
 
 const route = useRoute()
 const router = useRouter()
 const { t, locale } = useI18n()
 
-const eventId = route.params.id
-
-const event = computed(() => {
-  return eventsData.find(e => e.id === eventId)
-})
+const eventId = computed(() => String(route.params.id || ''))
+const localEvent = computed(() => eventsData.find(e => e.id === eventId.value) || null)
+const apiEvent = ref(null)
+const event = computed(() => apiEvent.value || localEvent.value)
 
 const activeSection = ref(0)
 const selectedImage = ref(null)
 const tabsContainer = ref(null)
+let activeRequest = 0
+
+const loadEvent = async () => {
+  const requestId = ++activeRequest
+  apiEvent.value = null
+  activeSection.value = 0
+  selectedImage.value = null
+
+  try {
+    const result = await getEventById(eventId.value, locale.value, localEvent.value)
+    if (requestId === activeRequest) apiEvent.value = result
+  } catch {
+    // JSON local remains the visible source when the API is unavailable.
+  }
+}
+
+watch([eventId, locale], loadEvent, { immediate: true })
 
 const scrollTabs = (direction) => {
   if (tabsContainer.value) {

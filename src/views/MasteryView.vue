@@ -1,9 +1,12 @@
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import charactersDataVi from '../data/characters.json'
 import charactersDataEn from '../data/characters_en.json'
+import masteryData from '../data/mastery.json'
+import { getAllCharacters } from '../services/characterApi'
+import { getMasteryConfig } from '../services/masteryApi'
 
 const { t, locale } = useI18n()
 const route = useRoute()
@@ -31,14 +34,37 @@ const toTier = ref(1)
 const showCharModal = ref(false)
 const modalTarget = ref('main')
 const searchQuery = ref('')
+const characterCatalog = ref(charactersDataVi)
+const masteryConfig = ref(masteryData)
 
 const defaultChar = charactersDataVi.find(c => c.name.includes('Zombieman') && c.tier === 'UR+') || charactersDataVi[0]
 const selectedChar = ref(charactersDataVi.find(c => c.id === route.query.character) || defaultChar)
 const supportChar = ref(null)
 
+const loadMasteryPageData = async () => {
+  const [charactersResult, masteryResult] = await Promise.allSettled([
+    getAllCharacters('vi', charactersDataVi),
+    getMasteryConfig(),
+  ])
+
+  if (charactersResult.status === 'fulfilled' && charactersResult.value.length) {
+    characterCatalog.value = charactersResult.value
+    selectedChar.value = characterCatalog.value.find(c => c.id === selectedChar.value?.id) || selectedChar.value
+    if (supportChar.value) {
+      supportChar.value = characterCatalog.value.find(c => c.id === supportChar.value.id) || supportChar.value
+    }
+  }
+
+  if (masteryResult.status === 'fulfilled' && masteryResult.value?.categories) {
+    masteryConfig.value = masteryResult.value
+  }
+}
+
+onMounted(loadMasteryPageData)
+
 watch(() => route.query.character, (characterId) => {
   if (!characterId) return
-  const character = charactersDataVi.find(c => c.id === characterId)
+  const character = characterCatalog.value.find(c => c.id === characterId)
   if (!character) return
   selectedChar.value = character
   supportChar.value = null
@@ -67,7 +93,7 @@ const getTypeName = (type) => ({
 const filteredChars = computed(() => {
   const query = searchQuery.value.trim().toLowerCase()
   
-  let list = charactersDataVi
+  let list = characterCatalog.value
   if (modalTarget.value === 'support' && selectedChar.value) {
     list = list.filter(c => c.faction === selectedChar.value.faction && !['N', 'R'].includes(c.tier))
   }
@@ -114,325 +140,36 @@ const supportCharDisplay = computed(() => {
 
 const tierDiff = computed(() => Math.max(0, toTier.value - fromTier.value))
 
-const statsData = {
-  phe_he: [
-    { atk: 0, hp: 0 },
-    { atk: 0, hp: 0 },
-    { atk: 840, hp: 5040 },
-    { atk: 1680, hp: 10080 },
-    { atk: 2520, hp: 15120 },
-    { atk: 3360, hp: 20160 },
-    { atk: 4200, hp: 25200 },
-    { atk: 5040, hp: 30240 },
-    { atk: 6720, hp: 40320 },
-    { atk: 10080, hp: 60480 },
-    { atk: 17220, hp: 103320 }
-  ],
-  cap: [
-    { atk: 0, hp: 0 },
-    { atk: 0, hp: 0 },
-    { atk: 600, hp: 3600 },
-    { atk: 1200, hp: 7200 },
-    { atk: 1800, hp: 10800 },
-    { atk: 2400, hp: 14400 },
-    { atk: 3000, hp: 18000 },
-    { atk: 3600, hp: 21600 },
-    { atk: 4800, hp: 28800 },
-    { atk: 7200, hp: 43200 },
-    { atk: 8600, hp: 51600 }
-  ]
+const categories = computed(() => masteryConfig.value?.categories || masteryData.categories)
+
+const getTierConfig = (category, tier) => {
+  const tiers = categories.value?.[category] || []
+  return tiers[tier] || tiers.find(item => item.tier === tier) || null
 }
 
-const currentStats = computed(() => {
-  const arr = subTab.value === 'cap' ? statsData.cap : statsData.phe_he
-  return arr[fromTier.value] || arr[arr.length - 1]
-})
-
-const targetStats = computed(() => {
-  const arr = subTab.value === 'cap' ? statsData.cap : statsData.phe_he
-  return arr[toTier.value] || arr[arr.length - 1]
-})
-
-const requirementsData = [
-  [],
-  [
-    { text: 'Bản thân đột phá đạt ', highlight: '2★ vàng', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ: Đột Phá ', highlight: '3★ (vàng)', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Bản thân đột phá đạt ', highlight: '3★ vàng', color: 'text-[#eab308]' },
-    { text: 'Huy Hiệu của bản thân đạt ', highlight: '2★', color: 'text-white' },
-    { text: 'Nhân vật hỗ trợ: Đột Phá ', highlight: '3★ (vàng)', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Bản thân đột phá đạt ', highlight: '3★ vàng', color: 'text-[#eab308]' },
-    { text: 'Huy Hiệu của bản thân đạt ', highlight: '3★', color: 'text-white' },
-    { text: 'Nhân vật hỗ trợ: Đột Phá ', highlight: '4★ (vàng)', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Bản thân đột phá đạt ', highlight: '4★ vàng', color: 'text-[#eab308]' },
-    { text: 'Huy Hiệu của bản thân đạt ', highlight: '3★', color: 'text-white' },
-    { text: 'Nhân vật hỗ trợ: Thức Tỉnh ', highlight: '2★ (tím)', color: 'text-purple-400' }
-  ],
-  [
-    { text: 'Bản thân đột phá đạt ', highlight: '4★ vàng', color: 'text-[#eab308]' },
-    { text: 'Huy Hiệu của bản thân đạt ', highlight: '4★', color: 'text-white' },
-    { text: 'Nhân vật hỗ trợ: Thức Tỉnh ', highlight: '2★ (tím)', color: 'text-purple-400' }
-  ],
-  [
-    { text: 'Bản thân đột phá đạt ', highlight: '5★ vàng', color: 'text-[#eab308]' },
-    { text: 'Huy Hiệu của bản thân đạt ', highlight: '4★', color: 'text-white' },
-    { text: 'Nhân vật hỗ trợ: Thức Tỉnh ', highlight: '3★ (tím)', color: 'text-purple-400' }
-  ],
-  [
-    { text: 'Bản thân đột phá đạt ', highlight: '5★ vàng', color: 'text-[#eab308]' },
-    { text: 'Huy Hiệu của bản thân đạt ', highlight: '5★', color: 'text-white' },
-    { text: 'Nhân vật hỗ trợ: Thức Tỉnh ', highlight: '3★ (tím)', color: 'text-purple-400' }
-  ],
-  [
-    { text: 'Bản thân đột phá đạt ', highlight: '6★ vàng', color: 'text-[#eab308]' },
-    { text: 'Huy Hiệu của bản thân đạt ', highlight: '5★', color: 'text-white' },
-    { text: 'Nhân vật hỗ trợ: Thức Tỉnh ', highlight: '4★ (tím)', color: 'text-purple-400' }
-  ],
-  [
-    { text: 'Bản thân đột phá đạt ', highlight: '6★ vàng', color: 'text-[#eab308]' },
-    { text: 'Huy Hiệu của bản thân đạt ', highlight: '6★', color: 'text-white' },
-    { text: 'Nhân vật hỗ trợ: Thức Tỉnh ', highlight: '4★ (tím)', color: 'text-purple-400' }
-  ],
-  [
-    { text: 'Bản thân đột phá đạt ', highlight: '7★ vàng', color: 'text-[#eab308]' },
-    { text: 'Huy Hiệu của bản thân đạt ', highlight: '6★', color: 'text-white' },
-    { text: 'Nhân vật hỗ trợ: Thức Tỉnh ', highlight: '5★ (tím)', color: 'text-purple-400' }
-  ]
-]
-
-const heRequirementsData = [
-  [],
-  [
-    { text: 'Cần ', highlight: '2 nhân vật {TYPE} đạt 3★ vàng', color: 'text-[#eab308]' },
-    { text: 'Training Center · ', highlight: 'lv trung bình đạt 45', color: 'text-white' }
-  ],
-  [
-    { text: 'Cần ', highlight: '3 nhân vật {TYPE} đạt 3★ vàng', color: 'text-[#eab308]' },
-    { text: 'Training Center · ', highlight: 'lv trung bình đạt 50', color: 'text-white' },
-    { text: 'Cần ', highlight: '2 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 2', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Huy Hiệu Lv 1', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Cần ', highlight: '3 nhân vật {TYPE} đạt 4★ vàng', color: 'text-[#eab308]' },
-    { text: 'Training Center · ', highlight: 'lv trung bình đạt 55', color: 'text-white' },
-    { text: 'Cần ', highlight: '3 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 2', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Huy Hiệu Lv 2', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Huy Hiệu Lv 1', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Cần ', highlight: '4 nhân vật {TYPE} đạt 4★ vàng', color: 'text-[#eab308]' },
-    { text: 'Training Center · ', highlight: 'lv trung bình đạt 60', color: 'text-white' },
-    { text: 'Cần ', highlight: '3 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 3', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Huy Hiệu Lv 2', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Huy Hiệu Lv 2', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Cần ', highlight: '4 nhân vật {TYPE} đạt 5★ vàng', color: 'text-[#eab308]' },
-    { text: 'Training Center · ', highlight: 'lv trung bình đạt 65', color: 'text-white' },
-    { text: 'Cần ', highlight: '4 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 3', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Huy Hiệu Lv 3', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Huy Hiệu Lv 2', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Cần ', highlight: '5 nhân vật {TYPE} đạt 5★ vàng', color: 'text-[#eab308]' },
-    { text: 'Training Center · ', highlight: 'lv trung bình đạt 70', color: 'text-white' },
-    { text: 'Cần ', highlight: '4 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 4', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Huy Hiệu Lv 3', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Huy Hiệu Lv 3', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Cần ', highlight: '5 nhân vật {TYPE} đạt 6★ vàng', color: 'text-[#eab308]' },
-    { text: 'Training Center · ', highlight: 'lv trung bình đạt 75', color: 'text-white' },
-    { text: 'Cần ', highlight: '5 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 4', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Huy Hiệu Lv 4', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Huy Hiệu Lv 3', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Cần ', highlight: '6 nhân vật {TYPE} đạt 6★ vàng', color: 'text-[#eab308]' },
-    { text: 'Training Center · ', highlight: 'lv trung bình đạt 80', color: 'text-white' },
-    { text: 'Cần ', highlight: '5 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 5', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Huy Hiệu Lv 4', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Huy Hiệu Lv 4', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Cần ', highlight: '6 nhân vật {TYPE} đạt 7★ vàng', color: 'text-[#eab308]' },
-    { text: 'Training Center · ', highlight: 'lv trung bình đạt 85', color: 'text-white' },
-    { text: 'Cần ', highlight: '5 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 6', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Huy Hiệu Lv 5', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Huy Hiệu Lv 4', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Cần ', highlight: '7 nhân vật {TYPE} đạt 7★ vàng', color: 'text-[#eab308]' },
-    { text: 'Training Center · ', highlight: 'lv trung bình đạt 90', color: 'text-white' },
-    { text: 'Cần ', highlight: '5 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 7', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Huy Hiệu Lv 5', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Huy Hiệu Lv 5', color: 'text-[#eab308]' }
-  ]
-]
-
-const capRequirementsData = [
-  [],
-  [
-    { text: 'Cần ', highlight: '3 nhân vật hạng S đạt 1★ tím', color: 'text-purple-400' },
-    { text: 'Kỷ Vật đạt ', highlight: '2★', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Kỷ Vật đạt ', highlight: '2★', color: 'text-[#eab308]' },
-    { text: 'Cần ', highlight: '2 nhân vật {TYPE} đạt tinh thông hệ (công) tier 2', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Kỷ Vật Lv 1', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Cần ', highlight: '4 nhân vật hạng S đạt 2★ tím', color: 'text-purple-400' },
-    { text: 'Kỷ Vật đạt ', highlight: '3★', color: 'text-[#eab308]' },
-    { text: 'Cần ', highlight: '2 nhân vật {TYPE} đạt tinh thông hệ (công) tier 3', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Kỷ Vật Lv 2', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Kỷ Vật Lv 1', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Kỷ Vật đạt ', highlight: '3★', color: 'text-[#eab308]' },
-    { text: 'Cần ', highlight: '2 nhân vật {TYPE} đạt tinh thông hệ (công) tier 3', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Kỷ Vật Lv 2', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Kỷ Vật Lv 2', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Cần ', highlight: '4 nhân vật hạng S đạt 3★ tím', color: 'text-purple-400' },
-    { text: 'Kỷ Vật đạt ', highlight: '4★', color: 'text-[#eab308]' },
-    { text: 'Cần ', highlight: '2 nhân vật {TYPE} đạt tinh thông hệ (công) tier 4', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Kỷ Vật Lv 3', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Kỷ Vật Lv 2', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Kỷ Vật đạt ', highlight: '4★', color: 'text-[#eab308]' },
-    { text: 'Cần ', highlight: '3 nhân vật {TYPE} đạt tinh thông hệ (công) tier 4', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Kỷ Vật Lv 3', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Kỷ Vật Lv 3', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Cần ', highlight: '5 nhân vật hạng S đạt 4★ tím', color: 'text-purple-400' },
-    { text: 'Kỷ Vật đạt ', highlight: '5★', color: 'text-[#eab308]' },
-    { text: 'Cần ', highlight: '3 nhân vật {TYPE} đạt tinh thông hệ (công) tier 5', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Kỷ Vật Lv 4', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Kỷ Vật Lv 3', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Kỷ Vật đạt ', highlight: '5★', color: 'text-[#eab308]' },
-    { text: 'Cần ', highlight: '3 nhân vật {TYPE} đạt tinh thông hệ (công) tier 5', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Kỷ Vật Lv 4', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Kỷ Vật Lv 4', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Cần ', highlight: '5 nhân vật hạng S đạt 5★ tím', color: 'text-purple-400' },
-    { text: 'Kỷ Vật đạt ', highlight: '6★', color: 'text-[#eab308]' },
-    { text: 'Cần ', highlight: '3 nhân vật {TYPE} đạt tinh thông hệ (công) tier 6', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Kỷ Vật Lv 5', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Kỷ Vật Lv 4', color: 'text-[#eab308]' }
-  ],
-  [
-    { text: 'Kỷ Vật đạt ', highlight: '6★', color: 'text-[#eab308]' },
-    { text: 'Cần ', highlight: '3 nhân vật {TYPE} đạt tinh thông hệ (công) tier 6', color: 'text-[#3b82f6]' },
-    { text: 'Nhân vật hỗ trợ 1: ', highlight: 'Kỷ Vật Lv 5', color: 'text-[#eab308]' },
-    { text: 'Nhân vật hỗ trợ 2: ', highlight: 'Kỷ Vật Lv 5', color: 'text-[#eab308]' }
-  ]
-]
-
-const translateRequirement = (condition) => {
-  if (locale.value !== 'en') return condition
-
-  const translate = (value) => value
-    .replace('Bản thân đột phá đạt ', 'Self breakthrough reaches ')
-    .replace('Huy Hiệu của bản thân đạt ', 'Own Insignia reaches ')
-    .replace('Nhân vật hỗ trợ: Đột Phá ', 'Support character: Breakthrough ')
-    .replace('Nhân vật hỗ trợ: Thức Tỉnh ', 'Support character: Awaken ')
-    .replace('Nhân vật hỗ trợ 1: ', 'Support character 1: ')
-    .replace('Nhân vật hỗ trợ 2: ', 'Support character 2: ')
-    .replace('Cần ', 'Require ')
-    .replace('Kỷ Vật đạt ', 'Keepsake reaches ')
-    .replace(/(\d+) nhân vật hạng S đạt (\d+★) tím/, '$1 S-rank characters reach $2 Purple')
-    .replace(/(\d+) nhân vật (.+) đạt (\d+★) vàng/, '$1 $2 characters reach $3 Gold')
-    .replace(/lv trung bình đạt (\d+)/, 'average level reaches $1')
-    .replace(/(\d+) nhân vật phe (.+) đạt tinh thông phe \(thủ\) tier (\d+)/, '$1 $2 characters reach Faction Mastery (DEF) Tier $3')
-    .replace(/(\d+) nhân vật (.+) đạt tinh thông hệ \(công\) tier (\d+)/, '$1 $2 characters reach Type Mastery (ATK) Tier $3')
-    .replace('Huy Hiệu Lv ', 'Insignia Lv ')
-    .replace('Kỷ Vật Lv ', 'Keepsake Lv ')
-    .replaceAll(' vàng', ' Gold')
-    .replaceAll('(vàng)', '(Gold)')
-    .replaceAll(' tím', ' Purple')
-    .replaceAll('(tím)', '(Purple)')
-
-  return { ...condition, text: translate(condition.text), highlight: translate(condition.highlight) }
-}
+const currentStats = computed(() => getTierConfig(subTab.value, fromTier.value)?.stats || { atk: 0, hp: 0 })
+const targetStats = computed(() => getTierConfig(subTab.value, toTier.value)?.stats || { atk: 0, hp: 0 })
 
 const targetRequirement = computed(() => {
   if (tierDiff.value === 0) return null
-  
-  const typeStr = getTypeName(selectedChar.value.type || 'Khác')
-  const factionStr = getFactionName(selectedChar.value.faction || 'Khác')
-  
-  const replacePlaceholders = (cond) => {
-    return {
-      ...cond,
-      highlight: cond.highlight.replace('{TYPE}', typeStr).replace('{FACTION}', factionStr)
-    }
-  }
-  
-  if (subTab.value === 'he' && heRequirementsData[toTier.value]) {
-    return heRequirementsData[toTier.value].map(replacePlaceholders).map(translateRequirement)
-  } else if (subTab.value === 'cap' && capRequirementsData[toTier.value]) {
-    return capRequirementsData[toTier.value].map(replacePlaceholders).map(translateRequirement)
-  } else if (subTab.value === 'phe' && requirementsData[toTier.value]) {
-    return requirementsData[toTier.value].map(translateRequirement)
-  }
-  
-  return null
-})
 
-const materialData = {
-  phe: [
-    {}, // 0
-    { vatlieu: 0, chungchi: 1, the_plus_plus: 0, the_plus: 2, the: 9, vang: 1000 },
-    { vatlieu: 240, chungchi: 2, the_plus_plus: 0, the_plus: 5, the: 1, vang: 6000 },
-    { vatlieu: 444, chungchi: 4, the_plus_plus: 0, the_plus: 8, the: 6, vang: 7000 },
-    { vatlieu: 565, chungchi: 8, the_plus_plus: 1, the_plus: 5, the: 0, vang: 12000 },
-    { vatlieu: 871, chungchi: 10, the_plus_plus: 2, the_plus: 7, the: 0, vang: 13000 },
-    { vatlieu: 1235, chungchi: 14, the_plus_plus: 4, the_plus: 9, the: 0, vang: 18000 },
-    { vatlieu: 1605, chungchi: 17, the_plus_plus: 9, the_plus: 3, the: 0, vang: 19000 },
-    { vatlieu: 1980, chungchi: 21, the_plus_plus: 17, the_plus: 13, the: 0, vang: 24000 },
-    { vatlieu: 2254, chungchi: 26, the_plus_plus: 20, the_plus: 11, the: 0, vang: 25000 },
-    { vatlieu: 2472, chungchi: 32, the_plus_plus: 25, the_plus: 29, the: 0, vang: 30000 }
-  ],
-  he: [
-    {}, // 0
-    { sotay: 0, chungnhan: 1, the_he_he: 2, vatlieu: 0, the: 2, vang: 1000 },
-    { sotay: 75, chungnhan: 2, the_he_he: 3, vatlieu: 0, the: 6, vang: 6000 },
-    { sotay: 156, chungnhan: 4, the_he_he: 4, vatlieu: 0, the: 7, vang: 7000 },
-    { sotay: 282, chungnhan: 6, the_he_he: 6, vatlieu: 0, the: 8, vang: 12000 },
-    { sotay: 438, chungnhan: 8, the_he_he: 3, vatlieu: 1, the: 0, vang: 13000 },
-    { sotay: 663, chungnhan: 8, the_he_he: 3, vatlieu: 2, the: 0, vang: 18000 },
-    { sotay: 886, chungnhan: 10, the_he_he: 5, vatlieu: 4, the: 0, vang: 19000 },
-    { sotay: 1096, chungnhan: 10, the_he_he: 3, vatlieu: 8, the: 0, vang: 24000 },
-    { sotay: 1262, chungnhan: 12, the_he_he: 18, vatlieu: 10, the: 0, vang: 25000 },
-    { sotay: 1423, chungnhan: 12, the_he_he: 16, vatlieu: 14, the: 0, vang: 30000 }
-  ],
-  cap: [
-    {}, // 0
-    { sotay: 8, manh: 1, chungchi: 0, vang: 1000 },
-    { sotay: 12, manh: 1, chungchi: 0, vang: 1000 },
-    { sotay: 15, manh: 2, chungchi: 2, vang: 2000 },
-    { sotay: 18, manh: 3, chungchi: 0, vang: 2000 },
-    { sotay: 22, manh: 3, chungchi: 2, vang: 3000 },
-    { sotay: 25, manh: 4, chungchi: 0, vang: 3000 },
-    { sotay: 29, manh: 5, chungchi: 0, vang: 4000 },
-    { sotay: 33, manh: 6, chungchi: 3, vang: 4000 },
-    { sotay: 36, manh: 7, chungchi: 0, vang: 5000 },
-    { sotay: 39, manh: 8, chungchi: 3, vang: 5000 }
-  ]
-}
+  const tier = getTierConfig(subTab.value, toTier.value)
+  if (!tier?.requirements?.length) return null
+
+  const type = getTypeName(selectedChar.value?.type || '')
+  const faction = getFactionName(selectedChar.value?.faction || '')
+
+  return tier.requirements.map((condition) => {
+    const text = locale.value === 'en' ? condition.textEn : condition.textVi
+    const highlight = locale.value === 'en' ? condition.highlightEn : condition.highlightVi
+
+    return {
+      text: (text || '').replaceAll('{TYPE}', type).replaceAll('{FACTION}', faction),
+      highlight: (highlight || '').replaceAll('{TYPE}', type).replaceAll('{FACTION}', faction),
+      color: condition.color,
+    }
+  })
+})
 
 const getMaterialList = computed(() => {
   if (tierDiff.value === 0) return []
@@ -460,15 +197,15 @@ const getMaterialList = computed(() => {
   const sumCap = { sotay: 0, manh: 0, chungchi: 0, vang: 0 }
 
   for (let i = fromTier.value + 1; i <= toTier.value; i++) {
-    const p = materialData.phe[i]
+    const p = getTierConfig('phe', i)?.costs
     if (p) {
       sumPhe.vatlieu += p.vatlieu; sumPhe.chungchi += p.chungchi; sumPhe.the_plus += p.the_plus; sumPhe.the_plus_plus += p.the_plus_plus; sumPhe.the += p.the; sumPhe.vang += p.vang
     }
-    const h = materialData.he[i]
+    const h = getTierConfig('he', i)?.costs
     if (h) {
       sumHe.sotay += h.sotay; sumHe.chungnhan += h.chungnhan; sumHe.the_he_he += h.the_he_he; sumHe.vatlieu += h.vatlieu; sumHe.the += h.the; sumHe.vang += h.vang
     }
-    const c = materialData.cap[i]
+    const c = getTierConfig('cap', i)?.costs
     if (c) {
       sumCap.sotay += c.sotay; sumCap.manh += c.manh; sumCap.chungchi += c.chungchi; sumCap.vang += c.vang
     }

@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --test tests/*.test.mjs",
+    "test:frontend": "node --test tests/frontend-data.test.mjs"
   },
   "dependencies": {
     "pixi-spine": "^4.0.6",

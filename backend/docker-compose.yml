@@ -1,0 +1,37 @@
+services:
+  database:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-opmwiki}
+      POSTGRES_USER: ${POSTGRES_USER:-opmwiki}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-opmwiki}
+    ports:
+      - "5432:5432"
+    volumes:
+      - opmwiki-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-opmwiki} -d ${POSTGRES_DB:-opmwiki}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: src/OpmWiki.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__OpmWiki: Host=database;Port=5432;Database=${POSTGRES_DB:-opmwiki};Username=${POSTGRES_USER:-opmwiki};Password=${POSTGRES_PASSWORD:-opmwiki}
+      Database__MigrateOnStartup: "true"
+      SeedData__FrontendDataPath: /frontend-data
+    ports:
+      - "5180:8080"
+    volumes:
+      - ../src/data:/frontend-data:ro
+    depends_on:
+      database:
+        condition: service_healthy
+
+volumes:
+  opmwiki-postgres:

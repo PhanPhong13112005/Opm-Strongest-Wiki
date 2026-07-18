@@ -1,8 +1,11 @@
 <script setup>
-import { computed, ref, watch } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import charactersVi from '../data/characters.json'
 import charactersEn from '../data/characters_en.json'
+import insigniaData from '../data/insignias.json'
+import { getAllKeepsakes, getKeepsakeById } from '../services/keepsakeApi'
+import { createLocalInsigniaCatalog, getAllInsignias, getInsigniaById } from '../services/insigniaApi'
 
 const props = defineProps({
   kind: { type: String, required: true },
@@ -15,22 +18,42 @@ const tierFilter = ref('')
 const factionFilter = ref('')
 const typeFilter = ref('')
 const currentPage = ref(1)
+const guidePreview = ref('')
+const localKeepsakes = charactersVi.filter(character => character.keepsakeIcon)
+const localInsignias = createLocalInsigniaCatalog(insigniaData)
+const keepsakeCatalog = ref(localKeepsakes)
+const insigniaCatalog = ref(localInsignias)
 const pageSize = 12
 const isKeepsake = computed(() => props.kind === 'keepsake')
 const title = computed(() => t(isKeepsake.value ? 'equipment.keepsakeTitle' : 'equipment.insigniaTitle'))
 const description = computed(() => t(isKeepsake.value ? 'equipment.keepsakeDesc' : 'equipment.insigniaDesc'))
-const guideRoot = '/Class/Hướng dẫn'
 const safeUrl = (url) => encodeURI(url).replace(/\+/g, '%2B').replace(/#/g, '%23')
-const guideImage = (filename) => `${guideRoot}/${filename}`
-const insigniaClasses = ['A', 'B', 'C', 'Class_S', 'Class_SS', 'Demon', 'Dragon', 'Martial_Artist', 'Outlaw', 'Tiger']
-const insigniaItems = insigniaClasses.map(classLevel => ({
-  id: `insignia-${classLevel}`,
-  classLevel,
-  name: classLevel,
-  tier: '',
-  faction: '',
-  type: ''
-}))
+
+onMounted(async () => {
+  try {
+    if (isKeepsake.value) {
+      if (props.id) {
+        const localKeepsake = localKeepsakes.find(item => item.id === props.id)
+        const detail = await getKeepsakeById(props.id, 'vi', localKeepsake)
+        keepsakeCatalog.value = localKeepsakes.map(item => item.id === detail.id ? detail : item)
+      } else {
+        const items = await getAllKeepsakes('vi', localKeepsakes)
+        if (items.length) keepsakeCatalog.value = items
+      }
+    } else {
+      const items = await getAllInsignias(locale.value, localInsignias)
+      if (items.length) insigniaCatalog.value = items
+      if (props.id) {
+        const localInsignia = insigniaCatalog.value.find(item => item.id === props.id)
+        const detail = await getInsigniaById(props.id, locale.value, localInsignia)
+        insigniaCatalog.value = insigniaCatalog.value.map(item => item.id === detail.id ? detail : item)
+      }
+    }
+  } catch {
+    if (isKeepsake.value) keepsakeCatalog.value = localKeepsakes
+    else insigniaCatalog.value = localInsignias
+  }
+})
 
 const localized = (character) => {
   if (locale.value !== 'en') return character
@@ -54,24 +77,12 @@ const displayType = (type) => ({
 
 const displayName = (item) => {
   if (isKeepsake.value) return localized(item).name
-  const names = {
-    A: ['Huy Hiệu A', 'A Insignia'],
-    B: ['Huy Hiệu B', 'B Insignia'],
-    C: ['Huy Hiệu C', 'C Insignia'],
-    Class_S: ['Huy Hiệu S', 'S Insignia'],
-    Class_SS: ['Huy Hiệu SS', 'SS Insignia'],
-    Demon: ['Huy Hiệu Quỷ', 'Demon Insignia'],
-    Dragon: ['Huy Hiệu Rồng', 'Dragon Insignia'],
-    Martial_Artist: ['Huy Hiệu Võ Thuật', 'Martial Artist Insignia'],
-    Outlaw: ['Huy Hiệu Tội Phạm', 'Outlaw Insignia'],
-    Tiger: ['Huy Hiệu Hổ', 'Tiger Insignia']
-  }
-  return names[item.classLevel]?.[locale.value === 'en' ? 1 : 0] || item.name
+  return locale.value === 'en' ? item.nameEn : item.nameVi
 }
 
 const getImage = (character) => {
   if (isKeepsake.value && character.keepsakeIcon) return character.keepsakeIcon
-  if (!isKeepsake.value) return `/Class/${character.classLevel || 'Other'}.png`
+  if (!isKeepsake.value) return character.imageUrl
   if (!character.imageURL) return ''
   return character.imageURL.startsWith('/')
     ? character.imageURL
@@ -80,8 +91,8 @@ const getImage = (character) => {
 
 const baseItems = computed(() => {
   const base = isKeepsake.value
-    ? charactersVi.filter(character => character.keepsakeIcon)
-    : insigniaItems
+    ? keepsakeCatalog.value
+    : insigniaCatalog.value
   return base
 })
 
@@ -111,76 +122,34 @@ watch([search, tierFilter, factionFilter, typeFilter, isKeepsake], () => { curre
 watch(totalPages, (total) => { if (currentPage.value > total) currentPage.value = total })
 
 const item = computed(() => isKeepsake.value
-  ? charactersVi.find(character => character.id === props.id)
-  : insigniaItems.find(insignia => insignia.id === props.id)
+  ? keepsakeCatalog.value.find(character => character.id === props.id)
+  : insigniaCatalog.value.find(insignia => insignia.id === props.id)
 )
 const itemName = computed(() => {
   if (!item.value) return ''
   return isKeepsake.value ? `${displayName(item.value)} ${t('detail.keepsake')}` : displayName(item.value)
 })
+const keepsakeAcquisition = computed(() => {
+  if (!isKeepsake.value || !item.value) return ''
+  const acquisitionType = item.value.acquisitionType ||
+    (item.value.tier?.includes('UR') ? 'limited-event' : 'related-event')
+  return t(acquisitionType === 'limited-event' ? 'equipment.keepsakeSourceUr' : 'equipment.keepsakeSource')
+})
 
 const insigniaGuides = computed(() => {
   if (isKeepsake.value || !item.value) return []
-
-  const dailyRequests = {
-    title: t('equipment.guideDailyRequests'),
-    description: t('equipment.guideDailyRequestsDesc'),
-    images: [guideImage('Request_1.webp'), guideImage('Request_2.webp')]
-  }
-  const randomChest = {
-    title: t('equipment.guideRandomChest'),
-    description: t('equipment.guideRandomChestDesc'),
-    images: [guideImage('Chest.webp')]
-  }
-  const randomChestSource = {
-    title: t('equipment.guideRandomChestSource'),
-    description: t('equipment.guideRandomChestSourceDesc'),
-    images: [guideImage('Request_1.webp'), guideImage('Request_2.webp')]
-  }
-  const classAShop = {
-    title: t('equipment.guideClassAShop'),
-    description: t('equipment.guideClassAShopDesc'),
-    images: [guideImage('Shop_3.webp')]
-  }
-  const demonShop = {
-    title: t('equipment.guideDemonShop'),
-    description: t('equipment.guideDemonShopDesc'),
-    images: [guideImage('Shop.webp')]
-  }
-  const badgeChest = {
-    title: t('equipment.guideBadgeChest'),
-    description: t('equipment.guideBadgeChestDesc'),
-    images: [guideImage('Shop_2.webp'), guideImage('Detal_Shop_2.webp')]
-  }
-  const monthlyCard = {
-    title: t('equipment.guideMonthlyCard'),
-    description: t('equipment.guideMonthlyCardDesc'),
-    images: [guideImage('Nap.webp')]
-  }
-  const unavailable = {
-    title: t('equipment.guideUnavailable'),
-    description: t('equipment.guideUnavailableDesc'),
-    images: []
-  }
-
-  return {
-    A: [classAShop],
-    B: [randomChestSource, randomChest],
-    C: [randomChestSource, randomChest],
-    Class_S: [badgeChest, monthlyCard],
-    Class_SS: [badgeChest, monthlyCard],
-    Demon: [dailyRequests, demonShop],
-    Dragon: [dailyRequests, badgeChest, monthlyCard],
-    Martial_Artist: [badgeChest, monthlyCard],
-    Outlaw: [badgeChest, monthlyCard],
-    Tiger: [randomChestSource, randomChest]
-  }[item.value.classLevel] || [unavailable]
+  return (item.value.guides || []).map(guide => ({
+    id: guide.id,
+    title: locale.value === 'en' ? guide.titleEn : guide.titleVi,
+    description: locale.value === 'en' ? guide.descriptionEn : guide.descriptionVi,
+    images: guide.images || [],
+  }))
 })
 </script>
 
 <template>
   <main class="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6">
-    <template v-if="id && item">
+    <template v-if="props.id && item">
       <RouterLink :to="isKeepsake ? '/keepsakes' : '/insignias'" class="mb-6 inline-flex text-sm font-bold text-gray-400 hover:text-white">← {{ t('equipment.backToList') }}</RouterLink>
       <section class="grid gap-8 rounded-2xl border border-gray-800 bg-[#12131a] p-6 md:grid-cols-[280px_1fr] md:p-10">
         <div class="flex min-h-64 items-center justify-center rounded-xl bg-[#0b0c10] p-6">
@@ -196,6 +165,12 @@ const insigniaGuides = computed(() => {
         </div>
       </section>
 
+      <section v-if="isKeepsake" class="mt-8 rounded-2xl border border-gray-800 bg-[#12131a] p-6 md:p-10">
+        <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-opm-gold">{{ t('equipment.acquisitionGuide') }}</p>
+        <h2 class="text-2xl font-black text-white">{{ t('equipment.keepsakeHowToGet') }}</h2>
+        <p class="mt-4 max-w-3xl text-sm leading-relaxed text-gray-300">{{ keepsakeAcquisition }}</p>
+      </section>
+
       <section v-if="!isKeepsake" class="mt-8 rounded-2xl border border-gray-800 bg-[#12131a] p-6 md:p-10">
         <div class="mb-6">
           <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-opm-gold">{{ t('equipment.acquisitionGuide') }}</p>
@@ -203,23 +178,22 @@ const insigniaGuides = computed(() => {
         </div>
 
         <div class="grid gap-5 lg:grid-cols-2">
-          <article v-for="guide in insigniaGuides" :key="guide.title" class="overflow-hidden rounded-xl border border-gray-800 bg-[#0b0c10]">
+          <article v-for="guide in insigniaGuides" :key="guide.id" class="overflow-hidden rounded-xl border border-gray-800 bg-[#0b0c10]">
             <div class="p-5">
               <h3 class="font-black text-white">{{ guide.title }}</h3>
               <p class="mt-2 text-sm leading-relaxed text-gray-400">{{ guide.description }}</p>
             </div>
             <div v-if="guide.images.length" class="grid gap-3 border-t border-gray-800 p-3" :class="guide.images.length > 1 ? 'sm:grid-cols-2' : ''">
-              <a
+              <button
                 v-for="image in guide.images"
                 :key="image"
-                :href="safeUrl(image)"
-                target="_blank"
-                rel="noopener"
-                class="group relative block overflow-hidden rounded-lg border border-gray-800 bg-black"
+                type="button"
+                class="group relative block w-full cursor-zoom-in overflow-hidden rounded-lg border border-gray-800 bg-black"
+                @click="guidePreview = safeUrl(image)"
               >
                 <img :src="safeUrl(image)" :alt="guide.title" loading="lazy" class="aspect-video h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:opacity-60" />
                 <span class="absolute inset-0 flex items-center justify-center text-xs font-black uppercase tracking-widest text-white opacity-0 transition-opacity group-hover:opacity-100">{{ t('equipment.openGuide') }}</span>
-              </a>
+              </button>
             </div>
           </article>
         </div>
@@ -292,6 +266,29 @@ const insigniaGuides = computed(() => {
         </button>
       </div>
     </template>
+
+    <transition name="fade">
+      <div
+        v-if="guidePreview"
+        class="fixed inset-0 z-[70] flex cursor-zoom-out items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+        role="dialog"
+        aria-modal="true"
+        :aria-label="locale === 'vi' ? 'Xem ảnh hướng dẫn' : 'View guide image'"
+        @click="guidePreview = ''"
+      >
+        <div class="relative flex max-h-[92vh] max-w-[96vw] items-center justify-center" @click.stop>
+          <img :src="guidePreview" alt="" class="max-h-[92vh] max-w-[96vw] rounded-lg border border-white/10 object-contain shadow-2xl" />
+          <button
+            type="button"
+            class="absolute right-2 top-2 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/75 text-2xl font-bold text-white transition hover:bg-opm-red"
+            :aria-label="locale === 'vi' ? 'Đóng ảnh' : 'Close image'"
+            @click="guidePreview = ''"
+          >
+            ×
+          </button>
+        </div>
+      </div>
+    </transition>
   </main>
 </template>
 

@@ -1,0 +1,99 @@
+# OPM Strongest Wiki Backend
+
+Backend ASP.NET Core cung cấp API dữ liệu cho frontend Vue hiện tại. Frontend vẫn tiếp tục đọc JSON cho đến khi từng màn hình được chuyển sang API.
+
+## Kiến trúc
+
+```text
+OpmWiki.Api            HTTP, Swagger, CORS, health checks
+OpmWiki.Application    DTO, truy vấn và abstraction
+OpmWiki.Domain         Entity và quy tắc dữ liệu cốt lõi
+OpmWiki.Infrastructure EF Core, PostgreSQL, repository, nhập JSON
+OpmWiki.Tests          Kiểm thử tự động
+```
+
+Luồng phụ thuộc:
+
+```text
+Api -> Application <- Infrastructure -> Domain
+```
+
+## Yêu cầu
+
+- .NET SDK 10
+- PostgreSQL, hoặc Docker Desktop
+
+## Chạy local
+
+Từ thư mục `backend`:
+
+```powershell
+Copy-Item .env.example .env
+docker compose up -d database
+dotnet tool restore
+dotnet ef database update --project src/OpmWiki.Infrastructure --startup-project src/OpmWiki.Api
+dotnet run --project src/OpmWiki.Api -- --seed-data
+dotnet run --project src/OpmWiki.Api --urls http://localhost:5180
+```
+
+Swagger: `http://localhost:5180/swagger`
+
+Nếu muốn chạy cả API và PostgreSQL bằng Docker:
+
+```powershell
+docker compose up --build
+docker compose exec api dotnet OpmWiki.Api.dll --seed-data
+```
+
+## API ban đầu
+
+| Method | Endpoint | Chức năng |
+|---|---|---|
+| `GET` | `/api/health` | Kiểm tra API |
+| `GET` | `/api/health/database` | Kiểm tra PostgreSQL |
+| `GET` | `/api/characters` | Danh sách, tìm kiếm, lọc và phân trang nhân vật |
+| `GET` | `/api/characters/{id}` | Chi tiết nhân vật |
+| `GET` | `/api/events` | Danh sách, lọc thời gian và phân trang sự kiện |
+| `GET` | `/api/events/{id}` | Chi tiết sự kiện |
+| `GET` | `/api/mastery` | Cấu hình 3 nhánh và 33 mốc Tinh Thông |
+| `GET` | `/api/keepsakes` | Danh sách, tìm kiếm, lọc và phân trang Kỷ vật |
+| `GET` | `/api/keepsakes/{id}` | Chi tiết Kỷ vật theo nhân vật |
+| `GET` | `/api/insignias` | Danh sách 10 Huy Hiệu hợp lệ, hỗ trợ tìm kiếm và phân trang |
+| `GET` | `/api/insignias/{id}` | Chi tiết Huy Hiệu và các hướng dẫn nhận theo thứ tự |
+| `GET` | `/api/backgears` | Danh mục Thẻ Hình nền, cấp nâng, chỉ số và Bộ Sưu Tập |
+| `GET` | `/api/tactics` | Danh mục Thẻ Chiến thuật, chỉ số sao và Khung Chiến thuật |
+
+Các endpoint dữ liệu hỗ trợ `language=vi` hoặc `language=en`.
+
+Ví dụ:
+
+```text
+/api/characters?language=vi&tier=UR%2B&sort=release_desc&page=1&pageSize=12
+/api/characters/100013-urplus?language=en
+/api/events?language=vi&category=main&from=2026-07-01&to=2026-07-31
+/api/keepsakes?language=en&tier=UR%2B&page=1&pageSize=12
+/api/insignias?language=vi&page=1&pageSize=12
+/api/insignias/insignia-Class_SS?language=en
+/api/backgears?language=en
+/api/tactics?language=vi
+```
+
+## Database và nhập dữ liệu
+
+Migration nằm trong `src/OpmWiki.Infrastructure/Migrations`. Lệnh `--seed-data` đọc:
+
+- `src/data/characters.json`
+- `src/data/characters_en.json`
+- `src/data/events.json`
+- `src/data/mastery.json`
+- `src/data/insignias.json`
+- `src/data/backgear.json`
+- `src/data/tactics.json`
+
+Quá trình nhập là idempotent: chạy lại sẽ cập nhật theo ID, thay thế kỹ năng/hiệu ứng cũ và xóa bản ghi không còn trong JSON nguồn.
+
+Không ghi mật khẩu production vào `appsettings.json`. Khi triển khai, cấu hình bằng biến môi trường:
+
+```text
+ConnectionStrings__OpmWiki=Host=...;Database=...;Username=...;Password=...;SSL Mode=Require;Trust Server Certificate=true
+```

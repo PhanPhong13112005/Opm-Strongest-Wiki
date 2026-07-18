@@ -112,6 +112,13 @@
     "title": "Core Skill",
     "desc": "Calculate materials for Core Skill upgrades.",
     "coreSkill": "Core Skill",
+    "selectCore": "Select Core",
+    "partSelection": "Select Upgrade Part",
+    "part1": "1: Skill Enhancement",
+    "part2": "2: Single-Core Enhancement",
+    "part3": "3: Team-Core Enhancement",
+    "part4": "4: Special Enhancement",
+    "activationCondition": "Activation Condition",
     "basicCondition": "Basic Activation Condition",
     "advancedCondition": "Advanced Activation Condition",
     "calcLevel": "Calculation Level",
@@ -202,6 +209,7 @@
     "insigniaSourceUr": "Available after obtaining the character; acquire and upgrade it through Insignia-related events and shops.",
     "insigniaSource": "Available after obtaining the character; acquire it through eligible events and shops.",
     "acquisitionGuide": "In-game guide",
+    "keepsakeHowToGet": "How to obtain Keepsakes",
     "insigniaHowToGet": "How to obtain Insignias",
     "guideDailyRequests": "Daily Requests",
     "guideDailyRequestsDesc": "Complete Daily Requests that reward Dragon or Demon Insignia shards.",
@@ -240,7 +248,10 @@
     "daysLeft": "{days} days left",
     "startsIn": "Starts in {days} days",
     "timeEnded": "Ended",
-    "disclaimer": "The event schedule below may not be completely accurate and is intended for reference purposes only."
+    "disclaimer": "The event schedule below may not be completely accurate and is intended for reference purposes only.",
+    "newServerDay": "Day {day} New Server",
+    "openDetails": "Click to view details",
+    "imageUpdating": "Event image is being updated"
   },
   "medals": {
     "title": "Emblem Feature",

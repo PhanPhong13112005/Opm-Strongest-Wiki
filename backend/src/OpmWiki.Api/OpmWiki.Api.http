@@ -1,0 +1,54 @@
+@OpmWiki_Api_HostAddress = http://localhost:5180
+
+GET {{OpmWiki_Api_HostAddress}}/api/health
+Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/characters?language=vi&sort=release_desc&page=1&pageSize=12
+Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/characters/100013-urplus?language=en
+Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/events?language=vi&category=main
+Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/mastery
+Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/keepsakes?language=vi&tier=UR%2B&page=1&pageSize=12
+Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/keepsakes/100313-urplus?language=en
+Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/insignias?language=vi&page=1&pageSize=12
+Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/insignias/insignia-Class_SS?language=en
+Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/backgears?language=vi
+Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/tactics?language=en
+Accept: application/json

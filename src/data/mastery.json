@@ -1,0 +1,1340 @@
+{
+  "version": 1,
+  "categories": {
+    "phe": [
+      {
+        "tier": 0,
+        "stats": {
+          "atk": 0,
+          "hp": 0
+        },
+        "costs": {},
+        "requirements": []
+      },
+      {
+        "tier": 1,
+        "stats": {
+          "atk": 0,
+          "hp": 0
+        },
+        "costs": {
+          "vatlieu": 0,
+          "chungchi": 1,
+          "the_plus_plus": 0,
+          "the_plus": 2,
+          "the": 9,
+          "vang": 1000
+        },
+        "requirements": [
+          {
+            "textVi": "Bản thân đột phá đạt ",
+            "highlightVi": "2★ vàng",
+            "textEn": "Self breakthrough reaches ",
+            "highlightEn": "2★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ: Đột Phá ",
+            "highlightVi": "3★ (vàng)",
+            "textEn": "Support character: Breakthrough ",
+            "highlightEn": "3★ (Gold)",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 2,
+        "stats": {
+          "atk": 840,
+          "hp": 5040
+        },
+        "costs": {
+          "vatlieu": 240,
+          "chungchi": 2,
+          "the_plus_plus": 0,
+          "the_plus": 5,
+          "the": 1,
+          "vang": 6000
+        },
+        "requirements": [
+          {
+            "textVi": "Bản thân đột phá đạt ",
+            "highlightVi": "3★ vàng",
+            "textEn": "Self breakthrough reaches ",
+            "highlightEn": "3★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Huy Hiệu của bản thân đạt ",
+            "highlightVi": "2★",
+            "textEn": "Own Insignia reaches ",
+            "highlightEn": "2★",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ: Đột Phá ",
+            "highlightVi": "3★ (vàng)",
+            "textEn": "Support character: Breakthrough ",
+            "highlightEn": "3★ (Gold)",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 3,
+        "stats": {
+          "atk": 1680,
+          "hp": 10080
+        },
+        "costs": {
+          "vatlieu": 444,
+          "chungchi": 4,
+          "the_plus_plus": 0,
+          "the_plus": 8,
+          "the": 6,
+          "vang": 7000
+        },
+        "requirements": [
+          {
+            "textVi": "Bản thân đột phá đạt ",
+            "highlightVi": "3★ vàng",
+            "textEn": "Self breakthrough reaches ",
+            "highlightEn": "3★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Huy Hiệu của bản thân đạt ",
+            "highlightVi": "3★",
+            "textEn": "Own Insignia reaches ",
+            "highlightEn": "3★",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ: Đột Phá ",
+            "highlightVi": "4★ (vàng)",
+            "textEn": "Support character: Breakthrough ",
+            "highlightEn": "4★ (Gold)",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 4,
+        "stats": {
+          "atk": 2520,
+          "hp": 15120
+        },
+        "costs": {
+          "vatlieu": 565,
+          "chungchi": 8,
+          "the_plus_plus": 1,
+          "the_plus": 5,
+          "the": 0,
+          "vang": 12000
+        },
+        "requirements": [
+          {
+            "textVi": "Bản thân đột phá đạt ",
+            "highlightVi": "4★ vàng",
+            "textEn": "Self breakthrough reaches ",
+            "highlightEn": "4★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Huy Hiệu của bản thân đạt ",
+            "highlightVi": "3★",
+            "textEn": "Own Insignia reaches ",
+            "highlightEn": "3★",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ: Thức Tỉnh ",
+            "highlightVi": "2★ (tím)",
+            "textEn": "Support character: Awaken ",
+            "highlightEn": "2★ (Purple)",
+            "color": "text-purple-400"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "stats": {
+          "atk": 3360,
+          "hp": 20160
+        },
+        "costs": {
+          "vatlieu": 871,
+          "chungchi": 10,
+          "the_plus_plus": 2,
+          "the_plus": 7,
+          "the": 0,
+          "vang": 13000
+        },
+        "requirements": [
+          {
+            "textVi": "Bản thân đột phá đạt ",
+            "highlightVi": "4★ vàng",
+            "textEn": "Self breakthrough reaches ",
+            "highlightEn": "4★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Huy Hiệu của bản thân đạt ",
+            "highlightVi": "4★",
+            "textEn": "Own Insignia reaches ",
+            "highlightEn": "4★",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ: Thức Tỉnh ",
+            "highlightVi": "2★ (tím)",
+            "textEn": "Support character: Awaken ",
+            "highlightEn": "2★ (Purple)",
+            "color": "text-purple-400"
+          }
+        ]
+      },
+      {
+        "tier": 6,
+        "stats": {
+          "atk": 4200,
+          "hp": 25200
+        },
+        "costs": {
+          "vatlieu": 1235,
+          "chungchi": 14,
+          "the_plus_plus": 4,
+          "the_plus": 9,
+          "the": 0,
+          "vang": 18000
+        },
+        "requirements": [
+          {
+            "textVi": "Bản thân đột phá đạt ",
+            "highlightVi": "5★ vàng",
+            "textEn": "Self breakthrough reaches ",
+            "highlightEn": "5★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Huy Hiệu của bản thân đạt ",
+            "highlightVi": "4★",
+            "textEn": "Own Insignia reaches ",
+            "highlightEn": "4★",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ: Thức Tỉnh ",
+            "highlightVi": "3★ (tím)",
+            "textEn": "Support character: Awaken ",
+            "highlightEn": "3★ (Purple)",
+            "color": "text-purple-400"
+          }
+        ]
+      },
+      {
+        "tier": 7,
+        "stats": {
+          "atk": 5040,
+          "hp": 30240
+        },
+        "costs": {
+          "vatlieu": 1605,
+          "chungchi": 17,
+          "the_plus_plus": 9,
+          "the_plus": 3,
+          "the": 0,
+          "vang": 19000
+        },
+        "requirements": [
+          {
+            "textVi": "Bản thân đột phá đạt ",
+            "highlightVi": "5★ vàng",
+            "textEn": "Self breakthrough reaches ",
+            "highlightEn": "5★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Huy Hiệu của bản thân đạt ",
+            "highlightVi": "5★",
+            "textEn": "Own Insignia reaches ",
+            "highlightEn": "5★",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ: Thức Tỉnh ",
+            "highlightVi": "3★ (tím)",
+            "textEn": "Support character: Awaken ",
+            "highlightEn": "3★ (Purple)",
+            "color": "text-purple-400"
+          }
+        ]
+      },
+      {
+        "tier": 8,
+        "stats": {
+          "atk": 6720,
+          "hp": 40320
+        },
+        "costs": {
+          "vatlieu": 1980,
+          "chungchi": 21,
+          "the_plus_plus": 17,
+          "the_plus": 13,
+          "the": 0,
+          "vang": 24000
+        },
+        "requirements": [
+          {
+            "textVi": "Bản thân đột phá đạt ",
+            "highlightVi": "6★ vàng",
+            "textEn": "Self breakthrough reaches ",
+            "highlightEn": "6★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Huy Hiệu của bản thân đạt ",
+            "highlightVi": "5★",
+            "textEn": "Own Insignia reaches ",
+            "highlightEn": "5★",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ: Thức Tỉnh ",
+            "highlightVi": "4★ (tím)",
+            "textEn": "Support character: Awaken ",
+            "highlightEn": "4★ (Purple)",
+            "color": "text-purple-400"
+          }
+        ]
+      },
+      {
+        "tier": 9,
+        "stats": {
+          "atk": 10080,
+          "hp": 60480
+        },
+        "costs": {
+          "vatlieu": 2254,
+          "chungchi": 26,
+          "the_plus_plus": 20,
+          "the_plus": 11,
+          "the": 0,
+          "vang": 25000
+        },
+        "requirements": [
+          {
+            "textVi": "Bản thân đột phá đạt ",
+            "highlightVi": "6★ vàng",
+            "textEn": "Self breakthrough reaches ",
+            "highlightEn": "6★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Huy Hiệu của bản thân đạt ",
+            "highlightVi": "6★",
+            "textEn": "Own Insignia reaches ",
+            "highlightEn": "6★",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ: Thức Tỉnh ",
+            "highlightVi": "4★ (tím)",
+            "textEn": "Support character: Awaken ",
+            "highlightEn": "4★ (Purple)",
+            "color": "text-purple-400"
+          }
+        ]
+      },
+      {
+        "tier": 10,
+        "stats": {
+          "atk": 17220,
+          "hp": 103320
+        },
+        "costs": {
+          "vatlieu": 2472,
+          "chungchi": 32,
+          "the_plus_plus": 25,
+          "the_plus": 29,
+          "the": 0,
+          "vang": 30000
+        },
+        "requirements": [
+          {
+            "textVi": "Bản thân đột phá đạt ",
+            "highlightVi": "7★ vàng",
+            "textEn": "Self breakthrough reaches ",
+            "highlightEn": "7★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Huy Hiệu của bản thân đạt ",
+            "highlightVi": "6★",
+            "textEn": "Own Insignia reaches ",
+            "highlightEn": "6★",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ: Thức Tỉnh ",
+            "highlightVi": "5★ (tím)",
+            "textEn": "Support character: Awaken ",
+            "highlightEn": "5★ (Purple)",
+            "color": "text-purple-400"
+          }
+        ]
+      }
+    ],
+    "he": [
+      {
+        "tier": 0,
+        "stats": {
+          "atk": 0,
+          "hp": 0
+        },
+        "costs": {},
+        "requirements": []
+      },
+      {
+        "tier": 1,
+        "stats": {
+          "atk": 0,
+          "hp": 0
+        },
+        "costs": {
+          "sotay": 0,
+          "chungnhan": 1,
+          "the_he_he": 2,
+          "vatlieu": 0,
+          "the": 2,
+          "vang": 1000
+        },
+        "requirements": [
+          {
+            "textVi": "Cần ",
+            "highlightVi": "2 nhân vật {TYPE} đạt 3★ vàng",
+            "textEn": "Require ",
+            "highlightEn": "2 {TYPE} characters reach 3★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Training Center · ",
+            "highlightVi": "lv trung bình đạt 45",
+            "textEn": "Training Center · ",
+            "highlightEn": "average level reaches 45",
+            "color": "text-white"
+          }
+        ]
+      },
+      {
+        "tier": 2,
+        "stats": {
+          "atk": 840,
+          "hp": 5040
+        },
+        "costs": {
+          "sotay": 75,
+          "chungnhan": 2,
+          "the_he_he": 3,
+          "vatlieu": 0,
+          "the": 6,
+          "vang": 6000
+        },
+        "requirements": [
+          {
+            "textVi": "Cần ",
+            "highlightVi": "3 nhân vật {TYPE} đạt 3★ vàng",
+            "textEn": "Require ",
+            "highlightEn": "3 {TYPE} characters reach 3★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Training Center · ",
+            "highlightVi": "lv trung bình đạt 50",
+            "textEn": "Training Center · ",
+            "highlightEn": "average level reaches 50",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "2 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 2",
+            "textEn": "Require ",
+            "highlightEn": "2 {FACTION} characters reach Faction Mastery (DEF) Tier 2",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Huy Hiệu Lv 1",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Insignia Lv 1",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 3,
+        "stats": {
+          "atk": 1680,
+          "hp": 10080
+        },
+        "costs": {
+          "sotay": 156,
+          "chungnhan": 4,
+          "the_he_he": 4,
+          "vatlieu": 0,
+          "the": 7,
+          "vang": 7000
+        },
+        "requirements": [
+          {
+            "textVi": "Cần ",
+            "highlightVi": "3 nhân vật {TYPE} đạt 4★ vàng",
+            "textEn": "Require ",
+            "highlightEn": "3 {TYPE} characters reach 4★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Training Center · ",
+            "highlightVi": "lv trung bình đạt 55",
+            "textEn": "Training Center · ",
+            "highlightEn": "average level reaches 55",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "3 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 2",
+            "textEn": "Require ",
+            "highlightEn": "3 {FACTION} characters reach Faction Mastery (DEF) Tier 2",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Huy Hiệu Lv 2",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Insignia Lv 2",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Huy Hiệu Lv 1",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Insignia Lv 1",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 4,
+        "stats": {
+          "atk": 2520,
+          "hp": 15120
+        },
+        "costs": {
+          "sotay": 282,
+          "chungnhan": 6,
+          "the_he_he": 6,
+          "vatlieu": 0,
+          "the": 8,
+          "vang": 12000
+        },
+        "requirements": [
+          {
+            "textVi": "Cần ",
+            "highlightVi": "4 nhân vật {TYPE} đạt 4★ vàng",
+            "textEn": "Require ",
+            "highlightEn": "4 {TYPE} characters reach 4★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Training Center · ",
+            "highlightVi": "lv trung bình đạt 60",
+            "textEn": "Training Center · ",
+            "highlightEn": "average level reaches 60",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "3 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 3",
+            "textEn": "Require ",
+            "highlightEn": "3 {FACTION} characters reach Faction Mastery (DEF) Tier 3",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Huy Hiệu Lv 2",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Insignia Lv 2",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Huy Hiệu Lv 2",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Insignia Lv 2",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "stats": {
+          "atk": 3360,
+          "hp": 20160
+        },
+        "costs": {
+          "sotay": 438,
+          "chungnhan": 8,
+          "the_he_he": 3,
+          "vatlieu": 1,
+          "the": 0,
+          "vang": 13000
+        },
+        "requirements": [
+          {
+            "textVi": "Cần ",
+            "highlightVi": "4 nhân vật {TYPE} đạt 5★ vàng",
+            "textEn": "Require ",
+            "highlightEn": "4 {TYPE} characters reach 5★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Training Center · ",
+            "highlightVi": "lv trung bình đạt 65",
+            "textEn": "Training Center · ",
+            "highlightEn": "average level reaches 65",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "4 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 3",
+            "textEn": "Require ",
+            "highlightEn": "4 {FACTION} characters reach Faction Mastery (DEF) Tier 3",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Huy Hiệu Lv 3",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Insignia Lv 3",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Huy Hiệu Lv 2",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Insignia Lv 2",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 6,
+        "stats": {
+          "atk": 4200,
+          "hp": 25200
+        },
+        "costs": {
+          "sotay": 663,
+          "chungnhan": 8,
+          "the_he_he": 3,
+          "vatlieu": 2,
+          "the": 0,
+          "vang": 18000
+        },
+        "requirements": [
+          {
+            "textVi": "Cần ",
+            "highlightVi": "5 nhân vật {TYPE} đạt 5★ vàng",
+            "textEn": "Require ",
+            "highlightEn": "5 {TYPE} characters reach 5★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Training Center · ",
+            "highlightVi": "lv trung bình đạt 70",
+            "textEn": "Training Center · ",
+            "highlightEn": "average level reaches 70",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "4 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 4",
+            "textEn": "Require ",
+            "highlightEn": "4 {FACTION} characters reach Faction Mastery (DEF) Tier 4",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Huy Hiệu Lv 3",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Insignia Lv 3",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Huy Hiệu Lv 3",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Insignia Lv 3",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 7,
+        "stats": {
+          "atk": 5040,
+          "hp": 30240
+        },
+        "costs": {
+          "sotay": 886,
+          "chungnhan": 10,
+          "the_he_he": 5,
+          "vatlieu": 4,
+          "the": 0,
+          "vang": 19000
+        },
+        "requirements": [
+          {
+            "textVi": "Cần ",
+            "highlightVi": "5 nhân vật {TYPE} đạt 6★ vàng",
+            "textEn": "Require ",
+            "highlightEn": "5 {TYPE} characters reach 6★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Training Center · ",
+            "highlightVi": "lv trung bình đạt 75",
+            "textEn": "Training Center · ",
+            "highlightEn": "average level reaches 75",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "5 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 4",
+            "textEn": "Require ",
+            "highlightEn": "5 {FACTION} characters reach Faction Mastery (DEF) Tier 4",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Huy Hiệu Lv 4",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Insignia Lv 4",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Huy Hiệu Lv 3",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Insignia Lv 3",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 8,
+        "stats": {
+          "atk": 6720,
+          "hp": 40320
+        },
+        "costs": {
+          "sotay": 1096,
+          "chungnhan": 10,
+          "the_he_he": 3,
+          "vatlieu": 8,
+          "the": 0,
+          "vang": 24000
+        },
+        "requirements": [
+          {
+            "textVi": "Cần ",
+            "highlightVi": "6 nhân vật {TYPE} đạt 6★ vàng",
+            "textEn": "Require ",
+            "highlightEn": "6 {TYPE} characters reach 6★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Training Center · ",
+            "highlightVi": "lv trung bình đạt 80",
+            "textEn": "Training Center · ",
+            "highlightEn": "average level reaches 80",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "5 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 5",
+            "textEn": "Require ",
+            "highlightEn": "5 {FACTION} characters reach Faction Mastery (DEF) Tier 5",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Huy Hiệu Lv 4",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Insignia Lv 4",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Huy Hiệu Lv 4",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Insignia Lv 4",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 9,
+        "stats": {
+          "atk": 10080,
+          "hp": 60480
+        },
+        "costs": {
+          "sotay": 1262,
+          "chungnhan": 12,
+          "the_he_he": 18,
+          "vatlieu": 10,
+          "the": 0,
+          "vang": 25000
+        },
+        "requirements": [
+          {
+            "textVi": "Cần ",
+            "highlightVi": "6 nhân vật {TYPE} đạt 7★ vàng",
+            "textEn": "Require ",
+            "highlightEn": "6 {TYPE} characters reach 7★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Training Center · ",
+            "highlightVi": "lv trung bình đạt 85",
+            "textEn": "Training Center · ",
+            "highlightEn": "average level reaches 85",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "5 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 6",
+            "textEn": "Require ",
+            "highlightEn": "5 {FACTION} characters reach Faction Mastery (DEF) Tier 6",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Huy Hiệu Lv 5",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Insignia Lv 5",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Huy Hiệu Lv 4",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Insignia Lv 4",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 10,
+        "stats": {
+          "atk": 17220,
+          "hp": 103320
+        },
+        "costs": {
+          "sotay": 1423,
+          "chungnhan": 12,
+          "the_he_he": 16,
+          "vatlieu": 14,
+          "the": 0,
+          "vang": 30000
+        },
+        "requirements": [
+          {
+            "textVi": "Cần ",
+            "highlightVi": "7 nhân vật {TYPE} đạt 7★ vàng",
+            "textEn": "Require ",
+            "highlightEn": "7 {TYPE} characters reach 7★ Gold",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Training Center · ",
+            "highlightVi": "lv trung bình đạt 90",
+            "textEn": "Training Center · ",
+            "highlightEn": "average level reaches 90",
+            "color": "text-white"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "5 nhân vật phe {FACTION} đạt tinh thông phe (thủ) tier 7",
+            "textEn": "Require ",
+            "highlightEn": "5 {FACTION} characters reach Faction Mastery (DEF) Tier 7",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Huy Hiệu Lv 5",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Insignia Lv 5",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Huy Hiệu Lv 5",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Insignia Lv 5",
+            "color": "text-[#eab308]"
+          }
+        ]
+      }
+    ],
+    "cap": [
+      {
+        "tier": 0,
+        "stats": {
+          "atk": 0,
+          "hp": 0
+        },
+        "costs": {},
+        "requirements": []
+      },
+      {
+        "tier": 1,
+        "stats": {
+          "atk": 0,
+          "hp": 0
+        },
+        "costs": {
+          "sotay": 8,
+          "manh": 1,
+          "chungchi": 0,
+          "vang": 1000
+        },
+        "requirements": [
+          {
+            "textVi": "Cần ",
+            "highlightVi": "3 nhân vật hạng S đạt 1★ tím",
+            "textEn": "Require ",
+            "highlightEn": "3 S-rank characters reach 1★ Purple",
+            "color": "text-purple-400"
+          },
+          {
+            "textVi": "Kỷ Vật đạt ",
+            "highlightVi": "2★",
+            "textEn": "Keepsake reaches ",
+            "highlightEn": "2★",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 2,
+        "stats": {
+          "atk": 600,
+          "hp": 3600
+        },
+        "costs": {
+          "sotay": 12,
+          "manh": 1,
+          "chungchi": 0,
+          "vang": 1000
+        },
+        "requirements": [
+          {
+            "textVi": "Kỷ Vật đạt ",
+            "highlightVi": "2★",
+            "textEn": "Keepsake reaches ",
+            "highlightEn": "2★",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "2 nhân vật {TYPE} đạt tinh thông hệ (công) tier 2",
+            "textEn": "Require ",
+            "highlightEn": "2 {TYPE} characters reach Type Mastery (ATK) Tier 2",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Kỷ Vật Lv 1",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Keepsake Lv 1",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 3,
+        "stats": {
+          "atk": 1200,
+          "hp": 7200
+        },
+        "costs": {
+          "sotay": 15,
+          "manh": 2,
+          "chungchi": 2,
+          "vang": 2000
+        },
+        "requirements": [
+          {
+            "textVi": "Cần ",
+            "highlightVi": "4 nhân vật hạng S đạt 2★ tím",
+            "textEn": "Require ",
+            "highlightEn": "4 S-rank characters reach 2★ Purple",
+            "color": "text-purple-400"
+          },
+          {
+            "textVi": "Kỷ Vật đạt ",
+            "highlightVi": "3★",
+            "textEn": "Keepsake reaches ",
+            "highlightEn": "3★",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "2 nhân vật {TYPE} đạt tinh thông hệ (công) tier 3",
+            "textEn": "Require ",
+            "highlightEn": "2 {TYPE} characters reach Type Mastery (ATK) Tier 3",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Kỷ Vật Lv 2",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Keepsake Lv 2",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Kỷ Vật Lv 1",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Keepsake Lv 1",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 4,
+        "stats": {
+          "atk": 1800,
+          "hp": 10800
+        },
+        "costs": {
+          "sotay": 18,
+          "manh": 3,
+          "chungchi": 0,
+          "vang": 2000
+        },
+        "requirements": [
+          {
+            "textVi": "Kỷ Vật đạt ",
+            "highlightVi": "3★",
+            "textEn": "Keepsake reaches ",
+            "highlightEn": "3★",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "2 nhân vật {TYPE} đạt tinh thông hệ (công) tier 3",
+            "textEn": "Require ",
+            "highlightEn": "2 {TYPE} characters reach Type Mastery (ATK) Tier 3",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Kỷ Vật Lv 2",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Keepsake Lv 2",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Kỷ Vật Lv 2",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Keepsake Lv 2",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "stats": {
+          "atk": 2400,
+          "hp": 14400
+        },
+        "costs": {
+          "sotay": 22,
+          "manh": 3,
+          "chungchi": 2,
+          "vang": 3000
+        },
+        "requirements": [
+          {
+            "textVi": "Cần ",
+            "highlightVi": "4 nhân vật hạng S đạt 3★ tím",
+            "textEn": "Require ",
+            "highlightEn": "4 S-rank characters reach 3★ Purple",
+            "color": "text-purple-400"
+          },
+          {
+            "textVi": "Kỷ Vật đạt ",
+            "highlightVi": "4★",
+            "textEn": "Keepsake reaches ",
+            "highlightEn": "4★",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "2 nhân vật {TYPE} đạt tinh thông hệ (công) tier 4",
+            "textEn": "Require ",
+            "highlightEn": "2 {TYPE} characters reach Type Mastery (ATK) Tier 4",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Kỷ Vật Lv 3",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Keepsake Lv 3",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Kỷ Vật Lv 2",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Keepsake Lv 2",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 6,
+        "stats": {
+          "atk": 3000,
+          "hp": 18000
+        },
+        "costs": {
+          "sotay": 25,
+          "manh": 4,
+          "chungchi": 0,
+          "vang": 3000
+        },
+        "requirements": [
+          {
+            "textVi": "Kỷ Vật đạt ",
+            "highlightVi": "4★",
+            "textEn": "Keepsake reaches ",
+            "highlightEn": "4★",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "3 nhân vật {TYPE} đạt tinh thông hệ (công) tier 4",
+            "textEn": "Require ",
+            "highlightEn": "3 {TYPE} characters reach Type Mastery (ATK) Tier 4",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Kỷ Vật Lv 3",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Keepsake Lv 3",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Kỷ Vật Lv 3",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Keepsake Lv 3",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 7,
+        "stats": {
+          "atk": 3600,
+          "hp": 21600
+        },
+        "costs": {
+          "sotay": 29,
+          "manh": 5,
+          "chungchi": 0,
+          "vang": 4000
+        },
+        "requirements": [
+          {
+            "textVi": "Cần ",
+            "highlightVi": "5 nhân vật hạng S đạt 4★ tím",
+            "textEn": "Require ",
+            "highlightEn": "5 S-rank characters reach 4★ Purple",
+            "color": "text-purple-400"
+          },
+          {
+            "textVi": "Kỷ Vật đạt ",
+            "highlightVi": "5★",
+            "textEn": "Keepsake reaches ",
+            "highlightEn": "5★",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "3 nhân vật {TYPE} đạt tinh thông hệ (công) tier 5",
+            "textEn": "Require ",
+            "highlightEn": "3 {TYPE} characters reach Type Mastery (ATK) Tier 5",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Kỷ Vật Lv 4",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Keepsake Lv 4",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Kỷ Vật Lv 3",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Keepsake Lv 3",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 8,
+        "stats": {
+          "atk": 4800,
+          "hp": 28800
+        },
+        "costs": {
+          "sotay": 33,
+          "manh": 6,
+          "chungchi": 3,
+          "vang": 4000
+        },
+        "requirements": [
+          {
+            "textVi": "Kỷ Vật đạt ",
+            "highlightVi": "5★",
+            "textEn": "Keepsake reaches ",
+            "highlightEn": "5★",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "3 nhân vật {TYPE} đạt tinh thông hệ (công) tier 5",
+            "textEn": "Require ",
+            "highlightEn": "3 {TYPE} characters reach Type Mastery (ATK) Tier 5",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Kỷ Vật Lv 4",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Keepsake Lv 4",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Kỷ Vật Lv 4",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Keepsake Lv 4",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 9,
+        "stats": {
+          "atk": 7200,
+          "hp": 43200
+        },
+        "costs": {
+          "sotay": 36,
+          "manh": 7,
+          "chungchi": 0,
+          "vang": 5000
+        },
+        "requirements": [
+          {
+            "textVi": "Cần ",
+            "highlightVi": "5 nhân vật hạng S đạt 5★ tím",
+            "textEn": "Require ",
+            "highlightEn": "5 S-rank characters reach 5★ Purple",
+            "color": "text-purple-400"
+          },
+          {
+            "textVi": "Kỷ Vật đạt ",
+            "highlightVi": "6★",
+            "textEn": "Keepsake reaches ",
+            "highlightEn": "6★",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "3 nhân vật {TYPE} đạt tinh thông hệ (công) tier 6",
+            "textEn": "Require ",
+            "highlightEn": "3 {TYPE} characters reach Type Mastery (ATK) Tier 6",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Kỷ Vật Lv 5",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Keepsake Lv 5",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Kỷ Vật Lv 4",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Keepsake Lv 4",
+            "color": "text-[#eab308]"
+          }
+        ]
+      },
+      {
+        "tier": 10,
+        "stats": {
+          "atk": 8600,
+          "hp": 51600
+        },
+        "costs": {
+          "sotay": 39,
+          "manh": 8,
+          "chungchi": 3,
+          "vang": 5000
+        },
+        "requirements": [
+          {
+            "textVi": "Kỷ Vật đạt ",
+            "highlightVi": "6★",
+            "textEn": "Keepsake reaches ",
+            "highlightEn": "6★",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Cần ",
+            "highlightVi": "3 nhân vật {TYPE} đạt tinh thông hệ (công) tier 6",
+            "textEn": "Require ",
+            "highlightEn": "3 {TYPE} characters reach Type Mastery (ATK) Tier 6",
+            "color": "text-[#3b82f6]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 1: ",
+            "highlightVi": "Kỷ Vật Lv 5",
+            "textEn": "Support character 1: ",
+            "highlightEn": "Keepsake Lv 5",
+            "color": "text-[#eab308]"
+          },
+          {
+            "textVi": "Nhân vật hỗ trợ 2: ",
+            "highlightVi": "Kỷ Vật Lv 5",
+            "textEn": "Support character 2: ",
+            "highlightEn": "Keepsake Lv 5",
+            "color": "text-[#eab308]"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -52,7 +52,8 @@
       "hero": "Anh Hùng",
       "monster": "Quái Nhân",
       "martial_artist": "Võ Thuật",
-      "outlaw": "Tội Phạm"
+      "outlaw": "Tội Phạm",
+      "villain": "Phản Diện"
     }
   },
   "detail": {
@@ -110,6 +111,7 @@
   "corelab": {
     "title": "Phòng Nghiên Cứu",
     "desc": "Tính toán nguyên liệu nâng cấp Phòng Nghiên Cứu (Core Skill).",
+    "coreSkill": "Kỹ năng Cốt Lõi",
     "selectCore": "Chọn Lõi",
     "partSelection": "Chọn Bộ Phận Nâng Cấp",
     "part1": "1: Cường Hóa Kỹ Năng",
@@ -207,6 +209,7 @@
     "insigniaSourceUr": "Mở sau khi sở hữu nhân vật; nhận và nâng cấp qua sự kiện, cửa hàng Huy hiệu.",
     "insigniaSource": "Mở sau khi sở hữu nhân vật; nhận qua sự kiện và cửa hàng phù hợp.",
     "acquisitionGuide": "Hướng dẫn trong game",
+    "keepsakeHowToGet": "Cách lấy Kỷ vật",
     "insigniaHowToGet": "Cách lấy Huy hiệu",
     "guideDailyRequests": "Nhiệm vụ Yêu cầu hằng ngày",
     "guideDailyRequestsDesc": "Hoàn thành các Yêu cầu hằng ngày có phần thưởng mảnh Huy hiệu Rồng hoặc Huy hiệu Quỷ.",
@@ -245,7 +248,10 @@
     "daysLeft": "Còn {days} ngày",
     "startsIn": "Bắt đầu sau {days} ngày",
     "timeEnded": "Đã kết thúc",
-    "disclaimer": "Thông tin lịch trình dưới đây có thể không hoàn toàn chính xác và chỉ mang tính chất tham khảo."
+    "disclaimer": "Thông tin lịch trình dưới đây có thể không hoàn toàn chính xác và chỉ mang tính chất tham khảo.",
+    "newServerDay": "Ngày {day} Server Mới",
+    "openDetails": "Bấm để xem chi tiết",
+    "imageUpdating": "Ảnh sự kiện đang được cập nhật"
   },
   "medals": {
     "title": "Tính Năng Huy Chương",
