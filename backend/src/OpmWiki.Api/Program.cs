@@ -18,7 +18,7 @@ builder.Services.AddSwaggerGen(options =>
     {
         Title = "OPM Strongest Wiki API",
         Version = "v1",
-        Description = "API dữ liệu nhân vật và sự kiện cho OPM Strongest Wiki."
+        Description = "API dữ liệu nhân vật, sự kiện và hệ thống tra cứu cho OPM Strongest Wiki."
     });
 });
 builder.Services.AddInfrastructure(builder.Configuration, builder.Environment.ContentRootPath);
@@ -44,11 +44,13 @@ if (seedRequested || migrateOnStartup)
     {
         var result = await scope.ServiceProvider.GetRequiredService<IDataSeeder>().SeedAsync();
         app.Logger.LogInformation(
-            "Seed completed: {Characters} characters, {Events} events, {MasteryTiers} mastery tiers, {Insignias} insignias.",
+            "Seed completed: {Characters} characters, {Events} events, {MasteryTiers} mastery tiers, {Insignias} insignias, {Backgears} backgears and {BackgearSets} backgear sets.",
             result.Characters,
             result.Events,
             result.MasteryTiers,
-            result.Insignias);
+            result.Insignias,
+            result.Backgears,
+            result.BackgearSets);
         return;
     }
 }

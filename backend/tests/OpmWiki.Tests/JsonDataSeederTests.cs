@@ -18,6 +18,7 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
         await File.WriteAllTextAsync(Path.Combine(dataPath, "events.json"), Events);
         await File.WriteAllTextAsync(Path.Combine(dataPath, "mastery.json"), Mastery);
         await File.WriteAllTextAsync(Path.Combine(dataPath, "insignias.json"), Insignias);
+        await File.WriteAllTextAsync(Path.Combine(dataPath, "backgear.json"), Backgears);
     }
 
     public Task DisposeAsync()
@@ -45,6 +46,8 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
         Assert.Equal(1, first.Events);
         Assert.Equal(1, first.MasteryTiers);
         Assert.Equal(1, first.Insignias);
+        Assert.Equal(1, first.Backgears);
+        Assert.Equal(1, first.BackgearSets);
         Assert.Equal(first, second);
 
         var character = await dbContext.Characters
@@ -67,6 +70,8 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
             .SingleAsync();
         Assert.Equal("Test Insignia", insignia.NameEn);
         Assert.Equal("Mystery Shop", Assert.Single(insignia.GuideLinks).Guide.TitleEn);
+        Assert.Equal("Test Backgear", (await dbContext.Backgears.SingleAsync()).NameEn);
+        Assert.Equal("Test Set", (await dbContext.BackgearSets.SingleAsync()).NameEn);
     }
 
     [Fact]
@@ -91,11 +96,15 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
         Assert.Equal(46, result.Events);
         Assert.Equal(33, result.MasteryTiers);
         Assert.Equal(10, result.Insignias);
+        Assert.Equal(9, result.Backgears);
+        Assert.Equal(1, result.BackgearSets);
         Assert.Equal(result.Characters, await dbContext.Characters.CountAsync());
         Assert.Equal(result.Events, await dbContext.Events.CountAsync());
         Assert.True(await dbContext.CharacterSkills.CountAsync() > 0);
         Assert.Equal(result.MasteryTiers, await dbContext.MasteryTiers.CountAsync());
         Assert.Equal(result.Insignias, await dbContext.Insignias.CountAsync());
+        Assert.Equal(result.Backgears, await dbContext.Backgears.CountAsync());
+        Assert.Equal(result.BackgearSets, await dbContext.BackgearSets.CountAsync());
     }
 
     private const string CharactersVi = """
@@ -160,6 +169,25 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
           "items": [{
             "id":"insignia-A","classLevel":"A","nameVi":"Huy Hiệu thử","nameEn":"Test Insignia",
             "imageUrl":"/Class/A.png","sortOrder":1,"guideIds":["mystery-shop"]
+          }]
+        }
+        """;
+
+    private const string Backgears = """
+        {
+          "gears": [{
+            "id":"BD_TEST","nameVi":"Thẻ thử","nameEn":"Test Backgear","theme":"spring",
+            "rarityVi":"Siêu Hạng","rarity":"Superb","acquireVi":"Sự kiện","acquireEn":"Event",
+            "levelMax":1,"icon":"/gear.webp","thumbnail":"/thumb.webp","seniorIcon":"/gear.webp",
+            "changeLevel":null,
+            "levels":[{"level":1,"senior":false,"costVi":"mở khoá","costEn":"unlock",
+              "effects":[{"type":"hp_up","vi":"Máu","en":"HP","text":"+1"}]}]
+          }],
+          "sets": [{
+            "id":"SET_TEST","nameVi":"Bộ thử","nameEn":"Test Set","rarityVi":"Siêu Hạng","rarity":"Superb",
+            "rewardVi":"Thưởng","rewardEn":"Reward","rewardIcon":"/reward.webp",
+            "needs":[{"id":"BD_TEST","nameVi":"Thẻ thử","nameEn":"Test Backgear","icon":"/gear.webp","count":1}],
+            "levels":[{"setLevel":1,"effects":[{"type":"attack_up","vi":"Tấn Công","en":"ATK","text":"+1%"}]}]
           }]
         }
         """;

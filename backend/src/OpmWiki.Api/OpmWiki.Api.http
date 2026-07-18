@@ -42,3 +42,8 @@ Accept: application/json
 
 GET {{OpmWiki_Api_HostAddress}}/api/insignias/insignia-Class_SS?language=en
 Accept: application/json
+
+###
+
+GET {{OpmWiki_Api_HostAddress}}/api/backgears?language=vi
+Accept: application/json

@@ -13,6 +13,8 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
     public DbSet<Insignia> Insignias => Set<Insignia>();
     public DbSet<InsigniaGuide> InsigniaGuides => Set<InsigniaGuide>();
     public DbSet<InsigniaGuideLink> InsigniaGuideLinks => Set<InsigniaGuideLink>();
+    public DbSet<Backgear> Backgears => Set<Backgear>();
+    public DbSet<BackgearSet> BackgearSets => Set<BackgearSet>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -20,6 +22,7 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
         ConfigureEvents(modelBuilder);
         ConfigureMastery(modelBuilder);
         ConfigureInsignias(modelBuilder);
+        ConfigureBackgears(modelBuilder);
     }
 
     public override int SaveChanges()
@@ -195,6 +198,45 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
         });
     }
 
+    private static void ConfigureBackgears(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Backgear>(entity =>
+        {
+            entity.ToTable("backgears");
+            entity.HasKey(x => x.Id);
+            entity.Property(x => x.Id).HasMaxLength(80);
+            entity.Property(x => x.NameVi).HasMaxLength(200);
+            entity.Property(x => x.NameEn).HasMaxLength(200);
+            entity.Property(x => x.Theme).HasMaxLength(80);
+            entity.Property(x => x.RarityVi).HasMaxLength(100);
+            entity.Property(x => x.RarityEn).HasMaxLength(100);
+            entity.Property(x => x.IconUrl).HasMaxLength(500);
+            entity.Property(x => x.ThumbnailUrl).HasMaxLength(500);
+            entity.Property(x => x.SeniorIconUrl).HasMaxLength(500);
+            entity.Property(x => x.LevelsJson).HasColumnType("jsonb");
+            entity.Property(x => x.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+            entity.Property(x => x.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+            entity.HasIndex(x => x.SortOrder).IsUnique();
+        });
+
+        modelBuilder.Entity<BackgearSet>(entity =>
+        {
+            entity.ToTable("backgear_sets");
+            entity.HasKey(x => x.Id);
+            entity.Property(x => x.Id).HasMaxLength(80);
+            entity.Property(x => x.NameVi).HasMaxLength(200);
+            entity.Property(x => x.NameEn).HasMaxLength(200);
+            entity.Property(x => x.RarityVi).HasMaxLength(100);
+            entity.Property(x => x.RarityEn).HasMaxLength(100);
+            entity.Property(x => x.RewardIconUrl).HasMaxLength(500);
+            entity.Property(x => x.NeedsJson).HasColumnType("jsonb");
+            entity.Property(x => x.LevelsJson).HasColumnType("jsonb");
+            entity.Property(x => x.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+            entity.Property(x => x.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+            entity.HasIndex(x => x.SortOrder).IsUnique();
+        });
+    }
+
     private void UpdateTimestamps()
     {
         var now = DateTimeOffset.UtcNow;
@@ -223,6 +265,18 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
 
         foreach (var entry in ChangeTracker.Entries<InsigniaGuide>())
         {
+            if (entry.State is EntityState.Added or EntityState.Modified) entry.Entity.UpdatedAt = now;
+        }
+
+        foreach (var entry in ChangeTracker.Entries<Backgear>())
+        {
+            if (entry.State == EntityState.Added) entry.Entity.CreatedAt = now;
+            if (entry.State is EntityState.Added or EntityState.Modified) entry.Entity.UpdatedAt = now;
+        }
+
+        foreach (var entry in ChangeTracker.Entries<BackgearSet>())
+        {
+            if (entry.State == EntityState.Added) entry.Entity.CreatedAt = now;
             if (entry.State is EntityState.Added or EntityState.Modified) entry.Entity.UpdatedAt = now;
         }
     }

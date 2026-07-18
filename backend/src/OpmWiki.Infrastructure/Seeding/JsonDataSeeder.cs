@@ -23,18 +23,21 @@ public sealed class JsonDataSeeder(
         var eventsPath = Path.Combine(dataPath, "events.json");
         var masteryPath = Path.Combine(dataPath, "mastery.json");
         var insigniasPath = Path.Combine(dataPath, "insignias.json");
+        var backgearsPath = Path.Combine(dataPath, "backgear.json");
 
         EnsureFileExists(charactersViPath);
         EnsureFileExists(charactersEnPath);
         EnsureFileExists(eventsPath);
         EnsureFileExists(masteryPath);
         EnsureFileExists(insigniasPath);
+        EnsureFileExists(backgearsPath);
 
         using var charactersVi = await ReadJsonAsync(charactersViPath, cancellationToken);
         using var charactersEn = await ReadJsonAsync(charactersEnPath, cancellationToken);
         using var events = await ReadJsonAsync(eventsPath, cancellationToken);
         using var mastery = await ReadJsonAsync(masteryPath, cancellationToken);
         using var insignias = await ReadJsonAsync(insigniasPath, cancellationToken);
+        using var backgears = await ReadJsonAsync(backgearsPath, cancellationToken);
 
         var englishCharacters = charactersEn.RootElement.EnumerateArray()
             .ToDictionary(x => GetString(x, "id"), x => x, StringComparer.OrdinalIgnoreCase);
@@ -52,19 +55,30 @@ public sealed class JsonDataSeeder(
             var eventCount = await SeedEventsAsync(events.RootElement, cancellationToken);
             var masteryTierCount = await SeedMasteryAsync(mastery.RootElement, cancellationToken);
             var insigniaCount = await SeedInsigniasAsync(insignias.RootElement, cancellationToken);
+            var (backgearCount, backgearSetCount) = await SeedBackgearsAsync(
+                backgears.RootElement,
+                cancellationToken);
             await dbContext.SaveChangesAsync(cancellationToken);
 
             if (transaction is not null)
                 await transaction.CommitAsync(cancellationToken);
 
             logger.LogInformation(
-                "Imported {CharacterCount} characters, {EventCount} events, {MasteryTierCount} mastery tiers and {InsigniaCount} insignias from {DataPath}",
+                "Imported {CharacterCount} characters, {EventCount} events, {MasteryTierCount} mastery tiers, {InsigniaCount} insignias, {BackgearCount} backgears and {BackgearSetCount} backgear sets from {DataPath}",
                 characterCount,
                 eventCount,
                 masteryTierCount,
                 insigniaCount,
+                backgearCount,
+                backgearSetCount,
                 dataPath);
-            return new SeedResult(characterCount, eventCount, masteryTierCount, insigniaCount);
+            return new SeedResult(
+                characterCount,
+                eventCount,
+                masteryTierCount,
+                insigniaCount,
+                backgearCount,
+                backgearSetCount);
         }
         catch
         {
@@ -297,6 +311,92 @@ public sealed class JsonDataSeeder(
         return importedInsigniaIds.Count;
     }
 
+    private async Task<(int Backgears, int Sets)> SeedBackgearsAsync(
+        JsonElement root,
+        CancellationToken cancellationToken)
+    {
+        if (!root.TryGetProperty("gears", out var gearsRoot) || gearsRoot.ValueKind != JsonValueKind.Array)
+            throw new InvalidDataException("Backgear data is missing its gears array.");
+        if (!root.TryGetProperty("sets", out var setsRoot) || setsRoot.ValueKind != JsonValueKind.Array)
+            throw new InvalidDataException("Backgear data is missing its sets array.");
+
+        var existingGears = await dbContext.Backgears
+            .ToDictionaryAsync(x => x.Id, StringComparer.OrdinalIgnoreCase, cancellationToken);
+        var importedGearIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var gearIndex = 0;
+        foreach (var source in gearsRoot.EnumerateArray())
+        {
+            var id = GetString(source, "id");
+            if (string.IsNullOrWhiteSpace(id))
+                throw new InvalidDataException("A backgear is missing its id.");
+            if (!importedGearIds.Add(id))
+                throw new InvalidDataException($"Duplicate backgear id: '{id}'.");
+
+            if (!existingGears.TryGetValue(id, out var gear))
+            {
+                gear = new Backgear { Id = id };
+                dbContext.Backgears.Add(gear);
+            }
+
+            gear.NameVi = GetString(source, "nameVi");
+            gear.NameEn = Fallback(GetString(source, "nameEn"), gear.NameVi);
+            gear.Theme = GetString(source, "theme");
+            gear.RarityVi = GetString(source, "rarityVi");
+            gear.RarityEn = Fallback(GetString(source, "rarity"), gear.RarityVi);
+            gear.AcquireVi = GetString(source, "acquireVi");
+            gear.AcquireEn = Fallback(GetString(source, "acquireEn"), gear.AcquireVi);
+            gear.LevelMax = GetInt(source, "levelMax");
+            gear.IconUrl = GetString(source, "icon");
+            gear.ThumbnailUrl = Fallback(GetString(source, "thumbnail"), gear.IconUrl);
+            gear.SeniorIconUrl = Fallback(GetString(source, "seniorIcon"), gear.IconUrl);
+            gear.ChangeLevel = GetNullableInt(source, "changeLevel");
+            gear.LevelsJson = GetRawJson(source, "levels", "[]");
+            gear.SortOrder = gearIndex++;
+        }
+
+        var removedGears = existingGears.Values
+            .Where(x => !importedGearIds.Contains(x.Id))
+            .ToArray();
+        if (removedGears.Length > 0) dbContext.Backgears.RemoveRange(removedGears);
+
+        var existingSets = await dbContext.BackgearSets
+            .ToDictionaryAsync(x => x.Id, StringComparer.OrdinalIgnoreCase, cancellationToken);
+        var importedSetIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var setIndex = 0;
+        foreach (var source in setsRoot.EnumerateArray())
+        {
+            var id = GetString(source, "id");
+            if (string.IsNullOrWhiteSpace(id))
+                throw new InvalidDataException("A backgear set is missing its id.");
+            if (!importedSetIds.Add(id))
+                throw new InvalidDataException($"Duplicate backgear set id: '{id}'.");
+
+            if (!existingSets.TryGetValue(id, out var set))
+            {
+                set = new BackgearSet { Id = id };
+                dbContext.BackgearSets.Add(set);
+            }
+
+            set.NameVi = GetString(source, "nameVi");
+            set.NameEn = Fallback(GetString(source, "nameEn"), set.NameVi);
+            set.RarityVi = GetString(source, "rarityVi");
+            set.RarityEn = Fallback(GetString(source, "rarity"), set.RarityVi);
+            set.RewardVi = GetString(source, "rewardVi");
+            set.RewardEn = Fallback(GetString(source, "rewardEn"), set.RewardVi);
+            set.RewardIconUrl = GetString(source, "rewardIcon");
+            set.NeedsJson = GetRawJson(source, "needs", "[]");
+            set.LevelsJson = GetRawJson(source, "levels", "[]");
+            set.SortOrder = setIndex++;
+        }
+
+        var removedSets = existingSets.Values
+            .Where(x => !importedSetIds.Contains(x.Id))
+            .ToArray();
+        if (removedSets.Length > 0) dbContext.BackgearSets.RemoveRange(removedSets);
+
+        return (importedGearIds.Count, importedSetIds.Count);
+    }
+
     private void ReplaceSkills(Character character, JsonElement vi, JsonElement en)
     {
         var viSkills = GetArray(vi, "skills");
@@ -428,6 +528,13 @@ public sealed class JsonDataSeeder(
     {
         if (!source.TryGetProperty(propertyName, out var property)) return 0;
         return property.TryGetInt32(out var value) ? value : 0;
+    }
+
+    private static int? GetNullableInt(JsonElement source, string propertyName)
+    {
+        if (!source.TryGetProperty(propertyName, out var property)) return null;
+        if (property.ValueKind != JsonValueKind.Number) return null;
+        return property.TryGetInt32(out var value) ? value : null;
     }
 
     private static string[] GetStringArray(JsonElement source, string propertyName)
