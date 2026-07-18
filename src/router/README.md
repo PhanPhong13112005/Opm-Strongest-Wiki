@@ -17,6 +17,8 @@ Sử dụng thư viện `vue-router` phiên bản 4 để thiết lập lịch s
 *   `/events/:id`: Trang Chi Tiết Sự Kiện cụ thể.
 *   `/privacy`: Trang Chính Sách Bảo Mật.
 *   `/history`: Trang Lịch Sử Phiên Bản.
+*   `/admin/login`: Đăng nhập quản trị bằng backend ASP.NET Core.
+*   `/admin/characters`: CRUD Nhân vật và Kỷ vật; route guard yêu cầu JWT Admin còn hạn.
 
 ## Các tùy biến đặc biệt
 *   `scrollBehavior`: Cấu hình tự động cuộn trang lên đầu (`top: 0`) mỗi khi chuyển tuyến đường (route change) trừ khi có lịch sử cuộn trước đó (`savedPosition`).

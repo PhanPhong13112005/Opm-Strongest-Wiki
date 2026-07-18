@@ -25,6 +25,9 @@ services:
       ConnectionStrings__OpmWiki: Host=database;Port=5432;Database=${POSTGRES_DB:-opmwiki};Username=${POSTGRES_USER:-opmwiki};Password=${POSTGRES_PASSWORD:-opmwiki}
       Database__MigrateOnStartup: "true"
       SeedData__FrontendDataPath: /frontend-data
+      AdminAuth__Username: ${ADMIN_USERNAME:-admin}
+      AdminAuth__Password: ${ADMIN_PASSWORD:-dev-only-change-me}
+      AdminAuth__JwtSigningKey: ${ADMIN_JWT_SIGNING_KEY:-development-only-opmwiki-admin-signing-key-change-me}
     ports:
       - "5180:8080"
     volumes:

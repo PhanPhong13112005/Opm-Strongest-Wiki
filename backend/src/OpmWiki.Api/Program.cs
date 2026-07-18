@@ -1,5 +1,9 @@
+using System.Threading.RateLimiting;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
+using OpmWiki.Api.Security;
 using OpmWiki.Application.Abstractions;
 using OpmWiki.Infrastructure;
 using OpmWiki.Infrastructure.Persistence;
@@ -22,6 +26,54 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 builder.Services.AddInfrastructure(builder.Configuration, builder.Environment.ContentRootPath);
+
+var adminAuthOptions = builder.Configuration
+    .GetSection(AdminAuthOptions.SectionName)
+    .Get<AdminAuthOptions>() ?? new AdminAuthOptions();
+if (builder.Environment.IsDevelopment())
+{
+    if (string.IsNullOrWhiteSpace(adminAuthOptions.Username)) adminAuthOptions.Username = "admin";
+    if (string.IsNullOrWhiteSpace(adminAuthOptions.Password)) adminAuthOptions.Password = "dev-only-change-me";
+    if (string.IsNullOrWhiteSpace(adminAuthOptions.JwtSigningKey))
+        adminAuthOptions.JwtSigningKey = "development-only-opmwiki-admin-signing-key-change-me";
+}
+else if (string.IsNullOrWhiteSpace(adminAuthOptions.Username) ||
+         string.IsNullOrWhiteSpace(adminAuthOptions.Password) ||
+         adminAuthOptions.JwtSigningKey.Length < 32)
+{
+    throw new InvalidOperationException(
+        "AdminAuth username, password and a JWT signing key of at least 32 characters must be configured.");
+}
+
+builder.Services.AddSingleton(adminAuthOptions);
+builder.Services.AddSingleton<AdminTokenService>();
+builder.Services
+    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidIssuer = "OpmWiki.Api",
+            ValidateAudience = true,
+            ValidAudience = "OpmWiki.Admin",
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = AdminTokenService.CreateSigningKey(adminAuthOptions.JwtSigningKey),
+            ValidateLifetime = true,
+            ClockSkew = TimeSpan.FromSeconds(30),
+        };
+    });
+builder.Services.AddAuthorization();
+builder.Services.AddRateLimiter(options => options.AddPolicy("admin-login", context =>
+    RateLimitPartition.GetFixedWindowLimiter(
+        context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+        _ => new FixedWindowRateLimiterOptions
+        {
+            PermitLimit = 5,
+            Window = TimeSpan.FromMinutes(1),
+            QueueLimit = 0,
+            AutoReplenishment = true,
+        })));
 
 var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>()
     ?? ["http://localhost:5173"];
@@ -70,6 +122,9 @@ else
 
 app.UseHttpsRedirection();
 app.UseCors("Frontend");
+app.UseRateLimiter();
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
 app.MapGet("/api/health", () => Results.Ok(new
 {

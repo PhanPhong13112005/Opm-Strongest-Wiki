@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\OpmWiki.Api\OpmWiki.Api.csproj" />
     <ProjectReference Include="..\..\src\OpmWiki.Application\OpmWiki.Application.csproj" />
     <ProjectReference Include="..\..\src\OpmWiki.Infrastructure\OpmWiki.Infrastructure.csproj" />
   </ItemGroup>

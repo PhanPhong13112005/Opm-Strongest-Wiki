@@ -39,3 +39,8 @@ Thư mục này chứa tất cả các thành phần View (Trang) hoàn chỉnh 
 
 ### 8. `PrivacyView.vue` & `HistoryView.vue`
 *   Trang Chính sách bảo mật song ngữ và Lịch sử cập nhật phiên bản được phát triển từ phiên bản v2.0.
+
+### 9. `AdminLoginView.vue` & `AdminCharactersView.vue`
+*   Đăng nhập quản trị bằng JWT, token chỉ tồn tại trong tab hiện tại (`sessionStorage`).
+*   Tìm kiếm, phân trang, thêm/sửa/xóa metadata và chỉ số Nhân vật trong PostgreSQL.
+*   Gắn, đổi hoặc gỡ Kỷ vật ngay trên bản ghi Nhân vật, không tạo nguồn dữ liệu trùng lặp.

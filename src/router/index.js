@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { hasValidAdminToken } from '../services/adminApi'
 
 // Keep the landing page in the initial bundle and load feature pages only when
 // users visit them. This avoids downloading the large data catalogs and Spine
@@ -16,6 +17,8 @@ const HistoryView = () => import('../views/HistoryView.vue')
 const MedalsView = () => import('../views/MedalsView.vue')
 const TacticsView = () => import('../views/TacticsView.vue')
 const BackgearView = () => import('../views/BackgearView.vue')
+const AdminLoginView = () => import('../views/AdminLoginView.vue')
+const AdminCharactersView = () => import('../views/AdminCharactersView.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -104,6 +107,21 @@ const router = createRouter({
       path: '/history',
       name: 'history',
       component: HistoryView
+    },
+    {
+      path: '/admin/login',
+      name: 'admin-login',
+      component: AdminLoginView
+    },
+    {
+      path: '/admin',
+      redirect: '/admin/characters'
+    },
+    {
+      path: '/admin/characters',
+      name: 'admin-characters',
+      component: AdminCharactersView,
+      meta: { requiresAdmin: true }
     }
   ],
   scrollBehavior(to, from, savedPosition) {
@@ -118,6 +136,16 @@ const router = createRouter({
       return { top: 0 }
     }
   }
+})
+
+router.beforeEach((to) => {
+  if (to.meta.requiresAdmin && !hasValidAdminToken()) {
+    return { name: 'admin-login', query: { redirect: to.fullPath } }
+  }
+  if (to.name === 'admin-login' && hasValidAdminToken()) {
+    return { name: 'admin-characters' }
+  }
+  return true
 })
 
 export default router
