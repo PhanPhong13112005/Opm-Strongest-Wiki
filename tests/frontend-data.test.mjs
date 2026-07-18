@@ -82,9 +82,9 @@ test('Keepsake assets exist and reserved path characters are encoded safely', ()
   for (const keepsake of keepsakes) {
     const assetPath = path.join(root, 'public', keepsake.keepsakeIcon.replace(/^\//, ''))
     assert.ok(fs.existsSync(assetPath), `${keepsake.id} references missing Keepsake ${keepsake.keepsakeIcon}`)
+    assert.ok(!keepsake.keepsakeIcon.includes('+'), `${keepsake.id} uses a deploy-unsafe + in its Keepsake path`)
     const browserUrl = safeAssetUrl(keepsake.keepsakeIcon)
     assert.ok(!browserUrl.includes(' '), `${keepsake.id} contains an unescaped space in its browser URL`)
-    assert.equal(browserUrl.includes('+'), keepsake.keepsakeIcon.includes('+'))
   }
 })
 

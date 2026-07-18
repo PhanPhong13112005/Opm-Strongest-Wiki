@@ -4794,7 +4794,7 @@
         "desc": "Trạng thái sinh tồn giữ người mang sống sót bằng cách giảm mạnh sát thương nhận vào (ví dụ chỉ chịu 20%)."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/05/2023",
     "pvpStats": {
       "atk": 30,
@@ -4931,7 +4931,7 @@
         "desc": "Loại sát thương ăn mòn liên tục theo thời gian bào mòn Máu dần dần, có thể bị chặn bởi miễn nhiễm vùng."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Metal Knight (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Metal Knight (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/04/2023",
     "pvpStats": {
       "atk": 30,
@@ -5032,7 +5032,7 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "debut": "03 / 2023",
-    "keepsakeIcon": "/Keepsake/Puri-Puri Prisoner (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Puri-Puri Prisoner (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "03 / 2023",
     "pvpStats": {
       "atk": 30,
@@ -5146,7 +5146,7 @@
         "desc": "Buff tốc độ mà khi còn hiệu lực cho phép người mang và tối đa 6 đồng minh hành động lại và vượt qua kẻ địch có tốc độ thấp hơn."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Zombieman (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Zombieman (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/03/2023",
     "pvpStats": {
       "atk": 30,
@@ -5264,7 +5264,7 @@
         "desc": "Sát thương theo thời gian dạng ăn mòn đặt lên khu vực mục tiêu, thường đi kèm với Nullity lên toàn bộ kẻ địch."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Groribas (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Groribas (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "releaseTrung": "01/02/2023",
@@ -5379,7 +5379,7 @@
         "desc": "Trạng thái vô hiệu hóa áp lên một khu vực/cột mục tiêu, khiến các đơn vị bị ảnh hưởng không thể hành động hoặc phát huy tác dụng."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Watchdog Man (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Watchdog Man (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/01/2023",
     "pvpStats": {
       "atk": 30,
@@ -5503,7 +5503,7 @@
         "desc": "Hồi Máu theo thời gian hoặc trước hành động kế tiếp của đơn vị."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Melzargard (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Melzargard (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "releaseTrung": "01/12/2022",
@@ -5592,7 +5592,7 @@
     "type": "Công Nghệ",
     "faction": "Anh Hùng",
     "debut": "10 / 2022",
-    "keepsakeIcon": "/Keepsake/Drive Knight (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Drive Knight (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/11/2022",
     "pvpStats": {
       "atk": 30,
@@ -5707,7 +5707,7 @@
         "desc": "Hiệu ứng bất lợi vô hiệu hóa các hiệu ứng bất tử/chống chết của mục tiêu, cho phép hạ gục nó như bình thường."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Tank Top Master (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Tank Top Master (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/10/2022",
     "pvpStats": {
       "atk": 30,
@@ -5836,7 +5836,7 @@
         "desc": "Hiệu ứng sát thương theo thời gian dạng ăn mòn, mỗi lượt gây sát thương bằng một tỷ lệ ST (ví dụ 300%) lên mục tiêu."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Deep Sea King (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Deep Sea King (SSRplus)/Keepsake_SSRplus.png",
     "class": "Demon",
     "classIcon": "/Class/Demon.png",
     "releaseTrung": "01/09/2022",
@@ -5959,7 +5959,7 @@
         "desc": "Bậc PvP của Thiêu Đốt — sát thương liên tục mạnh hơn, khó giải hơn."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Subterranean King (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Subterranean King (SSRplus)/Keepsake_SSRplus.png",
     "class": "Demon",
     "classIcon": "/Class/Demon.png",
     "releaseTrung": "07 / 2022",
@@ -6084,7 +6084,7 @@
         "desc": "Kích hoạt hồi sinh: sau khi nhận sát thương chí mạng, nếu có đồng minh, hồi 50% Máu trước khi hành động, giới hạn số lần nhất định."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "releaseTrung": "01/08/2022",
@@ -6181,7 +6181,7 @@
     "type": "Tâm Linh",
     "faction": "Anh Hùng",
     "debut": "06 / 2022",
-    "keepsakeIcon": "/Keepsake/Pig God (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Pig God (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "06 / 2022",
     "pvpStats": {
       "atk": 30,
@@ -6286,7 +6286,7 @@
     ],
     "imageURL": "/Characters/Flashy Flash (SSR+)/SSR+.png",
     "debut": "05 / 2022",
-    "keepsakeIcon": "/Keepsake/Flashy Flash (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Flashy Flash (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/07/2022",
     "pvpStats": {
       "atk": 30,
@@ -6426,7 +6426,7 @@
         "desc": "Trạng thái khiến người mang không bị ảnh hưởng bởi một hiệu ứng hoặc loại khống chế nhất định, như [Breakthrough], Choáng hay Mê Hoặc."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Gouketsu (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Gouketsu (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "releaseTrung": "01/06/2022",
@@ -6530,7 +6530,7 @@
     ],
     "imageURL": "/Characters/Phoenix Man (SSR+)/SSR+.png",
     "debut": "03 / 2022",
-    "keepsakeIcon": "/Keepsake/Phoenix Man (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Phoenix Man (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "releaseTrung": "03 / 2022",
@@ -6650,7 +6650,7 @@
         "desc": "Xóa các hiệu ứng/buff đang có trên toàn bộ kẻ địch."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Garou (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Garou (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/05/2022",
     "pvpStats": {
       "atk": 30,
@@ -6736,7 +6736,7 @@
         "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Atomic Samurai (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Atomic Samurai (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/04/2022",
     "pvpStats": {
       "atk": 30,
@@ -6814,7 +6814,7 @@
     ],
     "imageURL": "/Characters/Bang (SSR+)/SSR+.png",
     "debut": "12 / 2021",
-    "keepsakeIcon": "/Keepsake/Bang (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Bang (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "01/03/2022",
     "pvpStats": {
       "atk": 30,
@@ -6920,7 +6920,7 @@
         "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Geryuganshoop (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Geryuganshoop (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "releaseTrung": "01/02/2022",
@@ -7030,7 +7030,7 @@
         "desc": "Khiên hấp thụ sát thương tới một phần Máu của chủ thể; Charge DMG bỏ qua nó."
       }
     ],
-    "keepsakeIcon": "/Keepsake/King (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/King (SSRplus)/Keepsake_SSRplus.png",
     "releaseTrung": "10 / 2021",
     "pvpStats": {
       "atk": 30,
@@ -7110,7 +7110,7 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "debut": null,
-    "keepsakeIcon": "/Keepsake/Boros (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Boros (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "pvpStats": {
@@ -7211,7 +7211,7 @@
         "desc": "Đòn ngoài lượt gây 70% sát thương và hiệu ứng của chiêu cuối, không tốn năng lượng, tối đa 3 lần mỗi vòng."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Carnage Kabuto (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Carnage Kabuto (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "pvpStats": {
@@ -7302,7 +7302,7 @@
       }
     ],
     "effects": [],
-    "keepsakeIcon": "/Keepsake/Child Emperor (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Child Emperor (SSRplus)/Keepsake_SSRplus.png",
     "pvpStats": {
       "atk": 30,
       "hp": 30,
@@ -7402,7 +7402,7 @@
         "desc": "Đòn tấn công thêm ngoài lượt (thường sau khi đồng minh hành động) gây một phần ST và hiệu ứng của chiêu cuối lên mục tiêu ngẫu nhiên, không tốn năng lượng."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Metal Bat (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Metal Bat (SSRplus)/Keepsake_SSRplus.png",
     "pvpStats": {
       "atk": 30,
       "hp": 30,
@@ -7486,7 +7486,7 @@
         "desc": "Buff tấn công có sát thương tăng theo điều kiện (ví dụ mỗi kẻ địch bị đánh dấu), khuếch đại lượng sát thương loại Cuồng Nộ mà đơn vị gây ra."
       }
     ],
-    "keepsakeIcon": "/Keepsake/Monsterized Bakuzan (SSR+)/Keepsake_SSR+.png",
+    "keepsakeIcon": "/Keepsake/Monsterized Bakuzan (SSRplus)/Keepsake_SSRplus.png",
     "class": "Dragon",
     "classIcon": "/Class/Dragon.png",
     "pvpStats": {
