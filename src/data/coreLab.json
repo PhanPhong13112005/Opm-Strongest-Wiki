@@ -469,6 +469,7 @@
   "heroes": [
     {
       "coreHeId": "he_100307",
+      "characterId": "100109-ur",
       "slug": "100109-ur",
       "name": "Gyoro-Gyoro",
       "tier": "UR",
@@ -1571,6 +1572,7 @@
     },
     {
       "coreHeId": "he_100196",
+      "characterId": "100045-ur",
       "slug": "100045-ur",
       "name": "Child Emperor",
       "tier": "UR",
@@ -2673,6 +2675,7 @@
     },
     {
       "coreHeId": "he_100184",
+      "characterId": "100184-ur",
       "slug": "100184-ur",
       "name": "Boros",
       "tier": "UR",
@@ -3775,6 +3778,7 @@
     },
     {
       "coreHeId": "he_100078",
+      "characterId": "100044-ssrplus",
       "slug": "100044-ssrplus",
       "name": "Drive Knight",
       "tier": "SSR+",
@@ -4877,6 +4881,7 @@
     },
     {
       "coreHeId": "he_100159",
+      "characterId": "100059-ssrplus",
       "slug": "100059-ssrplus",
       "name": "Geryuganshoop",
       "tier": "SSR+",
@@ -5979,6 +5984,7 @@
     },
     {
       "coreHeId": "he_100108",
+      "characterId": "100108-ssr",
       "slug": "100108-ssr",
       "name": "Bom/Bengpu",
       "tier": "SSR",
@@ -7081,6 +7087,7 @@
     },
     {
       "coreHeId": "he_100045",
+      "characterId": "100045-ssr",
       "slug": "100045-ssr",
       "name": "Child Emperor",
       "tier": "SSR",
@@ -8183,6 +8190,7 @@
     },
     {
       "coreHeId": "he_100003",
+      "characterId": "100003-ssr",
       "slug": "100003-ssr",
       "name": "Deep Sea King",
       "tier": "SSR",
@@ -9285,6 +9293,7 @@
     },
     {
       "coreHeId": "he_100109",
+      "characterId": "100109-ssr",
       "slug": "100109-ssr",
       "name": "Gyoro-Gyoro",
       "tier": "SSR",
@@ -10387,6 +10396,7 @@
     },
     {
       "coreHeId": "he_100013",
+      "characterId": "100013-ssr",
       "slug": "100013-ssr",
       "name": "Zombieman",
       "tier": "SSR",
@@ -11489,6 +11499,7 @@
     },
     {
       "coreHeId": "he_100029",
+      "characterId": "100029-sr",
       "slug": "100029-sr",
       "name": "Amai Mask",
       "tier": "SR",
@@ -12591,6 +12602,7 @@
     },
     {
       "coreHeId": "he_100092",
+      "characterId": "100092-sr",
       "slug": "100092-sr",
       "name": "Bakuzan",
       "tier": "SR",
@@ -13693,6 +13705,7 @@
     },
     {
       "coreHeId": "he_100083",
+      "characterId": "100083-sr",
       "slug": "100083-sr",
       "name": "Doctor Genus",
       "tier": "SR",
@@ -14795,6 +14808,7 @@
     },
     {
       "coreHeId": "he_100001",
+      "characterId": "100001-sr",
       "slug": "100001-sr",
       "name": "Genos",
       "tier": "SR",
@@ -15897,6 +15911,7 @@
     },
     {
       "coreHeId": "he_100008",
+      "characterId": "100008-sr",
       "slug": "100008-sr",
       "name": "Mosquito Girl",
       "tier": "SR",

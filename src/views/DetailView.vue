@@ -43,7 +43,7 @@ watch([() => props.id, locale], loadCharacter, { immediate: true })
 
 const coreData = computed(() => {
   if (!character.value) return null
-  return coreLabData.heroes.find(h => h.name === character.value.name && h.tier === character.value.tier)
+  return coreLabData.heroes.find(h => h.characterId === character.value.id)
 })
 
 const coreLevels = computed(() => {

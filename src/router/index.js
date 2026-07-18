@@ -1,17 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import DetailView from '../views/DetailView.vue'
-import CharacterListView from '../views/CharacterListView.vue'
-import MasteryView from '../views/MasteryView.vue'
-import CoreLabView from '../views/CoreLabView.vue'
-import EquipmentView from '../views/EquipmentView.vue'
-import EventsView from '../views/EventsView.vue'
-import EventDetailView from '../views/EventDetailView.vue'
-import PrivacyView from '../views/PrivacyView.vue'
-import HistoryView from '../views/HistoryView.vue'
-import MedalsView from '../views/MedalsView.vue'
-import TacticsView from '../views/TacticsView.vue'
-import BackgearView from '../views/BackgearView.vue'
+
+// Keep the landing page in the initial bundle and load feature pages only when
+// users visit them. This avoids downloading the large data catalogs and Spine
+// renderer on every first visit.
+const DetailView = () => import('../views/DetailView.vue')
+const CharacterListView = () => import('../views/CharacterListView.vue')
+const MasteryView = () => import('../views/MasteryView.vue')
+const CoreLabView = () => import('../views/CoreLabView.vue')
+const EquipmentView = () => import('../views/EquipmentView.vue')
+const EventsView = () => import('../views/EventsView.vue')
+const EventDetailView = () => import('../views/EventDetailView.vue')
+const PrivacyView = () => import('../views/PrivacyView.vue')
+const HistoryView = () => import('../views/HistoryView.vue')
+const MedalsView = () => import('../views/MedalsView.vue')
+const TacticsView = () => import('../views/TacticsView.vue')
+const BackgearView = () => import('../views/BackgearView.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

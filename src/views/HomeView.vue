@@ -1,22 +1,34 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import charactersDataVi from '../data/characters.json'
-import charactersDataEn from '../data/characters_en.json'
 import { getAllCharacters } from '../services/characterApi'
 
 const { t, locale } = useI18n()
-const localCharactersData = computed(() => locale.value === 'en' ? charactersDataEn : charactersDataVi)
+const localCatalogs = ref({ vi: null, en: null })
+const localCharactersData = computed(() => localCatalogs.value[locale.value] || [])
 const apiCharacters = ref(null)
 const charactersData = computed(() => apiCharacters.value || localCharactersData.value)
 let activeRequest = 0
 
+const loadLocalCharacters = async (language) => {
+  if (localCatalogs.value[language]) return localCatalogs.value[language]
+  const module = language === 'en'
+    ? await import('../data/characters_en.json')
+    : await import('../data/characters.json')
+  const catalog = module.default
+  localCatalogs.value = { ...localCatalogs.value, [language]: catalog }
+  return catalog
+}
+
 const loadCharacters = async () => {
   const requestId = ++activeRequest
   apiCharacters.value = null
+  const language = locale.value
+  const localCharacters = await loadLocalCharacters(language)
+  if (requestId !== activeRequest) return
 
   try {
-    const result = await getAllCharacters(locale.value, localCharactersData.value)
+    const result = await getAllCharacters(language, localCharacters)
     if (requestId === activeRequest) apiCharacters.value = result
   } catch {
     // JSON local remains the visible source when the API is unavailable.
