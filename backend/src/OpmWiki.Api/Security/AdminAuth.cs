@@ -16,7 +16,14 @@ public sealed class AdminAuthOptions
 }
 
 public sealed record AdminLoginRequest(string Username, string Password);
-public sealed record AdminLoginResponse(string AccessToken, DateTimeOffset ExpiresAt, string Username);
+public sealed record AdminLoginResponse(
+    string AccessToken,
+    DateTimeOffset ExpiresAt,
+    string UserId,
+    string Username,
+    string DisplayName,
+    string Role,
+    decimal Balance);
 
 public sealed class AdminTokenService(AdminAuthOptions options)
 {
@@ -24,15 +31,25 @@ public sealed class AdminTokenService(AdminAuthOptions options)
         FixedTimeEquals(username, options.Username) &&
         FixedTimeEquals(password, options.Password);
 
-    public AdminLoginResponse CreateToken()
+    public AdminLoginResponse CreateToken() =>
+        CreateToken($"admin:{options.Username}", options.Username, options.Username, "Admin", 0);
+
+    public AdminLoginResponse CreateToken(
+        string userId,
+        string username,
+        string displayName,
+        string role,
+        decimal balance)
     {
         var now = DateTimeOffset.UtcNow;
         var expiresAt = now.AddMinutes(Math.Clamp(options.TokenLifetimeMinutes, 5, 1440));
         var claims = new[]
         {
-            new Claim(JwtRegisteredClaimNames.Sub, options.Username),
-            new Claim(ClaimTypes.Name, options.Username),
-            new Claim(ClaimTypes.Role, "Admin"),
+            new Claim(JwtRegisteredClaimNames.Sub, userId),
+            new Claim(ClaimTypes.NameIdentifier, userId),
+            new Claim(ClaimTypes.Name, username),
+            new Claim("display_name", displayName),
+            new Claim(ClaimTypes.Role, role),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString("N")),
         };
         var credentials = new SigningCredentials(
@@ -40,7 +57,7 @@ public sealed class AdminTokenService(AdminAuthOptions options)
             SecurityAlgorithms.HmacSha256);
         var token = new JwtSecurityToken(
             issuer: "OpmWiki.Api",
-            audience: "OpmWiki.Admin",
+            audience: "OpmWiki.Web",
             claims: claims,
             notBefore: now.UtcDateTime,
             expires: expiresAt.UtcDateTime,
@@ -49,7 +66,11 @@ public sealed class AdminTokenService(AdminAuthOptions options)
         return new AdminLoginResponse(
             new JwtSecurityTokenHandler().WriteToken(token),
             expiresAt,
-            options.Username);
+            userId,
+            username,
+            displayName,
+            role,
+            balance);
     }
 
     public static SymmetricSecurityKey CreateSigningKey(string signingKey) =>

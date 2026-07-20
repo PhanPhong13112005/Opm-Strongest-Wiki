@@ -1,5 +1,10 @@
 {
   "home": {
+    "eyebrow": "TIÊU ĐIỂM NHÂN VẬT CỦA THÁNG NÀY",
+    "title": "Radar ra mắt",
+    "subtitle": "Theo dõi nhịp phát hành nhân vật giữa máy chủ Trung Quốc và Đông Nam Á trên một dòng thời gian duy nhất.",
+    "overview": "TỔNG QUAN THÁNG",
+    "records": "MỐC DỮ LIỆU",
     "serverTrungFull": "MÁY CHỦ TRUNG QUỐC",
     "serverSeaFull": "MÁY CHỦ ĐÔNG NAM Á",
     "release": "RA MẮT",
@@ -25,7 +30,10 @@
     "backgear": "Thẻ Hình nền",
     "features": "Hệ Thống",
     "events": "Lịch sự kiện",
-    "login": "Đăng nhập"
+    "login": "Đăng nhập",
+    "forum": "Diễn đàn",
+    "advisor": "Tư vấn AI",
+    "topup": "Nạp thẻ"
   },
   "footer": {
     "desc": "OPM: The Strongest — cơ sở dữ liệu cộng đồng · dữ liệu trích xuất trực tiếp từ game",

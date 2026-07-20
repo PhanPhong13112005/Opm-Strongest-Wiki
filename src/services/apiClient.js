@@ -1,6 +1,6 @@
 const configuredBaseUrl = (import.meta.env.VITE_API_BASE_URL || '').trim()
 const API_BASE_URL = configuredBaseUrl || (import.meta.env.DEV ? 'http://localhost:5180' : '')
-const REQUEST_TIMEOUT_MS = 3000
+const REQUEST_TIMEOUT_MS = 8000
 
 const buildUrl = (path, params = {}) => {
   if (!API_BASE_URL) return null

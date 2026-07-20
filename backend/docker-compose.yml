@@ -28,6 +28,10 @@ services:
       AdminAuth__Username: ${ADMIN_USERNAME:-admin}
       AdminAuth__Password: ${ADMIN_PASSWORD:-dev-only-change-me}
       AdminAuth__JwtSigningKey: ${ADMIN_JWT_SIGNING_KEY:-development-only-opmwiki-admin-signing-key-change-me}
+      AiAdvisor__Enabled: ${AI_ADVISOR_ENABLED:-false}
+      AiAdvisor__Endpoint: ${AI_ADVISOR_ENDPOINT:-}
+      AiAdvisor__ApiKey: ${AI_ADVISOR_API_KEY:-}
+      AiAdvisor__Model: ${AI_ADVISOR_MODEL:-}
     ports:
       - "5180:8080"
     volumes:

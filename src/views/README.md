@@ -44,3 +44,11 @@ Thư mục này chứa tất cả các thành phần View (Trang) hoàn chỉnh 
 *   Đăng nhập quản trị bằng JWT, token chỉ tồn tại trong tab hiện tại (`sessionStorage`).
 *   Tìm kiếm, phân trang, thêm/sửa/xóa metadata và chỉ số Nhân vật trong PostgreSQL.
 *   Gắn, đổi hoặc gỡ Kỷ vật ngay trên bản ghi Nhân vật, không tạo nguồn dữ liệu trùng lặp.
+
+### 10. Cổng cộng đồng theo vai trò
+*   `UserPortalView.vue`: trang cá nhân và lối vào Diễn đàn, AI, Nạp thẻ, Bình luận sự kiện.
+*   `ForumView.vue`, `AdvisorView.vue`, `TopUpView.vue`: các luồng cộng đồng dành cho tài khoản đã đăng nhập.
+*   `StaffDashboardView.vue`: duyệt nạp, xem/xóa bình luận; Staff cũng có thể xóa cả chủ đề hoặc phản hồi vi phạm trong diễn đàn.
+*   `AdminDashboardView.vue`: thống kê người dùng/nội dung/dữ liệu, phân vai trò và điều hướng quản trị.
+*   `AdminEventsView.vue`: thêm, sửa, xóa nội dung sự kiện trong PostgreSQL.
+*   `AdminReleasesView.vue`: thêm, sửa, xóa lịch ra mắt tướng CN/SEA; dữ liệu điều khiển banner trang chủ.

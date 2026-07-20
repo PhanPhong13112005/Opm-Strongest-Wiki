@@ -19,6 +19,15 @@ Sử dụng thư viện `vue-router` phiên bản 4 để thiết lập lịch s
 *   `/history`: Trang Lịch Sử Phiên Bản.
 *   `/admin/login`: Đăng nhập quản trị bằng backend ASP.NET Core.
 *   `/admin/characters`: CRUD Nhân vật và Kỷ vật; route guard yêu cầu JWT Admin còn hạn.
+*   `/login`: Đăng nhập/đăng ký dùng chung cho User, Staff và Admin.
+*   `/account`: Cổng người dùng.
+*   `/forum`, `/advisor`, `/top-up`: Diễn đàn, tư vấn và yêu cầu nạp.
+*   `/staff`: Cổng duyệt nạp và kiểm duyệt nội dung cho Staff/Admin.
+*   `/admin/dashboard`: Dashboard tổng hợp và phân quyền tài khoản.
+*   `/admin/events`: CRUD nội dung sự kiện.
+*   `/admin/releases`: CRUD lịch ra mắt tướng CN/SEA hiển thị trực tiếp trên trang chủ.
+
+Route guard đọc vai trò trong phiên JWT và điều hướng người dùng về đúng cổng. Backend vẫn là lớp phân quyền cuối cùng; route guard chỉ phục vụ trải nghiệm giao diện.
 
 ## Các tùy biến đặc biệt
 *   `scrollBehavior`: Cấu hình tự động cuộn trang lên đầu (`top: 0`) mỗi khi chuyển tuyến đường (route change) trừ khi có lịch sử cuộn trước đó (`savedPosition`).

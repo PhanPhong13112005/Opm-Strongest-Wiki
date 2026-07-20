@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using OpmWiki.Api.Security;
+using OpmWiki.Api.Services;
 using OpmWiki.Application.Abstractions;
 using OpmWiki.Infrastructure;
 using OpmWiki.Infrastructure.Persistence;
@@ -47,6 +48,10 @@ else if (string.IsNullOrWhiteSpace(adminAuthOptions.Username) ||
 
 builder.Services.AddSingleton(adminAuthOptions);
 builder.Services.AddSingleton<AdminTokenService>();
+builder.Services.AddSingleton<PasswordHasher>();
+var aiAdvisorOptions = builder.Configuration.GetSection(AiAdvisorOptions.SectionName).Get<AiAdvisorOptions>() ?? new();
+builder.Services.AddSingleton(aiAdvisorOptions);
+builder.Services.AddHttpClient<AiAdvisorClient>(client => client.Timeout = TimeSpan.FromSeconds(20));
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -56,7 +61,7 @@ builder.Services
             ValidateIssuer = true,
             ValidIssuer = "OpmWiki.Api",
             ValidateAudience = true,
-            ValidAudience = "OpmWiki.Admin",
+            ValidAudience = "OpmWiki.Web",
             ValidateIssuerSigningKey = true,
             IssuerSigningKey = AdminTokenService.CreateSigningKey(adminAuthOptions.JwtSigningKey),
             ValidateLifetime = true,
@@ -64,16 +69,20 @@ builder.Services
         };
     });
 builder.Services.AddAuthorization();
-builder.Services.AddRateLimiter(options => options.AddPolicy("admin-login", context =>
-    RateLimitPartition.GetFixedWindowLimiter(
-        context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
-        _ => new FixedWindowRateLimiterOptions
-        {
-            PermitLimit = 5,
-            Window = TimeSpan.FromMinutes(1),
-            QueueLimit = 0,
-            AutoReplenishment = true,
-        })));
+builder.Services.AddRateLimiter(options =>
+{
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+    options.AddPolicy("admin-login", context =>
+        RateLimitPartition.GetFixedWindowLimiter(
+            context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+            _ => new FixedWindowRateLimiterOptions
+            {
+                PermitLimit = 5,
+                Window = TimeSpan.FromMinutes(1),
+                QueueLimit = 0,
+                AutoReplenishment = true,
+            }));
+});
 
 var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>()
     ?? ["http://localhost:5173"];
