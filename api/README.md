@@ -14,11 +14,14 @@ Vercel Hobby. Frontend và API dùng chung domain nên không cần cấu hình 
 - `/api/staff/top-ups`, `/api/staff/top-ups/:id/review`
 - `/api/moderation/comments`, `/api/moderation/forum/*`
 - `/api/admin/dashboard`, `/api/admin/users`, `/api/admin/users/:id/role`
+- `/api/admin/characters/*`, `/api/admin/keepsakes/*`
+- `/api/admin/events/*`, `/api/admin/releases/*`
+- `/api/release-schedule` (public, song ngữ VI/EN)
 - `/api/advisor/ask` (tra cứu dữ liệu Wiki nội bộ)
 
-Các màn hình dữ liệu công khai như Nhân vật, Sự kiện, Tinh thông, Kỷ vật, Huy hiệu,
-Thẻ Hình nền và Chiến thuật vẫn dùng JSON tĩnh hiện có. Đây là chủ đích để website
-không tạo truy vấn PostgreSQL cho nội dung chỉ đọc.
+Lịch ra mắt CN/SEA được đọc trực tiếp từ PostgreSQL. Các trang nội dung công khai còn lại
+vẫn dùng JSON tĩnh làm nguồn đọc nhanh; trang quản trị lưu Nhân vật, Kỷ vật và Sự kiện vào
+PostgreSQL để chuẩn bị chuyển dần các API đọc công khai.
 
 ## Biến môi trường trên Vercel
 
@@ -30,6 +33,9 @@ ADMINAUTH__USERNAME=admin
 ADMINAUTH__PASSWORD=<mật khẩu quản trị mạnh>
 ADMINAUTH__JWTSIGNINGKEY=<chuỗi ngẫu nhiên tối thiểu 32 ký tự>
 ```
+
+Có thể dùng connection string kiểu .NET qua `CONNECTIONSTRINGS__OPMWIKI` thay cho
+`DATABASE_URL`. Không cần đặt đồng thời cả hai.
 
 Không thêm tiền tố `VITE_` cho các secret trên. Vercel Function sẽ tự tạo các bảng
 cộng đồng còn thiếu trong Neon ở yêu cầu đầu tiên. Schema dùng cùng tên bảng/cột và
