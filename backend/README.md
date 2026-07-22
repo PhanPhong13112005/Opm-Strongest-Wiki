@@ -38,6 +38,8 @@ dotnet run --project src/OpmWiki.Api --urls http://localhost:5180
 
 Swagger: `http://localhost:5180/swagger`
 
+Hướng dẫn production: [`DEPLOYMENT.md`](DEPLOYMENT.md).
+
 Nếu muốn chạy cả API và PostgreSQL bằng Docker:
 
 ```powershell

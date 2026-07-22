@@ -17,13 +17,14 @@ services:
 
   api:
     build:
-      context: .
-      dockerfile: src/OpmWiki.Api/Dockerfile
+      context: ..
+      dockerfile: Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: http://+:8080
       ConnectionStrings__OpmWiki: Host=database;Port=5432;Database=${POSTGRES_DB:-opmwiki};Username=${POSTGRES_USER:-opmwiki};Password=${POSTGRES_PASSWORD:-opmwiki}
       Database__MigrateOnStartup: "true"
+      Database__SeedWhenEmpty: "true"
       SeedData__FrontendDataPath: /frontend-data
       AdminAuth__Username: ${ADMIN_USERNAME:-admin}
       AdminAuth__Password: ${ADMIN_PASSWORD:-dev-only-change-me}

@@ -18,7 +18,12 @@ public static class DependencyInjection
         var connectionString = configuration.GetConnectionString("OpmWiki")
             ?? throw new InvalidOperationException("Connection string 'OpmWiki' is not configured.");
 
-        services.AddDbContext<OpmWikiDbContext>(options => options.UseNpgsql(connectionString));
+        services.AddDbContext<OpmWikiDbContext>(options => options.UseNpgsql(
+            connectionString,
+            npgsql => npgsql.EnableRetryOnFailure(
+                maxRetryCount: 5,
+                maxRetryDelay: TimeSpan.FromSeconds(10),
+                errorCodesToAdd: null)));
         services.AddScoped<ICharacterRepository, CharacterRepository>();
         services.AddScoped<IAdminCharacterRepository, AdminCharacterRepository>();
         services.AddScoped<IKeepsakeRepository, KeepsakeRepository>();

@@ -1,5 +1,6 @@
 using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
@@ -10,6 +11,14 @@ using OpmWiki.Infrastructure;
 using OpmWiki.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Railway and similar platforms provide the listening port via PORT.
+// Prefer it when present while keeping ASPNETCORE_URLS for local/Docker usage.
+var platformPort = builder.Configuration["PORT"];
+if (int.TryParse(platformPort, out var parsedPort) && parsedPort is > 0 and <= 65535)
+{
+    builder.WebHost.UseUrls($"http://0.0.0.0:{parsedPort}");
+}
 
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
@@ -69,6 +78,12 @@ builder.Services
         };
     });
 builder.Services.AddAuthorization();
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+    options.KnownIPNetworks.Clear();
+    options.KnownProxies.Clear();
+});
 builder.Services.AddRateLimiter(options =>
 {
     options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
@@ -95,13 +110,15 @@ var app = builder.Build();
 
 var seedRequested = args.Any(x => string.Equals(x, "--seed-data", StringComparison.OrdinalIgnoreCase));
 var migrateOnStartup = builder.Configuration.GetValue<bool>("Database:MigrateOnStartup");
-if (seedRequested || migrateOnStartup)
+var seedWhenEmpty = builder.Configuration.GetValue<bool>("Database:SeedWhenEmpty");
+if (seedRequested || migrateOnStartup || seedWhenEmpty)
 {
     await using var scope = app.Services.CreateAsyncScope();
     var dbContext = scope.ServiceProvider.GetRequiredService<OpmWikiDbContext>();
     await dbContext.Database.MigrateAsync();
 
-    if (seedRequested)
+    var databaseIsEmpty = seedWhenEmpty && !await dbContext.Characters.AsNoTracking().AnyAsync();
+    if (seedRequested || databaseIsEmpty)
     {
         var result = await scope.ServiceProvider.GetRequiredService<IDataSeeder>().SeedAsync();
         app.Logger.LogInformation(
@@ -114,7 +131,7 @@ if (seedRequested || migrateOnStartup)
             result.BackgearSets,
             result.TacticCards,
             result.TacticFrames);
-        return;
+        if (seedRequested) return;
     }
 }
 
@@ -129,6 +146,7 @@ else
     app.UseExceptionHandler();
 }
 
+app.UseForwardedHeaders();
 app.UseHttpsRedirection();
 app.UseCors("Frontend");
 app.UseRateLimiter();
