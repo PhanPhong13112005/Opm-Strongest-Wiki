@@ -4,6 +4,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import eventsData from '../data/events.json'
 import { getEventById } from '../services/eventApi'
+import EventComments from '../components/EventComments.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -236,6 +237,8 @@ const goBack = () => {
           </div>
         </div>
       </div>
+
+      <EventComments :event-id="eventId" />
       
     </div>
     

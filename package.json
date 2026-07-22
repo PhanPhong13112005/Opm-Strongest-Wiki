@@ -11,6 +11,7 @@
     "test:frontend": "node --test tests/frontend-data.test.mjs"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "pixi-spine": "^4.0.6",

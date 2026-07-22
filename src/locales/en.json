@@ -1,5 +1,10 @@
 {
   "home": {
+    "eyebrow": "THIS MONTH'S FEATURED CHARACTER",
+    "title": "Release radar",
+    "subtitle": "Track character releases across China and Southeast Asia servers on one unified timeline.",
+    "overview": "MONTH OVERVIEW",
+    "records": "DATA RECORDS",
     "serverTrungFull": "CN SERVER",
     "serverSeaFull": "SEA SERVER",
     "release": "RELEASE",
@@ -24,7 +29,11 @@
     "tactics": "Tactics",
     "backgear": "Backgear",
     "features": "Features",
-    "events": "Event Schedule"
+    "events": "Event Schedule",
+    "login": "Login",
+    "forum": "Forum",
+    "advisor": "AI Advisor",
+    "topup": "Top up"
   },
   "footer": {
     "desc": "OPM: The Strongest — community database · data extracted directly from game",

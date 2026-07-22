@@ -18,14 +18,21 @@ public static class DependencyInjection
         var connectionString = configuration.GetConnectionString("OpmWiki")
             ?? throw new InvalidOperationException("Connection string 'OpmWiki' is not configured.");
 
-        services.AddDbContext<OpmWikiDbContext>(options => options.UseNpgsql(connectionString));
+        services.AddDbContext<OpmWikiDbContext>(options => options.UseNpgsql(
+            connectionString,
+            npgsql => npgsql.EnableRetryOnFailure(
+                maxRetryCount: 5,
+                maxRetryDelay: TimeSpan.FromSeconds(10),
+                errorCodesToAdd: null)));
         services.AddScoped<ICharacterRepository, CharacterRepository>();
+        services.AddScoped<IAdminCharacterRepository, AdminCharacterRepository>();
         services.AddScoped<IKeepsakeRepository, KeepsakeRepository>();
         services.AddScoped<IEventRepository, EventRepository>();
         services.AddScoped<IMasteryRepository, MasteryRepository>();
         services.AddScoped<IInsigniaRepository, InsigniaRepository>();
         services.AddScoped<IBackgearRepository, BackgearRepository>();
         services.AddScoped<ITacticRepository, TacticRepository>();
+        services.AddScoped<ICommunityRepository, CommunityRepository>();
         services.AddScoped<IDataSeeder, JsonDataSeeder>();
 
         var configuredDataPath = configuration["SeedData:FrontendDataPath"] ?? "../../../src/data";

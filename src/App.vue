@@ -1,183 +1,151 @@
 <script setup>
-import { ref, watch } from 'vue'
-import { RouterView, RouterLink } from 'vue-router'
+import { computed, ref, watch } from 'vue'
+import { RouterView, RouterLink, useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { Analytics } from '@vercel/analytics/vue'
 import { SpeedInsights } from '@vercel/speed-insights/vue'
+import { authState, getPortalPath, hasRole, hasValidSession } from './services/authApi'
 
 const { t, locale } = useI18n()
-
-// Use a ref for the UI toggle but sync it with vue-i18n locale
+const route = useRoute()
 const lang = ref(locale.value.toUpperCase())
 const isMobileMenuOpen = ref(false)
+const accountPath = computed(() => getPortalPath(authState.session?.role))
+const featureRoutes = ['/core-lab', '/medals', '/tactics', '/backgear', '/keepsakes', '/insignias']
+const isFeaturesRoute = computed(() => featureRoutes.some(path => route.path.startsWith(path)))
+const isWorkspaceRoute = computed(() => hasValidSession() && (
+  ['/account', '/forum', '/advisor', '/top-up', '/staff'].includes(route.path)
+  || route.path.startsWith('/admin/')
+))
+
+const workspaceLinks = computed(() => {
+  const community = [
+    { to: '/forum', code: 'CM', label: 'Cộng đồng' },
+    { to: '/advisor', code: 'AI', label: 'Trợ lý dữ liệu' },
+    { to: '/top-up', code: 'CR', label: 'Nạp tín dụng' },
+  ]
+  if (hasRole('Admin')) {
+    return [
+      { to: '/admin/dashboard', code: 'DB', label: 'Dashboard' },
+      { to: '/admin/characters', code: 'CH', label: 'Nhân vật' },
+      { to: '/admin/events', code: 'EV', label: 'Sự kiện' },
+      { to: '/admin/releases', code: 'RL', label: 'Lịch ra mắt' },
+      { to: '/staff', code: 'OP', label: 'Vận hành' },
+      ...community,
+    ]
+  }
+  if (hasRole('Staff')) return [{ to: '/staff', code: 'OP', label: 'Vận hành' }, ...community]
+  return [{ to: '/account', code: 'HQ', label: 'Tổng quan' }, ...community]
+})
 
 const toggleLang = () => {
-  const newLang = lang.value === 'VI' ? 'EN' : 'VI'
-  lang.value = newLang
-  locale.value = newLang.toLowerCase()
+  const next = lang.value === 'VI' ? 'EN' : 'VI'
+  lang.value = next
+  locale.value = next.toLowerCase()
 }
 
-const toggleMobileMenu = () => {
-  isMobileMenuOpen.value = !isMobileMenuOpen.value
-}
+watch(() => route.fullPath, () => { isMobileMenuOpen.value = false })
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col bg-opm-dark">
-    <!-- Header/Navbar chung cho toàn trang -->
-    <header class="sticky top-0 z-40 border-b border-white/5 bg-[#05060a]/90 backdrop-blur-md">
-      <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 relative">
-        <RouterLink to="/" class="text-2xl font-black uppercase tracking-[0.2em] text-white hover:text-gray-300 transition-colors">
-          OPM STRONGEST
+  <div class="site-shell min-h-screen">
+    <header class="site-header">
+      <div class="site-header__signal">
+        <div class="mx-auto flex max-w-[1440px] items-center justify-between px-4 sm:px-6">
+          <span>HERO DATA NETWORK // LIVE ARCHIVE</span>
+          <span class="hidden sm:inline">DATABASE STATUS: <b>ONLINE</b></span>
+        </div>
+      </div>
+
+      <div class="site-header__main mx-auto flex max-w-[1440px] items-center gap-5 px-4 sm:px-6">
+        <RouterLink to="/" class="brand-lockup" aria-label="OPM Strongest Wiki">
+          <span class="brand-lockup__mark"><i>O</i><i>S</i></span>
+          <span><strong>OPM STRONGEST</strong><small>HERO DATA BUREAU</small></span>
         </RouterLink>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden sm:flex gap-8 items-center">
-          <RouterLink to="/characters" class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-            {{ t('nav.characters') }}
-          </RouterLink>
-          <RouterLink to="/mastery" class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-            {{ t('nav.mastery') }}
-          </RouterLink>
-
-          <!-- Dropdown Features -->
-          <div class="relative group">
-            <button class="flex items-center gap-1 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors focus:outline-none py-2">
+        <nav class="ml-auto hidden items-center gap-1 xl:flex" aria-label="Điều hướng chính">
+          <RouterLink to="/characters" class="site-nav-link">{{ t('nav.characters') }}</RouterLink>
+          <RouterLink to="/mastery" class="site-nav-link">{{ t('nav.mastery') }}</RouterLink>
+          <div class="group relative">
+            <button class="site-nav-link flex items-center gap-2" :class="{ 'is-active': isFeaturesRoute }">
               {{ t('nav.features') }}
-              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              <svg class="h-3.5 w-3.5 transition group-hover:rotate-180" viewBox="0 0 20 20" fill="none" stroke="currentColor"><path d="m5 7.5 5 5 5-5" stroke-width="1.8" /></svg>
             </button>
-            <div class="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-48 rounded-lg bg-[#0a0c10] border border-white/10 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top -translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
-              <div class="flex flex-col">
-                <RouterLink to="/core-lab" class="px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5" exact-active-class="text-white bg-white/5">
-                  {{ t('nav.corelab') }}
-                </RouterLink>
-                <RouterLink to="/medals" class="px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5" exact-active-class="text-white bg-white/5">
-                  {{ t('nav.medals') }}
-                </RouterLink>
-                <RouterLink to="/tactics" class="px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5" exact-active-class="text-white bg-white/5">
-                  {{ t('nav.tactics') }}
-                </RouterLink>
-                <RouterLink to="/backgear" class="px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5" exact-active-class="text-white bg-white/5">
-                  {{ t('nav.backgear') }}
-                </RouterLink>
-                <RouterLink to="/keepsakes" class="px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5" exact-active-class="text-white bg-white/5">
-                  {{ t('nav.keepsakes') }}
-                </RouterLink>
-                <RouterLink to="/insignias" class="px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white hover:bg-white/5 transition-colors" exact-active-class="text-white bg-white/5">
-                  {{ t('nav.insignias') }}
-                </RouterLink>
-              </div>
+            <div class="site-nav-menu">
+              <RouterLink to="/core-lab">{{ t('nav.corelab') }}</RouterLink>
+              <RouterLink to="/medals">{{ t('nav.medals') }}</RouterLink>
+              <RouterLink to="/tactics">{{ t('nav.tactics') }}</RouterLink>
+              <RouterLink to="/backgear">{{ t('nav.backgear') }}</RouterLink>
+              <RouterLink to="/keepsakes">{{ t('nav.keepsakes') }}</RouterLink>
+              <RouterLink to="/insignias">{{ t('nav.insignias') }}</RouterLink>
             </div>
           </div>
-
-          <RouterLink to="/events" class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-            {{ t('nav.events') }}
-          </RouterLink>
-          
-          <div class="ml-4 flex items-center bg-[#1a1c23] rounded-full px-1 py-1 border border-gray-700 cursor-pointer relative" @click="toggleLang">
-            <div class="absolute inset-y-1 w-1/2 rounded-full bg-opm-gold transition-all duration-300" :class="lang === 'VI' ? 'left-1' : 'left-[calc(50%-4px)]'"></div>
-            <span class="relative z-10 text-[10px] font-bold px-3 py-0.5 rounded-full transition-colors" :class="lang === 'VI' ? 'text-black' : 'text-gray-400'">VI</span>
-            <span class="relative z-10 text-[10px] font-bold px-3 py-0.5 rounded-full transition-colors" :class="lang === 'EN' ? 'text-black' : 'text-gray-400'">EN</span>
-          </div>
+          <RouterLink to="/events" class="site-nav-link">{{ t('nav.events') }}</RouterLink>
         </nav>
 
-        <!-- Mobile Navigation Toggle -->
-        <div class="flex sm:hidden items-center gap-4">
-          <div class="flex items-center bg-[#1a1c23] rounded-full px-1 py-1 border border-gray-700 cursor-pointer relative" @click="toggleLang">
-            <div class="absolute inset-y-1 w-1/2 rounded-full bg-opm-gold transition-all duration-300" :class="lang === 'VI' ? 'left-1' : 'left-[calc(50%-4px)]'"></div>
-            <span class="relative z-10 text-[10px] font-bold px-3 py-0.5 rounded-full transition-colors" :class="lang === 'VI' ? 'text-black' : 'text-gray-400'">VI</span>
-            <span class="relative z-10 text-[10px] font-bold px-3 py-0.5 rounded-full transition-colors" :class="lang === 'EN' ? 'text-black' : 'text-gray-400'">EN</span>
-          </div>
-          <button @click="toggleMobileMenu" class="text-gray-400 hover:text-white focus:outline-none">
-            <svg v-if="!isMobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        <div class="ml-auto flex items-center gap-2 xl:ml-3">
+          <button class="lang-control" :aria-label="`Language ${lang}`" @click="toggleLang">
+            <span :class="{ active: lang === 'VI' }">VI</span><span :class="{ active: lang === 'EN' }">EN</span>
+          </button>
+          <RouterLink :to="hasValidSession() ? accountPath : '/login'" class="account-control">
+            <span class="account-control__dot" />
+            <span class="hidden max-w-[120px] truncate sm:block">{{ hasValidSession() ? authState.session?.displayName : t('nav.login') }}</span>
+            <span class="sm:hidden">ID</span>
+          </RouterLink>
+          <button class="menu-control xl:hidden" aria-label="Mở menu" @click="isMobileMenuOpen = !isMobileMenuOpen">
+            <svg v-if="!isMobileMenuOpen" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 7h16M8 12h12M4 17h16" stroke-width="1.8" /></svg>
+            <svg v-else viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m6 6 12 12M18 6 6 18" stroke-width="1.8" /></svg>
           </button>
         </div>
       </div>
 
-      <!-- Mobile Menu Dropdown -->
-      <div v-if="isMobileMenuOpen" class="sm:hidden absolute top-20 left-0 w-full bg-[#05060a]/95 backdrop-blur-md border-b border-white/5 py-4 px-4 flex flex-col gap-4 shadow-xl z-50">
-        <RouterLink @click="toggleMobileMenu" to="/characters" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-          {{ t('nav.characters') }}
-        </RouterLink>
-        <RouterLink @click="toggleMobileMenu" to="/mastery" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-          {{ t('nav.mastery') }}
-        </RouterLink>
-
-        <!-- Features Group Header -->
-        <div class="text-xs font-bold text-gray-500 uppercase tracking-widest mt-2 px-2 border-b border-white/5 pb-2">
-          {{ t('nav.features') }}
-        </div>
-        <div class="flex flex-col gap-4 pl-4 border-l-2 border-white/5 ml-2">
-          <RouterLink @click="toggleMobileMenu" to="/core-lab" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-            {{ t('nav.corelab') }}
-          </RouterLink>
-          <RouterLink @click="toggleMobileMenu" to="/medals" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-            {{ t('nav.medals') }}
-          </RouterLink>
-          <RouterLink @click="toggleMobileMenu" to="/tactics" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-            {{ t('nav.tactics') }}
-          </RouterLink>
-          <RouterLink @click="toggleMobileMenu" to="/backgear" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-            {{ t('nav.backgear') }}
-          </RouterLink>
-          <RouterLink @click="toggleMobileMenu" to="/keepsakes" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-            {{ t('nav.keepsakes') }}
-          </RouterLink>
-          <RouterLink @click="toggleMobileMenu" to="/insignias" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors" exact-active-class="text-white">
-            {{ t('nav.insignias') }}
-          </RouterLink>
-        </div>
-
-        <RouterLink @click="toggleMobileMenu" to="/events" class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors mt-2" exact-active-class="text-white">
-          {{ t('nav.events') }}
-        </RouterLink>
-      </div>
+      <nav v-if="isMobileMenuOpen" class="mobile-command-menu">
+        <RouterLink to="/characters">{{ t('nav.characters') }}</RouterLink>
+        <RouterLink to="/mastery">{{ t('nav.mastery') }}</RouterLink>
+        <RouterLink to="/events">{{ t('nav.events') }}</RouterLink>
+        <RouterLink to="/tactics">{{ t('nav.tactics') }}</RouterLink>
+        <RouterLink to="/backgear">{{ t('nav.backgear') }}</RouterLink>
+        <RouterLink to="/keepsakes">{{ t('nav.keepsakes') }}</RouterLink>
+        <RouterLink to="/insignias">{{ t('nav.insignias') }}</RouterLink>
+      </nav>
     </header>
 
-    <!-- Khu vực hiển thị View tương ứng -->
-    <RouterView class="flex-grow" v-slot="{ Component, route }">
-      <transition name="page" mode="out-in">
-        <component :is="Component" :key="route.path" />
-      </transition>
+    <div v-if="isWorkspaceRoute" class="workspace-frame">
+      <aside class="workspace-rail">
+        <div class="workspace-profile">
+          <span class="workspace-avatar">{{ authState.session?.displayName?.slice(0, 1)?.toUpperCase() || 'U' }}</span>
+          <div><strong>{{ authState.session?.displayName }}</strong><small>{{ authState.session?.role }} ACCESS</small></div>
+        </div>
+        <p class="workspace-label">CONTROL DECK</p>
+        <nav>
+          <RouterLink v-for="item in workspaceLinks" :key="item.to" :to="item.to" class="workspace-link">
+            <span>{{ item.code }}</span><b>{{ item.label }}</b>
+          </RouterLink>
+        </nav>
+        <RouterLink to="/" class="workspace-exit">← Trở về Wiki</RouterLink>
+      </aside>
+      <div class="workspace-content">
+        <RouterView v-slot="{ Component, route: currentRoute }">
+          <transition name="page" mode="out-in"><component :is="Component" :key="currentRoute.path" /></transition>
+        </RouterView>
+      </div>
+    </div>
+
+    <RouterView v-else class="flex-grow" v-slot="{ Component, route: currentRoute }">
+      <transition name="page" mode="out-in"><component :is="Component" :key="currentRoute.path" /></transition>
     </RouterView>
 
-    <!-- Footer -->
-    <footer class="border-t border-white/5 bg-[#05060a] py-8 mt-auto">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 text-center">
-        <p class="text-gray-500 text-xs mb-2">{{ t('footer.desc') }}</p>
-        <div class="flex justify-center gap-4 text-xs">
-          <RouterLink to="/history" class="text-gray-400 hover:text-white underline decoration-gray-600 underline-offset-4">{{ t('footer.history') || 'Lịch sử' }}</RouterLink>
-          <span class="text-gray-600">|</span>
-          <RouterLink to="/privacy" class="text-gray-400 hover:text-white underline decoration-gray-600 underline-offset-4">{{ t('footer.privacy') || 'Chính sách bảo mật' }}</RouterLink>
-        </div>
+    <footer v-if="!isWorkspaceRoute" class="site-footer">
+      <div class="mx-auto grid max-w-[1440px] gap-6 px-4 sm:grid-cols-[1fr_auto] sm:px-6">
+        <div><strong>OPM STRONGEST // HERO DATA BUREAU</strong><p>{{ t('footer.desc') }}</p></div>
+        <div class="flex items-end gap-5"><RouterLink to="/history">{{ t('footer.history') || 'Lịch sử' }}</RouterLink><RouterLink to="/privacy">{{ t('footer.privacy') || 'Chính sách bảo mật' }}</RouterLink></div>
       </div>
     </footer>
 
-    <Analytics />
-    <SpeedInsights />
+    <Analytics /><SpeedInsights />
   </div>
 </template>
 
 <style>
-/* CSS cho router-link-active nếu cần */
-.router-link-exact-active {
-  @apply text-white;
-}
-
-/* Page Transitions */
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.page-enter-from {
-  opacity: 0;
-  transform: translateY(15px);
-}
-
-.page-leave-to {
-  opacity: 0;
-  transform: translateY(-15px);
-}
+.page-enter-active,.page-leave-active{transition:opacity .22s ease,transform .22s ease}.page-enter-from{opacity:0;transform:translateY(8px)}.page-leave-to{opacity:0;transform:translateY(-5px)}
 </style>

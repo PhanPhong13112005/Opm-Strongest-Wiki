@@ -2,6 +2,8 @@
 import { ref, computed, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { getAllCharacters } from '../services/characterApi'
+import { getReleaseSchedule } from '../services/releaseScheduleApi'
+import HomeRadar from '../components/HomeRadar.vue'
 
 const { t, locale } = useI18n()
 const localCatalogs = ref({ vi: null, en: null })
@@ -9,6 +11,8 @@ const localCharactersData = computed(() => localCatalogs.value[locale.value] || 
 const apiCharacters = ref(null)
 const charactersData = computed(() => apiCharacters.value || localCharactersData.value)
 let activeRequest = 0
+const releaseScheduleRows = ref([])
+let activeScheduleRequest = 0
 
 const loadLocalCharacters = async (language) => {
   if (localCatalogs.value[language]) return localCatalogs.value[language]
@@ -36,6 +40,18 @@ const loadCharacters = async () => {
 }
 
 watch(locale, loadCharacters, { immediate: true })
+
+const loadReleaseSchedule = async () => {
+  const requestId = ++activeScheduleRequest
+  try {
+    const rows = await getReleaseSchedule(locale.value)
+    if (requestId === activeScheduleRequest) releaseScheduleRows.value = rows
+  } catch {
+    if (requestId === activeScheduleRequest) releaseScheduleRows.value = []
+  }
+}
+
+watch(locale, loadReleaseSchedule, { immediate: true })
 
 const safeUrl = (url) => {
   if (!url) return ''
@@ -98,7 +114,7 @@ onMounted(() => {
   }, 1000);
 })
 
-const scheduleData = computed(() => ({
+const fallbackScheduleData = computed(() => ({
   '2026-06': [
     {
       server: 'CN',
@@ -286,6 +302,52 @@ const scheduleData = computed(() => ({
   ]
 }))
 
+const apiScheduleData = computed(() => {
+  const result = {}
+  for (const row of releaseScheduleRows.value) {
+    const month = String(row.date).slice(0, 7)
+    if (!result[month]) result[month] = []
+    let server = result[month].find(item => item.server === row.server)
+    if (!server) {
+      server = {
+        server: row.server,
+        serverName: row.server === 'CN' ? t('home.serverTrungFull') : t('home.serverSeaFull'),
+        serverColor: row.server === 'CN' ? '#00d8b6' : '#ff4da6',
+        items: [],
+      }
+      result[month].push(server)
+    }
+    const isPurpleReturn = row.isReturn && row.server === 'SEA'
+    const [year, monthNumber, day] = String(row.date).split('-')
+    server.items.push({
+      id: row.characterId,
+      bannerImage: row.bannerImage,
+      overrideName: row.overrideName || undefined,
+      overrideTier: row.overrideTier || undefined,
+      overrideFaction: row.overrideFaction || undefined,
+      overrideType: row.overrideType || undefined,
+      overrideRole: row.overrideRole || undefined,
+      tag: row.isReturn ? t('home.return') : t('home.release'),
+      tagBg: row.isReturn ? (isPurpleReturn ? 'bg-[#b861ff] text-black' : 'bg-opm-red text-black') : 'bg-opm-gold text-black',
+      tagText: row.isReturn ? (isPurpleReturn ? 'text-[#b861ff]' : 'text-opm-red') : 'text-opm-gold',
+      period: Number(day) <= 7 ? t('home.earlyMonth') : t('home.midMonth'),
+      date: `${day} / ${monthNumber} / ${year}`,
+      borderColor: row.isReturn ? (isPurpleReturn ? 'border-[#b861ff]' : 'border-opm-red') : 'border-opm-gold',
+      shadowColor: row.isReturn ? (isPurpleReturn ? 'shadow-[0_0_15px_rgba(184,97,255,0.3)]' : 'shadow-glow-red') : 'shadow-glow-gold',
+      sortOrder: row.sortOrder,
+    })
+  }
+  for (const month of Object.values(result)) {
+    month.sort((a, b) => (a.server === 'CN' ? 0 : 1) - (b.server === 'CN' ? 0 : 1))
+    month.forEach(server => server.items.sort((a, b) => a.sortOrder - b.sortOrder))
+  }
+  return result
+})
+
+const scheduleData = computed(() => releaseScheduleRows.value.length > 0
+  ? apiScheduleData.value
+  : fallbackScheduleData.value)
+
 const hasNextMonth = computed(() => !!scheduleData.value[nextMonthStr.value])
 const hasPrevMonth = computed(() => !!scheduleData.value[prevMonthStr.value])
 
@@ -311,7 +373,20 @@ const servers = computed(() => {
 </script>
 
 <template>
-  <main class="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6">
+  <div class="home-page-root">
+  <HomeRadar
+    :servers="servers"
+    :display-date="displayDateStr"
+    :current-month="currentMonthStr"
+    :has-previous="hasPrevMonth"
+    :has-next="hasNextMonth"
+    :transition-name="transitionName"
+    :get-character-image="getCharacterImage"
+    :get-character="getChar"
+    @previous="prevMonth"
+    @next="nextMonth"
+  />
+  <main v-if="false" class="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6">
     <div class="space-y-12 pb-20">
 
       <!-- Month Navigation -->
@@ -421,6 +496,7 @@ const servers = computed(() => {
 
     </div>
   </main>
+  </div>
 </template>
 
 <style scoped>

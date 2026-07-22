@@ -14,3 +14,7 @@ Thư mục này chứa toàn bộ mã nguồn của ứng dụng Vue 3 / Vite.
 1.  **Khởi chạy (`main.js` & `App.vue`):** Ứng dụng khởi động từ `main.js`, cấu hình Vue Router, Vue I18n và mount vào `App.vue`.
 2.  **Đa ngôn ngữ (`i18n.js`):** Phát hiện và thay đổi ngôn ngữ động toàn trang thông qua toggle tại thanh điều hướng của `App.vue`.
 3.  **Tải Dữ Liệu:** Các View trong `/views` đọc trực tiếp dữ liệu từ các file JSON trong `/data` rồi render giao diện tương ứng theo locale hiện tại (`vi` hoặc `en`).
+
+4.  **Backend & quản trị:** Các màn hình đã chuyển đổi sẽ ưu tiên API ASP.NET Core/PostgreSQL và
+    dùng JSON làm fallback tra cứu. Riêng `/admin/login` và `/admin/characters` bắt buộc có backend,
+    dùng JWT để quản lý Nhân vật và Kỷ vật, không ghi trực tiếp vào JSON trong trình duyệt.

@@ -397,6 +397,142 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                     b.ToTable("character_skills", (string)null);
                 });
 
+            modelBuilder.Entity("OpmWiki.Domain.Entities.EventComment", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("character varying(1000)");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<Guid?>("DeletedById")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("EventId")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("EventId", "CreatedAt");
+
+                    b.ToTable("event_comments", (string)null);
+                });
+
+            modelBuilder.Entity("OpmWiki.Domain.Entities.ForumPost", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(3000)
+                        .HasColumnType("character varying(3000)");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<Guid?>("DeletedById")
+                        .HasColumnType("uuid");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<long>("TopicId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("TopicId", "CreatedAt");
+
+                    b.ToTable("forum_posts", (string)null);
+                });
+
+            modelBuilder.Entity("OpmWiki.Domain.Entities.ForumTopic", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(5000)
+                        .HasColumnType("character varying(5000)");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsLocked")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(160)
+                        .HasColumnType("character varying(160)");
+
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UpdatedAt");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("forum_topics", (string)null);
+                });
+
             modelBuilder.Entity("OpmWiki.Domain.Entities.GameEvent", b =>
                 {
                     b.Property<string>("Id")
@@ -608,6 +744,355 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                     b.ToTable("mastery_tiers", (string)null);
                 });
 
+            modelBuilder.Entity("OpmWiki.Domain.Entities.ReleaseScheduleEntry", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("BannerImage")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<string>("CharacterId")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("character varying(80)");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("date");
+
+                    b.Property<bool>("IsReturn")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("OverrideFactionEn")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("OverrideFactionVi")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("OverrideNameEn")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
+
+                    b.Property<string>("OverrideNameVi")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
+
+                    b.Property<string>("OverrideRoleEn")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
+
+                    b.Property<string>("OverrideRoleVi")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
+
+                    b.Property<string>("OverrideTier")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
+
+                    b.Property<string>("OverrideTypeEn")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("OverrideTypeVi")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("Server")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("character varying(10)");
+
+                    b.Property<int>("SortOrder")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Date", "Server", "SortOrder")
+                        .IsUnique();
+
+                    b.ToTable("release_schedule", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            BannerImage = "/Characters/Full_Background/Rover_URplus.png",
+                            CharacterId = "100316-urplus",
+                            CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Date = new DateOnly(2026, 6, 1),
+                            IsReturn = false,
+                            OverrideFactionEn = "",
+                            OverrideFactionVi = "",
+                            OverrideNameEn = "",
+                            OverrideNameVi = "",
+                            OverrideRoleEn = "",
+                            OverrideRoleVi = "",
+                            OverrideTier = "",
+                            OverrideTypeEn = "",
+                            OverrideTypeVi = "",
+                            Server = "CN",
+                            SortOrder = 1,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            BannerImage = "/Characters/Full_Background/G5_URplus.png",
+                            CharacterId = "100314-urplus",
+                            CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Date = new DateOnly(2026, 6, 15),
+                            IsReturn = true,
+                            OverrideFactionEn = "",
+                            OverrideFactionVi = "",
+                            OverrideNameEn = "",
+                            OverrideNameVi = "",
+                            OverrideRoleEn = "",
+                            OverrideRoleVi = "",
+                            OverrideTier = "",
+                            OverrideTypeEn = "",
+                            OverrideTypeVi = "",
+                            Server = "CN",
+                            SortOrder = 2,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            BannerImage = "/Characters/Full_Background/Nyan_URplus.png",
+                            CharacterId = "100312-urplus",
+                            CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Date = new DateOnly(2026, 6, 1),
+                            IsReturn = false,
+                            OverrideFactionEn = "",
+                            OverrideFactionVi = "",
+                            OverrideNameEn = "",
+                            OverrideNameVi = "",
+                            OverrideRoleEn = "",
+                            OverrideRoleVi = "",
+                            OverrideTier = "",
+                            OverrideTypeEn = "",
+                            OverrideTypeVi = "",
+                            Server = "SEA",
+                            SortOrder = 1,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            BannerImage = "/Characters/Full_Background/Amai_Mask_Urplus.png",
+                            CharacterId = "100029-urplus",
+                            CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Date = new DateOnly(2026, 6, 15),
+                            IsReturn = true,
+                            OverrideFactionEn = "",
+                            OverrideFactionVi = "",
+                            OverrideNameEn = "",
+                            OverrideNameVi = "",
+                            OverrideRoleEn = "",
+                            OverrideRoleVi = "",
+                            OverrideTier = "",
+                            OverrideTypeEn = "",
+                            OverrideTypeVi = "",
+                            Server = "SEA",
+                            SortOrder = 2,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 5L,
+                            BannerImage = "/Characters/Full_Background/ZombIeMan_URplus.png",
+                            CharacterId = "100013-urplus",
+                            CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Date = new DateOnly(2026, 7, 1),
+                            IsReturn = false,
+                            OverrideFactionEn = "",
+                            OverrideFactionVi = "",
+                            OverrideNameEn = "",
+                            OverrideNameVi = "",
+                            OverrideRoleEn = "",
+                            OverrideRoleVi = "",
+                            OverrideTier = "",
+                            OverrideTypeEn = "",
+                            OverrideTypeVi = "",
+                            Server = "CN",
+                            SortOrder = 1,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 6L,
+                            BannerImage = "/Characters/Full_Background/Bang&Bomb_Urplus.png",
+                            CharacterId = "100315-urplus",
+                            CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Date = new DateOnly(2026, 7, 15),
+                            IsReturn = true,
+                            OverrideFactionEn = "",
+                            OverrideFactionVi = "",
+                            OverrideNameEn = "",
+                            OverrideNameVi = "",
+                            OverrideRoleEn = "",
+                            OverrideRoleVi = "",
+                            OverrideTier = "",
+                            OverrideTypeEn = "",
+                            OverrideTypeVi = "",
+                            Server = "CN",
+                            SortOrder = 2,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 7L,
+                            BannerImage = "/Characters/Full_Background/Atomic Samurai_URplus.png",
+                            CharacterId = "100313-urplus",
+                            CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Date = new DateOnly(2026, 7, 1),
+                            IsReturn = false,
+                            OverrideFactionEn = "",
+                            OverrideFactionVi = "",
+                            OverrideNameEn = "",
+                            OverrideNameVi = "",
+                            OverrideRoleEn = "",
+                            OverrideRoleVi = "",
+                            OverrideTier = "",
+                            OverrideTypeEn = "",
+                            OverrideTypeVi = "",
+                            Server = "SEA",
+                            SortOrder = 1,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 8L,
+                            BannerImage = "/Characters/Full_Background/Tatsumaki_URplus.png",
+                            CharacterId = "100180-urplus",
+                            CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Date = new DateOnly(2026, 7, 15),
+                            IsReturn = true,
+                            OverrideFactionEn = "",
+                            OverrideFactionVi = "",
+                            OverrideNameEn = "",
+                            OverrideNameVi = "",
+                            OverrideRoleEn = "",
+                            OverrideRoleVi = "",
+                            OverrideTier = "",
+                            OverrideTypeEn = "",
+                            OverrideTypeVi = "",
+                            Server = "SEA",
+                            SortOrder = 2,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 9L,
+                            BannerImage = "/Characters/Full_Background/Nhan_Vat_Bi_An.jpg",
+                            CharacterId = "unknown",
+                            CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Date = new DateOnly(2026, 8, 1),
+                            IsReturn = false,
+                            OverrideFactionEn = "UNKNOWN",
+                            OverrideFactionVi = "UNKNOWN",
+                            OverrideNameEn = "Mystery Character",
+                            OverrideNameVi = "Nhân Vật Bí Ẩn",
+                            OverrideRoleEn = "Hidden Potential",
+                            OverrideRoleVi = "Sức Mạnh Tiềm Ẩn",
+                            OverrideTier = "UR+",
+                            OverrideTypeEn = "UNKNOWN",
+                            OverrideTypeVi = "UNKNOWN",
+                            Server = "CN",
+                            SortOrder = 1,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 10L,
+                            BannerImage = "/Characters/Full_Background/Rover_URplus.png",
+                            CharacterId = "100316-urplus",
+                            CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Date = new DateOnly(2026, 8, 15),
+                            IsReturn = true,
+                            OverrideFactionEn = "",
+                            OverrideFactionVi = "",
+                            OverrideNameEn = "",
+                            OverrideNameVi = "",
+                            OverrideRoleEn = "",
+                            OverrideRoleVi = "",
+                            OverrideTier = "",
+                            OverrideTypeEn = "",
+                            OverrideTypeVi = "",
+                            Server = "CN",
+                            SortOrder = 2,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 11L,
+                            BannerImage = "/Characters/Full_Background/G5_URplus.png",
+                            CharacterId = "100314-urplus",
+                            CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Date = new DateOnly(2026, 8, 1),
+                            IsReturn = false,
+                            OverrideFactionEn = "",
+                            OverrideFactionVi = "",
+                            OverrideNameEn = "",
+                            OverrideNameVi = "",
+                            OverrideRoleEn = "",
+                            OverrideRoleVi = "",
+                            OverrideTier = "",
+                            OverrideTypeEn = "",
+                            OverrideTypeVi = "",
+                            Server = "SEA",
+                            SortOrder = 1,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 12L,
+                            BannerImage = "/Characters/Full_Background/Nyan_URplus.png",
+                            CharacterId = "100312-urplus",
+                            CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Date = new DateOnly(2026, 8, 15),
+                            IsReturn = true,
+                            OverrideFactionEn = "",
+                            OverrideFactionVi = "",
+                            OverrideNameEn = "",
+                            OverrideNameVi = "",
+                            OverrideRoleEn = "",
+                            OverrideRoleVi = "",
+                            OverrideTier = "",
+                            OverrideTypeEn = "",
+                            OverrideTypeVi = "",
+                            Server = "SEA",
+                            SortOrder = 2,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        });
+                });
+
             modelBuilder.Entity("OpmWiki.Domain.Entities.TacticCard", b =>
                 {
                     b.Property<string>("Id")
@@ -721,6 +1206,127 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                     b.ToTable("tactic_frames", (string)null);
                 });
 
+            modelBuilder.Entity("OpmWiki.Domain.Entities.TopUpRequest", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<decimal>("Amount")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("numeric(18,2)");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<string>("Provider")
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("character varying(60)");
+
+                    b.Property<string>("ReferenceCode")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("character varying(120)");
+
+                    b.Property<DateTimeOffset?>("ReviewedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid?>("ReviewedById")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("StaffNote")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
+
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReviewedById");
+
+                    b.HasIndex("Status", "CreatedAt");
+
+                    b.HasIndex("UserId", "ReferenceCode")
+                        .IsUnique();
+
+                    b.ToTable("top_up_requests", (string)null);
+                });
+
+            modelBuilder.Entity("OpmWiki.Domain.Entities.UserAccount", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<decimal>("Balance")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("numeric(18,2)");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<string>("DisplayName")
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("character varying(60)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("NormalizedUsername")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("character varying(30)");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
+
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("character varying(30)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedUsername")
+                        .IsUnique();
+
+                    b.HasIndex("Role");
+
+                    b.ToTable("user_accounts", (string)null);
+                });
+
             modelBuilder.Entity("OpmWiki.Domain.Entities.Character", b =>
                 {
                     b.OwnsOne("OpmWiki.Domain.Entities.CharacterStats", "BaseStats", b1 =>
@@ -746,7 +1352,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
 
                             b1.HasKey("CharacterId");
 
-                            b1.ToTable("characters", (string)null);
+                            b1.ToTable("characters");
 
                             b1.WithOwner()
                                 .HasForeignKey("CharacterId");
@@ -775,7 +1381,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
 
                             b1.HasKey("CharacterId");
 
-                            b1.ToTable("characters", (string)null);
+                            b1.ToTable("characters");
 
                             b1.WithOwner()
                                 .HasForeignKey("CharacterId");
@@ -810,6 +1416,53 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                     b.Navigation("Character");
                 });
 
+            modelBuilder.Entity("OpmWiki.Domain.Entities.EventComment", b =>
+                {
+                    b.HasOne("OpmWiki.Domain.Entities.GameEvent", null)
+                        .WithMany()
+                        .HasForeignKey("EventId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OpmWiki.Domain.Entities.UserAccount", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("OpmWiki.Domain.Entities.ForumPost", b =>
+                {
+                    b.HasOne("OpmWiki.Domain.Entities.ForumTopic", "Topic")
+                        .WithMany("Posts")
+                        .HasForeignKey("TopicId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OpmWiki.Domain.Entities.UserAccount", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Topic");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("OpmWiki.Domain.Entities.ForumTopic", b =>
+                {
+                    b.HasOne("OpmWiki.Domain.Entities.UserAccount", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("OpmWiki.Domain.Entities.InsigniaGuideLink", b =>
                 {
                     b.HasOne("OpmWiki.Domain.Entities.InsigniaGuide", "Guide")
@@ -829,11 +1482,34 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                     b.Navigation("Insignia");
                 });
 
+            modelBuilder.Entity("OpmWiki.Domain.Entities.TopUpRequest", b =>
+                {
+                    b.HasOne("OpmWiki.Domain.Entities.UserAccount", "ReviewedBy")
+                        .WithMany()
+                        .HasForeignKey("ReviewedById")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("OpmWiki.Domain.Entities.UserAccount", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("ReviewedBy");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("OpmWiki.Domain.Entities.Character", b =>
                 {
                     b.Navigation("Effects");
 
                     b.Navigation("Skills");
+                });
+
+            modelBuilder.Entity("OpmWiki.Domain.Entities.ForumTopic", b =>
+                {
+                    b.Navigation("Posts");
                 });
 
             modelBuilder.Entity("OpmWiki.Domain.Entities.Insignia", b =>
