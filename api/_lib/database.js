@@ -117,14 +117,13 @@ const schemaStatements = [
     ON top_up_requests ("Status", "CreatedAt")`,
 ]
 
+export const initializeCommunitySchema = async (sql) => {
+  for (const statement of schemaStatements) await sql.query(statement)
+}
+
 export const ensureCommunitySchema = async () => {
   if (schemaPromise) return schemaPromise
-  schemaPromise = (async () => {
-    const sql = getSql()
-    for (const statement of schemaStatements) {
-      await sql.query(statement)
-    }
-  })().catch((error) => {
+  schemaPromise = initializeCommunitySchema(getSql()).catch((error) => {
     schemaPromise = undefined
     throw error
   })
@@ -135,4 +134,3 @@ export const _resetDatabaseForTests = () => {
   client = undefined
   schemaPromise = undefined
 }
-

@@ -1,5 +1,6 @@
 import { getDatabaseUrl, getSql } from './_lib/database.js'
 import { handleAuthRoute } from './_lib/authRoutes.js'
+import { handleAdminDataRoute } from './_lib/adminRoutes.js'
 import { handleCommunityRoute } from './_lib/communityRoutes.js'
 import { json, routePath } from './_lib/http.js'
 
@@ -25,6 +26,7 @@ export default async function handler(request, response) {
     }
 
     if (await handleAuthRoute(request, response, path)) return
+    if (await handleAdminDataRoute(request, response, path)) return
     if (await handleCommunityRoute(request, response, path)) return
     return json(response, 404, { message: 'API endpoint chưa được chuyển sang Vercel Functions.' })
   } catch (error) {
@@ -36,4 +38,3 @@ export default async function handler(request, response) {
     })
   }
 }
-

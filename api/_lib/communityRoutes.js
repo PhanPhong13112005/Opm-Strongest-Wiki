@@ -1,4 +1,5 @@
 import { ensureCommunitySchema, getSql } from './database.js'
+import { ensureAdminSchema } from './adminDatabase.js'
 import { bodyOf, json, methodNotAllowed, noContent, requireUser } from './http.js'
 import { createRequire } from 'node:module'
 
@@ -25,8 +26,7 @@ const topUpSelect = `
          t."CreatedAt" AS "createdAt", t."ReviewedAt" AS "reviewedAt"
     FROM top_up_requests t JOIN user_accounts u ON u."Id" = t."UserId"`
 
-const getTopicDetail = async (id) => {
-  const sql = getSql()
+const getTopicDetail = async (id, sql = getSql()) => {
   const topics = await sql.query(
     `SELECT t."Id" AS id, t."Title" AS title, t."Content" AS content,
             u."DisplayName" AS author, u."Role" AS "authorRole",
@@ -46,13 +46,17 @@ const getTopicDetail = async (id) => {
   return { ...topics[0], id: Number(topics[0].id), posts: posts.map(mapPost) }
 }
 
-export const handleCommunityRoute = async (request, response, path) => {
+export const createCommunityRouteHandler = ({
+  ensureSchema = ensureCommunitySchema,
+  ensureContentSchema = ensureAdminSchema,
+  sqlProvider = getSql,
+} = {}) => async (request, response, path) => {
   const isCommunityPath = path.startsWith('/events/') || path.startsWith('/forum/') ||
     path.startsWith('/moderation/') || path.startsWith('/top-ups') ||
     path.startsWith('/staff/top-ups') || path === '/admin/dashboard' || path === '/advisor/ask'
   if (!isCommunityPath) return false
-  await ensureCommunitySchema()
-  const sql = getSql()
+  await ensureSchema()
+  const sql = sqlProvider()
 
   const commentsMatch = /^\/events\/([^/]+)\/comments$/.exec(path)
   if (commentsMatch) {
@@ -142,7 +146,7 @@ export const handleCommunityRoute = async (request, response, path) => {
          RETURNING "Id" AS id`,
         [user.userId, title, content],
       )
-      const topic = await getTopicDetail(rows[0].id)
+      const topic = await getTopicDetail(rows[0].id, sql)
       response.setHeader('Location', `/api/forum/topics/${rows[0].id}`)
       return json(response, 201, topic)
     }
@@ -153,7 +157,7 @@ export const handleCommunityRoute = async (request, response, path) => {
   if (topicMatch) {
     if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
     if (!requireUser(request, response)) return true
-    const topic = await getTopicDetail(Number(topicMatch[1]))
+    const topic = await getTopicDetail(Number(topicMatch[1]), sql)
     return topic ? json(response, 200, topic) : json(response, 404, { message: 'Không tìm thấy chủ đề.' })
   }
 
@@ -291,6 +295,7 @@ export const handleCommunityRoute = async (request, response, path) => {
   if (path === '/admin/dashboard') {
     if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
     if (!requireUser(request, response, ['Admin'])) return true
+    await ensureContentSchema()
     const rows = await sql.query(
       `SELECT
         COUNT(*) FILTER (WHERE "Role" = 'User')::int AS users,
@@ -299,15 +304,13 @@ export const handleCommunityRoute = async (request, response, path) => {
         (SELECT COUNT(*)::int FROM event_comments WHERE "IsDeleted" = false) AS "eventComments",
         (SELECT COUNT(*)::int FROM forum_topics WHERE "IsDeleted" = false) AS "forumTopics",
         (SELECT COUNT(*)::int FROM forum_posts WHERE "IsDeleted" = false) AS "forumPosts",
-        (SELECT COUNT(*)::int FROM top_up_requests WHERE "Status" = 'Pending') AS "pendingTopUps"
+        (SELECT COUNT(*)::int FROM top_up_requests WHERE "Status" = 'Pending') AS "pendingTopUps",
+        (SELECT COUNT(*)::int FROM characters) AS characters,
+        (SELECT COUNT(*)::int FROM events) AS events,
+        (SELECT COUNT(*)::int FROM release_schedule) AS "releaseEntries"
        FROM user_accounts`,
     )
-    return json(response, 200, {
-      ...rows[0],
-      characters: characters.length,
-      events: events.length,
-      releaseEntries: 12,
-    })
+    return json(response, 200, rows[0])
   }
 
   if (path === '/advisor/ask') {
@@ -355,3 +358,5 @@ export const handleCommunityRoute = async (request, response, path) => {
 
   return false
 }
+
+export const handleCommunityRoute = createCommunityRouteHandler()
