@@ -16,12 +16,14 @@ Vercel Hobby. Frontend và API dùng chung domain nên không cần cấu hình 
 - `/api/admin/dashboard`, `/api/admin/users`, `/api/admin/users/:id/role`
 - `/api/admin/characters/*`, `/api/admin/keepsakes/*`
 - `/api/admin/events/*`, `/api/admin/releases/*`
+- `/api/characters`, `/api/characters/:id` (public, dữ liệu Neon, song ngữ VI/EN)
+- `/api/events`, `/api/events/:id` (public, dữ liệu Neon, song ngữ VI/EN)
 - `/api/release-schedule` (public, song ngữ VI/EN)
 - `/api/advisor/ask` (tra cứu dữ liệu Wiki nội bộ)
 
-Lịch ra mắt CN/SEA được đọc trực tiếp từ PostgreSQL. Các trang nội dung công khai còn lại
-vẫn dùng JSON tĩnh làm nguồn đọc nhanh; trang quản trị lưu Nhân vật, Kỷ vật và Sự kiện vào
-PostgreSQL để chuẩn bị chuyển dần các API đọc công khai.
+Nhân vật, Sự kiện và Lịch ra mắt CN/SEA được đọc trực tiếp từ PostgreSQL/Neon. Các endpoint
+công khai trả cache header cho trình duyệt và CDN; frontend vẫn giữ JSON tĩnh làm fallback khi
+API hoặc cơ sở dữ liệu tạm thời không khả dụng.
 
 ## Biến môi trường trên Vercel
 

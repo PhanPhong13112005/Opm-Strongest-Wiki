@@ -11,6 +11,7 @@ const charactersVi = readJson('src/data/characters.json')
 const charactersEn = readJson('src/data/characters_en.json')
 const coreLab = readJson('src/data/coreLab.json')
 const events = readJson('src/data/events.json')
+const releaseSchedule = readJson('src/data/releaseSchedule.json')
 const backgear = readJson('src/data/backgear.json')
 const tactics = readJson('src/data/tactics.json')
 const vi = readJson('src/locales/vi.json')
@@ -63,6 +64,14 @@ test('event images are either valid public assets or use the translated placehol
     const assetPath = path.join(root, 'public', decodeURIComponent(event.imageUrl.replace(/^\//, '')))
     assert.ok(fs.existsSync(assetPath), `${event.id} references missing image ${event.imageUrl}`)
   }
+})
+
+test('release schedule fallback is bilingual and covers both servers', () => {
+  assert.equal(releaseSchedule.length, 12)
+  assert.deepEqual(new Set(releaseSchedule.map((entry) => entry.server)), new Set(['CN', 'SEA']))
+  const mystery = releaseSchedule.find((entry) => entry.characterId === 'unknown')
+  assert.ok(mystery?.overrideNameVi)
+  assert.ok(mystery?.overrideNameEn)
 })
 
 test('Backgear catalog contains nine unique cards and one collection set', () => {

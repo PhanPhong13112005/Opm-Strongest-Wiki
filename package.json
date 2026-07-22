@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "node --test tests/*.test.mjs",
+    "test:integration": "playwright test",
     "test:frontend": "node --test tests/frontend-data.test.mjs",
     "test:production:admin-crud": "node scripts/production-admin-crud.mjs"
   },
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@electric-sql/pglite": "^0.5.4",
+    "@playwright/test": "^1.61.1",
     "@vitejs/plugin-vue": "^5.0.4",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",

@@ -36,7 +36,16 @@
     "topup": "Top up"
   },
   "footer": {
+    "eyebrow": "Community data archive",
+    "navigation": "Project dossier",
+    "historyHint": "Track development milestones",
+    "privacyHint": "Data, privacy, and ownership",
+    "systemStatus": "System status",
+    "online": "Operational",
+    "independent": "An independent wiki built and maintained by the community.",
     "desc": "OPM: The Strongest — community database · data extracted directly from game",
+    "copyright": "© {year} OPM Strongest Wiki contributors",
+    "disclaimer": "Fan-made project; not affiliated with franchise owners or game publishers.",
     "privacy": "Privacy Policy & Copyright",
     "history": "Version History"
   },

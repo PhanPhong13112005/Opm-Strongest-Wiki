@@ -1,6 +1,8 @@
-const configuredBaseUrl = (import.meta.env.VITE_API_BASE_URL || '').trim()
-const API_BASE_URL = configuredBaseUrl || (import.meta.env.DEV ? 'http://localhost:5180' : '')
+const configuredBaseUrl = (import.meta.env?.VITE_API_BASE_URL || '').trim()
+const API_BASE_URL = configuredBaseUrl || (import.meta.env?.DEV ? 'http://localhost:5180' : '')
 const REQUEST_TIMEOUT_MS = 8000
+const DEFAULT_CACHE_TTL_MS = 60_000
+const responseCache = new Map()
 
 const buildUrl = (path, params = {}) => {
   const sameOrigin = typeof globalThis.location?.origin === 'string' ? globalThis.location.origin : ''
@@ -51,11 +53,47 @@ export const requestApi = async (path, params, options = {}) => {
   }
 }
 
+const cacheKey = (path, params = {}) => {
+  const query = Object.entries(params || {})
+    .filter(([, value]) => value !== undefined && value !== null && value !== '')
+    .sort(([left], [right]) => left.localeCompare(right))
+    .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(String(value))}`)
+    .join('&')
+  return query ? `${path}?${query}` : path
+}
+
+export const requestApiCached = async (path, params, { ttlMs = DEFAULT_CACHE_TTL_MS } = {}) => {
+  const key = cacheKey(path, params)
+  const now = Date.now()
+  const cached = responseCache.get(key)
+  if (cached?.value !== undefined && cached.expiresAt > now) return cached.value
+  if (cached?.promise) return cached.promise
+
+  const promise = requestApi(path, params)
+    .then((value) => {
+      responseCache.set(key, { value, expiresAt: Date.now() + Math.max(0, ttlMs) })
+      return value
+    })
+    .catch((error) => {
+      responseCache.delete(key)
+      throw error
+    })
+
+  responseCache.set(key, { promise, expiresAt: now + Math.max(0, ttlMs) })
+  return promise
+}
+
+export const invalidateApiCache = (pathPrefix = '') => {
+  for (const key of responseCache.keys()) {
+    if (!pathPrefix || key.startsWith(pathPrefix)) responseCache.delete(key)
+  }
+}
+
 export const isApiConfigured = () => Boolean(API_BASE_URL)
 
-// Authentication and community APIs are deployed as same-origin Vercel
-// Functions in production. Public wiki screens still use their local JSON
-// fallback until each read-only .NET endpoint has been migrated.
+// Authentication, community and public read APIs are deployed as same-origin
+// Vercel Functions in production. Public services keep their bundled JSON as
+// an offline fallback when the API or database is unavailable.
 export const isSameOriginApiAvailable = () => Boolean(
   API_BASE_URL || (typeof globalThis.location?.origin === 'string' && globalThis.location.origin),
 )

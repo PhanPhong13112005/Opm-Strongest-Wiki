@@ -1,0 +1,107 @@
+[
+  {
+    "server": "CN",
+    "date": "2026-06-01",
+    "characterId": "100316-urplus",
+    "bannerImage": "/Characters/Full_Background/Rover_URplus.png",
+    "isReturn": false,
+    "sortOrder": 1
+  },
+  {
+    "server": "CN",
+    "date": "2026-06-15",
+    "characterId": "100314-urplus",
+    "bannerImage": "/Characters/Full_Background/G5_URplus.png",
+    "isReturn": true,
+    "sortOrder": 2
+  },
+  {
+    "server": "SEA",
+    "date": "2026-06-01",
+    "characterId": "100312-urplus",
+    "bannerImage": "/Characters/Full_Background/Nyan_URplus.png",
+    "isReturn": false,
+    "sortOrder": 1
+  },
+  {
+    "server": "SEA",
+    "date": "2026-06-15",
+    "characterId": "100029-urplus",
+    "bannerImage": "/Characters/Full_Background/Amai_Mask_Urplus.png",
+    "isReturn": true,
+    "sortOrder": 2
+  },
+  {
+    "server": "CN",
+    "date": "2026-07-01",
+    "characterId": "100013-urplus",
+    "bannerImage": "/Characters/Full_Background/ZombIeMan_URplus.png",
+    "isReturn": false,
+    "sortOrder": 1
+  },
+  {
+    "server": "CN",
+    "date": "2026-07-15",
+    "characterId": "100315-urplus",
+    "bannerImage": "/Characters/Full_Background/Bang&Bomb_Urplus.png",
+    "isReturn": true,
+    "sortOrder": 2
+  },
+  {
+    "server": "SEA",
+    "date": "2026-07-01",
+    "characterId": "100313-urplus",
+    "bannerImage": "/Characters/Full_Background/Atomic Samurai_URplus.png",
+    "isReturn": false,
+    "sortOrder": 1
+  },
+  {
+    "server": "SEA",
+    "date": "2026-07-15",
+    "characterId": "100180-urplus",
+    "bannerImage": "/Characters/Full_Background/Tatsumaki_URplus.png",
+    "isReturn": true,
+    "sortOrder": 2
+  },
+  {
+    "server": "CN",
+    "date": "2026-08-01",
+    "characterId": "unknown",
+    "bannerImage": "/Characters/Full_Background/Nhan_Vat_Bi_An.jpg",
+    "isReturn": false,
+    "sortOrder": 1,
+    "overrideNameVi": "Nhân Vật Bí Ẩn",
+    "overrideNameEn": "Mystery Character",
+    "overrideTier": "UR+",
+    "overrideFactionVi": "CHƯA RÕ",
+    "overrideFactionEn": "UNKNOWN",
+    "overrideTypeVi": "CHƯA RÕ",
+    "overrideTypeEn": "UNKNOWN",
+    "overrideRoleVi": "Sức Mạnh Tiềm Ẩn",
+    "overrideRoleEn": "Hidden Potential"
+  },
+  {
+    "server": "CN",
+    "date": "2026-08-15",
+    "characterId": "100316-urplus",
+    "bannerImage": "/Characters/Full_Background/Rover_URplus.png",
+    "isReturn": true,
+    "sortOrder": 2
+  },
+  {
+    "server": "SEA",
+    "date": "2026-08-01",
+    "characterId": "100314-urplus",
+    "bannerImage": "/Characters/Full_Background/G5_URplus.png",
+    "isReturn": false,
+    "sortOrder": 1
+  },
+  {
+    "server": "SEA",
+    "date": "2026-08-15",
+    "characterId": "100312-urplus",
+    "bannerImage": "/Characters/Full_Background/Nyan_URplus.png",
+    "isReturn": true,
+    "sortOrder": 2
+  }
+]

@@ -1,4 +1,5 @@
 import { createRequire } from 'node:module'
+import { createHash } from 'node:crypto'
 import { getSql } from './database.js'
 
 const require = createRequire(import.meta.url)
@@ -72,6 +73,33 @@ const schemaStatements = [
   )`,
   `CREATE INDEX IF NOT EXISTS "IX_characters_NameVi" ON characters ("NameVi")`,
   `CREATE INDEX IF NOT EXISTS "IX_characters_NameEn" ON characters ("NameEn")`,
+  `CREATE TABLE IF NOT EXISTS character_skills (
+    "Id" uuid PRIMARY KEY,
+    "CharacterId" varchar(80) NOT NULL REFERENCES characters ("Id") ON DELETE CASCADE,
+    "SortOrder" integer NOT NULL,
+    "NameVi" varchar(200) NOT NULL,
+    "NameEn" varchar(200) NOT NULL,
+    "DescriptionVi" text NOT NULL DEFAULT '',
+    "DescriptionEn" text NOT NULL DEFAULT '',
+    "TypeVi" varchar(100) NOT NULL DEFAULT '',
+    "TypeEn" varchar(100) NOT NULL DEFAULT '',
+    "IconUrl" varchar(500),
+    "AnimationUrl" varchar(500),
+    "KeepsakeIconUrl" varchar(500)
+  )`,
+  `CREATE UNIQUE INDEX IF NOT EXISTS "IX_character_skills_CharacterId_SortOrder"
+    ON character_skills ("CharacterId", "SortOrder")`,
+  `CREATE TABLE IF NOT EXISTS character_effects (
+    "Id" uuid PRIMARY KEY,
+    "CharacterId" varchar(80) NOT NULL REFERENCES characters ("Id") ON DELETE CASCADE,
+    "SortOrder" integer NOT NULL,
+    "TermVi" varchar(200) NOT NULL,
+    "TermEn" varchar(200) NOT NULL,
+    "DescriptionVi" text NOT NULL DEFAULT '',
+    "DescriptionEn" text NOT NULL DEFAULT ''
+  )`,
+  `CREATE UNIQUE INDEX IF NOT EXISTS "IX_character_effects_CharacterId_SortOrder"
+    ON character_effects ("CharacterId", "SortOrder")`,
   `CREATE TABLE IF NOT EXISTS events (
     "Id" varchar(100) PRIMARY KEY,
     "TitleVi" varchar(300) NOT NULL,
@@ -132,6 +160,11 @@ const statsOf = (value = {}) => ({
   spd: Math.max(0, Number(value.spd) || 0),
 })
 
+const stableUuid = (value) => {
+  const hex = createHash('sha256').update(value).digest('hex')
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-4${hex.slice(13, 16)}-a${hex.slice(17, 20)}-${hex.slice(20, 32)}`
+}
+
 const characterSeeds = charactersVi.map((vi, index) => {
   const en = charactersEn.find((item) => item.id === vi.id) || charactersEn[index] || {}
   const base = statsOf(vi.baseStats)
@@ -164,6 +197,43 @@ const characterSeeds = charactersVi.map((vi, index) => {
     pvpAtk: pvp.atk, pvpHp: pvp.hp, pvpDef: pvp.def, pvpSpd: pvp.spd,
   }
 }).filter((item) => item.id && item.nameVi && item.nameEn && item.tier && item.typeVi && item.typeEn && item.factionVi && item.factionEn)
+
+const characterSkillSeeds = charactersVi.flatMap((vi, characterIndex) => {
+  const en = charactersEn.find((item) => item.id === vi.id) || charactersEn[characterIndex] || {}
+  return (vi.skills || []).map((skill, sortOrder) => {
+    const translated = en.skills?.[sortOrder] || skill
+    return {
+      id: stableUuid(`${vi.id}:skill:${sortOrder}`),
+      characterId: vi.id,
+      sortOrder,
+      nameVi: String(skill.name || '').trim(),
+      nameEn: String(translated.name || skill.name || '').trim(),
+      descriptionVi: String(skill.desc || '').trim(),
+      descriptionEn: String(translated.desc || skill.desc || '').trim(),
+      typeVi: String(skill.type || '').trim(),
+      typeEn: String(translated.type || skill.type || '').trim(),
+      iconUrl: String(skill.icon || '').trim() || null,
+      animationUrl: String(skill.animation || skill.animationURL || skill.videoURL || '').trim() || null,
+      keepsakeIconUrl: String(skill.keepsakeIcon || '').trim() || null,
+    }
+  }).filter((skill) => skill.nameVi && skill.nameEn)
+})
+
+const characterEffectSeeds = charactersVi.flatMap((vi, characterIndex) => {
+  const en = charactersEn.find((item) => item.id === vi.id) || charactersEn[characterIndex] || {}
+  return (vi.effects || []).map((effect, sortOrder) => {
+    const translated = en.effects?.[sortOrder] || effect
+    return {
+      id: stableUuid(`${vi.id}:effect:${sortOrder}`),
+      characterId: vi.id,
+      sortOrder,
+      termVi: String(effect.term || '').trim(),
+      termEn: String(translated.term || effect.term || '').trim(),
+      descriptionVi: String(effect.desc || '').trim(),
+      descriptionEn: String(translated.desc || effect.desc || '').trim(),
+    }
+  }).filter((effect) => effect.termVi && effect.termEn)
+})
 
 const eventSeeds = events.map((event) => ({
   id: String(event.id || '').trim(),
@@ -216,6 +286,33 @@ const seedEvents = async (sql) => sql.query(
   [JSON.stringify(eventSeeds)],
 )
 
+const seedCharacterSkills = async (sql) => sql.query(
+  `INSERT INTO character_skills (
+     "Id", "CharacterId", "SortOrder", "NameVi", "NameEn", "DescriptionVi", "DescriptionEn",
+     "TypeVi", "TypeEn", "IconUrl", "AnimationUrl", "KeepsakeIconUrl")
+   SELECT x.id::uuid, x."characterId", x."sortOrder", x."nameVi", x."nameEn",
+          x."descriptionVi", x."descriptionEn", x."typeVi", x."typeEn", x."iconUrl",
+          x."animationUrl", x."keepsakeIconUrl"
+     FROM jsonb_to_recordset($1::jsonb) AS x(
+       id text, "characterId" text, "sortOrder" integer, "nameVi" text, "nameEn" text,
+       "descriptionVi" text, "descriptionEn" text, "typeVi" text, "typeEn" text,
+       "iconUrl" text, "animationUrl" text, "keepsakeIconUrl" text)
+   ON CONFLICT ("CharacterId", "SortOrder") DO NOTHING`,
+  [JSON.stringify(characterSkillSeeds)],
+)
+
+const seedCharacterEffects = async (sql) => sql.query(
+  `INSERT INTO character_effects (
+     "Id", "CharacterId", "SortOrder", "TermVi", "TermEn", "DescriptionVi", "DescriptionEn")
+   SELECT x.id::uuid, x."characterId", x."sortOrder", x."termVi", x."termEn",
+          x."descriptionVi", x."descriptionEn"
+     FROM jsonb_to_recordset($1::jsonb) AS x(
+       id text, "characterId" text, "sortOrder" integer, "termVi" text, "termEn" text,
+       "descriptionVi" text, "descriptionEn" text)
+   ON CONFLICT ("CharacterId", "SortOrder") DO NOTHING`,
+  [JSON.stringify(characterEffectSeeds)],
+)
+
 const seedReleases = async (sql) => sql.query(
   `INSERT INTO release_schedule (
      "Server", "Date", "CharacterId", "BannerImage", "IsReturn", "OverrideNameVi", "OverrideNameEn",
@@ -238,10 +335,14 @@ export const initializeAdminSchema = async (sql, { seed = true } = {}) => {
   if (!seed) return
   const [counts] = await sql.query(
       `SELECT (SELECT COUNT(*) FROM characters) AS characters,
+              (SELECT COUNT(*) FROM character_skills) AS "characterSkills",
+              (SELECT COUNT(*) FROM character_effects) AS "characterEffects",
               (SELECT COUNT(*) FROM events) AS events,
               (SELECT COUNT(*) FROM release_schedule) AS releases`,
   )
   if (Number(counts?.characters || 0) === 0) await seedCharacters(sql)
+  if (Number(counts?.characterSkills || 0) === 0) await seedCharacterSkills(sql)
+  if (Number(counts?.characterEffects || 0) === 0) await seedCharacterEffects(sql)
   if (Number(counts?.events || 0) === 0) await seedEvents(sql)
   if (Number(counts?.releases || 0) === 0) await seedReleases(sql)
 }
@@ -261,6 +362,8 @@ export const _resetAdminSchemaForTests = () => {
 
 export const adminSeedCounts = {
   characters: characterSeeds.length,
+  characterSkills: characterSkillSeeds.length,
+  characterEffects: characterEffectSeeds.length,
   events: eventSeeds.length,
   releases: releaseSeeds.length,
 }

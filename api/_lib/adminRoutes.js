@@ -13,6 +13,12 @@ const dateValue = (value) => {
   return String(value).slice(0, 10)
 }
 
+const isEnglish = (language) => String(language || '').toLowerCase() === 'en'
+const publicCache = (response) => {
+  response.setHeader('Cache-Control', 'public, max-age=60, s-maxage=300, stale-while-revalidate=3600')
+  response.setHeader('Vary', 'Accept-Encoding')
+}
+
 const validationResponse = (response, errors) => json(response, 400, {
   title: 'One or more validation errors occurred.',
   errors,
@@ -59,6 +65,49 @@ const mapCharacter = (row) => ({
   pvpStats: { atk: number(row.pvpAtk), hp: number(row.pvpHp), def: number(row.pvpDef), spd: number(row.pvpSpd) },
   updatedAt: row.updatedAt,
 })
+
+const mapPublicCharacter = (row, language, detail = false, skills = [], effects = []) => {
+  const character = mapCharacter(row)
+  const english = isEnglish(language)
+  const localized = {
+    id: character.id,
+    name: english ? character.nameEn : character.nameVi,
+    imageUrl: character.imageUrl,
+    tier: character.tier,
+    type: english ? character.typeEn : character.typeVi,
+    faction: english ? character.factionEn : character.factionVi,
+    roles: english ? character.rolesEn : character.rolesVi,
+    classLevel: character.classLevel,
+    keepsakeIcon: character.keepsakeIcon,
+    releaseSea: character.releaseSea,
+    releaseChina: character.releaseChina,
+  }
+  if (!detail) return localized
+  return {
+    ...localized,
+    duyen: english ? character.duyenEn : character.duyenVi,
+    bio: english ? character.bioEn : character.bioVi,
+    traits: english ? character.traitsEn : character.traitsVi,
+    bondList: english ? character.bondListEn : character.bondListVi,
+    baseStats: character.baseStats,
+    pvpStats: character.pvpStats,
+    skills: skills.map((skill) => ({
+      sortOrder: skill.sortOrder,
+      name: english ? skill.nameEn : skill.nameVi,
+      description: english ? skill.descriptionEn : skill.descriptionVi,
+      type: english ? skill.typeEn : skill.typeVi,
+      iconUrl: skill.iconUrl,
+      animationUrl: skill.animationUrl,
+      keepsakeIconUrl: skill.keepsakeIconUrl,
+    })),
+    effects: effects.map((effect) => ({
+      sortOrder: effect.sortOrder,
+      term: english ? effect.termEn : effect.termVi,
+      description: english ? effect.descriptionEn : effect.descriptionVi,
+    })),
+    updatedAt: character.updatedAt,
+  }
+}
 
 const characterPayload = (body) => ({
   id: text(body.id),
@@ -158,6 +207,75 @@ const updateCharacter = async (sql, id, payload) => sql.query(
   [id, JSON.stringify(payload)],
 )
 
+const handlePublicCharacters = async (request, response, path, sql) => {
+  const match = /^\/characters\/([^/]+)$/.exec(path)
+  if (path !== '/characters' && !match) return false
+  if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
+
+  const language = request.query?.language
+  if (match) {
+    const id = decodeURIComponent(match[1])
+    const rows = await sql.query(`${characterSelect} WHERE "Id" = $1 LIMIT 1`, [id])
+    if (!rows[0]) return json(response, 404, { message: 'Character not found.' })
+    const [skills, effects] = await Promise.all([
+      sql.query(
+        `SELECT "SortOrder" AS "sortOrder", "NameVi" AS "nameVi", "NameEn" AS "nameEn",
+                "DescriptionVi" AS "descriptionVi", "DescriptionEn" AS "descriptionEn",
+                "TypeVi" AS "typeVi", "TypeEn" AS "typeEn", "IconUrl" AS "iconUrl",
+                "AnimationUrl" AS "animationUrl", "KeepsakeIconUrl" AS "keepsakeIconUrl"
+           FROM character_skills WHERE "CharacterId" = $1 ORDER BY "SortOrder"`,
+        [id],
+      ),
+      sql.query(
+        `SELECT "SortOrder" AS "sortOrder", "TermVi" AS "termVi", "TermEn" AS "termEn",
+                "DescriptionVi" AS "descriptionVi", "DescriptionEn" AS "descriptionEn"
+           FROM character_effects WHERE "CharacterId" = $1 ORDER BY "SortOrder"`,
+        [id],
+      ),
+    ])
+    publicCache(response)
+    return json(response, 200, mapPublicCharacter(rows[0], language, true, skills, effects))
+  }
+
+  const english = isEnglish(language)
+  const page = Math.max(1, Number.parseInt(request.query?.page, 10) || 1)
+  const pageSize = Math.min(100, Math.max(1, Number.parseInt(request.query?.pageSize, 10) || 12))
+  const filters = []
+  const params = []
+  const addFilter = (clause, value) => {
+    params.push(value)
+    filters.push(clause.replace('?', `$${params.length}`))
+  }
+  const search = text(request.query?.search)
+  const tier = text(request.query?.tier)
+  const faction = text(request.query?.faction)
+  const type = text(request.query?.type)
+  if (search) addFilter(`"${english ? 'NameEn' : 'NameVi'}" ILIKE ?`, `%${search}%`)
+  if (tier) addFilter('"Tier" = ?', tier)
+  if (faction) addFilter(`"${english ? 'FactionEn' : 'FactionVi'}" = ?`, faction)
+  if (type) addFilter(`"${english ? 'TypeEn' : 'TypeVi'}" = ?`, type)
+  const where = filters.length ? ` WHERE ${filters.join(' AND ')}` : ''
+  const [count] = await sql.query(`SELECT COUNT(*)::int AS count FROM characters${where}`, params)
+  const totalCount = Number(count?.count || 0)
+  const nameColumn = english ? 'NameEn' : 'NameVi'
+  const order = String(request.query?.sort || '').toLowerCase() === 'name_asc'
+    ? ` ORDER BY "${nameColumn}"`
+    : ` ORDER BY COALESCE("ReleaseSea", "ReleaseChina") IS NULL,
+                       COALESCE("ReleaseSea", "ReleaseChina") DESC, "${nameColumn}"`
+  const rows = await sql.query(
+    `${characterSelect}${where}${order} OFFSET $${params.length + 1} LIMIT $${params.length + 2}`,
+    [...params, (page - 1) * pageSize, pageSize],
+  )
+  publicCache(response)
+  return json(response, 200, {
+    items: rows.map((row) => mapPublicCharacter(row, language)),
+    page,
+    pageSize,
+    totalCount,
+    totalPages: Math.max(1, Math.ceil(totalCount / pageSize)),
+  })
+}
+
 const eventSelect = `
   SELECT "Id" AS id, "TitleVi" AS "titleVi", "TitleEn" AS "titleEn",
          "DescriptionVi" AS "descriptionVi", "DescriptionEn" AS "descriptionEn",
@@ -172,6 +290,36 @@ const mapEvent = (row) => ({
   endDate: dateValue(row.endDate),
 })
 
+const parseSections = (value) => {
+  if (Array.isArray(value)) return value
+  if (value && typeof value === 'object') return value
+  try {
+    return JSON.parse(value || '[]')
+  } catch {
+    return []
+  }
+}
+
+const mapPublicEvent = (row, language, detail = false) => {
+  const english = isEnglish(language)
+  const localized = {
+    id: row.id,
+    title: english ? row.titleEn : row.titleVi,
+    description: english ? row.descriptionEn : row.descriptionVi,
+    category: row.category,
+    imageUrl: row.imageUrl,
+    startDate: dateValue(row.startDate),
+    endDate: dateValue(row.endDate),
+  }
+  if (!detail) return localized
+  return {
+    ...localized,
+    detailImages: row.detailImages || [],
+    sections: parseSections(row.sectionsJson),
+    updatedAt: row.updatedAt,
+  }
+}
+
 const eventPayload = (body) => ({
   id: text(body.id),
   titleVi: text(body.titleVi),
@@ -185,6 +333,52 @@ const eventPayload = (body) => ({
   startDate: text(body.startDate),
   endDate: text(body.endDate),
 })
+
+const handlePublicEvents = async (request, response, path, sql) => {
+  const match = /^\/events\/([^/]+)$/.exec(path)
+  if (path !== '/events' && !match) return false
+  if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
+
+  const language = request.query?.language
+  if (match) {
+    const id = decodeURIComponent(match[1])
+    const rows = await sql.query(`${eventSelect} WHERE "Id" = $1 LIMIT 1`, [id])
+    if (!rows[0]) return json(response, 404, { message: 'Event not found.' })
+    publicCache(response)
+    return json(response, 200, mapPublicEvent(rows[0], language, true))
+  }
+
+  const page = Math.max(1, Number.parseInt(request.query?.page, 10) || 1)
+  const pageSize = Math.min(100, Math.max(1, Number.parseInt(request.query?.pageSize, 10) || 20))
+  const filters = []
+  const params = []
+  const addFilter = (clause, value) => {
+    params.push(value)
+    filters.push(clause.replace('?', `$${params.length}`))
+  }
+  const category = text(request.query?.category)
+  const from = text(request.query?.from)
+  const to = text(request.query?.to)
+  if (category) addFilter('"Category" = ?', category)
+  if (/^\d{4}-\d{2}-\d{2}$/.test(from)) addFilter('"EndDate" >= ?::date', from)
+  if (/^\d{4}-\d{2}-\d{2}$/.test(to)) addFilter('"StartDate" <= ?::date', to)
+  const where = filters.length ? ` WHERE ${filters.join(' AND ')}` : ''
+  const [count] = await sql.query(`SELECT COUNT(*)::int AS count FROM events${where}`, params)
+  const totalCount = Number(count?.count || 0)
+  const rows = await sql.query(
+    `${eventSelect}${where} ORDER BY "StartDate" DESC, "TitleVi"
+       OFFSET $${params.length + 1} LIMIT $${params.length + 2}`,
+    [...params, (page - 1) * pageSize, pageSize],
+  )
+  publicCache(response)
+  return json(response, 200, {
+    items: rows.map((row) => mapPublicEvent(row, language)),
+    page,
+    pageSize,
+    totalCount,
+    totalPages: Math.max(1, Math.ceil(totalCount / pageSize)),
+  })
+}
 
 export const validateEvent = (payload) => {
   const errors = {}
@@ -396,6 +590,7 @@ const handleReleases = async (request, response, path, sql) => {
   if (path === '/release-schedule') {
     if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
     const rows = await sql.query(`${releaseSelect} ORDER BY "Date", "Server", "SortOrder"`)
+    publicCache(response)
     return json(response, 200, rows.map((row) => mapRelease(row, request.query?.language)))
   }
   const match = /^\/admin\/releases\/(\d+)$/.exec(path)
@@ -467,16 +662,19 @@ export const createAdminDataRouteHandler = ({
   ensureSchema = ensureAdminSchema,
   sqlProvider = getSql,
 } = {}) => async (request, response, path) => {
-  const isPublicRelease = path === '/release-schedule'
+  const isPublicContent = path === '/release-schedule' || path === '/characters' ||
+    /^\/characters\/[^/]+$/.test(path) || path === '/events' || /^\/events\/[^/]+$/.test(path)
   const isAdminData = path.startsWith('/admin/characters') || path.startsWith('/admin/keepsakes') ||
     path.startsWith('/admin/events') || path.startsWith('/admin/releases')
-  if (!isPublicRelease && !isAdminData) return false
+  if (!isPublicContent && !isAdminData) return false
 
   if (isAdminData && !requireUser(request, response, ['Admin'])) return true
   await ensureSchema()
   const sql = sqlProvider()
 
-  if (isPublicRelease || path.startsWith('/admin/releases')) return handleReleases(request, response, path, sql)
+  if (path === '/release-schedule' || path.startsWith('/admin/releases')) return handleReleases(request, response, path, sql)
+  if (path === '/characters' || path.startsWith('/characters/')) return handlePublicCharacters(request, response, path, sql)
+  if (path === '/events' || path.startsWith('/events/')) return handlePublicEvents(request, response, path, sql)
   if (path.startsWith('/admin/events')) return handleEvents(request, response, path, sql)
   return handleCharacters(request, response, path, sql)
 }
