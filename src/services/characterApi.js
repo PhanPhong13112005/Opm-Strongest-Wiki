@@ -1,4 +1,4 @@
-import { isApiConfigured, requestApi } from './apiClient'
+import { isApiConfigured, requestApiCached } from './apiClient'
 
 const formatLegacyDate = (value) => {
   if (!value) return value
@@ -39,7 +39,7 @@ export const mergeCharacterDetail = (character, localCharacter = {}) => ({
   releaseTrung: formatLegacyDate(character.releaseChina) || localCharacter.releaseTrung,
   baseStats: character.baseStats,
   pvpStats: character.pvpStats,
-  skills: (character.skills || []).map((skill) => ({
+  skills: character.skills?.length ? character.skills.map((skill) => ({
     ...(localCharacter.skills?.[skill.sortOrder] || {}),
     name: skill.name,
     desc: skill.description,
@@ -47,23 +47,68 @@ export const mergeCharacterDetail = (character, localCharacter = {}) => ({
     icon: skill.iconUrl,
     animation: skill.animationUrl,
     keepsakeIcon: skill.keepsakeIconUrl,
-  })),
-  effects: (character.effects || []).map((effect) => ({
+  })) : (localCharacter.skills || []),
+  effects: character.effects?.length ? character.effects.map((effect) => ({
     term: effect.term,
     desc: effect.description,
-  })),
+  })) : (localCharacter.effects || []),
   updatedAt: character.updatedAt,
 })
 
+const releaseTime = (character) => {
+  const value = character.releaseSea || character.releaseDate || character.releaseTrung
+  if (!value) return null
+  const legacy = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(value)
+  if (legacy) return Date.UTC(Number(legacy[3]), Number(legacy[2]) - 1, Number(legacy[1]))
+  const timestamp = Date.parse(value)
+  return Number.isNaN(timestamp) ? null : timestamp
+}
+
+const fallbackCharacters = (localCharacters, query) => {
+  const search = String(query.search || '').trim().toLowerCase()
+  return localCharacters
+    .filter((character) => {
+      if (search && !String(character.name || '').toLowerCase().includes(search)) return false
+      if (query.tier && character.tier !== query.tier) return false
+      if (query.type && character.type !== query.type) return false
+      if (query.faction && character.faction !== query.faction) return false
+      return true
+    })
+    .sort((left, right) => {
+      if (query.sort === 'name_asc') return left.name.localeCompare(right.name)
+      const leftRelease = releaseTime(left)
+      const rightRelease = releaseTime(right)
+      if (leftRelease === null && rightRelease !== null) return 1
+      if (leftRelease !== null && rightRelease === null) return -1
+      if (leftRelease !== rightRelease) return rightRelease - leftRelease
+      return left.name.localeCompare(right.name)
+    })
+}
+
 export const getCharacters = async ({ localCharacters = [], ...query }) => {
-  const result = await requestApi('api/characters', query)
-  const localById = new Map(localCharacters.map((character) => [character.id, character]))
-  return {
-    ...result,
-    items: result.items.map((character) => ({
-      ...(localById.get(character.id) || {}),
-      ...mapCharacterSummary(character),
-    })),
+  try {
+    const result = await requestApiCached('api/characters', query)
+    const localById = new Map(localCharacters.map((character) => [character.id, character]))
+    return {
+      ...result,
+      source: 'api',
+      items: result.items.map((character) => ({
+        ...(localById.get(character.id) || {}),
+        ...mapCharacterSummary(character),
+      })),
+    }
+  } catch {
+    const filtered = fallbackCharacters(localCharacters, query)
+    const page = Math.max(1, Number(query.page) || 1)
+    const pageSize = Math.max(1, Number(query.pageSize) || 12)
+    return {
+      items: filtered.slice((page - 1) * pageSize, page * pageSize),
+      page,
+      pageSize,
+      totalCount: filtered.length,
+      totalPages: Math.max(1, Math.ceil(filtered.length / pageSize)),
+      source: 'fallback',
+    }
   }
 }
 
@@ -75,6 +120,7 @@ export const getAllCharacters = async (language, localCharacters = []) => {
     localCharacters,
   })
 
+  if (firstPage.source === 'fallback') return fallbackCharacters(localCharacters, { sort: 'release_desc' })
   if (firstPage.totalPages <= 1) return firstPage.items
 
   const remainingPages = await Promise.all(
@@ -90,8 +136,13 @@ export const getAllCharacters = async (language, localCharacters = []) => {
 }
 
 export const getCharacterById = async (id, language, localCharacter) => {
-  const result = await requestApi(`api/characters/${encodeURIComponent(id)}`, { language })
-  return mergeCharacterDetail(result, localCharacter)
+  try {
+    const result = await requestApiCached(`api/characters/${encodeURIComponent(id)}`, { language })
+    return mergeCharacterDetail(result, localCharacter)
+  } catch (error) {
+    if (localCharacter) return localCharacter
+    throw error
+  }
 }
 
 export const isCharacterApiConfigured = isApiConfigured

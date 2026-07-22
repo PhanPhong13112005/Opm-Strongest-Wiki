@@ -26,9 +26,11 @@ Thư mục này chứa toàn bộ dữ liệu cấu trúc dưới dạng JSON, h
             *   `levels`: Danh sách mốc nâng cấp từ lv 1 đến lv 17, bao gồm chi tiết tài nguyên tiêu hao (`cost`), hiệu quả sơ cấp (`coreEffect`), hiệu quả cao cấp (`reward`), điều kiện kích hoạt (`condition`), và biểu tượng mốc nâng cấp (`milestoneIcon`).
 3.  **`events.json`**:
     *   **Nhiệm vụ**: Quản lý lịch trình sự kiện trong tháng (Banner chiêu mộ, Sự kiện huấn luyện, Quà nạp mốc).
-4.  **`backgear.json`**:
+4.  **`releaseSchedule.json`**:
+    *   **Nhiệm vụ**: Dữ liệu dự phòng song ngữ cho lịch ra mắt CN/SEA khi API Neon không khả dụng.
+5.  **`backgear.json`**:
     *   **Nhiệm vụ**: Chứa tên song ngữ, nguồn nhận, ảnh, chỉ số theo cấp, chi phí nâng và dữ liệu Bộ Sưu Tập Thẻ Hình nền.
-5.  **`insignias.json`**:
+6.  **`insignias.json`**:
     *   **Nhiệm vụ**: Chứa đúng 10 Huy Hiệu hợp lệ, nội dung song ngữ và quan hệ tới các hướng dẫn nhận dùng chung. Đây là nguồn seed cho PostgreSQL và dữ liệu dự phòng của frontend.
-6.  **`tactics.json`**:
+7.  **`tactics.json`**:
     *   **Nhiệm vụ**: Chứa 19 Thẻ Chiến thuật, chỉ số theo phẩm chất/sao và 13 Khung Chiến thuật. Đây là nguồn seed PostgreSQL và fallback của trang Chiến thuật.

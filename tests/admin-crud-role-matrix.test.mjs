@@ -138,6 +138,8 @@ test('embedded PostgreSQL schema seeds the canonical wiki data', async () => {
   await ensureSchema()
   const [counts] = await sql.query(
     `SELECT (SELECT COUNT(*)::int FROM characters) AS characters,
+            (SELECT COUNT(*)::int FROM character_skills) AS "characterSkills",
+            (SELECT COUNT(*)::int FROM character_effects) AS "characterEffects",
             (SELECT COUNT(*)::int FROM events) AS events,
             (SELECT COUNT(*)::int FROM release_schedule) AS releases`,
   )
@@ -169,6 +171,39 @@ test('only Admin can access content-management APIs', async () => {
   const admin = await invoke({ path: '/admin/characters', role: 'Admin' })
   assert.equal(admin.statusCode, 200)
   assert.equal(admin.payload.totalCount, adminSeedCounts.characters)
+})
+
+test('public character and event APIs read localized PostgreSQL data with cache headers', async () => {
+  const characters = await invoke({
+    path: '/characters',
+    query: { language: 'en', search: 'Zombieman', page: 1, pageSize: 12, sort: 'release_desc' },
+  })
+  assert.equal(characters.statusCode, 200)
+  assert.ok(characters.payload.totalCount >= 1)
+  const zombieman = characters.payload.items.find((character) => character.id === '100013-urplus')
+  assert.ok(zombieman)
+  assert.equal(zombieman.type, 'Duelist')
+  assert.match(characters.headers['Cache-Control'], /s-maxage=300/)
+
+  const character = await invoke({ path: '/characters/100013-urplus', query: { language: 'vi' } })
+  assert.equal(character.statusCode, 200)
+  assert.equal(character.payload.type, 'Vũ Trang')
+  assert.deepEqual(character.payload.baseStats, { atk: 683, hp: 4095, def: 173, spd: 118 })
+  assert.ok(character.payload.skills.length > 0)
+  assert.ok(character.payload.effects.length > 0)
+
+  const events = await invoke({
+    path: '/events', query: { language: 'en', category: 'main', page: 1, pageSize: 100 },
+  })
+  assert.equal(events.statusCode, 200)
+  assert.ok(events.payload.items.length > 0)
+  assert.ok(events.payload.items.every((event) => event.category === 'main'))
+  assert.match(events.headers['Cache-Control'], /stale-while-revalidate=3600/)
+
+  const event = await invoke({ path: '/events/e3', query: { language: 'en' } })
+  assert.equal(event.statusCode, 200)
+  assert.equal(event.payload.title, 'Limited Recruitment: UR+ Atomic Samurai')
+  assert.ok(Array.isArray(event.payload.sections))
 })
 
 test('User can comment, use forum/advisor, and create a top-up request', async () => {
@@ -259,6 +294,12 @@ test('Admin character and keepsake CRUD preserves the frontend contract', async 
   assert.equal(updated.statusCode, 200)
   assert.equal(updated.payload.nameVi, 'Nhân vật đã sửa')
 
+  const publicUpdatedCharacter = await invoke({
+    path: `/characters/${validCharacter.id}`, query: { language: 'vi' },
+  })
+  assert.equal(publicUpdatedCharacter.statusCode, 200)
+  assert.equal(publicUpdatedCharacter.payload.name, updated.payload.nameVi)
+
   const keepsake = await invoke({
     path: `/admin/keepsakes/${validCharacter.id}`, method: 'PUT', role: 'Admin',
     body: { iconUrl: '/Keepsake/QA/SSRplus.png' },
@@ -294,6 +335,9 @@ test('Admin event CRUD validates JSON and dates', async () => {
   })
   assert.equal(updated.statusCode, 200)
   assert.equal(updated.payload.titleEn, 'Updated QA Event')
+  const publicUpdatedEvent = await invoke({ path: `/events/${validEvent.id}`, query: { language: 'en' } })
+  assert.equal(publicUpdatedEvent.statusCode, 200)
+  assert.equal(publicUpdatedEvent.payload.title, 'Updated QA Event')
   assert.equal((await invoke({
     path: `/admin/events/${validEvent.id}`, method: 'DELETE', role: 'Admin',
   })).statusCode, 204)

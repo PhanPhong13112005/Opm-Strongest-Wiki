@@ -10,6 +10,7 @@ const { t, locale } = useI18n()
 const route = useRoute()
 const lang = ref(locale.value.toUpperCase())
 const isMobileMenuOpen = ref(false)
+const currentYear = new Date().getFullYear()
 const accountPath = computed(() => getPortalPath(authState.session?.role))
 const featureRoutes = ['/core-lab', '/medals', '/tactics', '/backgear', '/keepsakes', '/insignias']
 const isFeaturesRoute = computed(() => featureRoutes.some(path => route.path.startsWith(path)))
@@ -136,9 +137,44 @@ watch(() => route.fullPath, () => { isMobileMenuOpen.value = false })
     </RouterView>
 
     <footer v-if="!isWorkspaceRoute" class="site-footer">
-      <div class="mx-auto grid max-w-[1440px] gap-6 px-4 sm:grid-cols-[1fr_auto] sm:px-6">
-        <div><strong>OPM STRONGEST // HERO DATA BUREAU</strong><p>{{ t('footer.desc') }}</p></div>
-        <div class="flex items-end gap-5"><RouterLink to="/history">{{ t('footer.history') || 'Lịch sử' }}</RouterLink><RouterLink to="/privacy">{{ t('footer.privacy') || 'Chính sách bảo mật' }}</RouterLink></div>
+      <div class="site-footer__accent" aria-hidden="true"></div>
+
+      <div class="site-footer__main">
+        <section class="site-footer__brand">
+          <p class="site-footer__eyebrow"><span></span>{{ t('footer.eyebrow') }}</p>
+          <RouterLink to="/" class="site-footer__lockup" aria-label="OPM Strongest Wiki">
+            <span class="site-footer__mark"><i>O</i><i>S</i></span>
+            <span><strong>OPM STRONGEST</strong><small>HERO DATA BUREAU</small></span>
+          </RouterLink>
+          <p class="site-footer__description">{{ t('footer.desc') }}</p>
+        </section>
+
+        <nav class="site-footer__navigation" :aria-label="t('footer.navigation')">
+          <p class="site-footer__label">{{ t('footer.navigation') }}</p>
+          <RouterLink to="/history" class="site-footer__link">
+            <span>01</span>
+            <span><strong>{{ t('footer.history') }}</strong><small>{{ t('footer.historyHint') }}</small></span>
+            <b aria-hidden="true">↗</b>
+          </RouterLink>
+          <RouterLink to="/privacy" class="site-footer__link">
+            <span>02</span>
+            <span><strong>{{ t('footer.privacy') }}</strong><small>{{ t('footer.privacyHint') }}</small></span>
+            <b aria-hidden="true">↗</b>
+          </RouterLink>
+        </nav>
+
+        <section class="site-footer__status">
+          <p class="site-footer__label">{{ t('footer.systemStatus') }}</p>
+          <div class="site-footer__online"><span></span><strong>{{ t('footer.online') }}</strong></div>
+          <p>{{ t('footer.independent') }}</p>
+          <div class="site-footer__coordinates"><span>VN / SEA</span><span>2026</span></div>
+        </section>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>{{ t('footer.copyright', { year: currentYear }) }}</p>
+        <span aria-hidden="true"></span>
+        <p>{{ t('footer.disclaimer') }}</p>
       </div>
     </footer>
 

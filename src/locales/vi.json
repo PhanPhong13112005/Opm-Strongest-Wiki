@@ -36,7 +36,16 @@
     "topup": "Nạp thẻ"
   },
   "footer": {
+    "eyebrow": "Kho dữ liệu cộng đồng",
+    "navigation": "Hồ sơ dự án",
+    "historyHint": "Theo dõi các mốc phát triển",
+    "privacyHint": "Dữ liệu, quyền riêng tư và sở hữu",
+    "systemStatus": "Trạng thái hệ thống",
+    "online": "Đang hoạt động",
+    "independent": "Wiki độc lập do cộng đồng xây dựng và duy trì.",
     "desc": "OPM: The Strongest — cơ sở dữ liệu cộng đồng · dữ liệu trích xuất trực tiếp từ game",
+    "copyright": "© {year} OPM Strongest Wiki contributors",
+    "disclaimer": "Dự án fan-made, không liên kết với chủ sở hữu thương hiệu hoặc nhà phát hành game.",
     "privacy": "Chính sách bảo mật & Bản quyền",
     "history": "Lịch sử phiên bản"
   },
