@@ -13,3 +13,5 @@ File_Mẫu/
 **/bin/
 **/obj/
 .vs/
+.vercel
+.admin-e2e-credential.json
