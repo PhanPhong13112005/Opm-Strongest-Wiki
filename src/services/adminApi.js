@@ -1,4 +1,4 @@
-import { isApiConfigured } from './apiClient'
+import { isSameOriginApiAvailable } from './apiClient'
 import {
   authorizedRequest,
   clearSession,
@@ -61,4 +61,4 @@ export const deleteAdminRelease = (id) => authorizedRequest(`api/admin/releases/
   method: 'DELETE',
 })
 
-export const isAdminApiConfigured = isApiConfigured
+export const isAdminApiConfigured = isSameOriginApiAvailable

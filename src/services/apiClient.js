@@ -3,9 +3,11 @@ const API_BASE_URL = configuredBaseUrl || (import.meta.env.DEV ? 'http://localho
 const REQUEST_TIMEOUT_MS = 8000
 
 const buildUrl = (path, params = {}) => {
-  if (!API_BASE_URL) return null
+  const sameOrigin = typeof globalThis.location?.origin === 'string' ? globalThis.location.origin : ''
+  const baseUrl = API_BASE_URL || sameOrigin
+  if (!baseUrl) return null
 
-  const url = new URL(path, `${API_BASE_URL.replace(/\/$/, '')}/`)
+  const url = new URL(path, `${baseUrl.replace(/\/$/, '')}/`)
   Object.entries(params || {}).forEach(([key, value]) => {
     if (value !== undefined && value !== null && value !== '') {
       url.searchParams.set(key, String(value))
@@ -50,3 +52,10 @@ export const requestApi = async (path, params, options = {}) => {
 }
 
 export const isApiConfigured = () => Boolean(API_BASE_URL)
+
+// Authentication and community APIs are deployed as same-origin Vercel
+// Functions in production. Public wiki screens still use their local JSON
+// fallback until each read-only .NET endpoint has been migrated.
+export const isSameOriginApiAvailable = () => Boolean(
+  API_BASE_URL || (typeof globalThis.location?.origin === 'string' && globalThis.location.origin),
+)

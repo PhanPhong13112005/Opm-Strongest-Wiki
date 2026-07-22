@@ -1,5 +1,5 @@
 import { reactive } from 'vue'
-import { isApiConfigured, requestApi } from './apiClient'
+import { isSameOriginApiAvailable, requestApi } from './apiClient'
 
 const TOKEN_KEY = 'opmwiki.auth.token'
 const SESSION_KEY = 'opmwiki.auth.session'
@@ -104,4 +104,4 @@ export const getPortalPath = (role = authState.session?.role) => {
   return '/account'
 }
 
-export const isAuthApiConfigured = isApiConfigured
+export const isAuthApiConfigured = isSameOriginApiAvailable
