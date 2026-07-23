@@ -1,42 +1,69 @@
 <script setup>
-import { computed, ref, watch } from 'vue'
-import { RouterView, RouterLink, useRoute } from 'vue-router'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { RouterView, RouterLink, useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { Analytics } from '@vercel/analytics/vue'
 import { SpeedInsights } from '@vercel/speed-insights/vue'
-import { authState, getPortalPath, hasRole, hasValidSession } from './services/authApi'
+import { authState, clearSession, hasRole, hasValidSession } from './services/authApi'
 
 const { t, locale } = useI18n()
 const route = useRoute()
+const router = useRouter()
 const lang = ref(locale.value.toUpperCase())
 const isMobileMenuOpen = ref(false)
+const isAccountMenuOpen = ref(false)
+const accountMenuRef = ref(null)
 const currentYear = new Date().getFullYear()
-const accountPath = computed(() => getPortalPath(authState.session?.role))
+const isAuthenticated = computed(() => Boolean(authState.session) && hasValidSession())
+const workspaceRole = computed(() => String(authState.session?.role || 'User').toLowerCase())
+const workspaceRoleLabel = computed(() => ({
+  user: 'THÀNH VIÊN',
+  staff: 'NHÂN VIÊN',
+  admin: 'QUẢN TRỊ VIÊN',
+}[workspaceRole.value] || 'THÀNH VIÊN'))
+const accountRoleLabel = computed(() => ({
+  User: 'Thành viên',
+  Staff: 'Nhân viên',
+  Admin: 'Quản trị viên',
+}[authState.session?.role] || 'Thành viên'))
+const roleMenuItem = computed(() => {
+  if (authState.session?.role === 'Admin') {
+    return { to: '/admin/dashboard', label: 'Vào trang Quản trị', hint: 'Dashboard và quản lý dữ liệu', code: 'QT' }
+  }
+  if (authState.session?.role === 'Staff') {
+    return { to: '/staff', label: 'Vào trang Nhân viên', hint: 'Duyệt nạp và kiểm duyệt', code: 'NV' }
+  }
+  return { to: '/forum', label: 'Vào Diễn đàn', hint: 'Trao đổi cùng cộng đồng', code: 'DD' }
+})
 const featureRoutes = ['/core-lab', '/medals', '/tactics', '/backgear', '/keepsakes', '/insignias']
 const isFeaturesRoute = computed(() => featureRoutes.some(path => route.path.startsWith(path)))
-const isWorkspaceRoute = computed(() => hasValidSession() && (
-  ['/account', '/forum', '/advisor', '/top-up', '/staff'].includes(route.path)
+const isWorkspaceRoute = computed(() => isAuthenticated.value && (
+  ['/account', '/forum', '/advisor', '/top-up', '/coupon-top-up', '/staff'].includes(route.path)
   || route.path.startsWith('/admin/')
 ))
 
 const workspaceLinks = computed(() => {
   const community = [
-    { to: '/forum', code: 'CM', label: 'Cộng đồng' },
-    { to: '/advisor', code: 'AI', label: 'Trợ lý dữ liệu' },
-    { to: '/top-up', code: 'CR', label: 'Nạp tín dụng' },
+    { to: '/forum', code: 'DD', label: 'Diễn đàn' },
+    { to: '/advisor', code: 'AI', label: 'Trợ lý AI' },
+    { to: '/top-up', code: 'NT', label: 'Nạp thẻ' },
   ]
   if (hasRole('Admin')) {
     return [
-      { to: '/admin/dashboard', code: 'DB', label: 'Dashboard' },
+      { to: '/admin/dashboard', code: '01', label: 'Tổng quan' },
       { to: '/admin/characters', code: 'CH', label: 'Nhân vật' },
       { to: '/admin/events', code: 'EV', label: 'Sự kiện' },
       { to: '/admin/releases', code: 'RL', label: 'Lịch ra mắt' },
-      { to: '/staff', code: 'OP', label: 'Vận hành' },
+      { to: '/staff', code: 'KD', label: 'Kiểm duyệt' },
       ...community,
     ]
   }
-  if (hasRole('Staff')) return [{ to: '/staff', code: 'OP', label: 'Vận hành' }, ...community]
-  return [{ to: '/account', code: 'HQ', label: 'Tổng quan' }, ...community]
+  if (hasRole('Staff')) return [{ to: '/staff', code: '01', label: 'Tổng quan' }, ...community]
+  return [
+    { to: '/account', code: '01', label: 'Tổng quan' },
+    ...community,
+    { to: '/coupon-top-up', code: 'CP', label: 'Nạp Coupon' },
+  ]
 })
 
 const toggleLang = () => {
@@ -45,7 +72,24 @@ const toggleLang = () => {
   locale.value = next.toLowerCase()
 }
 
-watch(() => route.fullPath, () => { isMobileMenuOpen.value = false })
+const closeAccountMenuOutside = (event) => {
+  if (isAccountMenuOpen.value && !accountMenuRef.value?.contains(event.target)) {
+    isAccountMenuOpen.value = false
+  }
+}
+
+const logout = async () => {
+  clearSession()
+  isAccountMenuOpen.value = false
+  await router.push('/')
+}
+
+watch(() => route.fullPath, () => {
+  isMobileMenuOpen.value = false
+  isAccountMenuOpen.value = false
+})
+onMounted(() => document.addEventListener('pointerdown', closeAccountMenuOutside))
+onBeforeUnmount(() => document.removeEventListener('pointerdown', closeAccountMenuOutside))
 </script>
 
 <template>
@@ -88,9 +132,46 @@ watch(() => route.fullPath, () => { isMobileMenuOpen.value = false })
           <button class="lang-control" :aria-label="`Language ${lang}`" @click="toggleLang">
             <span :class="{ active: lang === 'VI' }">VI</span><span :class="{ active: lang === 'EN' }">EN</span>
           </button>
-          <RouterLink :to="hasValidSession() ? accountPath : '/login'" class="account-control">
+          <div v-if="isAuthenticated" ref="accountMenuRef" class="account-menu" :class="`account-menu--${workspaceRole}`">
+            <button
+              class="account-control account-control--signed-in"
+              type="button"
+              :aria-expanded="isAccountMenuOpen"
+              aria-haspopup="menu"
+              @click="isAccountMenuOpen = !isAccountMenuOpen"
+            >
+              <span class="account-control__avatar">{{ authState.session?.displayName?.slice(0, 1)?.toUpperCase() || 'U' }}</span>
+              <span class="account-control__identity hidden sm:block">
+                <strong>{{ authState.session?.displayName }}</strong>
+                <small>{{ accountRoleLabel }}</small>
+              </span>
+              <svg class="account-control__chevron" :class="{ 'is-open': isAccountMenuOpen }" viewBox="0 0 20 20" fill="none" stroke="currentColor"><path d="m5 7.5 5 5 5-5" stroke-width="1.8" /></svg>
+            </button>
+
+            <transition name="account-menu">
+              <div v-if="isAccountMenuOpen" class="account-dropdown" role="menu">
+                <header>
+                  <span class="account-dropdown__avatar">{{ authState.session?.displayName?.slice(0, 1)?.toUpperCase() || 'U' }}</span>
+                  <div>
+                    <strong>{{ authState.session?.displayName }}</strong>
+                    <small>@{{ authState.session?.username }} · {{ accountRoleLabel }}</small>
+                  </div>
+                </header>
+                <RouterLink :to="roleMenuItem.to" class="account-dropdown__primary" role="menuitem">
+                  <span>{{ roleMenuItem.code }}</span>
+                  <div><strong>{{ roleMenuItem.label }}</strong><small>{{ roleMenuItem.hint }}</small></div>
+                  <b>→</b>
+                </RouterLink>
+                <RouterLink to="/account" class="account-dropdown__link" role="menuitem">
+                  <span>Hồ sơ và thông tin tài khoản</span><b>→</b>
+                </RouterLink>
+                <button class="account-dropdown__logout" type="button" role="menuitem" @click="logout">Đăng xuất</button>
+              </div>
+            </transition>
+          </div>
+          <RouterLink v-else to="/login" class="account-control">
             <span class="account-control__dot" />
-            <span class="hidden max-w-[120px] truncate sm:block">{{ hasValidSession() ? authState.session?.displayName : t('nav.login') }}</span>
+            <span class="hidden sm:block">{{ t('nav.login') }}</span>
             <span class="sm:hidden">ID</span>
           </RouterLink>
           <button class="menu-control xl:hidden" aria-label="Mở menu" @click="isMobileMenuOpen = !isMobileMenuOpen">
@@ -111,19 +192,19 @@ watch(() => route.fullPath, () => { isMobileMenuOpen.value = false })
       </nav>
     </header>
 
-    <div v-if="isWorkspaceRoute" class="workspace-frame">
+    <div v-if="isWorkspaceRoute" class="workspace-frame" :class="`workspace-frame--${workspaceRole}`">
       <aside class="workspace-rail">
         <div class="workspace-profile">
           <span class="workspace-avatar">{{ authState.session?.displayName?.slice(0, 1)?.toUpperCase() || 'U' }}</span>
-          <div><strong>{{ authState.session?.displayName }}</strong><small>{{ authState.session?.role }} ACCESS</small></div>
+          <div><strong>{{ authState.session?.displayName }}</strong><small>{{ workspaceRoleLabel }}</small></div>
         </div>
-        <p class="workspace-label">CONTROL DECK</p>
+        <p class="workspace-label">KHU VỰC LÀM VIỆC</p>
         <nav>
           <RouterLink v-for="item in workspaceLinks" :key="item.to" :to="item.to" class="workspace-link">
             <span>{{ item.code }}</span><b>{{ item.label }}</b>
           </RouterLink>
         </nav>
-        <RouterLink to="/" class="workspace-exit">← Trở về Wiki</RouterLink>
+        <RouterLink to="/" class="workspace-exit">← Trở về trang Wiki</RouterLink>
       </aside>
       <div class="workspace-content">
         <RouterView v-slot="{ Component, route: currentRoute }">

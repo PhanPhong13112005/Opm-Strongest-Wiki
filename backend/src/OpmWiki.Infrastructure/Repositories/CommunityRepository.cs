@@ -269,7 +269,8 @@ public sealed class CommunityRepository(OpmWikiDbContext dbContext) : ICommunity
         request.StaffNote = staffNote.Trim();
         request.ReviewedById = reviewerId == Guid.Empty ? null : reviewerId;
         request.ReviewedAt = DateTimeOffset.UtcNow;
-        if (status == TopUpStatuses.Approved) request.User.Balance += request.Amount;
+        if (status == TopUpStatuses.Approved && request.Provider != "Coupon Order")
+            request.User.Balance += request.Amount;
         await dbContext.SaveChangesAsync(cancellationToken);
         return MapTopUp(request);
     }
