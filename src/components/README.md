@@ -13,3 +13,6 @@ Thư mục này chứa các thành phần giao diện nhỏ có tính chất tá
     *   Tự tải skeleton, atlas và texture theo nhân vật được chọn.
     *   Chỉ phát animation đứng chờ (`daiji`/`idle`), kiểm tra độ trượt chân trước khi phát, căn nhân vật xuống đáy và giải phóng renderer khi chuyển nhân vật.
     *   Rig không có idle hợp lệ sẽ giữ setup pose, không tự thay bằng animation tấn công hoặc kỹ năng.
+*   **`RolePortalShell.vue`**: Khung tiêu đề và thông tin phiên dùng chung cho ba cổng User, Staff và Admin.
+    *   Đổi màu nhận diện theo vai trò, hiển thị rõ tên tài khoản và nút đăng xuất.
+    *   Dùng chung hệ thống responsive để các dashboard không bị tràn ngang trên mobile.

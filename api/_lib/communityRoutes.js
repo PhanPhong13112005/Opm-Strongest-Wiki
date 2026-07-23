@@ -279,7 +279,9 @@ export const createCommunityRouteHandler = ({
           WHERE "Id" = $1 AND "Status" = 'Pending' RETURNING *
        ), credited AS (
          UPDATE user_accounts u SET "Balance" = u."Balance" + r."Amount", "UpdatedAt" = CURRENT_TIMESTAMP
-           FROM reviewed r WHERE r."Status" = 'Approved' AND u."Id" = r."UserId" RETURNING u."Id"
+           FROM reviewed r
+          WHERE r."Status" = 'Approved' AND r."Provider" <> 'Coupon Order' AND u."Id" = r."UserId"
+          RETURNING u."Id"
        )
        SELECT r."Id" AS id, r."UserId" AS "userId", u."Username" AS username,
               u."DisplayName" AS "displayName", r."Provider" AS provider,

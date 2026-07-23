@@ -232,6 +232,13 @@ test('User can comment, use forum/advisor, and create a top-up request', async (
   })
   assert.equal(topUp.statusCode, 201)
   assert.equal(topUp.payload.status, 'Pending')
+
+  const couponOrder = await invokeCommunity({
+    path: '/top-ups', method: 'POST', role: 'User',
+    body: { provider: 'Coupon Order', referenceCode: 'UID:3107453|SID:310170|CP:6|QTY:1|QA', amount: 12890 },
+  })
+  assert.equal(couponOrder.statusCode, 201)
+  assert.equal(couponOrder.payload.provider, 'Coupon Order')
 })
 
 test('Staff can moderate comments/forum and approve top-ups, but cannot use Admin CRUD', async () => {
@@ -263,6 +270,15 @@ test('Staff can moderate comments/forum and approve top-ups, but cannot use Admi
 
   const [user] = await sql.query('SELECT "Balance" AS balance FROM user_accounts WHERE "Username" = $1', ['user'])
   assert.equal(Number(user.balance), 50000)
+
+  const coupon = topUps.payload.find((item) => item.provider === 'Coupon Order')
+  assert.ok(coupon)
+  assert.equal((await invokeCommunity({
+    path: `/staff/top-ups/${coupon.id}/review`, method: 'PUT', role: 'Staff',
+    body: { status: 'Approved', staffNote: 'Đã nạp Coupon vào UID.' },
+  })).statusCode, 200)
+  const [userAfterCoupon] = await sql.query('SELECT "Balance" AS balance FROM user_accounts WHERE "Username" = $1', ['user'])
+  assert.equal(Number(userAfterCoupon.balance), 50000)
   assert.equal((await invoke({ path: '/admin/events', role: 'Staff' })).statusCode, 403)
 })
 

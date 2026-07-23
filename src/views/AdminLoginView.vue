@@ -1,7 +1,7 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { getPortalPath, isAuthApiConfigured, login, register } from '../services/authApi'
+import { isAuthApiConfigured, login, register } from '../services/authApi'
 
 const route = useRoute()
 const router = useRouter()
@@ -20,13 +20,12 @@ const submit = async () => {
   submitting.value = true
 
   try {
-    const result = isRegister.value
-      ? await register(username.value.trim(), displayName.value.trim(), password.value)
-      : await login(username.value.trim(), password.value)
-    const redirect = typeof route.query.redirect === 'string'
-      ? route.query.redirect
-      : (result.role === 'User' ? '/' : getPortalPath(result.role))
-    await router.replace(redirect)
+    if (isRegister.value) {
+      await register(username.value.trim(), displayName.value.trim(), password.value)
+    } else {
+      await login(username.value.trim(), password.value)
+    }
+    await router.replace('/')
   } catch (exception) {
     error.value = exception.message || 'Không thể kết nối hệ thống tài khoản.'
   } finally {

@@ -23,6 +23,7 @@ const UserPortalView = () => import('../views/UserPortalView.vue')
 const ForumView = () => import('../views/ForumView.vue')
 const AdvisorView = () => import('../views/AdvisorView.vue')
 const TopUpView = () => import('../views/TopUpView.vue')
+const CouponTopUpView = () => import('../views/CouponTopUpView.vue')
 const StaffDashboardView = () => import('../views/StaffDashboardView.vue')
 const AdminDashboardView = () => import('../views/AdminDashboardView.vue')
 const AdminEventsView = () => import('../views/AdminEventsView.vue')
@@ -154,6 +155,12 @@ const router = createRouter({
       meta: { requiresAuth: true }
     },
     {
+      path: '/coupon-top-up',
+      name: 'coupon-top-up',
+      component: CouponTopUpView,
+      meta: { requiresAuth: true, roles: ['User'] }
+    },
+    {
       path: '/staff',
       name: 'staff-dashboard',
       component: StaffDashboardView,
@@ -210,7 +217,7 @@ router.beforeEach((to) => {
     return getPortalPath()
   }
   if (to.name === 'login' && hasValidSession()) {
-    return getPortalPath()
+    return '/'
   }
   return true
 })

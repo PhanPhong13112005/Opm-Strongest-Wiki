@@ -3,6 +3,15 @@
 Tài liệu này ghi lại các mốc đã được đối chiếu với lịch sử Git và trạng thái mã nguồn. Dự án hiện
 chưa phát hành theo Semantic Versioning và `package.json` vẫn dùng phiên bản `0.0.0`.
 
+## 23/07/2026 — Điều hướng tài khoản theo vai trò
+
+- Sau khi đăng nhập hoặc đăng ký, mọi vai trò đều trở về Trang chủ.
+- Thêm menu tài khoản trên avatar/tên vai trò, có màu nhận diện riêng và thao tác đăng xuất rõ ràng.
+- User mở Diễn đàn; Staff mở trang Nhân viên; Admin mở trang Quản trị từ menu tài khoản.
+- Sửa trạng thái header không cập nhật ngay sau đăng nhập và bổ sung kiểm thử trình duyệt cho cả ba vai trò.
+- Thêm trang Nạp Coupon cho User với UID, Server, gói 6 Coupon, số lượng, tổng tiền và lịch sử xử lý;
+  yêu cầu Coupon không cộng nhầm giá trị đơn hàng vào số dư khi Staff duyệt.
+
 ## 22/07/2026 — Neon, API production và kiểm thử tích hợp
 
 - Chuyển API cộng đồng, xác thực và CRUD Admin sang Vercel Functions.
@@ -13,6 +22,9 @@ chưa phát hành theo Semantic Versioning và `package.json` vẫn dùng phiên
 - Lưu và đọc kỹ năng/hiệu ứng nhân vật từ PostgreSQL.
 - Thêm production Admin CRUD smoke test và Playwright integration test cho luồng
   `Admin API → Vue public character detail`.
+- Thiết kế lại cổng User, Staff và Admin theo cùng hệ thống giao diện, có màu nhận diện riêng,
+  tác vụ rõ ràng và điều hướng responsive theo vai trò.
+- Thêm kiểm thử tích hợp giao diện cho ba dashboard, bao gồm Staff trên màn hình mobile.
 
 ## 19–20/07/2026 — Tài khoản và portal theo vai trò
 

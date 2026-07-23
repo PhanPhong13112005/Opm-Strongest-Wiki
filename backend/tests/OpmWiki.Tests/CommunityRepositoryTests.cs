@@ -52,6 +52,13 @@ public sealed class CommunityRepositoryTests
         Assert.Equal(TopUpStatuses.Approved, reviewed?.Status);
         Assert.Equal(100_000, (await repository.FindUserByIdAsync(user.Id))?.Balance);
 
+        var couponOrder = await repository.CreateTopUpAsync(
+            user.Id, "Coupon Order", "UID:3107453|SID:310170|CP:6|QTY:1|QA", 12_890);
+        var reviewedCoupon = await repository.ReviewTopUpAsync(
+            couponOrder.Id, Guid.Empty, TopUpStatuses.Approved, "Đã nạp Coupon");
+        Assert.Equal(TopUpStatuses.Approved, reviewedCoupon?.Status);
+        Assert.Equal(100_000, (await repository.FindUserByIdAsync(user.Id))?.Balance);
+
         var dashboard = await repository.GetDashboardAsync();
         Assert.Equal(1, dashboard.Users);
         Assert.Equal(1, dashboard.EventComments);
