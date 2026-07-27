@@ -29,7 +29,7 @@ const labels = {
   eventComments: 'Bình luận sự kiện',
   forumTopics: 'Chủ đề diễn đàn',
   forumPosts: 'Phản hồi diễn đàn',
-  pendingTopUps: 'Nạp thẻ chờ duyệt',
+  pendingTopUps: 'Đơn Coupon chờ xử lý',
   characters: 'Nhân vật',
   events: 'Sự kiện',
   releaseEntries: 'Mốc ra mắt',
@@ -58,7 +58,7 @@ const modules = [
   { to: '/admin/characters', code: 'DATA-01', title: 'Nhân vật & Kỷ vật', description: 'Thêm, sửa, xóa thông tin nhân vật và gắn Kỷ vật.', color: 'gold' },
   { to: '/admin/releases', code: 'PLAN-02', title: 'Lịch ra mắt', description: 'Quản lý mốc phát hành CN/SEA hiển thị trên trang chủ.', color: 'blue' },
   { to: '/admin/events', code: 'LIVE-03', title: 'Sự kiện', description: 'Cập nhật lịch, nội dung và phần thưởng của sự kiện.', color: 'violet' },
-  { to: '/staff', code: 'SAFE-04', title: 'Kiểm duyệt', description: 'Duyệt nạp thẻ, bình luận và nội dung diễn đàn.', color: 'green' },
+  { to: '/staff', code: 'SAFE-04', title: 'Kiểm duyệt', description: 'Theo dõi bình luận và xử lý nội dung diễn đàn.', color: 'green' },
 ]
 
 const load = async () => {

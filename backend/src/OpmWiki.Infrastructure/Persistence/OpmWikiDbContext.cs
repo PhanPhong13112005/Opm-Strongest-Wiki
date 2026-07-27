@@ -22,6 +22,8 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
     public DbSet<ForumTopic> ForumTopics => Set<ForumTopic>();
     public DbSet<ForumPost> ForumPosts => Set<ForumPost>();
     public DbSet<TopUpRequest> TopUpRequests => Set<TopUpRequest>();
+    public DbSet<PaymentTransaction> PaymentTransactions => Set<PaymentTransaction>();
+    public DbSet<BalanceLedgerEntry> BalanceLedgerEntries => Set<BalanceLedgerEntry>();
     public DbSet<ReleaseScheduleEntry> ReleaseScheduleEntries => Set<ReleaseScheduleEntry>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -358,10 +360,14 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
             entity.Property(x => x.Amount).HasPrecision(18, 2);
             entity.Property(x => x.Status).HasMaxLength(20);
             entity.Property(x => x.StaffNote).HasMaxLength(500);
+            entity.Property(x => x.ExternalTransactionId).HasMaxLength(100);
             entity.Property(x => x.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
             entity.Property(x => x.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
             entity.HasIndex(x => new { x.Status, x.CreatedAt });
             entity.HasIndex(x => new { x.UserId, x.ReferenceCode }).IsUnique();
+            entity.HasIndex(x => x.ReferenceCode)
+                .IsUnique()
+                .HasFilter("\"Provider\" = 'Bank transfer'");
             entity.HasOne(x => x.User)
                 .WithMany()
                 .HasForeignKey(x => x.UserId)
@@ -369,6 +375,55 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
             entity.HasOne(x => x.ReviewedBy)
                 .WithMany()
                 .HasForeignKey(x => x.ReviewedById)
+                .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        modelBuilder.Entity<PaymentTransaction>(entity =>
+        {
+            entity.ToTable("payment_transactions");
+            entity.HasKey(x => x.Id);
+            entity.Property(x => x.Provider).HasMaxLength(30);
+            entity.Property(x => x.ExternalTransactionId).HasMaxLength(100);
+            entity.Property(x => x.Gateway).HasMaxLength(50);
+            entity.Property(x => x.AccountNumber).HasMaxLength(50);
+            entity.Property(x => x.PaymentCode).HasMaxLength(120);
+            entity.Property(x => x.Amount).HasPrecision(18, 2);
+            entity.Property(x => x.TransferType).HasMaxLength(10);
+            entity.Property(x => x.BankReferenceCode).HasMaxLength(120);
+            entity.Property(x => x.Status).HasMaxLength(30);
+            entity.Property(x => x.PayloadJson).HasColumnType("jsonb");
+            entity.Property(x => x.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+            entity.HasIndex(x => new { x.Provider, x.ExternalTransactionId }).IsUnique();
+            entity.HasIndex(x => x.TopUpRequestId);
+            entity.HasOne(x => x.TopUpRequest)
+                .WithMany()
+                .HasForeignKey(x => x.TopUpRequestId)
+                .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        modelBuilder.Entity<BalanceLedgerEntry>(entity =>
+        {
+            entity.ToTable("balance_ledger");
+            entity.HasKey(x => x.Id);
+            entity.Property(x => x.EntryType).HasMaxLength(30);
+            entity.Property(x => x.Amount).HasPrecision(18, 2);
+            entity.Property(x => x.BalanceBefore).HasPrecision(18, 2);
+            entity.Property(x => x.BalanceAfter).HasPrecision(18, 2);
+            entity.Property(x => x.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+            entity.HasIndex(x => x.PaymentTransactionId).IsUnique();
+            entity.HasIndex(x => x.TopUpRequestId).IsUnique();
+            entity.HasIndex(x => new { x.UserId, x.CreatedAt });
+            entity.HasOne(x => x.User)
+                .WithMany()
+                .HasForeignKey(x => x.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+            entity.HasOne(x => x.TopUpRequest)
+                .WithMany()
+                .HasForeignKey(x => x.TopUpRequestId)
+                .OnDelete(DeleteBehavior.Restrict);
+            entity.HasOne(x => x.PaymentTransaction)
+                .WithMany()
+                .HasForeignKey(x => x.PaymentTransactionId)
                 .OnDelete(DeleteBehavior.Restrict);
         });
 
@@ -519,6 +574,16 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
         {
             if (entry.State == EntityState.Added) entry.Entity.CreatedAt = now;
             if (entry.State is EntityState.Added or EntityState.Modified) entry.Entity.UpdatedAt = now;
+        }
+
+        foreach (var entry in ChangeTracker.Entries<PaymentTransaction>())
+        {
+            if (entry.State == EntityState.Added) entry.Entity.CreatedAt = now;
+        }
+
+        foreach (var entry in ChangeTracker.Entries<BalanceLedgerEntry>())
+        {
+            if (entry.State == EntityState.Added) entry.Entity.CreatedAt = now;
         }
 
         foreach (var entry in ChangeTracker.Entries<ReleaseScheduleEntry>())

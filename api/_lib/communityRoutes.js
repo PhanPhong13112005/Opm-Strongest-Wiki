@@ -2,6 +2,7 @@ import { ensureCommunitySchema, getSql } from './database.js'
 import { ensureAdminSchema } from './adminDatabase.js'
 import { bodyOf, json, methodNotAllowed, noContent, requireUser } from './http.js'
 import { createRequire } from 'node:module'
+import { randomUUID } from 'node:crypto'
 
 const require = createRequire(import.meta.url)
 const characters = require('../../src/data/characters.json')
@@ -11,6 +12,42 @@ const mapComment = (row) => ({ ...row, id: Number(row.id) })
 const mapTopic = (row) => ({ ...row, id: Number(row.id), postCount: Number(row.postCount || 0) })
 const mapPost = (row) => ({ ...row, id: Number(row.id) })
 const mapTopUp = (row) => ({ ...row, id: Number(row.id), amount: Number(row.amount || 0) })
+const couponOrderProvider = 'Coupon Order'
+const couponUnitPrice = 13_000
+const couponReferencePattern = /^UID:\d{5,20}\|SID:[A-Za-z0-9_-]{1,20}\|CP:6\|QTY:(10|[1-9])\|[A-Z0-9]+$/
+const bankIdPattern = /^[A-Za-z0-9]{2,20}$/
+const bankAccountPattern = /^[A-Za-z0-9]{6,19}$/
+const bankPaymentWindowMs = 5 * 60 * 1000
+
+const readBankTransferConfig = () => {
+  const bankId = String(process.env.BANKTRANSFER__BANKID || '').trim()
+  const accountNumber = String(process.env.BANKTRANSFER__ACCOUNTNUMBER || '').trim()
+  const accountName = String(process.env.BANKTRANSFER__ACCOUNTNAME || '').trim()
+  if (!bankIdPattern.test(bankId) || !bankAccountPattern.test(accountNumber) ||
+      accountName.length < 2 || accountName.length > 80 || /[\u0000-\u001f\u007f]/.test(accountName)) {
+    return null
+  }
+  return { bankId, accountNumber, accountName }
+}
+
+const createBankReference = () =>
+  `OPM${randomUUID().replaceAll('-', '').slice(0, 12)}`.toUpperCase()
+
+const createBankQrUrl = ({ bankId, accountNumber, accountName }, amount, referenceCode) => {
+  const parameters = new URLSearchParams({
+    amount: String(amount),
+    addInfo: referenceCode,
+    accountName,
+  })
+  return `https://img.vietqr.io/image/${bankId}-${accountNumber}-compact2.png?${parameters}`
+}
+
+const createBankQrPayload = (topUp, bank) => ({
+  topUp,
+  bank,
+  qrUrl: createBankQrUrl(bank, topUp.amount, topUp.referenceCode),
+  expiresAt: new Date(new Date(topUp.createdAt).getTime() + bankPaymentWindowMs).toISOString(),
+})
 
 const commentSelect = `
   SELECT c."Id" AS id, c."EventId" AS "eventId", c."UserId" AS "userId",
@@ -23,7 +60,8 @@ const topUpSelect = `
          u."DisplayName" AS "displayName", t."Provider" AS provider,
          t."ReferenceCode" AS "referenceCode", t."Amount" AS amount,
          t."Status" AS status, t."StaffNote" AS "staffNote",
-         t."CreatedAt" AS "createdAt", t."ReviewedAt" AS "reviewedAt"
+         t."CreatedAt" AS "createdAt", t."ReviewedAt" AS "reviewedAt",
+         t."PaidAt" AS "paidAt", t."ExternalTransactionId" AS "externalTransactionId"
     FROM top_up_requests t JOIN user_accounts u ON u."Id" = t."UserId"`
 
 const getTopicDetail = async (id, sql = getSql()) => {
@@ -208,8 +246,149 @@ export const createCommunityRouteHandler = ({
     const user = requireUser(request, response)
     if (!user) return true
     if (String(user.userId).startsWith('admin:')) return json(response, 200, [])
+    await sql.query(
+      `UPDATE top_up_requests
+          SET "Status" = 'Expired', "UpdatedAt" = CURRENT_TIMESTAMP
+        WHERE "UserId" = $1 AND "Provider" = 'Bank transfer'
+          AND "Status" = 'Pending'
+          AND "CreatedAt" <= CURRENT_TIMESTAMP - INTERVAL '5 minutes'`,
+      [user.userId],
+    )
     const rows = await sql.query(`${topUpSelect} WHERE t."UserId" = $1 ORDER BY t."CreatedAt" DESC`, [user.userId])
     return json(response, 200, rows.map(mapTopUp))
+  }
+
+  const bankPaymentMatch = /^\/top-ups\/(\d+)\/bank-payment$/.exec(path)
+  if (bankPaymentMatch) {
+    if (request.method !== 'PUT') return methodNotAllowed(response, ['PUT'])
+    const user = requireUser(request, response)
+    if (!user) return true
+    if (String(user.userId).startsWith('admin:')) {
+      return json(response, 404, { message: 'Không tìm thấy yêu cầu thanh toán.' })
+    }
+
+    const action = String(bodyOf(request).action || '').trim().toLowerCase()
+    if (action !== 'cancel') {
+      return json(response, 400, { message: 'Hành động thanh toán không hợp lệ.' })
+    }
+
+    const id = Number(bankPaymentMatch[1])
+    await sql.query(
+      `UPDATE top_up_requests
+          SET "Status" = 'Expired', "UpdatedAt" = CURRENT_TIMESTAMP
+        WHERE "Id" = $1 AND "UserId" = $2 AND "Provider" = 'Bank transfer'
+          AND "Status" = 'Pending'
+          AND "CreatedAt" <= CURRENT_TIMESTAMP - INTERVAL '5 minutes'`,
+      [id, user.userId],
+    )
+    let rows = await sql.query(
+      `${topUpSelect}
+        WHERE t."Id" = $1 AND t."UserId" = $2 AND t."Provider" = 'Bank transfer'
+        LIMIT 1`,
+      [id, user.userId],
+    )
+    if (!rows[0]) return json(response, 404, { message: 'Không tìm thấy yêu cầu thanh toán.' })
+
+    const targetStatus = 'Cancelled'
+    if (rows[0].status === targetStatus) return json(response, 200, mapTopUp(rows[0]))
+    if (!['Pending', 'PaymentReported'].includes(rows[0].status)) {
+      return json(response, 409, { message: 'Yêu cầu thanh toán không còn có thể cập nhật.' })
+    }
+
+    const updated = await sql.query(
+      `UPDATE top_up_requests
+          SET "Status" = $3, "UpdatedAt" = CURRENT_TIMESTAMP
+        WHERE "Id" = $1 AND "UserId" = $2 AND "Provider" = 'Bank transfer'
+          AND "Status" IN ('Pending', 'PaymentReported')
+        RETURNING "Id"`,
+      [id, user.userId, targetStatus],
+    )
+    if (!updated[0]) {
+      return json(response, 409, { message: 'Trạng thái vừa được cập nhật ở nơi khác. Vui lòng tải lại.' })
+    }
+    rows = await sql.query(
+      `${topUpSelect} WHERE t."Id" = $1 AND t."UserId" = $2 LIMIT 1`,
+      [id, user.userId],
+    )
+    return json(response, 200, mapTopUp(rows[0]))
+  }
+
+  const bankQrMatch = /^\/top-ups\/(\d+)\/bank-qr$/.exec(path)
+  if (bankQrMatch) {
+    if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
+    const user = requireUser(request, response)
+    if (!user) return true
+    if (String(user.userId).startsWith('admin:')) {
+      return json(response, 404, { message: 'Không tìm thấy yêu cầu thanh toán.' })
+    }
+
+    const id = Number(bankQrMatch[1])
+    await sql.query(
+      `UPDATE top_up_requests
+          SET "Status" = 'Expired', "UpdatedAt" = CURRENT_TIMESTAMP
+        WHERE "Id" = $1 AND "UserId" = $2 AND "Provider" = 'Bank transfer'
+          AND "Status" = 'Pending'
+          AND "CreatedAt" <= CURRENT_TIMESTAMP - INTERVAL '5 minutes'`,
+      [id, user.userId],
+    )
+    const rows = await sql.query(
+      `${topUpSelect}
+        WHERE t."Id" = $1 AND t."UserId" = $2 AND t."Provider" = 'Bank transfer'
+        LIMIT 1`,
+      [id, user.userId],
+    )
+    if (!rows[0]) return json(response, 404, { message: 'Không tìm thấy yêu cầu thanh toán.' })
+
+    const bank = readBankTransferConfig()
+    if (!bank) {
+      return json(response, 503, { message: 'Kênh chuyển khoản ngân hàng chưa được cấu hình.' })
+    }
+    const topUp = mapTopUp(rows[0])
+    return json(response, 200, createBankQrPayload(topUp, bank))
+  }
+
+  if (path === '/top-ups/bank-qr') {
+    if (request.method !== 'POST') return methodNotAllowed(response, ['POST'])
+    const user = requireUser(request, response)
+    if (!user) return true
+    if (String(user.userId).startsWith('admin:')) {
+      return json(response, 400, { message: 'Hãy dùng tài khoản người dùng để nạp.' })
+    }
+
+    const amount = Number(bodyOf(request).amount)
+    if (!Number.isInteger(amount) || amount < 10_000 || amount > 100_000_000) {
+      return json(response, 400, { message: 'Số tiền phải là số nguyên từ 10.000 đến 100.000.000.' })
+    }
+
+    const bank = readBankTransferConfig()
+    if (!bank) {
+      return json(response, 503, { message: 'Kênh chuyển khoản ngân hàng chưa được cấu hình.' })
+    }
+
+    const referenceCode = createBankReference()
+    try {
+      const rows = await sql.query(
+        `WITH inserted AS (
+           INSERT INTO top_up_requests ("UserId", "Provider", "ReferenceCode", "Amount")
+           VALUES ($1, 'Bank transfer', $2, $3) RETURNING *
+         )
+         SELECT i."Id" AS id, i."UserId" AS "userId", u."Username" AS username,
+                u."DisplayName" AS "displayName", i."Provider" AS provider,
+                i."ReferenceCode" AS "referenceCode", i."Amount" AS amount,
+                i."Status" AS status, i."StaffNote" AS "staffNote",
+                i."CreatedAt" AS "createdAt", i."ReviewedAt" AS "reviewedAt"
+           FROM inserted i JOIN user_accounts u ON u."Id" = i."UserId"`,
+        [user.userId, referenceCode, amount],
+      )
+      const topUp = mapTopUp(rows[0])
+      response.setHeader('Location', `/api/top-ups/${topUp.id}`)
+      return json(response, 201, createBankQrPayload(topUp, bank))
+    } catch (error) {
+      if (error?.code === '23505') {
+        return json(response, 409, { message: 'Không thể tạo mã chuyển khoản. Vui lòng thử lại.' })
+      }
+      throw error
+    }
   }
 
   if (path === '/top-ups') {
@@ -221,11 +400,21 @@ export const createCommunityRouteHandler = ({
     const provider = String(rawProvider).trim()
     const referenceCode = String(rawReference).trim()
     const amount = Number(rawAmount)
-    if (provider.length < 2 || provider.length > 60 || referenceCode.length < 4 || referenceCode.length > 120) {
-      return json(response, 400, { message: 'Nhà cung cấp hoặc mã giao dịch không hợp lệ.' })
+    if (provider !== couponOrderProvider) {
+      return json(response, 400, { message: 'Phương thức nạp không được hỗ trợ.' })
+    }
+    if (referenceCode.length < 4 || referenceCode.length > 120 || /[\u0000-\u001f\u007f]/.test(referenceCode)) {
+      return json(response, 400, { message: 'Mã giao dịch phải có 4-120 ký tự hợp lệ.' })
     }
     if (!Number.isFinite(amount) || amount < 10_000 || amount > 100_000_000) {
       return json(response, 400, { message: 'Số tiền phải từ 10.000 đến 100.000.000.' })
+    }
+    const couponMatch = couponReferencePattern.exec(referenceCode)
+    if (!couponMatch) {
+      return json(response, 400, { message: 'Thông tin đơn Coupon không hợp lệ.' })
+    }
+    if (amount !== couponUnitPrice * Number(couponMatch[1])) {
+      return json(response, 400, { message: 'Giá trị đơn Coupon không hợp lệ.' })
     }
     try {
       const rows = await sql.query(
@@ -251,32 +440,35 @@ export const createCommunityRouteHandler = ({
 
   if (path === '/staff/top-ups') {
     if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
-    if (!requireUser(request, response, ['Staff', 'Admin'])) return true
+    if (!requireUser(request, response, ['Admin'])) return true
     const status = String(request.query?.status || '')
     if (status && !['Pending', 'Approved', 'Rejected'].includes(status)) {
       return json(response, 400, { message: 'Trạng thái không hợp lệ.' })
     }
-    const rows = status
-      ? await sql.query(`${topUpSelect} WHERE t."Status" = $1 ORDER BY t."CreatedAt" DESC`, [status])
-      : await sql.query(`${topUpSelect} ORDER BY t."CreatedAt" DESC`)
+    const rows = status === 'Pending'
+      ? await sql.query(`${topUpSelect} WHERE t."Provider" = 'Coupon Order' AND t."Status" IN ('Pending', 'PaymentReported') ORDER BY t."CreatedAt" DESC`)
+      : status
+        ? await sql.query(`${topUpSelect} WHERE t."Provider" = 'Coupon Order' AND t."Status" = $1 ORDER BY t."CreatedAt" DESC`, [status])
+      : await sql.query(`${topUpSelect} WHERE t."Provider" = 'Coupon Order' ORDER BY t."CreatedAt" DESC`)
     return json(response, 200, rows.map(mapTopUp))
   }
 
   const reviewMatch = /^\/staff\/top-ups\/(\d+)\/review$/.exec(path)
   if (reviewMatch) {
     if (request.method !== 'PUT') return methodNotAllowed(response, ['PUT'])
-    const user = requireUser(request, response, ['Staff', 'Admin'])
+    const user = requireUser(request, response, ['Admin'])
     if (!user) return true
     const { status, staffNote = '' } = bodyOf(request)
     if (!['Approved', 'Rejected'].includes(status)) return json(response, 400, { message: 'Chỉ có thể duyệt hoặc từ chối yêu cầu.' })
     if (String(staffNote).length > 500) return json(response, 400, { message: 'Ghi chú không được vượt quá 500 ký tự.' })
-    const reviewerId = String(user.userId).startsWith('admin:') ? null : user.userId
+    const reviewerId = user.role === 'Admin' ? null : user.userId
     const rows = await sql.query(
       `WITH reviewed AS (
          UPDATE top_up_requests
             SET "Status" = $2, "StaffNote" = $3, "ReviewedById" = $4,
                 "ReviewedAt" = CURRENT_TIMESTAMP, "UpdatedAt" = CURRENT_TIMESTAMP
-          WHERE "Id" = $1 AND "Status" = 'Pending' RETURNING *
+          WHERE "Id" = $1 AND "Provider" = 'Coupon Order'
+            AND "Status" IN ('Pending', 'PaymentReported') RETURNING *
        ), credited AS (
          UPDATE user_accounts u SET "Balance" = u."Balance" + r."Amount", "UpdatedAt" = CURRENT_TIMESTAMP
            FROM reviewed r
@@ -306,7 +498,8 @@ export const createCommunityRouteHandler = ({
         (SELECT COUNT(*)::int FROM event_comments WHERE "IsDeleted" = false) AS "eventComments",
         (SELECT COUNT(*)::int FROM forum_topics WHERE "IsDeleted" = false) AS "forumTopics",
         (SELECT COUNT(*)::int FROM forum_posts WHERE "IsDeleted" = false) AS "forumPosts",
-        (SELECT COUNT(*)::int FROM top_up_requests WHERE "Status" = 'Pending') AS "pendingTopUps",
+        (SELECT COUNT(*)::int FROM top_up_requests
+          WHERE "Provider" = 'Coupon Order' AND "Status" IN ('Pending', 'PaymentReported')) AS "pendingTopUps",
         (SELECT COUNT(*)::int FROM characters) AS characters,
         (SELECT COUNT(*)::int FROM events) AS events,
         (SELECT COUNT(*)::int FROM release_schedule) AS "releaseEntries"

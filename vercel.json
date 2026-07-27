@@ -1,10 +1,14 @@
 {
   "rewrites": [
+    { "source": "/api/webhooks/sepay", "destination": "/api/sepay-webhook" },
     { "source": "/api/:path*", "destination": "/api?path=:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "functions": {
     "api/index.js": {
+      "maxDuration": 30
+    },
+    "api/sepay-webhook.js": {
       "maxDuration": 30
     }
   }

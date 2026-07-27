@@ -10,9 +10,8 @@ const navigation = [
   { to: '/account', index: '01', label: 'Tổng quan', hint: 'Trang cá nhân của bạn' },
   { to: '/forum', index: '02', label: 'Diễn đàn', hint: 'Trao đổi cùng cộng đồng' },
   { to: '/advisor', index: '03', label: 'Trợ lý AI', hint: 'Hỏi nhanh dữ liệu game' },
-  { to: '/top-up', index: '04', label: 'Nạp thẻ', hint: 'Tạo và theo dõi yêu cầu' },
-  { to: '/coupon-top-up', index: '05', label: 'Nạp Coupon', hint: 'Nạp Coupon vào tài khoản game' },
-  { to: '/events', index: '06', label: 'Sự kiện', hint: 'Xem và bình luận' },
+  { to: '/top-up', index: '04', label: 'Nạp thẻ', hint: 'Nạp Coupon vào tài khoản game' },
+  { to: '/events', index: '05', label: 'Sự kiện', hint: 'Xem và bình luận' },
 ]
 
 const modules = [
@@ -37,24 +36,15 @@ const modules = [
   {
     to: '/top-up',
     number: '03',
-    label: 'Tài khoản',
-    title: 'Nạp thẻ an toàn',
-    description: 'Gửi yêu cầu nạp, kiểm tra trạng thái xử lý và xem lại lịch sử giao dịch của bạn.',
-    action: 'Quản lý nạp thẻ',
-    tone: 'gold',
-  },
-  {
-    to: '/coupon-top-up',
-    number: '04',
     label: 'Cửa hàng',
-    title: 'Nạp Coupon',
+    title: 'Nạp thẻ One Punch Man',
     description: 'Nhập UID, máy chủ và gửi yêu cầu nạp Coupon vào đúng tài khoản trong game.',
     action: 'Chọn gói Coupon',
     tone: 'green',
   },
   {
     to: '/events',
-    number: '05',
+    number: '04',
     label: 'Nội dung',
     title: 'Khám phá sự kiện',
     description: 'Theo dõi sự kiện mới, xem phần thưởng và tham gia bình luận ngay trên từng sự kiện.',
@@ -102,7 +92,7 @@ onMounted(() => refreshSession().catch(() => {}))
         <span>Tiện ích của bạn</span>
         <h2>Truy cập nhanh</h2>
       </div>
-      <p>5 tính năng đang hoạt động</p>
+      <p>4 tính năng đang hoạt động</p>
     </div>
 
     <section class="user-module-grid">

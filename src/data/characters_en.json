@@ -1,5 +1,114 @@
 [
   {
+    "id": "blacksperm-urplus",
+    "name": "Black Sperm",
+    "imageURL": "/Characters/Black Sperm (URplus)/URplus.png",
+    "tier": "UR+",
+    "type": "Grappler",
+    "faction": "Monster",
+    "roles": [
+      "Infinite splitting",
+      "One person becomes an army"
+    ],
+    "duyen": "Combat Grandmaster",
+    "baseStats": {
+      "atk": 683,
+      "hp": 4095,
+      "def": 173,
+      "spd": 118
+    },
+    "skills": [
+      {
+        "name": "Ultimate",
+        "desc": "[Increases own [All Damage Increase] by 20%, and reduces the target's row's [All Damage Reduction] by 20% for 1 turn (cannot be dispelled).] Deals 12000% Attack Power (+10) points of specialized direct damage to all enemy targets in a 5-hit combo (affected only by advanced damage reduction), ignoring 45% specialized evasion and non-critical damage reduction, and penetrating Unyielding and Specialized Unyielding. This damage is not distributed to targets that cannot be damaged. Absorbed before actively using the ultimate skill. All Split Black Spirits on the field, each Split Black Spirit increases the ultimate skill damage by an additional 20%, lasting until the next active action.",
+        "icon": "/Skill/Black Sperm (URplus)/Skill_ult.png",
+        "type": "Ultimate",
+        "animation": "/Animation/Black Sperm_Urplus/ult.gif",
+        "keepsakeIcon": null
+      },
+      {
+        "name": "Super Ultimate",
+        "desc": "[Increases own [All Damage Increase] by 20%, and reduces the target's row's [All Damage Reduction] by 20% for 1 turn (cannot be dispelled).] Deals 15000% Attack Power (+10) points of specialized direct damage to all enemy targets in a 5-hit combo (affected only by advanced damage reduction), ignoring 60% specialized evasion and non-critical damage reduction, and penetrating Unyielding and Specialized Unyielding. This damage is not distributed to targets that cannot be damaged. Absorbed before actively using the ultimate skill. All Split Black Spirits on the field, each Split Black Spirit increases the ultimate skill damage by an additional 30%, lasting until the next active action.",
+        "keepsakeIcon": null,
+        "icon": "/Skill/Black Sperm (URplus)/Skill_ult.png",
+        "type": "Ultimate",
+        "animation": "/Animation/Black Sperm_Urplus/ult.gif"
+      },
+      {
+        "name": "Passive",
+        "desc": "Permanently increases own HP by (+20). Gains 60% non-critical damage reduction at the start of the battle. Permanently gains 20% [Invincible] status, absorbing all damage received during this period. Restores 100% HP to continue fighting on the next turn, triggering up to 4 times.",
+        "icon": "/Skill/Black Sperm (URplus)/Skill_pas.png",
+        "animation": "/Animation/Black Sperm_Urplus/Passive.gif",
+        "type": "Passive",
+        "keepsakeIcon": null
+      },
+      {
+        "name": "Extreme Passive",
+        "desc": "Non-critical damage reduction 60% > 70%. Permanently gains [Invincible] status 20% > 30%.",
+        "icon": "/Skill/Black Sperm (URplus)/Skill_pas.png",
+        "animation": "/Animation/Black Sperm_Urplus/Passive.gif",
+        "type": "Passive",
+        "keepsakeIcon": null
+      },
+      {
+        "name": "5-Star Passive",
+        "desc": "Non-critical damage reduction 70% > 80%. Permanently gains [Invincible] status 30% > 40%. Restores HP up to 4 > 6 times.",
+        "icon": "/Skill/Black Sperm (URplus)/Skill_pas.png",
+        "animation": "/Animation/Black Sperm_Urplus/Passive.gif",
+        "type": "Passive",
+        "keepsakeIcon": null
+      },
+      {
+        "name": "Awakening Passive",
+        "desc": "Upon entering the battlefield, the user permanently reduces the damage they receive by 30%. Each time it is attacked, it splits into 2 Black Spirits to assist in the battle. The split Black Spirits inherit 100% of the original Black Spirit's base attack power, and a maximum of 8 can exist at the same time (cannot be summoned when there is a conflict in follower positions). After any enemy character takes action, all split Black Spirits on the field will have a 70% chance to attack all enemy targets, with each split Black Spirit dealing 450% of its attack power as specialized direct damage.",
+        "icon": "/Skill/Black Sperm (URplus)/skill_awk.png",
+        "animation": "/Animation/Black Sperm_Urplus/awken+.gif",
+        "type": "Awakening",
+        "keepsakeIcon": null
+      },
+      {
+        "name": "Awakening 2",
+        "desc": "Permanently reduces damage received 30% > 50%. Splits into 2 > 4 Black Spirits. Attack chance 70% > 100%. Black Spirit damage 450% > 520%. When an allied character in the same row triggers [Re-battle], the Black Spirits immediately split to the maximum number and launch [Charged Pursuit] with 120% skill strength.",
+        "icon": "/Skill/Black Sperm (URplus)/skill_awk.png",
+        "animation": "/Animation/Black Sperm_Urplus/awken+.gif",
+        "type": "Awakening",
+        "keepsakeIcon": null
+      }
+    ],
+    "effects": [
+      {
+        "term": "[Invincible]",
+        "desc": "Absorbs all damage received during this period, restoring HP on the next turn."
+      },
+      {
+        "term": "[Re-battle]",
+        "desc": "Triggers an extra action."
+      },
+      {
+        "term": "[Charged Pursuit]",
+        "desc": "Attacks out of turn with a predetermined skill strength percentage."
+      }
+    ],
+    "keepsakeIcon": null,
+    "bio": "UR+ Form of Black Sperm. An incredibly dangerous Dragon-level monster with infinite cell splitting capabilities, overwhelming enemies with sheer numbers.",
+    "pvpStats": {
+      "atk": 30,
+      "hp": 30,
+      "def": 30,
+      "spd": 1
+    },
+    "dacTinh": [
+      "AOE DAMAGE",
+      "IMMORTAL",
+      "SUMMON",
+      "PURSUIT"
+    ],
+    "bondList": "Garou, Homeless Emperor, Psykos",
+    "classLevel": "Class_SS",
+    "releaseSea": "01/12/2026",
+    "releaseTrung": "01/08/2026"
+  },
+  {
     "id": "100013-urplus",
     "name": "Zombieman",
     "imageURL": "/Characters/Zombieman (URplus)/URplus.png",

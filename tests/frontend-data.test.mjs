@@ -34,7 +34,7 @@ test('Vietnamese and English locale files expose the same keys', () => {
 })
 
 test('localized character catalogs share stable IDs', () => {
-  assert.equal(charactersVi.length, 176)
+  assert.equal(charactersVi.length, 177)
   assert.equal(charactersEn.length, charactersVi.length)
   assert.equal(new Set(charactersVi.map(character => character.id)).size, charactersVi.length)
   assert.deepEqual(

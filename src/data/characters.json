@@ -1,5 +1,114 @@
 [
   {
+    "id": "blacksperm-urplus",
+    "name": "Tinh Trùng Đen",
+    "imageURL": "/Characters/Black Sperm (URplus)/URplus.png",
+    "tier": "UR+",
+    "type": "Giác Đấu",
+    "faction": "Quái Nhân",
+    "roles": [
+      "Phân chia vô hạn",
+      "Một người trở thành một đội quân"
+    ],
+    "duyen": "Đấu Thuật Tông Sư",
+    "baseStats": {
+      "atk": 683,
+      "hp": 4095,
+      "def": 173,
+      "spd": 118
+    },
+    "skills": [
+      {
+        "name": "Tuyệt Kĩ",
+        "desc": "[Tăng [Tăng toàn bộ sát thương] của bản thân thêm 20% và giảm [Giảm toàn bộ sát thương] của hàng mục tiêu đi 20% trong 1 lượt (không thể xua tan).] Gây 12000% Sức mạnh tấn công (+10) điểm sát thương trực tiếp đặc biệt lên tất cả mục tiêu địch trong đòn kết hợp 5 đòn (chỉ bị ảnh hưởng bởi giảm sát thương nâng cao), bỏ qua 45% chuyên dụng né tránh và giảm sát thương không nghiêm trọng, cũng như xuyên thấu Bất khuất và Chuyên biệt Bất khuất. Sát thương này không được phân bổ cho các mục tiêu không thể bị sát thương. Hấp thụ trước khi chủ động sử dụng kỹ năng tối thượng. Tất cả các Split Black Spirits trên sân, mỗi Split Black Spirit tăng sát thương kỹ năng tối thượng thêm 20%, kéo dài cho đến hành động kích hoạt tiếp theo.",
+        "icon": "/Skill/Black Sperm (URplus)/Skill_ult.png",
+        "type": "Tuyệt kĩ",
+        "animation": "/Animation/Black Sperm_Urplus/ult.gif",
+        "keepsakeIcon": null
+      },
+      {
+        "name": "Siêu Tuyệt Kĩ",
+        "desc": "[Tăng [Tăng toàn bộ sát thương] của bản thân thêm 20% và giảm [Giảm toàn bộ sát thương] của hàng mục tiêu đi 20% trong 1 lượt (không thể xua tan).] Gây 15000% Sức mạnh tấn công (+10) điểm sát thương trực tiếp đặc biệt lên tất cả mục tiêu địch trong đòn kết hợp 5 đòn (chỉ bị ảnh hưởng bởi giảm sát thương nâng cao), bỏ qua 60% chuyên dụng né tránh và giảm sát thương không nghiêm trọng, cũng như xuyên thấu Bất khuất và Chuyên biệt Bất khuất. Sát thương này không được phân bổ cho các mục tiêu không thể bị sát thương. Hấp thụ trước khi chủ động sử dụng kỹ năng tối thượng. Tất cả các Split Black Spirits trên sân, mỗi Split Black Spirit tăng sát thương kỹ năng tối thượng thêm 30%, kéo dài cho đến hành động kích hoạt tiếp theo.",
+        "keepsakeIcon": null,
+        "icon": "/Skill/Black Sperm (URplus)/Skill_ult.png",
+        "type": "Tuyệt kĩ",
+        "animation": "/Animation/Black Sperm_Urplus/ult.gif"
+      },
+      {
+        "name": "Bị động",
+        "desc": "Tăng vĩnh viễn HP của bản thân lên (+20). Nhận được 60% giảm sát thương không nghiêm trọng khi bắt đầu trận chiến. Tăng vĩnh viễn 20% trạng thái [Bất khả chiến bại], hấp thụ mọi sát thương nhận được trong thời gian này. Phục hồi 100% HP để tiếp tục chiến đấu ở lượt tiếp theo, kích hoạt tối đa 4 lần.",
+        "icon": "/Skill/Black Sperm (URplus)/Skill_pas.png",
+        "animation": "/Animation/Black Sperm_Urplus/Passive.gif",
+        "type": "Nội tại",
+        "keepsakeIcon": null
+      },
+      {
+        "name": "Bị động cực hạn",
+        "desc": "Giảm sát thương không nghiêm trọng 60% > 70%. Tăng vĩnh viễn trạng thái [Bất khả chiến bại] 20% > 30%.",
+        "icon": "/Skill/Black Sperm (URplus)/Skill_pas.png",
+        "animation": "/Animation/Black Sperm_Urplus/Passive.gif",
+        "type": "Nội tại",
+        "keepsakeIcon": null
+      },
+      {
+        "name": "Bị động 5 sao",
+        "desc": "Giảm sát thương không nghiêm trọng 70% > 80%. Tăng vĩnh viễn trạng thái [Bất khả chiến bại] 30% > 40%. Số lần phục hồi HP tối đa 4 > 6.",
+        "icon": "/Skill/Black Sperm (URplus)/Skill_pas.png",
+        "animation": "/Animation/Black Sperm_Urplus/Passive.gif",
+        "type": "Nội tại",
+        "keepsakeIcon": null
+      },
+      {
+        "name": "Bị động thức tỉnh",
+        "desc": "Khi vào chiến trường, người dùng sẽ giảm vĩnh viễn 30% sát thương họ nhận được. Mỗi lần bị tấn công, nó sẽ tách thành 2 Linh hồn đen để hỗ trợ trong trận chiến. Các Black Spirit bị chia tách kế thừa 100% sức mạnh tấn công cơ bản của Black Spirit ban đầu và có thể tồn tại tối đa 8 Black Spirit cùng lúc (không thể triệu hồi khi có xung đột ở các vị trí đi theo). Sau khi bất kỳ nhân vật kẻ địch nào hành động, tất cả các Linh hồn đen bị phân tách trên sân sẽ có 70% cơ hội tấn công tất cả các mục tiêu của kẻ địch, với mỗi Linh hồn đen bị phân tách gây ra 450% sức tấn công của nó dưới dạng sát thương trực tiếp chuyên dụng.",
+        "icon": "/Skill/Black Sperm (URplus)/skill_awk.png",
+        "animation": "/Animation/Black Sperm_Urplus/awken+.gif",
+        "type": "Thức tỉnh",
+        "keepsakeIcon": null
+      },
+      {
+        "name": "Thức tỉnh 2",
+        "desc": "Khi vào chiến trường, giảm vĩnh viễn sát thương nhận được 30% > 50%. Mỗi lần bị tấn công tách thành 2 > 4 Linh hồn đen. Tỉ lệ tấn công 70% > 100%. Sát thương của Linh hồn đen 450% > 520%. Khi một nhân vật đồng minh trong cùng hàng kích hoạt [Tái chiến], các Tinh linh đen ngay lập tức chia ra với số lượng tối đa và khởi động [Truy đuổi tích cực] với 120% sức mạnh kỹ năng.",
+        "icon": "/Skill/Black Sperm (URplus)/skill_awk.png",
+        "animation": "/Animation/Black Sperm_Urplus/awken+.gif",
+        "type": "Thức tỉnh",
+        "keepsakeIcon": null
+      }
+    ],
+    "effects": [
+      {
+        "term": "[Bất khả chiến bại]",
+        "desc": "Hấp thụ mọi sát thương nhận được trong thời gian này, phục hồi HP ở lượt tiếp theo."
+      },
+      {
+        "term": "[Tái chiến]",
+        "desc": "Kích hoạt hành động phụ."
+      },
+      {
+        "term": "[Truy đuổi tích cực]",
+        "desc": "Tấn công ngoài lượt với phần trăm sức mạnh kỹ năng định trước."
+      }
+    ],
+    "keepsakeIcon": null,
+    "bio": "Dạng UR+ của Tinh Trùng Đen, quái nhân đáng sợ bậc nhất Hiệp hội Quái nhân với khả năng phân bào vô hạn, áp đảo kẻ thù bằng số lượng.",
+    "pvpStats": {
+      "atk": 30,
+      "hp": 30,
+      "def": 30,
+      "spd": 1
+    },
+    "dacTinh": [
+      "SÁT THƯƠNG DIỆN RỘNG",
+      "BẤT TỬ",
+      "TRIỆU HỒI",
+      "TRUY KÍCH"
+    ],
+    "bondList": "Garou, Homeless Emperor, Psykos",
+    "classLevel": "Class_SS",
+    "releaseSea": "01/12/2026",
+    "releaseTrung": "01/08/2026"
+  },
+  {
     "id": "100013-urplus",
     "name": "Zombieman",
     "imageURL": "/Characters/Zombieman (URplus)/URplus.png",

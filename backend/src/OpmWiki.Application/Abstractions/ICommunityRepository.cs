@@ -24,9 +24,13 @@ public interface ICommunityRepository
     Task<bool> DeleteForumPostAsync(long id, Guid moderatorId, CancellationToken cancellationToken = default);
 
     Task<IReadOnlyList<TopUpRequestDto>> ListUserTopUpsAsync(Guid userId, CancellationToken cancellationToken = default);
+    Task<TopUpRequestDto?> GetUserTopUpAsync(long id, Guid userId, CancellationToken cancellationToken = default);
     Task<TopUpRequestDto> CreateTopUpAsync(Guid userId, string provider, string referenceCode, decimal amount, CancellationToken cancellationToken = default);
+    Task ExpirePendingBankTopUpsAsync(DateTimeOffset createdBefore, Guid? userId = null, CancellationToken cancellationToken = default);
+    Task<TopUpRequestDto?> UpdateUserTopUpStatusAsync(long id, Guid userId, string expectedStatus, string status, CancellationToken cancellationToken = default);
     Task<IReadOnlyList<TopUpRequestDto>> ListTopUpsAsync(string? status, CancellationToken cancellationToken = default);
     Task<TopUpRequestDto?> ReviewTopUpAsync(long id, Guid reviewerId, string status, string staffNote, CancellationToken cancellationToken = default);
+    Task<PaymentProcessingResult> ProcessSePayWebhookAsync(SePayWebhookTransaction transaction, CancellationToken cancellationToken = default);
 
     Task<DashboardDto> GetDashboardAsync(CancellationToken cancellationToken = default);
     Task<AdvisorContextDto> FindAdvisorContextAsync(string query, CancellationToken cancellationToken = default);

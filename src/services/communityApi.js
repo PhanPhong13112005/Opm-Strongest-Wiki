@@ -32,9 +32,12 @@ export const getMyTopUps = () => authorizedRequest('api/top-ups/mine')
 export const createTopUp = (payload) => authorizedRequest('api/top-ups', {
   method: 'POST', body: JSON.stringify(payload),
 })
-export const getStaffTopUps = (status = '') => authorizedRequest('api/staff/top-ups', {}, { status })
-export const reviewTopUp = (id, status, staffNote = '') => authorizedRequest(`api/staff/top-ups/${id}/review`, {
-  method: 'PUT', body: JSON.stringify({ status, staffNote }),
+export const createBankTopUpQr = (amount) => authorizedRequest('api/top-ups/bank-qr', {
+  method: 'POST', body: JSON.stringify({ amount }),
+})
+export const getBankTopUpQr = (id) => authorizedRequest(`api/top-ups/${id}/bank-qr`)
+export const updateBankTopUpPayment = (id, action) => authorizedRequest(`api/top-ups/${id}/bank-payment`, {
+  method: 'PUT', body: JSON.stringify({ action }),
 })
 export const getModerationComments = () => authorizedRequest('api/moderation/comments')
 export const deleteEventComment = (id) => authorizedRequest(`api/moderation/comments/${id}`, {

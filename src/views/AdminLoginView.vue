@@ -14,6 +14,10 @@ const error = ref('')
 const submitting = ref(false)
 
 const isRegister = computed(() => mode.value === 'register')
+const destinationAfterAuth = computed(() => {
+  const destination = typeof route.query.redirect === 'string' ? route.query.redirect : ''
+  return destination.startsWith('/') && !destination.startsWith('//') ? destination : '/'
+})
 
 const submit = async () => {
   error.value = ''
@@ -25,7 +29,7 @@ const submit = async () => {
     } else {
       await login(username.value.trim(), password.value)
     }
-    await router.replace('/')
+    await router.replace(destinationAfterAuth.value)
   } catch (exception) {
     error.value = exception.message || 'Không thể kết nối hệ thống tài khoản.'
   } finally {
