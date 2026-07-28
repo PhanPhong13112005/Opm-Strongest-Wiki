@@ -3,7 +3,7 @@ import { computed, onMounted, ref } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 import RolePortalShell from '../components/RolePortalShell.vue'
 import { authState, clearSession } from '../services/authApi'
-import { getAdminDashboard, getAdminUsers, updateAdminUserRole } from '../services/adminApi'
+import { getAdminDashboard, getAdminUsers, updateAdminUserRole, updateAdminUserStatus } from '../services/adminApi'
 
 const router = useRouter()
 const stats = ref(null)
@@ -19,7 +19,8 @@ const navigation = [
   { to: '/admin/characters', index: '02', label: 'Nhân vật', hint: 'Nhân vật và Kỷ vật', match: '/admin/characters' },
   { to: '/admin/events', index: '03', label: 'Sự kiện', hint: 'Nội dung sự kiện', match: '/admin/events' },
   { to: '/admin/releases', index: '04', label: 'Lịch ra mắt', hint: 'Banner CN và SEA', match: '/admin/releases' },
-  { to: '/staff', index: '05', label: 'Khu nhân viên', hint: 'Kiểm duyệt cộng đồng' },
+  { to: '/admin/top-ups', index: '05', label: 'Đơn Coupon', hint: 'Duyệt đơn nạp thủ công', match: '/admin/top-ups' },
+  { to: '/staff', index: '06', label: 'Khu nhân viên', hint: 'Kiểm duyệt cộng đồng' },
 ]
 
 const labels = {
@@ -47,6 +48,8 @@ const secondaryStats = computed(() => Object.entries(stats.value || {})
   .filter(([key]) => !mainStatKeys.includes(key))
   .map(([key, value]) => ({ key, value, label: labels[key] || key })))
 
+const isCurrentAccount = user => String(user.id).toLowerCase() === String(authState.session?.userId || '').toLowerCase()
+
 const filteredUsers = computed(() => {
   const keyword = userSearch.value.trim().toLocaleLowerCase('vi')
   if (!keyword) return users.value
@@ -58,7 +61,8 @@ const modules = [
   { to: '/admin/characters', code: 'DATA-01', title: 'Nhân vật & Kỷ vật', description: 'Thêm, sửa, xóa thông tin nhân vật và gắn Kỷ vật.', color: 'gold' },
   { to: '/admin/releases', code: 'PLAN-02', title: 'Lịch ra mắt', description: 'Quản lý mốc phát hành CN/SEA hiển thị trên trang chủ.', color: 'blue' },
   { to: '/admin/events', code: 'LIVE-03', title: 'Sự kiện', description: 'Cập nhật lịch, nội dung và phần thưởng của sự kiện.', color: 'violet' },
-  { to: '/staff', code: 'SAFE-04', title: 'Kiểm duyệt', description: 'Theo dõi bình luận và xử lý nội dung diễn đàn.', color: 'green' },
+  { to: '/admin/top-ups', code: 'PAY-04', title: 'Đơn Coupon', description: 'Kiểm tra UID, server và xác nhận đơn Coupon đã được nạp.', color: 'rose' },
+  { to: '/staff', code: 'SAFE-05', title: 'Kiểm duyệt', description: 'Theo dõi bình luận và xử lý nội dung diễn đàn.', color: 'green' },
 ]
 
 const load = async () => {
@@ -81,6 +85,27 @@ const updateRole = async user => {
     await updateAdminUserRole(user.id, user.role)
     notice.value = `Đã đổi vai trò của ${user.displayName} thành ${user.role}.`
     stats.value = await getAdminDashboard()
+  } catch (exception) {
+    error.value = exception.message
+    await load()
+  } finally {
+    updatingUserId.value = null
+  }
+}
+
+const updateStatus = async user => {
+  if (isCurrentAccount(user)) return
+  const nextIsActive = user.isActive === false
+  const action = nextIsActive ? 'kích hoạt lại' : 'vô hiệu hóa'
+  if (!globalThis.confirm(`Bạn muốn ${action} tài khoản “${user.displayName}”?`)) return
+
+  error.value = ''
+  notice.value = ''
+  updatingUserId.value = user.id
+  try {
+    const updated = await updateAdminUserStatus(user.id, nextIsActive)
+    Object.assign(user, updated)
+    notice.value = `Đã ${action} tài khoản ${user.displayName}.`
   } catch (exception) {
     error.value = exception.message
     await load()
@@ -158,7 +183,7 @@ onMounted(load)
         <div>
           <span>Tài khoản & quyền truy cập</span>
           <h2>Quản lý người dùng</h2>
-          <p>Thay đổi vai trò để cấp đúng quyền cho từng tài khoản.</p>
+          <p>Thay đổi vai trò hoặc trạng thái để kiểm soát quyền truy cập của từng tài khoản.</p>
         </div>
         <label class="admin-user-search">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M16 16l4 4" /></svg>
@@ -174,7 +199,9 @@ onMounted(load)
               <th>Tên đăng nhập</th>
               <th>Số dư</th>
               <th>Ngày tạo</th>
+              <th>Trạng thái</th>
               <th>Vai trò</th>
+              <th>Thao tác</th>
             </tr>
           </thead>
           <tbody>
@@ -189,11 +216,34 @@ onMounted(load)
               <td><b class="admin-balance">{{ Number(user.balance).toLocaleString('vi-VN') }}đ</b></td>
               <td>{{ new Date(user.createdAt).toLocaleDateString('vi-VN') }}</td>
               <td>
-                <select v-model="user.role" :disabled="updatingUserId === user.id" :aria-label="`Vai trò của ${user.displayName}`" @change="updateRole(user)">
+                <span class="admin-account-status" :class="{ 'admin-account-status--inactive': user.isActive === false }">
+                  {{ user.isActive === false ? 'Đã vô hiệu hóa' : 'Đang hoạt động' }}
+                </span>
+              </td>
+              <td>
+                <select
+                  v-model="user.role"
+                  :disabled="updatingUserId === user.id || user.isActive === false || isCurrentAccount(user)"
+                  :aria-label="`Vai trò của ${user.displayName}`"
+                  @change="updateRole(user)"
+                >
                   <option>User</option>
                   <option>Staff</option>
                   <option>Admin</option>
                 </select>
+                <small v-if="isCurrentAccount(user)" class="admin-account-self">Tài khoản hiện tại</small>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="admin-account-action"
+                  :class="{ 'admin-account-action--activate': user.isActive === false }"
+                  :disabled="updatingUserId === user.id || isCurrentAccount(user)"
+                  :aria-label="`${user.isActive === false ? 'Kích hoạt' : 'Vô hiệu hóa'} tài khoản ${user.displayName}`"
+                  @click="updateStatus(user)"
+                >
+                  {{ user.isActive === false ? 'Kích hoạt' : 'Vô hiệu hóa' }}
+                </button>
               </td>
             </tr>
           </tbody>
@@ -267,7 +317,15 @@ onMounted(load)
 .admin-balance { color: #ffc66b; font-size: 11px; }
 .admin-table-wrap select { min-width: 92px; height: 34px; border: 1px solid rgba(120, 152, 181, .2); border-radius: 8px; background: #070d15; padding: 0 9px; color: #d9e3eb; font-size: 10px; font-weight: 800; outline: none; }
 .admin-table-wrap select:focus { border-color: rgba(255, 184, 77, .5); }
-.admin-table-wrap select:disabled { cursor: wait; opacity: .5; }
+.admin-table-wrap select:disabled { cursor: not-allowed; opacity: .5; }
+.admin-account-status { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; color: #55e0b5; font-size: 9px; font-weight: 850; }
+.admin-account-status::before { width: 6px; height: 6px; border-radius: 50%; background: currentColor; content: ''; box-shadow: 0 0 9px currentColor; }
+.admin-account-status--inactive { color: #ff7f87; }
+.admin-account-self { display: block; margin-top: 5px; color: #6d8194; font-size: 8px; white-space: nowrap; }
+.admin-account-action { min-width: 84px; height: 34px; border: 1px solid rgba(255, 127, 135, .32); border-radius: 8px; background: rgba(255, 87, 98, .08); padding: 0 10px; color: #ff9aa0; font-size: 9px; font-weight: 850; white-space: nowrap; }
+.admin-account-action:hover:not(:disabled) { border-color: rgba(255, 127, 135, .58); background: rgba(255, 87, 98, .14); }
+.admin-account-action--activate { border-color: rgba(85, 224, 181, .32); background: rgba(85, 224, 181, .08); color: #71e7c2; }
+.admin-account-action:disabled { cursor: not-allowed; opacity: .45; }
 .admin-users__empty { display: grid; min-height: 120px; place-items: center; padding: 20px; color: #617587; font-size: 11px; }
 
 @media (max-width: 1100px) {

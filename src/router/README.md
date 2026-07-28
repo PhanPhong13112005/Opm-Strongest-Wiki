@@ -27,6 +27,7 @@ Sử dụng thư viện `vue-router` phiên bản 4 để thiết lập lịch s
 *   `/admin/dashboard`: Dashboard tổng hợp và phân quyền tài khoản.
 *   `/admin/events`: CRUD nội dung sự kiện.
 *   `/admin/releases`: CRUD lịch ra mắt tướng CN/SEA hiển thị trực tiếp trên trang chủ.
+*   `/admin/top-ups`: hàng đợi xử lý đơn Coupon, chỉ cho vai trò Admin.
 
 Route guard đọc vai trò trong phiên JWT và điều hướng người dùng về đúng cổng. Backend vẫn là lớp phân quyền cuối cùng; route guard chỉ phục vụ trải nghiệm giao diện.
 

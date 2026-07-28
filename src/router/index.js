@@ -28,6 +28,7 @@ const StaffDashboardView = () => import('../views/StaffDashboardView.vue')
 const AdminDashboardView = () => import('../views/AdminDashboardView.vue')
 const AdminEventsView = () => import('../views/AdminEventsView.vue')
 const AdminReleasesView = () => import('../views/AdminReleasesView.vue')
+const AdminTopUpsView = () => import('../views/AdminTopUpsView.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -196,6 +197,12 @@ const router = createRouter({
       path: '/admin/releases',
       name: 'admin-releases',
       component: AdminReleasesView,
+      meta: { requiresAuth: true, roles: ['Admin'] }
+    },
+    {
+      path: '/admin/top-ups',
+      name: 'admin-top-ups',
+      component: AdminTopUpsView,
       meta: { requiresAuth: true, roles: ['Admin'] }
     }
   ],

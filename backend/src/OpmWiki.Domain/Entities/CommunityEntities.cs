@@ -85,6 +85,7 @@ public sealed class TopUpRequest
     public string StaffNote { get; set; } = string.Empty;
     public Guid? ReviewedById { get; set; }
     public UserAccount? ReviewedBy { get; set; }
+    public string ReviewedBySubject { get; set; } = string.Empty;
     public DateTimeOffset? ReviewedAt { get; set; }
     public string ExternalTransactionId { get; set; } = string.Empty;
     public DateTimeOffset? PaidAt { get; set; }

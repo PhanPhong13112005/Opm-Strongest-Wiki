@@ -78,14 +78,16 @@ public sealed partial class AuthController(
                 User.FindFirst("display_name")?.Value ?? "Administrator",
                 User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value ?? "Admin",
                 0,
+                true,
                 DateTimeOffset.UtcNow));
         }
 
         var account = await repository.FindUserByIdAsync(id, cancellationToken);
-        return account is null
+        return account is null || !account.IsActive
             ? Unauthorized()
             : Ok(new AccountDto(
-                account.Id, account.Username, account.DisplayName, account.Role, account.Balance, account.CreatedAt));
+                account.Id, account.Username, account.DisplayName, account.Role, account.Balance,
+                account.IsActive, account.CreatedAt));
     }
 
     private static Dictionary<string, string[]> Validate(RegisterRequest request)

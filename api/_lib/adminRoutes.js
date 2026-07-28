@@ -1,6 +1,6 @@
 import { ensureAdminSchema } from './adminDatabase.js'
 import { getSql } from './database.js'
-import { bodyOf, json, methodNotAllowed, noContent, requireUser } from './http.js'
+import { bodyOf, json, methodNotAllowed, noContent, requireCurrentUser } from './http.js'
 
 const text = (value) => String(value ?? '').trim()
 const list = (value) => Array.isArray(value)
@@ -668,9 +668,9 @@ export const createAdminDataRouteHandler = ({
     path.startsWith('/admin/events') || path.startsWith('/admin/releases')
   if (!isPublicContent && !isAdminData) return false
 
-  if (isAdminData && !requireUser(request, response, ['Admin'])) return true
-  await ensureSchema()
   const sql = sqlProvider()
+  if (isAdminData && !await requireCurrentUser(request, response, sql, ['Admin'])) return true
+  await ensureSchema()
 
   if (path === '/release-schedule' || path.startsWith('/admin/releases')) return handleReleases(request, response, path, sql)
   if (path === '/characters' || path.startsWith('/characters/')) return handlePublicCharacters(request, response, path, sql)

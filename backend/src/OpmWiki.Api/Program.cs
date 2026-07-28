@@ -76,6 +76,22 @@ builder.Services
             ValidateLifetime = true,
             ClockSkew = TimeSpan.FromSeconds(30),
         };
+        options.Events = new JwtBearerEvents
+        {
+            OnTokenValidated = async context =>
+            {
+                var accountId = context.Principal?.GetAccountId() ?? Guid.Empty;
+                if (accountId == Guid.Empty) return;
+
+                var dbContext = context.HttpContext.RequestServices.GetRequiredService<OpmWikiDbContext>();
+                var currentRole = await dbContext.UserAccounts.AsNoTracking()
+                    .Where(x => x.Id == accountId && x.IsActive)
+                    .Select(x => x.Role)
+                    .SingleOrDefaultAsync(context.HttpContext.RequestAborted);
+                if (currentRole is null || context.Principal?.IsInRole(currentRole) != true)
+                    context.Fail("Account is inactive or its role has changed.");
+            },
+        };
     });
 builder.Services.AddAuthorization();
 builder.Services.Configure<ForwardedHeadersOptions>(options =>

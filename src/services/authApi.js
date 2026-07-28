@@ -77,14 +77,19 @@ export const authorizedRequest = async (path, options = {}, params) => {
     error.status = 401
     throw error
   }
-  return requestApi(path, params, {
-    ...options,
-    headers: {
-      ...(options.body ? { 'Content-Type': 'application/json' } : {}),
-      ...(options.headers || {}),
-      Authorization: `Bearer ${getAccessToken()}`,
-    },
-  })
+  try {
+    return await requestApi(path, params, {
+      ...options,
+      headers: {
+        ...(options.body ? { 'Content-Type': 'application/json' } : {}),
+        ...(options.headers || {}),
+        Authorization: `Bearer ${getAccessToken()}`,
+      },
+    })
+  } catch (error) {
+    if (error.status === 401) clearSession()
+    throw error
+  }
 }
 
 export const refreshSession = async () => {

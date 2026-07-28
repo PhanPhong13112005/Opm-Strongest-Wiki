@@ -1,6 +1,6 @@
 import { ensureCommunitySchema, getSql } from './database.js'
 import { ensureAdminSchema } from './adminDatabase.js'
-import { bodyOf, json, methodNotAllowed, noContent, requireUser } from './http.js'
+import { bodyOf, json, methodNotAllowed, noContent, requireCurrentUser } from './http.js'
 import { createRequire } from 'node:module'
 import { randomUUID } from 'node:crypto'
 
@@ -11,10 +11,22 @@ const events = require('../../src/data/events.json')
 const mapComment = (row) => ({ ...row, id: Number(row.id) })
 const mapTopic = (row) => ({ ...row, id: Number(row.id), postCount: Number(row.postCount || 0) })
 const mapPost = (row) => ({ ...row, id: Number(row.id) })
-const mapTopUp = (row) => ({ ...row, id: Number(row.id), amount: Number(row.amount || 0) })
+const mapTopUp = (row) => {
+  const { reviewedBySubject: _reviewedBySubject, ...publicRow } = row
+  return { ...publicRow, id: Number(row.id), amount: Number(row.amount || 0) }
+}
+const mapAdminTopUp = (row) => ({
+  ...mapTopUp(row),
+  reviewedBySubject: String(row.reviewedBySubject || ''),
+})
 const couponOrderProvider = 'Coupon Order'
 const couponUnitPrice = 13_000
 const couponReferencePattern = /^UID:\d{5,20}\|SID:[A-Za-z0-9_-]{1,20}\|CP:6\|QTY:(10|[1-9])\|[A-Z0-9]+$/
+const couponQuantity = referenceCode => Number(couponReferencePattern.exec(String(referenceCode || ''))?.[1] || 0)
+const isValidCouponOrder = (referenceCode, amount) => {
+  const quantity = couponQuantity(referenceCode)
+  return quantity >= 1 && quantity <= 10 && Number(amount) === couponUnitPrice * quantity
+}
 const bankIdPattern = /^[A-Za-z0-9]{2,20}$/
 const bankAccountPattern = /^[A-Za-z0-9]{6,19}$/
 const bankPaymentWindowMs = 5 * 60 * 1000
@@ -60,6 +72,7 @@ const topUpSelect = `
          u."DisplayName" AS "displayName", t."Provider" AS provider,
          t."ReferenceCode" AS "referenceCode", t."Amount" AS amount,
          t."Status" AS status, t."StaffNote" AS "staffNote",
+         t."ReviewedBySubject" AS "reviewedBySubject",
          t."CreatedAt" AS "createdAt", t."ReviewedAt" AS "reviewedAt",
          t."PaidAt" AS "paidAt", t."ExternalTransactionId" AS "externalTransactionId"
     FROM top_up_requests t JOIN user_accounts u ON u."Id" = t."UserId"`
@@ -91,7 +104,8 @@ export const createCommunityRouteHandler = ({
 } = {}) => async (request, response, path) => {
   const isCommunityPath = path.startsWith('/events/') || path.startsWith('/forum/') ||
     path.startsWith('/moderation/') || path.startsWith('/top-ups') ||
-    path.startsWith('/staff/top-ups') || path === '/admin/dashboard' || path === '/advisor/ask'
+    path.startsWith('/staff/top-ups') || path.startsWith('/admin/top-ups') ||
+    path === '/admin/dashboard' || path === '/advisor/ask'
   if (!isCommunityPath) return false
   await ensureSchema()
   const sql = sqlProvider()
@@ -107,7 +121,7 @@ export const createCommunityRouteHandler = ({
       return json(response, 200, rows.map(mapComment))
     }
     if (request.method === 'POST') {
-      const user = requireUser(request, response)
+      const user = await requireCurrentUser(request, response, sql)
       if (!user) return true
       if (String(user.userId).startsWith('admin:')) {
         return json(response, 400, { message: 'Tài khoản quản trị hệ thống không dùng để bình luận.' })
@@ -134,7 +148,7 @@ export const createCommunityRouteHandler = ({
 
   if (path === '/moderation/comments') {
     if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
-    if (!requireUser(request, response, ['Staff', 'Admin'])) return true
+    if (!await requireCurrentUser(request, response, sql, ['Staff', 'Admin'])) return true
     const rows = await sql.query(`${commentSelect} WHERE c."IsDeleted" = false ORDER BY c."CreatedAt" DESC LIMIT 100`)
     return json(response, 200, rows.map(mapComment))
   }
@@ -142,7 +156,7 @@ export const createCommunityRouteHandler = ({
   const deleteCommentMatch = /^\/moderation\/comments\/(\d+)$/.exec(path)
   if (deleteCommentMatch) {
     if (request.method !== 'DELETE') return methodNotAllowed(response, ['DELETE'])
-    const user = requireUser(request, response, ['Staff', 'Admin'])
+    const user = await requireCurrentUser(request, response, sql, ['Staff', 'Admin'])
     if (!user) return true
     const moderatorId = String(user.userId).startsWith('admin:') ? null : user.userId
     const rows = await sql.query(
@@ -154,7 +168,7 @@ export const createCommunityRouteHandler = ({
   }
 
   if (path === '/forum/topics') {
-    const user = requireUser(request, response)
+    const user = await requireCurrentUser(request, response, sql)
     if (!user) return true
     if (request.method === 'GET') {
       const rows = await sql.query(
@@ -194,7 +208,7 @@ export const createCommunityRouteHandler = ({
   const topicMatch = /^\/forum\/topics\/(\d+)$/.exec(path)
   if (topicMatch) {
     if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
-    if (!requireUser(request, response)) return true
+    if (!await requireCurrentUser(request, response, sql)) return true
     const topic = await getTopicDetail(Number(topicMatch[1]), sql)
     return topic ? json(response, 200, topic) : json(response, 404, { message: 'Không tìm thấy chủ đề.' })
   }
@@ -202,7 +216,7 @@ export const createCommunityRouteHandler = ({
   const postMatch = /^\/forum\/topics\/(\d+)\/posts$/.exec(path)
   if (postMatch) {
     if (request.method !== 'POST') return methodNotAllowed(response, ['POST'])
-    const user = requireUser(request, response)
+    const user = await requireCurrentUser(request, response, sql)
     if (!user) return true
     if (String(user.userId).startsWith('admin:')) {
       return json(response, 400, { message: 'Hãy dùng tài khoản cộng đồng để trò chuyện.' })
@@ -230,7 +244,7 @@ export const createCommunityRouteHandler = ({
   const deleteForumMatch = /^\/moderation\/forum\/(topics|posts)\/(\d+)$/.exec(path)
   if (deleteForumMatch) {
     if (request.method !== 'DELETE') return methodNotAllowed(response, ['DELETE'])
-    const user = requireUser(request, response, ['Staff', 'Admin'])
+    const user = await requireCurrentUser(request, response, sql, ['Staff', 'Admin'])
     if (!user) return true
     const table = deleteForumMatch[1] === 'topics' ? 'forum_topics' : 'forum_posts'
     const moderatorId = String(user.userId).startsWith('admin:') ? null : user.userId
@@ -243,7 +257,7 @@ export const createCommunityRouteHandler = ({
 
   if (path === '/top-ups/mine') {
     if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
-    const user = requireUser(request, response)
+    const user = await requireCurrentUser(request, response, sql)
     if (!user) return true
     if (String(user.userId).startsWith('admin:')) return json(response, 200, [])
     await sql.query(
@@ -261,7 +275,7 @@ export const createCommunityRouteHandler = ({
   const bankPaymentMatch = /^\/top-ups\/(\d+)\/bank-payment$/.exec(path)
   if (bankPaymentMatch) {
     if (request.method !== 'PUT') return methodNotAllowed(response, ['PUT'])
-    const user = requireUser(request, response)
+    const user = await requireCurrentUser(request, response, sql)
     if (!user) return true
     if (String(user.userId).startsWith('admin:')) {
       return json(response, 404, { message: 'Không tìm thấy yêu cầu thanh toán.' })
@@ -313,10 +327,53 @@ export const createCommunityRouteHandler = ({
     return json(response, 200, mapTopUp(rows[0]))
   }
 
+  const couponCancelMatch = /^\/top-ups\/(\d+)\/coupon-order$/.exec(path)
+  if (couponCancelMatch) {
+    if (request.method !== 'PUT') return methodNotAllowed(response, ['PUT'])
+    const user = await requireCurrentUser(request, response, sql)
+    if (!user) return true
+    if (String(user.userId).startsWith('admin:')) {
+      return json(response, 404, { message: 'Không tìm thấy yêu cầu Coupon.' })
+    }
+    const action = String(bodyOf(request).action || '').trim().toLowerCase()
+    if (action !== 'cancel') {
+      return json(response, 400, { message: 'Hành động Coupon không hợp lệ.' })
+    }
+
+    const id = Number(couponCancelMatch[1])
+    let rows = await sql.query(
+      `${topUpSelect}
+        WHERE t."Id" = $1 AND t."UserId" = $2 AND t."Provider" = 'Coupon Order'
+        LIMIT 1`,
+      [id, user.userId],
+    )
+    if (!rows[0]) return json(response, 404, { message: 'Không tìm thấy yêu cầu Coupon.' })
+    if (rows[0].status === 'Cancelled') return json(response, 200, mapTopUp(rows[0]))
+    if (!['Pending', 'PaymentReported'].includes(rows[0].status)) {
+      return json(response, 409, { message: 'Yêu cầu Coupon không còn có thể hủy.' })
+    }
+
+    const updated = await sql.query(
+      `UPDATE top_up_requests
+          SET "Status" = 'Cancelled', "UpdatedAt" = CURRENT_TIMESTAMP
+        WHERE "Id" = $1 AND "UserId" = $2 AND "Provider" = 'Coupon Order'
+          AND "Status" IN ('Pending', 'PaymentReported')
+        RETURNING "Id"`,
+      [id, user.userId],
+    )
+    if (!updated[0]) {
+      return json(response, 409, { message: 'Trạng thái vừa được cập nhật ở nơi khác. Vui lòng tải lại.' })
+    }
+    rows = await sql.query(
+      `${topUpSelect} WHERE t."Id" = $1 AND t."UserId" = $2 LIMIT 1`,
+      [id, user.userId],
+    )
+    return json(response, 200, mapTopUp(rows[0]))
+  }
   const bankQrMatch = /^\/top-ups\/(\d+)\/bank-qr$/.exec(path)
   if (bankQrMatch) {
     if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
-    const user = requireUser(request, response)
+    const user = await requireCurrentUser(request, response, sql)
     if (!user) return true
     if (String(user.userId).startsWith('admin:')) {
       return json(response, 404, { message: 'Không tìm thấy yêu cầu thanh toán.' })
@@ -349,7 +406,7 @@ export const createCommunityRouteHandler = ({
 
   if (path === '/top-ups/bank-qr') {
     if (request.method !== 'POST') return methodNotAllowed(response, ['POST'])
-    const user = requireUser(request, response)
+    const user = await requireCurrentUser(request, response, sql)
     if (!user) return true
     if (String(user.userId).startsWith('admin:')) {
       return json(response, 400, { message: 'Hãy dùng tài khoản người dùng để nạp.' })
@@ -393,7 +450,7 @@ export const createCommunityRouteHandler = ({
 
   if (path === '/top-ups') {
     if (request.method !== 'POST') return methodNotAllowed(response, ['POST'])
-    const user = requireUser(request, response)
+    const user = await requireCurrentUser(request, response, sql)
     if (!user) return true
     if (String(user.userId).startsWith('admin:')) return json(response, 400, { message: 'Hãy dùng tài khoản người dùng để nạp.' })
     const { provider: rawProvider = '', referenceCode: rawReference = '', amount: rawAmount } = bodyOf(request)
@@ -409,11 +466,11 @@ export const createCommunityRouteHandler = ({
     if (!Number.isFinite(amount) || amount < 10_000 || amount > 100_000_000) {
       return json(response, 400, { message: 'Số tiền phải từ 10.000 đến 100.000.000.' })
     }
-    const couponMatch = couponReferencePattern.exec(referenceCode)
-    if (!couponMatch) {
+    const quantity = couponQuantity(referenceCode)
+    if (!quantity) {
       return json(response, 400, { message: 'Thông tin đơn Coupon không hợp lệ.' })
     }
-    if (amount !== couponUnitPrice * Number(couponMatch[1])) {
+    if (amount !== couponUnitPrice * quantity) {
       return json(response, 400, { message: 'Giá trị đơn Coupon không hợp lệ.' })
     }
     try {
@@ -433,16 +490,28 @@ export const createCommunityRouteHandler = ({
       response.setHeader('Location', `/api/top-ups/${rows[0].id}`)
       return json(response, 201, mapTopUp(rows[0]))
     } catch (error) {
-      if (error?.code === '23505') return json(response, 409, { message: 'Mã giao dịch này đã được gửi trước đó.' })
+      if (error?.code === '23505') {
+        const existing = await sql.query(
+          `${topUpSelect}
+            WHERE t."UserId" = $1 AND t."ReferenceCode" = $2
+            LIMIT 1`,
+          [user.userId, referenceCode],
+        )
+        if (existing[0]?.provider === couponOrderProvider && Number(existing[0].amount) === amount) {
+          response.setHeader('Location', `/api/top-ups/${existing[0].id}`)
+          return json(response, 200, mapTopUp(existing[0]))
+        }
+        return json(response, 409, { message: 'Mã giao dịch này đã được dùng cho yêu cầu khác.' })
+      }
       throw error
     }
   }
 
-  if (path === '/staff/top-ups') {
+  if (path === '/admin/top-ups' || path === '/staff/top-ups') {
     if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
-    if (!requireUser(request, response, ['Admin'])) return true
+    if (!await requireCurrentUser(request, response, sql, ['Admin'])) return true
     const status = String(request.query?.status || '')
-    if (status && !['Pending', 'Approved', 'Rejected'].includes(status)) {
+    if (status && !['Pending', 'Approved', 'Rejected', 'Cancelled'].includes(status)) {
       return json(response, 400, { message: 'Trạng thái không hợp lệ.' })
     }
     const rows = status === 'Pending'
@@ -450,24 +519,46 @@ export const createCommunityRouteHandler = ({
       : status
         ? await sql.query(`${topUpSelect} WHERE t."Provider" = 'Coupon Order' AND t."Status" = $1 ORDER BY t."CreatedAt" DESC`, [status])
       : await sql.query(`${topUpSelect} WHERE t."Provider" = 'Coupon Order' ORDER BY t."CreatedAt" DESC`)
-    return json(response, 200, rows.map(mapTopUp))
+    return json(response, 200, rows.map(mapAdminTopUp))
   }
 
-  const reviewMatch = /^\/staff\/top-ups\/(\d+)\/review$/.exec(path)
+  const reviewMatch = /^\/(?:admin|staff)\/top-ups\/(\d+)\/review$/.exec(path)
   if (reviewMatch) {
     if (request.method !== 'PUT') return methodNotAllowed(response, ['PUT'])
-    const user = requireUser(request, response, ['Admin'])
+    const user = await requireCurrentUser(request, response, sql, ['Admin'])
     if (!user) return true
     const { status, staffNote = '' } = bodyOf(request)
+    const cleanStaffNote = String(staffNote).trim()
     if (!['Approved', 'Rejected'].includes(status)) return json(response, 400, { message: 'Chỉ có thể duyệt hoặc từ chối yêu cầu.' })
-    if (String(staffNote).length > 500) return json(response, 400, { message: 'Ghi chú không được vượt quá 500 ký tự.' })
-    const reviewerId = user.role === 'Admin' ? null : user.userId
+    if (cleanStaffNote.length > 500) return json(response, 400, { message: 'Ghi chú không được vượt quá 500 ký tự.' })
+    if (status === 'Rejected' && !cleanStaffNote) return json(response, 400, { message: 'Vui lòng nhập lý do từ chối.' })
+    const reviewerSubject = String(user.userId || '').slice(0, 160)
+    const reviewerId = reviewerSubject.startsWith('admin:') ? null : reviewerSubject
+    const existing = await sql.query(
+      `SELECT "UserId" AS "userId", "ReferenceCode" AS "referenceCode",
+              "Amount" AS amount, "Status" AS status
+         FROM top_up_requests
+        WHERE "Id" = $1 AND "Provider" = 'Coupon Order'
+        LIMIT 1`,
+      [Number(reviewMatch[1])],
+    )
+    if (!existing[0] || !['Pending', 'PaymentReported'].includes(existing[0].status)) {
+      return json(response, 409, { message: 'Yêu cầu không tồn tại hoặc đã được xử lý.' })
+    }
+    if (reviewerId && String(existing[0].userId) === reviewerId) {
+      return json(response, 409, { message: 'Không thể tự xử lý đơn Coupon của chính bạn.' })
+    }
+    if (status === 'Approved' && !isValidCouponOrder(existing[0].referenceCode, existing[0].amount)) {
+      return json(response, 409, { message: 'Thông tin hoặc giá trị đơn Coupon không hợp lệ. Chỉ có thể từ chối đơn.' })
+    }
     const rows = await sql.query(
       `WITH reviewed AS (
          UPDATE top_up_requests
             SET "Status" = $2, "StaffNote" = $3, "ReviewedById" = $4,
+                "ReviewedBySubject" = $5,
                 "ReviewedAt" = CURRENT_TIMESTAMP, "UpdatedAt" = CURRENT_TIMESTAMP
           WHERE "Id" = $1 AND "Provider" = 'Coupon Order'
+            AND ($4::uuid IS NULL OR "UserId" <> $4::uuid)
             AND "Status" IN ('Pending', 'PaymentReported') RETURNING *
        ), credited AS (
          UPDATE user_accounts u SET "Balance" = u."Balance" + r."Amount", "UpdatedAt" = CURRENT_TIMESTAMP
@@ -479,16 +570,17 @@ export const createCommunityRouteHandler = ({
               u."DisplayName" AS "displayName", r."Provider" AS provider,
               r."ReferenceCode" AS "referenceCode", r."Amount" AS amount,
               r."Status" AS status, r."StaffNote" AS "staffNote",
+              r."ReviewedBySubject" AS "reviewedBySubject",
               r."CreatedAt" AS "createdAt", r."ReviewedAt" AS "reviewedAt"
          FROM reviewed r JOIN user_accounts u ON u."Id" = r."UserId"`,
-      [Number(reviewMatch[1]), status, String(staffNote).trim(), reviewerId],
+      [Number(reviewMatch[1]), status, cleanStaffNote, reviewerId, reviewerSubject],
     )
-    return rows[0] ? json(response, 200, mapTopUp(rows[0])) : json(response, 409, { message: 'Yêu cầu không tồn tại hoặc đã được xử lý.' })
+    return rows[0] ? json(response, 200, mapAdminTopUp(rows[0])) : json(response, 409, { message: 'Yêu cầu không tồn tại hoặc đã được xử lý.' })
   }
 
   if (path === '/admin/dashboard') {
     if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
-    if (!requireUser(request, response, ['Admin'])) return true
+    if (!await requireCurrentUser(request, response, sql, ['Admin'])) return true
     await ensureContentSchema()
     const rows = await sql.query(
       `SELECT
@@ -510,7 +602,7 @@ export const createCommunityRouteHandler = ({
 
   if (path === '/advisor/ask') {
     if (request.method !== 'POST') return methodNotAllowed(response, ['POST'])
-    if (!requireUser(request, response)) return true
+    if (!await requireCurrentUser(request, response, sql)) return true
     const question = String(bodyOf(request).question || '').trim()
     if (question.length < 2 || question.length > 1000) {
       return json(response, 400, { message: 'Câu hỏi phải có 2-1000 ký tự.' })

@@ -52,6 +52,15 @@ export const getAdminUsers = () => authorizedRequest('api/admin/users')
 export const updateAdminUserRole = (id, role) => authorizedRequest(`api/admin/users/${id}/role`, {
   method: 'PUT', body: JSON.stringify({ role }),
 })
+export const updateAdminUserStatus = (id, isActive) => authorizedRequest(`api/admin/users/${id}/status`, {
+  method: 'PUT', body: JSON.stringify({ isActive }),
+})
+export const getAdminTopUps = (status = '') =>
+  authorizedRequest('api/admin/top-ups', {}, { status })
+export const reviewAdminTopUp = (id, status, staffNote = '') =>
+  authorizedRequest(`api/admin/top-ups/${encodeURIComponent(id)}/review`, {
+    method: 'PUT', body: JSON.stringify({ status, staffNote }),
+  })
 export const getAdminEvents = () => authorizedRequest('api/admin/events')
 export const createAdminEvent = (event) => mutateAndInvalidate('api/admin/events', {
   method: 'POST', body: JSON.stringify(event),

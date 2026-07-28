@@ -21,11 +21,6 @@ public sealed class TopUpsController(
     private static readonly Regex BankAccountPattern = new(
         @"^[A-Za-z0-9]{6,19}$",
         RegexOptions.Compiled | RegexOptions.CultureInvariant);
-    private static readonly Regex CouponReferencePattern = new(
-        @"^UID:\d{5,20}\|SID:[A-Za-z0-9_-]{1,20}\|CP:6\|QTY:(10|[1-9])\|[A-Z0-9]+$",
-        RegexOptions.Compiled | RegexOptions.CultureInvariant);
-    private const string CouponOrderProvider = "Coupon Order";
-    private const decimal CouponUnitPrice = 13_000;
     private static readonly TimeSpan BankPaymentWindow = TimeSpan.FromMinutes(5);
 
     [HttpGet("mine")]
@@ -131,12 +126,40 @@ public sealed class TopUpsController(
             return Conflict(new { message = "Yêu cầu thanh toán không còn có thể cập nhật." });
 
         var updated = await repository.UpdateUserTopUpStatusAsync(
-            id, userId, topUp.Status, TopUpStatuses.Cancelled, cancellationToken);
+            id, userId, "Bank transfer", topUp.Status, TopUpStatuses.Cancelled, cancellationToken);
         return updated is null
             ? Conflict(new { message = "Trạng thái vừa được cập nhật ở nơi khác. Vui lòng tải lại." })
             : Ok(updated);
     }
 
+    [HttpPut("{id:long}/coupon-order")]
+    public async Task<ActionResult<TopUpRequestDto>> UpdateCouponOrder(
+        long id,
+        UpdateCouponOrderRequest request,
+        CancellationToken cancellationToken)
+    {
+        var action = request.Action?.Trim().ToLowerInvariant() ?? string.Empty;
+        if (action != "cancel")
+            return BadRequest(new { message = "Hành động Coupon không hợp lệ." });
+
+        var userId = User.GetAccountId();
+        var topUp = userId == Guid.Empty
+            ? null
+            : await repository.GetUserTopUpAsync(id, userId, cancellationToken);
+        if (topUp is null || topUp.Provider != CouponOrderRules.Provider)
+            return NotFound(new { message = "Không tìm thấy yêu cầu Coupon." });
+
+        if (topUp.Status == TopUpStatuses.Cancelled)
+            return Ok(topUp);
+        if (topUp.Status is not (TopUpStatuses.Pending or TopUpStatuses.PaymentReported))
+            return Conflict(new { message = "Yêu cầu Coupon không còn có thể hủy." });
+
+        var updated = await repository.UpdateUserTopUpStatusAsync(
+            id, userId, CouponOrderRules.Provider, topUp.Status, TopUpStatuses.Cancelled, cancellationToken);
+        return updated is null
+            ? Conflict(new { message = "Trạng thái vừa được cập nhật ở nơi khác. Vui lòng tải lại." })
+            : Ok(updated);
+    }
     [HttpPost]
     public async Task<ActionResult<TopUpRequestDto>> Create(
         CreateTopUpRequest request,
@@ -144,28 +167,30 @@ public sealed class TopUpsController(
     {
         var provider = request.Provider?.Trim() ?? string.Empty;
         var reference = request.ReferenceCode?.Trim() ?? string.Empty;
-        if (provider != CouponOrderProvider)
+        if (provider != CouponOrderRules.Provider)
             return BadRequest(new { message = "Phương thức nạp không được hỗ trợ." });
         if (reference.Length is < 4 or > 120 || reference.Any(char.IsControl))
             return BadRequest(new { message = "Mã giao dịch phải có 4-120 ký tự hợp lệ." });
         if (request.Amount is < 10_000 or > 100_000_000)
             return BadRequest(new { message = "Số tiền phải từ 10.000 đến 100.000.000." });
-        var couponMatch = CouponReferencePattern.Match(reference);
-        if (!couponMatch.Success)
+        if (!CouponOrderRules.TryGetQuantity(reference, out var quantity))
             return BadRequest(new { message = "Thông tin đơn Coupon không hợp lệ." });
-        if (request.Amount != CouponUnitPrice * int.Parse(couponMatch.Groups[1].Value))
+        if (request.Amount != CouponOrderRules.UnitPrice * quantity)
             return BadRequest(new { message = "Giá trị đơn Coupon không hợp lệ." });
         var userId = User.GetAccountId();
         if (userId == Guid.Empty) return BadRequest(new { message = "Hãy dùng tài khoản người dùng để nạp." });
 
         try
         {
-            var result = await repository.CreateTopUpAsync(userId, provider, reference, request.Amount, cancellationToken);
-            return Created($"/api/top-ups/{result.Id}", result);
+            var result = await repository.CreateOrGetCouponTopUpAsync(
+                userId, reference, request.Amount, cancellationToken);
+            return result.Created
+                ? Created($"/api/top-ups/{result.TopUp.Id}", result.TopUp)
+                : Ok(result.TopUp);
         }
         catch (Microsoft.EntityFrameworkCore.DbUpdateException)
         {
-            return Conflict(new { message = "Mã giao dịch này đã được gửi trước đó." });
+            return Conflict(new { message = "Mã giao dịch này đã được dùng cho yêu cầu khác." });
         }
     }
 
@@ -212,6 +237,7 @@ public sealed class TopUpsController(
         return await repository.UpdateUserTopUpStatusAsync(
                    topUp.Id,
                    userId,
+                   "Bank transfer",
                    TopUpStatuses.Pending,
                    TopUpStatuses.Expired,
                    cancellationToken)
@@ -222,33 +248,49 @@ public sealed class TopUpsController(
 
 [ApiController]
 [Authorize(Roles = "Admin")]
+[Route("api/admin/top-ups")]
 [Route("api/staff/top-ups")]
-public sealed class StaffTopUpsController(ICommunityRepository repository) : ControllerBase
+public sealed class AdminTopUpsController(ICommunityRepository repository) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult<IReadOnlyList<TopUpRequestDto>>> List(
+    public async Task<ActionResult<IReadOnlyList<AdminTopUpRequestDto>>> List(
         [FromQuery] string? status,
         CancellationToken cancellationToken)
     {
-        if (!string.IsNullOrWhiteSpace(status) && status is not (TopUpStatuses.Pending or TopUpStatuses.Approved or TopUpStatuses.Rejected))
+        if (!string.IsNullOrWhiteSpace(status) && status is not (TopUpStatuses.Pending or TopUpStatuses.Approved or TopUpStatuses.Rejected or TopUpStatuses.Cancelled))
             return BadRequest(new { message = "Trạng thái không hợp lệ." });
         return Ok(await repository.ListTopUpsAsync(status, cancellationToken));
     }
 
     [HttpPut("{id:long}/review")]
-    public async Task<ActionResult<TopUpRequestDto>> Review(
+    public async Task<ActionResult<AdminTopUpRequestDto>> Review(
         long id,
         ReviewTopUpRequest request,
         CancellationToken cancellationToken)
     {
         if (request.Status is not (TopUpStatuses.Approved or TopUpStatuses.Rejected))
             return BadRequest(new { message = "Chỉ có thể duyệt hoặc từ chối yêu cầu." });
-        if ((request.StaffNote?.Length ?? 0) > 500)
+        var staffNote = request.StaffNote?.Trim() ?? string.Empty;
+        if (staffNote.Length > 500)
             return BadRequest(new { message = "Ghi chú không được vượt quá 500 ký tự." });
+        if (request.Status == TopUpStatuses.Rejected && staffNote.Length == 0)
+            return BadRequest(new { message = "Vui lòng nhập lý do từ chối." });
         var result = await repository.ReviewTopUpAsync(
-            id, User.GetAccountId(), request.Status, request.StaffNote ?? string.Empty, cancellationToken);
-        return result is null
-            ? Conflict(new { message = "Yêu cầu không tồn tại hoặc đã được xử lý." })
-            : Ok(result);
+            id,
+            User.GetAccountId(),
+            User.GetAccountSubject(),
+            request.Status,
+            staffNote,
+            cancellationToken);
+        return result.Failure switch
+        {
+            TopUpReviewFailure.InvalidCouponOrder =>
+                Conflict(new { message = "Thông tin hoặc giá trị đơn Coupon không hợp lệ. Chỉ có thể từ chối đơn." }),
+            TopUpReviewFailure.SelfReview =>
+                Conflict(new { message = "Không thể tự xử lý đơn Coupon của chính bạn." }),
+            TopUpReviewFailure.NotReviewable =>
+                Conflict(new { message = "Yêu cầu không tồn tại hoặc đã được xử lý." }),
+            _ => Ok(result.TopUp),
+        };
     }
 }

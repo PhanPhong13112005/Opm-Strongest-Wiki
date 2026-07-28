@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace OpmWiki.Application.Community;
 
 public sealed record AccountDto(
@@ -6,11 +8,15 @@ public sealed record AccountDto(
     string DisplayName,
     string Role,
     decimal Balance,
+    bool IsActive,
     DateTimeOffset CreatedAt);
 
 public sealed record RegisterRequest(string Username, string DisplayName, string Password);
 public sealed record LoginRequest(string Username, string Password);
 public sealed record UpdateAccountRoleRequest(string Role);
+public sealed record UpdateAccountStatusRequest(
+    [property: Required(ErrorMessage = "Trạng thái tài khoản là bắt buộc.")]
+    bool? IsActive);
 
 public sealed record EventCommentDto(
     long Id,
@@ -68,7 +74,25 @@ public sealed record TopUpRequestDto(
     DateTimeOffset? PaidAt,
     string ExternalTransactionId);
 
+public sealed record AdminTopUpRequestDto(
+    long Id,
+    Guid UserId,
+    string Username,
+    string DisplayName,
+    string Provider,
+    string ReferenceCode,
+    decimal Amount,
+    string Status,
+    string StaffNote,
+    string ReviewedBySubject,
+    DateTimeOffset CreatedAt,
+    DateTimeOffset? ReviewedAt,
+    DateTimeOffset? PaidAt,
+    string ExternalTransactionId);
+
 public sealed record CreateTopUpRequest(string Provider, string ReferenceCode, decimal Amount);
+public sealed record TopUpCreationResult(TopUpRequestDto TopUp, bool Created);
+public sealed record UpdateCouponOrderRequest(string Action);
 public sealed record CreateBankTopUpQrRequest(decimal Amount);
 public sealed record UpdateBankPaymentRequest(string Action);
 public sealed record BankTransferDetailsDto(string BankId, string AccountNumber, string AccountName);
@@ -78,6 +102,18 @@ public sealed record BankTopUpQrDto(
     string QrUrl,
     DateTimeOffset ExpiresAt);
 public sealed record ReviewTopUpRequest(string Status, string StaffNote);
+
+public enum TopUpReviewFailure
+{
+    None,
+    NotReviewable,
+    InvalidCouponOrder,
+    SelfReview,
+}
+public sealed record TopUpReviewResult(
+    AdminTopUpRequestDto? TopUp,
+    TopUpReviewFailure Failure);
+
 public sealed record SePayWebhookTransaction(
     string ExternalTransactionId,
     string Gateway,

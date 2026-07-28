@@ -119,6 +119,8 @@ const schemaStatements = [
     ADD COLUMN IF NOT EXISTS "ExternalTransactionId" varchar(100) NOT NULL DEFAULT ''`,
   `ALTER TABLE top_up_requests
     ADD COLUMN IF NOT EXISTS "PaidAt" timestamptz NULL`,
+  `ALTER TABLE top_up_requests
+    ADD COLUMN IF NOT EXISTS "ReviewedBySubject" varchar(160) NOT NULL DEFAULT ''`,
   `CREATE UNIQUE INDEX IF NOT EXISTS "IX_top_up_requests_BankReferenceCode"
     ON top_up_requests ("ReferenceCode") WHERE "Provider" = 'Bank transfer'`,
   `CREATE TABLE IF NOT EXISTS payment_transactions (

@@ -31,6 +31,7 @@ const mirageData = [
   { stage: '90', itemVi: 'Cục cầu vồng', itemEn: 'Rainbow Core', image: '/Feature/medals/Mirage_trial/ai_90.png' }
 ]
 const mirageMilestoneImages = {
+  5: '/Feature/medals/Mirage_trial/ai_5.png',
   20: '/Feature/medals/Mirage_trial/ai_20.png',
   40: '/Feature/medals/Mirage_trial/ai_40.png'
 }

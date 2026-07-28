@@ -37,6 +37,35 @@ export const requireUser = (request, response, roles = []) => {
   return user
 }
 
+export const requireCurrentUser = async (request, response, sql, roles = []) => {
+  const user = requireUser(request, response)
+  if (!user) return null
+  if (String(user.userId).startsWith('admin:')) {
+    if (roles.length > 0 && !roles.includes(user.role)) {
+      json(response, 403, { message: 'Tài khoản không có quyền thực hiện thao tác này.' })
+      return null
+    }
+    return user
+  }
+
+  const rows = await sql.query(
+    `SELECT "Role" AS role
+       FROM user_accounts
+      WHERE "Id" = $1 AND "IsActive" = true
+      LIMIT 1`,
+    [user.userId],
+  )
+  if (!rows[0] || rows[0].role !== user.role) {
+    json(response, 401, { message: 'Phiên đăng nhập không còn hiệu lực. Vui lòng đăng nhập lại.' })
+    return null
+  }
+  if (roles.length > 0 && !roles.includes(user.role)) {
+    json(response, 403, { message: 'Tài khoản không có quyền thực hiện thao tác này.' })
+    return null
+  }
+  return user
+}
+
 export const routePath = (request) => {
   const queryPath = Array.isArray(request.query?.path)
     ? request.query.path.join('/')

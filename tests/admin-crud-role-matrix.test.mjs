@@ -5,9 +5,10 @@ import { PGlite } from '@electric-sql/pglite'
 
 import { adminSeedCounts, initializeAdminSchema } from '../api/_lib/adminDatabase.js'
 import { createAdminDataRouteHandler } from '../api/_lib/adminRoutes.js'
+import { createAuthRouteHandler } from '../api/_lib/authRoutes.js'
 import { createCommunityRouteHandler } from '../api/_lib/communityRoutes.js'
 import { initializeCommunitySchema } from '../api/_lib/database.js'
-import { requireUser } from '../api/_lib/http.js'
+import { requireCurrentUser, requireUser } from '../api/_lib/http.js'
 import {
   extractSePayPaymentCode,
   processSePayWebhook,
@@ -43,12 +44,18 @@ const ensureCommunity = () => {
          ("Id", "Username", "NormalizedUsername", "DisplayName", "PasswordHash", "Role", "Balance", "IsActive")
        VALUES
          ('00000000-0000-0000-0000-000000000001', 'user', 'USER', 'User QA', 'test', 'User', 0, true),
-         ('00000000-0000-0000-0000-000000000002', 'staff', 'STAFF', 'Staff QA', 'test', 'Staff', 0, true)
+         ('00000000-0000-0000-0000-000000000002', 'staff', 'STAFF', 'Staff QA', 'test', 'Staff', 0, true),
+         ('00000000-0000-0000-0000-000000000003', 'db-admin', 'DB-ADMIN', 'Database Admin QA', 'test', 'Admin', 0, true)
        ON CONFLICT ("Id") DO NOTHING`,
     )
   })()
   return communityInitialized
 }
+
+const authHandler = createAuthRouteHandler({
+  ensureSchema: ensureCommunity,
+  sqlProvider: () => sql,
+})
 
 const communityHandler = createCommunityRouteHandler({
   ensureSchema: ensureCommunity,
@@ -59,12 +66,21 @@ const communityHandler = createCommunityRouteHandler({
 const tokens = Object.fromEntries(['User', 'Staff', 'Admin'].map((role) => [
   role,
   createAccessToken({
-    userId: `00000000-0000-0000-0000-00000000000${role === 'User' ? 1 : role === 'Staff' ? 2 : 3}`,
+    userId: role === 'Admin'
+      ? 'admin:configured-admin'
+      : `00000000-0000-0000-0000-00000000000${role === 'User' ? 1 : 2}`,
     username: role.toLowerCase(),
     displayName: `${role} QA`,
     role,
   }).accessToken,
 ]))
+
+tokens.DatabaseAdmin = createAccessToken({
+  userId: '00000000-0000-0000-0000-000000000003',
+  username: 'db-admin',
+  displayName: 'Database Admin QA',
+  role: 'Admin',
+}).accessToken
 
 const responseMock = () => ({
   statusCode: 200,
@@ -81,6 +97,13 @@ const invoke = async ({ path, method = 'GET', role, body, query = {} }) => {
   const response = responseMock()
   const headers = role ? { authorization: `Bearer ${tokens[role]}` } : {}
   await handler({ method, headers, body, query, url: `/api${path}` }, response, path)
+  return response
+}
+
+const invokeAuth = async ({ path, method = 'GET', role, body, query = {} }) => {
+  const response = responseMock()
+  const headers = role ? { authorization: `Bearer ${tokens[role]}` } : {}
+  await authHandler({ method, headers, body, query, url: `/api${path}` }, response, path)
   return response
 }
 
@@ -173,6 +196,90 @@ test('User, Staff, and Admin authorization matrix matches the portal roles', () 
   assert.equal(requireUser(request('Admin'), adminModerationResponse, ['Staff', 'Admin'])?.role, 'Admin')
 })
 
+test('current-account authorization validates identity before endpoint roles', async () => {
+  await ensureCommunity()
+  const request = role => ({ headers: { authorization: `Bearer ${tokens[role]}` } })
+  const currentRoleSql = role => ({ query: async () => role ? [{ role }] : [] })
+
+  assert.equal((await requireCurrentUser(request('User'), responseMock(), currentRoleSql('User')))?.role, 'User')
+
+  for (const scenario of [
+    { token: 'User', currentRole: 'Staff', roles: ['Staff', 'Admin'] },
+    { token: 'User', currentRole: 'Admin', roles: ['Admin'] },
+    { token: 'Staff', currentRole: 'User', roles: ['Staff', 'Admin'] },
+    { token: 'DatabaseAdmin', currentRole: 'User', roles: ['Admin'] },
+  ]) {
+    const response = responseMock()
+    assert.equal(
+      await requireCurrentUser(
+        request(scenario.token), response, currentRoleSql(scenario.currentRole), scenario.roles),
+      null,
+    )
+    assert.equal(response.statusCode, 401)
+  }
+
+  const inactiveResponse = responseMock()
+  assert.equal(
+    await requireCurrentUser(request('User'), inactiveResponse, currentRoleSql(null), ['User']),
+    null,
+  )
+  assert.equal(inactiveResponse.statusCode, 401)
+
+  const forbiddenResponse = responseMock()
+  assert.equal(
+    await requireCurrentUser(request('User'), forbiddenResponse, currentRoleSql('User'), ['Admin']),
+    null,
+  )
+  assert.equal(forbiddenResponse.statusCode, 403)
+})
+
+test('Admin manages account activity while Staff and self-service are denied', async () => {
+  assert.equal((await invokeAuth({ path: '/admin/users/00000000-0000-0000-0000-000000000001/status', method: 'PUT', role: 'Staff', body: { isActive: false } })).statusCode, 403)
+  assert.equal((await invokeAuth({ path: '/admin/users/00000000-0000-0000-0000-000000000003/status', method: 'PUT', role: 'DatabaseAdmin', body: { isActive: false } })).statusCode, 409)
+  assert.equal((await invokeAuth({ path: '/admin/users/00000000-0000-0000-0000-000000000003/role', method: 'PUT', role: 'DatabaseAdmin', body: { role: 'User' } })).statusCode, 409)
+
+  const disabled = await invokeAuth({
+    path: '/admin/users/00000000-0000-0000-0000-000000000001/status',
+    method: 'PUT', role: 'Admin', body: { isActive: false },
+  })
+  assert.equal(disabled.statusCode, 200)
+  assert.equal(disabled.payload.isActive, false)
+  assert.equal((await invokeAuth({ path: '/auth/me', role: 'User' })).statusCode, 401)
+  assert.equal((await invokeCommunity({ path: '/top-ups/mine', role: 'User' })).statusCode, 401)
+
+  const enabled = await invokeAuth({
+    path: '/admin/users/00000000-0000-0000-0000-000000000001/status',
+    method: 'PUT', role: 'Admin', body: { isActive: true },
+  })
+  assert.equal(enabled.statusCode, 200)
+  assert.equal(enabled.payload.isActive, true)
+})
+
+test('Admin cannot approve malformed legacy Coupon orders but can reject them', async () => {
+  await ensureCommunity()
+  const inserted = await sql.query(
+    `INSERT INTO top_up_requests ("UserId", "Provider", "ReferenceCode", "Amount")
+     VALUES ('00000000-0000-0000-0000-000000000001', 'Coupon Order',
+             'UID:3107453|SID:310170|CP:6|QTY:2|LEGACYPRICE', 13000)
+     RETURNING "Id" AS id`,
+  )
+  const id = Number(inserted[0].id)
+
+  const approved = await invokeCommunity({
+    path: `/admin/top-ups/${id}/review`, method: 'PUT', role: 'Admin',
+    body: { status: 'Approved', staffNote: 'Không được duyệt dữ liệu sai.' },
+  })
+  assert.equal(approved.statusCode, 409)
+  assert.match(approved.payload.message, /không hợp lệ/i)
+
+  const rejected = await invokeCommunity({
+    path: `/admin/top-ups/${id}/review`, method: 'PUT', role: 'Admin',
+    body: { status: 'Rejected', staffNote: 'Giá trị không khớp số lượng Coupon.' },
+  })
+  assert.equal(rejected.statusCode, 200)
+  assert.equal(rejected.payload.status, 'Rejected')
+})
+
 test('only Admin can access content-management APIs', async () => {
   assert.equal((await invoke({ path: '/admin/characters' })).statusCode, 401)
   assert.equal((await invoke({ path: '/admin/characters', role: 'User' })).statusCode, 403)
@@ -261,11 +368,55 @@ test('User can comment, use forum/advisor, and create a top-up request', async (
   assert.equal(couponOrder.statusCode, 201)
   assert.equal(couponOrder.payload.provider, 'Coupon Order')
 
+  const replayedCouponOrder = await invokeCommunity({
+    path: '/top-ups', method: 'POST', role: 'User',
+    body: { provider: 'Coupon Order', referenceCode: 'UID:3107453|SID:310170|CP:6|QTY:1|QA', amount: 13000 },
+  })
+  assert.equal(replayedCouponOrder.statusCode, 200)
+  assert.equal(replayedCouponOrder.payload.id, couponOrder.payload.id)
+  const [couponReplayCount] = await sql.query(
+    `SELECT COUNT(*)::int AS count FROM top_up_requests
+      WHERE "UserId" = '00000000-0000-0000-0000-000000000001'
+        AND "ReferenceCode" = 'UID:3107453|SID:310170|CP:6|QTY:1|QA'`,
+  )
+  assert.equal(couponReplayCount.count, 1)
+
   const invalidCouponPrice = await invokeCommunity({
     path: '/top-ups', method: 'POST', role: 'User',
     body: { provider: 'Coupon Order', referenceCode: 'UID:3107453|SID:310170|CP:6|QTY:2|QA', amount: 13000 },
   })
   assert.equal(invalidCouponPrice.statusCode, 400)
+
+
+  const cancellationCandidate = await invokeCommunity({
+    path: '/top-ups', method: 'POST', role: 'User',
+    body: {
+      provider: 'Coupon Order',
+      referenceCode: 'UID:3107453|SID:310170|CP:6|QTY:1|CANCELLATION',
+      amount: 13000,
+    },
+  })
+  assert.equal(cancellationCandidate.statusCode, 201)
+  assert.equal((await invokeCommunity({
+    path: '/top-ups/' + cancellationCandidate.payload.id + '/coupon-order',
+    method: 'PUT', role: 'User', body: { action: 'approve' },
+  })).statusCode, 400)
+  assert.equal((await invokeCommunity({
+    path: '/top-ups/' + cancellationCandidate.payload.id + '/coupon-order',
+    method: 'PUT', role: 'Staff', body: { action: 'cancel' },
+  })).statusCode, 404)
+  const cancelledCoupon = await invokeCommunity({
+    path: '/top-ups/' + cancellationCandidate.payload.id + '/coupon-order',
+    method: 'PUT', role: 'User', body: { action: 'cancel' },
+  })
+  assert.equal(cancelledCoupon.statusCode, 200)
+  assert.equal(cancelledCoupon.payload.status, 'Cancelled')
+  const repeatedCancellation = await invokeCommunity({
+    path: '/top-ups/' + cancellationCandidate.payload.id + '/coupon-order',
+    method: 'PUT', role: 'User', body: { action: 'cancel' },
+  })
+  assert.equal(repeatedCancellation.statusCode, 200)
+  assert.equal(repeatedCancellation.payload.status, 'Cancelled')
 })
 
 test('Bank QR top-up requires login and lets the backend decide transfer details', async () => {
@@ -461,31 +612,133 @@ test('Staff can moderate comments/forum but cannot access payment approval or Ad
   })).statusCode, 204)
 
   const staffTopUps = await invokeCommunity({
-    path: '/staff/top-ups', role: 'Staff', query: { status: 'Pending' },
+    path: '/admin/top-ups', role: 'Staff', query: { status: 'Pending' },
   })
   assert.equal(staffTopUps.statusCode, 403)
 
   const adminTopUps = await invokeCommunity({
-    path: '/staff/top-ups', role: 'Admin', query: { status: 'Pending' },
+    path: '/admin/top-ups', role: 'Admin', query: { status: 'Pending' },
   })
   assert.equal(adminTopUps.statusCode, 200)
   assert.ok(adminTopUps.payload.every((item) => item.provider === 'Coupon Order'))
+
+  const cancelledTopUps = await invokeCommunity({
+    path: '/admin/top-ups', role: 'Admin', query: { status: 'Cancelled' },
+  })
+  assert.equal(cancelledTopUps.statusCode, 200)
+  const userCancelledCoupon = cancelledTopUps.payload.find(
+    item => item.referenceCode.endsWith('|CANCELLATION'),
+  )
+  assert.ok(userCancelledCoupon)
+  assert.equal((await invokeCommunity({
+    path: '/admin/top-ups/' + userCancelledCoupon.id + '/review',
+    method: 'PUT', role: 'Admin',
+    body: { status: 'Approved', staffNote: 'Đơn đã bị User hủy.' },
+  })).statusCode, 409)
+  const legacyTopUps = await invokeCommunity({
+    path: '/staff/top-ups', role: 'Admin', query: { status: 'Pending' },
+  })
+  assert.equal(legacyTopUps.statusCode, 200)
   const [bank] = await sql.query(
     `SELECT "Id" AS id FROM top_up_requests
       WHERE "Provider" = 'Bank transfer' AND "Status" = 'Pending' LIMIT 1`,
   )
   assert.ok(bank)
   assert.equal((await invokeCommunity({
-    path: `/staff/top-ups/${bank.id}/review`, method: 'PUT', role: 'Admin',
+    path: `/admin/top-ups/${bank.id}/review`, method: 'PUT', role: 'Admin',
     body: { status: 'Approved', staffNote: 'Đã xác nhận giao dịch QA.' },
   })).statusCode, 409)
 
   const coupon = adminTopUps.payload.find((item) => item.provider === 'Coupon Order')
   assert.ok(coupon)
-  assert.equal((await invokeCommunity({
-    path: `/staff/top-ups/${coupon.id}/review`, method: 'PUT', role: 'Admin',
+  const rejectionCandidate = await invokeCommunity({
+    path: '/top-ups', method: 'POST', role: 'User',
+    body: {
+      provider: 'Coupon Order',
+      referenceCode: 'UID:3107453|SID:310170|CP:6|QTY:1|REJECTION',
+      amount: 13000,
+    },
+  })
+  assert.equal(rejectionCandidate.statusCode, 201)
+  const rejectedWithoutReason = await invokeCommunity({
+    path: '/admin/top-ups/' + rejectionCandidate.payload.id + '/review', method: 'PUT', role: 'Admin',
+    body: { status: 'Rejected', staffNote: '   ' },
+  })
+  assert.equal(rejectedWithoutReason.statusCode, 400)
+  assert.equal(rejectedWithoutReason.payload.message, 'Vui lòng nhập lý do từ chối.')
+  const rejectedWithReason = await invokeCommunity({
+    path: '/admin/top-ups/' + rejectionCandidate.payload.id + '/review', method: 'PUT', role: 'Admin',
+    body: { status: 'Rejected', staffNote: '  Server không tồn tại.  ' },
+  })
+  assert.equal(rejectedWithReason.statusCode, 200)
+  assert.equal(rejectedWithReason.payload.staffNote, 'Server không tồn tại.')
+  const reviewedCoupon = await invokeCommunity({
+    path: `/admin/top-ups/${coupon.id}/review`, method: 'PUT', role: 'Admin',
     body: { status: 'Approved', staffNote: 'Đã nạp Coupon vào UID.' },
-  })).statusCode, 200)
+  })
+  assert.equal(reviewedCoupon.statusCode, 200)
+  assert.equal(reviewedCoupon.payload.reviewedBySubject, 'admin:configured-admin')
+  const repeatedReview = await invokeCommunity({
+    path: `/admin/top-ups/${coupon.id}/review`, method: 'PUT', role: 'Admin',
+    body: { status: 'Approved', staffNote: 'Không xử lý lần hai.' },
+  })
+  assert.equal(repeatedReview.statusCode, 409)
+  assert.equal(repeatedReview.payload.message, 'Yêu cầu không tồn tại hoặc đã được xử lý.')
+  const [auditRow] = await sql.query(
+    'SELECT "ReviewedById" AS "reviewedById", "ReviewedBySubject" AS "reviewedBySubject" FROM top_up_requests WHERE "Id" = $1',
+    [coupon.id],
+  )
+  assert.equal(auditRow.reviewedById, null)
+  assert.equal(auditRow.reviewedBySubject, 'admin:configured-admin')
+
+  const selfAdminCoupon = await invokeCommunity({
+    path: '/top-ups', method: 'POST', role: 'DatabaseAdmin',
+    body: {
+      provider: 'Coupon Order',
+      referenceCode: 'UID:3107453|SID:310170|CP:6|QTY:1|SELFADMIN',
+      amount: 13000,
+    },
+  })
+  assert.equal(selfAdminCoupon.statusCode, 201)
+  const selfReview = await invokeCommunity({
+    path: '/admin/top-ups/' + selfAdminCoupon.payload.id + '/review',
+    method: 'PUT', role: 'DatabaseAdmin',
+    body: { status: 'Approved', staffNote: 'Không được tự duyệt.' },
+  })
+  assert.equal(selfReview.statusCode, 409)
+  assert.equal(selfReview.payload.message, 'Không thể tự xử lý đơn Coupon của chính bạn.')
+  const reviewedByAnotherAdmin = await invokeCommunity({
+    path: '/admin/top-ups/' + selfAdminCoupon.payload.id + '/review',
+    method: 'PUT', role: 'Admin',
+    body: { status: 'Approved', staffNote: 'Admin khác đã xử lý.' },
+  })
+  assert.equal(reviewedByAnotherAdmin.statusCode, 200)
+  assert.equal(reviewedByAnotherAdmin.payload.reviewedBySubject, 'admin:configured-admin')
+  const dbAdminCoupon = await invokeCommunity({
+    path: '/top-ups', method: 'POST', role: 'User',
+    body: {
+      provider: 'Coupon Order',
+      referenceCode: 'UID:3107453|SID:310170|CP:6|QTY:1|DBADMIN',
+      amount: 13000,
+    },
+  })
+  assert.equal(dbAdminCoupon.statusCode, 201)
+  const dbReviewedCoupon = await invokeCommunity({
+    path: `/admin/top-ups/${dbAdminCoupon.payload.id}/review`,
+    method: 'PUT',
+    role: 'DatabaseAdmin',
+    body: { status: 'Approved', staffNote: 'Database Admin đã nạp Coupon.' },
+  })
+  assert.equal(dbReviewedCoupon.statusCode, 200)
+  assert.equal(dbReviewedCoupon.payload.reviewedBySubject, '00000000-0000-0000-0000-000000000003')
+  const [dbAuditRow] = await sql.query(
+    'SELECT "ReviewedById" AS "reviewedById", "ReviewedBySubject" AS "reviewedBySubject" FROM top_up_requests WHERE "Id" = $1',
+    [dbAdminCoupon.payload.id],
+  )
+  assert.equal(dbAuditRow.reviewedById, '00000000-0000-0000-0000-000000000003')
+  assert.equal(dbAuditRow.reviewedBySubject, '00000000-0000-0000-0000-000000000003')
+  const userHistory = await invokeCommunity({ path: '/top-ups/mine', role: 'User' })
+  assert.ok(userHistory.payload.every(item => !Object.hasOwn(item, 'reviewedBySubject')))
   assert.equal((await invoke({ path: '/admin/events', role: 'Staff' })).statusCode, 403)
 })
 
