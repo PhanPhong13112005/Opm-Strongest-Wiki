@@ -184,11 +184,13 @@ onBeforeUnmount(() => document.removeEventListener('pointerdown', closeAccountMe
       <nav v-if="isMobileMenuOpen" class="mobile-command-menu">
         <RouterLink to="/characters">{{ t('nav.characters') }}</RouterLink>
         <RouterLink to="/mastery">{{ t('nav.mastery') }}</RouterLink>
-        <RouterLink to="/events">{{ t('nav.events') }}</RouterLink>
+        <RouterLink to="/core-lab">{{ t('nav.corelab') }}</RouterLink>
+        <RouterLink to="/medals">{{ t('nav.medals') }}</RouterLink>
         <RouterLink to="/tactics">{{ t('nav.tactics') }}</RouterLink>
         <RouterLink to="/backgear">{{ t('nav.backgear') }}</RouterLink>
         <RouterLink to="/keepsakes">{{ t('nav.keepsakes') }}</RouterLink>
         <RouterLink to="/insignias">{{ t('nav.insignias') }}</RouterLink>
+        <RouterLink to="/events">{{ t('nav.events') }}</RouterLink>
         <RouterLink to="/top-up">{{ t('nav.topup') }}</RouterLink>
       </nav>
     </header>

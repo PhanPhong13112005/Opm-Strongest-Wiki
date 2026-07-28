@@ -32,7 +32,7 @@ const assertNoHorizontalOverflow = async page => {
   expect(dimensions.content).toBeLessThanOrEqual(dimensions.viewport)
 }
 
-test('Public mobile menu exposes the game top-up shop and requires login only when ordering', async ({ page }) => {
+test('Public mobile menu exposes every wiki feature and requires login only when ordering', async ({ page }) => {
   const session = {
     userId: 'public-top-up-test',
     username: 'public-top-up',
@@ -54,6 +54,24 @@ test('Public mobile menu exposes the game top-up shop and requires login only wh
   await page.goto('/')
 
   await page.getByRole('button', { name: 'Mở menu' }).click()
+  const mobileMenu = page.locator('.mobile-command-menu')
+  const expectedFeaturePaths = [
+    '/characters',
+    '/mastery',
+    '/core-lab',
+    '/medals',
+    '/tactics',
+    '/backgear',
+    '/keepsakes',
+    '/insignias',
+    '/events',
+    '/top-up',
+  ]
+  await expect(mobileMenu.getByRole('link')).toHaveCount(expectedFeaturePaths.length)
+  for (const featurePath of expectedFeaturePaths) {
+    await expect(mobileMenu.locator(`a[href="${featurePath}"]`)).toBeVisible()
+  }
+
   const topUpLink = page.locator('.mobile-command-menu').getByRole('link', { name: 'Nạp thẻ', exact: true })
   await expect(topUpLink).toBeVisible()
   await topUpLink.click()

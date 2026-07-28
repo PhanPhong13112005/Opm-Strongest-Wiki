@@ -66,6 +66,18 @@ test('event images are either valid public assets or use the translated placehol
   }
 })
 
+test('Mirage Trial milestone illustrations are wired to existing public assets', () => {
+  const medalsView = fs.readFileSync(path.join(root, 'src/views/MedalsView.vue'), 'utf8')
+  for (const stage of ['20', '40', '65', '90']) {
+    const imageUrl = `/Feature/medals/Mirage_trial/ai_${stage}.png`
+    assert.ok(
+      fs.existsSync(path.join(root, 'public', imageUrl.replace(/^\//, ''))),
+      `Mirage Trial stage ${stage} is missing ${imageUrl}`,
+    )
+    assert.ok(medalsView.includes(imageUrl), `Mirage Trial stage ${stage} is not wired to ${imageUrl}`)
+  }
+})
+
 test('release schedule fallback is bilingual and covers both servers', () => {
   assert.equal(releaseSchedule.length, 12)
   assert.deepEqual(new Set(releaseSchedule.map((entry) => entry.server)), new Set(['CN', 'SEA']))
