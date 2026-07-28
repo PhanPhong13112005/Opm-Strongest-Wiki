@@ -72,15 +72,16 @@ docker compose exec api dotnet OpmWiki.Api.dll --seed-data
 | `GET/POST` | `/api/events/{eventId}/comments` | Xem hoặc gửi bình luận sự kiện |
 | `GET/POST` | `/api/forum/topics` | Danh sách hoặc tạo chủ đề diễn đàn |
 | `POST` | `/api/forum/topics/{id}/posts` | Gửi phản hồi trong chủ đề |
-| `GET/POST` | `/api/top-ups/mine`, `/api/top-ups` | Theo dõi yêu cầu hoặc gửi đơn Coupon |
+| `GET/POST` | `/api/top-ups/mine`, `/api/top-ups` | Theo dõi hoặc gửi đơn Coupon; POST trả `201` khi tạo mới, `200` khi replay cùng reference/payload và `409` nếu reference đã dùng cho payload khác |
+| `PUT` | `/api/top-ups/{id}/coupon-order` | User hủy đơn Coupon của chính mình khi còn chờ; update có kiểm tra trạng thái |
 | `POST` | `/api/top-ups/bank-qr` | Tạo yêu cầu chuyển khoản và mã VietQR |
 | `GET/PUT` | `/api/top-ups/{id}/bank-qr`, `/api/top-ups/{id}/bank-payment` | Xem chi tiết hoặc hủy thanh toán ngân hàng |
 | `POST` | `/api/webhooks/sepay` | SePay xác thực HMAC, đối soát và cộng số dư idempotent |
-| `GET/PUT` | `/api/staff/top-ups` | Endpoint kế thừa chỉ dành cho Admin xử lý đơn Coupon; Staff bị từ chối |
+| `GET/PUT` | `/api/admin/top-ups` | Admin liệt kê và duyệt/từ chối đơn Coupon; chặn self-review, bắt buộc lý do khi từ chối, chỉ cho duyệt khi UID/SID/QTY/giá trị hợp lệ và trả phản hồi riêng cho từng lỗi nghiệp vụ; `/api/staff/top-ups` là alias tương thích ngược, Staff vẫn bị từ chối |
 | `GET/DELETE` | `/api/moderation/comments` | Nhân viên kiểm duyệt bình luận |
 | `DELETE` | `/api/moderation/forum/topics/{id}`, `/api/moderation/forum/posts/{id}` | Nhân viên xóa chủ đề hoặc phản hồi vi phạm |
 | `GET` | `/api/admin/dashboard` | Thống kê toàn hệ thống |
-| `GET/PUT` | `/api/admin/users` | Danh sách và phân vai trò User/Staff/Admin |
+| `GET/PUT` | `/api/admin/users`, `/api/admin/users/{id}/role`, `/api/admin/users/{id}/status` | Danh sách, phân vai trò và bật/tắt tài khoản; `isActive` bắt buộc là boolean; Admin database không được tự đổi role hoặc tự vô hiệu hóa |
 | `GET/POST/PUT/DELETE` | `/api/admin/events` | CRUD nội dung sự kiện |
 | `GET` | `/api/release-schedule` | Lịch ra mắt CN/SEA công khai trên trang chủ |
 | `GET/POST/PUT/DELETE` | `/api/admin/releases` | Quản trị lịch ra mắt tướng CN/SEA |
@@ -132,9 +133,9 @@ SePay__WebhookSecret=<bí mật HMAC giống cấu hình trong SePay, tối thi�
 
 - `User`: bình luận sự kiện, diễn đàn, tư vấn Wiki/AI và gửi yêu cầu nạp.
 - `Staff`: kế thừa quyền cộng đồng và xóa nội dung không hợp lệ; không có quyền xử lý thanh toán.
-- `Admin`: dashboard, phân quyền, CRUD nhân vật/Kỷ vật và CRUD lịch sự kiện.
+- `Admin`: dashboard, phân quyền, bật/tắt tài khoản database, CRUD nhân vật/Kỷ vật và CRUD lịch sự kiện.
 
-Mật khẩu người dùng được băm PBKDF2-SHA256 với salt ngẫu nhiên; JWT chứa vai trò và mọi endpoint ghi đều kiểm tra quyền ở backend.
+Mật khẩu người dùng được băm PBKDF2-SHA256 với salt ngẫu nhiên. JWT chứa vai trò, nhưng ASP.NET đối chiếu lại `IsActive` và `Role` trong database ở `OnTokenValidated`; account bị khóa hoặc token có role cũ bị từ chối ngay trên mọi endpoint bảo vệ. Admin cấu hình môi trường có subject riêng và không phụ thuộc bản ghi database.
 Thanh toán ngân hàng chỉ được cộng số dư từ webhook SePay có chữ ký hợp lệ. Mỗi mã giao dịch SePay là duy nhất,
 việc cộng tiền và ghi `balance_ledger` nằm trong cùng giao dịch cơ sở dữ liệu. Hệ thống không lưu OTP, mật khẩu
 hay dữ liệu thẻ ngân hàng đầy đủ.

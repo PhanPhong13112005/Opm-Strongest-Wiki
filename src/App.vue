@@ -31,7 +31,7 @@ const roleMenuItem = computed(() => {
     return { to: '/admin/dashboard', label: 'Vào trang Quản trị', hint: 'Dashboard và quản lý dữ liệu', code: 'QT' }
   }
   if (authState.session?.role === 'Staff') {
-    return { to: '/staff', label: 'Vào trang Nhân viên', hint: 'Duyệt nạp và kiểm duyệt', code: 'NV' }
+    return { to: '/staff', label: 'Vào trang Nhân viên', hint: 'Kiểm duyệt nội dung cộng đồng', code: 'NV' }
   }
   return { to: '/forum', label: 'Vào Diễn đàn', hint: 'Trao đổi cùng cộng đồng', code: 'DD' }
 })
@@ -54,6 +54,7 @@ const workspaceLinks = computed(() => {
       { to: '/admin/characters', code: 'CH', label: 'Nhân vật' },
       { to: '/admin/events', code: 'EV', label: 'Sự kiện' },
       { to: '/admin/releases', code: 'RL', label: 'Lịch ra mắt' },
+      { to: '/admin/top-ups', code: 'CP', label: 'Đơn Coupon' },
       { to: '/staff', code: 'KD', label: 'Kiểm duyệt' },
       ...community,
     ]

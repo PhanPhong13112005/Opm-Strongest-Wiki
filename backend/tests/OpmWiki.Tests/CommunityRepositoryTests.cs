@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using OpmWiki.Api.Security;
 using OpmWiki.Application.Community;
@@ -48,16 +50,79 @@ public sealed class CommunityRepositoryTests
         Assert.NotNull(post);
 
         var topUp = await repository.CreateTopUpAsync(user.Id, "Momo", "TX-001", 100_000);
-        var reviewed = await repository.ReviewTopUpAsync(topUp.Id, Guid.Empty, TopUpStatuses.Approved, "Đã đối soát");
-        Assert.Null(reviewed);
+        var reviewed = await repository.ReviewTopUpAsync(
+            topUp.Id, Guid.Empty, "admin:test", TopUpStatuses.Approved, "Đã đối soát");
+        Assert.Equal(TopUpReviewFailure.NotReviewable, reviewed.Failure);
+        Assert.Null(reviewed.TopUp);
         Assert.Equal(0, (await repository.FindUserByIdAsync(user.Id))?.Balance);
 
         var couponOrder = await repository.CreateTopUpAsync(
             user.Id, "Coupon Order", "UID:3107453|SID:310170|CP:6|QTY:1|QA", 13_000);
         var reviewedCoupon = await repository.ReviewTopUpAsync(
-            couponOrder.Id, Guid.Empty, TopUpStatuses.Approved, "Đã nạp Coupon");
-        Assert.Equal(TopUpStatuses.Approved, reviewedCoupon?.Status);
+            couponOrder.Id, Guid.Empty, "admin:test", TopUpStatuses.Approved, "Đã nạp Coupon");
+        Assert.Equal(TopUpReviewFailure.None, reviewedCoupon.Failure);
+        Assert.Equal(TopUpStatuses.Approved, reviewedCoupon.TopUp?.Status);
+        Assert.Equal("admin:test", reviewedCoupon.TopUp?.ReviewedBySubject);
         Assert.Equal(0, (await repository.FindUserByIdAsync(user.Id))?.Balance);
+
+        var idempotentReference = "UID:3107453|SID:310170|CP:6|QTY:1|IDEMPOTENT";
+        var firstCouponSubmission = await repository.CreateOrGetCouponTopUpAsync(
+            user.Id, idempotentReference, 13_000);
+        var replayedCouponSubmission = await repository.CreateOrGetCouponTopUpAsync(
+            user.Id, idempotentReference, 13_000);
+        Assert.True(firstCouponSubmission.Created);
+        Assert.False(replayedCouponSubmission.Created);
+        Assert.Equal(firstCouponSubmission.TopUp.Id, replayedCouponSubmission.TopUp.Id);
+        Assert.Equal(1, await dbContext.TopUpRequests.CountAsync(
+            x => x.UserId == user.Id && x.ReferenceCode == idempotentReference));
+
+        Assert.Equal(
+            TopUpReviewFailure.NotReviewable,
+            (await repository.ReviewTopUpAsync(
+                couponOrder.Id, Guid.Empty, "admin:test", TopUpStatuses.Approved, "Lặp lại")).Failure);
+
+        var malformedCoupon = await repository.CreateTopUpAsync(
+            user.Id, CouponOrderRules.Provider,
+            "UID:3107453|SID:310170|CP:6|QTY:2|LEGACYPRICE", 13_000);
+        var malformedApproval = await repository.ReviewTopUpAsync(
+            malformedCoupon.Id, Guid.Empty, "admin:test",
+            TopUpStatuses.Approved, "Không được duyệt dữ liệu sai");
+        Assert.Equal(TopUpReviewFailure.InvalidCouponOrder, malformedApproval.Failure);
+        Assert.Null(malformedApproval.TopUp);
+        var rejectedMalformed = await repository.ReviewTopUpAsync(
+            malformedCoupon.Id, Guid.Empty, "admin:test",
+            TopUpStatuses.Rejected, "Giá trị không khớp số lượng Coupon");
+        Assert.Equal(TopUpReviewFailure.None, rejectedMalformed.Failure);
+        Assert.Equal(TopUpStatuses.Rejected, rejectedMalformed.TopUp?.Status);
+
+        var databaseAdmin = await repository.CreateUserAsync("db-admin", "Database Admin", "hash");
+        Assert.NotNull(databaseAdmin);
+        databaseAdmin!.Role = AccountRoles.Admin;
+        await dbContext.SaveChangesAsync();
+        var selfReviewCoupon = await repository.CreateTopUpAsync(
+            databaseAdmin.Id, "Coupon Order", "UID:3107453|SID:310170|CP:6|QTY:1|SELFREVIEW", 13_000);
+        var selfReview = await repository.ReviewTopUpAsync(
+            selfReviewCoupon.Id, databaseAdmin.Id, databaseAdmin.Id.ToString(),
+            TopUpStatuses.Approved, "Không được tự duyệt");
+        Assert.Equal(TopUpReviewFailure.SelfReview, selfReview.Failure);
+        Assert.Null(selfReview.TopUp);
+        Assert.Equal(TopUpStatuses.Pending,
+            (await repository.GetUserTopUpAsync(selfReviewCoupon.Id, databaseAdmin.Id))?.Status);
+        var reviewedByAnotherAdmin = await repository.ReviewTopUpAsync(
+            selfReviewCoupon.Id, Guid.Empty, "admin:other",
+            TopUpStatuses.Approved, "Admin khác đã xử lý");
+        Assert.Equal(TopUpReviewFailure.None, reviewedByAnotherAdmin.Failure);
+        Assert.Equal(TopUpStatuses.Approved, reviewedByAnotherAdmin.TopUp?.Status);
+        Assert.Equal("admin:other", reviewedByAnotherAdmin.TopUp?.ReviewedBySubject);
+        var cancellableCoupon = await repository.CreateTopUpAsync(
+            user.Id, "Coupon Order", "CANCEL-COUPON-001", 13_000);
+        Assert.Null(await repository.UpdateUserTopUpStatusAsync(
+            cancellableCoupon.Id, user.Id, "Bank transfer", TopUpStatuses.Pending, TopUpStatuses.Cancelled));
+        var cancelledCoupon = await repository.UpdateUserTopUpStatusAsync(
+            cancellableCoupon.Id, user.Id, "Coupon Order", TopUpStatuses.Pending, TopUpStatuses.Cancelled);
+        Assert.Equal(TopUpStatuses.Cancelled, cancelledCoupon?.Status);
+        Assert.Null(await repository.UpdateUserTopUpStatusAsync(
+            cancellableCoupon.Id, user.Id, "Coupon Order", TopUpStatuses.Pending, TopUpStatuses.Cancelled));
 
         var bankTopUp = await repository.CreateTopUpAsync(
             user.Id, "Bank transfer", "OPMTESTBANK001", 13_000);
@@ -67,8 +132,10 @@ public sealed class CommunityRepositoryTests
         Assert.DoesNotContain(
             await repository.ListTopUpsAsync(TopUpStatuses.Pending),
             item => item.Id == bankTopUp.Id && item.Status == TopUpStatuses.PaymentReported);
-        Assert.Null(await repository.ReviewTopUpAsync(
-            bankTopUp.Id, Guid.Empty, TopUpStatuses.Approved, "Không được duyệt thủ công"));
+        Assert.Equal(
+            TopUpReviewFailure.NotReviewable,
+            (await repository.ReviewTopUpAsync(
+                bankTopUp.Id, Guid.Empty, "admin:test", TopUpStatuses.Approved, "Không được duyệt thủ công")).Failure);
         var webhook = new SePayWebhookTransaction(
             "90001",
             "VCB",
@@ -106,10 +173,75 @@ public sealed class CommunityRepositoryTests
         Assert.Equal(1, dashboard.EventComments);
         Assert.Equal(1, dashboard.ForumTopics);
         Assert.Equal(1, dashboard.ForumPosts);
-        Assert.Equal(0, dashboard.PendingTopUps);
+        Assert.Equal(1, dashboard.PendingTopUps);
 
         Assert.True(await repository.DeleteForumTopicAsync(topic.Id, Guid.Empty));
         Assert.Empty(await repository.ListForumTopicsAsync());
+    }
+
+    [Theory]
+    [InlineData("{}")]
+    [InlineData("{\"isActive\":null}")]
+    public void AccountStatusContract_RejectsMissingOrNullBoolean(string payload)
+    {
+        var request = JsonSerializer.Deserialize<UpdateAccountStatusRequest>(
+            payload, new JsonSerializerOptions(JsonSerializerDefaults.Web));
+        Assert.NotNull(request);
+        var validationResults = new List<ValidationResult>();
+        Assert.False(Validator.TryValidateObject(
+            request!, new ValidationContext(request!), validationResults, validateAllProperties: true));
+        Assert.Contains(validationResults, result =>
+            result.MemberNames.Contains(nameof(UpdateAccountStatusRequest.IsActive)));
+    }
+
+    [Fact]
+    public void AccountStatusContract_RejectsStringBoolean()
+    {
+        Assert.Throws<JsonException>(() => JsonSerializer.Deserialize<UpdateAccountStatusRequest>(
+            "{\"isActive\":\"true\"}", new JsonSerializerOptions(JsonSerializerDefaults.Web)));
+    }
+
+    [Theory]
+    [InlineData(true)]
+    [InlineData(false)]
+    public void AccountStatusContract_AcceptsExplicitBoolean(bool isActive)
+    {
+        var payload = $"{{\"isActive\":{isActive.ToString().ToLowerInvariant()}}}";
+        var request = JsonSerializer.Deserialize<UpdateAccountStatusRequest>(
+            payload, new JsonSerializerOptions(JsonSerializerDefaults.Web));
+        Assert.NotNull(request);
+        var validationResults = new List<ValidationResult>();
+        Assert.True(Validator.TryValidateObject(
+            request!, new ValidationContext(request!), validationResults, validateAllProperties: true));
+        Assert.Equal(isActive, request!.IsActive);
+    }
+
+    [Fact]
+    public async Task AccountAdministration_TracksActivityAndPreventsSelfChanges()
+    {
+        await using var dbContext = CreateContext();
+        var repository = new CommunityRepository(dbContext);
+        var admin = await repository.CreateUserAsync("account-admin", "Account Admin", "hash");
+        var target = await repository.CreateUserAsync("account-target", "Account Target", "hash");
+        Assert.NotNull(admin);
+        Assert.NotNull(target);
+        admin!.Role = AccountRoles.Admin;
+        await dbContext.SaveChangesAsync();
+
+        Assert.Null(await repository.UpdateAccountStatusAsync(admin.Id, false, admin.Id));
+        Assert.Null(await repository.UpdateAccountRoleAsync(admin.Id, AccountRoles.User, admin.Id));
+
+        var disabled = await repository.UpdateAccountStatusAsync(target!.Id, false, admin.Id);
+        Assert.NotNull(disabled);
+        Assert.False(disabled!.IsActive);
+        Assert.False((await repository.ListAccountsAsync()).Single(x => x.Id == target.Id).IsActive);
+
+        var roleUpdated = await repository.UpdateAccountRoleAsync(target.Id, AccountRoles.Staff, admin.Id);
+        Assert.Equal(AccountRoles.Staff, roleUpdated?.Role);
+        Assert.False(roleUpdated?.IsActive);
+
+        var enabled = await repository.UpdateAccountStatusAsync(target.Id, true, admin.Id);
+        Assert.True(enabled?.IsActive);
     }
 
     [Fact]

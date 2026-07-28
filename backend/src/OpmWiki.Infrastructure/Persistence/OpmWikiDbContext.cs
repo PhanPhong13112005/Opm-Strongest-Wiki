@@ -360,6 +360,7 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
             entity.Property(x => x.Amount).HasPrecision(18, 2);
             entity.Property(x => x.Status).HasMaxLength(20);
             entity.Property(x => x.StaffNote).HasMaxLength(500);
+            entity.Property(x => x.ReviewedBySubject).HasMaxLength(160);
             entity.Property(x => x.ExternalTransactionId).HasMaxLength(100);
             entity.Property(x => x.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
             entity.Property(x => x.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");

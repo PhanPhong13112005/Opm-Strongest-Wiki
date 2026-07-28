@@ -50,9 +50,10 @@ Thư mục này chứa tất cả các thành phần View (Trang) hoàn chỉnh 
 *   `UserPortalView.vue`: trang cá nhân, số dư và lối vào rõ ràng cho Diễn đàn, AI, Nạp thẻ và Bình luận sự kiện.
 *   `ForumView.vue`, `AdvisorView.vue`: các luồng cộng đồng dành cho tài khoản đã đăng nhập.
 *   `TopUpHubView.vue`: điều phối hai tab công khai tại `/top-up`: nạp Coupon và nạp số dư bằng ngân hàng.
-*   `CouponTopUpView.vue`: luồng Coupon theo UID/Server, gói và số lượng; yêu cầu đăng nhập khi đặt hàng và xem lịch sử.
+*   `CouponTopUpView.vue`: luồng Coupon theo UID/Server, gói và số lượng; yêu cầu đăng nhập khi đặt hàng; giữ nguyên reference khi retry sau timeout để tránh tạo trùng đơn; lịch sử hiển thị dữ liệu đơn, trạng thái, thời gian xử lý và phản hồi Admin; User có thể tự hủy đơn còn chờ.
 *   `TopUpView.vue`, `BankPaymentView.vue`: tạo VietQR, đếm ngược 5 phút và theo dõi SePay tự động xác nhận/cộng số dư.
 *   `StaffDashboardView.vue`: kiểm duyệt bình luận; Staff cũng có thể xóa chủ đề hoặc phản hồi vi phạm trong diễn đàn nhưng không được xử lý thanh toán.
-*   `AdminDashboardView.vue`: phân nhóm thống kê, công cụ quản lý nội dung, tìm kiếm tài khoản và phân vai trò.
+*   `AdminDashboardView.vue`: phân nhóm thống kê, công cụ quản lý nội dung, tìm kiếm tài khoản, phân vai trò và bật/tắt trạng thái; không cho Admin database tự sửa quyền hoặc tự khóa.
+*   `AdminTopUpsView.vue`: hàng đợi Admin để lọc, kiểm tra UID/SID, duyệt hoặc từ chối đơn Coupon thủ công và hiển thị identity người đã xử lý; bắt buộc lý do khi từ chối, khóa self-review, khóa duyệt bản ghi legacy sai dữ liệu, xác nhận lại đầy đủ đích nạp và tự làm mới queue khi review gặp conflict.
 *   `AdminEventsView.vue`: thêm, sửa, xóa nội dung sự kiện trong PostgreSQL.
 *   `AdminReleasesView.vue`: thêm, sửa, xóa lịch ra mắt tướng CN/SEA; dữ liệu điều khiển banner trang chủ.

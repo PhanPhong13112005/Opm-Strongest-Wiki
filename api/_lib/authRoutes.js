@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto'
 import { ensureCommunitySchema, getSql } from './database.js'
-import { bodyOf, json, methodNotAllowed, requireUser } from './http.js'
+import { bodyOf, json, methodNotAllowed, requireCurrentUser } from './http.js'
 import {
   createAccessToken,
   createPasswordHash,
@@ -16,11 +16,11 @@ const accountResponse = (row) => ({
   displayName: row.displayName,
   role: row.role,
   balance: Number(row.balance || 0),
+  isActive: row.isActive !== false,
   createdAt: row.createdAt,
 })
 
-const findAccountByUsername = async (username) => {
-  const sql = getSql()
+const findAccountByUsername = async (sql, username) => {
   const rows = await sql.query(
     `SELECT "Id" AS id, "Username" AS username, "DisplayName" AS "displayName",
             "PasswordHash" AS "passwordHash", "Role" AS role, "Balance" AS balance,
@@ -33,9 +33,12 @@ const findAccountByUsername = async (username) => {
   return rows[0]
 }
 
-export const handleAuthRoute = async (request, response, path) => {
+export const createAuthRouteHandler = ({
+  ensureSchema = ensureCommunitySchema,
+  sqlProvider = getSql,
+} = {}) => async (request, response, path) => {
   if (!path.startsWith('/auth/') && !path.startsWith('/admin/users')) return false
-  await ensureCommunitySchema()
+  await ensureSchema()
 
   if (path === '/auth/register') {
     if (request.method !== 'POST') return methodNotAllowed(response, ['POST'])
@@ -54,7 +57,7 @@ export const handleAuthRoute = async (request, response, path) => {
       return json(response, 400, { title: 'One or more validation errors occurred.', errors })
     }
 
-    const sql = getSql()
+    const sql = sqlProvider()
     try {
       const rows = await sql.query(
         `INSERT INTO user_accounts
@@ -97,7 +100,7 @@ export const handleAuthRoute = async (request, response, path) => {
       }))
     }
 
-    const account = await findAccountByUsername(username)
+    const account = await findAccountByUsername(sqlProvider(), username)
     if (!account?.isActive || !verifyPasswordHash(password, account.passwordHash)) {
       return json(response, 401, { message: 'Tên đăng nhập hoặc mật khẩu không đúng.' })
     }
@@ -112,7 +115,7 @@ export const handleAuthRoute = async (request, response, path) => {
 
   if (path === '/auth/me') {
     if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
-    const user = requireUser(request, response)
+    const user = await requireCurrentUser(request, response, sqlProvider())
     if (!user) return true
     if (String(user.userId).startsWith('admin:')) {
       return json(response, 200, {
@@ -124,10 +127,11 @@ export const handleAuthRoute = async (request, response, path) => {
         createdAt: new Date().toISOString(),
       })
     }
-    const sql = getSql()
+    const sql = sqlProvider()
     const rows = await sql.query(
       `SELECT "Id" AS id, "Username" AS username, "DisplayName" AS "displayName",
-              "Role" AS role, "Balance" AS balance, "CreatedAt" AS "createdAt"
+              "Role" AS role, "Balance" AS balance, "IsActive" AS "isActive",
+              "CreatedAt" AS "createdAt"
          FROM user_accounts WHERE "Id" = $1 AND "IsActive" = true LIMIT 1`,
       [user.userId],
     )
@@ -136,10 +140,12 @@ export const handleAuthRoute = async (request, response, path) => {
 
   if (path === '/admin/users') {
     if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
-    if (!requireUser(request, response, ['Admin'])) return true
-    const rows = await getSql().query(
+    const sql = sqlProvider()
+    if (!await requireCurrentUser(request, response, sql, ['Admin'])) return true
+    const rows = await sql.query(
       `SELECT "Id" AS id, "Username" AS username, "DisplayName" AS "displayName",
-              "Role" AS role, "Balance" AS balance, "CreatedAt" AS "createdAt"
+              "Role" AS role, "Balance" AS balance, "IsActive" AS "isActive",
+              "CreatedAt" AS "createdAt"
          FROM user_accounts ORDER BY "CreatedAt" DESC`,
     )
     return json(response, 200, rows.map(accountResponse))
@@ -148,21 +154,55 @@ export const handleAuthRoute = async (request, response, path) => {
   const roleMatch = /^\/admin\/users\/([0-9a-f-]{36})\/role$/i.exec(path)
   if (roleMatch) {
     if (request.method !== 'PUT') return methodNotAllowed(response, ['PUT'])
-    if (!requireUser(request, response, ['Admin'])) return true
+    const sql = sqlProvider()
+    const admin = await requireCurrentUser(request, response, sql, ['Admin'])
+    if (!admin) return true
+    if (String(admin.userId).toLowerCase() === roleMatch[1].toLowerCase()) {
+      return json(response, 409, { message: 'Bạn không thể tự thay đổi vai trò của mình.' })
+    }
     const { role } = bodyOf(request)
     if (!['User', 'Staff', 'Admin'].includes(role)) {
       return json(response, 400, { message: 'Vai trò phải là User, Staff hoặc Admin.' })
     }
-    const rows = await getSql().query(
+    const rows = await sql.query(
       `UPDATE user_accounts SET "Role" = $2, "UpdatedAt" = CURRENT_TIMESTAMP
         WHERE "Id" = $1
         RETURNING "Id" AS id, "Username" AS username, "DisplayName" AS "displayName",
-                  "Role" AS role, "Balance" AS balance, "CreatedAt" AS "createdAt"`,
+                  "Role" AS role, "Balance" AS balance, "IsActive" AS "isActive",
+                  "CreatedAt" AS "createdAt"`,
       [roleMatch[1], role],
     )
     return rows[0] ? json(response, 200, accountResponse(rows[0])) : json(response, 404, { message: 'Không tìm thấy tài khoản.' })
   }
 
+  const statusMatch = /^\/admin\/users\/([0-9a-f-]{36})\/status$/i.exec(path)
+  if (statusMatch) {
+    if (request.method !== 'PUT') return methodNotAllowed(response, ['PUT'])
+    const sql = sqlProvider()
+    const admin = await requireCurrentUser(request, response, sql, ['Admin'])
+    if (!admin) return true
+    if (String(admin.userId).toLowerCase() === statusMatch[1].toLowerCase()) {
+      return json(response, 409, { message: 'Bạn không thể tự vô hiệu hóa tài khoản của mình.' })
+    }
+    const { isActive } = bodyOf(request)
+    if (typeof isActive !== 'boolean') {
+      return json(response, 400, { message: 'Trạng thái tài khoản phải là true hoặc false.' })
+    }
+    const rows = await sql.query(
+      `UPDATE user_accounts SET "IsActive" = $2, "UpdatedAt" = CURRENT_TIMESTAMP
+        WHERE "Id" = $1
+        RETURNING "Id" AS id, "Username" AS username, "DisplayName" AS "displayName",
+                  "Role" AS role, "Balance" AS balance, "IsActive" AS "isActive",
+                  "CreatedAt" AS "createdAt"`,
+      [statusMatch[1], isActive],
+    )
+    return rows[0]
+      ? json(response, 200, accountResponse(rows[0]))
+      : json(response, 404, { message: 'Không tìm thấy tài khoản.' })
+  }
+
   return false
 }
+
+export const handleAuthRoute = createAuthRouteHandler()
 

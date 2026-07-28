@@ -3,6 +3,25 @@
 Tài liệu này ghi lại các mốc đã được đối chiếu với lịch sử Git và trạng thái mã nguồn. Dự án hiện
 chưa phát hành theo Semantic Versioning và `package.json` vẫn dùng phiên bản `0.0.0`.
 
+## 28/07/2026 — Hàng đợi Admin và audit đơn Coupon
+
+- Thêm route `/admin/top-ups`, service và giao diện mobile để Admin lọc, kiểm tra UID/SID, duyệt hoặc từ chối đơn Coupon.
+- Chuẩn hóa API thành `/api/admin/top-ups`; giữ `/api/staff/top-ups` làm alias tương thích ngược nhưng Staff vẫn không có quyền xử lý thanh toán.
+- Đồng bộ Vercel Functions và ASP.NET Core, thêm `ReviewedBySubject` để audit cả Admin cấu hình môi trường lẫn Admin database.
+- Bổ sung migration EF Core, test ma trận quyền, repository .NET và Playwright cho luồng duyệt coupon.
+- Lịch sử Coupon phía User hiển thị UID/SID, số Coupon, trạng thái, thời gian xử lý và phản hồi Admin.
+- UI và cả hai backend bắt buộc lý do khi Admin từ chối đơn.
+- User có thể hủy đơn Coupon của chính mình khi còn chờ; API kiểm tra ownership, idempotency và race với thao tác Admin.
+- Admin có thể lọc và nhận biết đơn `Cancelled` mà không thể duyệt lại.
+- Chặn Admin database tự duyệt/từ chối đơn Coupon của chính account; portal yêu cầu Admin khác xử lý và backend enforce trong optimistic update.
+- Kiểm tra lại UID/SID, QTY và giá trị trước khi duyệt; đơn Coupon legacy/malformed được cảnh báo, khóa thao tác duyệt nhưng vẫn cho từ chối để dọn hàng đợi.
+- Đồng bộ phản hồi review Coupon giữa Vercel và ASP.NET: phân biệt rõ đơn sai dữ liệu, self-review và đơn không còn chờ xử lý; vẫn giữ optimistic update để chống xử lý đua.
+- Hộp xác nhận review hiển thị người nhận, UID, server, số Coupon và giá trị; nếu Admin khác xử lý trước, portal tự tải lại hàng đợi sau phản hồi `409` để loại trạng thái stale.
+- Hoàn thiện quản lý trạng thái tài khoản: Admin bật/tắt `IsActive`, không thể tự đổi role/tự khóa; Vercel và ASP.NET đều tái xác minh active/role để vô hiệu hóa token cũ ngay trên request bảo vệ, frontend xóa session khi nhận `401`.
+- Chuẩn hóa thứ tự authorization Vercel: account thiếu/inactive hoặc token mang role cũ trả `401`; identity hợp lệ nhưng thiếu quyền endpoint mới trả `403`.
+- Khóa contract cập nhật trạng thái ASP.NET: `isActive` bắt buộc là boolean `true`/`false`; thiếu, `null` hoặc sai kiểu trả `400`.
+- Chống tạo trùng đơn khi client retry sau timeout: frontend giữ nguyên reference sinh bằng `crypto.randomUUID`, cả Vercel và ASP.NET trả lại cùng bản ghi cho cùng `(UserId, ReferenceCode)`/payload; không phát sinh migration.
+
 ## 23/07/2026 — Điều hướng tài khoản theo vai trò
 
 - Sau khi đăng nhập hoặc đăng ký, mọi vai trò đều trở về Trang chủ.

@@ -32,6 +32,9 @@ export const getMyTopUps = () => authorizedRequest('api/top-ups/mine')
 export const createTopUp = (payload) => authorizedRequest('api/top-ups', {
   method: 'POST', body: JSON.stringify(payload),
 })
+export const updateCouponTopUp = (id, action) => authorizedRequest(`api/top-ups/${id}/coupon-order`, {
+  method: 'PUT', body: JSON.stringify({ action }),
+})
 export const createBankTopUpQr = (amount) => authorizedRequest('api/top-ups/bank-qr', {
   method: 'POST', body: JSON.stringify({ amount }),
 })

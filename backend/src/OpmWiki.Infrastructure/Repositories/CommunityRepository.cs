@@ -46,20 +46,41 @@ public sealed class CommunityRepository(OpmWikiDbContext dbContext) : ICommunity
         CancellationToken cancellationToken = default) =>
         await dbContext.UserAccounts.AsNoTracking()
             .OrderByDescending(x => x.CreatedAt)
-            .Select(x => new AccountDto(x.Id, x.Username, x.DisplayName, x.Role, x.Balance, x.CreatedAt))
+            .Select(x => new AccountDto(x.Id, x.Username, x.DisplayName, x.Role, x.Balance, x.IsActive, x.CreatedAt))
             .ToListAsync(cancellationToken);
 
     public async Task<AccountDto?> UpdateAccountRoleAsync(
         Guid id,
         string role,
+        Guid actorId,
         CancellationToken cancellationToken = default)
     {
-        var account = await dbContext.UserAccounts.SingleOrDefaultAsync(x => x.Id == id, cancellationToken);
+        var account = await dbContext.UserAccounts.SingleOrDefaultAsync(
+            x => x.Id == id && (actorId == Guid.Empty || x.Id != actorId),
+            cancellationToken);
         if (account is null) return null;
         account.Role = role;
         await dbContext.SaveChangesAsync(cancellationToken);
-        return new AccountDto(account.Id, account.Username, account.DisplayName, account.Role, account.Balance, account.CreatedAt);
+        return MapAccount(account);
     }
+
+    public async Task<AccountDto?> UpdateAccountStatusAsync(
+        Guid id,
+        bool isActive,
+        Guid actorId,
+        CancellationToken cancellationToken = default)
+    {
+        var account = await dbContext.UserAccounts.SingleOrDefaultAsync(
+            x => x.Id == id && (actorId == Guid.Empty || x.Id != actorId),
+            cancellationToken);
+        if (account is null) return null;
+        account.IsActive = isActive;
+        await dbContext.SaveChangesAsync(cancellationToken);
+        return MapAccount(account);
+    }
+
+    private static AccountDto MapAccount(UserAccount account) =>
+        new(account.Id, account.Username, account.DisplayName, account.Role, account.Balance, account.IsActive, account.CreatedAt);
 
     public async Task<IReadOnlyList<EventCommentDto>> ListEventCommentsAsync(
         string eventId,
@@ -253,6 +274,53 @@ public sealed class CommunityRepository(OpmWikiDbContext dbContext) : ICommunity
         return MapTopUp(request);
     }
 
+    public async Task<TopUpCreationResult> CreateOrGetCouponTopUpAsync(
+        Guid userId,
+        string referenceCode,
+        decimal amount,
+        CancellationToken cancellationToken = default)
+    {
+        var normalizedReference = referenceCode.Trim();
+        var existing = await FindTopUpByReferenceAsync(userId, normalizedReference, cancellationToken);
+        if (existing is not null)
+            return MapCouponReplay(existing, amount);
+
+        try
+        {
+            var created = await CreateTopUpAsync(
+                userId, CouponOrderRules.Provider, normalizedReference, amount, cancellationToken);
+            return new TopUpCreationResult(created, true);
+        }
+        catch (DbUpdateException)
+        {
+            foreach (var entry in dbContext.ChangeTracker.Entries<TopUpRequest>()
+                         .Where(x => x.State == EntityState.Added))
+                entry.State = EntityState.Detached;
+
+            existing = await FindTopUpByReferenceAsync(userId, normalizedReference, cancellationToken);
+            if (existing is not null)
+                return MapCouponReplay(existing, amount);
+            throw;
+        }
+    }
+
+    private async Task<TopUpRequest?> FindTopUpByReferenceAsync(
+        Guid userId,
+        string referenceCode,
+        CancellationToken cancellationToken) =>
+        await dbContext.TopUpRequests.AsNoTracking()
+            .Include(x => x.User)
+            .SingleOrDefaultAsync(
+                x => x.UserId == userId && x.ReferenceCode == referenceCode,
+                cancellationToken);
+
+    private static TopUpCreationResult MapCouponReplay(TopUpRequest request, decimal amount)
+    {
+        if (request.Provider != CouponOrderRules.Provider || request.Amount != amount)
+            throw new DbUpdateException("The idempotency reference belongs to a different top-up request.");
+        return new TopUpCreationResult(MapTopUp(request), false);
+    }
+
     public async Task ExpirePendingBankTopUpsAsync(
         DateTimeOffset createdBefore,
         Guid? userId = null,
@@ -283,24 +351,33 @@ public sealed class CommunityRepository(OpmWikiDbContext dbContext) : ICommunity
     public async Task<TopUpRequestDto?> UpdateUserTopUpStatusAsync(
         long id,
         Guid userId,
+        string provider,
         string expectedStatus,
         string status,
         CancellationToken cancellationToken = default)
     {
-        var updated = await dbContext.TopUpRequests
-            .Where(x => x.Id == id && x.UserId == userId && x.Provider == "Bank transfer" &&
-                        x.Status == expectedStatus)
-            .ExecuteUpdateAsync(
+        var query = dbContext.TopUpRequests.Where(
+            x => x.Id == id && x.UserId == userId && x.Provider == provider &&
+                 x.Status == expectedStatus);
+        if (dbContext.Database.IsRelational())
+        {
+            var updated = await query.ExecuteUpdateAsync(
                 setters => setters
                     .SetProperty(x => x.Status, status)
                     .SetProperty(x => x.UpdatedAt, DateTimeOffset.UtcNow),
                 cancellationToken);
-        return updated == 0
-            ? null
-            : await GetUserTopUpAsync(id, userId, cancellationToken);
-    }
+            return updated == 0
+                ? null
+                : await GetUserTopUpAsync(id, userId, cancellationToken);
+        }
 
-    public async Task<IReadOnlyList<TopUpRequestDto>> ListTopUpsAsync(
+        var request = await query.SingleOrDefaultAsync(cancellationToken);
+        if (request is null) return null;
+        request.Status = status;
+        await dbContext.SaveChangesAsync(cancellationToken);
+        return await GetUserTopUpAsync(id, userId, cancellationToken);
+    }
+    public async Task<IReadOnlyList<AdminTopUpRequestDto>> ListTopUpsAsync(
         string? status,
         CancellationToken cancellationToken = default)
     {
@@ -311,22 +388,37 @@ public sealed class CommunityRepository(OpmWikiDbContext dbContext) : ICommunity
                                      x.Status == TopUpStatuses.PaymentReported);
         else if (!string.IsNullOrWhiteSpace(status))
             query = query.Where(x => x.Status == status);
-        return await MapTopUps(query).ToListAsync(cancellationToken);
+        return await MapAdminTopUps(query).ToListAsync(cancellationToken);
     }
 
-    public async Task<TopUpRequestDto?> ReviewTopUpAsync(
+    public async Task<TopUpReviewResult> ReviewTopUpAsync(
         long id,
         Guid reviewerId,
+        string reviewerSubject,
         string status,
         string staffNote,
         CancellationToken cancellationToken = default)
     {
+        var order = await dbContext.TopUpRequests.AsNoTracking()
+            .Where(x => x.Id == id && x.Provider == CouponOrderRules.Provider)
+            .Select(x => new { x.UserId, x.Status, x.ReferenceCode, x.Amount })
+            .SingleOrDefaultAsync(cancellationToken);
+        if (order is null ||
+            order.Status is not (TopUpStatuses.Pending or TopUpStatuses.PaymentReported))
+            return new(null, TopUpReviewFailure.NotReviewable);
+        if (reviewerId != Guid.Empty && order.UserId == reviewerId)
+            return new(null, TopUpReviewFailure.SelfReview);
+        if (status == TopUpStatuses.Approved &&
+            !CouponOrderRules.IsValid(order.ReferenceCode, order.Amount))
+            return new(null, TopUpReviewFailure.InvalidCouponOrder);
+
         if (dbContext.Database.IsRelational())
         {
             await using var transaction = await dbContext.Database.BeginTransactionAsync(cancellationToken);
             var reviewedAt = DateTimeOffset.UtcNow;
             var updated = await dbContext.TopUpRequests
-                .Where(x => x.Id == id && x.Provider == "Coupon Order" &&
+                .Where(x => x.Id == id && x.Provider == CouponOrderRules.Provider &&
+                            (reviewerId == Guid.Empty || x.UserId != reviewerId) &&
                             (x.Status == TopUpStatuses.Pending ||
                              x.Status == TopUpStatuses.PaymentReported))
                 .ExecuteUpdateAsync(
@@ -334,36 +426,40 @@ public sealed class CommunityRepository(OpmWikiDbContext dbContext) : ICommunity
                         .SetProperty(x => x.Status, status)
                         .SetProperty(x => x.StaffNote, staffNote.Trim())
                         .SetProperty(x => x.ReviewedById, reviewerId == Guid.Empty ? null : reviewerId)
+                        .SetProperty(x => x.ReviewedBySubject, reviewerSubject)
                         .SetProperty(x => x.ReviewedAt, reviewedAt)
                         .SetProperty(x => x.UpdatedAt, reviewedAt),
                     cancellationToken);
-            if (updated == 0) return null;
+            if (updated == 0)
+                return new(null, TopUpReviewFailure.NotReviewable);
 
             var updatedRequest = await dbContext.TopUpRequests
                 .Include(x => x.User)
                 .SingleAsync(x => x.Id == id, cancellationToken);
-            if (status == TopUpStatuses.Approved && updatedRequest.Provider != "Coupon Order")
+            if (status == TopUpStatuses.Approved && updatedRequest.Provider != CouponOrderRules.Provider)
                 updatedRequest.User.Balance += updatedRequest.Amount;
             await dbContext.SaveChangesAsync(cancellationToken);
             await transaction.CommitAsync(cancellationToken);
-            return MapTopUp(updatedRequest);
+            return new(MapAdminTopUp(updatedRequest), TopUpReviewFailure.None);
         }
 
         var request = await dbContext.TopUpRequests
             .Include(x => x.User)
             .SingleOrDefaultAsync(x => x.Id == id, cancellationToken);
-        if (request is null || request.Provider != "Coupon Order" ||
+        if (request is null || request.Provider != CouponOrderRules.Provider ||
+            (reviewerId != Guid.Empty && request.UserId == reviewerId) ||
             request.Status is not (TopUpStatuses.Pending or TopUpStatuses.PaymentReported))
-            return null;
+            return new(null, TopUpReviewFailure.NotReviewable);
 
         request.Status = status;
         request.StaffNote = staffNote.Trim();
         request.ReviewedById = reviewerId == Guid.Empty ? null : reviewerId;
+        request.ReviewedBySubject = reviewerSubject;
         request.ReviewedAt = DateTimeOffset.UtcNow;
-        if (status == TopUpStatuses.Approved && request.Provider != "Coupon Order")
+        if (status == TopUpStatuses.Approved && request.Provider != CouponOrderRules.Provider)
             request.User.Balance += request.Amount;
         await dbContext.SaveChangesAsync(cancellationToken);
-        return MapTopUp(request);
+        return new(MapAdminTopUp(request), TopUpReviewFailure.None);
     }
 
     public async Task<PaymentProcessingResult> ProcessSePayWebhookAsync(
@@ -625,6 +721,40 @@ public sealed class CommunityRepository(OpmWikiDbContext dbContext) : ICommunity
             request.Amount,
             request.Status,
             request.StaffNote,
+            request.CreatedAt,
+            request.ReviewedAt,
+            request.PaidAt,
+            request.ExternalTransactionId);
+
+    private static IQueryable<AdminTopUpRequestDto> MapAdminTopUps(IQueryable<TopUpRequest> query) =>
+        query.OrderByDescending(x => x.CreatedAt).Select(x => new AdminTopUpRequestDto(
+            x.Id,
+            x.UserId,
+            x.User.Username,
+            x.User.DisplayName,
+            x.Provider,
+            x.ReferenceCode,
+            x.Amount,
+            x.Status,
+            x.StaffNote,
+            x.ReviewedBySubject,
+            x.CreatedAt,
+            x.ReviewedAt,
+            x.PaidAt,
+            x.ExternalTransactionId));
+
+    private static AdminTopUpRequestDto MapAdminTopUp(TopUpRequest request) =>
+        new(
+            request.Id,
+            request.UserId,
+            request.User.Username,
+            request.User.DisplayName,
+            request.Provider,
+            request.ReferenceCode,
+            request.Amount,
+            request.Status,
+            request.StaffNote,
+            request.ReviewedBySubject,
             request.CreatedAt,
             request.ReviewedAt,
             request.PaidAt,

@@ -36,6 +36,9 @@ public sealed class PasswordHasher
 
 public static class ClaimsPrincipalExtensions
 {
+    public static string GetAccountSubject(this ClaimsPrincipal principal) =>
+        principal.FindFirstValue(ClaimTypes.NameIdentifier) ?? string.Empty;
+
     public static Guid GetAccountId(this ClaimsPrincipal principal) =>
-        Guid.TryParse(principal.FindFirstValue(ClaimTypes.NameIdentifier), out var id) ? id : Guid.Empty;
+        Guid.TryParse(principal.GetAccountSubject(), out var id) ? id : Guid.Empty;
 }

@@ -13,10 +13,10 @@
 
 ### Thay đổi chưa commit tại lần kiểm tra gần nhất
 
-- `public/Feature/medals/Mirage_trial/ai_20.png` đang bị xóa cục bộ.
+- `public/Feature/medals/Mirage_trial/ai_20.png` đã tồn tại trở lại nhưng đang modified so với Git.
 - `public/Feature/medals/Mirage_trial/ai_5.png` chưa được Git theo dõi.
-- `src/views/MedalsView.vue` vẫn tham chiếu `ai_20.png`; nếu commit hoặc deploy trạng thái này, ảnh mốc 20 có thể bị lỗi.
-- Đây là trạng thái working tree tại thời điểm kiểm tra, không phải đặc điểm kiến trúc. Không tự ý xóa `ai_5.png`, khôi phục `ai_20.png` hoặc sửa mapping trước khi xác nhận mục đích của người dùng.
+- `src/views/MedalsView.vue` tham chiếu `ai_5.png` cho mốc Ải 5 và `ai_20.png` cho mốc Ải 20.
+- Đây là trạng thái working tree tại thời điểm kiểm tra, không phải đặc điểm kiến trúc. Không tự ý xóa, khôi phục hoặc ghi đè hai asset khi chưa xác nhận mục đích của người dùng.
 
 ## 1. Mục tiêu dự án
 
@@ -189,11 +189,13 @@ Các thư mục `node_modules`, `dist`, `build`, `.git`, IDE metadata, cache, lo
 
 ### User
 
-- Đăng ký, đăng nhập và xem/cập nhật khu vực tài khoản.
+- Đăng ký, đăng nhập và xem khu vực tài khoản cùng số dư hiện tại; chưa có giao diện cập nhật hồ sơ.
 - Bình luận sự kiện.
 - Tạo chủ đề và bài viết forum.
 - Sử dụng Advisor.
-- Tạo yêu cầu nạp bằng coupon.
+- Tạo yêu cầu nạp bằng coupon; một lần gửi giữ nguyên order code sinh bằng `crypto.randomUUID()` khi retry sau lỗi mạng/timeout, và chỉ tạo mã khác sau khi server xác nhận thành công hoặc người dùng thay đổi dữ liệu để bắt đầu đơn mới.
+- Xem UID, server, số Coupon, trạng thái, thời điểm xử lý và phản hồi xử lý của Admin trong lịch sử Coupon.
+- Tự hủy đơn Coupon của chính mình khi đơn còn `Pending`/`PaymentReported`; thao tác lặp lại trên đơn đã hủy là idempotent.
 - Tạo giao dịch chuyển khoản ngân hàng, nhận mã thanh toán/VietQR và theo dõi trạng thái.
 
 ### Staff
@@ -206,9 +208,14 @@ Các thư mục `node_modules`, `dist`, `build`, `.git`, IDE metadata, cache, lo
 ### Admin
 
 - Dashboard và thống kê.
-- Quản lý vai trò/trạng thái tài khoản.
+- Quản lý vai trò và bật/tắt trạng thái tài khoản database; không cho Admin database tự đổi vai trò hoặc tự vô hiệu hóa.
 - CRUD characters, keepsakes, events và release schedule.
-- API backend có khả năng liệt kê/duyệt yêu cầu coupon, nhưng frontend tương ứng chưa hoàn thiện.
+- Liệt kê, lọc và duyệt/từ chối đơn coupon tại `/admin/top-ups`; lưu và hiển thị subject của Admin đã xử lý; lọc riêng trạng thái `Cancelled`; Staff không được truy cập.
+- Từ chối bắt buộc có lý do để User biết cách xử lý; ghi chú được trim và giới hạn 500 ký tự ở cả hai backend.
+- Admin database không thể tự duyệt/từ chối đơn Coupon do chính account đó tạo; portal yêu cầu một Admin khác xử lý.
+- Trước khi duyệt, portal và cả hai backend kiểm tra lại UID/SID, gói 6 Coupon, QTY 1–10 và `Amount = 13.000 × QTY`; đơn legacy/malformed chỉ có thể bị từ chối.
+- Hai backend trả phản hồi riêng cho đơn Coupon sai dữ liệu, self-review và đơn không còn chờ xử lý; ASP.NET biểu diễn kết quả nội bộ bằng `TopUpReviewResult`/`TopUpReviewFailure`, còn cả hai vẫn dùng update có điều kiện để chống race.
+- Trước khi gửi review, portal xác nhận lại người nhận, UID, server, số Coupon và giá trị. Khi API trả `409` do đơn đã đổi trạng thái, portal tự làm mới hàng đợi và vẫn hiển thị nguyên nhân cho Admin.
 
 ### Thanh toán chuyển khoản
 
@@ -221,7 +228,6 @@ Các thư mục `node_modules`, `dist`, `build`, `.git`, IDE metadata, cache, lo
 
 ## 6. Chức năng chưa hoàn thành hoặc chưa đồng nhất
 
-- Chưa có frontend service/UI hoàn chỉnh để Admin liệt kê và duyệt top-up loại `Coupon`, dù backend đã có endpoint liên quan.
 - Vercel backend chưa có API database cho Mastery, Keepsake, Insignia, Backgear và Tactics; frontend phải dùng JSON fallback.
 - Advisor trên ASP.NET có thể gọi OpenAI-compatible API, còn Vercel Advisor chỉ dùng cơ chế wiki/keyword cục bộ. Chưa có parity giữa hai backend.
 - `TODO.md` còn ghi nhu cầu hoàn thiện bản địa hóa và hướng dẫn người mới 10 ngày.
@@ -267,7 +273,7 @@ Các thư mục `node_modules`, `dist`, `build`, `.git`, IDE metadata, cache, lo
 - `forum_topics` 1-N `forum_posts`; xóa topic sẽ cascade các post.
 - `top_up_requests` có thể liên kết với `payment_transactions`.
 - `balance_ledger` tham chiếu user, top-up và payment; unique key cho top-up/payment giúp chống ghi nhận số dư trùng.
-- `top_up_requests.ReviewedBy` là quan hệ tùy chọn đến `user_accounts`.
+- `top_up_requests.ReviewedBy` là quan hệ tùy chọn đến `user_accounts`; `ReviewedBySubject` lưu subject JWT ổn định để vẫn audit được Admin cấu hình môi trường không có account UUID.
 - `mastery_tiers` dùng composite key `(Category, Tier)`.
 - `release_schedule.CharacterId` không phải foreign key để vẫn biểu diễn được nhân vật chưa có trong bảng `characters`.
 
@@ -275,7 +281,7 @@ Một số trường danh sách dùng PostgreSQL `text[]`; dữ liệu lồng nh
 
 ### Migration và seed
 
-- Backend .NET có 8 nhóm migration chính: initial schema, mastery, insignia, backgear, tactics, community, release schedule và SePay/balance ledger.
+- Backend .NET có 9 nhóm migration chính: initial schema, mastery, insignia, backgear, tactics, community, release schedule, SePay/balance ledger và coupon review audit.
 - `JsonDataSeeder` đọc dữ liệu characters Việt/Anh, events, mastery, insignias, backgear và tactics.
 - Seeder có tính chất upsert nhưng cũng xóa record không còn trong nguồn JSON và có thể ghi đè dữ liệu đã chỉnh qua Admin. Không chạy seed trên database đang vận hành nếu chưa chủ động chọn JSON làm nguồn sự thật.
 - Release schedule được seed trong EF migration.
@@ -298,8 +304,8 @@ Một số trường danh sách dùng PostgreSQL `text[]`; dữ liệu lồng nh
 - Endpoint lịch sử dành cho Staff liên quan top-up hiện được bảo vệ ở mức Admin.
 - Mật khẩu dùng định dạng PBKDF2 tương thích giữa implementation Node và .NET.
 - JWT issuer/audience được thiết kế tương thích giữa hai backend.
-- Token hiện không có refresh/revocation flow được xác minh; role và trạng thái active trong claim có thể cũ cho đến khi token hết hạn, mặc định khoảng 60 phút.
-- Có cơ chế tài khoản Admin từ biến môi trường ngoài tài khoản lưu trong database.
+- Token chưa có refresh/revocation flow được xác minh, nhưng mọi request bảo vệ của tài khoản database đều đối chiếu lại `IsActive` và `Role`: Vercel dùng `requireCurrentUser`, còn ASP.NET dùng `JwtBearerEvents.OnTokenValidated`. Vercel xác minh account hiện tại và role trong token trước, trả `401` nếu account thiếu/inactive hoặc role đã đổi, rồi mới kiểm tra quyền endpoint để trả `403` cho identity hợp lệ nhưng thiếu quyền. Frontend xóa session cục bộ khi protected request nhận `401`. Admin cấu hình môi trường có subject `admin:*` không phụ thuộc bản ghi database.
+- Có cơ chế tài khoản Admin từ biến môi trường ngoài tài khoản lưu trong database; thao tác duyệt coupon lưu claim subject dạng `admin:<username>` vào `ReviewedBySubject`.
 
 ## 9. Quy tắc viết code đang được sử dụng
 
@@ -420,11 +426,11 @@ Smoke test production cần credential hợp lệ và có thao tác tạo/sửa/
 3. **Nguy cơ XSS:** `DetailView.vue` dựng nội dung kỹ năng bằng `v-html` và inline JavaScript; một số giá trị chưa được escape/sanitize đầy đủ. Core Lab cũng hiển thị HTML động. Dữ liệu hiện chủ yếu là trusted seed/Admin, nhưng đây vẫn là bề mặt XSS.
 4. **Hai backend bị lệch:** schema, endpoint và nghiệp vụ Node/.NET không tương đương. Thay đổi một backend có thể không hoạt động trên backend còn lại.
 5. **Schema runtime:** Vercel thực thi DDL khi runtime, không có migration versioned đầy đủ; khó audit/rollback và đòi hỏi database credential có quyền tạo/sửa schema.
-6. **Thiếu UI duyệt coupon:** backend có endpoint nhưng Admin frontend chưa hoàn chỉnh, khiến quy trình coupon chưa khép kín.
+6. **Coupon vẫn xử lý thủ công một bước:** Admin database đã bị chặn tự xử lý đơn của chính account, nhưng một Admin khác vẫn có thể xác nhận ngay sau khi tự kiểm tra UID/SID; chưa có cơ chế người thứ hai xác nhận hoặc đối soát với hệ thống game. Audit subject và chặn self-review giảm rủi ro nhưng không loại bỏ thao tác nhầm.
 
 ### Mức ưu tiên trung bình
 
-7. JWT lưu trong `sessionStorage`, không có refresh/revocation được xác minh; quyền/trạng thái bị khóa trong claim đến khi token hết hạn.
+7. JWT lưu trong `sessionStorage` và chưa có refresh/revocation flow; việc tái xác minh database đã chặn account inactive/role cũ ở request bảo vệ nhưng không loại bỏ rủi ro token bị lấy qua XSS trong thời gian còn hiệu lực.
 8. Public response có CDN cache dài hơn cache client; Admin chỉ invalidate cache trong client, không purge CDN.
 9. Release schedule đang bị lặp ở nhiều nguồn: JSON frontend, HomeView, Vercel seed và EF migration.
 10. Một số file quá lớn và gộp nhiều trách nhiệm, gồm Medals, Tactics, Detail và `adminRoutes`.
@@ -444,10 +450,17 @@ Smoke test production cần credential hợp lệ và có thao tác tạo/sửa/
 - Keepsake là dữ liệu gắn với character, không tạo bảng keepsake độc lập trong EF.
 - Community, tài khoản, số dư và thanh toán chỉ dựa vào database; không có JSON fallback.
 - JWT được lưu theo phiên browser; authorization thật phải được enforce phía server.
-- PBKDF2 và cấu hình JWT được giữ tương thích giữa Node và .NET.
+- PBKDF2 và cấu hình JWT được giữ tương thích giữa Node và .NET. Cả hai backend tái xác minh `IsActive`/`Role` của tài khoản database ở request bảo vệ để vô hiệu hóa token cũ ngay khi Admin khóa account hoặc đổi role.
 - Thông tin ngân hàng và secret webhook chỉ ở server; client nhận payload công khai cần thiết để hiển thị VietQR.
 - Webhook thanh toán dùng raw-body HMAC, timestamp window, transaction/CTE và ledger unique key để chống cộng tiền lặp.
-- Staff không được duyệt thanh toán; quyền này thuộc Admin.
+- Staff không được duyệt thanh toán; quyền này thuộc Admin. Frontend dùng route/API chuẩn `/admin/top-ups`; hai backend tạm giữ `/staff/top-ups` làm alias tương thích ngược. Mỗi lần review lưu `ReviewedBySubject` từ JWT và giữ `ReviewedById` khi subject là UUID hợp lệ; chỉ hợp đồng Admin trả trường audit này, lịch sử top-up của User không trả identity người duyệt.
+- `PUT /api/top-ups/{id}/coupon-order` với action `cancel` chỉ cập nhật đơn `Coupon Order` thuộc chính User và còn chờ; cả hai backend dùng điều kiện trạng thái trong update để tránh race với thao tác Admin.
+- Review Coupon dùng `ReviewedById`/account UUID để loại đơn có `UserId` trùng reviewer ngay trong optimistic update; Admin cấu hình môi trường không có account UUID nên không thể là chủ đơn database.
+- Rule Coupon được kiểm tra lúc tạo và kiểm tra lại trước `Approved`: reference phải chứa UID 5–20 chữ số, SID hợp lệ, gói `CP:6`, `QTY` 1–10, order code chữ hoa/số và giá trị bằng `13.000 × QTY`. Bản ghi legacy sai dữ liệu vẫn được phép `Rejected` để dọn hàng đợi.
+- Review Coupon phân biệt ba thất bại nghiệp vụ: bản ghi sai dữ liệu, account tự xử lý đơn của mình và đơn không tồn tại/không còn chờ. Vercel preflight rồi optimistic update; ASP.NET trả `TopUpReviewResult` từ repository rồi controller ánh xạ sang HTTP `409`.
+- Tạo Coupon dùng cặp `(UserId, ReferenceCode)` đã có unique index làm khóa idempotency: lần đầu trả `201`, retry đúng cùng provider/amount trả lại bản ghi cũ với `200`, còn tái sử dụng mã cho payload khác trả `409`; không cần migration mới.
+- `AdminTopUpsView.vue` coi HTTP `409` là dấu hiệu dữ liệu hàng đợi có thể đã stale: tải lại bộ lọc hiện tại, loại bản ghi đã được Admin khác xử lý và giữ thông báo conflict; hộp xác nhận phải hiển thị đầy đủ đích nạp trước thao tác.
+- `PUT /api/admin/users/{id}/status` chỉ chấp nhận payload có `isActive` là boolean `true` hoặc `false`; thiếu trường, `null` hoặc kiểu khác trả `400`. Admin database không được tự khóa hoặc tự đổi role, và thay đổi không cần migration vì cột `IsActive` đã có từ migration community.
 - Release schedule không bắt buộc foreign key đến character để hỗ trợ dữ liệu nhân vật chưa phát hành/chưa nhập.
 - Public API sử dụng cache; Admin mutation cần làm mới dữ liệu liên quan.
 - Route view được lazy-load để giảm bundle ban đầu.
@@ -461,14 +474,14 @@ Smoke test production cần credential hợp lệ và có thao tác tạo/sửa/
 3. Thêm rate limit cho auth, community, advisor và payment/webhook endpoint; xác minh WAF/rate limit ở production.
 4. Chọn chiến lược chính thức cho Node Functions và ASP.NET Core, sau đó lập ma trận parity endpoint/schema trước khi phát triển tiếp.
 5. Chuyển schema Vercel sang migration có version và thu hẹp quyền của database runtime.
-6. Hoàn thiện UI/service Admin cho danh sách và duyệt coupon top-up.
+6. Cân nhắc bước xác nhận thứ hai hoặc đối soát game cho đơn coupon để giảm rủi ro Admin nạp/xác nhận nhầm UID hoặc server.
 
 ### Nên cải thiện
 
 7. Xây dựng CI chạy build, Node tests, .NET tests và các kiểm tra migration.
 8. Thêm ESLint/formatter/typecheck hoặc quy tắc tương đương; pin Node bằng `engines` và file version.
 9. Hợp nhất release schedule về một nguồn sự thật.
-10. Bổ sung cơ chế token refresh/revocation hoặc kiểm tra trạng thái account ở request nhạy cảm.
+10. Bổ sung cơ chế token refresh/revocation và chiến lược logout cưỡng bức rõ ràng; kiểm tra `IsActive`/`Role` theo request đã được triển khai cho tài khoản database.
 11. Đồng bộ tài liệu, CHANGELOG và TODO với code hiện tại.
 12. Tách các view/route handler lớn thành module nhỏ hơn.
 13. Bổ sung foreign key/validation event cho comment ở schema Vercel.
@@ -513,9 +526,11 @@ Smoke test production cần credential hợp lệ và có thao tác tạo/sửa/
 - `src/views/DetailView.vue` — chi tiết nhân vật và điểm cần kiểm tra XSS.
 - `src/views/CoreLabView.vue` — Core Lab và HTML động.
 - `src/views/TopUpHubView.vue` — điểm vào lựa chọn phương thức nạp tiền tại `/top-up`.
+- `src/views/CouponTopUpView.vue` — tạo/hủy đơn Coupon, giữ reference ổn định qua retry timeout bằng `sessionStorage`, và hiển thị lịch sử với UID/SID, số Coupon, trạng thái, thời gian xử lý và phản hồi Admin.
 - `src/views/TopUpView.vue` — component tạo yêu cầu nạp ngân hàng, vẫn được `TopUpHubView.vue` import và sử dụng.
 - `src/views/BankPaymentView.vue` — hiển thị VietQR và theo dõi trạng thái thanh toán chuyển khoản.
-- `src/views/AdminDashboardView.vue` — dashboard Admin.
+- `src/views/AdminDashboardView.vue` — dashboard Admin, quản lý role/trạng thái account và lối vào hàng đợi coupon.
+- `src/views/AdminTopUpsView.vue` — lọc, kiểm tra UID/SID, xác nhận đích nạp, duyệt/từ chối đơn coupon và làm mới hàng đợi stale sau conflict tại `/admin/top-ups`.
 - `src/views/StaffDashboardView.vue` — moderation Staff.
 
 ### Vercel Functions
@@ -525,22 +540,23 @@ Smoke test production cần credential hợp lệ và có thao tác tạo/sửa/
 - `api/_lib/database.js` — kết nối/schema community.
 - `api/_lib/adminDatabase.js` — schema/content seed và Admin queries.
 - `api/_lib/security.js` — password/JWT/security helper.
-- `api/_lib/authRoutes.js` — auth endpoints.
-- `api/_lib/communityRoutes.js` — comment, forum, advisor và top-up endpoints.
-- `api/_lib/adminRoutes.js` — Admin CRUD và quản lý account.
+- `api/_lib/http.js` — Bearer token guard và đối chiếu `IsActive`/`Role` hiện tại.
+- `api/_lib/authRoutes.js` — auth endpoints và quản lý role/trạng thái account Admin.
+- `api/_lib/communityRoutes.js` — comment, forum, advisor và top-up endpoints, gồm `/admin/top-ups` cùng alias cũ `/staff/top-ups`.
+- `api/_lib/adminRoutes.js` — Admin CRUD nội dung; protected route dùng guard account hiện tại.
 - `api/_lib/sepayWebhook.js` — xác minh và xử lý giao dịch ngân hàng.
 
 ### ASP.NET Core
 
 - `backend/src/OpmWiki.Api/Program.cs` — composition root, middleware, auth, DI và seed.
-- `backend/src/OpmWiki.Api/Controllers/` — API surface và authorization.
-- `backend/src/OpmWiki.Application/` — DTO và interface.
+- `backend/src/OpmWiki.Api/Controllers/` — API surface và authorization; `AdminUsersController.cs` quản lý role/trạng thái account, còn `TopUpsController.cs` khai báo cả route Admin coupon chuẩn và alias cũ.
+- `backend/src/OpmWiki.Application/` — DTO, interface và `Community/CouponOrderRules.cs` chứa invariant reference/giá Coupon dùng chung.
 - `backend/src/OpmWiki.Domain/Entities/` — mô hình domain.
 - `backend/src/OpmWiki.Infrastructure/Persistence/OpmWikiDbContext.cs` — schema và quan hệ EF.
 - `backend/src/OpmWiki.Infrastructure/Repositories/CommunityRepository.cs` — community/payment logic.
 - `backend/src/OpmWiki.Infrastructure/Repositories/AdminCharacterRepository.cs` — Admin character/keepsake logic.
 - `backend/src/OpmWiki.Infrastructure/Seeding/JsonDataSeeder.cs` — seed/upsert/delete từ JSON.
-- `backend/src/OpmWiki.Infrastructure/Migrations/` — lịch sử schema.
+- `backend/src/OpmWiki.Infrastructure/Migrations/` — lịch sử schema; migration `AddCouponReviewAudit` thêm `ReviewedBySubject`.
 
 ### Test
 
@@ -552,4 +568,4 @@ Trước khi sửa một chức năng, cần đọc cả frontend service/view v
 
 ## Tóm tắt ngữ cảnh để tiếp tục làm việc
 
-OPM Strongest Wiki là Vue 3 SPA song ngữ cho dữ liệu game và cộng đồng. Production được thiết kế chủ yếu theo Vercel Functions + Neon, trong khi repository còn có backend ASP.NET Core/.NET 10 đầy đủ hơn theo kiến trúc gần Clean Architecture. Frontend dùng service layer, JWT trong `sessionStorage`, route guard theo `User`/`Staff`/`Admin`, và JSON làm seed/fallback cho dữ liệu wiki. Database EF có 20 bảng; schema Vercel chỉ bao phủ khoảng 12 bảng và đang tạo bằng DDL runtime, vì vậy hai backend có sai khác đáng kể. Luồng chuyển khoản dùng VietQR, SePay HMAC và balance ledger idempotent. Các ưu tiên lớn nhất là bảo vệ secret, xử lý XSS, thêm rate limit, version hóa migration Vercel, xác định chiến lược/parity hai backend và hoàn thiện UI duyệt coupon. Trước mọi thay đổi, đọc `src/router/index.js`, service/view liên quan, `api/index.js` cùng handler Node tương ứng, `backend/src/OpmWiki.Api/Program.cs`, `OpmWikiDbContext.cs`, migration và test liên quan; không chạy seeder trên dữ liệu vận hành nếu chưa chủ động chọn JSON làm nguồn sự thật.
+OPM Strongest Wiki là Vue 3 SPA song ngữ cho dữ liệu game và cộng đồng. Production được thiết kế chủ yếu theo Vercel Functions + Neon, trong khi repository còn có backend ASP.NET Core/.NET 10 đầy đủ hơn theo kiến trúc gần Clean Architecture. Frontend dùng service layer, JWT trong `sessionStorage`, route guard theo `User`/`Staff`/`Admin`, và JSON làm seed/fallback cho dữ liệu wiki. Admin quản lý role/`IsActive` của account database; Vercel và ASP.NET đều từ chối ngay token của account inactive hoặc token chứa role cũ ở request bảo vệ. Database EF có 20 bảng; schema Vercel chỉ bao phủ khoảng 12 bảng và đang tạo bằng DDL runtime, vì vậy hai backend có sai khác đáng kể. Luồng chuyển khoản dùng VietQR, SePay HMAC và balance ledger idempotent. Các ưu tiên lớn nhất là bảo vệ secret, xử lý XSS, thêm rate limit, version hóa migration Vercel, xác định chiến lược/parity hai backend và giảm rủi ro vận hành của quy trình coupon thủ công một bước. Trước mọi thay đổi, đọc `src/router/index.js`, service/view liên quan, `api/index.js` cùng handler Node tương ứng, `backend/src/OpmWiki.Api/Program.cs`, `OpmWikiDbContext.cs`, migration và test liên quan; không chạy seeder trên dữ liệu vận hành nếu chưa chủ động chọn JSON làm nguồn sự thật.
