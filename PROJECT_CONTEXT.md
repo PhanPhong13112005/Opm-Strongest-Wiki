@@ -4,6 +4,20 @@
 >
 > Cập nhật theo trạng thái mã nguồn được kiểm tra ngày 28/07/2026. Những nội dung liên quan đến hạ tầng production đang chạy thực tế, cấu hình trên Vercel/Neon và trạng thái dịch vụ bên ngoài được đánh dấu **chưa xác minh** nếu không thể kết luận chỉ từ repository.
 
+## Mốc kiểm tra gần nhất
+
+- Tài liệu được đối chiếu lại với repository ngày 28/07/2026 tại commit `abd4a43 — Fix mobile navigation and update medal content`.
+- Branch tại thời điểm đối chiếu: `agent/role-portals-coupon`.
+- Commit và branch trên chỉ là mốc kiểm tra gần nhất, không phải trạng thái cố định lâu dài của dự án. Luôn chạy `git status` và kiểm tra lịch sử Git ở đầu phiên làm việc mới.
+- Trạng thái mới nhất của remote `main` **chưa xác minh** vì lần đối chiếu này không chạy `git fetch`.
+
+### Thay đổi chưa commit tại lần kiểm tra gần nhất
+
+- `public/Feature/medals/Mirage_trial/ai_20.png` đang bị xóa cục bộ.
+- `public/Feature/medals/Mirage_trial/ai_5.png` chưa được Git theo dõi.
+- `src/views/MedalsView.vue` vẫn tham chiếu `ai_20.png`; nếu commit hoặc deploy trạng thái này, ảnh mốc 20 có thể bị lỗi.
+- Đây là trạng thái working tree tại thời điểm kiểm tra, không phải đặc điểm kiến trúc. Không tự ý xóa `ai_5.png`, khôi phục `ai_20.png` hoặc sửa mapping trước khi xác nhận mục đích của người dùng.
+
 ## 1. Mục tiêu dự án
 
 **OPM Strongest Wiki** là một wiki cộng đồng song ngữ Việt/Anh cho game **One Punch Man: The Strongest**. Dự án tập trung vào:
@@ -20,13 +34,17 @@
 
 ### Frontend
 
-- Vue `3.5.39`, Composition API và `<script setup>`.
-- Vue Router `4.6.4`.
-- vue-i18n `9.14.5`.
-- Vite `5.4.21`.
-- Tailwind CSS `3.4.19`, PostCSS `8.5.16`, Autoprefixer `10.5.2`.
-- PixiJS `7.4.3` và pixi-spine `4.0.6` cho nội dung đồ họa/animation.
-- Vercel Analytics `2.0.1` và Speed Insights `2.0.0`.
+Các range được khai báo trực tiếp trong `package.json`:
+
+- Vue `^3.4.21`, Composition API và `<script setup>`.
+- Vue Router `^4.6.4`.
+- vue-i18n `^9.14.5`.
+- Vite `^5.2.0`.
+- Tailwind CSS `^3.4.4`, PostCSS `^8.4.38`, Autoprefixer `^10.4.19`.
+- PixiJS `^7.4.3` và pixi-spine `^4.0.6` cho nội dung đồ họa/animation.
+- Vercel Analytics `^2.0.1` và Speed Insights `^2.0.0`.
+
+Phiên bản dependency resolved trong lockfile **chưa xác minh** ở lần đối chiếu gần nhất vì `package-lock.json` chưa được đọc lại. Không dùng phiên bản resolved từ lần phân tích cũ như thể đó là range được khai báo trong `package.json`.
 
 ### Backend
 
@@ -50,7 +68,7 @@ Dự án có hai backend cùng tồn tại:
 
 - PostgreSQL; môi trường Docker dùng image `postgres:17-alpine`.
 - Production hướng tới Neon PostgreSQL; trạng thái kết nối production hiện tại **chưa xác minh**.
-- Frontend/Node: Node test runner, PGlite `0.5.4`, Playwright `1.61.1`.
+- Frontend/Node: Node test runner; `package.json` khai báo PGlite `^0.5.4` và Playwright `^1.61.1`. Phiên bản resolved **chưa xác minh**.
 - .NET: xUnit `2.9.3`, EF Core InMemory `10.0.0`, coverlet `6.0.4`.
 
 ### Công cụ triển khai
@@ -83,6 +101,7 @@ Vue SPA
 - `src/main.js` khởi tạo Vue, router và i18n.
 - `src/App.vue` là application shell.
 - `src/router/index.js` định nghĩa route, lazy-load view và route guard theo vai trò.
+- Điều hướng mobile trong `src/App.vue` đã được đồng bộ với các route hiện có và nay có liên kết tới Core Lab và Huy chương. Đây là cập nhật điều hướng; hai trang chức năng đã tồn tại từ trước.
 - `src/views/` chứa các màn hình theo chức năng.
 - `src/components/` chứa UI dùng lại.
 - `src/services/` gom logic gọi API, auth, cache và xử lý request.
@@ -166,6 +185,7 @@ Các thư mục `node_modules`, `dist`, `build`, `.git`, IDE metadata, cache, lo
 - Lịch phát hành.
 - Trang lịch sử và chính sách riêng tư.
 - Giao diện đăng nhập/đăng ký.
+- Menu mobile có điều hướng tới Core Lab và Huy chương, đồng bộ với tập route public hiện có.
 
 ### User
 
@@ -300,7 +320,11 @@ Một số trường danh sách dùng PostgreSQL `text[]`; dữ liệu lồng nh
 - Không chạy seeder trên database có dữ liệu vận hành nếu chưa chấp nhận việc JSON có thể ghi đè/xóa dữ liệu.
 - Asset path có ký tự `+` hoặc `#` phải được encode đúng. Đường dẫn keepsake trong Admin tránh ký tự `+`, dùng convention như `SSRplus`/`URplus`.
 - Không đưa secret vào biến `VITE_*`, vì các biến này được bundle vào frontend.
-- Không commit `.env`, token, mật khẩu database, JWT secret, bank secret hoặc webhook secret.
+- Không đọc, hiển thị hoặc commit giá trị secret trong `.env`, token, mật khẩu database, JWT secret, bank secret hoặc webhook secret.
+- Trước khi sửa code phải chạy `git status`.
+- Không ghi đè file `modified`, `deleted` hoặc `untracked` của người dùng.
+- Không tự động chạy `git restore`, `git clean`, `git reset --hard` hoặc xóa file untracked.
+- Nếu code đang tham chiếu một asset bị xóa, phải báo rõ tác động và hỏi mục đích của người dùng trước khi sửa hoặc khôi phục.
 - Chưa có cấu hình lint/formatter bắt buộc được xác minh; khi sửa code nên giữ style của file hiện tại.
 
 ## 10. Cài đặt và chạy dự án
@@ -410,7 +434,6 @@ Smoke test production cần credential hợp lệ và có thao tác tạo/sửa/
 14. Chưa thấy CI, lint, typecheck hoặc Node version pin.
 15. Thư mục `public` rất lớn, xấp xỉ 981 MB, làm tăng thời gian clone/build/deploy và chi phí truyền tải.
 16. Dependency `sharp` có dấu hiệu chưa dùng.
-17. Tại thời điểm phân tích có hai asset ảnh chưa được Git theo dõi trong `public/Feature/medals/Mirage_trial/`; đây là thay đổi của người dùng và không được tự ý xóa/ghi đè.
 
 ## 12. Các quyết định kỹ thuật quan trọng
 
@@ -481,16 +504,17 @@ Smoke test production cần credential hợp lệ và có thao tác tạo/sửa/
 - `src/App.vue` — application shell.
 - `src/router/index.js` — route, lazy loading và role guard.
 - `src/services/apiClient.js` — base URL, timeout, auth header và cache.
-- `src/services/authService.js` — đăng nhập, token và session.
-- `src/services/adminService.js` — API Admin.
-- `src/services/communityService.js` — comment, forum, advisor và top-up.
-- `src/services/characterService.js` — character API/fallback.
-- `src/services/eventService.js` — event API/fallback.
-- `src/services/releaseService.js` — release schedule.
+- `src/services/authApi.js` — đăng nhập, token và session.
+- `src/services/adminApi.js` — API quản trị.
+- `src/services/communityApi.js` — bình luận, forum, advisor và top-up.
+- `src/services/characterApi.js` — character API và fallback.
+- `src/services/eventApi.js` — event API và fallback.
+- `src/services/releaseScheduleApi.js` — release schedule API và fallback.
 - `src/views/DetailView.vue` — chi tiết nhân vật và điểm cần kiểm tra XSS.
 - `src/views/CoreLabView.vue` — Core Lab và HTML động.
-- `src/views/TopUpView.vue` — tạo top-up.
-- `src/views/TopUpPaymentView.vue` — trạng thái thanh toán/VietQR.
+- `src/views/TopUpHubView.vue` — điểm vào lựa chọn phương thức nạp tiền tại `/top-up`.
+- `src/views/TopUpView.vue` — component tạo yêu cầu nạp ngân hàng, vẫn được `TopUpHubView.vue` import và sử dụng.
+- `src/views/BankPaymentView.vue` — hiển thị VietQR và theo dõi trạng thái thanh toán chuyển khoản.
 - `src/views/AdminDashboardView.vue` — dashboard Admin.
 - `src/views/StaffDashboardView.vue` — moderation Staff.
 
