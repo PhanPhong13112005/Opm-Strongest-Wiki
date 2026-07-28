@@ -64,10 +64,35 @@ public sealed record TopUpRequestDto(
     string Status,
     string StaffNote,
     DateTimeOffset CreatedAt,
-    DateTimeOffset? ReviewedAt);
+    DateTimeOffset? ReviewedAt,
+    DateTimeOffset? PaidAt,
+    string ExternalTransactionId);
 
 public sealed record CreateTopUpRequest(string Provider, string ReferenceCode, decimal Amount);
+public sealed record CreateBankTopUpQrRequest(decimal Amount);
+public sealed record UpdateBankPaymentRequest(string Action);
+public sealed record BankTransferDetailsDto(string BankId, string AccountNumber, string AccountName);
+public sealed record BankTopUpQrDto(
+    TopUpRequestDto TopUp,
+    BankTransferDetailsDto Bank,
+    string QrUrl,
+    DateTimeOffset ExpiresAt);
 public sealed record ReviewTopUpRequest(string Status, string StaffNote);
+public sealed record SePayWebhookTransaction(
+    string ExternalTransactionId,
+    string Gateway,
+    string AccountNumber,
+    string PaymentCode,
+    decimal Amount,
+    string TransferType,
+    string BankReferenceCode,
+    string PayloadJson,
+    DateTimeOffset? TransactionAt);
+public sealed record PaymentProcessingResult(
+    bool Duplicate,
+    bool Credited,
+    long? TopUpRequestId,
+    string Status);
 
 public sealed record DashboardDto(
     int Users,

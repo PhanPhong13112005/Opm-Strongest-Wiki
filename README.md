@@ -13,7 +13,7 @@ kỹ năng, sự kiện, lịch ra mắt CN/SEA và các hệ thống nâng cấ
 - Lịch ra mắt nhân vật CN/SEA và lịch sự kiện song ngữ.
 - Core Skill, Tinh thông, Thẻ Hình nền, Chiến thuật và Huy chương.
 - Tài khoản cộng đồng với ba vai trò `User`, `Staff`, `Admin`.
-- Bình luận sự kiện, diễn đàn, trợ lý dữ liệu và quy trình yêu cầu nạp.
+- Bình luận sự kiện, diễn đàn, trợ lý dữ liệu và nạp số dư ngân hàng qua VietQR/SePay.
 - Dashboard quản trị và CRUD Nhân vật, Kỷ vật, Sự kiện, Lịch ra mắt.
 - Giao diện responsive, hỗ trợ tiếng Việt/Anh, Vercel Analytics và Speed Insights.
 
@@ -116,8 +116,8 @@ Chi tiết xem [`CHANGELOG.md`](CHANGELOG.md) hoặc trang `/history` trên webs
 - Việc đọc wiki công khai không yêu cầu tài khoản. Tài khoản chỉ cần cho bình luận, diễn đàn,
   trợ lý, yêu cầu nạp và khu vực vận hành.
 - Hệ thống lưu tên đăng nhập, tên hiển thị, mật khẩu đã băm, vai trò và nội dung người dùng gửi.
-- Yêu cầu nạp chỉ nhận phương thức, mã tham chiếu và số tiền. Không nhập mật khẩu, OTP hoặc toàn
-  bộ thông tin thẻ/ngân hàng.
+- Yêu cầu nạp chỉ nhận mã tham chiếu và số tiền; webhook SePay được xác thực HMAC và ghi sổ số dư
+  idempotent. Không nhập mật khẩu, OTP hoặc toàn bộ thông tin thẻ/ngân hàng.
 - JWT và thông tin phiên được lưu trong `sessionStorage`; production sử dụng HTTPS.
 - Telemetry hiệu năng/truy cập được xử lý thông qua Vercel Analytics và Speed Insights.
 

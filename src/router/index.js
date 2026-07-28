@@ -22,8 +22,8 @@ const AdminCharactersView = () => import('../views/AdminCharactersView.vue')
 const UserPortalView = () => import('../views/UserPortalView.vue')
 const ForumView = () => import('../views/ForumView.vue')
 const AdvisorView = () => import('../views/AdvisorView.vue')
-const TopUpView = () => import('../views/TopUpView.vue')
-const CouponTopUpView = () => import('../views/CouponTopUpView.vue')
+const TopUpHubView = () => import('../views/TopUpHubView.vue')
+const BankPaymentView = () => import('../views/BankPaymentView.vue')
 const StaffDashboardView = () => import('../views/StaffDashboardView.vue')
 const AdminDashboardView = () => import('../views/AdminDashboardView.vue')
 const AdminEventsView = () => import('../views/AdminEventsView.vue')
@@ -151,14 +151,18 @@ const router = createRouter({
     {
       path: '/top-up',
       name: 'top-up',
-      component: TopUpView,
+      component: TopUpHubView
+    },
+    {
+      path: '/top-up/payment/:id',
+      name: 'bank-payment',
+      component: BankPaymentView,
+      props: true,
       meta: { requiresAuth: true }
     },
     {
       path: '/coupon-top-up',
-      name: 'coupon-top-up',
-      component: CouponTopUpView,
-      meta: { requiresAuth: true, roles: ['User'] }
+      redirect: '/top-up'
     },
     {
       path: '/staff',

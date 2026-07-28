@@ -47,10 +47,12 @@ Thư mục này chứa tất cả các thành phần View (Trang) hoàn chỉnh 
 
 ### 10. Cổng cộng đồng theo vai trò
 *   Ba dashboard dùng chung ngôn ngữ thiết kế và màu nhận diện riêng: User màu xanh, Staff màu lục và Admin màu vàng.
-*   `UserPortalView.vue`: trang cá nhân, số dư và lối vào rõ ràng cho Diễn đàn, AI, Nạp thẻ, Nạp Coupon, Bình luận sự kiện.
-*   `ForumView.vue`, `AdvisorView.vue`, `TopUpView.vue`: các luồng cộng đồng dành cho tài khoản đã đăng nhập.
-*   `CouponTopUpView.vue`: yêu cầu nạp Coupon theo UID/Server, gói, số lượng và lịch sử xử lý; chỉ User truy cập.
-*   `StaffDashboardView.vue`: hàng đợi duyệt nạp và bình luận có bộ lọc/trạng thái trực quan; Staff cũng có thể xóa chủ đề hoặc phản hồi vi phạm trong diễn đàn.
+*   `UserPortalView.vue`: trang cá nhân, số dư và lối vào rõ ràng cho Diễn đàn, AI, Nạp thẻ và Bình luận sự kiện.
+*   `ForumView.vue`, `AdvisorView.vue`: các luồng cộng đồng dành cho tài khoản đã đăng nhập.
+*   `TopUpHubView.vue`: điều phối hai tab công khai tại `/top-up`: nạp Coupon và nạp số dư bằng ngân hàng.
+*   `CouponTopUpView.vue`: luồng Coupon theo UID/Server, gói và số lượng; yêu cầu đăng nhập khi đặt hàng và xem lịch sử.
+*   `TopUpView.vue`, `BankPaymentView.vue`: tạo VietQR, đếm ngược 5 phút và theo dõi SePay tự động xác nhận/cộng số dư.
+*   `StaffDashboardView.vue`: kiểm duyệt bình luận; Staff cũng có thể xóa chủ đề hoặc phản hồi vi phạm trong diễn đàn nhưng không được xử lý thanh toán.
 *   `AdminDashboardView.vue`: phân nhóm thống kê, công cụ quản lý nội dung, tìm kiếm tài khoản và phân vai trò.
 *   `AdminEventsView.vue`: thêm, sửa, xóa nội dung sự kiện trong PostgreSQL.
 *   `AdminReleasesView.vue`: thêm, sửa, xóa lịch ra mắt tướng CN/SEA; dữ liệu điều khiển banner trang chủ.

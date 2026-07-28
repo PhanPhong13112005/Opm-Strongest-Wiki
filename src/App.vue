@@ -38,7 +38,7 @@ const roleMenuItem = computed(() => {
 const featureRoutes = ['/core-lab', '/medals', '/tactics', '/backgear', '/keepsakes', '/insignias']
 const isFeaturesRoute = computed(() => featureRoutes.some(path => route.path.startsWith(path)))
 const isWorkspaceRoute = computed(() => isAuthenticated.value && (
-  ['/account', '/forum', '/advisor', '/top-up', '/coupon-top-up', '/staff'].includes(route.path)
+  ['/account', '/forum', '/advisor', '/staff'].includes(route.path)
   || route.path.startsWith('/admin/')
 ))
 
@@ -62,7 +62,6 @@ const workspaceLinks = computed(() => {
   return [
     { to: '/account', code: '01', label: 'Tổng quan' },
     ...community,
-    { to: '/coupon-top-up', code: 'CP', label: 'Nạp Coupon' },
   ]
 })
 
@@ -126,6 +125,7 @@ onBeforeUnmount(() => document.removeEventListener('pointerdown', closeAccountMe
             </div>
           </div>
           <RouterLink to="/events" class="site-nav-link">{{ t('nav.events') }}</RouterLink>
+          <RouterLink to="/top-up" class="site-nav-link">{{ t('nav.topup') }}</RouterLink>
         </nav>
 
         <div class="ml-auto flex items-center gap-2 xl:ml-3">
@@ -184,11 +184,14 @@ onBeforeUnmount(() => document.removeEventListener('pointerdown', closeAccountMe
       <nav v-if="isMobileMenuOpen" class="mobile-command-menu">
         <RouterLink to="/characters">{{ t('nav.characters') }}</RouterLink>
         <RouterLink to="/mastery">{{ t('nav.mastery') }}</RouterLink>
-        <RouterLink to="/events">{{ t('nav.events') }}</RouterLink>
+        <RouterLink to="/core-lab">{{ t('nav.corelab') }}</RouterLink>
+        <RouterLink to="/medals">{{ t('nav.medals') }}</RouterLink>
         <RouterLink to="/tactics">{{ t('nav.tactics') }}</RouterLink>
         <RouterLink to="/backgear">{{ t('nav.backgear') }}</RouterLink>
         <RouterLink to="/keepsakes">{{ t('nav.keepsakes') }}</RouterLink>
         <RouterLink to="/insignias">{{ t('nav.insignias') }}</RouterLink>
+        <RouterLink to="/events">{{ t('nav.events') }}</RouterLink>
+        <RouterLink to="/top-up">{{ t('nav.topup') }}</RouterLink>
       </nav>
     </header>
 

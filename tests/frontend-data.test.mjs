@@ -34,7 +34,7 @@ test('Vietnamese and English locale files expose the same keys', () => {
 })
 
 test('localized character catalogs share stable IDs', () => {
-  assert.equal(charactersVi.length, 176)
+  assert.equal(charactersVi.length, 177)
   assert.equal(charactersEn.length, charactersVi.length)
   assert.equal(new Set(charactersVi.map(character => character.id)).size, charactersVi.length)
   assert.deepEqual(
@@ -63,6 +63,18 @@ test('event images are either valid public assets or use the translated placehol
     if (!event.imageUrl) continue
     const assetPath = path.join(root, 'public', decodeURIComponent(event.imageUrl.replace(/^\//, '')))
     assert.ok(fs.existsSync(assetPath), `${event.id} references missing image ${event.imageUrl}`)
+  }
+})
+
+test('Mirage Trial milestone illustrations are wired to existing public assets', () => {
+  const medalsView = fs.readFileSync(path.join(root, 'src/views/MedalsView.vue'), 'utf8')
+  for (const stage of ['20', '40', '65', '90']) {
+    const imageUrl = `/Feature/medals/Mirage_trial/ai_${stage}.png`
+    assert.ok(
+      fs.existsSync(path.join(root, 'public', imageUrl.replace(/^\//, ''))),
+      `Mirage Trial stage ${stage} is missing ${imageUrl}`,
+    )
+    assert.ok(medalsView.includes(imageUrl), `Mirage Trial stage ${stage} is not wired to ${imageUrl}`)
   }
 })
 

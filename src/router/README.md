@@ -21,8 +21,9 @@ Sử dụng thư viện `vue-router` phiên bản 4 để thiết lập lịch s
 *   `/admin/characters`: CRUD Nhân vật và Kỷ vật; route guard yêu cầu JWT Admin còn hạn.
 *   `/login`: Đăng nhập/đăng ký dùng chung cho User, Staff và Admin.
 *   `/account`: Cổng người dùng.
-*   `/forum`, `/advisor`, `/top-up`: Diễn đàn, tư vấn và yêu cầu nạp.
-*   `/staff`: Cổng duyệt nạp và kiểm duyệt nội dung cho Staff/Admin.
+*   `/forum`, `/advisor`: Diễn đàn và tư vấn dành cho tài khoản đã đăng nhập.
+*   `/top-up`: Trang nạp công khai gồm tab Coupon và chuyển khoản ngân hàng; chỉ yêu cầu đăng nhập khi gửi đơn. `/coupon-top-up` chuyển hướng về route này.
+*   `/staff`: Cổng kiểm duyệt bình luận và nội dung diễn đàn cho Staff/Admin; không xử lý thanh toán.
 *   `/admin/dashboard`: Dashboard tổng hợp và phân quyền tài khoản.
 *   `/admin/events`: CRUD nội dung sự kiện.
 *   `/admin/releases`: CRUD lịch ra mắt tướng CN/SEA hiển thị trực tiếp trên trang chủ.

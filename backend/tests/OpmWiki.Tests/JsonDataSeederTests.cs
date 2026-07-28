@@ -95,9 +95,13 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
             Options.Create(new SeedDataOptions { FrontendDataPath = frontendDataPath }),
             NullLogger<JsonDataSeeder>.Instance);
 
+        var charactersJsonPath = Path.Combine(frontendDataPath, "characters.json");
+        var expectedCharacterCount = System.Text.Json.JsonDocument.Parse(await File.ReadAllTextAsync(charactersJsonPath))
+            .RootElement.GetArrayLength();
+
         var result = await seeder.SeedAsync();
 
-        Assert.Equal(176, result.Characters);
+        Assert.Equal(expectedCharacterCount, result.Characters);
         Assert.Equal(46, result.Events);
         Assert.Equal(33, result.MasteryTiers);
         Assert.Equal(10, result.Insignias);
@@ -114,6 +118,11 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
         Assert.Equal(result.BackgearSets, await dbContext.BackgearSets.CountAsync());
         Assert.Equal(result.TacticCards, await dbContext.TacticCards.CountAsync());
         Assert.Equal(result.TacticFrames, await dbContext.TacticFrames.CountAsync());
+
+        var blackSperm = await dbContext.Characters.FirstOrDefaultAsync(c => c.Id == "blacksperm-urplus");
+        Assert.NotNull(blackSperm);
+        Assert.Equal("Tinh Trùng Đen", blackSperm.NameVi);
+        Assert.Equal("Black Sperm", blackSperm.NameEn);
     }
 
     private const string CharactersVi = """

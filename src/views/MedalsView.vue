@@ -30,6 +30,13 @@ const mirageData = [
   { stage: '65', itemVi: 'Cục cầu vồng', itemEn: 'Rainbow Core', image: '/Feature/medals/Mirage_trial/ai_65.png' },
   { stage: '90', itemVi: 'Cục cầu vồng', itemEn: 'Rainbow Core', image: '/Feature/medals/Mirage_trial/ai_90.png' }
 ]
+const mirageMilestoneImages = {
+  20: '/Feature/medals/Mirage_trial/ai_20.png',
+  40: '/Feature/medals/Mirage_trial/ai_40.png'
+}
+for (const milestone of mirageData) {
+  milestone.image ||= mirageMilestoneImages[milestone.stage]
+}
 
 // Emblem Ultimate Skills Data
 const emblemSkillsData = [

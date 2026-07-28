@@ -21,7 +21,7 @@ public sealed class CommunityRepositoryTests
     }
 
     [Fact]
-    public async Task CommunityFlow_CreatesUserCommentForumAndApprovedTopUp()
+    public async Task CommunityFlow_ModeratesContentAndCreditsOnlyVerifiedBankWebhook()
     {
         await using var dbContext = CreateContext();
         dbContext.Events.Add(new GameEvent
@@ -49,15 +49,57 @@ public sealed class CommunityRepositoryTests
 
         var topUp = await repository.CreateTopUpAsync(user.Id, "Momo", "TX-001", 100_000);
         var reviewed = await repository.ReviewTopUpAsync(topUp.Id, Guid.Empty, TopUpStatuses.Approved, "Đã đối soát");
-        Assert.Equal(TopUpStatuses.Approved, reviewed?.Status);
-        Assert.Equal(100_000, (await repository.FindUserByIdAsync(user.Id))?.Balance);
+        Assert.Null(reviewed);
+        Assert.Equal(0, (await repository.FindUserByIdAsync(user.Id))?.Balance);
 
         var couponOrder = await repository.CreateTopUpAsync(
-            user.Id, "Coupon Order", "UID:3107453|SID:310170|CP:6|QTY:1|QA", 12_890);
+            user.Id, "Coupon Order", "UID:3107453|SID:310170|CP:6|QTY:1|QA", 13_000);
         var reviewedCoupon = await repository.ReviewTopUpAsync(
             couponOrder.Id, Guid.Empty, TopUpStatuses.Approved, "Đã nạp Coupon");
         Assert.Equal(TopUpStatuses.Approved, reviewedCoupon?.Status);
-        Assert.Equal(100_000, (await repository.FindUserByIdAsync(user.Id))?.Balance);
+        Assert.Equal(0, (await repository.FindUserByIdAsync(user.Id))?.Balance);
+
+        var bankTopUp = await repository.CreateTopUpAsync(
+            user.Id, "Bank transfer", "OPMTESTBANK001", 13_000);
+        var bankEntity = await dbContext.TopUpRequests.SingleAsync(x => x.Id == bankTopUp.Id);
+        bankEntity.Status = TopUpStatuses.PaymentReported;
+        await dbContext.SaveChangesAsync();
+        Assert.DoesNotContain(
+            await repository.ListTopUpsAsync(TopUpStatuses.Pending),
+            item => item.Id == bankTopUp.Id && item.Status == TopUpStatuses.PaymentReported);
+        Assert.Null(await repository.ReviewTopUpAsync(
+            bankTopUp.Id, Guid.Empty, TopUpStatuses.Approved, "Không được duyệt thủ công"));
+        var webhook = new SePayWebhookTransaction(
+            "90001",
+            "VCB",
+            "0000000001",
+            bankTopUp.ReferenceCode,
+            bankTopUp.Amount,
+            "in",
+            "BANK-REF-001",
+            """{"id":90001}""",
+            DateTimeOffset.UtcNow);
+        var processed = await repository.ProcessSePayWebhookAsync(webhook);
+        Assert.True(processed.Credited);
+        Assert.False(processed.Duplicate);
+        Assert.Equal(TopUpStatuses.Paid, (await repository.GetUserTopUpAsync(bankTopUp.Id, user.Id))?.Status);
+        Assert.Equal(13_000, (await repository.FindUserByIdAsync(user.Id))?.Balance);
+        Assert.Single(await dbContext.BalanceLedgerEntries.ToListAsync());
+
+        var replayed = await repository.ProcessSePayWebhookAsync(webhook);
+        Assert.True(replayed.Duplicate);
+        Assert.Equal(13_000, (await repository.FindUserByIdAsync(user.Id))?.Balance);
+        Assert.Single(await dbContext.BalanceLedgerEntries.ToListAsync());
+
+        var expiredBankTopUp = await repository.CreateTopUpAsync(
+            user.Id, "Bank transfer", "OPMTESTBANK002", 50_000);
+        var expiredBankEntity = await dbContext.TopUpRequests.SingleAsync(x => x.Id == expiredBankTopUp.Id);
+        expiredBankEntity.CreatedAt = DateTimeOffset.UtcNow.AddMinutes(-6);
+        await dbContext.SaveChangesAsync();
+        await repository.ExpirePendingBankTopUpsAsync(DateTimeOffset.UtcNow.AddMinutes(-5), user.Id);
+        Assert.Equal(
+            TopUpStatuses.Expired,
+            (await repository.GetUserTopUpAsync(expiredBankTopUp.Id, user.Id))?.Status);
 
         var dashboard = await repository.GetDashboardAsync();
         Assert.Equal(1, dashboard.Users);

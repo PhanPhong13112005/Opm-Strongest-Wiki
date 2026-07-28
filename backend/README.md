@@ -72,8 +72,11 @@ docker compose exec api dotnet OpmWiki.Api.dll --seed-data
 | `GET/POST` | `/api/events/{eventId}/comments` | Xem hoặc gửi bình luận sự kiện |
 | `GET/POST` | `/api/forum/topics` | Danh sách hoặc tạo chủ đề diễn đàn |
 | `POST` | `/api/forum/topics/{id}/posts` | Gửi phản hồi trong chủ đề |
-| `GET/POST` | `/api/top-ups/mine`, `/api/top-ups` | Theo dõi hoặc gửi yêu cầu nạp |
-| `GET/PUT` | `/api/staff/top-ups` | Nhân viên duyệt/từ chối yêu cầu nạp |
+| `GET/POST` | `/api/top-ups/mine`, `/api/top-ups` | Theo dõi yêu cầu hoặc gửi đơn Coupon |
+| `POST` | `/api/top-ups/bank-qr` | Tạo yêu cầu chuyển khoản và mã VietQR |
+| `GET/PUT` | `/api/top-ups/{id}/bank-qr`, `/api/top-ups/{id}/bank-payment` | Xem chi tiết hoặc hủy thanh toán ngân hàng |
+| `POST` | `/api/webhooks/sepay` | SePay xác thực HMAC, đối soát và cộng số dư idempotent |
+| `GET/PUT` | `/api/staff/top-ups` | Endpoint kế thừa chỉ dành cho Admin xử lý đơn Coupon; Staff bị từ chối |
 | `GET/DELETE` | `/api/moderation/comments` | Nhân viên kiểm duyệt bình luận |
 | `DELETE` | `/api/moderation/forum/topics/{id}`, `/api/moderation/forum/posts/{id}` | Nhân viên xóa chủ đề hoặc phản hồi vi phạm |
 | `GET` | `/api/admin/dashboard` | Thống kê toàn hệ thống |
@@ -100,7 +103,7 @@ Ví dụ:
 
 ## Database và nhập dữ liệu
 
-Migration nằm trong `src/OpmWiki.Infrastructure/Migrations`. Lệnh `--seed-data` đọc:
+Migration nằm trong `src/OpmWiki.Infrastructure/Persistence/Migrations`. Lệnh `--seed-data` đọc:
 
 - `src/data/characters.json`
 - `src/data/characters_en.json`
@@ -119,16 +122,22 @@ ConnectionStrings__OpmWiki=Host=...;Database=...;Username=...;Password=...;SSL M
 AdminAuth__Username=wiki-admin
 AdminAuth__Password=<mật khẩu mạnh>
 AdminAuth__JwtSigningKey=<chuỗi ngẫu nhiên tối thiểu 32 ký tự>
+BankTransfer__BankId=<mã ngân hàng VietQR>
+BankTransfer__AccountNumber=<số tài khoản nhận đúng như SePay>
+BankTransfer__AccountName=<tên chủ tài khoản>
+SePay__WebhookSecret=<bí mật HMAC giống cấu hình trong SePay, tối thiểu 32 ký tự>
 ```
 
 ## Cổng người dùng, nhân viên và quản trị
 
 - `User`: bình luận sự kiện, diễn đàn, tư vấn Wiki/AI và gửi yêu cầu nạp.
-- `Staff`: kế thừa quyền cộng đồng, duyệt nạp và xóa nội dung không hợp lệ.
+- `Staff`: kế thừa quyền cộng đồng và xóa nội dung không hợp lệ; không có quyền xử lý thanh toán.
 - `Admin`: dashboard, phân quyền, CRUD nhân vật/Kỷ vật và CRUD lịch sự kiện.
 
 Mật khẩu người dùng được băm PBKDF2-SHA256 với salt ngẫu nhiên; JWT chứa vai trò và mọi endpoint ghi đều kiểm tra quyền ở backend.
-Yêu cầu nạp chỉ lưu phương thức, mã tham chiếu và số tiền. Không lưu OTP, mật khẩu hay dữ liệu thẻ ngân hàng đầy đủ.
+Thanh toán ngân hàng chỉ được cộng số dư từ webhook SePay có chữ ký hợp lệ. Mỗi mã giao dịch SePay là duy nhất,
+việc cộng tiền và ghi `balance_ledger` nằm trong cùng giao dịch cơ sở dữ liệu. Hệ thống không lưu OTP, mật khẩu
+hay dữ liệu thẻ ngân hàng đầy đủ.
 
 Trợ lý luôn có fallback tra cứu PostgreSQL. Để bật một dịch vụ AI tương thích Chat Completions, cấu hình:
 

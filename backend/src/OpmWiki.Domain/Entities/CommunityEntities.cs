@@ -10,6 +10,10 @@ public static class AccountRoles
 public static class TopUpStatuses
 {
     public const string Pending = "Pending";
+    public const string PaymentReported = "PaymentReported";
+    public const string Cancelled = "Cancelled";
+    public const string Expired = "Expired";
+    public const string Paid = "Paid";
     public const string Approved = "Approved";
     public const string Rejected = "Rejected";
 }
@@ -82,8 +86,45 @@ public sealed class TopUpRequest
     public Guid? ReviewedById { get; set; }
     public UserAccount? ReviewedBy { get; set; }
     public DateTimeOffset? ReviewedAt { get; set; }
+    public string ExternalTransactionId { get; set; } = string.Empty;
+    public DateTimeOffset? PaidAt { get; set; }
     public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
     public DateTimeOffset UpdatedAt { get; set; } = DateTimeOffset.UtcNow;
+}
+
+public sealed class PaymentTransaction
+{
+    public long Id { get; set; }
+    public string Provider { get; set; } = "SePay";
+    public string ExternalTransactionId { get; set; } = string.Empty;
+    public long? TopUpRequestId { get; set; }
+    public TopUpRequest? TopUpRequest { get; set; }
+    public string Gateway { get; set; } = string.Empty;
+    public string AccountNumber { get; set; } = string.Empty;
+    public string PaymentCode { get; set; } = string.Empty;
+    public decimal Amount { get; set; }
+    public string TransferType { get; set; } = string.Empty;
+    public string BankReferenceCode { get; set; } = string.Empty;
+    public string Status { get; set; } = string.Empty;
+    public string PayloadJson { get; set; } = "{}";
+    public DateTimeOffset? TransactionAt { get; set; }
+    public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
+}
+
+public sealed class BalanceLedgerEntry
+{
+    public long Id { get; set; }
+    public Guid UserId { get; set; }
+    public UserAccount User { get; set; } = null!;
+    public long TopUpRequestId { get; set; }
+    public TopUpRequest TopUpRequest { get; set; } = null!;
+    public long PaymentTransactionId { get; set; }
+    public PaymentTransaction PaymentTransaction { get; set; } = null!;
+    public string EntryType { get; set; } = "BankTopUp";
+    public decimal Amount { get; set; }
+    public decimal BalanceBefore { get; set; }
+    public decimal BalanceAfter { get; set; }
+    public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
 }
 
 public sealed class ReleaseScheduleEntry
