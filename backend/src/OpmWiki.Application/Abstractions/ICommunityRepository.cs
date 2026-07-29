@@ -6,8 +6,12 @@ namespace OpmWiki.Application.Abstractions;
 public interface ICommunityRepository
 {
     Task<UserAccount?> FindUserByUsernameAsync(string normalizedUsername, CancellationToken cancellationToken = default);
+    Task<UserAccount?> FindUserByIdentifierAsync(string normalizedUsername, string normalizedEmail, CancellationToken cancellationToken = default);
     Task<UserAccount?> FindUserByIdAsync(Guid id, CancellationToken cancellationToken = default);
     Task<UserAccount?> CreateUserAsync(string username, string displayName, string passwordHash, CancellationToken cancellationToken = default);
+    Task<UserAccount?> CreateUserWithEmailAsync(string username, string email, string displayName, string passwordHash, CancellationToken cancellationToken = default);
+    Task<UserAccount?> SetPasswordResetTokenAsync(string normalizedEmail, string tokenHash, DateTimeOffset expiresAt, CancellationToken cancellationToken = default);
+    Task<bool> ResetPasswordAsync(string tokenHash, string passwordHash, CancellationToken cancellationToken = default);
     Task<IReadOnlyList<AccountDto>> ListAccountsAsync(CancellationToken cancellationToken = default);
     Task<AccountDto?> UpdateAccountRoleAsync(Guid id, string role, Guid actorId, CancellationToken cancellationToken = default);
     Task<AccountDto?> UpdateAccountStatusAsync(Guid id, bool isActive, Guid actorId, CancellationToken cancellationToken = default);

@@ -123,6 +123,10 @@ ConnectionStrings__OpmWiki=Host=...;Database=...;Username=...;Password=...;SSL M
 AdminAuth__Username=wiki-admin
 AdminAuth__Password=<mật khẩu mạnh>
 AdminAuth__JwtSigningKey=<chuỗi ngẫu nhiên tối thiểu 32 ký tự>
+PublicAppUrl=https://<domain>
+Email__ResendApiKey=<Resend API key>
+Email__From=OPM Wiki <no-reply@<verified-domain>>
+PasswordReset__TokenLifetimeMinutes=15
 BankTransfer__BankId=<mã ngân hàng VietQR>
 BankTransfer__AccountNumber=<số tài khoản nhận đúng như SePay>
 BankTransfer__AccountName=<tên chủ tài khoản>
@@ -134,6 +138,10 @@ SePay__WebhookSecret=<bí mật HMAC giống cấu hình trong SePay, tối thi�
 - `User`: bình luận sự kiện, diễn đàn, tư vấn Wiki/AI và gửi yêu cầu nạp.
 - `Staff`: kế thừa quyền cộng đồng và xóa nội dung không hợp lệ; không có quyền xử lý thanh toán.
 - `Admin`: dashboard, phân quyền, bật/tắt tài khoản database, CRUD nhân vật/Kỷ vật và CRUD lịch sự kiện.
+
+Đăng ký tài khoản yêu cầu Gmail `@gmail.com`; dấu chấm và phần `+tag` được chuẩn hóa để
+một hộp thư không tạo nhiều account. Quên mật khẩu dùng token ngẫu nhiên một lần, database chỉ
+lưu SHA-256 của token và mặc định hết hạn sau 15 phút. Email production được gửi qua Resend.
 
 Mật khẩu người dùng được băm PBKDF2-SHA256 với salt ngẫu nhiên. JWT chứa vai trò, nhưng ASP.NET đối chiếu lại `IsActive` và `Role` trong database ở `OnTokenValidated`; account bị khóa hoặc token có role cũ bị từ chối ngay trên mọi endpoint bảo vệ. Admin cấu hình môi trường có subject riêng và không phụ thuộc bản ghi database.
 Thanh toán ngân hàng chỉ được cộng số dư từ webhook SePay có chữ ký hợp lệ. Mỗi mã giao dịch SePay là duy nhất,

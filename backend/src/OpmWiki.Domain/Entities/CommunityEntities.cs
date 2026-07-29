@@ -23,8 +23,12 @@ public sealed class UserAccount
     public Guid Id { get; set; } = Guid.NewGuid();
     public string Username { get; set; } = string.Empty;
     public string NormalizedUsername { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
+    public string NormalizedEmail { get; set; } = string.Empty;
     public string DisplayName { get; set; } = string.Empty;
     public string PasswordHash { get; set; } = string.Empty;
+    public string? PasswordResetTokenHash { get; set; }
+    public DateTimeOffset? PasswordResetExpiresAt { get; set; }
     public string Role { get; set; } = AccountRoles.User;
     public decimal Balance { get; set; }
     public bool IsActive { get; set; } = true;

@@ -1,14 +1,23 @@
 import { randomUUID } from 'node:crypto'
 import { ensureCommunitySchema, getSql } from './database.js'
 import { bodyOf, json, methodNotAllowed, requireCurrentUser } from './http.js'
+import { buildPasswordResetUrl, sendPasswordResetEmail } from './passwordResetEmail.js'
 import {
   createAccessToken,
   createPasswordHash,
+  createPasswordResetToken,
+  hashPasswordResetToken,
   validateAdminCredentials,
   verifyPasswordHash,
 } from './security.js'
 
 const usernamePattern = /^[a-zA-Z0-9._-]{3,30}$/
+const gmailPattern = /^[a-z0-9._%+-]+@gmail\.com$/i
+const normalizeGmail = (email) => {
+  const local = String(email || '').trim().toLowerCase().split('@')[0]
+  return `${local.split('+')[0].replaceAll('.', '')}@gmail.com`
+}
+const passwordResetMessage = 'Nếu Gmail tồn tại, liên kết đặt lại mật khẩu đã được gửi.'
 
 const accountResponse = (row) => ({
   id: row.id,
@@ -20,15 +29,16 @@ const accountResponse = (row) => ({
   createdAt: row.createdAt,
 })
 
-const findAccountByUsername = async (sql, username) => {
+const findAccountByIdentifier = async (sql, identifier) => {
+  const value = String(identifier || '').trim()
   const rows = await sql.query(
     `SELECT "Id" AS id, "Username" AS username, "DisplayName" AS "displayName",
             "PasswordHash" AS "passwordHash", "Role" AS role, "Balance" AS balance,
             "IsActive" AS "isActive", "CreatedAt" AS "createdAt"
        FROM user_accounts
-      WHERE "NormalizedUsername" = $1
+      WHERE "NormalizedUsername" = $1 OR "NormalizedEmail" = $2
       LIMIT 1`,
-    [String(username || '').trim().toUpperCase()],
+    [value.toUpperCase(), gmailPattern.test(value) ? normalizeGmail(value) : value.toLowerCase()],
   )
   return rows[0]
 }
@@ -42,13 +52,13 @@ export const createAuthRouteHandler = ({
 
   if (path === '/auth/register') {
     if (request.method !== 'POST') return methodNotAllowed(response, ['POST'])
-    const { username = '', displayName = '', password = '' } = bodyOf(request)
+    const { username = '', email = '', password = '' } = bodyOf(request)
     const errors = {}
     if (!usernamePattern.test(username)) {
       errors.username = ['Tên đăng nhập phải có 3-30 ký tự và chỉ gồm chữ, số, dấu chấm, gạch dưới hoặc gạch ngang.']
     }
-    if (String(displayName).trim().length < 2 || String(displayName).trim().length > 60) {
-      errors.displayName = ['Tên hiển thị phải có 2-60 ký tự.']
+    if (!gmailPattern.test(String(email).trim())) {
+      errors.email = ['Vui lòng sử dụng địa chỉ Gmail hợp lệ có đuôi @gmail.com.']
     }
     if (String(password).length < 8 || String(password).length > 72) {
       errors.password = ['Mật khẩu phải có 8-72 ký tự.']
@@ -61,11 +71,20 @@ export const createAuthRouteHandler = ({
     try {
       const rows = await sql.query(
         `INSERT INTO user_accounts
-          ("Id", "Username", "NormalizedUsername", "DisplayName", "PasswordHash", "Role", "Balance", "IsActive")
-         VALUES ($1, $2, $3, $4, $5, 'User', 0, true)
+          ("Id", "Username", "NormalizedUsername", "Email", "NormalizedEmail",
+           "DisplayName", "PasswordHash", "Role", "Balance", "IsActive")
+         VALUES ($1, $2, $3, $4, $5, $6, $7, 'User', 0, true)
          RETURNING "Id" AS id, "Username" AS username, "DisplayName" AS "displayName",
                    "Role" AS role, "Balance" AS balance`,
-        [randomUUID(), username.trim(), username.trim().toUpperCase(), displayName.trim(), createPasswordHash(password)],
+        [
+          randomUUID(),
+          username.trim(),
+          username.trim().toUpperCase(),
+          email.trim().toLowerCase(),
+          normalizeGmail(email),
+          username.trim(),
+          createPasswordHash(password),
+        ],
       )
       const account = rows[0]
       return json(response, 201, createAccessToken({
@@ -77,10 +96,80 @@ export const createAuthRouteHandler = ({
       }))
     } catch (error) {
       if (error?.code === '23505') {
-        return json(response, 409, { message: 'Tên đăng nhập đã được sử dụng.' })
+        return json(response, 409, { message: 'Tên đăng nhập hoặc Gmail đã được sử dụng.' })
       }
       throw error
     }
+  }
+
+  if (path === '/auth/forgot-password') {
+    if (request.method !== 'POST') return methodNotAllowed(response, ['POST'])
+    const { email = '' } = bodyOf(request)
+    const suppliedEmail = String(email).trim().toLowerCase()
+    if (!gmailPattern.test(suppliedEmail)) {
+      return json(response, 400, { message: 'Vui lòng nhập địa chỉ Gmail hợp lệ.' })
+    }
+    const normalizedEmail = normalizeGmail(suppliedEmail)
+
+    const token = createPasswordResetToken()
+    const tokenHash = hashPasswordResetToken(token)
+    const lifetime = Math.min(60, Math.max(5, Number(process.env.PASSWORDRESET__TOKENLIFETIMEMINUTES || 15)))
+    const rows = await sqlProvider().query(
+      `UPDATE user_accounts
+          SET "PasswordResetTokenHash" = $2,
+              "PasswordResetExpiresAt" = CURRENT_TIMESTAMP + ($3 * INTERVAL '1 minute'),
+              "UpdatedAt" = CURRENT_TIMESTAMP
+        WHERE "NormalizedEmail" = $1 AND "IsActive" = true
+        RETURNING "Id" AS id, "Email" AS email`,
+      [normalizedEmail, tokenHash, lifetime],
+    )
+
+    let resetUrl
+    if (rows[0]) {
+      resetUrl = buildPasswordResetUrl(request, token)
+      try {
+        await sendPasswordResetEmail({
+          email: rows[0].email,
+          resetUrl,
+          idempotencyKey: `password-reset-${rows[0].id}-${tokenHash.slice(0, 20)}`,
+          lifetimeMinutes: lifetime,
+        })
+      } catch (error) {
+        console.error('Password reset email failed', { message: error?.message })
+      }
+    }
+
+    return json(response, 200, {
+      message: passwordResetMessage,
+      ...(process.env.NODE_ENV !== 'production' && resetUrl ? { resetUrl } : {}),
+    })
+  }
+
+  if (path === '/auth/reset-password') {
+    if (request.method !== 'POST') return methodNotAllowed(response, ['POST'])
+    const { token = '', password = '' } = bodyOf(request)
+    if (String(token).length < 32 || String(token).length > 200) {
+      return json(response, 400, { message: 'Liên kết đặt lại mật khẩu không hợp lệ hoặc đã hết hạn.' })
+    }
+    if (String(password).length < 8 || String(password).length > 72) {
+      return json(response, 400, { message: 'Mật khẩu phải có 8-72 ký tự.' })
+    }
+
+    const rows = await sqlProvider().query(
+      `UPDATE user_accounts
+          SET "PasswordHash" = $2,
+              "PasswordResetTokenHash" = NULL,
+              "PasswordResetExpiresAt" = NULL,
+              "UpdatedAt" = CURRENT_TIMESTAMP
+        WHERE "PasswordResetTokenHash" = $1
+          AND "PasswordResetExpiresAt" > CURRENT_TIMESTAMP
+          AND "IsActive" = true
+        RETURNING "Id" AS id`,
+      [hashPasswordResetToken(token), createPasswordHash(password)],
+    )
+    return rows[0]
+      ? json(response, 200, { message: 'Mật khẩu đã được cập nhật. Bạn có thể đăng nhập ngay.' })
+      : json(response, 400, { message: 'Liên kết đặt lại mật khẩu không hợp lệ hoặc đã hết hạn.' })
   }
 
   if (path === '/auth/login') {
@@ -100,7 +189,7 @@ export const createAuthRouteHandler = ({
       }))
     }
 
-    const account = await findAccountByUsername(sqlProvider(), username)
+    const account = await findAccountByIdentifier(sqlProvider(), username)
     if (!account?.isActive || !verifyPasswordHash(password, account.passwordHash)) {
       return json(response, 401, { message: 'Tên đăng nhập hoặc mật khẩu không đúng.' })
     }

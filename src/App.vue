@@ -46,7 +46,6 @@ const workspaceLinks = computed(() => {
   const community = [
     { to: '/forum', code: 'DD', label: 'Diễn đàn' },
     { to: '/advisor', code: 'AI', label: 'Trợ lý AI' },
-    { to: '/top-up', code: 'NT', label: 'Nạp thẻ' },
   ]
   if (hasRole('Admin')) {
     return [

@@ -11,8 +11,10 @@ public sealed record AccountDto(
     bool IsActive,
     DateTimeOffset CreatedAt);
 
-public sealed record RegisterRequest(string Username, string DisplayName, string Password);
+public sealed record RegisterRequest(string Username, string Email, string Password);
 public sealed record LoginRequest(string Username, string Password);
+public sealed record ForgotPasswordRequest(string Email);
+public sealed record ResetPasswordRequest(string Token, string Password);
 public sealed record UpdateAccountRoleRequest(string Role);
 public sealed record UpdateAccountStatusRequest(
     [property: Required(ErrorMessage = "Trạng thái tài khoản là bắt buộc.")]

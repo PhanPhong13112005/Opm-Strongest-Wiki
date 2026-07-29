@@ -41,7 +41,16 @@ DATABASE_URL=postgresql://<user>:<password>@<neon-host>/<database>?sslmode=requi
 ADMINAUTH__USERNAME=admin
 ADMINAUTH__PASSWORD=<mật khẩu quản trị mạnh>
 ADMINAUTH__JWTSIGNINGKEY=<chuỗi ngẫu nhiên tối thiểu 32 ký tự>
+PUBLIC_APP_URL=https://<domain>
+EMAIL__RESENDAPIKEY=<Resend API key>
+EMAIL__FROM=OPM Wiki <no-reply@<verified-domain>>
+PASSWORDRESET__TOKENLIFETIMEMINUTES=15
 ```
+
+Đăng ký yêu cầu Gmail `@gmail.com`; hệ thống chuẩn hóa dấu chấm và phần `+tag` để một hộp thư
+không tạo nhiều tài khoản. Endpoint quên mật khẩu luôn trả phản hồi chung, chỉ lưu SHA-256 của
+token, token hết hạn sau 15 phút và bị xóa ngay khi dùng thành công. Resend cần sender domain đã
+xác minh; local không gửi email thật và có thể trả `resetUrl` để kiểm thử.
 
 Có thể dùng connection string kiểu .NET qua `CONNECTIONSTRINGS__OPMWIKI` thay cho
 `DATABASE_URL`. Không cần đặt đồng thời cả hai.
@@ -57,6 +66,8 @@ GET  https://<domain>/api/health
 GET  https://<domain>/api/health/database
 POST https://<domain>/api/auth/register
 POST https://<domain>/api/auth/login
+POST https://<domain>/api/auth/forgot-password
+POST https://<domain>/api/auth/reset-password
 ```
 
 Không commit connection string, mật khẩu hoặc JWT signing key vào Git.

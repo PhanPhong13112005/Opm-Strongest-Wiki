@@ -65,11 +65,23 @@ export const login = async (username, password) => saveSession(await requestApi(
   body: JSON.stringify({ username, password }),
 }))
 
-export const register = async (username, displayName, password) => saveSession(await requestApi('api/auth/register', null, {
+export const register = async (username, email, password) => saveSession(await requestApi('api/auth/register', null, {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ username, displayName, password }),
+  body: JSON.stringify({ username, email, password }),
 }))
+
+export const requestPasswordReset = async (email) => requestApi('api/auth/forgot-password', null, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ email }),
+})
+
+export const resetPassword = async (token, password) => requestApi('api/auth/reset-password', null, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ token, password }),
+})
 
 export const authorizedRequest = async (path, options = {}, params) => {
   if (!hasValidSession()) {
