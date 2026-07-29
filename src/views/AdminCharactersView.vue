@@ -1,8 +1,10 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import RolePortalShell from '../components/RolePortalShell.vue'
+import { adminPortalNavigation } from '../data/portalNavigation'
+import { authState, clearSession } from '../services/authApi'
 import {
-  clearAdminSession,
   createAdminCharacter,
   deleteAdminCharacter,
   deleteAdminKeepsake,
@@ -167,28 +169,32 @@ const changePage = (nextPage) => {
 }
 
 const logout = async () => {
-  clearAdminSession()
-  await router.replace('/admin/login')
+  clearSession()
+  await router.replace('/')
 }
 
 onMounted(load)
 </script>
 
 <template>
-  <main class="min-h-screen px-4 pb-16 pt-24 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-7xl">
-      <header class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p class="text-xs font-black uppercase tracking-[0.24em] text-opm-gold">OPM Wiki Admin</p>
-          <h1 class="mt-2 text-3xl font-black text-white sm:text-4xl">Nhân vật & Kỷ vật</h1>
-          <p class="mt-2 text-sm text-gray-400">{{ totalCount }} nhân vật trong PostgreSQL</p>
-        </div>
-        <div class="flex gap-3">
-          <button class="rounded-xl border border-white/10 px-4 py-2 text-sm font-bold text-gray-300 hover:bg-white/5" @click="logout">Đăng xuất</button>
-          <button class="rounded-xl bg-opm-gold px-4 py-2 text-sm font-black text-black hover:brightness-110" @click="startCreate">+ Thêm nhân vật</button>
-        </div>
-      </header>
-
+  <RolePortalShell
+    role="admin"
+    role-label="Khu vực quản trị viên"
+    title="Nhân vật & Kỷ vật"
+    description="Quản lý hồ sơ song ngữ, chỉ số chiến đấu, lịch phát hành và Kỷ vật của từng nhân vật."
+    :display-name="authState.session?.displayName"
+    :username="authState.session?.username"
+    :navigation="adminPortalNavigation"
+    @logout="logout"
+  >
+    <section class="character-toolbar">
+      <div>
+        <span>Kho dữ liệu nhân vật</span>
+        <h2>{{ totalCount.toLocaleString('vi-VN') }} hồ sơ trong PostgreSQL</h2>
+        <p>Tìm, chỉnh sửa hoặc tạo hồ sơ mới mà không rời khỏi trung tâm quản trị.</p>
+      </div>
+      <button type="button" class="character-primary-action" @click="startCreate">+ Thêm nhân vật</button>
+    </section>
       <p v-if="notice" class="mb-5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-3 text-sm text-emerald-300">{{ notice }}</p>
       <p v-if="error" role="alert" class="mb-5 rounded-xl border border-red-500/30 bg-red-500/10 p-3 text-sm text-red-300">{{ error }}</p>
 
@@ -277,11 +283,27 @@ onMounted(load)
           <button :disabled="page >= totalPages" class="rounded-lg border border-white/10 px-3 py-2 disabled:opacity-30" @click="changePage(page + 1)">Trang sau</button>
         </footer>
       </section>
-    </div>
-  </main>
+  </RolePortalShell>
 </template>
 
 <style scoped>
+.character-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(255, 184, 77, .18);
+  border-radius: 17px;
+  background: linear-gradient(135deg, rgba(255, 184, 77, .07), rgba(8, 14, 23, .94) 55%);
+  padding: 21px 22px;
+}
+.character-toolbar span { color: #ffb84d; font-size: 9px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+.character-toolbar h2 { margin: 5px 0 0; color: #f2f7fb; font-size: 20px; font-weight: 920; }
+.character-toolbar p { margin: 6px 0 0; color: #718598; font-size: 11px; }
+.character-primary-action { flex: 0 0 auto; border-radius: 11px; background: #ffb84d; padding: 11px 15px; color: #0a0e14; font-size: 11px; font-weight: 900; }
+.character-primary-action:hover { filter: brightness(1.08); }
+
 .admin-field span {
   @apply mb-2 block text-[11px] font-bold uppercase tracking-wider text-gray-400;
 }
@@ -293,5 +315,10 @@ onMounted(load)
 
 .admin-field input:read-only {
   @apply cursor-not-allowed opacity-60;
+}
+
+@media (max-width: 640px) {
+  .character-toolbar { align-items: flex-start; flex-direction: column; padding: 17px; }
+  .character-primary-action { width: 100%; }
 }
 </style>

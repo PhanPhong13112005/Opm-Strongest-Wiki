@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
 
 const props = defineProps({
   role: { type: String, required: true },
@@ -13,6 +14,8 @@ const props = defineProps({
 
 defineEmits(['logout'])
 
+const route = useRoute()
+
 const initials = computed(() => {
   const source = props.displayName || props.username || props.roleLabel
   return source
@@ -23,6 +26,13 @@ const initials = computed(() => {
     .join('')
     .toUpperCase()
 })
+
+const isActive = item => {
+  const match = item.match || item.to
+  return match === '/'
+    ? route.path === match
+    : route.path === match || route.path.startsWith(`${match}/`)
+}
 
 </script>
 
@@ -56,6 +66,24 @@ const initials = computed(() => {
           </button>
         </div>
       </header>
+
+      <nav v-if="navigation.length" class="role-portal__navigation" :aria-label="`Điều hướng ${roleLabel}`">
+        <RouterLink
+          v-for="item in navigation"
+          :key="item.to"
+          :to="item.to"
+          class="role-portal__nav-item"
+          :class="{ 'role-portal__nav-item--active': isActive(item) }"
+          :aria-current="isActive(item) ? 'page' : undefined"
+        >
+          <span>{{ item.index }}</span>
+          <span class="role-portal__nav-copy">
+            <strong>{{ item.label }}</strong>
+            <small>{{ item.hint }}</small>
+          </span>
+          <i aria-hidden="true">↗</i>
+        </RouterLink>
+      </nav>
 
       <section class="role-portal__content">
         <slot />
@@ -143,7 +171,45 @@ const initials = computed(() => {
 .role-portal__logout svg { width: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .role-portal__logout:hover { border-color: rgba(255, 112, 94, .5); background: rgba(255, 112, 94, .08); color: #ffc0b8; }
 
+.role-portal__navigation {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(123, 157, 187, .14);
+  border-radius: 16px;
+  background: rgba(123, 157, 187, .1);
+}
+
+.role-portal__nav-item {
+  display: grid;
+  min-width: 0;
+  min-height: 76px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  background: rgba(7, 13, 21, .96);
+  padding: 13px 14px;
+  transition: background .18s ease, color .18s ease;
+}
+
+.role-portal__nav-item:hover { background: rgba(var(--portal-accent-rgb), .055); }
+.role-portal__nav-item > span:first-child { color: rgba(var(--portal-accent-rgb), .48); font: 800 9px ui-monospace, SFMono-Regular, Consolas, monospace; }
+.role-portal__nav-copy { display: grid; min-width: 0; gap: 4px; }
+.role-portal__nav-copy strong { overflow: hidden; color: #b8c5d0; font-size: 11px; font-weight: 850; text-overflow: ellipsis; white-space: nowrap; }
+.role-portal__nav-copy small { overflow: hidden; color: #53687a; font-size: 8px; text-overflow: ellipsis; white-space: nowrap; }
+.role-portal__nav-item > i { color: #415568; font-size: 10px; font-style: normal; }
+.role-portal__nav-item--active { background: linear-gradient(145deg, rgba(var(--portal-accent-rgb), .12), rgba(7, 13, 21, .97)); box-shadow: inset 0 -2px 0 var(--portal-accent); }
+.role-portal__nav-item--active .role-portal__nav-copy strong,
+.role-portal__nav-item--active > i,
+.role-portal__nav-item--active > span:first-child { color: var(--portal-accent); }
+
 .role-portal__content { min-width: 0; margin-top: 20px; }
+
+@media (max-width: 1180px) {
+  .role-portal__navigation { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
 
 @media (max-width: 1050px) {
   .role-portal__header { align-items: flex-start; flex-direction: column; }
@@ -163,6 +229,18 @@ const initials = computed(() => {
   .role-portal__identity strong, .role-portal__identity span { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
   .role-portal__logout span { display: none; }
   .role-portal__logout { width: 42px; justify-content: center; padding: 0; }
+  .role-portal__navigation {
+    display: flex;
+    gap: 0;
+    margin-inline: -12px;
+    overflow-x: auto;
+    border-inline: 0;
+    border-radius: 0;
+    scrollbar-width: none;
+  }
+  .role-portal__navigation::-webkit-scrollbar { display: none; }
+  .role-portal__nav-item { width: 142px; min-height: 66px; flex: 0 0 142px; padding: 11px 12px; }
+  .role-portal__nav-copy small { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

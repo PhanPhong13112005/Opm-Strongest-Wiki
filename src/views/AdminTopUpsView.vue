@@ -2,6 +2,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import RolePortalShell from '../components/RolePortalShell.vue'
+import { adminPortalNavigation } from '../data/portalNavigation'
 import { authState, clearSession } from '../services/authApi'
 import { getAdminTopUps, reviewAdminTopUp } from '../services/adminApi'
 
@@ -20,15 +21,6 @@ const filters = [
   { value: 'Rejected', label: 'Đã từ chối' },
   { value: 'Cancelled', label: 'Đã hủy' },
   { value: '', label: 'Tất cả' },
-]
-
-const navigation = [
-  { to: '/admin/dashboard', index: '01', label: 'Tổng quan', hint: 'Sức khỏe hệ thống', match: '/admin/dashboard' },
-  { to: '/admin/characters', index: '02', label: 'Nhân vật', hint: 'Nhân vật và Kỷ vật', match: '/admin/characters' },
-  { to: '/admin/events', index: '03', label: 'Sự kiện', hint: 'Nội dung sự kiện', match: '/admin/events' },
-  { to: '/admin/releases', index: '04', label: 'Lịch ra mắt', hint: 'Banner CN và SEA', match: '/admin/releases' },
-  { to: '/admin/top-ups', index: '05', label: 'Đơn Coupon', hint: 'Duyệt đơn nạp thủ công', match: '/admin/top-ups' },
-  { to: '/staff', index: '06', label: 'Khu nhân viên', hint: 'Kiểm duyệt cộng đồng' },
 ]
 
 const parseCouponReference = (referenceCode = '', amount = 0) => {
@@ -163,7 +155,7 @@ onMounted(load)
     description="Kiểm tra đúng UID và server, nạp Coupon trong game rồi cập nhật kết quả cho người dùng."
     :display-name="authState.session?.displayName"
     :username="authState.session?.username"
-    :navigation="navigation"
+    :navigation="adminPortalNavigation"
     @logout="logout"
   >
     <section class="coupon-queue">

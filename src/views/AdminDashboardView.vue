@@ -2,6 +2,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 import RolePortalShell from '../components/RolePortalShell.vue'
+import { adminPortalNavigation } from '../data/portalNavigation'
 import { authState, clearSession } from '../services/authApi'
 import { getAdminDashboard, getAdminUsers, updateAdminUserRole, updateAdminUserStatus } from '../services/adminApi'
 
@@ -13,15 +14,6 @@ const notice = ref('')
 const loading = ref(true)
 const updatingUserId = ref(null)
 const userSearch = ref('')
-
-const navigation = [
-  { to: '/admin/dashboard', index: '01', label: 'Tổng quan', hint: 'Sức khỏe hệ thống', match: '/admin/dashboard' },
-  { to: '/admin/characters', index: '02', label: 'Nhân vật', hint: 'Nhân vật và Kỷ vật', match: '/admin/characters' },
-  { to: '/admin/events', index: '03', label: 'Sự kiện', hint: 'Nội dung sự kiện', match: '/admin/events' },
-  { to: '/admin/releases', index: '04', label: 'Lịch ra mắt', hint: 'Banner CN và SEA', match: '/admin/releases' },
-  { to: '/admin/top-ups', index: '05', label: 'Đơn Coupon', hint: 'Duyệt đơn nạp thủ công', match: '/admin/top-ups' },
-  { to: '/staff', index: '06', label: 'Khu nhân viên', hint: 'Kiểm duyệt cộng đồng' },
-]
 
 const labels = {
   users: 'Tài khoản người dùng',
@@ -130,7 +122,7 @@ onMounted(load)
     description="Theo dõi dữ liệu, quản lý nội dung và phân quyền tài khoản từ một nơi."
     :display-name="authState.session?.displayName"
     :username="authState.session?.username"
-    :navigation="navigation"
+    :navigation="adminPortalNavigation"
     @logout="logout"
   >
     <section class="admin-overview">

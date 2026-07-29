@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 import RolePortalShell from '../components/RolePortalShell.vue'
+import { staffPortalNavigation } from '../data/portalNavigation'
 import { authState, clearSession } from '../services/authApi'
 import { deleteEventComment, getModerationComments } from '../services/communityApi'
 
@@ -10,13 +11,6 @@ const comments = ref([])
 const error = ref('')
 const notice = ref('')
 const loading = ref(true)
-
-const navigation = [
-  { to: '/staff', index: '01', label: 'Tổng quan', hint: 'Kiểm duyệt cộng đồng' },
-  { to: '/forum', index: '02', label: 'Kiểm duyệt diễn đàn', hint: 'Chủ đề và phản hồi' },
-  { to: '/events', index: '03', label: 'Bình luận sự kiện', hint: 'Mở danh sách sự kiện' },
-  { to: '/account', index: '04', label: 'Trang cá nhân', hint: 'Tiện ích thành viên' },
-]
 
 const load = async () => {
   error.value = ''
@@ -60,7 +54,7 @@ onMounted(load)
     description="Theo dõi và xử lý nội dung cộng đồng. Thanh toán được hệ thống đối soát tự động và không thuộc quyền Staff."
     :display-name="authState.session?.displayName"
     :username="authState.session?.username"
-    :navigation="navigation"
+    :navigation="staffPortalNavigation"
     @logout="logout"
   >
     <section class="staff-summary">
