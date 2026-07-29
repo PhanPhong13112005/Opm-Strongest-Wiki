@@ -58,6 +58,12 @@ else if (string.IsNullOrWhiteSpace(adminAuthOptions.Username) ||
 builder.Services.AddSingleton(adminAuthOptions);
 builder.Services.AddSingleton<AdminTokenService>();
 builder.Services.AddSingleton<PasswordHasher>();
+var passwordResetOptions = builder.Configuration.GetSection("PasswordReset").Get<PasswordResetOptions>() ?? new();
+passwordResetOptions.ResendApiKey = builder.Configuration["Email:ResendApiKey"] ?? string.Empty;
+passwordResetOptions.From = builder.Configuration["Email:From"] ?? string.Empty;
+passwordResetOptions.PublicAppUrl = builder.Configuration["PublicAppUrl"] ?? string.Empty;
+builder.Services.AddSingleton(passwordResetOptions);
+builder.Services.AddHttpClient<PasswordResetEmailService>(client => client.Timeout = TimeSpan.FromSeconds(15));
 var aiAdvisorOptions = builder.Configuration.GetSection(AiAdvisorOptions.SectionName).Get<AiAdvisorOptions>() ?? new();
 builder.Services.AddSingleton(aiAdvisorOptions);
 builder.Services.AddHttpClient<AiAdvisorClient>(client => client.Timeout = TimeSpan.FromSeconds(20));

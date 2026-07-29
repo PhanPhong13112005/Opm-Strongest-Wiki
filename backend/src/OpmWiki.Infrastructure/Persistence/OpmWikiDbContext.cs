@@ -289,13 +289,19 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
             entity.HasKey(x => x.Id);
             entity.Property(x => x.Username).HasMaxLength(30);
             entity.Property(x => x.NormalizedUsername).HasMaxLength(30);
+            entity.Property(x => x.Email).HasMaxLength(254);
+            entity.Property(x => x.NormalizedEmail).HasMaxLength(254);
             entity.Property(x => x.DisplayName).HasMaxLength(60);
             entity.Property(x => x.PasswordHash).HasMaxLength(500);
+            entity.Property(x => x.PasswordResetTokenHash).HasMaxLength(64);
             entity.Property(x => x.Role).HasMaxLength(20);
             entity.Property(x => x.Balance).HasPrecision(18, 2);
             entity.Property(x => x.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
             entity.Property(x => x.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
             entity.HasIndex(x => x.NormalizedUsername).IsUnique();
+            entity.HasIndex(x => x.NormalizedEmail)
+                .IsUnique()
+                .HasFilter("\"NormalizedEmail\" <> ''");
             entity.HasIndex(x => x.Role);
         });
 

@@ -16,23 +16,51 @@ public sealed class CommunityRepository(OpmWikiDbContext dbContext) : ICommunity
         dbContext.UserAccounts.AsNoTracking()
             .SingleOrDefaultAsync(x => x.NormalizedUsername == normalizedUsername, cancellationToken);
 
+    public Task<UserAccount?> FindUserByIdentifierAsync(
+        string normalizedUsername,
+        string normalizedEmail,
+        CancellationToken cancellationToken = default)
+    {
+        var username = NormalizeUsername(normalizedUsername);
+        var email = NormalizeEmail(normalizedEmail);
+        return dbContext.UserAccounts.AsNoTracking()
+            .SingleOrDefaultAsync(
+                x => x.NormalizedUsername == username ||
+                     (email != string.Empty && x.NormalizedEmail == email),
+                cancellationToken);
+    }
+
     public Task<UserAccount?> FindUserByIdAsync(Guid id, CancellationToken cancellationToken = default) =>
         dbContext.UserAccounts.AsNoTracking().SingleOrDefaultAsync(x => x.Id == id, cancellationToken);
 
-    public async Task<UserAccount?> CreateUserAsync(
+    public Task<UserAccount?> CreateUserAsync(
         string username,
+        string displayName,
+        string passwordHash,
+        CancellationToken cancellationToken = default) =>
+        CreateUserWithEmailAsync(username, string.Empty, displayName, passwordHash, cancellationToken);
+
+    public async Task<UserAccount?> CreateUserWithEmailAsync(
+        string username,
+        string email,
         string displayName,
         string passwordHash,
         CancellationToken cancellationToken = default)
     {
         var normalized = NormalizeUsername(username);
-        if (await dbContext.UserAccounts.AnyAsync(x => x.NormalizedUsername == normalized, cancellationToken))
+        var normalizedEmail = NormalizeEmail(email);
+        if (await dbContext.UserAccounts.AnyAsync(
+                x => x.NormalizedUsername == normalized ||
+                     (normalizedEmail != string.Empty && x.NormalizedEmail == normalizedEmail),
+                cancellationToken))
             return null;
 
         var user = new UserAccount
         {
             Username = username.Trim(),
             NormalizedUsername = normalized,
+            Email = email.Trim().ToLowerInvariant(),
+            NormalizedEmail = normalizedEmail,
             DisplayName = displayName.Trim(),
             PasswordHash = passwordHash,
             Role = AccountRoles.User,
@@ -40,6 +68,44 @@ public sealed class CommunityRepository(OpmWikiDbContext dbContext) : ICommunity
         dbContext.UserAccounts.Add(user);
         await dbContext.SaveChangesAsync(cancellationToken);
         return user;
+    }
+
+    public async Task<UserAccount?> SetPasswordResetTokenAsync(
+        string normalizedEmail,
+        string tokenHash,
+        DateTimeOffset expiresAt,
+        CancellationToken cancellationToken = default)
+    {
+        var email = NormalizeEmail(normalizedEmail);
+        var account = await dbContext.UserAccounts.SingleOrDefaultAsync(
+            x => email != string.Empty && x.NormalizedEmail == email && x.IsActive,
+            cancellationToken);
+        if (account is null) return null;
+        account.PasswordResetTokenHash = tokenHash;
+        account.PasswordResetExpiresAt = expiresAt;
+        account.UpdatedAt = DateTimeOffset.UtcNow;
+        await dbContext.SaveChangesAsync(cancellationToken);
+        return account;
+    }
+
+    public async Task<bool> ResetPasswordAsync(
+        string tokenHash,
+        string passwordHash,
+        CancellationToken cancellationToken = default)
+    {
+        var now = DateTimeOffset.UtcNow;
+        var account = await dbContext.UserAccounts.SingleOrDefaultAsync(
+            x => x.PasswordResetTokenHash == tokenHash &&
+                 x.PasswordResetExpiresAt > now &&
+                 x.IsActive,
+            cancellationToken);
+        if (account is null) return false;
+        account.PasswordHash = passwordHash;
+        account.PasswordResetTokenHash = null;
+        account.PasswordResetExpiresAt = null;
+        account.UpdatedAt = now;
+        await dbContext.SaveChangesAsync(cancellationToken);
+        return true;
     }
 
     public async Task<IReadOnlyList<AccountDto>> ListAccountsAsync(
@@ -676,6 +742,11 @@ public sealed class CommunityRepository(OpmWikiDbContext dbContext) : ICommunity
     }
 
     private static string NormalizeUsername(string username) => username.Trim().ToUpperInvariant();
+    private static string NormalizeEmail(string email)
+    {
+        var local = email.Trim().ToLowerInvariant().Split('@')[0].Split('+')[0].Replace(".", string.Empty);
+        return string.IsNullOrEmpty(local) ? string.Empty : $"{local}@gmail.com";
+    }
 
     private static EventCommentDto MapComment(EventComment comment, UserAccount user) =>
         new(comment.Id, comment.EventId, comment.UserId, user.DisplayName, user.Role, comment.Content, comment.CreatedAt);

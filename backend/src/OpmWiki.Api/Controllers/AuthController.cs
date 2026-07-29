@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 using OpmWiki.Api.Security;
+using OpmWiki.Api.Services;
 using OpmWiki.Application.Abstractions;
 using OpmWiki.Application.Community;
 
@@ -13,7 +14,10 @@ namespace OpmWiki.Api.Controllers;
 public sealed partial class AuthController(
     ICommunityRepository repository,
     PasswordHasher passwordHasher,
-    AdminTokenService tokenService) : ControllerBase
+    AdminTokenService tokenService,
+    PasswordResetEmailService passwordResetEmail,
+    IWebHostEnvironment environment,
+    ILogger<AuthController> logger) : ControllerBase
 {
     [AllowAnonymous]
     [EnableRateLimiting("admin-login")]
@@ -28,7 +32,11 @@ public sealed partial class AuthController(
         if (tokenService.ValidateCredentials(request.Username, request.Password))
             return Ok(tokenService.CreateToken());
 
-        var account = await repository.FindUserByUsernameAsync(Normalize(request.Username), cancellationToken);
+        var identifier = request.Username.Trim();
+        var account = await repository.FindUserByIdentifierAsync(
+            Normalize(identifier),
+            GmailPattern().IsMatch(identifier) ? NormalizeGmail(identifier) : identifier.ToLowerInvariant(),
+            cancellationToken);
         if (account is null || !account.IsActive || !passwordHasher.Verify(request.Password, account.PasswordHash))
             return Unauthorized(new { message = "Tên đăng nhập hoặc mật khẩu không đúng." });
 
@@ -50,12 +58,13 @@ public sealed partial class AuthController(
         var errors = Validate(request);
         if (errors.Count > 0) return BadRequest(new ValidationProblemDetails(errors));
 
-        var account = await repository.CreateUserAsync(
+        var account = await repository.CreateUserWithEmailAsync(
             request.Username,
-            request.DisplayName,
+            request.Email,
+            request.Username,
             passwordHasher.Hash(request.Password),
             cancellationToken);
-        if (account is null) return Conflict(new { message = "Tên đăng nhập đã được sử dụng." });
+        if (account is null) return Conflict(new { message = "Tên đăng nhập hoặc Gmail đã được sử dụng." });
 
         return Created("/api/auth/me", tokenService.CreateToken(
             account.Id.ToString(),
@@ -63,6 +72,72 @@ public sealed partial class AuthController(
             account.DisplayName,
             account.Role,
             account.Balance));
+    }
+
+    [AllowAnonymous]
+    [EnableRateLimiting("admin-login")]
+    [HttpPost("forgot-password")]
+    public async Task<IActionResult> ForgotPassword(
+        ForgotPasswordRequest request,
+        CancellationToken cancellationToken)
+    {
+        var suppliedEmail = request.Email?.Trim().ToLowerInvariant() ?? string.Empty;
+        if (!GmailPattern().IsMatch(suppliedEmail))
+            return BadRequest(new { message = "Vui lòng nhập địa chỉ Gmail hợp lệ." });
+        var normalizedEmail = NormalizeGmail(suppliedEmail);
+
+        var token = PasswordResetTokens.Create();
+        var tokenHash = PasswordResetTokens.Hash(token);
+        var account = await repository.SetPasswordResetTokenAsync(
+            normalizedEmail,
+            tokenHash,
+            DateTimeOffset.UtcNow.AddMinutes(passwordResetEmail.TokenLifetimeMinutes),
+            cancellationToken);
+
+        string? resetUrl = null;
+        if (account is not null)
+        {
+            resetUrl = passwordResetEmail.BuildResetUrl(Request, token);
+            try
+            {
+                await passwordResetEmail.SendAsync(
+                    account.Email,
+                    resetUrl,
+                    $"password-reset-{account.Id:N}-{tokenHash[..20]}",
+                    cancellationToken);
+            }
+            catch (Exception exception)
+            {
+                logger.LogError(exception, "Could not send password reset email.");
+            }
+        }
+
+        return Ok(new
+        {
+            message = "Nếu Gmail tồn tại, liên kết đặt lại mật khẩu đã được gửi.",
+            resetUrl = environment.IsDevelopment() ? resetUrl : null,
+        });
+    }
+
+    [AllowAnonymous]
+    [EnableRateLimiting("admin-login")]
+    [HttpPost("reset-password")]
+    public async Task<IActionResult> ResetPassword(
+        ResetPasswordRequest request,
+        CancellationToken cancellationToken)
+    {
+        if (string.IsNullOrWhiteSpace(request.Token) || request.Token.Length is < 32 or > 200)
+            return BadRequest(new { message = "Liên kết đặt lại mật khẩu không hợp lệ hoặc đã hết hạn." });
+        if (string.IsNullOrEmpty(request.Password) || request.Password.Length is < 8 or > 72)
+            return BadRequest(new { message = "Mật khẩu phải có 8-72 ký tự." });
+
+        var updated = await repository.ResetPasswordAsync(
+            PasswordResetTokens.Hash(request.Token),
+            passwordHasher.Hash(request.Password),
+            cancellationToken);
+        return updated
+            ? Ok(new { message = "Mật khẩu đã được cập nhật. Bạn có thể đăng nhập ngay." })
+            : BadRequest(new { message = "Liên kết đặt lại mật khẩu không hợp lệ hoặc đã hết hạn." });
     }
 
     [Authorize]
@@ -95,8 +170,8 @@ public sealed partial class AuthController(
         var errors = new Dictionary<string, string[]>();
         if (!UsernamePattern().IsMatch(request.Username ?? string.Empty))
             errors[nameof(request.Username)] = ["Tên đăng nhập phải có 3-30 ký tự và chỉ gồm chữ, số, dấu chấm, gạch dưới hoặc gạch ngang."];
-        if (string.IsNullOrWhiteSpace(request.DisplayName) || request.DisplayName.Trim().Length is < 2 or > 60)
-            errors[nameof(request.DisplayName)] = ["Tên hiển thị phải có 2-60 ký tự."];
+        if (!GmailPattern().IsMatch(request.Email?.Trim() ?? string.Empty))
+            errors[nameof(request.Email)] = ["Vui lòng sử dụng địa chỉ Gmail hợp lệ có đuôi @gmail.com."];
         if (string.IsNullOrEmpty(request.Password) || request.Password.Length is < 8 or > 72)
             errors[nameof(request.Password)] = ["Mật khẩu phải có 8-72 ký tự."];
         return errors;
@@ -104,6 +179,15 @@ public sealed partial class AuthController(
 
     private static string Normalize(string value) => value.Trim().ToUpperInvariant();
 
+    private static string NormalizeGmail(string email)
+    {
+        var local = email.Trim().ToLowerInvariant().Split('@')[0].Split('+')[0].Replace(".", string.Empty);
+        return $"{local}@gmail.com";
+    }
+
     [GeneratedRegex("^[a-zA-Z0-9._-]{3,30}$")]
     private static partial Regex UsernamePattern();
+
+    [GeneratedRegex("^[a-zA-Z0-9._%+-]+@gmail\\.com$", RegexOptions.IgnoreCase)]
+    private static partial Regex GmailPattern();
 }

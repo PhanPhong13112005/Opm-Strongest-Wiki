@@ -1,4 +1,5 @@
 import {
+  createHash,
   createHmac,
   pbkdf2Sync,
   randomBytes,
@@ -55,6 +56,11 @@ export const verifyPasswordHash = (password, encoded) => {
     return false
   }
 }
+
+export const createPasswordResetToken = () => randomBytes(32).toString('base64url')
+
+export const hashPasswordResetToken = (token) =>
+  createHash('sha256').update(String(token || ''), 'utf8').digest('hex')
 
 export const createAccessToken = ({
   userId,

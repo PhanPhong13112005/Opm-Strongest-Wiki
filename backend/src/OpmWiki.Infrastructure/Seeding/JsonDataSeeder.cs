@@ -45,62 +45,62 @@ public sealed class JsonDataSeeder(
         var englishCharacters = charactersEn.RootElement.EnumerateArray()
             .ToDictionary(x => GetString(x, "id"), x => x, StringComparer.OrdinalIgnoreCase);
 
-        IDbContextTransaction? transaction = null;
-        if (dbContext.Database.IsRelational())
-            transaction = await dbContext.Database.BeginTransactionAsync(cancellationToken);
-
-        try
+        var executionStrategy = dbContext.Database.CreateExecutionStrategy();
+        return await executionStrategy.ExecuteAsync(async () =>
         {
-            var characterCount = await SeedCharactersAsync(
-                charactersVi.RootElement,
-                englishCharacters,
-                cancellationToken);
-            var eventCount = await SeedEventsAsync(events.RootElement, cancellationToken);
-            var masteryTierCount = await SeedMasteryAsync(mastery.RootElement, cancellationToken);
-            var insigniaCount = await SeedInsigniasAsync(insignias.RootElement, cancellationToken);
-            var (backgearCount, backgearSetCount) = await SeedBackgearsAsync(
-                backgears.RootElement,
-                cancellationToken);
-            var (tacticCardCount, tacticFrameCount) = await SeedTacticsAsync(
-                tactics.RootElement,
-                cancellationToken);
-            await dbContext.SaveChangesAsync(cancellationToken);
+            await using var transaction = dbContext.Database.IsRelational()
+                ? await dbContext.Database.BeginTransactionAsync(cancellationToken)
+                : null;
 
-            if (transaction is not null)
-                await transaction.CommitAsync(cancellationToken);
+            try
+            {
+                var characterCount = await SeedCharactersAsync(
+                    charactersVi.RootElement,
+                    englishCharacters,
+                    cancellationToken);
+                var eventCount = await SeedEventsAsync(events.RootElement, cancellationToken);
+                var masteryTierCount = await SeedMasteryAsync(mastery.RootElement, cancellationToken);
+                var insigniaCount = await SeedInsigniasAsync(insignias.RootElement, cancellationToken);
+                var (backgearCount, backgearSetCount) = await SeedBackgearsAsync(
+                    backgears.RootElement,
+                    cancellationToken);
+                var (tacticCardCount, tacticFrameCount) = await SeedTacticsAsync(
+                    tactics.RootElement,
+                    cancellationToken);
+                await dbContext.SaveChangesAsync(cancellationToken);
 
-            logger.LogInformation(
-                "Imported {CharacterCount} characters, {EventCount} events, {MasteryTierCount} mastery tiers, {InsigniaCount} insignias, {BackgearCount} backgears, {BackgearSetCount} backgear sets, {TacticCardCount} tactic cards and {TacticFrameCount} tactic frames from {DataPath}",
-                characterCount,
-                eventCount,
-                masteryTierCount,
-                insigniaCount,
-                backgearCount,
-                backgearSetCount,
-                tacticCardCount,
-                tacticFrameCount,
-                dataPath);
-            return new SeedResult(
-                characterCount,
-                eventCount,
-                masteryTierCount,
-                insigniaCount,
-                backgearCount,
-                backgearSetCount,
-                tacticCardCount,
-                tacticFrameCount);
-        }
-        catch
-        {
-            if (transaction is not null)
-                await transaction.RollbackAsync(cancellationToken);
-            throw;
-        }
-        finally
-        {
-            if (transaction is not null)
-                await transaction.DisposeAsync();
-        }
+                if (transaction is not null)
+                    await transaction.CommitAsync(cancellationToken);
+
+                logger.LogInformation(
+                    "Imported {CharacterCount} characters, {EventCount} events, {MasteryTierCount} mastery tiers, {InsigniaCount} insignias, {BackgearCount} backgears, {BackgearSetCount} backgear sets, {TacticCardCount} tactic cards and {TacticFrameCount} tactic frames from {DataPath}",
+                    characterCount,
+                    eventCount,
+                    masteryTierCount,
+                    insigniaCount,
+                    backgearCount,
+                    backgearSetCount,
+                    tacticCardCount,
+                    tacticFrameCount,
+                    dataPath);
+                return new SeedResult(
+                    characterCount,
+                    eventCount,
+                    masteryTierCount,
+                    insigniaCount,
+                    backgearCount,
+                    backgearSetCount,
+                    tacticCardCount,
+                    tacticFrameCount);
+            }
+            catch
+            {
+                if (transaction is not null)
+                    await transaction.RollbackAsync(cancellationToken);
+                dbContext.ChangeTracker.Clear();
+                throw;
+            }
+        });
     }
 
     private async Task<int> SeedCharactersAsync(

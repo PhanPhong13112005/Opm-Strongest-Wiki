@@ -2,11 +2,12 @@
 
 > Tài liệu ngữ cảnh kỹ thuật dành cho các phiên làm việc tiếp theo.
 >
-> Cập nhật theo trạng thái mã nguồn được kiểm tra ngày 28/07/2026. Những nội dung liên quan đến hạ tầng production đang chạy thực tế, cấu hình trên Vercel/Neon và trạng thái dịch vụ bên ngoài được đánh dấu **chưa xác minh** nếu không thể kết luận chỉ từ repository.
+> Cập nhật theo trạng thái mã nguồn được kiểm tra ngày 30/07/2026. Những nội dung liên quan đến hạ tầng production đang chạy thực tế, cấu hình trên Vercel/Neon và trạng thái dịch vụ bên ngoài được đánh dấu **chưa xác minh** nếu không thể kết luận chỉ từ repository.
 
 ## Mốc kiểm tra gần nhất
 
 - Tài liệu được đối chiếu lại với repository ngày 28/07/2026 tại commit `abd4a43 — Fix mobile navigation and update medal content`.
+- Tính năng đăng ký Gmail và quên/đặt lại mật khẩu được kiểm tra trên working tree ngày 30/07/2026; thay đổi này chưa commit tại thời điểm cập nhật tài liệu.
 - Branch tại thời điểm đối chiếu: `agent/role-portals-coupon`.
 - Commit và branch trên chỉ là mốc kiểm tra gần nhất, không phải trạng thái cố định lâu dài của dự án. Luôn chạy `git status` và kiểm tra lịch sử Git ở đầu phiên làm việc mới.
 - Trạng thái mới nhất của remote `main` **chưa xác minh** vì lần đối chiếu này không chạy `git fetch`.
@@ -184,12 +185,14 @@ Các thư mục `node_modules`, `dist`, `build`, `.git`, IDE metadata, cache, lo
 - Danh sách/chi tiết sự kiện.
 - Lịch phát hành.
 - Trang lịch sử và chính sách riêng tư.
-- Giao diện đăng nhập/đăng ký.
+- Giao diện đăng nhập/đăng ký/quên mật khẩu có chuyển tab slide–fade, trạng thái đang xử lý và xác nhận thành công; tôn trọng `prefers-reduced-motion`.
 - Menu mobile có điều hướng tới Core Lab và Huy chương, đồng bộ với tập route public hiện có.
 
 ### User
 
-- Đăng ký, đăng nhập và xem khu vực tài khoản cùng số dư hiện tại; chưa có giao diện cập nhật hồ sơ.
+- Đăng ký chỉ dùng một trường tên: `Username` đồng thời là tên đăng nhập và tên hiển thị. Địa chỉ `@gmail.com` là bắt buộc; hệ thống chuẩn hóa chữ hoa/thường, dấu chấm và phần `+tag` để hạn chế một hộp thư tạo nhiều tài khoản. Đăng nhập chấp nhận tên tài khoản hoặc Gmail.
+- Quên mật khẩu gửi liên kết đặt lại dùng một lần; database chỉ lưu SHA-256 của token, mặc định hết hạn sau 15 phút. Local trả `resetUrl` để kiểm thử khi chưa cấu hình dịch vụ email, production gửi qua Resend.
+- Xem khu vực tài khoản cùng số dư hiện tại; chưa có giao diện cập nhật hồ sơ hoặc gắn Gmail cho account cũ.
 - Bình luận sự kiện.
 - Tạo chủ đề và bài viết forum.
 - Sử dụng Advisor.
@@ -303,6 +306,7 @@ Một số trường danh sách dùng PostgreSQL `text[]`; dữ liệu lồng nh
 - Staff được kiểm duyệt community nhưng không được duyệt thanh toán.
 - Endpoint lịch sử dành cho Staff liên quan top-up hiện được bảo vệ ở mức Admin.
 - Mật khẩu dùng định dạng PBKDF2 tương thích giữa implementation Node và .NET.
+- Account mới bắt buộc có Gmail đã chuẩn hóa. Token đặt lại mật khẩu là chuỗi ngẫu nhiên một lần; chỉ hash SHA-256 được lưu, token bị xóa sau khi dùng thành công. Account cũ chưa có email cần luồng cập nhật/gắn Gmail trước khi dùng quên mật khẩu.
 - JWT issuer/audience được thiết kế tương thích giữa hai backend.
 - Token chưa có refresh/revocation flow được xác minh, nhưng mọi request bảo vệ của tài khoản database đều đối chiếu lại `IsActive` và `Role`: Vercel dùng `requireCurrentUser`, còn ASP.NET dùng `JwtBearerEvents.OnTokenValidated`. Vercel xác minh account hiện tại và role trong token trước, trả `401` nếu account thiếu/inactive hoặc role đã đổi, rồi mới kiểm tra quyền endpoint để trả `403` cho identity hợp lệ nhưng thiếu quyền. Frontend xóa session cục bộ khi protected request nhận `401`. Admin cấu hình môi trường có subject `admin:*` không phụ thuộc bản ghi database.
 - Có cơ chế tài khoản Admin từ biến môi trường ngoài tài khoản lưu trong database; thao tác duyệt coupon lưu claim subject dạng `admin:<username>` vào `ReviewedBySubject`.
@@ -398,8 +402,10 @@ Lệnh `--seed-data` có thể đồng bộ/xóa theo JSON; chỉ dùng khi đó
 ```powershell
 npm test
 npm run test:integration
-dotnet test backend/OpmWiki.sln
+dotnet test backend/tests/OpmWiki.Tests/OpmWiki.Tests.csproj
 ```
+
+Mốc kiểm thử ngày 30/07/2026: Node `33/33`, Playwright `27/27`, .NET `21/21`, frontend build thành công và luồng Docker register → login bằng Gmail → forgot → reset → login lại đã chạy thành công.
 
 Production smoke test Admin CRUD:
 
@@ -422,7 +428,7 @@ Smoke test production cần credential hợp lệ và có thao tác tạo/sửa/
 ### Mức ưu tiên cao
 
 1. **Secret cục bộ:** các file `.env.local`/`.env.production.local` bị ignore có chứa credential/token thực. Không sao chép chúng vào issue, log, tài liệu hoặc commit. Token quan sát được đã hết hạn tại thời điểm kiểm tra, nhưng vẫn nên xoay vòng/xóa credential không còn dùng.
-2. **Rate limiting:** Vercel API chưa có rate limit ở tầng ứng dụng; khả năng bảo vệ của WAF/platform **chưa xác minh**. Backend .NET mới thấy giới hạn login theo IP.
+2. **Rate limiting:** Vercel API chưa có rate limit ở tầng ứng dụng; khả năng bảo vệ của WAF/platform **chưa xác minh**. Backend .NET áp dụng policy giới hạn cho nhóm endpoint auth, nhưng cần tách/nghiệm thu ngưỡng riêng cho đăng nhập và quên mật khẩu trước production.
 3. **Nguy cơ XSS:** `DetailView.vue` dựng nội dung kỹ năng bằng `v-html` và inline JavaScript; một số giá trị chưa được escape/sanitize đầy đủ. Core Lab cũng hiển thị HTML động. Dữ liệu hiện chủ yếu là trusted seed/Admin, nhưng đây vẫn là bề mặt XSS.
 4. **Hai backend bị lệch:** schema, endpoint và nghiệp vụ Node/.NET không tương đương. Thay đổi một backend có thể không hoạt động trên backend còn lại.
 5. **Schema runtime:** Vercel thực thi DDL khi runtime, không có migration versioned đầy đủ; khó audit/rollback và đòi hỏi database credential có quyền tạo/sửa schema.
@@ -430,7 +436,7 @@ Smoke test production cần credential hợp lệ và có thao tác tạo/sửa/
 
 ### Mức ưu tiên trung bình
 
-7. JWT lưu trong `sessionStorage` và chưa có refresh/revocation flow; việc tái xác minh database đã chặn account inactive/role cũ ở request bảo vệ nhưng không loại bỏ rủi ro token bị lấy qua XSS trong thời gian còn hiệu lực.
+7. JWT lưu trong `sessionStorage` và chưa có refresh/revocation flow; đặt lại mật khẩu hiện chưa thu hồi ngay các access token đã phát hành; việc tái xác minh database đã chặn account inactive/role cũ ở request bảo vệ nhưng không loại bỏ rủi ro token bị lấy qua XSS trong thời gian còn hiệu lực.
 8. Public response có CDN cache dài hơn cache client; Admin chỉ invalidate cache trong client, không purge CDN.
 9. Release schedule đang bị lặp ở nhiều nguồn: JSON frontend, HomeView, Vercel seed và EF migration.
 10. Một số file quá lớn và gộp nhiều trách nhiệm, gồm Medals, Tactics, Detail và `adminRoutes`.
@@ -450,6 +456,7 @@ Smoke test production cần credential hợp lệ và có thao tác tạo/sửa/
 - Keepsake là dữ liệu gắn với character, không tạo bảng keepsake độc lập trong EF.
 - Community, tài khoản, số dư và thanh toán chỉ dựa vào database; không có JSON fallback.
 - JWT được lưu theo phiên browser; authorization thật phải được enforce phía server.
+- PBKDF2, chuẩn hóa Gmail và hợp đồng đăng ký/đăng nhập/quên mật khẩu được giữ tương thích giữa Node và .NET. Reset token chỉ lưu hash, dùng một lần và có hạn; production cần cấu hình `PUBLIC_APP_URL`, `EMAIL__RESENDAPIKEY`, `EMAIL__FROM` và `PASSWORDRESET__TOKENLIFETIMEMINUTES`.
 - PBKDF2 và cấu hình JWT được giữ tương thích giữa Node và .NET. Cả hai backend tái xác minh `IsActive`/`Role` của tài khoản database ở request bảo vệ để vô hiệu hóa token cũ ngay khi Admin khóa account hoặc đổi role.
 - Thông tin ngân hàng và secret webhook chỉ ở server; client nhận payload công khai cần thiết để hiển thị VietQR.
 - Webhook thanh toán dùng raw-body HMAC, timestamp window, transaction/CTE và ledger unique key để chống cộng tiền lặp.
@@ -471,7 +478,7 @@ Smoke test production cần credential hợp lệ và có thao tác tạo/sửa/
 
 1. Xoay vòng và dọn các credential/token cục bộ không còn cần thiết; kiểm tra chắc chắn không có secret trong Git history.
 2. Vá các điểm dùng `v-html`/inline JavaScript bằng sanitizer hoặc render có cấu trúc, đồng thời bổ sung CSP phù hợp.
-3. Thêm rate limit cho auth, community, advisor và payment/webhook endpoint; xác minh WAF/rate limit ở production.
+3. Thêm rate limit cho auth, community, advisor và payment/webhook endpoint phía Vercel; nghiệm thu riêng chống brute force/abuse cho login và quên mật khẩu, đồng thời xác minh WAF/rate limit ở production.
 4. Chọn chiến lược chính thức cho Node Functions và ASP.NET Core, sau đó lập ma trận parity endpoint/schema trước khi phát triển tiếp.
 5. Chuyển schema Vercel sang migration có version và thu hẹp quyền của database runtime.
 6. Cân nhắc bước xác nhận thứ hai hoặc đối soát game cho đơn coupon để giảm rủi ro Admin nạp/xác nhận nhầm UID hoặc server.

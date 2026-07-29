@@ -50,16 +50,30 @@ const schemaStatements = [
     "Id" uuid PRIMARY KEY,
     "Username" varchar(30) NOT NULL,
     "NormalizedUsername" varchar(30) NOT NULL,
+    "Email" varchar(254) NOT NULL DEFAULT '',
+    "NormalizedEmail" varchar(254) NOT NULL DEFAULT '',
     "DisplayName" varchar(60) NOT NULL,
     "PasswordHash" varchar(500) NOT NULL,
+    "PasswordResetTokenHash" varchar(64) NULL,
+    "PasswordResetExpiresAt" timestamptz NULL,
     "Role" varchar(20) NOT NULL DEFAULT 'User',
     "Balance" numeric(18,2) NOT NULL DEFAULT 0,
     "IsActive" boolean NOT NULL DEFAULT true,
     "CreatedAt" timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "UpdatedAt" timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP
   )`,
+  `ALTER TABLE user_accounts
+    ADD COLUMN IF NOT EXISTS "Email" varchar(254) NOT NULL DEFAULT ''`,
+  `ALTER TABLE user_accounts
+    ADD COLUMN IF NOT EXISTS "NormalizedEmail" varchar(254) NOT NULL DEFAULT ''`,
+  `ALTER TABLE user_accounts
+    ADD COLUMN IF NOT EXISTS "PasswordResetTokenHash" varchar(64) NULL`,
+  `ALTER TABLE user_accounts
+    ADD COLUMN IF NOT EXISTS "PasswordResetExpiresAt" timestamptz NULL`,
   `CREATE UNIQUE INDEX IF NOT EXISTS "IX_user_accounts_NormalizedUsername"
     ON user_accounts ("NormalizedUsername")`,
+  `CREATE UNIQUE INDEX IF NOT EXISTS "IX_user_accounts_NormalizedEmail"
+    ON user_accounts ("NormalizedEmail") WHERE "NormalizedEmail" <> ''`,
   `CREATE INDEX IF NOT EXISTS "IX_user_accounts_Role"
     ON user_accounts ("Role")`,
   `CREATE TABLE IF NOT EXISTS event_comments (

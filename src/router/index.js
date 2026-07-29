@@ -128,6 +128,15 @@ const router = createRouter({
       redirect: { path: '/login', query: { mode: 'register' } }
     },
     {
+      path: '/forgot-password',
+      redirect: { path: '/login', query: { mode: 'forgot' } }
+    },
+    {
+      path: '/reset-password',
+      name: 'reset-password',
+      component: AdminLoginView
+    },
+    {
       path: '/admin/login',
       redirect: '/login'
     },

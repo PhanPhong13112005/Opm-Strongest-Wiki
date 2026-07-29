@@ -29,6 +29,10 @@ services:
       AdminAuth__Username: ${ADMIN_USERNAME:-admin}
       AdminAuth__Password: ${ADMIN_PASSWORD:-dev-only-change-me}
       AdminAuth__JwtSigningKey: ${ADMIN_JWT_SIGNING_KEY:-development-only-opmwiki-admin-signing-key-change-me}
+      PublicAppUrl: ${PUBLIC_APP_URL:-http://localhost:5173}
+      Email__ResendApiKey: ${EMAIL__RESENDAPIKEY:-}
+      Email__From: ${EMAIL__FROM:-}
+      PasswordReset__TokenLifetimeMinutes: ${PASSWORDRESET__TOKENLIFETIMEMINUTES:-15}
       BankTransfer__BankId: ${BANKTRANSFER__BANKID:-}
       BankTransfer__AccountNumber: ${BANKTRANSFER__ACCOUNTNUMBER:-}
       BankTransfer__AccountName: ${BANKTRANSFER__ACCOUNTNAME:-}
