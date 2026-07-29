@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
+import StaffForumModerationPanel from '../components/StaffForumModerationPanel.vue'
 import RolePortalShell from '../components/RolePortalShell.vue'
 import { staffPortalNavigation } from '../data/portalNavigation'
 import { authState, clearSession } from '../services/authApi'
@@ -103,6 +104,8 @@ onMounted(load)
         <span>Nội dung cộng đồng hiện đang sạch.</span>
       </div>
     </section>
+
+    <StaffForumModerationPanel />
   </RolePortalShell>
 </template>
 
