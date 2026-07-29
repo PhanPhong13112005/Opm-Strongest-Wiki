@@ -154,20 +154,20 @@ const isActive = item => {
 .role-portal__eyebrow {
   margin: 0 0 7px;
   color: var(--portal-accent);
-  font: 850 11px ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 850 12px ui-monospace, SFMono-Regular, Consolas, monospace;
   letter-spacing: .16em;
   text-transform: uppercase;
 }
 
 .role-portal__heading h1 { margin: 0; color: #f5f9ff; font-size: clamp(28px, 3.2vw, 44px); font-weight: 950; line-height: 1.05; letter-spacing: -.04em; }
-.role-portal__description { max-width: 680px; margin: 9px 0 0; color: #91a3b5; font-size: 14px; line-height: 1.6; }
+.role-portal__description { max-width: 680px; margin: 9px 0 0; color: #a8b6c2; font-size: 15px; line-height: 1.6; }
 
 .role-portal__account { display: flex; align-items: center; gap: 13px; flex: 0 0 auto; }
 .role-portal__avatar { display: grid; width: 46px; height: 46px; place-items: center; border-radius: 50%; background: var(--portal-accent); color: #06101a; font-size: 13px; font-weight: 950; }
 .role-portal__identity { display: grid; min-width: 130px; }
 .role-portal__identity strong { color: #eef6ff; font-size: 14px; }
-.role-portal__identity span { margin-top: 3px; color: #63778b; font-size: 11px; }
-.role-portal__logout { display: inline-flex; align-items: center; gap: 8px; height: 42px; border: 1px solid rgba(255, 112, 94, .22); border-radius: 10px; padding: 0 13px; color: #ffa295; font-size: 12px; font-weight: 800; transition: .2s ease; }
+.role-portal__identity span { margin-top: 3px; color: #8799a9; font-size: 12px; }
+.role-portal__logout { display: inline-flex; align-items: center; gap: 8px; height: 42px; border: 1px solid rgba(255, 112, 94, .22); border-radius: 10px; padding: 0 13px; color: #ffaaa0; font-size: 13px; font-weight: 800; transition: .2s ease; }
 .role-portal__logout svg { width: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .role-portal__logout:hover { border-color: rgba(255, 112, 94, .5); background: rgba(255, 112, 94, .08); color: #ffc0b8; }
 
@@ -195,10 +195,10 @@ const isActive = item => {
 }
 
 .role-portal__nav-item:hover { background: rgba(var(--portal-accent-rgb), .055); }
-.role-portal__nav-item > span:first-child { color: rgba(var(--portal-accent-rgb), .48); font: 800 9px ui-monospace, SFMono-Regular, Consolas, monospace; }
+.role-portal__nav-item > span:first-child { color: rgba(var(--portal-accent-rgb), .48); font: 800 10px ui-monospace, SFMono-Regular, Consolas, monospace; }
 .role-portal__nav-copy { display: grid; min-width: 0; gap: 4px; }
-.role-portal__nav-copy strong { overflow: hidden; color: #b8c5d0; font-size: 11px; font-weight: 850; text-overflow: ellipsis; white-space: nowrap; }
-.role-portal__nav-copy small { overflow: hidden; color: #53687a; font-size: 8px; text-overflow: ellipsis; white-space: nowrap; }
+.role-portal__nav-copy strong { overflow: hidden; color: #d0dae2; font-size: 13px; font-weight: 850; text-overflow: ellipsis; white-space: nowrap; }
+.role-portal__nav-copy small { overflow: hidden; color: #7f92a2; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
 .role-portal__nav-item > i { color: #415568; font-size: 10px; font-style: normal; }
 .role-portal__nav-item--active { background: linear-gradient(145deg, rgba(var(--portal-accent-rgb), .12), rgba(7, 13, 21, .97)); box-shadow: inset 0 -2px 0 var(--portal-accent); }
 .role-portal__nav-item--active .role-portal__nav-copy strong,
