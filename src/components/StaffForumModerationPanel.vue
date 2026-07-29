@@ -235,7 +235,7 @@ onMounted(() => loadTopics({ keepSelection: false }))
 .topic-content > span,
 .reply-heading > span {
   color: #55e0b5;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 900;
   letter-spacing: .13em;
   text-transform: uppercase;
@@ -250,8 +250,8 @@ onMounted(() => loadTopics({ keepSelection: false }))
 
 .forum-moderation__header p {
   margin: 6px 0 0;
-  color: #6d8193;
-  font-size: 11px;
+  color: #91a3b3;
+  font-size: 12px;
 }
 
 .forum-refresh {
@@ -260,7 +260,7 @@ onMounted(() => loadTopics({ keepSelection: false }))
   border-radius: 10px;
   padding: 9px 13px;
   color: #7ce7c6;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 850;
 }
 
@@ -286,7 +286,7 @@ onMounted(() => loadTopics({ keepSelection: false }))
 
 .forum-moderation__metrics > div span {
   color: #63788b;
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 850;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -303,10 +303,10 @@ onMounted(() => loadTopics({ keepSelection: false }))
 }
 
 .forum-search svg { width: 16px; flex: 0 0 16px; fill: none; stroke: #63788b; stroke-width: 1.7; }
-.forum-search input { width: 100%; min-width: 0; background: transparent; color: #dce7ef; font-size: 11px; outline: none; }
+.forum-search input { width: 100%; min-width: 0; background: transparent; color: #dce7ef; font-size: 12px; outline: none; }
 .forum-search input::placeholder { color: #526779; }
 
-.forum-message { margin: 12px 14px 0; border: 1px solid; border-radius: 10px; padding: 11px 13px; font-size: 11px; }
+.forum-message { margin: 12px 14px 0; border: 1px solid; border-radius: 10px; padding: 11px 13px; font-size: 12px; }
 .forum-message--success { border-color: rgba(85, 224, 181, .24); background: rgba(85, 224, 181, .07); color: #84e9ca; }
 .forum-message--error { border-color: rgba(255, 103, 103, .24); background: rgba(255, 103, 103, .07); color: #ff9f96; }
 
@@ -316,35 +316,35 @@ onMounted(() => loadTopics({ keepSelection: false }))
 .topic-card:hover { border-color: rgba(85, 224, 181, .25); }
 .topic-card--active { border-color: rgba(85, 224, 181, .34); background: linear-gradient(135deg, rgba(85, 224, 181, .1), rgba(9, 17, 27, .92)); }
 .topic-card > span { color: #4db997; font: 800 8px ui-monospace, monospace; letter-spacing: .1em; }
-.topic-card > strong { overflow: hidden; color: #dbe6ed; font-size: 12px; font-weight: 850; text-overflow: ellipsis; white-space: nowrap; }
-.topic-card > small { overflow: hidden; color: #607486; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.topic-card > strong { overflow: hidden; color: #dbe6ed; font-size: 13px; font-weight: 850; text-overflow: ellipsis; white-space: nowrap; }
+.topic-card > small { overflow: hidden; color: #8ea0af; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
 
 .conversation { min-width: 0; padding: 20px; }
 .conversation__header { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; }
 .conversation__header > div { min-width: 0; }
 .conversation__header h3 { margin: 6px 0 0; color: #edf5fa; font-size: 20px; font-weight: 920; line-height: 1.25; }
-.conversation__header p { margin: 6px 0 0; color: #65798b; font-size: 10px; }
-.moderation-delete { flex: 0 0 auto; border: 1px solid rgba(255, 103, 103, .25); border-radius: 9px; padding: 9px 11px; color: #ff9c92; font-size: 9px; font-weight: 850; }
+.conversation__header p { margin: 6px 0 0; color: #8ea0af; font-size: 12px; }
+.moderation-delete { flex: 0 0 auto; border: 1px solid rgba(255, 103, 103, .25); border-radius: 9px; padding: 9px 11px; color: #ff9c92; font-size: 12px; font-weight: 850; }
 .moderation-delete:hover:not(:disabled) { background: rgba(255, 103, 103, .07); }
 .moderation-delete:disabled, .reply-card > button:disabled { cursor: wait; opacity: .55; }
 
 .topic-content { margin-top: 18px; border: 1px solid rgba(85, 224, 181, .1); border-radius: 12px; background: rgba(85, 224, 181, .035); padding: 15px; }
 .topic-content p { margin: 8px 0 0; color: #aebdc9; font-size: 12px; line-height: 1.7; white-space: pre-line; }
 .reply-heading { display: flex; align-items: center; justify-content: space-between; margin: 21px 2px 9px; }
-.reply-heading strong { display: grid; min-width: 24px; height: 24px; place-items: center; border-radius: 8px; background: rgba(85, 224, 181, .08); color: #72ddbc; font-size: 10px; }
+.reply-heading strong { display: grid; min-width: 24px; height: 24px; place-items: center; border-radius: 8px; background: rgba(85, 224, 181, .08); color: #72ddbc; font-size: 12px; }
 .reply-list { display: grid; gap: 8px; }
 .reply-card { border: 1px solid rgba(120, 152, 181, .1); border-radius: 11px; background: rgba(4, 9, 15, .32); padding: 13px 14px; }
 .reply-card header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .reply-card header > div { display: flex; align-items: center; gap: 7px; min-width: 0; }
-.reply-card header strong { overflow: hidden; color: #dce7ee; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+.reply-card header strong { overflow: hidden; color: #dce7ee; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
 .reply-card header span { border-radius: 999px; background: rgba(85, 224, 181, .07); padding: 3px 6px; color: #67caaa; font-size: 7px; font-weight: 850; text-transform: uppercase; }
-.reply-card time { flex: 0 0 auto; color: #566b7d; font-size: 8px; }
-.reply-card p { margin: 9px 0 0; color: #9badba; font-size: 11px; line-height: 1.6; white-space: pre-line; }
-.reply-card > button { display: block; margin: 10px 0 0 auto; color: #ff8d84; font-size: 8px; font-weight: 850; }
-.forum-empty { display: grid; min-height: 110px; place-content: center; gap: 5px; padding: 20px; color: #607486; text-align: center; font-size: 11px; }
+.reply-card time { flex: 0 0 auto; color: #7f92a2; font-size: 12px; }
+.reply-card p { margin: 9px 0 0; color: #9badba; font-size: 12px; line-height: 1.6; white-space: pre-line; }
+.reply-card > button { display: block; margin: 10px 0 0 auto; color: #ff8d84; font-size: 12px; font-weight: 850; }
+.forum-empty { display: grid; min-height: 110px; place-content: center; gap: 5px; padding: 20px; color: #8ea0af; text-align: center; font-size: 12px; }
 .forum-empty--large { min-height: 420px; }
 .forum-empty strong { color: #9aabba; font-size: 13px; }
-.forum-empty span { color: #5c7183; font-size: 10px; }
+.forum-empty span { color: #8799a8; font-size: 12px; }
 
 @media (max-width: 860px) {
   .forum-workspace { grid-template-columns: 1fr; }
