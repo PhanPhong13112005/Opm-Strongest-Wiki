@@ -133,14 +133,19 @@ var app = builder.Build();
 var seedRequested = args.Any(x => string.Equals(x, "--seed-data", StringComparison.OrdinalIgnoreCase));
 var migrateOnStartup = builder.Configuration.GetValue<bool>("Database:MigrateOnStartup");
 var seedWhenEmpty = builder.Configuration.GetValue<bool>("Database:SeedWhenEmpty");
+if (app.Environment.IsProduction() && (seedRequested || migrateOnStartup || seedWhenEmpty))
+{
+    throw new InvalidOperationException(
+        "Production startup migrations and seed data are disabled. Run migrations through the release job.");
+}
+
 if (seedRequested || migrateOnStartup || seedWhenEmpty)
 {
     await using var scope = app.Services.CreateAsyncScope();
     var dbContext = scope.ServiceProvider.GetRequiredService<OpmWikiDbContext>();
     await dbContext.Database.MigrateAsync();
 
-    var databaseIsEmpty = seedWhenEmpty && !await dbContext.Characters.AsNoTracking().AnyAsync();
-    if (seedRequested || databaseIsEmpty)
+    if (seedRequested || seedWhenEmpty)
     {
         var result = await scope.ServiceProvider.GetRequiredService<IDataSeeder>().SeedAsync();
         app.Logger.LogInformation(

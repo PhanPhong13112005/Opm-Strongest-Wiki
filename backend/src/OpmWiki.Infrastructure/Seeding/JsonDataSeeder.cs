@@ -15,6 +15,8 @@ public sealed class JsonDataSeeder(
     IOptions<SeedDataOptions> options,
     ILogger<JsonDataSeeder> logger) : IDataSeeder
 {
+    private const long SeederAdvisoryLockId = 5715140936559442249;
+
     public async Task<SeedResult> SeedAsync(CancellationToken cancellationToken = default)
     {
         var dataPath = options.Value.FrontendDataPath;
@@ -42,65 +44,107 @@ public sealed class JsonDataSeeder(
         using var backgears = await ReadJsonAsync(backgearsPath, cancellationToken);
         using var tactics = await ReadJsonAsync(tacticsPath, cancellationToken);
 
+        ValidateSourceData(
+            charactersVi.RootElement,
+            charactersEn.RootElement,
+            events.RootElement,
+            mastery.RootElement,
+            insignias.RootElement,
+            backgears.RootElement,
+            tactics.RootElement);
+
         var englishCharacters = charactersEn.RootElement.EnumerateArray()
             .ToDictionary(x => GetString(x, "id"), x => x, StringComparer.OrdinalIgnoreCase);
 
         var executionStrategy = dbContext.Database.CreateExecutionStrategy();
-        return await executionStrategy.ExecuteAsync(async () =>
+        var result = await executionStrategy.ExecuteAsync(async () =>
         {
-            await using var transaction = dbContext.Database.IsRelational()
-                ? await dbContext.Database.BeginTransactionAsync(cancellationToken)
-                : null;
-
+            IDbContextTransaction? transaction = null;
             try
             {
-                var characterCount = await SeedCharactersAsync(
-                    charactersVi.RootElement,
-                    englishCharacters,
-                    cancellationToken);
-                var eventCount = await SeedEventsAsync(events.RootElement, cancellationToken);
-                var masteryTierCount = await SeedMasteryAsync(mastery.RootElement, cancellationToken);
-                var insigniaCount = await SeedInsigniasAsync(insignias.RootElement, cancellationToken);
-                var (backgearCount, backgearSetCount) = await SeedBackgearsAsync(
-                    backgears.RootElement,
-                    cancellationToken);
-                var (tacticCardCount, tacticFrameCount) = await SeedTacticsAsync(
-                    tactics.RootElement,
-                    cancellationToken);
-                await dbContext.SaveChangesAsync(cancellationToken);
+                transaction = dbContext.Database.IsRelational()
+                    ? await dbContext.Database.BeginTransactionAsync(cancellationToken)
+                    : null;
 
-                if (transaction is not null)
-                    await transaction.CommitAsync(cancellationToken);
+                SeedResult attemptResult;
+                try
+                {
+                    if (dbContext.Database.IsNpgsql())
+                    {
+                        await dbContext.Database.ExecuteSqlInterpolatedAsync(
+                            $"SELECT pg_advisory_xact_lock({SeederAdvisoryLockId})",
+                            cancellationToken);
+                    }
 
-                logger.LogInformation(
-                    "Imported {CharacterCount} characters, {EventCount} events, {MasteryTierCount} mastery tiers, {InsigniaCount} insignias, {BackgearCount} backgears, {BackgearSetCount} backgear sets, {TacticCardCount} tactic cards and {TacticFrameCount} tactic frames from {DataPath}",
-                    characterCount,
-                    eventCount,
-                    masteryTierCount,
-                    insigniaCount,
-                    backgearCount,
-                    backgearSetCount,
-                    tacticCardCount,
-                    tacticFrameCount,
-                    dataPath);
-                return new SeedResult(
-                    characterCount,
-                    eventCount,
-                    masteryTierCount,
-                    insigniaCount,
-                    backgearCount,
-                    backgearSetCount,
-                    tacticCardCount,
-                    tacticFrameCount);
+                    var characterCount = await SeedCharactersAsync(
+                        charactersVi.RootElement,
+                        englishCharacters,
+                        cancellationToken);
+                    var eventCount = await SeedEventsAsync(events.RootElement, cancellationToken);
+                    var masteryTierCount = await SeedMasteryAsync(mastery.RootElement, cancellationToken);
+                    var insigniaCount = await SeedInsigniasAsync(insignias.RootElement, cancellationToken);
+                    var (backgearCount, backgearSetCount) = await SeedBackgearsAsync(
+                        backgears.RootElement,
+                        cancellationToken);
+                    var (tacticCardCount, tacticFrameCount) = await SeedTacticsAsync(
+                        tactics.RootElement,
+                        cancellationToken);
+                    await dbContext.SaveChangesAsync(cancellationToken);
+
+                    attemptResult = new SeedResult(
+                        characterCount,
+                        eventCount,
+                        masteryTierCount,
+                        insigniaCount,
+                        backgearCount,
+                        backgearSetCount,
+                        tacticCardCount,
+                        tacticFrameCount);
+
+                    if (transaction is not null)
+                        await transaction.CommitAsync(cancellationToken);
+                }
+                catch (Exception seedException)
+                {
+                    if (transaction is not null)
+                    {
+                        try
+                        {
+                            await transaction.RollbackAsync(CancellationToken.None);
+                        }
+                        catch (Exception rollbackException)
+                        {
+                            TryLogRollbackFailure(rollbackException, seedException);
+                        }
+                    }
+
+                    throw;
+                }
+                finally
+                {
+                    dbContext.ChangeTracker.Clear();
+                }
+
+                return attemptResult;
             }
-            catch
+            finally
             {
                 if (transaction is not null)
-                    await transaction.RollbackAsync(cancellationToken);
-                dbContext.ChangeTracker.Clear();
-                throw;
+                {
+                    try
+                    {
+                        await transaction.DisposeAsync();
+                    }
+                    catch (Exception disposalException)
+                    {
+                        TryLogTransactionDisposalFailure(disposalException);
+                    }
+                }
             }
         });
+
+        TryLogSeedCompleted(result, dataPath);
+        return result;
     }
 
     private async Task<int> SeedCharactersAsync(
@@ -121,24 +165,17 @@ public sealed class JsonDataSeeder(
             if (string.IsNullOrWhiteSpace(id))
                 throw new InvalidDataException("A character is missing its id.");
 
-            importedIds.Add(id);
+            if (!importedIds.Add(id))
+                throw new InvalidDataException($"Duplicate character id: '{id}'.");
+            if (existingCharacters.ContainsKey(id)) continue;
+
             var en = englishCharacters.GetValueOrDefault(id, vi);
-            if (!existingCharacters.TryGetValue(id, out var character))
-            {
-                character = new Character { Id = id };
-                dbContext.Characters.Add(character);
-            }
-
+            var character = new Character { Id = id };
             MapCharacter(character, vi, en);
-            ReplaceSkills(character, vi, en);
-            ReplaceEffects(character, vi, en);
+            AddSkills(character, vi, en);
+            AddEffects(character, vi, en);
+            dbContext.Characters.Add(character);
         }
-
-        var removedCharacters = existingCharacters.Values
-            .Where(x => !importedIds.Contains(x.Id))
-            .ToArray();
-        if (removedCharacters.Length > 0)
-            dbContext.Characters.RemoveRange(removedCharacters);
 
         return importedIds.Count;
     }
@@ -155,13 +192,11 @@ public sealed class JsonDataSeeder(
             if (string.IsNullOrWhiteSpace(id))
                 throw new InvalidDataException("An event is missing its id.");
 
-            importedIds.Add(id);
-            if (!existingEvents.TryGetValue(id, out var gameEvent))
-            {
-                gameEvent = new GameEvent { Id = id };
-                dbContext.Events.Add(gameEvent);
-            }
+            if (!importedIds.Add(id))
+                throw new InvalidDataException($"Duplicate event id: '{id}'.");
+            if (existingEvents.ContainsKey(id)) continue;
 
+            var gameEvent = new GameEvent { Id = id };
             gameEvent.TitleVi = GetString(source, "titleVi");
             gameEvent.TitleEn = Fallback(GetString(source, "titleEn"), gameEvent.TitleVi);
             gameEvent.DescriptionVi = GetString(source, "descriptionVi");
@@ -172,11 +207,8 @@ public sealed class JsonDataSeeder(
             gameEvent.SectionsJson = GetRawJson(source, "sections", "[]");
             gameEvent.StartDate = ParseRequiredDate(GetString(source, "startDate"), id, "startDate");
             gameEvent.EndDate = ParseRequiredDate(GetString(source, "endDate"), id, "endDate");
+            dbContext.Events.Add(gameEvent);
         }
-
-        var removedEvents = existingEvents.Values.Where(x => !importedIds.Contains(x.Id)).ToArray();
-        if (removedEvents.Length > 0)
-            dbContext.Events.RemoveRange(removedEvents);
 
         return importedIds.Count;
     }
@@ -198,14 +230,12 @@ public sealed class JsonDataSeeder(
             {
                 var tier = GetInt(source, "tier");
                 var key = $"{category.Name}:{tier}";
-                importedKeys.Add(key);
+                if (!importedKeys.Add(key))
+                    throw new InvalidDataException($"Duplicate mastery key: '{key}'.");
 
-                if (!existing.TryGetValue(key, out var masteryTier))
-                {
-                    masteryTier = new MasteryTier { Category = category.Name, Tier = tier };
-                    dbContext.MasteryTiers.Add(masteryTier);
-                }
+                if (existing.ContainsKey(key)) continue;
 
+                var masteryTier = new MasteryTier { Category = category.Name, Tier = tier };
                 if (source.TryGetProperty("stats", out var stats) && stats.ValueKind == JsonValueKind.Object)
                 {
                     masteryTier.Atk = GetInt(stats, "atk");
@@ -213,11 +243,10 @@ public sealed class JsonDataSeeder(
                 }
                 masteryTier.CostsJson = GetRawJson(source, "costs", "{}");
                 masteryTier.RequirementsJson = GetRawJson(source, "requirements", "[]");
+                dbContext.MasteryTiers.Add(masteryTier);
             }
         }
 
-        var removed = existing.Where(x => !importedKeys.Contains(x.Key)).Select(x => x.Value).ToArray();
-        if (removed.Length > 0) dbContext.MasteryTiers.RemoveRange(removed);
         return importedKeys.Count;
     }
 
@@ -240,18 +269,16 @@ public sealed class JsonDataSeeder(
             if (!importedGuideIds.Add(id))
                 throw new InvalidDataException($"Duplicate insignia guide id: '{id}'.");
 
-            if (!existingGuides.TryGetValue(id, out var guide))
-            {
-                guide = new InsigniaGuide { Id = id };
-                existingGuides.Add(id, guide);
-                dbContext.InsigniaGuides.Add(guide);
-            }
+            if (existingGuides.ContainsKey(id)) continue;
 
+            var guide = new InsigniaGuide { Id = id };
             guide.TitleVi = GetString(source, "titleVi");
             guide.TitleEn = Fallback(GetString(source, "titleEn"), guide.TitleVi);
             guide.DescriptionVi = GetString(source, "descriptionVi");
             guide.DescriptionEn = Fallback(GetString(source, "descriptionEn"), guide.DescriptionVi);
             guide.ImageUrls = GetStringArray(source, "images");
+            existingGuides.Add(id, guide);
+            dbContext.InsigniaGuides.Add(guide);
         }
 
         var existingInsignias = await dbContext.Insignias
@@ -270,12 +297,9 @@ public sealed class JsonDataSeeder(
             if (classLevel is "Other" or "Villain")
                 throw new InvalidDataException($"Excluded insignia class found: '{classLevel}'.");
 
-            if (!existingInsignias.TryGetValue(id, out var insignia))
-            {
-                insignia = new Insignia { Id = id };
-                dbContext.Insignias.Add(insignia);
-            }
+            if (existingInsignias.ContainsKey(id)) continue;
 
+            var insignia = new Insignia { Id = id };
             insignia.ClassLevel = classLevel;
             insignia.NameVi = GetString(source, "nameVi");
             insignia.NameEn = Fallback(GetString(source, "nameEn"), insignia.NameVi);
@@ -283,11 +307,14 @@ public sealed class JsonDataSeeder(
             insignia.SortOrder = GetInt(source, "sortOrder");
 
             var guideIds = GetStringArray(source, "guideIds");
+            var importedLinkGuideIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
             var existingLinks = insignia.GuideLinks
                 .ToDictionary(x => x.GuideId, StringComparer.OrdinalIgnoreCase);
             for (var index = 0; index < guideIds.Length; index++)
             {
                 var guideId = guideIds[index];
+                if (!importedLinkGuideIds.Add(guideId))
+                    throw new InvalidDataException($"Duplicate guide id '{guideId}' in insignia '{id}'.");
                 if (!existingGuides.TryGetValue(guideId, out var guide) || !importedGuideIds.Contains(guideId))
                     throw new InvalidDataException($"Insignia '{id}' references unknown guide '{guideId}'.");
 
@@ -300,23 +327,13 @@ public sealed class JsonDataSeeder(
                         Guide = guide,
                     };
                     insignia.GuideLinks.Add(link);
+                    existingLinks.Add(guideId, link);
                 }
                 link.SortOrder = index;
             }
 
-            var removedLinks = existingLinks.Values.Where(x => !guideIds.Contains(x.GuideId)).ToArray();
-            if (removedLinks.Length > 0) dbContext.InsigniaGuideLinks.RemoveRange(removedLinks);
+            dbContext.Insignias.Add(insignia);
         }
-
-        var removedInsignias = existingInsignias.Values
-            .Where(x => !importedInsigniaIds.Contains(x.Id))
-            .ToArray();
-        if (removedInsignias.Length > 0) dbContext.Insignias.RemoveRange(removedInsignias);
-
-        var removedGuides = existingGuides.Values
-            .Where(x => !importedGuideIds.Contains(x.Id))
-            .ToArray();
-        if (removedGuides.Length > 0) dbContext.InsigniaGuides.RemoveRange(removedGuides);
 
         return importedInsigniaIds.Count;
     }
@@ -342,12 +359,13 @@ public sealed class JsonDataSeeder(
             if (!importedGearIds.Add(id))
                 throw new InvalidDataException($"Duplicate backgear id: '{id}'.");
 
-            if (!existingGears.TryGetValue(id, out var gear))
+            if (existingGears.ContainsKey(id))
             {
-                gear = new Backgear { Id = id };
-                dbContext.Backgears.Add(gear);
+                gearIndex++;
+                continue;
             }
 
+            var gear = new Backgear { Id = id };
             gear.NameVi = GetString(source, "nameVi");
             gear.NameEn = Fallback(GetString(source, "nameEn"), gear.NameVi);
             gear.Theme = GetString(source, "theme");
@@ -362,12 +380,9 @@ public sealed class JsonDataSeeder(
             gear.ChangeLevel = GetNullableInt(source, "changeLevel");
             gear.LevelsJson = GetRawJson(source, "levels", "[]");
             gear.SortOrder = gearIndex++;
+            dbContext.Backgears.Add(gear);
         }
 
-        var removedGears = existingGears.Values
-            .Where(x => !importedGearIds.Contains(x.Id))
-            .ToArray();
-        if (removedGears.Length > 0) dbContext.Backgears.RemoveRange(removedGears);
 
         var existingSets = await dbContext.BackgearSets
             .ToDictionaryAsync(x => x.Id, StringComparer.OrdinalIgnoreCase, cancellationToken);
@@ -381,12 +396,13 @@ public sealed class JsonDataSeeder(
             if (!importedSetIds.Add(id))
                 throw new InvalidDataException($"Duplicate backgear set id: '{id}'.");
 
-            if (!existingSets.TryGetValue(id, out var set))
+            if (existingSets.ContainsKey(id))
             {
-                set = new BackgearSet { Id = id };
-                dbContext.BackgearSets.Add(set);
+                setIndex++;
+                continue;
             }
 
+            var set = new BackgearSet { Id = id };
             set.NameVi = GetString(source, "nameVi");
             set.NameEn = Fallback(GetString(source, "nameEn"), set.NameVi);
             set.RarityVi = GetString(source, "rarityVi");
@@ -397,12 +413,9 @@ public sealed class JsonDataSeeder(
             set.NeedsJson = GetRawJson(source, "needs", "[]");
             set.LevelsJson = GetRawJson(source, "levels", "[]");
             set.SortOrder = setIndex++;
+            dbContext.BackgearSets.Add(set);
         }
 
-        var removedSets = existingSets.Values
-            .Where(x => !importedSetIds.Contains(x.Id))
-            .ToArray();
-        if (removedSets.Length > 0) dbContext.BackgearSets.RemoveRange(removedSets);
 
         return (importedGearIds.Count, importedSetIds.Count);
     }
@@ -428,12 +441,13 @@ public sealed class JsonDataSeeder(
             if (!importedCardIds.Add(id))
                 throw new InvalidDataException($"Duplicate tactic card id: '{id}'.");
 
-            if (!existingCards.TryGetValue(id, out var card))
+            if (existingCards.ContainsKey(id))
             {
-                card = new TacticCard { Id = id };
-                dbContext.TacticCards.Add(card);
+                cardIndex++;
+                continue;
             }
 
+            var card = new TacticCard { Id = id };
             card.NameVi = GetNestedString(source, "name", "vi");
             card.NameEn = Fallback(GetNestedString(source, "name", "en"), card.NameVi);
             card.Icon = GetString(source, "icon");
@@ -442,12 +456,9 @@ public sealed class JsonDataSeeder(
             card.EffectEn = Fallback(GetNestedString(source, "eff", "en"), card.EffectVi);
             card.ScalingJson = GetRawJson(source, "scaling", "{}");
             card.SortOrder = cardIndex++;
+            dbContext.TacticCards.Add(card);
         }
 
-        var removedCards = existingCards.Values
-            .Where(x => !importedCardIds.Contains(x.Id))
-            .ToArray();
-        if (removedCards.Length > 0) dbContext.TacticCards.RemoveRange(removedCards);
 
         var existingFrames = await dbContext.TacticFrames
             .ToDictionaryAsync(x => x.Id, StringComparer.OrdinalIgnoreCase, cancellationToken);
@@ -461,12 +472,13 @@ public sealed class JsonDataSeeder(
             if (!importedFrameIds.Add(id))
                 throw new InvalidDataException($"Duplicate tactic frame id: '{id}'.");
 
-            if (!existingFrames.TryGetValue(id, out var frame))
+            if (existingFrames.ContainsKey(id))
             {
-                frame = new TacticFrame { Id = id };
-                dbContext.TacticFrames.Add(frame);
+                frameIndex++;
+                continue;
             }
 
+            var frame = new TacticFrame { Id = id };
             frame.Name = GetString(source, "name");
             frame.Icon = GetString(source, "icon");
             frame.Hp = GetInt(source, "hp");
@@ -475,30 +487,22 @@ public sealed class JsonDataSeeder(
             frame.BorderClass = GetString(source, "borderClass");
             frame.BackgroundClass = GetString(source, "bgClass");
             frame.SortOrder = frameIndex++;
+            dbContext.TacticFrames.Add(frame);
         }
 
-        var removedFrames = existingFrames.Values
-            .Where(x => !importedFrameIds.Contains(x.Id))
-            .ToArray();
-        if (removedFrames.Length > 0) dbContext.TacticFrames.RemoveRange(removedFrames);
 
         return (importedCardIds.Count, importedFrameIds.Count);
     }
 
-    private void ReplaceSkills(Character character, JsonElement vi, JsonElement en)
+    private static void AddSkills(Character character, JsonElement vi, JsonElement en)
     {
         var viSkills = GetArray(vi, "skills");
         var enSkills = GetArray(en, "skills");
-        var existingSkills = character.Skills.ToDictionary(x => x.SortOrder);
         for (var index = 0; index < viSkills.Length; index++)
         {
             var viSkill = viSkills[index];
             var enSkill = index < enSkills.Length ? enSkills[index] : viSkill;
-            if (!existingSkills.TryGetValue(index, out var skill))
-            {
-                skill = new CharacterSkill { CharacterId = character.Id, SortOrder = index };
-                character.Skills.Add(skill);
-            }
+            var skill = new CharacterSkill { CharacterId = character.Id, SortOrder = index };
 
             skill.NameVi = GetString(viSkill, "name");
             skill.NameEn = Fallback(GetString(enSkill, "name"), skill.NameVi);
@@ -509,37 +513,28 @@ public sealed class JsonDataSeeder(
             skill.IconUrl = GetNullableString(viSkill, "icon") ?? GetNullableString(enSkill, "icon");
             skill.AnimationUrl = GetNullableString(viSkill, "animation") ?? GetNullableString(enSkill, "animation");
             skill.KeepsakeIconUrl = GetNullableString(viSkill, "keepsakeIcon") ?? GetNullableString(enSkill, "keepsakeIcon");
+            character.Skills.Add(skill);
         }
 
-        var removedSkills = existingSkills.Values.Where(x => x.SortOrder >= viSkills.Length).ToArray();
-        if (removedSkills.Length > 0)
-            dbContext.CharacterSkills.RemoveRange(removedSkills);
     }
 
-    private void ReplaceEffects(Character character, JsonElement vi, JsonElement en)
+    private static void AddEffects(Character character, JsonElement vi, JsonElement en)
     {
         var viEffects = GetArray(vi, "effects");
         var enEffects = GetArray(en, "effects");
-        var existingEffects = character.Effects.ToDictionary(x => x.SortOrder);
         for (var index = 0; index < viEffects.Length; index++)
         {
             var viEffect = viEffects[index];
             var enEffect = index < enEffects.Length ? enEffects[index] : viEffect;
-            if (!existingEffects.TryGetValue(index, out var effect))
-            {
-                effect = new CharacterEffect { CharacterId = character.Id, SortOrder = index };
-                character.Effects.Add(effect);
-            }
+            var effect = new CharacterEffect { CharacterId = character.Id, SortOrder = index };
 
             effect.TermVi = GetString(viEffect, "term");
             effect.TermEn = Fallback(GetString(enEffect, "term"), effect.TermVi);
             effect.DescriptionVi = GetString(viEffect, "desc");
             effect.DescriptionEn = Fallback(GetString(enEffect, "desc"), effect.DescriptionVi);
+            character.Effects.Add(effect);
         }
 
-        var removedEffects = existingEffects.Values.Where(x => x.SortOrder >= viEffects.Length).ToArray();
-        if (removedEffects.Length > 0)
-            dbContext.CharacterEffects.RemoveRange(removedEffects);
     }
 
     private static void MapCharacter(Character character, JsonElement vi, JsonElement en)
@@ -586,6 +581,138 @@ public sealed class JsonDataSeeder(
         target.Hp = GetInt(stats, "hp");
         target.Def = GetInt(stats, "def");
         target.Spd = GetInt(stats, "spd");
+    }
+
+    private static void ValidateSourceData(
+        JsonElement charactersVi,
+        JsonElement charactersEn,
+        JsonElement events,
+        JsonElement mastery,
+        JsonElement insignias,
+        JsonElement backgears,
+        JsonElement tactics)
+    {
+        ValidateUniqueIds(charactersVi, "character");
+        ValidateUniqueIds(charactersEn, "English character");
+        ValidateUniqueIds(events, "event");
+        ValidateMasteryKeys(mastery);
+        ValidateNestedUniqueIds(insignias, "guides", "insignia guide");
+        ValidateNestedUniqueIds(insignias, "items", "insignia");
+        ValidateInsigniaGuideIds(insignias);
+        ValidateNestedUniqueIds(backgears, "gears", "backgear");
+        ValidateNestedUniqueIds(backgears, "sets", "backgear set");
+        ValidateNestedUniqueIds(tactics, "cards", "tactic card");
+        ValidateNestedUniqueIds(tactics, "frames", "tactic frame");
+    }
+
+    private static void ValidateUniqueIds(JsonElement root, string dataType)
+    {
+        if (root.ValueKind != JsonValueKind.Array)
+            throw new InvalidDataException($"{dataType} data must be an array.");
+
+        var ids = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        foreach (var source in root.EnumerateArray())
+        {
+            var id = GetString(source, "id");
+            if (string.IsNullOrWhiteSpace(id))
+                throw new InvalidDataException($"A {dataType} is missing its id.");
+            if (!ids.Add(id))
+                throw new InvalidDataException($"Duplicate {dataType} id: '{id}'.");
+        }
+    }
+
+    private static void ValidateNestedUniqueIds(JsonElement root, string propertyName, string dataType)
+    {
+        if (!root.TryGetProperty(propertyName, out var items) || items.ValueKind != JsonValueKind.Array)
+            throw new InvalidDataException($"{dataType} data is missing its {propertyName} array.");
+
+        ValidateUniqueIds(items, dataType);
+    }
+
+    private static void ValidateMasteryKeys(JsonElement root)
+    {
+        if (!root.TryGetProperty("categories", out var categories) || categories.ValueKind != JsonValueKind.Object)
+            throw new InvalidDataException("Mastery data is missing its categories object.");
+
+        var keys = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        foreach (var category in categories.EnumerateObject())
+        {
+            if (category.Value.ValueKind != JsonValueKind.Array) continue;
+
+            foreach (var source in category.Value.EnumerateArray())
+            {
+                var key = $"{category.Name}:{GetInt(source, "tier")}";
+                if (!keys.Add(key))
+                    throw new InvalidDataException($"Duplicate mastery key: '{key}'.");
+            }
+        }
+    }
+
+    private static void ValidateInsigniaGuideIds(JsonElement root)
+    {
+        if (!root.TryGetProperty("items", out var items) || items.ValueKind != JsonValueKind.Array)
+            return;
+
+        foreach (var source in items.EnumerateArray())
+        {
+            var insigniaId = GetString(source, "id");
+            var guideIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            foreach (var guideId in GetStringArray(source, "guideIds"))
+            {
+                if (!guideIds.Add(guideId))
+                    throw new InvalidDataException(
+                        $"Duplicate guide id '{guideId}' in insignia '{insigniaId}'.");
+            }
+        }
+    }
+
+    private void TryLogRollbackFailure(Exception rollbackException, Exception seedException)
+    {
+        try
+        {
+            logger.LogError(
+                rollbackException,
+                "Database rollback failed after a seed attempt failed with {SeedExceptionType}.",
+                seedException.GetType().Name);
+        }
+        catch
+        {
+            // A broken logger must never replace the original seed exception.
+        }
+    }
+
+    private void TryLogTransactionDisposalFailure(Exception disposalException)
+    {
+        try
+        {
+            logger.LogError(disposalException, "Database transaction disposal failed after a seed attempt.");
+        }
+        catch
+        {
+            // Transaction cleanup logging must not replace the seed result or exception.
+        }
+    }
+
+    private void TryLogSeedCompleted(SeedResult result, string dataPath)
+    {
+        try
+        {
+            logger.LogInformation(
+                "Imported {CharacterCount} characters, {EventCount} events, {MasteryTierCount} mastery tiers, {InsigniaCount} insignias, {BackgearCount} backgears, {BackgearSetCount} backgear sets, {TacticCardCount} tactic cards and {TacticFrameCount} tactic frames from {DataPath}",
+                result.Characters,
+                result.Events,
+                result.MasteryTiers,
+                result.Insignias,
+                result.Backgears,
+                result.BackgearSets,
+                result.TacticCards,
+                result.TacticFrames,
+                dataPath);
+        }
+        catch
+        {
+            // The seed is already committed; logging must not trigger a retry.
+        }
     }
 
     private static async Task<JsonDocument> ReadJsonAsync(string path, CancellationToken cancellationToken)

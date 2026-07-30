@@ -1,6 +1,8 @@
+using System.Text.Json.Nodes;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
+using OpmWiki.Domain.Entities;
 using OpmWiki.Infrastructure.Persistence;
 using OpmWiki.Infrastructure.Seeding;
 
@@ -80,6 +82,181 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
     }
 
     [Fact]
+    public async Task SeedAsync_RejectsExactDuplicateCharacterIdBeforeTrackingEntities()
+    {
+        await AppendDuplicateArrayItemAsync("characters.json");
+        await using var dbContext = CreateDbContext();
+
+        var exception = await Assert.ThrowsAsync<InvalidDataException>(() => CreateSeeder(dbContext).SeedAsync());
+
+        Assert.Contains("Duplicate character id", exception.Message);
+        Assert.Empty(dbContext.ChangeTracker.Entries());
+        Assert.Equal(0, await dbContext.Characters.CountAsync());
+    }
+
+    [Fact]
+    public async Task SeedAsync_RejectsCaseInsensitiveDuplicateCharacterIdBeforeTrackingEntities()
+    {
+        await AppendDuplicateArrayItemAsync("characters.json", "TEST-UR");
+        await using var dbContext = CreateDbContext();
+
+        var exception = await Assert.ThrowsAsync<InvalidDataException>(() => CreateSeeder(dbContext).SeedAsync());
+
+        Assert.Contains("Duplicate character id", exception.Message);
+        Assert.Empty(dbContext.ChangeTracker.Entries());
+        Assert.Equal(0, await dbContext.Characters.CountAsync());
+    }
+
+    [Fact]
+    public async Task SeedAsync_RejectsDuplicateEventIdBeforeTrackingEntities()
+    {
+        await AppendDuplicateArrayItemAsync("events.json");
+        await using var dbContext = CreateDbContext();
+
+        var exception = await Assert.ThrowsAsync<InvalidDataException>(() => CreateSeeder(dbContext).SeedAsync());
+
+        Assert.Contains("Duplicate event id", exception.Message);
+        Assert.Empty(dbContext.ChangeTracker.Entries());
+        Assert.Equal(0, await dbContext.Events.CountAsync());
+    }
+
+    [Fact]
+    public async Task SeedAsync_RejectsDuplicateMasteryKeyBeforeTrackingEntities()
+    {
+        var root = JsonNode.Parse(await File.ReadAllTextAsync(Path.Combine(dataPath, "mastery.json")))!.AsObject();
+        var tiers = root["categories"]!.AsObject()["phe"]!.AsArray();
+        tiers.Add(tiers[0]!.DeepClone());
+        await File.WriteAllTextAsync(Path.Combine(dataPath, "mastery.json"), root.ToJsonString());
+        await using var dbContext = CreateDbContext();
+
+        var exception = await Assert.ThrowsAsync<InvalidDataException>(() => CreateSeeder(dbContext).SeedAsync());
+
+        Assert.Contains("Duplicate mastery key", exception.Message);
+        Assert.Empty(dbContext.ChangeTracker.Entries());
+        Assert.Equal(0, await dbContext.MasteryTiers.CountAsync());
+    }
+
+    [Fact]
+    public async Task SeedAsync_RejectsDuplicateGuideIdWithinAnInsigniaBeforeTrackingEntities()
+    {
+        var root = JsonNode.Parse(await File.ReadAllTextAsync(Path.Combine(dataPath, "insignias.json")))!.AsObject();
+        var item = root["items"]!.AsArray()[0]!.AsObject();
+        var guideIds = item["guideIds"]!.AsArray();
+        guideIds.Add(guideIds[0]!.DeepClone());
+        await File.WriteAllTextAsync(Path.Combine(dataPath, "insignias.json"), root.ToJsonString());
+        await using var dbContext = CreateDbContext();
+
+        var exception = await Assert.ThrowsAsync<InvalidDataException>(() => CreateSeeder(dbContext).SeedAsync());
+
+        Assert.Contains("Duplicate guide id", exception.Message);
+        Assert.Empty(dbContext.ChangeTracker.Entries());
+        Assert.Equal(0, await dbContext.Insignias.CountAsync());
+    }
+
+    [Fact]
+    public async Task SeedAsync_ClearsTrackedEntitiesAfterFailureAndCanRunAgain()
+    {
+        await File.WriteAllTextAsync(
+            Path.Combine(dataPath, "events.json"),
+            Events.Replace("2026-07-01", "invalid-date", StringComparison.Ordinal));
+        await using var dbContext = CreateDbContext();
+        var seeder = CreateSeeder(dbContext);
+
+        await Assert.ThrowsAsync<InvalidDataException>(() => seeder.SeedAsync());
+
+        Assert.DoesNotContain(
+            dbContext.ChangeTracker.Entries(),
+            entry => entry.State is EntityState.Added or EntityState.Modified);
+        Assert.Empty(dbContext.ChangeTracker.Entries());
+        Assert.Equal(0, await dbContext.Characters.CountAsync());
+
+        await File.WriteAllTextAsync(Path.Combine(dataPath, "events.json"), Events);
+        var result = await seeder.SeedAsync();
+
+        Assert.Equal(1, result.Characters);
+        Assert.Equal(1, result.Events);
+        Assert.Equal(1, await dbContext.Characters.CountAsync());
+        Assert.Equal(1, await dbContext.Events.CountAsync());
+    }
+
+    [Fact]
+    public async Task SeedAsync_PreservesAdminChangesAndAddsOnlyMissingSourceRecords()
+    {
+        var options = new DbContextOptionsBuilder<OpmWikiDbContext>()
+            .UseInMemoryDatabase(Guid.NewGuid().ToString())
+            .Options;
+        await using var dbContext = new OpmWikiDbContext(options);
+        var seeder = new JsonDataSeeder(
+            dbContext,
+            Options.Create(new SeedDataOptions { FrontendDataPath = dataPath }),
+            NullLogger<JsonDataSeeder>.Instance);
+
+        await seeder.SeedAsync();
+
+        var character = await dbContext.Characters
+            .Include(x => x.Skills)
+            .Include(x => x.Effects)
+            .SingleAsync();
+        character.NameEn = "Admin Character";
+        Assert.Single(character.Skills).NameEn = "Admin Skill";
+        Assert.Single(character.Effects).DescriptionEn = "Admin Effect";
+        (await dbContext.Events.SingleAsync()).TitleEn = "Admin Event";
+        (await dbContext.MasteryTiers.SingleAsync()).Atk = 999;
+
+        var insignia = await dbContext.Insignias
+            .Include(x => x.GuideLinks)
+            .ThenInclude(x => x.Guide)
+            .SingleAsync();
+        insignia.NameEn = "Admin Insignia";
+        Assert.Single(insignia.GuideLinks).Guide.TitleEn = "Admin Guide";
+        (await dbContext.Backgears.SingleAsync()).NameEn = "Admin Backgear";
+        (await dbContext.BackgearSets.SingleAsync()).NameEn = "Admin Set";
+        (await dbContext.TacticCards.SingleAsync()).NameEn = "Admin Card";
+        (await dbContext.TacticFrames.SingleAsync()).Name = "Admin Frame";
+        dbContext.TacticFrames.Add(new TacticFrame
+        {
+            Id = "admin-frame",
+            Name = "Admin-created Frame",
+            Icon = "admin.png",
+            Hp = 1,
+            Def = 2,
+            ColorClass = "admin-color",
+            BorderClass = "admin-border",
+            BackgroundClass = "admin-background",
+            SortOrder = 99,
+        });
+        await dbContext.SaveChangesAsync();
+
+        await File.WriteAllTextAsync(Path.Combine(dataPath, "tactics.json"), TacticsWithNewFrame);
+        var second = await seeder.SeedAsync();
+        dbContext.ChangeTracker.Clear();
+
+        var preservedCharacter = await dbContext.Characters
+            .Include(x => x.Skills)
+            .Include(x => x.Effects)
+            .SingleAsync();
+        Assert.Equal("Admin Character", preservedCharacter.NameEn);
+        Assert.Equal("Admin Skill", Assert.Single(preservedCharacter.Skills).NameEn);
+        Assert.Equal("Admin Effect", Assert.Single(preservedCharacter.Effects).DescriptionEn);
+        Assert.Equal("Admin Event", (await dbContext.Events.SingleAsync()).TitleEn);
+        Assert.Equal(999, (await dbContext.MasteryTiers.SingleAsync()).Atk);
+
+        var preservedInsignia = await dbContext.Insignias
+            .Include(x => x.GuideLinks)
+            .ThenInclude(x => x.Guide)
+            .SingleAsync();
+        Assert.Equal("Admin Insignia", preservedInsignia.NameEn);
+        Assert.Equal("Admin Guide", Assert.Single(preservedInsignia.GuideLinks).Guide.TitleEn);
+        Assert.Equal("Admin Backgear", (await dbContext.Backgears.SingleAsync()).NameEn);
+        Assert.Equal("Admin Set", (await dbContext.BackgearSets.SingleAsync()).NameEn);
+        Assert.Equal("Admin Card", (await dbContext.TacticCards.SingleAsync()).NameEn);
+        Assert.Equal("Admin Frame", (await dbContext.TacticFrames.SingleAsync(x => x.Id == "tf_01")).Name);
+        Assert.Equal("Admin-created Frame", (await dbContext.TacticFrames.SingleAsync(x => x.Id == "admin-frame")).Name);
+        Assert.Equal("New Source Frame", (await dbContext.TacticFrames.SingleAsync(x => x.Id == "tf_02")).Name);
+        Assert.Equal(2, second.TacticFrames);
+        Assert.Equal(3, await dbContext.TacticFrames.CountAsync());
+    }
+    [Fact]
     public async Task SeedAsync_ImportsTheCurrentFrontendDataset()
     {
         var frontendDataPath = Path.GetFullPath(
@@ -123,6 +300,30 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
         Assert.NotNull(blackSperm);
         Assert.Equal("Tinh Trùng Đen", blackSperm.NameVi);
         Assert.Equal("Black Sperm", blackSperm.NameEn);
+    }
+
+    private static OpmWikiDbContext CreateDbContext()
+    {
+        var options = new DbContextOptionsBuilder<OpmWikiDbContext>()
+            .UseInMemoryDatabase(Guid.NewGuid().ToString())
+            .Options;
+        return new OpmWikiDbContext(options);
+    }
+
+    private JsonDataSeeder CreateSeeder(OpmWikiDbContext dbContext) =>
+        new(
+            dbContext,
+            Options.Create(new SeedDataOptions { FrontendDataPath = dataPath }),
+            NullLogger<JsonDataSeeder>.Instance);
+
+    private async Task AppendDuplicateArrayItemAsync(string fileName, string? duplicateId = null)
+    {
+        var path = Path.Combine(dataPath, fileName);
+        var root = JsonNode.Parse(await File.ReadAllTextAsync(path))!.AsArray();
+        var duplicate = root[0]!.DeepClone().AsObject();
+        if (duplicateId is not null) duplicate["id"] = duplicateId;
+        root.Add(duplicate);
+        await File.WriteAllTextAsync(path, root.ToJsonString());
     }
 
     private const string CharactersVi = """
@@ -221,6 +422,24 @@ public sealed class JsonDataSeederTests : IAsyncLifetime
           "frames":[{
             "id":"tf_01","name":"Standard I","icon":"frame.png","hp":4200,"def":2100,
             "colorClass":"text-green","borderClass":"border-green","bgClass":"bg-green"
+          }]
+        }
+        """;
+
+    private const string TacticsWithNewFrame = """
+        {
+          "cards":[{
+            "id":"tc_01","name":{"vi":"Cường Công","en":"Assault"},"icon":"attack.png","count":144,
+            "eff":{"vi":"+15% Tấn công","en":"+15% ATK"},
+            "scaling":{"metric":"stat","statType":"attack_rate","label_en":"ATK","label_vi":"Tấn công","unit":"%","summable":true,
+              "rarities":[{"key":"orange","quality":5,"name_en":"Orange","name_vi":"Cam","tiers":[{"star":7,"value":15}]}]}
+          }],
+          "frames":[{
+            "id":"tf_01","name":"Standard I","icon":"frame.png","hp":4200,"def":2100,
+            "colorClass":"text-green","borderClass":"border-green","bgClass":"bg-green"
+          },{
+            "id":"tf_02","name":"New Source Frame","icon":"frame-2.png","hp":5200,"def":2600,
+            "colorClass":"text-blue","borderClass":"border-blue","bgClass":"bg-blue"
           }]
         }
         """;
