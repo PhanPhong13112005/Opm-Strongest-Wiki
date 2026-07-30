@@ -39,6 +39,7 @@ dotnet run --project src/OpmWiki.Api --urls http://localhost:5180
 Swagger: `http://localhost:5180/swagger`
 
 Hướng dẫn production: [`DEPLOYMENT.md`](DEPLOYMENT.md).
+Đánh giá và runbook Giai đoạn 1: [`../docs/BACKEND_PRODUCTION_PHASE_1.md`](../docs/BACKEND_PRODUCTION_PHASE_1.md).
 
 Nếu muốn chạy cả API và PostgreSQL bằng Docker:
 
@@ -114,7 +115,9 @@ Migration nằm trong `src/OpmWiki.Infrastructure/Persistence/Migrations`. Lện
 - `src/data/backgear.json`
 - `src/data/tactics.json`
 
-Quá trình nhập là idempotent: chạy lại sẽ cập nhật theo ID, thay thế kỹ năng/hiệu ứng cũ và xóa bản ghi không còn trong JSON nguồn.
+Seeder là bootstrap insert-only: chỉ thêm aggregate chưa có theo khóa nghiệp vụ. Chạy lại không cập nhật,
+không thay thế kỹ năng/hiệu ứng/liên kết và không xóa nội dung hiện có. PostgreSQL dùng transaction advisory
+lock để nhiều instance không bootstrap đồng thời.
 
 Không ghi mật khẩu production vào `appsettings.json`. Khi triển khai, cấu hình bằng biến môi trường:
 
@@ -167,5 +170,6 @@ Kỷ vật tiếp tục là thuộc tính của Nhân vật thay vì một bản
 `KeepsakeIcon` trên bản ghi Nhân vật tương ứng. Đường dẫn ảnh không được chứa dấu `+`; dùng tên an
 toàn như `SSRplus` để cùng hoạt động trên Vite và Vercel.
 
-Lưu ý: chạy lại `--seed-data` sẽ đồng bộ dữ liệu từ JSON và có thể ghi đè nội dung đã sửa trong
-trang quản trị. Chỉ dùng seed khi chủ động muốn JSON trở thành nguồn chuẩn trở lại.
+`--seed-data`, `Database__MigrateOnStartup` và `Database__SeedWhenEmpty` chỉ dành cho môi trường không phải
+Production. Ứng dụng sẽ từ chối khởi động ở Production nếu một trong các tùy chọn này được bật; migration
+Production phải chạy bằng release job riêng.
