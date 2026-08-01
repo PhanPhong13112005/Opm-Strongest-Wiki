@@ -9,7 +9,7 @@ Thư mục này chứa toàn bộ dữ liệu cấu trúc dưới dạng JSON, h
         *   `id`: Mã định danh duy nhất (VD: `"108"` cho Bomb).
         *   `name`: Tên nhân vật.
         *   `tier`: Bậc nhân vật (`SSR+`, `UR`, `UR+`...).
-        *   `faction`: Phe (`Hero`, `Monster`, `Outlaw`).
+        *   `faction`: Phe (`Hero`, `Monster`, `Martial Artist`, `Outlaw`, `Other`).
         *   `type`: Hệ (`Grappler`, `Hi-Tech`, `Duelist`, `Esper`).
         *   `stats`: Các chỉ số cơ bản (HP, ATK, DEF, SPD).
         *   `skills`: Mảng chứa thông tin kỹ năng gồm:

@@ -38,7 +38,8 @@ export const updateCouponTopUp = (id, action) => authorizedRequest(`api/top-ups/
 export const createBankTopUpQr = (amount) => authorizedRequest('api/top-ups/bank-qr', {
   method: 'POST', body: JSON.stringify({ amount }),
 })
-export const getBankTopUpQr = (id) => authorizedRequest(`api/top-ups/${id}/bank-qr`)
+export const getBankTopUpQr = (id, { trackLoading = true } = {}) =>
+  authorizedRequest(`api/top-ups/${id}/bank-qr`, { trackLoading })
 export const updateBankTopUpPayment = (id, action) => authorizedRequest(`api/top-ups/${id}/bank-payment`, {
   method: 'PUT', body: JSON.stringify({ action }),
 })

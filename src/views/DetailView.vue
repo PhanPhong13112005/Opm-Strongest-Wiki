@@ -5,6 +5,8 @@ import { useI18n } from 'vue-i18n'
 import charactersDataVi from '../data/characters.json'
 import charactersDataEn from '../data/characters_en.json'
 import coreLabData from '../data/coreLab.json'
+import { safeAssetUrl } from '../utils/assetUrl'
+import { getSkillEnergyCost } from '../utils/skillPresentation'
 import { getCharacterById } from '../services/characterApi'
 
 const props = defineProps({
@@ -16,10 +18,7 @@ const props = defineProps({
 
 const router = useRouter()
 
-const safeUrl = (url) => {
-  if (!url) return ''
-  return encodeURI(url).replace(/\+/g, '%2B').replace(/#/g, '%23')
-}
+const safeUrl = safeAssetUrl
 const { t, locale } = useI18n()
 const charactersData = computed(() => locale.value === 'en' ? charactersDataEn : charactersDataVi)
 const localCharacter = computed(() => charactersData.value.find(c => c.id === props.id) || null)
@@ -142,6 +141,7 @@ const factionIcon = computed(() => {
   if (f.includes('quái vật') || f.includes('quái nhân') || f.includes('monster')) return '/Faction/Monster.png'
   if (f.includes('võ thuật') || f.includes('martial')) return '/Faction/Martial_Artist.png'
   if (f.includes('tội phạm') || f.includes('outlaw')) return '/Faction/Outlaw.png'
+  if (f.includes('khác') || f.includes('other')) return '/Faction/Other.png'
   return ''
 })
 
@@ -267,7 +267,7 @@ const getSkillsByType = (category) => {
 
 const skillCategories = computed(() => {
   const tabs = [
-    { key: 'basic', label: t('detail.skill_tabs.basic') || 'Cơ bản' },
+    { key: 'basic', label: t('detail.skill_tabs.basic') || 'Đánh Thường' },
     { key: 'ult', label: t('detail.skill_tabs.ult') || 'Tuyệt kĩ' },
     { key: 'passive', label: t('detail.skill_tabs.passive') || 'Nội tại' },
     { key: 'awaken', label: t('detail.skill_tabs.awaken') || 'Thức tỉnh' },
@@ -316,6 +316,14 @@ const formatSkillDesc = (desc) => {
     const safeTerm = p1.replace(/'/g, "\\'")
     return `<a href="javascript:void(0)" class="text-[color:var(--theme-color)] font-bold hover:text-white transition-colors cursor-pointer border-b border-[color:var(--theme-color)] border-dashed" onclick="event.preventDefault(); event.stopPropagation(); if(window.scrollToEffectDetail) window.scrollToEffectDetail('${safeTerm}')">[${p1}]</a>`
   })
+}
+
+const getSkillCost = (skill) => getSkillEnergyCost(skill, character.value?.skills)
+const getKeepsakeImage = (skill) => {
+  if (character.value?.keepsakeIcon) {
+    return character.value.keepsakeIcon
+  }
+  return skill?.keepsakeIcon || ''
 }
 
 const dacTinh = computed(() => {
@@ -711,9 +719,9 @@ onMounted(() => {
                     <h3 class="font-bold text-lg transition-colors" :class="expandedSkills.includes(skill.name) ? 'text-[color:var(--theme-color)]' : 'text-gray-300'">{{ skill.name }}</h3>
                     
                     <!-- KEEPSAKE BADGE -->
-                    <router-link v-if="skill.keepsakeIcon" :to="`/keepsake/${character.id}`" class="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-red-900/80 to-red-600/50 border border-red-500/50 rounded-full ml-2 shadow-[0_0_10px_rgba(255,0,0,0.4)] cursor-pointer hover:scale-105 hover:shadow-[0_0_15px_rgba(255,0,0,0.6)] transition-all duration-300">
+                    <router-link v-if="skill.keepsakeIcon || (skill.name.toLowerCase().includes('siêu') && character?.keepsakeIcon)" :to="`/keepsake/${character.id}`" class="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-red-900/80 to-red-600/50 border border-red-500/50 rounded-full ml-2 shadow-[0_0_10px_rgba(255,0,0,0.4)] cursor-pointer hover:scale-105 hover:shadow-[0_0_15px_rgba(255,0,0,0.6)] transition-all duration-300">
                       <span class="text-xs text-red-100 uppercase tracking-wider font-bold">{{ t("detail.unlockedBy") }}</span>
-                      <img :src="safeUrl(skill.keepsakeIcon)" class="h-10 w-auto object-contain drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] animate-pulse" alt="Keepsake" title="Xem chi tiết Vũ Khí Duyên" />
+                      <img :src="safeUrl(getKeepsakeImage(skill))" class="h-10 w-auto object-contain drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] animate-pulse" alt="Keepsake" title="Xem chi tiết Vũ Khí Duyên" />
                     </router-link>
 
                     <!-- Stars for Extreme Passives -->
@@ -724,11 +732,11 @@ onMounted(() => {
                 </div>
                 
                 <div class="flex items-center gap-4">
-                  <div v-if="skill.cost !== null && skill.cost !== undefined && skill.cost !== 0" class="bg-[#1a2235] border border-blue-500/30 text-blue-300 text-xs font-bold px-3 py-1 rounded flex items-center gap-1.5 shadow-[0_0_8px_rgba(59,130,246,0.3)] flex-shrink-0">
-                    <svg class="w-3 h-3 fill-current text-blue-400" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <div v-if="getSkillCost(skill) > 0" class="bg-[#1a2235] border border-blue-500/40 text-blue-300 text-xs font-bold px-3 py-1.5 rounded flex items-center gap-1.5 shadow-[0_0_8px_rgba(59,130,246,0.3)] flex-shrink-0" title="Chi phí Năng Lượng">
+                    <svg class="w-3.5 h-3.5 fill-current text-blue-400 drop-shadow-[0_0_3px_rgba(59,130,246,0.8)]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path d="M11.5 2C11.5 2 4.5 10.5 4.5 15.5C4.5 19.642 7.858 23 12 23C16.142 23 19.5 19.642 19.5 15.5C19.5 10.5 12.5 2 12.5 2H11.5ZM12 4.886C13.084 7.234 17.5 12.544 17.5 15.5C17.5 18.538 15.038 21 12 21C8.962 21 6.5 18.538 6.5 15.5C6.5 12.544 10.916 7.234 12 4.886Z"/>
                     </svg>
-                    {{ skill.cost }}
+                    {{ getSkillCost(skill) }}
                   </div>
                   <div class="text-gray-500 transform transition-transform duration-300" :class="expandedSkills.includes(skill.name) ? 'rotate-180' : ''">
                     ▼

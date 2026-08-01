@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n'
 import charactersDataVi from '../data/characters.json'
 import charactersDataEn from '../data/characters_en.json'
 import CharacterCard from '../components/CharacterCard.vue'
+import { safeAssetUrl } from '../utils/assetUrl'
 import { getCharacters } from '../services/characterApi'
 
 const { t, locale } = useI18n()
@@ -25,8 +26,8 @@ const TIER_ORDER = ['UR+', 'UR', 'SSR+', 'SSR', 'SR', 'R', 'N']
 const TYPE_MAP_VI = { duelist: 'Vũ Trang', grappler: 'Giác Đấu', esper: 'Tâm Linh', hi_tech: 'Công Nghệ' }
 const TYPE_MAP_EN = { duelist: 'Duelist', grappler: 'Grappler', esper: 'Esper', hi_tech: 'Hi-Tech' }
 
-const FACTION_MAP_VI = { hero: 'Anh Hùng', monster: 'Quái Nhân', martial_artist: 'Võ Thuật', outlaw: 'Tội Phạm' }
-const FACTION_MAP_EN = { hero: 'Hero', monster: 'Monster', martial_artist: 'Martial Artist', outlaw: 'Outlaw' }
+const FACTION_MAP_VI = { hero: 'Anh Hùng', monster: 'Quái Nhân', martial_artist: 'Võ Thuật', outlaw: 'Tội Phạm', other: 'Khác' }
+const FACTION_MAP_EN = { hero: 'Hero', monster: 'Monster', martial_artist: 'Martial Artist', outlaw: 'Outlaw', other: 'Other' }
 
 const TYPE_OPTIONS = computed(() => [
   { value: 'duelist', label: t('filters.type.duelist') },
@@ -40,6 +41,7 @@ const FACTION_OPTIONS = computed(() => [
   { value: 'monster', label: t('filters.faction.monster') },
   { value: 'martial_artist', label: t('filters.faction.martial_artist') },
   { value: 'outlaw', label: t('filters.faction.outlaw') },
+  { value: 'other', label: t('filters.faction.other') },
 ])
 
 const tierOptions = computed(() => {
@@ -146,10 +148,7 @@ const goToPage = (page) => {
   }
 }
 
-const safeUrl = (url) => {
-  if (!url) return ''
-  return encodeURI(url).replace(/\+/g, '%2B').replace(/#/g, '%23')
-}
+const safeUrl = safeAssetUrl
 
 const preloadedDetails = new Set()
 

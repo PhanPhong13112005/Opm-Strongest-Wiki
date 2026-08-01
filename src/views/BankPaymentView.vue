@@ -126,7 +126,7 @@ const loadPayment = async (showLoading = true) => {
   if (!payment.value) error.value = ''
   pollError.value = ''
   try {
-    payment.value = await getBankTopUpQr(paymentId.value)
+    payment.value = await getBankTopUpQr(paymentId.value, { trackLoading: showLoading })
     await handlePaymentState()
   } catch (exception) {
     if (payment.value) {

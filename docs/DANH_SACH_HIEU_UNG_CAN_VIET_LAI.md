@@ -1,0 +1,307 @@
+# Danh sách hiệu ứng song ngữ cần đọc và viết lại
+
+File này chỉ phục vụ việc rà soát nội dung. Đã hoàn tất rà soát và chuẩn hóa thuật ngữ song ngữ VI / EN.
+
+## Cách ghi
+
+- Mỗi hiệu ứng đã khai báo có cả `VI`, `EN nguồn` và danh sách nhân vật sử dụng.
+- Đánh dấu `[x]` khi tên và nội dung hiệu ứng đã được chốt.
+- Có thể sửa trực tiếp tên hiệu ứng và tên nhân vật nguồn.
+- Ví dụ của bạn: `Lock: Bão`.
+- Trong dữ liệu hiện tại, trường hợp tương ứng đang được ghi là:
+  `Khóa Mục Tiêu: Hellish Blizzard (Bão)`.
+- Không ghép tên Anh–Việt theo vị trí mảng nữa vì cách đó có thể tạo kết quả sai.
+
+## 1. Hiệu ứng đã có chú thích riêng
+
+Các mục dưới đây được lấy trực tiếp từ trường `effects[].term` trong `src/data/characters.json`.
+
+- [x] **VI:** Áp Chế Năng Lượng | **EN nguồn:** Energy Suppression | **Nhân vật:** Tatsumaki/Terrible Tornado
+- [x] **VI:** Ăn Mòn | **EN nguồn:** Corrode | **Nhân vật:** Pig God, Deep Sea King, Groribas, Fukegao, Konbu Infinity, Messenger of the Seafolk
+- [x] **VI:** Ăn Mòn Thông Minh | **EN nguồn:** Smart Corrode | **Nhân vật:** Groribas
+- [x] **VI:** Bám Dính | **EN nguồn:** Adhere | **Nhân vật:** King, Groribas, Tank Top Master, Deep Sea King
+- [x] **VI:** Bảo Vệ Chuyên Biệt | **EN nguồn:** Spec. Protect | **Nhân vật:** Metal Knight, Subterranean King
+- [x] **VI:** Bất Bại | **EN nguồn:** Invincible | **Nhân vật:** Garou, Melzargard | ⚠ EN dùng chung: Invincible
+- [x] **VI:** Bất khả chiến bại | **EN nguồn:** Invincible | **Nhân vật:** Tinh Trùng Đen | ⚠ EN dùng chung: Invincible
+- [x] **VI:** Bất Khuất | **EN nguồn:** Unyielding | **Nhân vật:** Overgrown Rover, G5, Nyan, Tatsumaki/Terrible Tornado, Amai Mask, Zombieman, Mosquito Girl, Boros, Deep Sea King, Subterranean King, Gyoro-Gyoro, Flashy Flash, Gouketsu, Atomic Samurai, King
+- [x] **VI:** Bất Khuất Chuyên Biệt | **EN nguồn:** Spec. Unyielding | **Nhân vật:** Overgrown Rover, G5, Nyan, Tatsumaki/Terrible Tornado, Amai Mask, Melzargard, Boros, Suiryu
+- [x] **VI:** Bất Khuất Cực Hạn | **EN nguồn:** Extreme Unyielding | **Nhân vật:** Overgrown Rover
+- [x] **VI:** Bất Khuất | **EN nguồn:** Immortal | **Nhân vật:** Superalloy Darkshine, Pig God, Gouketsu
+- [x] **VI:** Cắt Năng Lượng | **EN nguồn:** Energy Cut | **Nhân vật:** Sonic V1, Flashy Flash, Bang
+- [x] **VI:** Cấm Hồi Sinh | **EN nguồn:** Heal Block | **Nhân vật:** Subterranean King
+- [x] **VI:** Câm Lặng | **EN nguồn:** Silence | **Nhân vật:** Subterranean King, Mosquito Girl, Melzargard, Gyoro-Gyoro
+- [x] **VI:** Chí Mạng | **EN nguồn:** Crit | **Nhân vật:** Boros, Garou
+- [x] **VI:** Chia Sẻ Sát Thương | **EN nguồn:** Share DMG | **Nhân vật:** Genos
+- [x] **VI:** Choáng | **EN nguồn:** Stun | **Nhân vật:** Amai Mask, Metal Bat V2, Sonic V2, Garou, Subterranean King, Mosquito Girl, Gale Wind, G4, Metal Knight, Puri-Puri Prisoner, Melzargard, Gouketsu, Metal Bat, Child Emperor, Eyesight, Awakened Cockroach, Hammerhead, Lightning Max, Sky King
+- [x] **VI:** Choáng Chuyên Biệt | **EN nguồn:** Spec. Stun | **Nhân vật:** Amai Mask, Mosquito Girl, G4, Metal Knight
+- [x] **VI:** Choáng Tuyệt Đối | **EN nguồn:** Absolute Stun | **Nhân vật:** Garou, Subterranean King
+- [x] **VI:** Chống Chịu | **EN nguồn:** Endurance | **Nhân vật:** Pig God
+- [x] **VI:** Chuyển Hóa Năng Lượng | **EN nguồn:** Energy Conversion | **Nhân vật:** Tatsumaki/Terrible Tornado
+- [x] **VI:** Giận Dữ | **EN nguồn:** Berserk | **Nhân vật:** Deep Sea King, Metal Bat, Monsterized Bakuzan, Child Emperor
+- [x] **VI:** Cường Hóa | **EN nguồn:** Enhance | **Nhân vật:** Hellish Blizzard
+- [x] **VI:** Dấu Ấn | **EN nguồn:** Mark | **Nhân vật:** Metal Bat V2, Metal Knight, Melzargard, Garou, Bang
+- [x] **VI:** Đóng Băng | **EN nguồn:** Freeze | **Nhân vật:** Hellish Blizzard
+- [x] **VI:** Đột Phá | **EN nguồn:** Breakthrough | **Nhân vật:** Gouketsu, Suiryu
+- [x] **VI:** Gây Mù | **EN nguồn:** Blind | **Nhân vật:** Zombieman
+- [x] **VI:** Giảm Kháng Sát Thương | **EN nguồn:** Reduce DMG Res | **Nhân vật:** Bang & Bomb
+- [x] **VI:** Giảm Sát Thương Chí Mạng | **EN nguồn:** Reduce Crit DMG | **Nhân vật:** Bang & Bomb, Tatsumaki/Terrible Tornado
+- [x] **VI:** Giảm Sát Thương Chuẩn | **EN nguồn:** Reduce True DMG | **Nhân vật:** Overgrown Rover
+- [x] **VI:** Giảm Sát Thương Không Chí Mạng | **EN nguồn:** Reduce Non-Crit DMG | **Nhân vật:** Overgrown Rover, Atomic Samurai, Nyan, Mosquito Girl
+- [x] **VI:** Giảm ST Chế Ngự | **EN nguồn:** Reduce Control DMG | **Nhân vật:** Atomic Samurai
+- [x] **VI:** Giáp | **EN nguồn:** Armor | **Nhân vật:** Amai Mask
+- [x] **VI:** Hiệp | **EN nguồn:** Round | **Nhân vật:** Metal Knight
+- [x] **VI:** Hoảng Loạn | **EN nguồn:** Panic | **Nhân vật:** Gyoro-Gyoro, King, Geryuganshoop, Tatsumaki/Terrible Tornado V2, Watchdog Man
+- [x] **VI:** Hộ Vệ Chuyên Biệt | **EN nguồn:** Spec. Guard | **Nhân vật:** Suiryu, G4
+- [x] **VI:** Hồi Phục Động Năng | **EN nguồn:** Kinetic Recovery | **Nhân vật:** Metal Bat V2
+- [x] **VI:** Hồi Phục Tràn | **EN nguồn:** Overheal | **Nhân vật:** King
+- [x] **VI:** Hồi Sinh | **EN nguồn:** Revive | **Nhân vật:** Zombieman, Bang & Bomb, G5, Boros
+- [x] **VI:** Hút Máu | **EN nguồn:** Lifesteal | **Nhân vật:** Eyesight
+- [x] **VI:** Hư Vô | **EN nguồn:** Void | **Nhân vật:** Groribas
+- [x] **VI:** Khích Lệ | **EN nguồn:** Encourage | **Nhân vật:** Sonic V2, Deep Sea King, Gale Wind, Sonic V1
+- [x] **VI:** Khiên | **EN nguồn:** Shield | **Nhân vật:** Child Emperor, Tatsumaki/Terrible Tornado, King
+- [x] **VI:** Khóa Mục Tiêu | **EN nguồn:** Lock Target | **Nhân vật:** Hellish Blizzard (Bão)
+- [x] **VI:** Không Chí Mạng Không Chết | **EN nguồn:** Non-Crit Immunity | **Nhân vật:** Garou, Boros
+- [x] **VI:** Kích Nổ | **EN nguồn:** Detonate | **Nhân vật:** Gouketsu, Genos, Melzargard, G4, Vaccine Man V2 | ⚠ EN dùng chung: Detonate
+- [x] **VI:** Khiên | **EN nguồn:** Tenacity | **Nhân vật:** Bang, Deep Sea King, Flashy Flash, G4, Hellfire Flame, Hellish Blizzard, Metal Bat, Pig God, Speed-o-Sound Sonic V2, Suiryu, Superalloy Darkshine, Tank Top Master, Tatsumaki/Terrible Tornado V2, Armored Gorilla, Bushidoriru, Butterfly DX, Hammerhead, Heavy Tank Loincloth, Lightning Genji, Snek, Tank Top Vegan, Tank Top Tiger, YO649Z Mk. II
+- [x] **VI:** Khiên Năng Lượng | **EN nguồn:** Energy Tenacity | **Nhân vật:** Bang & Bomb, G5, Tatsumaki/Terrible Tornado, Boros
+- [x] **VI:** Làm Mới | **EN nguồn:** Refresh | **Nhân vật:** Carnage Kabuto
+- [x] **VI:** Liên Kết | **EN nguồn:** Link | **Nhân vật:** Zombieman
+- [x] **VI:** Máu Chuyên Biệt | **EN nguồn:** Spec. HP | **Nhân vật:** Bang & Bomb, Atomic Samurai, Tatsumaki/Terrible Tornado, Amai Mask
+- [x] **VI:** Miễn Nhiễm | **EN nguồn:** Immunity | **Nhân vật:** Flashy Flash, Gouketsu, Melzargard, Metal Bat
+- [x] **VI:** Miễn Nhiễm Sát Thương | **EN nguồn:** DMG Immunity | **Nhân vật:** Drive Knight
+- [x] **VI:** Miễn Sát Thương Không Chí Mạng | **EN nguồn:** Non-Crit DMG Immunity | **Nhân vật:** Tatsumaki/Terrible Tornado, Child Emperor, Boros
+- [x] **VI:** Miễn ST Chế Ngự | **EN nguồn:** Control DMG Immunity | **Nhân vật:** Boros, Genos, Metal Bat V2
+- [x] **VI:** Miễn ST Kháng | **EN nguồn:** Resist DMG Immunity | **Nhân vật:** Amai Mask
+- [x] **VI:** Miễn ST Trọng Thương | **EN nguồn:** Injury DMG Immunity | **Nhân vật:** Carnage Kabuto
+- [x] **VI:** Miễn Tử | **EN nguồn:** Death Immunity | **Nhân vật:** Tank Top Master, Garou
+- [x] **VI:** Miễn Tử Hỗn Hợp | **EN nguồn:** Mixed Death Immunity | **Nhân vật:** Garou
+- [x] **VI:** Né Tránh | **EN nguồn:** Dodge | **Nhân vật:** Genos, Hellfire Flame, Gale Wind, Sonic V1, Metal Knight, Watchdog Man, Subterranean King, Flashy Flash
+- [x] **VI:** Né Tránh Chuyên Biệt | **EN nguồn:** Spec. Dodge | **Nhân vật:** Overgrown Rover, Nyan, Tatsumaki/Terrible Tornado, Amai Mask, Carnage Kabuto
+- [x] **VI:** Né Tức Thì | **EN nguồn:** Insta-Dodge | **Nhân vật:** Gouketsu, Drive Knight, Bang
+- [x] **VI:** Nhanh Nhẹn | **EN nguồn:** Agility | **Nhân vật:** Child Emperor, Genos, Atomic Samurai, Bom/Bengpu, Drive Knight
+- [x] **VI:** Nhiễu Loạn | **EN nguồn:** Disrupt | **Nhân vật:** Overgrown Rover
+- [x] **VI:** Nổ | **EN nguồn:** Detonate | **Nhân vật:** Boros | ⚠ EN dùng chung: Detonate
+- [x] **VI:** Nổ Liên Tục | **EN nguồn:** Chain Detonate | **Nhân vật:** Hellish Blizzard
+- [x] **VI:** Nội Thương | **EN nguồn:** Internal Injury | **Nhân vật:** Carnage Kabuto, Bom/Bengpu, Suiryu, Bang, Choze, Gale Wind, Garou, Gouketsu, Awakened Cockroach, Bakuzan, Rinrin
+- [x] **VI:** Phá Giáp | **EN nguồn:** Shatter | **Nhân vật:** Amai Mask
+- [x] **VI:** Phá Khiên | **EN nguồn:** Shield Break | **Nhân vật:** Tatsumaki/Terrible Tornado
+- [x] **VI:** Phản Kích | **EN nguồn:** Counter | **Nhân vật:** Metal Bat V2, Zombieman, Metal Knight
+- [x] **VI:** Phục Sinh | **EN nguồn:** Resurrect | **Nhân vật:** Drive Knight, Melzargard, Zombieman
+- [x] **VI:** Sát Thương Ăn Mòn | **EN nguồn:** Corrode DMG | **Nhân vật:** Metal Knight
+- [x] **VI:** Sát Thương Ăn Mòn T.Minh | **EN nguồn:** Smart Corrode DMG | **Nhân vật:** Metal Knight
+- [x] **VI:** Sát Thương Chí Mạng | **EN nguồn:** Crit DMG | **Nhân vật:** Hellish Blizzard, Gyoro-Gyoro
+- [x] **VI:** Sát Thương Chuẩn | **EN nguồn:** True DMG | **Nhân vật:** Garou, Pig God, Carnage Kabuto, Drive Knight, Genos
+- [x] **VI:** Sát Thương DOT T.Minh | **EN nguồn:** Smart DoT | **Nhân vật:** Sonic V1
+- [x] **VI:** Sát Thương Nhiễu Loạn | **EN nguồn:** Disrupt DMG | **Nhân vật:** Overgrown Rover
+- [x] **VI:** Sát Thương Truy Kích | **EN nguồn:** Follow-up DMG | **Nhân vật:** Watchdog Man
+- [x] **VI:** Siêu Tốc | **EN nguồn:** Hyper Speed | **Nhân vật:** Flashy Flash, Sonic V1, Zombieman
+- [x] **VI:** ST Trực Tiếp Chuyên Biệt | **EN nguồn:** Spec. Direct DMG | **Nhân vật:** Overgrown Rover, Atomic Samurai, Nyan, Amai Mask
+- [x] **VI:** Sụp Đổ | **EN nguồn:** Collapse | **Nhân vật:** Deep Sea King, Melzargard, Gale Wind, Child Emperor, Dark Matter Thief
+- [x] **VI:** Nội Thương | **EN nguồn:** Armed Collapse | **Nhân vật:** Gouketsu, Bang
+- [x] **VI:** Sụp Đổ Chuyên Biệt | **EN nguồn:** Spec. Collapse | **Nhân vật:** Melzargard, Gale Wind
+- [x] **VI:** Suy Yếu | **EN nguồn:** Weaken | **Nhân vật:** Gouketsu, Geryuganshoop, Choze, G4, Metal Knight, Puri-Puri Prisoner, Suiryu, Tatsumaki/Terrible Tornado V1, Fukegao, Hamukichi, Messenger of the Seafolk, Funeral Suspenders, Ground Dragon, Jet Niceguy
+- [x] **VI:** Tái chiến | **EN nguồn:** Re-battle / Rematch | **Nhân vật:** Tinh Trùng Đen, Overgrown Rover — lưu ý: dữ liệu hiện có 2 mô tả khác nhau | ⚠ nhiều biến thể EN
+- [x] **VI:** Tái Sinh | **EN nguồn:** Regeneration | **Nhân vật:** Melzargard, Genos, Phoenix Man, Zombieman, Awakened Cockroach
+- [x] **VI:** Tái Sinh Chuyên Biệt | **EN nguồn:** Spec. Regeneration | **Nhân vật:** Zombieman
+- [x] **VI:** Tạo Khiên | **EN nguồn:** Generate Shield | **Nhân vật:** Tatsumaki/Terrible Tornado, Child Emperor
+- [x] **VI:** Tăng Kháng Sát Thương | **EN nguồn:** Increase DMG Res | **Nhân vật:** Bang & Bomb
+- [x] **VI:** Tăng ST Chế Ngự | **EN nguồn:** Increase Control DMG | **Nhân vật:** Atomic Samurai, Genos
+- [x] **VI:** Tăng Tốc Chuyên Biệt | **EN nguồn:** Spec. Speed Up | **Nhân vật:** Nyan, Zombieman, Gale Wind, Sonic V1
+- [x] **VI:** Thanh Tẩy | **EN nguồn:** Cleanse | **Nhân vật:** Flashy Flash, Garou, Bang
+- [x] **VI:** Thiêu Đốt | **EN nguồn:** Burn | **Nhân vật:** Genos, Hellfire Flame, Metal Knight, Phoenix Man, Subterranean King, Vaccine Man V1, Blue Fire, Lightning Max, Magicman
+- [x] **VI:** Thiêu Đốt Chuyên Biệt | **EN nguồn:** Spec. Burn | **Nhân vật:** Genos, Hellfire Flame, G4, Subterranean King
+- [x] **VI:** Thịnh Nộ | **EN nguồn:** Wrath | **Nhân vật:** Tatsumaki/Terrible Tornado
+- [x] **VI:** Trả Thù | **EN nguồn:** Revenge | **Nhân vật:** G5, Drive Knight
+- [x] **VI:** Trận Hình | **EN nguồn:** Formation | **Nhân vật:** Tatsumaki/Terrible Tornado
+- [x] **VI:** Trùng Sinh | **EN nguồn:** Rebirth | **Nhân vật:** Gyoro-Gyoro
+- [x] **VI:** Truy đuổi tích cực | **EN nguồn:** Charged Pursuit | **Nhân vật:** Tinh Trùng Đen
+- [x] **VI:** Truy Kích | **EN nguồn:** Follow-up | **Nhân vật:** Zombieman, Deep Sea King, Gyoro-Gyoro, Atomic Samurai, Flashy Flash, Gale Wind, Garou, Metal Bat, Subterranean King, Beast King, Snek, Subterranean
+- [x] **VI:** Truy Kích Liên Hoàn | **EN nguồn:** Chain Follow-up | **Nhân vật:** Deep Sea King, Metal Bat
+- [x] **VI:** Truy Kích Tuyệt Kỹ | **EN nguồn:** Ult Follow-up | **Nhân vật:** Deep Sea King, Gyoro-Gyoro, Carnage Kabuto
+- [x] **VI:** Trường Lực | **EN nguồn:** Force Field | **Nhân vật:** Vaccine Man V2
+- [x] **VI:** Trường Siêu Tốc·Công | **EN nguồn:** Hyper Speed Field: ATK | **Nhân vật:** Amai Mask
+- [x] **VI:** Trường Siêu Tốc·Thủ | **EN nguồn:** Hyper Speed Field: DEF | **Nhân vật:** Amai Mask
+- [x] **VI:** Uy Hiếp | **EN nguồn:** Threaten | **Nhân vật:** Amai Mask, Metal Bat V2, Sonic V2, Garou, Subterranean King
+- [x] **VI:** Vô Hiệu Hóa | **EN nguồn:** Nullify | **Nhân vật:** Flashy Flash, Watchdog Man
+
+## 2. Thuật ngữ xuất hiện trong kỹ năng/Core nhưng chưa có chú thích riêng
+
+Các mục dưới đây đã được đối chiếu và chốt cặp thuật ngữ song ngữ tương ứng (VI chốt / EN chốt).
+
+- [x] **Thuật ngữ nguồn:** Adhesion/Paralyzed | **VI chốt:** Bám Dính / Tê Liệt | **EN chốt:** Adhesion / Paralyzed | **Nhân vật/Nguồn:** Suiryu — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** All DMG Reduction | **VI chốt:** Giảm Tất Cả Sát Thương | **EN chốt:** All DMG Reduction | **Nhân vật/Nguồn:** Nyan — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Arena DMG Dealt | **VI chốt:** Sát Thương Đấu Trường Gây Ra | **EN chốt:** Arena DMG Dealt | **Nhân vật/Nguồn:** Bang & Bomb — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Arena DMG Reduction | **VI chốt:** Giảm Sát Thương Đấu Trường | **EN chốt:** Arena DMG Reduction | **Nhân vật/Nguồn:** Bang & Bomb — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Aura | **VI chốt:** Hào Quang | **EN chốt:** Aura | **Nhân vật/Nguồn:** Metal Bat — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Banish | **VI chốt:** Trục Xuất | **EN chốt:** Banish | **Nhân vật/Nguồn:** Phoenix Man — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Băng Hoại | **VI chốt:** Băng Hoại | **EN chốt:** Decay / Corrode | **Nhân vật/Nguồn:** Flashy Flash, King, Speed-o-Sound Sonic V1, Face Ripper, Deep Sea Destroyer, Deep Sea Invader, Deep Sea Ravager, Men's Esthetician Man — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Bền Bỉ/Kiên Cường | **VI chốt:** Khiên | **EN chốt:** Tenacity | **Nhân vật/Nguồn:** Hellfire Flame — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Block | **VI chốt:** Đỡ Đòn | **EN chốt:** Block | **Nhân vật/Nguồn:** Garou, Child Emperor — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Bỏng | **VI chốt:** Thiêu Đốt | **EN chốt:** Burn | **Nhân vật/Nguồn:** Genos — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Breakthrough | **VI chốt:** Đột Phá | **EN chốt:** Breakthrough | **Nhân vật/Nguồn:** Flashy Flash, Gouketsu, Melzargard, Metal Bat — nguồn: Mô tả chú thích
+- [x] **Thuật ngữ nguồn:** Buffer | **VI chốt:** Đệm Sát Thương | **EN chốt:** Buffer | **Nhân vật/Nguồn:** Hellfire Flame — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Burn/Forcefield/Injury/Internal Injury | **VI chốt:** Thiêu Đốt / Trường Lực / Trọng Thương / Nội Thương | **EN chốt:** Burn / Forcefield / Injury / Internal Injury | **Nhân vật/Nguồn:** Child Emperor — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Charge Pursuit | **VI chốt:** Truy Đuổi Tích Cực | **EN chốt:** Charged Pursuit | **Nhân vật/Nguồn:** Nyan — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Charged follow-up | **VI chốt:** Truy Kích Tụ Lực | **EN chốt:** Charged Follow-up | **Nhân vật/Nguồn:** G5 — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Charging follow-up | **VI chốt:** Truy Kích Tụ Lực | **EN chốt:** Charging Follow-up | **Nhân vật/Nguồn:** G5 — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Charm | **VI chốt:** Mê Hoặc | **EN chốt:** Charm | **Nhân vật/Nguồn:** Nyan, Puri-Puri Prisoner — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Charm Immunity | **VI chốt:** Miễn Nhiễm Mê Hoặc | **EN chốt:** Charm Immunity | **Nhân vật/Nguồn:** Puri-Puri Prisoner — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Charm/Off Battle | **VI chốt:** Mê Hoặc / Rời Chiến Trận | **EN chốt:** Charm / Off Battle | **Nhân vật/Nguồn:** Melzargard — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Choáng/Choáng chuyên biệt | **VI chốt:** Choáng / Choáng Chuyên Biệt | **EN chốt:** Stun / Specialized Stun | **Nhân vật/Nguồn:** Tatsumaki/Terrible Tornado — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Choáng/Specialized Stun | **VI chốt:** Choáng / Choáng Chuyên Biệt | **EN chốt:** Stun / Specialized Stun | **Nhân vật/Nguồn:** Tatsumaki/Terrible Tornado — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Collapse | **VI chốt:** Sụp Đổ | **EN chốt:** Collapse | **Nhân vật/Nguồn:** Gouketsu, Genos, Melzargard, G4, Vaccine Man V2 — nguồn: Mô tả chú thích
+- [x] **Thuật ngữ nguồn:** Combo | **VI chốt:** Liền Hoàn | **EN chốt:** Combo | **Nhân vật/Nguồn:** Bang & Bomb, Metal Knight — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Combo Attack | **VI chốt:** Tấn Công Liên Hoàn | **EN chốt:** Combo Attack | **Nhân vật/Nguồn:** Bom/Bengpu — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Combo Truy kích | **VI chốt:** Truy Kích Liên Hoàn | **EN chốt:** Combo Follow-up | **Nhân vật/Nguồn:** Metal Knight — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Consecutive Follow-up | **VI chốt:** Truy Kích Liên Tiếp | **EN chốt:** Consecutive Follow-up | **Nhân vật/Nguồn:** King, Groribas, Tank Top Master, Deep Sea King — nguồn: Mô tả chú thích + Kỹ năng
+- [x] **Thuật ngữ nguồn:** Continuous Follow-Up | **VI chốt:** Truy Kích Liên Tục | **EN chốt:** Continuous Follow-up | **Nhân vật/Nguồn:** Suiryu — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Cổ Vũ | **VI chốt:** Cổ Vũ | **EN chốt:** Cheer / Encourage | **Nhân vật/Nguồn:** Watchdog Man, Fist Fight Djinn — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Crash Bad | **VI chốt:** Trọng Thương Nặng | **EN chốt:** Crash Bad | **Nhân vật/Nguồn:** G4 — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Crit | **VI chốt:** Chí Mạng | **EN chốt:** Crit | **Nhân vật/Nguồn:** Boros, Garou — nguồn: Mô tả chú thích
+- [x] **Thuật ngữ nguồn:** Crit DMG Reduction | **VI chốt:** Giảm Sát Thương Chí Mạng | **EN chốt:** Crit DMG Reduction | **Nhân vật/Nguồn:** Hellish Blizzard, Gyoro-Gyoro — nguồn: Mô tả chú thích
+- [x] **Thuật ngữ nguồn:** Cuồng Bạo Chuyên Biệt | **VI chốt:** Giận Dữ Chuyên Biệt | **EN chốt:** Spec. Berserk | **Nhân vật/Nguồn:** King, Superalloy Darkshine — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Cuồng Nộ | **VI chốt:** Giận Dữ | **EN chốt:** Rage / Berserk | **Nhân vật/Nguồn:** Bang, Boros, Geryuganshoop, Hellish Blizzard, Bakuzan, Genos, Hammerhead, Iairon, Mumen Rider, Sourface, Amai Mask — nguồn: Kỹ năng + Core
+- [x] **Thuật ngữ nguồn:** Damage Focus | **VI chốt:** Tập Trung Sát Thương | **EN chốt:** Damage Focus | **Nhân vật/Nguồn:** Genos — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Damage Taken Up | **VI chốt:** Tăng Sát Thương Gánh Chịu | **EN chốt:** Damage Taken Up | **Nhân vật/Nguồn:** Drive Knight — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Detonate | **VI chốt:** Kích Nổ | **EN chốt:** Detonate | **Nhân vật/Nguồn:** Gouketsu, Bang — nguồn: Mô tả chú thích
+- [x] **Thuật ngữ nguồn:** Devour | **VI chốt:** Nuốt Chửng | **EN chốt:** Devour | **Nhân vật/Nguồn:** Pig God — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Direct DMG | **VI chốt:** Sát Thương Trực Tiếp | **EN chốt:** Direct DMG | **Nhân vật/Nguồn:** Pig God — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Disengage | **VI chốt:** Rời Chiến Trận | **EN chốt:** Disengage | **Nhân vật/Nguồn:** Pig God — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** DMG Amplification | **VI chốt:** Khuếch Đại Sát Thương | **EN chốt:** DMG Amplification | **Nhân vật/Nguồn:** Geryuganshoop — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** DMG Dealt | **VI chốt:** Sát Thương Gây Ra | **EN chốt:** DMG Dealt | **Nhân vật/Nguồn:** Eyesight — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** DMG Reduction | **VI chốt:** Giảm Sát Thương | **EN chốt:** DMG Reduction | **Nhân vật/Nguồn:** Eyesight — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Dodge | **VI chốt:** Né Tránh | **EN chốt:** Dodge | **Nhân vật/Nguồn:** Bang & Bomb — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** DoT DMG Bonus Reduction | **VI chốt:** Giảm Tăng Thêm ST Theo Thời Gian | **EN chốt:** DoT DMG Bonus Reduction | **Nhân vật/Nguồn:** Overgrown Rover — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** DoT DMG Reduction | **VI chốt:** Giảm Sát Thương Theo Thời Gian | **EN chốt:** DoT DMG Reduction | **Nhân vật/Nguồn:** Overgrown Rover — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Đánh tiếp | **VI chốt:** Truy Kích | **EN chốt:** Follow-up | **Nhân vật/Nguồn:** Tank Top Master — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Endless Chase | **VI chốt:** Truy Đuổi Vô Tận | **EN chốt:** Endless Chase | **Nhân vật/Nguồn:** Bang & Bomb — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Energy Seal | **VI chốt:** Phong Ấn Năng Lượng | **EN chốt:** Energy Seal | **Nhân vật/Nguồn:** Zombieman — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Energy Shield Rate | **VI chốt:** Tỷ Lệ Khiên Năng Lượng | **EN chốt:** Energy Shield Rate | **Nhân vật/Nguồn:** Pig God — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Energy Suppression | **VI chốt:** Áp Chế Năng Lượng | **EN chốt:** Energy Suppression | **Nhân vật/Nguồn:** Tatsumaki/Terrible Tornado — nguồn: Mô tả chú thích
+- [x] **Thuật ngữ nguồn:** Enhanced Unyielding | **VI chốt:** Bất Khuất Cường Hóa | **EN chốt:** Enhanced Unyielding | **Nhân vật/Nguồn:** Gouketsu — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Evaded | **VI chốt:** Né Tránh | **EN chốt:** Evaded | **Nhân vật/Nguồn:** Melzargard — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Excess Recovery | **VI chốt:** Hồi Phục Tràn | **EN chốt:** Excess Recovery / Overheal | **Nhân vật/Nguồn:** Boros — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Exit | **VI chốt:** Rời Trận | **EN chốt:** Exit | **Nhân vật/Nguồn:** Pig God — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Extra Energy Seal | **VI chốt:** Phong Ấn Năng Lượng Thêm | **EN chốt:** Extra Energy Seal | **Nhân vật/Nguồn:** Sonic V2 — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Extreme Energy Drain | **VI chốt:** Hút Năng Lượng Cực Hạn | **EN chốt:** Extreme Energy Drain | **Nhân vật/Nguồn:** Gyoro-Gyoro — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Extreme Field | **VI chốt:** Trường Cực Hạn | **EN chốt:** Extreme Field | **Nhân vật/Nguồn:** Gyoro-Gyoro — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Extreme Unyielding | **VI chốt:** Bất Khuất Cực Hạn | **EN chốt:** Extreme Unyielding | **Nhân vật/Nguồn:** Gyoro-Gyoro — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Faint | **VI chốt:** Choáng Váng | **EN chốt:** Faint / Stun | **Nhân vật/Nguồn:** Garou, Subterranean King — nguồn: Mô tả chú thích
+- [x] **Thuật ngữ nguồn:** Fear/Specialized Fear | **VI chốt:** Sợ Hãi / Sợ Hãi Chuyên Biệt | **EN chốt:** Fear / Specialized Fear | **Nhân vật/Nguồn:** Gyoro-Gyoro — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Feign Death | **VI chốt:** Giả Chết | **EN chốt:** Feign Death | **Nhân vật/Nguồn:** Zombieman — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Final Faint | **VI chốt:** Choáng Tuyệt Đối | **EN chốt:** Final Faint / Absolute Stun | **Nhân vật/Nguồn:** Sonic V2 — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Follow-up | **VI chốt:** Truy Kích | **EN chốt:** Follow-up | **Nhân vật/Nguồn:** King, Groribas, Tank Top Master, Deep Sea King — nguồn: Mô tả chú thích
+- [x] **Thuật ngữ nguồn:** Giải Trừ | **VI chốt:** Giải Trừ | **EN chốt:** Dispel / Cleanse | **Nhân vật/Nguồn:** Metal Bat, Armored Gorilla — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Giảm Máu Tối Đa | **VI chốt:** Giảm Máu Tối Đa | **EN chốt:** Reduce Max HP | **Nhân vật/Nguồn:** Flashy Flash — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Giảm Sát Thương Tụ Lực | **VI chốt:** Giảm Sát Thương Tụ Lực | **EN chốt:** Reduce Charged DMG | **Nhân vật/Nguồn:** Geryuganshoop — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Giảm ST Không Chí Mạng | **VI chốt:** Giảm Sát Thương Không Chí Mạng | **EN chốt:** Reduce Non-Crit DMG | **Nhân vật/Nguồn:** Gyoro-Gyoro — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Giảm toàn bộ sát thương | **VI chốt:** Giảm Tất Cả Sát Thương | **EN chốt:** All DMG Reduction | **Nhân vật/Nguồn:** Tinh Trùng Đen — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** High Speed Hurt | **VI chốt:** Sát Thương Tốc Độ Cao | **EN chốt:** High Speed Hurt | **Nhân vật/Nguồn:** Sonic V2 — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** hồi HP | **VI chốt:** Hồi Phục Máu | **EN chốt:** HP Recovery | **Nhân vật/Nguồn:** Doctor Genus — nguồn: Core
+- [x] **Thuật ngữ nguồn:** HP Link | **VI chốt:** Liên Kết Máu | **EN chốt:** HP Link | **Nhân vật/Nguồn:** Nyan — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** HP Shield | **VI chốt:** Khiên Máu | **EN chốt:** HP Shield | **Nhân vật/Nguồn:** Boros — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Ice DMG | **VI chốt:** Sát Thương Băng | **EN chốt:** Ice DMG | **Nhân vật/Nguồn:** Pig God — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Immune Not Death | **VI chốt:** Miễn Bất Tử | **EN chốt:** Immune Not Death | **Nhân vật/Nguồn:** Drive Knight — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Increased DMG from Resistance | **VI chốt:** Tăng Sát Thương Từ Kháng | **EN chốt:** Increased DMG from Resistance | **Nhân vật/Nguồn:** Bang & Bomb — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Injured/Internally Injured | **VI chốt:** Trọng Thương / Nội Thương | **EN chốt:** Injured / Internally Injured | **Nhân vật/Nguồn:** Zombieman — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Injury | **VI chốt:** Trọng Thương | **EN chốt:** Injury | **Nhân vật/Nguồn:** Carnage Kabuto — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Internal Injury | **VI chốt:** Nội Thương | **EN chốt:** Internal Injury | **Nhân vật/Nguồn:** Zombieman — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Internally Injured | **VI chốt:** Bị Nội Thương | **EN chốt:** Internally Injured | **Nhân vật/Nguồn:** Zombieman — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Khéo Léo | **VI chốt:** Nhanh Nhẹn / Khéo Léo | **EN chốt:** Agility / Skillful | **Nhân vật/Nguồn:** Gyoro-Gyoro, Pig God — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Khiên Sinh Mệnh | **VI chốt:** Khiên Sinh Mệnh | **EN chốt:** HP Shield | **Nhân vật/Nguồn:** King — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Khóa | **VI chốt:** Khóa Mục Tiêu | **EN chốt:** Lock Target | **Nhân vật/Nguồn:** Zombieman, Gyoro-Gyoro, Deep Sea King, Atomic Samurai, Flashy Flash, Gale Wind, Garou, Metal Bat, Subterranean King, Beast King, Snek, Subterranean — nguồn: Mô tả chú thích + Kỹ năng
+- [x] **Thuật ngữ nguồn:** Khổng Lồ | **VI chốt:** Khổng Lồ | **EN chốt:** Giant | **Nhân vật/Nguồn:** Vaccine Man V2 — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Limited Energy Deduction | **VI chốt:** Khấu Trừ Năng Lượng Giới Hạn | **EN chốt:** Limited Energy Deduction | **Nhân vật/Nguồn:** Gyoro-Gyoro — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Linh Xảo | **VI chốt:** Linh Xảo | **EN chốt:** Nimble / Agility | **Nhân vật/Nguồn:** Gale Wind, Gouketsu, Suiryu, Tatsumaki/Terrible Tornado V2 — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Loại Bỏ Năng Lượng | **VI chốt:** Cắt Năng Lượng | **EN chốt:** Energy Cut | **Nhân vật/Nguồn:** Gale Wind — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Lực Trường | **VI chốt:** Trường Lực | **EN chốt:** Force Field | **Nhân vật/Nguồn:** Drive Knight, Tatsumaki/Terrible Tornado V2, Awakened Cockroach, Butterfly DX — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Max HP Up | **VI chốt:** Tăng Máu Tối Đa | **EN chốt:** Max HP Up | **Nhân vật/Nguồn:** Gouketsu — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Monster Affinity | **VI chốt:** Tương Thích Quái Vật | **EN chốt:** Monster Affinity | **Nhân vật/Nguồn:** Nyan — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Mù | **VI chốt:** Gây Mù | **EN chốt:** Blind | **Nhân vật/Nguồn:** Zombieman, Deep Sea King, Gyoro-Gyoro, Atomic Samurai, Flashy Flash, Gale Wind, Garou, Metal Bat, Subterranean King, Beast King, Snek, Subterranean — nguồn: Mô tả chú thích
+- [x] **Thuật ngữ nguồn:** Né Đòn | **VI chốt:** Né Tránh | **EN chốt:** Dodge | **Nhân vật/Nguồn:** Bom/Bengpu, Watchdog Man — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Né Sát Thương Tức Thời | **VI chốt:** Né Tức Thì | **EN chốt:** Insta-Dodge | **Nhân vật/Nguồn:** Flashy Flash — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Non-Crit DMG Free | **VI chốt:** Miễn ST Không Chí Mạng | **EN chốt:** Non-Crit DMG Free | **Nhân vật/Nguồn:** Gyoro-Gyoro — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Non-Critical Hit Invincibility | **VI chốt:** Không Chí Mạng Không Chết | **EN chốt:** Non-Crit Immunity | **Nhân vật/Nguồn:** G5 — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Not Death | **VI chốt:** Miễn Tử | **EN chốt:** Death Immunity | **Nhân vật/Nguồn:** Drive Knight — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Nullify | **VI chốt:** Vô Hiệu Hóa | **EN chốt:** Nullify | **Nhân vật/Nguồn:** Bang & Bomb — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Nuốt Chửng | **VI chốt:** Nuốt Chửng | **EN chốt:** Devour | **Nhân vật/Nguồn:** Pig God — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Nuốt Chửng Rời Chiến Trận | **VI chốt:** Nuốt Chửng Rời Trận | **EN chốt:** Devour & Disengage | **Nhân vật/Nguồn:** Pig God — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Phá Vỡ | **VI chốt:** Phá Giáp | **EN chốt:** Shatter | **Nhân vật/Nguồn:** King — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Phản sát thương chuyên biệt | **VI chốt:** Phản ST Chuyên Biệt | **EN chốt:** Spec. DMG Reflect | **Nhân vật/Nguồn:** Superalloy Darkshine, Groribas — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Phản ST Chuyên Biệt | **VI chốt:** Phản ST Chuyên Biệt | **EN chốt:** Spec. DMG Reflect | **Nhân vật/Nguồn:** Bom/Bengpu — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Phòng Vệ Chuyên Biệt | **VI chốt:** Bảo Vệ Chuyên Biệt | **EN chốt:** Spec. Guard | **Nhân vật/Nguồn:** King, Groribas — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Rampage | **VI chốt:** Cuồng Bạo | **EN chốt:** Rampage / Berserk | **Nhân vật/Nguồn:** Watchdog Man — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Răn Đe | **VI chốt:** Uy Hiếp | **EN chốt:** Threaten / Deter | **Nhân vật/Nguồn:** Subterranean King — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Reduced DMG from Resistance | **VI chốt:** Giảm Sát Thương Từ Kháng | **EN chốt:** Reduced DMG from Resistance | **Nhân vật/Nguồn:** Bang & Bomb — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Resilience | **VI chốt:** Khiên | **EN chốt:** Resilience / Tenacity | **Nhân vật/Nguồn:** Bom/Bengpu — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Resurrected | **VI chốt:** Phục Sinh | **EN chốt:** Resurrected | **Nhân vật/Nguồn:** Subterranean King — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Revenge+ | **VI chốt:** Trả Thù+ | **EN chốt:** Revenge+ | **Nhân vật/Nguồn:** Drive Knight — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Revived | **VI chốt:** Hồi Sinh | **EN chốt:** Revived | **Nhân vật/Nguồn:** Subterranean King — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Rời Chiến Trận | **VI chốt:** Rời Chiến Trận | **EN chốt:** Disengage / Exit | **Nhân vật/Nguồn:** Pig God — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Rời trận | **VI chốt:** Rời Trận | **EN chốt:** Exit | **Nhân vật/Nguồn:** Tank Top Master — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Sát Thương Thêm | **VI chốt:** Sát Thương Phụ Trội | **EN chốt:** Extra DMG | **Nhân vật/Nguồn:** Metal Bat — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Sát Thương Tụ Lực | **VI chốt:** Sát Thương Tụ Lực | **EN chốt:** Charged DMG | **Nhân vật/Nguồn:** Carnage Kabuto — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Self-detonation | **VI chốt:** Tự Nổ | **EN chốt:** Self-detonation | **Nhân vật/Nguồn:** Gyoro-Gyoro — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Shatter | **VI chốt:** Phá Giáp | **EN chốt:** Shatter | **Nhân vật/Nguồn:** Child Emperor — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Shield Break | **VI chốt:** Phá Khiên | **EN chốt:** Shield Break | **Nhân vật/Nguồn:** Tatsumaki/Terrible Tornado — nguồn: Mô tả chú thích
+- [x] **Thuật ngữ nguồn:** Sợ Hãi | **VI chốt:** Sợ Hãi | **EN chốt:** Fear | **Nhân vật/Nguồn:** Gale Wind — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Sợ Hãi Chuyên Biệt | **VI chốt:** Sợ Hãi Chuyên Biệt | **EN chốt:** Specialized Fear | **Nhân vật/Nguồn:** Subterranean King — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Specialize Breakthrough | **VI chốt:** Đột Phá Chuyên Biệt | **EN chốt:** Spec. Breakthrough | **Nhân vật/Nguồn:** Mosquito Girl — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Specialized Breakthrough | **VI chốt:** Đột Phá Chuyên Biệt | **EN chốt:** Spec. Breakthrough | **Nhân vật/Nguồn:** Zombieman — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Specialized Charm | **VI chốt:** Mê Hoặc Chuyên Biệt | **EN chốt:** Spec. Charm | **Nhân vật/Nguồn:** Nyan — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Specialized Corrode | **VI chốt:** Ăn Mòn Chuyên Biệt | **EN chốt:** Spec. Corrode | **Nhân vật/Nguồn:** Deep Sea King — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Specialized DMG Reflect | **VI chốt:** Phản ST Chuyên Biệt | **EN chốt:** Spec. DMG Reflect | **Nhân vật/Nguồn:** Deep Sea King — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Specialized Evade | **VI chốt:** Né Tránh Chuyên Biệt | **EN chốt:** Spec. Dodge | **Nhân vật/Nguồn:** Boros — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Specialized Evolve | **VI chốt:** Tiến Hóa Chuyên Biệt | **EN chốt:** Spec. Evolve | **Nhân vật/Nguồn:** Carnage Kabuto — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Specialized Guard | **VI chốt:** Hộ Vệ Chuyên Biệt | **EN chốt:** Spec. Guard | **Nhân vật/Nguồn:** Drive Knight — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Specialized HP | **VI chốt:** Máu Chuyên Biệt | **EN chốt:** Spec. HP | **Nhân vật/Nguồn:** Gyoro-Gyoro — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Specialized Panic | **VI chốt:** Hoảng Loạn Chuyên Biệt | **EN chốt:** Spec. Panic | **Nhân vật/Nguồn:** Gyoro-Gyoro — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Specialized Resilience | **VI chốt:** Kiên Cường Chuyên Biệt | **EN chốt:** Spec. Tenacity | **Nhân vật/Nguồn:** Child Emperor — nguồn: Kỹ năng + Core
+- [x] **Thuật ngữ nguồn:** Specialized Speed | **VI chốt:** Tăng Tốc Chuyên Biệt | **EN chốt:** Spec. Speed Up | **Nhân vật/Nguồn:** Nyan — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Specialized Unyielding | **VI chốt:** Bất Khuất Chuyên Biệt | **EN chốt:** Spec. Unyielding | **Nhân vật/Nguồn:** Geryuganshoop — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Speed Field Defense | **VI chốt:** Trường Siêu Tốc·Thủ | **EN chốt:** Speed Field Defense | **Nhân vật/Nguồn:** Sonic V2 — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** ST Phụ Trội Chuyên Biệt | **VI chốt:** Sát Thương Phụ Trội Chuyên Biệt | **EN chốt:** Spec. Extra DMG | **Nhân vật/Nguồn:** Bom/Bengpu — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Stun/Specialized Stun | **VI chốt:** Choáng / Choáng Chuyên Biệt | **EN chốt:** Stun / Spec. Stun | **Nhân vật/Nguồn:** Hellfire Flame — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Súc Lực | **VI chốt:** Tụ Lực | **EN chốt:** Charge | **Nhân vật/Nguồn:** G4 — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Super Speed | **VI chốt:** Siêu Tốc | **EN chốt:** Super Speed / Hyper Speed | **Nhân vật/Nguồn:** Zombieman — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Suppression DMG | **VI chốt:** Sát Thương Áp Chế | **EN chốt:** Suppression DMG | **Nhân vật/Nguồn:** Metal Bat V2 — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Suy Sụp | **VI chốt:** Sụp Đổ | **EN chốt:** Collapse | **Nhân vật/Nguồn:** Atomic Samurai — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Suy Sụp Chuyên Biệt | **VI chốt:** Sụp Đổ Chuyên Biệt | **EN chốt:** Spec. Collapse | **Nhân vật/Nguồn:** Atomic Samurai — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Tách rời | **VI chốt:** Rời Trận | **EN chốt:** Disengage | **Nhân vật/Nguồn:** Mosquito Girl — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Tăng Kiên Cường | **VI chốt:** Tăng Khiên | **EN chốt:** Increase Tenacity | **Nhân vật/Nguồn:** Hellfire Flame — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Tăng toàn bộ sát thương | **VI chốt:** Tăng Tất Cả Sát Thương | **EN chốt:** All DMG Boost | **Nhân vật/Nguồn:** Tinh Trùng Đen — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Tenacity | **VI chốt:** Khiên | **EN chốt:** Tenacity | **Nhân vật/Nguồn:** Child Emperor, Bom/Bengpu, Zombieman — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Tê Liệt | **VI chốt:** Tê Liệt | **EN chốt:** Paralyzed | **Nhân vật/Nguồn:** King, Puri-Puri Prisoner — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Thương Tổn | **VI chốt:** Trọng Thương | **EN chốt:** Injury | **Nhân vật/Nguồn:** Amai Mask, Metal Bat, Metal Knight, Superalloy Darkshine, Tatsumaki/Terrible Tornado V1, Zombieman, Awakened Cockroach, Beast King, Fukegao, Hamukichi, Heavy Tank Loincloth, D-pad, Charanko — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Tỉ lệ Hồi máu | **VI chốt:** Tỷ Lệ Hồi Phục Máu | **EN chốt:** HP Healing Rate | **Nhân vật/Nguồn:** Bom/Bengpu — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Tích Lực | **VI chốt:** Tụ Lực | **EN chốt:** Charge | **Nhân vật/Nguồn:** Drive Knight, Suiryu — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** trạng thái loại Kiên Cường | **VI chốt:** Trạng Thái Loại Khiên | **EN chốt:** Tenacity-type State | **Nhân vật/Nguồn:** Lightning Genji — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Trói | **VI chốt:** Trói Cột | **EN chốt:** Bind / Restrain | **Nhân vật/Nguồn:** Flashy Flash — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** True Damage | **VI chốt:** Sát Thương Chuẩn | **EN chốt:** True DMG | **Nhân vật/Nguồn:** Pig God, Gyoro-Gyoro — nguồn: Kỹ năng + Core
+- [x] **Thuật ngữ nguồn:** True DMG | **VI chốt:** Sát Thương Chuẩn | **EN chốt:** True DMG | **Nhân vật/Nguồn:** Genos — nguồn: Mô tả chú thích
+- [x] **Thuật ngữ nguồn:** Truy Kích Báo Thù | **VI chốt:** Truy Kích Báo Thù | **EN chốt:** Revenge Follow-up | **Nhân vật/Nguồn:** Drive Knight — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Truy Kích Combo | **VI chốt:** Truy Kích Liên Hoàn | **EN chốt:** Combo Follow-up | **Nhân vật/Nguồn:** King — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Truy kích Tối thượng | **VI chốt:** Truy Kích Tuyệt Kỹ | **EN chốt:** Ult Follow-up | **Nhân vật/Nguồn:** Flashy Flash, Atomic Samurai, Metal Knight — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Truy Kích Tụ Lực | **VI chốt:** Truy Kích Tụ Lực | **EN chốt:** Charged Follow-up | **Nhân vật/Nguồn:** Overgrown Rover — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Tụ Lực | **VI chốt:** Tụ Lực | **EN chốt:** Charge | **Nhân vật/Nguồn:** Carnage Kabuto — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Undying-Suppression | **VI chốt:** Áp Chế Bất Tử | **EN chốt:** Undying-Suppression | **Nhân vật/Nguồn:** Drive Knight — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** UnhurtToShield | **VI chốt:** Chuyển Không Trúng Thành Khiên | **EN chốt:** UnhurtToShield | **Nhân vật/Nguồn:** Bang & Bomb — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Unyielding | **VI chốt:** Bất Khuất | **EN chốt:** Unyielding | **Nhân vật/Nguồn:** Geryuganshoop — nguồn: Core
+- [x] **Thuật ngữ nguồn:** Vô Hiệu Đòn Phụ | **VI chốt:** Vô Hiệu Truy Kích | **EN chốt:** Follow-up Nullify | **Nhân vật/Nguồn:** Flashy Flash — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Vỡ Vụn | **VI chốt:** Phá Giáp | **EN chốt:** Shatter | **Nhân vật/Nguồn:** Atomic Samurai, G4, Bushidoriru, Death Gatling, Golden Ball, Iairon, Spring Mustachio, Stinger — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Wild | **VI chốt:** Cuồng Bạo | **EN chốt:** Wild / Berserk | **Nhân vật/Nguồn:** Carnage Kabuto — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Wild Follow-up | **VI chốt:** Truy Kích Cuồng Bạo | **EN chốt:** Wild Follow-up | **Nhân vật/Nguồn:** Carnage Kabuto — nguồn: Kỹ năng
+- [x] **Thuật ngữ nguồn:** Xuyên chặn | **VI chốt:** Xuyên Đỡ Đòn | **EN chốt:** Pierce Block | **Nhân vật/Nguồn:** Tank Top Master — nguồn: Kỹ năng
+
+## 3. Metadata đã loại khỏi danh sách hiệu ứng
+
+Các chuỗi sau cũng nằm trong dấu `[]` nhưng rõ ràng là nhãn cấu trúc, chỉ số hoặc dữ liệu rác nên không đưa vào danh
+sách cần viết lại: `100%`, `4`, `ATK`, `Energy`, `Bạc`, `Basic Effect`, `Advanced Effect`, `Require`, `Cơ bản`,
+`Nâng cao`.
+
+## 4. Những nhóm đã xử lý & chuẩn hóa
+
+- **Cặp thuật ngữ song song (VI / EN):** `Sụp Đổ/Collapse`, `Đột Phá/Breakthrough`, `Chí Mạng/Crit`, `Kích Nổ/Detonate`, `Né Tránh/Dodge`, `Áp Chế Năng Lượng/Energy Suppression`, `Phá Khiên/Shield Break`, `Sát Thương Chuẩn/True DMG`.
+- **Nhóm hiệu ứng sinh tồn / hồi sinh:** `Phục Sinh/Resurrected`, `Hồi Sinh/Revived`, `Tái Sinh/Regeneration`, `Bất Khuất/Unyielding`.
+- **Nhóm hiệu ứng đòn đánh thêm / truy đuổi:** `Truy Kích/Follow-up`, `Truy Kích Liên Hoàn/Combo Follow-up`, `Truy Kích Tuyệt Kỹ/Ult Follow-up`, `Truy Kích Tụ Lực/Charged Follow-up`, `Truy Đuổi Tích Cực/Charged Pursuit`.
+- **Cụm nhiều hiệu ứng:** Đã phân tách rõ từng thành phần trong dấu `/` (ví dụ: `Adhesion/Paralyzed` -> `Bám Dính / Tê Liệt`, `Burn/Forcefield/Injury/Internal Injury` -> `Thiêu Đốt / Trường Lực / Trọng Thương / Nội Thương`).
