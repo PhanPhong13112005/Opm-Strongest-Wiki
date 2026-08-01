@@ -84,6 +84,9 @@ test('home month and mobile navigation transitions expose matching CSS hooks', (
     )
   }
   assert.ok(homeRadar.includes('@media(prefers-reduced-motion:reduce)'))
+  assert.equal((homeRadar.match(/<transition :name="transitionName" mode="out-in">/g) || []).length, 2)
+  assert.ok(homeRadar.includes(':key="`hero-${currentMonth}`"'))
+  assert.ok(homeRadar.includes('translateX(72px)'))
   assert.ok(homeRadar.includes("import('./SpineFigure.vue')"))
   assert.ok(homeRadar.includes('normalizeName(character.name) === normalizeName(featuredName.value)'))
   assert.ok(homeRadar.includes("'is-spine-replaced': featuredSpine && spineReady && !spineFailed"))
