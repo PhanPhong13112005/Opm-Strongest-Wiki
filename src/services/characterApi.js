@@ -115,11 +115,32 @@ const fallbackCharacters = (localCharacters, query) => {
     })
 }
 
+export const reconcileCharacterPage = (apiResult, localCharacters, query) => {
+  const localMatches = fallbackCharacters(localCharacters, query)
+  const apiTotalCount = Math.max(0, Number(apiResult?.totalCount) || 0)
+  if (apiTotalCount >= localMatches.length) return apiResult
+
+  const page = Math.max(1, Number(apiResult?.page || query.page) || 1)
+  const pageSize = Math.max(1, Number(apiResult?.pageSize || query.pageSize) || 12)
+  const apiById = new Map((apiResult?.items || []).map(character => [character.id, character]))
+  const localPage = localMatches.slice((page - 1) * pageSize, page * pageSize)
+
+  return {
+    ...apiResult,
+    items: localPage.map(character => apiById.get(character.id) || character),
+    page,
+    pageSize,
+    totalCount: localMatches.length,
+    totalPages: Math.max(1, Math.ceil(localMatches.length / pageSize)),
+    source: 'hybrid',
+  }
+}
+
 export const getCharacters = async ({ localCharacters = [], ...query }) => {
   try {
     const result = await requestApiCached('api/characters', query)
     const localById = new Map(localCharacters.map((character) => [character.id, character]))
-    return {
+    const mappedResult = {
       ...result,
       source: 'api',
       items: result.items.map((character) => {
@@ -127,6 +148,7 @@ export const getCharacters = async ({ localCharacters = [], ...query }) => {
         return { ...localCharacter, ...mapCharacterSummary(character, localCharacter) }
       }),
     }
+    return reconcileCharacterPage(mappedResult, localCharacters, query)
   } catch {
     const filtered = fallbackCharacters(localCharacters, query)
     const page = Math.max(1, Number(query.page) || 1)
