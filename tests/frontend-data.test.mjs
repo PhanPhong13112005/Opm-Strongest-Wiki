@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import path from 'node:path'
 import test from 'node:test'
-import { safeAssetUrl } from '../src/utils/assetUrl.js'
+import { decodeAssetUrlForLocalServer, safeAssetUrl } from '../src/utils/assetUrl.js'
 import { getSkillEnergyCost } from '../src/utils/skillPresentation.js'
 import { mapCharacterSummary, mergeCharacterDetail, reconcileCharacterPage } from '../src/services/characterApi.js'
 import { mergeKeepsakeCatalog } from '../src/services/keepsakeApi.js'
@@ -154,13 +154,25 @@ test('Vietnamese ultimate labels and explicit energy costs stay accurate', () =>
   assert.equal(getSkillEnergyCost({ name: 'Ultimate', type: 'Ultimate' }), 0)
 })
 test('character, skill, and Keepsake catalogs only reference existing assets', () => {
-  const blackSpermImageUrl = '/Characters/Black%20Sperm%20(UR+)/Black_Sperm.png?v=20260801-1'
+  const blackSpermImageUrl = '/Characters/Black%20Sperm%20(UR%2B)/Black_Sperm.png?v=20260801-1'
   assert.equal(
     safeAssetUrl('/Characters/Black Sperm (UR+)/Black_Sperm.png'),
     blackSpermImageUrl,
   )
   assert.equal(safeAssetUrl('/Characters/Black%20Sperm%20(UR+)/Black_Sperm.png'), blackSpermImageUrl)
   assert.equal(safeAssetUrl(blackSpermImageUrl), blackSpermImageUrl)
+  assert.equal(
+    safeAssetUrl('/Characters/Zombieman (SSR+)/SSR+.png'),
+    '/Characters/Zombieman%20(SSR%2B)/SSR%2B.png?v=20260801-1',
+  )
+  assert.equal(
+    safeAssetUrl('/Characters/Card+A.png?signature=a+b'),
+    '/Characters/Card%2BA.png?signature=a+b&v=20260801-1',
+  )
+  assert.equal(
+    decodeAssetUrlForLocalServer('/Characters/Zombieman%20(SSR%2B)/SSR%2B.png?v=1'),
+    '/Characters/Zombieman%20(SSR+)/SSR+.png?v=1',
+  )
   assert.equal(
     safeAssetUrl('/Characters/icon#1.png?size=large'),
     '/Characters/icon%231.png?size=large&v=20260801-1',

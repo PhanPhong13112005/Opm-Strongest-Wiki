@@ -1,10 +1,27 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
+import { decodeAssetUrlForLocalServer } from './src/utils/assetUrl.js'
+
+const encodedPlusAssetCompatibility = () => ({
+  name: 'encoded-plus-asset-compatibility',
+  configureServer(server) {
+    server.middlewares.use((request, _response, next) => {
+      if (request.url) request.url = decodeAssetUrlForLocalServer(request.url)
+      next()
+    })
+  },
+  configurePreviewServer(server) {
+    server.middlewares.use((request, _response, next) => {
+      if (request.url) request.url = decodeAssetUrlForLocalServer(request.url)
+      next()
+    })
+  },
+})
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [encodedPlusAssetCompatibility(), vue()],
   server: {
     watch: {
       // .NET creates and locks temporary build files on Windows. They are not
