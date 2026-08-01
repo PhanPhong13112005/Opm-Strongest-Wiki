@@ -4,7 +4,7 @@ import path from 'node:path'
 import test from 'node:test'
 import { safeAssetUrl } from '../src/utils/assetUrl.js'
 import { getSkillEnergyCost } from '../src/utils/skillPresentation.js'
-import { mapCharacterSummary, mergeCharacterDetail } from '../src/services/characterApi.js'
+import { mapCharacterSummary, mergeCharacterDetail, reconcileCharacterPage } from '../src/services/characterApi.js'
 import { mergeKeepsakeCatalog } from '../src/services/keepsakeApi.js'
 
 const root = path.resolve(import.meta.dirname, '..')
@@ -100,6 +100,34 @@ test('localized character catalogs share stable IDs', () => {
     charactersVi.map(character => character.id).sort(),
     charactersEn.map(character => character.id).sort(),
   )
+})
+
+test('character pages restore local entries missing from a stale production API', () => {
+  const staleApiItems = charactersVi
+    .filter(character => character.id !== 'blacksperm-urplus')
+    .slice(0, 12)
+    .map(character => character.id === '100013-urplus'
+      ? { ...character, name: 'Zombieman do Admin chỉnh sửa' }
+      : character)
+  const query = { page: 1, pageSize: 12, sort: 'release_desc' }
+  const reconciled = reconcileCharacterPage({
+    items: staleApiItems,
+    page: 1,
+    pageSize: 12,
+    totalCount: charactersVi.length - 1,
+    totalPages: 15,
+    source: 'api',
+  }, charactersVi, query)
+
+  assert.equal(reconciled.source, 'hybrid')
+  assert.equal(reconciled.totalCount, charactersVi.length)
+  assert.equal(reconciled.items[0].id, 'blacksperm-urplus')
+  assert.equal(reconciled.items.find(character => character.id === '100013-urplus').name, 'Zombieman do Admin chỉnh sửa')
+
+  const searched = reconcileCharacterPage({
+    items: [], page: 1, pageSize: 12, totalCount: 0, totalPages: 1, source: 'api',
+  }, charactersVi, { ...query, search: 'Tinh Trùng Đen' })
+  assert.deepEqual(searched.items.map(character => character.id), ['blacksperm-urplus'])
 })
 
 
