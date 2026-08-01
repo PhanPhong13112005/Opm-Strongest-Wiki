@@ -154,9 +154,20 @@ test('Vietnamese ultimate labels and explicit energy costs stay accurate', () =>
   assert.equal(getSkillEnergyCost({ name: 'Ultimate', type: 'Ultimate' }), 0)
 })
 test('character, skill, and Keepsake catalogs only reference existing assets', () => {
+  const blackSpermImageUrl = '/Characters/Black%20Sperm%20(UR+)/Black_Sperm.png?v=20260801-1'
   assert.equal(
     safeAssetUrl('/Characters/Black Sperm (UR+)/Black_Sperm.png'),
-    '/Characters/Black%20Sperm%20(UR+)/Black_Sperm.png',
+    blackSpermImageUrl,
+  )
+  assert.equal(safeAssetUrl('/Characters/Black%20Sperm%20(UR+)/Black_Sperm.png'), blackSpermImageUrl)
+  assert.equal(safeAssetUrl(blackSpermImageUrl), blackSpermImageUrl)
+  assert.equal(
+    safeAssetUrl('/Characters/icon#1.png?size=large'),
+    '/Characters/icon%231.png?size=large&v=20260801-1',
+  )
+  assert.equal(
+    safeAssetUrl('https://cdn.example.com/Characters/Black%20Sperm.png'),
+    'https://cdn.example.com/Characters/Black%20Sperm.png',
   )
 
   for (const character of charactersVi) {
