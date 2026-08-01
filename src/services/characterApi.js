@@ -1,4 +1,4 @@
-import { isApiConfigured, requestApiCached } from './apiClient'
+import { isApiConfigured, requestApiCached } from './apiClient.js'
 
 const formatLegacyDate = (value) => {
   if (!value) return value
@@ -6,32 +6,70 @@ const formatLegacyDate = (value) => {
   return match ? `${match[3]}/${match[2]}/${match[1]}` : value
 }
 
-export const mapCharacterSummary = (character) => ({
+export const mapCharacterSummary = (character, localCharacter = {}) => ({
   id: character.id,
   name: character.name,
-  imageURL: character.imageUrl,
+  imageURL: localCharacter.imageURL || character.imageUrl,
   tier: character.tier,
   type: character.type,
   faction: character.faction,
   roles: character.roles || [],
   classLevel: character.classLevel,
-  keepsakeIcon: character.keepsakeIcon,
+  keepsakeIcon: localCharacter.keepsakeIcon || character.keepsakeIcon,
   releaseSea: formatLegacyDate(character.releaseSea),
   releaseTrung: formatLegacyDate(character.releaseChina),
 })
+
+const mapApiSkill = (skill) => ({
+  name: skill.name,
+  desc: skill.description,
+  type: skill.type,
+  icon: skill.iconUrl,
+  animation: skill.animationUrl,
+  keepsakeIcon: skill.keepsakeIconUrl,
+})
+
+const mergeCharacterSkills = (characterSkills, localSkills) => {
+  const apiSkills = Array.isArray(characterSkills) ? characterSkills : []
+  const fallbackSkills = Array.isArray(localSkills) ? localSkills : []
+
+  if (fallbackSkills.length === 0) return apiSkills.map(mapApiSkill)
+
+  const apiBySortOrder = new Map(
+    apiSkills.map((skill, index) => [
+      Number.isInteger(skill.sortOrder) ? skill.sortOrder : index,
+      skill,
+    ]),
+  )
+  const usedApiSkills = new Set()
+  const merged = fallbackSkills.map((localSkill, index) => {
+    const apiSkill = apiBySortOrder.get(index)
+    if (apiSkill) usedApiSkills.add(apiSkill)
+    return {
+      ...(apiSkill ? mapApiSkill(apiSkill) : {}),
+      ...localSkill,
+    }
+  })
+
+  for (const apiSkill of apiSkills) {
+    if (!usedApiSkills.has(apiSkill)) merged.push(mapApiSkill(apiSkill))
+  }
+
+  return merged
+}
 
 export const mergeCharacterDetail = (character, localCharacter = {}) => ({
   ...localCharacter,
   id: character.id,
   name: character.name,
-  imageURL: character.imageUrl,
+  imageURL: localCharacter.imageURL || character.imageUrl,
   tier: character.tier,
   type: character.type,
   faction: character.faction,
   roles: character.roles || [],
   duyen: character.duyen,
   bio: character.bio,
-  keepsakeIcon: character.keepsakeIcon,
+  keepsakeIcon: localCharacter.keepsakeIcon || character.keepsakeIcon,
   dacTinh: character.traits || [],
   bondList: character.bondList,
   classLevel: character.classLevel,
@@ -39,15 +77,7 @@ export const mergeCharacterDetail = (character, localCharacter = {}) => ({
   releaseTrung: formatLegacyDate(character.releaseChina) || localCharacter.releaseTrung,
   baseStats: character.baseStats,
   pvpStats: character.pvpStats,
-  skills: character.skills?.length ? character.skills.map((skill) => ({
-    ...(localCharacter.skills?.[skill.sortOrder] || {}),
-    name: skill.name,
-    desc: skill.description,
-    type: skill.type,
-    icon: skill.iconUrl,
-    animation: skill.animationUrl,
-    keepsakeIcon: skill.keepsakeIconUrl,
-  })) : (localCharacter.skills || []),
+  skills: mergeCharacterSkills(character.skills, localCharacter.skills),
   effects: character.effects?.length ? character.effects.map((effect) => ({
     term: effect.term,
     desc: effect.description,
@@ -92,10 +122,10 @@ export const getCharacters = async ({ localCharacters = [], ...query }) => {
     return {
       ...result,
       source: 'api',
-      items: result.items.map((character) => ({
-        ...(localById.get(character.id) || {}),
-        ...mapCharacterSummary(character),
-      })),
+      items: result.items.map((character) => {
+        const localCharacter = localById.get(character.id) || {}
+        return { ...localCharacter, ...mapCharacterSummary(character, localCharacter) }
+      }),
     }
   } catch {
     const filtered = fallbackCharacters(localCharacters, query)

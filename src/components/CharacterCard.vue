@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from 'vue'
+import { safeAssetUrl } from '../utils/assetUrl'
 
 const props = defineProps({
   character: {
@@ -8,10 +9,7 @@ const props = defineProps({
   }
 })
 
-const safeUrl = (url) => {
-  if (!url) return ''
-  return encodeURI(url).replace(/\+/g, '%2B').replace(/#/g, '%23')
-}
+const safeUrl = safeAssetUrl
 
 const resolvedImage = computed(() => {
   const filename = props.character.avatarURL || props.character.imageURL
@@ -71,6 +69,7 @@ const factionIcon = computed(() => {
   if (f.includes('quái vật') || f.includes('quái nhân') || f.includes('monster')) return '/Faction/Monster.png'
   if (f.includes('võ thuật') || f.includes('martial')) return '/Faction/Martial_Artist.png'
   if (f.includes('tội phạm') || f.includes('outlaw')) return '/Faction/Outlaw.png'
+  if (f.includes('khác') || f.includes('other')) return '/Faction/Other.png'
   return ''
 })
 
@@ -80,6 +79,7 @@ const factionBgColor = computed(() => {
   if (f.includes('quái vật') || f.includes('quái nhân') || f.includes('monster')) return 'bg-red-600'
   if (f.includes('võ thuật') || f.includes('martial')) return 'bg-emerald-600'
   if (f.includes('tội phạm') || f.includes('outlaw')) return 'bg-indigo-600'
+  if (f.includes('khác') || f.includes('other')) return 'bg-slate-600'
   return 'bg-black'
 })
 

@@ -6,7 +6,7 @@ const originalLocation = globalThis.location
 
 globalThis.location = { origin: 'https://wiki.test' }
 
-const { invalidateApiCache, requestApiCached } = await import('../src/services/apiClient.js')
+const { invalidateApiCache, pendingApiRequests, requestApi, requestApiCached } = await import('../src/services/apiClient.js')
 
 test.after(() => {
   globalThis.fetch = originalFetch
@@ -40,4 +40,27 @@ test('public GET cache deduplicates requests and can be invalidated', async () =
   invalidateApiCache('api/characters')
   await requestApiCached('api/characters', params)
   assert.equal(requestCount, 2)
+})
+test('global GET loading counter covers success and failure without getting stuck', async () => {
+  let resolveFetch
+  globalThis.fetch = () => new Promise(resolve => {
+    resolveFetch = resolve
+  })
+
+  const pendingRequest = requestApi('api/loading-test')
+  await Promise.resolve()
+  assert.equal(pendingApiRequests.value, 1)
+
+  resolveFetch(new Response(JSON.stringify({ ok: true }), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json' },
+  }))
+  await pendingRequest
+  assert.equal(pendingApiRequests.value, 0)
+
+  globalThis.fetch = async () => {
+    throw new Error('Network unavailable')
+  }
+  await assert.rejects(requestApi('api/loading-error'), /Network unavailable/)
+  assert.equal(pendingApiRequests.value, 0)
 })

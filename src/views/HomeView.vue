@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { getAllCharacters } from '../services/characterApi'
 import { getReleaseSchedule } from '../services/releaseScheduleApi'
 import HomeRadar from '../components/HomeRadar.vue'
+import { safeAssetUrl } from '../utils/assetUrl'
 
 const { t, locale } = useI18n()
 const localCatalogs = ref({ vi: null, en: null })
@@ -53,10 +54,7 @@ const loadReleaseSchedule = async () => {
 
 watch(locale, loadReleaseSchedule, { immediate: true })
 
-const safeUrl = (url) => {
-  if (!url) return ''
-  return encodeURI(url).replace(/\+/g, '%2B').replace(/#/g, '%23')
-}
+const safeUrl = safeAssetUrl
 
 const getCharacterImage = (filename) => {
   if (!filename) return ''
@@ -66,7 +64,7 @@ const getCharacterImage = (filename) => {
 
 const getChar = (id) => charactersData.value.find(c => c.id === id) || {}
 
-const currentDate = ref(new Date(2026, 6)) // Starts at July 2026 (0-indexed month)
+const currentDate = ref(new Date(2026, 7)) // Starts at August 2026 (0-indexed month)
 
 const currentMonthStr = computed(() => {
   const y = currentDate.value.getFullYear()
@@ -242,13 +240,8 @@ const fallbackScheduleData = computed(() => ({
       serverColor: '#00d8b6',
       items: [
         {
-          id: 'unknown',
-          overrideName: t('home.unknownCharacter'),
-          overrideTier: 'UR+',
-          overrideFaction: 'UNKNOWN',
-          overrideType: 'UNKNOWN',
-          overrideRole: t('home.hiddenPotential'),
-          bannerImage: '/Characters/Full_Background/Nhan_Vat_Bi_An.jpg',
+          id: 'blacksperm-urplus',
+          bannerImage: '/Characters/Full_Background/Black_Sperm_Ur_plus.png',
           tag: t('home.release'),
           tagBg: 'bg-opm-gold text-black',
           tagText: 'text-opm-gold',
@@ -294,6 +287,71 @@ const fallbackScheduleData = computed(() => ({
           tagText: 'text-[#b861ff]',
           period: t('home.midMonth'),
           date: '15 / 08 / 2026',
+          borderColor: 'border-[#b861ff]',
+          shadowColor: 'shadow-[0_0_15px_rgba(184,97,255,0.3)]'
+        }
+      ]
+    }
+  ],
+  '2026-09': [
+    {
+      server: 'CN',
+      serverName: t('home.serverTrungFull'),
+      serverColor: '#00d8b6',
+      items: [
+        {
+          id: 'unknown',
+          overrideName: t('home.unknownCharacter'),
+          overrideTier: 'UR+',
+          overrideFaction: 'UNKNOWN',
+          overrideType: 'UNKNOWN',
+          overrideRole: t('home.hiddenPotential'),
+          bannerImage: '/Characters/Full_Background/Nhan_Vat_Bi_An.jpg',
+          tag: t('home.release'),
+          tagBg: 'bg-opm-gold text-black',
+          tagText: 'text-opm-gold',
+          period: t('home.earlyMonth'),
+          date: '01 / 09 / 2026',
+          borderColor: 'border-opm-gold',
+          shadowColor: 'shadow-glow-gold'
+        },
+        {
+          id: '100013-urplus',
+          bannerImage: '/Characters/Full_Background/ZombIeMan_URplus.png',
+          tag: t('home.return'),
+          tagBg: 'bg-opm-red text-black',
+          tagText: 'text-opm-red',
+          period: t('home.midMonth'),
+          date: '15 / 09 / 2026',
+          borderColor: 'border-opm-red',
+          shadowColor: 'shadow-glow-red'
+        }
+      ]
+    },
+    {
+      server: 'SEA',
+      serverName: t('home.serverSeaFull'),
+      serverColor: '#ff4da6',
+      items: [
+        {
+          id: '100315-urplus',
+          bannerImage: '/Characters/Full_Background/Bang&Bomb_Urplus.png',
+          tag: t('home.release'),
+          tagBg: 'bg-opm-gold text-black',
+          tagText: 'text-opm-gold',
+          period: t('home.earlyMonth'),
+          date: '01 / 09 / 2026',
+          borderColor: 'border-opm-gold',
+          shadowColor: 'shadow-glow-gold'
+        },
+        {
+          id: '100313-urplus',
+          bannerImage: '/Characters/Full_Background/Atomic Samurai_URplus.png',
+          tag: t('home.return'),
+          tagBg: 'bg-[#b861ff] text-black',
+          tagText: 'text-[#b861ff]',
+          period: t('home.midMonth'),
+          date: '15 / 09 / 2026',
           borderColor: 'border-[#b861ff]',
           shadowColor: 'shadow-[0_0_15px_rgba(184,97,255,0.3)]'
         }

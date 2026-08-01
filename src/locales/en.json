@@ -1,10 +1,17 @@
 {
-  "home": {
+  "loading": {
+    "eyebrow": "CONNECTING TO DATA ARCHIVE",
+    "title": "Loading data",
+    "message": "Please wait a few seconds while the page loads."
+  },  "home": {
     "eyebrow": "THIS MONTH'S FEATURED CHARACTER",
     "title": "Release radar",
     "subtitle": "Track character releases across China and Southeast Asia servers on one unified timeline.",
     "overview": "MONTH OVERVIEW",
     "records": "DATA RECORDS",
+    "releaseSchedule": "RELEASE SCHEDULE",
+    "servers": "SERVERS",
+    "characterCount": "{count} characters",
     "serverTrungFull": "CN SERVER",
     "serverSeaFull": "SEA SERVER",
     "release": "RELEASE",
@@ -19,8 +26,34 @@
     "comeBackLater": "Please check back later!",
     "viewDetails": "View details"
   },
-  "nav": {
+  "equipmentCatalog": {
+    "eyebrow": "GEAR FEATURE",
+    "title": "Gear",
+    "description": "The Gear reference area is currently being built and its data is being completed.",
+    "pendingStatus": "IN DEVELOPMENT",
+    "pendingTitle": "This feature is under development",
+    "pendingDesc": "Please wait until it is complete to read the content."
+  },  "buffGear": {
+    "eyebrow": "BUFF GEAR DATA ARCHIVE",
+    "title": "Buff Gear",
+    "description": "Browse the planned Buff Gear groups organized by combat type, grade, and faction.",
+    "pendingStatus": "IN DEVELOPMENT",
+    "pendingTitle": "This feature is under development",
+    "pendingDesc": "Please wait until it is complete to read the content.",
+    "systemCards": "Type Cards",
+    "systemCardsDesc": "Grouped by the four character combat types.",
+    "gradeCards": "Grade Cards",
+    "gradeCardsDesc": "Grouped by letter grade and disaster level.",
+    "factionCards": "Faction Cards",
+    "factionCardsDesc": "Grouped by the two primary lineup factions.",
+    "plannedStatus": "IN DEVELOPMENT",
+    "dragon": "Dragon",
+    "demon": "Demon",
+    "tiger": "Tiger"
+  },  "nav": {
     "characters": "Characters",
+    "equipment": "Gear",
+    "buffGear": "Buff Gear",
     "mastery": "Mastery",
     "corelab": "Core Skill",
     "keepsakes": "Keepsake",
@@ -28,6 +61,7 @@
     "medals": "Emblems",
     "tactics": "Tactics",
     "backgear": "Backgear",
+    "systems": "Systems",
     "features": "Features",
     "events": "Event Schedule",
     "login": "Login",
@@ -71,6 +105,7 @@
       "monster": "Monster",
       "martial_artist": "Martial Artist",
       "outlaw": "Outlaw",
+      "other": "Other",
       "villain": "Villain"
     }
   },
@@ -112,10 +147,10 @@
     "effectsLabel": "EFFECTS ANNOTATION",
     "animUpdating": "ANIMATION UPDATING",
     "skill_tabs": {
-      "basic": "BASIC SKILL",
+      "basic": "BASIC ATTACK",
       "ult": "ULTIMATE",
       "passive": "PASSIVE",
-      "awaken": "AWAKEN",
+      "awaken": "AWAKENING",
       "core": "Core"
     },
     "unlockedBy": "Unlocked By:",

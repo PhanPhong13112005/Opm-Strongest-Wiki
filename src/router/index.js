@@ -8,6 +8,8 @@ import { getPortalPath, hasRole, hasValidSession } from '../services/authApi'
 const DetailView = () => import('../views/DetailView.vue')
 const CharacterListView = () => import('../views/CharacterListView.vue')
 const MasteryView = () => import('../views/MasteryView.vue')
+const GearCatalogView = () => import('../views/GearCatalogView.vue')
+const BuffGearView = () => import('../views/BuffGearView.vue')
 const CoreLabView = () => import('../views/CoreLabView.vue')
 const EquipmentView = () => import('../views/EquipmentView.vue')
 const EventsView = () => import('../views/EventsView.vue')
@@ -73,6 +75,16 @@ const router = createRouter({
       path: '/core-lab',
       name: 'core-lab',
       component: CoreLabView
+    },
+    {
+      path: '/equipment',
+      name: 'equipment',
+      component: GearCatalogView
+    },
+    {
+      path: '/buff-gear',
+      name: 'buff-gear',
+      component: BuffGearView
     },
     {
       path: '/keepsakes',

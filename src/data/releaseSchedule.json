@@ -66,19 +66,10 @@
   {
     "server": "CN",
     "date": "2026-08-01",
-    "characterId": "unknown",
-    "bannerImage": "/Characters/Full_Background/Nhan_Vat_Bi_An.jpg",
+    "characterId": "blacksperm-urplus",
+    "bannerImage": "/Characters/Full_Background/Black_Sperm_Ur_plus.png",
     "isReturn": false,
-    "sortOrder": 1,
-    "overrideNameVi": "Nhân Vật Bí Ẩn",
-    "overrideNameEn": "Mystery Character",
-    "overrideTier": "UR+",
-    "overrideFactionVi": "CHƯA RÕ",
-    "overrideFactionEn": "UNKNOWN",
-    "overrideTypeVi": "CHƯA RÕ",
-    "overrideTypeEn": "UNKNOWN",
-    "overrideRoleVi": "Sức Mạnh Tiềm Ẩn",
-    "overrideRoleEn": "Hidden Potential"
+    "sortOrder": 1
   },
   {
     "server": "CN",
@@ -101,6 +92,47 @@
     "date": "2026-08-15",
     "characterId": "100312-urplus",
     "bannerImage": "/Characters/Full_Background/Nyan_URplus.png",
+    "isReturn": true,
+    "sortOrder": 2
+  },
+  {
+    "server": "SEA",
+    "date": "2026-09-01",
+    "characterId": "100315-urplus",
+    "bannerImage": "/Characters/Full_Background/Bang&Bomb_Urplus.png",
+    "isReturn": false,
+    "sortOrder": 1
+  },
+  {
+    "server": "CN",
+    "date": "2026-09-01",
+    "characterId": "unknown",
+    "bannerImage": "/Characters/Full_Background/Nhan_Vat_Bi_An.jpg",
+    "isReturn": false,
+    "sortOrder": 1,
+    "overrideNameVi": "Nhân Vật Bí Ẩn",
+    "overrideNameEn": "Mystery Character",
+    "overrideTier": "UR+",
+    "overrideFactionVi": "CHƯA RÕ",
+    "overrideFactionEn": "UNKNOWN",
+    "overrideTypeVi": "CHƯA RÕ",
+    "overrideTypeEn": "UNKNOWN",
+    "overrideRoleVi": "Sức Mạnh Tiềm Ẩn",
+    "overrideRoleEn": "Hidden Potential"
+  },
+  {
+    "server": "CN",
+    "date": "2026-09-15",
+    "characterId": "100013-urplus",
+    "bannerImage": "/Characters/Full_Background/ZombIeMan_URplus.png",
+    "isReturn": true,
+    "sortOrder": 2
+  },
+  {
+    "server": "SEA",
+    "date": "2026-09-15",
+    "characterId": "100313-urplus",
+    "bannerImage": "/Characters/Full_Background/Atomic Samurai_URplus.png",
     "isReturn": true,
     "sortOrder": 2
   }

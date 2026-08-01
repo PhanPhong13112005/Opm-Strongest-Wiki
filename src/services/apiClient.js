@@ -1,8 +1,13 @@
+import { readonly, ref } from 'vue'
+
 const configuredBaseUrl = (import.meta.env?.VITE_API_BASE_URL || '').trim()
 const API_BASE_URL = configuredBaseUrl || (import.meta.env?.DEV ? 'http://localhost:5180' : '')
 const REQUEST_TIMEOUT_MS = 8000
 const DEFAULT_CACHE_TTL_MS = 60_000
 const responseCache = new Map()
+const pendingApiRequestCount = ref(0)
+
+export const pendingApiRequests = readonly(pendingApiRequestCount)
 
 const buildUrl = (path, params = {}) => {
   const sameOrigin = typeof globalThis.location?.origin === 'string' ? globalThis.location.origin : ''
@@ -24,12 +29,15 @@ export const requestApi = async (path, params, options = {}) => {
 
   const controller = new AbortController()
   const timeout = globalThis.setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS)
-  const headers = new Headers(options.headers || {})
+  const { trackLoading = true, ...fetchOptions } = options
+  const headers = new Headers(fetchOptions.headers || {})
   if (!headers.has('Accept')) headers.set('Accept', 'application/json')
+  const shouldTrackLoading = trackLoading && String(fetchOptions.method || 'GET').toUpperCase() === 'GET'
+  if (shouldTrackLoading) pendingApiRequestCount.value += 1
 
   try {
     const response = await fetch(url, {
-      ...options,
+      ...fetchOptions,
       headers,
       signal: controller.signal,
     })
@@ -50,6 +58,9 @@ export const requestApi = async (path, params, options = {}) => {
     return await response.json()
   } finally {
     globalThis.clearTimeout(timeout)
+    if (shouldTrackLoading) {
+      pendingApiRequestCount.value = Math.max(0, pendingApiRequestCount.value - 1)
+    }
   }
 }
 

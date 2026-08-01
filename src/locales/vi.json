@@ -1,10 +1,17 @@
 {
-  "home": {
+  "loading": {
+    "eyebrow": "ĐANG KẾT NỐI KHO DỮ LIỆU",
+    "title": "Đang lấy dữ liệu",
+    "message": "Vui lòng chờ vài giây để tải."
+  },  "home": {
     "eyebrow": "TIÊU ĐIỂM NHÂN VẬT CỦA THÁNG NÀY",
     "title": "Radar ra mắt",
     "subtitle": "Theo dõi nhịp phát hành nhân vật giữa máy chủ Trung Quốc và Đông Nam Á trên một dòng thời gian duy nhất.",
     "overview": "TỔNG QUAN THÁNG",
     "records": "MỐC DỮ LIỆU",
+    "releaseSchedule": "LỊCH RA MẮT",
+    "servers": "MÁY CHỦ",
+    "characterCount": "{count} nhân vật",
     "serverTrungFull": "MÁY CHỦ TRUNG QUỐC",
     "serverSeaFull": "MÁY CHỦ ĐÔNG NAM Á",
     "release": "RA MẮT",
@@ -19,8 +26,34 @@
     "comeBackLater": "Vui lòng quay lại sau!",
     "viewDetails": "Xem chi tiết"
   },
-  "nav": {
+  "equipmentCatalog": {
+    "eyebrow": "TÍNH NĂNG TRANG BỊ",
+    "title": "Trang Bị",
+    "description": "Khu vực tra cứu Trang Bị đang được xây dựng và hoàn thiện dữ liệu.",
+    "pendingStatus": "ĐANG PHÁT TRIỂN",
+    "pendingTitle": "Tính năng này đang được phát triển",
+    "pendingDesc": "Vui lòng chờ hoàn thành để đọc nội dung."
+  },  "buffGear": {
+    "eyebrow": "KHO DỮ LIỆU THẺ BỔ TRỢ",
+    "title": "Thẻ Bổ Trợ",
+    "description": "Danh mục Thẻ Bổ Trợ được phân loại riêng theo Hệ, Cấp và Phe.",
+    "pendingStatus": "ĐANG PHÁT TRIỂN",
+    "pendingTitle": "Tính năng này đang được phát triển",
+    "pendingDesc": "Vui lòng chờ hoàn thành để đọc nội dung.",
+    "systemCards": "Thẻ Hệ",
+    "systemCardsDesc": "Phân loại theo bốn Hệ chiến đấu của nhân vật.",
+    "gradeCards": "Thẻ Cấp",
+    "gradeCardsDesc": "Phân loại theo cấp chữ và cấp thảm họa.",
+    "factionCards": "Thẻ Phe",
+    "factionCardsDesc": "Phân loại theo hai Phe chính trong đội hình.",
+    "plannedStatus": "ĐANG PHÁT TRIỂN",
+    "dragon": "Rồng",
+    "demon": "Quỷ",
+    "tiger": "Hổ"
+  },  "nav": {
     "characters": "Nhân vật",
+    "equipment": "Trang bị",
+    "buffGear": "Thẻ bổ trợ",
     "mastery": "Tinh Thông",
     "corelab": "Phòng Nghiên Cứu",
     "keepsakes": "Kỷ Vật",
@@ -28,7 +61,8 @@
     "medals": "Huy Chương",
     "tactics": "Chiến Thuật",
     "backgear": "Thẻ Hình nền",
-    "features": "Hệ Thống",
+    "systems": "Hệ Thống",
+    "features": "Tính Năng",
     "events": "Lịch sự kiện",
     "login": "Đăng nhập",
     "forum": "Diễn đàn",
@@ -71,6 +105,7 @@
       "monster": "Quái Nhân",
       "martial_artist": "Võ Thuật",
       "outlaw": "Tội Phạm",
+      "other": "Khác",
       "villain": "Phản Diện"
     }
   },
@@ -112,7 +147,7 @@
     "effectsLabel": "CHÚ THÍCH HIỆU ỨNG",
     "animUpdating": "ĐANG CẬP NHẬT HOẠT ẢNH",
     "skill_tabs": {
-      "basic": "KỸ NĂNG THƯỜNG",
+      "basic": "ĐÁNH THƯỜNG",
       "ult": "TUYỆT KĨ",
       "passive": "NỘI TẠI",
       "awaken": "THỨC TỈNH",
