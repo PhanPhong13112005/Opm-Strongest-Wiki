@@ -1,15 +1,6 @@
 /**
  * Counter Relationship Generator
- * Analyzes character skills to determine counter relationships.
- *
- * Logic:
- * - Characters with "Purify/Dispel" counter debuff-heavy characters
- * - Characters with "Shield/Tenacity" counter burst DPS characters
- * - Characters with "Silence/Seal" counter healer/support characters
- * - Characters with anti-heal counter healers
- * - Characters with high burst counter squishy/low-HP characters
- * - Characters with CC (stun/freeze) counter DPS without CC-immunity
- * - Type advantage: Giác Đấu > Công Nghệ > Tâm Linh > Vũ Trang > Giác Đấu
+ * Analyzes character skills to determine counter relationships strictly based on skill mechanisms.
  */
 
 import { readFileSync, writeFileSync } from 'fs'
@@ -48,14 +39,6 @@ function classifyCharacter(char) {
   return tags
 }
 
-// Type advantage wheel
-const TYPE_ADVANTAGE = {
-  'Giác Đấu': 'Công Nghệ',
-  'Công Nghệ': 'Tâm Linh',
-  'Tâm Linh': 'Vũ Trang',
-  'Vũ Trang': 'Giác Đấu',
-}
-
 function computeCounters(targetChar, allChars) {
   const targetTags = classifyCharacter(targetChar)
   const scores = []
@@ -66,15 +49,9 @@ function computeCounters(targetChar, allChars) {
     let score = 0
     const reasons = []
 
-    // Type advantage
-    if (TYPE_ADVANTAGE[candidate.type] === targetChar.type) {
-      score += 3
-      reasons.push('type')
-    }
-
     // Dispel counters debuff-heavy
     if (targetTags.has('debuff') && candidateTags.has('dispel')) {
-      score += 2
+      score += 3
       reasons.push('dispel-vs-debuff')
     }
 
@@ -104,13 +81,13 @@ function computeCounters(targetChar, allChars) {
 
     // CC immunity counters CC
     if (targetTags.has('cc') && candidateTags.has('immunity')) {
-      score += 2
+      score += 3
       reasons.push('immune-vs-cc')
     }
 
     // Dodge counters AoE
     if (targetTags.has('aoe') && candidateTags.has('dodge')) {
-      score += 1
+      score += 2
       reasons.push('dodge-vs-aoe')
     }
 
@@ -138,23 +115,27 @@ for (const char of highTierChars) {
   }
 }
 
-// Also ensure characters without computed counters still have entries
-// by giving them type-advantage picks
+// Fallback for characters with few/no skill counters: pick top UR+/UR characters with CC/dispel/antiheal skills
+const topSkillControlChars = highTierChars
+  .filter(c => {
+    const tags = classifyCharacter(c)
+    return tags.has('cc') || tags.has('dispel') || tags.has('antiheal')
+  })
+  .sort((a, b) => {
+    const tierOrder = ['SSR', 'SSR+', 'UR', 'UR+']
+    return tierOrder.indexOf(b.tier) - tierOrder.indexOf(a.tier)
+  })
+  .map(c => c.id)
+
 for (const char of highTierChars) {
   if (!counterMap[char.id] || counterMap[char.id].length === 0) {
-    const typeCounters = highTierChars
-      .filter(c => c.id !== char.id && TYPE_ADVANTAGE[c.type] === char.type)
-      .sort((a, b) => {
-        const tierOrder = ['SSR', 'SSR+', 'UR', 'UR+']
-        return tierOrder.indexOf(b.tier) - tierOrder.indexOf(a.tier)
-      })
-      .slice(0, 3)
-      .map(c => c.id)
-    if (typeCounters.length) counterMap[char.id] = typeCounters
+    counterMap[char.id] = topSkillControlChars
+      .filter(id => id !== char.id)
+      .slice(0, 4)
   }
 }
 
-console.log(`Generated counters for ${Object.keys(counterMap).length} characters`)
+console.log(`Generated skill-based counters for ${Object.keys(counterMap).length} characters`)
 console.log('Sample:', JSON.stringify(Object.entries(counterMap).slice(0, 3), null, 2))
 
 writeFileSync('./src/data/counterMap.json', JSON.stringify(counterMap, null, 2))
