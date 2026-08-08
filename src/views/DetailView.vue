@@ -6,6 +6,7 @@ import { loadLocalCharacterDetail } from '../data/loadCharacterDetail'
 import { safeAssetUrl } from '../utils/assetUrl'
 import { getSkillEnergyCost } from '../utils/skillPresentation'
 import { getCharacterById } from '../services/characterApi'
+import counterMap from '../data/counterMap.json'
 
 const props = defineProps({
   id: {
@@ -21,6 +22,28 @@ const { t, locale } = useI18n()
 const localCharacter = ref(null)
 const apiCharacter = ref(null)
 const character = computed(() => apiCharacter.value || localCharacter.value)
+const counterCharacters = ref([])
+
+const loadCounterCharacters = async (characterId, lang) => {
+  if (!characterId) {
+    counterCharacters.value = []
+    return
+  }
+  const counterIds = counterMap[characterId] || []
+  if (!counterIds.length) {
+    counterCharacters.value = []
+    return
+  }
+
+  const list = await Promise.all(
+    counterIds.map(id => loadLocalCharacterDetail(id, lang))
+  )
+  counterCharacters.value = list.filter(Boolean)
+}
+
+watch([() => character.value?.id, locale], ([newId, newLang]) => {
+  loadCounterCharacters(newId, newLang)
+}, { immediate: true })
 const coreLabData = ref(null)
 let activeDetailRequest = 0
 
@@ -656,13 +679,40 @@ onBeforeUnmount(() => {
         </div>
       </div>
 
-      <!-- BIO PANEL -->
-      <div class="w-full xl:w-1/4 bg-[#12131a] rounded-xl border border-gray-800 p-6">
-        <div class="flex items-center mb-6">
-          <span class="text-[#ffb300] font-bold text-xs tracking-widest uppercase">{{ t("detail.bioLabel") }}</span>
-          <div class="flex-grow h-px bg-gray-800 ml-4"></div>
+      <!-- COUNTER / BIO PANEL -->
+      <div class="w-full xl:w-1/4 bg-[#12131a] rounded-xl border border-gray-800 p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center mb-5">
+            <span class="text-[#ffb300] font-bold text-xs tracking-widest uppercase">{{ t("detail.bioLabel") }}</span>
+            <div class="flex-grow h-px bg-gray-800 ml-4"></div>
+          </div>
+
+          <div v-if="counterCharacters.length > 0" class="mb-5">
+            <div class="flex flex-wrap gap-2">
+              <router-link
+                v-for="counterChar in counterCharacters"
+                :key="counterChar.id"
+                :to="{ name: 'character-detail', params: { id: counterChar.id } }"
+                :title="counterChar.name"
+                class="relative w-11 h-11 rounded-lg overflow-hidden border border-gray-700 bg-gray-900 hover:border-[#ffb300] hover:scale-110 transition-all duration-200 shadow-md group shrink-0"
+              >
+                <img
+                  :src="safeUrl(getCharacterImage(counterChar.imageURL))"
+                  :alt="counterChar.name"
+                  class="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
+                <span class="absolute bottom-0 right-0 px-1 text-[7px] font-black text-white bg-black/75 rounded-tl">
+                  {{ counterChar.tier }}
+                </span>
+              </router-link>
+            </div>
+          </div>
+
+          <p v-if="character.bio" class="text-gray-300 text-xs leading-relaxed whitespace-pre-line border-t border-gray-800/80 pt-4">
+            {{ character.bio }}
+          </p>
         </div>
-        <p class="text-gray-300 text-sm leading-relaxed whitespace-pre-line">{{ character.bio }}</p>
       </div>
     </div>
 
