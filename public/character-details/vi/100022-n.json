@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 80% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 80% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Frog Man (N)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 180% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 180% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Frog Man (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 200% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 200% ATK DMG cho một mục tiêu.",
       "keepsakeIcon": "/Keepsake/Frog Man (N)/Keepsake_N.png",
       "icon": "/Skill/Frog Man (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Nếu Slugerous có mặt, tăng sát thương bản thân gây ra thêm 20%, kéo dài đến hết trận.",
+      "desc": "Nhận vĩnh viễn HP. Nếu có Slugerous, tăng% DMG của bản thân, kéo dài cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Frog Man (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Nếu Slugerous có mặt, tăng sát thương bản thân gây ra thêm 25%, kéo dài đến hết trận.",
+      "desc": "Nhận vĩnh viễn HP. Nếu có Slugerous, tăng DMG của bản thân thêm 25%, kéo dài cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Frog Man (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Nếu Slugerous có mặt, tăng sát thương bản thân gây ra thêm 28%, kéo dài đến hết trận.",
+      "desc": "Nhận vĩnh viễn HP. Nếu có Slugerous, tăng DMG của bản thân thêm 28%, tồn tại cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Frog Man (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

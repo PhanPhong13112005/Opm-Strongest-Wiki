@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals Direct DMG of 120% ATK to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals Direct DMG of 160% ATK to all enemies, plus [Ice] DMG to all enemies.",
+      "desc": "Deals 800% ATK DMG to all enemies with 5 consecutive strikes. Has a 100% chance to inflict [Lock] on all enemies for 2 rounds. [Lock]: Prevents the affected unit from triggering [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]. Before any character acts, deals 100% ATK [Lock] DoT to the affected unit. This DMG can CRIT and cannot be [Evaded].",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals Direct DMG of 160% > 200% ATK to all enemies, plus [Ice] DMG to all enemies.",
+      "desc": "Deals 1000% ATK DMG to all enemies with 5 consecutive strikes. Has a 100% chance to inflict [Lock] on all enemies for 2 rounds. [Lock]: Prevents the affected unit from triggering [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]. Before any character acts, deals 130% ATK [Lock] DoT to the affected unit. This DMG can CRIT and cannot be [Evaded].",
       "keepsakeIcon": "/Keepsake/Hellish Blizzard (UR)/Keepsake_UR.png",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "On entry: +20% HP to self, +60% [Non-Crit DMG Free], and +60% [DoT Bonus].",
+      "desc": "Gains 60% [Non-Crit DMG Free]. Permanently increases own Continuous DMG by 60%. [Non-Crit DMG Free]: Reduces all types of non-critical DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "On entry: +20% HP to self, [Non-Crit DMG Free] 60% &gt; 70%, and [DoT Bonus] 60% &gt; 80%.",
+      "desc": "Gains 70% [Non-Crit DMG Free]. Permanently increases own Continuous DMG by 80%. [Non-Crit DMG Free]: Reduces all types of non-critical DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "On entry: +20% HP to self, [Non-Crit DMG Free] 70% &gt; 80%, and [DoT Bonus] 80% &gt; 100%.",
+      "desc": "Gains 80% [Non-Crit DMG Free]. Permanently increases own Continuous DMG by 100%. [Non-Crit DMG Free]: Reduces all types of non-critical DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "After any enemy character triggers [Locked], inflicts [Continuous Explosion]. ———- [Continuous Explosion]: Immediately splash to surrounding target, dealing 80% [Locked] DoT",
+      "desc": "After any enemy triggers [Lock], immediately triggers [Continuous Explosion]. [Continuous Explosion]: Immediately splashes to surrounding targets, dealing 80% of the [Lock] DMG and DoT DMG. This DMG can CRIT and cannot be dodged.",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "When battle begins, inflicts 50% ATK of [Locked] to the whole enemy team, lasts for 1 round.",
+      "desc": "After any enemy triggers [Lock], immediately triggers [Continuous Explosion]. When battle begins, has a 100% chance to inflict [Lock] on all enemies with 50% ATK DMG for 1 round. [Continuous Explosion]: Immediately splashes to all enemies, dealing 90% of the [Lock] DMG and DoT DMG. This DMG can CRIT and cannot be dodged.",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

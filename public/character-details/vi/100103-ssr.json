@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 40% ST (+3) sát thương lên mục tiêu đơn qua 3 liên kích.",
+      "desc": "Gây 40% ATK (+3) DMG cho một mục tiêu trong 3 đòn combo.",
       "icon": "/Skill/Phoenix Man (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 50% ST (+3) sát thương lên mỗi kẻ địch hàng sau qua 3 liên kích, với 70% xác suất khiến mục tiêu [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 20% Máu tối đa).",
+      "desc": "Gây 50% ATK (+3) DMG cho mỗi kẻ địch ở hàng sau trong 3 đòn combo, với 70% cơ hội gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (DoT bằng 20% ​​của HP tối đa).",
       "icon": "/Skill/Phoenix Man (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 60% ST (+3) sát thương lên mỗi kẻ địch hàng sau qua 3 liên kích, với 100% xác suất khiến mục tiêu [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 25% Máu tối đa).",
+      "desc": "Gây 60% ATK (+3) DMG cho mỗi kẻ địch ở hàng sau trong 3 đòn combo, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (DoT bằng 25% HP tối đa).",
       "keepsakeIcon": "/Keepsake/Phoenix Man (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Phoenix Man (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi nhận sát thương chí mạng, kích hoạt [Tái Sinh] (khi có đồng minh trong trận, hồi phục 15% Máu trước lượt hành động tiếp theo của bản thân và tiếp tục chiến đấu, tối đa 3 lần). Khi tấn công, gây thêm sát thương bằng 35% Máu đã mất của bản thân lên mục tiêu.",
+      "desc": "Tăng vĩnh viễn HP của bản thân lên. Sau khi nhận sát thương chí mạng, kích hoạt [Hồi Phục] (khi có đồng minh hiện diện, hồi phục 15% HP trước lần tự hành động tiếp theo và tiếp tục chiến đấu, tối đa 3 lần). Khi tấn công, gây thêm DMG bằng 35% HP của bản thân đã mất cho mục tiêu.",
       "icon": "/Skill/Phoenix Man (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi nhận sát thương chí mạng, kích hoạt [Tái Sinh] (khi có đồng minh trong trận, hồi phục 20% Máu trước lượt hành động tiếp theo của bản thân và tiếp tục chiến đấu, tối đa 4 lần). Sau khi kích hoạt [Tái Sinh], Tốc độ của bản thân tăng lên 2 lần. Khi tấn công, gây thêm sát thương bằng 40% Máu đã mất của bản thân lên mục tiêu.",
+      "desc": "Tăng vĩnh viễn HP của bản thân lên. Sau khi nhận sát thương chí mạng, kích hoạt [Hồi Phục] (khi có đồng minh hiện diện, hồi phục 20% HP trước lần tự hành động tiếp theo và tiếp tục chiến đấu, tối đa 4 lần). Sau khi kích hoạt [Hồi Phục], Tốc độ của bản thân được tăng lên gấp 2 lần. Khi tấn công, gây thêm DMG bằng 40% HP của bản thân đã mất cho mục tiêu.",
       "icon": "/Skill/Phoenix Man (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi nhận sát thương chí mạng, kích hoạt [Tái Sinh] (khi có đồng minh trong trận, hồi phục 22% Máu trước lượt hành động tiếp theo của bản thân và tiếp tục chiến đấu, tối đa 5 lần). Sau khi kích hoạt [Tái Sinh], Tốc độ của bản thân tăng lên 2 lần. Khi tấn công, gây thêm sát thương bằng 45% Máu đã mất của bản thân lên mục tiêu.",
+      "desc": "Tăng vĩnh viễn HP của bản thân lên. Sau khi nhận sát thương chí mạng, kích hoạt [Hồi Phục] (khi có đồng minh hiện diện, hồi phục 22% HP trước lần tự hành động tiếp theo và tiếp tục chiến đấu, tối đa 5 lần). Sau khi kích hoạt [Hồi Phục], Tốc độ của bản thân được tăng lên gấp 2 lần. Khi tấn công, gây thêm DMG bằng 45% HP của bản thân đã mất cho mục tiêu.",
       "icon": "/Skill/Phoenix Man (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 70% ST (+5) sát thương lên mục tiêu đơn bằng liên kích 2 đòn, và trao cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 25% Máu của bản thân).",
+      "desc": "Gây 70% sát thương ATK cho một mục tiêu bằng combo 2 đòn và cấp cho bản thân [Lá Chắn] (hấp thụ sát thương bằng 25% HP của bản thân).",
       "icon": "/Skill/Suiryu (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Mỗi tầng [Tích Lực] gây thêm sát thương Tích Lực bằng 24% ST lên mục tiêu bị đánh trúng. Gây 160% ST sát thương lên mỗi kẻ địch hàng sau bằng liên kích 5 đòn.",
+      "desc": "Mỗi điểm cộng dồn [Tụ Lực] gây sát thương extra bằng 24% ATK cho mục tiêu trúng đòn. Gây 160% sát thương ATK cho mỗi kẻ địch ở hàng sau bằng combo 5 đòn.",
       "icon": "/Skill/Suiryu (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Mỗi tầng [Tích Lực] gây thêm sát thương Tích Lực bằng 30% ST lên mục tiêu bị đánh trúng. Gây 240% ST sát thương lên mỗi kẻ địch hàng sau bằng liên kích 5 đòn, có 100% tỷ lệ khiến mục tiêu bị chí mạng dính [Suy Yếu] (giảm 30% ST trong 2 lượt).",
+      "desc": "Mỗi điểm cộng dồn [Tụ Lực] gây sát thương extra bằng 30% ATK cho mục tiêu trúng đòn. Gây 240% sát thương ATK cho mỗi kẻ địch ở hàng sau bằng combo 5 đòn, với 100% cơ hội gây [Làm Suy Yếu] lên các mục tiêu chí mạng (giảm 30% ATK trong 2 lượt).",
       "keepsakeIcon": "/Keepsake/Suiryu (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Suiryu (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Mỗi lần bản thân nhận trạng thái [Kiên Cường] sẽ nhận 1 tầng [Tích Lực], tối đa 2 tầng. Vĩnh viễn tăng 25% ST cho đồng minh đang ở trạng thái [Tích Lực]. Bản thân vĩnh viễn nhận 40% miễn sát thương không Chí mạng (giảm ST bao gồm mọi loại sát thương; hiệu ứng này và [Linh Xảo] chỉ một cái có hiệu lực).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Mỗi lần bản thân nhận được trạng thái [Lá Chắn], nhận được 1 điểm [Tụ Lực], tối đa 2 điểm. Tăng vĩnh viễn ATK của đồng minh ở trạng thái [Tụ Lực] thêm 25%. Bản thân nhận được vĩnh viễn 40% Miễn Sát Thương Không Bạo Kích (mức giảm bao gồm tất cả các loại sát thương; hiệu ứng này và chỉ một loại [Nhanh Nhẹn] có hiệu lực).",
       "icon": "/Skill/Suiryu (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Mỗi lần bản thân nhận trạng thái [Kiên Cường] sẽ nhận 1 tầng [Tích Lực], tối đa 2 tầng. Vĩnh viễn tăng 35% ST cho đồng minh đang ở trạng thái [Tích Lực]. Bản thân vĩnh viễn nhận 45% miễn sát thương không Chí mạng (giảm ST bao gồm mọi loại sát thương; hiệu ứng này và [Linh Xảo] chỉ một cái có hiệu lực).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Mỗi lần bản thân nhận được trạng thái [Lá Chắn], nhận được 1 điểm [Tụ Lực], tối đa 2 điểm. Tăng vĩnh viễn ATK của đồng minh ở trạng thái [Tụ Lực] thêm 35%. Bản thân tăng vĩnh viễn 45% Miễn Sát Thương Không Bạo Kích (mức giảm bao gồm tất cả các loại sát thương; hiệu ứng này và chỉ một loại [Nhanh Nhẹn] có hiệu lực).",
       "icon": "/Skill/Suiryu (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Mỗi lần bản thân nhận trạng thái [Kiên Cường] sẽ nhận 1 tầng [Tích Lực], tối đa 2 tầng. Vĩnh viễn tăng 45% ST cho đồng minh đang ở trạng thái [Tích Lực]. Bản thân vĩnh viễn nhận 55% miễn sát thương không Chí mạng (giảm ST bao gồm mọi loại sát thương; hiệu ứng này và [Linh Xảo] chỉ một cái có hiệu lực).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Mỗi lần bản thân nhận được trạng thái [Lá Chắn], nhận được 1 điểm [Tụ Lực], tối đa 2 điểm. Tăng vĩnh viễn ATK của đồng minh ở trạng thái [Tụ Lực] thêm 45%. Bản thân tăng vĩnh viễn 55% Miễn Sát Thương Không Bạo Kích (mức giảm bao gồm tất cả các loại sát thương; hiệu ứng này và chỉ một loại [Nhanh Nhẹn] có hiệu lực).",
       "icon": "/Skill/Suiryu (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK DMG to a single target, then heals self for 120% ATK.",
+      "desc": "Deals 120% ATK DMG to a single target and gains [Specialized HP] equal to 120% of own ATK.",
       "icon": "/Skill/Sonic V1 (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 80% ATK DMG to the target's row. Grants [Superspeed] to self and up to 6 other allies; while [Superspeed] is active, allies whose SPD beats the target deal an extra 500% ATK DMG when they attack. Own row-mates gain SPD when their SPD exceeds the target's (SPD check at 92%). If the target has Energy, drains it (3x Energy DMG) and applies [Energy Cut] to all enemies when their Energy drops.",
+      "desc": "Attacks enemies in a row with 5 consecutive strikes, dealing 400% ATK DMG. Grants allies in the same row [Specialized Acceleration] for 1 round, increasing their SPD to 92% of Sonic’s SPD. If an ally’s original SPD is higher than the increased value, their SPD remains unchanged. Removes 3 Energy from the enemy team, up to once per round. After Energy is successfully removed, [Panic] cannot be triggered during the same round.",
       "icon": "/Skill/Sonic V1 (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 80% > 120% ATK DMG to the target's row. Grants [Superspeed] to self and up to 6 other allies; while [Superspeed] is active, allies whose SPD beats the target deal an extra 500% ATK DMG when they attack. Own row-mates gain SPD when their SPD exceeds the target's (SPD check at 92% > 96%). If the target has Energy, drains it (3x > 5x Energy DMG) and applies [Energy Cut] to all enemies when their Energy drops. Additionally restores 1000 Energy to self.",
+      "desc": "Attacks enemies in a row with 5 consecutive strikes, dealing 600% ATK DMG. Grants allies in the same row [Specialized Acceleration] for 1 round, increasing their SPD to 96% of Sonic’s SPD. If an ally’s original SPD is higher than the increased value, their SPD remains unchanged. Removes 5 Energy from the enemy team, up to once per round. After Energy is successfully removed, [Panic] cannot be triggered during the same round. After casting the Ultimate, gains 1000 Fighting Spirit points.",
       "keepsakeIcon": "/Keepsake/Sonic V1 (UR)/Keepsake_UR.png",
       "icon": "/Skill/Sonic V1 (UR)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). Before battle begins, [Encourage] allies. 100% chance to use its own Ultimate skill to attack the target with [Specialized Burn].[Encourage]: gain an additional 2 Energy at the beginning of the round for 3 rounds.[Specialized Burn]: 150% ATK in continuous DMG; disappears after activating 3 times; transfers to a target that can take damage after any character moves.",
+      "desc": "At battle start, applies [Encourage] to all allies. When Sonic uses his Ultimate, has a 100% chance to inflict [Specialized Burn] on enemies hit. [Encourage]: Grants 2 Energy at the start of each round for 3 rounds. [Specialized Burn]: Deals 150% ATK as DoT DMG for the next 3 actions, then disappears.",
       "icon": "/Skill/Sonic V1 (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Encourage] energy 2 &gt; 3. [Specialized Burn] DoT 150% &gt; 200% ATK.",
+      "desc": "At battle start, applies [Encourage] to all allies. When Sonic uses his Ultimate, has a 100% chance to inflict [Specialized Burn] on enemies hit. [Encourage]: Grants 3 Energy at the start of each round for 3 rounds. [Specialized Burn]: Deals 200% ATK as DoT DMG for the next 3 actions, then disappears.",
       "icon": "/Skill/Sonic V1 (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Encourage] duration 3 &gt; 5 rounds. [Specialized Burn] DoT 200% &gt; 250% ATK.",
+      "desc": "At battle start, applies [Encourage] to all allies. When Sonic uses his Ultimate, has a 100% chance to inflict [Specialized Burn] on enemies hit. [Encourage]: Grants 3 Energy at the start of each round for 5 rounds. [Specialized Burn]: Deals 250% ATK as DoT DMG for the next 3 actions, then disappears.",
       "icon": "/Skill/Sonic V1 (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "At the start of the battle, grants [Specialized Acceleration] (Increases SPD by 25%, if the main target's SPD is lower than Sonic, deals 500% ATK as Extra DMG). Permanently grants himself 65% chance of [Evasion] (Reduce Direct/Extra/Charge/Berserk DMG to 1 DMG)",
+      "desc": "At battle start, permanently gains 25% [Specialized Acceleration]. When attacking, if the main target’s SPD is lower than Sonic’s SPD, deals [True DMG] equal to 500% ATK. Permanently gains a 65% chance of [Instant DMG Evasion]. [Instant DMG Evasion]: Direct DMG, True DMG, Charge DMG, and Berserk DMG only deal 1 point of DMG.",
       "icon": "/Skill/Sonic V1 (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Increase SPD 25% > 30% Evasion > + allies in the same row @ 45% chance",
+      "desc": "At battle start, permanently gains 30% [Specialized Acceleration]. When attacking, if the main target’s SPD is lower than Sonic’s SPD, deals [True DMG] equal to 500% ATK. Permanently gains a 65% chance of [Instant DMG Evasion] and grants allies in the same row a 45% chance of [Instant DMG Evasion]. [Instant DMG Evasion]: Direct DMG, True DMG, Charge DMG, and Berserk DMG only deal 1 point of DMG.",
       "icon": "/Skill/Sonic V1 (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

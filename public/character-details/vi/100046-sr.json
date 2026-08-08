@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 100% ST(+10) sát thương cho mục tiêu đơn.",
+      "desc": "Gây 100% AT DMG cho một mục tiêu.",
       "icon": "/Skill/Blue Fire (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 4 đòn liên kích vào mỗi kẻ địch trong cả hàng, gây 30% ST(+2) sát thương mỗi đòn, với 100% cơ hội khiến mục tiêu chính dính [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 80% ST).",
+      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng combo 4 đòn, gây 30% ATK(+2) DMG mỗi đòn, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính trong 2 lượt (DoT bằng 80% ATK).",
       "icon": "/Skill/Blue Fire (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung 4 đòn liên kích vào mỗi kẻ địch trong cả hàng, gây 30% ST(+2) sát thương mỗi đòn, với 100% cơ hội khiến mục tiêu chính và 50% cơ hội khiến kẻ địch cùng hàng với mục tiêu chính dính [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 80% ST).",
+      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng combo 4 đòn, gây 30% ATK(+2) DMG mỗi đòn, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính và 50% cơ hội lên kẻ địch trong hàng của mục tiêu chính trong 2 lượt (DoT bằng 80% ATK).",
       "keepsakeIcon": "/Keepsake/Blue Fire (SR)/Keepsake_SR.png",
       "icon": "/Skill/Blue Fire (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi [Thiêu Đốt] trên kẻ địch biến mất, khiến một mục tiêu địch ngẫu nhiên dính [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 50% ST).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi [Thiêu Đốt] của kẻ địch hết hạn, gây [Thiêu Đốt] lên một mục tiêu kẻ địch ngẫu nhiên trong 2 lượt (DoT bằng 50% ATK).",
       "icon": "/Skill/Blue Fire (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi [Thiêu Đốt] trên kẻ địch biến mất, khiến một mục tiêu địch ngẫu nhiên dính [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 70% ST).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi [Thiêu Đốt] của kẻ địch hết hạn, gây [Thiêu Đốt] lên một mục tiêu kẻ địch ngẫu nhiên trong 2 lượt (DoT bằng 70% ATK).",
       "icon": "/Skill/Blue Fire (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi [Thiêu Đốt] trên kẻ địch biến mất, khiến một mục tiêu địch ngẫu nhiên dính [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 80% ST).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi [Thiêu Đốt] của kẻ địch hết hạn, gây [Thiêu Đốt] lên một mục tiêu kẻ địch ngẫu nhiên trong 2 lượt (DoT bằng 80% ATK).",
       "icon": "/Skill/Blue Fire (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

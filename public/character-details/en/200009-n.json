@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). After an ally acts, has a 20% chance to launch a Follow-up against the enemy with the lowest HP, dealing 80% of Basic Attack damage (up to 2 Follow-ups per turn).",
+      "desc": "Permanently increases own HP by. After an ally acts, has a 20% chance to launch a Follow-up against the enemy with the lowest HP, dealing 80% of Basic Attack damage (up to 2 Follow-ups per turn).",
       "icon": "/Skill/Skyfolk Raider (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). After an ally acts, has a 20% chance to launch a Follow-up against the enemy with the lowest HP, dealing 100% of Basic Attack damage (up to 2 Follow-ups per turn).",
+      "desc": "Permanently increases own HP by. After an ally acts, has a 20% chance to launch a Follow-up against the enemy with the lowest HP, dealing 100% of Basic Attack damage (up to 2 Follow-ups per turn).",
       "icon": "/Skill/Skyfolk Raider (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). After an ally acts, has a 20% chance to launch a Follow-up against the enemy with the lowest HP, dealing 110% of Basic Attack damage (up to 2 Follow-ups per turn).",
+      "desc": "Permanently increases own HP by. After an ally acts, has a 20% chance to launch a Follow-up against the enemy with the lowest HP, dealing 110% of Basic Attack damage (up to 2 Follow-ups per turn).",
       "icon": "/Skill/Skyfolk Raider (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

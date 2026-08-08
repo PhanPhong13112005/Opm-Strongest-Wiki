@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 130% ATK DMG to each enemy in a column, with a 100% chance to inflict [Weaken] on the main target (reduces ATK by 20% for 1 turn).",
+      "desc": "Deals 130% ATK DMG to each enemy in a column, with a 100% chance to inflict [Weaken] on the main target (reduces ATK% for 1 turn).",
       "icon": "/Skill/Jet Niceguy (R)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own max HP by 20%. After being attacked, has a 25% chance to increase own DMG by 10% for 1 turn.",
+      "desc": "Permanently increases own max HP%. After being attacked, has a 25% chance to increase own DMG by 10% for 1 turn.",
       "icon": "/Skill/Jet Niceguy (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own max HP by 20%. After being attacked, has a 25% chance to increase own DMG by 20% for 1 turn.",
+      "desc": "Permanently increases own max HP%. After being attacked, has a 25% chance to increase own DMG% for 1 turn.",
       "icon": "/Skill/Jet Niceguy (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own max HP by 20%. After being attacked, has a 25% chance to increase own DMG by 25% for 1 turn.",
+      "desc": "Permanently increases own max HP%. After being attacked, has a 25% chance to increase own DMG by 25% for 1 turn.",
       "icon": "/Skill/Jet Niceguy (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

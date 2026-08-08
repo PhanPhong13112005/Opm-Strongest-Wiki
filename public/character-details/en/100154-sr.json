@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 100% ATK (+10) DMG to a single target.",
+      "desc": "Deals 100% ATK DMG to a single target.",
       "icon": "/Skill/Butterfly DX (SR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -47,7 +47,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases self HP (+20). At the start of battle, permanently grants a 20% DoT Boost to self and allies in the same row, and grants self [Tenacity] (absorbs DMG equal to 20% of own HP).",
+      "desc": "Permanently increases self HP. At the start of battle, permanently grants a 20% DoT Boost to self and allies in the same row, and grants self [Tenacity] (absorbs DMG equal to 20% of own HP).",
       "icon": "/Skill/Butterfly DX (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases self HP (+20). At the start of battle, permanently grants a 25% DoT Boost to self and allies in the same row, and grants self [Tenacity] (absorbs DMG equal to 25% of own HP).",
+      "desc": "Permanently increases self HP. At the start of battle, permanently grants a 25% DoT Boost to self and allies in the same row, and grants self [Tenacity] (absorbs DMG equal to 25% of own HP).",
       "icon": "/Skill/Butterfly DX (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases self HP (+20). At the start of battle, permanently grants a 30% DoT Boost to self and allies in the same row, and grants self [Tenacity] (absorbs DMG equal to 30% of own HP).",
+      "desc": "Permanently increases self HP. At the start of battle, permanently grants a 30% DoT Boost to self and allies in the same row, and grants self [Tenacity] (absorbs DMG equal to 30% of own HP).",
       "icon": "/Skill/Butterfly DX (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

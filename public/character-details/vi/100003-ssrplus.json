@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 100% ST sát thương trực tiếp lên mục tiêu đơn, sau đó gây [Ăn Mòn] lên mục tiêu.",
+      "desc": "Gây 100% ATK DMG cho một mục tiêu, với 50% cơ hội gây ra [Ăn Mòn Chuyên Biệt]. [Ăn Mòn Chuyên Biệt]: Gây 100% ATK dưới dạng DMG liên tục. Biến mất sau khi kích hoạt 1 lần. Sau khi bất kỳ nhân vật nào hành động, hãy chuyển sang mục tiêu khác có thể lấy DMG.",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 210% ST sát thương trực tiếp lên mục tiêu đơn, nhận [Bất Khuất] (không thể bị hạ dưới 1 HP), gây [Ăn Mòn] lên toàn bộ vùng đã chọn, và hồi máu cho bản thân.",
+      "desc": "Tấn công một mục tiêu bằng 5 đòn liên tiếp, gây 1050% ATK DMG. Có thể kích hoạt [Tiến Hóa], với mỗi mục tiêu chỉ kích hoạt nó một lần trong mỗi lần tấn công. Có 75% cơ hội gây [Ăn Mòn Chuyên Biệt] lên mục tiêu chính và các đồng minh xung quanh. Ngoài ra, tăng [Phòng Hộ Chuyên Biệt] bằng 450% ATK. [Tiến Hóa]: Loại bỏ ngay trạng thái [Bất Khuất] của mục tiêu và Bỏ qua trạng thái DMG. [Ăn Mòn Chuyên Biệt]: Gây 100% ATK dưới dạng DMG liên tục. Biến mất sau khi kích hoạt 3 lần. Sau khi bất kỳ nhân vật nào hành động, hãy chuyển sang mục tiêu khác có thể lấy DMG. [Phòng Hộ Chuyên Biệt]: Phủ định đã nhận DMG và ghi đè các hiệu ứng Extra HP. Tổng số tiền không được vượt quá 15 lần HP ban đầu của thiết bị.",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Sát thương trực tiếp 210% > 260% ST. Vẫn nhận [Bất Khuất], lan [Ăn Mòn] lên vùng đã chọn, và tự hồi máu.",
+      "desc": "Sát Thương Trực Tiếp 210% > 260% ATK. Vẫn nhận được [Bất Khuất], phát tán [Ăn Mòn] trên khu vực đã chọn và tự hồi phục.",
       "keepsakeIcon": "/Keepsake/Deep Sea King (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Nhận +20% Máu. Vào cuối lượt của bản thân, nếu có kẻ địch đang chịu DoT, gây 60% ST sát thương bổ sung lên toàn bộ kẻ địch.",
+      "desc": "Khi kẻ địch nhận được DMG liên tục, ngay lập tức hấp thụ 60% DMG liên tục và biến nó thành Extra DMG. Chỉ một hiệu ứng thuộc loại này có thể có hiệu quả trong suốt trận chiến. Tăng vĩnh viễn HP của chính mình.",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Sát thương bổ sung 60% > 80% ST.",
+      "desc": "Khi kẻ địch nhận được DMG liên tục, ngay lập tức hấp thụ 80% DMG liên tục và biến nó thành Extra DMG. Chỉ một hiệu ứng thuộc loại này có thể có hiệu quả trong suốt trận chiến. Tăng vĩnh viễn HP của chính mình.",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Sát thương bổ sung 80% > 86% ST.",
+      "desc": "Khi kẻ địch nhận được DMG liên tục, ngay lập tức hấp thụ 86% DMG liên tục và biến nó thành Extra DMG. Chỉ một hiệu ứng thuộc loại này có thể có hiệu quả trong suốt trận chiến. Tăng vĩnh viễn HP của chính mình.",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khiến kẻ địch đang chịu [Ăn Mòn Chuyên Biệt] bị [Kẹt] (Không thể tung [Truy Kích] và [Truy Kích Liên Tiếp], kéo dài 2 lượt). Sau khi bất kỳ đồng minh nào hành động, có 60% khả năng gây [Truy Kích Liên Kích] lên một kẻ địch ngẫu nhiên (Deep Sea King và đồng minh cùng cột sẽ tung [Truy Kích Chiêu Cuối], một lần mỗi lượt)",
+      "desc": "Gây [Bám Dính] lên kẻ địch bị ảnh hưởng bởi [Ăn Mòn Chuyên Biệt] trong 2 lượt. Sau khi đồng minh hành động, Vua Biển Sâu có 60% cơ hội thực hiện [Truy Kích Liên Hợp] chống lại mục tiêu kẻ thù ngẫu nhiên, tối đa 1 lần mỗi hiệp. [Bám Dính]: Ngăn thiết bị bị ảnh hưởng khởi tạo [Truy Kích] và [Truy Kích Liên Tục]. [Truy Kích Liên Hợp]: Vua Biển Sâu và các đồng minh trong cùng một cột kích hoạt Tuyệt Kĩ của họ.",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Tỉ lệ kích hoạt 60% > 70% Combo Follow-up mỗi lượt 1x > 2x",
+      "desc": "Gây [Bám Dính] lên kẻ địch bị ảnh hưởng bởi [Ăn Mòn Chuyên Biệt] trong 2 lượt. Sau khi đồng minh hành động, Vua Biển Sâu có 70% cơ hội thực hiện [Truy Kích Liên Hợp] chống lại mục tiêu kẻ thù ngẫu nhiên, tối đa 2 lần mỗi hiệp. [Bám Dính]: Ngăn thiết bị bị ảnh hưởng khởi tạo [Truy Kích] và [Truy Kích Liên Tục]. [Truy Kích Liên Hợp]: Vua Biển Sâu và các đồng minh trong cùng một cột kích hoạt Tuyệt Kĩ của họ.",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -92,7 +92,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

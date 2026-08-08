@@ -96,7 +96,7 @@ const factionCards = computed(() => [
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 34px 24px 100px;
+  padding: 32px clamp(16px, 2vw, 24px) 88px;
   color: #edf6ff;
 }
 
@@ -231,8 +231,8 @@ const factionCards = computed(() => [
 
 .buff-pending span {
   color: #d29aff;
-  font: 900 9px/1.4 ui-monospace, monospace;
-  letter-spacing: .16em;
+  font: 900 11px/1.4 ui-monospace, monospace;
+  letter-spacing: .12em;
 }
 
 .buff-pending h2 {
@@ -329,21 +329,21 @@ const factionCards = computed(() => [
 .gear-token strong {
   display: block;
   color: #eaf2f9;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 900;
 }
 
 .gear-token small {
   display: block;
   margin-top: 2px;
-  color: #71879a;
-  font-size: 9px;
+  color: #8399ab;
+  font-size: 11px;
 }
 
 .gear-token > b {
   grid-column: 1 / -1;
-  color: #526a7e;
-  font-size: 7px;
+  color: #6f8597;
+  font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -360,7 +360,7 @@ const factionCards = computed(() => [
   font-size: 9px;
 }
 
-.token-grid--grade .gear-token strong { font-size: 11px; }
+.token-grid--grade .gear-token strong { font-size: 12px; }
 
 @media (max-width: 1050px) {
   .token-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -368,24 +368,28 @@ const factionCards = computed(() => [
 }
 
 @media (max-width: 760px) {
-  .buff-page { padding: 18px 12px 70px; }
-  .buff-hero { min-height: 440px; grid-template-columns: 1fr; align-items: start; padding: 32px 24px; }
-  .buff-hero h1 { font-size: 52px; }
-  .buff-hero__badge { position: absolute; right: 22px; bottom: 20px; width: 130px; height: 130px; opacity: 0.62; }
-  .buff-hero__badge strong { font-size: 34px; }
-  .token-grid--grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .buff-page { padding: 16px 10px 60px; }
+  .buff-hero { min-height: 350px; grid-template-columns: 1fr; align-items: start; border-radius: 20px; padding: 26px 20px; }
+  .buff-hero h1 { margin-top: 16px; font-size: clamp(40px, 12vw, 52px); line-height: .94; }
+  .buff-hero p { max-width: 88%; margin-top: 16px; font-size: 14px; line-height: 1.65; }
+  .buff-hero__badge { position: absolute; right: 15px; bottom: 15px; width: 110px; height: 110px; opacity: 0.48; }
+  .buff-hero__badge strong { font-size: 30px; }
+  .buff-pending { grid-template-columns: 58px minmax(0, 1fr); gap: 14px; border-radius: 18px; padding: 18px; }
+  .buff-pending__icon { width: 58px; height: 58px; border-radius: 16px; font-size: 16px; }
+  .buff-section { border-radius: 18px; padding: 16px 14px; }
+  .buff-section > header { align-items: flex-start; gap: 10px; }
+  .buff-section header p { font-size: 13px; line-height: 1.5; }
+  .token-grid--four,
+  .token-grid--grade,
+  .token-grid--faction { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .gear-token { min-height: 104px; grid-template-columns: 38px minmax(0, 1fr); gap: 8px; padding: 10px; }
+  .gear-token > span { width: 38px; height: 38px; }
+  .gear-token > b { font-size: 11px; letter-spacing: .06em; }
+  .token-grid--grade .gear-token > span { font-size: 11px; }
 }
 
-@media (max-width: 480px) {
-  .buff-hero h1 { font-size: 43px; }
-  .buff-hero p { font-size: 13px; }
-  .buff-pending {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-  }
-
-  .buff-section { padding: 17px; }
+@media (max-width: 360px) {
+  .buff-pending { grid-template-columns: 1fr; justify-items: center; text-align: center; }
   .token-grid--four,
   .token-grid--faction { grid-template-columns: 1fr; }
 }

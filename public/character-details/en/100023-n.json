@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 80% ATK (+10) DMG to a single target.",
+      "desc": "Deals 80% ATK DMG to a single target.",
       "icon": "/Skill/Slugrus (N)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 180% ATK (+10) DMG to a single target.",
+      "desc": "Deals 180% ATK DMG to a single target.",
       "icon": "/Skill/Slugrus (N)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 200% ATK (+10) DMG to a single target.",
+      "desc": "Deals 200% ATK DMG to a single target.",
       "keepsakeIcon": "/Keepsake/Slugrus (N)/Keepsake_N.png",
       "icon": "/Skill/Slugrus (N)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). If Froggy Man is present, increases own DMG by 20% until the end of battle.",
+      "desc": "Permanently increases own HP by. If Froggy Man is present, increases own DMG% until the end of battle.",
       "icon": "/Skill/Slugrus (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). If Froggy Man is present, increases own DMG by 25% until the end of battle.",
+      "desc": "Permanently increases own HP by. If Froggy Man is present, increases own DMG by 25% until the end of battle.",
       "icon": "/Skill/Slugrus (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). If Froggy Man is present, increases own DMG by 28% until the end of battle.",
+      "desc": "Permanently increases own HP by. If Froggy Man is present, increases own DMG by 28% until the end of battle.",
       "icon": "/Skill/Slugrus (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

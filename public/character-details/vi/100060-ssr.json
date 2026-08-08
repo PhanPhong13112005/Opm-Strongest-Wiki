@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST lên mục tiêu đơn, kèm sát thương phụ trội bằng 5% Máu tối đa của bản thân.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu, cộng thêm sát thương bằng 5% HP tối đa của bản thân.",
       "icon": "/Skill/Vaccine Man V1 (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Đánh mỗi kẻ địch trong cả hàng với 3 đòn liên kích, mỗi đòn gây 44% ST, với 50% tỉ lệ gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (sát thương theo thời gian bằng 80% ST).",
+      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng 3 đòn liên tiếp gây 44% ATK DMG mỗi kẻ, với 50% cơ hội gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (DoT bằng 80% ATK).",
       "icon": "/Skill/Vaccine Man V1 (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Đánh mỗi kẻ địch trong cả hàng với 3 đòn liên kích, mỗi đòn gây 55% ST, với 75% tỉ lệ gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (sát thương theo thời gian bằng 80% ST).",
+      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng 3 đòn liên tiếp gây 55% ATK DMG mỗi kẻ, với 75% cơ hội gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (DoT bằng 80% ATK).",
       "icon": "/Skill/Vaccine Man V1 (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Vaccine Man V1 (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi kẻ địch chịu sát thương theo thời gian, lập tức hấp thụ 50% giá trị sát thương đó để gây sát thương phụ trội lên toàn bộ địch (chỉ 1 hiệu ứng cùng loại có tác dụng trong suốt cả trận đấu).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi kẻ địch nhận DoT, ngay lập tức hấp thụ 50% giá trị DoT đó để gây sát thương extra cho tất cả kẻ địch (chỉ có 1 hiệu ứng cùng loại có tác dụng trong toàn bộ trận chiến).",
       "icon": "/Skill/Vaccine Man V1 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi kẻ địch chịu sát thương theo thời gian, lập tức hấp thụ 70% giá trị sát thương đó để gây sát thương phụ trội lên toàn bộ địch (chỉ 1 hiệu ứng cùng loại có tác dụng trong suốt cả trận đấu).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi kẻ địch nhận DoT, ngay lập tức hấp thụ 70% giá trị DoT đó để gây sát thương extra cho tất cả kẻ địch (chỉ có 1 hiệu ứng cùng loại có tác dụng trong toàn bộ trận chiến).",
       "icon": "/Skill/Vaccine Man V1 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi kẻ địch chịu sát thương theo thời gian, lập tức hấp thụ 75% giá trị sát thương đó để gây sát thương phụ trội lên toàn bộ địch (chỉ 1 hiệu ứng cùng loại có tác dụng trong suốt cả trận đấu).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi kẻ địch nhận DoT, ngay lập tức hấp thụ 75% giá trị DoT đó để gây sát thương extra cho tất cả kẻ địch (chỉ có 1 hiệu ứng cùng loại có tác dụng trong toàn bộ trận chiến).",
       "icon": "/Skill/Vaccine Man V1 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

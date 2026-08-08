@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây ST trực tiếp bằng 20% HP tối đa của mục tiêu cho một kẻ địch đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Garou (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tăng cho bản thân +20% ST chuẩn (True DMG) gây ra trong 2 lượt, sau đó áp [Miễn Tử Hỗn Hợp II] lên toàn bộ kẻ địch (gỡ trạng thái bất tử/miễn nhiễm để có thể giết chúng). Gây ST trực tiếp bằng 26% HP tối đa cho toàn bộ kẻ địch, cộng thêm [Sát Thương Chuẩn] bằng 100% HP tối đa còn lại của mỗi kẻ địch.",
+      "desc": "Gây combo 5 đòn cho tất cả mục tiêu, gây Sát Thương Trực Tiếp bằng 130% HP tối đa. Mỗi lần đánh có thể kích hoạt [Đột Phá Đặc Biệt] một lần và gây thêm [Sát Thương Chuẩn] bằng 100% HP tối đa ban đầu. Tăng [Tăng Sát Thương Chuẩn]% của bản thân trong 2 lượt. [Đột Phá Đặc Biệt]: Loại bỏ ngay [Bất Khuất Chuyên Biệt] của mục tiêu. [Sát Thương Chuẩn]: Không bị ảnh hưởng bởi Tỷ lệ DMG hoặc DMG miễn phí và giao dịch Sát Thương Trực Tiếp không có [Chia Sẻ Sát Thương] hoặc [Khả Năng Né Tránh].",
       "icon": "/Skill/Garou (UR)/skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tăng cho bản thân +20% ST chuẩn (True DMG) gây ra trong 2 lượt, sau đó áp [Miễn Tử Hỗn Hợp II] lên toàn bộ kẻ địch (gỡ trạng thái bất tử/miễn nhiễm để có thể giết chúng). Gây ST trực tiếp bằng 26% > 34% HP tối đa cho toàn bộ kẻ địch, cộng thêm [Sát Thương Chuẩn] bằng 100% HP tối đa còn lại của mỗi kẻ địch.",
+      "desc": "Gây combo 5 đòn cho tất cả mục tiêu, gây Sát Thương Trực Tiếp bằng 170% HP tối đa. Mỗi đòn đánh có thể kích hoạt [Đột Phá Đặc Biệt] một lần và gây thêm [Sát Thương Chuẩn] bằng 140% HP tối đa ban đầu. Tăng [Tăng Sát Thương Chuẩn] của bản thân thêm 35% trong 2 lượt. [Đột Phá Đặc Biệt]: Loại bỏ ngay [Bất Khuất Chuyên Biệt] của mục tiêu. [Sát Thương Chuẩn]: Không bị ảnh hưởng bởi Tỷ lệ DMG hoặc DMG miễn phí và giao dịch Sát Thương Trực Tiếp không có [Chia Sẻ Sát Thương] hoặc [Khả Năng Né Tránh].",
       "keepsakeIcon": "/Keepsake/Garou (UR)/Keepsake_UR.png",
       "icon": "/Skill/Garou (UR)/skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Tăng +20% Máu tối đa. Khi vào trận, nhận 60% [Né Sát Thương Tức Thì], miễn nhiễm [Uy Hiếp], [Choáng] và [Choáng Chuyên Biệt], và nhận +25% Tỉ Lệ Đỡ.[Né Sát Thương Tức Thì]: giảm ST Trực Tiếp/Phụ/Charge/Cuồng Nộ về 1.",
+      "desc": "Tăng 60% [Né Tránh Đặc Biệt]. Trở nên miễn nhiễm với [Sợ Hãi], [Choáng] và [Choáng Đặc Biệt]. Tăng Tỷ lệ chặn của bản thân thêm 25%. [Né Tránh Đặc Biệt]: Sát Thương Trực Tiếp, DoT DMG, Đã nhận DMG và Tiền thưởng DMG chỉ chia 1 điểm DMG cho mỗi phiên bản.",
       "icon": "/Skill/Garou (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Né Sát Thương Tức Thì] 60% &gt; 70%. Tỉ Lệ Đỡ 25% &gt; 30%.",
+      "desc": "Tăng 70% [Né Tránh Đặc Biệt]. Trở nên miễn nhiễm với [Sợ Hãi], [Choáng] và [Choáng Đặc Biệt]. Tăng Tỷ lệ chặn của bản thân thêm 30%. [Né Tránh Đặc Biệt]: Sát Thương Trực Tiếp, DoT DMG, Đã nhận DMG và Tiền thưởng DMG chỉ chia 1 điểm DMG cho mỗi phiên bản.",
       "icon": "/Skill/Garou (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Né Sát Thương Tức Thì] 70% &gt; 80%. Tỉ Lệ Đỡ 30% &gt; 35%.",
+      "desc": "Tăng 80% [Né Tránh Đặc Biệt]. Trở nên miễn nhiễm với [Sợ Hãi], [Choáng] và [Choáng Đặc Biệt]. Tăng Tỷ lệ chặn của bản thân thêm 35%. [Né Tránh Đặc Biệt]: Sát Thương Trực Tiếp, DoT DMG, Đã nhận DMG và Tiền thưởng DMG chỉ chia 1 điểm DMG cho mỗi phiên bản.",
       "icon": "/Skill/Garou (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi trận đấu bắt đầu, nhận [Không Bạo Kích, Không Tử], kéo dài 6 lượt. Nhận vĩnh viễn 100% Tỉ lệ kháng chí mạng. Sau khi kích hoạt [Đỡ Đòn], phản lại 200% Máu tối đa [Sát Thương Thật] về người tấn công. ———- [Không Bạo Kích, Không Tử]: Trong thời gian hiệu lực, giữ lại 70% Máu và duy trì [Bất Bại] trước các đòn không chí mạng gây chết, và kháng các đòn chí mạng gây chết tối đa 6 lần. (Chỉ tính đòn đầu tiên đối với đòn chí mạng)",
+      "desc": "Khi vào trận, nhận được [Bất Khuất Không Bạo Kích] trong 6 lượt. Tăng vĩnh viễn 100% [Kháng Bạo Kích]. Khi kích hoạt Chặn, phản ánh [Sát Thương Chuẩn] bằng 200% HP tối đa của chính mình cho kẻ tấn công. [Bất Khuất Không Bạo Kích]: Khi hoạt động, sát thương kết liễu từ những đòn đánh không chí mạng sẽ không hạ gục nhân vật và HP được giữ lại ở mức 70%. Ngoài ra, chặn tối đa 6 phiên bản sát thương kết liễu khỏi các đòn chí mạng. Chỉ đòn tấn công đầu tiên mới xác định được liệu đó có phải là đòn chí mạng hay không.",
       "icon": "/Skill/Garou (UR)/skill_awk.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "True DMG (Máu tối đa) 200% > 300% Giữ lại Máu 70% > 100% Kháng đòn chí mạng gây chết 6 lần > 9 lần",
+      "desc": "Khi vào trận, nhận được [Bất Khuất Không Bạo Kích] trong 6 lượt. Tăng vĩnh viễn 100% [Kháng Bạo Kích]. Khi kích hoạt Chặn, phản ánh [Sát Thương Chuẩn] bằng 300% HP tối đa của chính mình cho kẻ tấn công. [Bất Khuất Không Bạo Kích]: Khi hoạt động, sát thương kết liễu từ những đòn đánh không chí mạng sẽ không hạ gục nhân vật và HP được giữ nguyên ở mức 100%. Ngoài ra, chặn tối đa 9 phiên bản sát thương kết liễu khỏi các đòn chí mạng. Chỉ đòn tấn công đầu tiên mới xác định được liệu đó có phải là đòn chí mạng hay không.",
       "icon": "/Skill/Garou (UR)/skill_awk.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Garou (UR)/skill_awk.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

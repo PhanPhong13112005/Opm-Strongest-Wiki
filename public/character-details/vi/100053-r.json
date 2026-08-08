@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 90% ST tấn công lên mục tiêu đơn.",
+      "desc": "Gây 90% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/YO649Z Mk II (R)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 190% ST tấn công lên mục tiêu đơn, có 100% cơ hội tạo [Kiên Cường] cho bản thân (hấp thụ ST bằng 20% Máu của bản thân).",
+      "desc": "Gây 190% ATK DMG cho một mục tiêu, với 100% cơ hội nhận được [Lá Chắn] của bản thân (hấp thụ DMG bằng 20% ​​HP của bản thân).",
       "icon": "/Skill/YO649Z Mk II (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 200% ST tấn công lên mục tiêu đơn, có 100% cơ hội tạo [Kiên Cường] cho bản thân (hấp thụ ST bằng 30% Máu của bản thân).",
+      "desc": "Gây 200% ATK DMG cho một mục tiêu, với 100% cơ hội nhận được [Lá Chắn] của bản thân (hấp thụ DMG bằng 30% HP của bản thân).",
       "keepsakeIcon": "/Keepsake/YO649Z Mk. II (R)/Keepsake_R.png",
       "icon": "/Skill/YO649Z Mk II (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Sau khi bị tấn công, có 100% cơ hội giảm 10% ST phải chịu trong 2 lượt.",
+      "desc": "Tăng vĩnh viễn HP tối đa% của chính mình. Sau khi bị tấn công, có 100% cơ hội giảm 10% DMG phải chịu trong 2 lượt.",
       "icon": "/Skill/YO649Z Mk II (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Sau khi bị tấn công, có 100% cơ hội giảm 20% ST phải chịu trong 2 lượt.",
+      "desc": "Tăng vĩnh viễn HP tối đa% của chính mình. Sau khi bị tấn công, có 100% cơ hội giảm DMG phải chịu% trong 2 lượt.",
       "icon": "/Skill/YO649Z Mk II (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng 25% Máu tối đa của bản thân. Sau khi bị tấn công, có 100% cơ hội giảm 25% ST phải chịu trong 2 lượt.",
+      "desc": "Tăng vĩnh viễn HP tối đa của bản thân thêm 25%. Sau khi bị tấn công, có 100% cơ hội giảm 25% DMG phải chịu trong 2 lượt.",
       "icon": "/Skill/YO649Z Mk II (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

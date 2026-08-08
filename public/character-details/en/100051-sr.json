@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP (+20). After any character's action, increases the ATK of allies in a [Tenacity-type state] (Tenacity/Resilience) by 25%.",
+      "desc": "Permanently increases own HP. After any character's action, increases the ATK of allies in a [Tenacity-type state] (Tenacity/Resilience) by 25%.",
       "icon": "/Skill/Lightning Genji (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP (+20). After any character's action, increases the ATK of allies in a [Tenacity-type state] (Tenacity/Resilience) by 35%.",
+      "desc": "Permanently increases own HP. After any character's action, increases the ATK of allies in a [Tenacity-type state] (Tenacity/Resilience) by 35%.",
       "icon": "/Skill/Lightning Genji (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP (+20). After any character's action, increases the ATK of allies in a [Tenacity-type state] (Tenacity/Resilience) by 40%.",
+      "desc": "Permanently increases own HP. After any character's action, increases the ATK of allies in a [Tenacity-type state] (Tenacity/Resilience) by 40%.",
       "icon": "/Skill/Lightning Genji (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

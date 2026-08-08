@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST (+10) sát thương lên mục tiêu đơn và hồi Máu bằng 10% Máu tối đa, tối đa 3 lần mỗi lượt.",
+      "desc": "Gây 120% sát thương ATK cho một mục tiêu và phục hồi HP bằng 10% HP tối đa, tối đa 3 lần mỗi lượt.",
       "icon": "/Skill/Metal Bat (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 30% ST (+2) sát thương lên mỗi kẻ địch trong cả hàng bằng 5 liên kích, có 50% tỉ lệ khiến mỗi mục tiêu bị đánh trúng [Thương Tổn] 2 lượt (nhận thêm sát thương Thương Tổn bằng 50% ST khi bị tấn công), và cấp cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 10% Máu của bản thân).",
+      "desc": "Gây 30% ATK (+2) sát thương cho mỗi kẻ địch trong toàn bộ cột trong một combo 5 đòn, với 50% cơ hội gây [Bị Thương] cho mỗi mục tiêu bị trúng đòn trong 2 lượt (nhận thêm sát thương bị thương bằng 50% ATK khi bị tấn công) và tự cấp cho mình [Lá Chắn] (hấp thụ sát thương bằng 10% HP của riêng mình).",
       "icon": "/Skill/Metal Bat (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 38% ST (+2) sát thương lên mỗi kẻ địch trong cả hàng bằng 5 liên kích, có 60% tỉ lệ khiến mỗi mục tiêu bị đánh trúng [Thương Tổn] 2 lượt (nhận thêm sát thương Thương Tổn bằng 50% ST khi bị tấn công), và cấp cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 20% Máu của bản thân).",
+      "desc": "Gây 38% ATK (+2) sát thương cho mỗi kẻ địch trong toàn bộ cột trong một combo 5 đòn, với 60% cơ hội gây [Bị Thương] cho mỗi mục tiêu bị trúng đòn trong 2 lượt (nhận thêm sát thương bị thương bằng 50% ATK khi bị tấn công) và tự cấp cho mình [Lá Chắn] (hấp thụ sát thương bằng 20% HP của riêng mình).",
       "icon": "/Skill/Metal Bat (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Metal Bat (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Máu càng thấp, [Miễn Sát Thương] càng cao (giảm tối đa 50% ST Trực Tiếp và Phụ). Sau khi bị tấn công, nếu Máu dưới 80%, phản đòn bằng [Truy Kích] (80% ST Đòn Thường và hiệu ứng).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. HP của nó càng thấp thì [Miễn Sát Thương] của nó càng cao (giảm tới 50% DMG Trực tiếp và Thưởng). Sau khi bị tấn công, nếu HP của bản thân dưới 80%, hãy phản công kẻ địch bằng [Truy Kích] (80% ATK DMG cơ bản và các hiệu ứng).",
       "icon": "/Skill/Metal Bat (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Miễn Sát Thương] tối đa 50% &gt; 55%. [Truy Kích] 80% &gt; 110% ST Đòn Thường.",
+      "desc": "[Miễn Sát Thương] lên tới 50% > 55%. [Truy Kích] 80% > 110% Cơ bản ATK.",
       "icon": "/Skill/Metal Bat (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Miễn Sát Thương] tối đa 55% &gt; 58%. [Truy Kích] 110% &gt; 120% ST Đòn Thường.",
+      "desc": "[Miễn Sát Thương] lên tới 55% > 58%. [Truy Kích] 110% > 120% Cơ bản ATK.",
       "icon": "/Skill/Metal Bat (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

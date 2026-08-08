@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals Direct DMG of 60% ATK to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target with 2 consecutive strikes.",
       "icon": "/Skill/Pig God (SSR+)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Grants [Undying] to the target for 2 turns, then deals Direct DMG of 75% ATK and [Devour]s the target (removes it from the field / [Exit]).",
+      "desc": "Attacks a single target with 4 consecutive strikes, dealing 300% ATK DMG. [Devours] the target and causes it to [Exit] for 1 round. After [Devour], reduces the target's remaining [Enhanced Unyielding] duration by 2 actions.",
       "icon": "/Skill/Pig God (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -41,7 +41,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by 20%. When battle begins, gains [Specialized Guard] of 1000% ATK (removes DMG; stacks with extra-HP effects; total DMG removed cannot exceed 15x its original HP). After entering [Specialized Unyielding], gains another [Specialized Guard] of 600% ATK. Unable to [Off Battle] and immune to [Devour].",
+      "desc": "At battle start, gains [Enhanced Protection] equal to 1000% ATK. [Enhanced Protection] negates received DMG, can stack with Extra HP effects, and the total DMG it can negate cannot exceed 15 times Pig God's original Max HP. After entering [Enhanced Unyielding], gains an additional [Enhanced Protection] equal to 600% ATK. Pig God is immune to [Disengage] and [Devour].",
       "icon": "/Skill/Pig God (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Specialized Guard] 1000% &gt; 1100% ATK. Second [Specialized Guard] 600% &gt; 700% ATK.",
+      "desc": "[Enhanced Protection] 1000% > 1100% ATK. Second [Enhanced Protection] 600% > 700% ATK.",
       "icon": "/Skill/Pig God (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Specialized Guard] 1100% &gt; 1200% ATK. Second [Specialized Guard] 700% &gt; 800% ATK.",
+      "desc": "[Enhanced Protection] 1100% > 1200% ATK. Second [Enhanced Protection] 700% > 800% ATK.",
       "icon": "/Skill/Pig God (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -68,7 +68,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "When an ally triggers [Off Battle], inflicts [Specialized Corrode] (DoT by 150% ATK; after any character acts, transfers the effect to a random enemy, disappears after transferring 3 times). Once a surrounding ally is defeated, Pig God can [Devour] an ally; after any character acts, the ally returns to battle and recovers 60% Max HP, up to 3 times.",
+      "desc": "When an ally triggers [Disengage], releases 1 [Specialized Corrode], dealing 150% ATK as Continuous DMG. After any character acts, [Specialized Corrode] transfers to a random enemy, up to 3 transfers. When a surrounding ally is defeated, Pig God can [Devour] that ally. After any character acts, Pig God releases the devoured ally back onto the battlefield and restores the ally's HP to 60% of Max HP. Can trigger up to 3 times.",
       "icon": "/Skill/Pig God (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

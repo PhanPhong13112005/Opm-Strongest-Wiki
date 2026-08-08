@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 48% ATK DMG to a single target with 4 combo strikes, with a 100% chance to reduce self [Injured] by 20% for 2 turns.",
+      "desc": "Deals 48% ATK DMG to a single target with 4 combo strikes, with a 100% chance to reduce self [Injured]% for 2 turns.",
       "keepsakeIcon": "/Keepsake/D-pad (R)/Keepsake_R.png",
       "icon": "/Skill/D-pad (R)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases self max HP. When deployed together with Sangfu Overall Suit, D-Pad DMG is increased by 20% until the end of the battle.",
+      "desc": "Permanently increases self max HP. When deployed together with Sangfu Overall Suit, D-Pad DMG is increased% until the end of the battle.",
       "icon": "/Skill/D-pad (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

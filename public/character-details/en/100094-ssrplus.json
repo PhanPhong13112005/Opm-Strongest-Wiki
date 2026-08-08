@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases HP by (+20). Removes [Stun] from himself after any character's action. After an ally acts, launches an [Ultimate Follow-up] on 1 random enemy in the [Ignore DMG] state, up to 2 times per round.[Ultimate Follow-up]: deals 50% of the Ultimate skill's DMG (same effects).",
+      "desc": "Permanently increases HP by. Removes [Stun] from himself after any character's action. After an ally acts, launches an [Ultimate Follow-up] on 1 random enemy in the [Ignore DMG] state, up to 2 times per round.[Ultimate Follow-up]: deals 50% of the Ultimate skill's DMG (same effects).",
       "icon": "/Skill/Garou (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Ultimate Follow-up] DMG 50% &gt; 60% (still up to 2 times per round).",
+      "desc": "[Ultimate Follow-up] DMG 50% > 60% (still up to 2 times per round).",
       "icon": "/Skill/Garou (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Ultimate Follow-up] DMG 60% &gt; 70% (still up to 2 times per round).",
+      "desc": "[Ultimate Follow-up] DMG 60% > 70% (still up to 2 times per round).",
       "icon": "/Skill/Garou (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

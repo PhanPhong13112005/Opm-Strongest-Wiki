@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 24% ATK DMG to a single target.",
+      "desc": "Attacks a single target with 5 consecutive strikes, dealing 120% ATK DMG.",
       "icon": "/Skill/Watchdog Man (SSR+)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Watchdog Man unleashes a rapid chase-combo on the target, each hit dealing 150% ATK [Chase DMG]. The combo grows with his [Rampage] stacks, escalating from 4 up to 13 consecutive hits.",
+      "desc": "Attacks a single target with consecutive strikes, dealing 150% ATK DMG per strike. Initially performs 4 consecutive strikes. Each layer of [Specialized Guard] adds 1 additional strike, up to a maximum of 13 strikes for a total of 1950% ATK DMG.",
       "icon": "/Skill/Watchdog Man (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Chase-combo ATK per hit 150% > 180%. Still escalates from 4 up to 13 consecutive [Chase DMG] hits.",
+      "desc": "Attacks a single target with consecutive strikes, dealing 180% ATK DMG per strike. Initially performs 4 consecutive strikes. Each layer of [Specialized Guard] adds 1 additional strike, up to a maximum of 13 strikes for a total of 2340% ATK DMG.",
       "keepsakeIcon": "/Keepsake/Watchdog Man (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Watchdog Man (SSR+)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Gains +20% HP. On entry, gains +20% Crit (3 rounds). On a max-multiplier hit, inflicts [Disabled] on the target's column.",
+      "desc": "After taking action, permanently inflicts [Disabled] on all enemies in the target's column. At battle start, increases own CRIT Rate by 20% for 3 rounds. [Disabled]: Prevents the affected unit from triggering [Follow-Up] and [Continuous Follow-Up].",
       "icon": "/Skill/Watchdog Man (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Disabled] range on max-multiplier hit: target's column > selected area.",
+      "desc": "After taking action, permanently inflicts [Disabled] on all enemies in the target's column and surrounding enemies. At battle start, increases own CRIT Rate by 20% for 3 rounds. [Disabled]: Prevents the affected unit from triggering [Follow-Up] and [Continuous Follow-Up].",
       "icon": "/Skill/Watchdog Man (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Disabled] range on max-multiplier hit: selected area > selected area.",
+      "desc": "After taking action, permanently inflicts [Disabled] on all enemies in the target's column and surrounding enemies. At battle start, increases own CRIT Rate by 20% for 5 rounds. [Disabled]: Prevents the affected unit from triggering [Follow-Up] and [Continuous Follow-Up].",
       "icon": "/Skill/Watchdog Man (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "When battle begins, permanently grant 70% chance of [Evade] (Reduce Direct/Extra/Charge/Berserk DMG to 1 DMG). After any character acts, if Watchdogman triggered [Evade], adds 1 consecutive strike.",
+      "desc": "At battle start, permanently gains a 70% chance of [Evasion]. After any character acts, if Watchdog Man triggers [Evasion], adds 1 additional consecutive strike to his Ultimate. [Evasion]: Direct DMG, Extra DMG, Charge DMG, and Berserk DMG deal only 1 point of DMG.",
       "icon": "/Skill/Watchdog Man (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "After any character acts, if Watchdogman triggered [Evade], increases 30% ATK for self for 1 round.",
+      "desc": "At battle start, permanently gains a 70% chance of [Evasion]. After any character acts, if Watchdog Man triggers [Evasion], adds 1 additional consecutive strike to his Ultimate and increases own ATK by 30% for 1 round. [Evasion]: Direct DMG, Extra DMG, Charge DMG, and Berserk DMG deal only 1 point of DMG.",
       "icon": "/Skill/Watchdog Man (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

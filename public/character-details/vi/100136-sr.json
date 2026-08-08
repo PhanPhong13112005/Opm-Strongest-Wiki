@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tấn công một mục tiêu đơn với 3 đòn liên kích gây 40% ST (+3) sát thương.",
+      "desc": "Tấn công một mục tiêu bằng 3 đòn kết hợp gây 40% ATK (+3) DMG.",
       "icon": "/Skill/Death Gatling (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công mỗi kẻ địch trong cả hàng với 5 đòn liên kích gây 50% ST (+2) sát thương, có 75% cơ hội gây [Vỡ Vụn] lên mục tiêu chính trong 2 lượt (giảm Tỉ lệ Giảm sát thương 35%), và có 75% cơ hội gây [Vỡ Vụn] lên các mục tiêu còn lại trong cùng hàng trong 2 lượt (giảm Tỉ lệ Giảm sát thương 30%).",
+      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng 5 đòn kết hợp gây ra 50% ATK (+2) DMG, với 75% cơ hội gây [Nứt Vỡ] lên mục tiêu chính trong 2 lượt (giảm Giảm Sát Thương. Tỷ lệ 35%) và 75% cơ hội gây sát thương [Nứt Vỡ] lên các mục tiêu còn lại trong cùng hàng trong 2 lượt (giảm Giảm Sát Thương. Tỷ lệ 30%).",
       "icon": "/Skill/Death Gatling (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tấn công mỗi kẻ địch trong cả hàng với 5 đòn liên kích gây 55% ST (+2) sát thương, có 100% cơ hội gây [Vỡ Vụn] lên mục tiêu chính trong 2 lượt (giảm Tỉ lệ Giảm sát thương 35%), và có 100% cơ hội gây [Vỡ Vụn] lên các mục tiêu còn lại trong cùng hàng trong 2 lượt (giảm Tỉ lệ Giảm sát thương 30%).",
+      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng 5 đòn kết hợp gây ra 55% ATK (+2) DMG, với 100% cơ hội gây [Nứt Vỡ] lên mục tiêu chính trong 2 lượt (giảm Giảm Sát Thương. Tỷ lệ 35%) và 100% cơ hội gây sát thương [Nứt Vỡ] lên các mục tiêu còn lại trong cùng hàng trong 2 lượt (giảm Giảm Sát Thương. Tỷ lệ 30%).",
       "keepsakeIcon": "/Keepsake/Death Gatling (SR)/Keepsake_SR.png",
       "icon": "/Skill/Death Gatling (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Giảm Tỉ lệ Kháng Chí Mạng của kẻ địch bị [Vỡ Vụn] 25% trong 2 lượt.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Giảm 25% Tỷ lệ RES của CRIT của kẻ địch có [Nứt Vỡ] trong 2 lượt.",
       "icon": "/Skill/Death Gatling (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Giảm Tỉ lệ Kháng Chí Mạng của kẻ địch bị [Vỡ Vụn] 30% trong 2 lượt.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Giảm 30% Tỷ lệ RES của CRIT của kẻ địch có [Nứt Vỡ] trong 2 lượt.",
       "icon": "/Skill/Death Gatling (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Giảm Tỉ lệ Kháng Chí Mạng của kẻ địch bị [Vỡ Vụn] 35% trong 2 lượt.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Giảm 35% Tỷ lệ RES của CRIT của kẻ địch có [Nứt Vỡ] trong 2 lượt.",
       "icon": "/Skill/Death Gatling (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

@@ -47,7 +47,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). At the start of the round, grants [Tenacity] to all allies (absorbs 30% of each ally's own Max HP). For every enemy slower than its own SPD, increases own [Ultimate DMG Reduction] by 15% (up to 3 stacks). After acting, launches a [Follow-up] on the enemy with the highest Max HP (80% Basic ATK DMG and effects, 70% chance, up to 3 times per round).",
+      "desc": "Permanently increases own HP by. At the start of the round, grants [Tenacity] to all allies (absorbs 30% of each ally's own Max HP). For every enemy slower than its own SPD, increases own [Ultimate DMG Reduction] by 15% (up to 3 stacks). After acting, launches a [Follow-up] on the enemy with the highest Max HP (80% Basic ATK DMG and effects, 70% chance, up to 3 times per round).",
       "icon": "/Skill/Amai Mask (SSR)/skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Ultimate DMG Reduction] per stack 15% &gt; 18%. [Follow-up] 80% &gt; 100% Basic ATK.",
+      "desc": "[Ultimate DMG Reduction] per stack 15% > 18%. [Follow-up] 80% > 100% Basic ATK.",
       "icon": "/Skill/Amai Mask (SSR)/skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Grants self a Shield equal to 40% of HP. [Ultimate DMG Reduction] per stack 18% &gt; 20%. [Follow-up] up to 3 &gt; 4 times per round.",
+      "desc": "Grants self a Shield equal to 40% of HP. [Ultimate DMG Reduction] per stack 18% > 20%. [Follow-up] up to 3 > 4 times per round.",
       "icon": "/Skill/Amai Mask (SSR)/skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

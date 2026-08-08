@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ATK lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Overgrown Rover (URplus)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung combo 3 đòn lên toàn bộ kẻ địch, gây 7000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] (chỉ chịu ảnh hưởng bởi tăng/giảm sát thương nâng cao), bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Đòn thứ 1 có 150% khả năng gây [Rối Loạn]. ———- [Rối Loạn]: Trước khi bất kỳ nhân vật nào hành động, nếu mục tiêu không có [Bất Khuất Chuyên Biệt] hoặc [Bất Khuất Tuyệt Kỹ], gây 4000% [Sát Thương Rối Loạn] (dựa trên ATK của Rover), bỏ qua 100% [Giảm Sát Thương Duy Trì] và xuyên [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích]. Mỗi [Rối Loạn] kích hoạt tối đa 3 lần và có thể cộng dồn.",
+      "desc": "Gây combo 3 đòn cho tất cả kẻ thù, mỗi đòn gây ra 7000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] (chỉ bị ảnh hưởng bởi các công cụ sửa đổi DMG nâng cao). Bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Đòn đánh đầu tiên có 150% cơ hội gây [Rối Loạn] lên các mục tiêu bị trúng đòn trong 3 lượt. [Rối Loạn]: Trước khi bất kỳ nhân vật nào hành động, nếu mục tiêu không thuộc [Bất Khuất Chuyên Biệt] hoặc [Kiên Cường Cực Hạn], gây 4000% ATK [Sát Thương Rối Loạn] dựa trên ATK của Overgrown Rover. Hiệu ứng biến mất sau khi kích hoạt và có thể cộng dồn. Bỏ qua 100% [Giảm Sát Thương Duy Trì] và xuyên qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích].",
       "icon": "/Skill/Overgrown Rover (URplus)/skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "[Sát Thương Trực Tiếp Chuyên Biệt] 7000% > 9000% ATK. Bỏ qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] 45% > 60%. [Sát Thương Rối Loạn] 4000% > 5500%.",
+      "desc": "Gây combo 3 đòn cho tất cả kẻ thù, mỗi đòn gây ra 9000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] (chỉ bị ảnh hưởng bởi các công cụ sửa đổi DMG nâng cao). Bỏ qua 60% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Đòn đánh đầu tiên có 150% cơ hội gây [Rối Loạn] lên các mục tiêu bị trúng đòn trong 3 lượt. [Rối Loạn]: Trước khi bất kỳ nhân vật nào hành động, nếu mục tiêu không thuộc [Bất Khuất Chuyên Biệt] hoặc [Kiên Cường Cực Hạn], gây 5500% ATK [Sát Thương Rối Loạn] dựa trên ATK của Overgrown Rover. Hiệu ứng biến mất sau khi kích hoạt và có thể cộng dồn. Bỏ qua 100% [Giảm Sát Thương Duy Trì] và xuyên qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích].",
       "keepsakeIcon": "/Keepsake/Overgrown Rover (URplus)/Keepsake_URplus.png",
       "icon": "/Skill/Overgrown Rover (URplus)/skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn nhận +20 Máu tối đa. Khi vào trận, nhận 60% [Giảm Sát Thương Không Bạo Kích], và ban cho toàn bộ đồng minh 70% [Giảm Sát Thương Chuẩn] đồng thời gỡ [Giảm Phần Tăng Sát Thương Duy Trì] khỏi toàn bộ đồng minh trong suốt trận đấu. Khi [Re-Battle] kích hoạt, uy lực đòn Tối Thượng [Truy Kích Tụ Lực] của đơn vị này tăng lên 1.1x.",
+      "desc": "Khi bắt đầu trận chiến, tăng 60% [Giảm Sát Thương Không Bạo Kích]. Tất cả đồng minh cũng nhận được 70% [Giảm Sát Thương Chuẩn]. Loại bỏ hiệu ứng [Giảm Phần Tăng Sát Thương Duy Trì] khỏi tất cả đồng minh trong toàn bộ trận chiến. Khi [Tái Chiến] được kích hoạt, sức mạnh của [Truy Kích Tích Lực] Tuyệt Kĩ của đơn vị này được tăng lên 1,1 lần.",
       "icon": "/Skill/Overgrown Rover (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] 60% > 70%. [Giảm Sát Thương Chuẩn] của toàn bộ đồng minh 70% > 75%. Uy lực [Truy Kích Tụ Lực] khi [Re-Battle] 1.1x > 1.2x.",
+      "desc": "Khi bắt đầu trận chiến, tăng 70% [Giảm Sát Thương Không Bạo Kích]. Tất cả đồng minh cũng nhận được 75% [Giảm Sát Thương Chuẩn]. Loại bỏ hiệu ứng [Giảm Phần Tăng Sát Thương Duy Trì] khỏi tất cả đồng minh trong toàn bộ trận chiến. Khi [Tái Chiến] được kích hoạt, sức mạnh của [Truy Kích Tích Lực] Tuyệt Kĩ của đơn vị này được tăng lên 1,2 lần.",
       "icon": "/Skill/Overgrown Rover (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] 70% > 80%. [Giảm Sát Thương Chuẩn] của toàn bộ đồng minh 75% > 80%. Uy lực [Truy Kích Tụ Lực] khi [Re-Battle] 1.2x > 1.25x.",
+      "desc": "Khi bắt đầu trận chiến, tăng 80% [Giảm Sát Thương Không Bạo Kích]. Tất cả đồng minh cũng nhận được 80% [Giảm Sát Thương Chuẩn]. Loại bỏ hiệu ứng [Giảm Phần Tăng Sát Thương Duy Trì] khỏi tất cả đồng minh trong toàn bộ trận chiến. Khi [Tái Chiến] được kích hoạt, sức mạnh của [Truy Kích Tích Lực] Tuyệt Kĩ của đơn vị này được tăng lên 1,25 lần.",
       "icon": "/Skill/Overgrown Rover (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi vào trận, vĩnh viễn giảm số hành động bỏ qua ST của [Bất Khuất Tuyệt Kỹ] của toàn bộ kẻ địch đi 1, và nhận 3 lớp [Tái Chiến]. ———- [Tái Chiến]: Vĩnh viễn giảm 75% ST nhận vào (+2.5% mỗi lần trở lại sân). Khi đồng minh cùng hàng (hoặc toàn bộ đồng minh) bị hạ trong lúc đơn vị này cũng đã bị hạ, tiêu 1 lớp [Tái Chiến] để trở lại với 100% HP và tung [Truy Kích Tụ Lực] lên mục tiêu ngẫu nhiên với 120% uy lực Tối Thượng; các đồng minh cùng hàng đã bị hạ khác có 70% khả năng cũng kích hoạt. (Chỉ một trong [Tái Chiến], [Trả Thù], [Tập Hợp Lại] hoặc [Hoàn Trả Động Lực] có hiệu lực tại một thời điểm.)",
+      "desc": "Khi vào, giảm vĩnh viễn số lần hành động của hiệu ứng [Kiên Cường Cực Hạn] bỏ qua-DMG của tất cả kẻ thù xuống 1. Nhận được 4 điểm cộng dồn [Tái Chiến]. [Tái Chiến]: Giảm vĩnh viễn 75% DMG phải chịu (mỗi lần quay lại trận chiến sẽ tăng hiệu ứng này thêm 2,5%). Khi một đồng minh trong cùng một hàng hoặc tất cả các đồng minh bị đánh bại, nếu đơn vị này đã bị đánh bại, hãy tiêu thụ 1 điểm [Tái Chiến] để ngay lập tức quay lại trận chiến, khôi phục 100% HP và thực hiện [Truy Kích Tích Lực] lên một mục tiêu ngẫu nhiên với 120% sức mạnh Tuyệt Kĩ. Nếu có đồng minh khác bị đánh bại trong cùng hàng, có 70% cơ hội kích hoạt hiệu ứng này cho họ.",
       "icon": "/Skill/Overgrown Rover (URplus)/skill_awk.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Số hành động bỏ qua ST của [Bất Khuất Tuyệt Kỹ] của toàn bộ kẻ địch 1 > 2. Số lớp [Tái Chiến] 3 > 5. Giảm ST của [Tái Chiến] 75% > 78% (+2.5% > 2.8% mỗi lần trở lại). Uy lực [Truy Kích Tụ Lực] 120% > 135%. Khả năng kích hoạt của đồng minh cùng hàng khác 70% > 100%.",
+      "desc": "Khi vào, giảm vĩnh viễn số lần hành động của hiệu ứng [Kiên Cường Cực Hạn] bỏ qua-DMG của tất cả kẻ thù xuống 2. Nhận được 5 điểm cộng dồn [Tái Chiến]. [Tái Chiến]: Giảm vĩnh viễn 78% DMG phải chịu (mỗi lần quay lại trận chiến sẽ tăng hiệu ứng này thêm 2,8%). Khi một đồng minh trong cùng một hàng hoặc tất cả các đồng minh bị đánh bại, nếu đơn vị này đã bị đánh bại, hãy tiêu thụ 1 điểm [Tái Chiến] để ngay lập tức quay lại trận chiến, khôi phục 100% HP và thực hiện [Truy Kích Tích Lực] lên một mục tiêu ngẫu nhiên với 135% sức mạnh Tuyệt Kĩ. Nếu có đồng minh khác bị đánh bại trong cùng hàng, có 100% cơ hội kích hoạt hiệu ứng này cho họ.",
       "icon": "/Skill/Overgrown Rover (URplus)/skill_awk.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Overgrown Rover (URplus)/skill_awk.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

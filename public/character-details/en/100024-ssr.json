@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK (+10) DMG to a single target, and enters [Berserk] for 1 turn (DMG increased by 30%).",
+      "desc": "Deals 120% ATK DMG to a single target and enters [Berserk] for 1 turn. [Berserk]: Increases DMG by 30%.",
       "icon": "/Skill/Bang (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 5 hit combo of 30% ATK (+2) DMG to each enemy in the entire column, with a 100% chance to inflict [Internal Injury] on struck targets (when hit, adds Internal Injury DMG equal to 140% ATK of Silver Fang; effect is removed after triggering).",
+      "desc": "Attacks all enemies in a column with 5 consecutive strikes, dealing 150% ATK DMG. Has a 100% chance to inflict [Internal Injury] on the target. [Internal Injury]: When the affected unit is attacked, takes DMG equal to 140% of Silverfang's ATK. The effect disappears after triggering once.",
       "icon": "/Skill/Bang (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 5 hit combo of 38% ATK (+2) DMG to each enemy in the entire column, with a 100% chance to inflict [Internal Injury] on struck targets (when hit, adds Internal Injury DMG equal to 160% ATK of Silver Fang; effect is removed after triggering).",
+      "desc": "Attacks all enemies in a column with 5 consecutive strikes, dealing 187.5% ATK DMG. Has a 100% chance to inflict [Internal Injury] on the target. [Internal Injury]: When the affected unit is attacked, takes DMG equal to 160% of Silverfang's ATK. The effect disappears after triggering once.",
       "icon": "/Skill/Bang (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Bang (SSR)/Keepsake_SSR.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). At the start of battle, grants the whole team 30% Block rate for 2 turns. After an ally character triggers Block, they gain [Tenacity] (absorbs DMG equal to 7% of their own HP, up to 3 times per turn).",
+      "desc": "At battle start, increases all allies' Block Rate by 30% for 2 turns. When an allied character successfully triggers Block, gains [Tenacity]. [Tenacity]: Absorbs DMG equal to 7% of Max HP. Can trigger up to 3 times per turn.",
       "icon": "/Skill/Bang (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). At the start of battle, grants the whole team 30% Block rate for 2 turns. After an ally character triggers Block, they gain [Tenacity] (absorbs DMG equal to 8% of their own HP, up to 4 times per turn).",
+      "desc": "Permanently increases own HP by. At the start of battle, grants the whole team 30% Block rate for 2 turns. After an ally character triggers Block, they gain [Tenacity] (absorbs DMG equal to 8% of their own HP, up to 4 times per turn).",
       "icon": "/Skill/Bang (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). At the start of battle, grants the whole team 30% Block rate for 2 turns. After an ally character triggers Block, they gain [Tenacity] (absorbs DMG equal to 8.5% of their own HP, up to 4 times per turn).",
+      "desc": "Permanently increases own HP by. At the start of battle, grants the whole team 30% Block rate for 2 turns. After an ally character triggers Block, they gain [Tenacity] (absorbs DMG equal to 8.5% of their own HP, up to 4 times per turn).",
       "icon": "/Skill/Bang (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

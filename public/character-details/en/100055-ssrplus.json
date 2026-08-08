@@ -42,7 +42,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own max HP by 20%. At the end of his turn, tallies all healing done by all allies and heals self for a share of that total.",
+      "desc": "Permanently increases own max HP%. At the end of his turn, tallies all healing done by all allies and heals self for a share of that total.",
       "icon": "/Skill/Boros (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own max HP by 20%. At the end of his turn, tallies all healing done by all allies and heals self for a share of that total.",
+      "desc": "Permanently increases own max HP%. At the end of his turn, tallies all healing done by all allies and heals self for a share of that total.",
       "icon": "/Skill/Boros (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own max HP by 20%. At the end of his turn, tallies all healing done by all allies and heals self for a share of that total.",
+      "desc": "Permanently increases own max HP%. At the end of his turn, tallies all healing done by all allies and heals self for a share of that total.",
       "icon": "/Skill/Boros (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

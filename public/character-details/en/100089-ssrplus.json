@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK Direct DMG to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Gouketsu (SSR+)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Strips [Undying] from the target's entire column, then deals 50% ATK Direct DMG plus Extra Direct DMG equal to 14% ATK to that column.",
+      "desc": "Attacks all enemies in a column with 3 consecutive strikes, dealing 150% ATK + 45% Max HP as DMG. Immediately triggers [Breakthrough], removing 1 instance of [Specialized Unyielding] from affected enemies.",
       "icon": "/Skill/Gouketsu (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Additionally grants self +30% Crit and +30% Crit DMG. Direct DMG to the column 50% > 60% ATK, and the Extra Direct DMG 14% > 18% ATK.",
+      "desc": "Before attacking, increases own CRIT Rate by 30%. Attacks all enemies in a column with 3 consecutive strikes, dealing 180% ATK + 54% Max HP as DMG. Immediately triggers [Breakthrough], removing 1 instance of [Specialized Unyielding] from affected enemies.",
       "keepsakeIcon": "/Keepsake/Gouketsu (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Gouketsu (SSR+)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Gains +20% HP. On entry, gains [Max HP Up] raising Max HP by 100% and gains undispellable [Immunity]. At the start of each round, heals for 50% of Max HP. At the start of his turn, cleanses [Stun] from 2 allies.",
+      "desc": "At battle start, permanently increases own Max HP by 100% and enters battle at full HP. Before each new round begins, restores 50% Max HP. Before any character takes action, removes [Stun] from 1 ally, up to 2 times per round.",
       "icon": "/Skill/Gouketsu (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Round-start heal 50% > 70% of Max HP.",
+      "desc": "At battle start, permanently increases own Max HP by 100% and enters battle at full HP. Before each new round begins, restores 70% Max HP. Before any character takes action, removes [Stun] from 1 ally, up to 2 times per round.",
       "icon": "/Skill/Gouketsu (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Round-start heal 70% > 90% of Max HP. [Stun] cleanse targets 2 > 3 allies.",
+      "desc": "At battle start, permanently increases own Max HP by 100% and enters battle at full HP. Before each new round begins, restores 90% Max HP. Before any character takes action, removes [Stun] from 1 ally, up to 3 times per round.",
       "icon": "/Skill/Gouketsu (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "When battle begins, summons 1 crow (400% of Gouketsu's original HP). One of them will share 85% damage for allies in Gouketsu's row. After consuming all HP, deals EXTRA DMG by 30% of its Max HP to 3 random enemies which are not in any [Unyielding] state. Reduces main target's [Enhanced Unyielding] state by 2 actions.",
+      "desc": "At battle start, summons 1 [Three-legged Crow]. The Crow inherits HP equal to 400% of Gouketsu’s initial Max HP and absorbs 85% of the DMG that Gouketsu and allies in the same row would receive. When the [Three-legged Crow] is defeated, it explodes and deals additional DMG equal to 30% of its Max HP to 3 random enemies, prioritizing enemies affected by [Specialized Unyielding]. It also reduces the remaining action count of enemies’ [Specialized Unyielding] by 2.",
       "icon": "/Skill/Gouketsu (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Summon crows 1 > 2",
+      "desc": "At battle start, summons 2 [Three-legged Crow]. Each Crow inherits HP equal to 400% of Gouketsu’s initial Max HP and absorbs 85% of the DMG received by its protected row. The second Crow protects the other row. When a [Three-legged Crow] is defeated, it explodes and deals additional DMG equal to 30% of its Max HP to 3 random enemies, prioritizing enemies affected by [Specialized Unyielding]. It also reduces the remaining action count of enemies’ [Specialized Unyielding] by 2.",
       "icon": "/Skill/Gouketsu (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

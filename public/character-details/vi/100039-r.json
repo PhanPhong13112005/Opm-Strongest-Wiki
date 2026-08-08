@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 90% ST(+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 90% AT DMG cho một mục tiêu.",
       "icon": "/Skill/Crablante (R)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung liên kích 5 đòn lên mục tiêu đơn gây 38% ST(+2) sát thương, và có 100% xác suất giảm 10% sát thương phải chịu của bản thân trong 2 lượt.",
+      "desc": "Tấn công một mục tiêu bằng combo 5 đòn gây sát thương 38% ATK(+2) DMG và có 100% cơ hội giảm 10% DMG phải chịu cho bản thân trong 2 lượt.",
       "icon": "/Skill/Crablante (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung liên kích 5 đòn lên mục tiêu đơn gây 38% ST(+2) sát thương. Có 100% xác suất giảm 20% sát thương phải chịu của bản thân trong 2 lượt.",
+      "desc": "Tấn công một mục tiêu bằng combo 5 đòn gây 38% ATK(+2) DMG. Có 100% cơ hội tự giảm DMG phải chịu% trong 2 lượt.",
       "icon": "/Skill/Crablante (R)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Crablante (R)/Keepsake_R.png",
       "type": "Tuyệt kĩ",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi bị tấn công, có 25% xác suất tăng 10% sát thương cho bản thân trong 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP của bản thân lên. Sau khi bị tấn công, có 25% cơ hội tăng 10% cho DMG của bản thân trong 1 lượt.",
       "icon": "/Skill/Crablante (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi bị tấn công, có 25% xác suất tăng 20% sát thương cho bản thân trong 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP của bản thân lên. Sau khi bị tấn công, có 25% cơ hội tăng DMG% cho bản thân trong 1 lượt.",
       "icon": "/Skill/Crablante (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi bị tấn công, có 25% xác suất tăng 25% sát thương cho bản thân trong 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP của bản thân lên. Sau khi bị tấn công, có 25% cơ hội tăng bản thân DMG thêm 25% trong 1 lượt.",
       "icon": "/Skill/Crablante (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

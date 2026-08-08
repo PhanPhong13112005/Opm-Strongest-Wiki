@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Genos (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Attacks all enemies with 2 consecutive strikes, dealing DMG by 500% ATK. Every strike has a 50% chance to add 1 stack of [Specialized Burn] (DoT by 300% ATK; after any character acts, transfers the effect to a random target, disappears after transferring 3 times) to the target.",
+      "desc": "Attacks all enemies with 2 consecutive strikes, dealing 500% ATK DMG. Each strike has a 50% chance to add 1 stack of [Specialized Burn] to the target. [Specialized Burn]: Deals 300% ATK as DoT DMG. After any character acts, transfers the effect to a random target and disappears after being transferred 3 times.",
       "icon": "/Skill/Genos (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Ultimate ATK: 500% → 700%.[Specialized Burn] stack chance: 50% → 80%.[Specialized Burn] DoT: 300% → 400%.",
+      "desc": "Attacks all enemies with 2 consecutive strikes, dealing 700% ATK DMG. Each strike has an 80% chance to add 1 stack of [Specialized Burn] to the target. [Specialized Burn]: Deals 400% ATK as DoT DMG. After any character acts, transfers the effect to a random target and disappears after being transferred 3 times.",
       "keepsakeIcon": "/Keepsake/Genos (UR)/Keepsake_UR.png",
       "icon": "/Skill/Genos (UR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "When battle begins, grants 60% Non-Crit DMG Free (reduces all types of Non-Crit DMG, cannot co-exist with [Agility]).After any character acts, [Detonate] the [Specialized Burn] (400% of a single [Specialized Burn]'s DMG turns into [Detonation] DMG).",
+      "desc": "When battle begins, gains 60% [Non-Crit DMG Free]. After any character acts, [Detonate] activates, converting 400% of a single [Specialized Burn] DMG into [Detonation] DMG. [Non-Crit DMG Free]: Reduces all types of non-critical DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Genos (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Non-Crit DMG Free: 60% → 70%.Detonate: 400% → 450%.",
+      "desc": "When battle begins, gains 70% [Non-Crit DMG Free]. After any character acts, [Detonate] activates, converting 450% of a single [Specialized Burn] DMG into [Detonation] DMG. [Non-Crit DMG Free]: Reduces all types of non-critical DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Genos (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Non-Crit DMG Free: 70% → 80%.Detonate: 450% → 500%.",
+      "desc": "When battle begins, gains 80% [Non-Crit DMG Free]. After any character acts, [Detonate] activates, converting 500% of a single [Specialized Burn] DMG into [Detonation] DMG. [Non-Crit DMG Free]: Reduces all types of non-critical DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Genos (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "After any character acts, absorbs 40% [Detonation] DMG and deals [True DMG] ( Not affected by DMG Rate and DMG Free, deal direct DMG without [DMG Sharing] or [Evasion]) to 3 characters with the lowest HP",
+      "desc": "After any character acts, absorbs 40% of [Detonation] DMG and deals [True DMG] to the 3 enemies with the lowest HP. [True DMG]: Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion].",
       "icon": "/Skill/Genos (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Deals True Damage to 3 characters with the lowest HP > entire enemy team",
+      "desc": "After any character acts, absorbs 40% of [Detonation] DMG and deals [True DMG] to the entire enemy team. [True DMG]: Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion].",
       "icon": "/Skill/Genos (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by 20%. After an enemy in the [Burn] state acts, Subterranean King immediately performs a [Follow-up] (attacking with 80% of the Basic Attack's DMG and effects, up to 3 times per turn).",
+      "desc": "Permanently increases own HP%. After an enemy in the [Burn] state acts, Subterranean King immediately performs a [Follow-up] (attacking with 80% of the Basic Attack's DMG and effects, up to 3 times per turn).",
       "icon": "/Skill/Subterranean King (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by 20%. After an enemy in the [Burn] state acts, Subterranean King immediately performs a [Follow-up] (attacking with 120% of the Basic Attack's DMG and effects, up to 3 times per turn).",
+      "desc": "Permanently increases own HP%. After an enemy in the [Burn] state acts, Subterranean King immediately performs a [Follow-up] (attacking with 120% of the Basic Attack's DMG and effects, up to 3 times per turn).",
       "icon": "/Skill/Subterranean King (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by 20%. After an enemy in the [Burn] state acts, Subterranean King immediately performs a [Follow-up] (attacking with 130% of the Basic Attack's DMG and effects, up to 3 times per turn).",
+      "desc": "Permanently increases own HP%. After an enemy in the [Burn] state acts, Subterranean King immediately performs a [Follow-up] (attacking with 130% of the Basic Attack's DMG and effects, up to 3 times per turn).",
       "icon": "/Skill/Subterranean King (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

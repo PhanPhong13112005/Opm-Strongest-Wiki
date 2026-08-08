@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 30% ST sát thương lên mục tiêu đơn.",
+      "desc": "Tấn công một mục tiêu bằng 5 đòn liên tiếp, gây 150% ATK DMG.",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 75% ST sát thương lên mục tiêu đơn và đánh dấu bản thân. Gây thêm sát thương bằng 40% Máu tối đa của mục tiêu, sau đó đánh dấu mục tiêu để [Trục Xuất].",
+      "desc": "Tấn công một mục tiêu bằng 2 đòn liên tiếp, gây 150% ATK + 40% HP tối đa tương đương DMG. Sau hành động, gây [Rời Trận] lên mục tiêu, khiến mục tiêu phải rời khỏi chiến trường cho đến hiệp tiếp theo. Hiệu ứng này không bị ảnh hưởng bởi Formal Set. Các đơn vị được triệu hồi như Dark Matter Thief của Boros và Underdog Man Robot của Đồng Đế không thể bị ảnh hưởng. [Rời Trận]: Nhân vật bị ảnh hưởng không thể hành động, không thể kích hoạt các đòn tấn công thụ động và không thể nhận DMG khi ở ngoài chiến trường, nhưng các hiệu ứng như tăng SPD của đồng minh có thể vẫn hoạt động.",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 75% ST sát thương lên mục tiêu đơn và đánh dấu bản thân. Gây thêm sát thương bằng 40% > 50% Máu tối đa của mục tiêu, sau đó đánh dấu mục tiêu để [Trục Xuất].",
+      "desc": "Tấn công một mục tiêu bằng 2 đòn liên tiếp, gây 150% ATK + 50% HP tối đa thành DMG. Sau hành động, gây [Rời Trận] lên mục tiêu, khiến mục tiêu phải rời khỏi chiến trường cho đến hiệp tiếp theo. Hiệu ứng này không bị ảnh hưởng bởi Formal Set. Các đơn vị được triệu hồi như Dark Matter Thief của Boros và Underdog Man Robot của Đồng Đế không thể bị ảnh hưởng. [Rời Trận]: Nhân vật bị ảnh hưởng không thể hành động, không thể kích hoạt các đòn tấn công thụ động và không thể nhận DMG khi ở ngoài chiến trường, nhưng các hiệu ứng như tăng SPD của đồng minh có thể vẫn hoạt động.",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Phoenix Man (SSRplus)/Keepsake_SSRplus.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Khi vào trận, nhận +100% Máu tối đa và miễn nhiễm với [Trục Xuất] cùng hiệu ứng giảm Máu tối đa. Đầu mỗi hiệp, hồi phục 50% Máu tối đa. Cuối mỗi lượt, nhận một dấu tích lũy cho phép bản thân [Trục Xuất] 1 kẻ địch đã bị đánh dấu khỏi trận. Sau khi nhận sát thương chí mạng, hồi sinh, tối đa 1 lần.",
+      "desc": "Khi bắt đầu trận chiến, tăng vĩnh viễn HP tối đa của bản thân lên 100% và khôi phục 50% HP tối đa. Khi nhận sát thương kết liễu trong khi không được bảo vệ bởi bất kỳ hiệu ứng [Bất Khuất] nào, sẽ kích hoạt [Hồi Sinh]. Phoenixman miễn nhiễm với [Rời Trận]. [Hồi Sinh]: Trong khi ít nhất 1 đồng minh vẫn còn trên chiến trường, hồi phục 15% HP trước hành động tiếp theo của Phoenixman và tiếp tục chiến đấu. Có thể kích hoạt tối đa 1 lần trong mỗi trận chiến.",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Khi vào trận, nhận +100% Máu tối đa và miễn nhiễm với [Trục Xuất] cùng hiệu ứng giảm Máu tối đa. Đầu mỗi hiệp, hồi phục 50% Máu tối đa. Cuối mỗi lượt, nhận một dấu tích lũy cho phép bản thân [Trục Xuất] 1 kẻ địch đã bị đánh dấu khỏi trận. Sau khi nhận sát thương chí mạng, hồi sinh, tối đa 1 > 2 lần.",
+      "desc": "Khi bắt đầu trận chiến, tăng vĩnh viễn HP tối đa của bản thân lên 100% và khôi phục 50% HP tối đa. Khi nhận sát thương kết liễu trong khi không được bảo vệ bởi bất kỳ hiệu ứng [Bất Khuất] nào, sẽ kích hoạt [Hồi Sinh]. Phoenixman miễn nhiễm với [Rời Trận]. [Hồi Sinh]: Trong khi ít nhất 1 đồng minh vẫn còn trên chiến trường, hồi phục 15% HP trước hành động tiếp theo của Phoenixman và tiếp tục chiến đấu. Có thể kích hoạt tối đa 2 lần mỗi trận.",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Khi vào trận, nhận +100% Máu tối đa và miễn nhiễm với [Trục Xuất] cùng hiệu ứng giảm Máu tối đa. Đầu mỗi hiệp, hồi phục 50% Máu tối đa. Cuối mỗi lượt, nhận một dấu tích lũy cho phép bản thân [Trục Xuất] 1 kẻ địch đã bị đánh dấu khỏi trận. Sau khi nhận sát thương chí mạng, hồi sinh, tối đa 2 lần.",
+      "desc": "Khi bắt đầu trận chiến, tăng vĩnh viễn HP tối đa của bản thân lên 100% và khôi phục 50% HP tối đa. Khi nhận sát thương kết liễu trong khi không được bảo vệ bởi bất kỳ hiệu ứng [Bất Khuất] nào, sẽ kích hoạt [Hồi Sinh]. Phoenixman miễn nhiễm với [Rời Trận]. [Hồi Sinh]: Trong khi ít nhất 1 đồng minh vẫn còn trên chiến trường, hồi phục 25% HP trước hành động tiếp theo của Phoenixman và tiếp tục chiến đấu. Có thể kích hoạt tối đa 2 lần mỗi trận.",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Ngay lập tức đưa đồng minh bị đánh bại trở lại trận đấu với 100% Máu (tổng cộng 4 lần mỗi trận đấu) (Hiệu ứng sẽ bị loại bỏ nếu Phoenixman chết trước khi dùng hết số lần hồi sinh.)",
+      "desc": "Ngay lập tức đưa đồng minh bị đánh bại ra chiến đấu với 100% HP. Có thể hồi sinh đồng minh tổng cộng tối đa 4 lần trong mỗi trận chiến. Nếu Phoenixman bị đánh bại trước khi sử dụng hết số lần hồi sinh, hiệu ứng hồi sinh còn lại sẽ bị loại bỏ.",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Hồi sinh đồng minh 4 lần > 6 lần Hiệu ứng bổ sung - Cấp đồng minh 30% Giảm sát thương không chí mạng (không thể đồng tồn tại với Agility)\nĐiều cần lưu ý:\nSSR+ CK không phản sát thương nếu bị loại khỏi trận đấu Không thể loại Boss (pve) khỏi trận đấu, như Boros Club Challenge (hiển nhiên) Không thể loại các đơn vị đã chết nhưng đang chờ hồi sinh (ví dụ ZBM đang nằm dưới đất) Nếu chỉ còn lại một đơn vị kẻ địch, thì không thể loại đơn vị đó khỏi trận đấu",
+      "desc": "Ngay lập tức đưa đồng minh bị đánh bại ra chiến đấu với 100% HP. Có thể hồi sinh đồng minh tổng cộng tối đa 6 lần trong mỗi trận chiến. Nếu Phoenixman bị đánh bại trước khi sử dụng hết số lần hồi sinh, hiệu ứng hồi sinh còn lại sẽ bị loại bỏ. Cấp vĩnh viễn cho tất cả đồng minh 30% [Miễn Sát Thương Không Bạo Kích]. [Miễn Sát Thương Không Bạo Kích]: Giảm DMG không quan trọng có thể áp dụng và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -91,7 +91,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

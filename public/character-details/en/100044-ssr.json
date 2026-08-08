@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 130% ATK(+10) DMG to a single target.",
+      "desc": "Attacks a single target with 3 consecutive strikes, dealing 120% ATK DMG.",
       "icon": "/Skill/Drive Knight (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "In [Silver] form, deals [Charged] DMG split evenly across the number of targets attacked. (After an enemy takes [Force Field] DMG, 1 stack of 240% ATK Charge accumulates, up to 4 stacks.) Strikes the entire enemy row with a 3-hit combo, then inflicts [Force Field] on the main target (taking DoT before it acts). Each stack grants your side 0.4 Energy.",
+      "desc": "Attacks all enemies in a row with 3 consecutive strikes, dealing 195% ATK DMG. Has a 100% chance to inflict [Field] on the main target for 1 turn, and a 50% chance to inflict [Field] on other targets in the same row for 1 turn. [Field]: Before taking action, the affected unit suffers Continuous DMG equal to 160% ATK.",
       "icon": "/Skill/Drive Knight (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "In [Silver] form, deals [Charged] DMG split evenly across the number of targets attacked. (After an enemy takes [Force Field] DMG, 1 stack of 330% ATK Charge accumulates, up to 4 stacks.) Strikes the entire enemy row with a 3-hit combo, then inflicts [Force Field] on the main target (taking DoT before it acts). Each stack grants your side 0.5 Energy.",
+      "desc": "Attacks all enemies in a row with 3 consecutive strikes, dealing 244% ATK DMG. Has a 100% chance to inflict [Field] on the main target for 1 turn, and a 50% chance to inflict [Field] on other targets in the same row for 1 turn. [Field]: Before taking action, the affected unit suffers Continuous DMG equal to 180% ATK.",
       "keepsakeIcon": "/Keepsake/Drive Knight (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Drive Knight (SSR)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). On entry, grants all allies 90% Ultimate DMG Immunity for a duration. Permanently gains 40% Non-Crit DMG Free (reduces all types of DMG; only one of this and [Agility] takes effect). At the start of battle, lowers own SPD by 50%. After an enemy takes [Force Field] DMG, Drive Knight transforms into [Silver] form.",
+      "desc": "At battle start, grants all allies 40% Ultimate DMG Reduction for 2 turns and permanently grants all allies 50% [Non-Crit DMG Reduction]. [Non-Crit DMG Reduction] is effective against all types of DMG and cannot coexist with [Agility]. At battle start, reduces own SPD by 90%. When an enemy suffers [Field] DMG, Drive Knight transforms into [Silver State].",
       "icon": "/Skill/Drive Knight (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). On entry, grants all allies 90% Ultimate DMG Immunity for a duration. Permanently gains 45% Non-Crit DMG Free (reduces all types of DMG; only one of this and [Agility] takes effect). At the start of battle, lowers own SPD by 55%. After an enemy takes [Force Field] DMG, Drive Knight transforms into [Silver] form.",
+      "desc": "Permanently increases own HP. On entry, grants all allies 90% Ultimate DMG Immunity for a duration. Permanently gains 45% [Non-Crit DMG Free]. [Non-Crit DMG Free] reduces all types of non-critical DMG and cannot coexist with [Agility]. At battle start, reduces own SPD by 55%. When an enemy suffers [Field] DMG, Drive Knight transforms into [Silver State].",
       "icon": "/Skill/Drive Knight (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). On entry, grants all allies 90% Ultimate DMG Immunity for a duration. Permanently gains 50% Non-Crit DMG Free (reduces all types of DMG; only one of this and [Agility] takes effect). At the start of battle, lowers own SPD by 65%. After an enemy takes [Force Field] DMG, Drive Knight transforms into [Silver] form.",
+      "desc": "Permanently increases own HP. On entry, grants all allies 90% Ultimate DMG Immunity for a duration. Permanently gains 50% [Non-Crit DMG Free]. [Non-Crit DMG Free] reduces all types of non-critical DMG and cannot coexist with [Agility]. At battle start, reduces own SPD by 65%. When an enemy suffers [Field] DMG, Drive Knight transforms into [Silver State].",
       "icon": "/Skill/Drive Knight (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

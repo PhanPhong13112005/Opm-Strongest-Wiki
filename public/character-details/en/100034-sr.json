@@ -42,7 +42,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by 20. Inflicts [Weaken] on enemies affected by [Corrosion] (ATK reduced by 20% for 1 turn).",
+      "desc": "Permanently increases own HP. Inflicts [Weaken] on enemies affected by [Corrosion] (ATK reduced% for 1 turn).",
       "icon": "/Skill/Messenger of the Seafolk (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by 20. Inflicts [Weaken] on enemies affected by [Corrosion] (ATK reduced by 30% for 1 turn).",
+      "desc": "Permanently increases own HP. Inflicts [Weaken] on enemies affected by [Corrosion] (ATK reduced by 30% for 1 turn).",
       "icon": "/Skill/Messenger of the Seafolk (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by 20. Inflicts [Weaken] on enemies affected by [Corrosion] (ATK reduced by 37% for 1 turn).",
+      "desc": "Permanently increases own HP. Inflicts [Weaken] on enemies affected by [Corrosion] (ATK reduced by 37% for 1 turn).",
       "icon": "/Skill/Messenger of the Seafolk (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

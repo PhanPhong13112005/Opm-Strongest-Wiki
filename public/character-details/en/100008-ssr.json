@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Strikes a single target with 2 combo hits, dealing 50% ATK DMG each.",
+      "desc": "Attacks a single target with 2 consecutive strikes, dealing 50% ATK DMG per strike.",
       "icon": "/Skill/Mosquito Girl (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Strikes enemies in a cross-shaped area with 3 combo hits, dealing 40% ATK DMG each; the final hit drains 100% of the DMG dealt to heal herself.",
+      "desc": "Attacks enemies in a cross-shaped area with 3 consecutive strikes, dealing 40% ATK DMG per strike. The final strike restores HP equal to 100% of the DMG dealt by that strike.",
       "icon": "/Skill/Mosquito Girl (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Strikes enemies in a cross-shaped area with 3 combo hits, dealing 40% ATK DMG each; the final hit drains 100% of the DMG dealt to heal herself, and the first and second hits each have a 100% chance to drain 100% of the DMG dealt to heal as well.",
+      "desc": "Attacks enemies in a cross-shaped area with 3 consecutive strikes, dealing 40% ATK DMG per strike. Each of the first 2 strikes has a 100% chance to restore HP equal to 100% of the DMG dealt by that strike, and the final strike also restores HP equal to 100% of the DMG dealt.",
       "keepsakeIcon": "/Keepsake/Mosquito Girl (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Mosquito Girl (SSR)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). Grants 33% [Non-Crit DMG Free] (effective for all DMG types, cannot co-exist with [Agility]). After an ally attacks (starting from round 2), [Awaken] Mosquito Girl launches a [Follow-up] on the enemy with the lowest HP ratio (80% of Basic Attack DMG with special effects, 4 times per round).",
+      "desc": "Permanently increases own HP. Permanently gains 33% [Non-Crit DMG Free], which is effective against all types of non-critical DMG and cannot coexist with [Agility]. Starting from round 2, after an ally attacks, Awakened Mosquito Girl launches a [Follow-Up] against the enemy with the lowest HP percentage. [Follow-Up]: Deals 80% of the Basic Attack's DMG and retains its special effects. Can trigger up to 4 times per round.",
       "icon": "/Skill/Mosquito Girl (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Non-Crit DMG Free] 33% &gt; 38%. [Follow-up] 80% &gt; 90% Basic Attack, 4 &gt; 5 times per round.",
+      "desc": "Permanently increases own HP. Permanently gains 38% [Non-Crit DMG Free], which is effective against all types of non-critical DMG and cannot coexist with [Agility]. Starting from round 2, after an ally attacks, Awakened Mosquito Girl launches a [Follow-Up] against the enemy with the lowest HP percentage. [Follow-Up]: Deals 90% of the Basic Attack's DMG and retains its special effects. Can trigger up to 5 times per round.",
       "icon": "/Skill/Mosquito Girl (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Non-Crit DMG Free] 38% &gt; 45%. [Follow-up] 90% &gt; 100% Basic Attack. Trigger window: from round 2 &gt; from round 1.",
+      "desc": "Permanently increases own HP. Permanently gains 45% [Non-Crit DMG Free], which is effective against all types of non-critical DMG and cannot coexist with [Agility]. Starting from round 1, after an ally attacks, Awakened Mosquito Girl launches a [Follow-Up] against the enemy with the lowest HP percentage. [Follow-Up]: Deals 100% of the Basic Attack's DMG and retains its special effects. Can trigger up to 5 times per round.",
       "icon": "/Skill/Mosquito Girl (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

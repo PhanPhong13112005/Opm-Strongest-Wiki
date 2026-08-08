@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 60% ST sát thương trực tiếp lên một mục tiêu.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu bằng 2 đòn đánh liên tiếp.",
       "icon": "/Skill/Groribas (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 50% ST sát thương trực tiếp lên toàn bộ kẻ địch, sau đó gây [Ăn Mòn Đặc Hóa] (sát thương theo thời gian do ăn mòn) lên khu vực mục tiêu và áp [Hư Vô] lên toàn bộ kẻ địch.",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 2 đòn liên tiếp, gây 250% ATK DMG. Có 100% cơ hội gây [Ăn Mòn Chuyên Biệt] lên mục tiêu chính và các đơn vị xung quanh. [Ăn Mòn Chuyên Biệt]: Gây 120% ATK dưới dạng DMG liên tục. Sau khi bất kỳ nhân vật nào hành động, sẽ chuyển đến một mục tiêu hợp lệ ngẫu nhiên và biến mất sau khi chuyển 5 lần. Vô hiệu hóa Extra DMG do DMG gây ra Phản ánh trong toàn bộ trận chiến.",
       "icon": "/Skill/Groribas (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 50% > 80% ST sát thương trực tiếp lên toàn bộ kẻ địch, sau đó gây [Ăn Mòn Đặc Hóa] (sát thương theo thời gian do ăn mòn) lên khu vực mục tiêu > toàn bộ kẻ địch và áp [Hư Vô] lên toàn bộ kẻ địch.",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 2 đòn liên tiếp, gây 400% ATK DMG. Có 100% cơ hội gây [Ăn Mòn Chuyên Biệt] lên mục tiêu chính và các đơn vị xung quanh. [Ăn Mòn Chuyên Biệt]: Gây 180% ATK dưới dạng DMG liên tục. Sau khi bất kỳ nhân vật nào hành động, sẽ chuyển đến một mục tiêu hợp lệ ngẫu nhiên và biến mất sau khi chuyển 5 lần. Vô hiệu hóa Extra DMG do DMG gây ra Phản ánh trong toàn bộ trận chiến.",
       "keepsakeIcon": "/Keepsake/Groribas (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Groribas (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20% Máu bản thân. Vào cuối lượt của mình, nếu có kẻ địch đang chịu sát thương theo thời gian, gây thêm 60% ST lên toàn bộ kẻ địch và áp [Bám Dính] lên tối đa 6 kẻ địch đang chịu [Ăn Mòn Đặc Hóa].",
+      "desc": "Khi kẻ địch nhận được DMG liên tục, ngay lập tức gây Extra DMG cho tất cả kẻ địch bằng 60% số DMG liên tục đó. Chỉ một hiệu ứng thuộc loại này có thể có hiệu lực trong suốt trận chiến. Kẻ địch bị ảnh hưởng bởi [Ăn Mòn Chuyên Biệt] cũng nhận được [Bị Bám Dính] trong 2 lượt. [Bị Bám Dính]: Ngăn thiết bị bị ảnh hưởng khởi tạo [Truy Kích] và [Truy Kích Liên Tục].",
       "icon": "/Skill/Groribas (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng 20% Máu bản thân. Vào cuối lượt của mình, nếu có kẻ địch đang chịu sát thương theo thời gian, gây thêm 60% > 70% ST lên toàn bộ kẻ địch và áp [Bám Dính] lên tối đa 6 kẻ địch đang chịu [Ăn Mòn Đặc Hóa].",
+      "desc": "Khi kẻ địch nhận được DMG liên tục, ngay lập tức gây Extra DMG cho tất cả kẻ địch bằng 75% số DMG liên tục đó. Chỉ một hiệu ứng thuộc loại này có thể có hiệu lực trong suốt trận chiến. Kẻ địch bị ảnh hưởng bởi [Ăn Mòn Chuyên Biệt] cũng nhận được [Bị Bám Dính] trong 2 lượt. [Bị Bám Dính]: Ngăn thiết bị bị ảnh hưởng khởi tạo [Truy Kích] và [Truy Kích Liên Tục].",
       "icon": "/Skill/Groribas (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng 20% Máu bản thân. Vào cuối lượt của mình, nếu có kẻ địch đang chịu sát thương theo thời gian, gây thêm 70% > 80% ST lên toàn bộ kẻ địch và áp [Bám Dính] lên tối đa 6 kẻ địch đang chịu [Ăn Mòn Đặc Hóa].",
+      "desc": "Khi kẻ địch nhận được DMG liên tục, ngay lập tức gây Extra DMG cho tất cả kẻ địch bằng 80% số DMG liên tục đó. Chỉ một hiệu ứng thuộc loại này có thể có hiệu lực trong suốt trận chiến. Kẻ địch bị ảnh hưởng bởi [Ăn Mòn Chuyên Biệt] cũng nhận được [Bị Bám Dính] trong 2 lượt. [Bị Bám Dính]: Ngăn thiết bị bị ảnh hưởng khởi tạo [Truy Kích] và [Truy Kích Liên Tục].",
       "icon": "/Skill/Groribas (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi trận đấu bắt đầu, cấp [Phản Sát Thương Chuyên Biệt] (giảm ST trực tiếp và ST phụ trội đi 50%, phản lại 50% sát thương gốc về phía kẻ tấn công, kéo dài suốt trận đấu.) Sau khi bất kỳ nhân vật nào hành động, khôi phục [Phòng vệ chuyên biệt] cho Groribas và cột của nó bằng 100% lượng ST theo thời gian trên kẻ địch.",
+      "desc": "Khi bắt đầu trận chiến, nhận vĩnh viễn [Phản Sát Thương Chuyên Biệt]. [Phản Sát Thương Chuyên Biệt]: Giảm 50% Sát Thương Trực Tiếp và Extra DMG nhận được và phản ánh Extra DMG bằng 50% DMG ban đầu trở lại kẻ tấn công. Sau khi bất kỳ nhân vật nào hành động, hấp thụ 100% DMG liên tục mà kẻ thù phải gánh chịu để khôi phục [Phòng Hộ Chuyên Biệt] của chính mình.",
       "icon": "/Skill/Groribas (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Sau khi bất kỳ nhân vật nào hành động, Groribas và cột của nó …",
+      "desc": "Khi bắt đầu trận chiến, nhận vĩnh viễn [Phản Sát Thương Chuyên Biệt]. [Phản Sát Thương Chuyên Biệt]: Giảm 50% Sát Thương Trực Tiếp và Extra DMG nhận được và phản ánh Extra DMG bằng 50% DMG ban đầu trở lại kẻ tấn công. Sau khi bất kỳ nhân vật nào hành động, hấp thụ 100% DMG liên tục mà kẻ thù phải gánh chịu để khôi phục [Phòng Hộ Chuyên Biệt] cho bản thân và đồng minh trong cùng một hàng.",
       "icon": "/Skill/Groribas (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -92,7 +92,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Groribas (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Direct DMG 60% ATK to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target with 2 consecutive strikes and triggers a [Combo].",
       "icon": "/Skill/Bang (SSR+)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Direct DMG 60% ATK to all enemies. Applies [Armed Collapse] to 3 random enemies.",
+      "desc": "Attacks all enemies with 5 consecutive strikes, dealing 300% ATK DMG. Has a 100% chance to inflict [Internal Injury] on 3 random targets and triggers a [Combo]. [Internal Injury]: When the affected target is attacked, it takes [Internal Injury] DMG equal to 200% of Silverfang’s ATK. The effect disappears after triggering.",
       "icon": "/Skill/Bang (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Direct DMG 60% > 70% ATK to all enemies. Applies [Armed Collapse] to 3 random enemies > all enemies.",
+      "desc": "Attacks all enemies with 5 consecutive strikes, dealing 350% ATK DMG. Has a 100% chance to inflict [Internal Injury] on all targets and triggers a [Combo]. [Internal Injury]: When the affected target is attacked, it takes [Internal Injury] DMG equal to 250% of Silverfang’s ATK. The effect disappears after triggering.",
       "icon": "/Skill/Bang (SSR+)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Bang (SSRplus)/Keepsake_SSRplus.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases HP by (+20). While Round &lt; 3, after taking an action, removes [Energy] from the target enemy (up to once per round; cannot inflict [Fear] on that enemy in the same round after a successful removal). At battle start, permanently gains +30% [Instant DMG Evasion].[Instant DMG Evasion]: Direct DMG, Ex. DMG, Charge DMG, and Berserk DMG each deal only 1 DMG.",
+      "desc": "During the first 2 rounds, after taking an action, removes the enemy team’s sealed Energy, up to once per round. After sealed Energy is successfully removed, [Fear] cannot be inflicted on enemies during the same round. At battle start, permanently gains 30% [Instant DMG Evasion]. Permanently increases own HP by. [Instant DMG Evasion]: Direct DMG, Extra DMG, Charge DMG, and Berserk DMG only deal 1 point of DMG.",
       "icon": "/Skill/Bang (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Round window .",
+      "desc": "During the first 3 rounds, after taking an action, reduces the enemy team’s Energy while [Fear] is active, up to once per round. At battle start, permanently gains 40% [Instant DMG Evasion]. Permanently increases own HP by. [Instant DMG Evasion]: Direct DMG, Extra DMG, Charge DMG, and Berserk DMG only deal 1 point of DMG.",
       "icon": "/Skill/Bang (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Whenever Bang attacks, summons Bomb to [Combo Attack] with a similar attack: Basic — deals 100% ATK to a random enemy; Ultimate — 3-hit AoE for 180% ATK. [Combo Attack] uses Bang's ATK as its DMG (Bomb does not need to be on your team).",
+      "desc": "When Silverfang attacks, Bomb uses the same type of skill to perform a [Combo] against enemy targets. Bomb inherits 100% of Silverfang’s ATK. Basic: Deals 100% ATK DMG to 1 random target. Ultimate: Attacks all enemies with 3 consecutive strikes, dealing 180% ATK DMG.",
       "icon": "/Skill/Source/100024-ssrplus/awakened.webp",
       "animation": null,
       "type": "Awakening",
@@ -82,7 +82,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "[Combo Attack] Ultimate ATK 180% > 210%. For each enemy with [Internal Injury], reduces that enemy's [Energy Gauge] by 250.",
+      "desc": "When Silverfang attacks, Bomb uses the same type of skill to perform a [Combo] against enemy targets. Bomb inherits 100% of Silverfang’s ATK. Basic: Deals 100% ATK DMG to 1 random target. Ultimate: Attacks all enemies with 3 consecutive strikes, dealing 210% ATK DMG. When Bomb performs an Ultimate [Combo], reduces the enemy team’s Fighting Spirit by 250 for each target affected by [Internal Injury].",
       "icon": "/Skill/Source/100024-ssrplus/awakened.webp",
       "animation": null,
       "type": "Awakening",

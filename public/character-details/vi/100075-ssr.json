@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST lên mục tiêu đơn, với 100% cơ hội khiến mục tiêu bị [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 50% ST).",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu, với 100% cơ hội gây ra [Thiêu Đốt] trong 2 lượt (DoT bằng 50% ATK).",
       "icon": "/Skill/Metal Knight (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 5 liên kích 20% ST lên toàn bộ địch, với 50% cơ hội khiến mục tiêu bị [Thương Tổn] trong 2 lượt (bổ sung ST thương tổn bằng 50% ST khi bị tấn công), và 100% cơ hội khiến mục tiêu chính bị [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 50% ST).",
+      "desc": "Gây 5 đòn liên tiếp 20% ATK DMG cho tất cả kẻ địch, có 50% cơ hội gây [Bị Thương] trong 2 lượt (thêm sát thương DMG bằng 50% ATK khi mục tiêu bị tấn công) và 100% cơ hội gây sát thương [Thiêu Đốt] lên mục tiêu chính trong 2 lượt (DoT bằng 50% ATK).",
       "icon": "/Skill/Metal Knight (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 5 liên kích 24% ST lên toàn bộ địch, với 50% cơ hội khiến mục tiêu bị [Thương Tổn] trong 2 lượt (bổ sung ST thương tổn bằng 65% ST khi bị tấn công), và 100% cơ hội khiến mục tiêu chính bị [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 100% ST).",
+      "desc": "Gây 5 đòn liên tiếp 24% ATK DMG cho tất cả kẻ địch, có 50% cơ hội gây [Bị Thương] trong 2 lượt (thêm sát thương DMG bằng 65% ATK khi mục tiêu bị tấn công) và 100% cơ hội gây sát thương [Thiêu Đốt] vào mục tiêu chính trong 2 lượt (DoT bằng 100% ATK).",
       "keepsakeIcon": "/Keepsake/Metal Knight (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Metal Knight (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Tăng vĩnh viễn Máu tối đa của bản thân. Mỗi kẻ địch bị [Thương Tổn] tăng cho phe ta +100% ST, tối đa 3 tầng, và khiến kẻ địch bị [Thiêu Đốt] trở nên [Suy Yếu] (giảm 10% ST trong một số lượt).",
+      "desc": "Tăng vĩnh viễn HP tối đa của riêng bạn. Mỗi kẻ địch [Bị Thương] cấp cho đồng minh +100% ATK, tối đa 3 điểm cộng dồn và khiến kẻ địch [Thiêu Đốt] trở thành [Đã Suy Yếu] (ATK giảm 10% trong một số lượt).",
       "icon": "/Skill/Metal Knight (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Tăng vĩnh viễn Máu tối đa của bản thân. Mỗi kẻ địch bị [Thương Tổn] tăng cho phe ta +100% ST, tối đa 4 tầng, và khiến kẻ địch bị [Thiêu Đốt] trở nên [Suy Yếu] (giảm 20% ST trong một số lượt).",
+      "desc": "Tăng vĩnh viễn HP tối đa của riêng bạn. Mỗi kẻ thù [Bị Thương] cấp cho đồng minh +100% ATK, tối đa 4 điểm cộng dồn và khiến kẻ thù [Thiêu Đốt] trở thành [Đã Suy Yếu] (ATK giảm% trong một số lượt).",
       "icon": "/Skill/Metal Knight (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Tăng vĩnh viễn Máu tối đa của bản thân. Mỗi kẻ địch bị [Thương Tổn] tăng cho phe ta +100% ST, tối đa 4 tầng, và khiến kẻ địch bị [Thiêu Đốt] trở nên [Suy Yếu] (giảm 25% ST trong một số lượt).",
+      "desc": "Tăng vĩnh viễn HP tối đa của riêng bạn. Mỗi kẻ thù [Bị Thương] cấp cho đồng minh +100% ATK, tối đa 4 điểm cộng dồn và khiến kẻ thù [Thiêu Đốt] trở thành [Đã Suy Yếu] (ATK giảm 25% trong một số lượt).",
       "icon": "/Skill/Metal Knight (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

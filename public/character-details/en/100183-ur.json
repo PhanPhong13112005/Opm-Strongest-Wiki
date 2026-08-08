@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 2 consecutive strikes to a single target for 120% ATK, with a 100% chance to inflict [Internal Injury] (deals 100% of Suiryu's ATK when the target attacks, then disappears once triggered).",
+      "desc": "Deals 2 consecutive strikes to a single target for 120% ATK, with a 100% chance to inflict [Internal Injury]. [Internal Injury]: Deals 100% of Suiryu’s ATK when the affected target is attacked, then disappears after triggering.",
       "icon": "/Skill/Suiryu (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Attacks an entire row of enemies with 5 consecutive strikes for 400% ATK.Triggers [Breakthrough] (cancels [Specialized Unyielding], once per attack).Has a 75% chance to inflict [Internal Injury] on the main target and 3 random enemies (deals 600% of Suiryu's ATK when the target attacks, then disappears once triggered).Grants himself [Specialized Guard] equal to 400% ATK.",
+      "desc": "Attacks all enemies in a row with 5 consecutive strikes, dealing 400% ATK DMG. Triggers [Breakthrough], removing 1 instance of [Unyielding] or [Specialized Unyielding]. [Breakthrough] can trigger up to once during each action. Has a 75% chance to inflict [Internal Injury] on the main target and 3 random enemies. [Internal Injury]: Deals 600% of Suiryu’s ATK when the affected target is attacked, then disappears after triggering. Grants self [Specialized Guard] equal to 400% ATK, up to 15 stacks.",
       "icon": "/Skill/Suiryu (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Ultimate DMG 400% → 600%[Internal Injury] chance 75% → 90%[Internal Injury] DMG 600% → 750%Self [Specialized Guard] 400% → 600%",
+      "desc": "Attacks all enemies in a row with 5 consecutive strikes, dealing 600% ATK DMG. Each hit can trigger [Breakthrough], removing 1 instance of [Unyielding] or [Specialized Unyielding], with no activation limit during the action. Has a 90% chance to inflict [Internal Injury] on the main target and 3 random enemies. [Internal Injury]: Deals 750% of Suiryu’s ATK when the affected target is attacked, then disappears after triggering. Grants self [Specialized Guard] equal to 600% ATK, up to 15 stacks.",
       "keepsakeIcon": "/Keepsake/Suiryu (UR)/Keepsake_UR.png",
       "icon": "/Skill/Suiryu (UR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently grants himself 50% Injury Boost.Grants himself 50% Non-Crit DMG Free, lasting 4 turns.After taking Fatal DMG, recovers 50% max HP, once per battle.",
+      "desc": "Permanently gains 50% [Injury Boost]. Grants self 50% [Non-Crit DMG Free] for 4 turns. When receiving fatal DMG, triggers [Unyielding] and restores 50% Max HP. Can trigger once per battle.",
       "icon": "/Skill/Suiryu (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Injury Boost 50% → 65%Recover after Fatal DMG 1x → 2x",
+      "desc": "Permanently gains 65% [Injury Boost]. Grants self and allies in the same column 50% [Non-Crit DMG Free] for 4 turns. When receiving fatal DMG, triggers [Unyielding] and restores 50% Max HP. Can trigger up to 2 times per battle.",
       "icon": "/Skill/Suiryu (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Injury Boost 65% → 80%Self Non-Crit DMG Free 50% → 60%Healing after Fatal DMG 50% → 80%",
+      "desc": "Permanently gains 80% [Injury Boost]. Grants self and allies in the same column 60% [Non-Crit DMG Free] for 4 turns. When receiving fatal DMG, triggers [Unyielding] and restores 80% Max HP. Can trigger up to 2 times per battle.",
       "icon": "/Skill/Suiryu (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "After casting Ultimate, launches [Continuous Follow-Up] to 2 random enemies with [Internal Injury] (100% of Ultimate DMG and effect, if less than 2 enemies, can Follow-up on the same target). Immune to [Adhesion/Paralyzed]",
+      "desc": "After actively casting the Ultimate, performs [Continuous Follow-Up] 2 times against random enemy rows affected by [Internal Injury], dealing 100% of the Ultimate’s DMG with 100% of its effects. If fewer than 2 enemies remain, the remaining enemies can still be targeted repeatedly. Suiryu is permanently immune to [Adhesion] and [Paralyzed] while performing a Follow-Up.",
       "icon": "/Skill/Suiryu (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Continuous Follow-up to 2 enemies > 3 enemies Follow-up if less than 2 enemies > 3 enemies Additional: After recovering from [Specialized Unyielding], launches [Continuous Follow-up] to 2 random enemies (80% of Ultimate DMG and 100% of Ultimate effect, if less than 2 enemies, can Follow-up on the same target).",
+      "desc": "After actively casting the Ultimate, performs [Continuous Follow-Up] 3 times against random enemy rows affected by [Internal Injury], dealing 100% of the Ultimate’s DMG with 100% of its effects. If fewer than 3 enemies remain, the remaining enemies can still be targeted repeatedly. After recovering from [Unyielding] or [Specialized Unyielding], immediately performs [Continuous Follow-Up] 2 times against random enemy rows, dealing 80% of the Ultimate’s DMG with 100% of its effects. If fewer than 2 enemies remain, the remaining enemies can still be targeted repeatedly. Suiryu is permanently immune to [Adhesion] and [Paralyzed] while performing a Follow-Up.",
       "icon": "/Skill/Suiryu (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 30% ATK DMG to a single target.",
+      "desc": "Attacks a single target with 5 consecutive strikes, dealing 150% ATK DMG.",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 75% ATK DMG to a single target and marks self. Deals additional DMG equal to 40% of the target's max HP, then marks the target for [Banish].",
+      "desc": "Attacks a single target with 2 consecutive strikes, dealing 150% ATK + 40% Max HP as DMG. After the action, inflicts [Exit] on the target, causing it to leave the battlefield until the next round. This effect is not affected by Formal Set. Summoned units such as Boros’ Dark Matter Thief and Child Emperor’s Underdog Man Robot cannot be affected. [Exit]: The affected character cannot act, cannot trigger passive attacks, and cannot receive DMG while outside the battlefield, but effects such as increasing allies’ SPD can remain active.",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 75% ATK DMG to a single target and marks self. Deals additional DMG equal to 40% > 50% of the target's max HP, then marks the target for [Banish].",
+      "desc": "Attacks a single target with 2 consecutive strikes, dealing 150% ATK + 50% Max HP as DMG. After the action, inflicts [Exit] on the target, causing it to leave the battlefield until the next round. This effect is not affected by Formal Set. Summoned units such as Boros’ Dark Matter Thief and Child Emperor’s Underdog Man Robot cannot be affected. [Exit]: The affected character cannot act, cannot trigger passive attacks, and cannot receive DMG while outside the battlefield, but effects such as increasing allies’ SPD can remain active.",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Phoenix Man (SSRplus)/Keepsake_SSRplus.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases self HP by 20%. On entry, gains +100% max HP and becomes immune to [Banish] and to max-HP reduction. At the start of each round, recovers 50% of max HP. Each turn end, gains a counter mark that lets self [Banish] 1 marked enemy from battle. After taking fatal damage, revives, up to 1 time.",
+      "desc": "At battle start, permanently increases own Max HP by 100% and restores 50% of Max HP. When receiving fatal DMG while not protected by any [Unyielding] effect, triggers [Resurrection]. Phoenixman is immune to [Exit]. [Resurrection]: While at least 1 ally remains on the battlefield, restores 15% HP before Phoenixman’s next action and continues fighting. Can trigger up to 1 time per battle.",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases self HP by 20%. On entry, gains +100% max HP and becomes immune to [Banish] and to max-HP reduction. At the start of each round, recovers 50% of max HP. Each turn end, gains a counter mark that lets self [Banish] 1 marked enemy from battle. After taking fatal damage, revives, up to 1 > 2 times.",
+      "desc": "At battle start, permanently increases own Max HP by 100% and restores 50% of Max HP. When receiving fatal DMG while not protected by any [Unyielding] effect, triggers [Resurrection]. Phoenixman is immune to [Exit]. [Resurrection]: While at least 1 ally remains on the battlefield, restores 15% HP before Phoenixman’s next action and continues fighting. Can trigger up to 2 times per battle.",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases self HP by 20%. On entry, gains +100% max HP and becomes immune to [Banish] and to max-HP reduction. At the start of each round, recovers 50% of max HP. Each turn end, gains a counter mark that lets self [Banish] 1 marked enemy from battle. After taking fatal damage, revives, up to 2 times.",
+      "desc": "At battle start, permanently increases own Max HP by 100% and restores 50% of Max HP. When receiving fatal DMG while not protected by any [Unyielding] effect, triggers [Resurrection]. Phoenixman is immune to [Exit]. [Resurrection]: While at least 1 ally remains on the battlefield, restores 25% HP before Phoenixman’s next action and continues fighting. Can trigger up to 2 times per battle.",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Immediately let defeated allies return to battle with 100% HP (total 4 times per battle) (Effect will be removed if Phoenixman dies before the number of revival is used up.)",
+      "desc": "Immediately returns a defeated ally to battle with 100% HP. Can revive allies up to 4 times per battle in total. If Phoenixman is defeated before all revival counts are used, the remaining revival effect is removed.",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Revive allies 4x > 6x Additional effect - Grants allies 30% non-CRIT DMG FREE (cannot co-exist with Agility)\nThings to note:\nSSR+ CK does not reflect damage if removed from battle Cannot remove Bosses (pve) from the battle, like Boros Club Challenge (obviously) Cannot remove units that are dead but waiting to revive (eg ZBM on the ground) If there is only one enemy unit left, then cannot remove that unit from the battle",
+      "desc": "Immediately returns a defeated ally to battle with 100% HP. Can revive allies up to 6 times per battle in total. If Phoenixman is defeated before all revival counts are used, the remaining revival effect is removed. Permanently grants all allies 30% [Non-Crit DMG Free]. [Non-Crit DMG Free]: Reduces applicable non-critical DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Phoenix Man (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

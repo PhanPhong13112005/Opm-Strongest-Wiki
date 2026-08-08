@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tấn công mục tiêu đơn với 2 đòn liên kích, mỗi đòn gây 50% ST sát thương.",
+      "desc": "Tấn công một mục tiêu bằng 2 đòn kết hợp, mỗi đòn gây 50% ATK DMG.",
       "icon": "/Skill/Messenger of the Seafolk (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công toàn bộ địch với 3 đòn liên kích, mỗi đòn gây 27% ST sát thương, với 100% tỉ lệ gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (sát thương theo thời gian bằng 20% ST).",
+      "desc": "Tấn công tất cả kẻ địch bằng 3 đòn kết hợp, mỗi đòn gây ra 27% ATK DMG, với 100% cơ hội gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (DoT bằng 20% ​​ATK).",
       "icon": "/Skill/Messenger of the Seafolk (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tấn công toàn bộ địch với 3 đòn liên kích, mỗi đòn gây 27% ST sát thương, với 100% tỉ lệ gây [Ăn Mòn] lên mục tiêu chính và 50% tỉ lệ gây [Ăn Mòn] lên những kẻ địch xung quanh mục tiêu chính trong 2 lượt (sát thương theo thời gian bằng 20% ST).",
+      "desc": "Tấn công tất cả kẻ địch bằng 3 đòn kết hợp, mỗi đòn gây 27% ATK DMG, với 100% cơ hội gây [Ăn Mòn] lên mục tiêu chính và 50% cơ hội gây [Ăn Mòn] cho những người xung quanh mục tiêu chính trong 2 lượt (DoT bằng 20% ATK).",
       "icon": "/Skill/Messenger of the Seafolk (SR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Messenger of the Seafolk (SR)/Keepsake_SR.png",
       "type": "Tuyệt kĩ",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20 Máu cho bản thân. Gây [Suy Yếu] lên kẻ địch đang bị [Ăn Mòn] (giảm 20% ST trong 1 lượt).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Gây [Làm Suy Yếu] lên kẻ địch bị ảnh hưởng bởi [Ăn Mòn] (ATK giảm% trong 1 lượt).",
       "icon": "/Skill/Messenger of the Seafolk (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng 20 Máu cho bản thân. Gây [Suy Yếu] lên kẻ địch đang bị [Ăn Mòn] (giảm 30% ST trong 1 lượt).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Gây [Làm Suy Yếu] lên kẻ địch bị ảnh hưởng bởi [Ăn Mòn] (ATK giảm 30% trong 1 lượt).",
       "icon": "/Skill/Messenger of the Seafolk (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng 20 Máu cho bản thân. Gây [Suy Yếu] lên kẻ địch đang bị [Ăn Mòn] (giảm 37% ST trong 1 lượt).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Gây [Làm Suy Yếu] lên kẻ địch bị ảnh hưởng bởi [Ăn Mòn] (ATK giảm 37% trong 1 lượt).",
       "icon": "/Skill/Messenger of the Seafolk (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

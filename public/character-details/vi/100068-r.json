@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 90% ST lên mục tiêu đơn.",
+      "desc": "Gây 90% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Dark Matter Thief (R)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 70% ST lên toàn bộ địch, với 30% cơ hội khiến mục tiêu chính bị [Sụp Đổ] trong 1 lượt (giảm tỷ lệ giảm ST đi 30%).",
+      "desc": "Gây 70% ATK DMG cho tất cả kẻ địch, với 30% cơ hội gây [Sụp Đổ] lên mục tiêu chính trong 1 lượt (tỷ lệ Giảm Sát Thương giảm 30%).",
       "icon": "/Skill/Dark Matter Thief (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 70% ST lên toàn bộ địch, với 30% cơ hội khiến mục tiêu chính bị [Sụp Đổ] trong 1 lượt (giảm tỷ lệ giảm ST đi 40%).",
+      "desc": "Gây 70% ATK DMG cho tất cả kẻ địch, với 30% cơ hội gây [Sụp Đổ] lên mục tiêu chính trong 1 lượt (tỷ lệ Giảm Sát Thương giảm 40%).",
       "keepsakeIcon": "/Keepsake/Dark Matter Thief (R)/Keepsake_R.png",
       "icon": "/Skill/Dark Matter Thief (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Tăng vĩnh viễn Máu tối đa của bản thân. Sau khi bị tấn công, có 20% cơ hội tăng ST bản thân gây ra thêm 10% trong 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP tối đa của riêng bạn. Sau khi bị tấn công, có 20% cơ hội tăng 10% DMG của bản thân trong 1 lượt.",
       "icon": "/Skill/Dark Matter Thief (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Tăng vĩnh viễn Máu tối đa của bản thân. Sau khi bị tấn công, có 20% cơ hội tăng ST bản thân gây ra thêm 20% trong 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP tối đa của riêng bạn. Sau khi bị tấn công, có 20% cơ hội tăng% số DMG của bản thân trong 1 lượt.",
       "icon": "/Skill/Dark Matter Thief (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Tăng vĩnh viễn Máu tối đa của bản thân. Sau khi bị tấn công, có 20% cơ hội tăng ST bản thân gây ra thêm 25% trong 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP tối đa của riêng bạn. Sau khi bị tấn công, có 20% cơ hội tăng 25% DMG của bản thân trong 1 lượt.",
       "icon": "/Skill/Dark Matter Thief (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

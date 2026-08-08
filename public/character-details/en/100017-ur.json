@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals Direct DMG of 60% ATK to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Subterranean King (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals Direct DMG of 90% ATK to the target's row. While it is before Round 6, applies [Deterrent] to 2 random enemies (30% chance).",
+      "desc": "Deals 450% ATK as Direct DMG to all enemies in a row with a 5-hit combo. During the first 5 rounds, has an 80% chance to inflict [Intimidation] on 2 random enemies for 1 round. [Intimidation]: Prevents the affected unit from acting and reduces all DMG Immunity by 30%. This effect is treated as a [Stun] state.",
       "icon": "/Skill/Subterranean King (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals Direct DMG of 90% > 120% ATK to the target's row. While it is before Round 6, applies [Deterrent] to 2 > 3 random enemies (30% > 40% chance).",
+      "desc": "Deals 600% ATK as Direct DMG to all enemies in a row with a 5-hit combo. During the first 5 rounds, has a 100% chance to inflict [Intimidation] on 3 random enemies for 1 round. [Intimidation]: Prevents the affected unit from acting and reduces all DMG Immunity by 40%. This effect is treated as a [Stun] state.",
       "keepsakeIcon": "/Keepsake/Subterranean King (UR)/Keepsake_UR.png",
       "icon": "/Skill/Subterranean King (UR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Gains +20% HP. On entry, gains [Specialized Dodge] 60%. At the start of its own turn, dispels [Faint], [Faint Final], and [Silence] from 1 affected ally each.",
+      "desc": "Gains 60% [Specialized Dodge]. After any character acts, removes [Stun], [Specialized Stun], or [Silence] from 1 ally. [Specialized Dodge]: Direct DMG, Continuous DMG, Injury DMG, and Extra DMG only deal 1 point of DMG.",
       "icon": "/Skill/Subterranean King (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Gains +20% HP. On entry, gains [Specialized Dodge] 60% &gt; 70%. At the start of its own turn, dispels [Faint], [Faint Final], and [Silence] from 1 &gt; 2 affected allies each.",
+      "desc": "Gains 70% [Specialized Dodge]. After any character acts, removes [Stun], [Specialized Stun], or [Silence] from 2 allies. [Specialized Dodge]: Direct DMG, Continuous DMG, Injury DMG, and Extra DMG only deal 1 point of DMG.",
       "icon": "/Skill/Subterranean King (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Specialized Dodge] 70% &gt; 80%. Dispels [Faint], [Faint Final], and [Silence] from 2 &gt; 3 affected allies each.",
+      "desc": "Gains 80% [Specialized Dodge]. After any character acts, removes [Stun], [Specialized Stun], or [Silence] from 3 allies. [Specialized Dodge]: Direct DMG, Continuous DMG, Injury DMG, and Extra DMG only deal 1 point of DMG.",
       "icon": "/Skill/Subterranean King (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Ignore the additional consumption effect caused by [Specialized Fear]. Increase the hit rate of all allies by 30%.",
+      "desc": "Ignores the additional consumption effect caused by [Specialized Panic]. Increases the [Hit] stat of all allies by 30%.",
       "icon": "/Skill/Subterranean King (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Hit Rate 30% > 40% At the start of battle, there is a 100% chance to add [Deterrence] to 3 random enemies for 1 round.",
+      "desc": "Ignores the additional consumption effect caused by [Specialized Panic]. Increases the [Hit] stat of all allies by 40%. At battle start, has a 100% chance to inflict [Intimidation] on 3 random enemies for 1 round.",
       "icon": "/Skill/Subterranean King (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

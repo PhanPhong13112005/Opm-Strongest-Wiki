@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Kabuto Rage: Đánh 5 đòn liên tiếp vào mục tiêu đơn, mỗi lượt gây 100% ST(+10) cộng thêm 25% HP tối đa dưới dạng sát thương cộng thêm.",
+      "desc": "Kabuto Rage: Gây sát thương cho một mục tiêu bằng 5 đòn đánh liên tiếp với 100% ATK cộng với 25% HP tối đa dưới dạng extra DMG.",
       "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Chaos Dancer: Gây 400% ST(+10) sát thương cho mục tiêu đơn và ban [Sát Thương Tụ Lực] bằng 35% HP tối đa. Sau khi tung, nhận [Cuồng Dã] trong lượt này và thực hiện [Truy Kích Tuyệt Kỹ] khi kẻ địch hành động. [Truy Kích Tuyệt Kỹ]: gây 100% sát thương và hiệu ứng của kỹ năng Ultimate, không tốn Follow-up, tối đa 2 lần mỗi lượt. Hồi tối đa 35% HP tối đa cho bản thân trong 1 lượt.",
+      "desc": "Chaos Dancer: Gây 400% ATK DMG cho một mục tiêu và cấp [Sát Thương Tụ Lực] bằng 35% HP tối đa. Sau khi thả ra, nhận được [Cuồng Dã] trong vòng này và thực hiện [Truy Kích Tuyệt Kỹ] khi kẻ địch hành động. [Truy Kích Tuyệt Kỹ]: gây 100% DMG và hiệu ứng của Tuyệt Kĩ, không tốn Truy Kích, tối đa 2 lần mỗi vòng. Tự hồi phục tới 35% HP tối đa trong vòng 1 hiệp.",
       "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Chaos Dancer (nâng cấp): Gây 400% ST(+10) sát thương cho mục tiêu đơn và ban [Sát Thương Tụ Lực] bằng 35% > 45% HP tối đa. Sau khi tung, nhận [Cuồng Dã] trong lượt này và thực hiện [Truy Kích Tuyệt Kỹ] khi kẻ địch hành động. [Truy Kích Tuyệt Kỹ]: gây 100% sát thương và hiệu ứng của kỹ năng Ultimate, không tốn Follow-up, tối đa 2 lần mỗi lượt. Hồi tối đa 35% HP tối đa cho bản thân trong 1 lượt.",
+      "desc": "Chaos Dancer (đã nâng cấp): Gây 400% ATK DMG cho một mục tiêu và cấp [Sát Thương Tụ Lực] bằng 35% > 45% HP tối đa. Sau khi thả ra, nhận được [Cuồng Dã] trong vòng này và thực hiện [Truy Kích Tuyệt Kỹ] khi kẻ địch hành động. [Truy Kích Tuyệt Kỹ]: gây 100% DMG và hiệu ứng của Tuyệt Kĩ, không tốn Truy Kích, tối đa 2 lần mỗi vòng. Tự hồi phục tới 35% HP tối đa trong vòng 1 hiệp.",
       "keepsakeIcon": "/Keepsake/Carnage Kabuto (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Highly Evolved: Khi nhận sát thương (kể cả qua khiên) hoặc bị hạ gục, phản lại 50% sát thương đã nhận lên 4 kẻ địch ngẫu nhiên. Sát thương bao gồm tất cả hiệu ứng Tenacity và hiệu ứng tiêu hao HP. Mỗi trận chỉ một hiệu ứng cùng loại. Vĩnh viễn tăng 20 HP.",
+      "desc": "Tiến hóa cao: Khi nhận sát thương (kể cả khi xuyên qua khiên) hoặc bị đánh bại, phản lại 50% DMG nhận được lên 4 kẻ thù ngẫu nhiên. Thiệt hại bao gồm tất cả các hiệu ứng Độ bền và hiệu ứng tiêu thụ HP. Chỉ có một hiệu ứng cùng loại trong mỗi trận chiến. Tăng vĩnh viễn HP.",
       "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Highly Evolved (nâng cấp): Khi nhận sát thương (kể cả qua khiên) hoặc bị hạ gục, phản lại 50% > 60% sát thương đã nhận lên 4 kẻ địch ngẫu nhiên. Sát thương bao gồm tất cả hiệu ứng Tenacity và hiệu ứng tiêu hao HP. Mỗi trận chỉ một hiệu ứng cùng loại. Vĩnh viễn tăng 20 HP.",
+      "desc": "Tiến hóa cao (đã nâng cấp): Khi nhận sát thương (kể cả khi xuyên qua khiên) hoặc bị đánh bại, phản lại 50% > 60% DMG nhận được lên 4 kẻ thù ngẫu nhiên. Thiệt hại bao gồm tất cả các hiệu ứng Độ bền và hiệu ứng tiêu thụ HP. Chỉ có một hiệu ứng cùng loại trong mỗi trận chiến. Tăng vĩnh viễn HP.",
       "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Highly Evolved (5P): Khi nhận sát thương (kể cả qua khiên) hoặc bị hạ gục, phản lại 60% sát thương đã nhận lên toàn bộ kẻ địch (nâng cấp từ 4 kẻ địch ngẫu nhiên). Sát thương bao gồm tất cả hiệu ứng Tenacity và hiệu ứng tiêu hao HP. Mỗi trận chỉ một hiệu ứng cùng loại. Vĩnh viễn tăng 20 HP.",
+      "desc": "Tiến hóa cao (5P): Khi nhận sát thương (kể cả khi xuyên qua khiên) hoặc bị đánh bại, phản lại 60% DMG nhận được lên tất cả kẻ thù (được nâng cấp từ 4 kẻ thù ngẫu nhiên). Thiệt hại bao gồm tất cả các hiệu ứng Độ bền và hiệu ứng tiêu thụ HP. Chỉ có một hiệu ứng cùng loại trong mỗi trận chiến. Tăng vĩnh viễn HP.",
       "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Heavily Armored: Khi vào trận, tăng 25% HP Tối đa, nhân bốn hiệu ứng tăng HP Tối đa lên bản thân (giống core Gyoro, không cộng dồn với tăng HP của WDM), và hồi 50% HP Tối đa.",
+      "desc": "Được bọc thép hạng nặng: Khi trận chiến bắt đầu, tăng HP tối đa lên 25%, nhân bốn lần hiệu ứng tăng sức mạnh HP tối đa lên bản thân (giống như lõi Gyoro, không thể cộng dồn khi tăng WDM HP) và phục hồi 50% HP tối đa.",
       "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Tăng HP Tối đa 25% > 30%. Sau khi bị hạ gục, hồi sinh với 70% HP vào lượt kế tiếp (một lần mỗi trận).",
+      "desc": "HP tối đa tăng 25% > 30%. Sau khi bị đánh bại, hồi sinh với 70% HP ở vòng tiếp theo (một lần mỗi trận).",
       "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -91,7 +91,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

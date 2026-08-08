@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Rigid Arm: Deal 120% ATK(+10) DMG to a single target, and deal 8% of Max HP as extra DMG.",
+      "desc": "Rigid Arm: Deal 120% AT DMG to a single target, and deal 8% of Max HP as extra DMG.",
       "icon": "/Skill/Carnage Kabuto (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Kabuto Knuckle: Deal damage to a single target with 2 consecutive strikes for 210% ATK(+10) DMG. Heal self for 20% of Max HP. If the 2nd phase deals Crit DMG, 100% chance to inflict [Injury] for 2 rounds (when attacked, takes Injury DMG of 50% ATK).",
+      "desc": "Kabuto Knuckle: Deal damage to a single target with 2 consecutive strikes for 210% AT DMG. Heal self for 20% of Max HP. If the 2nd phase deals Crit DMG, 100% chance to inflict [Injury] for 2 rounds (when attacked, takes Injury DMG of 50% ATK).",
       "icon": "/Skill/Carnage Kabuto (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Kabuto Knuckle (Ultra-Ultimate): Deal damage to a single target with 2 consecutive strikes for 210% > 262% ATK(+10) DMG. Heal self for 20% > 35% of Max HP. If the 2nd phase does NOT deal Crit DMG, there's a 100% chance to afflict the main target with [Injury] for 2 rounds (when attacked, deal a follow-up attack of 50% > 80% ATK as extra DMG).",
+      "desc": "Kabuto Knuckle (Ultra-Ultimate): Deal damage to a single target with 2 consecutive strikes for 210% > 262% AT DMG. Heal self for 20% > 35% of Max HP. If the 2nd phase does NOT deal Crit DMG, there's a 100% chance to afflict the main target with [Injury] for 2 rounds (when attacked, deal a follow-up attack of 50% > 80% ATK as extra DMG).",
       "icon": "/Skill/Carnage Kabuto (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Carnage Kabuto (SSR)/Keepsake_SSR.png",
       "type": "Ultimate",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Kabuto Armor: When attacked, reflect 20% of DMG taken onto all enemies (only one effect of the same type per battle). Permanently increase HP by 20.",
+      "desc": "Kabuto Armor: When attacked, reflect 20% of DMG taken onto all enemies (only one effect of the same type per battle). Permanently increase HP.",
       "icon": "/Skill/Carnage Kabuto (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Kabuto Armor (5P): When attacked, reflect 35% of DMG taken onto all enemies (only one effect of the same type per battle). Permanently increase HP by 20.",
+      "desc": "Kabuto Armor (5P): When attacked, reflect 35% of DMG taken onto all enemies (only one effect of the same type per battle). Permanently increase HP.",
       "icon": "/Skill/Carnage Kabuto (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

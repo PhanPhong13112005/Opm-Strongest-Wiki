@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 60% ST dưới dạng sát thương lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Atomic Samurai (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 130% ST dưới dạng sát thương lên cả cột của mục tiêu và trao [Bất Khuất] cho cột đó.",
+      "desc": "Tấn công tất cả kẻ địch trong một cột bằng 5 nhát chém liên tiếp, gây 650% ATK DMG. Giảm số hành động còn lại của kẻ thù hiện đang ở dưới [Bất Khuất Chuyên Biệt] xuống 2. Nếu kẻ địch bị ảnh hưởng hiện không ở dưới [Bất Khuất Chuyên Biệt], [Bất Khuất Chuyên Biệt] tiếp theo mà chúng kích hoạt sẽ có số hành động giảm đi 2.",
       "icon": "/Skill/Atomic Samurai (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 130% > 150% ST dưới dạng sát thương lên cả cột của mục tiêu, trao [Bất Khuất] cho cột đó, đồng thời trao thêm [Bất Khuất] cho toàn bộ đồng minh.",
+      "desc": "Tấn công tất cả kẻ địch trong một cột bằng 5 nhát chém liên tiếp, gây 750% ATK DMG. Giảm số hành động còn lại của kẻ thù hiện đang ở dưới [Bất Khuất Chuyên Biệt] xuống 2. Nếu kẻ địch bị ảnh hưởng hiện không ở dưới [Bất Khuất Chuyên Biệt], [Bất Khuất Chuyên Biệt] tiếp theo mà chúng kích hoạt sẽ có số hành động giảm đi 2. Khi sử dụng Tuyệt Kĩ, sẽ tăng số hành động của [Bất Khuất Chuyên Biệt] của tất cả đồng minh lên 1.",
       "keepsakeIcon": "/Keepsake/Atomic Samurai (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Atomic Samurai (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "+20% Máu. Khi vào trận, nhận +60% [Miễn Sát Thương Không Bạo Kích]. Sau khi bất kỳ đơn vị nào hành động, hồi cho bản thân 10% Máu tối đa.",
+      "desc": "Tăng vĩnh viễn 60% [Giảm Sát Thương Không Bạo Kích]. Sau khi bất kỳ nhân vật nào hành động, sẽ phục hồi 10% HP tối đa. Sự phục hồi này không có giới hạn kích hoạt mỗi vòng.",
       "icon": "/Skill/Atomic Samurai (SSR+)/Skill_pas.png",
       "animation": "/Animation/Sam_Urplus/Passive.gif",
       "type": "Nội tại",
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Miễn Sát Thương Không Bạo Kích] 60% &gt; 70%. Hồi máu sau khi đơn vị bất kỳ hành động 10% &gt; 15% Máu tối đa.",
+      "desc": "Tăng vĩnh viễn 70% [Giảm Sát Thương Không Bạo Kích]. Sau khi bất kỳ nhân vật nào hành động, sẽ hồi phục 15% HP tối đa. Sự phục hồi này không có giới hạn kích hoạt mỗi vòng.",
       "icon": "/Skill/Atomic Samurai (SSR+)/Skill_pas.png",
       "animation": "/Animation/Sam_Urplus/Passive.gif",
       "type": "Nội tại",
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Miễn Sát Thương Không Bạo Kích] 70% &gt; 80%. Hồi máu sau khi đơn vị bất kỳ hành động 15% &gt; 20% Máu tối đa.",
+      "desc": "Tăng vĩnh viễn 80% [Giảm Sát Thương Không Bạo Kích]. Sau khi bất kỳ nhân vật nào hành động, sẽ hồi phục 20% HP tối đa. Sự phục hồi này không có giới hạn kích hoạt mỗi vòng.",
       "icon": "/Skill/Atomic Samurai (SSR+)/Skill_pas.png",
       "animation": "/Animation/Sam_Urplus/Passive.gif",
       "type": "Nội tại",
@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Đánh dấu mục tiêu chính, giảm HP Tối đa của mục tiêu bằng 600% ATK của Atomic Samurai (tối đa 50% HP Tối đa của mục tiêu), và vô hiệu mọi hiệu ứng tăng HP Tối đa của mục tiêu. Sau khi hành động, nếu Atomic Samurai hạ gục mục tiêu bị đánh dấu hoặc kích hoạt [Bất Khuất] / [Bất Khuất Cường Hóa] lên nó, kích hoạt [Truy Kích] (Ultimate Follow-up) lên một kẻ địch ngẫu nhiên, gây 80% ST của Ultimate.",
+      "desc": "Khi Samurai Nguyên Tử chủ động tấn công, trước tiên hãy loại bỏ [Tăng Max HP 4×] khỏi kẻ địch trúng đòn, sau đó giảm vĩnh viễn HP tối đa của chúng một lượng bằng 600% ATK của Samurai Nguyên Tử. HP tối đa của kẻ địch không thể giảm xuống dưới 50% giá trị ban đầu bởi hiệu ứng này. Sau khi Samurai Nguyên Tử hành động, nếu anh ta đánh bại kẻ thù hoặc khiến kẻ thù kích hoạt [Bất Khuất] hoặc [Bất Khuất Chuyên Biệt], thực hiện [Truy Kích Tuyệt Kĩ] chống lại một cột kẻ thù ngẫu nhiên, gây sát thương bằng 80% DMG ban đầu của Tuyệt Kĩ. Việc truy đuổi này không làm giảm HP tối đa và có thể kích hoạt một lần mỗi vòng.",
       "icon": "/Skill/Source/100011-ssrplus/awakened.webp",
       "animation": null,
       "type": "Thức tỉnh",
@@ -82,7 +82,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Hiệu ứng thêm: giảm vĩnh viễn 40% ATK của kẻ địch bị đánh dấu. ATK của Ultimate Follow-up 80% > 120% (nay kích hoạt sau bất kỳ hành động nào).",
+      "desc": "Khi Samurai Nguyên Tử chủ động tấn công, trước tiên hãy loại bỏ [Tăng Max HP 4×] khỏi kẻ địch trúng đòn, sau đó giảm vĩnh viễn HP tối đa của chúng một lượng bằng 600% ATK của Samurai Nguyên Tử. HP tối đa của kẻ địch không thể giảm xuống dưới 50% giá trị ban đầu bởi hiệu ứng này. Sau khi Samurai Nguyên Tử kết thúc hành động, luôn thực hiện [Truy Kích Tuyệt Kĩ] chống lại một cột kẻ thù ngẫu nhiên mà không yêu cầu kẻ địch phải bị đánh bại hoặc kích hoạt [Bất Khuất] hoặc [Bất Khuất Chuyên Biệt]. Việc truy đuổi gây ra 120% DMG ban đầu của Tuyệt Kĩ, không làm giảm HP tối đa và có thể kích hoạt một lần mỗi hiệp. Kẻ địch bị Samurai Nguyên Tử tấn công trực tiếp cũng mất vĩnh viễn 40% ATK.",
       "icon": "/Skill/Source/100011-ssrplus/awakened.webp",
       "animation": null,
       "type": "Thức tỉnh",
@@ -91,7 +91,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Source/100011-ssrplus/awakened.webp",
       "animation": null,
       "type": "Thức tỉnh",

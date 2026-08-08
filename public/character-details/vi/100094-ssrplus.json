@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 30% ST trực tiếp lên mục tiêu đơn.",
+      "desc": "Gây 30% ATK Sát Thương Trực Tiếp cho một mục tiêu.",
       "icon": "/Skill/Garou (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 190% ST trực tiếp lên mục tiêu đơn. Khi [Bạo Kích], nếu mục tiêu chưa có miễn tử, áp [Miễn Nhiễm Tử Vong] lên nó (vô hiệu hóa hiệu ứng bất tử/chống chết của mục tiêu).",
+      "desc": "Gây 190% ATK Sát Thương Trực Tiếp cho một mục tiêu. Trên [Bạo Kích], nếu mục tiêu không có khả năng miễn nhiễm tử vong, hãy áp dụng [Miễn Nhiễm Tử Vong] cho mục tiêu đó (vô hiệu hóa hiệu ứng bất tử/ngăn chặn tử vong của mục tiêu).",
       "icon": "/Skill/Garou (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 190% > 240% ST trực tiếp lên mục tiêu đơn. Áp [Miễn Nhiễm Tử Vong] lên mục tiêu nếu nó chưa có miễn tử (khi Crit > luôn luôn, không cần [Bạo Kích]). Nếu mục tiêu đã có miễn tử, thay vào đó hồi cho bản thân một phần Máu tối đa.",
+      "desc": "Gây 190% > 240% ATK Sát Thương Trực Tiếp cho một mục tiêu. Áp dụng [Miễn Nhiễm Tử Vong] cho mục tiêu nếu mục tiêu không có khả năng miễn nhiễm tử vong (trên CRIT > luôn luôn, không yêu cầu [Bạo Kích]). Nếu mục tiêu đã có khả năng miễn dịch tử vong, thay vào đó, bản thân sẽ tự hồi phục một phần HP tối đa.",
       "keepsakeIcon": "/Keepsake/Garou (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Garou (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Gỡ [Choáng] khỏi bản thân sau hành động của bất kỳ nhân vật nào. Sau khi đồng minh hành động, tung [Truy Kích Tuyệt Kỹ] lên 1 kẻ địch ngẫu nhiên đang ở trạng thái [Bỏ Qua Sát Thương], tối đa 2 lần mỗi lượt.[Truy Kích Tuyệt Kỹ]: gây 50% ST của Tuyệt Kỹ (hiệu ứng tương tự).",
+      "desc": "Tăng vĩnh viễn HP thêm. Loại bỏ [Choáng] khỏi bản thân sau bất kỳ hành động nào của nhân vật. Sau khi một đồng minh hành động, phóng [Truy Kích Tuyệt Kỹ] lên 1 kẻ thù ngẫu nhiên ở trạng thái [Bỏ Qua Sát Thương], tối đa 2 lần mỗi hiệp.[Truy Kích Tuyệt Kỹ]: gây 50% Tuyệt Kĩ của DMG (hiệu ứng tương tự).",
       "icon": "/Skill/Garou (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Truy Kích Tuyệt Kỹ] ST 50% &gt; 60% (vẫn tối đa 2 lần mỗi lượt).",
+      "desc": "[Truy Kích Tuyệt Kỹ] DMG 50% > 60% (vẫn tối đa 2 lần mỗi hiệp).",
       "icon": "/Skill/Garou (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Truy Kích Tuyệt Kỹ] ST 60% &gt; 70% (vẫn tối đa 2 lần mỗi lượt).",
+      "desc": "[Truy Kích Tuyệt Kỹ] DMG 60% > 70% (vẫn tối đa 2 lần mỗi hiệp).",
       "icon": "/Skill/Garou (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi bắt đầu trận đấu, Garou nhận 2 hiệu ứng bất khuất dựa trên 50% Máu tối đa. Một khi hiệu ứng bất khuất bị giảm, Garou kích hoạt hiệu ứng bảo vệ chuyên biệt (120% Máu tối đa, gỡ bỏ sát thương, có thể cộng dồn với hiệu ứng Máu bổ sung, lượng gỡ bỏ sát thương sẽ không vượt quá 5 lần Máu gốc).",
+      "desc": "Khi bắt đầu trận đấu, Garou nhận được hiệu ứng kiên cường gấp đôi dựa trên 50% HP tối đa. Sau khi giảm hiệu ứng kiên cường, Garou kích hoạt hiệu ứng bảo vệ chuyên dụng (120% HP tối đa, loại bỏ sát thương, có thể cộng dồn với hiệu ứng extra HP, loại bỏ sát thương sẽ không bằng 5 lần HP ban đầu).",
       "icon": "/Skill/Garou (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Một khi trạng thái bất khuất/bất khuất đặc biệt của đồng minh hết hạn, Garou nhận lượng bảo vệ chuyên biệt bằng 100% Máu tối đa của bản thân, tối đa 3 lần mỗi trận.",
+      "desc": "Khi đồng minh ở trạng thái bất khuất/bất khuất đặc biệt hết hạn, Garou nhận được 100% lớp bảo vệ chuyên biệt HP tối đa của riêng mình, tối đa 3 lần mỗi trận.",
       "icon": "/Skill/Garou (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -91,7 +91,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Garou (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

@@ -29,7 +29,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Attacks all enemies with 5 consecutive strikes for 120% ATK (+10) Direct DMG. Grants same-column allies [Specialized Speed Up] for 1 round. Removes 1 Energy from the enemy (up to once per round; after a successful removal, the enemy cannot be inflicted with [Fear] in the same round).[Specialized Speed Up]: increases SPD up to 90% of Flashy Flash's SPD.",
+      "desc": "Attacks all enemies with 5 consecutive strikes for 120% ATK Direct DMG. Grants same-column allies [Specialized Speed Up] for 1 round. Removes 1 Energy from the enemy (up to once per round; after a successful removal, the enemy cannot be inflicted with [Fear] in the same round).[Specialized Speed Up]: increases SPD up to 90% of Flashy Flash's SPD.",
       "icon": "/Skill/Flashy Flash (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,

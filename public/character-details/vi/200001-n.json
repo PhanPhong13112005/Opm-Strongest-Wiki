@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 80% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 80% sát thương ATK cho một mục tiêu.",
       "icon": "/Skill/Paradiser Footsoldier (N)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 180% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 180% sát thương ATK cho một mục tiêu.",
       "icon": "/Skill/Paradiser Footsoldier (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 200% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 200% sát thương ATK cho một mục tiêu.",
       "keepsakeIcon": "/Keepsake/Paradiser Footsoldier (N)/Keepsake_N.png",
       "icon": "/Skill/Paradiser Footsoldier (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Tăng vĩnh viễn Máu (+20) của bản thân. Nếu có Du Côn Nhóm Đào Nguyên trên sân, tăng 20% sát thương của bản thân, kéo dài đến hết trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Nếu Paradise Group Punk có mặt trên sân, tăng% sát thương của bản thân, kéo dài cho đến cuối trận chiến.",
       "icon": "/Skill/Paradiser Footsoldier (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Tăng vĩnh viễn Máu (+20) của bản thân. Nếu có Du Côn Nhóm Đào Nguyên trên sân, tăng 25% sát thương của bản thân, kéo dài đến hết trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Nếu Paradise Group Punk ở trên sân, tăng sát thương của bản thân thêm 25%, kéo dài cho đến hết trận chiến.",
       "icon": "/Skill/Paradiser Footsoldier (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Tăng vĩnh viễn Máu (+20) của bản thân. Nếu có Du Côn Nhóm Đào Nguyên trên sân, tăng 28% sát thương của bản thân, kéo dài đến hết trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Nếu Paradise Group Punk ở trên sân, tăng sát thương của bản thân thêm 28%, kéo dài cho đến hết trận chiến.",
       "icon": "/Skill/Paradiser Footsoldier (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 80% ATK (+10) damage to a single target.",
+      "desc": "Deals 80% ATK damage to a single target.",
       "icon": "/Skill/Paradiser Footsoldier (N)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 180% ATK (+10) damage to a single target.",
+      "desc": "Deals 180% ATK damage to a single target.",
       "icon": "/Skill/Paradiser Footsoldier (N)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 200% ATK (+10) damage to a single target.",
+      "desc": "Deals 200% ATK damage to a single target.",
       "keepsakeIcon": "/Keepsake/Paradiser Footsoldier (N)/Keepsake_N.png",
       "icon": "/Skill/Paradiser Footsoldier (N)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP (+20). If a Paradise Group Punk is on the field, increases own damage by 20%, lasting until the end of battle.",
+      "desc": "Permanently increases own HP. If a Paradise Group Punk is on the field, increases own damage%, lasting until the end of battle.",
       "icon": "/Skill/Paradiser Footsoldier (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP (+20). If a Paradise Group Punk is on the field, increases own damage by 25%, lasting until the end of battle.",
+      "desc": "Permanently increases own HP. If a Paradise Group Punk is on the field, increases own damage by 25%, lasting until the end of battle.",
       "icon": "/Skill/Paradiser Footsoldier (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP (+20). If a Paradise Group Punk is on the field, increases own damage by 28%, lasting until the end of battle.",
+      "desc": "Permanently increases own HP. If a Paradise Group Punk is on the field, increases own damage by 28%, lasting until the end of battle.",
       "icon": "/Skill/Paradiser Footsoldier (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

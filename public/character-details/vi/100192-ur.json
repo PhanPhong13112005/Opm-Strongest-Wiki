@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST cho mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Genos (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công toàn bộ kẻ địch với 2 đòn liên tiếp, gây ST bằng 500% ST. Mỗi đòn có 50% tỉ lệ thêm 1 lớp [Thiêu Đốt Chuyên Biệt] (sát thương theo thời gian bằng 300% ST; sau khi bất kỳ nhân vật nào hành động, chuyển hiệu ứng sang một mục tiêu ngẫu nhiên, biến mất sau khi chuyển 3 lần) lên mục tiêu.",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 2 đòn liên tiếp, gây 500% ATK DMG. Mỗi đòn tấn công có 50% cơ hội thêm 1 điểm [Thiêu Đốt Chuyên Biệt] vào mục tiêu. [Thiêu Đốt Chuyên Biệt]: Gây 300% ATK thành DoT DMG. Sau khi bất kỳ nhân vật nào hành động, chuyển hiệu ứng sang mục tiêu ngẫu nhiên và biến mất sau khi được chuyển 3 lần.",
       "icon": "/Skill/Genos (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "ST Tối thượng: 500% → 700%.Tỉ lệ thêm lớp [Thiêu Đốt Chuyên Biệt]: 50% → 80%.Sát thương theo thời gian [Thiêu Đốt Chuyên Biệt]: 300% → 400%.",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 2 đòn liên tiếp, gây 700% ATK DMG. Mỗi đòn tấn công có 80% cơ hội thêm 1 điểm [Thiêu Đốt Chuyên Biệt] vào mục tiêu. [Thiêu Đốt Chuyên Biệt]: Gây 400% ATK thành DoT DMG. Sau khi bất kỳ nhân vật nào hành động, chuyển hiệu ứng sang mục tiêu ngẫu nhiên và biến mất sau khi được chuyển 3 lần.",
       "keepsakeIcon": "/Keepsake/Genos (UR)/Keepsake_UR.png",
       "icon": "/Skill/Genos (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Khi trận đấu bắt đầu, nhận 60% Giảm ST không chí mạng (giảm mọi loại ST không chí mạng, không thể cùng tồn tại với [Nhanh Nhẹn]).Sau khi bất kỳ nhân vật nào hành động, [Kích Nổ] [Thiêu Đốt Chuyên Biệt] (400% ST của một [Thiêu Đốt Chuyên Biệt] đơn chuyển thành ST [Kích Nổ]).",
+      "desc": "Khi trận chiến bắt đầu, nhận được 60% [Miễn Sát Thương Không Bạo Kích]. Sau khi bất kỳ nhân vật nào hành động, [Kích Nổ] sẽ kích hoạt, chuyển đổi 400% của một [Thiêu Đốt Chuyên Biệt] DMG thành [Kích Nổ] DMG. [Miễn Sát Thương Không Bạo Kích]: Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Genos (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Giảm ST không chí mạng: 60% → 70%.Detonate: 400% → 450%.",
+      "desc": "Khi trận chiến bắt đầu, nhận được 70% [Miễn Sát Thương Không Bạo Kích]. Sau khi bất kỳ nhân vật nào hành động, [Kích Nổ] sẽ kích hoạt, chuyển đổi 450% của một [Thiêu Đốt Chuyên Biệt] DMG thành [Kích Nổ] DMG. [Miễn Sát Thương Không Bạo Kích]: Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Genos (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Giảm ST không chí mạng: 70% → 80%.Detonate: 450% → 500%.",
+      "desc": "Khi trận chiến bắt đầu, nhận được 80% [Miễn Sát Thương Không Bạo Kích]. Sau khi bất kỳ nhân vật nào hành động, [Kích Nổ] sẽ kích hoạt, chuyển đổi 500% của một [Thiêu Đốt Chuyên Biệt] DMG thành [Kích Nổ] DMG. [Miễn Sát Thương Không Bạo Kích]: Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Genos (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Sau khi bất kỳ nhân vật nào hành động, hấp thụ 40% ST [Kích Nổ] và gây [Sát Thương Thật] (Không bị ảnh hưởng bởi Tăng sát thương và Giảm sát thương, gây ST trực tiếp mà không bị [Chia Sẻ ST] hay [Né Tránh]) lên 3 nhân vật có Máu thấp nhất.",
+      "desc": "Sau khi bất kỳ nhân vật nào hành động, hấp thụ 40% [Kích Nổ] DMG và gây [Sát Thương Chuẩn] cho 3 kẻ thù có HP thấp nhất. [Sát Thương Chuẩn]: Không bị ảnh hưởng bởi Tỷ lệ DMG hoặc DMG miễn phí và giao dịch Sát Thương Trực Tiếp không có [Chia Sẻ Sát Thương] hoặc [Khả Năng Né Tránh].",
       "icon": "/Skill/Genos (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Gây True Damage lên 3 nhân vật có Máu thấp nhất > toàn bộ đội kẻ địch",
+      "desc": "Sau khi bất kỳ nhân vật nào hành động, hấp thụ 40% [Kích Nổ] DMG và gây [Sát Thương Chuẩn] cho toàn bộ đội địch. [Sát Thương Chuẩn]: Không bị ảnh hưởng bởi Tỷ lệ DMG hoặc DMG miễn phí và giao dịch Sát Thương Trực Tiếp không có [Chia Sẻ Sát Thương] hoặc [Khả Năng Né Tránh].",
       "icon": "/Skill/Genos (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Genos (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

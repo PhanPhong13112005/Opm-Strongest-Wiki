@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST (+10) sát thương lên mục tiêu đơn, và bản thân vào trạng thái [Cuồng Nộ] 1 lượt (tăng 30% sát thương).",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu và rơi vào trạng thái [Giận Dữ] trong 1 lượt. [Giận Dữ]: Tăng DMG thêm 30%.",
       "icon": "/Skill/Bang (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 5 liên kích gây 30% ST (+2) sát thương lên mỗi kẻ địch trong cả cột, với 100% cơ hội gây [Nội Thương] cho mục tiêu bị đánh (khi bị đánh, gây thêm sát thương Nội Thương bằng 140% ST của Silver Fang; hiệu ứng biến mất sau khi kích hoạt).",
+      "desc": "Tấn công tất cả kẻ địch trong một cột bằng 5 đòn liên tiếp, gây 150% ATK DMG. Có 100% cơ hội gây [Nội Thương] lên mục tiêu. [Nội Thương]: Khi đơn vị bị ảnh hưởng bị tấn công, lấy DMG bằng 140% ATK của Silverfang. Hiệu ứng biến mất sau khi kích hoạt một lần.",
       "icon": "/Skill/Bang (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung 5 liên kích gây 38% ST (+2) sát thương lên mỗi kẻ địch trong cả cột, với 100% cơ hội gây [Nội Thương] cho mục tiêu bị đánh (khi bị đánh, gây thêm sát thương Nội Thương bằng 160% ST của Silver Fang; hiệu ứng biến mất sau khi kích hoạt).",
+      "desc": "Tấn công tất cả kẻ địch trong một cột bằng 5 đòn liên tiếp, gây 187,5% ATK DMG. Có 100% cơ hội gây [Nội Thương] lên mục tiêu. [Nội Thương]: Khi đơn vị bị ảnh hưởng bị tấn công, lấy DMG bằng 160% ATK của Silverfang. Hiệu ứng biến mất sau khi kích hoạt một lần.",
       "icon": "/Skill/Bang (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Bang (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi bắt đầu trận đấu, tăng 30% tỷ lệ Đỡ cho cả đội trong 2 lượt. Sau khi đồng minh kích hoạt Đỡ, nhận [Kiên Cường] (hấp thụ sát thương bằng 7% Máu của bản thân, 3 lần mỗi lượt).",
+      "desc": "Khi bắt đầu trận chiến, tăng 30% Tỷ lệ chặn của tất cả đồng minh trong 2 lượt. Khi một nhân vật đồng minh kích hoạt Chặn thành công, sẽ nhận được [Lá Chắn]. [Lá Chắn]: Hấp thụ DMG bằng 7% HP tối đa. Có thể kích hoạt tối đa 3 lần mỗi lượt.",
       "icon": "/Skill/Bang (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi bắt đầu trận đấu, tăng 30% tỷ lệ Đỡ cho cả đội trong 2 lượt. Sau khi đồng minh kích hoạt Đỡ, nhận [Kiên Cường] (hấp thụ sát thương bằng 8% Máu của bản thân, 4 lần mỗi lượt).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi bắt đầu trận chiến, cấp cho toàn đội 30% Tỷ lệ chặn trong 2 lượt. Sau khi nhân vật đồng minh kích hoạt Chặn, họ nhận được [Lá Chắn] (hấp thụ DMG bằng 8% HP của chính họ, tối đa 4 lần mỗi lượt).",
       "icon": "/Skill/Bang (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi bắt đầu trận đấu, tăng 30% tỷ lệ Đỡ cho cả đội trong 2 lượt. Sau khi đồng minh kích hoạt Đỡ, nhận [Kiên Cường] (hấp thụ sát thương bằng 8.5% Máu của bản thân, 4 lần mỗi lượt).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi bắt đầu trận chiến, cấp cho toàn đội 30% Tỷ lệ chặn trong 2 lượt. Sau khi nhân vật đồng minh kích hoạt Chặn, họ nhận được [Lá Chắn] (hấp thụ DMG bằng 8,5% HP của chính họ, tối đa 4 lần mỗi lượt).",
       "icon": "/Skill/Bang (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

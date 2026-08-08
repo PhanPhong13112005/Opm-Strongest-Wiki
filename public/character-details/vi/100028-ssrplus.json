@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây ST trực tiếp 60% ST lên mục tiêu đơn.",
+      "desc": "Tấn công một mục tiêu bằng 2 đòn liên tiếp, gây 120% ATK DMG.",
       "icon": "/Skill/Tank Top Master (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Ban [Miễn Tử] cho cả cột của mục tiêu. Gây ST trực tiếp 22% Máu Tối Đa lên cả cột của mục tiêu.",
+      "desc": "Tấn công tất cả kẻ địch trong một cột bằng 5 đòn liên tiếp, gây DMG bằng 110% HP tối đa. Có thể kích hoạt [Đột Phá] một lần trong mỗi lần tấn công vào từng mục tiêu. [Đột Phá]: Loại bỏ ngay lập tức DMG Bỏ qua do hiệu ứng loại Bất khuất gây ra.",
       "icon": "/Skill/Tank Top Master (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Ban [Miễn Tử] cho cả cột của mục tiêu. Gây ST trực tiếp 22% > 28% Máu Tối Đa lên cả cột của mục tiêu.",
+      "desc": "Tấn công tất cả kẻ địch trong một cột bằng 5 đòn liên tiếp, gây DMG bằng 140% HP tối đa. Có thể kích hoạt [Đột Phá] một lần trong mỗi lần tấn công vào từng mục tiêu. [Đột Phá]: Loại bỏ ngay lập tức DMG Bỏ qua do hiệu ứng loại Bất khuất gây ra.",
       "keepsakeIcon": "/Keepsake/Tank Top Master (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Tank Top Master (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "+20% Máu cho bản thân. Đầu lượt của mình, Giải trừ hiệu ứng toàn bộ kẻ địch. Khi vào trận, hồi máu cho bản thân dựa trên Máu Tối Đa. Nếu nhận ST hoặc mất Máu, vào cuối lượt của mình và khi tử vong gây ST Thêm 51% ST (tăng theo ST/Máu đã mất) lên 4 kẻ địch ngẫu nhiên.",
+      "desc": "Khi bắt đầu trận chiến, nhận được [Phòng Hộ Chuyên Biệt] bằng 180% HP tối đa. Vào đầu mỗi lượt, loại bỏ hiệu ứng [Chia Sẻ Sát Thương] của tất cả kẻ thù. Sau khi lấy DMG hoặc bị đánh bại, phản ánh DMG bằng 51% DMG nhận vào lên 4 kẻ địch. Lượng phản ánh được tính từ [Phòng Hộ Chuyên Biệt] và HP kết hợp đã tiêu thụ. Chỉ một hiệu ứng thuộc loại này có thể có hiệu lực trong suốt trận chiến.",
       "icon": "/Skill/Tank Top Master (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "ST Thêm phản đòn nay đánh trúng 4 ngẫu nhiên > toàn bộ kẻ địch.",
+      "desc": "Khi bắt đầu trận chiến, nhận được [Phòng Hộ Chuyên Biệt] bằng 200% HP tối đa. Vào đầu mỗi lượt, loại bỏ hiệu ứng [Chia Sẻ Sát Thương] của tất cả kẻ thù. Sau khi lấy DMG hoặc bị đánh bại, phản ánh DMG bằng 61% DMG nhận vào lên tất cả kẻ thù. Lượng phản ánh được tính từ [Phòng Hộ Chuyên Biệt] và HP kết hợp đã tiêu thụ. Chỉ một hiệu ứng thuộc loại này có thể có hiệu lực trong suốt trận chiến.",
       "icon": "/Skill/Tank Top Master (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "ST Thêm phản đòn 51% > 61% ST lên toàn bộ kẻ địch.",
+      "desc": "Khi bắt đầu trận chiến, nhận được [Phòng Hộ Chuyên Biệt] bằng 230% HP tối đa. Vào đầu mỗi lượt, loại bỏ hiệu ứng [Chia Sẻ Sát Thương] của tất cả kẻ thù. Sau khi lấy DMG hoặc bị đánh bại, phản ánh DMG bằng 61% DMG nhận vào lên tất cả kẻ thù. Lượng phản ánh được tính từ [Phòng Hộ Chuyên Biệt] và HP kết hợp đã tiêu thụ. Chỉ một hiệu ứng thuộc loại này có thể có hiệu lực trong suốt trận chiến.",
       "icon": "/Skill/Tank Top Master (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi trận đấu bắt đầu, triệu hồi Tank-Top Tiger (Tấn công bằng 30% Máu của TTM). Sau khi một đồng minh hành động, Tank-Top Tiger sẽ gây sát thương lên 1 kẻ địch ngẫu nhiên bằng 100% Tấn công. Ưu tiên kẻ địch đang [Bất khuất chuyên biệt] và kích hoạt [Xuyên chặn] (hủy trạng thái bất khuất chuyên biệt và thường). Khôi phục [Bảo vệ chuyên biệt] của Tank-Top Master bằng 20% Máu tối đa",
+      "desc": "Khi bắt đầu trận chiến, triệu hồi [Áo Ba Lỗ Hổ] để hỗ trợ. Tank-Top Tiger có ATK bằng 30% HP tối đa ban đầu của Tank-Top Master. Sau khi một đồng minh hành động, Tank-Top Tiger thực hiện [Truy Kích] chống lại 1 kẻ địch ngẫu nhiên, gây ra 100% ATK DMG. [Truy Kích] ưu tiên kẻ thù có DMG Bỏ qua và có thể kích hoạt [Đột Phá]. Sau [Truy Kích], khôi phục [Phòng Hộ Chuyên Biệt] của Tank-Top Master bằng 20% ​​HP tối đa.",
       "icon": "/Skill/Tank Top Master (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Triệu hồi Tank-Top Blackhole\nCác anh em Tank-Top vẫn có thể [Đánh tiếp] nếu TTM bị [Kẹt] Các anh em Tank-Top không bao giờ ngã ngay cả khi TTM đã chết Chỉ 1 lần phản sát thương được kích hoạt Có thể phản sát thương nhận được trong [Bảo vệ chuyên biệt] Việc gỡ bỏ [chia sẻ sát thương] áp dụng cho mọi nhân vật hỗ trợ Các anh em Tank-Top không có giới hạn đánh tiếp Không thể phản nếu TTM đã [Rời trận] TTM có thể khôi phục [Bảo vệ chuyên biệt] nhanh hơn với SSR+ DSK",
+      "desc": "Khi bắt đầu trận chiến, triệu hồi [Áo Ba Lỗ Hổ] và [Áo Ba Lỗ Lỗ Đen] để hỗ trợ. ATK của họ bằng 30% HP tối đa ban đầu của Tank-Top Master. Sau khi một đồng minh hành động, Tank-Top Tiger và Tank-Top Blackhole thực hiện các đòn tấn công [Truy Kích] chống lại 1 kẻ địch ngẫu nhiên, gây ra 100% ATK DMG. [Truy Kích] ưu tiên kẻ thù có DMG Bỏ qua và có thể kích hoạt [Đột Phá]. Sau [Truy Kích], khôi phục [Phòng Hộ Chuyên Biệt] của Tank-Top Master bằng 20% ​​HP tối đa.",
       "icon": "/Skill/Tank Top Master (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -92,7 +92,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Tank Top Master (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 45% ST lên mục tiêu đơn với 2 đòn liên kích.",
+      "desc": "Gây 45% ATK DMG cho một mục tiêu bằng 2 đòn combo.",
       "icon": "/Skill/D-pad (R)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 48% ST lên mục tiêu đơn với 4 đòn liên kích, có 100% cơ hội giảm 10% [Thương Tổn] bản thân, kéo dài 2 lượt.",
+      "desc": "Gây 48% ATK DMG cho một mục tiêu bằng 4 đòn đánh kết hợp, với 100% cơ hội giảm 10% [Bị Thương] của bản thân trong 2 lượt.",
       "icon": "/Skill/D-pad (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 48% ST lên mục tiêu đơn với 4 đòn liên kích, có 100% cơ hội giảm 20% [Thương Tổn] bản thân, kéo dài 2 lượt.",
+      "desc": "Gây 48% ATK DMG cho một mục tiêu bằng 4 đòn combo, với 100% cơ hội giảm [Bị Thương]% của bản thân trong 2 lượt.",
       "keepsakeIcon": "/Keepsake/D-pad (R)/Keepsake_R.png",
       "icon": "/Skill/D-pad (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Khi xuất trận cùng với Yếm Tang Áo Liền, ST Phím Chữ Thập tăng 20%, kéo dài đến hết trận đấu.",
+      "desc": "Tăng vĩnh viễn HP tối đa của bản thân. Khi triển khai cùng với Bộ đồ tổng thể Sangfu, D-Pad DMG được tăng % cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/D-pad (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Khi xuất trận cùng với Yếm Tang Áo Liền, ST Phím Chữ Thập tăng 30%, kéo dài đến hết trận đấu.",
+      "desc": "Tăng vĩnh viễn HP tối đa của bản thân. Khi triển khai cùng với Bộ đồ tổng thể Sangfu, D-Pad DMG được tăng thêm 30% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/D-pad (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Khi xuất trận cùng với Yếm Tang Áo Liền, ST Phím Chữ Thập tăng 35%, kéo dài đến hết trận đấu.",
+      "desc": "Tăng vĩnh viễn HP tối đa của bản thân. Khi triển khai cùng với Bộ đồ tổng thể Sangfu, D-Pad DMG được tăng thêm 35% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/D-pad (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

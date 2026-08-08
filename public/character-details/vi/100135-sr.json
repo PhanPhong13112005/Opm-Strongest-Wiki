@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Awakened Cockroach (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung liên kích 4 đòn lên mục tiêu đơn hàng sau, gây 35% ST (+2) sát thương, và giảm 50% tỷ lệ mục tiêu gây [Lực Trường], [Choáng], [Thương Tổn] và [Nội Thương], kéo dài 1 lượt.",
+      "desc": "Gây combo 4 đòn cho một mục tiêu ở hàng sau với tổng sát thương bằng 35% ATK (+2) DMG, đồng thời giảm 50% khả năng mục tiêu gây ra [Trường Lực], [Choáng], [Bị Thương] và [Nội Thương] trong 1 lượt.",
       "icon": "/Skill/Awakened Cockroach (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung liên kích 4 đòn lên mục tiêu đơn hàng sau, gây 40% ST (+2) sát thương, và giảm 50% tỷ lệ mục tiêu gây [Lực Trường], [Choáng], [Thương Tổn] và [Nội Thương], kéo dài 1 lượt.",
+      "desc": "Gây combo 4 đòn cho một mục tiêu ở hàng sau với 40% ATK (+2) DMG, đồng thời giảm 50% khả năng mục tiêu gây ra [Trường Lực], [Choáng], [Bị Thương] và [Nội Thương] trong 1 lượt.",
       "keepsakeIcon": "/Keepsake/Awakened Cockroach (SR)/Keepsake_SR.png",
       "icon": "/Skill/Awakened Cockroach (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi chịu sát thương chí mạng, kích hoạt [Tái Sinh] (khi có đồng đội trên sân, hồi 15% Máu trước hành động kế tiếp của bản thân để tiếp tục chiến đấu, kích hoạt tối đa 1 lần). Sau khi hành động, tăng tỷ lệ giảm sát thương của bản thân thêm 30%, kéo dài 2 lượt.",
+      "desc": "Nhận vĩnh viễn HP. Sau khi lấy sát thương kết liễu, kích hoạt [Hồi Phục] (khi đồng minh đang ở trên chiến trường, hồi phục 15% HP trước khi thực hiện hành động tiếp theo của chính mình để tiếp tục chiến đấu, kích hoạt tối đa 1 lần). Sau khi hành động, tăng Giảm Sát Thương của bản thân thêm 30% trong 2 lượt.",
       "icon": "/Skill/Awakened Cockroach (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi chịu sát thương chí mạng, kích hoạt [Tái Sinh] (khi có đồng đội trên sân, hồi 15% Máu trước hành động kế tiếp của bản thân để tiếp tục chiến đấu, kích hoạt tối đa 2 lần). Sau khi hành động, tăng tỷ lệ giảm sát thương của bản thân thêm 35%, kéo dài 2 lượt.",
+      "desc": "Nhận vĩnh viễn HP. Sau khi lấy sát thương kết liễu, kích hoạt [Hồi Phục] (khi đồng minh ở trên chiến trường, hồi phục 15% HP trước khi thực hiện hành động tiếp theo của chính mình để tiếp tục chiến đấu, kích hoạt tối đa 2 lần). Sau khi hành động, tăng Giảm Sát Thương của bản thân thêm 35% trong 2 lượt.",
       "icon": "/Skill/Awakened Cockroach (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi chịu sát thương chí mạng, kích hoạt [Tái Sinh] (khi có đồng đội trên sân, hồi 15% Máu trước hành động kế tiếp của bản thân để tiếp tục chiến đấu, kích hoạt tối đa 2 lần). Sau khi hành động, tăng tỷ lệ giảm sát thương của bản thân thêm 40%, kéo dài 2 lượt.",
+      "desc": "Nhận vĩnh viễn HP. Sau khi lấy sát thương kết liễu, kích hoạt [Hồi Phục] (khi đồng minh ở trên chiến trường, hồi phục 15% HP trước khi thực hiện hành động tiếp theo của chính mình để tiếp tục chiến đấu, kích hoạt tối đa 2 lần). Sau khi hành động, tăng Giảm Sát Thương của bản thân thêm 40% trong 2 lượt.",
       "icon": "/Skill/Awakened Cockroach (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

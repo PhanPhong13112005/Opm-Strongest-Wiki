@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK(+10) damage to a single target, and reduces damage taken by self by 20% for 1 turn.",
+      "desc": "Deals 120% AT damage to a single target, and reduces damage taken by self% for 1 turn.",
       "icon": "/Skill/Tank Top Master (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 75% ATK(+5) damage to each enemy in the entire column, and grants self and allies in the same row [Tenacity] (absorbs damage equal to 20% of own HP).",
+      "desc": "Deals 75% AT damage to each enemy in the entire column, and grants self and allies in the same row [Tenacity] (absorbs damage equal to 20% of own HP).",
       "icon": "/Skill/Tank Top Master (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 94% ATK(+5) damage to each enemy in the entire column, and grants self and allies in the same row [Tenacity] (absorbs damage equal to 30% of own HP).",
+      "desc": "Deals 94% AT damage to each enemy in the entire column, and grants self and allies in the same row [Tenacity] (absorbs damage equal to 30% of own HP).",
       "keepsakeIcon": "/Keepsake/Tank Top Master (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Tank Top Master (SSR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP(+20). Deals extra damage equal to 8% of own max HP to enemies.",
+      "desc": "Permanently increases own H. Deals extra damage equal to 8% of own max HP to enemies.",
       "icon": "/Skill/Tank Top Master (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP(+20). Deals extra damage equal to 9% of own max HP to enemies, and has a 50% chance to deal an equal amount of extra damage to enemies in the same row as the main target.",
+      "desc": "Permanently increases own H. Deals extra damage equal to 9% of own max HP to enemies, and has a 50% chance to deal an equal amount of extra damage to enemies in the same row as the main target.",
       "icon": "/Skill/Tank Top Master (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP(+20). Deals extra damage equal to 9.5% of own max HP to enemies, and has a 50% chance to deal an equal amount of extra damage to enemies in the same row as the main target.",
+      "desc": "Permanently increases own H. Deals extra damage equal to 9.5% of own max HP to enemies, and has a 50% chance to deal an equal amount of extra damage to enemies in the same row as the main target.",
       "icon": "/Skill/Tank Top Master (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

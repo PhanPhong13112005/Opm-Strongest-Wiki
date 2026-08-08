@@ -30,7 +30,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "KING strides to the center of the battlefield and intimidates all enemies, plunging all enemies into [Panic] (sealing 2 energy for 1 turn; when the same effect exists, the highest value applies), and restores HP to all allies by 200% ATK.",
+      "desc": "KING strides to the center of the battlefield and intimidates all enemies, plunging all enemies into [Panic] (sealing 2 energy for 1 turn; when the same effect exists, the highest value applies), and restores HP to all allies0% ATK.",
       "icon": "/Skill/King (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -39,7 +39,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "KING strides to the center of the battlefield and intimidates all enemies, plunging all enemies into [Panic] (sealing 2 energy for 1 turn; when the same effect exists, the highest value applies), and restores HP to all allies by 200% ATK.",
+      "desc": "KING strides to the center of the battlefield and intimidates all enemies, plunging all enemies into [Panic] (sealing 2 energy for 1 turn; when the same effect exists, the highest value applies), and restores HP to all allies0% ATK.",
       "icon": "/Skill/King (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/King (SSR)/Keepsake_SSR.png",
       "type": "Ultimate",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own max HP. Deals up to 120% ATK extra damage.When acting, deals 20% ATK extra damage to affected enemies, and this extra damage increases by 20% ATK for each point of energy your team currently has.",
+      "desc": "Permanently increases own max HP. Deals up to 120% ATK extra damage.When acting, deals 20% ATK extra damage to affected enemies, and this extra damage increases% ATK for each point of energy your team currently has.",
       "icon": "/Skill/King (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

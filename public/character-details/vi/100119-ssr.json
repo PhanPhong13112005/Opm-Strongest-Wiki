@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 70% ST (+5) sát thương với 2 đòn liên kích lên mục tiêu đơn. 100% khả năng khiến mục tiêu bị [Vỡ Vụn] trong 2 lượt (giảm Tỉ lệ Giảm ST đi 15%).",
+      "desc": "Gây 70% ATK DMG với 2 đòn đánh liên tiếp vào một mục tiêu. 100% cơ hội gây [Nứt Vỡ] lên mục tiêu trong 2 lượt (giảm 15% Tỷ lệ Giảm Sát Thương).",
       "icon": "/Skill/G4 (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 80% ST (+3) sát thương với 3 đòn liên kích lên mục tiêu đơn. 100% khả năng khiến mục tiêu bị [Vỡ Vụn] trong 2 lượt (giảm Tỉ lệ Giảm ST đi 30%); khi kích hoạt Chí Mạng, khiến mục tiêu bị [Suy Yếu] (giảm ST 25% trong 1 lượt).",
+      "desc": "Gây 80% ATK (+3) DMG với 3 đòn đánh liên tiếp vào một mục tiêu. 100% cơ hội gây [Nứt Vỡ] lên mục tiêu trong 2 lượt (giảm 30% Tỷ lệ Giảm Sát Thương); kích hoạt Đòn tấn công chí mạng gây [Làm Suy Yếu] lên mục tiêu (ATK giảm 25% trong 1 lượt).",
       "icon": "/Skill/G4 (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 100% ST (+3) sát thương với 3 đòn liên kích lên mục tiêu đơn. 100% khả năng khiến mục tiêu bị [Vỡ Vụn] trong 2 lượt (giảm Tỉ lệ Giảm ST đi 40%); khi kích hoạt Chí Mạng, khiến mục tiêu bị [Suy Yếu] (giảm ST 45% trong 1 lượt).",
+      "desc": "Gây 100% ATK (+3) DMG với 3 đòn đánh liên tiếp vào một mục tiêu. 100% cơ hội gây [Nứt Vỡ] lên mục tiêu trong 2 lượt (giảm Tỷ lệ Giảm Sát Thương đi 40%); kích hoạt Đòn tấn công chí mạng gây [Làm Suy Yếu] lên mục tiêu (ATK giảm 45% trong 1 lượt).",
       "keepsakeIcon": "/Keepsake/G4 (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/G4 (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân thêm (+20). Nếu tồn tại kẻ địch đang bị [Vỡ Vụn] thì bản thân vào trạng thái [Kiên Cường] (hấp thụ sát thương bằng 20% Máu bản thân, tối đa 1 lần mỗi lượt).Mỗi loại hiệu ứng giảm đồng thời tồn tại trên kẻ địch khiến bản thân nhận [Súc Lực] (khi tấn công gây 117% ST sát thương Súc Lực, tối đa 3 lớp).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Nếu kẻ địch [Nứt Vỡ]ed tồn tại, chuyển sang trạng thái [Lá Chắn] (hấp thụ DMG bằng 20% HP của bản thân, tối đa 1 lần mỗi lượt). Đối với mỗi loại debuff đồng thời xuất hiện trên kẻ thù, nhận [Tụ Lực] (gây 117% ATK Sạc DMG khi tấn công, tối đa 3 điểm).",
       "icon": "/Skill/G4 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân thêm (+20). Nếu tồn tại kẻ địch đang bị [Vỡ Vụn] thì bản thân vào trạng thái [Kiên Cường] (hấp thụ sát thương bằng 20% Máu bản thân, tối đa 1 lần mỗi lượt).Mỗi loại hiệu ứng giảm đồng thời tồn tại trên kẻ địch khiến bản thân nhận [Súc Lực] (khi tấn công gây 117% ST sát thương Súc Lực, tối đa 3 lớp).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Nếu kẻ địch [Nứt Vỡ]ed tồn tại, chuyển sang trạng thái [Lá Chắn] (hấp thụ DMG bằng 20% HP của bản thân, tối đa 1 lần mỗi lượt). Đối với mỗi loại debuff đồng thời xuất hiện trên kẻ thù, nhận [Tụ Lực] (gây 117% ATK Sạc DMG khi tấn công, tối đa 3 điểm).",
       "icon": "/Skill/G4 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân thêm (+20). Nếu tồn tại kẻ địch đang bị [Vỡ Vụn] thì bản thân vào trạng thái [Kiên Cường] (hấp thụ sát thương bằng 25% Máu bản thân, tối đa 1 lần mỗi lượt).Mỗi loại hiệu ứng giảm đồng thời tồn tại trên kẻ địch khiến bản thân nhận [Súc Lực] (khi tấn công gây 117% ST sát thương Súc Lực, tối đa 3 lớp).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Nếu kẻ địch [Nứt Vỡ]ed tồn tại, chuyển sang trạng thái [Lá Chắn] (hấp thụ DMG bằng 25% HP của bản thân, tối đa 1 lần mỗi lượt). Đối với mỗi loại debuff đồng thời xuất hiện trên kẻ thù, nhận [Tụ Lực] (gây 117% ATK Sạc DMG khi tấn công, tối đa 3 điểm).",
       "icon": "/Skill/G4 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

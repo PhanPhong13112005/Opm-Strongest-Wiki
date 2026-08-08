@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 90% ST sát thương lên mục tiêu đơn.",
+      "desc": "Gây 90% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Kamakyuri (R)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 190% ST sát thương lên mục tiêu đơn, với 100% tỉ lệ tăng 10% ST của bản thân trong 2 lượt.",
+      "desc": "Gây 190% ATK DMG cho một mục tiêu, với 100% cơ hội tăng ATK của bản thân lên 10% trong 2 lượt.",
       "icon": "/Skill/Kamakyuri (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 200% ST sát thương lên mục tiêu đơn, với 100% tỉ lệ tăng 20% ST của bản thân trong 2 lượt.",
+      "desc": "Gây 200% ATK DMG cho một mục tiêu, với 100% cơ hội tăng ATK% của bản thân trong 2 lượt.",
       "keepsakeIcon": "/Keepsake/Kamakyuri (R)/Keepsake_R.png",
       "icon": "/Skill/Kamakyuri (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Trước khi hành động, tăng 5% tỉ lệ Bạo Kích của bản thân trong 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP tối đa của bản thân. Trước khi hành động, hãy tăng Tỷ lệ CRIT của bản thân thêm 5% trong 1 lượt.",
       "icon": "/Skill/Kamakyuri (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Trước khi hành động, tăng 10% tỉ lệ Bạo Kích của bản thân trong 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP tối đa của bản thân. Trước khi hành động, hãy tăng Tỷ lệ CRIT của bản thân thêm 10% trong 1 lượt.",
       "icon": "/Skill/Kamakyuri (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Trước khi hành động, tăng 13% tỉ lệ Bạo Kích của bản thân trong 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP tối đa của bản thân. Trước khi hành động, tăng Tỷ lệ CRIT của bản thân thêm 13% trong 1 lượt.",
       "icon": "/Skill/Kamakyuri (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 200% ST cho mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 5000% ST sát thương trực tiếp chuyên biệt (chỉ chịu ảnh hưởng bởi Giảm sát thương cấp cao) cho toàn bộ mục tiêu, bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Miễn Sát Thương Không Bạo Kích], xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt].Gây [Áp Chế Năng Lượng] cho 3 kẻ địch có ST cao nhất, kéo dài 2 lượt.——— [Áp Chế Năng Lượng]: Khi gây ST lên Máu/[HP Chuyên Biệt], khiến mục tiêu kích hoạt 1 lần [Chuyển Hóa Năng Lượng] (giảm ST nhận vào và chuyển hóa thành [Khiên]).",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 3 đòn liên tiếp, gây 300% ATK DMG. Có 100% cơ hội gây [Trường Lực] lên tất cả kẻ địch trong 1 lượt. Trước khi kẻ địch bị ảnh hưởng hành động, [Trường Lực] gây 400% ATK thành DoT DMG và có 80% cơ hội vượt qua khả năng miễn nhiễm. Tự xóa [Bám Dính] và [Vô Hiệu Hóa].",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Nhận 20% [Cuồng Nộ] và [Phá Khiên]. ST 5000% → 7000%. Bỏ qua [Khả Năng Né Tránh Chuyên Biệt] 45% → 60%. Gây [Áp Chế Năng Lượng] cho 3 kẻ địch → toàn bộ kẻ địch.——— [Phá Khiên]: Trong lúc tấn công, bỏ qua 30% Giảm sát thương và Phòng thủ chuyên biệt của kẻ địch.",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 3 đòn liên tiếp, gây 450% ATK DMG. Có 100% cơ hội gây [Trường Lực] lên tất cả kẻ địch trong 1 lượt. Trước khi kẻ địch bị ảnh hưởng hành động, [Trường Lực] gây ra 600% ATK tương đương DoT DMG và có 80% cơ hội vượt qua khả năng miễn nhiễm. Tự xóa [Bám Dính] và [Vô Hiệu Hóa].",
       "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (UR)/Keepsake_UR.png",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi đồng minh hành động, tung [Truy Kích Tuyệt Kỹ] lên toàn đội địch bằng 80%, tối đa 2 lần/lượt, và hồi [Phòng Hộ Chuyên Biệt] bằng 50% ST theo thời gian từ [Kích Nổ].",
+      "desc": "Sau khi đồng minh hành động, thực hiện [Truy Kích Tuyệt Kỹ] với 80% DMG của Tuyệt Kĩ và các hiệu ứng của nó, tối đa 2 lần mỗi hiệp. Hấp thụ 50% [Sát Thương Kích Nổ] và chuyển đổi nó thành [HP Chuyên Biệt].",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Truy Kích Tuyệt Kỹ] 80% &gt; 100%. Hồi [Phòng Hộ Chuyên Biệt] 50% &gt; 65%.",
+      "desc": "Sau khi đồng minh hành động, thực hiện [Truy Kích Tuyệt Kỹ] với 100% DMG Tuyệt Kĩ và các hiệu ứng của nó, tối đa 2 lần mỗi hiệp. Hấp thụ 65% [Sát Thương Kích Nổ] và chuyển đổi nó thành [HP Chuyên Biệt].",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Truy Kích Tuyệt Kỹ] 100% &gt; 120%. Hồi [Phòng Hộ Chuyên Biệt] 65% &gt; 80%.",
+      "desc": "Sau khi đồng minh hành động, thực hiện [Truy Kích Tuyệt Kỹ] với 120% DMG Tuyệt Kĩ và các hiệu ứng của nó, tối đa 2 lần mỗi hiệp. Hấp thụ 80% [Sát Thương Kích Nổ] và chuyển đổi nó thành [HP Chuyên Biệt].",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi trận đấu bắt đầu, triệu hồi Hellish Blizzard hỗ trợ chiến đấu, 100% Tấn công của UR TT. Sau khi UR TT hành động hoặc tung đánh đuổi theo Tối thượng, Hellish Blizzard sẽ tấn công với cùng kiểu. Cơ bản - Gây 100% ST Tấn công lên một mục tiêu ngẫu nhiên. Tối thượng - Tấn công toàn bộ kẻ địch với 3 đòn liên tiếp và gây ST bằng 100% Tấn công và kích nổ [Lĩnh Vực] (ST theo thời gian bằng 100%). Sau khi bất kỳ nhân vật nào hành động, hồi phục từ [Choáng/Specialized Stun].",
+      "desc": "Khi trận chiến bắt đầu, triệu hồi Fubuki để hỗ trợ trận chiến. Fubuki kế thừa 100% cơ sở ATK của Tatsumaki. Khi Tatsumaki sử dụng Đòn tấn công cơ bản, Fubuki cũng thực hiện Đòn tấn công cơ bản lên 1 kẻ địch ngẫu nhiên. Khi Tatsumaki sử dụng Tuyệt Kĩ của mình, Fubuki cũng sử dụng Tuyệt Kĩ của mình để chống lại tất cả kẻ thù, gây DMG bằng 100% ATK được thừa kế của cô và kích hoạt [Kích Nổ] lên kẻ thù bị ảnh hưởng bởi [Trường Lực].",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Khi trận đấu bắt đầu, triệu hồi Hellish Blizzard trợ chiến (100% (120%) ATK của Terrible Tornado). Sau khi Terrible Tornado hành động hoặc tung [Truy Kích Tuyệt Kỹ], Hellish Blizzard tấn công cùng kiểu. Đòn thường: 100% ATK lên mục tiêu ngẫu nhiên. Tuyệt kỹ: đánh toàn địch 3 đòn liên tiếp 100% ATK và kích nổ [Lĩnh Vực] (DoT 100% (160%) ATK). Sau hành động của bất kỳ nhân vật nào, gỡ [Choáng]/[Choáng Chuyên Biệt].",
+      "desc": "Khi trận chiến bắt đầu, triệu hồi Fubuki để hỗ trợ trận chiến. Fubuki thừa hưởng 120% cơ sở ATK của Tatsumaki. Khi Tatsumaki sử dụng Đòn tấn công cơ bản, Fubuki cũng thực hiện Đòn tấn công cơ bản lên 1 kẻ địch ngẫu nhiên. Khi Tatsumaki sử dụng Tuyệt Kĩ của mình, Fubuki cũng sử dụng Tuyệt Kĩ của mình để chống lại tất cả kẻ thù, gây DMG bằng 120% ATK được thừa kế của cô và kích hoạt [Kích Nổ] lên kẻ địch bị ảnh hưởng bởi [Trường Lực] với hiệu ứng 160%. Sau khi bất kỳ nhân vật nào hành động, Tatsumaki sẽ loại bỏ [Choáng] và [Choáng Chuyên Biệt] khỏi chính cô ấy.",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -91,7 +91,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

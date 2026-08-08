@@ -22,7 +22,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Hồi HP bằng 100% ST cho một mục tiêu đơn đồng minh.",
+      "desc": "Chữa lành vết thương cho mục tiêu đồng minh cho HP bằng 100% ATK.",
       "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -31,7 +31,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Hồi HP bằng 100% ST cho toàn bộ đồng minh. Có 100% tỷ lệ gắn [Khóa] lên toàn bộ kẻ địch trong 2 lượt. [Khóa]: không thể phát động truy kích; gây 150% ST sát thương khóa trước khi bất kỳ nhân vật nào hành động (có thể chí mạng, không thể né).",
+      "desc": "Chữa lành vết thương cho tất cả đồng minh của HP bằng 100% ATK và có 100% cơ hội gây [Khóa] lên tất cả kẻ thù trong 2 lượt. [Khóa]: Ngăn thiết bị bị ảnh hưởng kích hoạt [Truy Kích], [Truy Kích Liên Tục] và [Truy Kích Liên Kích]. Trước khi bất kỳ nhân vật nào hành động, gây 150% ATK [Khóa] DoT cho đơn vị bị ảnh hưởng (có thể là CRIT và không thể là [Đã Né Tránh]).",
       "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -40,7 +40,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 120% ST sát thương cho toàn bộ kẻ địch qua 5 đòn. Hồi HP bằng 150% ST cho toàn bộ đồng minh. Có 100% tỷ lệ gắn [Khóa] lên toàn bộ kẻ địch trong 2 lượt. [Khóa]: không thể phát động truy kích; gây 200% ST sát thương khóa trước khi bất kỳ nhân vật nào hành động (có thể chí mạng, không thể né).",
+      "desc": "Gây combo 5 đòn cho tất cả kẻ địch, với mỗi đòn gây ra 600% ATK DMG. Chữa lành vết thương cho tất cả đồng minh của HP bằng 150% ATK và có 100% cơ hội gây [Khóa] lên tất cả kẻ thù trong 2 lượt. [Khóa]: Ngăn thiết bị bị ảnh hưởng kích hoạt [Truy Kích], [Truy Kích Liên Tục] và [Truy Kích Liên Kích]. Trước khi bất kỳ nhân vật nào hành động, gây 200% ATK [Khóa] DoT cho đơn vị bị ảnh hưởng (có thể là CRIT và không thể là [Đã Né Tránh]).",
       "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (UR)/Keepsake_UR.png",
       "type": "Tuyệt kĩ",
@@ -49,7 +49,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Tăng vĩnh viễn HP bản thân 20%. Khi vào trận, nhận 60% [Giảm ST Không Chí Mạng] và có 100% tỷ lệ gắn [Khóa] gây 150% ST lên toàn bộ kẻ địch trong 1 lượt trọn vẹn. [Giảm ST Không Chí Mạng]: giảm mọi sát thương không chí mạng phải nhận (chỉ một trong hiệu ứng này hoặc [Khéo Léo] có hiệu lực).",
+      "desc": "Khi bắt đầu trận chiến, nhận được 60% [Giảm Sát Thương Không Bạo Kích] và có 100% cơ hội gây [Khóa] lên tất cả kẻ địch, gây 150% ATK DMG và kéo dài 1 lượt. [Giảm Sát Thương Không Bạo Kích]: Có hiệu quả chống lại tất cả các loại DMG và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -58,7 +58,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Giảm ST Không Chí Mạng] 60% > 70%.",
+      "desc": "Khi bắt đầu trận chiến, nhận được 70% [Giảm Sát Thương Không Bạo Kích] và có 100% cơ hội gây [Khóa] lên tất cả kẻ địch, gây 150% ATK DMG và kéo dài 1 lượt. [Giảm Sát Thương Không Bạo Kích]: Có hiệu quả chống lại tất cả các loại DMG và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -67,7 +67,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Giảm ST Không Chí Mạng] 70% > 80%.",
+      "desc": "Khi bắt đầu trận chiến, nhận được 80% [Giảm Sát Thương Không Bạo Kích] và có 100% cơ hội gây [Khóa] lên tất cả kẻ địch, gây ra 150% ATK DMG và kéo dài 1 lượt. [Giảm Sát Thương Không Bạo Kích]: Có hiệu quả chống lại tất cả các loại DMG và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -76,7 +76,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Trong 5 lượt đầu, vào đầu mỗi lượt, áp [Giới Hạn Trừ Năng Lượng] lên toàn bộ kẻ địch. ———— [Giới Hạn Trừ Năng Lượng]: Trừ 4 điểm năng lượng (một lần mỗi lượt); sau khi trừ thành công, kẻ địch không thể bị [Hoảng Loạn]/[Hoảng Loạn Chuyên Biệt] lần nữa trong cùng lượt.",
+      "desc": "Trong 5 hiệp đầu tiên, khi bắt đầu mỗi hiệp, hãy áp dụng [Giới Hạn Trừ Năng Lượng] cho tất cả kẻ thù. ———— [Giới Hạn Trừ Năng Lượng]: Trừ 4 điểm năng lượng (mỗi hiệp một lần); sau khi khấu trừ thành công, kẻ địch không thể bị gây lại [Hoảng Loạn]/[Hoảng Loạn Chuyên Biệt] trong cùng một hiệp.",
       "type": "Thức tỉnh",
       "icon": "/Skill/Source/100109-ur/awakened.webp",
       "keepsakeIcon": null,
@@ -85,7 +85,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "[Basic Effect]: Nhận 3 Năng lượng mỗi lượt. Ban cho đồng minh [Miễn Sát Thương Không Bạo Kích] và Né tránh chuyên biệt có hiệu lực chống [Sát Thương Chuẩn]. Nhân đôi hiệu quả giảm sát thương của [HP Chuyên Biệt]. Trong 5 lượt đầu, vào đầu mỗi lượt, gây [Rút Năng Lượng Cực Hạn] lên kẻ địch (trừ 4 Năng lượng; chỉ kích hoạt một lần mỗi lượt. Sau khi trừ thành công, mục tiêu không thể bị [Sợ Hãi/Sợ Hãi Chuyên Biệt] trong cùng lượt, và mức tăng Tổng Sát Thương của chúng bị giảm 25% trong 1 lượt).\n[Require]: Triển khai 1 Duelist, 1 Grappler, 1 Esper.\n[Advanced Effect]: Khi triển khai, toàn bộ đồng minh nhận hiệu ứng [HP Chuyên Biệt]. Mỗi khi tiêu hao tích lũy [HP Chuyên Biệt] bằng 175% Máu Tối Đa, nhận [Bất Khuất Cực Hạn].\n———— [HP Chuyên Biệt]: Ban cho đơn vị [HP Chuyên Biệt] bằng 250% Máu Tối Đa gốc, tối đa tích lũy 700%. [HP Chuyên Biệt] giảm 30% mọi sát thương nhận vào. [Bất Khuất Cực Hạn]: Miễn nhiễm toàn bộ sát thương. Hiệu ứng bị gỡ sau khi có 3 nhân vật bất kỳ hành động.\n[Require]: Triển khai 1 Duelist, 1 Grappler, 2 Esper.",
+      "desc": "[Hiệu Ứng Cơ Bản]: Tăng 3 Năng lượng mỗi lượt. Cung cấp cho đồng minh hiệu quả [Miễn Sát Thương Không Bạo Kích] và Né tránh đặc biệt chống lại [Sát Thương Chuẩn]. Nhân đôi hiệu quả giảm sát thương của [HP Chuyên Biệt]. Trong 5 lượt đầu tiên, khi bắt đầu mỗi lượt, gây [Rút Năng Lượng Cực Hạn] lên kẻ địch (loại bỏ 4 Năng lượng; chỉ có thể kích hoạt một lần mỗi lượt. Sau khi hút máu thành công, mục tiêu không thể bị ảnh hưởng bởi [Sợ Hãi/Sợ Hãi Chuyên Biệt] trong cùng một lượt và Tổng sát thương cộng thêm của họ giảm 25% trong 1 lượt). [Yêu Cầu]: Triển khai 1 Duelist, 1 Grappler, 1 Esper. [Hiệu Ứng Nâng Cao]: Khi triển khai, tất cả đồng minh đều nhận được hiệu ứng [HP Chuyên Biệt]. Với mỗi mức tiêu thụ tích lũy [HP Chuyên Biệt] bằng 175% Máu tối đa, sẽ nhận được [Bất Khuất Cực Hạn]. ———— [HP Chuyên Biệt]: Cấp cho đơn vị [HP Chuyên Biệt] bằng 250% Máu tối đa cơ bản của nó, với mức tích lũy tối đa là 700%. [HP Chuyên Biệt] giảm 30% tất cả sát thương nhận vào. [Bất Khuất Cực Hạn]: Miễn nhiễm với mọi sát thương. Hiệu ứng sẽ bị loại bỏ sau khi 3 nhân vật bất kỳ đã hành động. [Yêu Cầu]: Triển khai 1 Duelist, 1 Grappler, 2 Esper.",
       "type": "Thức tỉnh",
       "icon": "/Skill/Source/100109-ur/awakened.webp",
       "keepsakeIcon": null,
@@ -94,7 +94,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "[Basic Effect]: Nhận 4 Năng lượng mỗi lượt. Ban cho đồng minh [Miễn Sát Thương Không Bạo Kích] và Né tránh chuyên biệt có hiệu lực chống [Sát Thương Chuẩn]. Tăng hiệu quả giảm sát thương của [HP Chuyên Biệt] lên 2.2 lần. Trong 5 lượt đầu, vào đầu mỗi lượt, gây [Rút Năng Lượng Cực Hạn] lên kẻ địch (trừ 5 Năng lượng; chỉ kích hoạt một lần mỗi lượt. Sau khi trừ thành công, mục tiêu không thể bị [Sợ Hãi/Sợ Hãi Chuyên Biệt] trong cùng lượt, và mức tăng Tổng Sát Thương của chúng bị giảm 25% trong 1 lượt).\n[Require]: Triển khai 1 Duelist, 1 Grappler, 1 Esper.\n[Advanced Effect]: Khi triển khai, toàn bộ đồng minh nhận hiệu ứng [HP Chuyên Biệt]. Mỗi khi tiêu hao tích lũy [HP Chuyên Biệt] bằng 175% Máu Tối Đa, nhận [Bất Khuất Cực Hạn].\n———— [HP Chuyên Biệt]: Ban cho đơn vị [HP Chuyên Biệt] bằng 250% Máu Tối Đa gốc, tối đa tích lũy 700%. [HP Chuyên Biệt] giảm 30% mọi sát thương nhận vào. [Bất Khuất Cực Hạn]: Miễn nhiễm toàn bộ sát thương. Hiệu ứng bị gỡ sau khi có 3 nhân vật bất kỳ hành động.\n[Require]: Triển khai 1 Duelist, 1 Grappler, 2 Esper.",
+      "desc": "[Hiệu Ứng Cơ Bản]: Tăng 4 Năng lượng mỗi lượt. Cung cấp cho đồng minh hiệu quả [Miễn Sát Thương Không Bạo Kích] và Né tránh đặc biệt chống lại [Sát Thương Chuẩn]. Tăng hiệu quả giảm sát thương của [HP Chuyên Biệt] lên 2,2 lần. Trong 5 lượt đầu tiên, khi bắt đầu mỗi lượt, gây [Rút Năng Lượng Cực Hạn] lên kẻ địch (loại bỏ 5 Năng lượng; chỉ có thể kích hoạt một lần mỗi lượt. Sau khi hút máu thành công, mục tiêu không thể bị ảnh hưởng bởi [Sợ Hãi/Sợ Hãi Chuyên Biệt] trong cùng một lượt và Tổng sát thương cộng thêm của họ giảm 25% trong 1 lượt). [Yêu Cầu]: Triển khai 1 Duelist, 1 Grappler, 1 Esper. [Hiệu Ứng Nâng Cao]: Khi triển khai, tất cả đồng minh đều nhận được hiệu ứng [HP Chuyên Biệt]. Với mỗi mức tiêu thụ tích lũy [HP Chuyên Biệt] bằng 175% Máu tối đa, sẽ nhận được [Bất Khuất Cực Hạn]. ———— [HP Chuyên Biệt]: Cấp cho đơn vị [HP Chuyên Biệt] bằng 250% Máu tối đa cơ bản của nó, với mức tích lũy tối đa là 700%. [HP Chuyên Biệt] giảm 30% tất cả sát thương nhận vào. [Bất Khuất Cực Hạn]: Miễn nhiễm với mọi sát thương. Hiệu ứng sẽ bị loại bỏ sau khi 3 nhân vật bất kỳ đã hành động. [Yêu Cầu]: Triển khai 1 Duelist, 1 Grappler, 2 Esper.",
       "type": "Thức tỉnh",
       "icon": "/Skill/Source/100109-ur/awakened.webp",
       "keepsakeIcon": null,

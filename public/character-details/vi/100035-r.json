@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 90% ST sát thương lên mục tiêu đơn.",
+      "desc": "Gây 90% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Tank Top Blackhole (R)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 190% ST sát thương lên mục tiêu đơn, với 100% tỉ lệ giảm 10% sát thương phải nhận cho bản thân trong 2 lượt.",
+      "desc": "Gây 190% ATK DMG cho một mục tiêu, với 100% cơ hội giảm 10% DMG phải chịu của bản thân trong 2 lượt.",
       "icon": "/Skill/Tank Top Blackhole (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 190% ST sát thương lên mục tiêu đơn, với 100% tỉ lệ giảm 20% sát thương phải nhận cho bản thân trong 2 lượt.",
+      "desc": "Gây 190% ATK DMG cho một mục tiêu, với 100% cơ hội giảm DMG phải chịu% của bản thân trong 2 lượt.",
       "keepsakeIcon": "/Keepsake/Tank Top Blackhole (R)/Keepsake_R.png",
       "icon": "/Skill/Tank Top Blackhole (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20 Máu cho bản thân. Khi cùng ra trận với Tank Top Tiger, tăng 20% tỉ lệ giảm sát thương cho bản thân, kéo dài đến hết trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi được triển khai cùng với Hổ Ba Lỗ, Giảm Sát Thương% của bản thân sẽ tăng% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Tank Top Blackhole (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng 20 Máu cho bản thân. Khi cùng ra trận với Tank Top Tiger, tăng 30% tỉ lệ giảm sát thương cho bản thân, kéo dài đến hết trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi được triển khai cùng với Hổ Ba Lỗ, Giảm Sát Thương của bản thân sẽ tăng 30% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Tank Top Blackhole (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng 20 Máu cho bản thân. Khi cùng ra trận với Tank Top Tiger, tăng 35% tỉ lệ giảm sát thương cho bản thân, kéo dài đến hết trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi được triển khai cùng với Hổ Ba Lỗ, Giảm Sát Thương của bản thân sẽ tăng 35% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Tank Top Blackhole (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 100% ATK (+10) damage to a single target. On a critical hit, has a 100% chance to inflict [Corrosion] on the main target for 2 turns (15% ATK as DoT).",
+      "desc": "Deals 100% ATK damage to a single target. On a critical hit, has a 100% chance to inflict [Corrosion] on the main target for 2 turns (15% ATK as DoT).",
       "icon": "/Skill/Fukegao (SR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -41,7 +41,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own max HP by (+20). Inflicts [Weaken] on enemies afflicted with [Injured] (ATK reduced by 20% for 1 turn).",
+      "desc": "Permanently increases own max HP by. Inflicts [Weaken] on enemies afflicted with [Injured] (ATK reduced% for 1 turn).",
       "icon": "/Skill/Fukegao (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own max HP by (+20). Inflicts [Weaken] on enemies afflicted with [Injured] (ATK reduced by 30% for 1 turn).",
+      "desc": "Permanently increases own max HP by. Inflicts [Weaken] on enemies afflicted with [Injured] (ATK reduced by 30% for 1 turn).",
       "icon": "/Skill/Fukegao (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own max HP by (+20). Inflicts [Weaken] on enemies afflicted with [Injured] (ATK reduced by 35% for 1 turn).",
+      "desc": "Permanently increases own max HP by. Inflicts [Weaken] on enemies afflicted with [Injured] (ATK reduced by 35% for 1 turn).",
       "icon": "/Skill/Fukegao (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

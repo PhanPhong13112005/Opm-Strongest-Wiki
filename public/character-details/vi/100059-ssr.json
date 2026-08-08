@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 40% ST (+3) sát thương cho mục tiêu đơn với 3 liên kích. Sau khi hành động, ngẫu nhiên đưa một đồng minh vào trạng thái [Cuồng Nộ] (tăng 30% sát thương khi tấn công).",
+      "desc": "Gây 40% ATK (+3) sát thương cho một mục tiêu trong 3 đòn combo. Sau khi hành động, ngẫu nhiên đưa một đồng minh vào trạng thái [Giận Dữ] (gây thêm 30% sát thương khi tấn công).",
       "icon": "/Skill/Geryuganshoop (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 26% ST (+2) sát thương cho mỗi kẻ địch trong cả hàng với 5 liên kích, và khiến kẻ địch rơi vào [Hoảng Loạn] (phong tỏa năng lượng của kẻ địch trong vài lượt; khi cùng hiệu ứng tồn tại thì lấy giá trị cao nhất).",
+      "desc": "Gây 26% ATK (+2) sát thương cho mỗi kẻ địch trong toàn hàng trong 5 đòn combo và gây [Hoảng Loạn] cho kẻ địch (phong ấn năng lượng của kẻ địch trong nhiều lượt; khi hiệu ứng tương tự xuất hiện, giá trị cao nhất sẽ có hiệu lực).",
       "icon": "/Skill/Geryuganshoop (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 33% ST (+2) sát thương cho mỗi kẻ địch trong cả hàng với 5 liên kích, và khiến kẻ địch rơi vào [Hoảng Loạn] (phong tỏa năng lượng của kẻ địch trong vài lượt; khi cùng hiệu ứng tồn tại thì lấy giá trị cao nhất).",
+      "desc": "Gây 33% ATK (+2) sát thương cho mỗi kẻ địch trong toàn hàng trong 5 đòn combo và gây [Hoảng Loạn] cho kẻ địch (phong ấn năng lượng của kẻ địch trong nhiều lượt; khi hiệu ứng tương tự xuất hiện, giá trị cao nhất sẽ có hiệu lực).",
       "icon": "/Skill/Geryuganshoop (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Geryuganshoop (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu tối đa cho bản thân. Sau mỗi lần hành động, rút năng lượng đang bị phong tỏa của mục tiêu chính (mỗi lượt chỉ rút được một lần; sau khi rút thành công, trong cùng lượt không thể khiến kẻ địch [Hoảng Loạn] nữa). Mỗi điểm năng lượng bị rút gây thêm 40% ST sát thương cho toàn bộ địch.",
+      "desc": "Tăng vĩnh viễn HP tối đa của riêng bạn lên. Sau mỗi hành động, hút năng lượng bị phong ấn khỏi mục tiêu chính (chỉ có thể hút một lần mỗi lượt; sau khi hút thành công, không thể gây [Hoảng Loạn] lên kẻ địch lần nữa trong lượt đó). Đối với mỗi điểm năng lượng tiêu hao, gây 40% sát thương ATK extra cho tất cả kẻ thù.",
       "icon": "/Skill/Geryuganshoop (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu tối đa cho bản thân. Sau mỗi lần hành động, rút năng lượng đang bị phong tỏa của mục tiêu chính (mỗi lượt chỉ rút được một lần; sau khi rút thành công, trong cùng lượt không thể khiến kẻ địch [Hoảng Loạn] nữa). Mỗi điểm năng lượng bị rút gây thêm 50% ST sát thương cho toàn bộ địch.",
+      "desc": "Tăng vĩnh viễn HP tối đa của riêng bạn lên. Sau mỗi hành động, hút năng lượng bị phong ấn khỏi mục tiêu chính (chỉ có thể hút một lần mỗi lượt; sau khi hút thành công, không thể gây [Hoảng Loạn] lên kẻ địch lần nữa trong lượt đó). Với mỗi điểm năng lượng tiêu hao, gây 50% ATK extra sát thương cho tất cả kẻ địch.",
       "icon": "/Skill/Geryuganshoop (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu tối đa cho bản thân. Sau mỗi lần hành động, rút năng lượng đang bị phong tỏa của mục tiêu chính (mỗi lượt chỉ rút được một lần; sau khi rút thành công, trong cùng lượt không thể khiến kẻ địch [Hoảng Loạn] nữa). Mỗi điểm năng lượng bị rút gây thêm 55% ST sát thương cho toàn bộ địch.",
+      "desc": "Tăng vĩnh viễn HP tối đa của riêng bạn lên. Sau mỗi hành động, hút năng lượng bị phong ấn khỏi mục tiêu chính (chỉ có thể hút một lần mỗi lượt; sau khi hút thành công, không thể gây [Hoảng Loạn] lên kẻ địch lần nữa trong lượt đó). Với mỗi điểm năng lượng tiêu hao, gây 55% ATK extra sát thương cho tất cả kẻ địch.",
       "icon": "/Skill/Geryuganshoop (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

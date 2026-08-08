@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Đánh mục tiêu đơn với 2 đòn liên kích, mỗi đòn gây 60% ST; khi bạo kích có 100% tỉ lệ gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (sát thương theo thời gian bằng 15% ST).",
+      "desc": "Tấn công một mục tiêu bằng 2 đòn liên tiếp gây 60% ATK DMG mỗi đòn; khi trúng đòn chí mạng, có 100% cơ hội gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (DoT bằng 15% ATK).",
       "icon": "/Skill/Groribas (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Đánh mỗi kẻ địch trong cả hàng với 5 đòn liên kích, mỗi đòn gây 26% ST, có 100% tỉ lệ gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (sát thương theo thời gian bằng 20% ST), đồng thời kẻ địch bị bạo kích có 100% tỉ lệ chịu [Ăn Mòn] trong 2 lượt.",
+      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng 5 đòn liên tiếp gây 26% ATK DMG mỗi đòn, có 100% cơ hội gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (DoT bằng 20% ATK) và kẻ địch bị chí mạng có một 100% cơ hội lấy [Ăn Mòn] trong 2 lượt.",
       "icon": "/Skill/Groribas (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Đánh mỗi kẻ địch trong cả hàng với 5 đòn liên kích, mỗi đòn gây 33% ST, có 100% tỉ lệ gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (sát thương theo thời gian bằng 30% ST), đồng thời kẻ địch bị bạo kích có 100% tỉ lệ chịu [Ăn Mòn] trong 2 lượt.",
+      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng 5 đòn liên tiếp gây 33% ATK DMG mỗi đòn, có 100% cơ hội gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (DoT bằng 30% ATK) và kẻ địch bị chí mạng có một 100% cơ hội lấy [Ăn Mòn] trong 2 lượt.",
       "icon": "/Skill/Groribas (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Groribas (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Mỗi kẻ địch trên sân đang mang [Ăn Mòn] tăng 10% ST cho toàn bộ đồng minh, cộng dồn tối đa 3 tầng.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Mỗi kẻ địch trên sân bị ảnh hưởng bởi [Ăn Mòn] sẽ tăng ATK của tất cả đồng minh lên 10%, cộng dồn tối đa 3 lần.",
       "icon": "/Skill/Groribas (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Mỗi kẻ địch trên sân đang mang [Ăn Mòn] tăng 15% ST cho toàn bộ đồng minh, cộng dồn tối đa 3 tầng.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Mỗi kẻ địch trên sân bị ảnh hưởng bởi [Ăn Mòn] sẽ tăng ATK của tất cả đồng minh lên 15%, cộng dồn tối đa 3 lần.",
       "icon": "/Skill/Groribas (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Mỗi kẻ địch trên sân đang mang [Ăn Mòn] tăng 18% ST cho toàn bộ đồng minh, cộng dồn tối đa 3 tầng.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Mỗi kẻ địch trên sân bị ảnh hưởng bởi [Ăn Mòn] sẽ tăng ATK của tất cả đồng minh lên 18%, cộng dồn tối đa 3 lần.",
       "icon": "/Skill/Groribas (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

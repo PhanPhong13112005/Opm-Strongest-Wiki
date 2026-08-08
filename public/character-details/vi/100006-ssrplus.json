@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Hồi HP cho một mục tiêu đồng minh.",
+      "desc": "Phục hồi HP của đồng minh thêm 120% ATK.",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 750% ST lên mục tiêu đơn bằng 2 đòn liên tiếp và áp [Mê Hoặc].",
+      "desc": "Tấn công một kẻ địch ở hàng sau bằng 2 đòn liên tiếp, gây 750% ATK DMG và gây [Mê Hoặc]. [Mê Hoặc]: Khiến mục tiêu rơi vào [Rời Trận] trên chiến trường và sử dụng Tuyệt Kĩ hoặc Nội tại của chính nó để tấn công một đồng minh ngẫu nhiên. Mục tiêu quay lại chiến đấu sau khi vòng đấu kết thúc.",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 750% &gt; 900% ST lên mục tiêu đơn bằng 2 đòn liên tiếp và áp [Mê Hoặc]. Ngoài ra áp [Choáng] lên mục tiêu và toàn bộ cột của nó trong 1 lượt.",
+      "desc": "Tấn công một kẻ địch ở hàng sau bằng 2 đòn liên tiếp, gây 900% ATK DMG và gây [Mê Hoặc]. Đồng thời gây [Choáng] lên mục tiêu và kẻ địch trong cùng một cột trong 1 lượt. [Mê Hoặc]: Khiến mục tiêu rơi vào [Rời Trận] trên chiến trường và sử dụng Tuyệt Kĩ hoặc Nội tại của chính nó để tấn công một đồng minh ngẫu nhiên. Mục tiêu quay lại chiến đấu sau khi vòng đấu kết thúc.",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Puri-Puri Prisoner (SSRplus)/Keepsake_SSRplus.png",
       "type": "Tuyệt kĩ",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Nhận +20% HP. Vào đầu mỗi hiệp, áp một hiệu ứng bất lợi lên toàn bộ kẻ địch. Khi vào trận, nhận [Miễn Nhiễm Mê Hoặc] cho bản thân.",
+      "desc": "Khi bắt đầu trận chiến, giảm vĩnh viễn Tỷ lệ DMG liên tục của tất cả kẻ thù xuống 40%. Do-S miễn nhiễm với [Mê Hoặc].",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Giữ nguyên các hiệu ứng của nội tại gốc; dữ liệu CN không cho thấy nâng cấp chỉ số ở bậc này.",
+      "desc": "Khi bắt đầu trận chiến, giảm vĩnh viễn Tỷ lệ DMG liên tục của tất cả kẻ thù xuống 50%. Do-S miễn nhiễm với [Mê Hoặc].",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Giữ nguyên các hiệu ứng của nội tại gốc; dữ liệu CN không cho thấy nâng cấp chỉ số ở bậc này.",
+      "desc": "Khi bắt đầu trận chiến, giảm vĩnh viễn Tỷ lệ DMG liên tục của tất cả kẻ thù xuống 60%. Do-S miễn nhiễm với [Mê Hoặc].",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -68,7 +68,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Tăng ST không chí mạng thêm 30% cho cả hàng, kéo dài 3 lượt. Sau khi hành động, gây [Tê liệt] (Không thể Truy kích, Truy kích liên tục, Combo Truy kích) lên mục tiêu và cột của nó",
+      "desc": "Cấp cho tất cả đồng minh trong cùng một hàng 30% [Miễn Sát Thương Không Bạo Kích] trong 3 hiệp. Sau khi hành động Do-S, gây [Tê Liệt] lên mục tiêu và kẻ thù trong cùng một cột. [Tê Liệt]: Ngăn thiết bị bị ảnh hưởng kích hoạt [Truy Kích], [Truy Kích Liên Tục] và [Truy Kích Liên Kích].",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -77,7 +77,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Giảm sát thương không chí mạng 30% > 40%",
+      "desc": "Cấp cho tất cả đồng minh trong cùng một hàng 40% [Miễn Sát Thương Không Bạo Kích] trong 3 hiệp. Sau khi hành động Do-S, gây [Tê Liệt] lên mục tiêu và kẻ thù trong cùng một cột. [Tê Liệt]: Ngăn thiết bị bị ảnh hưởng kích hoạt [Truy Kích], [Truy Kích Liên Tục] và [Truy Kích Liên Kích].",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -86,7 +86,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

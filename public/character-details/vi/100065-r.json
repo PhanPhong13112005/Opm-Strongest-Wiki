@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 90% ST sát thương lên mục tiêu đơn.",
+      "desc": "Gây 90% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Ground Dragon (R)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 190% ST sát thương lên mục tiêu đơn hàng sau, với 100% tỉ lệ gây [Suy Yếu] lên mục tiêu (giảm 20% ST trong 2 lượt).",
+      "desc": "Gây 190% ATK DMG cho một mục tiêu ở hàng sau, với 100% cơ hội gây [Suy Yếu] lên mục tiêu (giảm ATK% trong 2 lượt).",
       "icon": "/Skill/Ground Dragon (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 190% ST sát thương lên mục tiêu đơn hàng sau, với 100% tỉ lệ gây [Suy Yếu] lên mục tiêu (giảm 30% ST trong 2 lượt).",
+      "desc": "Gây 190% ATK DMG cho một mục tiêu ở hàng sau, với 100% cơ hội gây [Suy Yếu] lên mục tiêu (giảm 30% ATK trong 2 lượt).",
       "icon": "/Skill/Ground Dragon (R)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Ground Dragon (R)/Keepsake_R.png",
       "type": "Tuyệt kĩ",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Khi ra trận cùng với Frog Man, tăng 20% ST của bản thân.",
+      "desc": "Tăng vĩnh viễn HP tối đa của bản thân. Khi được triển khai cùng với Người Ếch, ATK của bản thân sẽ tăng lên.",
       "icon": "/Skill/Ground Dragon (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng 30% Máu tối đa của bản thân. Khi ra trận cùng với Frog Man, tăng 30% ST của bản thân.",
+      "desc": "Tăng vĩnh viễn HP tối đa của bản thân thêm 30%. Khi được triển khai cùng với Người Ếch, ATK của bản thân sẽ tăng thêm 30%.",
       "icon": "/Skill/Ground Dragon (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng 35% Máu tối đa của bản thân. Khi ra trận cùng với Frog Man, tăng 35% ST của bản thân.",
+      "desc": "Tăng vĩnh viễn HP tối đa của bản thân thêm 35%. Khi được triển khai cùng với Người Ếch, ATK của bản thân sẽ tăng thêm 35%.",
       "icon": "/Skill/Ground Dragon (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

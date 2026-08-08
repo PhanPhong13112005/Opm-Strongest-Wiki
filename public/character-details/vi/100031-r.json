@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 90% ST lên mục tiêu đơn.",
+      "desc": "Gây 90% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Mumen Rider (R)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Cấp cho một đồng minh trạng thái [Cuồng Nộ] trong 1 lượt và tăng 20% Tốc độ của họ.[Cuồng Nộ]: Tăng 30% ST gây ra khi tấn công.",
+      "desc": "Cấp cho đồng minh trạng thái [Giận Dữ] trong 1 lượt và tăng SPD của họ.[Giận Dữ]: Tăng DMG thêm 30% khi tấn công.",
       "icon": "/Skill/Mumen Rider (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Cấp cho một đồng minh trạng thái [Cuồng Nộ] trong 1 lượt và tăng 30% Tốc độ của họ.[Cuồng Nộ]: Tăng 35% ST gây ra khi tấn công.",
+      "desc": "Cấp cho đồng minh trạng thái [Giận Dữ] trong 1 lượt và tăng SPD của họ thêm 30%.[Giận Dữ]: Tăng DMG gây ra thêm 35% khi tấn công.",
       "icon": "/Skill/Mumen Rider (R)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Mumen Rider (R)/Keepsake_R.png",
       "type": "Tuyệt kĩ",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Lần đầu nhận sát thương chí mạng mỗi trận, hồi sinh với Máu bằng 5% Máu tối đa của bản thân.",
+      "desc": "Tăng vĩnh viễn HP tối đa của bản thân. Lần đầu tiên lấy sát thương kết liễu mỗi trận, hồi sinh với HP bằng 5% HP tối đa của bản thân.",
       "icon": "/Skill/Mumen Rider (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Lần đầu nhận sát thương chí mạng mỗi trận, hồi sinh với Máu bằng 10% Máu tối đa của bản thân.",
+      "desc": "Tăng vĩnh viễn HP tối đa của bản thân. Lần đầu tiên lấy sát thương kết liễu mỗi trận, hồi sinh với HP bằng 10% HP tối đa của bản thân.",
       "icon": "/Skill/Mumen Rider (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Lần đầu nhận sát thương chí mạng mỗi trận, hồi sinh với Máu bằng 13% Máu tối đa của bản thân.",
+      "desc": "Tăng vĩnh viễn HP tối đa của bản thân. Lần đầu tiên lấy sát thương kết liễu mỗi trận, hồi sinh với HP bằng 13% HP tối đa của bản thân.",
       "icon": "/Skill/Mumen Rider (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

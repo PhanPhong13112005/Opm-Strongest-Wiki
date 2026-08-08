@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 80% ST lên mục tiêu đơn.",
+      "desc": "Gây 80% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Charanko (N)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 180% ST lên kẻ địch đơn, với 50% cơ hội gây [Thương Tổn] lên mục tiêu chính trong 2 lượt (thêm ST Thương Tổn bằng 10% ST khi mục tiêu bị tấn công).",
+      "desc": "Gây 180% ATK DMG cho một kẻ địch, có 50% cơ hội gây [Bị Thương] lên mục tiêu chính trong 2 lượt (thêm DMG bị thương bằng 10% ATK khi mục tiêu bị tấn công).",
       "icon": "/Skill/Charanko (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 200% ST lên kẻ địch đơn, với 50% cơ hội gây [Thương Tổn] lên mục tiêu chính trong 2 lượt (thêm ST Thương Tổn bằng 10% ST khi mục tiêu bị tấn công).",
+      "desc": "Gây 200% ATK DMG cho một kẻ địch, có 50% cơ hội gây [Bị Thương] lên mục tiêu chính trong 2 lượt (thêm phần thưởng DMG bị thương bằng 10% ATK khi mục tiêu bị tấn công).",
       "icon": "/Skill/Charanko (N)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Charanko (N)/Keepsake_N.png",
       "type": "Tuyệt kĩ",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng +20% Máu. Khi cùng ra trận với Sâu Đắng, ST tăng thêm 20%.",
+      "desc": "Tăng vĩnh viễn +20% HP. Khi được triển khai cùng với Bitterworm, DMG được tăng lên%.",
       "icon": "/Skill/Charanko (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng +30% Máu. Khi cùng ra trận với Sâu Đắng, ST tăng thêm 30%.",
+      "desc": "Tăng vĩnh viễn +30% HP. Khi được triển khai cùng với Bitterworm, DMG được tăng thêm 30%.",
       "icon": "/Skill/Charanko (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng +35% Máu. Khi cùng ra trận với Sâu Đắng, ST tăng thêm 35%.",
+      "desc": "Tăng vĩnh viễn +35% HP. Khi được triển khai cùng với Bitterworm, DMG được tăng thêm 35%.",
       "icon": "/Skill/Charanko (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

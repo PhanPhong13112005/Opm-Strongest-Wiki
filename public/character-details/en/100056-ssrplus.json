@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "King rallies his own resolve, restoring own HP by 150% (+10) ATK.",
+      "desc": "Restores an ally’s HP by 150% ATK.",
       "icon": "/Skill/King (SSR+)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "King fires up the Imperial Engine, inflicting [Panic] on the main target (sealing 2 energy for 1 turn). Dispels the [Unyielding]/[Tenacity] of the 3 enemies with the highest max HP and re-applies it downgraded to a [Tenacity] effect worth 60% of the dispelled value, and restores HP to the 2 lowest-HP% allies by 300% (+10) ATK.",
+      "desc": "Consumes no Energy. Applies [Fear] to all enemies, sealing 2 Energy for 1 round. Reduces [Resilience/Tenacity] of the 3 enemies with the highest HP by 40%. Restores HP to the 2 allies with the lowest HP by 300% of their ATK.",
       "icon": "/Skill/King (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "[Panic] energy sealed 2 > 3Dispel/downgrade target — 3 highest-max-HP enemies > all enemiesDowngraded [Tenacity] power 60% > 50%Allies healed — 2 > 4 lowest-HP% allies, 300% (+10) ATK",
+      "desc": "Consumes no Energy. Applies [Fear] to all enemies, sealing 3 Energy for 1 round. Reduces [Resilience/Tenacity] of all enemies by 50%. Restores HP to the 4 allies with the lowest HP by 300% of their ATK.",
       "keepsakeIcon": "/Keepsake/King (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/King (SSR+)/Skill_ult.png",
       "type": "Ultimate",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own max HP by 20%.At battle start, raises the SPD of allies in the same row to 90% of King's SPD (if an ally's own SPD is already higher, it is unchanged).",
+      "desc": "Increases the SPD of allies in the same row by 90% of King’s SPD. This effect remains active even if King is defeated.",
       "icon": "/Skill/King (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "At battle start — also raises own SPD by 16%Same-row allies' SPD raised to 90% of King's SPD",
+      "desc": "Permanently increases own SPD by 16%. Increases the SPD of allies in the same row by 90% of King’s SPD. This effect remains active even if King is defeated.",
       "icon": "/Skill/King (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "At battle start — own SPD raised 16% > 20%Same-row allies' SPD raised to 90% > 95% of King's SPD",
+      "desc": "Permanently increases own SPD by 20%. Increases the SPD of allies in the same row by 95% of King’s SPD. This effect remains active even if King is defeated.",
       "icon": "/Skill/King (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Summon drone at start of match (ATK &HP are 100% & 800% respectively of King's ATK). Drone will absorb 90% of all types of DMG received by King (excluding emblem and reflect effect) until its HP is 1%. Drone will follow up (after allies move) on 1 random enemy (350% ATK, up to 2 times each round).\nPic credits to Gibrah Noah",
+      "desc": "At battle start, summons 1 [Drone]. The Drone inherits ATK equal to 100% of King’s ATK and HP equal to 800% of King’s ATK. The Drone absorbs 90% of all types of DMG received by King, excluding Emblem DMG and reflected DMG, until the Drone’s HP is reduced to 1%. After an ally acts, the Drone performs a [Follow-Up] against 1 random enemy, dealing 350% ATK DMG. Can trigger up to 2 times per round.",
       "icon": "/Skill/King (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Number of drones summoned 1 > 2.",
+      "desc": "At battle start, summons 2 [Drones]. Each Drone inherits ATK equal to 100% of King’s ATK and HP equal to 800% of King’s ATK. The Drones absorb 90% of all types of DMG received by King, excluding Emblem DMG and reflected DMG, until their HP is reduced to 1%. After an ally acts, the Drones perform a [Follow-Up] against 1 random enemy, dealing 350% ATK DMG. Can trigger up to 2 times per round.",
       "icon": "/Skill/King (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

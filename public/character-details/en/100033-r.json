@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 130% ATK DMG to each enemy in the entire column, with a 100% chance to inflict [Weaken] on the main target (ATK reduced by 20% for 1 turn).",
+      "desc": "Deals 130% ATK DMG to each enemy in the entire column, with a 100% chance to inflict [Weaken] on the main target (ATK reduced% for 1 turn).",
       "icon": "/Skill/Funeral Suspenders (R)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by 20. When deployed together with the Cross Button, the Mourning Overall Pants' ATK is increased by 20% until the end of battle.",
+      "desc": "Permanently increases own HP. When deployed together with the Cross Button, the Mourning Overall Pants' ATK is increased% until the end of battle.",
       "icon": "/Skill/Funeral Suspenders (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by 20. When deployed together with the Cross Button, the Mourning Overall Pants' ATK is increased by 30% until the end of battle.",
+      "desc": "Permanently increases own HP. When deployed together with the Cross Button, the Mourning Overall Pants' ATK is increased by 30% until the end of battle.",
       "icon": "/Skill/Funeral Suspenders (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by 20. When deployed together with the Cross Button, the Mourning Overall Pants' ATK is increased by 35% until the end of battle.",
+      "desc": "Permanently increases own HP. When deployed together with the Cross Button, the Mourning Overall Pants' ATK is increased by 35% until the end of battle.",
       "icon": "/Skill/Funeral Suspenders (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

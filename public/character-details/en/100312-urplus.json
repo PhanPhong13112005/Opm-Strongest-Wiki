@@ -22,7 +22,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK DMG to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target. After using the Ultimate for the first time, Normal Attacks can reduce the duration of [Non-Crit Undying].",
       "icon": "/Skill/Nyan (URplus)/Skill_base.png",
       "type": "Basic",
       "animation": null,
@@ -31,7 +31,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 1500% ATK [Specialized Direct DMG] to a single enemy target in the back row in a 4-hit combo (affected only by advanced DMG reduction), ignoring 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and penetrating [Unyielding] and [Specialized Unyielding]. Permanently grants [Specialized Acceleration] to non-row allies. When using the ultimate skill for the first 6 rounds, additionally applies [Specialized Charm] to the main target. — [Specialized Acceleration]: Speed is increased to 94% of Nyan's speed; if a teammate's own speed is higher, it stays unchanged. [Specialized Charm]: The target immediately disengages from combat, uses some special skills and passive effects to attack a random enemy, then returns and skips their next active action; enemies with [Specialized Charm] have [All DMG Reduction] reduced by 20% for 1 turn.",
+      "desc": "Deals 1500% ATK [Specialized Direct DMG] to a single enemy target in the back row in a 4-hit combo (affected only by advanced DMG reduction), ignoring 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and penetrating [Unyielding] and [Specialized Unyielding]. Permanently grants [Specialized Acceleration] to non-row allies. When using the Ultimate Skill during the first 6 rounds, additionally applies [Specialized Charm] to the main target. [Specialized Acceleration]: Speed is increased to 94% of Nyan’s Speed. If a teammate’s own Speed is higher than the increased Speed, their Speed remains unchanged. [Specialized Charm]: The target immediately disengages from combat, uses some special skills and passive effects to attack a random enemy, then immediately returns to their original position and skips their next active action. Enemy units that gain [Specialized Charm] have their [All DMG Reduction] reduced% for 1 turn.",
       "icon": "/Skill/Nyan (URplus)/Skill_ult.png",
       "type": "Ultimate",
       "animation": "/Animation/Nyan_Urplus/ult.gif",
@@ -40,7 +40,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 1500% > 2400% ATK [Specialized Direct DMG]. Ignore [Specialized Evasion] and [Non-Crit DMG Reduction] 45% > 60%. [Specialized Acceleration] speed increased to 94% > 98% of Nyan's speed.",
+      "desc": "Deals 2400% ATK [Specialized Direct DMG] to a single enemy target in the back row in a 4-hit combo (affected only by advanced DMG reduction), ignoring 60% [Specialized Evasion] and [Non-Crit DMG Reduction], and penetrating [Unyielding] and [Specialized Unyielding]. Permanently grants [Specialized Acceleration] to non-row allies. When using the Ultimate Skill during the first 6 rounds, additionally applies [Specialized Charm] to the main target. [Specialized Acceleration]: Speed is increased to 98% of Nyan’s Speed. If a teammate’s own Speed is higher than the increased Speed, their Speed remains unchanged. [Specialized Charm]: The target immediately disengages from combat, uses some special skills and passive effects to attack a random enemy, then immediately returns to their original position and skips their next active action. Enemy units that gain [Specialized Charm] have their [All DMG Reduction] reduced% for 1 turn.",
       "icon": "/Skill/Nyan (URplus)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Nyan (URplus)/Keepsake_URplus.png",
       "type": "Ultimate",
@@ -49,7 +49,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Gains 60% [Non-Crit DMG Reduction] at the start of the battle. Removes all enemy [Suppression DMG Increase] and [Suppression DMG Reduction] debuffs. Immune to [Charm]/[Specialized Charm]. Reduces the amount of energy deducted by 2 when allies suffer additional energy loss during the first 5 rounds. Self has [Monster Affinity]. — [Monster Affinity]: When the core skill of a Monster character is activated, Nyan can be treated as one of any other currently missing character element (e.g. missing a duelist slot for the Gyoro Core — Nyan counts as a duelist so the Core activates, even though Nyan is a grappler).",
+      "desc": "At battle start, gains 60% [Specialized Evasion]. Immune to [Charm] and [Specialized Charm]. During the first 5 rounds, when allies suffer additional Energy loss, reduces the amount of Energy deducted by 2. Self has [Monster Affinity]. [Monster Affinity]: When the Core Skill of a Monster character is activated, Nyan can be treated as one currently missing character of any element.",
       "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
       "type": "Passive",
       "animation": null,
@@ -58,7 +58,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Non-Crit DMG Reduction] on entry 60% > 70%. Reduces energy deducted by 2 > 3 when allies suffer additional energy loss during the first 5 rounds.",
+      "desc": "At battle start, gains 70% [Specialized Evasion]. Immune to [Charm] and [Specialized Charm]. During the first 5 rounds, when allies suffer additional Energy loss, reduces the amount of Energy deducted by 3. Self has [Monster Affinity]. [Monster Affinity]: When the Core Skill of a Monster character is activated, Nyan can be treated as one currently missing character of any element.",
       "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
       "type": "Passive",
       "animation": null,
@@ -67,7 +67,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Non-Crit DMG Reduction] on entry 70% > 80%. Reduces energy deducted by 3 when allies suffer additional energy loss during the first 5 rounds.",
+      "desc": "At battle start, gains 80% [Specialized Evasion]. Immune to [Charm] and [Specialized Charm]. During the first 5 rounds, when allies suffer additional Energy loss, reduces the amount of Energy deducted by 3. Self has [Monster Affinity]. [Monster Affinity]: When the Core Skill of a Monster character is activated, Nyan can be treated as one currently missing character of any element.",
       "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
       "type": "Passive",
       "animation": null,
@@ -76,7 +76,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "On entry, gain 46% [Specialized Speed]. Applies [Life Link] to the ally with the highest ATK for 6 turns. After Nyan actively uses its skill, the ally with [Life Link] launches [Charged Pursuit] with 80% skill power, up to once per round. — [Life Link]: Nyan will not be defeated as long as the [Life Link] teammate is alive; if they are defeated, [Life Link] transfers to the next-highest-ATK teammate, up to 3 times. [Charged Pursuit]: Performs a DMG-type or AoE-healing Ultimate as a follow-up ATK; targets random, no energy cost.",
+      "desc": "On entry, gains 46% [Specialized Speed]. Applies [HP Link] to the ally with the highest ATK for 6 turns. After Nyan actively uses a skill, the ally with [HP Link] launches a [Charge Pursuit] with 80% skill power, up to once per round. [HP Link]: Nyan will not be defeated as long as the teammate with [HP Link] is still alive. If that teammate is defeated, [HP Link] is immediately transferred to another teammate with the highest ATK on the field, up to 3 times. [Charge Pursuit]: Performs a DMG-type or AoE healing Ultimate as a follow-up attack. Targets are random, and it does not consume Energy.",
       "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
       "type": "Awakening",
       "animation": null,
@@ -85,7 +85,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "On entry, gain [Specialized Speed] 46% > 54%. [Life Link] ally launches [Charged Pursuit] with 80% > 120% skill power.",
+      "desc": "On entry, gains 54% [Specialized Speed]. Applies [HP Link] to the ally with the highest ATK for 6 turns. After Nyan actively uses a skill, the ally with [HP Link] launches a [Charge Pursuit] with 120% skill power, up to once per round. [HP Link]: Nyan will not be defeated as long as the teammate with [HP Link] is still alive. If that teammate is defeated, [HP Link] is immediately transferred to another teammate with the highest ATK on the field, up to 3 times. [Charge Pursuit]: Performs a DMG-type or AoE healing Ultimate as a follow-up attack. Targets are random, and it does not consume Energy.",
       "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
       "type": "Awakening",
       "animation": null,

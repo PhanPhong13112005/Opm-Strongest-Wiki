@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung liên kích 3 đòn lên mục tiêu đơn, gây 35% ST(+3) sát thương.",
+      "desc": "Tấn công một mục tiêu bằng combo 3 đòn, gây 35% ATK(+3) sát thương.",
       "icon": "/Skill/Amai Mask (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công mục tiêu đơn ở hàng sau 2 đến 5 lần, gây tối đa 100% ST(+2) sát thương.",
+      "desc": "Tấn công một mục tiêu ở hàng sau từ 2 đến 5 lần, gây sát thương lên tới 100% ATK(+2).",
       "icon": "/Skill/Amai Mask (SSR)/skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tấn công mục tiêu đơn ở hàng sau 3 đến 5 lần, gây tối đa 100% ST(+2) sát thương.",
+      "desc": "Tấn công một mục tiêu ở hàng sau từ 3 đến 5 lần, gây sát thương lên tới 100% ATK(+2).",
       "keepsakeIcon": "/Keepsake/Amai Mask (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Amai Mask (SSR)/skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Đầu lượt, cấp [Lá Chắn] cho toàn đồng minh (hấp thụ 30% Máu tối đa của chính đồng minh đó). Mỗi kẻ địch có Tốc thấp hơn bản thân, tăng [Giảm Sát Thương Tuyệt Kỹ] của mình 15% (tối đa 3 tầng). Sau khi hành động, tung [Truy Kích] lên địch có Máu tối đa cao nhất (80% ST Đòn Thường và hiệu ứng, 70% xác suất, tối đa 3 lần/lượt).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi bắt đầu vòng đấu, cấp [Lá Chắn] cho tất cả đồng minh (hấp thụ 30% HP tối đa của mỗi đồng minh). Đối với mỗi kẻ địch chậm hơn SPD của chính nó, hãy tăng [Giảm Sát Thương Tuyệt Kỹ] của chính nó thêm 15% (tối đa 3 điểm). Sau khi hành động, phóng [Truy Kích] vào kẻ địch có HP tối đa cao nhất (80% ATK DMG cơ bản và hiệu ứng, 70% cơ hội, tối đa 3 lần mỗi hiệp).",
       "icon": "/Skill/Amai Mask (SSR)/skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Giảm Sát Thương Tuyệt Kỹ] mỗi tầng 15% &gt; 18%. [Truy Kích] 80% &gt; 100% ST Đòn Thường.",
+      "desc": "[Giảm Sát Thương Tuyệt Kỹ] mỗi ngăn xếp 15% > 18%. [Truy Kích] 80% > 100% Cơ bản ATK.",
       "icon": "/Skill/Amai Mask (SSR)/skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Tự nhận Khiên bằng 40% Máu. [Giảm Sát Thương Tuyệt Kỹ] mỗi tầng 18% &gt; 20%. [Truy Kích] tối đa 3 &gt; 4 lần/lượt.",
+      "desc": "Tự cấp cho mình một Khiên bằng 40% HP. [Giảm Sát Thương Tuyệt Kỹ] mỗi ngăn xếp 18% > 20%. [Truy Kích] tối đa 3 > 4 lần mỗi vòng.",
       "icon": "/Skill/Amai Mask (SSR)/skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

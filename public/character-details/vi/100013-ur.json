@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 60% ST sát thương trực tiếp lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Zombieman (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 150% ST sát thương trực tiếp lên toàn bộ hàng của mục tiêu. Cấp [Siêu Tốc] cho đồng minh cùng hàng (trừ bản thân) khi tốc độ của hắn đủ cao. Đặt dấu [Phản Kích] lên toàn bộ kẻ địch, và gây [Phong Ấn Năng Lượng] lên mục tiêu (phong ấn 3 năng lượng) khi dấu còn hiệu lực.",
+      "desc": "Thực hiện combo 3 đòn liên tiếp lên tất cả kẻ địch, gây 450% ATK DMG. Cấp cho đồng đội cùng hàng [Gia Tốc Chuyên Biệt] trong 1 lượt. Gây [Sợ Hãi Chuyên Biệt] lên tất cả kẻ địch trong 1 lượt. [Gia Tốc Chuyên Biệt]: Tăng SPD lên 94% SPD của Zombie Man. Nếu SPD ban đầu của đồng đội cao hơn giá trị tăng lên thì SPD của họ vẫn không thay đổi. [Sợ Hãi Chuyên Biệt]: Khóa 3 Năng lượng và ghi đè [Sợ Hãi]. Khóa Năng lượng không ảnh hưởng đến kẻ thù đã bị trừ Năng lượng. Ngoài ra, khi kẻ địch bị ảnh hưởng sử dụng Tuyệt Kĩ, bao gồm cả Tuyệt Kĩ truy đuổi, chúng sẽ tiêu tốn thêm 1 Năng lượng. Có thể kích hoạt tối đa 3 lần mỗi vòng cho mỗi nhân vật.",
       "icon": "/Skill/Zombieman (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Sát thương trực tiếp 150% > 200% ST lên hàng của mục tiêu. Nới lỏng ngưỡng kích hoạt [Siêu Tốc]. Ngoài ra tăng +30% ST cho toàn bộ đồng minh (2 lượt). Dấu [Phản Kích] và [Phong Ấn Năng Lượng] (3 năng lượng) giữ nguyên.",
+      "desc": "Thực hiện combo 3 đòn liên tiếp lên tất cả kẻ địch, gây 600% ATK DMG. Cấp cho đồng đội cùng hàng [Gia Tốc Chuyên Biệt] trong 1 lượt. Gây [Sợ Hãi Chuyên Biệt] lên tất cả kẻ địch trong 1 lượt. [Gia Tốc Chuyên Biệt]: Tăng SPD lên 98% SPD của Zombie Man. Nếu SPD ban đầu của đồng đội cao hơn giá trị tăng lên thì SPD của họ vẫn không thay đổi. [Sợ Hãi Chuyên Biệt]: Khóa 4 Năng lượng và ghi đè [Sợ Hãi]. Khóa Năng lượng không ảnh hưởng đến kẻ thù đã bị trừ Năng lượng. Ngoài ra, khi kẻ địch bị ảnh hưởng sử dụng Tuyệt Kĩ, bao gồm cả Tuyệt Kĩ truy đuổi, chúng sẽ tiêu tốn thêm 1 Năng lượng. Có thể kích hoạt tối đa 4 lần mỗi vòng cho mỗi nhân vật.",
       "keepsakeIcon": "/Keepsake/Zombieman (UR)/Keepsake_UR.png",
       "icon": "/Skill/Zombieman (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn nhận +20% HP. Khi vào trận, nhận +60% Né tránh. Khi nhận sát thương chí mạng, kích hoạt [Giả Chết] và hồi sinh với 60% HP tối đa, tối đa 3 lần.",
+      "desc": "Khi bắt đầu trận chiến, tăng 60% [Né Sát Thương Tức Thì]. Khi nhận được sát thương kết liễu, sẽ kích hoạt [Hồi Phục]. [Né Sát Thương Tức Thì]: Giảm Sát Thương Trực Tiếp, DMG bổ sung, Sạc DMG và Berserk DMG xuống 1 điểm. [Hồi Phục]: Chỉ cần có ít nhất một đồng đội còn lại trên chiến trường, khôi phục 60% HP trước hành động tiếp theo và tiếp tục chiến đấu. Có thể kích hoạt tối đa 3 lần.",
       "icon": "/Skill/Zombieman (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Né tránh 60% > 70%. HP hồi sinh [Giả Chết] 60% > 80% HP tối đa. Hồi sinh 3 lần.",
+      "desc": "Khi bắt đầu trận chiến, tăng 70% [Né Sát Thương Tức Thì]. Khi nhận được sát thương kết liễu, sẽ kích hoạt [Hồi Phục]. [Né Sát Thương Tức Thì]: Giảm Sát Thương Trực Tiếp, DMG bổ sung, Sạc DMG và Berserk DMG xuống 1 điểm. [Hồi Phục]: Chỉ cần có ít nhất một đồng đội còn lại trên chiến trường, khôi phục 80% HP trước hành động tiếp theo và tiếp tục chiến đấu. Có thể kích hoạt tối đa 3 lần.",
       "icon": "/Skill/Zombieman (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Né tránh 70% > 80%. Hồi sinh 3 > 4 lần với 80% HP tối đa.",
+      "desc": "Khi bắt đầu trận chiến, tăng 80% [Né Sát Thương Tức Thì]. Khi nhận được sát thương kết liễu, sẽ kích hoạt [Hồi Phục]. [Né Sát Thương Tức Thì]: Giảm Sát Thương Trực Tiếp, DMG bổ sung, Sạc DMG và Berserk DMG xuống 1 điểm. [Hồi Phục]: Chỉ cần có ít nhất một đồng đội còn lại trên chiến trường, khôi phục 80% HP trước hành động tiếp theo và tiếp tục chiến đấu. Có thể kích hoạt tối đa 4 lần.",
       "icon": "/Skill/Zombieman (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Nhận 32% [Tăng Tốc Chuyên Biệt] vào đầu trận đấu. Trước khi các đồng minh xung quanh hành động, họ sẽ kích hoạt [Đột Phá Chuyên Biệt] một lần lên mục tiêu chính (chỉ có thể kích hoạt một lần mỗi lượt). ———- [Đột Phá Chuyên Biệt]: Ngay lập tức hủy bỏ [Kiên Cường] của mục tiêu và tăng Tấn công thêm 20% cho đến khi kết thúc đòn tấn công này",
+      "desc": "Khi bắt đầu trận chiến, nhận được [Gia Tốc Chuyên Biệt]. Trước khi đồng đội xung quanh tấn công kẻ thù, kích hoạt [Đột Phá Chuyên Biệt] một lần trên mục tiêu chính. Mỗi đồng đội có thể kích hoạt hiệu ứng này một lần trong lượt. [Gia Tốc Chuyên Biệt]: Tăng SPD của bản thân thêm 32%. [Đột Phá Chuyên Biệt]: Ngay lập tức loại bỏ trạng thái Bất khuất hoặc phủ định DMG của mục tiêu và tăng ATK% của kẻ tấn công cho đến khi kết thúc cuộc tấn công hiện tại.",
       "icon": "/Skill/Zombieman (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Specialized Acceleration 32% > 40% Đồng minh xung quanh > TOÀN BỘ đồng minh Tăng Tấn công 20% > 30%",
+      "desc": "Khi bắt đầu trận chiến, nhận được [Gia Tốc Chuyên Biệt]. Trước khi bất kỳ đồng đội nào tấn công kẻ thù, hãy kích hoạt [Đột Phá Chuyên Biệt] một lần vào mục tiêu chính. Mỗi đồng đội có thể kích hoạt hiệu ứng này một lần trong lượt. [Gia Tốc Chuyên Biệt]: Tăng SPD của bản thân thêm 40%. [Đột Phá Chuyên Biệt]: Ngay lập tức loại bỏ trạng thái Bất khuất hoặc phủ định DMG của mục tiêu và tăng 30% ATK của kẻ tấn công cho đến khi kết thúc cuộc tấn công hiện tại.",
       "icon": "/Skill/Zombieman (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Zombieman (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

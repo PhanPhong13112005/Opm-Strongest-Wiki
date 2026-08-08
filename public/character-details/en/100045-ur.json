@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Child Emperor (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "(No energy consumed) Deals damage to enemies in a row with 3 consecutive strikes for 900% ATK, grants 30% Block Rate to all allies for 2 rounds.",
+      "desc": "Deals 900% ATK DMG to all targets in a row with 3 consecutive hits. Increases the team’s Block Rate by 30% for 2 turns.",
       "icon": "/Skill/Child Emperor (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "(No energy consumed) Deals damage to enemies in a row with 3 consecutive strikes for 900% > 1200% ATK, grants 30% > 40% Block Rate to all allies for 2 rounds.",
+      "desc": "Deals 1200% ATK DMG to all targets in a row with 3 consecutive hits. Increases the team’s Block Rate by 40% for 2 turns. Additionally increases the team’s Block by 40% for 2 turns.",
       "keepsakeIcon": "/Keepsake/Child Emperor (UR)/Keepsake_UR.png",
       "icon": "/Skill/Child Emperor (UR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Gain 60% [Non-Crit DMG Free]. When any ally triggers [Block], gain 25% Max HP of [Tenacity], can trigger 4 times.[Non-Crit DMG Free]: Effective for all types of DMG. Cannot co-exist with [Agility].",
+      "desc": "Child Emperor gains 60% [Non-Crit DMG Reduction]. All allies gain the following effect: after triggering a Block, receives [Tenacity] equal to 25% of Max HP. Can trigger up to 4 times. [Non-Crit DMG Reduction]: The reduction applies to all types of DMG and does not stack with [Agility].",
       "icon": "/Skill/Child Emperor (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Gain 60% > 70% [Non-Crit DMG Free]. When any ally triggers [Block], gain 25% > 30% Max HP of [Tenacity], can trigger 4 times.[Non-Crit DMG Free]: Effective for all types of DMG. Cannot co-exist with [Agility].",
+      "desc": "Child Emperor gains 70% [Non-Crit DMG Reduction]. All allies gain the following effect: after triggering a Block, receives [Tenacity] equal to 30% of Max HP. Can trigger up to 4 times. [Non-Crit DMG Reduction]: The reduction applies to all types of DMG and does not stack with [Agility].",
       "icon": "/Skill/Child Emperor (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Gain 60% > 80% [Non-Crit DMG Free]. When any ally triggers [Block], gain 25% > 35% Max HP of [Tenacity], can trigger 4 times.[Non-Crit DMG Free]: Effective for all types of DMG. Cannot co-exist with [Agility].",
+      "desc": "Child Emperor gains 80% [Non-Crit DMG Reduction]. All allies gain the following effect: after triggering a Block, receives [Tenacity] equal to 35% of Max HP. Can trigger up to 4 times. [Non-Crit DMG Reduction]: The reduction applies to all types of DMG and does not stack with [Agility].",
       "icon": "/Skill/Child Emperor (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "[Basic Core] (Require: 1 Duelist, 1 Grappler, 1 Hi-Tech): Gain 3 energy per round.[Advanced Core] (Require: 1 of each): Permanently grants all allies [Specialized Resilience]. Before battle begins, all allies receive 150% Max HP of [Tenacity] (not affected by Shield Rate). At the start of battle, remove any Arena DMG Boost and Free effects from enemies.———— [Specialized Resilience]: Absorbs all types of DMG, accumulates up to 5x Max HP [Tenacity]; every 1 point of [Shield] absorbs 10 DMG, and Tenacity can recharge it. (Lv4: 180% Max HP / 11 DMG per Shield · Lv10: 210% Max HP / 12 DMG per Shield · Lv17: 250% Max HP / 13 DMG per Shield)",
+      "desc": "Basic Core: Gains 3 Energy each turn. Advanced Core: Upon entering battle, all allies permanently gain [Specialized Resilience]. Before the start of each turn, all allies receive [Tenacity] equal to 100% of their Max HP, unaffected by Shield Rate. After battle begins, removes enemy buffs that increase or decrease DMG during battle. [Specialized Resilience]: Grants a shield that absorbs all types of DMG, with a maximum capacity equal to 5 times the character’s Max HP. Each Shield point can absorb 10 DMG, and [Tenacity] can recharge the shield.",
       "type": "Awakening",
       "icon": "/Skill/Source/100045-ur/awakened.webp",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "When any ally triggers [Block], grants 1 energy (once per turn). All characters gain 20% All DMG Boost and All DMG Free for 2 turns.",
+      "desc": "Gains 3 Energy each turn. After any character triggers a Block, gains 1 Energy. Can trigger once per turn.",
       "type": "Awakening",
       "icon": "/Skill/Source/100045-ur/awakened.webp",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Awaken 3 Passive",
-      "desc": "When any ally triggers [Block], grants 1 energy (twice per turn). All characters gain 20% All DMG Boost and All DMG Free for 2 turns.",
+      "desc": "Gains 3 Energy each turn. After any character triggers a Block, gains 1 Energy. Can trigger once per turn. The entire team gains a 20% DMG boost to all types of DMG for 2 turns.",
       "type": "Awakening",
       "icon": "/Skill/Source/100045-ur/awakened.webp",
       "keepsakeIcon": null,

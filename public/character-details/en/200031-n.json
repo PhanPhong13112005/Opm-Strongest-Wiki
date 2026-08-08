@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 80% ATK(+10) DMG to a single target.",
+      "desc": "Deals 80% AT DMG to a single target.",
       "icon": "/Skill/Deep Sea Ravager (N)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). If a Deep Sea Invader is present, increases own DMG by 20% until the end of battle.",
+      "desc": "Permanently increases own HP by. If a Deep Sea Invader is present, increases own DMG% until the end of battle.",
       "icon": "/Skill/Deep Sea Ravager (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). If a Deep Sea Invader is present, increases own DMG by 25% until the end of battle.",
+      "desc": "Permanently increases own HP by. If a Deep Sea Invader is present, increases own DMG by 25% until the end of battle.",
       "icon": "/Skill/Deep Sea Ravager (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). If a Deep Sea Invader is present, increases own DMG by 28% until the end of battle.",
+      "desc": "Permanently increases own HP by. If a Deep Sea Invader is present, increases own DMG by 28% until the end of battle.",
       "icon": "/Skill/Deep Sea Ravager (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK Direct DMG to a single target with a 3-hit combo.",
+      "desc": "Attacks a single target with 3 consecutive hits, dealing 120% ATK DMG.",
       "icon": "/Skill/Metal Bat V2 (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Increase own Hit and Specialized Hit by 50%. Negates target 30% [Evasion], [Specialized Evasion], [Non-Crit DMG Reduction]. Grants ownself 100% [Berserk]. Each strike can trigger 1 [Specialized Breakthrough]. Deals damage with 3 consecutive strikes to the entire row a fixed total of 3900% ATK of Direct Damage.",
+      "desc": "Increases own [Instant DMG Hit Rate] and [Specialized Hit Rate] by 50%. Ignores 30% of the target’s [Evasion], [Specialized Evasion], and [Non-Crit DMG Reduction]. Enters the [Berserk] state with 100% ATK. Each hit can trigger [Specialized Breakthrough] once. Deals a 3-hit combo to all enemies in a row, inflicting Direct DMG equal to 3900% ATK.",
       "icon": "/Skill/Metal Bat V2 (UR)/skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Specialized Hit 50% > 70%. Negates target [Evasion] 30% > 50%. Self [Berserk] 100% > 130%. Entire row total DMG 3900% > 5400%.",
+      "desc": "Increases own [Instant DMG Hit Rate] and [Specialized Hit Rate] by 70%. Ignores 50% of the target’s [Evasion], [Specialized Evasion], and [Non-Crit DMG Reduction]. Enters the [Berserk] state with 130% ATK. Each hit can trigger [Specialized Breakthrough] once. Deals a 3-hit combo to all enemies in a row, inflicting Direct DMG equal to 5400% ATK.",
       "keepsakeIcon": "/Keepsake/Metal Bat V2 (UR)/Keepsake_UR.png",
       "icon": "/Skill/Metal Bat V2 (UR)/skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Obtains 60% [Non-Crit DMG Reduction]. Reduce [Regroup] and [Revenge Revival] chances by 3. Negates enemies [Specialized DMG Reflect]. Grants [Immunity] to [Deterrence], [Stun], [Specialized Stun], to himself and ally in the same column.",
+      "desc": "Grants self 60% [Non-Crit DMG Reduction]. Reduces the number of revivals from [Regroup] and [Revenge] by 3. Dispels enemies’ [Specialized Counter DMG] effects and grants self and allies in the same column immunity to [Fear], [Stun], and [Specialized Stun].",
       "icon": "/Skill/Metal Bat V2 (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Gains [Non-Crit DMG Reduction] 60% > 70%. Reduce no. of resurrections by 3 > 5.",
+      "desc": "Grants self 70% [Non-Crit DMG Reduction]. Reduces the number of revivals from [Regroup] and [Revenge] by 5. Dispels enemies’ [Specialized Counter DMG] effects and grants self and allies in the same column immunity to [Fear], [Stun], and [Specialized Stun].",
       "icon": "/Skill/Metal Bat V2 (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Gains [Non-Crit DMG Reduction] 70% > 80%. Reduce no. of resurrections by 5 > 7.",
+      "desc": "Grants self 80% [Non-Crit DMG Reduction]. Reduces the number of revivals from [Regroup] and [Revenge] by 7. Dispels enemies’ [Specialized Counter DMG] effects and grants self and allies in the same column immunity to [Fear], [Stun], and [Specialized Stun].",
       "icon": "/Skill/Metal Bat V2 (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Gains [Momentum Return] 2 times. Obtains 30% [Suppression DMG Reduction]. — [Momentum Return]: After all allies are defeated, return to battle with 110% (200%) Max HP. [Suppression DMG Reduction]: Reduce 30% DMG received, if ATK is higher than the Attacker, reduce by 150%.",
+      "desc": "Gains 2 charges of [Momentum Return]. At the start of battle, gains 30% [Suppression DMG Reduction]. [Momentum Return]: When all allies are defeated, the unit returns to the battlefield with 110% HP. Any excess HP is converted into additional Max HP. [Suppression DMG Reduction]: Reduces DMG taken by 30%. If the unit’s ATK is higher than the target’s, the DMG reduction increases to 150%.",
       "icon": "/Skill/Metal Bat V2 (UR)/skill_awk.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Gain [Momentum Return] 2 > 3. Gain [Suppression DMG Reduction] 30% > 40%. Reduce DMG 30% > 40%. If ATK is higher, reduce by 150% > 170%.",
+      "desc": "Gains 3 charges of [Momentum Return]. At the start of battle, gains 40% [Suppression DMG Reduction]. [Momentum Return]: When all allies are defeated, the unit returns to the battlefield with 200% HP. Any excess HP is converted into additional Max HP. [Suppression DMG Reduction]: Reduces DMG taken by 40%. If the unit’s ATK is higher than the target’s, the DMG reduction increases to 170%.",
       "icon": "/Skill/Metal Bat V2 (UR)/skill_awk.png",
       "type": "Awakening",
       "keepsakeIcon": null,

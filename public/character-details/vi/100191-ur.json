@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST cho một mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công kẻ địch theo hàng với 3 đòn liên tiếp, gây 900% ST. Mỗi đòn có 50% tỉ lệ thêm một lớp [Thiêu Đốt Chuyên Biệt] (gây 300% ST sát thương theo thời gian, biến mất sau khi có hiệu lực 3 lần; sau khi bất kỳ nhân vật nào hành động, chuyển sang các mục tiêu có thể nhận sát thương). Có 100% tỉ lệ giảm Tỉ lệ chí mạng của toàn bộ đội kẻ địch đi 40% trong 2 lượt.",
+      "desc": "Tấn công kẻ địch liên tiếp 3 đòn liên tiếp, gây 900% ATK DMG. Mỗi đòn tấn công có 50% cơ hội thêm 1 điểm [Thiêu Đốt Chuyên Biệt]. Có 100% cơ hội giảm 40% Tỷ lệ CRIT của toàn đội địch trong 2 lượt. [Thiêu Đốt Chuyên Biệt]: Gây 300% ATK thành DoT DMG. Biến mất sau khi kích hoạt 3 lần. Sau khi bất kỳ nhân vật nào hành động, sẽ chuyển đến mục tiêu có thể nhận DMG.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "ST Tối Thượng 900% → 1200% ST. Giảm Tỉ lệ chí mạng kẻ địch 40% → 60%. ST [Thiêu Đốt Chuyên Biệt] 300% → 400% ST.",
+      "desc": "Tấn công kẻ địch liên tiếp bằng 3 đòn liên tiếp, gây 1200% ATK DMG. Mỗi đòn tấn công có 80% cơ hội thêm 1 điểm [Thiêu Đốt Chuyên Biệt]. Có 100% cơ hội giảm 60% Tỷ lệ CRIT của toàn đội địch trong 2 lượt. [Thiêu Đốt Chuyên Biệt]: Gây 400% ATK thành DoT DMG. Biến mất sau khi kích hoạt 3 lần. Sau khi bất kỳ nhân vật nào hành động, sẽ chuyển đến mục tiêu có thể nhận DMG.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Hellfire Flame (UR)/Keepsake_UR.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Khi trận đấu bắt đầu, có 100% tỉ lệ giảm Tỉ lệ hồi máu của đội kẻ địch đi 60%. Vào đầu trận đấu, nhận 60% tỉ lệ [Khả Năng Né Tránh] (giảm ST trực tiếp/phụ trội/tích lũy/cuồng bạo xuống còn 1 ST).",
+      "desc": "Khi trận chiến bắt đầu, có 100% cơ hội giảm 60% Tỷ Lệ Hồi Phục của đội địch. Khi bắt đầu trận chiến, có 60% cơ hội nhận được [Khả Năng Né Tránh]. [Khả Năng Né Tránh]: Giảm Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG nhận được còn 1 DMG.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Giảm Tỉ lệ hồi máu kẻ địch 60% → 70%. Tỉ lệ [Khả Năng Né Tránh] 60% → 70%.",
+      "desc": "Khi trận chiến bắt đầu, có 100% cơ hội giảm 70% Tỷ Lệ Hồi Phục của đội địch. Khi bắt đầu trận chiến, có 70% cơ hội nhận được [Khả Năng Né Tránh]. [Khả Năng Né Tránh]: Giảm Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG nhận được còn 1 DMG.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Giảm Tỉ lệ hồi máu kẻ địch 70% → 80%. Tỉ lệ [Khả Năng Né Tránh] 70% → 80%.",
+      "desc": "Khi trận chiến bắt đầu, có 100% cơ hội giảm 80% Tỷ Lệ Hồi Phục của đội địch. Khi bắt đầu trận chiến, có 80% cơ hội nhận được [Khả Năng Né Tránh]. [Khả Năng Né Tránh]: Giảm Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG nhận được còn 1 DMG.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Toàn bộ đồng minh vĩnh viễn nhận 60% [Đệm Sát Thương] (Giảm ST dựa trên Máu tối đa). Khi bất kỳ nhân vật nào hành động, gỡ bỏ [Choáng/Choáng Chuyên Biệt] khỏi 1 đồng minh (Có thể gỡ bỏ mỗi hiệu ứng giảm trong mỗi lượt, tối đa 3 lần).",
+      "desc": "Tất cả đồng minh nhận được vĩnh viễn 60% [Đệm Sát Thương]. Sau khi bất kỳ nhân vật nào hành động, loại bỏ [Choáng] hoặc [Choáng Chuyên Biệt] khỏi 1 đồng minh. Mỗi debuff có thể được loại bỏ tối đa 3 lần mỗi vòng. [Đệm Sát Thương]: Giảm DMG dựa trên HP tối đa.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Buffer 60% > 80% Gỡ bỏ hiệu ứng giảm tối đa 3 lần > Không giới hạn",
+      "desc": "Tất cả đồng minh nhận được vĩnh viễn 80% [Đệm Sát Thương]. Sau khi bất kỳ nhân vật nào hành động, loại bỏ [Choáng] hoặc [Choáng Chuyên Biệt] khỏi 1 đồng minh. Mỗi debuff có thể được loại bỏ không giới hạn số lần trong mỗi vòng. [Đệm Sát Thương]: Giảm DMG dựa trên HP tối đa.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -92,7 +92,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

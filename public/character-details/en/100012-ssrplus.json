@@ -47,7 +47,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). Permanently grants [Immunity against Stun] to other allies in its row. After 2 rounds, grants itself [Immunity against Extra DMG].",
+      "desc": "Permanently increases own HP by. Permanently grants [Immunity against Stun] to other allies in its row. After 2 rounds, grants itself [Immunity against Extra DMG].",
       "icon": "/Skill/Metal Bat (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Self [Immunity against Extra DMG]: after 2 rounds &gt; after 1 round.",
+      "desc": "Self [Immunity against Extra DMG]: after 2 rounds > after 1 round.",
       "icon": "/Skill/Metal Bat (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Self [Immunity against Extra DMG]: after 1 round &gt; permanent (from the start).",
+      "desc": "Self [Immunity against Extra DMG]: after 1 round > permanent (from the start).",
       "icon": "/Skill/Metal Bat (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

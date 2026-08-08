@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK (+10) DMG to a single target. 100% chance to inflict [Internal Injury] on the target (when the target is hit, an added Internal Injury DMG equal to 100% of Garou's ATK is dealt; the effect is removed after triggering).",
+      "desc": "Attacks a single target, dealing 120% ATK DMG. Has a 100% chance to inflict [Internal Injury] on the target. [Internal Injury]: When the affected unit is attacked, takes DMG equal to 100% of Garou's ATK. The effect disappears after triggering once.",
       "icon": "/Skill/Garou (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 20% ATK (+2) DMG with 5 consecutive strikes to all targets. 100% chance to inflict [Internal Injury] on 3 random targets (when the target is hit, an added Internal Injury DMG equal to 130% of Garou's ATK is dealt; the effect is removed after triggering).",
+      "desc": "Attacks all enemies with 5 consecutive strikes, dealing 100% ATK DMG. Has a 100% chance to inflict [Internal Injury] on 3 random targets. [Internal Injury]: When the affected unit is attacked, takes DMG equal to 130% of Garou's ATK. The effect disappears after triggering once.",
       "icon": "/Skill/Garou (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). After an enemy character acts, Garou has a 40% chance to perform a [Follow-up] (attacks with 80% of Basic Attack DMG and effects, up to 3 times each round); always triggers if a hero acts. When taking fatal damage for the first time each battle, heals self for 30% of max HP.",
+      "desc": "After an enemy acts, Garou has a 40% chance to perform a [Follow-Up]. If the acting enemy is a Hero, the [Follow-Up] is guaranteed to trigger. The first time Garou receives fatal DMG each battle, restores 30% of Max HP. [Follow-Up]: Deals 80% of Garou's Basic Attack DMG and retains its effects. Can trigger up to 3 times per turn.",
       "icon": "/Skill/Garou (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). After an enemy character acts, Garou has a 40% chance to perform a [Follow-up] (attacks with 90% of Basic Attack DMG and effects, up to 4 times each round); always triggers if a hero acts. Heals self for 30% of max HP on first fatal damage.",
+      "desc": "Permanently increases own HP by. After an enemy character acts, Garou has a 40% chance to perform a [Follow-up] (attacks with 90% of Basic Attack DMG and effects, up to 4 times each round); always triggers if a hero acts. Heals self for 30% of max HP on first fatal damage.",
       "icon": "/Skill/Garou (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). After an enemy character acts, Garou has a 50% chance to perform a [Follow-up] (attacks with 115% of Basic Attack DMG and effects, up to 4 times each round); always triggers if a hero acts. Heals self for 38% of max HP on first fatal damage.",
+      "desc": "Permanently increases own HP by. After an enemy character acts, Garou has a 50% chance to perform a [Follow-up] (attacks with 115% of Basic Attack DMG and effects, up to 4 times each round); always triggers if a hero acts. Heals self for 38% of max HP on first fatal damage.",
       "icon": "/Skill/Garou (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

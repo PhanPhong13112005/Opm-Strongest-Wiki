@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 80% ST lên mục tiêu đơn.",
+      "desc": "Gây 80% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Sourface (R)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 60% ST lên mục tiêu đơn, và bản thân vào trạng thái [Cuồng Nộ] (tăng 30% sát thương khi tấn công).",
+      "desc": "Gây 60% ATK DMG cho một mục tiêu và bản thân rơi vào trạng thái [Giận Dữ] (tăng DMG khi tấn công thêm 30%).",
       "icon": "/Skill/Sourface (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 60% ST lên mục tiêu đơn, và bản thân vào trạng thái [Cuồng Nộ] (tăng 35% sát thương khi tấn công).",
+      "desc": "Gây 60% ATK DMG cho một mục tiêu và bản thân rơi vào trạng thái [Giận Dữ] (tăng DMG khi tấn công thêm 35%).",
       "keepsakeIcon": "/Keepsake/Sourface (R)/Keepsake_R.png",
       "icon": "/Skill/Sourface (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Mỗi khi kích hoạt chí mạng, thêm sát thương bằng 40% ST.",
+      "desc": "Tăng vĩnh viễn HP tối đa% của chính mình. Bất cứ khi nào một đòn chí mạng được kích hoạt, hãy thêm extra DMG bằng 40% ATK.",
       "icon": "/Skill/Sourface (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Mỗi khi kích hoạt chí mạng, thêm sát thương bằng 50% ST.",
+      "desc": "Tăng vĩnh viễn HP tối đa% của chính mình. Bất cứ khi nào một đòn chí mạng được kích hoạt, hãy thêm extra DMG bằng 50% ATK.",
       "icon": "/Skill/Sourface (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Mỗi khi kích hoạt chí mạng, thêm sát thương bằng 55% ST.",
+      "desc": "Tăng vĩnh viễn HP tối đa% của chính mình. Bất cứ khi nào một đòn chí mạng được kích hoạt, hãy thêm extra DMG bằng 55% ATK.",
       "icon": "/Skill/Sourface (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

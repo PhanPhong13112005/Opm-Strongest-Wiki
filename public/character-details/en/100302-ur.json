@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Arrow Combo: 2 combos, dealing 240% ATK(+10) to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Knuckle High: 3 consecutive strikes to the enemy target column for 900% ATK(+9). Each strike adds 600% ATK as [True DMG]. Each strike can trigger [Specialized Evolve] once. [True DMG]: not affected by DMG increase/mitigation, unavoidable and unshareable, deals direct DMG to HP. [Specialized Evolve]: immediately cancels the target's Unyielding and DMG-ignore statuses.",
+      "desc": "Deals 900% ATK as Direct DMG to all enemies in a column with a 3-hit combo. Each hit additionally deals 600% ATK DMG as [True DMG]. Each hit can trigger [Specialized Breakthrough] once. [True DMG]: Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion]. [Specialized Breakthrough]: Instantly removes [DMG Ignoration].",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Knuckle High (upgraded): 3 consecutive strikes to the enemy target column for 900% > 1200% ATK(+9). Each strike adds 600% > 840% ATK as [True DMG]. Each strike can trigger [Specialized Evolve] once. [True DMG]: not affected by DMG increase/mitigation, unavoidable and unshareable, deals direct DMG to HP. [Specialized Evolve]: immediately cancels the target's Unyielding and DMG-ignore statuses.",
+      "desc": "Deals 1200% ATK as Direct DMG to all enemies in a column with a 3-hit combo. Each hit additionally deals 840% ATK DMG as [True DMG]. Each hit can trigger [Specialized Breakthrough] once. [True DMG]: Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion]. [Specialized Breakthrough]: Instantly removes [DMG Ignoration].",
       "keepsakeIcon": "/Keepsake/Carnage Kabuto (UR)/Keepsake_UR.png",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Focused Rage: Permanently +20 HP. Gain 60% [Specialized Evasion]. After any character's action, if cumulative DMG taken exceeds your Max HP, unleash [Wild Follow-up] dealing 180% of Ultimate Skill Power (ignores extra Energy cost, prioritizes front row), up to 10 times per battle. [Specialized Evasion]: reduce all Direct DMG/DoT/Injury/Extra DMG to just 1 point.",
+      "desc": "Gains 60% [Specialized Dodge]. When any character acts, if own accumulated DMG exceeds Max HP, triggers a [Rampage Pursuit] attack with 180% Ultimate DMG. This skill is not affected by the additional consumption effect caused by [Specialized Panic] and prioritizes the front row. Can activate up to 10 times per battle. [Specialized Dodge]: Direct DMG, Continuous DMG, Injury DMG, and Extra DMG only deal 1 point of DMG.",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Focused Rage (upgraded): Permanently +20 HP. Gain 60% > 70% [Specialized Evasion]. After any character's action, if cumulative DMG taken exceeds your Max HP, unleash [Wild Follow-up] dealing 180% of Ultimate Skill Power (ignores extra Energy cost, prioritizes front row), up to 10 > 11 times per battle. [Specialized Evasion]: reduce all Direct DMG/DoT/Injury/Extra DMG to just 1 point.",
+      "desc": "Gains 70% [Specialized Dodge]. When any character acts, if own accumulated DMG exceeds Max HP, triggers a [Rampage Pursuit] attack with 180% Ultimate DMG. This skill is not affected by the additional consumption effect caused by [Specialized Panic] and prioritizes the front row. Can activate up to 11 times per battle. [Specialized Dodge]: Direct DMG, Continuous DMG, Injury DMG, and Extra DMG only deal 1 point of DMG.",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Focused Rage (5P): Permanently +20 HP. Gain 60% > 80% [Specialized Evasion]. After any character's action, if cumulative DMG taken exceeds your Max HP, unleash [Wild Follow-up] dealing 180% of Ultimate Skill Power (ignores extra Energy cost, prioritizes front row), up to 10 > 12 times per battle. [Specialized Evasion]: reduce all Direct DMG/DoT/Injury/Extra DMG to just 1 point.",
+      "desc": "Gains 80% [Specialized Dodge]. When any character acts, if own accumulated DMG exceeds Max HP, triggers a [Rampage Pursuit] attack with 180% Ultimate DMG. This skill is not affected by the additional consumption effect caused by [Specialized Panic] and prioritizes the front row. Can activate up to 12 times per battle. [Specialized Dodge]: Direct DMG, Continuous DMG, Injury DMG, and Extra DMG only deal 1 point of DMG.",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Grants himself [Refresh]. Grants all allies 150% > 200% [Injury DMG Free]. [Refresh]: after being defeated, return to battle with 80% > 100% HP and increase own ATK by 20% for 1 round, up to 7 > 10 times. [Injury DMG Free]: reduce [Injury], [Internal Injury], and [Charge] DMG.",
+      "desc": "At battle start, gains [Regroup] and grants all allies 150% [Injury Reduction]. [Regroup]: After being defeated, returns to the battlefield with 80% HP and increases own ATK% for 1 round. Can trigger up to 7 times. [Injury Reduction]: Reduces [Injury], [Internal Injury], and [Charge] DMG.",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Injury DMG Free 150% > 200% Revive HP 80% > 100% Own ATK Increase 7x > 10x",
+      "desc": "At battle start, gains [Regroup] and grants all allies 200% [Injury Reduction]. [Regroup]: After being defeated, returns to the battlefield with 100% HP and increases own ATK by 35% for 1 round. Can trigger up to 10 times. [Injury Reduction]: Reduces [Injury], [Internal Injury], and [Charge] DMG.",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

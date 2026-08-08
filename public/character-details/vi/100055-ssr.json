@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST sát thương cho mục tiêu đơn và bản thân vào trạng thái [Cuồng Nộ] 1 lượt (tăng 30% sát thương gây ra).",
+      "desc": "Gây 120% sát thương ATK cho một mục tiêu và chuyển sang trạng thái [Giận Dữ] trong 1 lượt (DMG tăng 30%).",
       "icon": "/Skill/Boros (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Mỗi đồng minh hệ Tâm linh làm tăng ST của Boros, tăng cường độ kỹ năng 105%, tối đa 3 tầng (+50% ST mỗi tầng). Tung đòn liên kích 3 lần vào mục tiêu đơn, gây 70% ST sát thương mỗi đòn.",
+      "desc": "Mỗi đồng minh loại Esper tăng ATK của Boros, tăng sức mạnh kỹ năng thêm 105%, tối đa 3 điểm cộng dồn (+50% ATK mỗi điểm). Tấn công một mục tiêu bằng combo 3 đòn, gây 70% sát thương ATK mỗi đòn.",
       "icon": "/Skill/Boros (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Mỗi đồng minh hệ Tâm linh làm tăng ST của Boros, tăng cường độ kỹ năng 158%, tối đa 3 tầng (+60% ST mỗi tầng). Tung đòn liên kích 3 lần vào mục tiêu đơn, gây 88% ST sát thương mỗi đòn.",
+      "desc": "Mỗi đồng minh loại Esper tăng ATK của Boros, tăng sức mạnh kỹ năng thêm 158%, tối đa 3 điểm cộng dồn (+60% ATK mỗi điểm). Tấn công một mục tiêu bằng combo 3 đòn, gây 88% sát thương ATK mỗi đòn.",
       "icon": "/Skill/Boros (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Boros (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Khi đồng minh hồi Máu, Boros được hồi 60% giá trị đó, kích hoạt tối đa 6 lần mỗi lượt.",
+      "desc": "Tăng vĩnh viễn HP tối đa của chính mình. Khi đồng minh khôi phục HP, Boros được hồi máu bằng 60% giá trị đó, kích hoạt tối đa 6 lần mỗi lượt.",
       "icon": "/Skill/Boros (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Khi đồng minh hồi Máu, Boros được hồi 80% giá trị đó, kích hoạt tối đa 8 lần mỗi lượt.",
+      "desc": "Tăng vĩnh viễn HP tối đa của chính mình. Khi đồng minh khôi phục HP, Boros được hồi máu bằng 80% giá trị đó, kích hoạt tối đa 8 lần mỗi lượt.",
       "icon": "/Skill/Boros (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Khi đồng minh hồi Máu, Boros được hồi 85% giá trị đó, kích hoạt tối đa 8 lần mỗi lượt.",
+      "desc": "Tăng vĩnh viễn HP tối đa của chính mình. Khi đồng minh khôi phục HP, Boros được hồi máu bằng 85% giá trị đó, kích hoạt tối đa 8 lần mỗi lượt.",
       "icon": "/Skill/Boros (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

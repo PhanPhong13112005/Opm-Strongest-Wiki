@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 2 combo strikes to a single target for 60% ATK DMG, with a 100% chance to inflict [Field] on the target for 1 turn.[Field]: Takes DoT equal to 150% ATK before taking action.",
+      "desc": "Attacks a single target with 2 consecutive strikes, dealing 60% ATK DMG per strike. Has a 100% chance to inflict [Field] on the target for 1 turn. [Field]: Before taking action, the affected unit suffers Continuous DMG equal to 150% ATK.",
       "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 3 combo strikes to all enemies for 50% ATK DMG; if in the [Giant] state, increases DoT Boost by 50%. Has a 100% chance to inflict [Field] on all enemies for 1 turn.[Field]: Takes DoT equal to 160% ATK before taking action.",
+      "desc": "Attacks all enemies with 3 consecutive strikes, dealing 50% ATK DMG per strike. While in [Giant State], increases Continuous DMG Rate by 50%. Has a 100% chance to inflict [Field] on all enemies for 1 turn. [Field]: Before taking action, the affected unit suffers Continuous DMG equal to 160% ATK.",
       "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 3 combo strikes to all enemies for 60% ATK DMG; if in the [Giant] state, increases DoT Boost by 50%. Has a 100% chance to inflict [Field] on all enemies for 1 turn.[Field]: Takes DoT equal to 230% ATK before taking action.",
+      "desc": "Attacks all enemies with 3 consecutive strikes, dealing 60% ATK DMG per strike. While in [Giant State], increases Continuous DMG Rate by 50%. Has a 100% chance to inflict [Field] on all enemies for 1 turn. [Field]: Before taking action, the affected unit suffers Continuous DMG equal to 230% ATK.",
       "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Vaccine Man V2 (SSR)/Keepsake_SSR.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). After any character's action, [detonates] all enemy [Fields] 3 times per round (instantly converts the original DMG into 100% Detonation DMG). After Detonation, enters [Giant] state. Revives with 50% Max HP after taking fatal damage (up to 2 times).",
+      "desc": "Permanently increases own HP. After any character acts, detonates all enemy [Field] effects, up to 3 times per round. [Detonation]: Immediately converts the original [Field] DMG into 100% Detonation DMG. After triggering [Detonation], enters [Giant State]. After receiving fatal DMG, revives with 50% Max HP. Can trigger up to 2 times per battle.",
       "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Detonation DMG 100% &gt; 110%. Revive HP 50% &gt; 60% Max HP.",
+      "desc": "Permanently increases own HP. After any character acts, detonates all enemy [Field] effects, up to 3 times per round. [Detonation]: Immediately converts the original [Field] DMG into 110% Detonation DMG. After triggering [Detonation], enters [Giant State]. After receiving fatal DMG, revives with 60% Max HP. Can trigger up to 2 times per battle.",
       "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Detonation DMG 110% &gt; 120%. Revive HP 60% &gt; 80% Max HP.",
+      "desc": "Permanently increases own HP. After any character acts, detonates all enemy [Field] effects, up to 3 times per round. [Detonation]: Immediately converts the original [Field] DMG into 120% Detonation DMG. After triggering [Detonation], enters [Giant State]. After receiving fatal DMG, revives with 80% Max HP. Can trigger up to 2 times per battle.",
       "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

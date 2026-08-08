@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST cho một mục tiêu.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Child Emperor (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "(Không tiêu hao năng lượng) Đánh 3 đòn liên tiếp vào kẻ địch trên cùng một hàng, mỗi đòn gây 900% ST, đồng thời tăng 30% Block Rate cho toàn bộ đồng minh trong 2 lượt.",
+      "desc": "Gây 900% ATK DMG lên tất cả mục tiêu liên tiếp với 3 đòn đánh liên tiếp. Tăng Tỷ lệ chặn của đội thêm 30% trong 2 lượt.",
       "icon": "/Skill/Child Emperor (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "(Không tiêu hao năng lượng) Đánh 3 đòn liên tiếp vào kẻ địch trên cùng một hàng, mỗi đòn gây 900% > 1200% ST, đồng thời tăng 30% > 40% Block Rate cho toàn bộ đồng minh trong 2 lượt.",
+      "desc": "Gây 1200% ATK DMG cho tất cả mục tiêu liên tiếp với 3 đòn đánh liên tiếp. Tăng Tỷ lệ chặn của đội thêm 40% trong 2 lượt. Ngoài ra, tăng khả năng Chặn của đội thêm 40% trong 2 lượt.",
       "keepsakeIcon": "/Keepsake/Child Emperor (UR)/Keepsake_UR.png",
       "icon": "/Skill/Child Emperor (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Nhận 60% [Miễn Sát Thương Không Bạo Kích]. Khi bất kỳ đồng minh nào kích hoạt [Đỡ Đòn], nhận [Lá Chắn] bằng 25% HP Tối đa, có thể kích hoạt 4 lần.[Miễn Sát Thương Không Bạo Kích]: Có hiệu lực với mọi loại sát thương. Không thể tồn tại cùng lúc với [Nhanh Nhẹn].",
+      "desc": "Đồng Đế tăng 60% [Giảm Sát Thương Không Bạo Kích]. Tất cả đồng minh đều đạt được hiệu ứng sau: sau khi kích hoạt Khối, nhận được [Lá Chắn] bằng 25% HP tối đa. Có thể kích hoạt tối đa 4 lần. [Giảm Sát Thương Không Bạo Kích]: Mức giảm áp dụng cho tất cả các loại DMG và không cộng dồn với [Nhanh Nhẹn].",
       "icon": "/Skill/Child Emperor (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Nhận 60% > 70% [Miễn Sát Thương Không Bạo Kích]. Khi bất kỳ đồng minh nào kích hoạt [Đỡ Đòn], nhận [Lá Chắn] bằng 25% > 30% HP Tối đa, có thể kích hoạt 4 lần.[Miễn Sát Thương Không Bạo Kích]: Có hiệu lực với mọi loại sát thương. Không thể tồn tại cùng lúc với [Nhanh Nhẹn].",
+      "desc": "Đồng Đế tăng 70% [Giảm Sát Thương Không Bạo Kích]. Tất cả đồng minh đều đạt được hiệu ứng sau: sau khi kích hoạt Khối, nhận được [Lá Chắn] bằng 30% HP tối đa. Có thể kích hoạt tối đa 4 lần. [Giảm Sát Thương Không Bạo Kích]: Mức giảm áp dụng cho tất cả các loại DMG và không cộng dồn với [Nhanh Nhẹn].",
       "icon": "/Skill/Child Emperor (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Nhận 60% > 80% [Miễn Sát Thương Không Bạo Kích]. Khi bất kỳ đồng minh nào kích hoạt [Đỡ Đòn], nhận [Lá Chắn] bằng 25% > 35% HP Tối đa, có thể kích hoạt 4 lần.[Miễn Sát Thương Không Bạo Kích]: Có hiệu lực với mọi loại sát thương. Không thể tồn tại cùng lúc với [Nhanh Nhẹn].",
+      "desc": "Đồng Đế tăng 80% [Giảm Sát Thương Không Bạo Kích]. Tất cả đồng minh đều đạt được hiệu ứng sau: sau khi kích hoạt Khối, nhận được [Lá Chắn] bằng 35% HP tối đa. Có thể kích hoạt tối đa 4 lần. [Giảm Sát Thương Không Bạo Kích]: Mức giảm áp dụng cho tất cả các loại DMG và không cộng dồn với [Nhanh Nhẹn].",
       "icon": "/Skill/Child Emperor (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "[Core Cơ bản] (Yêu cầu: 1 Duelist, 1 Grappler, 1 Hi-Tech): Nhận 3 năng lượng mỗi lượt.[Core Nâng cao] (Yêu cầu: 1 mỗi loại): Vĩnh viễn ban cho toàn bộ đồng minh [Bền Bỉ Chuyên Biệt]. Khi vào trận, toàn bộ đồng minh nhận [Lá Chắn] bằng 150% HP Tối đa (không bị ảnh hưởng bởi Shield Rate). Khi bắt đầu trận, xóa mọi hiệu ứng Arena DMG Boost và Free của kẻ địch.———— [Bền Bỉ Chuyên Biệt]: Hấp thụ mọi loại ST, tích lũy tối đa 5 lần HP Tối đa [Lá Chắn]; mỗi 1 điểm [Khiên] hấp thụ 10 ST, và Tenacity có thể nạp lại. (Lv4: 180% HP Tối đa / 11 ST mỗi Shield · Lv10: 210% HP Tối đa / 12 ST mỗi Shield · Lv17: 250% HP Tối đa / 13 ST mỗi Shield)",
+      "desc": "Lõi cơ bản: Nhận 3 Năng lượng mỗi lượt. Advanced Core: Khi tham gia trận chiến, tất cả đồng minh vĩnh viễn nhận được [Bền Bỉ Chuyên Biệt]. Trước khi bắt đầu mỗi lượt, tất cả đồng minh nhận được [Lá Chắn] bằng 100% HP tối đa của họ, không bị ảnh hưởng bởi Tỷ Lệ Khiên. Sau khi trận chiến bắt đầu, loại bỏ các bùa lợi của kẻ thù làm tăng hoặc giảm DMG trong trận chiến. [Bền Bỉ Chuyên Biệt]: Cấp một tấm khiên hấp thụ mọi loại DMG, với sức chứa tối đa gấp 5 lần HP tối đa của nhân vật. Mỗi điểm Khiên có thể hấp thụ 10 DMG và [Lá Chắn] có thể nạp lại lá chắn.",
       "type": "Thức tỉnh",
       "icon": "/Skill/Source/100045-ur/awakened.webp",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Khi bất kỳ đồng minh kích hoạt [Đỡ Đòn], nhận 1 năng lượng (một lần mỗi lượt). Toàn bộ nhân vật nhận 20% All DMG Boost và All DMG Free trong 2 lượt.",
+      "desc": "Nhận được 3 Năng lượng mỗi lượt. Sau khi bất kỳ nhân vật nào kích hoạt Khối, nhận được 1 Năng lượng. Có thể kích hoạt một lần mỗi lượt.",
       "type": "Thức tỉnh",
       "icon": "/Skill/Source/100045-ur/awakened.webp",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "Khi bất kỳ đồng minh kích hoạt [Đỡ Đòn], nhận 1 năng lượng (hai lần mỗi lượt). Toàn bộ nhân vật nhận 20% All DMG Boost và All DMG Free trong 2 lượt.",
+      "desc": "Nhận được 3 Năng lượng mỗi lượt. Sau khi bất kỳ nhân vật nào kích hoạt Khối, nhận được 1 Năng lượng. Có thể kích hoạt một lần mỗi lượt. Toàn đội nhận được 20% Tăng Sát Thương cho tất cả các loại DMG trong 2 lượt.",
       "type": "Thức tỉnh",
       "icon": "/Skill/Source/100045-ur/awakened.webp",
       "keepsakeIcon": null,

@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own max HP by (+20). After each action, drains the sealed energy from the main target (can only drain once per turn; after a successful drain, cannot inflict [Panic] on enemies again that turn). For each point of energy drained, deals 40% ATK extra damage to all enemies.",
+      "desc": "Permanently increases own max HP by. After each action, drains the sealed energy from the main target (can only drain once per turn; after a successful drain, cannot inflict [Panic] on enemies again that turn). For each point of energy drained, deals 40% ATK extra damage to all enemies.",
       "icon": "/Skill/Geryuganshoop (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own max HP by (+20). After each action, drains the sealed energy from the main target (can only drain once per turn; after a successful drain, cannot inflict [Panic] on enemies again that turn). For each point of energy drained, deals 50% ATK extra damage to all enemies.",
+      "desc": "Permanently increases own max HP by. After each action, drains the sealed energy from the main target (can only drain once per turn; after a successful drain, cannot inflict [Panic] on enemies again that turn). For each point of energy drained, deals 50% ATK extra damage to all enemies.",
       "icon": "/Skill/Geryuganshoop (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own max HP by (+20). After each action, drains the sealed energy from the main target (can only drain once per turn; after a successful drain, cannot inflict [Panic] on enemies again that turn). For each point of energy drained, deals 55% ATK extra damage to all enemies.",
+      "desc": "Permanently increases own max HP by. After each action, drains the sealed energy from the main target (can only drain once per turn; after a successful drain, cannot inflict [Panic] on enemies again that turn). For each point of energy drained, deals 55% ATK extra damage to all enemies.",
       "icon": "/Skill/Geryuganshoop (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

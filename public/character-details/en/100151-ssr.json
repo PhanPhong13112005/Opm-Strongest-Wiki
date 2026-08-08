@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 140% ATK (+10) DMG to a single target, and grants self [Tenacity] (absorbs DMG equal to 30% of own HP).",
+      "desc": "Deals 140% ATK DMG to a single target and grants self [Tenacity]. [Tenacity]: Absorbs DMG equal to 30% of own Max HP.",
       "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 50% ATK DMG with 3 consecutive strikes to all enemies, permanently grants self 50% continuous DMG Boost, and has a 100% chance to inflict [Force Field] on all targets on the field for 1 turn (takes DoT equal to 50% ATK before acting; 50% chance to penetrate immunity effects).",
+      "desc": "Attacks all enemies with 3 consecutive strikes, dealing 50% ATK DMG per strike. Permanently increases own Continuous DMG Rate by 50%. Has a 100% chance to inflict [Force Field] on all enemies for 1 turn. [Force Field]: Before taking action, the affected unit suffers Continuous DMG equal to 50% ATK. Has a 50% chance to ignore immunity.",
       "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 60% ATK DMG with 3 consecutive strikes to all enemies, permanently grants self 60% continuous DMG Boost, and has a 100% chance to inflict [Force Field] on all targets on the field for 1 turn (takes DoT equal to 50% ATK before acting; 50% chance to penetrate immunity effects).",
+      "desc": "Attacks all enemies with 3 consecutive strikes, dealing 60% ATK DMG per strike. Permanently increases own Continuous DMG Rate by 60%. Has a 100% chance to inflict [Force Field] on all enemies for 1 turn. [Force Field]: Before taking action, the affected unit suffers Continuous DMG equal to 50% ATK. Has a 50% chance to ignore immunity.",
       "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado V2 (SSR)/Keepsake_SSR.png",
       "type": "Ultimate",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). After acting, drains the energy of enemies in a sealed state (once per turn; after a successful drain, they cannot be [Panicked] again the same turn). Gains 30% [Non-Crit DMG Free] (all DMG types; this and [Agility] only one takes effect). Converts 50% of incoming DoT into HP.",
+      "desc": "Permanently increases own HP. After taking action, removes sealed Energy from enemies once per turn. After successfully removing sealed Energy, those enemies cannot be inflicted with [Panicked] again during the same turn. Permanently gains 30% [Non-Crit DMG Free], which reduces all types of non-critical DMG and cannot coexist with [Agility]. Converts 50% of incoming Continuous DMG into HP recovery.",
       "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). After acting, drains the energy of enemies in a sealed state (once per turn; after a successful drain, they cannot be [Panicked] again the same turn). Gains 35% [Non-Crit DMG Free] (all DMG types; this and [Agility] only one takes effect). Converts 75% of incoming DoT into HP.",
+      "desc": "Permanently increases own HP. After taking action, removes sealed Energy from enemies once per turn. After successfully removing sealed Energy, those enemies cannot be inflicted with [Panicked] again during the same turn. Permanently gains 35% [Non-Crit DMG Free], which reduces all types of non-critical DMG and cannot coexist with [Agility]. Converts 75% of incoming Continuous DMG into HP recovery.",
       "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). After acting, drains the energy of enemies in a sealed state (once per turn; after a successful drain, they cannot be [Panicked] again the same turn). Gains 40% [Non-Crit DMG Free] (all DMG types; this and [Agility] only one takes effect). Converts 100% of incoming DoT into HP.",
+      "desc": "Permanently increases own HP. After taking action, removes sealed Energy from enemies once per turn. After successfully removing sealed Energy, those enemies cannot be inflicted with [Panicked] again during the same turn. Permanently gains 40% [Non-Crit DMG Free], which reduces all types of non-critical DMG and cannot coexist with [Agility]. Converts 100% of incoming Continuous DMG into HP recovery.",
       "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

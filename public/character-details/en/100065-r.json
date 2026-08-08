@@ -23,7 +23,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 190% ATK DMG to a single back-row target, with a 100% chance to inflict [Weak] on the target (reduces ATK by 20% for 2 turns).",
+      "desc": "Deals 190% ATK DMG to a single back-row target, with a 100% chance to inflict [Weak] on the target (reduces ATK% for 2 turns).",
       "icon": "/Skill/Ground Dragon (R)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -41,7 +41,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases self max HP by 20%. When deployed together with Frog Man, increases self ATK by 20%.",
+      "desc": "Permanently increases self max HP%. When deployed together with Frog Man, increases self ATK%.",
       "icon": "/Skill/Ground Dragon (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

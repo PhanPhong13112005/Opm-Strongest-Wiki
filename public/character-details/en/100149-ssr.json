@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Grants 50% [Lifesteal] to self. Deals 120% ATK DMG to a single target.",
+      "desc": "Gains 50% Lifesteal for 1 round, then attacks a single target, dealing 120% ATK DMG.",
       "icon": "/Skill/Eyesight (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Grants 50% [Lifesteal] to self. Deals 30% ATK DMG to all enemies and [Stun] the target. Grants 20% [DMG Dealt] to all Monster allies.",
+      "desc": "Gains 50% Lifesteal for 2 rounds, then attacks all enemies with 5 consecutive strikes, dealing 150% ATK DMG. Has a 100% chance to inflict [Stun] on the main target for 1 round. [Stun]: Prevents the affected unit from acting. At most 4 characters can be affected by [Stun] at the same time. After attacking, grants all Monster allies [Rage] for their next action. [Rage]: Increases ATK by 20% during the next direct action.",
       "icon": "/Skill/Eyesight (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Grants 50% [Lifesteal]; the target expands from self to all Monster allies. Deals 30% > 40% ATK DMG to all enemies and [Stun] the target. Grants 20% > 30% [DMG Dealt] to all Monster allies.",
+      "desc": "Grants all Monster allies 50% Lifesteal for 2 rounds, then attacks all enemies with 5 consecutive strikes, dealing 200% ATK DMG. Has a 100% chance to inflict [Stun] on the main target for 1 round. [Stun]: Prevents the affected unit from acting. At most 4 characters can be affected by [Stun] at the same time. After attacking, grants all Monster allies [Rage] for their next action. [Rage]: Increases ATK by 30% during the next direct action.",
       "keepsakeIcon": "/Keepsake/Eyesight (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Eyesight (SSR)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "During the first 2 turns, increases ATK of allied Esper characters by 25%. Additionally, reduces the ATK of all enemy Hero characters by 25%.",
+      "desc": "During the first 2 rounds, increases the ATK of all Esper allies by 25% and reduces the ATK of all enemies by 25%.",
       "icon": "/Skill/Eyesight (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP. On entry, grants 25% > 30% [ATK] to all Esper allies. Additionally grants 40% DMG Reduction to all Monster allies.",
+      "desc": "During the first 2 rounds, increases the ATK of all Esper allies by 30% and reduces the ATK of all enemies by 30%. Additionally, Monster allies take 40% less DMG from [Injury], [Internal Injury], and [Charge] for 2 rounds.",
       "icon": "/Skill/Eyesight (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP. On entry, grants 30% [ATK] to all Esper allies and 40% DMG Reduction to all Monster allies.",
+      "desc": "During the first 3 rounds, increases the ATK of all Esper allies by 30% and reduces the ATK of all enemies by 30%. Additionally, Monster allies take 40% less DMG from [Injury], [Internal Injury], and [Charge] for 3 rounds.",
       "icon": "/Skill/Eyesight (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

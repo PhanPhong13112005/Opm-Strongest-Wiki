@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 100% ST (+10) sát thương lên mục tiêu đơn, với 70% xác suất khiến mục tiêu [Băng Hoại] trong 1 lượt (giảm 30% tỷ lệ miễn sát thương).",
+      "desc": "Gây 100% sát thương ATK cho một mục tiêu, với 70% cơ hội gây ra [Ăn Mòn] trong 1 lượt (tỷ lệ miễn nhiễm sát thương giảm 30%).",
       "icon": "/Skill/Face Ripper (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Lập tức nhận 30% tỷ lệ hút máu trong 1 lượt, tung chuỗi 2 liên kích gây 140% ST (+5) sát thương lên mục tiêu đơn, với 100% xác suất khiến mục tiêu [Băng Hoại] trong 2 lượt (giảm 30% tỷ lệ miễn sát thương).",
+      "desc": "Ngay lập tức nhận được 30% tỷ lệ hút máu trong 1 lượt, sau đó gây ra 2 đòn combo gây 140% sát thương ATK cho một mục tiêu, với 100% cơ hội gây ra [Ăn Mòn] trong 2 lượt (tỷ lệ miễn nhiễm sát thương giảm 30%).",
       "icon": "/Skill/Face Ripper (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Lập tức trao cho bản thân và đồng minh cùng cột 40% tỷ lệ hút máu trong 1 lượt, tung chuỗi 2 liên kích gây 160% ST (+5) sát thương lên mục tiêu đơn, với 100% xác suất khiến mục tiêu [Băng Hoại] trong 2 lượt (giảm 30% tỷ lệ miễn sát thương).",
+      "desc": "Ngay lập tức cấp cho bản thân và đồng minh cùng cột tỷ lệ hút máu 40% trong 1 lượt, sau đó gây combo 2 đòn với 160% sát thương ATK cho một mục tiêu, với 100% cơ hội gây ra [Ăn Mòn] trong 2 lượt (tỷ lệ miễn nhiễm sát thương giảm 30%).",
       "keepsakeIcon": "/Keepsake/Face Ripper (SR)/Keepsake_SR.png",
       "icon": "/Skill/Face Ripper (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Khi Máu bản thân dưới 50%, sát thương trực tiếp phải chịu giảm 50%, đồng thời tăng 25% ST.",
+      "desc": "Nhận vĩnh viễn HP. Trong khi HP của bản thân dưới 50%, sát thương trực tiếp phải chịu giảm 50% và ATK tăng 25%.",
       "icon": "/Skill/Face Ripper (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Khi Máu bản thân dưới 60%, sát thương trực tiếp phải chịu giảm 60%, đồng thời tăng 30% ST.",
+      "desc": "Nhận vĩnh viễn HP. Khi HP của bản thân dưới 60%, sát thương trực tiếp phải chịu giảm 60% và ATK tăng 30%.",
       "icon": "/Skill/Face Ripper (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Khi Máu bản thân dưới 65%, sát thương trực tiếp phải chịu giảm 65%, đồng thời tăng 35% ST.",
+      "desc": "Nhận vĩnh viễn HP. Trong khi HP của bản thân dưới 65%, sát thương trực tiếp phải chịu giảm 65% và ATK tăng 35%.",
       "icon": "/Skill/Face Ripper (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

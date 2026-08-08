@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 80% ATK (+10) DMG to a single target.",
+      "desc": "Deals 80% ATK DMG to a single target.",
       "icon": "/Skill/Frog Man (N)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 180% ATK (+10) DMG to a single target.",
+      "desc": "Deals 180% ATK DMG to a single target.",
       "icon": "/Skill/Frog Man (N)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 200% ATK (+10) DMG to a single target.",
+      "desc": "Deals 200% ATK DMG to a single target.",
       "keepsakeIcon": "/Keepsake/Frog Man (N)/Keepsake_N.png",
       "icon": "/Skill/Frog Man (N)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently gains (+20) HP. If Slugerous is present, increases own DMG dealt by 20%, lasting until the end of battle.",
+      "desc": "Permanently gains HP. If Slugerous is present, increases own DMG dealt%, lasting until the end of battle.",
       "icon": "/Skill/Frog Man (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently gains (+20) HP. If Slugerous is present, increases own DMG dealt by 25%, lasting until the end of battle.",
+      "desc": "Permanently gains HP. If Slugerous is present, increases own DMG dealt by 25%, lasting until the end of battle.",
       "icon": "/Skill/Frog Man (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently gains (+20) HP. If Slugerous is present, increases own DMG dealt by 28%, lasting until the end of battle.",
+      "desc": "Permanently gains HP. If Slugerous is present, increases own DMG dealt by 28%, lasting until the end of battle.",
       "icon": "/Skill/Frog Man (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

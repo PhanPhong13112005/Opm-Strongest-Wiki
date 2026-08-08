@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own max HP by 20%. When battle begins, grants 20% Bonus DMG RED. to allies in the same row and self for 3 turns.",
+      "desc": "Permanently increases own max HP%. When battle begins, grants 20% Bonus DMG RED. to allies in the same row and self for 3 turns.",
       "icon": "/Skill/Magicman (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own max HP by 20%. When battle begins, grants 30% Bonus DMG RED. to allies in the same row and self for 3 turns.",
+      "desc": "Permanently increases own max HP%. When battle begins, grants 30% Bonus DMG RED. to allies in the same row and self for 3 turns.",
       "icon": "/Skill/Magicman (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own max HP by 20%. When battle begins, grants 35% Bonus DMG RED. to allies in the same row and self for 3 turns.",
+      "desc": "Permanently increases own max HP%. When battle begins, grants 35% Bonus DMG RED. to allies in the same row and self for 3 turns.",
       "icon": "/Skill/Magicman (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

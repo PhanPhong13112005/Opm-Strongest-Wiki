@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Sends out a recon drone to scout a single target, directing the ally with the highest ATK to launch a [Follow-up], and recovers HP to self equal to 120% ATK.",
+      "desc": "Sends out a recon drone to scout a single target, causing the ally with the highest ATK to perform a [Follow-Up]. Restores own HP equal to 120% ATK.",
       "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Reduces the target's max HP for several turns (HP exceeding the new cap is immediately removed). Deals 110% ATK DMG to all targets.",
+      "desc": "Attacks all enemies, dealing 110% ATK DMG. Reduces their Max HP by 15% for 2 turns. Any HP exceeding the reduced Max HP is immediately removed.",
       "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Reduces the target's max HP for several turns (HP exceeding the new cap is immediately removed). Deals 140% ATK DMG to all targets.",
+      "desc": "Attacks all enemies, dealing 140% ATK DMG. Reduces their Max HP by 15% for 2 turns. Any HP exceeding the reduced Max HP is immediately removed.",
       "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). Increases all allies' max HP by 15% for 2 turns. When an ally in the same column is a Monster, Gyoro-Gyoro shares a portion of the damage they take (stops sharing once their HP falls below a threshold).",
+      "desc": "Permanently increases own HP. At battle start, increases all allies' Max HP by 15% for 2 turns. When a Monster ally is in the same column, Gyoro-Gyoro shares 50% of the DMG received by that ally. DMG Sharing stops when the ally's HP falls below 20%.",
       "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). Increases all allies' max HP by 20% for 2 turns. When an ally in the same column is a Monster, Gyoro-Gyoro shares a portion of the damage they take (stops sharing once their HP falls below a threshold).",
+      "desc": "Permanently increases own HP. At battle start, increases all allies' Max HP for 2 turns. When a Monster ally is in the same column, Gyoro-Gyoro shares 50% of the DMG received by that ally. DMG Sharing stops when the ally's HP falls below 20%.",
       "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). Increases all allies' max HP by 25% for 2 turns. When an ally in the same column is a Monster, Gyoro-Gyoro shares a portion of the damage they take (stops sharing once their HP falls below a threshold).",
+      "desc": "Permanently increases own HP. At battle start, increases all allies' Max HP by 25% for 2 turns. When a Monster ally is in the same column, Gyoro-Gyoro shares 50% of the DMG received by that ally. DMG Sharing stops when the ally's HP falls below 20%.",
       "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

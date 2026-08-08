@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 130% ATK DMG (+10) to a single target, and increases own max HP by 20% for 2 turns.",
+      "desc": "Deals 130% ATK DMG to a single target, and increases own max HP% for 2 turns.",
       "icon": "/Skill/Hellfire Flame (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP (+20). At battle start, grants [Tenacity Boost] to self and surrounding allies for 2 turns (makes [Resilience/Tenacity] absorb DoT and Injury-type DMG: Injury/Internal Injury/Charge). At the start of each turn, grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 20% of Hellfire Flame's HP).",
+      "desc": "Permanently increases own HP. At battle start, grants [Tenacity Boost] to self and surrounding allies for 2 turns (makes [Resilience/Tenacity] absorb DoT and Injury-type DMG: Injury/Internal Injury/Charge). At the start of each turn, grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 20% of Hellfire Flame's HP).",
       "icon": "/Skill/Hellfire Flame (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP (+20). At battle start, grants [Tenacity Boost] to your entire team for 2 turns (makes [Resilience/Tenacity] absorb DoT and Injury-type DMG: Injury/Internal Injury/Charge). At the start of each turn, grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 25% of Hellfire Flame's HP).",
+      "desc": "Permanently increases own HP. At battle start, grants [Tenacity Boost] to your entire team for 2 turns (makes [Resilience/Tenacity] absorb DoT and Injury-type DMG: Injury/Internal Injury/Charge). At the start of each turn, grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 25% of Hellfire Flame's HP).",
       "icon": "/Skill/Hellfire Flame (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP (+20). At battle start, grants [Tenacity Boost] to your entire team for 3 turns (makes [Resilience/Tenacity] absorb DoT and Injury-type DMG: Injury/Internal Injury/Charge). At the start of each turn, grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 30% of Hellfire Flame's HP).",
+      "desc": "Permanently increases own HP. At battle start, grants [Tenacity Boost] to your entire team for 3 turns (makes [Resilience/Tenacity] absorb DoT and Injury-type DMG: Injury/Internal Injury/Charge). At the start of each turn, grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 30% of Hellfire Flame's HP).",
       "icon": "/Skill/Hellfire Flame (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

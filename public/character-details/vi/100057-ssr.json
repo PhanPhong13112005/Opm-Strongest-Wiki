@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung liên kích 2 đòn gây 60% ST lên mục tiêu đơn, và cấp cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 30% Máu bản thân).",
+      "desc": "Gây combo 2 đòn 60% ATK cho một mục tiêu và cấp cho bản thân [Lá Chắn] (hấp thụ sát thương bằng 30% HP của bản thân).",
       "icon": "/Skill/Pig God (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây sát thương lên mục tiêu đơn bằng 45% Máu tối đa của Pig God, và [Nuốt Chửng] mục tiêu khiến nó rời chiến trận 1 lượt (mỗi lượt hiệu lực 1 lần).",
+      "desc": "Gây sát thương cho một mục tiêu bằng 45% HP tối đa của Thần Heo và [Nuốt Chửng] cho mục tiêu đó, buộc mục tiêu đó phải rời khỏi giao tranh trong 1 lượt (kích hoạt một lần mỗi lượt).",
       "icon": "/Skill/Pig God (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây sát thương lên mục tiêu đơn bằng 60% Máu tối đa của Pig God, và [Nuốt Chửng] mục tiêu khiến nó rời chiến trận 1 lượt (mỗi lượt hiệu lực 1 lần).",
+      "desc": "Gây sát thương cho một mục tiêu bằng 60% HP tối đa của Thần Heo và [Nuốt Chửng] cho mục tiêu đó, buộc mục tiêu đó phải rời khỏi giao tranh trong 1 lượt (kích hoạt một lần mỗi lượt).",
       "icon": "/Skill/Pig God (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Pig God (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Nhận 15% Miễn Sát Thương Không Chí Mạng (giảm mọi loại sát thương; hiệu ứng này và [Khéo Léo] chỉ một cái có tác dụng), và miễn nhiễm [Rời Chiến Trận] cùng [Nuốt Chửng Rời Chiến Trận].",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Tăng 15% Miễn Sát Thương Không Bạo Kích (giảm tất cả các loại sát thương; chỉ một trong số này và [Khéo Léo] có hiệu lực) và miễn nhiễm với [Ngoài Trận] và [Nuốt Chửng Khi Ngoài Trận].",
       "icon": "/Skill/Pig God (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Nhận 20% Miễn Sát Thương Không Chí Mạng (giảm mọi loại sát thương; hiệu ứng này và [Khéo Léo] chỉ một cái có tác dụng), và miễn nhiễm [Rời Chiến Trận] cùng [Nuốt Chửng Rời Chiến Trận].",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Tăng 20% ​​Miễn Sát Thương Không Bạo Kích (giảm tất cả các loại sát thương; chỉ một trong số này và [Khéo Léo] có hiệu lực) và miễn nhiễm với [Ngoài Trận] và [Nuốt Chửng Khi Ngoài Trận].",
       "icon": "/Skill/Pig God (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Nhận 25% Miễn Sát Thương Không Chí Mạng (giảm mọi loại sát thương; hiệu ứng này và [Khéo Léo] chỉ một cái có tác dụng), và miễn nhiễm [Rời Chiến Trận] cùng [Nuốt Chửng Rời Chiến Trận].",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Tăng 25% Miễn Sát Thương Không Bạo Kích (giảm tất cả các loại sát thương; chỉ một trong số này và [Khéo Léo] có hiệu lực) và miễn nhiễm với [Ngoài Trận] và [Nuốt Chửng Khi Ngoài Trận].",
       "icon": "/Skill/Pig God (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

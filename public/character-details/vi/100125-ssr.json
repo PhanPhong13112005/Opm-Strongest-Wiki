@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 130% ST tấn công (+10) lên mục tiêu đơn, và tăng Máu tối đa của bản thân thêm 20% trong 2 lượt.",
+      "desc": "Gây 130% ATK DMG cho một mục tiêu và tăng HP tối đa% của bản thân trong 2 lượt.",
       "icon": "/Skill/Hellfire Flame (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công mỗi kẻ địch trên cả hàng với 3 liên kích, gây ST dựa trên 30% Máu tối đa của mục tiêu chính (+thưởng) (không vượt quá 30% Máu tối đa của Hellfire Flame). Có 100% khả năng gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (ST theo thời gian bằng 30% ST tấn công).",
+      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng 3 đòn kết hợp, gây DMG dựa trên 30% HP tối đa (+tiền thưởng) của mục tiêu chính (tối đa 30% HP tối đa của Hellfire Flame). Có 100% cơ hội gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (DoT bằng 30% ATK).",
       "icon": "/Skill/Hellfire Flame (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tấn công mỗi kẻ địch trên cả hàng với 3 liên kích, gây ST dựa trên 40% Máu tối đa của mục tiêu chính (+thưởng) (không vượt quá 40% Máu tối đa của Hellfire Flame). Có 100% khả năng gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (ST theo thời gian bằng 40% ST tấn công).",
+      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng 3 đòn kết hợp, gây DMG dựa trên 40% HP tối đa (+tiền thưởng) của mục tiêu chính (giới hạn ở mức 40% HP tối đa của Hellfire Flame). Có 100% cơ hội gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (DoT bằng 40% ATK).",
       "keepsakeIcon": "/Keepsake/Hellfire Flame (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Hellfire Flame (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Khi vào trận, cấp [Tăng Kiên Cường] cho bản thân và các đồng minh xung quanh trong 2 lượt (khiến [Bền Bỉ/Kiên Cường] hấp thụ ST theo thời gian và ST loại Thương Tổn: Thương tổn/Nội thương/Tích lực). Vào đầu mỗi lượt, cấp [Kiên Cường] cho bản thân và đồng minh cùng cột (hấp thụ ST bằng 20% Máu của Hellfire Flame).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi bắt đầu trận chiến, cấp [Tăng Lá Chắn] cho bản thân và các đồng minh xung quanh trong 2 lượt (khiến [Bền Bỉ/Kiên Cường] hấp thụ DoT và DMG loại Chấn thương: Chấn thương/Thương tích bên trong/Sạc điện). Khi bắt đầu mỗi lượt, cấp [Lá Chắn] cho bản thân và đồng minh trong cùng một cột (hấp thụ DMG bằng 20% ​​HP của Hellfire Flame).",
       "icon": "/Skill/Hellfire Flame (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Khi vào trận, cấp [Tăng Kiên Cường] cho toàn bộ đội của bạn trong 2 lượt (khiến [Bền Bỉ/Kiên Cường] hấp thụ ST theo thời gian và ST loại Thương Tổn: Thương tổn/Nội thương/Tích lực). Vào đầu mỗi lượt, cấp [Kiên Cường] cho bản thân và đồng minh cùng cột (hấp thụ ST bằng 25% Máu của Hellfire Flame).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi bắt đầu trận chiến, cấp [Tăng Lá Chắn] cho toàn đội của bạn trong 2 lượt (khiến [Bền Bỉ/Kiên Cường] hấp thụ DoT và DMG loại Chấn thương: Chấn thương/Thương tích bên trong/Sạc). Khi bắt đầu mỗi lượt, cấp [Lá Chắn] cho bản thân và đồng minh trong cùng một cột (hấp thụ DMG bằng 25% HP của Hellfire Flame).",
       "icon": "/Skill/Hellfire Flame (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Khi vào trận, cấp [Tăng Kiên Cường] cho toàn bộ đội của bạn trong 3 lượt (khiến [Bền Bỉ/Kiên Cường] hấp thụ ST theo thời gian và ST loại Thương Tổn: Thương tổn/Nội thương/Tích lực). Vào đầu mỗi lượt, cấp [Kiên Cường] cho bản thân và đồng minh cùng cột (hấp thụ ST bằng 30% Máu của Hellfire Flame).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi bắt đầu trận chiến, cấp [Tăng Lá Chắn] cho toàn đội của bạn trong 3 lượt (khiến [Bền Bỉ/Kiên Cường] hấp thụ DoT và DMG loại Chấn thương: Chấn thương/Thương tích bên trong/Sạc điện). Khi bắt đầu mỗi lượt, cấp [Lá Chắn] cho bản thân và đồng minh trong cùng một cột (hấp thụ DMG bằng 30% HP của Hellfire Flame).",
       "icon": "/Skill/Hellfire Flame (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

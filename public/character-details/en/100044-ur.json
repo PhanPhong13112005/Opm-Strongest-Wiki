@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK Direct DMG to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Drive Knight (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Gains [Damage Immunity] on self (takes only 20% of incoming DMG) and Dispels his own debuffs. Applies [Undying-Suppression] to the target's entire column, then deals HP-scaling Direct DMG equal to 35% ATK plus [True DMG] to that column.",
+      "desc": "Deals Direct DMG equal to 105% of Max HP to a single target with a 3-hit combo, with each hit additionally dealing 110% of original Max HP as [True DMG]. Has an 80% chance to penetrate [Buffer] (Hellfire UR’s buff). Each hit can trigger [Specialized Breakthrough] once. [True DMG]: Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion]. [Specialized Breakthrough]: Instantly removes [DMG Ignoration].",
       "icon": "/Skill/Drive Knight (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "[Damage Immunity] on self becomes total — incoming DMG taken 20% > 0%. HP-scaling Direct DMG 35% > 45% ATK.",
+      "desc": "Deals Direct DMG equal to 135% of Max HP to a single target with a 3-hit combo, with each hit additionally dealing 145% of original Max HP as [True DMG]. Has an 80% chance to penetrate [Buffer] (Hellfire UR’s buff). Each hit can trigger [Specialized Breakthrough] once. [True DMG]: Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion]. [Specialized Breakthrough]: Instantly removes [DMG Ignoration].",
       "keepsakeIcon": "/Keepsake/Drive Knight (UR)/Keepsake_UR.png",
       "icon": "/Skill/Drive Knight (UR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "On entry, gains +20% HP and +60% Non-Crit DMG Free, and gains [Revenge+] (revives up to 4 times).",
+      "desc": "At battle start, gains 60% [Non-Crit DMG Free]. After any character other than self is defeated for the first time, increases own [Revenge] count by 1, up to 4 times. [Non-Crit DMG Free]: Reduces all types of non-critical DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Drive Knight (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Non-Crit DMG Free] 60% &gt; 70%.",
+      "desc": "At battle start, gains 70% [Non-Crit DMG Free]. After any character other than self is defeated for the first time, increases own [Revenge] count by 1, up to 4 times. [Non-Crit DMG Free]: Reduces all types of non-critical DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Drive Knight (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Non-Crit DMG Free 70% &gt; 80%. Revival 4 &gt; 5 times.",
+      "desc": "At battle start, gains 80% [Non-Crit DMG Free]. After any character other than self is defeated for the first time, increases own [Revenge] count by 1, up to 5 times. [Non-Crit DMG Free]: Reduces all types of non-critical DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Drive Knight (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Grants himself [Vengeance]. ———- [Vengeance]: If Drive Knight is defeated after any character acts, revives with 80% HP. and launches [Vengeance Follow-up] (150% of Ultimate DMG, does not use energy). Has 4 times of [Revival] at the start of the battle.",
+      "desc": "Gains [Revenge] at battle start. [Revenge]: If any character is defeated after an action, this unit immediately resurrects, restores 80% HP, and performs a [Revenge Pursuit] on any target with 150% Special Skill power. This skill is not affected by [Specialized Fear]. Initially has 4 resurrection counts.",
       "icon": "/Skill/Drive Knight (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Revive HP 80% > 100% Follow-up Dmg 150% > 200%",
+      "desc": "Gains [Revenge] at battle start. [Revenge]: If any character is defeated after an action, this unit immediately resurrects, restores 100% HP, and performs a [Revenge Pursuit] on any target with 200% Special Skill power. This skill is not affected by [Specialized Fear]. Initially has 4 resurrection counts.",
       "icon": "/Skill/Drive Knight (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

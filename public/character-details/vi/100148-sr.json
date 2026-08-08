@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 40% ST (+3) sát thương cho mục tiêu đơn với liên kích 3 đòn.",
+      "desc": "Gây 40% ATK (+3) DMG cho một mục tiêu trong combo 3 đòn.",
       "icon": "/Skill/Hamukichi (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 180% ST (+10) sát thương cho mục tiêu đơn, 100% xác suất khiến mục tiêu chính chịu [Thương Tổn] trong 2 lượt (khi bị tấn công chịu thêm sát thương Thương Tổn bằng 60% ST), và khiến mục tiêu [Suy Yếu] (giảm 30% ST trong 2 lượt).",
+      "desc": "Gây 180% ATK DMG cho một mục tiêu, với 100% cơ hội gây [Bị Thương] lên mục tiêu chính trong 2 lượt (thêm 60% ATK trị giá DMG bị thương khi mục tiêu bị tấn công) và gây ra [Làm Suy Yếu] vào mục tiêu (ATK giảm 30% trong 2 lượt).",
       "icon": "/Skill/Hamukichi (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 220% ST (+10) sát thương cho mục tiêu đơn, 100% xác suất khiến mục tiêu chính chịu [Thương Tổn] trong 2 lượt (khi bị tấn công chịu thêm sát thương Thương Tổn bằng 80% ST), và khiến mục tiêu [Suy Yếu] (giảm 40% ST trong 2 lượt).",
+      "desc": "Gây 220% ATK DMG cho một mục tiêu, với 100% cơ hội gây [Bị Thương] lên mục tiêu chính trong 2 lượt (thêm 80% ATK trị giá DMG bị thương khi mục tiêu bị tấn công) và gây ra [Làm Suy Yếu] vào mục tiêu (ATK giảm 40% trong 2 lượt).",
       "keepsakeIcon": "/Keepsake/Hamukichi (SR)/Keepsake_SR.png",
       "icon": "/Skill/Hamukichi (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Đòn đánh cuối có 60% xác suất khiến mục tiêu chính và địch xung quanh chịu [Thương Tổn] trong 2 lượt (khi bị tấn công chịu thêm sát thương Thương Tổn bằng 60% ST).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Đòn đánh cuối cùng có 60% cơ hội gây [Bị Thương] lên mục tiêu chính và kẻ địch xung quanh trong 2 lượt (thêm 60% ATK trị giá DMG bị thương khi chúng bị tấn công).",
       "icon": "/Skill/Hamukichi (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Đòn đánh cuối có 80% xác suất khiến mục tiêu chính và địch xung quanh chịu [Thương Tổn] trong 2 lượt (khi bị tấn công chịu thêm sát thương Thương Tổn bằng 60% ST).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Đòn đánh cuối cùng có 80% cơ hội gây [Bị Thương] lên mục tiêu chính và kẻ địch xung quanh trong 2 lượt (thêm 60% ATK trị giá DMG bị thương khi chúng bị tấn công).",
       "icon": "/Skill/Hamukichi (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Đòn đánh cuối có 80% xác suất khiến mục tiêu chính và địch xung quanh chịu [Thương Tổn] trong 2 lượt (khi bị tấn công chịu thêm sát thương Thương Tổn bằng 80% ST).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Đòn đánh cuối cùng có 80% cơ hội gây [Bị Thương] lên mục tiêu chính và kẻ địch xung quanh trong 2 lượt (thêm 80% ATK trị giá DMG bị thương khi chúng bị tấn công).",
       "icon": "/Skill/Hamukichi (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). If there is a [Burning] enemy among the foes, you enter [Berserk] state (deals 30% more DMG when attacking).",
+      "desc": "Permanently increases own HP by. If there is a [Burning] enemy among the foes, you enter [Berserk] state (deals 30% more DMG when attacking).",
       "icon": "/Skill/Genos (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). If there is a [Burning] enemy among the foes, you enter [Berserk] state (deals 40% more DMG when attacking).",
+      "desc": "Permanently increases own HP by. If there is a [Burning] enemy among the foes, you enter [Berserk] state (deals 40% more DMG when attacking).",
       "icon": "/Skill/Genos (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). If there is a [Burning] enemy among the foes, you enter [Berserk] state (deals 45% more DMG when attacking).",
+      "desc": "Permanently increases own HP by. If there is a [Burning] enemy among the foes, you enter [Berserk] state (deals 45% more DMG when attacking).",
       "icon": "/Skill/Genos (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

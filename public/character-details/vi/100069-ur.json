@@ -21,7 +21,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tấn công một mục tiêu đơn bằng 2 đòn liên tiếp, gây 120% ST.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu với 2 đòn đánh liên tiếp.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -30,7 +30,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 4 đòn liên tiếp lên toàn bộ hàng địch, gây ST trực tiếp bằng 900% ST. Đồng minh cùng hàng vĩnh viễn nhận [Tăng Tốc Chuyên Biệt]. Toàn bộ đồng minh nhận [Lĩnh Vực Tốc Độ: Tấn Công] trong 3 lượt. — [Tăng Tốc Chuyên Biệt]: Tốc độ tăng lên 94% Tốc độ của Sonic; nếu đồng minh vốn nhanh hơn thì giữ nguyên. [Lĩnh Vực Tốc Độ: Tấn Công]: khi tấn công trong PvP, nếu Tốc độ mục tiêu không cao hơn người tấn công, tổng ST lên mục tiêu tăng 20%.",
+      "desc": "Gây combo 4 đòn cho tất cả kẻ địch trong một cột, gây Sát Thương Trực Tiếp bằng 900% ATK. Cấp vĩnh viễn [Gia Tốc Chuyên Biệt] cho tất cả đồng minh trong cùng một hàng. Cấp cho tất cả đồng minh [Vùng Tốc Độ · Tấn Công] trong 3 lượt. [Gia Tốc Chuyên Biệt]: Tăng SPD của đồng minh lên 94% so với SPD của Sonic. Nếu SPD ban đầu của đồng minh cao hơn giá trị tăng lên thì SPD của họ vẫn không thay đổi. [Vùng Tốc Độ · Tấn Công]: Trong PvP, khi tấn công một mục tiêu có SPD bằng hoặc thấp hơn của kẻ tấn công, tất cả DMG gây ra cho mục tiêu đó sẽ tăng lên%.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -39,7 +39,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "ST Tối Thượng 900% > 1160% ST. [Tăng Tốc Chuyên Biệt] lên 94% > 98% Tốc độ của Sonic. [Lĩnh Vực Tốc Độ: Tấn Công] tăng ST 20% > 30%.",
+      "desc": "Gây combo 4 đòn cho tất cả kẻ địch trong một cột, gây Sát Thương Trực Tiếp bằng 1160% ATK. Cấp vĩnh viễn [Gia Tốc Chuyên Biệt] cho tất cả đồng minh trong cùng một hàng. Cấp cho tất cả đồng minh [Vùng Tốc Độ · Tấn Công] trong 3 lượt. [Gia Tốc Chuyên Biệt]: Tăng SPD của đồng minh lên 98% so với SPD của Sonic. Nếu SPD ban đầu của đồng minh cao hơn giá trị tăng lên thì SPD của họ vẫn không thay đổi. [Vùng Tốc Độ · Tấn Công]: Trong PvP, khi tấn công một mục tiêu có SPD bằng hoặc thấp hơn của kẻ tấn công, tất cả DMG gây ra cho mục tiêu đó sẽ tăng thêm 30%.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Sonic V2 (UR)/Keepsake_UR.png",
       "type": "Tuyệt kĩ",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Nhận 60% [Né Sát Thương Tức Thì] khi vào trận. Miễn nhiễm [Uy Hiếp], [Choáng] và [Choáng Chuyên Biệt]. — [Né Sát Thương Tức Thì]: Sát thương Trực tiếp, Ex. DMG, Charge DMG và Berserk DMG chỉ gây 1 ST.",
+      "desc": "Tăng 60% [Khả Năng Né Tránh Chuyên Biệt]. Trở nên miễn nhiễm với [Sợ Hãi], [Choáng] và [Choáng Chuyên Biệt]. Cấp cho tất cả đồng minh khả năng miễn nhiễm [Hoảng Loạn Chuyên Biệt]. [Khả Năng Né Tránh Chuyên Biệt]: Giảm Sát Thương Trực Tiếp, DoT DMG, [Sát Thương Phải Chịu] và [Sát Thương Bổ Sung] xuống 1 điểm DMG.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -57,7 +57,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Né Sát Thương Tức Thì] 60% > 70%.",
+      "desc": "Tăng 70% [Khả Năng Né Tránh Chuyên Biệt]. Trở nên miễn nhiễm với [Sợ Hãi], [Choáng] và [Choáng Chuyên Biệt]. Cấp cho tất cả đồng minh khả năng miễn nhiễm [Hoảng Loạn Chuyên Biệt]. [Khả Năng Né Tránh Chuyên Biệt]: Giảm Sát Thương Trực Tiếp, DoT DMG, [Sát Thương Phải Chịu] và [Sát Thương Bổ Sung] xuống 1 điểm DMG.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -66,7 +66,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Né Sát Thương Tức Thì] 70% > 80%.",
+      "desc": "Tăng 80% [Khả Năng Né Tránh Chuyên Biệt]. Trở nên miễn nhiễm với [Sợ Hãi], [Choáng] và [Choáng Chuyên Biệt]. Cấp cho tất cả đồng minh khả năng miễn nhiễm [Hoảng Loạn Chuyên Biệt]. [Khả Năng Né Tránh Chuyên Biệt]: Giảm Sát Thương Trực Tiếp, DoT DMG, [Sát Thương Phải Chịu] và [Sát Thương Bổ Sung] xuống 1 điểm DMG.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -75,7 +75,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi vào sân, tăng 39% [Tốc Độ Chuyên Biệt] của bản thân và 20% của đồng minh. Toàn bộ đồng minh vĩnh viễn nhận 30% [Lĩnh Vực Tốc Độ: Phòng Thủ]. Trước trận, [Cổ Vũ] cho đội (nhận thêm 2 năng lượng trong 3 lượt đầu mỗi lượt). — [Lĩnh Vực Tốc Độ: Phòng Thủ]: khi bị tấn công trong PvP, nếu Tốc độ người tấn công không cao hơn người thủ, ST nhận vào được giảm.",
+      "desc": "Khi bước vào trận chiến, nhận được 39% [Gia Tốc Chuyên Biệt] và cấp cho tất cả đồng minh 20% [Gia Tốc Chuyên Biệt]. Tất cả các nhân vật đồng minh nhận được vĩnh viễn 30% [Vùng Tốc Độ · Phòng Thủ]. Trước khi trận chiến bắt đầu, áp dụng [Khích Lệ] cho tất cả đồng minh. [Khích Lệ]: Cấp thêm 2 Năng lượng khi bắt đầu mỗi lượt trong 3 lượt. [Vùng Tốc Độ · Phòng Thủ]: Trong PvP, khi bị tấn công bởi kẻ thù có SPD bằng hoặc thấp hơn của người phòng thủ, tất cả DMG nhận được từ đòn tấn công đó sẽ bị giảm.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -84,7 +84,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "[Tốc Độ Chuyên Biệt] bản thân 35% > 42%. [Tốc Độ Chuyên Biệt] đồng minh 20% > 30%. [Lĩnh Vực Tốc Độ: Phòng Thủ] 30% > 40% (người khác), 60% cho Sonic.",
+      "desc": "Khi tham chiến, nhận được 42% [Gia Tốc Chuyên Biệt] và cấp cho tất cả đồng minh 30% [Gia Tốc Chuyên Biệt]. Tất cả các nhân vật đồng minh nhận được vĩnh viễn 40% [Vùng Tốc Độ · Phòng Thủ]. Bản thân vĩnh viễn nhận thêm 60% [Vùng Tốc Độ · Phòng Thủ]. Trước khi trận chiến bắt đầu, áp dụng [Khích Lệ] cho tất cả đồng minh. [Khích Lệ]: Cấp thêm 2 Năng lượng khi bắt đầu mỗi lượt trong 3 lượt. [Vùng Tốc Độ · Phòng Thủ]: Trong PvP, khi bị tấn công bởi kẻ thù có SPD bằng hoặc thấp hơn của người phòng thủ, tất cả DMG nhận được từ đòn tấn công đó sẽ bị giảm.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -93,7 +93,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Sonic V2 (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

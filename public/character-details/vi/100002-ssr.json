@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST (+10) sát thương lên mục tiêu đơn, với 100% tỉ lệ khiến mục tiêu bị [Băng Hoại] trong 2 lượt (giảm 30% tỉ lệ giảm sát thương).",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu, với 100% cơ hội gây [Tha Hóa] lên mục tiêu trong 2 lượt (giảm 30% tỷ lệ Giảm Sát Thương).",
       "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 210% ST (+10) sát thương lên mục tiêu đơn và ban hiệu ứng tăng tốc trong 1 lượt; nếu đòn này chí mạng thì chắc chắn kích hoạt hiệu ứng tăng tốc. Có 100% tỉ lệ lập tức tăng Tốc độ cho bản thân và đồng minh xung quanh.",
+      "desc": "Gây 210% ATK DMG cho một mục tiêu và cấp buff tăng tốc trong 1 lượt; nếu đòn tấn công này gây ra đòn chí mạng, hiệu ứng tăng tốc chắc chắn sẽ được kích hoạt. Có 100% cơ hội nâng ngay SPD của bản thân và đồng minh xung quanh.",
       "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 263% ST (+10) sát thương lên mục tiêu đơn và ban hiệu ứng tăng tốc trong 1 lượt; nếu đòn này chí mạng thì chắc chắn kích hoạt hiệu ứng tăng tốc. Có 100% tỉ lệ lập tức tăng Tốc độ cho toàn bộ đồng minh.",
+      "desc": "Gây 263% ATK DMG cho một mục tiêu và cấp buff tăng tốc trong 1 lượt; nếu đòn tấn công này gây ra đòn chí mạng, hiệu ứng tăng tốc chắc chắn sẽ được kích hoạt. Có 100% cơ hội nâng cao ngay lập tức SPD của tất cả đồng minh.",
       "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Speed-o-Sound Sonic V1 (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau mỗi lần hành động, tấn công kẻ địch đang bị [Băng Hoại] sẽ gây thêm 75% ST sát thương.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Sau mỗi hành động, tấn công kẻ thù [Đã Tha Hóa] gây ra extra 75% ATK DMG.",
       "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau mỗi lần hành động, tấn công kẻ địch đang bị [Băng Hoại] sẽ gây thêm 85% ST sát thương.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Sau mỗi hành động, tấn công kẻ thù [Đã Tha Hóa] gây ra extra 85% ATK DMG.",
       "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau mỗi lần hành động, tấn công kẻ địch đang bị [Băng Hoại] sẽ gây thêm 100% ST sát thương.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Sau mỗi hành động, tấn công kẻ thù [Đã Tha Hóa] gây ra extra 100% ATK DMG.",
       "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST lên mục tiêu đơn.",
+      "desc": "Gây combo 2 đòn cho một mục tiêu, mỗi đòn gây 120% ATK DMG.",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_base.png",
       "type": "Kỹ năng thường",
       "animation": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Atomic Samurai tung ra 30 nhát chém, mỗi đòn Chí mạng giảm 1% [Giảm Tổng Sát Thương] của toàn bộ kẻ địch. Sau đó vung một nhát chém mạnh gây 5000% ST Specialized Direct DMG lên toàn bộ kẻ địch (chỉ chịu ảnh hưởng của giảm ST nâng cao), bỏ qua 55% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], và xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Ở lần dùng đầu tiên, ngoài ra giảm 100% [HP Chuyên Biệt] của toàn bộ kẻ địch.",
+      "desc": "Samurai Nguyên Tử tung ra 30 nhát chém. Mỗi nhát chém CRIT làm giảm 1% [Giảm Tổng Sát Thương] của tất cả kẻ thù. Sau đó tung ra một nhát chém cuối cùng mạnh mẽ, gây 5000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] cho tất cả kẻ thù (chỉ bị ảnh hưởng bởi các công cụ sửa đổi DMG nâng cao). Bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Trong lần sử dụng Tuyệt Kĩ đầu tiên, đồng thời loại bỏ 100% [HP Chuyên Biệt] của tất cả kẻ thù.",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "animation": "/Animation/Sam_Urplus/ult.gif",
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Chém 30 > 50 lần. ST 5000% > 7000%. Bỏ qua Specialized Evasion và [Giảm Sát Thương Không Bạo Kích] 55% > 80%. Giảm [HP Chuyên Biệt] của toàn bộ kẻ địch 100% > 175%.",
+      "desc": "Samurai Nguyên Tử tung ra 50 nhát chém. Mỗi nhát chém CRIT làm giảm 1% [Giảm Tổng Sát Thương] của tất cả kẻ thù. Sau đó tung ra một nhát chém cuối cùng mạnh mẽ, gây 7000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] cho tất cả kẻ thù (chỉ bị ảnh hưởng bởi các công cụ sửa đổi DMG nâng cao). Bỏ qua 80% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Trong lần sử dụng Tuyệt Kĩ đầu tiên, đồng thời loại bỏ 150% [HP Chuyên Biệt] của tất cả kẻ thù.",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Atomic Samurai (URplus)/Keepsake_URplus.png",
       "type": "Tuyệt kĩ",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Nhận 60% [Giảm Sát Thương Không Bạo Kích] khi vào trận. Xóa toàn bộ debuff [Tăng Sát Thương Áp Chế] và [Giảm Sát Thương Áp Chế] của kẻ địch. Khi gây Specialized Direct DMG, bỏ qua 40% [Kháng Bạo Kích] của kẻ địch.",
+      "desc": "Khi bắt đầu trận chiến, tăng 60% [Giảm Sát Thương Không Bạo Kích]. Loại bỏ [Tăng Cường Áp Chế] và [Phòng Thủ Áp Chế] khỏi tất cả kẻ thù. Khi xử lý [Sát Thương Trực Tiếp Chuyên Biệt], bỏ qua 40% [Kháng Bạo Kích] của kẻ địch.",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "animation": "/Animation/Sam_Urplus/Passive.gif",
@@ -51,7 +51,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] 60% > 70%. Bỏ qua [Kháng Bạo Kích] của kẻ địch 40% > 60%.",
+      "desc": "Khi bắt đầu trận chiến, tăng 70% [Giảm Sát Thương Không Bạo Kích]. Loại bỏ [Tăng Cường Áp Chế] và [Phòng Thủ Áp Chế] khỏi tất cả kẻ thù. Khi xử lý [Sát Thương Trực Tiếp Chuyên Biệt], bỏ qua 70% [Kháng Bạo Kích] của kẻ địch.",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "animation": "/Animation/Sam_Urplus/Passive.gif",
@@ -60,7 +60,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] 70% > 80%. Bỏ qua [Kháng Bạo Kích] của kẻ địch 60% > 80%.",
+      "desc": "Khi bắt đầu trận chiến, tăng 80% [Giảm Sát Thương Không Bạo Kích]. Loại bỏ [Tăng Cường Áp Chế] và [Phòng Thủ Áp Chế] khỏi tất cả kẻ thù. Khi xử lý [Sát Thương Trực Tiếp Chuyên Biệt], bỏ qua 80% [Kháng Bạo Kích] của kẻ địch.",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "animation": "/Animation/Sam_Urplus/Passive.gif",
@@ -69,7 +69,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi bắt đầu trận đấu, ban cho Atomic Samurai 20% tăng Tốc độ chuyên biệt. Khi chịu sát thương, có cơ hội giảm 40% sát thương đó (cơ hội bằng hai lần tỉ lệ Chí mạng hiện tại của bản thân). Nếu bản thân nằm trong hai đồng minh hành động đầu tiên, sẽ nhận 30% tỉ lệ Chí mạng và 50% Sát thương chí mạng.",
+      "desc": "Khi tham gia, tăng 20% ​​[Tốc Độ Chuyên Biệt]. Khi nhận DMG, có cơ hội giảm 40% DMG phải chịu (cơ hội kích hoạt bằng 2× [Tỷ Lệ Bạo Kích] hiện tại). Nếu đơn vị này là một trong hai đồng minh đầu tiên hành động, sẽ nhận được 30% [Tỷ Lệ Bạo Kích] và 50% [Sát Thương Bạo Kích].",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "animation": "/Animation/Sam_Urplus/awken.gif",
@@ -78,7 +78,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Tăng Tốc độ 20% > 30% Giảm sát thương 40% > 70% Tỉ lệ Chí mạng 30% > 50% Sát thương chí mạng 50% > 80%",
+      "desc": "Khi tham gia, tăng 30% [Tốc Độ Chuyên Biệt]. Khi nhận DMG, có cơ hội giảm 70% DMG phải chịu (cơ hội kích hoạt bằng 2× [Tỷ Lệ Bạo Kích] hiện tại). Nếu đơn vị này là một trong hai đồng minh đầu tiên hành động, sẽ nhận được 50% [Tỷ Lệ Bạo Kích] và 80% [Sát Thương Bạo Kích].",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "animation": "/Animation/Sam_Urplus/awken.gif",
@@ -87,7 +87,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "animation": "/Animation/Sam_Urplus/awken.gif",

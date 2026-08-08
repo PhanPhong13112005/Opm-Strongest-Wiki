@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Strikes a single target, dealing 60% ATK DMG.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 400% ATK DMG to all enemies. Inflicts [Max HP Reduction] and [Extra Action Disabled] (disables extra actions) on 3 random enemies.",
+      "desc": "Attacks all enemies with 2 consecutive strikes, dealing 800% ATK DMG. The last attack has a 100% chance to inflict [Specialized Collapse] on 3 random enemies for 3 turns. Also has a 100% chance to inflict [Specialized Disable] on 3 random enemies for 2 rounds. [Specialized Collapse]: Decreases DMG Free by 10%. When attacked, deals 250% of Flashy Flash’s ATK as DMG. Stacks up to 3 times and does not stack with [Shatter]. [Specialized Disable]: Prevents Follow-Ups and Combo Follow-Ups, and reduces DMG Rate%.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 400% > 500% ATK DMG to all enemies. Inflicts [Max HP Reduction] and [Extra Action Disabled] (disables extra actions) on 3 random enemies > all enemies.",
+      "desc": "Attacks all enemies with 2 consecutive strikes, dealing 1000% ATK DMG. The last attack has a 100% chance to inflict [Specialized Collapse] on 3 random enemies for 3 turns. Also has a 100% chance to inflict [Specialized Disable] on all enemies for 2 rounds. [Specialized Collapse]: Decreases DMG Free by 15%. When attacked, deals 350% of Flashy Flash’s ATK as DMG. Stacks up to 3 times and does not stack with [Shatter]. [Specialized Disable]: Prevents Follow-Ups and Combo Follow-Ups, and reduces DMG Rate by 40%.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Flashy Flash (UR)/Keepsake_UR.png",
       "type": "Ultimate",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). Gains 60% [Instant DMG Evasion] at the start of battle, grants self [Specialized Speed Up] (+30% SPD), and becomes immune to [Disable] and [Specialized Disable].[Instant DMG Evasion]: Direct/Ex/Charge/Berserk DMG each deal only 1.",
+      "desc": "When battle begins, gains 60% [Instant DMG Evasion] and [Specialized Acceleration]. Immune to [Specialized Disable] and [Adhesion]. [Instant DMG Evasion]: Direct DMG, Extra DMG, Charge DMG, and Berserk DMG only deal 1 point of DMG. [Specialized Acceleration]: Increases own Speed by 30%.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Instant DMG Evasion] 60% &gt; 70%. [Specialized Speed Up] SPD +30% &gt; +34%.",
+      "desc": "When battle begins, gains 70% [Instant DMG Evasion] and [Specialized Acceleration]. Immune to [Specialized Disable] and [Adhesion]. [Instant DMG Evasion]: Direct DMG, Extra DMG, Charge DMG, and Berserk DMG only deal 1 point of DMG. [Specialized Acceleration]: Increases own Speed by 34%.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Instant DMG Evasion] 70% &gt; 80%. [Specialized Speed Up] SPD +34% &gt; +38%. Also becomes immune to [Adhesion].",
+      "desc": "When battle begins, gains 80% [Instant DMG Evasion] and [Specialized Acceleration]. Immune to [Specialized Disable] and [Adhesion]. [Instant DMG Evasion]: Direct DMG, Extra DMG, Charge DMG, and Berserk DMG only deal 1 point of DMG. [Specialized Acceleration]: Increases own Speed by 38%.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "After any enemy takes action, if its SPD is lower than Flashy Flash, he will trigger [Ultimate Follow-up] to the enemy. ———- [Ultimate Follow-up]: 70% of the DMG and effect of the Ultimate, no cost, up to 3 times per round.",
+      "desc": "After any enemy takes action, if their Speed is lower than Flashy Flash’s Speed, launches an [Ultimate Follow-Up]. Before any character takes action, launches an [Ultimate Follow-Up], once per round. [Ultimate Follow-Up]: Deals 70% of the Ultimate’s DMG. Can trigger up to 3 times per round.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Ultimate Follow-up DMG 70% > 100% 3x per round > 5x per round",
+      "desc": "After any enemy takes action, if their Speed is lower than Flashy Flash’s Speed, launches an [Ultimate Follow-Up]. Before any character takes action, launches an [Ultimate Follow-Up], once per round. [Ultimate Follow-Up]: Deals 100% of the Ultimate’s DMG. Can trigger up to 5 times per round.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

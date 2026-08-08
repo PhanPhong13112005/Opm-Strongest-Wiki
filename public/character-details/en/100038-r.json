@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Strikes a single target with a 5-hit combo, dealing 38% ATK(+2) DMG. Has a 100% chance to increase self ATK by 20% for 2 turns.",
+      "desc": "Strikes a single target with a 5-hit combo, dealing 38% ATK(+2) DMG. Has a 100% chance to increase self ATK% for 2 turns.",
       "keepsakeIcon": "/Keepsake/Bunbun Man (R)/Keepsake_R.png",
       "icon": "/Skill/Bunbun Man (R)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases self HP by (+20). Before acting, increases self Crit by 5% for 1 turn.",
+      "desc": "Permanently increases self HP by. Before acting, increases self Crit by 5% for 1 turn.",
       "icon": "/Skill/Bunbun Man (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases self HP by (+20). Before acting, increases self Crit by 10% for 1 turn.",
+      "desc": "Permanently increases self HP by. Before acting, increases self Crit by 10% for 1 turn.",
       "icon": "/Skill/Bunbun Man (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases self HP by (+20). Before acting, increases self Crit by 15% for 1 turn.",
+      "desc": "Permanently increases self HP by. Before acting, increases self Crit by 15% for 1 turn.",
       "icon": "/Skill/Bunbun Man (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

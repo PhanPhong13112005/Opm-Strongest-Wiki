@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "ST trực tiếp 60% ST lên một mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu bằng 2 đòn đánh liên tiếp và kích hoạt [Liên Kích].",
       "icon": "/Skill/Bang (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "ST trực tiếp 60% ST lên toàn bộ kẻ địch. Gây [Nội Thương Vũ Trang] lên 3 kẻ địch ngẫu nhiên.",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 5 đòn liên tiếp, gây 300% ATK DMG. Có 100% cơ hội gây [Nội Thương] lên 3 mục tiêu ngẫu nhiên và kích hoạt [Liên Kích]. [Nội Thương]: Khi mục tiêu bị ảnh hưởng bị tấn công, cần tiêu tốn [Nội Thương] DMG bằng 200% ATK của Silverfang. Hiệu ứng biến mất sau khi kích hoạt.",
       "icon": "/Skill/Bang (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "ST trực tiếp 60% > 70% ST lên toàn bộ kẻ địch. Gây [Nội Thương Vũ Trang] lên 3 kẻ địch ngẫu nhiên > toàn bộ kẻ địch.",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 5 đòn liên tiếp, gây 350% ATK DMG. Có 100% cơ hội gây [Nội Thương] lên tất cả mục tiêu và kích hoạt [Liên Kích]. [Nội Thương]: Khi mục tiêu bị ảnh hưởng bị tấn công, cần tiêu tốn [Nội Thương] DMG bằng 250% ATK của Silverfang. Hiệu ứng biến mất sau khi kích hoạt.",
       "icon": "/Skill/Bang (SSR+)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Bang (SSRplus)/Keepsake_SSRplus.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Khi Round &lt; 3, sau khi hành động, gỡ [Energy] của kẻ địch mục tiêu (tối đa 1 lần mỗi lượt; sau khi gỡ thành công không thể gây [Sợ Hãi] lên kẻ địch đó trong cùng lượt). Đầu trận, vĩnh viễn nhận +30% [Né Sát Thương Tức Thì].[Né Sát Thương Tức Thì]: ST Trực Tiếp, ST Ex, ST Charge và ST Cuồng Nộ chỉ gây 1 ST.",
+      "desc": "Trong 2 hiệp đầu tiên, sau khi thực hiện một hành động, sẽ loại bỏ Năng lượng bị phong ấn của đội đối phương, tối đa một lần mỗi hiệp. Sau khi loại bỏ Năng lượng bị phong ấn thành công, [Sợ Hãi] không thể gây ra cho kẻ thù trong cùng một hiệp đấu. Khi bắt đầu trận chiến, nhận được vĩnh viễn 30% [Né Sát Thương Tức Thì]. Tăng vĩnh viễn HP của riêng bạn lên. [Né Sát Thương Tức Thì]: Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG chỉ gây được 1 điểm DMG.",
       "icon": "/Skill/Bang (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Cửa sổ Round .",
+      "desc": "Cửa sổ tròn.",
       "icon": "/Skill/Bang (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Cửa sổ Round .",
+      "desc": "Trong 3 hiệp đầu tiên, sau khi thực hiện một hành động, sẽ giảm Năng lượng của đội địch khi [Sợ Hãi] đang hoạt động, tối đa một lần mỗi hiệp. Khi bắt đầu trận chiến, nhận được vĩnh viễn 40% [Né Sát Thương Tức Thì]. Tăng vĩnh viễn HP của riêng bạn lên. [Né Sát Thương Tức Thì]: Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG chỉ gây được 1 điểm DMG.",
       "icon": "/Skill/Bang (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Mỗi khi Bang tấn công, triệu hồi Bomb để [Tấn Công Liên Kích] với đòn tương tự: Đánh Thường — gây 100% ATK lên một kẻ địch ngẫu nhiên; Ultimate — đánh AoE 3 đòn với 180% ATK. [Tấn Công Liên Kích] dùng ATK của Bang làm ST (Bomb không cần có trong đội).",
+      "desc": "Khi Silverfang tấn công, Bomb sử dụng loại kỹ năng tương tự để thực hiện [Liên Kích] chống lại mục tiêu của kẻ thù. Bomb kế thừa 100% ATK của Silverfang. Cơ bản: Gây 100% ATK DMG cho 1 mục tiêu ngẫu nhiên. Tuyệt Kĩ: Tấn công toàn bộ kẻ địch bằng 3 đòn liên tiếp, gây 180% ATK DMG.",
       "icon": "/Skill/Source/100024-ssrplus/awakened.webp",
       "animation": null,
       "type": "Thức tỉnh",
@@ -82,7 +82,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "ATK Ultimate của [Tấn Công Liên Kích] 180% > 210%. Với mỗi kẻ địch có [Nội Thương], giảm 250 [Thanh Năng Lượng] của kẻ địch đó.",
+      "desc": "Khi Silverfang tấn công, Bomb sử dụng loại kỹ năng tương tự để thực hiện [Liên Kích] chống lại mục tiêu của kẻ thù. Bomb kế thừa 100% ATK của Silverfang. Cơ bản: Gây 100% ATK DMG cho 1 mục tiêu ngẫu nhiên. Tuyệt Kĩ: Tấn công toàn bộ kẻ địch bằng 3 đòn liên tiếp, gây 210% ATK DMG. Khi Bomb thực hiện Tuyệt Kĩ [Liên Kích], tinh thần chiến đấu của đội địch sẽ giảm 250 cho mỗi mục tiêu bị ảnh hưởng bởi [Nội Thương].",
       "icon": "/Skill/Source/100024-ssrplus/awakened.webp",
       "animation": null,
       "type": "Thức tỉnh",
@@ -91,7 +91,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Source/100024-ssrplus/awakened.webp",
       "animation": null,
       "type": "Thức tỉnh",

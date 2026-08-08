@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 100% ST tấn công lên mục tiêu đơn.",
+      "desc": "Gây 100% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Tank Top Vegan (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Đánh mục tiêu đơn với 5 đòn liên kích gây 50% ST tấn công mỗi đòn, và cấp [Kiên Cường] cho bản thân và đồng minh cùng cột (hấp thụ ST bằng 30% Máu bản thân).",
+      "desc": "Tấn công một mục tiêu bằng 5 đòn kết hợp với tổng sát thương bằng 50% ATK DMG mỗi mục tiêu và cấp [Lá Chắn] cho bản thân và đồng minh trong cùng một cột (hấp thụ DMG bằng 30% HP của chính mình).",
       "icon": "/Skill/Tank Top Vegan (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Đánh mục tiêu đơn với 5 đòn liên kích gây 56% ST tấn công mỗi đòn, và cấp [Kiên Cường] cho bản thân và đồng minh cùng cột (hấp thụ ST bằng 35% Máu bản thân).",
+      "desc": "Tấn công một mục tiêu bằng 5 đòn kết hợp với tổng sát thương bằng 56% ATK DMG mỗi mục tiêu và cấp [Lá Chắn] cho bản thân và đồng minh trong cùng một cột (hấp thụ DMG bằng 35% HP của chính mình).",
       "icon": "/Skill/Tank Top Vegan (SR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Tank Top Vegan (SR)/Keepsake_SR.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi bắt đầu trận đấu, cấp cho toàn bộ đồng minh 50% Tỉ lệ Khiên trong 2 lượt.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi bắt đầu trận chiến, cấp cho tất cả đồng minh 50% Tỷ Lệ Khiên trong 2 lượt.",
       "icon": "/Skill/Tank Top Vegan (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi bắt đầu trận đấu, cấp cho toàn bộ đồng minh 60% Tỉ lệ Khiên trong 2 lượt.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi bắt đầu trận chiến, cấp cho tất cả đồng minh 60% Tỷ Lệ Khiên trong 2 lượt.",
       "icon": "/Skill/Tank Top Vegan (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi bắt đầu trận đấu, cấp cho toàn bộ đồng minh 70% Tỉ lệ Khiên trong 2 lượt.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi bắt đầu trận chiến, cấp cho tất cả đồng minh 70% Tỷ Lệ Khiên trong 2 lượt.",
       "icon": "/Skill/Tank Top Vegan (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

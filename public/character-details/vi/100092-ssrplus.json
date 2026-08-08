@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 70% ST sát thương trực tiếp lên một mục tiêu.",
+      "desc": "Gây 70% ATK Sát Thương Trực Tiếp cho một mục tiêu.",
       "icon": "/Skill/Monsterized Bakuzan (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Vào trạng thái [Giận Dữ], tích tối đa 2 tầng năng lượng (var101), rồi gây sát thương trực tiếp lên toàn bộ cột của mục tiêu, tỷ lệ theo số tầng đã tích. Đồng thời giải hiệu ứng có lợi khỏi bản thân.",
+      "desc": "Nhập [Giận Dữ], xây dựng tối đa 2 lớp điện tích (var101), sau đó gây Sát Thương Trực Tiếp cho toàn bộ cột của mục tiêu theo tỷ lệ theo số lượng lớp điện tích. Đồng thời xua tan buff từ chính mình.",
       "icon": "/Skill/Monsterized Bakuzan (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Không thay đổi chỉ số — giống hệt Tối Thượng: [Giận Dữ] với tối đa 2 tầng năng lượng, rồi gây sát thương trực tiếp lên toàn bộ cột của mục tiêu theo số tầng, và tự giải hiệu ứng có lợi.",
+      "desc": "Không thay đổi giá trị - giống với Tuyệt Kĩ: [Giận Dữ] với tối đa 2 lớp tích điện, sau đó là Sát Thương Trực Tiếp mở rộng toàn bộ cột của mục tiêu bằng các lớp tích điện và tự Dispel.",
       "keepsakeIcon": "/Keepsake/Monsterized Bakuzan (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Monsterized Bakuzan (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn nhận +20% Máu. Vào đầu lượt của mình, giải hiệu ứng có lợi khỏi 3 kẻ địch ngẫu nhiên. Sau khi tấn công, gây hiệu ứng bất lợi lên các kẻ địch bị đánh trúng. Vào cuối lượt của mình, nhận một tầng [Giận Dữ].",
+      "desc": "Tăng vĩnh viễn +20% HP. Khi bắt đầu lượt của mình, Xóa bùa lợi từ 3 kẻ thù ngẫu nhiên. Sau khi tấn công, áp dụng debuff cho kẻ địch mà anh ta đánh trúng. Ở cuối lượt của mình, nhận được một điểm [Giận Dữ].",
       "icon": "/Skill/Monsterized Bakuzan (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Giải hiệu ứng có lợi đầu lượt tác động lên 3 > 4 kẻ địch. Các hiệu ứng khác giữ nguyên.",
+      "desc": "Bắt đầu lần lượt Xua tan mục tiêu 3 > 4 kẻ thù. Tất cả các hiệu ứng khác không thay đổi.",
       "icon": "/Skill/Monsterized Bakuzan (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Không thay đổi chỉ số — giống hệt Extreme Passive (giải hiệu ứng đầu lượt vẫn tác động lên 4 kẻ địch).",
+      "desc": "Không có thay đổi về giá trị - giống hệt với Nội tại Cực đoan (Giải trừ khi bắt đầu theo lượt vẫn nhắm vào 4 kẻ địch).",
       "icon": "/Skill/Monsterized Bakuzan (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi nhận sát thương chí mạng, hồi sinh với 70% HP vào lượt kế tiếp. Nhận [Lá Chắn] khi hồi sinh (hấp thụ tối đa 50% HP Tối đa sát thương). Kích hoạt một lần mỗi trận.",
+      "desc": "Khi nhận sát thương chí mạng, hồi sinh với 70% HP ở vòng tiếp theo. Nhận được [Lá Chắn] khi hồi sinh (hấp thụ tới 50% HP tối đa của DMG). Kích hoạt một lần mỗi trận chiến.",
       "icon": "/Skill/Source/100092-ssrplus/awakened.webp",
       "animation": null,
       "type": "Thức tỉnh",
@@ -83,7 +83,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Hồi sinh một lần > hai lần mỗi trận. [Lá Chắn] hấp thụ 50% > 70% HP Tối đa.",
+      "desc": "Hồi sinh một > hai lần mỗi trận. [Lá Chắn] hấp thụ 50% > 70% HP tối đa.",
       "icon": "/Skill/Source/100092-ssrplus/awakened.webp",
       "animation": null,
       "type": "Thức tỉnh",
@@ -92,7 +92,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Source/100092-ssrplus/awakened.webp",
       "animation": null,
       "type": "Thức tỉnh",

@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây sát thương trực tiếp 120% ST lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Đánh dấu toàn bộ kẻ địch, sau đó vào trạng thái [Giận Dữ] tăng theo số kẻ địch bị đánh dấu (250% ST mỗi kẻ địch bị đánh dấu). Gây sát thương trực tiếp 800% ST lên toàn bộ kẻ địch, đồng thời phong ấn rồi rút cạn năng lượng của mục tiêu.",
+      "desc": "Gây 800% ATK DMG cho tất cả mục tiêu. Thêm [Tích Lực Chuyên Biệt] DMG bằng số mục tiêu bắn trúng × 250% ATK. Loại bỏ Năng lượng [Sợ Hãi Chuyên Biệt] của đội địch.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Đánh dấu toàn bộ kẻ địch, sau đó vào trạng thái [Giận Dữ] tăng theo số kẻ địch bị đánh dấu (250% > 325% ST mỗi kẻ địch bị đánh dấu). Gây sát thương trực tiếp 800% > 1000% ST lên toàn bộ kẻ địch, đồng thời phong ấn rồi rút cạn năng lượng của mục tiêu.",
+      "desc": "Gây 1000% ATK DMG cho tất cả mục tiêu. Thêm [Tích Lực Chuyên Biệt] DMG bằng số mục tiêu bắn trúng × 325% ATK. Loại bỏ Năng lượng [Sợ Hãi Chuyên Biệt] của đội địch.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Deep Sea King (UR)/Keepsake_UR.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "+20% HP tối đa. Khi vào trận, nhận +60% giảm sát thương chí mạng và +100% sát thương [Sụp Đổ].",
+      "desc": "Tăng 60% [Miễn Sát Thương Không Bạo Kích]. Tăng vĩnh viễn 100% [Tăng Cường Trọng Thương]. [Miễn Sát Thương Không Bạo Kích]: Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]. [Tăng Cường Trọng Thương]: Tăng [Trọng Thương], [Nội Thương] và [Tụ Lực] DMG.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Giảm sát thương chí mạng 60% > 70%. Sát thương [Sụp Đổ] 100% > 125%.",
+      "desc": "Tăng 70% [Miễn Sát Thương Không Bạo Kích]. Tăng vĩnh viễn 125% [Tăng Cường Trọng Thương]. [Miễn Sát Thương Không Bạo Kích]: Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]. [Tăng Cường Trọng Thương]: Tăng [Trọng Thương], [Nội Thương] và [Tụ Lực] DMG.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Giảm sát thương chí mạng 70% > 80%. Sát thương [Sụp Đổ] 125% > 150%.",
+      "desc": "Tăng 80% [Miễn Sát Thương Không Bạo Kích]. Tăng vĩnh viễn 150% [Tăng Cường Trọng Thương]. [Miễn Sát Thương Không Bạo Kích]: Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]. [Tăng Cường Trọng Thương]: Tăng [Trọng Thương], [Nội Thương] và [Tụ Lực] DMG.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi trận đấu bắt đầu, [Cổ Vũ] đồng minh. Cấp [Phản Sát Thương Chuyên Biệt] cho toàn bộ đồng minh trong suốt trận đấu. Tăng Chính xác hiệu ứng thêm 50%.\n———- [Cổ Vũ]: Vào đầu mỗi lượt, nhận 2 năng lượng, trong 3 lượt. [Phản Sát Thương Chuyên Biệt]: Giảm ST trực tiếp và ST phụ trội đi 40%, phản lại 40% ST gốc về phía kẻ tấn công.",
+      "desc": "Trước khi trận chiến bắt đầu, [Cổ Vũ] liên minh và cấp vĩnh viễn cho tất cả đồng minh [Phản Sát Thương Chuyên Biệt]. Tăng [Tỷ Lệ Chính Xác Sát Thương Tức Thời] của bản thân thêm 50%. [Cổ Vũ]: Tăng 2 Năng lượng khi bắt đầu mỗi hiệp trong 3 hiệp. [Phản Sát Thương Chuyên Biệt]: Giảm 50% Sát Thương Trực Tiếp và DMG bổ sung nhận được và trả lại 50% DMG ban đầu cho kẻ tấn công dưới dạng Extra DMG.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Tăng Chính xác hiệu ứng 50% > 70% Nhận năng lượng 2x > 3x Trong 3 lượt > 5 lượt Giảm ST trực tiếp/phụ trội đi 40% > 70% Phản sát thương 40% > 70%",
+      "desc": "Trước khi trận chiến bắt đầu, [Cổ Vũ] liên minh và cấp vĩnh viễn cho tất cả đồng minh [Phản Sát Thương Chuyên Biệt]. Tăng [Tỷ Lệ Chính Xác Sát Thương Tức Thời] của bản thân thêm 70%. [Cổ Vũ]: Tăng 3 Năng lượng khi bắt đầu mỗi hiệp trong 5 hiệp. [Phản Sát Thương Chuyên Biệt]: Giảm 70% Sát Thương Trực Tiếp và DMG bổ sung nhận được và trả lại 70% DMG ban đầu cho kẻ tấn công dưới dạng Extra DMG.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -91,7 +91,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Deep Sea King (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

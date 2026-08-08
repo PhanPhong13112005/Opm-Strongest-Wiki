@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals Direct DMG of 40% ATK to a single target.",
+      "desc": "Attacks a single target with 3 consecutive strikes, dealing 120% ATK DMG.",
       "icon": "/Skill/Zombieman (SSR+)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals Direct DMG of 90% ATK to the target's row. If own SPD (×0.9) exceeds the target's SPD, steals the SPD difference as [Super Speed]. Grants [Super Speed] to own row for 2 turns.",
+      "desc": "Attacks all enemies in a row with 4 consecutive strikes, dealing 360% ATK DMG. Grants allies in the same row [Specialized Speed Up] for 1 round. Requires 0 Energy to activate. [Specialized Speed Up]: Sets their SPD to 90% of Zombieman's SPD. If their current SPD is higher, it remains unchanged.",
       "icon": "/Skill/Zombieman (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals Direct DMG of 90% > 125% ATK to the target's row. If own SPD (×0.9) exceeds the target's SPD, steals the SPD difference as [Super Speed]. Grants [Super Speed] to own row for 2 turns.",
+      "desc": "Attacks all enemies in a row with 4 consecutive strikes, dealing 500% ATK DMG. Grants allies in the same row [Specialized Speed Up] for 1 round. Requires 0 Energy to activate. [Specialized Speed Up]: Sets their SPD to 95% of Zombieman's SPD. If their current SPD is higher, it remains unchanged.",
       "keepsakeIcon": "/Keepsake/Zombieman (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Zombieman (SSR+)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). At the start of battle, grants [Specialized Acceleration] (increases SPD by 20%; if the main target's SPD is lower than Zombieman, deals 500% ATK as Extra DMG). Before battle begins, [Encourage] allies (gain 2 energy at the start of the round, lasting 3 rounds). Triggers [Resurrection] after taking fatal DMG (while an ally is present, recovers 60% HP before action, up to 3 times).",
+      "desc": "At battle start, gains [Specialized Speed Up], increasing SPD by 20%. If the main target's SPD is lower than Zombieman's SPD, deals 500% ATK as Extra DMG.",
       "icon": "/Skill/Zombieman (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Specialized Acceleration] SPD +20% &gt; +25%. [Encourage] 2 &gt; 3 energy.",
+      "desc": "At battle start, gains [Specialized Speed Up], increasing SPD by 25%. If the main target's SPD is lower than Zombieman's SPD, deals 500% ATK as Extra DMG.",
       "icon": "/Skill/Zombieman (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Specialized Acceleration] SPD +25% &gt; +30%. [Encourage] duration 3 &gt; 5 rounds. [Resurrection] up to 3 &gt; 4 times.",
+      "desc": "At battle start, gains [Specialized Speed Up], increasing SPD by 30%. If the main target's SPD is lower than Zombieman's SPD, deals 500% ATK as Extra DMG.",
       "icon": "/Skill/Zombieman (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Before battle begins, [Encourage] the allies (gains 2 energy at the start of the round, lasts 3 rounds). Triggers [Resurrection] after receiving fatal damage (When ally is present, recovers 60% HP before action, up to 3 times)",
+      "desc": "Before battle begins, grants all allies [Encourage] for 3 rounds. After receiving fatal DMG, triggers [Regeneration]. [Encourage]: Grants 2 Energy at the start of each round. [Regeneration]: While at least 1 ally remains, restores 60% Max HP before Zombieman's action. Can trigger up to 3 times.",
       "icon": "/Skill/Zombieman (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Encourage allies 2 energy > 3 energy Last 3 rounds > 5 rounds Trigger Resurrection 3x > 4x",
+      "desc": "Before battle begins, grants all allies [Encourage] for 5 rounds. After receiving fatal DMG, triggers [Regeneration]. [Encourage]: Grants 3 Energy at the start of each round. [Regeneration]: While at least 1 ally remains, restores 60% Max HP before Zombieman's action. Can trigger up to 5 times.",
       "icon": "/Skill/Zombieman (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

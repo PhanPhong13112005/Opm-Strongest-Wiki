@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Restores HP to a single ally.",
+      "desc": "Restores an ally's HP by 120% ATK.",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 750% ATK DMG to a single target with 2 consecutive strikes and inflicts [Charm].",
+      "desc": "Attacks a single back-row enemy with 2 consecutive strikes, dealing 750% ATK DMG and inflicting [Charm]. [Charm]: Causes the target to [Exit] the battlefield and use its own Ultimate or Passive to attack a random ally. The target returns to battle after the round ends.",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 750% &gt; 900% ATK DMG to a single target with 2 consecutive strikes and inflicts [Charm]. Additionally inflicts [Stun] on the target and its entire column for 1 round.",
+      "desc": "Attacks a single back-row enemy with 2 consecutive strikes, dealing 900% ATK DMG and inflicting [Charm]. Also inflicts [Stun] on the target and enemies in the same column for 1 round. [Charm]: Causes the target to [Exit] the battlefield and use its own Ultimate or Passive to attack a random ally. The target returns to battle after the round ends.",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Puri-Puri Prisoner (SSRplus)/Keepsake_SSRplus.png",
       "type": "Ultimate",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Gains +20% HP. At the start of each round, inflicts a debuff on all enemies. On entry, gains [Charm Immunity] on self.",
+      "desc": "At battle start, permanently reduces all enemies' Continuous DMG Rate by 40%. Do-S is immune to [Charm].",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Retains the base passive effects; CN data shows no numeric upgrade at this tier.",
+      "desc": "At battle start, permanently reduces all enemies' Continuous DMG Rate by 50%. Do-S is immune to [Charm].",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Retains the base passive effects; CN data shows no numeric upgrade at this tier.",
+      "desc": "At battle start, permanently reduces all enemies' Continuous DMG Rate by 60%. Do-S is immune to [Charm].",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -68,7 +68,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Increase Non-Crit DMG by 30% for the entire row, lasts 3 rounds. After action, inflict [Paralysis] (Unable to Follow-Up, Continuous Follow-Up, Combo Follow-Up) on the target and its column",
+      "desc": "Grants all allies in the same row 30% [Non-Crit DMG Free] for 3 rounds. After Do-S acts, inflicts [Paralysis] on the target and enemies in the same column. [Paralysis]: Prevents the affected unit from triggering [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up].",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -77,7 +77,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Non-CRIT DMG free 30% > 40%",
+      "desc": "Grants all allies in the same row 40% [Non-Crit DMG Free] for 3 rounds. After Do-S acts, inflicts [Paralysis] on the target and enemies in the same column. [Paralysis]: Prevents the affected unit from triggering [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up].",
       "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

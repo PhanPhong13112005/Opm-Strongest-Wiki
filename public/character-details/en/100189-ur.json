@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Gale Wind (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Attacks enemies in a column with 5 consecutive strikes, dealing 450% ATK DMG. The last strike has a 100% chance to inflict [Specialized Shatter] on the main target for 2 turns (reduces DMG Reduction by 12%, deals 180% ATK as [Shatter] DMG when attacked, stacks up to 3 times, does not stack with [Shatter]), and has a 100% chance to inflict [Stun] on the main target for 1 turn (unable to act, at most 4 characters can be stunned simultaneously).",
+      "desc": "Attacks enemies in a column with 5 consecutive strikes, dealing 450% ATK DMG. The last strike has a 100% chance to inflict [Specialized Collapse] on the main target for 2 rounds and a 100% chance to inflict [Stun] on the main target for 1 round. [Specialized Collapse]: Decreases DMG Free by 12% and deals 180% ATK [Collapse DMG] when the affected target is attacked. Stacks up to 3 times and does not stack with [Collapse]. [Stun]: Prevents the affected unit from acting. At most 4 characters can be stunned simultaneously.",
       "icon": "/Skill/Gale Wind (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Ultimate DMG 450% → 600% ATK. DMG Reduction reduction 12% → 15%. [Shatter] DMG 180% → 230% ATK. Chance to inflict [Stun] on the main target → also affects an enemy in the same column.",
+      "desc": "Attacks enemies in a column with 5 consecutive strikes, dealing 600% ATK DMG. The last strike has a 100% chance to inflict [Specialized Collapse] on the main target for 2 rounds and a 100% chance to inflict [Stun] on the main target and another enemy in the same column for 1 round. [Specialized Collapse]: Decreases DMG Free by 15% and deals 230% ATK [Collapse DMG] when the affected target is attacked. Stacks up to 3 times and does not stack with [Collapse]. [Stun]: Prevents the affected unit from acting. At most 4 characters can be stunned simultaneously.",
       "keepsakeIcon": "/Keepsake/Gale Wind (UR)/Keepsake_UR.png",
       "icon": "/Skill/Gale Wind (UR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently grants himself a 55% chance of [Evasion] (reduces Direct/Extra/Charge/Berserk DMG to 1 DMG). After any character acts, deals 500% ATK as Extra DMG to enemies with [Specialized Shatter], up to 2 times per turn.",
+      "desc": "Permanently grants self a 55% chance of [Evasion]. After any character acts, deals 500% ATK as Extra DMG to enemies affected by [Specialized Collapse], up to 2 times per round. [Evasion]: Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG.",
       "icon": "/Skill/Gale Wind (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Evasion] applies to self → also to an ally in the same column. Attacking enemies with [Specialized Shatter] 2 times per turn → 3 times per turn.",
+      "desc": "Permanently grants allies in the same row a 60% chance of [Evasion]. After any character acts, deals 650% ATK as Extra DMG to enemies affected by [Specialized Collapse], up to 3 times per round. [Evasion]: Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG.",
       "icon": "/Skill/Gale Wind (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "At the start of the battle, grants [Specialized Acceleration] (Increases SPD by 28%, if the main target's SPD is lower than Gale Wind, deals 500% ATK as Extra DMG). At the start of every round, increase SPD of allies in the same row to 92% of Gale Wind's SPD, only when ally's SPD is lower than expected). Grants Immunity against [Fear] and [Energy Removal]. When the round begins, [Encourage] the allies (gains 2 energy at the start of the round, lasts for 3 rounds).",
+      "desc": "At battle start, gains [Specialized Acceleration]. At the start of every round, increases the SPD of allies in the same row to 92% of Gale Wind’s SPD if their current SPD is lower. Grants immunity to [Fear] and [Energy Removal]. [Specialized Acceleration]: Increases SPD by 28%. If the main target’s SPD is lower than Gale Wind’s SPD, deals 500% ATK as Extra DMG.",
       "icon": "/Skill/Gale Wind (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Specialized Acceleration 28% > 32% ATK Extra DMG 500% > 600% Increase SPD of allies in same row 92% > 96% Encourage allies energy gain 2 > 3 Permanent Immunity against Stun",
+      "desc": "At battle start, gains [Specialized Acceleration]. At the start of every round, increases the SPD of allies in the same row to 96% of Gale Wind’s SPD if their current SPD is lower. Grants immunity to [Fear] and [Energy Removal]. At the beginning of each round, applies [Encourage] to allies. Permanently grants immunity to [Stun]. [Specialized Acceleration]: Increases SPD by 32%. If the main target’s SPD is lower than Gale Wind’s SPD, deals 600% ATK as Extra DMG. [Encourage]: Gains 3 Energy at the start of each round for 3 rounds.",
       "icon": "/Skill/Gale Wind (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

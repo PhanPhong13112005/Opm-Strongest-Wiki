@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "2 đòn liên tiếp lên mục tiêu đơn gây 120% ST sát thương.",
+      "desc": "2 đòn tấn công liên tiếp vào một mục tiêu duy nhất với tổng sát thương bằng 120% ATK DMG.",
       "icon": "/Skill/Child Emperor (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây sát thương lên toàn bộ kẻ địch bằng 5 đòn liên tiếp với 250% ST, và giảm Max HP của mục tiêu chính đi 20% trong 2 lượt.",
+      "desc": "Gây DMG cho tất cả kẻ địch bằng 5 đòn đánh liên tiếp với tổng sát thương bằng 250% ATK và giảm HP tối đa% của mục tiêu chính trong 2 lượt.",
       "icon": "/Skill/Child Emperor (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây sát thương lên toàn bộ kẻ địch bằng 5 đòn liên tiếp với 250% > 300% ST, và giảm Max HP của mục tiêu chính đi 20% > 30% trong 2 lượt.",
+      "desc": "Gây DMG cho tất cả kẻ địch bằng 5 đòn đánh liên tiếp với tỷ lệ 250% > 300% ATK và giảm HP tối đa% > 30% của mục tiêu chính trong 2 lượt.",
       "keepsakeIcon": "/Keepsake/Child Emperor (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Child Emperor (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Khi vào trận, tăng 25% tỉ lệ chí mạng cho bản thân và cùng hàng trong 2 lượt. Cấp cho bản thân và cùng hàng miễn nhiễm vĩnh viễn với [Thiêu Đốt/Trường Lực/Trọng Thương/Nội Thương].",
+      "desc": "Khi trận chiến bắt đầu, tăng 25% tỷ lệ CRIT cho bản thân và cùng hàng trong 2 hiệp. Cấp cho bản thân và cùng hàng khả năng miễn dịch vĩnh viễn chống lại [Thiêu Đốt/Trường Lực/Trọng Thương/Nội Thương].",
       "icon": "/Skill/Child Emperor (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Khi vào trận, tăng 25% > 30% tỉ lệ chí mạng cho bản thân và cùng hàng trong 2 > 3 lượt. Cấp cho bản thân và cùng hàng miễn nhiễm vĩnh viễn với [Thiêu Đốt/Trường Lực/Trọng Thương/Nội Thương].",
+      "desc": "Khi trận chiến bắt đầu, tăng tỷ lệ CRIT 25% > 30% cho bản thân và cùng hàng trong 2 > 3 hiệp. Cấp cho bản thân và cùng hàng khả năng miễn dịch vĩnh viễn chống lại [Thiêu Đốt/Trường Lực/Trọng Thương/Nội Thương].",
       "icon": "/Skill/Child Emperor (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Khi vào trận, tăng 25% > 35% tỉ lệ chí mạng cho bản thân và cùng hàng trong 2 > 3 lượt. Cấp cho bản thân và cùng hàng miễn nhiễm vĩnh viễn với [Thiêu Đốt/Trường Lực/Trọng Thương/Nội Thương].",
+      "desc": "Khi trận chiến bắt đầu, tăng tỷ lệ CRIT 25% > 35% cho bản thân và cùng hàng trong 2 > 3 hiệp. Cấp cho bản thân và cùng hàng khả năng miễn dịch vĩnh viễn chống lại [Thiêu Đốt/Trường Lực/Trọng Thương/Nội Thương].",
       "icon": "/Skill/Child Emperor (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi vào trận, triệu hồi 1 robot chó ([100%] ST của Child Emperor). Sau hành động của đồng minh, robot chó gây sát thương trực tiếp lên kẻ địch có tỉ lệ HP thấp nhất bằng 200% ST dưới dạng sát thương thêm, và hồi 25% HP cho đồng minh có tỉ lệ HP thấp nhất.",
+      "desc": "Khi trận chiến bắt đầu, triệu hồi 1 chú chó robot ([100%] ATK của Đồng Đế). Sau hành động của đồng minh, chó robot gây Sát Thương Trực Tiếp cho kẻ thù có tỷ lệ HP thấp nhất với 200% ATK là extra DMG và chữa lành vết thương cho đồng minh có tỷ lệ HP thấp nhất 25% HP.",
       "icon": "/Skill/Child Emperor (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Số robot chó triệu hồi 1 > 2.",
+      "desc": "Số lượng chó robot được triệu hồi 1 > 2.",
       "icon": "/Skill/Child Emperor (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -91,7 +91,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Child Emperor (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

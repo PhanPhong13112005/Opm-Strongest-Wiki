@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own max HP by 20%. Whenever a critical hit is triggered, adds extra DMG equal to 40% ATK.",
+      "desc": "Permanently increases own max HP%. Whenever a critical hit is triggered, adds extra DMG equal to 40% ATK.",
       "icon": "/Skill/Sourface (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own max HP by 20%. Whenever a critical hit is triggered, adds extra DMG equal to 50% ATK.",
+      "desc": "Permanently increases own max HP%. Whenever a critical hit is triggered, adds extra DMG equal to 50% ATK.",
       "icon": "/Skill/Sourface (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own max HP by 20%. Whenever a critical hit is triggered, adds extra DMG equal to 55% ATK.",
+      "desc": "Permanently increases own max HP%. Whenever a critical hit is triggered, adds extra DMG equal to 55% ATK.",
       "icon": "/Skill/Sourface (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

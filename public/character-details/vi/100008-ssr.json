@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung 2 liên kích lên mục tiêu đơn, mỗi đòn gây 50% ST sát thương.",
+      "desc": "Tấn công một mục tiêu bằng 2 đòn liên tiếp, gây 50% ATK DMG mỗi đòn.",
       "icon": "/Skill/Mosquito Girl (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 3 liên kích lên kẻ địch trong vùng chữ thập, mỗi đòn gây 40% ST sát thương; đòn cuối hút 100% sát thương gây ra để hồi máu cho bản thân.",
+      "desc": "Tấn công kẻ địch trong khu vực hình chữ thập bằng 3 đòn liên tiếp, gây 40% ATK DMG mỗi đòn. Đòn đánh cuối cùng khôi phục HP bằng 100% DMG do đòn đánh đó gây ra.",
       "icon": "/Skill/Mosquito Girl (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung 3 liên kích lên kẻ địch trong vùng chữ thập, mỗi đòn gây 40% ST sát thương; đòn cuối hút 100% sát thương gây ra để hồi máu cho bản thân, đồng thời đòn thứ nhất và thứ hai mỗi đòn có 100% tỉ lệ hút 100% sát thương gây ra để hồi máu.",
+      "desc": "Tấn công kẻ địch trong khu vực hình chữ thập bằng 3 đòn liên tiếp, gây 40% ATK DMG mỗi đòn. Mỗi đòn trong 2 đòn đầu tiên có 100% cơ hội khôi phục HP bằng 100% DMG do đòn đánh đó gây ra và đòn cuối cùng cũng khôi phục HP bằng 100% DMG đã gây ra.",
       "keepsakeIcon": "/Keepsake/Mosquito Girl (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Mosquito Girl (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Nhận 33% [Miễn Sát Thương Không Bạo Kích] (hiệu lực mọi loại ST, không tồn tại cùng [Nhanh Nhẹn]). Sau khi đồng minh tấn công (từ lượt 2), [Thức Tỉnh] Mosquito Girl tung [Truy Kích] lên địch có tỉ lệ Máu thấp nhất (80% ST Đòn Thường kèm hiệu ứng đặc biệt, 4 lần/lượt).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Tăng vĩnh viễn 33% [Miễn Sát Thương Không Bạo Kích], có hiệu quả chống lại tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]. Bắt đầu từ vòng 2, sau khi bị đồng minh tấn công, Cô Gái Muỗi đã thức tỉnh tung ra [Truy Kích] chống lại kẻ thù có tỷ lệ HP thấp nhất. [Truy Kích]: Gây 80% DMG của đòn tấn công cơ bản và giữ nguyên hiệu ứng đặc biệt. Có thể kích hoạt tối đa 4 lần mỗi vòng.",
       "icon": "/Skill/Mosquito Girl (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Miễn Sát Thương Không Bạo Kích] 33% &gt; 38%. [Truy Kích] 80% &gt; 90% ST Đòn Thường, 4 &gt; 5 lần/lượt.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Tăng vĩnh viễn 38% [Miễn Sát Thương Không Bạo Kích], có hiệu quả chống lại tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]. Bắt đầu từ vòng 2, sau khi bị đồng minh tấn công, Cô Gái Muỗi đã thức tỉnh tung ra [Truy Kích] chống lại kẻ thù có tỷ lệ HP thấp nhất. [Truy Kích]: Gây 90% DMG của đòn tấn công cơ bản và giữ nguyên hiệu ứng đặc biệt. Có thể kích hoạt tối đa 5 lần mỗi vòng.",
       "icon": "/Skill/Mosquito Girl (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Miễn Sát Thương Không Bạo Kích] 38% &gt; 45%. [Truy Kích] 90% &gt; 100% ST Đòn Thường. Kích hoạt: từ lượt 2 &gt; từ lượt 1.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Tăng vĩnh viễn 45% [Miễn Sát Thương Không Bạo Kích], có hiệu quả chống lại tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]. Bắt đầu từ vòng 1, sau khi bị đồng minh tấn công, Cô Gái Muỗi đã thức tỉnh tung ra [Truy Kích] chống lại kẻ thù có tỷ lệ HP thấp nhất. [Truy Kích]: Gây 100% DMG của đòn tấn công cơ bản và giữ nguyên hiệu ứng đặc biệt. Có thể kích hoạt tối đa 5 lần mỗi vòng.",
       "icon": "/Skill/Mosquito Girl (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Attacks a single target with 2 hit combo for 120% ATK DMG. 100% chance to inflict [Crash Bad] for 2 turns (injury-free rate reduced by 20%).",
+      "desc": "Attacks a single target with 2 hit combo for 120% ATK DMG. 100% chance to inflict [Crash Bad] for 2 turns (injury-free rate reduced%).",
       "icon": "/Skill/G4 (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,

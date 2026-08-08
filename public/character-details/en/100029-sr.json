@@ -42,7 +42,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP(+20). When attacking a Monster or Bounty Criminal, inflicts [Injured] on the target for 2 turns (adds Injured damage equal to 50% ATK when attacked).",
+      "desc": "Permanently increases own H. When attacking a Monster or Bounty Criminal, inflicts [Injured] on the target for 2 turns (adds Injured damage equal to 50% ATK when attacked).",
       "icon": "/Skill/Amai Mask (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP(+20). Attacks inflict [Injured] on the target for 2 turns (adds Injured damage equal to 70% ATK when attacked).",
+      "desc": "Permanently increases own H. Attacks inflict [Injured] on the target for 2 turns (adds Injured damage equal to 70% ATK when attacked).",
       "icon": "/Skill/Amai Mask (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP(+20). Attacks inflict [Injured] on the target for 2 turns (adds Injured damage equal to 75% ATK when attacked).",
+      "desc": "Permanently increases own H. Attacks inflict [Injured] on the target for 2 turns (adds Injured damage equal to 75% ATK when attacked).",
       "icon": "/Skill/Amai Mask (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

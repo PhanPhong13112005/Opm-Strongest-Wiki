@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by 20%. When Spring Mustachio is attacked, if the attacker is in the [Shatter] state, the DMG is reduced by 40%.",
+      "desc": "Permanently increases own HP%. When Spring Mustachio is attacked, if the attacker is in the [Shatter] state, the DMG is reduced by 40%.",
       "icon": "/Skill/Spring Mustachio (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by 20%. When Spring Mustachio is attacked, if the attacker is in the [Shatter] state, the DMG is reduced by 50%.",
+      "desc": "Permanently increases own HP%. When Spring Mustachio is attacked, if the attacker is in the [Shatter] state, the DMG is reduced by 50%.",
       "icon": "/Skill/Spring Mustachio (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by 20%. When Spring Mustachio is attacked, if the attacker is in the [Shatter] state, the DMG is reduced by 60%.",
+      "desc": "Permanently increases own HP%. When Spring Mustachio is attacked, if the attacker is in the [Shatter] state, the DMG is reduced by 60%.",
       "icon": "/Skill/Spring Mustachio (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

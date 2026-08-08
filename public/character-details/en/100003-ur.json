@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Direct DMG 120% ATK to the target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Marks all enemies, then enters [Berserk] scaling with the number of marked enemies (250% ATK per marked enemy). Direct DMG 800% ATK to all enemies, and seals then drains energy from the target.",
+      "desc": "Deals 800% ATK DMG to all targets. Adds [Specialized Charge] DMG equal to the number of targets hit × 250% ATK. Removes the enemy team’s [Specialized Fear] Energy.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Marks all enemies, then enters [Berserk] scaling with the number of marked enemies (250% > 325% ATK per marked enemy). Direct DMG 800% > 1000% ATK to all enemies, and seals then drains energy from the target.",
+      "desc": "Deals 1000% ATK DMG to all targets. Adds [Specialized Charge] DMG equal to the number of targets hit × 325% ATK. Removes the enemy team’s [Specialized Fear] Energy.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Deep Sea King (UR)/Keepsake_UR.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "+20% Max HP. On entry, gains +60% Crit DMG reduction and +100% [Collapse] DMG.",
+      "desc": "Gains 60% [Non-Crit DMG Free]. Permanently gains 100% [Injury Boost]. [Non-Crit DMG Free]: Reduces all types of non-critical DMG and cannot coexist with [Agility]. [Injury Boost]: Increases [Injury], [Internal Injury], and [Charge] DMG.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Crit DMG reduction 60% > 70%. [Collapse] DMG 100% > 125%.",
+      "desc": "Gains 70% [Non-Crit DMG Free]. Permanently gains 125% [Injury Boost]. [Non-Crit DMG Free]: Reduces all types of non-critical DMG and cannot coexist with [Agility]. [Injury Boost]: Increases [Injury], [Internal Injury], and [Charge] DMG.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Crit DMG reduction 70% > 80%. [Collapse] DMG 125% > 150%.",
+      "desc": "Gains 80% [Non-Crit DMG Free]. Permanently gains 150% [Injury Boost]. [Non-Crit DMG Free]: Reduces all types of non-critical DMG and cannot coexist with [Agility]. [Injury Boost]: Increases [Injury], [Internal Injury], and [Charge] DMG.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "When battle begins, [Encourage] the allies. Grants [Specialized DMG Reflect] to all allies for the entire battle. Increase Hit by 50%.\n———- [Encourage]: At the start of each round, gains 2 energy, for 3 rounds. [Specialized DMG Reflect]: Reduce Direct DMG and Extra DMG by 40%, reflects 40% of the original DMG back to the attacker.",
+      "desc": "Before battle begins, [Encourage] allies and permanently grants all allies [Specialized DMG Reflect]. Increases own [Instant DMG Accuracy] by 50%. [Encourage]: Gains 2 Energy at the start of each round for 3 rounds. [Specialized DMG Reflect]: Reduces Direct DMG and Additional DMG received by 50%, and returns 50% of the original DMG to the attacker as Extra DMG.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Increase Hit 50% > 70% Gain Energy 2x > 3x For 3 rounds > 5 rounds Reduce Direct/Extra DMG by 40% > 70% DMG Reflect 40% > 70%",
+      "desc": "Before battle begins, [Encourage] allies and permanently grants all allies [Specialized DMG Reflect]. Increases own [Instant DMG Accuracy] by 70%. [Encourage]: Gains 3 Energy at the start of each round for 5 rounds. [Specialized DMG Reflect]: Reduces Direct DMG and Additional DMG received by 70%, and returns 70% of the original DMG to the attacker as Extra DMG.",
       "icon": "/Skill/Deep Sea King (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

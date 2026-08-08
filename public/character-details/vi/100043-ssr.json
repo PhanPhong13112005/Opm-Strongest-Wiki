@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Rigid Arm: Gây 120% ST(+10) sát thương lên mục tiêu đơn, và gây thêm 8% HP tối đa làm sát thương phụ.",
+      "desc": "Cánh tay cứng: Gây 120% TẠI DMG cho một mục tiêu và gây 8% HP tối đa là extra DMG.",
       "icon": "/Skill/Carnage Kabuto (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Kabuto Knuckle: Gây sát thương lên mục tiêu đơn với 2 đòn liên tiếp tổng 210% ST(+10). Hồi 20% HP tối đa cho bản thân. Nếu đòn thứ 2 gây sát thương Chí mạng, 100% cơ hội gây [Trọng Thương] trong 2 lượt (khi bị tấn công, nhận sát thương Injury bằng 50% ST).",
+      "desc": "Kabuto Knuckle: Gây sát thương lên một mục tiêu bằng 2 đòn đánh liên tiếp với 210% TẠI DMG. Tự hồi máu bằng 20% ​​HP tối đa. Nếu giai đoạn 2 gây CRIT DMG, 100% cơ hội gây [Trọng Thương] trong 2 lượt (khi bị tấn công, gây sát thương DMG là 50% ATK).",
       "icon": "/Skill/Carnage Kabuto (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Kabuto Knuckle (Tối thượng): Gây sát thương lên mục tiêu đơn với 2 đòn liên tiếp tổng 210% > 262% ST(+10). Hồi 20% > 35% HP tối đa cho bản thân. Nếu đòn thứ 2 KHÔNG gây sát thương Chí mạng, 100% cơ hội gây [Trọng Thương] lên mục tiêu chính trong 2 lượt (khi bị tấn công, tung đòn truy kích bằng 50% > 80% ST làm sát thương phụ).",
+      "desc": "Kabuto Knuckle (Ultra-Tuyệt Kĩ): Gây sát thương lên một mục tiêu bằng 2 đòn đánh liên tiếp với tỷ lệ 210% > 262% TẠI DMG. Tự hồi máu 20% > 35% HP tối đa. Nếu giai đoạn 2 KHÔNG gây CRIT DMG, có 100% cơ hội gây [Trọng Thương] lên mục tiêu chính trong 2 lượt (khi bị tấn công, gây đòn tấn công Truy Kích 50% > 80% ATK như extra DMG).",
       "icon": "/Skill/Carnage Kabuto (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Carnage Kabuto (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Kabuto Armor: Khi bị tấn công, phản lại 20% sát thương nhận vào toàn bộ kẻ địch (chỉ một hiệu ứng cùng loại mỗi trận). Vĩnh viễn tăng 20 HP.",
+      "desc": "Áo giáp Kabuto: Khi bị tấn công, phản chiếu 20% DMG phải chịu lên tất cả kẻ địch (chỉ một hiệu ứng cùng loại trong mỗi trận chiến). Tăng vĩnh viễn HP.",
       "icon": "/Skill/Carnage Kabuto (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Kabuto Armor (Cực hạn): Khi bị tấn công, phản lại 30% sát thương nhận vào toàn bộ kẻ địch (chỉ một hiệu ứng cùng loại mỗi trận). Vĩnh viễn tăng HP.",
+      "desc": "Áo giáp Kabuto (Cực đoan): Khi bị tấn công, phản ánh 30% DMG phải chịu lên tất cả kẻ thù (chỉ một hiệu ứng cùng loại trong mỗi trận chiến). Tăng vĩnh viễn HP.",
       "icon": "/Skill/Carnage Kabuto (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Kabuto Armor (5 Tím): Khi bị tấn công, phản lại 35% sát thương nhận vào toàn bộ kẻ địch (chỉ một hiệu ứng cùng loại mỗi trận). Vĩnh viễn tăng 20 HP.",
+      "desc": "Giáp Kabuto (5P): Khi bị tấn công, phản ánh 35% DMG phải chịu lên tất cả kẻ thù (chỉ một hiệu ứng cùng loại trong mỗi trận chiến). Tăng vĩnh viễn HP.",
       "icon": "/Skill/Carnage Kabuto (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

@@ -22,7 +22,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST (+10) sát thương lên mục tiêu đơn, có 100% xác suất khiến mục tiêu bị trúng đòn nhận [Thương Tổn] trong 2 lượt (khi bị tấn công, chịu thêm sát thương [Thương Tổn] bằng 100% ST).",
+      "desc": "Gây 120% sát thương ATK cho một mục tiêu, với 100% cơ hội gây [Bị Thương] lên mục tiêu bị tấn công trong 2 lượt (khi bị tấn công, nhận thêm sát thương [Bị Thương] bằng 100% ATK).",
       "icon": "/Skill/Zombieman (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -31,7 +31,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung combo 5 đòn lên mục tiêu đơn, gây 48% ST (+2) sát thương, đồng thời hồi toàn bộ đồng minh lượng Máu bằng 100% ST.",
+      "desc": "Gây một đòn combo 5 đòn cho một mục tiêu, gây sát thương 48% ATK (+2), đồng thời hồi máu cho tất cả đồng minh với 100% ATK trị giá HP.",
       "icon": "/Skill/Zombieman (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -40,7 +40,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung combo 5 đòn lên mục tiêu đơn, gây 60% ST (+2) sát thương, đồng thời hồi toàn bộ đồng minh lượng Máu bằng 150% ST.",
+      "desc": "Gây một đòn kết hợp 5 đòn cho một mục tiêu, gây 60% ATK (+2) sát thương, đồng thời hồi máu cho tất cả đồng minh với giá trị 150% ATK trị giá HP.",
       "icon": "/Skill/Zombieman (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Zombieman (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -49,7 +49,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn nhận +20 Máu. Đồng thời nhận [Tái Sinh] (khi có đồng minh, trước lượt hành động kế tiếp hồi 10% Máu và tiếp tục chiến đấu, kích hoạt tối đa 4 lần).Sau khi nhận sát thương chí mạng, gây thêm sát thương bằng 60% ST lên toàn bộ kẻ địch.",
+      "desc": "Tăng vĩnh viễn +20 HP. Đồng thời cấp [Hồi Phục] (khi đồng minh có mặt, trước khi hành động tiếp theo, bạn sẽ khôi phục 10% HP và tiếp tục chiến đấu, kích hoạt tối đa 4 lần). Sau khi nhận sát thương chí mạng, gây thêm sát thương bằng 60% ATK cho tất cả kẻ thù.",
       "icon": "/Skill/Zombieman (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -58,7 +58,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn nhận +20 Máu. Đồng thời nhận [Tái Sinh] (khi có đồng minh, trước lượt hành động kế tiếp hồi 15% Máu và tiếp tục chiến đấu, kích hoạt tối đa 6 lần).Sau khi nhận sát thương chí mạng, gây thêm sát thương bằng 80% ST lên toàn bộ kẻ địch.",
+      "desc": "Tăng vĩnh viễn +20 HP. Đồng thời cấp [Hồi Phục] (khi đồng minh có mặt, trước khi hành động tiếp theo, bạn sẽ khôi phục 15% HP và tiếp tục chiến đấu, kích hoạt tối đa 6 lần). Sau khi nhận sát thương chí mạng, gây thêm sát thương bằng 80% ATK cho tất cả kẻ thù.",
       "icon": "/Skill/Zombieman (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -67,7 +67,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn nhận +20 Máu. Đồng thời nhận [Tái Sinh] (khi có đồng minh, trước lượt hành động kế tiếp hồi 18% Máu và tiếp tục chiến đấu, kích hoạt tối đa 6 lần).Sau khi nhận sát thương chí mạng, gây thêm sát thương bằng 90% ST lên toàn bộ kẻ địch.",
+      "desc": "Tăng vĩnh viễn +20 HP. Đồng thời cấp [Hồi Phục] (khi đồng minh có mặt, trước khi hành động tiếp theo, bạn sẽ khôi phục 18% HP và tiếp tục chiến đấu, kích hoạt tối đa 6 lần). Sau khi nhận sát thương chí mạng, gây thêm sát thương bằng 90% ATK cho tất cả kẻ thù.",
       "icon": "/Skill/Zombieman (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

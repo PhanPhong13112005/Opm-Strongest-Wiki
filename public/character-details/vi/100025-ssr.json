@@ -21,7 +21,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 150% ST (+10) sát thương lên mục tiêu đơn, và hồi Máu bằng 30% Máu tối đa.",
+      "desc": "Gây 150% ATK DMG cho một mục tiêu và khôi phục HP bằng 30% HP tối đa.",
       "icon": "/Skill/Watchdog Man (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -30,7 +30,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 5 liên kích gây sát thương bằng 5% (+2) Máu tối đa của Watchdog Man lên cả hàng mục tiêu, và khiến kẻ địch rơi vào [Hoảng Loạn] (phong tỏa năng lượng trong một số lượt; khi cùng hiệu ứng tồn tại, lấy giá trị cao nhất).",
+      "desc": "Gây ra 5 combo 5% (+2) HP tối đa của Người Chó Canh dưới dạng DMG cho toàn bộ hàng mục tiêu và gây [Hoảng Loạn] lên kẻ thù (phong ấn năng lượng của chúng trong một số lượt; khi hiệu ứng tương tự tồn tại, giá trị cao nhất sẽ được áp dụng).",
       "icon": "/Skill/Watchdog Man (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -39,7 +39,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung 5 liên kích gây sát thương bằng 6% (+2) Máu tối đa của Watchdog Man lên cả hàng mục tiêu, và khiến kẻ địch rơi vào [Hoảng Loạn] (phong tỏa năng lượng trong một số lượt; khi cùng hiệu ứng tồn tại, lấy giá trị cao nhất).",
+      "desc": "Gây ra 5 combo 6% (+2) HP tối đa của Người Chó Canh dưới dạng DMG cho toàn bộ hàng mục tiêu và gây [Hoảng Loạn] lên kẻ thù (phong ấn năng lượng của chúng trong một số lượt; khi hiệu ứng tương tự tồn tại, giá trị cao nhất sẽ được áp dụng).",
       "icon": "/Skill/Watchdog Man (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Watchdog Man (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước khi trận đấu bắt đầu, Watchdog Man [Cổ Vũ] phe ta (nhận thêm 2 điểm năng lượng khi bắt đầu lượt, kéo dài 2 lượt). Tăng 25% Máu tối đa cho bản thân và đồng minh cùng cột trong 3 lượt. Sau khi nhận sát thương chí mạng, hồi sinh với 20% Máu tối đa (tối đa 2 lần).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Trước khi trận chiến bắt đầu, các đồng minh Người Chó Canh [Cổ Vũ] (nhận 2 năng lượng extra khi bắt đầu mỗi lượt, kéo dài 2 lượt). Tăng HP tối đa của bản thân và đồng minh trong cột của mình thêm 25% trong 3 lượt. Sau khi tiêu diệt DMG gây chết người, hồi sinh với 20% HP tối đa (tối đa 2 lần).",
       "icon": "/Skill/Watchdog Man (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -57,7 +57,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước khi trận đấu bắt đầu, Watchdog Man [Cổ Vũ] phe ta (nhận thêm 2 điểm năng lượng khi bắt đầu lượt, kéo dài 2 lượt). Tăng 30% Máu tối đa cho bản thân và đồng minh cùng cột trong 5 lượt. Sau khi nhận sát thương chí mạng, hồi sinh với 25% Máu tối đa (tối đa 2 lần).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Trước khi trận chiến bắt đầu, các đồng minh Người Chó Canh [Cổ Vũ] (nhận 2 năng lượng extra khi bắt đầu mỗi lượt, kéo dài 2 lượt). Tăng HP tối đa của bản thân và đồng minh trong cột của mình thêm 30% trong 5 lượt. Sau khi tiêu diệt DMG gây chết người, hồi sinh với 25% HP tối đa (tối đa 2 lần).",
       "icon": "/Skill/Watchdog Man (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -66,7 +66,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước khi trận đấu bắt đầu, Watchdog Man [Cổ Vũ] phe ta (nhận thêm 2 điểm năng lượng khi bắt đầu lượt, kéo dài 3 lượt). Tăng 33% Máu tối đa cho bản thân và đồng minh cùng cột trong 10 lượt. Sau khi nhận sát thương chí mạng, hồi sinh với 50% Máu tối đa (tối đa 2 lần).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Trước khi trận chiến bắt đầu, các đồng minh Người Chó Canh [Cổ Vũ] (nhận 2 năng lượng extra khi bắt đầu mỗi lượt, kéo dài 3 lượt). Tăng HP tối đa của bản thân và đồng minh trong cột của mình thêm 33% trong 10 lượt. Sau khi tiêu diệt DMG gây chết người, hồi sinh với 50% HP tối đa (tối đa 2 lần).",
       "icon": "/Skill/Watchdog Man (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

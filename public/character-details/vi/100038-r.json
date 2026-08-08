@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung liên kích 5 đòn lên mục tiêu đơn, gây 18% ST(+2) sát thương.",
+      "desc": "Tấn công một mục tiêu bằng combo 5 đòn, gây 18% ATK(+2) DMG.",
       "icon": "/Skill/Bunbun Man (R)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung liên kích 5 đòn lên mục tiêu đơn, gây 38% ST(+2) sát thương. Có 100% xác suất tăng 10% ST cho bản thân trong 2 lượt.",
+      "desc": "Tấn công một mục tiêu bằng combo 5 đòn, gây 38% ATK(+2) DMG. Có 100% cơ hội tăng ATK của bản thân thêm 10% trong 2 lượt.",
       "icon": "/Skill/Bunbun Man (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung liên kích 5 đòn lên mục tiêu đơn, gây 38% ST(+2) sát thương. Có 100% xác suất tăng 20% ST cho bản thân trong 2 lượt.",
+      "desc": "Tấn công một mục tiêu bằng combo 5 đòn, gây 38% ATK(+2) DMG. Có 100% cơ hội tăng ATK% của bản thân trong 2 lượt.",
       "keepsakeIcon": "/Keepsake/Bunbun Man (R)/Keepsake_R.png",
       "icon": "/Skill/Bunbun Man (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước khi hành động, tăng 5% Bạo Kích cho bản thân trong 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP của bản thân lên. Trước khi hành động, tăng bản thân CRIT thêm 5% trong 1 lượt.",
       "icon": "/Skill/Bunbun Man (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước khi hành động, tăng 10% Bạo Kích cho bản thân trong 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP của bản thân lên. Trước khi hành động, tăng bản thân CRIT thêm 10% trong 1 lượt.",
       "icon": "/Skill/Bunbun Man (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước khi hành động, tăng 15% Bạo Kích cho bản thân trong 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP của bản thân lên. Trước khi hành động, tăng bản thân CRIT thêm 15% trong 1 lượt.",
       "icon": "/Skill/Bunbun Man (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

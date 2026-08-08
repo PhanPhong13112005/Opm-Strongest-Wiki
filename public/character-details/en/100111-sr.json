@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deal 100% ATK (+10) damage to a single target, with a 70% chance to inflict [Corrosion] for 1 turn (damage-immunity rate reduced by 30%).",
+      "desc": "Deal 100% ATK damage to a single target, with a 70% chance to inflict [Corrosion] for 1 turn (damage-immunity rate reduced by 30%).",
       "icon": "/Skill/Face Ripper (SR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Immediately gain a 30% lifesteal rate for 1 turn, then deal a 2-hit combo of 140% ATK (+5) damage to a single target, with a 100% chance to inflict [Corrosion] for 2 turns (damage-immunity rate reduced by 30%).",
+      "desc": "Immediately gain a 30% lifesteal rate for 1 turn, then deal a 2-hit combo of 140% ATK damage to a single target, with a 100% chance to inflict [Corrosion] for 2 turns (damage-immunity rate reduced by 30%).",
       "icon": "/Skill/Face Ripper (SR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Immediately grant self and same-column allies a 40% lifesteal rate for 1 turn, then deal a 2-hit combo of 160% ATK (+5) damage to a single target, with a 100% chance to inflict [Corrosion] for 2 turns (damage-immunity rate reduced by 30%).",
+      "desc": "Immediately grant self and same-column allies a 40% lifesteal rate for 1 turn, then deal a 2-hit combo of 160% ATK damage to a single target, with a 100% chance to inflict [Corrosion] for 2 turns (damage-immunity rate reduced by 30%).",
       "keepsakeIcon": "/Keepsake/Face Ripper (SR)/Keepsake_SR.png",
       "icon": "/Skill/Face Ripper (SR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently gain (+20) HP. While own HP is below 50%, direct damage taken is reduced by 50% and ATK is increased by 25%.",
+      "desc": "Permanently gain HP. While own HP is below 50%, direct damage taken is reduced by 50% and ATK is increased by 25%.",
       "icon": "/Skill/Face Ripper (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently gain (+20) HP. While own HP is below 60%, direct damage taken is reduced by 60% and ATK is increased by 30%.",
+      "desc": "Permanently gain HP. While own HP is below 60%, direct damage taken is reduced by 60% and ATK is increased by 30%.",
       "icon": "/Skill/Face Ripper (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently gain (+20) HP. While own HP is below 65%, direct damage taken is reduced by 65% and ATK is increased by 35%.",
+      "desc": "Permanently gain HP. While own HP is below 65%, direct damage taken is reduced by 65% and ATK is increased by 35%.",
       "icon": "/Skill/Face Ripper (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

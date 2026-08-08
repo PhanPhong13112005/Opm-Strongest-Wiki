@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung 5 đòn liên kích vào mục tiêu đơn, mỗi đòn gây 20% ST (+2) sát thương.",
+      "desc": "Gây 5 đòn combo vào một mục tiêu với tổng sát thương bằng 20% ATK (+2) DMG mỗi đòn.",
       "icon": "/Skill/Genos (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 4 đòn liên kích vào mỗi kẻ địch trong cả hàng, mỗi đòn gây 35% ST (+2) sát thương, với 100% tỉ lệ khiến mục tiêu chính bị [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 50% ST).",
+      "desc": "Gây 4 đòn combo cho mỗi kẻ địch trong toàn hàng với 35% ATK (+2) DMG mỗi kẻ, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính trong 2 lượt (DoT bằng 50% ATK).",
       "icon": "/Skill/Genos (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung 4 đòn liên kích vào mỗi kẻ địch trong cả hàng, mỗi đòn gây 35% ST (+2) sát thương, với 100% tỉ lệ khiến mục tiêu chính và 50% tỉ lệ khiến kẻ địch cùng cột với mục tiêu chính bị [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 50% ST).",
+      "desc": "Gây 4 đòn combo cho mỗi kẻ địch trong toàn hàng với 35% ATK (+2) DMG mỗi kẻ, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính và 50% cơ hội gây [Thiêu Đốt] lên kẻ địch trong cột của mục tiêu chính trong 2 lượt (DoT bằng 50% ATK).",
       "keepsakeIcon": "/Keepsake/Genos (SR)/Keepsake_SR.png",
       "icon": "/Skill/Genos (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu có kẻ địch đang bị [Thiêu Đốt], bản thân vào trạng thái [Cuồng Nộ] (gây thêm 30% sát thương khi tấn công).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Nếu có kẻ thù [Thiêu Đốt] trong số kẻ thù, bạn sẽ chuyển sang trạng thái [Giận Dữ] (gây thêm 30% DMG khi tấn công).",
       "icon": "/Skill/Genos (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu có kẻ địch đang bị [Thiêu Đốt], bản thân vào trạng thái [Cuồng Nộ] (gây thêm 40% sát thương khi tấn công).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Nếu có kẻ thù [Thiêu Đốt] trong số kẻ thù, bạn sẽ chuyển sang trạng thái [Giận Dữ] (gây thêm 40% DMG khi tấn công).",
       "icon": "/Skill/Genos (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu có kẻ địch đang bị [Thiêu Đốt], bản thân vào trạng thái [Cuồng Nộ] (gây thêm 45% sát thương khi tấn công).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Nếu có kẻ thù [Thiêu Đốt] trong số kẻ thù, bạn sẽ chuyển sang trạng thái [Giận Dữ] (gây thêm 45% DMG khi tấn công).",
       "icon": "/Skill/Genos (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

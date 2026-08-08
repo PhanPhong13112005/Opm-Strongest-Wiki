@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST(+10) sát thương lên mục tiêu đơn, và giảm 20% sát thương bản thân nhận vào trong 1 lượt.",
+      "desc": "Gây 120% sát thương AT cho một mục tiêu và giảm% sát thương mà bản thân phải gánh chịu trong 1 lượt.",
       "icon": "/Skill/Tank Top Master (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 75% ST(+5) sát thương lên mỗi kẻ địch trong cả cột, và trao cho bản thân cùng đồng minh cùng hàng [Kiên Cường] (hấp thụ sát thương bằng 20% Máu của bản thân).",
+      "desc": "Gây 75% AT sát thương cho mỗi kẻ địch trong toàn bộ cột, đồng thời cấp cho bản thân và đồng minh trong cùng một hàng [Lá Chắn] (hấp thụ sát thương bằng 20% ​​HP của chính mình).",
       "icon": "/Skill/Tank Top Master (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 94% ST(+5) sát thương lên mỗi kẻ địch trong cả cột, và trao cho bản thân cùng đồng minh cùng hàng [Kiên Cường] (hấp thụ sát thương bằng 30% Máu của bản thân).",
+      "desc": "Gây 94% AT sát thương cho mỗi kẻ địch trong toàn bộ cột, đồng thời cấp cho bản thân và đồng minh trong cùng một hàng [Lá Chắn] (hấp thụ sát thương bằng 30% HP của chính mình).",
       "keepsakeIcon": "/Keepsake/Tank Top Master (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Tank Top Master (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân(+20). Gây sát thương phụ trội bằng 8% Máu tối đa của bản thân lên kẻ địch.",
+      "desc": "Tăng vĩnh viễn H của bản thân. Gây sát thương extra bằng 8% HP tối đa của bản thân lên kẻ thù.",
       "icon": "/Skill/Tank Top Master (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân(+20). Gây sát thương phụ trội bằng 9% Máu tối đa của bản thân lên kẻ địch, và có 50% khả năng gây lượng sát thương phụ trội tương đương lên kẻ địch cùng hàng với mục tiêu chính.",
+      "desc": "Tăng vĩnh viễn H của bản thân. Gây sát thương extra bằng 9% HP tối đa của bản thân lên kẻ thù và có 50% cơ hội gây một lượng sát thương extra tương đương cho kẻ thù trong cùng hàng với mục tiêu chính.",
       "icon": "/Skill/Tank Top Master (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân(+20). Gây sát thương phụ trội bằng 9.5% Máu tối đa của bản thân lên kẻ địch, và có 50% khả năng gây lượng sát thương phụ trội tương đương lên kẻ địch cùng hàng với mục tiêu chính.",
+      "desc": "Tăng vĩnh viễn H của bản thân. Gây sát thương extra bằng 9,5% HP tối đa của bản thân lên kẻ thù và có 50% cơ hội gây một lượng sát thương extra tương đương cho kẻ thù trong cùng hàng với mục tiêu chính.",
       "icon": "/Skill/Tank Top Master (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

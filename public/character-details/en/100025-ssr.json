@@ -21,7 +21,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 150% ATK (+10) DMG to a single target, and restores HP equal to 30% of max HP.",
+      "desc": "Deals 150% ATK DMG to a single target, and restores HP equal to 30% of max HP.",
       "icon": "/Skill/Watchdog Man (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -48,7 +48,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). Before battle begins, Watchdog Man [Encourages] allies (gain 2 extra energy at the start of each turn, lasting 2 turns). Increases the max HP of himself and allies in his column by 25% for 3 turns. After taking lethal DMG, revives with 20% of max HP (up to 2 times).",
+      "desc": "Permanently increases own HP by. Before battle begins, Watchdog Man [Encourages] allies (gain 2 extra energy at the start of each turn, lasting 2 turns). Increases the max HP of himself and allies in his column by 25% for 3 turns. After taking lethal DMG, revives with 20% of max HP (up to 2 times).",
       "icon": "/Skill/Watchdog Man (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -57,7 +57,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). Before battle begins, Watchdog Man [Encourages] allies (gain 2 extra energy at the start of each turn, lasting 2 turns). Increases the max HP of himself and allies in his column by 30% for 5 turns. After taking lethal DMG, revives with 25% of max HP (up to 2 times).",
+      "desc": "Permanently increases own HP by. Before battle begins, Watchdog Man [Encourages] allies (gain 2 extra energy at the start of each turn, lasting 2 turns). Increases the max HP of himself and allies in his column by 30% for 5 turns. After taking lethal DMG, revives with 25% of max HP (up to 2 times).",
       "icon": "/Skill/Watchdog Man (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -66,7 +66,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). Before battle begins, Watchdog Man [Encourages] allies (gain 2 extra energy at the start of each turn, lasting 3 turns). Increases the max HP of himself and allies in his column by 33% for 10 turns. After taking lethal DMG, revives with 50% of max HP (up to 2 times).",
+      "desc": "Permanently increases own HP by. Before battle begins, Watchdog Man [Encourages] allies (gain 2 extra energy at the start of each turn, lasting 3 turns). Increases the max HP of himself and allies in his column by 33% for 10 turns. After taking lethal DMG, revives with 50% of max HP (up to 2 times).",
       "icon": "/Skill/Watchdog Man (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

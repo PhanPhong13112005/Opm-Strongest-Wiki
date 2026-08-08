@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 90% ST(+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 90% AT DMG cho một mục tiêu.",
       "icon": "/Skill/Wild Monkey (R)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 110% ST(+10) sát thương lên mỗi kẻ địch trong cả hàng, và có 100% xác suất giảm 10% sát thương phải chịu của bản thân trong 2 lượt.",
+      "desc": "Gây 110% AT DMG cho mỗi kẻ địch trong toàn hàng và có 100% cơ hội giảm 10% DMG phải chịu cho bản thân trong 2 lượt.",
       "icon": "/Skill/Wild Monkey (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 110% ST(+10) sát thương lên mỗi kẻ địch trong cả hàng, và có 100% xác suất giảm 20% sát thương phải chịu của bản thân trong 2 lượt.",
+      "desc": "Gây 110% AT DMG cho mỗi kẻ địch trong toàn hàng và có 100% cơ hội tự giảm DMG phải chịu% trong 2 lượt.",
       "icon": "/Skill/Wild Monkey (R)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Wild Monkey (R)/Keepsake_R.png",
       "type": "Tuyệt kĩ",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi ra trận cùng Mi Mắt, tăng 20% sát thương cho đến khi kết thúc trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của bản thân lên. Khi được triển khai cùng với Mi Mắt, sẽ tăng DMG% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Wild Monkey (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi ra trận cùng Mi Mắt, tăng 30% sát thương cho đến khi kết thúc trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của bản thân lên. Khi được triển khai cùng với Mi Mắt, DMG sẽ tăng 30% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Wild Monkey (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi ra trận cùng Mi Mắt, tăng 35% sát thương cho đến khi kết thúc trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của bản thân lên. Khi được triển khai cùng với Mi Mắt, DMG sẽ tăng 35% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Wild Monkey (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

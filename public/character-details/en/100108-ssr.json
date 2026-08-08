@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 130% ATK DMG to a single target, and reduces the target's [Heal Rate] by 30% for 2 turns.",
+      "desc": "Deals 130% ATK DMG to a single target and reduces the target's Heal Rate by 30% for 2 turns.",
       "icon": "/Skill/BomBengpu (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Strikes each enemy in the entire row with 3 combo strikes for 65% ATK DMG each, with a 100% chance to reduce the main target's [Heal Rate], and a 50% chance to reduce the [Heal Rate] of targets in the same row (Heal effect reduced by 45% for 2 turns).",
+      "desc": "Attacks all enemies in a row with 3 consecutive strikes, dealing 195% ATK DMG. Has a 100% chance to reduce the main target's Heal Rate by 45% for 2 turns, and a 50% chance to reduce the Heal Rate of other targets in the same row by 45% for 2 turns.",
       "icon": "/Skill/BomBengpu (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Strikes each enemy in the entire row with 3 combo strikes for 80% ATK DMG each, with a 100% chance to reduce the main target's [Heal Rate], and a 50% chance to reduce the [Heal Rate] of targets in the same row (Heal effect reduced by 65% for 2 turns).",
+      "desc": "Attacks all enemies in a row with 3 consecutive strikes, dealing 244% ATK DMG. Has a 100% chance to reduce the main target's Heal Rate by 65% for 2 turns, and a 50% chance to reduce the Heal Rate of other targets in the same row by 65% for 2 turns.",
       "keepsakeIcon": "/Keepsake/Bom/Bengpu (UR)/Keepsake_UR.png",
       "icon": "/Skill/BomBengpu (SSR)/Skill_ult.png",
       "type": "Ultimate",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP (+20). When battle starts, grants [Agility] to self and surrounding allies (reduces higher Direct DMG (12% - 60%) while taking fewer incoming strikes; cannot co-exist with [Non-Crit DMG Free]). The first time it takes fatal damage each battle, revives with 40% Max HP.",
+      "desc": "At battle start, grants [Agility] to self and surrounding allies. The first time this character receives fatal DMG in each battle, restores HP equal to 40% of Max HP. [Agility]: Reduces higher Direct DMG by 12%–60% depending on the number of incoming strikes. Cannot coexist with [Non-Crit DMG Reduction].",
       "icon": "/Skill/BomBengpu (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST [Sát Thương Trực Tiếp] lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Pig God (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 800% ST [Sát Thương Trực Tiếp] lên vùng mục tiêu, sau đó đánh toàn bộ kẻ địch với 150% ST [Sát Thương Băng]. Giảm [Tỷ Lệ Khiên Năng Lượng] của toàn bộ kẻ địch đi 30% và tăng cho toàn bộ đồng minh thêm 30%. Gây [Ăn Mòn] lên mục tiêu chính, gây 300% ST sát thương theo thời gian.",
+      "desc": "Gây 800% ATK dưới dạng Sát Thương Trực Tiếp cho kẻ địch trong khu vực hình chữ thập và có 100% cơ hội gây [Khóa] lên tất cả kẻ địch trong 2 lượt. Giảm 30% [Tỷ Lệ Bền Bỉ Chuyên Biệt] của tất cả kẻ thù và tăng 30% [Tỷ Lệ Bền Bỉ Chuyên Biệt] của tất cả đồng minh. Có 100% cơ hội gây [Ăn Mòn Chuyên Biệt] lên mục tiêu chính. [Khóa]: Ngăn chặn [Truy Kích], [Truy Kích Liên Tục] và [Truy Kích Liên Kích]. Trước khi bất kỳ nhân vật nào hành động, gây 150% ATK [Khóa] DoT (có thể là CRIT và không thể là [Đã Né Tránh]). [Ăn Mòn Chuyên Biệt]: Gây DMG liên tục bằng 300% ATK. Biến mất sau khi kích hoạt 10 lần. Sau khi bất kỳ nhân vật nào hành động, sẽ chuyển đến mục tiêu có thể nhận DMG. [Tỷ Lệ Bền Bỉ Chuyên Biệt]: Ảnh hưởng đến lượng DMG mà [Bền Bỉ Chuyên Biệt] có thể hấp thụ cho mỗi điểm Khiên.",
       "icon": "/Skill/Pig God (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 800% > 1100% ST [Sát Thương Trực Tiếp] lên vùng mục tiêu, sau đó đánh toàn bộ kẻ địch với 150% > 200% ST [Sát Thương Băng]. Giảm [Tỷ Lệ Khiên Năng Lượng] của toàn bộ kẻ địch đi 30% > 50% và tăng cho toàn bộ đồng minh thêm 30% > 50%. Gây [Ăn Mòn] lên mục tiêu chính, gây 300% > 400% ST sát thương theo thời gian.",
+      "desc": "Gây 1100% ATK dưới dạng Sát Thương Trực Tiếp cho kẻ địch trong khu vực hình chữ thập và có 100% cơ hội gây [Khóa] lên tất cả kẻ địch trong 2 lượt. Giảm 50% [Tỷ Lệ Bền Bỉ Chuyên Biệt] của tất cả kẻ thù và tăng 50% [Tỷ Lệ Bền Bỉ Chuyên Biệt] của tất cả đồng minh. Có 100% cơ hội gây [Ăn Mòn Chuyên Biệt] lên mục tiêu chính. [Khóa]: Ngăn chặn [Truy Kích], [Truy Kích Liên Tục] và [Truy Kích Liên Kích]. Trước khi bất kỳ nhân vật nào hành động, gây 200% ATK [Khóa] DoT (có thể là CRIT và không thể là [Đã Né Tránh]). [Ăn Mòn Chuyên Biệt]: Gây DMG liên tục bằng 300% ATK. Biến mất sau khi kích hoạt 10 lần. Sau khi bất kỳ nhân vật nào hành động, sẽ chuyển đến mục tiêu có thể nhận DMG. [Tỷ Lệ Bền Bỉ Chuyên Biệt]: Ảnh hưởng đến lượng DMG mà [Bền Bỉ Chuyên Biệt] có thể hấp thụ cho mỗi điểm Khiên.",
       "icon": "/Skill/Pig God (UR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Pig God (UR)/Keepsake_UR.png",
       "type": "Tuyệt kĩ",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20% Máu. Nhận 60% [Miễn Sát Thương Không Bạo Kích]. Giảm 60% ST [Bạo Nổ Lan Truyền] nhận vào.[Miễn Sát Thương Không Bạo Kích]: hiệu lực mọi loại ST; không tồn tại cùng [Nhanh Nhẹn].",
+      "desc": "Tăng 60% [Miễn Sát Thương Không Bạo Kích]. Giảm 60% [Sát Thương Nổ Liên Tục] mà tất cả đồng minh nhận được.",
       "icon": "/Skill/Pig God (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Miễn Sát Thương Không Bạo Kích] 60% &gt; 70%. Giảm ST [Bạo Nổ Lan Truyền] 60% &gt; 70%.",
+      "desc": "Tăng 70% [Miễn Sát Thương Không Bạo Kích]. Giảm 70% [Sát Thương Nổ Liên Tục] mà tất cả đồng minh nhận được.",
       "icon": "/Skill/Pig God (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Miễn Sát Thương Không Bạo Kích] 70% &gt; 80%. Giảm ST [Bạo Nổ Lan Truyền] 70% &gt; 80%.",
+      "desc": "Tăng 80% [Miễn Sát Thương Không Bạo Kích]. Giảm 80% [Sát Thương Nổ Liên Tục] mà tất cả đồng minh nhận được.",
       "icon": "/Skill/Pig God (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -68,7 +68,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi trận đấu bắt đầu, toàn bộ đồng minh nhận hiệu ứng [Bền Bỉ/Kiên Cường] bằng 100% Máu tối đa của bản thân. Sau khi bất kỳ nhân vật nào hành động, 4 nhân vật kẻ địch ngẫu nhiên nhận [Sát Thương Thật] bằng 100% tổng sát thương bị khóa ban đầu. ———- [Bền Bỉ/Kiên Cường]: Hấp thụ sát thương bằng 100% Máu của bản thân. [Sát Thương Chuẩn]: Không bị ảnh hưởng bởi tăng sát thương hay giảm sát thương, đây là sát thương gây trực tiếp lên Máu của mục tiêu mà không thể chia sẻ hoặc né tránh.",
+      "desc": "Khi bắt đầu trận chiến, tất cả đồng minh nhận được [Bền Bỉ Chuyên Biệt] bằng 100% HP tối đa của chính họ. Trước khi bất kỳ nhân vật nào hành động, 4 kẻ thù ngẫu nhiên nhận được [Sát Thương Chuẩn] bằng 100% tổng số [Khóa] DMG ban đầu. [Bền Bỉ Chuyên Biệt]: Hấp thụ DMG bằng 100% HP tối đa của thiết bị bị ảnh hưởng. [Sát Thương Chuẩn]: Không bị ảnh hưởng bởi Tỷ lệ DMG hoặc DMG Miễn phí và giao dịch Sát Thương Trực Tiếp không có [Chia Sẻ Sát Thương] hoặc [Khả Năng Né Tránh].",
       "icon": "/Skill/Pig God (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -77,7 +77,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Khi trận đấu bắt đầu, toàn bộ đồng minh nhận [Bền Bỉ] bằng 100% (150%) Máu tối đa của chính mình và 100% xác suất áp [Đã Khóa Mục Tiêu] bằng 100% ATK. Sau hành động của bất kỳ nhân vật nào, gây tổng [Đã Khóa Mục Tiêu] dưới dạng 100% (150%) [Sát Thương Chuẩn] lên 4 địch ngẫu nhiên (toàn đội địch ở bậc nâng).[Bền Bỉ]: hấp thụ ST bằng 100% (150%) Máu.[Sát Thương Chuẩn]: không bị ảnh hưởng bởi DMG Rate/DMG Free; gây ST trực tiếp bỏ qua [Chia Sẻ Sát Thương]/[Né Sát Thương Tức Thì].",
+      "desc": "Khi bắt đầu trận chiến, tất cả đồng minh nhận được [Bền Bỉ Chuyên Biệt] bằng 150% HP tối đa của chính họ. Trước khi bất kỳ nhân vật nào hành động, 4 kẻ thù ngẫu nhiên nhận được [Sát Thương Chuẩn] bằng 150% tổng số [Khóa] DMG ban đầu. Khi bắt đầu trận chiến, có 100% cơ hội gây [Khóa] lên tất cả kẻ địch, gây 100% ATK DMG trong 1 lượt. [Bền Bỉ Chuyên Biệt]: Hấp thụ DMG bằng 150% HP tối đa của thiết bị bị ảnh hưởng. [Sát Thương Chuẩn]: Không bị ảnh hưởng bởi Tỷ lệ DMG hoặc DMG Miễn phí và giao dịch Sát Thương Trực Tiếp không có [Chia Sẻ Sát Thương] hoặc [Khả Năng Né Tránh].",
       "icon": "/Skill/Pig God (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -86,7 +86,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Pig God (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

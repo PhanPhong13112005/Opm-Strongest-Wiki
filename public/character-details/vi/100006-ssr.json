@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST tấn công lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Puri-Puri Prisoner (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 5 đòn liên kích lên mục tiêu đơn hàng sau gây 42% ST tấn công, và khiến mục tiêu rơi vào [Suy Yếu] (giảm 40% ST tấn công trong 2 lượt).",
+      "desc": "Gây 5 đòn combo vào một mục tiêu ở hàng sau với 42% ATK DMG và gây [Làm Suy Yếu] lên mục tiêu (ATK giảm 40% trong 2 lượt).",
       "icon": "/Skill/Puri-Puri Prisoner (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung 5 đòn liên kích lên mục tiêu đơn hàng sau gây 53% ST tấn công, và khiến mục tiêu rơi vào [Suy Yếu] (giảm 50% ST tấn công trong 2 lượt).",
+      "desc": "Gây 5 đòn combo cho một mục tiêu ở hàng sau với 53% ATK DMG và gây [Làm Suy Yếu] lên mục tiêu (ATK giảm 50% trong 2 lượt).",
       "keepsakeIcon": "/Keepsake/Puri-Puri Prisoner (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Puri-Puri Prisoner (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu của bản thân. Đòn cuối cùng gây ST lan tỏa bằng 40% ST tấn công lên các địch xung quanh mục tiêu; Chí mạng tăng ST lan tỏa thêm 1 lần, cộng dồn tối đa 2 lần.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Đòn đánh cuối cùng gây sát thương lan bằng 40% ATK cho kẻ địch xung quanh mục tiêu; Đòn tấn công chí mạng tăng sát thương lan lên gấp 1 lần, cộng dồn lên tới gấp đôi.",
       "icon": "/Skill/Puri-Puri Prisoner (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu của bản thân. Đòn cuối cùng gây ST lan tỏa bằng 45% ST tấn công lên các địch xung quanh mục tiêu; Chí mạng tăng ST lan tỏa thêm 1 lần, cộng dồn tối đa 3 lần.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Đòn đánh cuối cùng gây sát thương lan bằng 45% ATK cho kẻ địch xung quanh mục tiêu; Đòn tấn công chí mạng tăng sát thương lan lên gấp 1 lần, cộng dồn lên tới 3 lần.",
       "icon": "/Skill/Puri-Puri Prisoner (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu của bản thân. Đòn cuối cùng gây ST lan tỏa bằng 48% ST tấn công lên các địch xung quanh mục tiêu; Chí mạng tăng ST lan tỏa thêm 1 lần, cộng dồn tối đa 3 lần.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Đòn đánh cuối cùng gây sát thương lan bằng 48% ATK cho kẻ địch xung quanh mục tiêu; Đòn tấn công chí mạng tăng sát thương lan lên gấp 1 lần, cộng dồn lên tới 3 lần.",
       "icon": "/Skill/Puri-Puri Prisoner (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

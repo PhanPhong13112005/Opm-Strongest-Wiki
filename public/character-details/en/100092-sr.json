@@ -42,7 +42,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own max HP by 20%. If any enemy is afflicted with [Internal Injury], self enters [Berserk] state (increases DMG dealt when attacking by 30%).",
+      "desc": "Permanently increases own max HP%. If any enemy is afflicted with [Internal Injury], self enters [Berserk] state (increases DMG dealt when attacking by 30%).",
       "icon": "/Skill/Bakuzan (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own max HP by 20%. If any enemy is afflicted with [Internal Injury], self enters [Berserk] state (increases DMG dealt when attacking by 40%).",
+      "desc": "Permanently increases own max HP%. If any enemy is afflicted with [Internal Injury], self enters [Berserk] state (increases DMG dealt when attacking by 40%).",
       "icon": "/Skill/Bakuzan (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own max HP by 20%. If any enemy is afflicted with [Internal Injury], self enters [Berserk] state (increases DMG dealt when attacking by 45%).",
+      "desc": "Permanently increases own max HP%. If any enemy is afflicted with [Internal Injury], self enters [Berserk] state (increases DMG dealt when attacking by 45%).",
       "icon": "/Skill/Bakuzan (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

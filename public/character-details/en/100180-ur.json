@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 200% ATK to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 5000% ATK of Specialized Direct DMG (only affected by high-level DMG Free) to all targets, ignores 45% [Specialized Evasion] and [Non-Crit DMG Free], and pierces through [Unyielding] and [Specialized Unyielding].Inflicts [Energy Suppression] on the 3 enemies with highest ATK, lasting 2 turns.——— [Energy Suppression]: when dealing DMG to HP/[Specialized HP], causes the target to activate 1x [Energy Conversion] (reduces DMG received and converts it into [Shield]).",
+      "desc": "Attacks all enemies with 3 consecutive strikes, dealing 300% ATK DMG. Has a 100% chance to inflict [Force Field] on all enemies for 1 turn. Before an affected enemy takes action, [Force Field] deals 400% ATK as DoT DMG and has an 80% chance to bypass immunity. Removes [Adhesion] and [Disable] from self.",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Gain 20% [Rage] and [Shield Break]. ATK 5000% → 7000%. Ignores [Specialized Evasion] 45% → 60%. Inflicts [Energy Suppression] on 3 enemies → all enemies.——— [Shield Break]: during an attack, ignore the enemy's 30% DMG Free and Specialized DEF.",
+      "desc": "Attacks all enemies with 3 consecutive strikes, dealing 450% ATK DMG. Has a 100% chance to inflict [Force Field] on all enemies for 1 turn. Before an affected enemy takes action, [Force Field] deals 600% ATK as DoT DMG and has an 80% chance to bypass immunity. Removes [Adhesion] and [Disable] from self.",
       "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (UR)/Keepsake_UR.png",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). After any ally acts, launches an [Ultimate Follow-up] on the whole enemy team for 80%, up to 2 times per round, and restores [Specialized Guard] equal to 50% of the DoT from [Detonation].",
+      "desc": "After an ally takes action, performs an [Ultimate Follow-Up] with 80% of the Ultimate’s DMG and its effects, up to 2 times per round. Absorbs 50% of [Detonation DMG] and converts it into [Specialized HP].",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Ultimate Follow-up] 80% &gt; 100%. Restore [Specialized Guard] 50% &gt; 65%.",
+      "desc": "After an ally takes action, performs an [Ultimate Follow-Up] with 100% of the Ultimate’s DMG and its effects, up to 2 times per round. Absorbs 65% of [Detonation DMG] and converts it into [Specialized HP].",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Ultimate Follow-up] 100% &gt; 120%. Restore [Specialized Guard] 65% &gt; 80%.",
+      "desc": "After an ally takes action, performs an [Ultimate Follow-Up] with 120% of the Ultimate’s DMG and its effects, up to 2 times per round. Absorbs 80% of [Detonation DMG] and converts it into [Specialized HP].",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "When battle begins, summons Hellish Blizzard to assist in battle, 100% ATK of UR TT. After UR TT acts or launching Ultimate Follow-Up, Hellish Blizzard will attack with the same style. Basic - Deals 100% ATK damage to a random target. Ultimate - Attacks all enemies with 3 consecutive strikes and deals DMG by 100% ATK and detonates [Field] (DOT by 100%) After any character acts, recover from [Stun/Specialized Stun].",
+      "desc": "At battle start, summons Fubuki to assist in battle. Fubuki inherits 100% of Tatsumaki’s base ATK. When Tatsumaki uses a Basic Attack, Fubuki also performs a Basic Attack against 1 random enemy. When Tatsumaki uses her Ultimate, Fubuki also uses her Ultimate against all enemies, dealing DMG equal to 100% of her inherited ATK and triggering [Detonation] on enemies affected by [Force Field].",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "When battle begins, summons Hellish Blizzard to assist (100% (120%) ATK of Terrible Tornado). After Terrible Tornado acts or launches an [Ultimate Follow-up], Hellish Blizzard attacks in the same style. Basic: deals 100% ATK DMG to a random target. Ultimate: attacks all enemies with 3 consecutive strikes for 100% ATK and detonates [Field] (DoT 100% (160%) ATK). After any character acts, recovers from [Stun]/[Specialized Stun].",
+      "desc": "At battle start, summons Fubuki to assist in battle. Fubuki inherits 120% of Tatsumaki’s base ATK. When Tatsumaki uses a Basic Attack, Fubuki also performs a Basic Attack against 1 random enemy. When Tatsumaki uses her Ultimate, Fubuki also uses her Ultimate against all enemies, dealing DMG equal to 120% of her inherited ATK and triggering [Detonation] on enemies affected by [Force Field] with 160% effect. After any character takes action, Tatsumaki removes [Stun] and [Specialized Stun] from herself.",
       "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

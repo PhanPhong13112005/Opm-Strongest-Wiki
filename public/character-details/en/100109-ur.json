@@ -22,7 +22,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Restores HP equal to 100% ATK to a single target ally.",
+      "desc": "Heals an allied target for HP equal to 100% ATK.",
       "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -31,7 +31,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Restores HP equal to 100% ATK to all allies. Has a 100% chance to apply [Lock] to all enemies for 2 turns. [Lock]: cannot trigger pursuits; deals 150% ATK lock DMG before any character acts (can crit, cannot be dodged).",
+      "desc": "Heals all allies for HP equal to 100% ATK and has a 100% chance to inflict [Lock] on all enemies for 2 turns. [Lock]: Prevents the affected unit from triggering [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]. Before any character acts, deals 150% ATK [Lock] DoT to the affected unit (can CRIT and cannot be [Evaded]).",
       "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -40,7 +40,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 120% ATK DMG to all enemies over 5 hits. Restores HP equal to 150% ATK to all allies. Has a 100% chance to apply [Lock] to all enemies for 2 turns. [Lock]: cannot trigger pursuits; deals 200% ATK lock DMG before any character acts (can crit, cannot be dodged).",
+      "desc": "Deals a 5-hit combo to all enemies, with each hit dealing 600% ATK DMG. Heals all allies for HP equal to 150% ATK and has a 100% chance to inflict [Lock] on all enemies for 2 turns. [Lock]: Prevents the affected unit from triggering [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]. Before any character acts, deals 200% ATK [Lock] DoT to the affected unit (can CRIT and cannot be [Evaded]).",
       "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (UR)/Keepsake_UR.png",
       "type": "Ultimate",
@@ -49,7 +49,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by 20%. On entry, gains 60% [Non-Crit DMG Reduction] and has a 100% chance to apply [Lock] dealing 150% ATK to all enemies for 1 full turn. [Non-Crit DMG Reduction]: reduces all non-critical DMG taken (only one of this or [Nimble] can be active).",
+      "desc": "At battle start, gains 60% [Non-Crit DMG Reduction] and has a 100% chance to inflict [Lock] on all enemies, dealing 150% ATK DMG and lasting 1 turn. [Non-Crit DMG Reduction]: Effective against all types of DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -58,7 +58,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Non-Crit DMG Reduction] 60% > 70%.",
+      "desc": "At battle start, gains 70% [Non-Crit DMG Reduction] and has a 100% chance to inflict [Lock] on all enemies, dealing 150% ATK DMG and lasting 1 turn. [Non-Crit DMG Reduction]: Effective against all types of DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -67,7 +67,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Non-Crit DMG Reduction] 70% > 80%.",
+      "desc": "At battle start, gains 80% [Non-Crit DMG Reduction] and has a 100% chance to inflict [Lock] on all enemies, dealing 150% ATK DMG and lasting 1 turn. [Non-Crit DMG Reduction]: Effective against all types of DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -85,7 +85,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "[Basic Effect]: Gain 3 Energy per turn. Grants allies' [Non-Crit DMG Free] and Specialized Evasion effectiveness against [True Damage]. Doubles the damage reduction effect of [Specialized HP]. During the first 5 turns, at the start of each turn, inflicts [Extreme Energy Drain] on the enemy (removes 4 Energy; can only trigger once per turn. After a successful drain, the target cannot be affected by [Fear/Specialized Fear] in the same turn, and their Total Damage Bonus is reduced by 25% for 1 turn).\n[Require]: Deploy 1 Duelist, 1 Grappler, 1 Esper.\n[Advanced Effect]: On deployment, all allies gain the [Specialized HP] effect. For every cumulative consumption of [Specialized HP] equal to 175% of Max Health, gains [Extreme Unyielding].\n———— [Specialized HP]: Grants the unit [Specialized HP] equal to 250% of its base Max Health, with a cumulative maximum of 700%. [Specialized HP] reduces all incoming damage by 30%. [Extreme Unyielding]: Become immune to all damage. Effect is removed after any 3 characters have acted.\n[Require]: Deploy 1 Duelist, 1 Grappler, 2 Esper.",
+      "desc": "[Basic Effect]: Gain 3 Energy per turn. Grants allies' [Non-Crit DMG Free] and Specialized Evasion effectiveness against [True Damage]. Doubles the damage reduction effect of [Specialized HP]. During the first 5 turns, at the start of each turn, inflicts [Extreme Energy Drain] on the enemy (removes 4 Energy; can only trigger once per turn. After a successful drain, the target cannot be affected by [Fear/Specialized Fear] in the same turn, and their Total Damage Bonus is reduced by 25% for 1 turn). [Require]: Deploy 1 Duelist, 1 Grappler, 1 Esper. [Advanced Effect]: On deployment, all allies gain the [Specialized HP] effect. For every cumulative consumption of [Specialized HP] equal to 175% of Max Health, gains [Extreme Unyielding]. ———— [Specialized HP]: Grants the unit [Specialized HP] equal to 250% of its base Max Health, with a cumulative maximum of 700%. [Specialized HP] reduces all incoming damage by 30%. [Extreme Unyielding]: Become immune to all damage. Effect is removed after any 3 characters have acted. [Require]: Deploy 1 Duelist, 1 Grappler, 2 Esper.",
       "type": "Awakening",
       "icon": "/Skill/Source/100109-ur/awakened.webp",
       "keepsakeIcon": null,
@@ -94,7 +94,7 @@
     },
     {
       "name": "Awaken 3 Passive",
-      "desc": "[Basic Effect]: Gain 4 Energy per turn. Grants allies' [Non-Crit DMG Free] and Specialized Evasion effectiveness against [True Damage]. Increases the damage reduction effect of [Specialized HP] by 2.2 times. During the first 5 turns, at the start of each turn, inflicts [Extreme Energy Drain] on the enemy (removes 5 Energy; can only trigger once per turn. After a successful drain, the target cannot be affected by [Fear/Specialized Fear] in the same turn, and their Total Damage Bonus is reduced by 25% for 1 turn).\n[Require]: Deploy 1 Duelist, 1 Grappler, 1 Esper.\n[Advanced Effect]: On deployment, all allies gain the [Specialized HP] effect. For every cumulative consumption of [Specialized HP] equal to 175% of Max Health, gains [Extreme Unyielding].\n———— [Specialized HP]: Grants the unit [Specialized HP] equal to 250% of its base Max Health, with a cumulative maximum of 700%. [Specialized HP] reduces all incoming damage by 30%. [Extreme Unyielding]: Become immune to all damage. Effect is removed after any 3 characters have acted.\n[Require]: Deploy 1 Duelist, 1 Grappler, 2 Esper.",
+      "desc": "[Basic Effect]: Gain 4 Energy per turn. Grants allies' [Non-Crit DMG Free] and Specialized Evasion effectiveness against [True Damage]. Increases the damage reduction effect of [Specialized HP] by 2.2 times. During the first 5 turns, at the start of each turn, inflicts [Extreme Energy Drain] on the enemy (removes 5 Energy; can only trigger once per turn. After a successful drain, the target cannot be affected by [Fear/Specialized Fear] in the same turn, and their Total Damage Bonus is reduced by 25% for 1 turn). [Require]: Deploy 1 Duelist, 1 Grappler, 1 Esper. [Advanced Effect]: On deployment, all allies gain the [Specialized HP] effect. For every cumulative consumption of [Specialized HP] equal to 175% of Max Health, gains [Extreme Unyielding]. ———— [Specialized HP]: Grants the unit [Specialized HP] equal to 250% of its base Max Health, with a cumulative maximum of 700%. [Specialized HP] reduces all incoming damage by 30%. [Extreme Unyielding]: Become immune to all damage. Effect is removed after any 3 characters have acted. [Require]: Deploy 1 Duelist, 1 Grappler, 2 Esper.",
       "type": "Awakening",
       "icon": "/Skill/Source/100109-ur/awakened.webp",
       "keepsakeIcon": null,

@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Attacks a single target with 3 consecutive strikes for 135% ATK.",
+      "desc": "Attacks a single target with 3 consecutive strikes, dealing 135% ATK DMG.",
       "icon": "/Skill/Metal Bat (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Increases Crit DMG by 30% for 1 turn.Deals 105% of max HP as Direct DMG to a column target with 3 consecutive strikes, plus additional Specialized Extra DMG equal to 120% of original max HP (extra Crit DMG applies).[Aura] increases Specialized Extra DMG by 20%.",
+      "desc": "Increases own CRIT DMG by 30% for 1 round. Deals Direct DMG equal to 105% of Max HP to all enemies in a column with 3 consecutive strikes and additionally deals [Specialized Extra DMG] equal to 120% of own original Max HP. Each layer of [Momentum] increases [Specialized Extra DMG]%. [Specialized Extra DMG]: Can CRIT and is unaffected by [Specialized DMG Reflect].",
       "icon": "/Skill/Metal Bat (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Crit DMG 30% → 50%Max HP DMG 105% → 135%Specialized Extra DMG 120% → 140%[Aura] increase 20% → 25%",
+      "desc": "Increases own CRIT DMG by 50% for 1 round. Deals Direct DMG equal to 135% of Max HP to all enemies in a column with 3 consecutive strikes and additionally deals [Specialized Extra DMG] equal to 140% of own original Max HP. Each layer of [Momentum] increases [Specialized Extra DMG] by 25%. [Specialized Extra DMG]: Can CRIT and is unaffected by [Specialized DMG Reflect].",
       "icon": "/Skill/Metal Bat (UR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Metal Bat (UR)/Keepsake_UR.png",
       "type": "Ultimate",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently gains 60% Non-Crit DMG Free (damage reduction includes all damage types; cannot coexist with Agility).Increases 1500 Energy before taking action.",
+      "desc": "Permanently gains 60% [Non-Crit DMG Free]. Gains 1500 Energy points before taking an action. [Non-Crit DMG Free]: Effective against all types of DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Metal Bat (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Non-Crit DMG Free 60% → 65%Energy increase 1500 → 2000",
+      "desc": "Permanently gains 65% [Non-Crit DMG Free]. Gains 2000 Energy points before taking an action. [Non-Crit DMG Free]: Effective against all types of DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Metal Bat (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Non-Crit DMG Free 65% → 70%Energy increase 2000 → 2500",
+      "desc": "Permanently gains 70% [Non-Crit DMG Free]. Gains 2500 Energy points before taking an action. [Non-Crit DMG Free]: Effective against all types of DMG and cannot coexist with [Agility].",
       "icon": "/Skill/Metal Bat (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -69,7 +69,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "At the beginning of the round, 200% of Metal Bat's Max HP and 80% of Max HP of allies in the same row is recovered, lasts up to 4 rounds. Before any character takes action, the life armor he possess will be permanently increased by [Aura] (1 layer of armor equals to 1 layer of aura, up to 4 layers, calculated based on the highest number of layers of own armor). Own Crit hit rate is permanently increased by 50% and the Crit hit rate of allies is permanently increased by 30%.",
+      "desc": "At the start of each round, restores own HP equal to 200% of Max HP for up to 4 rounds. Allies in the same row restore HP equal to 80% of Metal Bat’s Max HP for up to 4 rounds. Before any character takes action, own [HP Shield] permanently increases [Momentum]. Increases own CRIT Rate by 50% and increases all allies’ CRIT Rate by 30%. [Momentum]: Each layer of [Excess Recovery] grants 1 layer of [Momentum], up to 4 layers. The number of [Momentum] layers is calculated based on the highest number of Metal Bat’s [Excess Recovery] layers.",
       "icon": "/Skill/Metal Bat (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -78,7 +78,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Max HP Recovered 200% > 250% Max HP Recovered (allies) 80% > 120% Aura max layers 4 > 6 Crit hit rate 50% > 70% Crit hit rate (allies) 30% > 50%",
+      "desc": "At the start of each round, restores own HP equal to 250% of Max HP for up to 4 rounds. Allies in the same row restore HP equal to 120% of Metal Bat’s Max HP for up to 4 rounds. Before any character takes action, own [HP Shield] permanently increases [Momentum]. Increases own CRIT Rate by 70% and increases all allies’ CRIT Rate by 50%. [Momentum]: Each layer of [Excess Recovery] grants 1 layer of [Momentum], up to 6 layers. The number of [Momentum] layers is calculated based on the highest number of Metal Bat’s [Excess Recovery] layers.",
       "icon": "/Skill/Metal Bat (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

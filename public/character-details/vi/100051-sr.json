@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tấn công mục tiêu đơn với 3 liên kích gây 40% ST tấn công (+3).",
+      "desc": "Tấn công một mục tiêu bằng 3 đòn kết hợp gây 40% ATK DMG (+3).",
       "icon": "/Skill/Lightning Genji (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công các mục tiêu trong vùng hình chữ thập với 3 liên kích gây 50% ST tấn công (+3). Đồng thời cấp [Kiên Cường] cho bản thân và đồng minh cùng cột (hấp thụ ST bằng 30% Máu của bản thân).",
+      "desc": "Tấn công mục tiêu trong khu vực hình chữ thập bằng 3 đòn combo gây 50% ATK DMG (+3). Đồng thời cấp [Lá Chắn] cho bản thân và đồng minh trong cùng một cột (hấp thụ DMG bằng 30% HP của chính mình).",
       "icon": "/Skill/Lightning Genji (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tấn công các mục tiêu trong vùng hình chữ thập với 3 liên kích gây 55% ST tấn công (+3). Đồng thời cấp [Kiên Cường] cho bản thân và đồng minh cùng cột (hấp thụ ST bằng 35% Máu của bản thân).",
+      "desc": "Tấn công mục tiêu trong khu vực hình chữ thập bằng 3 đòn combo gây 55% ATK DMG (+3). Đồng thời cấp [Lá Chắn] cho bản thân và đồng minh trong cùng một cột (hấp thụ DMG bằng 35% HP của chính mình).",
       "keepsakeIcon": "/Keepsake/Lightning Genji (SR)/Keepsake_SR.png",
       "icon": "/Skill/Lightning Genji (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Sau hành động của bất kỳ nhân vật nào, tăng 25% ST tấn công cho các đồng minh đang ở [trạng thái loại Kiên Cường] (Kiên Cường/Bền Bỉ).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Sau bất kỳ hành động nào của nhân vật, tăng ATK của đồng minh trong [Trạng Thái Lá Chắn] (Độ bền/Khả năng phục hồi) thêm 25%.",
       "icon": "/Skill/Lightning Genji (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Sau hành động của bất kỳ nhân vật nào, tăng 35% ST tấn công cho các đồng minh đang ở [trạng thái loại Kiên Cường] (Kiên Cường/Bền Bỉ).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Sau bất kỳ hành động nào của nhân vật, tăng ATK của đồng minh trong [Trạng Thái Lá Chắn] (Độ bền/Khả năng phục hồi) thêm 35%.",
       "icon": "/Skill/Lightning Genji (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Sau hành động của bất kỳ nhân vật nào, tăng 40% ST tấn công cho các đồng minh đang ở [trạng thái loại Kiên Cường] (Kiên Cường/Bền Bỉ).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Sau bất kỳ hành động nào của nhân vật, tăng ATK của đồng minh trong [Trạng Thái Lá Chắn] (Độ bền/Khả năng phục hồi) thêm 40%.",
       "icon": "/Skill/Lightning Genji (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

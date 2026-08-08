@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals a 3-hit combo to a single target for 120% ATK Direct DMG.",
+      "desc": "Deals 120% ATK DMG to a single target in a 3-hit combo.",
       "icon": "/Skill/Bang & Bomb (URplus)/Skill_base.png",
       "animation": "/Animation/Bang_URplus/Base.gif",
       "type": "Basic",
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals Specialized Direct DMG equal to 500% of the target's HP to all enemies (affected only by advanced DMG modifiers), ignoring 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and penetrating [Unyielding] and [Specialized Unyielding]. Each cast of the Ultimate increases this unit's Ultimate DMG by an additional 15% (max 2 stacks). After the first Ultimate cast, if an enemy on the field breaks out of the [Ultimate Unyielding] state, Silverfang & Bomb unleash a 5-hit [Void Fist] combo on that target for Specialized Direct DMG equal to 600% of the target's HP (once per turn).",
+      "desc": "Deals 500% Max HP [Specialized Direct DMG] to all enemies (only affected by advanced DMG modifiers). Ignores 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and pierces [Unyielding] and [Specialized Unyielding]. Each time the Ultimate is used, increases its DMG by an additional 15%, up to 2 stacks. After the first Ultimate cast, whenever an enemy leaves the [Extreme Tenacity] state, Bomb & Bang unleash [Roaring Aura Sky Ripping Fist], performing a 5-hit combo that deals 600% Max HP [Specialized Direct DMG]. Can trigger up to 1 time per turn.",
       "icon": "/Skill/Bang & Bomb (URplus)/skill_ult.png",
       "type": "Ultimate",
       "animation": "/Animation/Bang_URplus/ult.gif",
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Additionally grants all allies +35% [Arena DMG Increase] and reduces all enemies' [Arena DMG Reduction] by 35% (cannot be dispelled). Specialized Direct DMG 500% > 700%; ignores [Specialized Evasion] and [Non-Crit DMG Reduction] 45% > 60%; each cast increases Ultimate DMG 15% > 20%; [Void Fist] combo DMG 600% > 800%.",
+      "desc": "Deals 700% Max HP [Specialized Direct DMG] to all enemies (only affected by advanced DMG modifiers). Ignores 60% [Specialized Evasion] and [Non-Crit DMG Reduction], and pierces [Unyielding] and [Specialized Unyielding]. Each time the Ultimate is used, increases its DMG by an additional 20%, up to 2 stacks. After the first Ultimate cast, whenever an enemy leaves the [Extreme Tenacity] state, Bomb & Bang unleash [Roaring Aura Sky Ripping Fist], performing a 5-hit combo that deals 800% Max HP [Specialized Direct DMG]. Can trigger up to 3 times per turn.",
       "keepsakeIcon": "/Keepsake/Bang & Bomb (URplus)/Keepsake_URplus.png",
       "icon": "/Skill/Bang & Bomb (URplus)/skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently gains +20 Max HP. At the start of battle, gains 60% [Non-Crit DMG Reduction]. Permanently removes enemy [Energy Conversion], grants all allies immunity to [Energy Pressure], and prevents all enemies from recovering [Specialized HP].",
+      "desc": "At battle start, gains 60% [Non-Crit DMG Reduction]. At battle start, permanently removes enemies’ [Energy Conversion], makes all allies immune to [Energy Pressure], and prevents all enemies from restoring [Specialized HP].",
       "icon": "/Skill/Bang & Bomb (URplus)/Skill_pas.png",
       "animation": "/Animation/Bang_URplus/Passive.gif",
       "type": "Passive",
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Non-Crit DMG Reduction] on entry 60% > 70%.",
+      "desc": "At battle start, gains 70% [Non-Crit DMG Reduction]. At battle start, permanently removes enemies’ [Energy Conversion], makes all allies immune to [Energy Pressure], and prevents all enemies from restoring [Specialized HP].",
       "icon": "/Skill/Bang & Bomb (URplus)/Skill_pas.png",
       "animation": "/Animation/Bang_URplus/Passive.gif",
       "type": "Passive",
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Non-Crit DMG Reduction] on entry 70% > 80%.",
+      "desc": "At battle start, gains 80% [Non-Crit DMG Reduction]. At battle start, permanently removes enemies’ [Energy Conversion], makes all allies immune to [Energy Pressure], and prevents all enemies from restoring [Specialized HP].",
       "icon": "/Skill/Bang & Bomb (URplus)/Skill_pas.png",
       "animation": "/Animation/Bang_URplus/Passive.gif",
       "type": "Passive",
@@ -73,7 +73,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Permanently increases own Max HP by 60%. At the start of the battle, grants self [Increased DMG from Resistance] and [Reduced DMG from Resistance]. When allies HP/[Specialized HP] take DMG, this DMG is reduced by 99%, and 99% of the original damage is converted into [Energy Resilience] (the total amount of [Energy Resilience] gained in this way is at most 28 times the original Max HP of Silverfang & Bomb. This effect and [Resurrection] can only be active at one time. Once [Energy Resilience] reaches its Max, the DMG Reduction effect will no longer be effective).\n[Increased DMG from Resistance]: Increases damage dealt by 30% and increases further to 1.5 times when the original health is higher than the attacker's. [Reduced DMG from Resistance]: Reduces damage taken by 30%, and increases futher to 1.5 times when the original health is higher than the attacker's.",
+      "desc": "Permanently increases own base Max HP by 60%. At battle start, gains [Defiance Boost] and [Defiance Guard]. When allies’ HP or [Specialized HP] take DMG, that instance of DMG is reduced by 99%, and 99% of the original DMG is converted into [Energy Shield]. The total [Energy Shield] gained this way is capped at 28 times Bomb & Bang’s base Max HP. This effect cannot coexist with [Revive] (only one can be active at a time). Once the [Energy Shield] cap is reached, the DMG reduction effect no longer applies. [Defiance Boost]: Increases DMG dealt by 30%. If Bomb & Bang’s base Max HP is higher than the attacker’s, the DMG dealt is increased to 1.5×. [Defiance Guard]: Reduces DMG taken by 30%. If Bomb & Bang’s base Max HP is higher than the attacker’s, the DMG reduction is increased to 1.5×.",
       "icon": "/Skill/Bang & Bomb (URplus)/skill_awk.png",
       "animation": "/Animation/Bang_URplus/awken.gif",
       "type": "Awakening",
@@ -82,7 +82,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Increase own max HP 60% > 80% Converts 10% of the [Energy Resilience] gained by allies into [Specialized HP] (self-conversion rate increased by an additional 50%) [Increased DMG from Resistance]+[Reduced DMG from Resistance]: 30% > 50%, Increases further 1.5 > 1.7",
+      "desc": "Permanently increases own base Max HP by 80%. At battle start, gains [Defiance Boost] and [Defiance Guard]. When allies’ HP or [Specialized HP] take DMG, that instance of DMG is reduced by 99%, and 99% of the original DMG is converted into [Energy Shield]. The total [Energy Shield] gained this way is capped at 35 times Bomb & Bang’s base Max HP. This effect cannot coexist with [Revive] (only one can be active at a time). Once the [Energy Shield] cap is reached, the DMG reduction effect no longer applies. Converts the [Energy Shield] gained by allies into 10% of [Specialized HP] with an additional 50% increase in conversion rate, and nullifies the enemy’s [Specialized HP DMG Reduction] effect. [Defiance Boost]: Increases DMG dealt by 50%. If Bomb & Bang’s base Max HP is higher than the attacker’s, the DMG dealt is increased to 1.7×. [Defiance Guard]: Reduces DMG taken by 50%. If Bomb & Bang’s base Max HP is higher than the attacker’s, the DMG reduction is increased to 1.7×.",
       "icon": "/Skill/Bang & Bomb (URplus)/skill_awk.png",
       "animation": "/Animation/Bang_URplus/awken.gif",
       "type": "Awakening",

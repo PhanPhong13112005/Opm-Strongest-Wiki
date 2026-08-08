@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Attacks a single target with 2 combo strikes for 80% ATK DMG (+5). Has a 100% chance to inflict [Internal Injury] on the target (when attacked, takes Internal Injury DMG equal to 155% of Gale Wind's ATK; the effect disappears once triggered).",
+      "desc": "Attacks a single target with 2 consecutive strikes, dealing 80% ATK DMG. Has a 100% chance to inflict [Internal Injury] on the target. [Internal Injury]: When the affected unit is attacked, takes DMG equal to 155% of Gale Wind's ATK. The effect disappears after triggering once.",
       "icon": "/Skill/Gale Wind (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Attacks targets in a cross-shaped area with 4 combo strikes for 50% ATK DMG (+bonus). In the first 2 turns, has a 100% chance to inflict [Stun] on 2 random targets for 1 turn (cannot take actions; only 4 characters on each team can be stunned at the same time; has a 50% chance to pierce immunity). Also increases your [Energy Gauge] by -900.",
+      "desc": "Attacks enemies in a cross-shaped area with 4 consecutive strikes, dealing 50% ATK DMG plus bonus DMG. During the first 2 turns, has a 100% chance to inflict [Stun] on 2 random targets for 1 turn. [Stun]: Prevents the affected unit from acting. At most 4 characters on each team can be affected by [Stun] simultaneously. Has a 50% chance to ignore Stun immunity. Reduces the [Energy Gauge] by 900 points.",
       "icon": "/Skill/Gale Wind (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Attacks targets in a cross-shaped area with 4 combo strikes for 65% ATK DMG (+bonus). In the first 2 turns, has a 100% chance to inflict [Stun] on 3 random targets for 1 turn (cannot take actions; only 4 characters on each team can be stunned at the same time; has a 50% chance to pierce immunity). Also increases your [Energy Gauge] by -950.",
+      "desc": "Attacks enemies in a cross-shaped area with 4 consecutive strikes, dealing 65% ATK DMG plus bonus DMG. During the first 2 turns, has a 100% chance to inflict [Stun] on 3 random targets for 1 turn. [Stun]: Prevents the affected unit from acting. At most 4 characters on each team can be affected by [Stun] simultaneously. Has a 50% chance to ignore Stun immunity. Reduces the [Energy Gauge] by 950 points.",
       "keepsakeIcon": "/Keepsake/Gale Wind (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Gale Wind (SSR)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP (+20). Grants self 40% Non-CRIT DMG reduction (reduces all types of DMG; this effect and [Agility] can only have one active). After any character's action, launches a [Follow-up] attack on the enemy with the highest ATK (attacks with 80% of Basic Attack's DMG and effects, 3 times per turn).",
+      "desc": "Permanently increases own HP. Permanently gains 40% [Non-Crit DMG Reduction], which reduces all types of non-critical DMG and cannot coexist with [Agility]. After any character acts, launches a [Follow-Up] against the enemy with the highest ATK. [Follow-Up]: Deals 80% of the Basic Attack's DMG and retains its effects. Can trigger up to 3 times per turn.",
       "icon": "/Skill/Gale Wind (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP (+20). Grants self 50% Non-CRIT DMG reduction (reduces all types of DMG; this effect and [Agility] can only have one active). After any character's action, launches a [Follow-up] attack on the enemy with the highest ATK (attacks with 100% of Basic Attack's DMG and effects, 4 times per turn).",
+      "desc": "Permanently increases own HP. Permanently gains 50% [Non-Crit DMG Reduction], which reduces all types of non-critical DMG and cannot coexist with [Agility]. After any character acts, launches a [Follow-Up] against the enemy with the highest ATK. [Follow-Up]: Deals 100% of the Basic Attack's DMG and retains its effects. Can trigger up to 4 times per turn.",
       "icon": "/Skill/Gale Wind (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP (+20). Grants self 50% Non-CRIT DMG reduction (reduces all types of DMG; this effect and [Agility] can only have one active). After any character's action, launches a [Follow-up] attack on the enemy with the highest ATK (attacks with 120% of Basic Attack's DMG and effects, 4 times per turn).",
+      "desc": "Permanently increases own HP. Permanently gains 50% [Non-Crit DMG Reduction], which reduces all types of non-critical DMG and cannot coexist with [Agility]. After any character acts, launches a [Follow-Up] against the enemy with the highest ATK. [Follow-Up]: Deals 120% of the Basic Attack's DMG and retains its effects. Can trigger up to 4 times per turn.",
       "icon": "/Skill/Gale Wind (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 130% ST tấn công lên mục tiêu đơn, và giảm 30% [Tỉ lệ Hồi máu] của mục tiêu trong 2 lượt.",
+      "desc": "Gây 130% ATK DMG cho một mục tiêu và giảm 30% Tỷ Lệ Hồi Phục của mục tiêu trong 2 lượt.",
       "icon": "/Skill/BomBengpu (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Đánh mỗi kẻ địch trong cả hàng với 3 đòn liên kích gây 65% ST tấn công mỗi đòn, có 100% tỉ lệ giảm [Tỉ lệ Hồi máu] của mục tiêu chính, và 50% tỉ lệ giảm [Tỉ lệ Hồi máu] của các mục tiêu cùng hàng (hiệu quả Hồi máu giảm 45% trong 2 lượt).",
+      "desc": "Tấn công tất cả kẻ địch liên tiếp bằng 3 đòn liên tiếp, gây 195% ATK DMG. Có 100% cơ hội giảm 45% Tỷ Lệ Hồi Phục của mục tiêu chính trong 2 lượt và 50% cơ hội giảm 45% Tỷ Lệ Hồi Phục của các mục tiêu khác trong cùng hàng trong 2 lượt.",
       "icon": "/Skill/BomBengpu (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Đánh mỗi kẻ địch trong cả hàng với 3 đòn liên kích gây 80% ST tấn công mỗi đòn, có 100% tỉ lệ giảm [Tỉ lệ Hồi máu] của mục tiêu chính, và 50% tỉ lệ giảm [Tỉ lệ Hồi máu] của các mục tiêu cùng hàng (hiệu quả Hồi máu giảm 65% trong 2 lượt).",
+      "desc": "Tấn công toàn bộ kẻ địch liên tiếp bằng 3 đòn liên tiếp, gây 244% ATK DMG. Có 100% cơ hội giảm 65% Tỷ Lệ Hồi Phục của mục tiêu chính trong 2 lượt và 50% cơ hội giảm 65% Tỷ Lệ Hồi Phục của các mục tiêu khác trong cùng hàng trong 2 lượt.",
       "keepsakeIcon": "/Keepsake/Bom/Bengpu (UR)/Keepsake_UR.png",
       "icon": "/Skill/BomBengpu (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Khi vào trận, trao [Nhanh Nhẹn] cho bản thân và đồng minh xung quanh (càng hứng ít đòn thì né được càng nhiều ST trực tiếp, 12% - 60%; không thể tồn tại cùng Giảm ST Không Chí Mạng). Lần đầu chịu sát thương chí mạng mỗi trận, hồi sinh với 40% Máu Tối Đa.",
+      "desc": "Khi bắt đầu trận chiến, cấp [Nhanh Nhẹn] cho bản thân và các đồng minh xung quanh. Lần đầu tiên nhân vật này nhận được sát thương kết liễu trong mỗi trận chiến, phục hồi HP bằng 40% HP tối đa. [Nhanh Nhẹn]: Giảm Sát Thương Trực Tiếp cao hơn từ 12%–60% tùy thuộc vào số lần tấn công sắp tới. Không thể cùng tồn tại với [Giảm Sát Thương Không Bạo Kích].",
       "icon": "/Skill/BomBengpu (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi bắt đầu trận đấu, vĩnh viễn cấp [Nhanh Nhẹn] cho toàn bộ đồng minh (càng hứng ít đòn đánh từ địch thì né được càng nhiều ST trực tiếp, tối đa 60% và tối thiểu 12%; hiệu ứng này và Giảm ST Không Chí Mạng chỉ một cái có hiệu lực). Lần đầu nhận ST chí mạng trong mỗi trận, hồi sinh với 45% Máu tối đa.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi bắt đầu trận chiến, cấp vĩnh viễn [Nhanh Nhẹn] cho tất cả đồng minh (càng ít đòn tấn công của kẻ thù, Sát Thương Trực Tiếp càng bị né tránh nhiều hơn, lên tới 60% và không dưới 12%; hiệu ứng này và Giảm Sát Thương Không Bạo Kích chỉ có thể có một lần kích hoạt). Tiêu diệt sát thương kết liễu lần đầu tiên trong mỗi trận chiến, hồi sinh với 45% HP tối đa.",
       "icon": "/Skill/BomBengpu (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi bắt đầu trận đấu, vĩnh viễn cấp [Nhanh Nhẹn] cho toàn bộ đồng minh (càng hứng ít đòn đánh từ địch thì né được càng nhiều ST trực tiếp, tối đa 65% và tối thiểu 16%; hiệu ứng này và Giảm ST Không Chí Mạng chỉ một cái có hiệu lực). Lần đầu nhận ST chí mạng trong mỗi trận, hồi sinh với 50% Máu tối đa.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi bắt đầu trận chiến, cấp vĩnh viễn [Nhanh Nhẹn] cho tất cả đồng minh (càng nhận ít đòn đánh từ đòn tấn công của kẻ thù, Sát Thương Trực Tiếp càng bị né tránh, lên tới 65% và không dưới 16%; hiệu ứng này và Giảm Sát Thương Không Bạo Kích chỉ có thể có một lần kích hoạt). Tiêu diệt sát thương kết liễu lần đầu tiên trong mỗi trận chiến, hồi sinh với 50% HP tối đa.",
       "icon": "/Skill/BomBengpu (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

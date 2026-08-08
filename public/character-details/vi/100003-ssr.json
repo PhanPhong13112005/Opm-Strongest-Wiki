@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST (+10) sát thương lên mục tiêu đơn, với 100% tỉ lệ khiến mục tiêu chính bị [Ăn Mòn] trong 2 lượt (sát thương theo thời gian bằng 8% ST).",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu, với 100% cơ hội gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (DoT bằng 8% ATK).",
       "icon": "/Skill/Deep Sea King (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 3 đòn liên kích vào mục tiêu đơn, mỗi đòn gây 70% ST (+3) sát thương, kèm theo sát thương phụ trội bằng 50% lượng Máu đã mất của bản thân.",
+      "desc": "Gây 3 đòn kết hợp vào một mục tiêu với 70% ATK (+3) DMG mỗi mục tiêu, cộng với extra DMG bằng 50% số HP mà bạn đã mất.",
       "icon": "/Skill/Deep Sea King (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung 3 đòn liên kích vào mục tiêu đơn, mỗi đòn gây 88% ST (+3) sát thương, kèm theo sát thương phụ trội bằng 75% lượng Máu đã mất của bản thân.",
+      "desc": "Gây 3 đòn kết hợp vào một mục tiêu với tổng sát thương bằng 88% ATK (+3) DMG mỗi mục tiêu, cộng với extra DMG bằng 75% số HP mà bạn đã mất.",
       "icon": "/Skill/Deep Sea King (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Deep Sea King (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi Máu của bản thân dưới 50%, liên tục ban cho bản thân [Kiên Cường] (hấp thụ lượng sát thương bằng 10% Máu tối đa của bản thân), tối đa 3 lần mỗi lượt.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi HP của bản thân dưới 50%, hãy liên tục cấp cho mình [Lá Chắn] (hấp thụ DMG bằng 10% HP tối đa của bản thân), tối đa 3 lần mỗi lượt.",
       "icon": "/Skill/Deep Sea King (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi Máu của bản thân dưới 50%, liên tục ban cho bản thân [Kiên Cường] (hấp thụ lượng sát thương bằng 15% Máu tối đa của bản thân), tối đa 3 lần mỗi lượt.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi HP của bản thân dưới 50%, hãy liên tục cấp cho mình [Lá Chắn] (hấp thụ DMG bằng 15% HP tối đa của bản thân), tối đa 3 lần mỗi lượt.",
       "icon": "/Skill/Deep Sea King (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi Máu của bản thân dưới 50%, liên tục ban cho bản thân [Kiên Cường] (hấp thụ lượng sát thương bằng 18% Máu tối đa của bản thân), tối đa 3 lần mỗi lượt.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi HP của bản thân dưới 50%, hãy liên tục cấp cho mình [Lá Chắn] (hấp thụ DMG bằng 18% HP tối đa của bản thân), tối đa 3 lần mỗi lượt.",
       "icon": "/Skill/Deep Sea King (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

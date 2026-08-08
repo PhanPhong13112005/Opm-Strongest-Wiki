@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK to a single target. After casting the first Ultimate, can reduce [No Crit No Death].",
+      "desc": "Deals 150% ATK DMG to a single target and restores own HP equal to 150% of own ATK.",
       "icon": "/Skill/Boros (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Reduces the target's [No Crit No Death] by 1 turn.Deals 7000% ATK of Direct DMG to a single target (only affected by high-level DMG Free), negates 45% [Specialized Evade] and [Non-Crit DMG Free], and pierces [Unyielding] and [Specialized Unyielding].",
+      "desc": "Performs a 5-hit attack, dealing a total of 600% ATK DMG to all enemies. If the target has [Unyielding], [Specialized Unyielding], or [Specialized HP], Boros enters the [Enrage] state, increasing ATK by 50% for his next active action.",
       "icon": "/Skill/Boros (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Increase Crit Rate by 50%Ultimate ATK DMG 7000% → 10,000%",
+      "desc": "Before casting the Ultimate, Boros gains 30% Drain Rate for 1 round. Performs a 5-hit attack, dealing a total of 800% ATK DMG to all enemies. If the target has [Unyielding], [Specialized Unyielding], or [Specialized HP], Boros enters the [Enrage] state, increasing ATK by 100% for his next active action.",
       "keepsakeIcon": "/Keepsake/Boros (UR)/Keepsake_UR.png",
       "icon": "/Skill/Boros (UR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). After taking an action, self and surrounding allies trigger [Evolve] on the target. Before each round, restores HP to all allies equal to 300% of Max HP, lasting 2 rounds. Permanently gains +50% [Non-Crit DMG Free].[Evolve]: immediately cancels the target's [Unyielding] and [Ignore DMG] statuses.[Non-Crit DMG Free]: effective against all DMG types; cannot co-exist with [Agility].",
+      "desc": "After Boros or an adjacent ally takes action, they can trigger [Breakthrough]. [Breakthrough] immediately removes [Specialized Unyielding] from all targets on the battlefield. This effect lasts for 2 rounds. Before each round, restores all allies’ HP equal to 300% of each ally’s Max HP for 2 rounds. Boros permanently gains 50% [Non-Crit DMG Reduction].",
       "icon": "/Skill/Boros (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). After all allies take an action, trigger [Evolve] on the target. Before each round, restores HP to all allies equal to 350% of Max HP, lasting 2 rounds. Permanently gains +55% [Non-Crit DMG Free].",
+      "desc": "After any ally takes action, they can trigger [Breakthrough]. [Breakthrough] immediately removes [Specialized Unyielding] from all targets on the battlefield. This effect lasts for 2 rounds. Before each round, restores all allies’ HP equal to 350% of each ally’s Max HP for 2 rounds. Boros permanently gains 55% [Non-Crit DMG Reduction].",
       "icon": "/Skill/Boros (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). After all allies take an action, trigger [Evolve] on the target. Before each round, restores HP to all allies equal to 350% of Max HP, lasting 3 rounds. Permanently gains +60% [Non-Crit DMG Free].",
+      "desc": "After any ally takes action, they can trigger [Breakthrough]. [Breakthrough] immediately removes [Specialized Unyielding] from all targets on the battlefield. This effect lasts for 2 rounds. Before each round, restores all allies’ HP equal to 350% of each ally’s Max HP for 3 rounds. Boros permanently gains 60% [Non-Crit DMG Reduction].",
       "icon": "/Skill/Boros (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "(Basic Core Effect) (1 Grappler, 2 Esper): Grants 3 energy per round. In the first 3 rounds, allies gain 30% Combat DMG increase.(Advance Core Effect) (1 Grappler, 1 Duelist, 2 Esper): When battle begins, grants allies permanent [Excess Recovery] (excess HP healing is converted to [HP Shield] to offset DMG received, cannot exceed 20x Max HP). All allies gain 30% Combat immunity. When battle begins, front-row allies are healed by 80% of their Max HP, lasting 3 rounds.",
+      "desc": "Basic Core: Grants 3 Energy every round. During the first 3 rounds, all allies gain 30% [Arena DMG]. Requirement: Deploy 1 Grappler and 2 Espers. Advanced Core: All allied characters permanently gain [Excess Recovery] upon entering battle. All allies gain 30% [Arena DMG Free]. At the beginning of each round, front-row allies restore HP equal to 80% of their Max HP. This effect lasts for 3 rounds. [Excess Recovery]: Excess Healing and Drain are converted into an equal amount of [HP Shield] that absorbs incoming DMG. The total amount of DMG absorbed cannot exceed 20× the unit’s original HP. Requirement: Deploy 1 Duelist, 1 Grappler, and 2 Espers.",
       "icon": "/Skill/Source/100184-ur/awakened.webp",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "(Basic & Advanced Core): Combat DMG increase 30% > 50%. When allies perform a follow-up, gain another 1 energy (1x per round).",
+      "desc": "Grants 3 Energy every round. During the first 3 rounds, all allies gain 50% [Arena DMG]. When an ally triggers [Pursuit], gains 1 additional Energy. Can trigger once per round.",
       "icon": "/Skill/Source/100184-ur/awakened.webp",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Awaken 3 Passive",
-      "desc": "(Basic & Advanced Core): Combat DMG increase 30% > 50%. When allies perform a follow-up, gain another 1 energy (2x per round).",
+      "desc": "Grants 3 Energy every round. During the first 3 rounds, all allies gain 50% [Arena DMG]. When an ally triggers [Pursuit], gains 2 additional Energy. Can trigger once per round.",
       "icon": "/Skill/Source/100184-ur/awakened.webp",
       "type": "Awakening",
       "keepsakeIcon": null,
