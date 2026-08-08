@@ -32,7 +32,10 @@ const currentImage = computed(() => {
   return gear.changeLevel && previewLevel.value >= gear.changeLevel ? gear.seniorIcon : gear.icon
 })
 const firstLevel = computed(() => selectedGear.value?.levels[0])
-const lastLevel = computed(() => selectedGear.value?.levels.at(-1))
+const lastLevel = computed(() => {
+  const levels = selectedGear.value?.levels
+  return levels?.length ? levels[levels.length - 1] : undefined
+})
 const summaryLevels = computed(() => firstLevel.value === lastLevel.value ? [firstLevel.value] : [firstLevel.value, lastLevel.value])
 const handleSpineFail = () => {
   if (!selectedCharacter.value) return
