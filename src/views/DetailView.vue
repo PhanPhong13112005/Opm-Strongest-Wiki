@@ -21,6 +21,7 @@ const { t, locale } = useI18n()
 const localCharacter = ref(null)
 const apiCharacter = ref(null)
 const character = computed(() => apiCharacter.value || localCharacter.value)
+const activeRecommendationTab = ref('insignia')
 const coreLabData = ref(null)
 let activeDetailRequest = 0
 
@@ -841,18 +842,46 @@ onBeforeUnmount(() => {
   
     <!-- CHARACTER BUILD RECOMMENDATIONS -->
     <section v-if="skillsMediaReady" class="deferred-detail-section mb-16" aria-labelledby="build-recommendations-title">
-      <div class="flex items-center mb-6">
-        <span id="build-recommendations-title" class="text-[#ffb300] font-bold text-xs tracking-widest uppercase">{{ t('detail.recommendationsLabel') }}</span>
-        <div class="flex-grow h-px bg-gray-800 ml-4"></div>
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+        <div class="flex items-center flex-1">
+          <span id="build-recommendations-title" class="text-[#ffb300] font-bold text-xs tracking-widest uppercase">{{ t('detail.recommendationsLabel') }}</span>
+          <div class="flex-grow h-px bg-gray-800 ml-4"></div>
+        </div>
+
+        <!-- TABS HEADER -->
+        <div class="flex gap-2">
+          <button
+            @click="activeRecommendationTab = 'insignia'"
+            class="px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 border"
+            :class="activeRecommendationTab === 'insignia' 
+              ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/50 shadow-[0_0_12px_rgba(6,182,212,0.25)]' 
+              : 'bg-[#12131a] text-gray-400 border-gray-800 hover:text-white hover:border-gray-700'"
+          >
+            ◆ {{ t('detail.requiredInsignia') }}
+          </button>
+          <button
+            @click="activeRecommendationTab = 'gear'"
+            class="px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 border"
+            :class="activeRecommendationTab === 'gear' 
+              ? 'bg-amber-500/20 text-amber-300 border-amber-500/50 shadow-[0_0_12px_rgba(245,158,11,0.25)]' 
+              : 'bg-[#12131a] text-gray-400 border-gray-800 hover:text-white hover:border-gray-700'"
+          >
+            ▦ {{ t('detail.recommendedGear') }}
+          </button>
+        </div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <article class="group relative overflow-hidden rounded-2xl border border-gray-800 bg-[#0d0e14] p-6 transition-colors hover:border-cyan-500/40">
+
+      <!-- TAB CONTENT -->
+      <transition name="fade" mode="out-in">
+        <article v-if="activeRecommendationTab === 'insignia'" key="insignia" class="group relative overflow-hidden rounded-2xl border border-gray-800 bg-[#0d0e14] p-6 transition-colors hover:border-cyan-500/40">
           <div class="absolute right-0 top-0 h-28 w-28 rounded-full bg-cyan-400/5 blur-2xl" aria-hidden="true"></div>
           <div class="relative flex items-start gap-4">
             <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-500/10 text-xl text-cyan-300" aria-hidden="true">◆</span>
-            <div class="min-w-0">
-              <h3 class="text-lg font-black text-white">{{ t('detail.requiredInsignia') }}</h3>
-              <span class="mt-2 inline-flex rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-amber-300">{{ t('detail.recommendationPending') }}</span>
+            <div class="min-w-0 flex-1">
+              <div class="flex items-center justify-between gap-4">
+                <h3 class="text-lg font-black text-white">{{ t('detail.requiredInsignia') }}</h3>
+                <span class="inline-flex rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-amber-300">{{ t('detail.recommendationPending') }}</span>
+              </div>
               <p class="mt-3 text-sm leading-relaxed text-gray-400">{{ t('detail.recommendationEmpty') }}</p>
               <RouterLink to="/insignias" class="mt-5 inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-cyan-300 transition-colors hover:text-white">
                 {{ t('detail.browseInsignias') }} <span aria-hidden="true">→</span>
@@ -860,13 +889,16 @@ onBeforeUnmount(() => {
             </div>
           </div>
         </article>
-        <article class="group relative overflow-hidden rounded-2xl border border-gray-800 bg-[#0d0e14] p-6 transition-colors hover:border-amber-500/40">
+
+        <article v-else-if="activeRecommendationTab === 'gear'" key="gear" class="group relative overflow-hidden rounded-2xl border border-gray-800 bg-[#0d0e14] p-6 transition-colors hover:border-amber-500/40">
           <div class="absolute right-0 top-0 h-28 w-28 rounded-full bg-amber-400/5 blur-2xl" aria-hidden="true"></div>
           <div class="relative flex items-start gap-4">
             <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-amber-500/30 bg-amber-500/10 text-xl text-amber-300" aria-hidden="true">▦</span>
-            <div class="min-w-0">
-              <h3 class="text-lg font-black text-white">{{ t('detail.recommendedGear') }}</h3>
-              <span class="mt-2 inline-flex rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-amber-300">{{ t('detail.recommendationPending') }}</span>
+            <div class="min-w-0 flex-1">
+              <div class="flex items-center justify-between gap-4">
+                <h3 class="text-lg font-black text-white">{{ t('detail.recommendedGear') }}</h3>
+                <span class="inline-flex rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-amber-300">{{ t('detail.recommendationPending') }}</span>
+              </div>
               <p class="mt-3 text-sm leading-relaxed text-gray-400">{{ t('detail.recommendationEmpty') }}</p>
               <RouterLink to="/equipment" class="mt-5 inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-amber-300 transition-colors hover:text-white">
                 {{ t('detail.browseGear') }} <span aria-hidden="true">→</span>
@@ -874,7 +906,7 @@ onBeforeUnmount(() => {
             </div>
           </div>
         </article>
-      </div>
+      </transition>
     </section>
     <!-- EFFECT GLOSSARY -->
     <div class="deferred-detail-section mb-16" v-if="skillsMediaReady && chuThichHieuUng && chuThichHieuUng.length > 0">
