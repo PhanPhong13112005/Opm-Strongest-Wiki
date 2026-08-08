@@ -5,11 +5,15 @@ import charactersDataVi from '../data/characters.json'
 import charactersDataEn from '../data/characters_en.json'
 import CharacterCard from '../components/CharacterCard.vue'
 import { safeAssetUrl } from '../utils/assetUrl'
-import { getCharacters } from '../services/characterApi'
+import { getCharacters, matchesCharacterSearch } from '../services/characterApi'
 
 const { t, locale } = useI18n()
 
 const localCharacters = computed(() => locale.value === 'en' ? charactersDataEn : charactersDataVi)
+const searchCharacters = computed(() => locale.value === 'en' ? charactersDataVi : charactersDataEn)
+const searchCharactersById = computed(() => new Map(
+  searchCharacters.value.map(character => [character.id, character]),
+))
 const searchQuery = ref('')
 const selectedTier = ref('')
 const selectedType = ref('')
@@ -63,7 +67,7 @@ const filteredLocalCharacters = computed(() => {
   const query = searchQuery.value.trim().toLowerCase()
 
   return localCharacters.value.filter(c => {
-    if (query && !c.name.toLowerCase().includes(query)) return false
+    if (query && !matchesCharacterSearch(c, query, searchCharactersById.value.get(c.id))) return false
     if (selectedTier.value && c.tier !== selectedTier.value) return false
     
     if (selectedType.value) {
@@ -113,6 +117,7 @@ const loadCharacters = async () => {
       pageSize: itemsPerPage,
       sort: 'release_desc',
       localCharacters: localCharacters.value,
+      searchCharacters: searchCharacters.value,
     })
 
     if (requestId !== activeRequest) return

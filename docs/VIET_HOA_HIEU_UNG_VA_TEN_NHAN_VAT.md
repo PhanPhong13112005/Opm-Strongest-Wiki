@@ -1,5 +1,10 @@
 # Bảng Việt hóa hiệu ứng và tên nhân vật
 
+> **BẢN NHÁP CŨ — KHÔNG CÒN LÀ NGUỒN CHỐT**
+>
+> Bản hoàn chỉnh đã được áp dụng ngày 04/08/2026. Mọi chỉnh sửa tiếp theo phải thực hiện tại
+> `docs/VIET_HOA_HIEU_UNG_VA_TEN_NHAN_VAT_HOAN_CHINH.md` để tránh ghi đè bản dịch đã chốt.
+
 File này là phiếu biên tập. Chưa được đọc tự động bởi website. Bạn sửa trực tiếp cột **Tên Việt bạn chốt**, sau đó báo Codex để áp dụng vào dữ liệu Việt.
 
 ## Cách sửa
@@ -14,41 +19,41 @@ File này là phiếu biên tập. Chưa được đọc tự động bởi webs
 
 | STT | Đã chốt | Thuật ngữ EN nguồn | Tên Việt bạn chốt | Nhân vật đang sử dụng |
 |---:|:---:|---|---|---|
-| 1 | [ ] | `Absolute Stun` |  | Garou (100094-ur), Subterranean King (100017-ur) |
-| 2 | [ ] | `Adhere` |  | Deep Sea King (100003-ssrplus), Groribas (100062-ssrplus), King (100187-ur), Tank Top Master (100028-ssrplus) |
-| 3 | [ ] | `Adhesion` |  | Flashy Flash (100010-ur), King (100187-ur) |
-| 4 | [ ] | `Adhesion/Paralyzed` |  | Suiryu (100183-ur) |
-| 5 | [ ] | `Advanced Core` |  | Child Emperor (100045-ur) |
-| 6 | [ ] | `Agility` |  | Atomic Samurai (100188-ur), Bom/Bengpu (100108-ssr), Boros (100184-ur), Child Emperor (100045-ur), Drive Knight (100044-ssr), Gale Wind (100126-ssr), Genos (100192-ur), Gouketsu (100089-ssr), Gyoro-Gyoro (100109-ssrplus), Hellish Blizzard (100009-ssr), Mosquito Girl (100008-ssr), Pig God (100057-ur) … (+2) |
-| 7 | [ ] | `All DMG Amplification` |  | Black Sperm (blacksperm-urplus) |
-| 8 | [ ] | `All DMG Reduction` |  | Black Sperm (blacksperm-urplus), Nyan (100312-urplus) |
+| 1 | [x] | `Absolute Stun` | `Choáng Tuyệt Đối` | Garou (100094-ur), Subterranean King (100017-ur) |
+| 2 | [x] | `Adhere` | `Bám Dính` | Deep Sea King (100003-ssrplus), Groribas (100062-ssrplus), King (100187-ur), Tank Top Master (100028-ssrplus) |
+| 3 | [x] | `Adhesion` | `Bám dính` | Flashy Flash (100010-ur), King (100187-ur) |
+| 4 | [x] | `Adhesion/Paralyzed` | `Bám dính`  | Suiryu (100183-ur) |
+| 5 | [x] | `Advanced Core` | `Lõi Nâng Cao` | Child Emperor (100045-ur) |
+| 6 | [x] | `Agility` | `Nhanh nhẹ` | Atomic Samurai (100188-ur), Bom/Bengpu (100108-ssr), Boros (100184-ur), Child Emperor (100045-ur), Drive Knight (100044-ssr), Gale Wind (100126-ssr), Genos (100192-ur), Gouketsu (100089-ssr), Gyoro-Gyoro (100109-ssrplus), Hellish Blizzard (100009-ssr), Mosquito Girl (100008-ssr), Pig God (100057-ur) … (+2) |
+| 7 | [x] | `All DMG Amplification` | `Tăng Sát Thương Toàn Phần`  | Black Sperm (blacksperm-urplus) |
+| 8 | [x] | `All DMG Reduction` | `Giảm Sát Thương Toàn Phần` | Black Sperm (blacksperm-urplus), Nyan (100312-urplus) |
 | 9 | [ ] | `Arena DMG Increase` |  | Bang & Bomb (100315-urplus) |
 | 10 | [ ] | `Arena DMG Reduction` |  | Bang & Bomb (100315-urplus), Zombieman (100013-urplus) |
-| 11 | [ ] | `Armed Collapse` |  | Bang (100024-ssrplus), Choze (100095-ssr), Gouketsu (100089-ur) |
-| 12 | [ ] | `Armor` |  | Amai Mask (100029-urplus) |
-| 13 | [ ] | `Aura` |  | Metal Bat (100185-ur) |
-| 14 | [ ] | `Awaken` |  | Mosquito Girl (100008-ssr) |
-| 15 | [ ] | `Banish` |  | Phoenix Man (100103-ssrplus) |
-| 16 | [ ] | `Basic Acceleration` |  | Flashy Flash (100010-ssrplus) |
+| 11 | [x] | `Armed Collapse` | `Nội Thương`  | Bang (100024-ssrplus), Choze (100095-ssr), Gouketsu (100089-ur) |
+| 12 | [x] | `Armor` | `Giáp` | Amai Mask (100029-urplus) |
+| 13 | [x] | `Aura` | `Hào Quang`  | Metal Bat (100185-ur) |
+| 14 | [x] | `Awaken` | `Thức Tỉnh`  | Mosquito Girl (100008-ssr) |
+| 15 | [x] | `Banish` | `Trục Xuất` | Phoenix Man (100103-ssrplus) |
+| 16 | [x] | `Basic Acceleration` | `Gia Tốc Cơ Bản`  | Flashy Flash (100010-ssrplus) |
 | 17 | [ ] | `Basic Core` |  | Child Emperor (100045-ur) |
-| 18 | [ ] | `Berserk` |  | Bakuzan (100092-sr), Bang (100024-ssr), Boros (100055-ssr), Child Emperor (100045-ssr), Deep Sea King (100003-ur), Genos (100001-sr), Geryuganshoop (100059-ssr), Hammerhead (100007-sr), Hellish Blizzard (100009-sr), Hellish Blizzard (100009-ssr), Iairon (100018-sr), Metal Bat (100012-ssrplus) … (+4) |
-| 19 | [ ] | `Blind` |  | Atomic Samurai (100011-ssr), Beast King (100049-sr), Deep Sea King (100003-ssrplus), Flashy Flash (100010-ssr), Gale Wind (100126-ssr), Garou (100094-ssr), Gyoro-Gyoro (100109-ssr), Gyoro-Gyoro (100109-ssrplus), Metal Bat (100012-ssr), Snek (100030-sr), Subterranean (100086-sr), Subterranean King (100017-ssr) … (+1) |
-| 20 | [ ] | `Block` |  | Child Emperor (100045-ur), Garou (100094-ur) |
-| 21 | [ ] | `Break` |  | King (100187-ur) |
-| 22 | [ ] | `Break Armor` |  | Zombieman (100013-urplus) |
-| 23 | [ ] | `Breakthrough` |  | Flashy Flash (100010-ur), Gouketsu (100089-ssrplus), Gouketsu (100089-ur), Melzargard (100054-ssrplus), Melzargard (100190-ur), Metal Bat (100012-ssrplus), Suiryu (100183-ur), Tank Top Master (100028-ssrplus) |
-| 24 | [ ] | `Buffer` |  | Hellfire Flame (100191-ur) |
-| 25 | [ ] | `Burn` |  | Blue Fire (100046-sr), Genos (100001-sr), Genos (100074-ssr), Hellfire Flame (100125-ssr), Lightning Max (100005-sr), Magicman (100091-sr), Metal Knight (100075-ssr), Phoenix Man (100103-ssr), Subterranean King (100017-ssr), Vaccine Man V1 (100060-ssr) |
-| 26 | [ ] | `Burn/Forcefield/Injury/Internal Injury` |  | Child Emperor (100045-ssrplus) |
-| 27 | [ ] | `Burning` |  | Genos (100001-sr) |
-| 28 | [ ] | `Chain Detonate` |  | Hellish Blizzard (100009-ur) |
-| 29 | [ ] | `Chain Explosion` |  | Pig God (100057-ur) |
-| 30 | [ ] | `Chain Follow-up` |  | Deep Sea King (100003-ssrplus), Metal Bat (100012-ssrplus) |
-| 31 | [ ] | `Charge` |  | Carnage Kabuto (100302-ur), G4 (100119-ssr), Suiryu (100090-ssr) |
-| 32 | [ ] | `Charge DMG` |  | Carnage Kabuto (100156-ssrplus) |
-| 33 | [ ] | `Charge DMG Reduction` |  | Geryuganshoop (100059-ssrplus) |
-| 34 | [ ] | `Charged` |  | Drive Knight (100044-ssr) |
-| 35 | [ ] | `Charged Pursuit` |  | Black Sperm (blacksperm-urplus), G5 (100314-urplus), Nyan (100312-urplus), Overgrown Rover (100316-urplus), Zombieman (100013-urplus) |
+| 18 | [x] | `Berserk` | `Giận Dữ` | Bakuzan (100092-sr), Bang (100024-ssr), Boros (100055-ssr), Child Emperor (100045-ssr), Deep Sea King (100003-ur), Genos (100001-sr), Geryuganshoop (100059-ssr), Hammerhead (100007-sr), Hellish Blizzard (100009-sr), Hellish Blizzard (100009-ssr), Iairon (100018-sr), Metal Bat (100012-ssrplus) … (+4) |
+| 19 | [x] | `Blind` | `Gây Mù`  | Atomic Samurai (100011-ssr), Beast King (100049-sr), Deep Sea King (100003-ssrplus), Flashy Flash (100010-ssr), Gale Wind (100126-ssr), Garou (100094-ssr), Gyoro-Gyoro (100109-ssr), Gyoro-Gyoro (100109-ssrplus), Metal Bat (100012-ssr), Snek (100030-sr), Subterranean (100086-sr), Subterranean King (100017-ssr) … (+1) |
+| 20 | [x] | `Block` | `Đỡ Đòn` | Child Emperor (100045-ur), Garou (100094-ur) |
+| 21 | [x] | `Break` | `Phá Vỡ` | King (100187-ur) |
+| 22 | [x] | `Break Armor` | `Phá Vỡ Giáp` | Zombieman (100013-urplus) |
+| 23 | [x] | `Breakthrough` | `Đột Phá` | Flashy Flash (100010-ur), Gouketsu (100089-ssrplus), Gouketsu (100089-ur), Melzargard (100054-ssrplus), Melzargard (100190-ur), Metal Bat (100012-ssrplus), Suiryu (100183-ur), Tank Top Master (100028-ssrplus) |
+| 24 | [x] | `Buffer` | `Đệm Sát Thương`  | Hellfire Flame (100191-ur) |
+| 25 | [x] | `Burn` | `Thiêu đốt` | Blue Fire (100046-sr), Genos (100001-sr), Genos (100074-ssr), Hellfire Flame (100125-ssr), Lightning Max (100005-sr), Magicman (100091-sr), Metal Knight (100075-ssr), Phoenix Man (100103-ssr), Subterranean King (100017-ssr), Vaccine Man V1 (100060-ssr) |
+| 26 | [x ] | `Burn/Forcefield/Injury/Internal Injury` | `Thiêu Đốt/Trường Lực/ Trọng Thương/Nội Thương` | Child Emperor (100045-ssrplus) |
+| 27 | [x] | `Burning` | `Thiêu Đốt` | Genos (100001-sr) |
+| 28 | [x] | `Chain Detonate` | `Nổ Liên Tục`| Hellish Blizzard (100009-ur) |
+| 29 | [x] | `Chain Explosion` | `Nổ Lan Truyền` | Pig God (100057-ur) |
+| 30 | [x] | `Chain Follow-up` | `Nổ Liên Hoàn`  | Deep Sea King (100003-ssrplus), Metal Bat (100012-ssrplus) |
+| 31 | [x] | `Charge` | `Tụ Lực` | Carnage Kabuto (100302-ur), G4 (100119-ssr), Suiryu (100090-ssr) |
+| 32 | [x] | `Charge DMG` | `Sát Thương Tụ Lực` | Carnage Kabuto (100156-ssrplus) |
+| 33 | [x] | `Charge DMG Reduction` | `Giảm Sát Thương Tụ Lực`  | Geryuganshoop (100059-ssrplus) |
+| 34 | [x] | `Charged` | `Đã Tích Tụ Lực` | Drive Knight (100044-ssr) |
+| 35 | [x] | `Charged Pursuit` | `Truy Kích Tụ Lực` | Black Sperm (blacksperm-urplus), G5 (100314-urplus), Nyan (100312-urplus), Overgrown Rover (100316-urplus), Zombieman (100013-urplus) |
 | 36 | [ ] | `Charm` |  | Nyan (100312-urplus), Puri-Puri Prisoner (100006-ssrplus) |
 | 37 | [ ] | `Charm Immunity` |  | Puri-Puri Prisoner (100006-ssrplus) |
 | 38 | [ ] | `Charm/Off Battle` |  | Melzargard (100190-ur) |

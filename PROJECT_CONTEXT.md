@@ -2,9 +2,14 @@
 
 > Tài liệu ngữ cảnh kỹ thuật dành cho các phiên làm việc tiếp theo.
 >
-> Cập nhật theo trạng thái mã nguồn được kiểm tra ngày 30/07/2026. Những nội dung liên quan đến hạ tầng production đang chạy thực tế, cấu hình trên Vercel/Neon và trạng thái dịch vụ bên ngoài được đánh dấu **chưa xác minh** nếu không thể kết luận chỉ từ repository.
+> Cập nhật theo trạng thái mã nguồn được kiểm tra ngày 04/08/2026. Những nội dung liên quan đến hạ tầng production đang chạy thực tế, cấu hình trên Vercel/Neon và trạng thái dịch vụ bên ngoài được đánh dấu **chưa xác minh** nếu không thể kết luận chỉ từ repository.
 
 ## Mốc kiểm tra gần nhất
+
+- Ngày 04/08/2026, working tree trên branch `codex/fix-plus-asset-paths` đã áp dụng bảng chốt 318 hiệu ứng và 177 tên nhân vật vào catalog tiếng Việt; thay đổi chưa commit tại thời điểm cập nhật tài liệu.
+- Tìm kiếm danh sách nhân vật đã đối chiếu catalog VI/EN theo ID, hỗ trợ tên Việt, tên Anh, tên seed cũ, ID và tiếng Việt không dấu ở cả hai locale.
+- `characterApi.js` giữ tên Admin tùy chỉnh, nhưng thay tên/hiệu ứng seed cũ từ API bằng nội dung local đã Việt hóa.
+- Kiểm tra gần nhất: toàn bộ Node test đạt 46/46, frontend test đạt 22/22 và Vite production build thành công.
 
 - Tài liệu được đối chiếu lại với repository ngày 28/07/2026 tại commit `abd4a43 — Fix mobile navigation and update medal content`.
 - Tính năng đăng ký Gmail và quên/đặt lại mật khẩu được kiểm tra trên working tree ngày 30/07/2026; thay đổi này chưa commit tại thời điểm cập nhật tài liệu.

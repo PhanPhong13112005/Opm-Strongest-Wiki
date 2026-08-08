@@ -1,4 +1,5 @@
 import { isApiConfigured, requestApiCached } from './apiClient.js'
+import characterNameAliases from '../data/characterNameAliases.js'
 
 const formatLegacyDate = (value) => {
   if (!value) return value
@@ -6,9 +7,40 @@ const formatLegacyDate = (value) => {
   return match ? `${match[3]}/${match[2]}/${match[1]}` : value
 }
 
-export const mapCharacterSummary = (character, localCharacter = {}) => ({
+const legacyNamesById = new Map(
+  Object.entries(characterNameAliases).map(([id, names]) => [id, new Set(names)]),
+)
+
+const normalizeSearchText = (value) => String(value || '')
+  .normalize('NFD')
+  .replace(/\p{Diacritic}/gu, '')
+  .replace(/đ/g, 'd')
+  .replace(/Đ/g, 'D')
+  .toLocaleLowerCase('vi')
+
+export const matchesCharacterSearch = (character, search, alternateCharacter = {}) => {
+  const query = normalizeSearchText(search).trim()
+  if (!query) return true
+
+  return [
+    character?.id,
+    character?.name,
+    alternateCharacter?.name,
+    ...(legacyNamesById.get(character?.id) || []),
+  ].some(value => normalizeSearchText(value).includes(query))
+}
+
+const resolveCharacterName = (character, localCharacter, language = 'vi') => {
+  const apiName = String(character?.name || '').trim()
+  const localName = String(localCharacter?.name || '').trim()
+  if (String(language || 'vi').toLowerCase() !== 'vi') return apiName || localName
+  if (!apiName || legacyNamesById.get(character?.id)?.has(apiName)) return localName || apiName
+  return apiName
+}
+
+export const mapCharacterSummary = (character, localCharacter = {}, language = 'vi') => ({
   id: character.id,
-  name: character.name,
+  name: resolveCharacterName(character, localCharacter, language),
   imageURL: localCharacter.imageURL || character.imageUrl,
   tier: character.tier,
   type: character.type,
@@ -58,10 +90,44 @@ const mergeCharacterSkills = (characterSkills, localSkills) => {
   return merged
 }
 
-export const mergeCharacterDetail = (character, localCharacter = {}) => ({
+const mapApiEffect = (effect) => ({
+  term: effect.term,
+  desc: effect.description,
+})
+
+const mergeCharacterEffects = (characterEffects, localEffects) => {
+  const apiEffects = Array.isArray(characterEffects) ? characterEffects : []
+  const fallbackEffects = Array.isArray(localEffects) ? localEffects : []
+
+  if (fallbackEffects.length === 0) return apiEffects.map(mapApiEffect)
+
+  const apiBySortOrder = new Map(
+    apiEffects.map((effect, index) => [
+      Number.isInteger(effect.sortOrder) ? effect.sortOrder : index,
+      effect,
+    ]),
+  )
+  const usedApiEffects = new Set()
+  const merged = fallbackEffects.map((localEffect, index) => {
+    const apiEffect = apiBySortOrder.get(index)
+    if (apiEffect) usedApiEffects.add(apiEffect)
+    return {
+      ...(apiEffect ? mapApiEffect(apiEffect) : {}),
+      ...localEffect,
+    }
+  })
+
+  for (const apiEffect of apiEffects) {
+    if (!usedApiEffects.has(apiEffect)) merged.push(mapApiEffect(apiEffect))
+  }
+
+  return merged
+}
+
+export const mergeCharacterDetail = (character, localCharacter = {}, language = 'vi') => ({
   ...localCharacter,
   id: character.id,
-  name: character.name,
+  name: resolveCharacterName(character, localCharacter, language),
   imageURL: localCharacter.imageURL || character.imageUrl,
   tier: character.tier,
   type: character.type,
@@ -78,10 +144,7 @@ export const mergeCharacterDetail = (character, localCharacter = {}) => ({
   baseStats: character.baseStats,
   pvpStats: character.pvpStats,
   skills: mergeCharacterSkills(character.skills, localCharacter.skills),
-  effects: character.effects?.length ? character.effects.map((effect) => ({
-    term: effect.term,
-    desc: effect.description,
-  })) : (localCharacter.effects || []),
+  effects: mergeCharacterEffects(character.effects, localCharacter.effects),
   updatedAt: character.updatedAt,
 })
 
@@ -94,11 +157,11 @@ const releaseTime = (character) => {
   return Number.isNaN(timestamp) ? null : timestamp
 }
 
-const fallbackCharacters = (localCharacters, query) => {
-  const search = String(query.search || '').trim().toLowerCase()
+const fallbackCharacters = (localCharacters, query, searchCharacters = []) => {
+  const alternateById = new Map(searchCharacters.map(character => [character.id, character]))
   return localCharacters
     .filter((character) => {
-      if (search && !String(character.name || '').toLowerCase().includes(search)) return false
+      if (!matchesCharacterSearch(character, query.search, alternateById.get(character.id))) return false
       if (query.tier && character.tier !== query.tier) return false
       if (query.type && character.type !== query.type) return false
       if (query.faction && character.faction !== query.faction) return false
@@ -115,8 +178,8 @@ const fallbackCharacters = (localCharacters, query) => {
     })
 }
 
-export const reconcileCharacterPage = (apiResult, localCharacters, query) => {
-  const localMatches = fallbackCharacters(localCharacters, query)
+export const reconcileCharacterPage = (apiResult, localCharacters, query, searchCharacters = []) => {
+  const localMatches = fallbackCharacters(localCharacters, query, searchCharacters)
   const apiTotalCount = Math.max(0, Number(apiResult?.totalCount) || 0)
   if (apiTotalCount >= localMatches.length) return apiResult
 
@@ -136,7 +199,7 @@ export const reconcileCharacterPage = (apiResult, localCharacters, query) => {
   }
 }
 
-export const getCharacters = async ({ localCharacters = [], ...query }) => {
+export const getCharacters = async ({ localCharacters = [], searchCharacters = [], ...query }) => {
   try {
     const result = await requestApiCached('api/characters', query)
     const localById = new Map(localCharacters.map((character) => [character.id, character]))
@@ -145,12 +208,12 @@ export const getCharacters = async ({ localCharacters = [], ...query }) => {
       source: 'api',
       items: result.items.map((character) => {
         const localCharacter = localById.get(character.id) || {}
-        return { ...localCharacter, ...mapCharacterSummary(character, localCharacter) }
+        return { ...localCharacter, ...mapCharacterSummary(character, localCharacter, query.language) }
       }),
     }
-    return reconcileCharacterPage(mappedResult, localCharacters, query)
+    return reconcileCharacterPage(mappedResult, localCharacters, query, searchCharacters)
   } catch {
-    const filtered = fallbackCharacters(localCharacters, query)
+    const filtered = fallbackCharacters(localCharacters, query, searchCharacters)
     const page = Math.max(1, Number(query.page) || 1)
     const pageSize = Math.max(1, Number(query.pageSize) || 12)
     return {
@@ -190,7 +253,7 @@ export const getAllCharacters = async (language, localCharacters = []) => {
 export const getCharacterById = async (id, language, localCharacter) => {
   try {
     const result = await requestApiCached(`api/characters/${encodeURIComponent(id)}`, { language })
-    return mergeCharacterDetail(result, localCharacter)
+    return mergeCharacterDetail(result, localCharacter, language)
   } catch (error) {
     if (localCharacter) return localCharacter
     throw error

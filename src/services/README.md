@@ -14,6 +14,12 @@ trong thời gian ngắn. Cache liên quan được xóa sau thao tác quản tr
 - giới hạn thời gian chờ để giao diện không bị treo khi API chưa chạy;
 - cho phép các View dùng JSON trong `src/data` làm nguồn dự phòng.
 
+Tìm kiếm nhân vật được đối chiếu theo ID giữa hai catalog VI/EN:
+
+- tìm được bằng tên Việt, tên Anh, tên seed cũ, ID và tiếng Việt không dấu ở mọi ngôn ngữ giao diện;
+- ưu tiên tên/hiệu ứng Việt hóa local khi API còn dữ liệu seed cũ;
+- giữ nguyên tên tùy chỉnh do Admin nhập thay vì ghi đè bằng JSON local.
+
 `eventApi.js` tải danh sách/chi tiết sự kiện và hợp nhất response API với metadata
 giao diện trong `events.json`, ví dụ ngày mở server và nội dung nhiệm vụ theo section.
 
