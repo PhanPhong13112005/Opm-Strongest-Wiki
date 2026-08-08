@@ -1845,33 +1845,51 @@
 - **Roles:** Enemy off battle, ally reborn
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Deals 30% ATK DMG to a single target. |
-| 2 | Ultimate | **Ultimate** | Deals 75% ATK DMG to a single target and marks self. Deals additional DMG equal to 40% of the target's max HP, then marks the target for [Banish]. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 75% ATK DMG to a single target and marks self. Deals additional DMG equal to 40% > 50% of the target's max HP, then marks the target for [Banish]. |
-| 4 | Passive | **Passive** | Permanently increases self HP%. On entry, gains +100% max HP and becomes immune to [Banish] and to max-HP reduction. At the start of each round, recovers 50% of max HP. Each turn end, gains a counter mark that lets self [Banish] 1 marked enemy from battle. After taking fatal damage, revives, up to 1 time. |
-| 5 | Passive | **Extreme Passive** | Permanently increases self HP%. On entry, gains +100% max HP and becomes immune to [Banish] and to max-HP reduction. At the start of each round, recovers 50% of max HP. Each turn end, gains a counter mark that lets self [Banish] 1 marked enemy from battle. After taking fatal damage, revives, up to 1 > 2 times. |
-| 6 | Passive | **5★ Passive** | Permanently increases self HP%. On entry, gains +100% max HP and becomes immune to [Banish] and to max-HP reduction. At the start of each round, recovers 50% of max HP. Each turn end, gains a counter mark that lets self [Banish] 1 marked enemy from battle. After taking fatal damage, revives, up to 2 times. |
-| 7 | Awakening | **Awaken 1 Passive** | Immediately let defeated allies return to battle with 100% HP (total 4 times per battle) (Effect will be removed if Phoenixman dies before the number of revival is used up.) |
-| 8 | Awakening | **Awaken 2 Passive** | Revive allies 4x > 6x Additional effect - Grants allies 30% non-CRIT DMG FREE (cannot co-exist with Agility) Things to note: SSR+ CK does not reflect damage if removed from battle Cannot remove Bosses (pve) from the battle, like Boros Club Challenge (obviously) Cannot remove units that are dead but waiting to revive (eg ZBM on the ground) If there is only one enemy unit left, then cannot remove that unit from the battle |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Attacks a single target with 5 consecutive strikes, dealing 150% ATK DMG. |
+| 2 | Ultimate | **Ultimate** | Attacks a single target with 2 consecutive strikes, dealing 150% ATK + 40% Max HP as DMG. After the action, inflicts [Exit] on the target, causing it to leave the battlefield until the next round. This effect is not affected by Formal Set. Summoned units such as Boros’ Dark Matter Thief and Child Emperor’s Underdog Man Robot cannot be affected. [Exit]: The affected character cannot act, cannot trigger passive attacks, and cannot receive DMG while outside the battlefield, but effects such as increasing allies’ SPD can remain active. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks a single target with 2 consecutive strikes, dealing 150% ATK + 50% Max HP as DMG. After the action, inflicts [Exit] on the target, causing it to leave the battlefield until the next round. This effect is not affected by Formal Set. Summoned units such as Boros’ Dark Matter Thief and Child Emperor’s Underdog Man Robot cannot be affected. [Exit]: The affected character cannot act, cannot trigger passive attacks, and cannot receive DMG while outside the battlefield, but effects such as increasing allies’ SPD can remain active. |
+| 4 | Passive | **Passive** | At battle start, permanently increases own Max HP by 100% and restores 50% of Max HP. When receiving fatal DMG while not protected by any [Unyielding] effect, triggers [Resurrection]. Phoenixman is immune to [Exit]. [Resurrection]: While at least 1 ally remains on the battlefield, restores 15% HP before Phoenixman’s next action and continues fighting. Can trigger up to 1 time per battle. |
+| 5 | Passive | **Extreme Passive** | At battle start, permanently increases own Max HP by 100% and restores 50% of Max HP. When receiving fatal DMG while not protected by any [Unyielding] effect, triggers [Resurrection]. Phoenixman is immune to [Exit]. [Resurrection]: While at least 1 ally remains on the battlefield, restores 15% HP before Phoenixman’s next action and continues fighting. Can trigger up to 2 times per battle. |
+| 6 | Passive | **5★ Passive** | At battle start, permanently increases own Max HP by 100% and restores 50% of Max HP. When receiving fatal DMG while not protected by any [Unyielding] effect, triggers [Resurrection]. Phoenixman is immune to [Exit]. [Resurrection]: While at least 1 ally remains on the battlefield, restores 25% HP before Phoenixman’s next action and continues fighting. Can trigger up to 2 times per battle. |
+| 7 | Awakening | **Awaken 1 Passive** | Immediately returns a defeated ally to battle with 100% HP. Can revive allies up to 4 times per battle in total. If Phoenixman is defeated before all revival counts are used, the remaining revival effect is removed. |
+| 8 | Awakening | **Awaken 2 Passive** | Immediately returns a defeated ally to battle with 100% HP. Can revive allies up to 6 times per battle in total. If Phoenixman is defeated before all revival counts are used, the remaining revival effect is removed. Permanently grants all allies 30% [Non-Crit DMG Free]. [Non-Crit DMG Free]: Reduces applicable non-critical DMG and cannot coexist with [Agility]. |
 | 9 | Awakening | **Awaken 3 Passive** | • Restores 150 [Energy Gauge] (when attacking) |
 
----
 
+
+### Effect Glossary
+
+| Term | Description |
+|---|---|
+| [Exit] | Temporarily removes the affected character from the battlefield until the next round. While outside the battlefield, the character cannot act, trigger passive attacks, or receive DMG, although certain passive effects such as SPD increases can remain active. |
+| [Resurrection] | After receiving fatal DMG without an active [Unyielding] effect, restores HP before Phoenixman’s next action and allows him to continue fighting while at least 1 ally remains. |
+| [Unyielding] | A survival effect that prevents fatal DMG from immediately defeating the affected unit. |
+| [Non-Crit DMG Free] | Reduces applicable non-critical DMG and cannot coexist with [Agility]. |
+| [Agility] | A defensive effect that cannot coexist with [Non-Crit DMG Free]. |
+
+### Additional Notes
+
+- SSR+ Carnage Kabuto does not reflect DMG while affected by [Exit].
+- Boss enemies in PvE cannot be affected by [Exit].
+- Defeated units that are waiting to revive, such as Zombieman while downed, cannot be affected by [Exit].
+- If only 1 enemy unit remains on the battlefield, that unit cannot be affected by [Exit].
+
+---
 ### Pig God
 - **ID:** `100057-ssrplus`
 - **Type:** Esper | **Faction:** Hero
 - **Roles:** Specialized Corrode, Glutton Everything
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Deals Direct DMG of 60% ATK to a single target. |
-| 2 | Ultimate | **Ultimate** | Grants [Undying] to the target for 2 turns, then deals Direct DMG of 75% ATK and [Devour]s the target (removes it from the field / [Exit]). |
-| 3 | Ultimate | **Ultra-Ultimate** | Grants [Undying] to the target for 2 > 4 turns, then deals Direct DMG of 75% > 100% ATK and [Devour]s the target (removes it from the field / [Exit]). |
-| 4 | Passive | **Passive** | Permanently increases own HP%. When battle begins, gains [Specialized Guard] of 1000% ATK (removes DMG; stacks with extra-HP effects; total DMG removed cannot exceed 15x its original HP). After entering [Specialized Unyielding], gains another [Specialized Guard] of 600% ATK. Unable to [Off Battle] and immune to [Devour]. |
-| 5 | Passive | **Extreme Passive** | [Specialized Guard] 1000% &gt; 1100% ATK. Second [Specialized Guard] 600% &gt; 700% ATK. |
-| 6 | Passive | **5★ Passive** | [Specialized Guard] 1100% &gt; 1200% ATK. Second [Specialized Guard] 700% &gt; 800% ATK. |
-| 7 | Awakening | **Awaken 1 Passive** | When an ally triggers [Off Battle], inflicts [Specialized Corrode] (DoT by 150% ATK; after any character acts, transfers the effect to a random enemy, disappears after transferring 3 times). Once a surrounding ally is defeated, Pig God can [Devour] an ally; after any character acts, the ally returns to battle and recovers 60% Max HP, up to 3 times. |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Deals 120% ATK DMG to a single target with 2 consecutive strikes. |
+| 2 | Ultimate | **Ultimate** | Attacks a single target with 4 consecutive strikes, dealing 300% ATK DMG. [Devours] the target and causes it to [Exit] for 1 round. After [Devour], reduces the target's remaining [Enhanced Unyielding] duration by 2 actions. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Effect currently unknown. |
+| 4 | Passive | **Passive** | At battle start, gains [Enhanced Protection] equal to 1000% ATK. [Enhanced Protection] negates received DMG, can stack with Extra HP effects, and the total DMG it can negate cannot exceed 15 times Pig God's original Max HP. After entering [Enhanced Unyielding], gains an additional [Enhanced Protection] equal to 600% ATK. Pig God is immune to [Disengage] and [Devour]. |
+| 5 | Passive | **Extreme Passive** | [Enhanced Protection] 1000% > 1100% ATK. Second [Enhanced Protection] 600% > 700% ATK. |
+| 6 | Passive | **5★ Passive** | [Enhanced Protection] 1100% > 1200% ATK. Second [Enhanced Protection] 700% > 800% ATK. |
+| 7 | Awakening | **Awaken 1 Passive** | When an ally triggers [Disengage], releases 1 [Specialized Corrode], dealing 150% ATK as Continuous DMG. After any character acts, [Specialized Corrode] transfers to a random enemy, up to 3 transfers. When a surrounding ally is defeated, Pig God can [Devour] that ally. After any character acts, Pig God releases the devoured ally back onto the battlefield and restores the ally's HP to 60% of Max HP. Can trigger up to 3 times. |
 | 8 | Awakening | **Awaken 2 Passive** | [Specialized Corrode] DoT 150% > 200% ATK. On [Devour], the ally recovers 60% > 75% Max HP, and [Devour] can trigger up to 3 > 4 times. |
 | 9 | Awakening | **Awaken 3 Passive** | • Restores 150 [Energy Gauge] (when attacking) |
 
@@ -1879,7 +1897,12 @@
 
 | Term | Description |
 |---|---|
-| [Immortal] | Survival status keeps the bearer alive by drastically reducing damage taken (e.g. only taking 20%). |
+| [Devour] | Removes a target from the battlefield through Pig God's skill. Against enemies, it causes [Exit] for 1 round. Pig God's Awaken Passive can also use [Devour] on a defeated surrounding ally and later return that ally to battle. |
+| [Exit] | Temporarily removes the affected unit from the battlefield for the specified duration. |
+| [Enhanced Protection] | Negates received DMG and can stack with Extra HP effects. The total amount of DMG negated cannot exceed 15 times the unit's original Max HP. |
+| [Enhanced Unyielding] | An enhanced survival state measured by remaining actions. Pig God's Ultimate reduces its remaining duration by 2 actions after [Devour]. |
+| [Disengage] | An effect that causes a character to leave the battlefield. Pig God is immune to it, while allied [Disengage] can trigger his Awaken Passive. |
+| [Specialized Corrode] | Deals 150% ATK as Continuous DMG. After any character acts, it transfers to a random enemy, up to 3 transfers. |
 
 ---
 
@@ -1889,22 +1912,29 @@
 - **Roles:** Back Row Charm, Continuous Rebellion
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Restores HP to a single ally. |
-| 2 | Ultimate | **Ultimate** | Deals 750% ATK DMG to a single target with 2 consecutive strikes and inflicts [Charm]. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 750% &gt; 900% ATK DMG to a single target with 2 consecutive strikes and inflicts [Charm]. Additionally inflicts [Stun] on the target and its entire column for 1 round. |
-| 4 | Passive | **Passive** | Gains +20% HP. At the start of each round, inflicts a debuff on all enemies. On entry, gains [Charm Immunity] on self. |
-| 5 | Passive | **Extreme Passive** | Retains the base passive effects; CN data shows no numeric upgrade at this tier. |
-| 6 | Passive | **5★ Passive** | Retains the base passive effects; CN data shows no numeric upgrade at this tier. |
-| 7 | Awakening | **Awaken 1 Passive** | Increase Non-Crit DMG by 30% for the entire row, lasts 3 rounds. After action, inflict [Paralysis] (Unable to Follow-Up, Continuous Follow-Up, Combo Follow-Up) on the target and its column |
-| 8 | Awakening | **Awaken 2 Passive** | Non-CRIT DMG free 30% > 40% |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Restores an ally's HP by 120% ATK. |
+| 2 | Ultimate | **Ultimate** | Attacks a single back-row enemy with 2 consecutive strikes, dealing 750% ATK DMG and inflicting [Charm]. [Charm]: Causes the target to [Exit] the battlefield and use its own Ultimate or Passive to attack a random ally. The target returns to battle after the round ends. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks a single back-row enemy with 2 consecutive strikes, dealing 900% ATK DMG and inflicting [Charm]. Also inflicts [Stun] on the target and enemies in the same column for 1 round. [Charm]: Causes the target to [Exit] the battlefield and use its own Ultimate or Passive to attack a random ally. The target returns to battle after the round ends. |
+| 4 | Passive | **Passive** | At battle start, permanently reduces all enemies' Continuous DMG Rate by 40%. Do-S is immune to [Charm]. |
+| 5 | Passive | **Extreme Passive** | At battle start, permanently reduces all enemies' Continuous DMG Rate by 50%. Do-S is immune to [Charm]. |
+| 6 | Passive | **5★ Passive** | At battle start, permanently reduces all enemies' Continuous DMG Rate by 60%. Do-S is immune to [Charm]. |
+| 7 | Awakening | **Awaken 1 Passive** | Grants all allies in the same row 30% [Non-Crit DMG Free] for 3 rounds. After Do-S acts, inflicts [Paralysis] on the target and enemies in the same column. [Paralysis]: Prevents the affected unit from triggering [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]. |
+| 8 | Awakening | **Awaken 2 Passive** | Grants all allies in the same row 40% [Non-Crit DMG Free] for 3 rounds. After Do-S acts, inflicts [Paralysis] on the target and enemies in the same column. [Paralysis]: Prevents the affected unit from triggering [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]. |
 | 9 | Awakening | **Awaken 3 Passive** | • Restores 150 [Energy Gauge] (when attacking) |
 
 **Effect Glossary:**
 
 | Term | Description |
 |---|---|
-| [Stun] | The stun-type control effect prevents the target from taking action during the duration. |
+| [Charm] | Causes the affected enemy to [Exit] the battlefield and use its own Ultimate or Passive to attack a random ally. The affected enemy returns after the round ends. |
+| [Exit] | Temporarily removes the affected character from the battlefield. |
+| [Stun] | Prevents the affected unit from acting for the specified duration. |
+| [Paralysis] | Prevents the affected unit from triggering [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]. |
+| [Follow-Up] | An additional attack triggered after another action or when specified conditions are met. |
+| [Continuous Follow-Up] | A Follow-Up effect that can trigger repeatedly under specified conditions. |
+| [Combo Follow-Up] | A coordinated Follow-Up attack triggered through a Combo-type effect. |
+| [Non-Crit DMG Free] | Reduces all types of non-critical DMG and cannot coexist with [Agility]. |
 
 ---
 
@@ -1914,26 +1944,35 @@
 - **Roles:** All Breakthrough, Spec. Burn
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Deals 60% ATK Direct DMG to a single target. |
-| 2 | Ultimate | **Ultimate** | Deals 60% ATK Direct DMG to all enemies, then applies [No Revival] (ImmuneNotDeathMix) to all enemies that are not already death-immune, preventing them from becoming immune to death. |
-| 3 | Ultimate | **Ultra-Ultimate** | Direct DMG to all enemies increases 60% > 100% ATK. Still applies [No Revival] to all enemies that are not already death-immune. |
-| 4 | Passive | **Passive** | Permanently increases own HP%. When battle begins, obtains [Specialized Protection] equal to 800% ATK (absorbs incoming damage, stacks with extra-HP effects; total damage absorbed cannot exceed 15x his original HP). |
-| 5 | Passive | **Extreme Passive** | [Specialized Protection] 800% &gt; 1500% ATK. |
-| 6 | Passive | **5★ Passive** | [Specialized Protection] 1500% &gt; 2200% ATK. |
-| 7 | Awakening | **Awaken 1 Passive** | Has a 50% chance to inflict [Specialized Burn] (DOT by 150% ATK. After any character acts, transfers the effect to a random target, disappears after transferring 3 times). Absorbs [Specialized Burn] DOT DMG on enemies to restore [Specialized Protection]. |
-| 8 | Awakening | **Awaken 2 Passive** | Inflict chance 50% > 90% Specialized Burn DoT 150% > 200% Permanently grants 30% bonus ULT DMG 1. [Specialized Burn] can be affected by HIT%/RES%. 2. [Specialized Burn] will first transfer to characters which are not in any [Unyielding] state. 3. [Specialized Burn] can be stacked up to 6 times. 4. M.Choze and Vaccine Man can deal Extra DMG by the [Specialized Burn] 5. [Specialized Burn] can transfer to [Revived] and [Resurrected] characters. 6. [Specialized Burn] can be affected by Formal Set. 7. [Specialized Burn] is not affected by [Evade]. |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Deals 120% ATK DMG to a single target with 2 consecutive strikes. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies with 4 consecutive strikes, dealing 240% ATK DMG. Can trigger [Breakthrough], removing the target's [Unyielding] state. [Breakthrough] can trigger only once on each target per attack. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks all enemies with 4 consecutive strikes, dealing 400% ATK DMG. Can trigger [Breakthrough], removing the target's [Unyielding] state. [Breakthrough] can trigger only once on each target per attack. |
+| 4 | Passive | **Passive** | At battle start, gains [Specialized Protection] equal to 800% ATK. [Specialized Protection] negates received DMG, can stack with Extra HP effects, and the total amount of DMG negated cannot exceed 15 times the unit's original Max HP. |
+| 5 | Passive | **Extreme Passive** | At battle start, gains [Specialized Protection] equal to 1000% ATK. [Specialized Protection] negates received DMG, can stack with Extra HP effects, and the total amount of DMG negated cannot exceed 15 times the unit's original Max HP. |
+| 6 | Passive | **5★ Passive** | At battle start, gains [Specialized Protection] equal to 1200% ATK. [Specialized Protection] negates received DMG, can stack with Extra HP effects, and the total amount of DMG negated cannot exceed 15 times the unit's original Max HP. |
+| 7 | Awakening | **Awaken 1 Passive** | Has a 50% chance to inflict [Specialized Burn]. [Specialized Burn]: Deals 150% ATK as Continuous DMG. After any character acts, transfers to a random enemy and disappears after transferring 3 times. Absorbs the Continuous DMG dealt by [Specialized Burn] on enemies to restore own [Specialized Protection]. |
+| 8 | Awakening | **Awaken 2 Passive** | Has a 90% chance to inflict [Specialized Burn]. [Specialized Burn]: Deals 200% ATK as Continuous DMG. After any character acts, transfers to a random enemy and disappears after transferring 3 times. Absorbs the Continuous DMG dealt by [Specialized Burn] on enemies to restore own [Specialized Protection]. Permanently increases Ultimate DMG by 30%. |
 | 9 | Awakening | **Awaken 3 Passive** | • Restores 150 [Energy Gauge] (when attacking) |
 
 **Effect Glossary:**
 
 | Term | Description |
 |---|---|
-| [Spec. Protect] | PvP shields reduce or negate damage to allies. |
-| [Unyielding] | Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG. |
-| [Heal Block] | The death immunity blocking debuff is applied to enemies that are not immune to death, preventing them from becoming immune to death or respawns. |
-| [Dodge] | The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration. |
-| [Spec. Burn] | Burning PvP tier — stronger burst damage, harder to deal with. |
+| [Breakthrough] | Removes the target's [Unyielding] state. Can trigger only once on each target per attack. |
+| [Unyielding] | A survival effect that prevents the affected unit from being defeated under specified conditions. |
+| [Specialized Protection] | Negates received DMG and can stack with Extra HP effects. The total amount of DMG negated cannot exceed 15 times the unit's original Max HP. |
+| [Specialized Burn] | Deals ATK-based Continuous DMG. After any character acts, transfers to another enemy and disappears after transferring 3 times. It can stack up to 6 times. |
+
+### Additional Notes
+
+- [Specialized Burn] is affected by HIT% and RES%.
+- When transferring, [Specialized Burn] prioritizes characters that are not under any [Unyielding] state.
+- [Specialized Burn] can stack up to 6 times.
+- M. Choze and Vaccine Man can deal Extra DMG through [Specialized Burn].
+- [Specialized Burn] can transfer to [Revived] and [Resurrected] characters.
+- [Specialized Burn] is affected by Formal Set.
+- [Specialized Burn] is not affected by [Evade].
 
 ---
 
@@ -1943,22 +1982,27 @@
 - **Roles:** Enhance Shield, Group Reflect DMG
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Deals Direct DMG of 120% ATK to a single target. |
-| 2 | Ultimate | **Ultimate** | Deals Direct DMG of 30% ATK (scales with Max HP) to the target's row, then heals self. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals Direct DMG of 30% > 40% ATK (scales with Max HP) to the target's row, then heals self > own row. |
-| 4 | Passive | **Passive** | Gains +20% HP. On entry, grants +55% Shield power to all allies and gains [Undying] on self. |
-| 5 | Passive | **Extreme Passive** | Shield power to all allies 55% > 65%. |
-| 6 | Passive | **5★ Passive** | Shield power to all allies 65% > 75%. |
-| 7 | Awakening | **Awaken 1 Passive** | When battle begins, grants the whole team [Specialized DMG Reflect] (reduce direct DMG and Extra DMG by 40%, reflects 40% of the original DMG back to the attacker, lasts for the whole battle.) |
-| 8 | Awakening | **Awaken 2 Passive** | Reduce dmg 40% > 60% Reflect 40% > 60% Grants the whole team [Specialized Berserk] (First strike will also deal Berserk DMG by 50% of Superalloy Blackluster Max HP, with a chance of Crit), lasts the whole battle |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Attacks a single target, dealing 120% ATK DMG. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies in a row with 4 consecutive strikes, dealing DMG equal to 120% of Max HP. Grants self [Specialized Guard] equal to 150% of Max HP. [Specialized Guard]: Negates received DMG and overwrites Bonus HP effects. The total amount cannot exceed 15 times the unit's original Max HP. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks all enemies in a row with 4 consecutive strikes, dealing DMG equal to 160% of Max HP. Grants self and allies in the same row [Specialized Guard] equal to 200% of Max HP. [Specialized Guard]: Negates received DMG and overwrites Bonus HP effects. The total amount cannot exceed 15 times the unit's original Max HP. |
+| 4 | Passive | **Passive** | At battle start, grants all allies 55% [Shield Rate] for 3 rounds. After receiving fatal DMG, revives with 20% Max HP. Can trigger up to 2 times per battle. [Shield Rate]: Increases the effectiveness of generated [Tenacity] and [Specialized Guard]. |
+| 5 | Passive | **Extreme Passive** | At battle start, grants all allies 65% [Shield Rate] for 4 rounds. After receiving fatal DMG, revives with 20% Max HP. Can trigger up to 2 times per battle. [Shield Rate]: Increases the effectiveness of generated [Tenacity] and [Specialized Guard]. |
+| 6 | Passive | **5★ Passive** | At battle start, grants all allies 75% [Shield Rate] for 5 rounds. After receiving fatal DMG, revives with 20% Max HP. Can trigger up to 3 times per battle. [Shield Rate]: Increases the effectiveness of generated [Tenacity] and [Specialized Guard]. |
+| 7 | Awakening | **Awaken 1 Passive** | At battle start, permanently grants all allies [Specialized DMG Reflect]. [Specialized DMG Reflect]: Reduces Direct DMG and Extra DMG received by 40%, and reflects Extra DMG equal to 40% of the original DMG back to the attacker. |
+| 8 | Awakening | **Awaken 2 Passive** | At battle start, permanently grants all allies [Specialized DMG Reflect] and [Specialized Berserk]. [Specialized DMG Reflect]: Reduces Direct DMG and Extra DMG received by 60%, and reflects Extra DMG equal to 60% of the original DMG back to the attacker. [Specialized Berserk]: The first strike also deals [Berserk DMG] equal to 50% of Superalloy Darkshine's Max HP and can CRIT. For each enemy hit by [Berserk DMG], consumes 150 points from the Energy Gauge. |
 | 9 | Awakening | **Awaken 3 Passive** | • Restores 150 [Energy Gauge] (when attacking) |
 
 **Effect Glossary:**
 
 | Term | Description |
 |---|---|
-| [Immortal] | Survival status keeps the bearer alive by drastically reducing damage taken (e.g. only taking 20%). |
+| [Specialized Guard] | Negates received DMG and overwrites Bonus HP effects. The total amount cannot exceed 15 times the unit's original Max HP. |
+| [Shield Rate] | Increases the effectiveness of generated [Tenacity] and [Specialized Guard]. |
+| [Tenacity] | A defensive effect whose generated value is increased by [Shield Rate]. |
+| [Specialized DMG Reflect] | Reduces Direct DMG and Extra DMG received and reflects a percentage of the original DMG back to the attacker as Extra DMG. |
+| [Specialized Berserk] | Causes the first strike to additionally deal [Berserk DMG] equal to 50% of Superalloy Darkshine's Max HP. Lasts for the entire battle. |
+| [Berserk DMG] | Max-HP-based additional DMG that can CRIT. Each enemy hit consumes 150 points from the Energy Gauge. |
 
 ---
 
@@ -1968,23 +2012,28 @@
 - **Roles:** Breakthrough and Unyielding, DMG Reflecion
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Direct DMG 60% ATK to a single target. |
-| 2 | Ultimate | **Ultimate** | Grants [Immune to Death] to the target's column. Direct DMG 22% of Max HP to the target's column. |
-| 3 | Ultimate | **Ultra-Ultimate** | Grants [Immune to Death] to the target's column. Direct DMG 22% > 28% of Max HP to the target's column. |
-| 4 | Passive | **Passive** | +20% HP to self. At own turn start, Dispel all enemies. On entry, heals self based on Max HP. If it took damage or lost HP, at own turn end and on death deals Extra DMG 51% ATK (scaling with damage/HP lost) to 4 random enemies. |
-| 5 | Passive | **Extreme Passive** | Reflect Extra DMG now hits 4 random > all enemies. |
-| 6 | Passive | **5★ Passive** | Reflect Extra DMG 51% > 61% ATK to all enemies. |
-| 7 | Awakening | **Awaken 1 Passive** | When battle begins, summons Tank-Top Tiger (ATK by 30% of TTM's HP). After an ally acts, Tank-Top Tiger will deal damage to 1 random enemy by 100% ATK. Prioritises enemies in [Specialized Unyielding] and trigger [Breakthrough] (cancels specialized and normal unyielding state). Restores Tank-Top Master's [Specialized Protection]% Max HP |
-| 8 | Awakening | **Awaken 2 Passive** | Summons Tank-Top Blackhole Tank-Top brothers can still [Follow-up] if TTM is [Stuck] Tank-Top brothers never fall even if TTM is dead Only 1 DMG reflect will be triggered Can reflect DMG received in [Specialized Protection] Removal of [DMG Sharing] applies to all support characters Tank-Top brothers have no follow-up limit Cannot reflect if TTM is [Exited] TTM can restore [Specialized Protection] faster with SSR+ DSK |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Attacks a single target with 2 consecutive strikes, dealing 120% ATK DMG. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies in a column with 5 consecutive strikes, dealing DMG equal to 110% of Max HP. Can trigger [Breakthrough] once per attack on each target. [Breakthrough]: Immediately removes DMG Ignoration granted by Unyielding-type effects. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks all enemies in a column with 5 consecutive strikes, dealing DMG equal to 140% of Max HP. Can trigger [Breakthrough] once per attack on each target. [Breakthrough]: Immediately removes DMG Ignoration granted by Unyielding-type effects. |
+| 4 | Passive | **Passive** | At battle start, gains [Specialized Guard] equal to 180% of Max HP. At the beginning of each turn, removes all enemies' [DMG Sharing] effects. After taking DMG or being defeated, reflects DMG equal to 51% of the incoming DMG to 4 enemies. The reflected amount is calculated from the combined [Specialized Guard] and HP consumed. Only one effect of this type can take effect throughout the battle. |
+| 5 | Passive | **Extreme Passive** | At battle start, gains [Specialized Guard] equal to 200% of Max HP. At the beginning of each turn, removes all enemies' [DMG Sharing] effects. After taking DMG or being defeated, reflects DMG equal to 61% of the incoming DMG to all enemies. The reflected amount is calculated from the combined [Specialized Guard] and HP consumed. Only one effect of this type can take effect throughout the battle. |
+| 6 | Passive | **5★ Passive** | At battle start, gains [Specialized Guard] equal to 230% of Max HP. At the beginning of each turn, removes all enemies' [DMG Sharing] effects. After taking DMG or being defeated, reflects DMG equal to 61% of the incoming DMG to all enemies. The reflected amount is calculated from the combined [Specialized Guard] and HP consumed. Only one effect of this type can take effect throughout the battle. |
+| 7 | Awakening | **Awaken 1 Passive** | At battle start, summons [Tank-Top Tiger] to assist. Tank-Top Tiger has ATK equal to 30% of Tank-Top Master's original Max HP. After an ally acts, Tank-Top Tiger performs a [Follow-Up] against 1 random enemy, dealing 100% ATK DMG. The [Follow-Up] prioritizes enemies with DMG Ignoration and can trigger [Breakthrough]. After the [Follow-Up], restores Tank-Top Master's [Specialized Guard] by 20% of Max HP. |
+| 8 | Awakening | **Awaken 2 Passive** | At battle start, summons [Tank-Top Tiger] and [Tank-Top Blackhole] to assist. Their ATK is equal to 30% of Tank-Top Master's original Max HP. After an ally acts, Tank-Top Tiger and Tank-Top Blackhole perform [Follow-Up] attacks against 1 random enemy, dealing 100% ATK DMG. The [Follow-Up] prioritizes enemies with DMG Ignoration and can trigger [Breakthrough]. After the [Follow-Up], restores Tank-Top Master's [Specialized Guard] by 20% of Max HP. |
 | 9 | Awakening | **Awaken 3 Passive** | • Restores 150 [Energy Gauge] (when attacking) |
 
 **Effect Glossary:**
 
 | Term | Description |
 |---|---|
-| [Adhere] | Control status prevents the target from casting [Follow-up] and [Consecutive Follow-up], usually for 2 turns. |
-| [Death Immunity] | Unfavorable effects negate the target's invincibility/anti-death effects, allowing it to be knocked down as normal. |
+| [Breakthrough] | Immediately removes DMG Ignoration granted by Unyielding-type effects. Can trigger once per attack on each target. |
+| [DMG Ignoration] | An effect granted by certain Unyielding-type states that causes applicable incoming DMG to be ignored. |
+| [Specialized Guard] | Negates incoming DMG and overwrites Bonus HP effects. Its total amount cannot exceed 15 times the unit's original Max HP. |
+| [DMG Sharing] | An effect that distributes received DMG between affected units. Tank-Top Master removes this effect from all enemies at the beginning of each turn. |
+| [Follow-Up] | An additional attack triggered after an ally acts. Tank-Top Master's summoned assists prioritize enemies with DMG Ignoration and can trigger [Breakthrough]. |
+| [Tank-Top Tiger] | A summoned assist whose ATK is based on 30% of Tank-Top Master's original Max HP and can perform [Follow-Up] attacks. |
+| [Tank-Top Blackhole] | An additional summoned assist unlocked by Awaken 2 that participates in [Follow-Up] attacks. |
 
 ---
 
@@ -1994,24 +2043,26 @@
 - **Roles:** Tactical Combo, Column Disabler
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Deals 24% ATK DMG to a single target. |
-| 2 | Ultimate | **Ultimate** | Watchdog Man unleashes a rapid chase-combo on the target, each hit dealing 150% ATK [Chase DMG]. The combo grows with his [Rampage] stacks, escalating from 4 up to 13 consecutive hits. |
-| 3 | Ultimate | **Ultra-Ultimate** | Chase-combo ATK per hit 150% > 180%. Still escalates from 4 up to 13 consecutive [Chase DMG] hits. |
-| 4 | Passive | **Passive** | Gains +20% HP. On entry, gains +20% Crit (3 rounds). On a max-multiplier hit, inflicts [Disabled] on the target's column. |
-| 5 | Passive | **Extreme Passive** | [Disabled] range on max-multiplier hit: target's column > selected area. |
-| 6 | Passive | **5★ Passive** | [Disabled] range on max-multiplier hit: selected area > selected area. |
-| 7 | Awakening | **Awaken 1 Passive** | When battle begins, permanently grant 70% chance of [Evade] (Reduce Direct/Extra/Charge/Berserk DMG to 1 DMG). After any character acts, if Watchdogman triggered [Evade], adds 1 consecutive strike. |
-| 8 | Awakening | **Awaken 2 Passive** | After any character acts, if Watchdogman triggered [Evade], increases 30% ATK for self for 1 round. |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Attacks a single target with 5 consecutive strikes, dealing 120% ATK DMG. |
+| 2 | Ultimate | **Ultimate** | Attacks a single target with consecutive strikes, dealing 150% ATK DMG per strike. Initially performs 4 consecutive strikes. Each layer of [Specialized Guard] adds 1 additional strike, up to a maximum of 13 strikes for a total of 1950% ATK DMG. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks a single target with consecutive strikes, dealing 180% ATK DMG per strike. Initially performs 4 consecutive strikes. Each layer of [Specialized Guard] adds 1 additional strike, up to a maximum of 13 strikes for a total of 2340% ATK DMG. |
+| 4 | Passive | **Passive** | After taking action, permanently inflicts [Disabled] on all enemies in the target's column. At battle start, increases own CRIT Rate by 20% for 3 rounds. [Disabled]: Prevents the affected unit from triggering [Follow-Up] and [Continuous Follow-Up]. |
+| 5 | Passive | **Extreme Passive** | After taking action, permanently inflicts [Disabled] on all enemies in the target's column and surrounding enemies. At battle start, increases own CRIT Rate by 20% for 3 rounds. [Disabled]: Prevents the affected unit from triggering [Follow-Up] and [Continuous Follow-Up]. |
+| 6 | Passive | **5★ Passive** | After taking action, permanently inflicts [Disabled] on all enemies in the target's column and surrounding enemies. At battle start, increases own CRIT Rate by 20% for 5 rounds. [Disabled]: Prevents the affected unit from triggering [Follow-Up] and [Continuous Follow-Up]. |
+| 7 | Awakening | **Awaken 1 Passive** | At battle start, permanently gains a 70% chance of [Evasion]. After any character acts, if Watchdog Man triggers [Evasion], adds 1 additional consecutive strike to his Ultimate. [Evasion]: Direct DMG, Extra DMG, Charge DMG, and Berserk DMG deal only 1 point of DMG. |
+| 8 | Awakening | **Awaken 2 Passive** | At battle start, permanently gains a 70% chance of [Evasion]. After any character acts, if Watchdog Man triggers [Evasion], adds 1 additional consecutive strike to his Ultimate and increases own ATK by 30% for 1 round. [Evasion]: Direct DMG, Extra DMG, Charge DMG, and Berserk DMG deal only 1 point of DMG. |
 | 9 | Awakening | **Awaken 3 Passive** | • Restores 150 [Energy Gauge] (when attacking) |
 
 **Effect Glossary:**
 
 | Term | Description |
 |---|---|
-| [Dodge] | The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration. |
-| [Follow-up DMG] | This type of attack damage is dealt as Attack attacks in a series of rapid attacks, gradually increasing the number of consecutive attacks. |
-| [Nullify] | Disabled status applies to a target area/column, rendering affected units unable to act or be effective. |
+| [Specialized Guard] | Negates incoming DMG and overwrites Bonus HP effects. Its total amount cannot exceed 15 times the unit's original Max HP. |
+| [Disabled] | Prevents the affected unit from triggering [Follow-Up] and [Continuous Follow-Up]. |
+| [Follow-Up] | An additional attack triggered after another action or when specified conditions are met. |
+| [Continuous Follow-Up] | A Follow-Up effect that can trigger repeatedly under specified conditions. |
+| [Evasion] | Causes Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to deal only 1 point of DMG. |
 
 ---
 
@@ -2021,25 +2072,24 @@
 - **Roles:** Same Row Speed Up, Encourage Allies
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Deals Direct DMG of 40% ATK to a single target. |
-| 2 | Ultimate | **Ultimate** | Deals Direct DMG of 90% ATK to the target's row. If own SPD (×0.9) exceeds the target's SPD, steals the SPD difference as [Super Speed]. Grants [Super Speed] to own row for 2 turns. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals Direct DMG of 90% > 125% ATK to the target's row. If own SPD (×0.9) exceeds the target's SPD, steals the SPD difference as [Super Speed]. Grants [Super Speed] to own row for 2 turns. |
-| 4 | Passive | **Passive** | Permanently increases own HP by. At the start of battle, grants [Specialized Acceleration] (increases SPD%; if the main target's SPD is lower than Zombieman, deals 500% ATK as Extra DMG). Before battle begins, [Encourage] allies (gain 2 energy at the start of the round, lasting 3 rounds). Triggers [Resurrection] after taking fatal DMG (while an ally is present, recovers 60% HP before action, up to 3 times). |
-| 5 | Passive | **Extreme Passive** | [Specialized Acceleration] SPD +20% &gt; +25%. [Encourage] 2 &gt; 3 energy. |
-| 6 | Passive | **5★ Passive** | [Specialized Acceleration] SPD +25% &gt; +30%. [Encourage] duration 3 &gt; 5 rounds. [Resurrection] up to 3 &gt; 4 times. |
-| 7 | Awakening | **Awaken 1 Passive** | Before battle begins, [Encourage] the allies (gains 2 energy at the start of the round, lasts 3 rounds). Triggers [Resurrection] after receiving fatal damage (When ally is present, recovers 60% HP before action, up to 3 times) |
-| 8 | Awakening | **Awaken 2 Passive** | Encourage allies 2 energy > 3 energy Last 3 rounds > 5 rounds Trigger Resurrection 3x > 4x |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Attacks a single target with 3 consecutive strikes, dealing 120% ATK DMG. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies in a row with 4 consecutive strikes, dealing 360% ATK DMG. Grants allies in the same row [Specialized Speed Up] for 1 round. Requires 0 Energy to activate. [Specialized Speed Up]: Sets their SPD to 90% of Zombieman's SPD. If their current SPD is higher, it remains unchanged. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks all enemies in a row with 4 consecutive strikes, dealing 500% ATK DMG. Grants allies in the same row [Specialized Speed Up] for 1 round. Requires 0 Energy to activate. [Specialized Speed Up]: Sets their SPD to 95% of Zombieman's SPD. If their current SPD is higher, it remains unchanged. |
+| 4 | Passive | **Passive** | At battle start, gains [Specialized Speed Up], increasing SPD by 20%. If the main target's SPD is lower than Zombieman's SPD, deals 500% ATK as Extra DMG. |
+| 5 | Passive | **Extreme Passive** | At battle start, gains [Specialized Speed Up], increasing SPD by 25%. If the main target's SPD is lower than Zombieman's SPD, deals 500% ATK as Extra DMG. |
+| 6 | Passive | **5★ Passive** | At battle start, gains [Specialized Speed Up], increasing SPD by 30%. If the main target's SPD is lower than Zombieman's SPD, deals 500% ATK as Extra DMG. |
+| 7 | Awakening | **Awaken 1 Passive** | Before battle begins, grants all allies [Encourage] for 3 rounds. After receiving fatal DMG, triggers [Regeneration]. [Encourage]: Grants 2 Energy at the start of each round. [Regeneration]: While at least 1 ally remains, restores 60% Max HP before Zombieman's action. Can trigger up to 3 times. |
+| 8 | Awakening | **Awaken 2 Passive** | Before battle begins, grants all allies [Encourage] for 5 rounds. After receiving fatal DMG, triggers [Regeneration]. [Encourage]: Grants 3 Energy at the start of each round. [Regeneration]: While at least 1 ally remains, restores 60% Max HP before Zombieman's action. Can trigger up to 5 times. |
 | 9 | Awakening | **Awaken 3 Passive** | • Restores 150 [Energy Gauge] (when attacking) |
 
 **Effect Glossary:**
 
 | Term | Description |
 |---|---|
-| [Revive] | The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match. |
-| [Resurrect] | Status returns downed units to battle, granting a limited number of respawns that anti-revive effects can remove. |
-| [Hyper Speed] | Speed ​​buff that while in effect allows the bearer and up to 6 allies to act against and overcome enemies with lower speed. |
-
+| [Specialized Speed Up] | A specialized SPD-enhancing effect. Zombieman's Ultimate raises same-row allies to a percentage of his SPD without lowering allies who are already faster. His Passive provides a percentage-based SPD increase. |
+| [Encourage] | Grants Energy to the team at the start of each round for a limited duration. |
+| [Regeneration] | After receiving fatal DMG, restores 60% Max HP before Zombieman's action while at least 1 ally remains, allowing him to continue fighting. |
 ---
 
 ## 🏆 SSR (42 characters)
@@ -2066,11 +2116,11 @@
 - **Roles:** AoE Shatter, Strong Follow-up, Core Duelist
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Deals 130% ATK  damage to a single target. |
-| 2 | Ultimate | **Ultimate** | Deals 20% ATK  damage to all enemies in a 5-hit combo. The first hit has a 50% chance to inflict [Collapse] on the target for 2 turns (DMG reduction rate lowered by 30%). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 25% ATK  damage to all enemies in a 5-hit combo. The first hit has a 50% chance to inflict [Collapse] on the target for 2 turns (DMG reduction rate lowered by 30%). |
-| 4 | Passive | **Passive** | Permanently grants self HP. After an Armament-type ally attacks, Atomic Samurai immediately performs a [Follow-up] (attacks with 80% of his basic attack's damage and effects, up to 3 times per turn). |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Attacks a single target, dealing 130% ATK DMG. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies with 5 consecutive strikes, dealing 100% ATK DMG. The first strike has a 50% chance to inflict [Shatter] on the target for 2 turns. [Shatter]: Reduces DMG Reduction Rate by 30%. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks all enemies with 5 consecutive strikes, dealing 150% ATK DMG. The first strike has a 100% chance to inflict [Shatter] on the target for 2 turns. [Shatter]: Reduces DMG Reduction Rate by 30%. |
+| 4 | Passive | **Passive** | After a Duelist ally attacks, Atomic Samurai immediately performs a [Follow-Up]. [Follow-Up]: Performs an attack using 80% of the Basic Attack's DMG and effects. Can trigger up to 3 times per turn. |
 | 5 | Passive | **Extreme Passive** | Permanently grants self  HP. After an Armament-type ally attacks, Atomic Samurai immediately performs a [Follow-up] (attacks with 120% of his basic attack's damage and effects, up to 3 times per turn). |
 | 6 | Passive | **5★ Passive** | Permanently grants self  HP. After an Armament-type ally attacks, Atomic Samurai immediately performs a [Follow-up] (attacks with 130% of his basic attack's damage and effects, up to 3 times per turn). |
 
@@ -2078,7 +2128,8 @@
 
 | Term | Description |
 |---|---|
-| [Truy Kích] | Extra attack outside of turn. Disabled by [Lock] and [Blind]. |
+| [Shatter] | Reduces DMG Reduction Rate by 30% for 2 turns. |
+| [Follow-Up] | An additional attack triggered after a Duelist ally attacks. Atomic Samurai's Follow-Up uses 80% of his Basic Attack's DMG and effects and can trigger up to 3 times per turn. |
 
 ---
 
@@ -2089,10 +2140,10 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals 120% ATK DMG to a single target, and enters [Berserk] for 1 turn (DMG increased by 30%). |
-| 2 | Ultimate | **Ultimate** | Deals 5 hit combo of 30% ATK (+2) DMG to each enemy in the entire column, with a 100% chance to inflict [Internal Injury] on struck targets (when hit, adds Internal Injury DMG equal to 140% ATK of Silver Fang; effect is removed after triggering). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 5 hit combo of 38% ATK (+2) DMG to each enemy in the entire column, with a 100% chance to inflict [Internal Injury] on struck targets (when hit, adds Internal Injury DMG equal to 160% ATK of Silver Fang; effect is removed after triggering). |
-| 4 | Passive | **Passive** | Permanently increases own HP by. At the start of battle, grants the whole team 30% Block rate for 2 turns. After an ally character triggers Block, they gain [Tenacity] (absorbs DMG equal to 7% of their own HP, up to 3 times per turn). |
+| 1 | Basic | **Basic** | Deals 120% ATK DMG to a single target and enters [Berserk] for 1 turn. [Berserk]: Increases DMG by 30%. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies in a column with 5 consecutive strikes, dealing 150% ATK DMG. Has a 100% chance to inflict [Internal Injury] on the target. [Internal Injury]: When the affected unit is attacked, takes DMG equal to 140% of Silverfang's ATK. The effect disappears after triggering once. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks all enemies in a column with 5 consecutive strikes, dealing 187.5% ATK DMG. Has a 100% chance to inflict [Internal Injury] on the target. [Internal Injury]: When the affected unit is attacked, takes DMG equal to 160% of Silverfang's ATK. The effect disappears after triggering once. |
+| 4 | Passive | **Passive** | At battle start, increases all allies' Block Rate by 30% for 2 turns. When an allied character successfully triggers Block, gains [Tenacity]. [Tenacity]: Absorbs DMG equal to 7% of Max HP. Can trigger up to 3 times per turn. |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP by. At the start of battle, grants the whole team 30% Block rate for 2 turns. After an ally character triggers Block, they gain [Tenacity] (absorbs DMG equal to 8% of their own HP, up to 4 times per turn). |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP by. At the start of battle, grants the whole team 30% Block rate for 2 turns. After an ally character triggers Block, they gain [Tenacity] (absorbs DMG equal to 8.5% of their own HP, up to 4 times per turn). |
 
@@ -2100,8 +2151,10 @@
 
 | Term | Description |
 |---|---|
-| [Tenacity] | The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge). |
-| [Internal Injury] | Damage over time based on ST, disappears after activation; Can Detonate to explode. |
+| [Berserk] | Increases DMG by 30% for 1 turn. |
+| [Internal Injury] | When the affected unit is attacked, takes DMG equal to 140% of Silverfang's ATK. Disappears after triggering once. |
+| [Block] | A defensive trigger that can activate Silverfang's Passive and grant [Tenacity]. |
+| [Tenacity] | Absorbs DMG equal to 7% of Max HP. Can trigger up to 3 times per turn. |
 
 ---
 
@@ -2112,10 +2165,10 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals 130% ATK DMG to a single target, and reduces the target's [Heal Rate] by 30% for 2 turns. |
-| 2 | Ultimate | **Ultimate** | Strikes each enemy in the entire row with 3 combo strikes for 65% ATK DMG each, with a 100% chance to reduce the main target's [Heal Rate], and a 50% chance to reduce the [Heal Rate] of targets in the same row (Heal effect reduced by 45% for 2 turns). |
-| 3 | Ultimate | **Ultra-Ultimate** | Strikes each enemy in the entire row with 3 combo strikes for 80% ATK DMG each, with a 100% chance to reduce the main target's [Heal Rate], and a 50% chance to reduce the [Heal Rate] of targets in the same row (Heal effect reduced by 65% for 2 turns). |
-| 4 | Passive | **Passive** | Permanently increases own HP. When battle starts, grants [Agility] to self and surrounding allies (reduces higher Direct DMG (12% - 60%) while taking fewer incoming strikes; cannot co-exist with [Non-Crit DMG Free]). The first time it takes fatal damage each battle, revives with 40% Max HP. |
+| 1 | Basic | **Basic** | Deals 130% ATK DMG to a single target and reduces the target's Heal Rate by 30% for 2 turns. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies in a row with 3 consecutive strikes, dealing 195% ATK DMG. Has a 100% chance to reduce the main target's Heal Rate by 45% for 2 turns, and a 50% chance to reduce the Heal Rate of other targets in the same row by 45% for 2 turns. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks all enemies in a row with 3 consecutive strikes, dealing 244% ATK DMG. Has a 100% chance to reduce the main target's Heal Rate by 65% for 2 turns, and a 50% chance to reduce the Heal Rate of other targets in the same row by 65% for 2 turns. |
+| 4 | Passive | **Passive** | At battle start, grants [Agility] to self and surrounding allies. The first time this character receives fatal DMG in each battle, restores HP equal to 40% of Max HP. [Agility]: Reduces higher Direct DMG by 12%–60% depending on the number of incoming strikes. Cannot coexist with [Non-Crit DMG Reduction]. |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP. At the start of battle, permanently grants [Agility] to all allies (the fewer strikes taken from enemy attacks, the more Direct DMG is evaded, up to 60% and no less than 12%; this effect and Non-Crit DMG RED can only have one active). The first time fatal DMG is taken each battle, revives with 45% of Max HP. |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP. At the start of battle, permanently grants [Agility] to all allies (the fewer strikes taken from enemy attacks, the more Direct DMG is evaded, up to 65% and no less than 16%; this effect and Non-Crit DMG RED can only have one active). The first time fatal DMG is taken each battle, revives with 50% of Max HP. |
 
@@ -2123,7 +2176,9 @@
 
 | Term | Description |
 |---|---|
-| [Agility] | Evasion type buff; mutually exclusive with Non-Crit Damage Immunity. |
+| [Heal Rate Reduction] | Reduces the effectiveness of HP recovery received by the affected unit. |
+| [Agility] | Reduces higher Direct DMG by 12%–60% depending on the number of incoming strikes. Cannot coexist with [Non-Crit DMG Reduction]. |
+| [Non-Crit DMG Reduction] | A defensive effect that reduces non-critical DMG and cannot coexist with [Agility]. |
 
 ---
 
@@ -2190,9 +2245,9 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals 50% ATK DMG to a single target with 2 combo strikes. |
-| 2 | Ultimate | **Ultimate** | Deals 50% ATK DMG to a single target with 4 combo strikes, and inflicts [Weaken] on Injured or Armed Collapse targets (reduces ATK by 30% for 1 turn). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 50% ATK DMG to a single target with 4 combo strikes, and inflicts [Weaken] on Injured or Armed Collapse targets (reduces ATK by 40% for 1 turn). |
+| 1 | Basic | **Basic** | Attacks a single target with 3 consecutive strikes, dealing 120% ATK DMG. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies in a row with 3 consecutive strikes, dealing 195% ATK DMG. Has a 100% chance to inflict [Field] on the main target for 1 turn, and a 50% chance to inflict [Field] on other targets in the same row for 1 turn. [Field]: Before taking action, the affected unit suffers Continuous DMG equal to 160% ATK. |
+| 3 | Ultimate | **Ultra-Ultimate** | Attacks all enemies in a row with 3 consecutive strikes, dealing 244% ATK DMG. Has a 100% chance to inflict [Field] on the main target for 1 turn, and a 50% chance to inflict [Field] on other targets in the same row for 1 turn. [Field]: Before taking action, the affected unit suffers Continuous DMG equal to 180% ATK. |
 | 4 | Passive | **Passive** | Permanently gains +20% HP. When attacking, if its own ATK is higher than the struck target's, the struck target suffers [Armed Collapse] (adds bonus Armed Collapse DMG equal to 120% of Choze's ATK when struck; the effect disappears after triggering). |
 | 5 | Passive | **Extreme Passive** | Permanently gains +20% HP. When attacking, if its own ATK is higher than the struck target's, the struck target suffers [Armed Collapse] (adds bonus Armed Collapse DMG equal to 140% of Choze's ATK when struck; the effect disappears after triggering). |
 | 6 | Passive | **5★ Passive** | Permanently gains +20% HP. When attacking, if its own ATK is higher than the struck target's, the struck target suffers [Armed Collapse] (adds bonus Armed Collapse DMG equal to 160% of Choze's ATK when struck; the effect disappears after triggering). |
@@ -2201,8 +2256,8 @@
 
 | Term | Description |
 |---|---|
-| [Internal Injury] | Damage over time based on ST, disappears after activation; Can Detonate to explode. |
-| [Weaken] | Unfavorable effect reduces the target's damage reduction rate by 30% for the duration. |
+| [Field] | Before taking action, the affected unit suffers Continuous DMG equal to 160% ATK. |
+| [Continuous DMG] | Damage-over-time that is applied separately from the initial attack. |
 
 ---
 
@@ -2236,18 +2291,22 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals 130% AT DMG to a single target. |
-| 2 | Ultimate | **Ultimate** | In [Silver] form, deals [Charged] DMG split evenly across the number of targets attacked. (After an enemy takes [Force Field] DMG, 1 stack of 240% ATK Charge accumulates, up to 4 stacks.) Strikes the entire enemy row with a 3-hit combo, then inflicts [Force Field] on the main target (taking DoT before it acts). Each stack grants your side 0.4 Energy. |
-| 3 | Ultimate | **Ultra-Ultimate** | In [Silver] form, deals [Charged] DMG split evenly across the number of targets attacked. (After an enemy takes [Force Field] DMG, 1 stack of 330% ATK Charge accumulates, up to 4 stacks.) Strikes the entire enemy row with a 3-hit combo, then inflicts [Force Field] on the main target (taking DoT before it acts). Each stack grants your side 0.5 Energy. |
-| 4 | Passive | **Passive** | Permanently increases own HP by. On entry, grants all allies 90% Ultimate DMG Immunity for a duration. Permanently gains 40% Non-Crit DMG Free (reduces all types of DMG; only one of this and [Agility] takes effect). At the start of battle, lowers own SPD by 50%. After an enemy takes [Force Field] DMG, Drive Knight transforms into [Silver] form. |
-| 5 | Passive | **Extreme Passive** | Permanently increases own HP by. On entry, grants all allies 90% Ultimate DMG Immunity for a duration. Permanently gains 45% Non-Crit DMG Free (reduces all types of DMG; only one of this and [Agility] takes effect). At the start of battle, lowers own SPD by 55%. After an enemy takes [Force Field] DMG, Drive Knight transforms into [Silver] form. |
-| 6 | Passive | **5★ Passive** | Permanently increases own HP by. On entry, grants all allies 90% Ultimate DMG Immunity for a duration. Permanently gains 50% Non-Crit DMG Free (reduces all types of DMG; only one of this and [Agility] takes effect). At the start of battle, lowers own SPD by 65%. After an enemy takes [Force Field] DMG, Drive Knight transforms into [Silver] form. |
+| 1 | Basic | **Basic** | Attacks a single target with 3 consecutive strikes, dealing 120% ATK DMG. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies in a row with 3 consecutive strikes, dealing 195% ATK DMG. Has a 100% chance to inflict [Field] on the main target for 1 turn, and a 50% chance to inflict [Field] on other targets in the same row for 1 turn. [Field]: Before taking action, the affected unit suffers Continuous DMG equal to 160% ATK. |
+| 3 | Ultimate | **Ultra-Ultimate** | Attacks all enemies in a row with 3 consecutive strikes, dealing 244% ATK DMG. Has a 100% chance to inflict [Field] on the main target for 1 turn, and a 50% chance to inflict [Field] on other targets in the same row for 1 turn. [Field]: Before taking action, the affected unit suffers Continuous DMG equal to 180% ATK. |
+| 4 | Passive | **Passive** | At battle start, grants all allies 40% Ultimate DMG Reduction for 2 turns and permanently grants all allies 50% [Non-Crit DMG Reduction]. [Non-Crit DMG Reduction] is effective against all types of DMG and cannot coexist with [Agility]. At battle start, reduces own SPD by 90%. When an enemy suffers [Field] DMG, Drive Knight transforms into [Silver State]. |
+| 5 | Passive | **Extreme Passive** | Permanently increases own HP. On entry, grants all allies 90% Ultimate DMG Immunity for a duration. Permanently gains 45% [Non-Crit DMG Free]. [Non-Crit DMG Free] reduces all types of non-critical DMG and cannot coexist with [Agility]. At battle start, reduces own SPD by 55%. When an enemy suffers [Field] DMG, Drive Knight transforms into [Silver State]. |
+| 6 | Passive | **5★ Passive** | Permanently increases own HP. On entry, grants all allies 90% Ultimate DMG Immunity for a duration. Permanently gains 50% [Non-Crit DMG Free]. [Non-Crit DMG Free] reduces all types of non-critical DMG and cannot coexist with [Agility]. At battle start, reduces own SPD by 65%. When an enemy suffers [Field] DMG, Drive Knight transforms into [Silver State]. |
 
 **Effect Glossary:**
-
 | Term | Description |
 |---|---|
-| [Agility] | Evasion type buff; mutually exclusive with Non-Crit Damage Immunity. |
+| [Field] | Before taking action, the affected unit suffers Continuous DMG equal to 160% ATK. |
+| [Silver State] | Drive Knight transforms into this state when an enemy suffers [Field] DMG. While in this state, his Ultimate can apply [Charge DMG] to enemies in the target row. |
+| [Charge] | A stack applied to targets affected by [Field]. Each layer deals 240% ATK as Charge DMG and reduces the Energy Gauge by 500 points. Can stack up to 4 layers. |
+| [Charge DMG] | A specialized damage type generated through [Charge] stacks. |
+| [Non-Crit DMG Reduction] | Permanently reduces all types of non-critical DMG received by 50%. Cannot coexist with [Agility]. |
+| [Agility] | A defensive effect that cannot coexist with [Non-Crit DMG Reduction]. |
 
 ---
 
@@ -2258,19 +2317,22 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Grants 50% [Lifesteal] to self. Deals 120% ATK DMG to a single target. |
-| 2 | Ultimate | **Ultimate** | Grants 50% [Lifesteal] to self. Deals 30% ATK DMG to all enemies and [Stun] the target. Grants 20% [DMG Dealt] to all Monster allies. |
-| 3 | Ultimate | **Ultra-Ultimate** | Grants 50% [Lifesteal]; the target expands from self to all Monster allies. Deals 30% > 40% ATK DMG to all enemies and [Stun] the target. Grants 20% > 30% [DMG Dealt] to all Monster allies. |
-| 4 | Passive | **Passive** | During the first 2 turns, increases ATK of allied Esper characters by 25%. Additionally, reduces the ATK of all enemy Hero characters by 25%. |
-| 5 | Passive | **Extreme Passive** | Permanently increases own HP. On entry, grants 25% > 30% [ATK] to all Esper allies. Additionally grants 40% DMG Reduction to all Monster allies. |
-| 6 | Passive | **5★ Passive** | Permanently increases own HP. On entry, grants 30% [ATK] to all Esper allies and 40% DMG Reduction to all Monster allies. |
-
+| 1 | Basic | **Basic** | Gains 50% Lifesteal for 1 round, then attacks a single target, dealing 120% ATK DMG. |
+| 2 | Ultimate | **Ultimate** | Gains 50% Lifesteal for 2 rounds, then attacks all enemies with 5 consecutive strikes, dealing 150% ATK DMG. Has a 100% chance to inflict [Stun] on the main target for 1 round. [Stun]: Prevents the affected unit from acting. At most 4 characters can be affected by [Stun] at the same time. After attacking, grants all Monster allies [Rage] for their next action. [Rage]: Increases ATK by 20% during the next direct action. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Grants all Monster allies 50% Lifesteal for 2 rounds, then attacks all enemies with 5 consecutive strikes, dealing 200% ATK DMG. Has a 100% chance to inflict [Stun] on the main target for 1 round. [Stun]: Prevents the affected unit from acting. At most 4 characters can be affected by [Stun] at the same time. After attacking, grants all Monster allies [Rage] for their next action. [Rage]: Increases ATK by 30% during the next direct action. |
+| 4 | Passive | **Passive** | During the first 2 rounds, increases the ATK of all Esper allies by 25% and reduces the ATK of all enemies by 25%. |
+| 5 | Passive | **Extreme Passive** | During the first 2 rounds, increases the ATK of all Esper allies by 30% and reduces the ATK of all enemies by 30%. Additionally, Monster allies take 40% less DMG from [Injury], [Internal Injury], and [Charge] for 2 rounds. |
+| 6 | Passive | **5★ Passive** | During the first 3 rounds, increases the ATK of all Esper allies by 30% and reduces the ATK of all enemies by 30%. Additionally, Monster allies take 40% less DMG from [Injury], [Internal Injury], and [Charge] for 3 rounds. |
 **Effect Glossary:**
 
 | Term | Description |
 |---|---|
-| [Stun] | The stun-type control effect prevents the target from taking action during the duration. |
-| [Lifesteal] | Self-buff heals the bearer for a percentage (e.g. 50%) of the damage they deal. |
+| [Lifesteal] | Restores HP based on a percentage of DMG dealt. |
+| [Stun] | Prevents the affected unit from acting. At most 4 characters can be affected by [Stun] simultaneously. |
+| [Rage] | Increases ATK during the unit's next direct action. |
+| [Injury] | A special damage effect. |
+| [Internal Injury] | A special damage effect that triggers under specified conditions. |
+| [Charge] | A special accumulated damage effect that can deal Charge DMG when triggered. |
 
 ---
 
@@ -2304,7 +2366,7 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals 70% ATK (+5) DMG with 2 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 15%). |
+| 1 | Basic | **Basic** | Deals 70% ATK DMG with 2 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 15%). |
 | 2 | Ultimate | **Ultimate** | Deals 80% ATK (+3) DMG with 3 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 30%); triggering a Critical Strike inflicts [Weaken] on the target (ATK reduced by 25% for 1 turn). |
 | 3 | Ultimate | **Ultra-Ultimate** | Deals 100% ATK (+3) DMG with 3 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 40%); triggering a Critical Strike inflicts [Weaken] on the target (ATK reduced by 45% for 1 turn). |
 | 4 | Passive | **Passive** | Permanently increases own HP by. If a [Shatter]ed enemy exists, enters [Tenacity] state (absorbs DMG equal to 20% of own HP, up to 1 time per turn).For each type of debuff simultaneously present on enemies, gain [Charge] (deals 117% ATK Charge DMG when attacking, up to 3 stacks). |
@@ -2326,22 +2388,24 @@
 - **Roles:** Stun, Internal Injury
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Attacks a single target with 2 combo strikes for 80% ATK DMG (+5). Has a 100% chance to inflict [Internal Injury] on the target (when attacked, takes Internal Injury DMG equal to 155% of Gale Wind's ATK; the effect disappears once triggered). |
-| 2 | Ultimate | **Ultimate** | Attacks targets in a cross-shaped area with 4 combo strikes for 50% ATK DMG (+bonus). In the first 2 turns, has a 100% chance to inflict [Stun] on 2 random targets for 1 turn (cannot take actions; only 4 characters on each team can be stunned at the same time; has a 50% chance to pierce immunity). Also increases your [Energy Gauge] by -900. |
-| 3 | Ultimate | **Ultra-Ultimate** | Attacks targets in a cross-shaped area with 4 combo strikes for 65% ATK DMG (+bonus). In the first 2 turns, has a 100% chance to inflict [Stun] on 3 random targets for 1 turn (cannot take actions; only 4 characters on each team can be stunned at the same time; has a 50% chance to pierce immunity). Also increases your [Energy Gauge] by -950. |
-| 4 | Passive | **Passive** | Permanently increases own HP. Grants self 40% Non-CRIT DMG reduction (reduces all types of DMG; this effect and [Agility] can only have one active). After any character's action, launches a [Follow-up] attack on the enemy with the highest ATK (attacks with 80% of Basic Attack's DMG and effects, 3 times per turn). |
-| 5 | Passive | **Extreme Passive** | Permanently increases own HP. Grants self 50% Non-CRIT DMG reduction (reduces all types of DMG; this effect and [Agility] can only have one active). After any character's action, launches a [Follow-up] attack on the enemy with the highest ATK (attacks with 100% of Basic Attack's DMG and effects, 4 times per turn). |
-| 6 | Passive | **5★ Passive** | Permanently increases own HP. Grants self 50% Non-CRIT DMG reduction (reduces all types of DMG; this effect and [Agility] can only have one active). After any character's action, launches a [Follow-up] attack on the enemy with the highest ATK (attacks with 120% of Basic Attack's DMG and effects, 4 times per turn). |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Attacks a single target with 2 consecutive strikes, dealing 80% ATK DMG. Has a 100% chance to inflict [Internal Injury] on the target. [Internal Injury]: When the affected unit is attacked, takes DMG equal to 155% of Gale Wind's ATK. The effect disappears after triggering once. |
+| 2 | Ultimate | **Ultimate** | Attacks enemies in a cross-shaped area with 4 consecutive strikes, dealing 50% ATK DMG plus bonus DMG. During the first 2 turns, has a 100% chance to inflict [Stun] on 2 random targets for 1 turn. [Stun]: Prevents the affected unit from acting. At most 4 characters on each team can be affected by [Stun] simultaneously. Has a 50% chance to ignore Stun immunity. Reduces the [Energy Gauge] by 900 points. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks enemies in a cross-shaped area with 4 consecutive strikes, dealing 65% ATK DMG plus bonus DMG. During the first 2 turns, has a 100% chance to inflict [Stun] on 3 random targets for 1 turn. [Stun]: Prevents the affected unit from acting. At most 4 characters on each team can be affected by [Stun] simultaneously. Has a 50% chance to ignore Stun immunity. Reduces the [Energy Gauge] by 950 points. |
+| 4 | Passive | **Passive** | Permanently increases own HP. Permanently gains 40% [Non-Crit DMG Reduction], which reduces all types of non-critical DMG and cannot coexist with [Agility]. After any character acts, launches a [Follow-Up] against the enemy with the highest ATK. [Follow-Up]: Deals 80% of the Basic Attack's DMG and retains its effects. Can trigger up to 3 times per turn. |
+| 5 | Passive | **Extreme Passive** | Permanently increases own HP. Permanently gains 50% [Non-Crit DMG Reduction], which reduces all types of non-critical DMG and cannot coexist with [Agility]. After any character acts, launches a [Follow-Up] against the enemy with the highest ATK. [Follow-Up]: Deals 100% of the Basic Attack's DMG and retains its effects. Can trigger up to 4 times per turn. |
+| 6 | Passive | **5★ Passive** | Permanently increases own HP. Permanently gains 50% [Non-Crit DMG Reduction], which reduces all types of non-critical DMG and cannot coexist with [Agility]. After any character acts, launches a [Follow-Up] against the enemy with the highest ATK. [Follow-Up]: Deals 120% of the Basic Attack's DMG and retains its effects. Can trigger up to 4 times per turn. |
 
 **Effect Glossary:**
 
 | Term | Description |
 |---|---|
-| [Stun] | The stun-type control effect prevents the target from taking action during the duration. |
-| [Internal Injury] | Damage over time based on ST, disappears after activation; Can Detonate to explode. |
-| [Truy Kích] | Extra attack outside of turn. Disabled by [Lock] and [Blind]. |
-
+| [Internal Injury] | When the affected unit is attacked, takes DMG equal to 155% of Gale Wind's ATK. Disappears after triggering once. |
+| [Stun] | Prevents the affected unit from acting. At most 4 characters on each team can be affected by [Stun] simultaneously. Gale Wind's Ultimate has a 50% chance to ignore Stun immunity. |
+| [Energy Gauge] | A battle resource affected by Gale Wind's Ultimate. His Ultimate reduces it by 900 points, while Ultra-Ultimate reduces it by 950 points. |
+| [Non-Crit DMG Reduction] | Reduces all types of non-critical DMG and cannot coexist with [Agility]. |
+| [Agility] | A defensive effect that cannot coexist with [Non-Crit DMG Reduction]. |
+| [Follow-Up] | An additional attack launched against the enemy with the highest ATK after any character acts. It uses Gale Wind's Basic Attack DMG and retains the Basic Attack's effects. |
 ---
 
 ### Garou
@@ -2351,10 +2415,10 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals 120% ATK DMG to a single target. 100% chance to inflict [Internal Injury] on the target (when the target is hit, an added Internal Injury DMG equal to 100% of Garou's ATK is dealt; the effect is removed after triggering). |
-| 2 | Ultimate | **Ultimate** | Deals 20% ATK (+2) DMG with 5 consecutive strikes to all targets. 100% chance to inflict [Internal Injury] on 3 random targets (when the target is hit, an added Internal Injury DMG equal to 130% of Garou's ATK is dealt; the effect is removed after triggering). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 24% ATK (+2) DMG with 5 consecutive strikes to all targets. 100% chance to inflict [Internal Injury] on 4 random targets (when the target is hit, an added Internal Injury DMG equal to 145% of Garou's ATK is dealt; the effect is removed after triggering). |
-| 4 | Passive | **Passive** | Permanently increases own HP by. After an enemy character acts, Garou has a 40% chance to perform a [Follow-up] (attacks with 80% of Basic Attack DMG and effects, up to 3 times each round); always triggers if a hero acts. When taking fatal damage for the first time each battle, heals self for 30% of max HP. |
+| 1 | Basic | **Basic** | Attacks a single target, dealing 120% ATK DMG. Has a 100% chance to inflict [Internal Injury] on the target. [Internal Injury]: When the affected unit is attacked, takes DMG equal to 100% of Garou's ATK. The effect disappears after triggering once. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies with 5 consecutive strikes, dealing 100% ATK DMG. Has a 100% chance to inflict [Internal Injury] on 3 random targets. [Internal Injury]: When the affected unit is attacked, takes DMG equal to 130% of Garou's ATK. The effect disappears after triggering once. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Effect currently unknown. |
+| 4 | Passive | **Passive** | After an enemy acts, Garou has a 40% chance to perform a [Follow-Up]. If the acting enemy is a Hero, the [Follow-Up] is guaranteed to trigger. The first time Garou receives fatal DMG each battle, restores 30% of Max HP. [Follow-Up]: Deals 80% of Garou's Basic Attack DMG and retains its effects. Can trigger up to 3 times per turn. |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP by. After an enemy character acts, Garou has a 40% chance to perform a [Follow-up] (attacks with 90% of Basic Attack DMG and effects, up to 4 times each round); always triggers if a hero acts. Heals self for 30% of max HP on first fatal damage. |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP by. After an enemy character acts, Garou has a 50% chance to perform a [Follow-up] (attacks with 115% of Basic Attack DMG and effects, up to 4 times each round); always triggers if a hero acts. Heals self for 38% of max HP on first fatal damage. |
 
@@ -2362,8 +2426,8 @@
 
 | Term | Description |
 |---|---|
-| [Internal Injury] | Damage over time based on ST, disappears after activation; Can Detonate to explode. |
-| [Truy Kích] | Extra attack outside of turn. Disabled by [Lock] and [Blind]. |
+| [Internal Injury] | When the affected unit is hit, takes additional ATK-based DMG. The effect disappears after triggering once. |
+| [Follow-Up] | An additional attack triggered after an enemy acts. Garou's Follow-Up uses a percentage of his Basic Attack DMG and retains the Basic Attack's effects. It always triggers when the acting enemy is a Hero. |
 
 ---
 
@@ -2374,19 +2438,19 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals 2 combo strikes to a single target for 90% ATK(+5) DMG each. |
-| 2 | Ultimate | **Ultimate** | Deals 2 combo strikes to all enemies, dealing DMG equal to 24% of Genos' max HP(+1), with a 100% chance to inflict [Burn] on the main target and those around it for 2 turns (DoT equal to 70% ATK).After casting, Genos loses 70% max HP until the end of the current turn. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 2 combo strikes to all enemies, dealing DMG equal to 32% of Genos' max HP(+1), with a 100% chance to inflict [Burn] on the main target and those around it for 2 turns (DoT equal to 90% ATK).After casting, Genos loses 90% max HP until the end of the current turn. |
-| 4 | Passive | **Passive** | Permanently increases own HP by.After taking fatal DMG, triggers [Regeneration] (while an ally is present, recovers 50% HP before Genos' next action to keep fighting, up to 1 time). When [Regeneration] triggers, deals bonus DMG equal to 160% ATK to all enemies. |
-| 5 | Passive | **Extreme Passive** | Permanently increases own HP by.After taking fatal DMG, triggers [Regeneration] (while an ally is present, recovers 75% HP before Genos' next action to keep fighting, up to 1 time). When [Regeneration] triggers, deals bonus DMG equal to 180% ATK to all enemies. |
-| 6 | Passive | **5★ Passive** | Permanently increases own HP by.After taking fatal DMG, triggers [Regeneration] (while an ally is present, recovers 75% HP before Genos' next action to keep fighting, up to 2 times). When [Regeneration] triggers, deals bonus DMG equal to 200% ATK to all enemies. |
+| 1 | Basic | **Basic** | Attacks a single target with 2 consecutive strikes, dealing 90% ATK DMG per strike. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies with 2 consecutive strikes, dealing DMG equal to 24% of Genos' Max HP. Has a 100% chance to inflict [Burn] on the main target and surrounding enemies for 2 turns. [Burn]: Deals Continuous DMG equal to 70% ATK. After casting, Genos loses 70% of Max HP until the end of the current turn. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks all enemies with 2 consecutive strikes, dealing DMG equal to 32% of Genos' Max HP. Has a 100% chance to inflict [Burn] on the main target and surrounding enemies for 2 turns. [Burn]: Deals Continuous DMG equal to 90% ATK. After casting, Genos loses 90% of Max HP until the end of the current turn. |
+| 4 | Passive | **Passive** | Permanently increases own HP. After receiving fatal DMG, triggers [Regeneration]. [Regeneration]: While at least 1 ally remains, restores 50% HP before Genos' next action and allows him to continue fighting. Can trigger up to 1 time per battle. When [Regeneration] triggers, deals Extra DMG equal to 160% ATK to all enemies. |
+| 5 | Passive | **Extreme Passive** | Permanently increases own HP. After receiving fatal DMG, triggers [Regeneration]. [Regeneration]: While at least 1 ally remains, restores 75% HP before Genos' next action and allows him to continue fighting. Can trigger up to 1 time per battle. When [Regeneration] triggers, deals Extra DMG equal to 180% ATK to all enemies. |
+| 6 | Passive | **5★ Passive** | Permanently increases own HP. After receiving fatal DMG, triggers [Regeneration]. [Regeneration]: While at least 1 ally remains, restores 75% HP before Genos' next action and allows him to continue fighting. Can trigger up to 2 times per battle. When [Regeneration] triggers, deals Extra DMG equal to 200% ATK to all enemies. |
 
 **Effect Glossary:**
 
 | Term | Description |
 |---|---|
-| [Thiêu Đốt] | Continuous fire damage over time to the target. |
-| [Regeneration] | Restores Health over time or before the unit's next action. |
+| [Burn] | Deals ATK-based Continuous DMG for 2 turns. Ultimate deals 70% ATK as Continuous DMG, while Ultra-Ultimate deals 90% ATK. |
+| [Regeneration] | After receiving fatal DMG, restores HP before Genos' next action while at least 1 ally remains, allowing him to continue fighting. |
 
 ---
 
@@ -2418,19 +2482,23 @@
 - **Roles:** Reduce Non-Crit DMG, Increase Shield Rate
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Deals 120% ATK damage to a single target, with a 100% chance to inflict [Internal Injury] on the target (when the target is hit, adds Internal Injury damage equal to 100% of Gouketsu's ATK; the effect disappears after triggering). |
-| 2 | Ultimate | **Ultimate** | Deals 60% ATK (+3) damage to all targets with a 3-hit combo, and simultaneously restores HP equal to 20% of own max HP. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 70% ATK (+3) damage to all targets with a 3-hit combo, and simultaneously restores HP equal to 30% of own max HP. |
-| 4 | Passive | **Passive** | Permanently increases own HP by. Self gains 30% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect). At the start of battle, grants self and surrounding allies 70% Healing rate and Shield rate for 2 turns. |
-| 5 | Passive | **Extreme Passive** | Permanently increases own HP by. Self gains 35% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect). At the start of battle, grants self and surrounding allies 80% Healing rate and Shield rate for 2 turns. |
-| 6 | Passive | **5★ Passive** | Permanently increases own HP by. Self gains 38% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect). At the start of battle, grants self and surrounding allies 90% Healing rate and Shield rate for 2 turns. |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Deals 120% ATK DMG to a single target. Has a 100% chance to inflict [Internal Injury] on the target. [Internal Injury]: When the affected unit is attacked, takes DMG equal to 100% of Gouketsu's ATK. The effect disappears after triggering once. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies with 3 consecutive strikes, dealing 60% ATK DMG per strike. Restores HP equal to 20% of Max HP. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks all enemies with 3 consecutive strikes, dealing 70% ATK DMG per strike. Restores HP equal to 30% of Max HP. |
+| 4 | Passive | **Passive** | Permanently increases own HP. Permanently gains 30% [Non-Crit DMG Reduction], which reduces all types of non-critical DMG and cannot coexist with [Agility]. At battle start, increases Heal Rate and Shield Rate by 70% for self and surrounding allies for 2 turns. |
+| 5 | Passive | **Extreme Passive** | Permanently increases own HP. Permanently gains 35% [Non-Crit DMG Reduction], which reduces all types of non-critical DMG and cannot coexist with [Agility]. At battle start, increases Heal Rate and Shield Rate by 80% for self and surrounding allies for 2 turns. |
+| 6 | Passive | **5★ Passive** | Permanently increases own HP. Permanently gains 38% [Non-Crit DMG Reduction], which reduces all types of non-critical DMG and cannot coexist with [Agility]. At battle start, increases Heal Rate and Shield Rate by 90% for self and surrounding allies for 2 turns. |
 
 **Effect Glossary:**
 
 | Term | Description |
 |---|---|
-| [Internal Injury] | Damage over time based on ST, disappears after activation; Can Detonate to explode. |
+| [Internal Injury] | When the affected unit is attacked, takes DMG equal to 100% of Gouketsu's ATK. Disappears after triggering once. |
+| [Non-Crit DMG Reduction] | Reduces all types of non-critical DMG and cannot coexist with [Agility]. |
+| [Agility] | A defensive effect that cannot coexist with [Non-Crit DMG Reduction]. |
+| [Heal Rate] | Increases the effectiveness of HP recovery. |
+| [Shield Rate] | Increases the effectiveness of generated shield-type effects. |
 
 ---
 
@@ -2462,19 +2530,20 @@
 - **Roles:** Max HP Core, Follow-up
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Sends out a recon drone to scout a single target, directing the ally with the highest ATK to launch a [Follow-up], and recovers HP to self equal to 120% ATK. |
-| 2 | Ultimate | **Ultimate** | Reduces the target's max HP for several turns (HP exceeding the new cap is immediately removed). Deals 110% ATK DMG to all targets. |
-| 3 | Ultimate | **Ultra-Ultimate** | Reduces the target's max HP for several turns (HP exceeding the new cap is immediately removed). Deals 140% ATK DMG to all targets. |
-| 4 | Passive | **Passive** | Permanently increases own HP by. Increases all allies' max HP by 15% for 2 turns. When an ally in the same column is a Monster, Gyoro-Gyoro shares a portion of the damage they take (stops sharing once their HP falls below a threshold). |
-| 5 | Passive | **Extreme Passive** | Permanently increases own HP by. Increases all allies' max HP% for 2 turns. When an ally in the same column is a Monster, Gyoro-Gyoro shares a portion of the damage they take (stops sharing once their HP falls below a threshold). |
-| 6 | Passive | **5★ Passive** | Permanently increases own HP by. Increases all allies' max HP by 25% for 2 turns. When an ally in the same column is a Monster, Gyoro-Gyoro shares a portion of the damage they take (stops sharing once their HP falls below a threshold). |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Sends out a recon drone to scout a single target, causing the ally with the highest ATK to perform a [Follow-Up]. Restores own HP equal to 120% ATK. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies, dealing 110% ATK DMG. Reduces their Max HP by 15% for 2 turns. Any HP exceeding the reduced Max HP is immediately removed. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks all enemies, dealing 140% ATK DMG. Reduces their Max HP by 15% for 2 turns. Any HP exceeding the reduced Max HP is immediately removed. |
+| 4 | Passive | **Passive** | Permanently increases own HP. At battle start, increases all allies' Max HP by 15% for 2 turns. When a Monster ally is in the same column, Gyoro-Gyoro shares 50% of the DMG received by that ally. DMG Sharing stops when the ally's HP falls below 20%. |
+| 5 | Passive | **Extreme Passive** | Permanently increases own HP. At battle start, increases all allies' Max HP for 2 turns. When a Monster ally is in the same column, Gyoro-Gyoro shares 50% of the DMG received by that ally. DMG Sharing stops when the ally's HP falls below 20%. |
+| 6 | Passive | **5★ Passive** | Permanently increases own HP. At battle start, increases all allies' Max HP by 25% for 2 turns. When a Monster ally is in the same column, Gyoro-Gyoro shares 50% of the DMG received by that ally. DMG Sharing stops when the ally's HP falls below 20%. |
 
 **Effect Glossary:**
 
 | Term | Description |
 |---|---|
-| [Truy Kích] | Extra attack outside of turn. Disabled by [Lock] and [Blind]. |
+| [Follow-Up] | An additional attack performed by the ally with the highest ATK when triggered by Gyoro-Gyoro's Basic Attack. |
+| [DMG Sharing] | Gyoro-Gyoro shares 50% of the DMG received by a Monster ally in the same column. The effect stops when that ally's HP falls below 20%. |
 
 ---
 
@@ -2613,14 +2682,20 @@
 - **Roles:** Single Target DMG, Follow-up
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Strikes a single target with 2 combo hits, dealing 50% ATK DMG each. |
-| 2 | Ultimate | **Ultimate** | Strikes enemies in a cross-shaped area with 3 combo hits, dealing 40% ATK DMG each; the final hit drains 100% of the DMG dealt to heal herself. |
-| 3 | Ultimate | **Ultra-Ultimate** | Strikes enemies in a cross-shaped area with 3 combo hits, dealing 40% ATK DMG each; the final hit drains 100% of the DMG dealt to heal herself, and the first and second hits each have a 100% chance to drain 100% of the DMG dealt to heal as well. |
-| 4 | Passive | **Passive** | Permanently increases own HP by. Grants 33% [Non-Crit DMG Free] (effective for all DMG types, cannot co-exist with [Agility]). After an ally attacks (starting from round 2), [Awaken] Mosquito Girl launches a [Follow-up] on the enemy with the lowest HP ratio (80% of Basic Attack DMG with special effects, 4 times per round). |
-| 5 | Passive | **Extreme Passive** | [Non-Crit DMG Free] 33% &gt; 38%. [Follow-up] 80% &gt; 90% Basic Attack, 4 &gt; 5 times per round. |
-| 6 | Passive | **5★ Passive** | [Non-Crit DMG Free] 38% &gt; 45%. [Follow-up] 90% &gt; 100% Basic Attack. Trigger window: from round 2 &gt; from round 1. |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Attacks a single target with 2 consecutive strikes, dealing 50% ATK DMG per strike. |
+| 2 | Ultimate | **Ultimate** | Attacks enemies in a cross-shaped area with 3 consecutive strikes, dealing 40% ATK DMG per strike. The final strike restores HP equal to 100% of the DMG dealt by that strike. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks enemies in a cross-shaped area with 3 consecutive strikes, dealing 40% ATK DMG per strike. Each of the first 2 strikes has a 100% chance to restore HP equal to 100% of the DMG dealt by that strike, and the final strike also restores HP equal to 100% of the DMG dealt. |
+| 4 | Passive | **Passive** | Permanently increases own HP. Permanently gains 33% [Non-Crit DMG Free], which is effective against all types of non-critical DMG and cannot coexist with [Agility]. Starting from round 2, after an ally attacks, Awakened Mosquito Girl launches a [Follow-Up] against the enemy with the lowest HP percentage. [Follow-Up]: Deals 80% of the Basic Attack's DMG and retains its special effects. Can trigger up to 4 times per round. |
+| 5 | Passive | **Extreme Passive** | Permanently increases own HP. Permanently gains 38% [Non-Crit DMG Free], which is effective against all types of non-critical DMG and cannot coexist with [Agility]. Starting from round 2, after an ally attacks, Awakened Mosquito Girl launches a [Follow-Up] against the enemy with the lowest HP percentage. [Follow-Up]: Deals 90% of the Basic Attack's DMG and retains its special effects. Can trigger up to 5 times per round. |
+| 6 | Passive | **5★ Passive** | Permanently increases own HP. Permanently gains 45% [Non-Crit DMG Free], which is effective against all types of non-critical DMG and cannot coexist with [Agility]. Starting from round 1, after an ally attacks, Awakened Mosquito Girl launches a [Follow-Up] against the enemy with the lowest HP percentage. [Follow-Up]: Deals 100% of the Basic Attack's DMG and retains its special effects. Can trigger up to 5 times per round. |
+### Effect Glossary
 
+| Term | Description |
+|---|---|
+| [Non-Crit DMG Free] | Reduces all types of non-critical DMG and cannot coexist with [Agility]. |
+| [Agility] | A defensive effect that cannot coexist with [Non-Crit DMG Free]. |
+| [Follow-Up] | An additional attack triggered after an ally attacks. It targets the enemy with the lowest HP percentage, uses a percentage of Awakened Mosquito Girl's Basic Attack DMG, and retains the Basic Attack's special effects. |
 ---
 
 ### Phoenix Man
@@ -2758,7 +2833,7 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals 70% ATK (+5) damage to a single target with a 2-hit combo, and grants self [Tenacity] (absorbs damage equal to 25% of own HP). |
+| 1 | Basic | **Basic** | Deals 70% ATK damage to a single target with a 2-hit combo, and grants self [Tenacity] (absorbs damage equal to 25% of own HP). |
 | 2 | Ultimate | **Ultimate** | Each stack of [Charge] deals extra Charge damage equal to 24% ATK to the target hit. Deals 160% ATK damage to each back-row enemy with a 5-hit combo. |
 | 3 | Ultimate | **Ultra-Ultimate** | Each stack of [Charge] deals extra Charge damage equal to 30% ATK to the target hit. Deals 240% ATK damage to each back-row enemy with a 5-hit combo, with a 100% chance to inflict [Weaken] on critically-hit targets (reduces ATK by 30% for 2 turns). |
 | 4 | Passive | **Passive** | Permanently increases own HP by. Each time self gains a [Tenacity] state, gains 1 stack of [Charge], up to 2 stacks. Permanently increases the ATK of allies in a [Charge] state by 25%. Self permanently gains 40% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect). |
@@ -2781,7 +2856,7 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Strikes a single target with a 2-hit combo, dealing 60% ATK(+5) damage. Grants self [Tenacity] (absorbs damage equal to 10% of own HP). |
+| 1 | Basic | **Basic** | Strikes a single target with a 2-hit combo, dealing 60% AT damage. Grants self [Tenacity] (absorbs damage equal to 10% of own HP). |
 | 2 | Ultimate | **Ultimate** | Deals 130% AT damage to targets in a cross area. Has a 100% chance to inflict [Injured] on the main target for 2 turns (adds Injured damage equal to 50% ATK when attacked). Shares 40% of the damage taken by the 2 lowest-HP allies for 2 turns, reducing the shared damage taken% (no longer shares once HP drops below 20%). |
 | 3 | Ultimate | **Ultra-Ultimate** | Deals 160% AT damage to targets in a cross area. Has a 100% chance to inflict [Injured] on the main target for 2 turns (adds Injured damage equal to 50% ATK when attacked). Shares 40% of the damage taken by the 2 lowest-HP allies for 2 turns, reducing the shared damage taken by 40% (no longer shares once HP drops below 20%). |
 | 4 | Passive | **Passive** | Permanently increases own HP. When battle begins, grants allies in the same row and self 40% Ultimate DMG Free for 2 turns. The first time fatal damage is taken each battle, heals self for 30% of max HP. |
@@ -2804,8 +2879,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 120% AT damage to a single target, and reduces damage taken by self% for 1 turn. |
-| 2 | Ultimate | **Ultimate** | Deals 75% ATK(+5) damage to each enemy in the entire column, and grants self and allies in the same row [Tenacity] (absorbs damage equal to 20% of own HP). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 94% ATK(+5) damage to each enemy in the entire column, and grants self and allies in the same row [Tenacity] (absorbs damage equal to 30% of own HP). |
+| 2 | Ultimate | **Ultimate** | Deals 75% AT damage to each enemy in the entire column, and grants self and allies in the same row [Tenacity] (absorbs damage equal to 20% of own HP). |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals 94% AT damage to each enemy in the entire column, and grants self and allies in the same row [Tenacity] (absorbs damage equal to 30% of own HP). |
 | 4 | Passive | **Passive** | Permanently increases own H. Deals extra damage equal to 8% of own max HP to enemies. |
 | 5 | Passive | **Extreme Passive** | Permanently increases own H. Deals extra damage equal to 9% of own max HP to enemies, and has a 50% chance to deal an equal amount of extra damage to enemies in the same row as the main target. |
 | 6 | Passive | **5★ Passive** | Permanently increases own H. Deals extra damage equal to 9.5% of own max HP to enemies, and has a 50% chance to deal an equal amount of extra damage to enemies in the same row as the main target. |
@@ -2846,20 +2921,23 @@
 - **Roles:** DMG (ATK), Weaken, DMG (HP), Generate Shield
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Deals 140% ATK DMG to a single target, and grants self [Tenacity] (absorbs DMG equal to 30% of own HP). |
-| 2 | Ultimate | **Ultimate** | Deals 50% ATK DMG with 3 consecutive strikes to all enemies, permanently grants self 50% continuous DMG Boost, and has a 100% chance to inflict [Force Field] on all targets on the field for 1 turn (takes DoT equal to 50% ATK before acting; 50% chance to penetrate immunity effects). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 60% ATK DMG with 3 consecutive strikes to all enemies, permanently grants self 60% continuous DMG Boost, and has a 100% chance to inflict [Force Field] on all targets on the field for 1 turn (takes DoT equal to 50% ATK before acting; 50% chance to penetrate immunity effects). |
-| 4 | Passive | **Passive** | Permanently increases own HP by. After acting, drains the energy of enemies in a sealed state (once per turn; after a successful drain, they cannot be [Panicked] again the same turn). Gains 30% [Non-Crit DMG Free] (all DMG types; this and [Agility] only one takes effect). Converts 50% of incoming DoT into HP. |
-| 5 | Passive | **Extreme Passive** | Permanently increases own HP by. After acting, drains the energy of enemies in a sealed state (once per turn; after a successful drain, they cannot be [Panicked] again the same turn). Gains 35% [Non-Crit DMG Free] (all DMG types; this and [Agility] only one takes effect). Converts 75% of incoming DoT into HP. |
-| 6 | Passive | **5★ Passive** | Permanently increases own HP by. After acting, drains the energy of enemies in a sealed state (once per turn; after a successful drain, they cannot be [Panicked] again the same turn). Gains 40% [Non-Crit DMG Free] (all DMG types; this and [Agility] only one takes effect). Converts 100% of incoming DoT into HP. |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Deals 140% ATK DMG to a single target and grants self [Tenacity]. [Tenacity]: Absorbs DMG equal to 30% of own Max HP. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies with 3 consecutive strikes, dealing 50% ATK DMG per strike. Permanently increases own Continuous DMG Rate by 50%. Has a 100% chance to inflict [Force Field] on all enemies for 1 turn. [Force Field]: Before taking action, the affected unit suffers Continuous DMG equal to 50% ATK. Has a 50% chance to ignore immunity. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks all enemies with 3 consecutive strikes, dealing 60% ATK DMG per strike. Permanently increases own Continuous DMG Rate by 60%. Has a 100% chance to inflict [Force Field] on all enemies for 1 turn. [Force Field]: Before taking action, the affected unit suffers Continuous DMG equal to 50% ATK. Has a 50% chance to ignore immunity. |
+| 4 | Passive | **Passive** | Permanently increases own HP. After taking action, removes sealed Energy from enemies once per turn. After successfully removing sealed Energy, those enemies cannot be inflicted with [Panicked] again during the same turn. Permanently gains 30% [Non-Crit DMG Free], which reduces all types of non-critical DMG and cannot coexist with [Agility]. Converts 50% of incoming Continuous DMG into HP recovery. |
+| 5 | Passive | **Extreme Passive** | Permanently increases own HP. After taking action, removes sealed Energy from enemies once per turn. After successfully removing sealed Energy, those enemies cannot be inflicted with [Panicked] again during the same turn. Permanently gains 35% [Non-Crit DMG Free], which reduces all types of non-critical DMG and cannot coexist with [Agility]. Converts 75% of incoming Continuous DMG into HP recovery. |
+| 6 | Passive | **5★ Passive** | Permanently increases own HP. After taking action, removes sealed Energy from enemies once per turn. After successfully removing sealed Energy, those enemies cannot be inflicted with [Panicked] again during the same turn. Permanently gains 40% [Non-Crit DMG Free], which reduces all types of non-critical DMG and cannot coexist with [Agility]. Converts 100% of incoming Continuous DMG into HP recovery. |
 
 **Effect Glossary:**
 
 | Term | Description |
 |---|---|
-| [Panic] | Control status interrupts the target's actions. |
-| [Tenacity] | The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge). |
+| [Tenacity] | Absorbs DMG equal to 30% of own Max HP. |
+| [Force Field] | Before taking action, the affected unit suffers Continuous DMG equal to 50% ATK. Has a 50% chance to ignore immunity. |
+| [Panicked] | An Energy-sealing control effect. After sealed Energy is successfully removed by this Passive, the affected enemies cannot receive [Panicked] again during the same turn. |
+| [Non-Crit DMG Free] | Reduces all types of non-critical DMG and cannot coexist with [Agility]. |
+| [Agility] | A defensive effect that cannot coexist with [Non-Crit DMG Free]. |
 
 ---
 
@@ -2891,20 +2969,21 @@
 - **Roles:** DMG (ATK), DMG (HP), Revive
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Deals 2 combo strikes to a single target for 60% ATK DMG, with a 100% chance to inflict [Field] on the target for 1 turn.[Field]: Takes DoT equal to 150% ATK before taking action. |
-| 2 | Ultimate | **Ultimate** | Deals 3 combo strikes to all enemies for 50% ATK DMG; if in the [Giant] state, increases DoT Boost by 50%. Has a 100% chance to inflict [Field] on all enemies for 1 turn.[Field]: Takes DoT equal to 160% ATK before taking action. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 3 combo strikes to all enemies for 60% ATK DMG; if in the [Giant] state, increases DoT Boost by 50%. Has a 100% chance to inflict [Field] on all enemies for 1 turn.[Field]: Takes DoT equal to 230% ATK before taking action. |
-| 4 | Passive | **Passive** | Permanently increases own HP by. After any character's action, [detonates] all enemy [Fields] 3 times per round (instantly converts the original DMG into 100% Detonation DMG). After Detonation, enters [Giant] state. Revives with 50% Max HP after taking fatal damage (up to 2 times). |
-| 5 | Passive | **Extreme Passive** | Detonation DMG 100% &gt; 110%. Revive HP 50% &gt; 60% Max HP. |
-| 6 | Passive | **5★ Passive** | Detonation DMG 110% &gt; 120%. Revive HP 60% &gt; 80% Max HP. |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Attacks a single target with 2 consecutive strikes, dealing 60% ATK DMG per strike. Has a 100% chance to inflict [Field] on the target for 1 turn. [Field]: Before taking action, the affected unit suffers Continuous DMG equal to 150% ATK. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies with 3 consecutive strikes, dealing 50% ATK DMG per strike. While in [Giant State], increases Continuous DMG Rate by 50%. Has a 100% chance to inflict [Field] on all enemies for 1 turn. [Field]: Before taking action, the affected unit suffers Continuous DMG equal to 160% ATK. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks all enemies with 3 consecutive strikes, dealing 60% ATK DMG per strike. While in [Giant State], increases Continuous DMG Rate by 50%. Has a 100% chance to inflict [Field] on all enemies for 1 turn. [Field]: Before taking action, the affected unit suffers Continuous DMG equal to 230% ATK. |
+| 4 | Passive | **Passive** | Permanently increases own HP. After any character acts, detonates all enemy [Field] effects, up to 3 times per round. [Detonation]: Immediately converts the original [Field] DMG into 100% Detonation DMG. After triggering [Detonation], enters [Giant State]. After receiving fatal DMG, revives with 50% Max HP. Can trigger up to 2 times per battle. |
+| 5 | Passive | **Extreme Passive** | Permanently increases own HP. After any character acts, detonates all enemy [Field] effects, up to 3 times per round. [Detonation]: Immediately converts the original [Field] DMG into 110% Detonation DMG. After triggering [Detonation], enters [Giant State]. After receiving fatal DMG, revives with 60% Max HP. Can trigger up to 2 times per battle. |
+| 6 | Passive | **5★ Passive** | Permanently increases own HP. After any character acts, detonates all enemy [Field] effects, up to 3 times per round. [Detonation]: Immediately converts the original [Field] DMG into 120% Detonation DMG. After triggering [Detonation], enters [Giant State]. After receiving fatal DMG, revives with 80% Max HP. Can trigger up to 2 times per battle. |
 
 **Effect Glossary:**
 
 | Term | Description |
 |---|---|
-| [Detonate] | Activate a stack of damage over time or stored [Collapse] to instantly explode, turning it into an instant multiplier (e.g. 3 times the stored damage). |
-| [Force Field] | Tatsumaki's damage over time area; Every time an enemy takes damage from the Field, it will accumulate a level of Charge (maximum 4 levels). |
+| [Field] | Before taking action, the affected unit suffers ATK-based Continuous DMG. Basic deals 150% ATK, Ultimate deals 160% ATK, and Ultra-Ultimate deals 230% ATK. |
+| [Detonation] | Immediately converts the original [Field] DMG into Detonation DMG. The conversion rate is 100% / 110% / 120% depending on Passive level. |
+| [Giant State] | A special state entered after triggering [Detonation]. While in this state, Ultimate and Ultra-Ultimate increase Continuous DMG Rate by 50%. |
 
 ---
 
@@ -3189,8 +3268,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deal 100% ATK damage to a single target, with a 70% chance to inflict [Corrosion] for 1 turn (damage-immunity rate reduced by 30%). |
-| 2 | Ultimate | **Ultimate** | Immediately gain a 30% lifesteal rate for 1 turn, then deal a 2-hit combo of 140% ATK (+5) damage to a single target, with a 100% chance to inflict [Corrosion] for 2 turns (damage-immunity rate reduced by 30%). |
-| 3 | Ultimate | **Ultra-Ultimate** | Immediately grant self and same-column allies a 40% lifesteal rate for 1 turn, then deal a 2-hit combo of 160% ATK (+5) damage to a single target, with a 100% chance to inflict [Corrosion] for 2 turns (damage-immunity rate reduced by 30%). |
+| 2 | Ultimate | **Ultimate** | Immediately gain a 30% lifesteal rate for 1 turn, then deal a 2-hit combo of 140% ATK damage to a single target, with a 100% chance to inflict [Corrosion] for 2 turns (damage-immunity rate reduced by 30%). |
+| 3 | Ultimate | **Ultra-Ultimate** | Immediately grant self and same-column allies a 40% lifesteal rate for 1 turn, then deal a 2-hit combo of 160% ATK damage to a single target, with a 100% chance to inflict [Corrosion] for 2 turns (damage-immunity rate reduced by 30%). |
 | 4 | Passive | **Passive** | Permanently gain HP. While own HP is below 50%, direct damage taken is reduced by 50% and ATK is increased by 25%. |
 | 5 | Passive | **Extreme Passive** | Permanently gain HP. While own HP is below 60%, direct damage taken is reduced by 60% and ATK is increased by 30%. |
 | 6 | Passive | **5★ Passive** | Permanently gain HP. While own HP is below 65%, direct damage taken is reduced by 65% and ATK is increased by 35%. |
@@ -3929,7 +4008,7 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals a 2-hit combo of 45% ATK (+5) DMG to a single target. |
+| 1 | Basic | **Basic** | Deals a 2-hit combo of 45% ATK DMG to a single target. |
 | 2 | Ultimate | **Ultimate** | Deals a 5-hit combo of 22% ATK (+2) DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 10% ATK extra DMG. |
 | 3 | Ultimate | **Ultra-Ultimate** | Deals a 5-hit combo of 22% ATK (+2) DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 20% ATK extra DMG. |
 | 4 | Passive | **Passive** | Permanently gains HP. On the first turn, if Hellish Blizzard is present, increases DMG dealt%, lasting until the end of battle. |
@@ -4034,8 +4113,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 80% ATK damage to a single target. |
-| 2 | Ultimate | **Ultimate** | Strikes a single target with a 2-hit combo for 90% ATK (+5) damage, with a 100% chance to inflict [Corrosion] for 2 turns (DMG reduction rate lowered by 30%). |
-| 3 | Ultimate | **Ultra-Ultimate** | Strikes a single target with a 2-hit combo for 100% ATK (+5) damage, with a 100% chance to inflict [Corrosion] for 2 turns (DMG reduction rate lowered by 30%). |
+| 2 | Ultimate | **Ultimate** | Strikes a single target with a 2-hit combo for 90% ATK damage, with a 100% chance to inflict [Corrosion] for 2 turns (DMG reduction rate lowered by 30%). |
+| 3 | Ultimate | **Ultra-Ultimate** | Strikes a single target with a 2-hit combo for 100% ATK damage, with a 100% chance to inflict [Corrosion] for 2 turns (DMG reduction rate lowered by 30%). |
 | 4 | Passive | **Passive** | Permanently increases own HP by. While Deep Sea Destroyer is on the field, increases own damage% until the end of battle. |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP by. While Deep Sea Destroyer is on the field, increases own damage by 25% until the end of battle. |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP by. While Deep Sea Destroyer is on the field, increases own damage by 28% until the end of battle. |
@@ -4081,9 +4160,9 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Strike a single target with a 2-hit combo, dealing 40% ATK (+5) damage. |
-| 2 | Ultimate | **Ultimate** | Strike the entire target row with a 2-hit combo, dealing 60% ATK (+5) damage. |
-| 3 | Ultimate | **Ultra-Ultimate** | Strike the entire target row with a 2-hit combo, dealing 70% ATK (+5) damage. |
+| 1 | Basic | **Basic** | Strike a single target with a 2-hit combo, dealing 40% ATK damage. |
+| 2 | Ultimate | **Ultimate** | Strike the entire target row with a 2-hit combo, dealing 60% ATK damage. |
+| 3 | Ultimate | **Ultra-Ultimate** | Strike the entire target row with a 2-hit combo, dealing 70% ATK damage. |
 | 4 | Passive | **Passive** | Permanently increase self HP by. Before acting, increase self Crit Rate by 5% for 1 turn. |
 | 5 | Passive | **Extreme Passive** | Permanently increase self HP by. Before acting, increase self Crit Rate by 8% for 1 turn. |
 | 6 | Passive | **5★ Passive** | Permanently increase self HP by. Before acting, increase self Crit Rate by 10% for 1 turn. |

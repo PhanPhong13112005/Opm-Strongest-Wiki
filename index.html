@@ -5,9 +5,37 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OPM Strongest Wiki</title>
+    <style>
+      .home-boot{min-height:100vh;background:#040a12;color:#edf7ff;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.home-boot__signal{display:none}.home-boot__header{height:72px;border-bottom:1px solid rgba(91,222,255,.16);background:#050b13}.home-boot__header-inner{display:flex;height:100%;align-items:center;gap:11px;padding:0 16px}.home-boot__mark{display:grid;width:40px;height:40px;grid-template-columns:1fr 1fr;overflow:hidden;border:1px solid rgba(91,222,255,.5);clip-path:polygon(0 0,82% 0,100% 18%,100% 100%,18% 100%,0 82%)}.home-boot__mark i{display:grid;place-items:center;font:900 11px ui-monospace,monospace}.home-boot__mark i:first-child{background:#5bdeff;color:#031018}.home-boot__mark i:last-child{color:#ff6a57}.home-boot__brand strong{display:block;font-size:13px;letter-spacing:.14em}.home-boot__brand small{display:block;margin-top:3px;color:#60758c;font:700 7px ui-monospace,monospace;letter-spacing:.22em}.home-boot__stage{padding:18px 12px 70px}.home-boot__hero{position:relative;display:grid;min-height:500px;overflow:hidden;border:1px solid rgba(117,159,195,.18);border-radius:20px;background:linear-gradient(120deg,#0b1b2c 0%,#091421 58%,#15101a 100%);box-shadow:0 32px 80px rgba(0,0,0,.34)}.home-boot__hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(113,163,201,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(113,163,201,.055) 1px,transparent 1px);background-size:42px 42px}.home-boot__copy{position:relative;z-index:3;padding:25px 20px}.home-boot__pill{display:flex;width:max-content;align-items:center;gap:8px;border:1px solid rgba(255,59,59,.35);border-radius:999px;background:rgba(255,59,59,.09);padding:6px 9px;color:#ff3b3b;font-size:8px;font-weight:900;letter-spacing:.08em}.home-boot__pill i{width:7px;height:7px;border-radius:50%;background:#ff3b3b;box-shadow:0 0 14px #ff3b3b}.home-boot h1{max-width:730px;margin:15px 0 0;color:#f5f9ff;font-size:36px;font-weight:950;line-height:1;letter-spacing:-.065em;text-transform:uppercase;text-shadow:0 7px 28px rgba(0,0,0,.3)}.home-boot__copy>p{max-width:610px;margin:18px 0 0;color:#a4b4c5;font-size:12px;line-height:1.65}.home-boot__stats{position:relative;z-index:4;display:flex;gap:8px;margin-top:20px;padding:10px 0;background:linear-gradient(90deg,rgba(9,20,33,.84),rgba(9,20,33,.15))}.home-boot__stats div{border-left:2px solid rgba(255,59,59,.42);padding-left:8px}.home-boot__stats strong{display:block;color:#f1f7ff;font-size:15px;font-weight:900}.home-boot__stats span{display:block;margin-top:5px;color:#71879b;font-size:7px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}.home-boot__visual{position:absolute;right:0;bottom:0;left:0;height:46%;overflow:hidden;opacity:.65}.home-boot__visual::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#0a1827 0%,transparent 42%)}.home-boot__visual img{position:absolute;right:-16%;bottom:-2%;width:116%;height:104%;object-fit:contain;object-position:right bottom;filter:drop-shadow(0 10px 30px rgba(0,0,0,.55))}
+      @media(min-width:701px){.home-boot__signal{display:block;height:26px;border-bottom:1px solid rgba(120,163,201,.1);color:#617891;font:700 9px/26px ui-monospace,monospace;letter-spacing:.2em}.home-boot__signal-inner{display:flex;max-width:1440px;justify-content:space-between;margin:auto;padding:0 24px}.home-boot__signal b{color:#53e6c2}.home-boot__header{height:88px}.home-boot__header-inner{max-width:1440px;margin:auto;padding:0 24px}.home-boot__mark{width:48px;height:48px}.home-boot__brand strong{font-size:16px}.home-boot__brand small{margin-top:5px;font-size:8px}.home-boot__stage{max-width:1440px;margin:auto;padding:34px 24px 100px}.home-boot__hero{min-height:430px;grid-template-columns:minmax(0,1fr) minmax(320px,44%);border-radius:26px}.home-boot__copy{display:flex;flex-direction:column;justify-content:center;padding:55px 20px 48px 58px}.home-boot__pill{padding:7px 12px;font-size:10px;letter-spacing:.13em}.home-boot h1{margin-top:18px;font-size:clamp(50px,7vw,94px);line-height:.9}.home-boot__copy>p{margin-top:23px;font-size:15px;line-height:1.75}.home-boot__stats{gap:34px;margin-top:33px;padding:0;background:none}.home-boot__stats div{padding-left:13px}.home-boot__stats strong{font-size:21px}.home-boot__stats span{font-size:9px;letter-spacing:.08em}.home-boot__visual{position:relative;left:auto;height:auto;opacity:1}.home-boot__visual::before{background:linear-gradient(90deg,#0a1827 0%,transparent 38%)}.home-boot__visual img{right:-2%;width:112%;height:105%}}
+    </style>
   </head>
   <body>
     <div id="app"></div>
+    <template id="home-boot-template">
+      <div class="home-boot" aria-hidden="true">
+        <div class="home-boot__signal"><div class="home-boot__signal-inner"><span>HERO DATA NETWORK // LIVE ARCHIVE</span><span>DATABASE STATUS: <b>ONLINE</b></span></div></div>
+        <header class="home-boot__header"><div class="home-boot__header-inner"><span class="home-boot__mark"><i>O</i><i>S</i></span><span class="home-boot__brand"><strong>OPM STRONGEST</strong><small>HERO DATA BUREAU</small></span></div></header>
+        <main class="home-boot__stage">
+          <section class="home-boot__hero">
+            <div class="home-boot__copy">
+              <span class="home-boot__pill"><i></i>TIÊU ĐIỂM NHÂN VẬT CỦA THÁNG NÀY</span>
+              <h1>TINH TRÙNG ĐEN</h1>
+              <p>Phân chia vô hạn</p>
+              <div class="home-boot__stats"><div><strong>08 / 2026</strong><span>Tổng quan tháng</span></div><div><strong>4</strong><span>Mốc dữ liệu</span></div><div><strong>2</strong><span>Máy chủ</span></div></div>
+            </div>
+            <div class="home-boot__visual"><img src="/Characters/Full_Background/Black_Sperm_Ur_plus.webp?v=20260801-1" alt="" width="520" height="480" loading="eager" fetchpriority="high" decoding="async"></div>
+          </section>
+        </main>
+      </div>
+    </template>
+    <script>
+      if (location.pathname === '/') {
+        const template = document.getElementById('home-boot-template')
+        document.getElementById('app').append(template.content.cloneNode(true))
+      }
+      document.getElementById('home-boot-template').remove()
+    </script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

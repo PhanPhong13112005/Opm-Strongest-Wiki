@@ -1,0 +1,24 @@
+{
+  "vi": {
+    "100316-urplus": { "id": "100316-urplus", "name": "Overgrown Rover", "tier": "UR+", "type": "Tâm Linh", "faction": "Quái Nhân", "roles": ["Chủ Lực (Công)"] },
+    "100314-urplus": { "id": "100314-urplus", "name": "G5", "tier": "UR+", "type": "Công Nghệ", "faction": "Quái Nhân", "roles": ["Sát Thương (Công)", "Suy Yếu", "Hồi Sinh", "Tạo Khiên", "Tốc Độ"] },
+    "100312-urplus": { "id": "100312-urplus", "name": "Nyan", "tier": "UR+", "type": "Giác Đấu", "faction": "Quái Nhân", "roles": ["Sát Thương (Công)", "Hỗ Trợ", "Suy Yếu", "Sát Thương (Máu)", "Tạo Khiên", "Tốc Độ"] },
+    "100029-urplus": { "id": "100029-urplus", "name": "Mặt Nạ Ngọt Ngào", "tier": "UR+", "type": "Giác Đấu", "faction": "Anh Hùng", "roles": ["Hạt Nhân"] },
+    "100013-urplus": { "id": "100013-urplus", "name": "Zombieman", "tier": "UR+", "type": "Vũ Trang", "faction": "Anh Hùng", "roles": ["Gây mù diện rộng", "Tiên phong bất tử"] },
+    "100315-urplus": { "id": "100315-urplus", "name": "Bang & Bomb", "tier": "UR+", "type": "Giác Đấu", "faction": "Anh Hùng", "roles": ["Sát thương theo HP", "Bảo kê tuyệt đối"] },
+    "100313-urplus": { "id": "100313-urplus", "name": "Samurai Nguyên Tử", "tier": "UR+", "type": "Vũ Trang", "faction": "Anh Hùng", "roles": ["Xuyên phá diện rộng", "Sát thủ tốc độ"] },
+    "100180-urplus": { "id": "100180-urplus", "name": "Lốc Xoáy Kinh Hoàng", "tier": "UR+", "type": "Tâm Linh", "faction": "Anh Hùng", "roles": ["Xóa sổ Bất khuất", "Hỗ trợ tối thượng"] },
+    "blacksperm-urplus": { "id": "blacksperm-urplus", "name": "Tinh Trùng Đen", "tier": "UR+", "type": "Giác Đấu", "faction": "Quái Nhân", "roles": ["Phân chia vô hạn", "Một người trở thành một đội quân"] }
+  },
+  "en": {
+    "100316-urplus": { "id": "100316-urplus", "name": "Overgrown Rover", "tier": "UR+", "type": "Esper", "faction": "Monster", "roles": ["Main DPS (ATK)"] },
+    "100314-urplus": { "id": "100314-urplus", "name": "G5", "tier": "UR+", "type": "Hi-Tech", "faction": "Monster", "roles": ["DMG (ATK)", "Weaken", "Revive", "Generate Shield", "Speed"] },
+    "100312-urplus": { "id": "100312-urplus", "name": "Nyan", "tier": "UR+", "type": "Grappler", "faction": "Monster", "roles": ["DMG (ATK)", "Support", "Weaken", "DMG (HP)", "Generate Shield", "Speed"] },
+    "100029-urplus": { "id": "100029-urplus", "name": "Amai Mask", "tier": "UR+", "type": "Grappler", "faction": "Hero", "roles": ["Core"] },
+    "100013-urplus": { "id": "100013-urplus", "name": "Zombieman", "tier": "UR+", "type": "Duelist", "faction": "Hero", "roles": ["AoE Blind", "Immortal Vanguard"] },
+    "100315-urplus": { "id": "100315-urplus", "name": "Bang & Bomb", "tier": "UR+", "type": "Grappler", "faction": "Hero", "roles": ["HP-based DMG", "Absolute Guard"] },
+    "100313-urplus": { "id": "100313-urplus", "name": "Atomic Samurai", "tier": "UR+", "type": "Duelist", "faction": "Hero", "roles": ["AoE Pierce", "Speed Assassin"] },
+    "100180-urplus": { "id": "100180-urplus", "name": "Tatsumaki/Terrible Tornado", "tier": "UR+", "type": "Esper", "faction": "Hero", "roles": ["Erase Unyielding", "Ultimate Support"] },
+    "blacksperm-urplus": { "id": "blacksperm-urplus", "name": "Black Sperm", "tier": "UR+", "type": "Grappler", "faction": "Monster", "roles": ["Infinite splitting", "One person becomes an army"] }
+  }
+}

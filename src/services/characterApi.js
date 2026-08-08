@@ -199,9 +199,9 @@ export const reconcileCharacterPage = (apiResult, localCharacters, query, search
   }
 }
 
-export const getCharacters = async ({ localCharacters = [], searchCharacters = [], ...query }) => {
+export const getCharacters = async ({ localCharacters = [], searchCharacters = [], ...query }, requestOptions) => {
   try {
-    const result = await requestApiCached('api/characters', query)
+    const result = await requestApiCached('api/characters', query, requestOptions)
     const localById = new Map(localCharacters.map((character) => [character.id, character]))
     const mappedResult = {
       ...result,
@@ -227,13 +227,13 @@ export const getCharacters = async ({ localCharacters = [], searchCharacters = [
   }
 }
 
-export const getAllCharacters = async (language, localCharacters = []) => {
+export const getAllCharacters = async (language, localCharacters = [], requestOptions) => {
   const firstPage = await getCharacters({
     language,
     page: 1,
     pageSize: 100,
     localCharacters,
-  })
+  }, requestOptions)
 
   if (firstPage.source === 'fallback') return fallbackCharacters(localCharacters, { sort: 'release_desc' })
   if (firstPage.totalPages <= 1) return firstPage.items
@@ -244,7 +244,7 @@ export const getAllCharacters = async (language, localCharacters = []) => {
       page: index + 2,
       pageSize: 100,
       localCharacters,
-    })),
+    }, requestOptions)),
   )
 
   return [firstPage, ...remainingPages].flatMap((page) => page.items)
