@@ -1,0 +1,130 @@
+{
+  "id": "100092-ssrplus",
+  "name": "Monsterized Bakuzan",
+  "imageURL": "/Characters/optimized/100092-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Grappler",
+  "faction": "Monster",
+  "roles": [
+    "Accumulated DMG",
+    "Remove ATK Buff",
+    "Revive & Tenacity"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 104
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 70% ATK Direct DMG to a single target.",
+      "icon": "/Skill/Monsterized Bakuzan (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Enters [Berserk], building up to 2 charge layers (var101), then deals Direct DMG to the target's entire column scaling with the number of charge layers. Also Dispels buffs from himself.",
+      "icon": "/Skill/Monsterized Bakuzan (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "No change to values — identical to the Ultimate: [Berserk] with up to 2 charge layers, then Direct DMG to the target's entire column scaling with charge layers, and self-Dispel.",
+      "keepsakeIcon": "/Keepsake/Monsterized Bakuzan (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Monsterized Bakuzan (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently gains +20% HP. At his turn start, Dispels buffs from 3 random enemies. After attacking, applies a debuff to the enemies he hit. At his turn end, gains a stack of [Berserk].",
+      "icon": "/Skill/Monsterized Bakuzan (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Turn-start Dispel targets 3 > 4 enemies. All other effects unchanged.",
+      "icon": "/Skill/Monsterized Bakuzan (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "No change to values — identical to the Extreme Passive (turn-start Dispel still targets 4 enemies).",
+      "icon": "/Skill/Monsterized Bakuzan (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When taking fatal damage, revives with 70% HP the next round. Gains [Tenacity] upon revival (absorbs up to 50% Max HP of DMG). Activates once per battle.",
+      "icon": "/Skill/Source/100092-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Awakening",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Revival once > twice per battle. [Tenacity] absorb 50% > 70% Max HP.",
+      "icon": "/Skill/Source/100092-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Awakening",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Source/100092-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Awakening",
+      "cost": null,
+      "keepsakeIcon": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Berserk]",
+      "desc": "Attack buffs increase damage based on conditions (e.g. each marked enemy), amplifying the amount of Fury-type damage the unit deals."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Monsterized Bakuzan (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "DMG (HP)",
+    "Revive",
+    "Generate Shield",
+    "Speed"
+  ],
+  "bondList": "Bakuzan + Bitter Bug + Charanko",
+  "classLevel": "Dragon",
+  "imageSrcset": "/Characters/optimized/100092-ssrplus-360.webp 360w, /Characters/optimized/100092-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

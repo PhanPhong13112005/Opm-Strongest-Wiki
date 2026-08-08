@@ -1,0 +1,87 @@
+{
+  "id": "100055-ssr",
+  "name": "Boros",
+  "roles": [
+    "Hỗ Trợ",
+    "Hồi Phục"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 398,
+    "hp": 2385,
+    "def": 101,
+    "spd": 97
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST sát thương cho mục tiêu đơn và bản thân vào trạng thái [Cuồng Nộ] 1 lượt (tăng 30% sát thương gây ra).",
+      "icon": "/Skill/Boros (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Mỗi đồng minh hệ Tâm linh làm tăng ST của Boros, tăng cường độ kỹ năng 105%, tối đa 3 tầng (+50% ST mỗi tầng). Tung đòn liên kích 3 lần vào mục tiêu đơn, gây 70% ST sát thương mỗi đòn.",
+      "icon": "/Skill/Boros (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Mỗi đồng minh hệ Tâm linh làm tăng ST của Boros, tăng cường độ kỹ năng 158%, tối đa 3 tầng (+60% ST mỗi tầng). Tung đòn liên kích 3 lần vào mục tiêu đơn, gây 88% ST sát thương mỗi đòn.",
+      "icon": "/Skill/Boros (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Boros (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Khi đồng minh hồi Máu, Boros được hồi 60% giá trị đó, kích hoạt tối đa 6 lần mỗi lượt.",
+      "icon": "/Skill/Boros (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Khi đồng minh hồi Máu, Boros được hồi 80% giá trị đó, kích hoạt tối đa 8 lần mỗi lượt.",
+      "icon": "/Skill/Boros (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Khi đồng minh hồi Máu, Boros được hồi 85% giá trị đó, kích hoạt tối đa 8 lần mỗi lượt.",
+      "icon": "/Skill/Boros (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR",
+  "imageURL": "/Characters/optimized/100055-ssr-600.webp",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Boros (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseDate": "01/08/2020",
+  "effects": [],
+  "classLevel": "Dragon",
+  "releaseSea": "01/07/2020",
+  "releaseTrung": "01/03/2020",
+  "imageSrcset": "/Characters/optimized/100055-ssr-360.webp 360w, /Characters/optimized/100055-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

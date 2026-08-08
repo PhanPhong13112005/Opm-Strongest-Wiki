@@ -250,12 +250,17 @@ export const getAllCharacters = async (language, localCharacters = [], requestOp
   return [firstPage, ...remainingPages].flatMap((page) => page.items)
 }
 
-export const getCharacterById = async (id, language, localCharacter) => {
+export const getCharacterById = async (id, language, localCharacter, requestOptions) => {
+  const localCharacterPromise = Promise.resolve(localCharacter)
   try {
-    const result = await requestApiCached(`api/characters/${encodeURIComponent(id)}`, { language })
-    return mergeCharacterDetail(result, localCharacter, language)
+    const [result, resolvedLocalCharacter] = await Promise.all([
+      requestApiCached(`api/characters/${encodeURIComponent(id)}`, { language }, requestOptions),
+      localCharacterPromise,
+    ])
+    return mergeCharacterDetail(result, resolvedLocalCharacter, language)
   } catch (error) {
-    if (localCharacter) return localCharacter
+    const resolvedLocalCharacter = await localCharacterPromise
+    if (resolvedLocalCharacter) return resolvedLocalCharacter
     throw error
   }
 }

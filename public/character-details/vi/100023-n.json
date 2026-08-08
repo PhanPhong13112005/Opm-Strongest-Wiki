@@ -1,0 +1,82 @@
+{
+  "id": "100023-n",
+  "name": "Slugrus",
+  "imageURL": "/Characters/optimized/100023-n-600.webp",
+  "tier": "N",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 153,
+    "hp": 918,
+    "def": 39,
+    "spd": 82
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 80% ST (+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Slugrus (N)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 180% ST (+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Slugrus (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 200% ST (+10) sát thương lên mục tiêu đơn.",
+      "keepsakeIcon": "/Keepsake/Slugrus (N)/Keepsake_N.png",
+      "icon": "/Skill/Slugrus (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu Froggy Man có mặt, tăng 20% sát thương của bản thân cho đến khi kết thúc trận đấu.",
+      "icon": "/Skill/Slugrus (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu Froggy Man có mặt, tăng 25% sát thương của bản thân cho đến khi kết thúc trận đấu.",
+      "icon": "/Skill/Slugrus (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu Froggy Man có mặt, tăng 28% sát thương của bản thân cho đến khi kết thúc trận đấu.",
+      "icon": "/Skill/Slugrus (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Slugrus (N)/Keepsake_N.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100023-n-360.webp 360w, /Characters/optimized/100023-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

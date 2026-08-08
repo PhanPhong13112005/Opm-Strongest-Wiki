@@ -1,0 +1,133 @@
+{
+  "id": "100057-ur",
+  "name": "Pig God",
+  "roles": [
+    "Heal"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 117
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK [Direct DMG] to a single target.",
+      "icon": "/Skill/Pig God (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 800% ATK [Direct DMG] to the target area, then hits all enemies with 150% ATK [Ice DMG]. Lowers [Energy Shield Rate] of all enemies by 30% and raises it for all allies by 30%. Inflicts [Corrosion] on the main target, dealing 300% ATK DoT.",
+      "icon": "/Skill/Pig God (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 800% > 1100% ATK [Direct DMG] to the target area, then hits all enemies with 150% > 200% ATK [Ice DMG]. Lowers [Energy Shield Rate] of all enemies by 30% > 50% and raises it for all allies by 30% > 50%. Inflicts [Corrosion] on the main target, dealing 300% > 400% ATK DoT.",
+      "icon": "/Skill/Pig God (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Pig God (UR)/Keepsake_UR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by 20%. Gains 60% [Non-Crit DMG Free]. Reduces [Chain Explosion] DMG received by 60%.[Non-Crit DMG Free]: effective for all DMG types; cannot co-exist with [Agility].",
+      "icon": "/Skill/Pig God (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Non-Crit DMG Free] 60% &gt; 70%. [Chain Explosion] DMG reduction 60% &gt; 70%.",
+      "icon": "/Skill/Pig God (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Non-Crit DMG Free] 70% &gt; 80%. [Chain Explosion] DMG reduction 70% &gt; 80%.",
+      "icon": "/Skill/Pig God (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When battle begins, all allies gain a [Toughness] effect equal to 100% of their own Max HP. After any character takes action, 4 random enemy characters receive [True DMG] equal to 100% of the original Locked total DMG. ———- [Toughness]: Absorbs 100% of own health in damage. [True Damage]: Not affected by damage increase or damage reduction, it is damage directly inflicted on the target's HP that cannot be shared or avoided.",
+      "icon": "/Skill/Pig God (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "When battle begins, all allies obtain [Resilience] equal to 100% (150%) of their own Max HP and a 100% chance to inflict [Locked On] equal to 100% ATK. After any character acts, inflicts the total [Locked On] as 100% (150%) [True DMG] to 4 random enemies (the entire enemy team at the upgraded rank).[Resilience]: absorbs DMG equal to 100% (150%) HP.[True DMG]: not affected by DMG Rate or DMG Free; deals direct DMG unaffected by [DMG Sharing] or [Instant DMG Evasion].",
+      "icon": "/Skill/Pig God (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Pig God (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "UR",
+  "imageURL": "/Characters/optimized/100057-ur-600.webp",
+  "type": "Esper",
+  "faction": "Hero",
+  "debut": "05 / 2025",
+  "keepsakeIcon": "/Keepsake/Pig God (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/05/2025",
+  "releaseSea": "01/09/2025",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Heal"
+  ],
+  "effects": [
+    {
+      "term": "[Endurance]",
+      "desc": "The shield absorbs damage equal to 100% of the wearer's Maximum Health."
+    },
+    {
+      "term": "[True DMG]",
+      "desc": "This type of bonus damage is dealt on top of attacks, is reduced by Evasion-type effects, and can be immune after a certain number of turns."
+    },
+    {
+      "term": "[Corrode]",
+      "desc": "Corrosive damage over time effect, each turn dealing damage equal to a percentage of ST (e.g. 300%) to the target."
+    }
+  ],
+  "classLevel": "Class_SS",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100057-ur-360.webp 360w, /Characters/optimized/100057-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

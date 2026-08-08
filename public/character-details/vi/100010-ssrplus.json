@@ -1,0 +1,147 @@
+{
+  "id": "100010-ssrplus",
+  "name": "Tia Chớp Chói Lóa",
+  "tier": "SSR+",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Hỗ Trợ",
+    "Sát Thương (Máu)",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 120
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST tấn công ST Trực Tiếp lên mục tiêu đơn.",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tấn công toàn bộ kẻ địch với 5 liên kích gây 120% ST tấn công (+10) ST Trực Tiếp. Trao cho đồng minh cùng cột [Tăng Tốc Đặc Hóa] trong 1 lượt. Loại bỏ 1 Năng lượng của kẻ địch (tối đa 1 lần mỗi lượt; sau khi loại bỏ thành công, kẻ địch không thể bị [Khiếp Sợ] trong cùng lượt).[Tăng Tốc Đặc Hóa]: tăng SPD lên tối đa 90% SPD của Flashy Flash.",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Nâng cấp Tối Thượng — ST 120% → 150% ST tấn công; [Tăng Tốc Đặc Hóa] nâng SPD đồng minh cùng cột lên 90% → 95% SPD của Flashy Flash; loại bỏ 1 → 3 Năng lượng của kẻ địch.",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Flashy Flash (SSRplus)/Keepsake_SSRplus.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Khi vào trận, nhận [Tăng Tốc Đặc Hóa] (+5% SPD). Nếu SPD mục tiêu chính thấp hơn Flashy Flash, gây 300% ST tấn công ST Phụ Trội. Sau khi bất kỳ nhân vật nào hành động, loại bỏ [Gia Tốc Cơ Bản] của kẻ địch.",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Khi vào trận, nhận [Tăng Tốc Đặc Hóa] (+20% SPD). Nếu SPD mục tiêu chính thấp hơn Flashy Flash, gây 300% ST tấn công ST Phụ Trội. Sau khi bất kỳ nhân vật nào hành động, loại bỏ [Gia Tốc Cơ Bản] của kẻ địch.",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Khi vào trận, nhận [Tăng Tốc Đặc Hóa] (+25% SPD). Nếu SPD mục tiêu chính thấp hơn Flashy Flash, gây 300% ST tấn công ST Phụ Trội. Sau khi bất kỳ nhân vật nào hành động, loại bỏ [Gia Tốc Cơ Bản] của kẻ địch.",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Flashy Flash có 70% cơ hội và đồng minh cùng cột có 50% cơ hội kích hoạt [Né Tránh] (Giảm ST trực tiếp/phụ trội/tích lũy/cuồng bạo xuống còn 1 ST). Sau khi bất kỳ nhân vật nào hành động, nếu Flashy Flash kích hoạt [Né Tránh], gây 400% Tấn công dưới dạng ST phụ trội lên 1 kẻ địch ngẫu nhiên không đang ở trạng thái [Kiên Cường] nào và hồi phục Máu bằng 150% Tấn công (3 [4] lần mỗi lượt).",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Đồng minh cùng cột có 50% cơ hội kích hoạt [Né Tránh]; khi [Né Tránh], hồi phục Máu bằng 150% ST tấn công, tối đa 4 lần mỗi lượt.",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100010-ssrplus-600.webp",
+  "debut": "05 / 2022",
+  "keepsakeIcon": "/Keepsake/Flashy Flash (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/07/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Sát Thương (Máu)",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "effects": [
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    },
+    {
+      "term": "[Cắt Giảm Năng Lượng]",
+      "desc": "Debuff áp lên toàn bộ kẻ địch khi Năng lượng của chúng giảm, chặn hoặc phá Năng lượng khiến chúng không thể dùng chiêu cuối."
+    },
+    {
+      "term": "[Né Tránh]",
+      "desc": "Trạng thái né giúp giảm sát thương Trực Tiếp, Thêm, Tích Lũy và Cuồng Nộ nhận vào chỉ còn 1 điểm trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Siêu Tốc]",
+      "desc": "Buff tốc độ mà khi còn hiệu lực cho phép người mang và tối đa 6 đồng minh hành động lại và vượt qua kẻ địch có tốc độ thấp hơn."
+    },
+    {
+      "term": "[Thanh Tẩy]",
+      "desc": "Xóa các hiệu ứng/buff đang có trên toàn bộ kẻ địch."
+    }
+  ],
+  "classLevel": "Class_S",
+  "releaseSea": "01/11/2022",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100010-ssrplus-360.webp 360w, /Characters/optimized/100010-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

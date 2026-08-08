@@ -1,0 +1,122 @@
+{
+  "id": "100006-ssrplus",
+  "name": "Tù Nhân Du Hí",
+  "roles": [
+    "Cường Hóa Hàng Sau, Kháng Liên Tục"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 104
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Hồi HP cho một mục tiêu đồng minh.",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 750% ST lên mục tiêu đơn bằng 2 đòn liên tiếp và áp [Mê Hoặc].",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 750% &gt; 900% ST lên mục tiêu đơn bằng 2 đòn liên tiếp và áp [Mê Hoặc]. Ngoài ra áp [Choáng] lên mục tiêu và toàn bộ cột của nó trong 1 lượt.",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Puri-Puri Prisoner (SSRplus)/Keepsake_SSRplus.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Nhận +20% HP. Vào đầu mỗi hiệp, áp một hiệu ứng bất lợi lên toàn bộ kẻ địch. Khi vào trận, nhận [Miễn Nhiễm Mê Hoặc] cho bản thân.",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Giữ nguyên các hiệu ứng của nội tại gốc; dữ liệu CN không cho thấy nâng cấp chỉ số ở bậc này.",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Giữ nguyên các hiệu ứng của nội tại gốc; dữ liệu CN không cho thấy nâng cấp chỉ số ở bậc này.",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Tăng ST không chí mạng thêm 30% cho cả hàng, kéo dài 3 lượt. Sau khi hành động, gây [Tê liệt] (Không thể Truy kích, Truy kích liên tục, Combo Truy kích) lên mục tiêu và cột của nó",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Giảm sát thương không chí mạng 30% > 40%",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR+",
+  "imageURL": "/Characters/optimized/100006-ssrplus-600.webp",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "debut": "03 / 2023",
+  "keepsakeIcon": "/Keepsake/Puri-Puri Prisoner (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "03 / 2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [],
+  "effects": [
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    }
+  ],
+  "classLevel": "Class_S",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100006-ssrplus-360.webp 360w, /Characters/optimized/100006-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

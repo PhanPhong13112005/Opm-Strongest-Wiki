@@ -1,0 +1,127 @@
+{
+  "id": "100044-ssrplus",
+  "name": "Drive Knight",
+  "roles": [
+    "DMG (ATK)",
+    "Speed"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Direct DMG 120% ATK to the target.",
+      "icon": "/Skill/Drive Knight (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Direct DMG 150% ATK to the target's column, then applies [Damage Taken Up] 30% to all enemies (they take more DMG).",
+      "icon": "/Skill/Drive Knight (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Direct DMG 150% > 225% ATK to the target's column, then applies [Damage Taken Up] 30% > 50% to all enemies.",
+      "icon": "/Skill/Drive Knight (SSR+)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Drive Knight (SSRplus)/Keepsake_SSRplus.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Gains +20% HP. After any character's action, [Evolve] 2 targets that are in an [Unyielding]/[Ignore DMG] state and deals 200% ATK as Extra DMG. When battle begins, gains 60% [Instant DMG Evasion] for 2 rounds.[Evolve]: immediately cancels the target's [Unyielding] and [Ignore DMG] statuses.",
+      "icon": "/Skill/Drive Knight (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Evolve] 3 targets; Extra DMG 200% ATK; [Instant DMG Evasion] 60% &gt; 65%. No [Evolve] limit.",
+      "icon": "/Skill/Drive Knight (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Evolve] 3 targets; Extra DMG 200% &gt; 300% ATK; [Instant DMG Evasion] 65% &gt; 70%. No [Evolve] limit.",
+      "icon": "/Skill/Drive Knight (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "(Basic Effect) (1 Grappler, 1 Duelist, 1 Hi-Tech): Gain 3 energy per round.(Advance Effect) (1 Grappler, 1 Duelist, 1 Hi-Tech, 1 Esper): When battle begins, all allies obtain [Specialized Protection] of 600% original Max HP (removes damage, stackable with extra HP effects, accumulated damage removed will not be more than 15x of his original HP, can be stacked).",
+      "type": "Awakening",
+      "icon": "/Skill/Source/100044-ssrplus/awakened.webp",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Gains 1 energy once per round if any ally triggers CRIT.",
+      "type": "Awakening",
+      "icon": "/Skill/Source/100044-ssrplus/awakened.webp",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "Gains 1 energy twice per round if any ally triggers CRIT.",
+      "type": "Awakening",
+      "icon": "/Skill/Source/100044-ssrplus/awakened.webp",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR+",
+  "imageURL": "/Characters/optimized/100044-ssrplus-600.webp",
+  "type": "Hi-Tech",
+  "faction": "Hero",
+  "debut": "10 / 2022",
+  "keepsakeIcon": "/Keepsake/Drive Knight (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/11/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Speed"
+  ],
+  "effects": [
+    {
+      "term": "[Insta-Dodge]",
+      "desc": "Floors that each cause a direct, additional, charge, or berserk attack to only deal 1 damage."
+    }
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/03/2023",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100044-ssrplus-360.webp 360w, /Characters/optimized/100044-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

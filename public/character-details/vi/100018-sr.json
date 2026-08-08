@@ -1,0 +1,81 @@
+{
+  "id": "100018-sr",
+  "name": "Iairon",
+  "imageURL": "/Characters/optimized/100018-sr-600.webp",
+  "tier": "SR",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Sụp Đổ"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 168,
+    "hp": 1010,
+    "def": 43,
+    "spd": 92
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 100% ST sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Iairon (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 60% ST sát thương lên mỗi kẻ địch trong một hàng với 2 đòn liên kích, với 100% cơ hội gây [Vỡ Vụn] lên mục tiêu chính trong 2 lượt (giảm tỉ lệ Giảm ST đi 30%).",
+      "icon": "/Skill/Iairon (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 60% ST sát thương lên mỗi kẻ địch trong một hàng với 2 đòn liên kích, với 100% cơ hội gây [Vỡ Vụn] lên mục tiêu chính và 50% cơ hội lên kẻ địch cùng hàng với mục tiêu chính trong 2 lượt (giảm tỉ lệ Giảm ST đi 30%).",
+      "keepsakeIcon": "/Keepsake/Iairon (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Iairon (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi đồng minh tấn công kẻ địch đang trong trạng thái [Vỡ Vụn], Iairon vào trạng thái [Cuồng Nộ] trong 99 lượt (tăng ST gây ra 30%).",
+      "icon": "/Skill/Iairon (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi nhân vật phe ta tấn công kẻ địch đang trong trạng thái [Vỡ Vụn], Iairon vào trạng thái [Cuồng Nộ] trong 99 lượt (tăng ST gây ra 40%).",
+      "icon": "/Skill/Iairon (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi nhân vật phe ta tấn công kẻ địch đang trong trạng thái [Vỡ Vụn], Iairon vào trạng thái [Cuồng Nộ] trong 99 lượt (tăng ST gây ra 45%).",
+      "icon": "/Skill/Iairon (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Iairon (SR)/Keepsake_SR.png",
+  "classLevel": "A",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100018-sr-360.webp 360w, /Characters/optimized/100018-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

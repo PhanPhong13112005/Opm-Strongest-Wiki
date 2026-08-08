@@ -1,0 +1,92 @@
+{
+  "id": "100060-ssr",
+  "name": "Vaccine Man V1",
+  "roles": [
+    "Sát Thương (Công)",
+    "Sát Thương (Máu)"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 373,
+    "hp": 2236,
+    "def": 94,
+    "spd": 97
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST lên mục tiêu đơn, kèm sát thương phụ trội bằng 5% Máu tối đa của bản thân.",
+      "icon": "/Skill/Vaccine Man V1 (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Đánh mỗi kẻ địch trong cả hàng với 3 đòn liên kích, mỗi đòn gây 44% ST, với 50% tỉ lệ gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (sát thương theo thời gian bằng 80% ST).",
+      "icon": "/Skill/Vaccine Man V1 (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Đánh mỗi kẻ địch trong cả hàng với 3 đòn liên kích, mỗi đòn gây 55% ST, với 75% tỉ lệ gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (sát thương theo thời gian bằng 80% ST).",
+      "icon": "/Skill/Vaccine Man V1 (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Vaccine Man V1 (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi kẻ địch chịu sát thương theo thời gian, lập tức hấp thụ 50% giá trị sát thương đó để gây sát thương phụ trội lên toàn bộ địch (chỉ 1 hiệu ứng cùng loại có tác dụng trong suốt cả trận đấu).",
+      "icon": "/Skill/Vaccine Man V1 (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi kẻ địch chịu sát thương theo thời gian, lập tức hấp thụ 70% giá trị sát thương đó để gây sát thương phụ trội lên toàn bộ địch (chỉ 1 hiệu ứng cùng loại có tác dụng trong suốt cả trận đấu).",
+      "icon": "/Skill/Vaccine Man V1 (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi kẻ địch chịu sát thương theo thời gian, lập tức hấp thụ 75% giá trị sát thương đó để gây sát thương phụ trội lên toàn bộ địch (chỉ 1 hiệu ứng cùng loại có tác dụng trong suốt cả trận đấu).",
+      "icon": "/Skill/Vaccine Man V1 (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR",
+  "imageURL": "/Characters/optimized/100060-ssr-600.webp",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Vaccine Man V1 (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "effects": [
+    {
+      "term": "[Thiêu Đốt]",
+      "desc": "Sát thương lửa liên tục theo thời gian lên mục tiêu."
+    }
+  ],
+  "releaseDate": "16/06/2020",
+  "classLevel": "Dragon",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "imageSrcset": "/Characters/optimized/100060-ssr-360.webp 360w, /Characters/optimized/100060-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

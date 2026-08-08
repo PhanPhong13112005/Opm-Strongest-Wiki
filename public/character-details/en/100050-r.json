@@ -1,0 +1,86 @@
+{
+  "id": "100050-r",
+  "name": "Jet Niceguy",
+  "imageURL": "/Characters/optimized/100050-r-600.webp",
+  "tier": "R",
+  "type": "Hi-Tech",
+  "faction": "Hero",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 153,
+    "hp": 918,
+    "def": 39,
+    "spd": 89
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 90% ATK DMG to a single target.",
+      "icon": "/Skill/Jet Niceguy (R)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 130% ATK DMG to each enemy in a column, with a 100% chance to inflict [Weaken] on the main target (reduces ATK by 20% for 1 turn).",
+      "icon": "/Skill/Jet Niceguy (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 130% ATK DMG to each enemy in a column, with a 100% chance to inflict [Weaken] on the main target (reduces ATK by 30% for 1 turn).",
+      "keepsakeIcon": "/Keepsake/Jet Niceguy (R)/Keepsake_R.png",
+      "icon": "/Skill/Jet Niceguy (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own max HP by 20%. After being attacked, has a 25% chance to increase own DMG by 10% for 1 turn.",
+      "icon": "/Skill/Jet Niceguy (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own max HP by 20%. After being attacked, has a 25% chance to increase own DMG by 20% for 1 turn.",
+      "icon": "/Skill/Jet Niceguy (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own max HP by 20%. After being attacked, has a 25% chance to increase own DMG by 25% for 1 turn.",
+      "icon": "/Skill/Jet Niceguy (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Weaken]",
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Jet Niceguy (R)/Keepsake_R.png",
+  "classLevel": "B",
+  "classIcon": "/Class/B.png",
+  "imageSrcset": "/Characters/optimized/100050-r-360.webp 360w, /Characters/optimized/100050-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

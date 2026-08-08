@@ -1,0 +1,131 @@
+{
+  "id": "100187-ur",
+  "name": "King",
+  "imageURL": "/Characters/optimized/100187-ur-600.webp",
+  "tier": "UR",
+  "type": "Tâm Linh",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Kích Tốc"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Đe dọa một mục tiêu đơn, khiến mục tiêu [Phá Vỡ] trong 2 lượt (giảm Tăng ST đi 20%), hồi phục Máu bằng 20% ST.",
+      "icon": "/Skill/King (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Hồi máu cho toàn bộ đồng minh bằng 150% Máu tối đa của King, ban cho đồng minh cùng hàng [Cuồng Bạo Chuyên Biệt] (đòn đầu tiên gây ST Cuồng Bạo bằng 50% Máu tối đa của King, có tỉ lệ Chí Mạng, tiêu hao 150 điểm Thanh Năng Lượng cho mỗi kẻ địch bị đánh trúng), kéo dài 1 lượt.",
+      "icon": "/Skill/King (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Hồi máu — thêm 100% Máu tối đa [Phòng Vệ Chuyên Biệt]Cùng hàng → Toàn bộ đồng minhST Cuồng Bạo 50% → 150%Thanh Năng Lượng tiêu hao 150 → 100",
+      "keepsakeIcon": "/Keepsake/King (UR)/Keepsake_UR.png",
+      "icon": "/Skill/King (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Khi bắt đầu trận đấu, đồng minh cùng hàng nhận 3 lượt [Hồi Phục Tràn] (lượng Máu dư từ Hồi máu và Hút máu chuyển thành lượng [Khiên Sinh Mệnh] tương ứng; ST tích lũy bị loại bỏ không vượt quá 20 lần Máu gốc của hắn). Hồi máu bằng 450% Máu tối đa của King.Trước khi bất kỳ nhân vật nào hành động, loại bỏ [Tê Liệt] khỏi bản thân và đồng minh cùng hàng.",
+      "icon": "/Skill/King (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Hồi máu 450% → 600%Trước khi hành động — đồng thời loại bỏ [Bám Dính] khỏi bản thân và toàn bộ đồng minh cùng hàng",
+      "icon": "/Skill/King (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Hồi Phục Tràn] 3 lượt → 5 lượt",
+      "icon": "/Skill/King (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Sau khi bất kỳ đồng minh nào hành động, King và đồng minh cùng hàng thực hiện [Truy Kích Combo] (100% ST và 100% hiệu ứng của kỹ năng Tối thượng, mục tiêu ngẫu nhiên, không bị ảnh hưởng bởi Chính xác hiệu ứng/Kháng hiệu ứng), một lần mỗi vòng. Đồng minh cùng hàng chia sẻ 50% ST trực tiếp với King. ST được chia sẻ bị giảm 50%, không thể chia sẻ ST khi Máu dưới 30%",
+      "icon": "/Skill/King (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "ST Truy Kích Combo 100% > 150% Thực hiện Truy Kích Combo một lần ở vòng đầu > hai lần ở vòng đầu Đồng minh cùng hàng chia sẻ ST 50% > 60% Mức giảm ST được chia sẻ 50% > 80%",
+      "icon": "/Skill/King (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/King (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bám Dính]",
+      "desc": "Trạng thái khống chế ngăn mục tiêu tung [Truy Kích] và [Truy Kích Liên Tiếp], thường trong 2 lượt."
+    },
+    {
+      "term": "[Hồi Máu Vượt Mức]",
+      "desc": "Chuyển phần Máu dư từ hồi phục và hút máu thành Khiên Máu tương đương, tối đa theo giới hạn dựa trên Máu gốc."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/King (UR)/Keepsake_UR.png",
+  "releaseTrung": "01 / 2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Debuff",
+    "Hồi Phục",
+    "Tốc Độ"
+  ],
+  "classLevel": "Class_SS",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100187-ur-360.webp 360w, /Characters/optimized/100187-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

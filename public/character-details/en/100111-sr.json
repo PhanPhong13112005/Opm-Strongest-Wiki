@@ -1,0 +1,89 @@
+{
+  "id": "100111-sr",
+  "name": "Face Ripper",
+  "imageURL": "/Characters/optimized/100111-sr-600.webp",
+  "tier": "SR",
+  "type": "Duelist",
+  "faction": "Monster",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 186,
+    "hp": 1089,
+    "def": 48,
+    "spd": 96
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deal 100% ATK (+10) damage to a single target, with a 70% chance to inflict [Corrosion] for 1 turn (damage-immunity rate reduced by 30%).",
+      "icon": "/Skill/Face Ripper (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Immediately gain a 30% lifesteal rate for 1 turn, then deal a 2-hit combo of 140% ATK (+5) damage to a single target, with a 100% chance to inflict [Corrosion] for 2 turns (damage-immunity rate reduced by 30%).",
+      "icon": "/Skill/Face Ripper (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Immediately grant self and same-column allies a 40% lifesteal rate for 1 turn, then deal a 2-hit combo of 160% ATK (+5) damage to a single target, with a 100% chance to inflict [Corrosion] for 2 turns (damage-immunity rate reduced by 30%).",
+      "keepsakeIcon": "/Keepsake/Face Ripper (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Face Ripper (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently gain (+20) HP. While own HP is below 50%, direct damage taken is reduced by 50% and ATK is increased by 25%.",
+      "icon": "/Skill/Face Ripper (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently gain (+20) HP. While own HP is below 60%, direct damage taken is reduced by 60% and ATK is increased by 30%.",
+      "icon": "/Skill/Face Ripper (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently gain (+20) HP. While own HP is below 65%, direct damage taken is reduced by 65% and ATK is increased by 35%.",
+      "icon": "/Skill/Face Ripper (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Face Ripper (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [],
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "classLevel": "Demon",
+  "imageSrcset": "/Characters/optimized/100111-sr-360.webp 360w, /Characters/optimized/100111-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

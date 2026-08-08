@@ -1,0 +1,146 @@
+{
+  "id": "100189-ur",
+  "name": "Gale Wind",
+  "imageURL": "/Characters/optimized/100189-ur-600.webp",
+  "tier": "UR",
+  "type": "Grappler",
+  "faction": "Monster",
+  "roles": [
+    "Control"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 122
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK to a single target.",
+      "icon": "/Skill/Gale Wind (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Attacks enemies in a column with 5 consecutive strikes, dealing 450% ATK DMG. The last strike has a 100% chance to inflict [Specialized Shatter] on the main target for 2 turns (reduces DMG Reduction by 12%, deals 180% ATK as [Shatter] DMG when attacked, stacks up to 3 times, does not stack with [Shatter]), and has a 100% chance to inflict [Stun] on the main target for 1 turn (unable to act, at most 4 characters can be stunned simultaneously).",
+      "icon": "/Skill/Gale Wind (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Ultimate DMG 450% → 600% ATK. DMG Reduction reduction 12% → 15%. [Shatter] DMG 180% → 230% ATK. Chance to inflict [Stun] on the main target → also affects an enemy in the same column.",
+      "keepsakeIcon": "/Keepsake/Gale Wind (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Gale Wind (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently grants himself a 55% chance of [Evasion] (reduces Direct/Extra/Charge/Berserk DMG to 1 DMG). After any character acts, deals 500% ATK as Extra DMG to enemies with [Specialized Shatter], up to 2 times per turn.",
+      "icon": "/Skill/Gale Wind (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Evasion] applies to self → also to an ally in the same column. Attacking enemies with [Specialized Shatter] 2 times per turn → 3 times per turn.",
+      "icon": "/Skill/Gale Wind (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Evasion] chance 55% → 60%. Extra DMG 500% → 650% ATK.",
+      "icon": "/Skill/Gale Wind (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "At the start of the battle, grants [Specialized Acceleration] (Increases SPD by 28%, if the main target's SPD is lower than Gale Wind, deals 500% ATK as Extra DMG). At the start of every round, increase SPD of allies in the same row to 92% of Gale Wind's SPD, only when ally's SPD is lower than expected). Grants Immunity against [Fear] and [Energy Removal]. When the round begins, [Encourage] the allies (gains 2 energy at the start of the round, lasts for 3 rounds).",
+      "icon": "/Skill/Gale Wind (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Specialized Acceleration 28% > 32% ATK Extra DMG 500% > 600% Increase SPD of allies in same row 92% > 96% Encourage allies energy gain 2 > 3 Permanent Immunity against Stun",
+      "icon": "/Skill/Gale Wind (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Gale Wind (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Stun]",
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+    },
+    {
+      "term": "[Encourage]",
+      "desc": "Power up at the beginning of each round for several rounds."
+    },
+    {
+      "term": "[Dodge]",
+      "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+    },
+    {
+      "term": "[Spec. Collapse]",
+      "desc": "PvP debuff reduces target's Damage Reduction by 10% and deals 250% Shatter damage each time the target is attacked."
+    },
+    {
+      "term": "[Collapse]",
+      "desc": "Damage/disadvantage effect breaks target's defense."
+    },
+    {
+      "term": "[Spec. Speed Up]",
+      "desc": "Increases ally's speed to near deployer's speed (remains the same if ally is already faster)."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Gale Wind (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/09/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Debuff",
+    "Generate Shield"
+  ],
+  "classLevel": "Demon",
+  "releaseSea": "01/01/2025",
+  "classIcon": "/Class/Demon.png",
+  "imageSrcset": "/Characters/optimized/100189-ur-360.webp 360w, /Characters/optimized/100189-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

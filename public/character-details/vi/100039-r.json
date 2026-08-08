@@ -1,0 +1,83 @@
+{
+  "id": "100039-r",
+  "name": "Cua Càng Bựa",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 156,
+    "hp": 936,
+    "def": 40,
+    "spd": 86
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 90% ST(+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Crablante (R)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung liên kích 5 đòn lên mục tiêu đơn gây 38% ST(+2) sát thương, và có 100% xác suất giảm 10% sát thương phải chịu của bản thân trong 2 lượt.",
+      "icon": "/Skill/Crablante (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung liên kích 5 đòn lên mục tiêu đơn gây 38% ST(+2) sát thương. Có 100% xác suất giảm 20% sát thương phải chịu của bản thân trong 2 lượt.",
+      "icon": "/Skill/Crablante (R)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Crablante (R)/Keepsake_R.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi bị tấn công, có 25% xác suất tăng 10% sát thương cho bản thân trong 1 lượt.",
+      "icon": "/Skill/Crablante (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi bị tấn công, có 25% xác suất tăng 20% sát thương cho bản thân trong 1 lượt.",
+      "icon": "/Skill/Crablante (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi bị tấn công, có 25% xác suất tăng 25% sát thương cho bản thân trong 1 lượt.",
+      "icon": "/Skill/Crablante (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "R",
+  "imageURL": "/Characters/optimized/100039-r-600.webp",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Crablante (R)/Keepsake_R.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "effects": [],
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100039-r-360.webp 360w, /Characters/optimized/100039-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

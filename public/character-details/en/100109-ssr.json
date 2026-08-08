@@ -1,0 +1,91 @@
+{
+  "id": "100109-ssr",
+  "name": "Gyoro-Gyoro",
+  "imageURL": "/Characters/optimized/100109-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Max HP Core",
+    "Follow-up"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 390,
+    "hp": 2340,
+    "def": 99,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Sends out a recon drone to scout a single target, directing the ally with the highest ATK to launch a [Follow-up], and recovers HP to self equal to 120% ATK.",
+      "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Reduces the target's max HP for several turns (HP exceeding the new cap is immediately removed). Deals 110% ATK DMG to all targets.",
+      "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Reduces the target's max HP for several turns (HP exceeding the new cap is immediately removed). Deals 140% ATK DMG to all targets.",
+      "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). Increases all allies' max HP by 15% for 2 turns. When an ally in the same column is a Monster, Gyoro-Gyoro shares a portion of the damage they take (stops sharing once their HP falls below a threshold).",
+      "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). Increases all allies' max HP by 20% for 2 turns. When an ally in the same column is a Monster, Gyoro-Gyoro shares a portion of the damage they take (stops sharing once their HP falls below a threshold).",
+      "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). Increases all allies' max HP by 25% for 2 turns. When an ally in the same column is a Monster, Gyoro-Gyoro shares a portion of the damage they take (stops sharing once their HP falls below a threshold).",
+      "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Truy Kích]",
+      "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseDate": "01/05/2021",
+  "classLevel": "Dragon",
+  "releaseSea": "01/04/2021",
+  "releaseTrung": "01/12/2020",
+  "imageSrcset": "/Characters/optimized/100109-ssr-360.webp 360w, /Characters/optimized/100109-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

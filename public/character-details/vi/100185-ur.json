@@ -1,0 +1,122 @@
+{
+  "id": "100185-ur",
+  "name": "Chày Sắt",
+  "roles": [
+    "Sát Thương (Máu)",
+    "Tạo Khiên"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 104
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tấn công một mục tiêu đơn với 3 đòn liên tiếp, gây 135% ST.",
+      "icon": "/Skill/Metal Bat (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tăng Sát thương chí mạng thêm 30% trong 1 lượt.Gây ST trực tiếp bằng 105% Máu tối đa lên mục tiêu cột với 3 đòn liên tiếp, và gây thêm ST phụ trội chuyên biệt bằng 120% Máu tối đa ban đầu (có thể gây thêm Sát thương chí mạng).[Hào Quang] tăng thêm 20% cho ST phụ trội chuyên biệt.",
+      "icon": "/Skill/Metal Bat (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Sát thương chí mạng 30% → 50%ST Máu tối đa 105% → 135%ST phụ trội chuyên biệt 120% → 140%[Hào Quang] tăng 20% → 25%",
+      "icon": "/Skill/Metal Bat (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Metal Bat (UR)/Keepsake_UR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn nhận 60% Giảm ST Non-Crit (giảm sát thương bao gồm mọi loại sát thương; không thể tồn tại song song với Agility).Tăng 1500 năng lượng trước khi hành động.",
+      "icon": "/Skill/Metal Bat (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Giảm ST Non-Crit 60% → 65%Năng lượng tăng 1500 → 2000",
+      "icon": "/Skill/Metal Bat (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Giảm ST Non-Crit 65% → 70%Năng lượng tăng 2000 → 2500",
+      "icon": "/Skill/Metal Bat (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Vào đầu lượt, hồi 200% Máu tối đa của Metal Bat và 80% Máu tối đa của đồng minh cùng hàng, kéo dài tối đa 4 lượt. Trước khi bất kỳ nhân vật nào hành động, giáp sinh mệnh mà bản thân sở hữu sẽ được tăng vĩnh viễn theo [Hào Quang] (1 lớp giáp tương đương 1 lớp aura, tối đa 4 lớp, tính theo số lớp giáp cao nhất của bản thân). Tỉ lệ Chí mạng của bản thân được tăng vĩnh viễn 50% và tỉ lệ Chí mạng của đồng minh được tăng vĩnh viễn 30%.",
+      "icon": "/Skill/Metal Bat (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Máu tối đa hồi 200% > 250% Máu tối đa hồi (đồng minh) 80% > 120% Số lớp Aura tối đa 4 > 6 Tỉ lệ Chí mạng 50% > 70% Tỉ lệ Chí mạng (đồng minh) 30% > 50%",
+      "icon": "/Skill/Metal Bat (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Metal Bat (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "UR",
+  "imageURL": "/Characters/optimized/100185-ur-600.webp",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "debut": "11 / 2023",
+  "keepsakeIcon": "/Keepsake/Metal Bat (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/11/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Máu)",
+    "Tạo Khiên"
+  ],
+  "effects": [],
+  "classLevel": "Class_S",
+  "releaseSea": "01/03/2024",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100185-ur-360.webp 360w, /Characters/optimized/100185-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

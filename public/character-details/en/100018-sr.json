@@ -1,0 +1,81 @@
+{
+  "id": "100018-sr",
+  "name": "Iairon",
+  "imageURL": "/Characters/optimized/100018-sr-600.webp",
+  "tier": "SR",
+  "type": "Duelist",
+  "faction": "Hero",
+  "roles": [
+    "Collapse"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 168,
+    "hp": 1010,
+    "def": 43,
+    "spd": 92
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 100% ATK DMG to a single target.",
+      "icon": "/Skill/Iairon (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 60% ATK DMG to each enemy in a row with 2 combo strikes, with a 100% chance to inflict [Shatter] on the main target for 2 turns (reduces DMG RED. rate by 30%).",
+      "icon": "/Skill/Iairon (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 60% ATK DMG to each enemy in a row with 2 combo strikes, with a 100% chance to inflict [Shatter] on the main target and a 50% chance on enemies in the same row as the main target for 2 turns (reduces DMG RED. rate by 30%).",
+      "keepsakeIcon": "/Keepsake/Iairon (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Iairon (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP. When an ally attacks an enemy in the [Shatter] state, Iairon enters the [Berserk] state for 99 turns (increases DMG dealt by 30%).",
+      "icon": "/Skill/Iairon (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP. When an allied character attacks an enemy in the [Shatter] state, Iairon enters the [Berserk] state for 99 turns (increases DMG dealt by 40%).",
+      "icon": "/Skill/Iairon (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP. When an allied character attacks an enemy in the [Shatter] state, Iairon enters the [Berserk] state for 99 turns (increases DMG dealt by 45%).",
+      "icon": "/Skill/Iairon (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Iairon (SR)/Keepsake_SR.png",
+  "classLevel": "A",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100018-sr-360.webp 360w, /Characters/optimized/100018-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

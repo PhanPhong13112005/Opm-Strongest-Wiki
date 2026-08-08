@@ -1,0 +1,145 @@
+{
+  "id": "100313-urplus",
+  "name": "Samurai Nguyên Tử",
+  "roles": [
+    "Xuyên phá diện rộng",
+    "Sát thủ tốc độ"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 130
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST lên mục tiêu đơn.",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Atomic Samurai tung ra 30 nhát chém, mỗi đòn Chí mạng giảm 1% [Giảm Tổng Sát Thương] của toàn bộ kẻ địch. Sau đó vung một nhát chém mạnh gây 5000% ST Specialized Direct DMG lên toàn bộ kẻ địch (chỉ chịu ảnh hưởng của giảm ST nâng cao), bỏ qua 55% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], và xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Ở lần dùng đầu tiên, ngoài ra giảm 100% [HP Chuyên Biệt] của toàn bộ kẻ địch.",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": "/Animation/Sam_Urplus/ult.gif",
+      "keepsakeIcon": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Chém 30 > 50 lần. ST 5000% > 7000%. Bỏ qua Specialized Evasion và [Giảm Sát Thương Không Bạo Kích] 55% > 80%. Giảm [HP Chuyên Biệt] của toàn bộ kẻ địch 100% > 175%.",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Atomic Samurai (URplus)/Keepsake_URplus.png",
+      "type": "Tuyệt kĩ",
+      "animation": "/Animation/Sam_Urplus/ult.gif",
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Nhận 60% [Giảm Sát Thương Không Bạo Kích] khi vào trận. Xóa toàn bộ debuff [Tăng Sát Thương Áp Chế] và [Giảm Sát Thương Áp Chế] của kẻ địch. Khi gây Specialized Direct DMG, bỏ qua 40% [Kháng Bạo Kích] của kẻ địch.",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] 60% > 70%. Bỏ qua [Kháng Bạo Kích] của kẻ địch 40% > 60%.",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] 70% > 80%. Bỏ qua [Kháng Bạo Kích] của kẻ địch 60% > 80%.",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi bắt đầu trận đấu, ban cho Atomic Samurai 20% tăng Tốc độ chuyên biệt. Khi chịu sát thương, có cơ hội giảm 40% sát thương đó (cơ hội bằng hai lần tỉ lệ Chí mạng hiện tại của bản thân). Nếu bản thân nằm trong hai đồng minh hành động đầu tiên, sẽ nhận 30% tỉ lệ Chí mạng và 50% Sát thương chí mạng.",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "animation": "/Animation/Sam_Urplus/awken.gif",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Tăng Tốc độ 20% > 30% Giảm sát thương 40% > 70% Tỉ lệ Chí mạng 30% > 50% Sát thương chí mạng 50% > 80%",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "animation": "/Animation/Sam_Urplus/awken.gif",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "animation": "/Animation/Sam_Urplus/awken.gif",
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "tier": "UR+",
+  "imageURL": "/Characters/optimized/100313-urplus-600.webp",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "debut": "03 / 2026",
+  "keepsakeIcon": "/Keepsake/Atomic Samurai (URplus)/Keepsake_URplus.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "ST DIỆN RỘNG (AOE)",
+    "TỐC ĐỘ ĐÁNH TRƯỚC",
+    "XUYÊN NÉ/GIẢM THƯƠNG",
+    "CHÍ MẠNG"
+  ],
+  "effects": [
+    {
+      "term": "[Giảm Sát Thương Khống Chế]",
+      "desc": "Giảm lượng sát thương nhận vào nhờ hiệu ứng Áp Chế."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm lượng sát thương nhận vào từ các đòn đánh không phải chí mạng."
+    },
+    {
+      "term": "[HP Chuyên Biệt]",
+      "desc": "Thanh máu riêng bậc PvP xếp chồng lên máu thường, cũng phải bị hạ và có thể được hồi độc lập."
+    },
+    {
+      "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
+      "desc": "Bậc cao cấp của sát thương trực tiếp, chỉ chịu ảnh hưởng của tăng/giảm sát thương cao cấp và xuyên qua phòng thủ thường."
+    },
+    {
+      "term": "[Tăng Sát Thương Khống Chế]",
+      "desc": "Buff tấn công cho 30-40% năng lượng và tăng sát thương, tăng thêm 150-170% khi Tấn công của người mang cao hơn mục tiêu."
+    }
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/07/2026",
+  "releaseTrung": "01/03/2026",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100313-urplus-360.webp 360w, /Characters/optimized/100313-urplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

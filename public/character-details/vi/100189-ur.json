@@ -1,0 +1,146 @@
+{
+  "id": "100189-ur",
+  "name": "Gale Wind",
+  "imageURL": "/Characters/optimized/100189-ur-600.webp",
+  "tier": "UR",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Khống Chế"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 122
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST cho một mục tiêu đơn.",
+      "icon": "/Skill/Gale Wind (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tấn công kẻ địch theo cột với 5 đòn liên tiếp, gây 450% ST. Đòn cuối có 100% tỉ lệ gây [Nứt Vỡ Chuyên Biệt] cho mục tiêu chính trong 2 lượt (giảm Giảm Sát Thương đi 12%, gây 180% ST sát thương [Nứt Vỡ] khi bị tấn công, cộng dồn tối đa 3 lần, không cộng dồn với [Nứt Vỡ]), và có 100% tỉ lệ gây [Choáng] lên mục tiêu chính trong 1 lượt (không thể hành động, tối đa 4 nhân vật có thể bị choáng cùng lúc).",
+      "icon": "/Skill/Gale Wind (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "ST Tối Thượng 450% → 600% ST. Giảm Sát Thương giảm đi 12% → 15%. ST [Nứt Vỡ] 180% → 230% ST. Tỉ lệ gây [Choáng] cho mục tiêu chính → thêm kẻ địch cùng cột.",
+      "keepsakeIcon": "/Keepsake/Gale Wind (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Gale Wind (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn nhận cho bản thân 55% tỉ lệ [Khả Năng Né Tránh] (giảm ST trực tiếp/phụ trội/tích lũy/cuồng bạo xuống còn 1 ST). Sau khi bất kỳ nhân vật nào hành động, gây 500% ST phụ trội lên kẻ địch có [Nứt Vỡ Chuyên Biệt], tối đa 2 lần mỗi lượt.",
+      "icon": "/Skill/Gale Wind (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Khả Năng Né Tránh] cho bản thân → thêm đồng minh cùng cột. Tấn công kẻ địch có [Nứt Vỡ Chuyên Biệt] 2 lần mỗi lượt → 3 lần mỗi lượt.",
+      "icon": "/Skill/Gale Wind (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Tỉ lệ [Khả Năng Né Tránh] 55% → 60%. ST phụ trội 500% → 650% ST.",
+      "icon": "/Skill/Gale Wind (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi bắt đầu trận đấu, nhận [Tăng Tốc Chuyên Biệt] (Tăng 28% Tốc độ, nếu Tốc độ của mục tiêu chính thấp hơn Gale Wind, gây ST phụ trội bằng 500% Tấn công). Vào đầu mỗi vòng, tăng Tốc độ của đồng minh cùng hàng lên 92% Tốc độ của Gale Wind, chỉ khi Tốc độ của đồng minh thấp hơn kỳ vọng). Miễn nhiễm với [Sợ Hãi] và [Loại Bỏ Năng Lượng]. Khi vòng đấu bắt đầu, [Khích Lệ] đồng minh (nhận 2 năng lượng vào đầu vòng, kéo dài 3 vòng).",
+      "icon": "/Skill/Gale Wind (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Tăng Tốc Chuyên Biệt 28% > 32% ST phụ trội Tấn công 500% > 600% Tăng Tốc độ của đồng minh cùng hàng 92% > 96% Khích Lệ đồng minh nhận năng lượng 2 > 3 Miễn nhiễm Choáng vĩnh viễn",
+      "icon": "/Skill/Gale Wind (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Gale Wind (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Cổ Vũ]",
+      "desc": "Cấp năng lượng vào đầu mỗi vòng trong vài vòng."
+    },
+    {
+      "term": "[Né Tránh]",
+      "desc": "Trạng thái né giúp giảm sát thương Trực Tiếp, Thêm, Tích Lũy và Cuồng Nộ nhận vào chỉ còn 1 điểm trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Sụp Đổ Chuyên Biệt]",
+      "desc": "Debuff PvP giảm 10% Giảm Sát Thương của mục tiêu và gây 250% ST dạng Shatter mỗi khi mục tiêu bị tấn công."
+    },
+    {
+      "term": "[Sụp Đổ]",
+      "desc": "Hiệu ứng sát thương/bất lợi phá vỡ phòng thủ của mục tiêu."
+    },
+    {
+      "term": "[Tăng Tốc Chuyên Biệt]",
+      "desc": "Tăng tốc độ của đồng minh tới gần tốc độ của người triển khai (giữ nguyên nếu đồng minh đã nhanh hơn)."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Gale Wind (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/09/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Debuff",
+    "Tạo Khiên"
+  ],
+  "classLevel": "Demon",
+  "releaseSea": "01/01/2025",
+  "classIcon": "/Class/Demon.png",
+  "imageSrcset": "/Characters/optimized/100189-ur-360.webp 360w, /Characters/optimized/100189-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

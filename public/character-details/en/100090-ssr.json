@@ -1,0 +1,92 @@
+{
+  "id": "100090-ssr",
+  "name": "Suiryu",
+  "imageURL": "/Characters/optimized/100090-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Grappler",
+  "faction": "Martial Artist",
+  "roles": [
+    "Accumulated DMG",
+    "Reduce Non-Crit DMG"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 411,
+    "hp": 2469,
+    "def": 196,
+    "spd": 96
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 70% ATK (+5) damage to a single target with a 2-hit combo, and grants self [Tenacity] (absorbs damage equal to 25% of own HP).",
+      "icon": "/Skill/Suiryu (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Each stack of [Charge] deals extra Charge damage equal to 24% ATK to the target hit. Deals 160% ATK damage to each back-row enemy with a 5-hit combo.",
+      "icon": "/Skill/Suiryu (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Each stack of [Charge] deals extra Charge damage equal to 30% ATK to the target hit. Deals 240% ATK damage to each back-row enemy with a 5-hit combo, with a 100% chance to inflict [Weaken] on critically-hit targets (reduces ATK by 30% for 2 turns).",
+      "keepsakeIcon": "/Keepsake/Suiryu (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Suiryu (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). Each time self gains a [Tenacity] state, gains 1 stack of [Charge], up to 2 stacks. Permanently increases the ATK of allies in a [Charge] state by 25%. Self permanently gains 40% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect).",
+      "icon": "/Skill/Suiryu (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). Each time self gains a [Tenacity] state, gains 1 stack of [Charge], up to 2 stacks. Permanently increases the ATK of allies in a [Charge] state by 35%. Self permanently gains 45% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect).",
+      "icon": "/Skill/Suiryu (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). Each time self gains a [Tenacity] state, gains 1 stack of [Charge], up to 2 stacks. Permanently increases the ATK of allies in a [Charge] state by 45%. Self permanently gains 55% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect).",
+      "icon": "/Skill/Suiryu (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Tenacity]",
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+    },
+    {
+      "term": "[Weaken]",
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Suiryu (SSR)/Keepsake_SSR.png",
+  "releaseDate": "01/03/2022",
+  "classLevel": "Martial_Artist",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100090-ssr-360.webp 360w, /Characters/optimized/100090-ssr-600.webp 564w",
+  "imageWidth": 564,
+  "imageHeight": 688
+}

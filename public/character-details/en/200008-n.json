@@ -1,0 +1,82 @@
+{
+  "id": "200008-n",
+  "name": "Don Pacino",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 164,
+    "hp": 981,
+    "def": 41,
+    "spd": 81
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Strike a single target with a 2-hit combo, dealing 40% ATK (+5) damage.",
+      "icon": "/Skill/Don Pacino (N)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Strike the entire target row with a 2-hit combo, dealing 60% ATK (+5) damage.",
+      "icon": "/Skill/Don Pacino (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Strike the entire target row with a 2-hit combo, dealing 70% ATK (+5) damage.",
+      "icon": "/Skill/Don Pacino (N)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Don Pacino (N)/Keepsake_N.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increase self HP by (+20). Before acting, increase self Crit Rate by 5% for 1 turn.",
+      "icon": "/Skill/Don Pacino (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increase self HP by (+20). Before acting, increase self Crit Rate by 8% for 1 turn.",
+      "icon": "/Skill/Don Pacino (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increase self HP by (+20). Before acting, increase self Crit Rate by 10% for 1 turn.",
+      "icon": "/Skill/Don Pacino (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "N",
+  "imageURL": "/Characters/optimized/200008-n-600.webp",
+  "type": "Duelist",
+  "faction": "Outlaw",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Don Pacino (N)/Keepsake_N.png",
+  "effects": [],
+  "classLevel": "Outlaw",
+  "classIcon": "/Class/Outlaw.png",
+  "imageSrcset": "/Characters/optimized/200008-n-360.webp 360w, /Characters/optimized/200008-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 676
+}

@@ -1,0 +1,89 @@
+{
+  "id": "100104-sr",
+  "name": "Ba Lỗ Ăn Chay",
+  "tier": "SR",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hỗ Trợ",
+    "Tạo Khiên"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 183,
+    "hp": 1167,
+    "def": 48,
+    "spd": 95
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 100% ST tấn công lên mục tiêu đơn.",
+      "icon": "/Skill/Tank Top Vegan (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Đánh mục tiêu đơn với 5 đòn liên kích gây 50% ST tấn công mỗi đòn, và cấp [Kiên Cường] cho bản thân và đồng minh cùng cột (hấp thụ ST bằng 30% Máu bản thân).",
+      "icon": "/Skill/Tank Top Vegan (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Đánh mục tiêu đơn với 5 đòn liên kích gây 56% ST tấn công mỗi đòn, và cấp [Kiên Cường] cho bản thân và đồng minh cùng cột (hấp thụ ST bằng 35% Máu bản thân).",
+      "icon": "/Skill/Tank Top Vegan (SR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Tank Top Vegan (SR)/Keepsake_SR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi bắt đầu trận đấu, cấp cho toàn bộ đồng minh 50% Tỉ lệ Khiên trong 2 lượt.",
+      "icon": "/Skill/Tank Top Vegan (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi bắt đầu trận đấu, cấp cho toàn bộ đồng minh 60% Tỉ lệ Khiên trong 2 lượt.",
+      "icon": "/Skill/Tank Top Vegan (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi bắt đầu trận đấu, cấp cho toàn bộ đồng minh 70% Tỉ lệ Khiên trong 2 lượt.",
+      "icon": "/Skill/Tank Top Vegan (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100104-sr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Tank Top Vegan (SR)/Keepsake_SR.png",
+  "effects": [
+    {
+      "term": "[Lá Chắn]",
+      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+    }
+  ],
+  "classLevel": "A",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100104-sr-360.webp 360w, /Characters/optimized/100104-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

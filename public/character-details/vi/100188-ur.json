@@ -1,0 +1,124 @@
+{
+  "id": "100188-ur",
+  "name": "Samurai Nguyên Tử",
+  "imageURL": "/Characters/optimized/100188-ur-600.webp",
+  "tier": "UR",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Chủ Lực (Công)"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 108
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST lên một mục tiêu đơn, 100% tỉ lệ khiến mục tiêu [Suy Sụp] trong 2 lượt (giảm Giảm ST đi 20%).",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tấn công toàn bộ địch với 5 đòn liên tiếp, gây 350% ST. Đòn cuối có 100% tỉ lệ khiến mục tiêu chính nhận [Suy Sụp Chuyên Biệt] trong 2 lượt (giảm Tăng ST đi 10%, gây ST [Suy Sụp] bằng 200% ST khi bị tấn công, cộng dồn tối đa 3 lần, không cộng dồn với [Suy Sụp]).",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "ST 350% → 450%Giảm Tăng ST 10% → 15%ST [Suy Sụp Chuyên Biệt] 200% → 250%",
+      "keepsakeIcon": "/Keepsake/Atomic Samurai (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Tự nhận 50% Giảm ST Không Chí Mạng (hiệu lực với mọi loại ST, không thể tồn tại cùng [Nhanh Nhẹn]), kéo dài 4 lượt.Sau khi nhận ST chí tử, hồi sinh với 50% Máu tối đa.",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_pas.png",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Giảm ST Không Chí Mạng 50% → 60%Hồi sinh 1 lần → 2 lần",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_pas.png",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Thời gian Giảm ST Không Chí Mạng 4 lượt → 5 lượtMáu hồi sinh 50% → 100%",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_pas.png",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi bắt đầu trận đấu, giảm 30% Tấn công của toàn bộ kẻ địch, nhận 20% Tỉ lệ Hút máu, kéo dài 2 vòng. Trước khi bất kỳ nhân vật nào hành động, tung [Truy Kích Tối Thượng] (60% ST và 100% hiệu ứng), một lần mỗi vòng.",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_Awken.png",
+      "animation": "/Animation/Sam_Urplus/awken.gif",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Giảm Tấn công của kẻ địch 30% > 40% Nhận 20% Tỉ lệ Suy Sụp Tỉ lệ Hút máu 20% > 30% ST Truy Kích 60% > 100%",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_Awken.png",
+      "animation": "/Animation/Sam_Urplus/awken.gif",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_Awken.png",
+      "animation": "/Animation/Sam_Urplus/awken.gif",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Nhanh Nhẹn]",
+      "desc": "Buff loại né tránh; loại trừ lẫn nhau với Miễn Sát Thương Non-Crit."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Atomic Samurai (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/08/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)"
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/12/2024",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100188-ur-360.webp 360w, /Characters/optimized/100188-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,144 @@
+{
+  "id": "100182-ur",
+  "name": "G4",
+  "imageURL": "/Characters/optimized/100182-ur-600.webp",
+  "tier": "UR",
+  "type": "Công Nghệ",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Sát Thương Duy Trì & Phục Hồi Hộ Thể"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tấn công mục tiêu đơn với 2 liên kích gây 120% ST. 100% khả năng gây [Đập Nát] trong 2 lượt (giảm tỉ lệ giảm thương tổn đi 20%).",
+      "icon": "/Skill/G4 (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tấn công toàn bộ kẻ địch trong cả hàng với 3 liên kích gây 420% ST. Mỗi đòn có 100% khả năng áp 1 tầng [Thiêu Đốt Chuyên Biệt] (gây sát thương theo thời gian bằng 150% ST, biến mất sau 3 lần. Sau khi bất kỳ kẻ địch nào hành động, sẽ lan sang những kẻ địch khác chưa có hiệu ứng này).",
+      "icon": "/Skill/G4 (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "ST 420% → 600%. [Thiêu Đốt Chuyên Biệt] sát thương theo thời gian 150% → 200%. Ban cho toàn bộ đồng minh Giảm 20% ST không chí mạng trong 2 lượt.",
+      "keepsakeIcon": "/Keepsake/G4 (UR)/Keepsake_UR.png",
+      "icon": "/Skill/G4 (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Khi bắt đầu trận đấu, ban cho toàn bộ đồng minh hiệu ứng tăng sát thương theo thời gian 50% kéo dài tối đa 4 lượt. Sau khi [Thiêu Đốt Chuyên Biệt] và [Kích Nổ] gây ST lên kẻ địch, G4 và các đồng minh cùng hàng sẽ hồi 40% ST đã gây thành [Phòng Hộ Chuyên Biệt].",
+      "icon": "/Skill/G4 (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Tăng sát thương theo thời gian 50% → 65%. Hồi [Phòng Hộ Chuyên Biệt] 40% → 50%.",
+      "icon": "/Skill/G4 (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Tăng sát thương theo thời gian 65% → 80%. Hồi [Phòng Hộ Chuyên Biệt] 50% → 60%.",
+      "icon": "/Skill/G4 (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi bắt đầu trận đấu, toàn bộ kẻ địch sẽ bị áp [Thiêu Đốt Chuyên Biệt] (Hiệu ứng này không bị ảnh hưởng bởi Chính xác hiệu ứng, gây ST liên tục bằng 150% Tấn công, biến mất sau 3 lần. Sau khi bất kỳ kẻ địch nào hành động, sẽ lan sang những kẻ địch khác chưa có hiệu ứng này). Trước khi bất kỳ nhân vật nào hành động, xóa [Choáng] hoặc [Choáng Chuyên Biệt] của 1 đồng minh, tối đa 2 lần mỗi lượt. Sau khi bất kỳ nhân vật nào hành động, với mỗi kẻ địch đang ở trạng thái [Thiêu Đốt Chuyên Biệt], tăng 10% Tấn công cho đồng minh, cộng dồn tối đa 3 lần trong 1 lượt.",
+      "icon": "/Skill/G4 (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Khi bắt đầu trận đấu > Trong 3 lượt đầu Giải Choáng 2 lần mỗi lượt > 3 lần Tăng Tấn công đồng minh 10% > 15% Tự nhận miễn nhiễm vĩnh viễn với Choáng/[Choáng Chuyên Biệt]",
+      "icon": "/Skill/G4 (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/G4 (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Choáng Chuyên Biệt]",
+      "desc": "Bậc PvP của Choáng — khó kháng hoặc giải hơn."
+    },
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Phòng Hộ Chuyên Biệt]",
+      "desc": "Khiên bậc PvP hấp thụ sát thương nhận vào, được cấp theo giá trị dựa trên Tấn Công (ví dụ 400% ST)."
+    },
+    {
+      "term": "[Kích Nổ]",
+      "desc": "Kích hoạt một tầng sát thương theo thời gian hoặc [Sụp Đổ] đang tích trữ để nổ ngay, biến nó thành một đòn tức thời nhân lên (ví dụ 3 lần sát thương tích trữ)."
+    },
+    {
+      "term": "[Thiêu Đốt Chuyên Biệt]",
+      "desc": "Bậc PvP của Thiêu Đốt — sát thương liên tục mạnh hơn, khó giải hơn."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/G4 (UR)/Keepsake_UR.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "releaseTrung": "01/08/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "classLevel": "Demon",
+  "releaseSea": "01/12/2023",
+  "imageSrcset": "/Characters/optimized/100182-ur-360.webp 360w, /Characters/optimized/100182-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 680
+}

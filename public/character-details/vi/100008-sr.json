@@ -1,0 +1,87 @@
+{
+  "id": "100008-sr",
+  "name": "Cô Gái Muỗi",
+  "tier": "SR",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hạt Nhân",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Hồi Sinh"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 173,
+    "hp": 1040,
+    "def": 33,
+    "spd": 91
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung 2 liên kích lên mục tiêu đơn, mỗi đòn gây 50% ST sát thương.",
+      "icon": "/Skill/Mosquito Girl (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 3 liên kích lên kẻ địch trong vùng chữ thập, mỗi đòn gây 40% ST sát thương; đòn cuối hút 100% sát thương gây ra để hồi máu cho bản thân.",
+      "icon": "/Skill/Mosquito Girl (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung 3 liên kích lên kẻ địch trong vùng chữ thập, mỗi đòn gây 40% ST sát thương; đòn cuối hút 100% sát thương gây ra để hồi máu cho bản thân, đồng thời đòn thứ nhất và thứ hai mỗi đòn có 100% tỉ lệ hút 100% sát thương gây ra để hồi máu.",
+      "icon": "/Skill/Mosquito Girl (SR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Mosquito Girl (SR)/Keepsake_SR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Sau mỗi lần hành động, hồi máu cho 1 đồng minh có phần trăm Máu thấp nhất, lượng hồi bằng 100% ST của Mosquito Girl.",
+      "icon": "/Skill/Mosquito Girl (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Sau mỗi lần hành động, hồi máu cho 2 đồng minh có phần trăm Máu thấp nhất, lượng hồi bằng 100% ST của Mosquito Girl.",
+      "icon": "/Skill/Mosquito Girl (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Sau mỗi lần hành động, hồi máu cho 2 đồng minh có phần trăm Máu thấp nhất, lượng hồi bằng 105% ST của Mosquito Girl.",
+      "icon": "/Skill/Mosquito Girl (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100008-sr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Mosquito Girl (SR)/Keepsake_SR.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "effects": [],
+  "classLevel": "Demon",
+  "imageSrcset": "/Characters/optimized/100008-sr-360.webp 360w, /Characters/optimized/100008-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

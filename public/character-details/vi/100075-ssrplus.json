@@ -1,0 +1,161 @@
+{
+  "id": "100075-ssrplus",
+  "name": "Hiệp Sĩ Kim Loại",
+  "imageURL": "/Characters/optimized/100075-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Công Nghệ",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Choáng Diện Rộng",
+    "Miễn Nhiễm Ăn Mòn"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây ST trực tiếp 30% ST lên mục tiêu đơn.",
+      "icon": "/Skill/Metal Knight (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gắn [Đánh Dấu] và [Phản Kích] lên toàn bộ kẻ địch, sau đó gây ST trực tiếp 20% ST cho mỗi [Đánh Dấu] (tối thiểu 3) lên toàn bộ kẻ địch. 30% cơ hội [Bất Tỉnh] cả cột của mục tiêu trong 2 lượt khi [Hiệp] < 6.",
+      "icon": "/Skill/Metal Knight (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gắn [Đánh Dấu] và [Phản Kích] lên toàn bộ kẻ địch, sau đó gây ST trực tiếp 20% > 30% ST cho mỗi [Đánh Dấu] (tối thiểu 3) lên toàn bộ kẻ địch. 30% cơ hội [Bất Tỉnh] cả cột của mục tiêu > toàn bộ vùng chọn trong 2 > 6 lượt khi [Hiệp] < 6.",
+      "keepsakeIcon": "/Keepsake/Metal Knight (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Metal Knight (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Đầu trận, tăng +20% Máu. Khi vào trận và khi hồi sinh, bản thân và đồng minh xung quanh miễn nhiễm [Ăn Mòn] và [Ăn Mòn Chuyên Biệt] trong 5 lượt.",
+      "icon": "/Skill/Metal Knight (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Thời gian miễn nhiễm [Ăn Mòn]/[Ăn Mòn Chuyên Biệt] 5 lượt &gt; Vĩnh viễn.",
+      "icon": "/Skill/Metal Knight (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Phạm vi miễn nhiễm bản thân và đồng minh xung quanh &gt; toàn bộ đồng minh.",
+      "icon": "/Skill/Metal Knight (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi bắt đầu trận đấu, trao 45% cơ hội [Né Tránh] (Giảm ST trực tiếp/phụ trội/Charge/Cuồng bạo xuống còn 1 ST). Loại bỏ [Combo Truy kích] khỏi toàn bộ đội địch, kéo dài suốt trận đấu.",
+      "icon": "/Skill/Metal Knight (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Né tránh 45% > 60% Hiệu ứng bổ sung: Sau khi bất kỳ nhân vật nào hành động, với mỗi kẻ địch đang trong trạng thái [Choáng Chuyên Biệt], tăng [Bảo Hộ Chuyên Biệt] của toàn bộ đồng minh thêm 100% Tấn công của Metal Knight, 3 lần mỗi lượt.\n[Choáng Chuyên Biệt] không bị ảnh hưởng bởi SSR+ Metal Bat, SSR+ Gouketsu và SSR+ Melzargard [Liên Kích] từ SSR+ Deep Sea King và [Truy kích Tối thượng] từ Cruel Tactic có thể gây [Choáng Chuyên Biệt]",
+      "icon": "/Skill/Metal Knight (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Metal Knight (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bảo Hộ Chuyên Biệt]",
+      "desc": "Khiên bảo hộ PvP giảm hoặc vô hiệu sát thương lên đồng minh."
+    },
+    {
+      "term": "[Choáng Chuyên Biệt]",
+      "desc": "Bậc PvP của Choáng — khó kháng hoặc giải hơn."
+    },
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Đánh Dấu]",
+      "desc": "Đánh dấu một đơn vị, mở điều kiện truy kích hoặc hiệu ứng thưởng gắn với dấu."
+    },
+    {
+      "term": "[Hiệp]",
+      "desc": "Một lượt trong trận đấu; nhiều hiệu ứng bị giới hạn theo số lượt hiện tại (ví dụ chỉ hiệu lực khi Round < 6)."
+    },
+    {
+      "term": "[Né Tránh]",
+      "desc": "Trạng thái né giúp giảm sát thương Trực Tiếp, Thêm, Tích Lũy và Cuồng Nộ nhận vào chỉ còn 1 điểm trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Phản Kích]",
+      "desc": "Dấu phản đòn mà số lớp của nó làm tăng dần sát thương trực tiếp truy kích của người dùng lên các kẻ địch bị đánh dấu."
+    },
+    {
+      "term": "[Sát Thương Ăn Mòn Đặc Hóa]",
+      "desc": "Biến thể sát thương Ăn Mòn theo thời gian nâng cao có khả năng tự chọn lại mục tiêu, mà một số đơn vị có thể miễn nhiễm."
+    },
+    {
+      "term": "[Sát Thương Ăn Mòn]",
+      "desc": "Loại sát thương ăn mòn liên tục theo thời gian bào mòn Máu dần dần, có thể bị chặn bởi miễn nhiễm vùng."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Metal Knight (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/04/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Hồi Phục",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/08/2023",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100075-ssrplus-360.webp 360w, /Characters/optimized/100075-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

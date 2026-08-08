@@ -1,0 +1,86 @@
+{
+  "id": "100054-ssr",
+  "name": "Melzargard",
+  "imageURL": "/Characters/optimized/100054-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Share DMG",
+    "Heal Allies"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 369,
+    "hp": 2214,
+    "def": 93,
+    "spd": 97
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK DMG to a single target, and reduces damage taken by self by 20% for 1 turn.",
+      "icon": "/Skill/Melzargard (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Strikes enemies in a cross area with 5 consecutive hits dealing 26% ATK DMG each, restores 20% of own max HP to self, and heals all allies for 8% of Melzargard's max HP.",
+      "icon": "/Skill/Melzargard (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Strikes enemies in a cross area with 5 consecutive hits dealing 33% ATK DMG each, restores 25% of own max HP to self, and heals all allies for 12% of Melzargard's max HP.",
+      "keepsakeIcon": "/Keepsake/Melzargard (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Melzargard (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP. Shares 20% of the damage taken by all allies; Melzargard reduces 50% of the damage received through this sharing (no longer shares when HP is below 20%).",
+      "icon": "/Skill/Melzargard (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP. Shares 30% of the damage taken by all allies; Melzargard reduces 65% of the damage received through this sharing (no longer shares when HP is below 20%).",
+      "icon": "/Skill/Melzargard (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP. Shares 30% of the damage taken by all allies; Melzargard reduces 85% of the damage received through this sharing (no longer shares when HP is below 20%).",
+      "icon": "/Skill/Melzargard (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Melzargard (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseDate": "16/06/2020",
+  "classLevel": "Dragon",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "imageSrcset": "/Characters/optimized/100054-ssr-360.webp 360w, /Characters/optimized/100054-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

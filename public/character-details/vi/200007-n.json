@@ -1,0 +1,82 @@
+{
+  "id": "200007-n",
+  "name": "Bản Sao",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 153,
+    "hp": 918,
+    "def": 39,
+    "spd": 81
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Đánh liên kích 4 lần vào mục tiêu đơn, gây 20% ST (+2) sát thương.",
+      "icon": "/Skill/Clone (N)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Đánh liên kích 4 lần vào mục tiêu đơn, gây 45% ST (+2) sát thương.",
+      "icon": "/Skill/Clone (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Đánh liên kích 4 lần vào mục tiêu đơn, gây 50% ST (+2) sát thương.",
+      "icon": "/Skill/Clone (N)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Clone (N)/Keepsake_N.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Lần đầu tiên bản thân nhận sát thương chí mạng mỗi trận, hồi sinh với 5% Máu tối đa.",
+      "icon": "/Skill/Clone (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Lần đầu tiên bản thân nhận sát thương chí mạng mỗi trận, hồi sinh với 10% Máu tối đa.",
+      "icon": "/Skill/Clone (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Lần đầu tiên bản thân nhận sát thương chí mạng mỗi trận, hồi sinh với 13% Máu tối đa.",
+      "icon": "/Skill/Clone (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "N",
+  "imageURL": "/Characters/optimized/200007-n-600.webp",
+  "type": "Công Nghệ",
+  "faction": "Khác",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Clone (N)/Keepsake_N.png",
+  "effects": [],
+  "classLevel": "Other",
+  "classIcon": "/Class/Other.png",
+  "imageSrcset": "/Characters/optimized/200007-n-360.webp 360w, /Characters/optimized/200007-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 680
+}

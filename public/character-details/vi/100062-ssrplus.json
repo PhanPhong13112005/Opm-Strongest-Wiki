@@ -1,0 +1,137 @@
+{
+  "id": "100062-ssrplus",
+  "name": "Groribas",
+  "imageURL": "/Characters/optimized/100062-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Ăn Mòn Chuyên Biệt",
+    "Vô Hiệu Truy Kích",
+    "Phản Sát Thương Chuyên Biệt"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 103
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 60% ST sát thương trực tiếp lên một mục tiêu.",
+      "icon": "/Skill/Groribas (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 50% ST sát thương trực tiếp lên toàn bộ kẻ địch, sau đó gây [Ăn Mòn Đặc Hóa] (sát thương theo thời gian do ăn mòn) lên khu vực mục tiêu và áp [Hư Vô] lên toàn bộ kẻ địch.",
+      "icon": "/Skill/Groribas (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 50% > 80% ST sát thương trực tiếp lên toàn bộ kẻ địch, sau đó gây [Ăn Mòn Đặc Hóa] (sát thương theo thời gian do ăn mòn) lên khu vực mục tiêu > toàn bộ kẻ địch và áp [Hư Vô] lên toàn bộ kẻ địch.",
+      "keepsakeIcon": "/Keepsake/Groribas (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Groribas (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng 20% Máu bản thân. Vào cuối lượt của mình, nếu có kẻ địch đang chịu sát thương theo thời gian, gây thêm 60% ST lên toàn bộ kẻ địch và áp [Bám Dính] lên tối đa 6 kẻ địch đang chịu [Ăn Mòn Đặc Hóa].",
+      "icon": "/Skill/Groribas (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng 20% Máu bản thân. Vào cuối lượt của mình, nếu có kẻ địch đang chịu sát thương theo thời gian, gây thêm 60% > 70% ST lên toàn bộ kẻ địch và áp [Bám Dính] lên tối đa 6 kẻ địch đang chịu [Ăn Mòn Đặc Hóa].",
+      "icon": "/Skill/Groribas (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng 20% Máu bản thân. Vào cuối lượt của mình, nếu có kẻ địch đang chịu sát thương theo thời gian, gây thêm 70% > 80% ST lên toàn bộ kẻ địch và áp [Bám Dính] lên tối đa 6 kẻ địch đang chịu [Ăn Mòn Đặc Hóa].",
+      "icon": "/Skill/Groribas (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi trận đấu bắt đầu, cấp [Phản Sát Thương Chuyên Biệt] (giảm ST trực tiếp và ST phụ trội đi 50%, phản lại 50% sát thương gốc về phía kẻ tấn công, kéo dài suốt trận đấu.) Sau khi bất kỳ nhân vật nào hành động, khôi phục [Phòng vệ chuyên biệt] cho Groribas và cột của nó bằng 100% lượng ST theo thời gian trên kẻ địch.",
+      "icon": "/Skill/Groribas (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Sau khi bất kỳ nhân vật nào hành động, Groribas và cột của nó …",
+      "icon": "/Skill/Groribas (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Groribas (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bám Dính]",
+      "desc": "Trạng thái khống chế ngăn mục tiêu tung [Truy Kích] và [Truy Kích Liên Tiếp], thường trong 2 lượt."
+    },
+    {
+      "term": "[Hư Vô]",
+      "desc": "Debuff áp lên toàn bộ kẻ địch, thường đi kèm sát thương ăn mòn theo thời gian, làm vô hiệu hóa các hiệu ứng của chúng."
+    },
+    {
+      "term": "[Ăn Mòn Đặc Hóa]",
+      "desc": "Sát thương theo thời gian dạng ăn mòn đặt lên khu vực mục tiêu, thường đi kèm với Nullity lên toàn bộ kẻ địch."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Groribas (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/02/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff"
+  ],
+  "bondList": "Deep Sea King",
+  "classLevel": "Dragon",
+  "releaseSea": "01/06/2023",
+  "imageSrcset": "/Characters/optimized/100062-ssrplus-360.webp 360w, /Characters/optimized/100062-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

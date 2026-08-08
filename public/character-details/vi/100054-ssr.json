@@ -1,0 +1,86 @@
+{
+  "id": "100054-ssr",
+  "name": "Melzargard",
+  "imageURL": "/Characters/optimized/100054-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Chia Sẻ Sát Thương",
+    "Hồi Máu Đồng Minh"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 369,
+    "hp": 2214,
+    "def": 93,
+    "spd": 97
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST lên mục tiêu đơn, đồng thời giảm 20% sát thương bản thân phải nhận, kéo dài 1 lượt.",
+      "icon": "/Skill/Melzargard (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Đánh kẻ địch trong vùng hình chữ thập với 5 đòn liên kích, mỗi đòn gây 26% ST, hồi 20% Máu tối đa của bản thân, và hồi cho toàn bộ đồng minh 8% Máu tối đa của Melzargard.",
+      "icon": "/Skill/Melzargard (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Đánh kẻ địch trong vùng hình chữ thập với 5 đòn liên kích, mỗi đòn gây 33% ST, hồi 25% Máu tối đa của bản thân, và hồi cho toàn bộ đồng minh 12% Máu tối đa của Melzargard.",
+      "keepsakeIcon": "/Keepsake/Melzargard (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Melzargard (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Gánh 20% sát thương mà toàn bộ đồng minh phải nhận; Melzargard giảm 50% sát thương nhận được thông qua việc gánh này (không còn gánh khi Máu dưới 20%).",
+      "icon": "/Skill/Melzargard (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Gánh 30% sát thương mà toàn bộ đồng minh phải nhận; Melzargard giảm 65% sát thương nhận được thông qua việc gánh này (không còn gánh khi Máu dưới 20%).",
+      "icon": "/Skill/Melzargard (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Gánh 30% sát thương mà toàn bộ đồng minh phải nhận; Melzargard giảm 85% sát thương nhận được thông qua việc gánh này (không còn gánh khi Máu dưới 20%).",
+      "icon": "/Skill/Melzargard (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Melzargard (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseDate": "16/06/2020",
+  "classLevel": "Dragon",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "imageSrcset": "/Characters/optimized/100054-ssr-360.webp 360w, /Characters/optimized/100054-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

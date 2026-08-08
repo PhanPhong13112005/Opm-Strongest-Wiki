@@ -1,0 +1,95 @@
+{
+  "id": "100075-ssr",
+  "name": "Metal Knight",
+  "imageURL": "/Characters/optimized/100075-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Hi-Tech",
+  "faction": "Hero",
+  "roles": [
+    "Injury",
+    "Burn",
+    "Increase/Reduce ATK"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 422,
+    "hp": 2531,
+    "def": 107,
+    "spd": 100
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deal 120% ATK DMG to a single target, with a 100% chance to inflict [Burn] for 2 turns (DoT equal to 50% ATK).",
+      "icon": "/Skill/Metal Knight (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deal 5 consecutive hits of 20% ATK DMG to all enemies, with a 50% chance to inflict [Injured] for 2 turns (adds injury DMG equal to 50% ATK when the target is attacked), and a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 50% ATK).",
+      "icon": "/Skill/Metal Knight (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deal 5 consecutive hits of 24% ATK DMG to all enemies, with a 50% chance to inflict [Injured] for 2 turns (adds injury DMG equal to 65% ATK when the target is attacked), and a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 100% ATK).",
+      "keepsakeIcon": "/Keepsake/Metal Knight (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Metal Knight (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increase own max HP. Each [Injured] enemy grants allies +100% ATK, up to 3 stacks, and makes [Burn] enemies [Weakened] (ATK reduced by 10% for a number of turns).",
+      "icon": "/Skill/Metal Knight (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increase own max HP. Each [Injured] enemy grants allies +100% ATK, up to 4 stacks, and makes [Burn] enemies [Weakened] (ATK reduced by 20% for a number of turns).",
+      "icon": "/Skill/Metal Knight (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increase own max HP. Each [Injured] enemy grants allies +100% ATK, up to 4 stacks, and makes [Burn] enemies [Weakened] (ATK reduced by 25% for a number of turns).",
+      "icon": "/Skill/Metal Knight (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Weaken]",
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
+    },
+    {
+      "term": "[Thiêu Đốt]",
+      "desc": "Continuous fire damage over time to the target."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Metal Knight (SSR)/Keepsake_SSR.png",
+  "releaseDate": "16/06/2020",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/09/2020",
+  "releaseTrung": "01/05/2020",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100075-ssr-360.webp 360w, /Characters/optimized/100075-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

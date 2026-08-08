@@ -1,0 +1,98 @@
+{
+  "id": "100049-sr",
+  "name": "Beast King",
+  "imageURL": "/Characters/optimized/100049-sr-600.webp",
+  "tier": "SR",
+  "type": "Grappler",
+  "faction": "Monster",
+  "roles": [
+    "Injury",
+    "Follow-up"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 172,
+    "hp": 1030,
+    "def": 43,
+    "spd": 92
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 100% ATK DMG to a single target.",
+      "icon": "/Skill/Beast King (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Strikes each enemy in a row with a 5-hit combo, dealing 24% ATK DMG per hit (120% ATK total), with a 100% chance to inflict [Injured] on the main target for 2 turn(s).[Injured]: When attacked, takes additional Injury DMG equal to 50% ATK.",
+      "icon": "/Skill/Beast King (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Strikes each enemy in a row with a 5-hit combo, dealing 24% ATK DMG per hit (120% ATK total), with a 100% chance to inflict [Injured] on the main target and a 50% chance to inflict [Injured] on enemies in the main target's row for 2 turn(s).[Injured]: When attacked, takes additional Injury DMG equal to 50% ATK.",
+      "keepsakeIcon": "/Keepsake/Beast King (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Beast King (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own max HP by 20%. Whenever an ally attacks a target inflicted with [Injured], Beast King launches a [Follow-up] against that target (attacking with 80% of Basic Attack's DMG and effects, up to 3 times each turn).",
+      "icon": "/Skill/Beast King (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own max HP by 20%. Whenever an ally attacks a target inflicted with [Injured], Beast King launches a [Follow-up] against that target (attacking with 80% of Basic Attack's DMG and effects, up to 3 times each turn).",
+      "icon": "/Skill/Beast King (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own max HP by 20%. Whenever an ally attacks a target inflicted with [Injured], Beast King launches a [Follow-up] against that target (attacking with 110% of Basic Attack's DMG and effects, up to 3 times each turn).",
+      "icon": "/Skill/Beast King (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Truy Kích]",
+      "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Beast King (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)"
+  ],
+  "bondList": "Deep Sea King + Sky King + Subterranean King",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "classLevel": "Demon",
+  "imageSrcset": "/Characters/optimized/100049-sr-360.webp 360w, /Characters/optimized/100049-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

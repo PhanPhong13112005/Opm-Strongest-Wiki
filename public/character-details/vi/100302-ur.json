@@ -1,0 +1,139 @@
+{
+  "id": "100302-ur",
+  "name": "Hung Thần Kabuto",
+  "imageURL": "/Characters/optimized/100302-ur-600.webp",
+  "tier": "UR",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Tường Chắn"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 115
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Arrow Combo: 2 đòn liên hoàn, gây 240% ST(+10) lên mục tiêu đơn.",
+      "icon": "/Skill/Carnage Kabuto (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Knuckle High: 3 đòn liên hoàn lên cột mục tiêu của kẻ địch, gây 900% ST(+9). Mỗi đòn cộng thêm 600% ST dưới dạng [Sát Thương Chuẩn]. Mỗi đòn có thể kích hoạt [Tiến Hóa Chuyên Biệt] 1 lần. [Sát Thương Chuẩn]: không bị ảnh hưởng bởi tăng/giảm sát thương, không thể né hay chia sẻ, đánh thẳng vào HP. [Tiến Hóa Chuyên Biệt]: lập tức xóa trạng thái Bất Khuất và bỏ qua sát thương của mục tiêu.",
+      "icon": "/Skill/Carnage Kabuto (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Knuckle High (nâng cấp): 3 đòn liên hoàn lên cột mục tiêu của kẻ địch, gây 900% > 1200% ST(+9). Mỗi đòn cộng thêm 600% > 840% ST dưới dạng [Sát Thương Chuẩn]. Mỗi đòn có thể kích hoạt [Tiến Hóa Chuyên Biệt] 1 lần. [Sát Thương Chuẩn]: không bị ảnh hưởng bởi tăng/giảm sát thương, không thể né hay chia sẻ, đánh thẳng vào HP. [Tiến Hóa Chuyên Biệt]: lập tức xóa trạng thái Bất Khuất và bỏ qua sát thương của mục tiêu.",
+      "keepsakeIcon": "/Keepsake/Carnage Kabuto (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Carnage Kabuto (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Focused Rage: Vĩnh viễn +20 HP. Nhận 60% [Khả Năng Né Tránh Chuyên Biệt]. Sau khi bất kỳ nhân vật nào hành động, nếu tổng sát thương đã nhận vượt quá HP tối đa của bản thân, tung ra [Truy Kích Cuồng Dã] gây 180% Sức Mạnh Kỹ Năng Tối Thượng (bỏ qua chi phí Năng Lượng thêm, ưu tiên hàng trước), tối đa 10 lần mỗi trận. [Khả Năng Né Tránh Chuyên Biệt]: giảm mọi Sát thương Trực tiếp/DoT/Injury/Sát thương Thêm xuống chỉ còn 1 điểm.",
+      "icon": "/Skill/Carnage Kabuto (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Focused Rage (nâng cấp): Vĩnh viễn +20 HP. Nhận 60% > 70% [Khả Năng Né Tránh Chuyên Biệt]. Sau khi bất kỳ nhân vật nào hành động, nếu tổng sát thương đã nhận vượt quá HP tối đa của bản thân, tung ra [Truy Kích Cuồng Dã] gây 180% Sức Mạnh Kỹ Năng Tối Thượng (bỏ qua chi phí Năng Lượng thêm, ưu tiên hàng trước), tối đa 10 > 11 lần mỗi trận. [Khả Năng Né Tránh Chuyên Biệt]: giảm mọi Sát thương Trực tiếp/DoT/Injury/Sát thương Thêm xuống chỉ còn 1 điểm.",
+      "icon": "/Skill/Carnage Kabuto (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Focused Rage (5P): Vĩnh viễn +20 HP. Nhận 60% > 80% [Khả Năng Né Tránh Chuyên Biệt]. Sau khi bất kỳ nhân vật nào hành động, nếu tổng sát thương đã nhận vượt quá HP tối đa của bản thân, tung ra [Truy Kích Cuồng Dã] gây 180% Sức Mạnh Kỹ Năng Tối Thượng (bỏ qua chi phí Năng Lượng thêm, ưu tiên hàng trước), tối đa 10 > 12 lần mỗi trận. [Khả Năng Né Tránh Chuyên Biệt]: giảm mọi Sát thương Trực tiếp/DoT/Injury/Sát thương Thêm xuống chỉ còn 1 điểm.",
+      "icon": "/Skill/Carnage Kabuto (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Cấp cho bản thân [Làm Mới]. Cấp cho toàn bộ đồng minh 150% > 200% [Miễn Sát Thương Trọng Thương]. [Làm Mới]: sau khi bị đánh bại, trở lại trận với 80% > 100% HP và tăng ST bản thân thêm 20% trong 1 lượt, tối đa 7 > 10 lần. [Miễn Sát Thương Trọng Thương]: giảm sát thương [Trọng Thương], [Nội Thương] và [Tụ Lực].",
+      "icon": "/Skill/Carnage Kabuto (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Giảm ST Thương Tổn 150% > 200% Máu hồi sinh 80% > 100% Tăng Tấn công bản thân 7x > 10x",
+      "icon": "/Skill/Carnage Kabuto (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Carnage Kabuto (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Làm Mới]",
+      "desc": "Hiệu ứng hồi sinh: sau khi bị hạ, quay lại trận với 80% Máu và nhận +20% ST trong 1 lượt, tối đa 7 lần."
+    },
+    {
+      "term": "[Miễn Nhiễm Sát Thương Trọng Thương]",
+      "desc": "Hiệu ứng giảm sát thương Thương Tích, Nội Thương và Tích Lũy nhận vào."
+    },
+    {
+      "term": "[Né Tránh Chuyên Biệt]",
+      "desc": "Bậc PvP của Né Tránh — giảm đòn chuyên biệt về 1 sát thương; bị xuyên bởi hiệu ứng bỏ qua né tránh."
+    },
+    {
+      "term": "[Nội Thương]",
+      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+    },
+    {
+      "term": "[Sát Thương Chuẩn]",
+      "desc": "Loại sát thương thưởng gây thêm ngoài đòn đánh, bị giảm bởi các hiệu ứng kiểu Né và có thể được miễn nhiễm sau một số lượt nhất định."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Carnage Kabuto (UR)/Keepsake_UR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/04/2025",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [],
+  "classLevel": "Dragon",
+  "releaseSea": "01/08/2025",
+  "imageSrcset": "/Characters/optimized/100302-ur-360.webp 360w, /Characters/optimized/100302-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,138 @@
+{
+  "id": "100094-ssrplus",
+  "name": "Garou",
+  "imageURL": "/Characters/optimized/100094-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Giác Đấu",
+  "faction": "Võ Thuật",
+  "roles": [
+    "Đột Phá Bất Khuất",
+    "Hộ Thể Chuyên Biệt"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 103
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 30% ST trực tiếp lên mục tiêu đơn.",
+      "icon": "/Skill/Garou (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 190% ST trực tiếp lên mục tiêu đơn. Khi [Bạo Kích], nếu mục tiêu chưa có miễn tử, áp [Miễn Nhiễm Tử Vong] lên nó (vô hiệu hóa hiệu ứng bất tử/chống chết của mục tiêu).",
+      "icon": "/Skill/Garou (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 190% > 240% ST trực tiếp lên mục tiêu đơn. Áp [Miễn Nhiễm Tử Vong] lên mục tiêu nếu nó chưa có miễn tử (khi Crit > luôn luôn, không cần [Bạo Kích]). Nếu mục tiêu đã có miễn tử, thay vào đó hồi cho bản thân một phần Máu tối đa.",
+      "keepsakeIcon": "/Keepsake/Garou (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Garou (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Gỡ [Choáng] khỏi bản thân sau hành động của bất kỳ nhân vật nào. Sau khi đồng minh hành động, tung [Truy Kích Tuyệt Kỹ] lên 1 kẻ địch ngẫu nhiên đang ở trạng thái [Bỏ Qua Sát Thương], tối đa 2 lần mỗi lượt.[Truy Kích Tuyệt Kỹ]: gây 50% ST của Tuyệt Kỹ (hiệu ứng tương tự).",
+      "icon": "/Skill/Garou (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Truy Kích Tuyệt Kỹ] ST 50% &gt; 60% (vẫn tối đa 2 lần mỗi lượt).",
+      "icon": "/Skill/Garou (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Truy Kích Tuyệt Kỹ] ST 60% &gt; 70% (vẫn tối đa 2 lần mỗi lượt).",
+      "icon": "/Skill/Garou (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi bắt đầu trận đấu, Garou nhận 2 hiệu ứng bất khuất dựa trên 50% Máu tối đa. Một khi hiệu ứng bất khuất bị giảm, Garou kích hoạt hiệu ứng bảo vệ chuyên biệt (120% Máu tối đa, gỡ bỏ sát thương, có thể cộng dồn với hiệu ứng Máu bổ sung, lượng gỡ bỏ sát thương sẽ không vượt quá 5 lần Máu gốc).",
+      "icon": "/Skill/Garou (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Một khi trạng thái bất khuất/bất khuất đặc biệt của đồng minh hết hạn, Garou nhận lượng bảo vệ chuyên biệt bằng 100% Máu tối đa của bản thân, tối đa 3 lần mỗi trận.",
+      "icon": "/Skill/Garou (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Garou (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bạo Kích]",
+      "desc": "Đòn chí mạng gây thêm sát thương; một số đơn vị có thể miễn nhiễm [Bạo Kích]."
+    },
+    {
+      "term": "[Đánh Dấu]",
+      "desc": "Đánh dấu một đơn vị, mở điều kiện truy kích hoặc hiệu ứng thưởng gắn với dấu."
+    },
+    {
+      "term": "[Miễn Tử]",
+      "desc": "Hiệu ứng bất lợi vô hiệu hóa các hiệu ứng bất tử/chống chết của mục tiêu, cho phép hạ gục nó như bình thường."
+    },
+    {
+      "term": "[Thanh Tẩy]",
+      "desc": "Xóa các hiệu ứng/buff đang có trên toàn bộ kẻ địch."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Garou (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/05/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Tạo Khiên"
+  ],
+  "classLevel": "Martial_Artist",
+  "releaseSea": "01/09/2022",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100094-ssrplus-360.webp 360w, /Characters/optimized/100094-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

@@ -1,0 +1,82 @@
+{
+  "id": "200018-n",
+  "name": "Skyfolk Rogue",
+  "imageURL": "/Characters/optimized/200018-n-600.webp",
+  "tier": "N",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 155,
+    "hp": 927,
+    "def": 39,
+    "spd": 84
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 80% ATK DMG to a single target.",
+      "icon": "/Skill/Skyfolk Rogue (N)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Strikes the entire target row with a 2-hit combo, dealing 60% ATK DMG per hit.",
+      "icon": "/Skill/Skyfolk Rogue (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Strikes the entire target row with a 2-hit combo, dealing 70% ATK DMG per hit.",
+      "keepsakeIcon": "/Keepsake/Skyfolk Rogue (N)/Keepsake_N.png",
+      "icon": "/Skill/Skyfolk Rogue (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). After an ally acts, has a 20% chance to launch a Follow-up against the enemy with the lowest HP, dealing 80% of Basic Attack damage (up to 2 Follow-ups per turn).",
+      "icon": "/Skill/Skyfolk Rogue (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). After an ally acts, has a 20% chance to launch a Follow-up against the enemy with the lowest HP, dealing 100% of Basic Attack damage (up to 2 Follow-ups per turn).",
+      "icon": "/Skill/Skyfolk Rogue (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). After an ally acts, has a 20% chance to launch a Follow-up against the enemy with the lowest HP, dealing 110% of Basic Attack damage (up to 2 Follow-ups per turn).",
+      "icon": "/Skill/Skyfolk Rogue (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Skyfolk Rogue (N)/Keepsake_N.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/200018-n-360.webp 360w, /Characters/optimized/200018-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

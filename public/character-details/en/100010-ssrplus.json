@@ -1,0 +1,147 @@
+{
+  "id": "100010-ssrplus",
+  "name": "Flashy Flash",
+  "tier": "SSR+",
+  "type": "Duelist",
+  "faction": "Hero",
+  "roles": [
+    "Support",
+    "DMG (HP)",
+    "Generate Shield",
+    "Speed"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 120
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK Direct DMG to a single target.",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Attacks all enemies with 5 consecutive strikes for 120% ATK (+10) Direct DMG. Grants same-column allies [Specialized Speed Up] for 1 round. Removes 1 Energy from the enemy (up to once per round; after a successful removal, the enemy cannot be inflicted with [Fear] in the same round).[Specialized Speed Up]: increases SPD up to 90% of Flashy Flash's SPD.",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Upgrades the Ultimate — DMG 120% → 150% ATK; [Specialized Speed Up] raises the same-column ally's SPD to 90% → 95% of Flashy Flash's SPD; removes 1 → 3 Energy from the enemy.",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Flashy Flash (SSRplus)/Keepsake_SSRplus.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "At the start of battle, grants self [Specialized Speed Up] (+5% SPD). If the main target's SPD is lower than Flashy Flash's, deals 300% ATK Extra DMG. After any character acts, removes the enemy's [Basic Acceleration].",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "At the start of battle, grants self [Specialized Speed Up] (+20% SPD). If the main target's SPD is lower than Flashy Flash's, deals 300% ATK Extra DMG. After any character acts, removes the enemy's [Basic Acceleration].",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "At the start of battle, grants self [Specialized Speed Up] (+25% SPD). If the main target's SPD is lower than Flashy Flash's, deals 300% ATK Extra DMG. After any character acts, removes the enemy's [Basic Acceleration].",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "Flashy Flash has a 70% chance and ally in the same column has a 50% chance to trigger [Evade] (Reduce direct/extra/charge/berserk DMG to 1 DMG). After any character acts, if Flashy Flash triggers [Evade], deals 400% ATK as Extra DMG to 1 random enemy which is not in any [Unyielding] state and restores HP by 150% ATK (3 [4] times per round).",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Ally in the same column has a 50% chance to trigger [Evade]; on an [Evade], restores HP by 150% ATK, up to 4 times per round.",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Flashy Flash (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100010-ssrplus-600.webp",
+  "debut": "05 / 2022",
+  "keepsakeIcon": "/Keepsake/Flashy Flash (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/07/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "DMG (HP)",
+    "Generate Shield",
+    "Speed"
+  ],
+  "effects": [
+    {
+      "term": "[Unyielding]",
+      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+    },
+    {
+      "term": "[Energy Cut]",
+      "desc": "Debuff applies to all enemies when their Energy is reduced, blocking or destroying their Energy, making them unable to use their ultimate."
+    },
+    {
+      "term": "[Dodge]",
+      "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+    },
+    {
+      "term": "[Hyper Speed]",
+      "desc": "Speed ​​buff that while in effect allows the bearer and up to 6 allies to act against and overcome enemies with lower speed."
+    },
+    {
+      "term": "[Cleanse]",
+      "desc": "Removes existing effects/buffs on all enemies."
+    }
+  ],
+  "classLevel": "Class_S",
+  "releaseSea": "01/11/2022",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100010-ssrplus-360.webp 360w, /Characters/optimized/100010-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

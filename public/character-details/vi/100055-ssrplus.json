@@ -1,0 +1,124 @@
+{
+  "id": "100055-ssrplus",
+  "name": "Boros",
+  "roles": [
+    "Hỗ Trợ",
+    "Hồi Phục"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 104
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 70% ST sát thương cho mục tiêu đơn.",
+      "icon": "/Skill/Boros (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Nhận trạng thái Bất Tử (sống sót qua đòn chí mạng tối đa 3 lần). Đánh dấu toàn bộ cột của mục tiêu, rồi gây 260% ST sát thương lên cột đó (điều chỉnh theo số dấu). Sau đó, giải trừ toàn bộ hiệu ứng bất lợi khỏi bản thân.",
+      "icon": "/Skill/Boros (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Nhận trạng thái Bất Tử (sống sót qua đòn chí mạng tối đa 3 lần) và +40% ST Chí Mạng cho bản thân. Đánh dấu toàn bộ cột của mục tiêu, rồi gây 260% > 300% ST sát thương lên cột đó (điều chỉnh theo số dấu). Sau đó, giải trừ toàn bộ hiệu ứng bất lợi khỏi bản thân.",
+      "icon": "/Skill/Boros (SSR+)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Boros (SSRplus)/Keepsake_SSRplus.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu tối đa 20% của bản thân. Vào cuối lượt của mình, tính tổng lượng hồi máu của toàn bộ đồng minh và hồi cho bản thân một phần của tổng đó.",
+      "icon": "/Skill/Boros (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu tối đa 20% của bản thân. Vào cuối lượt của mình, tính tổng lượng hồi máu của toàn bộ đồng minh và hồi cho bản thân một phần của tổng đó.",
+      "icon": "/Skill/Boros (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu tối đa 20% của bản thân. Vào cuối lượt của mình, tính tổng lượng hồi máu của toàn bộ đồng minh và hồi cho bản thân một phần của tổng đó.",
+      "icon": "/Skill/Boros (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi vào trận, triệu hồi 1 Dark Pirate Member với HP bằng 1800% ATK của Boros. Đơn vị triệu hồi chia sẻ 80% ST mà đồng minh cùng hàng nhận (mọi loại ST trừ ST Emblem Skill hoặc Reflect). Sau khi HP cạn, gây ST cộng thêm bằng 30% HP Tối đa của đơn vị triệu hồi lên 3 kẻ địch ngẫu nhiên.",
+      "icon": "/Skill/Source/100055-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Số Dark Pirate Member triệu hồi 1 > 2. Mục tiêu chia sẻ ST: đồng minh cùng hàng > toàn bộ đồng minh.",
+      "icon": "/Skill/Source/100055-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Source/100055-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "cost": null,
+      "keepsakeIcon": null
+    }
+  ],
+  "tier": "SSR+",
+  "imageURL": "/Characters/optimized/100055-ssrplus-600.webp",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Boros (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Hồi Phục"
+  ],
+  "bondList": "Hammerhead + Armored Gorilla",
+  "effects": [],
+  "classLevel": "Dragon",
+  "releaseSea": "01/03/2022",
+  "releaseTrung": "01/11/2021",
+  "imageSrcset": "/Characters/optimized/100055-ssrplus-360.webp 360w, /Characters/optimized/100055-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

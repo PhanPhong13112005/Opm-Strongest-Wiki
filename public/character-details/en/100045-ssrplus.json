@@ -1,0 +1,125 @@
+{
+  "id": "100045-ssrplus",
+  "name": "Child Emperor",
+  "imageURL": "/Characters/optimized/100045-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Hi-Tech",
+  "faction": "Hero",
+  "roles": [
+    "Increase Ally Crit",
+    "Immune Burn/Field/Injury"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "2 consecutive strikes on a single target for 120% ATK DMG.",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals DMG to all enemies with 5 consecutive strikes for 250% ATK, and reduces the main target's Max HP by 20% for 2 rounds.",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals DMG to all enemies with 5 consecutive strikes for 250% > 300% ATK, and reduces the main target's Max HP by 20% > 30% for 2 rounds.",
+      "keepsakeIcon": "/Keepsake/Child Emperor (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "When battle begins, grants 25% crit rate to self and same row for 2 rounds. Grants self and same row permanent immunity against [Burn/Forcefield/Injury/Internal Injury].",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "When battle begins, grants 25% > 30% crit rate to self and same row for 2 > 3 rounds. Grants self and same row permanent immunity against [Burn/Forcefield/Injury/Internal Injury].",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "When battle begins, grants 25% > 35% crit rate to self and same row for 2 > 3 rounds. Grants self and same row permanent immunity against [Burn/Forcefield/Injury/Internal Injury].",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When battle begins, summons 1 robot dog ([100%] ATK of Child Emperor). After an ally's action, the robot dog deals direct DMG to the enemy with the lowest HP ratio for 200% ATK as extra DMG, and heals the ally with the lowest HP ratio by 25% HP.",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Number of robot dogs summoned 1 > 2.",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Child Emperor (SSRplus)/Keepsake_SSRplus.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "Core",
+    "Debuff",
+    "Generate Shield"
+  ],
+  "bondList": "Genos + Metal Knight (Bofoi) + Dr. Genus",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/02/2022",
+  "releaseTrung": "01/10/2021",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100045-ssrplus-360.webp 360w, /Characters/optimized/100045-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

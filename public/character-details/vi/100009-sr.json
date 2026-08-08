@@ -1,0 +1,86 @@
+{
+  "id": "100009-sr",
+  "name": "Bão Tuyết Địa Ngục",
+  "imageURL": "/Characters/optimized/100009-sr-600.webp",
+  "tier": "SR",
+  "type": "Tâm Linh",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Kiên Cường Toàn Đội"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 180,
+    "hp": 1079,
+    "def": 46,
+    "spd": 94
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung combo 3 đòn vào mục tiêu đơn, gây 35% ST (+3) sát thương.",
+      "icon": "/Skill/Hellish Blizzard (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung combo 5 đòn vào toàn bộ địch, gây 17% ST (+2) sát thương. Nếu bản thân đang ở trạng thái [Cuồng Nộ], hồi phục Máu.",
+      "icon": "/Skill/Hellish Blizzard (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung combo 5 đòn vào toàn bộ địch, gây 17% ST (+2) sát thương, đồng thời trực tiếp hồi phục Máu bản thân. Cùng lúc, đòn đánh của đồng minh xung quanh bỏ qua 20% Phòng thủ trong một số lượt.",
+      "keepsakeIcon": "/Keepsake/Hellish Blizzard (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Hellish Blizzard (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi hành động, ban cho đồng minh có phần trăm Máu thấp nhất (bao gồm bản thân) trạng thái [Kiên Cường] (hấp thụ sát thương bằng 25% Máu tối đa của bản thân).",
+      "icon": "/Skill/Hellish Blizzard (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi hành động, ban cho đồng minh có phần trăm Máu thấp nhất (không bao gồm bản thân) trạng thái [Kiên Cường] (hấp thụ sát thương bằng 25% Máu tối đa của bản thân), và có 50% tỉ lệ ban cho bản thân trạng thái [Kiên Cường].",
+      "icon": "/Skill/Hellish Blizzard (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi hành động, ban cho đồng minh có phần trăm Máu thấp nhất (không bao gồm bản thân) trạng thái [Kiên Cường] (hấp thụ sát thương bằng 35% Máu tối đa của bản thân), và có 50% tỉ lệ ban cho bản thân trạng thái [Kiên Cường].",
+      "icon": "/Skill/Hellish Blizzard (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Lá Chắn]",
+      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Hellish Blizzard (SR)/Keepsake_SR.png",
+  "classLevel": "B",
+  "classIcon": "/Class/B.png",
+  "imageSrcset": "/Characters/optimized/100009-sr-360.webp 360w, /Characters/optimized/100009-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

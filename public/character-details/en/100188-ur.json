@@ -1,0 +1,124 @@
+{
+  "id": "100188-ur",
+  "name": "Atomic Samurai",
+  "imageURL": "/Characters/optimized/100188-ur-600.webp",
+  "tier": "UR",
+  "type": "Duelist",
+  "faction": "Hero",
+  "roles": [
+    "Main DPS (ATK)"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 108
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK to a single target, 100% chance to cause the target to [Collapse] for 2 rounds (decreases DMG Free by 20%).",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Attacks all enemies with 5 consecutive strikes, dealing 350% ATK. The last strike has a 100% chance to inflict [Specialized Collapse] on the main target for 2 rounds (decreases DMG Rate by 10%, deals 200% ATK of [Collapse] DMG when attacked, stacks up to 3 times, does not stack with [Collapse]).",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "ATK 350% → 450%DMG Rate decrease 10% → 15%[Specialized Collapse] DMG 200% → 250%",
+      "keepsakeIcon": "/Keepsake/Atomic Samurai (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Grants himself 50% Non-Crit DMG Free (effective against all types of DMG, cannot co-exist with [Agility]), lasting 4 rounds.After receiving fatal DMG, revives with 50% max HP.",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_pas.png",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Non-Crit DMG Free 50% → 60%Revive 1 time → 2 times",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_pas.png",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Non-Crit DMG Free duration 4 rounds → 5 roundsRevive HP 50% → 100%",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_pas.png",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When battle begins, decrease all enemies ATK by 30%, obtains 20% Drain Rate, lasts for 2 rounds. Before any character acts, launches [Ultimate Follow-up] (60% DMG and 100% effect), once per round.",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_Awken.png",
+      "animation": "/Animation/Sam_Urplus/awken.gif",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Decrease enemies ATK 30% > 40% Obtains 20% Collapse Rate Drain Rate 20% > 30% Follow-up DMG 60% > 100%",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_Awken.png",
+      "animation": "/Animation/Sam_Urplus/awken.gif",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Atomic Samurai (UR)/Skill_Awken.png",
+      "animation": "/Animation/Sam_Urplus/awken.gif",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Agility]",
+      "desc": "Evasion type buff; mutually exclusive with Non-Crit Damage Immunity."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Atomic Samurai (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/08/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)"
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/12/2024",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100188-ur-360.webp 360w, /Characters/optimized/100188-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

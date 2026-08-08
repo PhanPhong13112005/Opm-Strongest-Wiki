@@ -1,0 +1,88 @@
+{
+  "id": "100047-sr",
+  "name": "Khỉ Đột Bọc Giáp",
+  "imageURL": "/Characters/optimized/100047-sr-600.webp",
+  "tier": "SR",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Kiên Cường",
+    "Đỡ Đòn Giác Đấu"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 170,
+    "hp": 1020,
+    "def": 43,
+    "spd": 91
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 100% ST(+10) sát thương cho mục tiêu đơn.",
+      "icon": "/Skill/Armored Gorilla (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 120% ST(+10) sát thương cho kẻ địch trong khu vực hình chữ thập, với 100% cơ hội cấp cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 20% Máu bản thân).",
+      "icon": "/Skill/Armored Gorilla (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 120% ST(+10) sát thương cho kẻ địch trong khu vực hình chữ thập, với 100% cơ hội cấp cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 20% Máu bản thân). Sau khi hành động, [Giải Trừ] trạng thái bất lợi của bản thân.",
+      "keepsakeIcon": "/Keepsake/Armored Gorilla (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Armored Gorilla (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Với mỗi đồng minh Giác Đấu trong đội, Tỉ Lệ Giảm Sát Thương của Armored Gorilla tăng 15%, tối đa 3 lớp.",
+      "icon": "/Skill/Armored Gorilla (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Với mỗi đồng minh Giác Đấu trong đội, Tỉ Lệ Giảm Sát Thương của Armored Gorilla tăng 15%, tối đa 4 lớp.",
+      "icon": "/Skill/Armored Gorilla (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Với mỗi đồng minh Giác Đấu trong đội, Tỉ Lệ Giảm Sát Thương của Armored Gorilla tăng 18%, tối đa 4 lớp.",
+      "icon": "/Skill/Armored Gorilla (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Lá Chắn]",
+      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Armored Gorilla (SR)/Keepsake_SR.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "classLevel": "Demon",
+  "imageSrcset": "/Characters/optimized/100047-sr-360.webp 360w, /Characters/optimized/100047-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

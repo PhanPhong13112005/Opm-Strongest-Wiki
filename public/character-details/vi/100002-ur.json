@@ -1,0 +1,149 @@
+{
+  "id": "100002-ur",
+  "name": "Sonic Siêu Thanh V1",
+  "imageURL": "/Characters/optimized/100002-ur-600.webp",
+  "tier": "UR",
+  "type": "Vũ Trang",
+  "faction": "Tội Phạm",
+  "roles": [
+    "Tăng Tốc Cùng Hàng",
+    "Thiêu Đốt Chuyên Biệt"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 122
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST sát thương lên mục tiêu đơn, sau đó hồi cho bản thân lượng Máu bằng 120% ST.",
+      "icon": "/Skill/Sonic V1 (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 80% ST sát thương lên hàng của mục tiêu. Ban [Siêu Tốc] cho bản thân và tối đa 6 đồng minh khác; khi [Siêu Tốc] còn hiệu lực, đồng minh có Tốc độ vượt mục tiêu sẽ gây thêm 500% ST sát thương khi tấn công. Đồng minh cùng hàng được tăng Tốc độ khi Tốc độ của họ cao hơn mục tiêu (kiểm tra Tốc độ ở mức 92%). Nếu mục tiêu có Năng lượng, rút Năng lượng (3 lần ST Năng lượng) và áp [Cắt Giảm Năng Lượng] lên toàn bộ kẻ địch khi Năng lượng của chúng giảm.",
+      "icon": "/Skill/Sonic V1 (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 80% > 120% ST sát thương lên hàng của mục tiêu. Ban [Siêu Tốc] cho bản thân và tối đa 6 đồng minh khác; khi [Siêu Tốc] còn hiệu lực, đồng minh có Tốc độ vượt mục tiêu sẽ gây thêm 500% ST sát thương khi tấn công. Đồng minh cùng hàng được tăng Tốc độ khi Tốc độ của họ cao hơn mục tiêu (kiểm tra Tốc độ ở mức 92% > 96%). Nếu mục tiêu có Năng lượng, rút Năng lượng (3 lần > 5 lần ST Năng lượng) và áp [Cắt Giảm Năng Lượng] lên toàn bộ kẻ địch khi Năng lượng của chúng giảm. Ngoài ra hồi 1000 Năng lượng cho bản thân.",
+      "keepsakeIcon": "/Keepsake/Sonic V1 (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Sonic V1 (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Trước trận, [Cổ Vũ] đồng minh. 100% xác suất dùng Tuyệt kỹ của mình tấn công mục tiêu kèm [Thiêu Đốt Chuyên Biệt].[Cổ Vũ]: nhận thêm 2 Năng lượng đầu lượt, kéo dài 3 lượt.[Thiêu Đốt Chuyên Biệt]: 150% ATK sát thương liên tục; biến mất sau 3 lần kích hoạt; chuyển sang mục tiêu có thể chịu ST sau khi bất kỳ nhân vật nào hành động.",
+      "icon": "/Skill/Sonic V1 (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Cổ Vũ] năng lượng 2 &gt; 3. [Thiêu Đốt Chuyên Biệt] DoT 150% &gt; 200% ATK.",
+      "icon": "/Skill/Sonic V1 (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Cổ Vũ] kéo dài 3 &gt; 5 lượt. [Thiêu Đốt Chuyên Biệt] DoT 200% &gt; 250% ATK.",
+      "icon": "/Skill/Sonic V1 (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi bắt đầu trận đấu, ban [Tăng Tốc Chuyên Biệt] (Tăng Tốc độ 25%, nếu Tốc độ của mục tiêu chính thấp hơn Sonic, gây 500% Tấn công thành ST phụ trội). Tự nhận vĩnh viễn 65% tỉ lệ [Né Tránh] (Giảm ST trực tiếp/phụ trội/tích lũy/Cuồng bạo xuống còn 1 ST)",
+      "icon": "/Skill/Sonic V1 (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Tăng Tốc độ 25% > 30% [Né Tránh] > + đồng minh cùng hàng @ 45% tỉ lệ",
+      "icon": "/Skill/Sonic V1 (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Sonic V1 (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Cắt Giảm Năng Lượng]",
+      "desc": "Debuff áp lên toàn bộ kẻ địch khi Năng lượng của chúng giảm, chặn hoặc phá Năng lượng khiến chúng không thể dùng chiêu cuối."
+    },
+    {
+      "term": "[Cổ Vũ]",
+      "desc": "Cấp năng lượng vào đầu mỗi vòng trong vài vòng."
+    },
+    {
+      "term": "[Né Tránh]",
+      "desc": "Trạng thái né giúp giảm sát thương Trực Tiếp, Thêm, Tích Lũy và Cuồng Nộ nhận vào chỉ còn 1 điểm trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Siêu Tốc]",
+      "desc": "Buff tốc độ mà khi còn hiệu lực cho phép người mang và tối đa 6 đồng minh hành động lại và vượt qua kẻ địch có tốc độ thấp hơn."
+    },
+    {
+      "term": "[Sát Thương Duy Trì Đặc Hóa]",
+      "desc": "Hiệu ứng sát thương theo thời gian, gây sát thương dựa trên ST lên mục tiêu trong 3 lượt."
+    },
+    {
+      "term": "[Tăng Tốc Chuyên Biệt]",
+      "desc": "Tăng tốc độ của đồng minh tới gần tốc độ của người triển khai (giữ nguyên nếu đồng minh đã nhanh hơn)."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Sonic V1 (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/07/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Debuff",
+    "Tạo Khiên"
+  ],
+  "bondList": "Stinger + Lightning Max + Speed-o'-Sound Sonic",
+  "classLevel": "Outlaw",
+  "releaseSea": "01/11/2023",
+  "classIcon": "/Class/Outlaw.png",
+  "imageSrcset": "/Characters/optimized/100002-ur-360.webp 360w, /Characters/optimized/100002-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

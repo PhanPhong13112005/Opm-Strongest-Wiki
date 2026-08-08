@@ -1,0 +1,91 @@
+{
+  "id": "100009-ssr",
+  "name": "Bão Tuyết Địa Ngục",
+  "tier": "SSR",
+  "type": "Tâm Linh",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Hỗ Trợ",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Tạo Khiên"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 391,
+    "hp": 2480,
+    "def": 97,
+    "spd": 100
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung combo 3 đòn vào mục tiêu đơn, gây 35% ST (+3) sát thương.",
+      "icon": "/Skill/Hellish Blizzard (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung combo 5 đòn vào toàn bộ địch, gây 17% ST (+2) sát thương. Nếu bản thân đang ở trạng thái [Cuồng Nộ], hồi phục Máu.",
+      "icon": "/Skill/Hellish Blizzard (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung combo 5 đòn vào toàn bộ địch, gây 17% ST (+2) sát thương, đồng thời trực tiếp hồi phục Máu bản thân. Cùng lúc, đòn đánh của đồng minh xung quanh bỏ qua 20% Phòng thủ trong một số lượt.",
+      "icon": "/Skill/Hellish Blizzard (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Hellish Blizzard (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Khi trận đấu bắt đầu, cấp cho bản thân 30% [Miễn Sát Thương Không Bạo Kích] (hiệu lực mọi loại ST, không thể tồn tại cùng [Nhanh Nhẹn]). Gỡ [Sợ Hãi] khỏi đồng minh sau khi họ hành động.",
+      "icon": "/Skill/Hellish Blizzard (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Khi trận đấu bắt đầu, cấp cho bản thân 30% [Miễn Sát Thương Không Bạo Kích] và đồng minh cùng cột 10% [Miễn Sát Thương Không Bạo Kích] (mọi loại ST, không thể tồn tại cùng [Nhanh Nhẹn]). Gỡ [Sợ Hãi] khỏi đồng minh sau khi họ hành động.",
+      "icon": "/Skill/Hellish Blizzard (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Khi trận đấu bắt đầu, cấp cho bản thân 35% [Miễn Sát Thương Không Bạo Kích] và đồng minh cùng cột 15% [Miễn Sát Thương Không Bạo Kích] (mọi loại ST, không thể tồn tại cùng [Nhanh Nhẹn]). Gỡ [Sợ Hãi] khỏi đồng minh sau khi họ hành động.",
+      "icon": "/Skill/Hellish Blizzard (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100009-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Hellish Blizzard (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Lá Chắn]",
+      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+    }
+  ],
+  "releaseDate": "16/06/2020",
+  "classLevel": "B",
+  "classIcon": "/Class/B.png",
+  "imageSrcset": "/Characters/optimized/100009-ssr-360.webp 360w, /Characters/optimized/100009-ssr-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

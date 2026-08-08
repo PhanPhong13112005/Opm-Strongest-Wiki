@@ -1,0 +1,86 @@
+{
+  "id": "100043-ssr",
+  "name": "Hung Thần Kabuto",
+  "roles": [
+    "Phản Sát Thương, Sát Thương Trọng Thương"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 382,
+    "hp": 2290,
+    "def": 97,
+    "spd": 96
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Rigid Arm: Gây 120% ST(+10) sát thương lên mục tiêu đơn, và gây thêm 8% HP tối đa làm sát thương phụ.",
+      "icon": "/Skill/Carnage Kabuto (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Kabuto Knuckle: Gây sát thương lên mục tiêu đơn với 2 đòn liên tiếp tổng 210% ST(+10). Hồi 20% HP tối đa cho bản thân. Nếu đòn thứ 2 gây sát thương Chí mạng, 100% cơ hội gây [Trọng Thương] trong 2 lượt (khi bị tấn công, nhận sát thương Injury bằng 50% ST).",
+      "icon": "/Skill/Carnage Kabuto (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Kabuto Knuckle (Tối thượng): Gây sát thương lên mục tiêu đơn với 2 đòn liên tiếp tổng 210% > 262% ST(+10). Hồi 20% > 35% HP tối đa cho bản thân. Nếu đòn thứ 2 KHÔNG gây sát thương Chí mạng, 100% cơ hội gây [Trọng Thương] lên mục tiêu chính trong 2 lượt (khi bị tấn công, tung đòn truy kích bằng 50% > 80% ST làm sát thương phụ).",
+      "icon": "/Skill/Carnage Kabuto (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Carnage Kabuto (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Kabuto Armor: Khi bị tấn công, phản lại 20% sát thương nhận vào toàn bộ kẻ địch (chỉ một hiệu ứng cùng loại mỗi trận). Vĩnh viễn tăng 20 HP.",
+      "icon": "/Skill/Carnage Kabuto (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Kabuto Armor (Cực hạn): Khi bị tấn công, phản lại 30% sát thương nhận vào toàn bộ kẻ địch (chỉ một hiệu ứng cùng loại mỗi trận). Vĩnh viễn tăng HP.",
+      "icon": "/Skill/Carnage Kabuto (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Kabuto Armor (5 Tím): Khi bị tấn công, phản lại 35% sát thương nhận vào toàn bộ kẻ địch (chỉ một hiệu ứng cùng loại mỗi trận). Vĩnh viễn tăng 20 HP.",
+      "icon": "/Skill/Carnage Kabuto (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR",
+  "imageURL": "/Characters/optimized/100043-ssr-600.webp",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Carnage Kabuto (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseDate": "16/06/2020",
+  "effects": [],
+  "classLevel": "Dragon",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "imageSrcset": "/Characters/optimized/100043-ssr-360.webp 360w, /Characters/optimized/100043-ssr-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

@@ -1,0 +1,139 @@
+{
+  "id": "100010-ur",
+  "name": "Tia Chớp Chói Lóa",
+  "tier": "UR",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Hỗ Trợ",
+    "Sát Thương (Máu)",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 130
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung đòn vào mục tiêu đơn, gây 60% ST sát thương.",
+      "icon": "/Skill/Flashy Flash (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 400% ST sát thương lên toàn bộ kẻ địch. Gây [Giảm Máu Tối Đa] và [Vô Hiệu Đòn Phụ] (vô hiệu hóa đòn phụ) lên 3 kẻ địch ngẫu nhiên.",
+      "icon": "/Skill/Flashy Flash (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 400% > 500% ST sát thương lên toàn bộ kẻ địch. Gây [Giảm Máu Tối Đa] và [Vô Hiệu Đòn Phụ] (vô hiệu hóa đòn phụ) lên 3 kẻ địch ngẫu nhiên > toàn bộ kẻ địch.",
+      "icon": "/Skill/Flashy Flash (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Flashy Flash (UR)/Keepsake_UR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Đầu trận nhận 60% [Né Sát Thương Tức Thì], tự nhận [Tăng Tốc Chuyên Biệt] (+30% Tốc), và miễn nhiễm [Vô Hiệu Hóa] và [Vô Hiệu Hóa Chuyên Biệt].[Né Sát Thương Tức Thì]: ST Trực Tiếp/Phụ/Charge/Cuồng Nộ chỉ gây 1.",
+      "icon": "/Skill/Flashy Flash (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Né Sát Thương Tức Thì] 60% &gt; 70%. [Tăng Tốc Chuyên Biệt] Tốc +30% &gt; +34%.",
+      "icon": "/Skill/Flashy Flash (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Né Sát Thương Tức Thì] 70% &gt; 80%. [Tăng Tốc Chuyên Biệt] Tốc +34% &gt; +38%. Miễn nhiễm thêm [Bám Dính].",
+      "icon": "/Skill/Flashy Flash (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Sau khi bất kỳ kẻ địch nào hành động, nếu Tốc độ của nó thấp hơn Flashy Flash, anh ta sẽ kích hoạt [Truy kích Tối thượng] lên kẻ địch đó. ———- [Truy kích Tối thượng]: 70% sát thương và hiệu ứng của Tối thượng, không tốn năng lượng, tối đa 3 lần mỗi lượt.",
+      "icon": "/Skill/Flashy Flash (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Sát thương Truy kích Tối thượng 70% > 100% 3 lần mỗi lượt > 5 lần mỗi lượt",
+      "icon": "/Skill/Flashy Flash (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Flashy Flash (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100010-ur-600.webp",
+  "debut": "08 / 2024",
+  "keepsakeIcon": "/Keepsake/Flashy Flash (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/02/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Sát Thương (Máu)",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "effects": [
+    {
+      "term": "[Miễn Nhiễm]",
+      "desc": "Trạng thái khiến người mang không bị ảnh hưởng bởi một hiệu ứng hoặc loại khống chế nhất định, như [Đột Phá], Choáng hay Mê Hoặc."
+    },
+    {
+      "term": "[Siêu Tốc]",
+      "desc": "Buff tốc độ mà khi còn hiệu lực cho phép người mang và tối đa 6 đồng minh hành động lại và vượt qua kẻ địch có tốc độ thấp hơn."
+    },
+    {
+      "term": "[Vô Hiệu Hóa]",
+      "desc": "Trạng thái vô hiệu hóa áp lên một khu vực/cột mục tiêu, khiến các đơn vị bị ảnh hưởng không thể hành động hoặc phát huy tác dụng."
+    }
+  ],
+  "classLevel": "Class_S",
+  "releaseSea": "01/06/2024",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100010-ur-360.webp 360w, /Characters/optimized/100010-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

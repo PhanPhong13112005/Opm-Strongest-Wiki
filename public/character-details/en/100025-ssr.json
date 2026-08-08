@@ -1,0 +1,94 @@
+{
+  "id": "100025-ssr",
+  "name": "Watchdog Man",
+  "tier": "SSR",
+  "type": "Grappler",
+  "faction": "Hero",
+  "roles": [
+    "Support",
+    "Weaken",
+    "Heal",
+    "DMG (HP)",
+    "Revive"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 385,
+    "hp": 2504,
+    "def": 98,
+    "spd": 100
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 150% ATK (+10) DMG to a single target, and restores HP equal to 30% of max HP.",
+      "icon": "/Skill/Watchdog Man (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals a 5 hit combo of 5% (+2) of Watchdog Man's max HP as DMG to the entire target row, and inflicts [Panic] on enemies (seals their energy for a number of turns; when the same effect exists, the highest value applies).",
+      "icon": "/Skill/Watchdog Man (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals a 5 hit combo of 6% (+2) of Watchdog Man's max HP as DMG to the entire target row, and inflicts [Panic] on enemies (seals their energy for a number of turns; when the same effect exists, the highest value applies).",
+      "icon": "/Skill/Watchdog Man (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Watchdog Man (SSR)/Keepsake_SSR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). Before battle begins, Watchdog Man [Encourages] allies (gain 2 extra energy at the start of each turn, lasting 2 turns). Increases the max HP of himself and allies in his column by 25% for 3 turns. After taking lethal DMG, revives with 20% of max HP (up to 2 times).",
+      "icon": "/Skill/Watchdog Man (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). Before battle begins, Watchdog Man [Encourages] allies (gain 2 extra energy at the start of each turn, lasting 2 turns). Increases the max HP of himself and allies in his column by 30% for 5 turns. After taking lethal DMG, revives with 25% of max HP (up to 2 times).",
+      "icon": "/Skill/Watchdog Man (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). Before battle begins, Watchdog Man [Encourages] allies (gain 2 extra energy at the start of each turn, lasting 3 turns). Increases the max HP of himself and allies in his column by 33% for 10 turns. After taking lethal DMG, revives with 50% of max HP (up to 2 times).",
+      "icon": "/Skill/Watchdog Man (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100025-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Watchdog Man (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Panic]",
+      "desc": "Control status interrupts the target's actions."
+    }
+  ],
+  "releaseDate": "01/07/2021",
+  "classLevel": "Class_S",
+  "releaseSea": "01/06/2021",
+  "releaseTrung": "01/02/2021",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100025-ssr-360.webp 360w, /Characters/optimized/100025-ssr-600.webp 496w",
+  "imageWidth": 496,
+  "imageHeight": 688
+}

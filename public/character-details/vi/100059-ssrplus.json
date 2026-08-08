@@ -1,0 +1,129 @@
+{
+  "id": "100059-ssrplus",
+  "name": "Geryuganshoop",
+  "imageURL": "/Characters/optimized/100059-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Hạt Nhân Bất Khuất Chuyên Biệt",
+    "Cuồng Bạo Chuyên Biệt"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST trực tiếp lên một mục tiêu đơn.",
+      "icon": "/Skill/Geryuganshoop (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 24% ST trực tiếp lên toàn bộ kẻ địch. Cấp cho hàng của đơn vị này +200% [Khuếch Đại Sát Thương] theo ST, gỡ bỏ các hiệu ứng tích cực của họ.",
+      "icon": "/Skill/Geryuganshoop (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 24% > 30% ST trực tiếp lên toàn bộ kẻ địch. Mục tiêu [Khuếch Đại Sát Thương] mở rộng từ hàng của đơn vị này sang toàn bộ đồng minh.",
+      "keepsakeIcon": "/Keepsake/Geryuganshoop (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Geryuganshoop (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Nhận +20% HP. Khi vào trận, áp 30% [Làm Suy Yếu] lên tối đa 6 tướng địch trong 1 lượt. Từ lượt 2 trở đi, vào đầu lượt nhận 35% [Giảm Sát Thương Tụ Lực].",
+      "icon": "/Skill/Geryuganshoop (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Mục tiêu [Làm Suy Yếu] mở rộng sang toàn bộ kẻ địch. [Giảm Sát Thương Tụ Lực] 35% > 45%.",
+      "icon": "/Skill/Geryuganshoop (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Làm Suy Yếu] 30% > 40%, thời lượng 1 > 2 lượt. [Giảm Sát Thương Tụ Lực] 45% > 50% và nay áp dụng từ lượt 1 thay vì lượt 2.",
+      "icon": "/Skill/Geryuganshoop (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "(Hiệu ứng Cơ bản) (1 Grappler, 2 Esper): Nhận 3 Năng Lượng mỗi lượt.(Hiệu ứng Nâng cao) (2 Grappler, 2 Esper): Khi bất kỳ đồng minh nhận sát thương chí mạng, họ vào [Bất Khuất Chuyên Biệt] — biến mất sau hành động của 4 nhân vật bất kỳ, hồi 100% HP Tối đa, kích hoạt hai lần mỗi nhân vật mỗi trận. [Bất Khuất Chuyên Biệt]: Không nhận sát thương, thay thế [Bất Khuất] và không bị ảnh hưởng bởi hiệu ứng bỏ qua Unyielding.",
+      "icon": "/Skill/Source/100059-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Ngoài ra nhận 1 Năng Lượng một lần mỗi lượt khi bất kỳ nhân vật support tung Follow-up.",
+      "icon": "/Skill/Source/100059-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "Khi nhân vật này hành động, cấp cho toàn đội 150 [Thanh Năng Lượng].",
+      "icon": "/Skill/Source/100059-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "cost": null,
+      "keepsakeIcon": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Làm Suy Yếu]",
+      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Geryuganshoop (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/02/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Debuff"
+  ],
+  "bondList": "Tatsumaki (Terrible Tornado) + Fubuki (Hellish Blizzard)",
+  "classLevel": "Dragon",
+  "releaseSea": "01/06/2022",
+  "imageSrcset": "/Characters/optimized/100059-ssrplus-360.webp 360w, /Characters/optimized/100059-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

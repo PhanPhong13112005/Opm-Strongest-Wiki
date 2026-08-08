@@ -1,0 +1,141 @@
+{
+  "id": "100045-ur",
+  "name": "Child Emperor",
+  "imageURL": "/Characters/optimized/100045-ur-600.webp",
+  "tier": "UR",
+  "type": "Hi-Tech",
+  "faction": "Hero",
+  "roles": [
+    "Core"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK to a single target.",
+      "icon": "/Skill/Child Emperor (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "(No energy consumed) Deals damage to enemies in a row with 3 consecutive strikes for 900% ATK, grants 30% Block Rate to all allies for 2 rounds.",
+      "icon": "/Skill/Child Emperor (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "(No energy consumed) Deals damage to enemies in a row with 3 consecutive strikes for 900% > 1200% ATK, grants 30% > 40% Block Rate to all allies for 2 rounds.",
+      "keepsakeIcon": "/Keepsake/Child Emperor (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Child Emperor (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Gain 60% [Non-Crit DMG Free]. When any ally triggers [Block], gain 25% Max HP of [Tenacity], can trigger 4 times.[Non-Crit DMG Free]: Effective for all types of DMG. Cannot co-exist with [Agility].",
+      "icon": "/Skill/Child Emperor (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Gain 60% > 70% [Non-Crit DMG Free]. When any ally triggers [Block], gain 25% > 30% Max HP of [Tenacity], can trigger 4 times.[Non-Crit DMG Free]: Effective for all types of DMG. Cannot co-exist with [Agility].",
+      "icon": "/Skill/Child Emperor (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Gain 60% > 80% [Non-Crit DMG Free]. When any ally triggers [Block], gain 25% > 35% Max HP of [Tenacity], can trigger 4 times.[Non-Crit DMG Free]: Effective for all types of DMG. Cannot co-exist with [Agility].",
+      "icon": "/Skill/Child Emperor (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "[Basic Core] (Require: 1 Duelist, 1 Grappler, 1 Hi-Tech): Gain 3 energy per round.[Advanced Core] (Require: 1 of each): Permanently grants all allies [Specialized Resilience]. Before battle begins, all allies receive 150% Max HP of [Tenacity] (not affected by Shield Rate). At the start of battle, remove any Arena DMG Boost and Free effects from enemies.———— [Specialized Resilience]: Absorbs all types of DMG, accumulates up to 5x Max HP [Tenacity]; every 1 point of [Shield] absorbs 10 DMG, and Tenacity can recharge it. (Lv4: 180% Max HP / 11 DMG per Shield · Lv10: 210% Max HP / 12 DMG per Shield · Lv17: 250% Max HP / 13 DMG per Shield)",
+      "type": "Awakening",
+      "icon": "/Skill/Source/100045-ur/awakened.webp",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "When any ally triggers [Block], grants 1 energy (once per turn). All characters gain 20% All DMG Boost and All DMG Free for 2 turns.",
+      "type": "Awakening",
+      "icon": "/Skill/Source/100045-ur/awakened.webp",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "When any ally triggers [Block], grants 1 energy (twice per turn). All characters gain 20% All DMG Boost and All DMG Free for 2 turns.",
+      "type": "Awakening",
+      "icon": "/Skill/Source/100045-ur/awakened.webp",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Shield]",
+      "desc": "The shield absorbs damage up to a portion of the subject's Health; Charge DMG ignores it."
+    },
+    {
+      "term": "[Non-Crit DMG Immunity]",
+      "desc": "Reduces all non-critical damage (usually to 1). Cannot survive and avoid Agility."
+    },
+    {
+      "term": "[Agility]",
+      "desc": "Evasion type buff; mutually exclusive with Non-Crit Damage Immunity."
+    },
+    {
+      "term": "[Generate Shield]",
+      "desc": "The absorption barrier, usually created from transmogrified damage, absorbs damage before health is affected."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Child Emperor (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/04/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "Core",
+    "Debuff",
+    "Generate Shield"
+  ],
+  "bondList": "Genos + Metal Knight (Bofoi) + Dr. Genus",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/08/2024",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100045-ur-360.webp 360w, /Characters/optimized/100045-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

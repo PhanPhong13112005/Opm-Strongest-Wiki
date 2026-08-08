@@ -1,0 +1,148 @@
+{
+  "id": "100157-ur",
+  "name": "Chày Sắt V2",
+  "imageURL": "/Characters/optimized/100157-ur-600.webp",
+  "tier": "UR",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Chủ Lực (Công)"
+  ],
+  "duyen": "V2",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 117
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST trực tiếp lên một mục tiêu đơn bằng 3 đòn liên tiếp.",
+      "icon": "/Skill/Metal Bat V2 (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tăng Hit và Specialized Hit của bản thân 50%. Vô hiệu 30% [Khả Năng Né Tránh], [Khả Năng Né Tránh Chuyên Biệt], [Giảm Sát Thương Không Bạo Kích] của mục tiêu. Ban cho bản thân 100% [Giận Dữ]. Mỗi đòn đánh có thể kích hoạt 1 [Đột Phá Chuyên Biệt]. Tung 3 đòn liên tiếp lên toàn bộ hàng, gây tổng cố định 3900% ST sát thương trực tiếp.",
+      "icon": "/Skill/Metal Bat V2 (UR)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Specialized Hit 50% > 70%. Vô hiệu [Khả Năng Né Tránh] của mục tiêu 30% > 50%. [Giận Dữ] của bản thân 100% > 130%. Tổng ST lên toàn bộ hàng 3900% > 5400%.",
+      "keepsakeIcon": "/Keepsake/Metal Bat V2 (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Metal Bat V2 (UR)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Nhận 60% [Giảm Sát Thương Không Bạo Kích]. Giảm tỉ lệ [Tập Hợp Lại] và [Hồi Sinh Báo Thù] đi 3. Vô hiệu [Phản Sát Thương Chuyên Biệt] của kẻ địch. Ban [Miễn Nhiễm] với [Uy Hiếp], [Choáng], [Choáng Chuyên Biệt] cho bản thân và đồng minh cùng cột.",
+      "icon": "/Skill/Metal Bat V2 (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Nhận [Giảm Sát Thương Không Bạo Kích] 60% > 70%. Giảm số lần hồi sinh đi 3 > 5.",
+      "icon": "/Skill/Metal Bat V2 (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Nhận [Giảm Sát Thương Không Bạo Kích] 70% > 80%. Giảm số lần hồi sinh đi 5 > 7.",
+      "icon": "/Skill/Metal Bat V2 (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Nhận [Hoàn Trả Động Lực] 2 lần. Nhận 30% [Giảm Sát Thương Áp Chế]. — [Hoàn Trả Động Lực]: Sau khi toàn bộ đồng minh bị đánh bại, trở lại trận đấu với 110% (200%) Máu Tối đa. [Giảm Sát Thương Áp Chế]: Giảm 30% ST nhận vào, nếu ATK cao hơn kẻ tấn công, giảm thêm 150%.",
+      "icon": "/Skill/Metal Bat V2 (UR)/skill_awk.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Nhận [Hoàn Trả Động Lực] 2 > 3. Nhận [Giảm Sát Thương Áp Chế] 30% > 40%. Giảm ST 30% > 40%. Nếu ATK cao hơn, giảm thêm 150% > 170%.",
+      "icon": "/Skill/Metal Bat V2 (UR)/skill_awk.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Metal Bat V2 (UR)/skill_awk.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Đánh Dấu]",
+      "desc": "Đánh dấu một đơn vị, mở điều kiện truy kích hoặc hiệu ứng thưởng gắn với dấu."
+    },
+    {
+      "term": "[Hồi Phục Động Năng]",
+      "desc": "Hiệu ứng hồi sinh: sau khi toàn bộ đồng minh bị hạ, đơn vị quay lại trận đấu với phần lớn Máu tối đa (110%–200%)."
+    },
+    {
+      "term": "[Miễn Nhiễm Sát Thương Khống Chế]",
+      "desc": "Hiệu ứng phòng thủ giảm sát thương nhận vào (30–40%), tăng lên mức giảm 150–170% khi ST của người mang cao hơn kẻ tấn công."
+    },
+    {
+      "term": "[Phản Kích]",
+      "desc": "Dấu phản đòn mà số lớp của nó làm tăng dần sát thương trực tiếp truy kích của người dùng lên các kẻ địch bị đánh dấu."
+    },
+    {
+      "term": "[Uy Hiếp]",
+      "desc": "Hiệu ứng khống chế dạng choáng khiến mục tiêu không thể hành động và giảm toàn bộ khả năng miễn sát thương của nó đi 30%."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Metal Bat V2 (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/08/2025",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Debuff",
+    "Sát Thương (Máu)",
+    "Hồi Sinh",
+    "Tạo Khiên"
+  ],
+  "classLevel": "Class_S",
+  "releaseSea": "01/12/2025",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100157-ur-360.webp 360w, /Characters/optimized/100157-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

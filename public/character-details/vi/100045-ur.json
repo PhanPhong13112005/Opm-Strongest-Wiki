@@ -1,0 +1,141 @@
+{
+  "id": "100045-ur",
+  "name": "Đồng Đế",
+  "imageURL": "/Characters/optimized/100045-ur-600.webp",
+  "tier": "UR",
+  "type": "Công Nghệ",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Hạt Nhân"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST cho một mục tiêu.",
+      "icon": "/Skill/Child Emperor (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "(Không tiêu hao năng lượng) Đánh 3 đòn liên tiếp vào kẻ địch trên cùng một hàng, mỗi đòn gây 900% ST, đồng thời tăng 30% Block Rate cho toàn bộ đồng minh trong 2 lượt.",
+      "icon": "/Skill/Child Emperor (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "(Không tiêu hao năng lượng) Đánh 3 đòn liên tiếp vào kẻ địch trên cùng một hàng, mỗi đòn gây 900% > 1200% ST, đồng thời tăng 30% > 40% Block Rate cho toàn bộ đồng minh trong 2 lượt.",
+      "keepsakeIcon": "/Keepsake/Child Emperor (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Child Emperor (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Nhận 60% [Miễn Sát Thương Không Bạo Kích]. Khi bất kỳ đồng minh nào kích hoạt [Đỡ Đòn], nhận [Lá Chắn] bằng 25% HP Tối đa, có thể kích hoạt 4 lần.[Miễn Sát Thương Không Bạo Kích]: Có hiệu lực với mọi loại sát thương. Không thể tồn tại cùng lúc với [Nhanh Nhẹn].",
+      "icon": "/Skill/Child Emperor (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Nhận 60% > 70% [Miễn Sát Thương Không Bạo Kích]. Khi bất kỳ đồng minh nào kích hoạt [Đỡ Đòn], nhận [Lá Chắn] bằng 25% > 30% HP Tối đa, có thể kích hoạt 4 lần.[Miễn Sát Thương Không Bạo Kích]: Có hiệu lực với mọi loại sát thương. Không thể tồn tại cùng lúc với [Nhanh Nhẹn].",
+      "icon": "/Skill/Child Emperor (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Nhận 60% > 80% [Miễn Sát Thương Không Bạo Kích]. Khi bất kỳ đồng minh nào kích hoạt [Đỡ Đòn], nhận [Lá Chắn] bằng 25% > 35% HP Tối đa, có thể kích hoạt 4 lần.[Miễn Sát Thương Không Bạo Kích]: Có hiệu lực với mọi loại sát thương. Không thể tồn tại cùng lúc với [Nhanh Nhẹn].",
+      "icon": "/Skill/Child Emperor (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "[Core Cơ bản] (Yêu cầu: 1 Duelist, 1 Grappler, 1 Hi-Tech): Nhận 3 năng lượng mỗi lượt.[Core Nâng cao] (Yêu cầu: 1 mỗi loại): Vĩnh viễn ban cho toàn bộ đồng minh [Bền Bỉ Chuyên Biệt]. Khi vào trận, toàn bộ đồng minh nhận [Lá Chắn] bằng 150% HP Tối đa (không bị ảnh hưởng bởi Shield Rate). Khi bắt đầu trận, xóa mọi hiệu ứng Arena DMG Boost và Free của kẻ địch.———— [Bền Bỉ Chuyên Biệt]: Hấp thụ mọi loại ST, tích lũy tối đa 5 lần HP Tối đa [Lá Chắn]; mỗi 1 điểm [Khiên] hấp thụ 10 ST, và Tenacity có thể nạp lại. (Lv4: 180% HP Tối đa / 11 ST mỗi Shield · Lv10: 210% HP Tối đa / 12 ST mỗi Shield · Lv17: 250% HP Tối đa / 13 ST mỗi Shield)",
+      "type": "Thức tỉnh",
+      "icon": "/Skill/Source/100045-ur/awakened.webp",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Khi bất kỳ đồng minh kích hoạt [Đỡ Đòn], nhận 1 năng lượng (một lần mỗi lượt). Toàn bộ nhân vật nhận 20% All DMG Boost và All DMG Free trong 2 lượt.",
+      "type": "Thức tỉnh",
+      "icon": "/Skill/Source/100045-ur/awakened.webp",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "Khi bất kỳ đồng minh kích hoạt [Đỡ Đòn], nhận 1 năng lượng (hai lần mỗi lượt). Toàn bộ nhân vật nhận 20% All DMG Boost và All DMG Free trong 2 lượt.",
+      "type": "Thức tỉnh",
+      "icon": "/Skill/Source/100045-ur/awakened.webp",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Khiên]",
+      "desc": "Khiên hấp thụ sát thương tới một phần Máu của chủ thể; Charge DMG bỏ qua nó."
+    },
+    {
+      "term": "[Miễn Nhiễm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm mọi sát thương không chí mạng (thường về 1). Không thể tồn tại cùng né tránh loại Agility."
+    },
+    {
+      "term": "[Nhanh Nhẹn]",
+      "desc": "Buff loại né tránh; loại trừ lẫn nhau với Miễn Sát Thương Non-Crit."
+    },
+    {
+      "term": "[Tạo Khiên]",
+      "desc": "Rào chắn hấp thụ, thường được tạo từ sát thương chuyển hóa, chịu đòn trước khi máu bị ảnh hưởng."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Child Emperor (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/04/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Hạt Nhân",
+    "Debuff",
+    "Tạo Khiên"
+  ],
+  "bondList": "Genos + Metal Knight (Bofoi) + Dr. Genus",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/08/2024",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100045-ur-360.webp 360w, /Characters/optimized/100045-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

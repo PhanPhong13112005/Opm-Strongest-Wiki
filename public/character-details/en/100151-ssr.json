@@ -1,0 +1,95 @@
+{
+  "id": "100151-ssr",
+  "name": "Tatsumaki/Terrible Tornado V2",
+  "tier": "SSR",
+  "type": "Esper",
+  "faction": "Hero",
+  "roles": [
+    "DMG (ATK)",
+    "Weaken",
+    "DMG (HP)",
+    "Generate Shield"
+  ],
+  "duyen": "Awakened",
+  "baseStats": {
+    "atk": 419,
+    "hp": 2394,
+    "def": 104,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 140% ATK (+10) DMG to a single target, and grants self [Tenacity] (absorbs DMG equal to 30% of own HP).",
+      "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 50% ATK DMG with 3 consecutive strikes to all enemies, permanently grants self 50% continuous DMG Boost, and has a 100% chance to inflict [Force Field] on all targets on the field for 1 turn (takes DoT equal to 50% ATK before acting; 50% chance to penetrate immunity effects).",
+      "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 60% ATK DMG with 3 consecutive strikes to all enemies, permanently grants self 60% continuous DMG Boost, and has a 100% chance to inflict [Force Field] on all targets on the field for 1 turn (takes DoT equal to 50% ATK before acting; 50% chance to penetrate immunity effects).",
+      "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado V2 (SSR)/Keepsake_SSR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). After acting, drains the energy of enemies in a sealed state (once per turn; after a successful drain, they cannot be [Panicked] again the same turn). Gains 30% [Non-Crit DMG Free] (all DMG types; this and [Agility] only one takes effect). Converts 50% of incoming DoT into HP.",
+      "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). After acting, drains the energy of enemies in a sealed state (once per turn; after a successful drain, they cannot be [Panicked] again the same turn). Gains 35% [Non-Crit DMG Free] (all DMG types; this and [Agility] only one takes effect). Converts 75% of incoming DoT into HP.",
+      "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). After acting, drains the energy of enemies in a sealed state (once per turn; after a successful drain, they cannot be [Panicked] again the same turn). Gains 40% [Non-Crit DMG Free] (all DMG types; this and [Agility] only one takes effect). Converts 100% of incoming DoT into HP.",
+      "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100151-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado V2 (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Panic]",
+      "desc": "Control status interrupts the target's actions."
+    },
+    {
+      "term": "[Tenacity]",
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+    }
+  ],
+  "releaseDate": "01/09/2021",
+  "classLevel": "Class_SS",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100151-ssr-360.webp 360w, /Characters/optimized/100151-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

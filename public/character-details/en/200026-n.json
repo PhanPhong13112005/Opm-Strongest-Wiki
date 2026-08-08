@@ -1,0 +1,82 @@
+{
+  "id": "200026-n",
+  "name": "Paradiser Thug",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 164,
+    "hp": 981,
+    "def": 41,
+    "spd": 80
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 80% ATK (+10) damage to a single target.",
+      "icon": "/Skill/Paradiser Thug (N)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 100% ATK (+10) damage to the entire row of targets.",
+      "icon": "/Skill/Paradiser Thug (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 120% ATK (+10) damage to the entire row of targets.",
+      "icon": "/Skill/Paradiser Thug (N)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Paradiser Thug (N)/Keepsake_N.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP (+20). If a Paradise Group Follower is on the field, increases own damage by 20%, lasting until the end of battle.",
+      "icon": "/Skill/Paradiser Thug (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP (+20). If a Paradise Group Follower is on the field, increases own damage by 25%, lasting until the end of battle.",
+      "icon": "/Skill/Paradiser Thug (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP (+20). If a Paradise Group Follower is on the field, increases own damage by 28%, lasting until the end of battle.",
+      "icon": "/Skill/Paradiser Thug (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "N",
+  "imageURL": "/Characters/optimized/200026-n-600.webp",
+  "type": "Hi-Tech",
+  "faction": "Other",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Paradiser Thug (N)/Keepsake_N.png",
+  "effects": [],
+  "classLevel": "Other",
+  "classIcon": "/Class/Other.png",
+  "imageSrcset": "/Characters/optimized/200026-n-360.webp 360w, /Characters/optimized/200026-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 664
+}

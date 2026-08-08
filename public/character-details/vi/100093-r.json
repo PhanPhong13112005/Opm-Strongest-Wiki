@@ -1,0 +1,81 @@
+{
+  "id": "100093-r",
+  "name": "Sourface",
+  "imageURL": "/Characters/optimized/100093-r-600.webp",
+  "tier": "R",
+  "type": "Giác Đấu",
+  "faction": "Võ Thuật",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 161,
+    "hp": 963,
+    "def": 41,
+    "spd": 80
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 80% ST lên mục tiêu đơn.",
+      "icon": "/Skill/Sourface (R)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 60% ST lên mục tiêu đơn, và bản thân vào trạng thái [Cuồng Nộ] (tăng 30% sát thương khi tấn công).",
+      "icon": "/Skill/Sourface (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 60% ST lên mục tiêu đơn, và bản thân vào trạng thái [Cuồng Nộ] (tăng 35% sát thương khi tấn công).",
+      "keepsakeIcon": "/Keepsake/Sourface (R)/Keepsake_R.png",
+      "icon": "/Skill/Sourface (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Mỗi khi kích hoạt chí mạng, thêm sát thương bằng 40% ST.",
+      "icon": "/Skill/Sourface (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Mỗi khi kích hoạt chí mạng, thêm sát thương bằng 50% ST.",
+      "icon": "/Skill/Sourface (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Mỗi khi kích hoạt chí mạng, thêm sát thương bằng 55% ST.",
+      "icon": "/Skill/Sourface (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Sourface (R)/Keepsake_R.png",
+  "classLevel": "Martial_Artist",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100093-r-360.webp 360w, /Characters/optimized/100093-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 684
+}

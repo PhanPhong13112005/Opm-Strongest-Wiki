@@ -1,0 +1,150 @@
+{
+  "id": "100008-ur",
+  "name": "Mosquito Girl",
+  "tier": "UR",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "DMG (ATK)",
+    "Core",
+    "Heal",
+    "DMG (HP)",
+    "Revive"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK Direct DMG to a single target.",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Raises her own instant-strike hit rate by 50%, then delivers a 2-hit combo to every enemy in the target's column, dealing 1500% ATK Direct DMG split evenly across the targets in that column. Before attacking, can trigger [Specialize Breakthrough] 1 time: immediately cancels the target's [Unyielding]-type damage-immunity states and raises her ATK by 20% until that attack segment ends.",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Instant-strike hit rate 50% > 65%. Column Direct DMG 1500% > 2000% ATK. [Specialize Breakthrough] triggers 1 > 2 times, and its ATK buff 20% > 40%.",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Mosquito Girl (UR)/Keepsake_UR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently gains +20% HP. On entry, gains 60% [Non-Crit DMG Reduction]. When any character acts, dispels [Stun] / [Specialized Stun] / [Silence] from 1 afflicted ally (per debuff category).",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Non-Crit DMG Reduction] 60% > 70%. Allies cleansed of [Stun] / [Specialized Stun] / [Silence] 1 > 2 (per category).",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Non-Crit DMG Reduction] 70% > 80%. Allies cleansed of [Stun] / [Specialized Stun] / [Silence] 2 > 3 (per category).",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When battle begins, summons 10 mosquitoes to assist in battle, each mosquito inherits Mosquito Girl's 800% ATK as HP. Mosquitoes shares 80% all types of DMG (except Emblem DMG) with the entire team, reducing 80% DMG taken. Immune to [Separation].",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Mosquito summons HP inherit ATK 800% > 1000% Grants the entire enemy team 40% Detonation DMG Free, and 40% DoT DMG Free",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100008-ur-600.webp",
+  "debut": "09 / 2024",
+  "keepsakeIcon": "/Keepsake/Mosquito Girl (UR)/Keepsake_UR.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "releaseTrung": "01/03/2024",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Core",
+    "Heal",
+    "DMG (HP)",
+    "Revive"
+  ],
+  "effects": [
+    {
+      "term": "[Unyielding]",
+      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+    },
+    {
+      "term": "[Spec. Stun]",
+      "desc": "PvP tier of Stun — harder to resist or resolve."
+    },
+    {
+      "term": "[Stun]",
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+    },
+    {
+      "term": "[Silence]",
+      "desc": "The target cannot use his ultimate. Counts as a control effect."
+    },
+    {
+      "term": "[Reduce Non-Crit DMG]",
+      "desc": "Reduced damage taken from non-critical attacks."
+    }
+  ],
+  "classLevel": "Demon",
+  "releaseSea": "01/07/2024",
+  "imageSrcset": "/Characters/optimized/100008-ur-360.webp 360w, /Characters/optimized/100008-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

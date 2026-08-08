@@ -1,0 +1,81 @@
+{
+  "id": "100042-n",
+  "name": "Allback-man",
+  "imageURL": "/Characters/optimized/100042-n-600.webp",
+  "tier": "N",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 152,
+    "hp": 909,
+    "def": 38,
+    "spd": 83
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 80% ST lên mục tiêu đơn.",
+      "icon": "/Skill/Allback-man (N)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 180% ST lên mục tiêu đơn.",
+      "icon": "/Skill/Allback-man (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 200% ST lên mục tiêu đơn.",
+      "keepsakeIcon": "/Keepsake/Allback-man (N)/Keepsake_N.png",
+      "icon": "/Skill/Allback-man (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân.Trước mỗi lượt hành động, tăng ST gây ra 10% cho bản thân, kéo dài 1 lượt.",
+      "icon": "/Skill/Allback-man (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân.Trước mỗi lượt hành động, tăng ST gây ra 15% cho bản thân, kéo dài 1 lượt.",
+      "icon": "/Skill/Allback-man (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân.Trước mỗi lượt hành động, tăng ST gây ra 18% cho bản thân, kéo dài 1 lượt.",
+      "icon": "/Skill/Allback-man (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Allback-man (N)/Keepsake_N.png",
+  "classLevel": "C",
+  "classIcon": "/Class/C.png",
+  "imageSrcset": "/Characters/optimized/100042-n-360.webp 360w, /Characters/optimized/100042-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

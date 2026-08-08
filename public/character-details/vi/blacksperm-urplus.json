@@ -1,0 +1,138 @@
+{
+  "id": "blacksperm-urplus",
+  "name": "Tinh Trùng Đen",
+  "imageURL": "/Characters/optimized/blacksperm-urplus-600.webp",
+  "tier": "UR+",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Phân chia vô hạn",
+    "Một người trở thành một đội quân"
+  ],
+  "duyen": "Đấu Thuật Tông Sư",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ATK (+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Source/blacksperm-urplus/basic.webp",
+      "animation": null,
+      "type": "Kỹ năng thường",
+      "cost": 0,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Sát thương này không chia đều cho mục tiêu không thể nhận sát thương. Trước khi chủ động dùng Tối Thượng, hấp thụ toàn bộ Hắc Tinh phân thân trên sân; mỗi phân thân tăng thêm 20% sát thương Tối Thượng, kéo dài đến lần chủ động dùng kỹ năng kế tiếp. Tung combo 5 đòn lên cả hàng địch, gây 2400% ATK (+2) [Sát Thương Trực Tiếp Chuyên Biệt] có thể chia đều (chỉ chịu ảnh hưởng bởi tăng/giảm sát thương nâng cao), bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Miễn Sát Thương Không Bạo Kích], xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt].",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tăng 20% [Tăng Sát Thương Toàn Phần] cho bản thân và giảm 20% [Giảm Sát Thương Toàn Phần] của hàng chứa mục tiêu trong 2 hồi (không thể giải trừ). Sát thương này không chia đều cho mục tiêu không thể nhận sát thương. Trước khi chủ động dùng Tối Thượng, hấp thụ toàn bộ Hắc Tinh phân thân trên sân; mỗi phân thân tăng thêm 30% sát thương Tối Thượng, kéo dài đến lần chủ động dùng kỹ năng kế tiếp. Tung combo 5 đòn lên cả hàng địch, gây 3000% ATK (+2) [Sát Thương Trực Tiếp Chuyên Biệt] có thể chia đều (chỉ chịu ảnh hưởng bởi tăng/giảm sát thương nâng cao), bỏ qua 60% [Khả Năng Né Tránh Chuyên Biệt] và [Miễn Sát Thương Không Bạo Kích], xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt].",
+      "keepsakeIcon": "/Keepsake/Black Sperm (URplus)/Keepsake_URplus.webp",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) HP bản thân. Khi vào trận, nhận 60% [Miễn Sát Thương Không Bạo Kích]. Vĩnh viễn nhận 20% [Tăng Cường Hỗ Trợ]. Trong 9 hồi đầu, khi sắp bị hạ, bản thân vào trạng thái [Bất Bại] và hấp thụ toàn bộ sát thương phải chịu; đến lượt hành động kế tiếp hồi 100% HP và tiếp tục chiến đấu, tối đa 4 lần.",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_pas.png",
+      "animation": null,
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) HP bản thân. Khi vào trận, nhận 70% [Miễn Sát Thương Không Bạo Kích]. Vĩnh viễn nhận 30% [Tăng Cường Hỗ Trợ]. Trong 9 hồi đầu, khi sắp bị hạ, bản thân vào trạng thái [Bất Bại] và hấp thụ toàn bộ sát thương phải chịu; đến lượt hành động kế tiếp hồi 100% HP và tiếp tục chiến đấu, tối đa 5 lần.",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_pas.png",
+      "animation": null,
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) HP bản thân. Khi vào trận, nhận 80% [Miễn Sát Thương Không Bạo Kích]. Vĩnh viễn nhận 40% [Tăng Cường Hỗ Trợ]. Trong 9 hồi đầu, khi sắp bị hạ, bản thân vào trạng thái [Bất Bại] và hấp thụ toàn bộ sát thương phải chịu; đến lượt hành động kế tiếp hồi 100% HP và tiếp tục chiến đấu, tối đa 6 lần.",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_pas.png",
+      "animation": null,
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Sau khi bất kỳ địch nào hành động, toàn bộ Hắc Tinh phân thân trên sân có 70% tỉ lệ truy kích toàn thể địch, mỗi phân thân gây 480% ATK [Sát Thương Trực Tiếp Chuyên Biệt]. Khi vào trận, vĩnh viễn giảm 30% sát thương phải chịu. Sau mỗi lần trúng đòn, phân tách ra 2 Hắc Tinh hỗ trợ chiến đấu; phân thân kế thừa 100% ATK gốc của bản thể, tối đa 8 con cùng lúc (không thể triệu hồi khi trùng vị trí chư hầu).",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_awk.png",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Sau khi bất kỳ địch nào hành động, toàn bộ Hắc Tinh phân thân trên sân có 100% tỉ lệ truy kích toàn thể địch, mỗi phân thân gây 620% ATK [Sát Thương Trực Tiếp Chuyên Biệt]. Khi đồng minh cùng hàng kích hoạt [Tập Hợp Lại], Hắc Tinh lập tức phân tách tới giới hạn số lượng và tung [Truy Kích Tụ Lực] với 120% cường độ kỹ năng. Khi vào trận, vĩnh viễn giảm 50% sát thương phải chịu. Sau mỗi lần trúng đòn, phân tách ra 4 Hắc Tinh hỗ trợ chiến đấu; phân thân kế thừa 120% ATK gốc của bản thể, tối đa 8 con cùng lúc (không thể triệu hồi khi trùng vị trí chư hầu).",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_awk.png",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_awk.png",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Vô Địch]",
+      "desc": "Hấp thụ mọi sát thương nhận được trong thời gian này, phục hồi HP ở lượt tiếp theo."
+    },
+    {
+      "term": "[Tái Chiến]",
+      "desc": "Kích hoạt hành động phụ."
+    },
+    {
+      "term": "[Truy Kích Tụ Lực]",
+      "desc": "Tấn công ngoài lượt với phần trăm sức mạnh kỹ năng định trước."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Black Sperm (URplus)/Keepsake_URplus.webp",
+  "bio": "Dạng UR+ của Tinh Trùng Đen, quái nhân đáng sợ bậc nhất Hiệp hội Quái nhân với khả năng phân bào vô hạn, áp đảo kẻ thù bằng số lượng.",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "SÁT THƯƠNG DIỆN RỘNG",
+    "BẤT TỬ",
+    "TRIỆU HỒI",
+    "TRUY KÍCH"
+  ],
+  "bondList": "Garou, Homeless Emperor, Psykos",
+  "classLevel": "Dragon",
+  "releaseSea": "01/12/2026",
+  "releaseTrung": "01/08/2026",
+  "classIcon": "/Class/Dragon.png",
+  "imageSrcset": "/Characters/optimized/blacksperm-urplus-360.webp 360w, /Characters/optimized/blacksperm-urplus-600.webp 600w",
+  "imageWidth": 1156,
+  "imageHeight": 1068
+}

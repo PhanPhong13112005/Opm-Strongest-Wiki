@@ -1,0 +1,156 @@
+{
+  "id": "100312-urplus",
+  "name": "Nyan",
+  "tier": "UR+",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hỗ Trợ",
+    "Suy Yếu",
+    "Sát Thương (Máu)",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 138
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST lên mục tiêu đơn.",
+      "icon": "/Skill/Nyan (URplus)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 1500% ST [Sát Thương Trực Tiếp Chuyên Biệt] lên một mục tiêu địch ở hàng sau bằng chuỗi 4 đòn (chỉ chịu ảnh hưởng bởi giảm ST nâng cao), bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Vĩnh viễn ban [Gia Tốc Chuyên Biệt] cho đồng minh khác hàng. Khi dùng chiêu cuối trong 6 lượt đầu, áp thêm [Mê Hoặc Chuyên Biệt] lên mục tiêu chính. — [Gia Tốc Chuyên Biệt]: Tốc độ được tăng lên 94% tốc độ của Nyan; nếu tốc độ của đồng minh cao hơn thì giữ nguyên. [Mê Hoặc Chuyên Biệt]: Mục tiêu lập tức rời khỏi giao tranh, dùng một số kỹ năng đặc biệt và hiệu ứng nội tại để tấn công một kẻ địch ngẫu nhiên, sau đó quay về và bỏ qua hành động chủ động kế tiếp; kẻ địch dính [Mê Hoặc Chuyên Biệt] bị giảm 20% [Giảm Sát Thương Toàn Phần] trong 1 lượt.",
+      "icon": "/Skill/Nyan (URplus)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": "/Animation/Nyan_Urplus/ult.gif",
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 1500% > 2400% ST [Sát Thương Trực Tiếp Chuyên Biệt]. Bỏ qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] 45% > 60%. [Gia Tốc Chuyên Biệt] tăng tốc độ lên 94% > 98% tốc độ của Nyan.",
+      "icon": "/Skill/Nyan (URplus)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Nyan (URplus)/Keepsake_URplus.png",
+      "type": "Tuyệt kĩ",
+      "animation": "/Animation/Nyan_Urplus/ult.gif",
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Nhận 60% [Giảm Sát Thương Không Bạo Kích] khi vào trận. Xóa toàn bộ debuff [Tăng Sát Thương Áp Chế] và [Giảm Sát Thương Áp Chế] của kẻ địch. Miễn nhiễm [Mê Hoặc]/[Mê Hoặc Chuyên Biệt]. Giảm lượng năng lượng bị trừ đi 2 khi đồng minh chịu mất năng lượng thêm trong 5 lượt đầu. Bản thân có [Tương Hợp Quái Nhân]. — [Tương Hợp Quái Nhân]: Khi kỹ năng core của một nhân vật Monster được kích hoạt, Nyan có thể được tính là bất kỳ nguyên tố nhân vật nào đang thiếu (ví dụ thiếu một suất duelist cho Gyoro Core — Nyan được tính là duelist nên Core kích hoạt, dù Nyan là grappler).",
+      "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] khi vào trận 60% > 70%. Giảm lượng năng lượng bị trừ 2 > 3 khi đồng minh chịu mất năng lượng thêm trong 5 lượt đầu.",
+      "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] khi vào trận 70% > 80%. Giảm lượng năng lượng bị trừ 3 khi đồng minh chịu mất năng lượng thêm trong 5 lượt đầu.",
+      "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi vào trận, nhận 46% [Tốc Độ Chuyên Biệt]. Áp [Liên Kết Sinh Mệnh] lên đồng minh có ST cao nhất trong 6 lượt. Sau khi Nyan chủ động dùng kỹ năng, đồng minh mang [Liên Kết Sinh Mệnh] tung [Truy Kích Tụ Lực] với 80% sức mạnh kỹ năng, tối đa một lần mỗi lượt. — [Liên Kết Sinh Mệnh]: Nyan sẽ không bị hạ gục chừng nào đồng đội mang [Liên Kết Sinh Mệnh] còn sống; nếu họ bị hạ, [Liên Kết Sinh Mệnh] chuyển sang đồng đội có ST cao kế tiếp, tối đa 3 lần. [Truy Kích Tụ Lực]: Thực hiện một chiêu cuối gây ST hoặc hồi máu diện rộng như một đòn truy kích; mục tiêu ngẫu nhiên, không tốn năng lượng.",
+      "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Khi vào trận, nhận [Tốc Độ Chuyên Biệt] 46% > 54%. Đồng minh mang [Liên Kết Sinh Mệnh] tung [Truy Kích Tụ Lực] với 80% > 120% sức mạnh kỹ năng.",
+      "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100312-urplus-600.webp",
+  "debut": "02 / 2026",
+  "keepsakeIcon": "/Keepsake/Nyan (URplus)/Keepsake_URplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Debuff",
+    "Sát Thương (Máu)",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "effects": [
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
+    },
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm lượng sát thương nhận vào từ các đòn đánh không phải chí mạng."
+    },
+    {
+      "term": "[Né Tránh Chuyên Biệt]",
+      "desc": "Bậc PvP của Né Tránh — giảm đòn chuyên biệt về 1 sát thương; bị xuyên bởi hiệu ứng bỏ qua né tránh."
+    },
+    {
+      "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
+      "desc": "Bậc cao cấp của sát thương trực tiếp, chỉ chịu ảnh hưởng của tăng/giảm sát thương cao cấp và xuyên qua phòng thủ thường."
+    },
+    {
+      "term": "[Tăng Tốc Chuyên Biệt]",
+      "desc": "Tăng tốc độ của đồng minh tới gần tốc độ của người triển khai (giữ nguyên nếu đồng minh đã nhanh hơn)."
+    }
+  ],
+  "classLevel": "Dragon",
+  "releaseSea": "01/06/2026",
+  "releaseTrung": "01/02/2026",
+  "imageSrcset": "/Characters/optimized/100312-urplus-360.webp 360w, /Characters/optimized/100312-urplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

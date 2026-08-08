@@ -1,0 +1,96 @@
+{
+  "id": "100074-ssr",
+  "name": "Genos",
+  "tier": "SSR",
+  "type": "Hi-Tech",
+  "faction": "Hero",
+  "roles": [
+    "DMG (ATK)",
+    "Support",
+    "Core"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 406,
+    "hp": 2435,
+    "def": 103,
+    "spd": 97
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 2 combo strikes to a single target for 90% ATK(+5) DMG each.",
+      "icon": "/Skill/Genos (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 2 combo strikes to all enemies, dealing DMG equal to 24% of Genos' max HP(+1), with a 100% chance to inflict [Burn] on the main target and those around it for 2 turns (DoT equal to 70% ATK).After casting, Genos loses 70% max HP until the end of the current turn.",
+      "icon": "/Skill/Genos (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 2 combo strikes to all enemies, dealing DMG equal to 32% of Genos' max HP(+1), with a 100% chance to inflict [Burn] on the main target and those around it for 2 turns (DoT equal to 90% ATK).After casting, Genos loses 90% max HP until the end of the current turn.",
+      "icon": "/Skill/Genos (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Genos (SSR)/Keepsake_SSR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20).After taking fatal DMG, triggers [Regeneration] (while an ally is present, recovers 50% HP before Genos' next action to keep fighting, up to 1 time). When [Regeneration] triggers, deals bonus DMG equal to 160% ATK to all enemies.",
+      "icon": "/Skill/Genos (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20).After taking fatal DMG, triggers [Regeneration] (while an ally is present, recovers 75% HP before Genos' next action to keep fighting, up to 1 time). When [Regeneration] triggers, deals bonus DMG equal to 180% ATK to all enemies.",
+      "icon": "/Skill/Genos (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20).After taking fatal DMG, triggers [Regeneration] (while an ally is present, recovers 75% HP before Genos' next action to keep fighting, up to 2 times). When [Regeneration] triggers, deals bonus DMG equal to 200% ATK to all enemies.",
+      "icon": "/Skill/Genos (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100074-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Genos (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Thiêu Đốt]",
+      "desc": "Continuous fire damage over time to the target."
+    },
+    {
+      "term": "[Regeneration]",
+      "desc": "Restores Health over time or before the unit's next action."
+    }
+  ],
+  "releaseDate": "01/06/2021",
+  "classLevel": "Class_S",
+  "releaseSea": "01/05/2021",
+  "releaseTrung": "01/01/2021",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100074-ssr-360.webp 360w, /Characters/optimized/100074-ssr-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

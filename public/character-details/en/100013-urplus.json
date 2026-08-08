@@ -1,0 +1,148 @@
+{
+  "id": "100013-urplus",
+  "name": "Zombieman",
+  "imageURL": "/Characters/optimized/100013-urplus-600.webp",
+  "tier": "UR+",
+  "type": "Duelist",
+  "faction": "Hero",
+  "roles": [
+    "AoE Blind",
+    "Immortal Vanguard"
+  ],
+  "duyen": "Heavy Vanguard",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals a 3-hit combo to a single target for 120% ATK DMG.",
+      "animation": "/Animation/Zombie_Man_Urplus/Base.gif",
+      "type": "Basic",
+      "icon": "/Skill/Source/100013-urplus/basic.webp",
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals a 5-hit combo to an entire enemy row for 4500% ATK [Specialized Direct DMG] (affected only by advanced DMG modifiers), ignoring 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and penetrating [Unyielding] and [Specialized Unyielding]. In the first 6 rounds, casting the Ultimate has a 120% chance to inflict [Blind] on the main target and 1 random enemy for 1 round. ———- [Blind]: lowers [Arena DMG Reduction] by 20%, prevents using the Ultimate and chasing; at most 2 can coexist; counts as a [Stun]-type effect.",
+      "icon": "/Skill/Zombieman (URplus)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": "/Animation/Zombie_Man_Urplus/ult.gif",
+      "keepsakeIcon": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Additionally grants all allies 15% [Rage] and [Break Armor]. [Specialized Direct DMG] 4500% > 6000% ATK; ignores [Specialized Evasion] and [Non-Crit DMG Reduction] 45% > 60%. The [Blind] window extends to the first 6 > 7 rounds with chance 120% > 180%, and [Blind] lowers [Arena DMG Reduction] 20% > 30%.",
+      "keepsakeIcon": "/Keepsake/Zombieman (URplus)/Keepsake_URplus.png",
+      "icon": "/Skill/Zombieman (URplus)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": "/Animation/Zombie_Man_Urplus/ult.gif",
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently gains +20 Max HP. On entry, gains 60% [Non-Crit DMG Reduction] and becomes immune to [Blind]. Before any character acts, dispels [Stun], [Specialized Stun], [Deterrent] and [Silence] from all allies. At the start of Round 3, clears [Life Link] from all enemies. During the first 4 rounds, same-column allies cast their Ultimate for 0 Energy.",
+      "icon": "/Skill/Zombieman (URplus)/Skill_pas.png",
+      "animation": "/Animation/Zombie_Man_Urplus/Passive.gif",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Non-Crit DMG Reduction] on entry 60% > 70%. Free-cost Ultimate window 4 > 5 rounds.",
+      "icon": "/Skill/Zombieman (URplus)/Skill_pas.png",
+      "animation": "/Animation/Zombie_Man_Urplus/Passive.gif",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Non-Crit DMG Reduction] on entry 70% > 80%. Free-cost Ultimate window 5 > 6 rounds.",
+      "icon": "/Skill/Zombieman (URplus)/Skill_pas.png",
+      "animation": "/Animation/Zombie_Man_Urplus/Passive.gif",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "On taking fatal damage, triggers [Specialized Regeneration]. ———- [Specialized Regeneration]: On entry, permanently reduces damage taken by 30%. While allies are present, before the user's next action, the user fully heals and keeps fighting, raising own ATK by 15% and Max HP by 30% (stackable), up to 3 triggers. After triggering, the user takes no damage until the end of their own action.",
+      "icon": "/Skill/Zombieman (URplus)/zombie_skill_awk.png",
+      "animation": "/Animation/Zombie_Man_Urplus/awken+.gif",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Damage reduction 30% > 60%. Max triggers 3 > 4. Additionally, when a same-row ally triggers [Re-Battle] while the user is in [Specialized Regeneration], launch [Charged Pursuit] at 120% skill power.",
+      "icon": "/Skill/Zombieman (URplus)/zombie_skill_awk.png",
+      "animation": "/Animation/Zombie_Man_Urplus/awken+.gif",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Zombieman (URplus)/zombie_skill_awk.png",
+      "animation": "/Animation/Zombie_Man_Urplus/awken+.gif",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Blind]",
+      "desc": "20% off Arena DMG Free, can't use ultimate, can't attack. Maximum 2 layers; Counts as a stun type effect."
+    },
+    {
+      "term": "[Revive]",
+      "desc": "The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match."
+    },
+    {
+      "term": "[Link]",
+      "desc": "Attach deployer's life to an ally; cannot be defeated as long as that ally is alive."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+    },
+    {
+      "term": "[Spec. Regeneration]",
+      "desc": "When entering battle, permanently reduces damage; While allies remain, heal to full health and continue fighting a limited number of times."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Zombieman (URplus)/Keepsake_URplus.png",
+  "bio": "A new URplus awakening of Zombieman — the “Heavy Vanguard” (重装先锋): an undying Duelist frontline that cleanses crowd-control for the team, blinds and pierces enemy defenses, and revives with stacking ATK/HP. CV: Takahiro Sakurai.",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "REVIVE",
+    "SUPPORT",
+    "DISPEL EFFECTS",
+    "BLIND",
+    "REMOVE LINK",
+    "TRUY KÍCH"
+  ],
+  "bondList": "Clone 1 + Paquino Family",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/11/2026",
+  "releaseTrung": "01/07/2026",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100013-urplus-360.webp 360w, /Characters/optimized/100013-urplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

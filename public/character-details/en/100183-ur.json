@@ -1,0 +1,139 @@
+{
+  "id": "100183-ur",
+  "name": "Suiryu",
+  "imageURL": "/Characters/optimized/100183-ur-600.webp",
+  "tier": "UR",
+  "type": "Grappler",
+  "faction": "Martial Artist",
+  "roles": [
+    "Main DPS (ATK)"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 2 consecutive strikes to a single target for 120% ATK, with a 100% chance to inflict [Internal Injury] (deals 100% of Suiryu's ATK when the target attacks, then disappears once triggered).",
+      "icon": "/Skill/Suiryu (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Attacks an entire row of enemies with 5 consecutive strikes for 400% ATK.Triggers [Breakthrough] (cancels [Specialized Unyielding], once per attack).Has a 75% chance to inflict [Internal Injury] on the main target and 3 random enemies (deals 600% of Suiryu's ATK when the target attacks, then disappears once triggered).Grants himself [Specialized Guard] equal to 400% ATK.",
+      "icon": "/Skill/Suiryu (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Ultimate DMG 400% → 600%[Internal Injury] chance 75% → 90%[Internal Injury] DMG 600% → 750%Self [Specialized Guard] 400% → 600%",
+      "keepsakeIcon": "/Keepsake/Suiryu (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Suiryu (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently grants himself 50% Injury Boost.Grants himself 50% Non-Crit DMG Free, lasting 4 turns.After taking Fatal DMG, recovers 50% max HP, once per battle.",
+      "icon": "/Skill/Suiryu (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Injury Boost 50% → 65%Recover after Fatal DMG 1x → 2x",
+      "icon": "/Skill/Suiryu (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Injury Boost 65% → 80%Self Non-Crit DMG Free 50% → 60%Healing after Fatal DMG 50% → 80%",
+      "icon": "/Skill/Suiryu (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "After casting Ultimate, launches [Continuous Follow-Up] to 2 random enemies with [Internal Injury] (100% of Ultimate DMG and effect, if less than 2 enemies, can Follow-up on the same target). Immune to [Adhesion/Paralyzed]",
+      "icon": "/Skill/Suiryu (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Continuous Follow-up to 2 enemies > 3 enemies Follow-up if less than 2 enemies > 3 enemies Additional: After recovering from [Specialized Unyielding], launches [Continuous Follow-up] to 2 random enemies (80% of Ultimate DMG and 100% of Ultimate effect, if less than 2 enemies, can Follow-up on the same target).",
+      "icon": "/Skill/Suiryu (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Suiryu (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Spec. Unyielding]",
+      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+    },
+    {
+      "term": "[Spec. Guard]",
+      "desc": "PvP-tier shields absorb incoming damage, granted at a value based on Attack (e.g. 400% ATK)."
+    },
+    {
+      "term": "[Internal Injury]",
+      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+    },
+    {
+      "term": "[Breakthrough]",
+      "desc": "Removes the target's Resilience shield and increases the attack for that attack."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Suiryu (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/09/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "DMG (HP)",
+    "Generate Shield"
+  ],
+  "classLevel": "Martial_Artist",
+  "releaseSea": "01/01/2024",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100183-ur-360.webp 360w, /Characters/optimized/100183-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,122 @@
+{
+  "id": "100185-ur",
+  "name": "Metal Bat",
+  "roles": [
+    "DMG (HP)",
+    "Generate Shield"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 104
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Attacks a single target with 3 consecutive strikes for 135% ATK.",
+      "icon": "/Skill/Metal Bat (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Increases Crit DMG by 30% for 1 turn.Deals 105% of max HP as Direct DMG to a column target with 3 consecutive strikes, plus additional Specialized Extra DMG equal to 120% of original max HP (extra Crit DMG applies).[Aura] increases Specialized Extra DMG by 20%.",
+      "icon": "/Skill/Metal Bat (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Crit DMG 30% → 50%Max HP DMG 105% → 135%Specialized Extra DMG 120% → 140%[Aura] increase 20% → 25%",
+      "icon": "/Skill/Metal Bat (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Metal Bat (UR)/Keepsake_UR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently gains 60% Non-Crit DMG Free (damage reduction includes all damage types; cannot coexist with Agility).Increases 1500 Energy before taking action.",
+      "icon": "/Skill/Metal Bat (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Non-Crit DMG Free 60% → 65%Energy increase 1500 → 2000",
+      "icon": "/Skill/Metal Bat (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Non-Crit DMG Free 65% → 70%Energy increase 2000 → 2500",
+      "icon": "/Skill/Metal Bat (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "At the beginning of the round, 200% of Metal Bat's Max HP and 80% of Max HP of allies in the same row is recovered, lasts up to 4 rounds. Before any character takes action, the life armor he possess will be permanently increased by [Aura] (1 layer of armor equals to 1 layer of aura, up to 4 layers, calculated based on the highest number of layers of own armor). Own Crit hit rate is permanently increased by 50% and the Crit hit rate of allies is permanently increased by 30%.",
+      "icon": "/Skill/Metal Bat (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Max HP Recovered 200% > 250% Max HP Recovered (allies) 80% > 120% Aura max layers 4 > 6 Crit hit rate 50% > 70% Crit hit rate (allies) 30% > 50%",
+      "icon": "/Skill/Metal Bat (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Metal Bat (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "UR",
+  "imageURL": "/Characters/optimized/100185-ur-600.webp",
+  "type": "Duelist",
+  "faction": "Hero",
+  "debut": "11 / 2023",
+  "keepsakeIcon": "/Keepsake/Metal Bat (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/11/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (HP)",
+    "Generate Shield"
+  ],
+  "effects": [],
+  "classLevel": "Class_S",
+  "releaseSea": "01/03/2024",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100185-ur-360.webp 360w, /Characters/optimized/100185-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

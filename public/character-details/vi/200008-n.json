@@ -1,0 +1,82 @@
+{
+  "id": "200008-n",
+  "name": "Don Pacino",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 164,
+    "hp": 981,
+    "def": 41,
+    "spd": 81
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Đánh liên kích 2 lần vào mục tiêu đơn, gây 40% ST (+5) sát thương.",
+      "icon": "/Skill/Don Pacino (N)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Đánh liên kích 2 lần vào cả hàng mục tiêu, gây 60% ST (+5) sát thương.",
+      "icon": "/Skill/Don Pacino (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Đánh liên kích 2 lần vào cả hàng mục tiêu, gây 70% ST (+5) sát thương.",
+      "icon": "/Skill/Don Pacino (N)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Don Pacino (N)/Keepsake_N.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước khi hành động, tăng Tỷ Lệ Bạo Kích 5% cho bản thân trong 1 lượt.",
+      "icon": "/Skill/Don Pacino (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước khi hành động, tăng Tỷ Lệ Bạo Kích 8% cho bản thân trong 1 lượt.",
+      "icon": "/Skill/Don Pacino (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước khi hành động, tăng Tỷ Lệ Bạo Kích 10% cho bản thân trong 1 lượt.",
+      "icon": "/Skill/Don Pacino (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "N",
+  "imageURL": "/Characters/optimized/200008-n-600.webp",
+  "type": "Vũ Trang",
+  "faction": "Tội Phạm",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Don Pacino (N)/Keepsake_N.png",
+  "effects": [],
+  "classLevel": "Outlaw",
+  "classIcon": "/Class/Outlaw.png",
+  "imageSrcset": "/Characters/optimized/200008-n-360.webp 360w, /Characters/optimized/200008-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 676
+}

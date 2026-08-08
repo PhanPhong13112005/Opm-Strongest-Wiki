@@ -1,0 +1,144 @@
+{
+  "id": "100182-ur",
+  "name": "G4",
+  "imageURL": "/Characters/optimized/100182-ur-600.webp",
+  "tier": "UR",
+  "type": "Hi-Tech",
+  "faction": "Monster",
+  "roles": [
+    "DoT & Guard Recovery"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Attacks a single target with 2 hit combo for 120% ATK DMG. 100% chance to inflict [Crash Bad] for 2 turns (injury-free rate reduced by 20%).",
+      "icon": "/Skill/G4 (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Attacks enemies in the entire row with 3 hit combo for 420% ATK DMG. Each hit has a 100% chance to apply 1 stack of [Specialized Burn] (deals DoT equal to 150% ATK, disappearing after 3 times. After any enemy takes action, it spreads to others that do not have this effect).",
+      "icon": "/Skill/G4 (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "ATK 420% → 600%. [Specialized Burn] DoT 150% → 200%. Grants 20% Non-crit DMG reduction to all allies for 2 turns.",
+      "keepsakeIcon": "/Keepsake/G4 (UR)/Keepsake_UR.png",
+      "icon": "/Skill/G4 (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "At the start of battle, grants 50% DoT increase to all allies, lasting up to 4 turns. After [Specialized Burn] and [Detonate] deal DMG to enemies, G4 and his same-row allies recover 40% of DMG dealt as [Specialized Guard].",
+      "icon": "/Skill/G4 (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "DoT increase 50% → 65%. Recover [Specialized Guard] 40% → 50%.",
+      "icon": "/Skill/G4 (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "DoT increase 65% → 80%. Recover [Specialized Guard] 50% → 60%.",
+      "icon": "/Skill/G4 (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "At the start of the battle, all enemies will be inflicted with [Specialized Burn] (This effect is unaffected by Hit, deals continuous damage for 150% ATK that will disappear after 3 times. After any enemy takes action, it will spread to others that does not have this effect). Before any character action, clear [Stun] or [Specialized Stun] of 1 ally up to 2 times per round. After any character action, for every enemy that is in [Specialized Burn] state, increase 10% ATK of allies, can be stacked up to 3 times for 1 round.",
+      "icon": "/Skill/G4 (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "At the start of battle > For the first 3 rounds Dispel stun 2x per round > 3x Increase allies atk 10% > 15% Self gain permanent immunity to Stun/S.Stun",
+      "icon": "/Skill/G4 (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/G4 (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Spec. Stun]",
+      "desc": "PvP tier of Stun — harder to resist or resolve."
+    },
+    {
+      "term": "[Stun]",
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+    },
+    {
+      "term": "[Spec. Guard]",
+      "desc": "PvP-tier shields absorb incoming damage, granted at a value based on Attack (e.g. 400% ATK)."
+    },
+    {
+      "term": "[Detonate]",
+      "desc": "Activate a stack of damage over time or stored [Collapse] to instantly explode, turning it into an instant multiplier (e.g. 3 times the stored damage)."
+    },
+    {
+      "term": "[Spec. Burn]",
+      "desc": "Burning PvP tier — stronger burst damage, harder to deal with."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/G4 (UR)/Keepsake_UR.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "releaseTrung": "01/08/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "Generate Shield",
+    "Speed"
+  ],
+  "classLevel": "Demon",
+  "releaseSea": "01/12/2023",
+  "imageSrcset": "/Characters/optimized/100182-ur-360.webp 360w, /Characters/optimized/100182-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 680
+}

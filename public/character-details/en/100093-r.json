@@ -1,0 +1,81 @@
+{
+  "id": "100093-r",
+  "name": "Sourface",
+  "imageURL": "/Characters/optimized/100093-r-600.webp",
+  "tier": "R",
+  "type": "Grappler",
+  "faction": "Martial Artist",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 161,
+    "hp": 963,
+    "def": 41,
+    "spd": 80
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 80% ATK DMG to a single target.",
+      "icon": "/Skill/Sourface (R)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 60% ATK DMG to a single target, and self enters [Berserk] state (increases DMG dealt when attacking by 30%).",
+      "icon": "/Skill/Sourface (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 60% ATK DMG to a single target, and self enters [Berserk] state (increases DMG dealt when attacking by 35%).",
+      "keepsakeIcon": "/Keepsake/Sourface (R)/Keepsake_R.png",
+      "icon": "/Skill/Sourface (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own max HP by 20%. Whenever a critical hit is triggered, adds extra DMG equal to 40% ATK.",
+      "icon": "/Skill/Sourface (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own max HP by 20%. Whenever a critical hit is triggered, adds extra DMG equal to 50% ATK.",
+      "icon": "/Skill/Sourface (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own max HP by 20%. Whenever a critical hit is triggered, adds extra DMG equal to 55% ATK.",
+      "icon": "/Skill/Sourface (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Sourface (R)/Keepsake_R.png",
+  "classLevel": "Martial_Artist",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100093-r-360.webp 360w, /Characters/optimized/100093-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 684
+}

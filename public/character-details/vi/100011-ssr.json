@@ -1,0 +1,99 @@
+{
+  "id": "100011-ssr",
+  "name": "Samurai Nguyên Tử",
+  "imageURL": "/Characters/optimized/100011-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Sụp Đổ",
+    "Truy Kích Vũ Trang"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 392,
+    "hp": 2351,
+    "def": 99,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 130% ST (+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Atomic Samurai (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 20% ST (+2) sát thương lên toàn bộ địch bằng 5 liên kích. Đòn đầu tiên có 50% tỉ lệ khiến mục tiêu [Vỡ Vụn] 2 lượt (giảm 30% tỉ lệ giảm sát thương).",
+      "icon": "/Skill/Atomic Samurai (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 25% ST (+2) sát thương lên toàn bộ địch bằng 5 liên kích. Đòn đầu tiên có 50% tỉ lệ khiến mục tiêu [Vỡ Vụn] 2 lượt (giảm 30% tỉ lệ giảm sát thương).",
+      "keepsakeIcon": "/Keepsake/Atomic Samurai (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Atomic Samurai (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu bản thân. Sau khi đồng minh hệ Vũ Trang tấn công, Atomic Samurai lập tức tung [Truy Kích] (tấn công bằng 80% ST đòn thường và hiệu ứng, tối đa 3 lần mỗi lượt).",
+      "icon": "/Skill/Atomic Samurai (SSR)/Skill_pas.png",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu bản thân. Sau khi đồng minh hệ Vũ Trang tấn công, Atomic Samurai lập tức tung [Truy Kích] (tấn công bằng 120% ST đòn thường và hiệu ứng, tối đa 3 lần mỗi lượt).",
+      "icon": "/Skill/Atomic Samurai (SSR)/Skill_pas.png",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu bản thân. Sau khi đồng minh hệ Vũ Trang tấn công, Atomic Samurai lập tức tung [Truy Kích] (tấn công bằng 130% ST đòn thường và hiệu ứng, tối đa 3 lần mỗi lượt).",
+      "icon": "/Skill/Atomic Samurai (SSR)/Skill_pas.png",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Truy Kích]",
+      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Atomic Samurai (SSR)/Keepsake_SSR.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)"
+  ],
+  "releaseDate": "16/06/2020",
+  "classLevel": "Class_SS",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100011-ssr-360.webp 360w, /Characters/optimized/100011-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,173 @@
+{
+  "id": "100180-urplus",
+  "name": "Lốc Xoáy Kinh Hoàng",
+  "imageURL": "/Characters/optimized/100180-urplus-600.webp",
+  "tier": "UR+",
+  "type": "Tâm Linh",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Xóa sổ Bất khuất",
+    "Hỗ trợ tối thượng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 200% ST cho mục tiêu đơn.",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 5000% ST sát thương trực tiếp chuyên biệt (chỉ chịu ảnh hưởng bởi Giảm sát thương cấp cao) cho toàn bộ kẻ địch, bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt].Gây [Áp Chế Năng Lượng] cho 3 kẻ địch có ST cao nhất, kéo dài 2 lượt.——— [Áp Chế Năng Lượng]: Khi gây ST lên Máu/[HP Chuyên Biệt], khiến mục tiêu kích hoạt 1 lần [Chuyển Hóa Năng Lượng] (giảm ST nhận vào và chuyển hóa thành [Khiên]).",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": "/Animation/Tat_Urplus/ult.gif",
+      "keepsakeIcon": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Nhận 20% [Cuồng Nộ] và [Phá Khiên]. ST 5000% > 7000%. Bỏ qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] 45% > 60%. Gây [Áp Chế Năng Lượng] cho 3 kẻ địch > toàn bộ kẻ địch (đánh dấu 3 lượt).——— [Phá Khiên]: Trong lúc tấn công, bỏ qua 30% Giảm sát thương và Phòng thủ chuyên biệt của kẻ địch.",
+      "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (URplus)/Keepsake_URplus.png",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": "/Animation/Tat_Urplus/ult.gif",
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Khi vào trận, nhận 60% [Giảm Sát Thương Không Bạo Kích], và giảm xuống 0 năng lượng mà đồng minh có ST cao nhất sử dụng khi dùng Tối Thượng.",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] khi vào trận 60% > 70%. Cửa sổ giảm năng lượng 4 > 6 lượt.",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] khi vào trận 70% > 80%. Cửa sổ giảm năng lượng 6 > 8 lượt.",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Cho phép đồng minh Anh hùng/Võ sĩ nhận được [Chuyển Hóa Năng Lượng]. Bản thân nhận 2.5 lần hiệu ứng [Chuyển Hóa Năng Lượng] của đồng minh, và khi kích hoạt [Chuyển Hóa Năng Lượng] không cần [Áp Chế Năng Lượng]. ——— [Chuyển Hóa Năng Lượng]: Khi một kẻ địch có [Áp Chế Năng Lượng] gây ST cho ta, giảm 20% ST, 20% ST gốc được chuyển hóa thành [Kháng Giảm Năng Lượng]",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
+      "type": "Thức tỉnh",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Khi trận đấu bắt đầu, gây [Áp Chế Năng Lượng] cho toàn bộ kẻ địch, kéo dài 1 lượt. [Chuyển Hóa Năng Lượng]: giảm ST 20% > 30% ST gốc được chuyển hóa thành [Kháng Giảm Năng Lượng] 20% > 30%",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
+      "type": "Thức tỉnh",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
+      "type": "Thức tỉnh",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
+    },
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    },
+    {
+      "term": "[Chuyển Hóa Năng Lượng]",
+      "desc": "Khi một kẻ địch mang [Áp Chế Năng Lượng] gây sát thương cho người mang, sát thương giảm 20% và phần bị giảm được chuyển hóa thành năng lượng."
+    },
+    {
+      "term": "[Giảm Sát Thương Bạo Kích]",
+      "desc": "Giảm sát thương nhận từ đòn chí mạng theo một tỷ lệ phần trăm nhất định."
+    },
+    {
+      "term": "[Kiên Cường Năng Lượng]",
+      "desc": "Loại khiên chuyển giá trị tích lũy thành giảm sát thương, giới hạn theo bội số Máu tối đa của đơn vị và không dùng chung được với Hồi Sinh."
+    },
+    {
+      "term": "[Miễn Nhiễm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm mọi sát thương không chí mạng (thường về 1). Không thể tồn tại cùng né tránh loại Agility."
+    },
+    {
+      "term": "[HP Chuyên Biệt]",
+      "desc": "Thanh máu riêng bậc PvP xếp chồng lên máu thường, cũng phải bị hạ và có thể được hồi độc lập."
+    },
+    {
+      "term": "[Né Tránh Chuyên Biệt]",
+      "desc": "Bậc PvP của Né Tránh — giảm đòn chuyên biệt về 1 sát thương; bị xuyên bởi hiệu ứng bỏ qua né tránh."
+    },
+    {
+      "term": "[Phá Khiên]",
+      "desc": "Trong lúc tấn công, bỏ qua 30% Miễn Sát Thương và Phòng Thủ Đặc Hóa của kẻ địch để đòn đánh xuyên qua khiên của chúng."
+    },
+    {
+      "term": "[Phẫn Nộ]",
+      "desc": "Buff tấn công tăng sát thương gây ra của đơn vị, thường đi kèm với [Phá Khiên]."
+    },
+    {
+      "term": "[Tạo Khiên]",
+      "desc": "Rào chắn hấp thụ, thường được tạo từ sát thương chuyển hóa, chịu đòn trước khi máu bị ảnh hưởng."
+    },
+    {
+      "term": "[Áp Chế Năng Lượng]",
+      "desc": "Khi gây sát thương lên máu, buộc mục tiêu kích hoạt Chuyển Hóa Năng Lượng, làm giảm sát thương chúng gây ra và bóp nghẹt nguồn năng lượng của chúng."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (URplus)/Keepsake_URplus.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "ST DIỆN RỘNG KHỦNG",
+    "XUYÊN BẤT KHUẤT",
+    "BUFF 0 NĂNG LƯỢNG",
+    "ỨC CHẾ ĐỊCH",
+    "TẠO KHIÊN"
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/05/2026",
+  "releaseTrung": "01/01/2026",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100180-urplus-360.webp 360w, /Characters/optimized/100180-urplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

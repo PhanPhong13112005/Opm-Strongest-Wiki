@@ -1,0 +1,94 @@
+{
+  "id": "100095-ssr",
+  "name": "Choze",
+  "roles": [
+    "Sát Thương (Công)",
+    "Tốc Độ"
+  ],
+  "duyen": "Monsterized",
+  "baseStats": {
+    "atk": 394,
+    "hp": 2268,
+    "def": 96,
+    "spd": 97
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 50% ST lên mục tiêu đơn với 2 đòn liên kích.",
+      "icon": "/Skill/Choze (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 50% ST lên mục tiêu đơn với 4 đòn liên kích, và gây [Suy Yếu] lên mục tiêu đang Thương Tổn hoặc Nội Thương (giảm 30% ST trong 1 lượt).",
+      "icon": "/Skill/Choze (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 50% ST lên mục tiêu đơn với 4 đòn liên kích, và gây [Suy Yếu] lên mục tiêu đang Thương Tổn hoặc Nội Thương (giảm 40% ST trong 1 lượt).",
+      "icon": "/Skill/Choze (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Choze (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng +20% Máu. Khi tấn công, nếu ST của bản thân cao hơn mục tiêu bị đánh, mục tiêu bị đánh chịu [Nội Thương] (thêm ST Nội Thương bằng 120% ST của Choze khi bị đánh; hiệu ứng biến mất sau khi kích hoạt).",
+      "icon": "/Skill/Choze (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng +20% Máu. Khi tấn công, nếu ST của bản thân cao hơn mục tiêu bị đánh, mục tiêu bị đánh chịu [Nội Thương] (thêm ST Nội Thương bằng 140% ST của Choze khi bị đánh; hiệu ứng biến mất sau khi kích hoạt).",
+      "icon": "/Skill/Choze (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng +20% Máu. Khi tấn công, nếu ST của bản thân cao hơn mục tiêu bị đánh, mục tiêu bị đánh chịu [Nội Thương] (thêm ST Nội Thương bằng 160% ST của Choze khi bị đánh; hiệu ứng biến mất sau khi kích hoạt).",
+      "icon": "/Skill/Choze (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR",
+  "imageURL": "/Characters/optimized/100095-ssr-600.webp",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Choze (SSR)/Keepsake_SSR.png",
+  "class": "Demon",
+  "classIcon": "/Class/Dragon.png",
+  "effects": [
+    {
+      "term": "[Nội Thương]",
+      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+    },
+    {
+      "term": "[Làm Suy Yếu]",
+      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+    }
+  ],
+  "releaseDate": "01/01/2022",
+  "classLevel": "Dragon",
+  "imageSrcset": "/Characters/optimized/100095-ssr-360.webp 360w, /Characters/optimized/100095-ssr-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

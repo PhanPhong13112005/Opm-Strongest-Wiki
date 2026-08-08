@@ -1,0 +1,93 @@
+{
+  "id": "100125-ssr",
+  "name": "Hellfire Flame",
+  "imageURL": "/Characters/optimized/100125-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Duelist",
+  "faction": "Monster",
+  "roles": [
+    "Increase Shield",
+    "Burn"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 391,
+    "hp": 2558,
+    "def": 108,
+    "spd": 95
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 130% ATK DMG (+10) to a single target, and increases own max HP by 20% for 2 turns.",
+      "icon": "/Skill/Hellfire Flame (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Attacks each enemy in the entire row with 3 combo strikes, dealing DMG based on 30% of the main target's max HP (+bonus) (capped at 30% of Hellfire Flame's max HP). Has a 100% chance to inflict [Burn] on the target for 2 turns (DoT equal to 30% ATK).",
+      "icon": "/Skill/Hellfire Flame (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Attacks each enemy in the entire row with 3 combo strikes, dealing DMG based on 40% of the main target's max HP (+bonus) (capped at 40% of Hellfire Flame's max HP). Has a 100% chance to inflict [Burn] on the target for 2 turns (DoT equal to 40% ATK).",
+      "keepsakeIcon": "/Keepsake/Hellfire Flame (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Hellfire Flame (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP (+20). At battle start, grants [Tenacity Boost] to self and surrounding allies for 2 turns (makes [Resilience/Tenacity] absorb DoT and Injury-type DMG: Injury/Internal Injury/Charge). At the start of each turn, grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 20% of Hellfire Flame's HP).",
+      "icon": "/Skill/Hellfire Flame (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP (+20). At battle start, grants [Tenacity Boost] to your entire team for 2 turns (makes [Resilience/Tenacity] absorb DoT and Injury-type DMG: Injury/Internal Injury/Charge). At the start of each turn, grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 25% of Hellfire Flame's HP).",
+      "icon": "/Skill/Hellfire Flame (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP (+20). At battle start, grants [Tenacity Boost] to your entire team for 3 turns (makes [Resilience/Tenacity] absorb DoT and Injury-type DMG: Injury/Internal Injury/Charge). At the start of each turn, grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 30% of Hellfire Flame's HP).",
+      "icon": "/Skill/Hellfire Flame (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Tenacity]",
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+    },
+    {
+      "term": "[Thiêu Đốt]",
+      "desc": "Continuous fire damage over time to the target."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Hellfire Flame (SSR)/Keepsake_SSR.png",
+  "releaseDate": "01/07/2022",
+  "class": "Demon",
+  "classLevel": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "imageSrcset": "/Characters/optimized/100125-ssr-360.webp 360w, /Characters/optimized/100125-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

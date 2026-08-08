@@ -1,0 +1,137 @@
+{
+  "id": "100044-ur",
+  "name": "Drive Knight",
+  "imageURL": "/Characters/optimized/100044-ur-600.webp",
+  "tier": "UR",
+  "type": "Hi-Tech",
+  "faction": "Hero",
+  "roles": [
+    "Control"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK Direct DMG to a single target.",
+      "icon": "/Skill/Drive Knight (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Gains [Damage Immunity] on self (takes only 20% of incoming DMG) and Dispels his own debuffs. Applies [Undying-Suppression] to the target's entire column, then deals HP-scaling Direct DMG equal to 35% ATK plus [True DMG] to that column.",
+      "icon": "/Skill/Drive Knight (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "[Damage Immunity] on self becomes total — incoming DMG taken 20% > 0%. HP-scaling Direct DMG 35% > 45% ATK.",
+      "keepsakeIcon": "/Keepsake/Drive Knight (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Drive Knight (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "On entry, gains +20% HP and +60% Non-Crit DMG Free, and gains [Revenge+] (revives up to 4 times).",
+      "icon": "/Skill/Drive Knight (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Non-Crit DMG Free] 60% &gt; 70%.",
+      "icon": "/Skill/Drive Knight (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Non-Crit DMG Free 70% &gt; 80%. Revival 4 &gt; 5 times.",
+      "icon": "/Skill/Drive Knight (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "Grants himself [Vengeance]. ———- [Vengeance]: If Drive Knight is defeated after any character acts, revives with 80% HP. and launches [Vengeance Follow-up] (150% of Ultimate DMG, does not use energy). Has 4 times of [Revival] at the start of the battle.",
+      "icon": "/Skill/Drive Knight (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Revive HP 80% > 100% Follow-up Dmg 150% > 200%",
+      "icon": "/Skill/Drive Knight (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Drive Knight (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[DMG Immunity]",
+      "desc": "The bearer only takes a portion (e.g. 20%, or 0% when enhanced) of all damage taken."
+    },
+    {
+      "term": "[Resurrect]",
+      "desc": "Status returns downed units to battle, granting a limited number of respawns that anti-revive effects can remove."
+    },
+    {
+      "term": "[True DMG]",
+      "desc": "This type of bonus damage is dealt on top of attacks, is reduced by Evasion-type effects, and can be immune after a certain number of turns."
+    },
+    {
+      "term": "[Revenge]",
+      "desc": "The counterattack state can extend the duration on yourself or shorten it on enemies, granting retaliatory effects."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Drive Knight (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/02/2025",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Speed"
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/06/2025",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100044-ur-360.webp 360w, /Characters/optimized/100044-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

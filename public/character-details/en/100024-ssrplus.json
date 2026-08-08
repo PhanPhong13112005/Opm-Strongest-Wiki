@@ -1,0 +1,145 @@
+{
+  "id": "100024-ssrplus",
+  "name": "Bang",
+  "tier": "SSR+",
+  "type": "Grappler",
+  "faction": "Hero",
+  "roles": [
+    "DMG (ATK)",
+    "Support",
+    "Generate Shield"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 103
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Direct DMG 60% ATK to a single target.",
+      "icon": "/Skill/Bang (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Direct DMG 60% ATK to all enemies. Applies [Armed Collapse] to 3 random enemies.",
+      "icon": "/Skill/Bang (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Direct DMG 60% > 70% ATK to all enemies. Applies [Armed Collapse] to 3 random enemies > all enemies.",
+      "icon": "/Skill/Bang (SSR+)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Bang (SSRplus)/Keepsake_SSRplus.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases HP by (+20). While Round &lt; 3, after taking an action, removes [Energy] from the target enemy (up to once per round; cannot inflict [Fear] on that enemy in the same round after a successful removal). At battle start, permanently gains +30% [Instant DMG Evasion].[Instant DMG Evasion]: Direct DMG, Ex. DMG, Charge DMG, and Berserk DMG each deal only 1 DMG.",
+      "icon": "/Skill/Bang (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Round window .",
+      "icon": "/Skill/Bang (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Round window .",
+      "icon": "/Skill/Bang (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "Whenever Bang attacks, summons Bomb to [Combo Attack] with a similar attack: Basic — deals 100% ATK to a random enemy; Ultimate — 3-hit AoE for 180% ATK. [Combo Attack] uses Bang's ATK as its DMG (Bomb does not need to be on your team).",
+      "icon": "/Skill/Source/100024-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Awakening",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "[Combo Attack] Ultimate ATK 180% > 210%. For each enemy with [Internal Injury], reduces that enemy's [Energy Gauge] by 250.",
+      "icon": "/Skill/Source/100024-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Awakening",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Source/100024-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Awakening",
+      "cost": null,
+      "keepsakeIcon": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100024-ssrplus-600.webp",
+  "debut": "12 / 2021",
+  "keepsakeIcon": "/Keepsake/Bang (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/03/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "Generate Shield"
+  ],
+  "effects": [
+    {
+      "term": "[Energy Cut]",
+      "desc": "Debuff applies to all enemies when their Energy is reduced, blocking or destroying their Energy, making them unable to use their ultimate."
+    },
+    {
+      "term": "[Mark]",
+      "desc": "Mark a unit, unlocking a raid condition or bonus effect associated with the mark."
+    },
+    {
+      "term": "[Insta-Dodge]",
+      "desc": "Floors that each cause a direct, additional, charge, or berserk attack to only deal 1 damage."
+    },
+    {
+      "term": "[Collapse (Duelist)]",
+      "desc": "Unfavorable effects cause delayed damage, storing additional damage (600-800% of Gouketsu's ST), releasing when the target is hit or when [Detonate]."
+    },
+    {
+      "term": "[Cleanse]",
+      "desc": "Removes existing effects/buffs on all enemies."
+    }
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/07/2022",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100024-ssrplus-360.webp 360w, /Characters/optimized/100024-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

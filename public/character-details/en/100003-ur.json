@@ -1,0 +1,138 @@
+{
+  "id": "100003-ur",
+  "name": "Deep Sea King",
+  "tier": "UR",
+  "type": "Grappler",
+  "faction": "Monster",
+  "roles": [
+    "Support",
+    "Core",
+    "DMG (HP)"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 116
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Direct DMG 120% ATK to the target.",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Marks all enemies, then enters [Berserk] scaling with the number of marked enemies (250% ATK per marked enemy). Direct DMG 800% ATK to all enemies, and seals then drains energy from the target.",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Marks all enemies, then enters [Berserk] scaling with the number of marked enemies (250% > 325% ATK per marked enemy). Direct DMG 800% > 1000% ATK to all enemies, and seals then drains energy from the target.",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Deep Sea King (UR)/Keepsake_UR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "+20% Max HP. On entry, gains +60% Crit DMG reduction and +100% [Collapse] DMG.",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Crit DMG reduction 60% > 70%. [Collapse] DMG 100% > 125%.",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Crit DMG reduction 70% > 80%. [Collapse] DMG 125% > 150%.",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When battle begins, [Encourage] the allies. Grants [Specialized DMG Reflect] to all allies for the entire battle. Increase Hit by 50%.\n———- [Encourage]: At the start of each round, gains 2 energy, for 3 rounds. [Specialized DMG Reflect]: Reduce Direct DMG and Extra DMG by 40%, reflects 40% of the original DMG back to the attacker.",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Increase Hit 50% > 70% Gain Energy 2x > 3x For 3 rounds > 5 rounds Reduce Direct/Extra DMG by 40% > 70% DMG Reflect 40% > 70%",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100003-ur-600.webp",
+  "debut": "12 / 2024",
+  "keepsakeIcon": "/Keepsake/Deep Sea King (UR)/Keepsake_UR.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "releaseTrung": "01/12/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Core",
+    "DMG (HP)"
+  ],
+  "effects": [
+    {
+      "term": "[Berserk]",
+      "desc": "Attack buffs increase damage based on conditions (e.g. each marked enemy), amplifying the amount of Fury-type damage the unit deals."
+    },
+    {
+      "term": "[Encourage]",
+      "desc": "Power up at the beginning of each round for several rounds."
+    },
+    {
+      "term": "[Collapse]",
+      "desc": "Damage/disadvantage effect breaks target's defense."
+    }
+  ],
+  "classLevel": "Demon",
+  "releaseSea": "01/04/2025",
+  "imageSrcset": "/Characters/optimized/100003-ur-360.webp 360w, /Characters/optimized/100003-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

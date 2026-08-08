@@ -1,0 +1,141 @@
+{
+  "id": "100089-ssrplus",
+  "name": "Gouketsu",
+  "imageURL": "/Characters/optimized/100089-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Đột Phá",
+    "Chia Sẻ Sát Thương"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 106
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST sát thương trực tiếp lên mục tiêu đơn.",
+      "icon": "/Skill/Gouketsu (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Xóa [Bất Tử] khỏi toàn bộ cột của mục tiêu, sau đó gây 50% ST sát thương trực tiếp cộng thêm Sát thương trực tiếp bổ sung bằng 14% ST lên cột đó.",
+      "icon": "/Skill/Gouketsu (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Thêm vào đó nhận +30% Crit và +30% Crit DMG cho bản thân. Sát thương trực tiếp lên cột 50% > 60% ST, và Sát thương trực tiếp bổ sung 14% > 18% ST.",
+      "keepsakeIcon": "/Keepsake/Gouketsu (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Gouketsu (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Nhận +20% Máu. Khi vào trận, nhận [Tăng HP Tối Đa] tăng HP Tối đa thêm 100% và nhận [Miễn Nhiễm] không thể bị giải. Vào đầu mỗi vòng, hồi 50% HP Tối đa. Vào đầu lượt của bản thân, giải [Choáng] khỏi 2 đồng minh.",
+      "icon": "/Skill/Gouketsu (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Hồi máu đầu vòng 50% > 70% HP Tối đa.",
+      "icon": "/Skill/Gouketsu (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Hồi máu đầu vòng 70% > 90% HP Tối đa. Giải [Choáng] cho 2 > 3 đồng minh.",
+      "icon": "/Skill/Gouketsu (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi trận đấu bắt đầu, triệu hồi 1 con quạ (400% Máu gốc của Gouketsu). Một trong số chúng sẽ chia sẻ 85% sát thương cho đồng minh ở hàng của Gouketsu. Sau khi tiêu hao hết Máu, gây ST phụ trội bằng 30% Máu tối đa của nó lên 3 kẻ địch ngẫu nhiên không đang ở trạng thái [Kiên Cường] nào. Giảm trạng thái [Bất Khuất Cường Hóa] của mục tiêu chính đi 2 hành động.",
+      "icon": "/Skill/Gouketsu (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Triệu hồi quạ 1 > 2",
+      "icon": "/Skill/Gouketsu (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Gouketsu (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    },
+    {
+      "term": "[Bất Tử]",
+      "desc": "Trạng thái sinh tồn giữ người mang sống sót bằng cách giảm mạnh sát thương nhận vào (ví dụ chỉ chịu 20%)."
+    },
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Miễn Nhiễm]",
+      "desc": "Trạng thái khiến người mang không bị ảnh hưởng bởi một hiệu ứng hoặc loại khống chế nhất định, như [Đột Phá], Choáng hay Mê Hoặc."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Gouketsu (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/06/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Hồi Phục",
+    "Tạo Khiên"
+  ],
+  "classLevel": "Dragon",
+  "releaseSea": "01/10/2022",
+  "imageSrcset": "/Characters/optimized/100089-ssrplus-360.webp 360w, /Characters/optimized/100089-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

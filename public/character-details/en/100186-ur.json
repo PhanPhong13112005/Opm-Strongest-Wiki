@@ -1,0 +1,128 @@
+{
+  "id": "100186-ur",
+  "name": "Bom/Bengpu",
+  "imageURL": "/Characters/optimized/100186-ur-600.webp",
+  "tier": "UR",
+  "type": "Grappler",
+  "faction": "Martial Artist",
+  "roles": [
+    "Core"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK, 100% chance to inflict [Internal Injury] (deals 100% of Bomb's ATK when the target is attacked, then disappears after triggering).",
+      "icon": "/Skill/BomBengpu (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Attacks enemies in a row with 6 consecutive strikes, dealing 510% ATK. 100% chance to inflict [Internal Injury] on the main target (deals 500% of Bomb's ATK when attacked, then disappears after triggering).",
+      "icon": "/Skill/BomBengpu (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "ATK 510% → 600%[Internal Injury] ATK 500% → 750%",
+      "keepsakeIcon": "/Keepsake/Bom/Bengpu (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/BomBengpu (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "When battle begins, gains 60% chance of [Evade] (reduces Direct/Extra/Charge/Berserk DMG to 1 DMG), lasting 5 rounds.After any character acts, absorbs 40% of [Internal Injury] DMG on enemies and deals [Specialized Extra DMG] (can Crit, not affected by [Specialized DMG Reflect]) to all enemies.For the first 5 rounds, before any character acts, recovers 500% ATK of HP, 3 times per round.",
+      "icon": "/Skill/BomBengpu (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Evade] chance 60% → 70%[Internal Injury] DMG absorbed 40% → 50%HP recovery 3 times per round → 4 times per round",
+      "icon": "/Skill/BomBengpu (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Evade] duration 5 rounds → 8 rounds[Internal Injury] DMG absorbed 50% → 60%HP recovery 500% → 650%",
+      "icon": "/Skill/BomBengpu (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When Bomb attacks, summons Silverfang to deal [Combo Attack] with the same attack style. Basic - Deals 100% Bomb's ATK damage to a random target. Ultimate - Attacks all enemies with 5 consecutive strikes and deals damage by 150% Bomb's ATK and have 75% chance of inflicting [Internal Injury] on main target (deals 450% of Bomb's ATK when attacked and disappears after triggered)",
+      "icon": "/Skill/BomBengpu (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Silverfang ult dmg 150% > 200% Internal Injury chance 75% > 90% Internal Injury dmg 450% > 600%",
+      "icon": "/Skill/BomBengpu (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/BomBengpu (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Internal Injury]",
+      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Bom/Bengpu (SSR)/Keepsake_SSR.png",
+  "releaseTrung": "01/06/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Core",
+    "Heal",
+    "DMG (HP)",
+    "Generate Shield"
+  ],
+  "classLevel": "Martial_Artist",
+  "releaseSea": "01/10/2024",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100186-ur-360.webp 360w, /Characters/optimized/100186-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 684
+}

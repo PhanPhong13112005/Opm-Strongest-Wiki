@@ -1,0 +1,86 @@
+{
+  "id": "100033-r",
+  "name": "Funeral Suspenders",
+  "imageURL": "/Characters/optimized/100033-r-600.webp",
+  "tier": "R",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 162,
+    "hp": 972,
+    "def": 41,
+    "spd": 86
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 90% ST sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Funeral Suspenders (R)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 130% ST sát thương lên mỗi kẻ địch trong cả cột, với 100% tỉ lệ gây [Suy Yếu] lên mục tiêu chính (giảm 20% ST trong 1 lượt).",
+      "icon": "/Skill/Funeral Suspenders (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 130% ST sát thương lên mỗi kẻ địch trong cả cột, với 100% tỉ lệ gây [Suy Yếu] lên mục tiêu chính (giảm 30% ST trong 1 lượt).",
+      "keepsakeIcon": "/Keepsake/Funeral Suspenders (R)/Keepsake_R.png",
+      "icon": "/Skill/Funeral Suspenders (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng 20 Máu cho bản thân. Khi cùng ra trận với Cross Button, ST của Mourning Overall Pants tăng 20%, kéo dài đến hết trận đấu.",
+      "icon": "/Skill/Funeral Suspenders (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng 20 Máu cho bản thân. Khi cùng ra trận với Cross Button, ST của Mourning Overall Pants tăng 30%, kéo dài đến hết trận đấu.",
+      "icon": "/Skill/Funeral Suspenders (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng 20 Máu cho bản thân. Khi cùng ra trận với Cross Button, ST của Mourning Overall Pants tăng 35%, kéo dài đến hết trận đấu.",
+      "icon": "/Skill/Funeral Suspenders (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Làm Suy Yếu]",
+      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Funeral Suspenders (R)/Keepsake_R.png",
+  "classLevel": "C",
+  "classIcon": "/Class/C.png",
+  "imageSrcset": "/Characters/optimized/100033-r-360.webp 360w, /Characters/optimized/100033-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,130 @@
+{
+  "id": "100308-urplus",
+  "name": "Genos",
+  "imageURL": "/Characters/optimized/100308-urplus-600.webp",
+  "tier": "UR+",
+  "type": "Công Nghệ",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Hạt Nhân"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST trực tiếp lên một mục tiêu đơn.",
+      "icon": "/Skill/Genos (URplus)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 5 đòn liên tiếp gây 5000% ST [Sát Thương Trực Tiếp Chuyên Biệt] lên toàn bộ kẻ địch. Vô hiệu 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt].",
+      "icon": "/Skill/Genos (URplus)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": "/Animation/Genos_Urplus/ult.gif",
+      "keepsakeIcon": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tăng 30% Tỉ lệ Chí mạng trong 1 lượt. Nếu ST cao hơn mục tiêu, có 130% khả năng giảm 2% giảm-ST-Specialized-HP của mục tiêu trong 4 lượt. Sát thương Tối Thượng 5000% > 7000% ST; mức vô hiệu [Khả Năng Né Tránh Chuyên Biệt] 45% > 60%.",
+      "keepsakeIcon": "/Keepsake/Genos (URplus)/Keepsake_URplus.png",
+      "icon": "/Skill/Genos (URplus)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": "/Animation/Genos_Urplus/ult.gif",
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Nhận 60% [Giảm Sát Thương Không Bạo Kích]. Khi có 2 mục tiêu trở xuống, [Sát Thương Trực Tiếp Chuyên Biệt] tăng 30%.",
+      "icon": "/Skill/Genos (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] 60% > 70%. [Sát Thương Trực Tiếp Chuyên Biệt] 30% > 40%.",
+      "icon": "/Skill/Genos (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] 70% > 80%. [Sát Thương Trực Tiếp Chuyên Biệt] 40% > 50%.",
+      "icon": "/Skill/Genos (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Nhận 30% [Giảm Sát Thương Áp Chế]. Đồng minh có [Giảm Sát Thương Áp Chế] và Genos nhận 30% [Tăng Sát Thương Áp Chế]. — [Giảm Sát Thương Áp Chế]: giảm 30% ST nhận vào; khi ATK cao hơn kẻ tấn công, giảm thêm 150%. [Tăng Sát Thương Áp Chế]: tăng 30% ST gây ra; khi ATK cao hơn mục tiêu, tăng thêm 150%.",
+      "icon": "/Skill/Genos (URplus)/skill_awk.png",
+      "type": "Thức tỉnh",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "[Giảm Sát Thương Áp Chế] 30% > 40% (khi ATK cao hơn kẻ tấn công, 150% > 170%). [Tăng Sát Thương Áp Chế] 30% > 40% (khi ATK cao hơn mục tiêu, 150% > 170%).",
+      "icon": "/Skill/Genos (URplus)/skill_awk.png",
+      "type": "Thức tỉnh",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Genos (URplus)/skill_awk.png",
+      "type": "Thức tỉnh",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Miễn Nhiễm Sát Thương Khống Chế]",
+      "desc": "Hiệu ứng phòng thủ giảm sát thương nhận vào (30–40%), tăng lên mức giảm 150–170% khi ST của người mang cao hơn kẻ tấn công."
+    },
+    {
+      "term": "[Tăng Sát Thương Khống Chế]",
+      "desc": "Buff tấn công cho 30-40% năng lượng và tăng sát thương, tăng thêm 150-170% khi Tấn công của người mang cao hơn mục tiêu."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Genos (URplus)/Keepsake_URplus.png",
+  "releaseTrung": "01/10/2025",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Hạt Nhân"
+  ],
+  "classLevel": "Class_S",
+  "releaseSea": "01/02/2026",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100308-urplus-360.webp 360w, /Characters/optimized/100308-urplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

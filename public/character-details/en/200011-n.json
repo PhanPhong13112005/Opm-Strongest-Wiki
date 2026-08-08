@@ -1,0 +1,82 @@
+{
+  "id": "200011-n",
+  "name": "Subterranean Brute",
+  "imageURL": "/Characters/optimized/200011-n-600.webp",
+  "tier": "N",
+  "type": "Grappler",
+  "faction": "Monster",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 153,
+    "hp": 918,
+    "def": 39,
+    "spd": 82
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 80% ATK(+10) DMG to a single target.",
+      "icon": "/Skill/Subterranean Brute (N)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 180% ATK(+10) DMG to a single target.",
+      "icon": "/Skill/Subterranean Brute (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 200% ATK(+10) DMG to a single target.",
+      "keepsakeIcon": "/Keepsake/Subterranean Brute (N)/Keepsake_N.png",
+      "icon": "/Skill/Subterranean Brute (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). Before each action, increases own DMG by 10% for 1 turn.",
+      "icon": "/Skill/Subterranean Brute (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). Before each action, increases own DMG by 15% for 1 turn.",
+      "icon": "/Skill/Subterranean Brute (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). Before each action, increases own DMG by 18% for 1 turn.",
+      "icon": "/Skill/Subterranean Brute (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Subterranean Brute (N)/Keepsake_N.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/200011-n-360.webp 360w, /Characters/optimized/200011-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 660
+}

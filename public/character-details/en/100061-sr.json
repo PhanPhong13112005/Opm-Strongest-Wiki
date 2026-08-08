@@ -1,0 +1,88 @@
+{
+  "id": "100061-sr",
+  "name": "Sky King",
+  "imageURL": "/Characters/optimized/100061-sr-600.webp",
+  "tier": "SR",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Increase DMG",
+    "Stun"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 178,
+    "hp": 1069,
+    "def": 45,
+    "spd": 93
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 100% ATK (+10) damage to a single target.",
+      "icon": "/Skill/Sky King (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 35% ATK (+2) damage to each enemy in the entire column in 4 hit combos, with a 50% chance to [Stun] the main target for 1 turn (cannot take actions; only 4 characters on each side can be in a stun-type state at the same time).",
+      "icon": "/Skill/Sky King (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 35% ATK (+2) damage to each enemy in the entire column in 4 hit combos, with a 50% chance to [Stun] the main target for 1 turn (cannot take actions; only 4 characters on each side can be in a stun-type state at the same time), and raises the Effect Resistance of allies in the same column by 40% for 2 turns.",
+      "keepsakeIcon": "/Keepsake/Sky King (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Sky King (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own max HP by (+20). When battle begins, grants all allies 20% Bonus DMG for 2 turns.",
+      "icon": "/Skill/Sky King (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own max HP by (+20). When battle begins, grants all allies 30% Bonus DMG for 2 turns.",
+      "icon": "/Skill/Sky King (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own max HP by (+20). When battle begins, grants all allies 35% Bonus DMG for 2 turns.",
+      "icon": "/Skill/Sky King (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Stun]",
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Sky King (SR)/Keepsake_SR.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "classLevel": "Demon",
+  "imageSrcset": "/Characters/optimized/100061-sr-360.webp 360w, /Characters/optimized/100061-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,149 @@
+{
+  "id": "100003-ssrplus",
+  "name": "Deep Sea King",
+  "imageURL": "/Characters/optimized/100003-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Grappler",
+  "faction": "Monster",
+  "roles": [
+    "Spec. Corrode",
+    "Breakthrough",
+    "Nullify Follow-up"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 104
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 100% ATK Direct DMG to a single target, then inflicts [Corrosion] on it.",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 210% ATK Direct DMG to a single target, gains [Unyielding] (cannot be reduced below 1 HP), inflicts [Corrosion] across the selected area, and heals himself.",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Direct DMG 210% > 260% ATK. Still gains [Unyielding], spreads [Corrosion] over the selected area, and self-heals.",
+      "keepsakeIcon": "/Keepsake/Deep Sea King (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Gains +20% HP. At the end of his turn, if any enemy is afflicted by a DoT, deals 60% ATK Extra DMG to all enemies.",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Extra DMG 60% > 80% ATK.",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Extra DMG 80% > 86% ATK.",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "Causes enemies with [Specialized Corrode] to be [Stuck] (Unable to launch [Follow-up] and [Consecutive Follow-up], lasts for 2 rounds) After any ally acts, has a 60% chance of inflicting [Combo Follow-up] to a random enemy (Deep Sea King and ally in the same column will launch [Ultimate Follow-up], once per round)",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Proc chance 60% > 70% Combo Follow-up per round 1x > 2x",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Adhere]",
+      "desc": "Control status prevents the target from casting [Follow-up] and [Consecutive Follow-up], usually for 2 turns."
+    },
+    {
+      "term": "[Unyielding]",
+      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+    },
+    {
+      "term": "[Chain Follow-up]",
+      "desc": "Extra attacks outside of turn (usually after an ally acts) apply a portion of the ultimate's ST and effects to a random target, at no mana cost."
+    },
+    {
+      "term": "[Ult Follow-up]",
+      "desc": "Out of turn attacks deal 70% of the ultimate's damage and effects, without consuming mana, up to 3 times per round."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+    },
+    {
+      "term": "[Corrode]",
+      "desc": "Corrosive damage over time effect, each turn dealing damage equal to a percentage of ST (e.g. 300%) to the target."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Deep Sea King (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "releaseTrung": "01/09/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Core",
+    "DMG (HP)"
+  ],
+  "classLevel": "Demon",
+  "releaseSea": "01/01/2023",
+  "imageSrcset": "/Characters/optimized/100003-ssrplus-360.webp 360w, /Characters/optimized/100003-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

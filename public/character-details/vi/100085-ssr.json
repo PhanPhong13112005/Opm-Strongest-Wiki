@@ -1,0 +1,97 @@
+{
+  "id": "100085-ssr",
+  "name": "Vaccine Man V2",
+  "tier": "SSR",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Sát Thương (Công)",
+    "Sát Thương (Máu)",
+    "Hồi Sinh"
+  ],
+  "duyen": "Awakened",
+  "baseStats": {
+    "atk": 391,
+    "hp": 2578,
+    "def": 109,
+    "spd": 96
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung 2 đòn liên kích lên mục tiêu đơn gây 60% ST, với 100% tỉ lệ khiến mục tiêu dính [Trường Lực] trong 1 lượt.[Trường Lực]: Chịu ST theo thời gian bằng 150% ST trước khi hành động.",
+      "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 3 đòn liên kích lên toàn bộ địch gây 50% ST; nếu đang ở trạng thái [Khổng Lồ] thì tăng Tăng ST theo thời gian thêm 50%. Có 100% tỉ lệ khiến toàn bộ địch dính [Trường Lực] trong 1 lượt.[Trường Lực]: Chịu ST theo thời gian bằng 160% ST trước khi hành động.",
+      "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung 3 đòn liên kích lên toàn bộ địch gây 60% ST; nếu đang ở trạng thái [Khổng Lồ] thì tăng Tăng ST theo thời gian thêm 50%. Có 100% tỉ lệ khiến toàn bộ địch dính [Trường Lực] trong 1 lượt.[Trường Lực]: Chịu ST theo thời gian bằng 230% ST trước khi hành động.",
+      "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Vaccine Man V2 (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Sau hành động của bất kỳ nhân vật nào, [Kích Nổ] toàn bộ [Các Lĩnh Vực] địch 3 lần/lượt (chuyển ngay ST gốc thành 100% ST Detonation). Sau Detonation, vào trạng thái [Khổng Lồ]. Hồi sinh với 50% Máu tối đa sau khi nhận sát thương chí mạng (tối đa 2 lần).",
+      "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "ST Detonation 100% &gt; 110%. Máu hồi sinh 50% &gt; 60% Máu tối đa.",
+      "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "ST Detonation 110% &gt; 120%. Máu hồi sinh 60% &gt; 80% Máu tối đa.",
+      "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100085-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Vaccine Man V2 (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "effects": [
+    {
+      "term": "[Kích Nổ]",
+      "desc": "Kích hoạt một tầng sát thương theo thời gian hoặc [Sụp Đổ] đang tích trữ để nổ ngay, biến nó thành một đòn tức thời nhân lên (ví dụ 3 lần sát thương tích trữ)."
+    },
+    {
+      "term": "[Trường Lực]",
+      "desc": "Vùng gây sát thương theo thời gian của Tatsumaki; mỗi khi kẻ địch chịu sát thương Lực Trường sẽ tích một tầng Charge (tối đa 4 tầng)."
+    }
+  ],
+  "releaseDate": "01/05/2022",
+  "classLevel": "Dragon",
+  "releaseSea": "01/12/2021",
+  "releaseTrung": "01/08/2021",
+  "imageSrcset": "/Characters/optimized/100085-ssr-360.webp 360w, /Characters/optimized/100085-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

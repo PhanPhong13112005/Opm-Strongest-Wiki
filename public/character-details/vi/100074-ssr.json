@@ -1,0 +1,96 @@
+{
+  "id": "100074-ssr",
+  "name": "Genos",
+  "tier": "SSR",
+  "type": "Công Nghệ",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hỗ Trợ",
+    "Hạt Nhân"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 406,
+    "hp": 2435,
+    "def": 103,
+    "spd": 97
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung 2 liên kích lên mục tiêu đơn, mỗi đòn gây 90% ST(+5) sát thương.",
+      "icon": "/Skill/Genos (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 2 liên kích lên toàn bộ địch, gây sát thương bằng 24% Máu tối đa(+1) của Genos, với 100% khả năng gây [Thiêu Đốt] lên mục tiêu chính và các mục tiêu xung quanh trong 2 lượt (sát thương theo thời gian bằng 70% ST).Sau khi thi triển, Genos mất 70% Máu tối đa cho đến khi kết thúc lượt hiện tại.",
+      "icon": "/Skill/Genos (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung 2 liên kích lên toàn bộ địch, gây sát thương bằng 32% Máu tối đa(+1) của Genos, với 100% khả năng gây [Thiêu Đốt] lên mục tiêu chính và các mục tiêu xung quanh trong 2 lượt (sát thương theo thời gian bằng 90% ST).Sau khi thi triển, Genos mất 90% Máu tối đa cho đến khi kết thúc lượt hiện tại.",
+      "icon": "/Skill/Genos (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Genos (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Tăng vĩnh viễn (+20) Máu cho bản thân.Sau khi chịu sát thương chí tử, kích hoạt [Tái Sinh] (khi có đồng minh hiện diện, hồi 50% Máu trước lượt hành động kế tiếp của bản thân để tiếp tục chiến đấu, tối đa 1 lần). Khi [Tái Sinh] kích hoạt, gây sát thương phụ trội bằng 160% ST lên toàn bộ địch.",
+      "icon": "/Skill/Genos (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Tăng vĩnh viễn (+20) Máu cho bản thân.Sau khi chịu sát thương chí tử, kích hoạt [Tái Sinh] (khi có đồng minh hiện diện, hồi 75% Máu trước lượt hành động kế tiếp của bản thân để tiếp tục chiến đấu, tối đa 1 lần). Khi [Tái Sinh] kích hoạt, gây sát thương phụ trội bằng 180% ST lên toàn bộ địch.",
+      "icon": "/Skill/Genos (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Tăng vĩnh viễn (+20) Máu cho bản thân.Sau khi chịu sát thương chí tử, kích hoạt [Tái Sinh] (khi có đồng minh hiện diện, hồi 75% Máu trước lượt hành động kế tiếp của bản thân để tiếp tục chiến đấu, tối đa 2 lần). Khi [Tái Sinh] kích hoạt, gây sát thương phụ trội bằng 200% ST lên toàn bộ địch.",
+      "icon": "/Skill/Genos (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100074-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Genos (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Thiêu Đốt]",
+      "desc": "Sát thương lửa liên tục theo thời gian lên mục tiêu."
+    },
+    {
+      "term": "[Hồi Phục]",
+      "desc": "Hồi Máu theo thời gian hoặc trước hành động kế tiếp của đơn vị."
+    }
+  ],
+  "releaseDate": "01/06/2021",
+  "classLevel": "Class_S",
+  "releaseSea": "01/05/2021",
+  "releaseTrung": "01/01/2021",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100074-ssr-360.webp 360w, /Characters/optimized/100074-ssr-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

@@ -1,0 +1,93 @@
+{
+  "id": "100059-ssr",
+  "name": "Geryuganshoop",
+  "tier": "SSR",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hỗ Trợ",
+    "Suy Yếu"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 367,
+    "hp": 2203,
+    "def": 93,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 40% ST (+3) sát thương cho mục tiêu đơn với 3 liên kích. Sau khi hành động, ngẫu nhiên đưa một đồng minh vào trạng thái [Cuồng Nộ] (tăng 30% sát thương khi tấn công).",
+      "icon": "/Skill/Geryuganshoop (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 26% ST (+2) sát thương cho mỗi kẻ địch trong cả hàng với 5 liên kích, và khiến kẻ địch rơi vào [Hoảng Loạn] (phong tỏa năng lượng của kẻ địch trong vài lượt; khi cùng hiệu ứng tồn tại thì lấy giá trị cao nhất).",
+      "icon": "/Skill/Geryuganshoop (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 33% ST (+2) sát thương cho mỗi kẻ địch trong cả hàng với 5 liên kích, và khiến kẻ địch rơi vào [Hoảng Loạn] (phong tỏa năng lượng của kẻ địch trong vài lượt; khi cùng hiệu ứng tồn tại thì lấy giá trị cao nhất).",
+      "icon": "/Skill/Geryuganshoop (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Geryuganshoop (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu tối đa cho bản thân. Sau mỗi lần hành động, rút năng lượng đang bị phong tỏa của mục tiêu chính (mỗi lượt chỉ rút được một lần; sau khi rút thành công, trong cùng lượt không thể khiến kẻ địch [Hoảng Loạn] nữa). Mỗi điểm năng lượng bị rút gây thêm 40% ST sát thương cho toàn bộ địch.",
+      "icon": "/Skill/Geryuganshoop (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu tối đa cho bản thân. Sau mỗi lần hành động, rút năng lượng đang bị phong tỏa của mục tiêu chính (mỗi lượt chỉ rút được một lần; sau khi rút thành công, trong cùng lượt không thể khiến kẻ địch [Hoảng Loạn] nữa). Mỗi điểm năng lượng bị rút gây thêm 50% ST sát thương cho toàn bộ địch.",
+      "icon": "/Skill/Geryuganshoop (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu tối đa cho bản thân. Sau mỗi lần hành động, rút năng lượng đang bị phong tỏa của mục tiêu chính (mỗi lượt chỉ rút được một lần; sau khi rút thành công, trong cùng lượt không thể khiến kẻ địch [Hoảng Loạn] nữa). Mỗi điểm năng lượng bị rút gây thêm 55% ST sát thương cho toàn bộ địch.",
+      "icon": "/Skill/Geryuganshoop (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100059-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Geryuganshoop (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "effects": [
+    {
+      "term": "[Hoảng Loạn]",
+      "desc": "Trạng thái khống chế làm gián đoạn hành động của mục tiêu."
+    }
+  ],
+  "releaseDate": "16/06/2020",
+  "classLevel": "Dragon",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "imageSrcset": "/Characters/optimized/100059-ssr-360.webp 360w, /Characters/optimized/100059-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,96 @@
+{
+  "id": "100029-ssr",
+  "name": "Mặt Nạ Ngọt Ngào",
+  "imageURL": "/Characters/optimized/100029-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Tăng Tốc Toàn Đội",
+    "Kiên Cường",
+    "Giảm HP Tối Đa"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 392,
+    "hp": 2389,
+    "def": 99,
+    "spd": 100
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung liên kích 3 đòn lên mục tiêu đơn, gây 35% ST(+3) sát thương.",
+      "icon": "/Skill/Amai Mask (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tấn công mục tiêu đơn ở hàng sau 2 đến 5 lần, gây tối đa 100% ST(+2) sát thương.",
+      "icon": "/Skill/Amai Mask (SSR)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tấn công mục tiêu đơn ở hàng sau 3 đến 5 lần, gây tối đa 100% ST(+2) sát thương.",
+      "keepsakeIcon": "/Keepsake/Amai Mask (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Amai Mask (SSR)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Đầu lượt, cấp [Lá Chắn] cho toàn đồng minh (hấp thụ 30% Máu tối đa của chính đồng minh đó). Mỗi kẻ địch có Tốc thấp hơn bản thân, tăng [Giảm Sát Thương Tuyệt Kỹ] của mình 15% (tối đa 3 tầng). Sau khi hành động, tung [Truy Kích] lên địch có Máu tối đa cao nhất (80% ST Đòn Thường và hiệu ứng, 70% xác suất, tối đa 3 lần/lượt).",
+      "icon": "/Skill/Amai Mask (SSR)/skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Giảm Sát Thương Tuyệt Kỹ] mỗi tầng 15% &gt; 18%. [Truy Kích] 80% &gt; 100% ST Đòn Thường.",
+      "icon": "/Skill/Amai Mask (SSR)/skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Tự nhận Khiên bằng 40% Máu. [Giảm Sát Thương Tuyệt Kỹ] mỗi tầng 18% &gt; 20%. [Truy Kích] tối đa 3 &gt; 4 lần/lượt.",
+      "icon": "/Skill/Amai Mask (SSR)/skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Amai Mask (SSR)/Keepsake_SSR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Hạt Nhân"
+  ],
+  "releaseDate": "01/06/2022",
+  "classLevel": "A",
+  "releaseSea": "01/09/2021",
+  "releaseTrung": "01/05/2021",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100029-ssr-360.webp 360w, /Characters/optimized/100029-ssr-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

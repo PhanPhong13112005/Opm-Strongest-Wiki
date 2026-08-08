@@ -1,0 +1,83 @@
+{
+  "id": "100029-sr",
+  "name": "Amai Mask",
+  "roles": [
+    "Support",
+    "Core"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 183,
+    "hp": 1099,
+    "def": 46,
+    "spd": 94
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Strikes a single target with a 3-hit combo, dealing 35% ATK(+3) damage.",
+      "icon": "/Skill/Amai Mask (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Attacks a single target in the back row 2 to 5 times, dealing up to 100% ATK(+2) damage.",
+      "icon": "/Skill/Amai Mask (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Attacks a single target in the back row 3 to 5 times, dealing up to 100% ATK(+2) damage.",
+      "icon": "/Skill/Amai Mask (SR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Amai Mask (SR)/Keepsake_SR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP(+20). When attacking a Monster or Bounty Criminal, inflicts [Injured] on the target for 2 turns (adds Injured damage equal to 50% ATK when attacked).",
+      "icon": "/Skill/Amai Mask (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP(+20). Attacks inflict [Injured] on the target for 2 turns (adds Injured damage equal to 70% ATK when attacked).",
+      "icon": "/Skill/Amai Mask (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP(+20). Attacks inflict [Injured] on the target for 2 turns (adds Injured damage equal to 75% ATK when attacked).",
+      "icon": "/Skill/Amai Mask (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SR",
+  "imageURL": "/Characters/optimized/100029-sr-600.webp",
+  "type": "Grappler",
+  "faction": "Hero",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Amai Mask (SR)/Keepsake_SR.png",
+  "effects": [],
+  "classLevel": "A",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100029-sr-360.webp 360w, /Characters/optimized/100029-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

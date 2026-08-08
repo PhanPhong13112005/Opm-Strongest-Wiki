@@ -1,0 +1,135 @@
+{
+  "id": "100191-ur",
+  "name": "Hellfire Flame",
+  "tier": "UR",
+  "type": "Duelist",
+  "faction": "Monster",
+  "roles": [
+    "DMG (ATK)",
+    "Heal",
+    "DMG (HP)",
+    "Generate Shield"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 116
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK to a single target.",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Attacks enemies in a row with 3 consecutive strikes, dealing 900% ATK. Each strike has a 50% chance to add a stack of [Specialized Burn] (deals 300% ATK as DoT, disappears after taking effect 3 times; after any character acts, transfers to targets that can receive damage). Has a 100% chance to decrease the whole enemy team's Crit Rate by 40% for 2 turns.",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Ultimate DMG 900% → 1200% ATK. Decrease enemy Crit Rate 40% → 60%. [Specialized Burn] DMG 300% → 400% ATK.",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Hellfire Flame (UR)/Keepsake_UR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "When the battle begins, has a 100% chance to lower the enemy team's Heal Rate by 60%. At the start of the battle, obtains a 60% chance of [Evasion] (reduces Direct/Extra/Charge/Berserk DMG to 1 DMG).",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Lower enemy's Heal Rate 60% → 70%. [Evasion] chance 60% → 70%.",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Lower enemy's Heal Rate 70% → 80%. [Evasion] chance 70% → 80%.",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "All allies permanently get 60% [Buffer] (Reduce DMG based on Max HP). When any character acts, removes [Stun/Specialized Stun] from 1 ally (Can remove each debuff in every round, up to 3 times).",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Buffer 60% > 80% Remove debuff up to 3x > Unlimited",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100191-ur-600.webp",
+  "debut": "05 / 2024",
+  "keepsakeIcon": "/Keepsake/Hellfire Flame (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/11/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Heal",
+    "DMG (HP)",
+    "Generate Shield"
+  ],
+  "effects": [
+    {
+      "term": "[Dodge]",
+      "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+    },
+    {
+      "term": "[Spec. Burn]",
+      "desc": "Burning PvP tier — stronger burst damage, harder to deal with."
+    }
+  ],
+  "classLevel": "Demon",
+  "releaseSea": "01/03/2025",
+  "classIcon": "/Class/Demon.png",
+  "imageSrcset": "/Characters/optimized/100191-ur-360.webp 360w, /Characters/optimized/100191-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,145 @@
+{
+  "id": "100313-urplus",
+  "name": "Atomic Samurai",
+  "roles": [
+    "AoE Pierce",
+    "Speed Assassin"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 130
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK DMG to a single target.",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_base.png",
+      "type": "Basic",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Atomic Samurai launches 30 slashes, each Crit Hit reducing all enemies' [Total DMG Reduction] by 1%. He then unleashes a powerful slash dealing 5000% ATK Specialized Direct DMG to all enemies (affected only by advanced DMG reduction), ignoring 55% [Specialized Evasion] and [Non-Crit DMG Reduction], and penetrating [Unyielding] and [Specialized Unyielding]. On the first cast, additionally reduces all enemies' [Specialized HP] by 100%.",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": "/Animation/Sam_Urplus/ult.gif",
+      "keepsakeIcon": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Slashes 30 > 50 times. ATK 5000% > 7000%. Ignore Specialized Evasion and [Non-Crit DMG Reduction] 55% > 80%. Reduce [Specialized HP] of all enemies 100% > 175%.",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Atomic Samurai (URplus)/Keepsake_URplus.png",
+      "type": "Ultimate",
+      "animation": "/Animation/Sam_Urplus/ult.gif",
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Gains 60% [Non-Crit DMG Reduction] at the start of battle. Removes all enemy [Suppression DMG Increase] and [Suppression DMG Reduction] debuffs. When dealing Specialized Direct DMG, ignores 40% of the enemy's [Critical Resistance].",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Non-Crit DMG Reduction] 60% > 70%. Ignore enemy's [Critical Resistance] 40% > 60%.",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Non-Crit DMG Reduction] 70% > 80%. Ignore enemy's [Critical Resistance] 60% > 80%.",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "At the start of battle, grants Atomic Samurai 20% SPD boost to Specialization. When taking damage, there is a chance to reduce that damage by 40% (the chance is twice the user's current Crit Hit rate). If the user is among the first two allies to act, they gain 30% Crit Hit rate and 50% Crit Hit DMG.",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
+      "type": "Awakening",
+      "animation": "/Animation/Sam_Urplus/awken.gif",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Speed boost 20% > 30% Reduce dmg by 40% > 70% Crit hit rate 30% > 50% Crit hit dmg 50% > 80%",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
+      "type": "Awakening",
+      "animation": "/Animation/Sam_Urplus/awken.gif",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
+      "type": "Awakening",
+      "animation": "/Animation/Sam_Urplus/awken.gif",
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "tier": "UR+",
+  "imageURL": "/Characters/optimized/100313-urplus-600.webp",
+  "type": "Duelist",
+  "faction": "Hero",
+  "debut": "03 / 2026",
+  "keepsakeIcon": "/Keepsake/Atomic Samurai (URplus)/Keepsake_URplus.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "AOE DMG",
+    "TỐC ĐỘ ĐÁNH TRƯỚC",
+    "PIERCE DODGE/DMG REDUCTION",
+    "CRIT"
+  ],
+  "effects": [
+    {
+      "term": "[Reduce Control DMG]",
+      "desc": "Reduces the amount of damage taken thanks to the Suppression effect."
+    },
+    {
+      "term": "[Reduce Non-Crit DMG]",
+      "desc": "Reduced damage taken from non-critical attacks."
+    },
+    {
+      "term": "[Spec. HP]",
+      "desc": "The PvP tier's unique health bar stacks on top of regular health, must also be depleted, and can be restored independently."
+    },
+    {
+      "term": "[Spec. Direct DMG]",
+      "desc": "Advanced tier of direct damage, only affected by advanced damage increase/decrease and passes through normal defenses."
+    },
+    {
+      "term": "[Increase Control DMG]",
+      "desc": "Attack buff gives 30-40% mana and increases damage, increasing by 150-170% when the bearer's Attack is higher than the target."
+    }
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/07/2026",
+  "releaseTrung": "01/03/2026",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100313-urplus-360.webp 360w, /Characters/optimized/100313-urplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

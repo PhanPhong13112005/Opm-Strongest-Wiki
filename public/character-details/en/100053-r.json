@@ -1,0 +1,87 @@
+{
+  "id": "100053-r",
+  "name": "YO649Z Mk. II",
+  "imageURL": "/Characters/optimized/100053-r-600.webp",
+  "tier": "R",
+  "type": "Hi-Tech",
+  "faction": "Monster",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 164,
+    "hp": 981,
+    "def": 41,
+    "spd": 85
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 90% ATK DMG to a single target.",
+      "icon": "/Skill/YO649Z Mk II (R)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 190% ATK DMG to a single target, with a 100% chance to grant self [Tenacity] (absorbs DMG equal to 20% of own HP).",
+      "icon": "/Skill/YO649Z Mk II (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 200% ATK DMG to a single target, with a 100% chance to grant self [Tenacity] (absorbs DMG equal to 30% of own HP).",
+      "keepsakeIcon": "/Keepsake/YO649Z Mk. II (R)/Keepsake_R.png",
+      "icon": "/Skill/YO649Z Mk II (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own max HP by 20%. After being attacked, has a 100% chance to reduce DMG taken by 10% for 2 turns.",
+      "icon": "/Skill/YO649Z Mk II (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own max HP by 20%. After being attacked, has a 100% chance to reduce DMG taken by 20% for 2 turns.",
+      "icon": "/Skill/YO649Z Mk II (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own max HP by 25%. After being attacked, has a 100% chance to reduce DMG taken by 25% for 2 turns.",
+      "icon": "/Skill/YO649Z Mk II (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Tenacity]",
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/YO649Z Mk. II (R)/Keepsake_R.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100053-r-360.webp 360w, /Characters/optimized/100053-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,137 @@
+{
+  "id": "100025-ssrplus",
+  "name": "Người Chó Canh",
+  "imageURL": "/Characters/optimized/100025-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Combo Chiến Thuật",
+    "Khống Chế Cột"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 110
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 24% ST lên mục tiêu đơn.",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Watchdog Man tung một chuỗi đòn liên hoàn lên mục tiêu, mỗi đòn gây 150% ST [Sát Thương Truy Kích]. Chuỗi đòn tăng theo số cộng dồn [Bạo Tẩu] của bản thân, leo thang từ 4 lên tới 13 đòn liên tiếp.",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "ST mỗi đòn liên hoàn 150% > 180%. Vẫn leo thang từ 4 lên tới 13 đòn [Sát Thương Truy Kích] liên tiếp.",
+      "keepsakeIcon": "/Keepsake/Watchdog Man (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Nhận +20% HP. Khi vào trận, nhận +20% Chí mạng (3 lượt). Khi tung đòn đạt bội số tối đa, gây [Bị Vô Hiệu Hóa] lên cả cột của mục tiêu.",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Phạm vi [Bị Vô Hiệu Hóa] khi tung đòn bội số tối đa: cả cột của mục tiêu > vùng được chọn.",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Phạm vi [Bị Vô Hiệu Hóa] khi tung đòn bội số tối đa: vùng được chọn > vùng được chọn.",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi trận đấu bắt đầu, vĩnh viễn cấp 70% cơ hội [Né đòn] (Giảm ST Trực tiếp/Phụ trội/Tích lực/Cuồng bạo xuống còn 1 ST). Sau khi bất kỳ nhân vật nào hành động, nếu Watchdogman kích hoạt [Né đòn], thêm 1 đòn liên tiếp.",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Sau khi bất kỳ nhân vật nào hành động, nếu Watchdogman kích hoạt [Né Tránh], tăng 30% Tấn công cho bản thân trong 1 lượt.",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Né Tránh]",
+      "desc": "Trạng thái né giúp giảm sát thương Trực Tiếp, Thêm, Tích Lũy và Cuồng Nộ nhận vào chỉ còn 1 điểm trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Sát Thương Truy Kích]",
+      "desc": "Loại sát thương truy kích gây ra thành các đòn theo Tấn Công trong một chuỗi đuổi đánh nhanh, tăng dần số đòn liên tiếp."
+    },
+    {
+      "term": "[Vô Hiệu Hóa]",
+      "desc": "Trạng thái vô hiệu hóa áp lên một khu vực/cột mục tiêu, khiến các đơn vị bị ảnh hưởng không thể hành động hoặc phát huy tác dụng."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Watchdog Man (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/01/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Debuff",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Hồi Sinh"
+  ],
+  "classLevel": "Class_S",
+  "releaseSea": "01/05/2023",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100025-ssrplus-360.webp 360w, /Characters/optimized/100025-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

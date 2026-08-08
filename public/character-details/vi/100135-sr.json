@@ -1,0 +1,102 @@
+{
+  "id": "100135-sr",
+  "name": "Gián Thức Tỉnh",
+  "imageURL": "/Characters/optimized/100135-sr-600.webp",
+  "tier": "SR",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 186,
+    "hp": 1089,
+    "def": 46,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST (+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Awakened Cockroach (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung liên kích 4 đòn lên mục tiêu đơn hàng sau, gây 35% ST (+2) sát thương, và giảm 50% tỷ lệ mục tiêu gây [Lực Trường], [Choáng], [Thương Tổn] và [Nội Thương], kéo dài 1 lượt.",
+      "icon": "/Skill/Awakened Cockroach (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung liên kích 4 đòn lên mục tiêu đơn hàng sau, gây 40% ST (+2) sát thương, và giảm 50% tỷ lệ mục tiêu gây [Lực Trường], [Choáng], [Thương Tổn] và [Nội Thương], kéo dài 1 lượt.",
+      "keepsakeIcon": "/Keepsake/Awakened Cockroach (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Awakened Cockroach (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi chịu sát thương chí mạng, kích hoạt [Tái Sinh] (khi có đồng đội trên sân, hồi 15% Máu trước hành động kế tiếp của bản thân để tiếp tục chiến đấu, kích hoạt tối đa 1 lần). Sau khi hành động, tăng tỷ lệ giảm sát thương của bản thân thêm 30%, kéo dài 2 lượt.",
+      "icon": "/Skill/Awakened Cockroach (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi chịu sát thương chí mạng, kích hoạt [Tái Sinh] (khi có đồng đội trên sân, hồi 15% Máu trước hành động kế tiếp của bản thân để tiếp tục chiến đấu, kích hoạt tối đa 2 lần). Sau khi hành động, tăng tỷ lệ giảm sát thương của bản thân thêm 35%, kéo dài 2 lượt.",
+      "icon": "/Skill/Awakened Cockroach (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi chịu sát thương chí mạng, kích hoạt [Tái Sinh] (khi có đồng đội trên sân, hồi 15% Máu trước hành động kế tiếp của bản thân để tiếp tục chiến đấu, kích hoạt tối đa 2 lần). Sau khi hành động, tăng tỷ lệ giảm sát thương của bản thân thêm 40%, kéo dài 2 lượt.",
+      "icon": "/Skill/Awakened Cockroach (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Nội Thương]",
+      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+    },
+    {
+      "term": "[Hồi Phục]",
+      "desc": "Hồi Máu theo thời gian hoặc trước hành động kế tiếp của đơn vị."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Awakened Cockroach (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [],
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "classLevel": "Demon",
+  "imageSrcset": "/Characters/optimized/100135-sr-360.webp 360w, /Characters/optimized/100135-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

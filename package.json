@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "generate:character-detail-assets": "node scripts/generate-character-detail-assets.mjs",
     "preview": "vite preview",
     "test": "node --test tests/*.test.mjs",
     "test:integration": "playwright test",

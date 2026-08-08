@@ -1,0 +1,90 @@
+{
+  "id": "100004-ssr",
+  "name": "Lốc Xoáy Kinh Hoàng V1",
+  "imageURL": "/Characters/optimized/100004-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Tâm Linh",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Trọng Thương Diện Rộng",
+    "Giảm Công"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 399,
+    "hp": 2396,
+    "def": 101,
+    "spd": 99
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung 3 đòn liên kích lên mục tiêu đơn gây 40% ST tấn công. Nếu kích hoạt Chí mạng, khiến mục tiêu rơi vào [Suy Yếu] (giảm 10% ST tấn công trong 1 lượt).",
+      "icon": "/Skill/TatsumakiTerrible Tornado V1 (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 5 đòn liên kích lên toàn bộ địch gây 20% ST tấn công, tăng 60% tỉ lệ Chí mạng cho đòn tấn công này. Có 100% tỉ lệ khiến mục tiêu chính và các địch xung quanh nó rơi vào [Thương Tổn] trong 1 lượt (khi bị tấn công, cộng thêm ST Thương tổn bằng 20% ST tấn công).",
+      "icon": "/Skill/TatsumakiTerrible Tornado V1 (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung 5 đòn liên kích lên toàn bộ địch gây 24% ST tấn công, tăng 75% tỉ lệ Chí mạng cho đòn tấn công này. Có 100% tỉ lệ khiến toàn bộ mục tiêu rơi vào [Thương Tổn] trong 1 lượt (khi bị tấn công, cộng thêm ST Thương tổn bằng 20% ST tấn công).",
+      "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado V1 (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/TatsumakiTerrible Tornado V1 (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Mỗi kẻ địch bị [Bị Thương] tăng [Sát Thương Bạo Kích] của Terrible Tornado thêm 30%, tối đa 3 tầng.",
+      "icon": "/Skill/TatsumakiTerrible Tornado V1 (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Sát Thương Bạo Kích] mỗi địch [Bị Thương] 30% &gt; 40% (tối đa 3 tầng).",
+      "icon": "/Skill/TatsumakiTerrible Tornado V1 (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Sát Thương Bạo Kích] mỗi địch [Bị Thương] 40% &gt; 45% (tối đa 3 tầng).",
+      "icon": "/Skill/TatsumakiTerrible Tornado V1 (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Làm Suy Yếu]",
+      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado V1 (SSR)/Keepsake_SSR.png",
+  "releaseDate": "16/06/2020",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/08/2021",
+  "releaseTrung": "01/04/2021",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100004-ssr-360.webp 360w, /Characters/optimized/100004-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,100 @@
+{
+  "id": "100084-sr",
+  "name": "Fukegao",
+  "roles": [
+    "Speed"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 167,
+    "hp": 1000,
+    "def": 42,
+    "spd": 93
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 100% ATK (+10) damage to a single target. On a critical hit, has a 100% chance to inflict [Corrosion] on the main target for 2 turns (15% ATK as DoT).",
+      "icon": "/Skill/Fukegao (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 27% ATK (+3) damage to all enemies in 3 hit combos, with a 100% chance to inflict [Injured] on the main target for 2 turns (when attacked, adds Injury damage equal to 50% ATK).",
+      "icon": "/Skill/Fukegao (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 27% ATK (+3) damage to all enemies in 3 hit combos, with a 100% chance to inflict [Injured] on the main target and a 50% chance to inflict it on the main target's row for 2 turns (when attacked, adds Injury damage equal to 50% ATK).",
+      "icon": "/Skill/Fukegao (SR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Fukegao (SR)/Keepsake_SR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own max HP by (+20). Inflicts [Weaken] on enemies afflicted with [Injured] (ATK reduced by 20% for 1 turn).",
+      "icon": "/Skill/Fukegao (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own max HP by (+20). Inflicts [Weaken] on enemies afflicted with [Injured] (ATK reduced by 30% for 1 turn).",
+      "icon": "/Skill/Fukegao (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own max HP by (+20). Inflicts [Weaken] on enemies afflicted with [Injured] (ATK reduced by 35% for 1 turn).",
+      "icon": "/Skill/Fukegao (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SR",
+  "imageURL": "/Characters/optimized/100084-sr-600.webp",
+  "type": "Hi-Tech",
+  "faction": "Outlaw",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Fukegao (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Speed"
+  ],
+  "effects": [
+    {
+      "term": "[Weaken]",
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
+    },
+    {
+      "term": "[Corrode]",
+      "desc": "Corrosive damage over time effect, each turn dealing damage equal to a percentage of ST (e.g. 300%) to the target."
+    }
+  ],
+  "classLevel": "Outlaw",
+  "classIcon": "/Class/Outlaw.png",
+  "imageSrcset": "/Characters/optimized/100084-sr-360.webp 360w, /Characters/optimized/100084-sr-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

@@ -1,0 +1,88 @@
+{
+  "id": "100065-r",
+  "name": "Ground Dragon",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 161,
+    "hp": 963,
+    "def": 41,
+    "spd": 85
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 90% ATK DMG to a single target.",
+      "icon": "/Skill/Ground Dragon (R)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 190% ATK DMG to a single back-row target, with a 100% chance to inflict [Weak] on the target (reduces ATK by 20% for 2 turns).",
+      "icon": "/Skill/Ground Dragon (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 190% ATK DMG to a single back-row target, with a 100% chance to inflict [Weak] on the target (reduces ATK by 30% for 2 turns).",
+      "icon": "/Skill/Ground Dragon (R)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Ground Dragon (R)/Keepsake_R.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases self max HP by 20%. When deployed together with Frog Man, increases self ATK by 20%.",
+      "icon": "/Skill/Ground Dragon (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases self max HP by 30%. When deployed together with Frog Man, increases self ATK by 30%.",
+      "icon": "/Skill/Ground Dragon (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases self max HP by 35%. When deployed together with Frog Man, increases self ATK by 35%.",
+      "icon": "/Skill/Ground Dragon (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "R",
+  "imageURL": "/Characters/optimized/100065-r-600.webp",
+  "type": "Grappler",
+  "faction": "Monster",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Ground Dragon (R)/Keepsake_R.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "effects": [
+    {
+      "term": "[Weaken]",
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
+    }
+  ],
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100065-r-360.webp 360w, /Characters/optimized/100065-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

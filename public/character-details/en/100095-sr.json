@@ -1,0 +1,101 @@
+{
+  "id": "100095-sr",
+  "name": "Choze",
+  "imageURL": "/Characters/optimized/100095-sr-600.webp",
+  "tier": "SR",
+  "type": "Grappler",
+  "faction": "Martial Artist",
+  "roles": [
+    "Internal Injury",
+    "Weaken"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 191,
+    "hp": 1079,
+    "def": 46,
+    "spd": 95
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 50% ATK DMG to a single target with 2 combo strikes.",
+      "icon": "/Skill/Choze (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 50% ATK DMG to a single target with 4 combo strikes, and inflicts [Weaken] on Injured or Armed Collapse targets (reduces ATK by 30% for 1 turn).",
+      "icon": "/Skill/Choze (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 50% ATK DMG to a single target with 4 combo strikes, and inflicts [Weaken] on Injured or Armed Collapse targets (reduces ATK by 40% for 1 turn).",
+      "keepsakeIcon": "/Keepsake/Choze (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Choze (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently gains +20% HP. When attacking, if its own ATK is higher than the struck target's, the struck target suffers [Internal Injury] (adds bonus Internal Injury DMG equal to 120% of Choze's ATK when struck; the effect disappears after triggering).",
+      "icon": "/Skill/Choze (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently gains +20% HP. When attacking, if its own ATK is higher than the struck target's, the struck target suffers [Internal Injury] (adds bonus Internal Injury DMG equal to 140% of Choze's ATK when struck; the effect disappears after triggering).",
+      "icon": "/Skill/Choze (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently gains +20% HP. When attacking, if its own ATK is higher than the struck target's, the struck target suffers [Internal Injury] (adds bonus Internal Injury DMG equal to 160% of Choze's ATK when struck; the effect disappears after triggering).",
+      "icon": "/Skill/Choze (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Internal Injury]",
+      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+    },
+    {
+      "term": "[Weaken]",
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Choze (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Speed"
+  ],
+  "classLevel": "Martial_Artist",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100095-sr-360.webp 360w, /Characters/optimized/100095-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 680
+}

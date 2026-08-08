@@ -1,0 +1,88 @@
+{
+  "id": "100057-ssr",
+  "name": "Pig God",
+  "roles": [
+    "Heal"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 394,
+    "hp": 2562,
+    "def": 100,
+    "spd": 106
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals a 2-hit combo of 60% ATK to a single target, and grants self [Tenacity] (absorbs damage equal to 30% of own HP).",
+      "icon": "/Skill/Pig God (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals damage to a single target equal to 45% of Pig God's max HP, and [Devours] the target, forcing it out of combat for 1 turn (triggers once per turn).",
+      "icon": "/Skill/Pig God (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals damage to a single target equal to 60% of Pig God's max HP, and [Devours] the target, forcing it out of combat for 1 turn (triggers once per turn).",
+      "icon": "/Skill/Pig God (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Pig God (SSR)/Keepsake_SSR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP. Gains 15% Non-Crit DMG Immunity (reduces all types of damage; only one of this and [Dexterity] takes effect), and is immune to [Out of Combat] and [Devour Out of Combat].",
+      "icon": "/Skill/Pig God (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP. Gains 20% Non-Crit DMG Immunity (reduces all types of damage; only one of this and [Dexterity] takes effect), and is immune to [Out of Combat] and [Devour Out of Combat].",
+      "icon": "/Skill/Pig God (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP. Gains 25% Non-Crit DMG Immunity (reduces all types of damage; only one of this and [Dexterity] takes effect), and is immune to [Out of Combat] and [Devour Out of Combat].",
+      "icon": "/Skill/Pig God (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR",
+  "imageURL": "/Characters/optimized/100057-ssr-600.webp",
+  "type": "Esper",
+  "faction": "Hero",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Pig God (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Tenacity]",
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+    }
+  ],
+  "releaseDate": "16/06/2020",
+  "classLevel": "Class_SS",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100057-ssr-360.webp 360w, /Characters/optimized/100057-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

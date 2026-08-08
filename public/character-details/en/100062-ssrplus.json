@@ -1,0 +1,137 @@
+{
+  "id": "100062-ssrplus",
+  "name": "Groribas",
+  "imageURL": "/Characters/optimized/100062-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Spec. Corrode",
+    "Nullify Follow-up",
+    "Spec. Reflect DMG"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 103
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 60% ATK direct DMG to a single target.",
+      "icon": "/Skill/Groribas (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 50% ATK direct DMG to all enemies, then inflicts [Smart Corrosion] (a corrosion damage-over-time) on the target area and applies [Nullity] to all enemies.",
+      "icon": "/Skill/Groribas (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 50% > 80% ATK direct DMG to all enemies, then inflicts [Smart Corrosion] (a corrosion damage-over-time) on the target area > all enemies and applies [Nullity] to all enemies.",
+      "keepsakeIcon": "/Keepsake/Groribas (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Groribas (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by 20%. At the end of its own turn, if any enemy is afflicted with a DoT, deals 60% ATK extra DMG to all enemies and applies [Stick] to up to 6 enemies afflicted with [Smart Corrosion].",
+      "icon": "/Skill/Groribas (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by 20%. At the end of its own turn, if any enemy is afflicted with a DoT, deals 60% > 70% ATK extra DMG to all enemies and applies [Stick] to up to 6 enemies afflicted with [Smart Corrosion].",
+      "icon": "/Skill/Groribas (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by 20%. At the end of its own turn, if any enemy is afflicted with a DoT, deals 70% > 80% ATK extra DMG to all enemies and applies [Stick] to up to 6 enemies afflicted with [Smart Corrosion].",
+      "icon": "/Skill/Groribas (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When battle begins, grants [Specialized DMG Reflect] (reduce direct DMG and Extra DMG by 50%, reflects 50% of the original DMG back to the attacker, lasts for the whole battle.) After any character acts, restores Groribas' and its column [Specialized Guard] by 100% of the DOT on enemies.",
+      "icon": "/Skill/Groribas (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "After any character acts, Groribas and its column …",
+      "icon": "/Skill/Groribas (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Groribas (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Adhere]",
+      "desc": "Control status prevents the target from casting [Follow-up] and [Consecutive Follow-up], usually for 2 turns."
+    },
+    {
+      "term": "[Void]",
+      "desc": "Debuffs apply to all enemies, often accompanied by corrosive damage over time, negating their effects."
+    },
+    {
+      "term": "[Smart Corrode]",
+      "desc": "Corrosive damage over time applied to the target area, often accompanied by Nullity on all enemies."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Groribas (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/02/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff"
+  ],
+  "bondList": "Deep Sea King",
+  "classLevel": "Dragon",
+  "releaseSea": "01/06/2023",
+  "imageSrcset": "/Characters/optimized/100062-ssrplus-360.webp 360w, /Characters/optimized/100062-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

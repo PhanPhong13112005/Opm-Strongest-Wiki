@@ -1,0 +1,150 @@
+{
+  "id": "100008-ur",
+  "name": "Cô Gái Muỗi",
+  "tier": "UR",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hạt Nhân",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Hồi Sinh"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST sát thương trực tiếp lên một mục tiêu đơn.",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tăng 50% chính xác đòn đánh tức thời của bản thân, sau đó tung combo 2 đòn lên mọi kẻ địch trong cột của mục tiêu, gây 1500% ST sát thương trực tiếp chia đều cho các mục tiêu trong cột đó. Trước khi tấn công, có thể kích hoạt [Đột Phá Chuyên Biệt] 1 lần: lập tức hủy trạng thái miễn sát thương loại [Bất Khuất] của mục tiêu, đồng thời tăng 20% ST của bản thân cho đến khi kết thúc đoạn tấn công đó.",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Chính xác đòn đánh tức thời 50% > 65%. Sát thương trực tiếp lên cột 1500% > 2000% ST. [Đột Phá Chuyên Biệt] kích hoạt 1 > 2 lần, và buff ST của nó 20% > 40%.",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Mosquito Girl (UR)/Keepsake_UR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn nhận +20% Máu. Khi vào trận, nhận 60% [Giảm Sát Thương Không Bạo Kích]. Khi bất kỳ nhân vật nào hành động, giải trừ [Choáng] / [Choáng Chuyên Biệt] / [Câm Lặng] cho 1 đồng minh đang chịu (mỗi loại hiệu ứng).",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] 60% > 70%. Số đồng minh được giải trừ [Choáng] / [Choáng Chuyên Biệt] / [Câm Lặng] 1 > 2 (mỗi loại).",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] 70% > 80%. Số đồng minh được giải trừ [Choáng] / [Choáng Chuyên Biệt] / [Câm Lặng] 2 > 3 (mỗi loại).",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi trận đấu bắt đầu, triệu hồi 10 con muỗi hỗ trợ chiến đấu, mỗi con muỗi kế thừa 800% Tấn công của Mosquito Girl làm Máu. Muỗi chia sẻ 80% mọi loại sát thương (trừ sát thương Emblem) với toàn đội, giảm 80% sát thương nhận vào. Miễn nhiễm [Tách rời].",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Máu muỗi triệu hồi kế thừa Tấn công 800% > 1000% Trao cho toàn đội kẻ địch 40% Giảm sát thương Kích nổ, và 40% Giảm sát thương ST theo thời gian",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Mosquito Girl (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100008-ur-600.webp",
+  "debut": "09 / 2024",
+  "keepsakeIcon": "/Keepsake/Mosquito Girl (UR)/Keepsake_UR.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "releaseTrung": "01/03/2024",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Hạt Nhân",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Hồi Sinh"
+  ],
+  "effects": [
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    },
+    {
+      "term": "[Choáng Chuyên Biệt]",
+      "desc": "Bậc PvP của Choáng — khó kháng hoặc giải hơn."
+    },
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Câm Lặng]",
+      "desc": "Mục tiêu không thể dùng chiêu cuối. Được tính là hiệu ứng khống chế."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm lượng sát thương nhận vào từ các đòn đánh không phải chí mạng."
+    }
+  ],
+  "classLevel": "Demon",
+  "releaseSea": "01/07/2024",
+  "imageSrcset": "/Characters/optimized/100008-ur-360.webp 360w, /Characters/optimized/100008-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

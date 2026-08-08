@@ -1,0 +1,156 @@
+{
+  "id": "100190-ur",
+  "name": "Melzargard",
+  "tier": "UR",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Heal",
+    "DMG (HP)",
+    "Generate Shield",
+    "Speed"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 130% ATK to a single target.",
+      "icon": "/Skill/Melzargard (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Attacks enemies in a cross shape with 3 consecutive strikes, dealing 600% ATK DMG. The last strike has a 100% chance to inflict [Specialized Shatter] on the main target for 3 turns (reduces DMG Reduction by 10%, deals 250% ATK as [Shatter] DMG when attacked, stacks up to 3 times, does not stack with [Shatter]).",
+      "icon": "/Skill/Melzargard (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Ultimate DMG 600% → 750% ATK. [Specialized Shatter] DMG Reduction reduction 10% → 15%. [Specialized Shatter] DMG 250% → 350% ATK.",
+      "icon": "/Skill/Melzargard (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Melzargard (UR)/Keepsake_UR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "After Melzargard and allies act, extends the enemy's [Specialized Shatter] status to 4 turns. After any character acts, if an enemy character has 3 stacks of [Specialized Shatter], immediately [Detonate] (single [Shatter] DMG of 500% turns into [Detonation] DMG). Removes [Revival] effects from enemies, lasting the whole battle.",
+      "icon": "/Skill/Melzargard (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Detonate] [Shatter] DMG 500% → 650% ATK.",
+      "icon": "/Skill/Melzargard (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Detonate] [Shatter] DMG 650% → 800% ATK.",
+      "icon": "/Skill/Melzargard (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "At the start of the battle, remains [Undefeated] for 3 rounds (If receive Non-Crit Fatal DMG, remains 20% HP without getting knocked down, and resist Crit Fatal DMG 3 times. Depends whether the first strike deals Crit DMG). Permanently grants 100% Crit Res Rate and 50% Non-Crit DMG Free, [Immune] against [Charm/Off Battle]",
+      "icon": "/Skill/Melzargard (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Undefeated 3 rounds > 5 rounds Resist Fatal Damage 3x > 55x Crit Res Rate 100% > 130% Non-CRIT DMG Free 50% > 65% Notes\n1. Detonation cannot be [Evaded], the 1 DMG is due to [Specialized Unyielding] 2. [Shatter] DMG and [Shatter] in the [Detonation] DMG are separately calculated, AS will deal his 200% and Melz will deal its 250% [Shatter] DMG (without keepsake)",
+      "icon": "/Skill/Melzargard (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Melzargard (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100190-ur-600.webp",
+  "debut": "04 / 2024",
+  "keepsakeIcon": "/Keepsake/Melzargard (UR)/Keepsake_UR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/10/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Heal",
+    "DMG (HP)",
+    "Generate Shield",
+    "Speed"
+  ],
+  "effects": [
+    {
+      "term": "[Invincible]",
+      "desc": "Survive non-fatal attacks (hold about 20% HP without collapsing) and resist a limited number of fatal attacks."
+    },
+    {
+      "term": "[Spec. Unyielding]",
+      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+    },
+    {
+      "term": "[Detonate]",
+      "desc": "Activate a stack of damage over time or stored [Collapse] to instantly explode, turning it into an instant multiplier (e.g. 3 times the stored damage)."
+    },
+    {
+      "term": "[Immunity]",
+      "desc": "Status that causes the bearer to be unaffected by a certain effect or type of control, such as [Breakthrough], Stun, or Charm."
+    },
+    {
+      "term": "[Resurrect]",
+      "desc": "Status returns downed units to battle, granting a limited number of respawns that anti-revive effects can remove."
+    },
+    {
+      "term": "[Spec. Collapse]",
+      "desc": "PvP debuff reduces target's Damage Reduction by 10% and deals 250% Shatter damage each time the target is attacked."
+    },
+    {
+      "term": "[Collapse]",
+      "desc": "Damage/disadvantage effect breaks target's defense."
+    }
+  ],
+  "classLevel": "Dragon",
+  "releaseSea": "01/02/2025",
+  "imageSrcset": "/Characters/optimized/100190-ur-360.webp 360w, /Characters/optimized/100190-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,94 @@
+{
+  "id": "100094-ssr",
+  "name": "Garou",
+  "imageURL": "/Characters/optimized/100094-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Grappler",
+  "faction": "Martial Artist",
+  "roles": [
+    "Internal Injury",
+    "Follow-up"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 408,
+    "hp": 2351,
+    "def": 99,
+    "spd": 99
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK (+10) DMG to a single target. 100% chance to inflict [Internal Injury] on the target (when the target is hit, an added Internal Injury DMG equal to 100% of Garou's ATK is dealt; the effect is removed after triggering).",
+      "icon": "/Skill/Garou (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 20% ATK (+2) DMG with 5 consecutive strikes to all targets. 100% chance to inflict [Internal Injury] on 3 random targets (when the target is hit, an added Internal Injury DMG equal to 130% of Garou's ATK is dealt; the effect is removed after triggering).",
+      "icon": "/Skill/Garou (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 24% ATK (+2) DMG with 5 consecutive strikes to all targets. 100% chance to inflict [Internal Injury] on 4 random targets (when the target is hit, an added Internal Injury DMG equal to 145% of Garou's ATK is dealt; the effect is removed after triggering).",
+      "keepsakeIcon": "/Keepsake/Garou (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Garou (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). After an enemy character acts, Garou has a 40% chance to perform a [Follow-up] (attacks with 80% of Basic Attack DMG and effects, up to 3 times each round); always triggers if a hero acts. When taking fatal damage for the first time each battle, heals self for 30% of max HP.",
+      "icon": "/Skill/Garou (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). After an enemy character acts, Garou has a 40% chance to perform a [Follow-up] (attacks with 90% of Basic Attack DMG and effects, up to 4 times each round); always triggers if a hero acts. Heals self for 30% of max HP on first fatal damage.",
+      "icon": "/Skill/Garou (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). After an enemy character acts, Garou has a 50% chance to perform a [Follow-up] (attacks with 115% of Basic Attack DMG and effects, up to 4 times each round); always triggers if a hero acts. Heals self for 38% of max HP on first fatal damage.",
+      "icon": "/Skill/Garou (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Internal Injury]",
+      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Garou (SSR)/Keepsake_SSR.png",
+  "releaseDate": "01/01/2021",
+  "classLevel": "Martial_Artist",
+  "releaseSea": "01/12/2020",
+  "releaseTrung": "01/08/2020",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100094-ssr-360.webp 360w, /Characters/optimized/100094-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

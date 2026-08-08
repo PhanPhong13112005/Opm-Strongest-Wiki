@@ -1,0 +1,96 @@
+{
+  "id": "100097-sr",
+  "name": "Fist Fight Djinn",
+  "tier": "SR",
+  "type": "Grappler",
+  "faction": "Monster",
+  "roles": [
+    "DMG (ATK)",
+    "Heal",
+    "Speed"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 186,
+    "hp": 1089,
+    "def": 46,
+    "spd": 93
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 2 combo strikes to a single target for 50% ATK DMG.",
+      "icon": "/Skill/Fist Fight Djinn (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 5 combo strikes to each enemy in the entire row for 30% ATK DMG, and restores 20% of max HP to self and same-column allies.",
+      "icon": "/Skill/Fist Fight Djinn (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 5 combo strikes to each enemy in the entire row for 35% ATK DMG, and restores 20% of max HP to self and same-column allies.",
+      "icon": "/Skill/Fist Fight Djinn (SR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Fist Fight Djinn (SR)/Keepsake_SR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP. Before battle starts, the Fist Fight Demon [Encourages] allies (gains 1 extra Energy at the start of each turn, lasting 2 turns). When battle starts, grants self 50% Ultimate DMG immunity, lasting 2 turns.",
+      "icon": "/Skill/Fist Fight Djinn (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP. Before battle starts, the Fist Fight Demon [Encourages] allies (gains 1 extra Energy at the start of each turn, lasting 2 turns). When battle starts, grants self 60% Ultimate DMG immunity, lasting 2 turns.",
+      "icon": "/Skill/Fist Fight Djinn (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP. Before battle starts, the Fist Fight Demon [Encourages] allies (gains 1 extra Energy at the start of each turn, lasting 2 turns). When battle starts, grants self 70% Ultimate DMG immunity, lasting 2 turns.",
+      "icon": "/Skill/Fist Fight Djinn (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100097-sr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Fist Fight Djinn (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Heal",
+    "Speed"
+  ],
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "effects": [],
+  "classLevel": "Demon",
+  "imageSrcset": "/Characters/optimized/100097-sr-360.webp 360w, /Characters/optimized/100097-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

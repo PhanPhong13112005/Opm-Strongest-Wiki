@@ -1,0 +1,95 @@
+{
+  "id": "100151-ssr",
+  "name": "Lốc Xoáy Kinh Hoàng V2",
+  "tier": "SSR",
+  "type": "Tâm Linh",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Sát Thương (Công)",
+    "Suy Yếu",
+    "Sát Thương (Máu)",
+    "Tạo Khiên"
+  ],
+  "duyen": "Awakened",
+  "baseStats": {
+    "atk": 419,
+    "hp": 2394,
+    "def": 104,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 140% ST (+10) sát thương lên mục tiêu đơn, và khiến bản thân nhận [Kiên Cường] (hấp thụ sát thương bằng 30% Máu bản thân).",
+      "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 50% ST sát thương với 3 đòn liên kích lên toàn bộ địch, vĩnh viễn trao cho bản thân 50% Tăng ST liên tục, và có 100% khả năng khiến tất cả mục tiêu trên sân rơi vào [Lực Trường] trong 1 lượt (chịu sát thương theo thời gian bằng 50% ST trước khi hành động; 50% khả năng xuyên thủng hiệu ứng miễn nhiễm).",
+      "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 60% ST sát thương với 3 đòn liên kích lên toàn bộ địch, vĩnh viễn trao cho bản thân 60% Tăng ST liên tục, và có 100% khả năng khiến tất cả mục tiêu trên sân rơi vào [Lực Trường] trong 1 lượt (chịu sát thương theo thời gian bằng 50% ST trước khi hành động; 50% khả năng xuyên thủng hiệu ứng miễn nhiễm).",
+      "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado V2 (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi hành động, rút năng lượng kẻ địch đang bị khóa (mỗi lượt 1 lần; sau khi rút thành công, không thể [Đã Hoảng Loạn] lại trong cùng lượt). Nhận 30% [Miễn Sát Thương Không Bạo Kích] (mọi loại ST; hiệu ứng này và [Nhanh Nhẹn] chỉ một cái hiệu lực). Chuyển 50% DoT nhận vào thành Máu.",
+      "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi hành động, rút năng lượng kẻ địch đang bị khóa (mỗi lượt 1 lần; sau khi rút thành công, không thể [Đã Hoảng Loạn] lại trong cùng lượt). Nhận 35% [Miễn Sát Thương Không Bạo Kích] (mọi loại ST; hiệu ứng này và [Nhanh Nhẹn] chỉ một cái hiệu lực). Chuyển 75% DoT nhận vào thành Máu.",
+      "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi hành động, rút năng lượng kẻ địch đang bị khóa (mỗi lượt 1 lần; sau khi rút thành công, không thể [Đã Hoảng Loạn] lại trong cùng lượt). Nhận 40% [Miễn Sát Thương Không Bạo Kích] (mọi loại ST; hiệu ứng này và [Nhanh Nhẹn] chỉ một cái hiệu lực). Chuyển 100% DoT nhận vào thành Máu.",
+      "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100151-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado V2 (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Hoảng Loạn]",
+      "desc": "Trạng thái khống chế làm gián đoạn hành động của mục tiêu."
+    },
+    {
+      "term": "[Lá Chắn]",
+      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+    }
+  ],
+  "releaseDate": "01/09/2021",
+  "classLevel": "Class_SS",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100151-ssr-360.webp 360w, /Characters/optimized/100151-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

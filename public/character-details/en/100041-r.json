@@ -1,0 +1,86 @@
+{
+  "id": "100041-r",
+  "name": "Tank Top Tiger",
+  "imageURL": "/Characters/optimized/100041-r-600.webp",
+  "tier": "R",
+  "type": "Grappler",
+  "faction": "Hero",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 158,
+    "hp": 945,
+    "def": 40,
+    "spd": 85
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 90% ATK DMG to a single target.",
+      "icon": "/Skill/Tank Top Tiger (R)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 190% ATK DMG to a single target.Has a 100% chance to grant self [Tenacity] (absorbs DMG equal to 20% of own HP).",
+      "icon": "/Skill/Tank Top Tiger (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 190% ATK DMG to a single target.Has a 100% chance to grant self [Tenacity] (absorbs DMG equal to 30% of own HP).",
+      "keepsakeIcon": "/Keepsake/Tank Top Tiger (R)/Keepsake_R.png",
+      "icon": "/Skill/Tank Top Tiger (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20).When deployed together with Vest Black Hole, increases own DMG reduction by 20%, lasting until the end of battle.",
+      "icon": "/Skill/Tank Top Tiger (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20).When deployed together with Vest Black Hole, increases own DMG reduction by 30%, lasting until the end of battle.",
+      "icon": "/Skill/Tank Top Tiger (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20).When deployed together with Vest Black Hole, increases own DMG reduction by 35%, lasting until the end of battle.",
+      "icon": "/Skill/Tank Top Tiger (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Tenacity]",
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Tank Top Tiger (R)/Keepsake_R.png",
+  "classLevel": "C",
+  "classIcon": "/Class/C.png",
+  "imageSrcset": "/Characters/optimized/100041-r-360.webp 360w, /Characters/optimized/100041-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

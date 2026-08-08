@@ -1,0 +1,92 @@
+{
+  "id": "100062-ssr",
+  "name": "Groribas",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hỗ Trợ"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 364,
+    "hp": 2182,
+    "def": 92,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Đánh mục tiêu đơn với 2 đòn liên kích, mỗi đòn gây 60% ST; khi bạo kích có 100% tỉ lệ gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (sát thương theo thời gian bằng 15% ST).",
+      "icon": "/Skill/Groribas (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Đánh mỗi kẻ địch trong cả hàng với 5 đòn liên kích, mỗi đòn gây 26% ST, có 100% tỉ lệ gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (sát thương theo thời gian bằng 20% ST), đồng thời kẻ địch bị bạo kích có 100% tỉ lệ chịu [Ăn Mòn] trong 2 lượt.",
+      "icon": "/Skill/Groribas (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Đánh mỗi kẻ địch trong cả hàng với 5 đòn liên kích, mỗi đòn gây 33% ST, có 100% tỉ lệ gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (sát thương theo thời gian bằng 30% ST), đồng thời kẻ địch bị bạo kích có 100% tỉ lệ chịu [Ăn Mòn] trong 2 lượt.",
+      "icon": "/Skill/Groribas (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Groribas (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Mỗi kẻ địch trên sân đang mang [Ăn Mòn] tăng 10% ST cho toàn bộ đồng minh, cộng dồn tối đa 3 tầng.",
+      "icon": "/Skill/Groribas (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Mỗi kẻ địch trên sân đang mang [Ăn Mòn] tăng 15% ST cho toàn bộ đồng minh, cộng dồn tối đa 3 tầng.",
+      "icon": "/Skill/Groribas (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Mỗi kẻ địch trên sân đang mang [Ăn Mòn] tăng 18% ST cho toàn bộ đồng minh, cộng dồn tối đa 3 tầng.",
+      "icon": "/Skill/Groribas (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR",
+  "imageURL": "/Characters/optimized/100062-ssr-600.webp",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Groribas (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "effects": [
+    {
+      "term": "[Ăn Mòn]",
+      "desc": "Hiệu ứng sát thương theo thời gian dạng ăn mòn, mỗi lượt gây sát thương bằng một tỷ lệ ST (ví dụ 300%) lên mục tiêu."
+    }
+  ],
+  "releaseDate": "16/06/2020",
+  "classLevel": "Dragon",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "imageSrcset": "/Characters/optimized/100062-ssr-360.webp 360w, /Characters/optimized/100062-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

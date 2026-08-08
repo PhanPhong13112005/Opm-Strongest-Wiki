@@ -1,0 +1,125 @@
+{
+  "id": "100103-ssrplus",
+  "name": "Phượng Hoàng",
+  "tier": "SSR+",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Hồi Sinh"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 30% ST sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 75% ST sát thương lên mục tiêu đơn và đánh dấu bản thân. Gây thêm sát thương bằng 40% Máu tối đa của mục tiêu, sau đó đánh dấu mục tiêu để [Trục Xuất].",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 75% ST sát thương lên mục tiêu đơn và đánh dấu bản thân. Gây thêm sát thương bằng 40% > 50% Máu tối đa của mục tiêu, sau đó đánh dấu mục tiêu để [Trục Xuất].",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Phoenix Man (SSRplus)/Keepsake_SSRplus.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Khi vào trận, nhận +100% Máu tối đa và miễn nhiễm với [Trục Xuất] cùng hiệu ứng giảm Máu tối đa. Đầu mỗi hiệp, hồi phục 50% Máu tối đa. Cuối mỗi lượt, nhận một dấu tích lũy cho phép bản thân [Trục Xuất] 1 kẻ địch đã bị đánh dấu khỏi trận. Sau khi nhận sát thương chí mạng, hồi sinh, tối đa 1 lần.",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Khi vào trận, nhận +100% Máu tối đa và miễn nhiễm với [Trục Xuất] cùng hiệu ứng giảm Máu tối đa. Đầu mỗi hiệp, hồi phục 50% Máu tối đa. Cuối mỗi lượt, nhận một dấu tích lũy cho phép bản thân [Trục Xuất] 1 kẻ địch đã bị đánh dấu khỏi trận. Sau khi nhận sát thương chí mạng, hồi sinh, tối đa 1 > 2 lần.",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Khi vào trận, nhận +100% Máu tối đa và miễn nhiễm với [Trục Xuất] cùng hiệu ứng giảm Máu tối đa. Đầu mỗi hiệp, hồi phục 50% Máu tối đa. Cuối mỗi lượt, nhận một dấu tích lũy cho phép bản thân [Trục Xuất] 1 kẻ địch đã bị đánh dấu khỏi trận. Sau khi nhận sát thương chí mạng, hồi sinh, tối đa 2 lần.",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Ngay lập tức đưa đồng minh bị đánh bại trở lại trận đấu với 100% Máu (tổng cộng 4 lần mỗi trận đấu) (Hiệu ứng sẽ bị loại bỏ nếu Phoenixman chết trước khi dùng hết số lần hồi sinh.)",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Hồi sinh đồng minh 4 lần > 6 lần Hiệu ứng bổ sung - Cấp đồng minh 30% Giảm sát thương không chí mạng (không thể đồng tồn tại với Agility)\nĐiều cần lưu ý:\nSSR+ CK không phản sát thương nếu bị loại khỏi trận đấu Không thể loại Boss (pve) khỏi trận đấu, như Boros Club Challenge (hiển nhiên) Không thể loại các đơn vị đã chết nhưng đang chờ hồi sinh (ví dụ ZBM đang nằm dưới đất) Nếu chỉ còn lại một đơn vị kẻ địch, thì không thể loại đơn vị đó khỏi trận đấu",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100103-ssrplus-600.webp",
+  "debut": "03 / 2022",
+  "keepsakeIcon": "/Keepsake/Phoenix Man (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Demon.png",
+  "releaseTrung": "03 / 2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Hồi Sinh"
+  ],
+  "bondList": "Silverfang (Bang) + Bomb (Bengpu) + Genos",
+  "effects": [],
+  "classLevel": "Demon",
+  "imageSrcset": "/Characters/optimized/100103-ssrplus-360.webp 360w, /Characters/optimized/100103-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

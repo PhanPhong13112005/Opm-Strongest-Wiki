@@ -1,0 +1,138 @@
+{
+  "id": "blacksperm-urplus",
+  "name": "Black Sperm",
+  "imageURL": "/Characters/optimized/blacksperm-urplus-600.webp",
+  "tier": "UR+",
+  "type": "Grappler",
+  "faction": "Monster",
+  "roles": [
+    "Infinite splitting",
+    "One person becomes an army"
+  ],
+  "duyen": "Combat Grandmaster",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK (+10) DMG to a single target.",
+      "icon": "/Skill/Source/blacksperm-urplus/basic.webp",
+      "animation": null,
+      "type": "Basic",
+      "cost": 0,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Ultimate",
+      "desc": "This DMG is not shared with targets that cannot take damage. Before actively casting the Ultimate, absorbs every Split Black Sperm on the field; each one raises Ultimate DMG by an extra 20%, lasting until the next actively cast skill. Deals a 5-hit combo to an entire enemy row for 2400% ATK (+2) shareable [Specialized Direct DMG] (affected only by advanced DMG modifiers), ignoring 45% [Specialized Evasion] and [Non-Crit DMG Free], and penetrating [Unyielding] and [Specialized Unyielding].",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Raises own [All DMG Amplification] by 20% and lowers the [All DMG Reduction] of the target's row by 20% for 2 rounds (undispellable). This DMG is not shared with targets that cannot take damage. Before actively casting the Ultimate, absorbs every Split Black Sperm on the field; each one raises Ultimate DMG by an extra 30%, lasting until the next actively cast skill. Deals a 5-hit combo to an entire enemy row for 3000% ATK (+2) shareable [Specialized Direct DMG] (affected only by advanced DMG modifiers), ignoring 60% [Specialized Evasion] and [Non-Crit DMG Free], and penetrating [Unyielding] and [Specialized Unyielding].",
+      "keepsakeIcon": "/Keepsake/Black Sperm (URplus)/Keepsake_URplus.webp",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently raises own HP by (+20). On entry, gains 60% [Non-Crit DMG Free]. Permanently gains 20% [Support Enhancement]. In the first 9 rounds, when about to be defeated, enters [Undefeated] and absorbs all damage taken during it; on the user's next action, recovers 100% HP and keeps fighting, up to 4 times.",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_pas.png",
+      "animation": null,
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently raises own HP by (+20). On entry, gains 70% [Non-Crit DMG Free]. Permanently gains 30% [Support Enhancement]. In the first 9 rounds, when about to be defeated, enters [Undefeated] and absorbs all damage taken during it; on the user's next action, recovers 100% HP and keeps fighting, up to 5 times.",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_pas.png",
+      "animation": null,
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently raises own HP by (+20). On entry, gains 80% [Non-Crit DMG Free]. Permanently gains 40% [Support Enhancement]. In the first 9 rounds, when about to be defeated, enters [Undefeated] and absorbs all damage taken during it; on the user's next action, recovers 100% HP and keeps fighting, up to 6 times.",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_pas.png",
+      "animation": null,
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "After any enemy acts, every Split Black Sperm on the field has a 70% chance to pursue all enemies, each dealing 480% ATK [Specialized Direct DMG]. On entry, permanently reduces DMG taken by 30%. After each hit taken, splits off 2 Black Sperm to fight alongside; splits inherit 100% of the host's base ATK, up to 8 at once (cannot be summoned while minion slots conflict).",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_awk.png",
+      "animation": null,
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "After any enemy acts, every Split Black Sperm on the field has a 100% chance to pursue all enemies, each dealing 620% ATK [Specialized Direct DMG]. When a same-row ally triggers [Regroup], Black Sperm immediately splits to its maximum count and launches a [Charged Pursuit] at 120% skill power. On entry, permanently reduces DMG taken by 50%. After each hit taken, splits off 4 Black Sperm to fight alongside; splits inherit 120% of the host's base ATK, up to 8 at once (cannot be summoned while minion slots conflict).",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_awk.png",
+      "animation": null,
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Black Sperm (UR+)/Skill_awk.png",
+      "animation": null,
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Invincible]",
+      "desc": "Absorbs all damage received during this period, restoring HP on the next turn."
+    },
+    {
+      "term": "[Re-battle]",
+      "desc": "Triggers an extra action."
+    },
+    {
+      "term": "[Charged Pursuit]",
+      "desc": "Attacks out of turn with a predetermined skill strength percentage."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Black Sperm (URplus)/Keepsake_URplus.webp",
+  "bio": "UR+ Form of Black Sperm. An incredibly dangerous Dragon-level monster with infinite cell splitting capabilities, overwhelming enemies with sheer numbers.",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "AOE DAMAGE",
+    "IMMORTAL",
+    "SUMMON",
+    "PURSUIT"
+  ],
+  "bondList": "Garou, Homeless Emperor, Psykos",
+  "classLevel": "Dragon",
+  "releaseSea": "01/12/2026",
+  "releaseTrung": "01/08/2026",
+  "classIcon": "/Class/Dragon.png",
+  "imageSrcset": "/Characters/optimized/blacksperm-urplus-360.webp 360w, /Characters/optimized/blacksperm-urplus-600.webp 600w",
+  "imageWidth": 1156,
+  "imageHeight": 1068
+}

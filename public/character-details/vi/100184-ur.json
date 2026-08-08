@@ -1,0 +1,142 @@
+{
+  "id": "100184-ur",
+  "name": "Boros",
+  "imageURL": "/Characters/optimized/100184-ur-600.webp",
+  "tier": "UR",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Chủ Lực (Công)"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 106
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST lên một mục tiêu đơn. Sau khi tung Tối Thượng đầu tiên, có thể giảm [Không Bạo Kích, Không Tử].",
+      "icon": "/Skill/Boros (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Giảm [Không Bạo Kích, Không Tử] của mục tiêu đi 1 lượt.Gây 7000% ST ST trực tiếp lên một mục tiêu đơn (chỉ chịu ảnh hưởng bởi Giảm ST cấp cao), vô hiệu 45% [Né Tránh Chuyên Biệt] và [Miễn Sát Thương Không Bạo Kích], xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt].",
+      "icon": "/Skill/Boros (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tăng Tỉ lệ Chí mạng thêm 50%ST Tấn công Tối Thượng 7000% → 10,000%",
+      "keepsakeIcon": "/Keepsake/Boros (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Boros (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi hành động, bản thân và đồng minh xung quanh kích hoạt [Tiến Hóa] lên mục tiêu. Trước mỗi hiệp, hồi Máu cho toàn bộ đồng minh bằng 300% Máu tối đa, kéo dài 2 hiệp. Vĩnh viễn nhận +50% [Miễn Sát Thương Không Bạo Kích].[Tiến Hóa]: lập tức hủy trạng thái [Bất Khuất] và [Bỏ Qua Sát Thương] của mục tiêu.[Miễn Sát Thương Không Bạo Kích]: hiệu lực với mọi loại ST; không thể tồn tại cùng [Nhanh Nhẹn].",
+      "icon": "/Skill/Boros (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi toàn bộ đồng minh hành động, kích hoạt [Tiến Hóa] lên mục tiêu. Trước mỗi hiệp, hồi Máu cho toàn bộ đồng minh bằng 350% Máu tối đa, kéo dài 2 hiệp. Vĩnh viễn nhận +55% [Miễn Sát Thương Không Bạo Kích].",
+      "icon": "/Skill/Boros (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi toàn bộ đồng minh hành động, kích hoạt [Tiến Hóa] lên mục tiêu. Trước mỗi hiệp, hồi Máu cho toàn bộ đồng minh bằng 350% Máu tối đa, kéo dài 3 hiệp. Vĩnh viễn nhận +60% [Miễn Sát Thương Không Bạo Kích].",
+      "icon": "/Skill/Boros (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "(Lõi Cơ bản) (1 Grappler, 2 Esper): Cấp 3 năng lượng mỗi lượt. Trong 3 lượt đầu, đồng minh nhận 30% tăng sát thương chiến đấu.(Lõi Nâng cao) (1 Grappler, 1 Duelist, 2 Esper): Khi vào trận, ban cho đồng minh [Hồi Phục Dư Thừa] vĩnh viễn (phần hồi HP vượt mức được chuyển thành [Khiên Sinh Lực] để chống ST nhận vào, không vượt quá 20 lần HP Tối đa). Toàn bộ đồng minh nhận 30% Combat immunity. Khi vào trận, đồng minh hàng trước được hồi 80% HP Tối đa, kéo dài 3 lượt.",
+      "icon": "/Skill/Source/100184-ur/awakened.webp",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "(Lõi Cơ bản & Nâng cao): Tăng sát thương chiến đấu 30% > 50%. Khi đồng minh thực hiện đòn truy kích, nhận thêm 1 năng lượng (1 lần mỗi lượt).",
+      "icon": "/Skill/Source/100184-ur/awakened.webp",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "(Lõi Cơ bản & Nâng cao): Tăng sát thương chiến đấu 30% > 50%. Khi đồng minh thực hiện đòn truy kích, nhận thêm 1 năng lượng (2 lần mỗi lượt).",
+      "icon": "/Skill/Source/100184-ur/awakened.webp",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
+    },
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    },
+    {
+      "term": "[Miễn Nhiễm Đòn Không Bạo Kích]",
+      "desc": "Buff sinh tồn mà khi có, đơn vị không thể bị chí mạng và không thể chết, giữ lại 70% máu trong suốt thời gian hiệu lực."
+    },
+    {
+      "term": "[Miễn Nhiễm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm mọi sát thương không chí mạng (thường về 1). Không thể tồn tại cùng né tránh loại Agility."
+    },
+    {
+      "term": "[Kích Nổ]",
+      "desc": "Lớp nổ tích lũy mà mỗi lớp (đến giới hạn) thêm một mục tiêu cho kỹ năng Tối Thượng."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Boros (UR)/Keepsake_UR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/10/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Hồi Phục"
+  ],
+  "classLevel": "Dragon",
+  "releaseSea": "01/02/2024",
+  "imageSrcset": "/Characters/optimized/100184-ur-360.webp 360w, /Characters/optimized/100184-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

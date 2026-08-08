@@ -1,0 +1,96 @@
+{
+  "id": "100024-ssr",
+  "name": "Bang",
+  "tier": "SSR",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hỗ Trợ",
+    "Tạo Khiên"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 392,
+    "hp": 2351,
+    "def": 99,
+    "spd": 97
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST (+10) sát thương lên mục tiêu đơn, và bản thân vào trạng thái [Cuồng Nộ] 1 lượt (tăng 30% sát thương).",
+      "icon": "/Skill/Bang (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 5 liên kích gây 30% ST (+2) sát thương lên mỗi kẻ địch trong cả cột, với 100% cơ hội gây [Nội Thương] cho mục tiêu bị đánh (khi bị đánh, gây thêm sát thương Nội Thương bằng 140% ST của Silver Fang; hiệu ứng biến mất sau khi kích hoạt).",
+      "icon": "/Skill/Bang (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung 5 liên kích gây 38% ST (+2) sát thương lên mỗi kẻ địch trong cả cột, với 100% cơ hội gây [Nội Thương] cho mục tiêu bị đánh (khi bị đánh, gây thêm sát thương Nội Thương bằng 160% ST của Silver Fang; hiệu ứng biến mất sau khi kích hoạt).",
+      "icon": "/Skill/Bang (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Bang (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi bắt đầu trận đấu, tăng 30% tỷ lệ Đỡ cho cả đội trong 2 lượt. Sau khi đồng minh kích hoạt Đỡ, nhận [Kiên Cường] (hấp thụ sát thương bằng 7% Máu của bản thân, 3 lần mỗi lượt).",
+      "icon": "/Skill/Bang (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi bắt đầu trận đấu, tăng 30% tỷ lệ Đỡ cho cả đội trong 2 lượt. Sau khi đồng minh kích hoạt Đỡ, nhận [Kiên Cường] (hấp thụ sát thương bằng 8% Máu của bản thân, 4 lần mỗi lượt).",
+      "icon": "/Skill/Bang (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi bắt đầu trận đấu, tăng 30% tỷ lệ Đỡ cho cả đội trong 2 lượt. Sau khi đồng minh kích hoạt Đỡ, nhận [Kiên Cường] (hấp thụ sát thương bằng 8.5% Máu của bản thân, 4 lần mỗi lượt).",
+      "icon": "/Skill/Bang (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100024-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Bang (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Lá Chắn]",
+      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+    },
+    {
+      "term": "[Nội Thương]",
+      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+    }
+  ],
+  "releaseDate": "01/11/2020",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/10/2020",
+  "releaseTrung": "01/06/2020",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100024-ssr-360.webp 360w, /Characters/optimized/100024-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

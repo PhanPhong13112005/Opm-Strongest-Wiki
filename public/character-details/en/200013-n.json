@@ -1,0 +1,82 @@
+{
+  "id": "200013-n",
+  "name": "Men's Esthetician Man",
+  "imageURL": "/Characters/optimized/200013-n-600.webp",
+  "tier": "N",
+  "type": "Duelist",
+  "faction": "Monster",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 158,
+    "hp": 945,
+    "def": 40,
+    "spd": 84
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 80% ATK (+10) damage to a single target. Has a 100% chance to inflict [Corrupt] on the target for 2 turns (DMG reduction rate lowered by 30%).",
+      "icon": "/Skill/Mens Esthetician Man (N)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 180% ATK (+10) damage to a single target.",
+      "icon": "/Skill/Mens Esthetician Man (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 200% ATK (+10) damage to a single target.",
+      "keepsakeIcon": "/Keepsake/Men's Esthetician Man (N)/Keepsake_N.png",
+      "icon": "/Skill/Mens Esthetician Man (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP (+20). After being hit, has a 25% chance to increase own damage by 10% for 1 turn.",
+      "icon": "/Skill/Mens Esthetician Man (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP (+20). After being hit, has a 25% chance to increase own damage by 15% for 1 turn.",
+      "icon": "/Skill/Mens Esthetician Man (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP (+20). After being hit, has a 25% chance to increase own damage by 18% for 1 turn.",
+      "icon": "/Skill/Mens Esthetician Man (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Men's Esthetician Man (N)/Keepsake_N.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/200013-n-360.webp 360w, /Characters/optimized/200013-n-600.webp 544w",
+  "imageWidth": 544,
+  "imageHeight": 684
+}

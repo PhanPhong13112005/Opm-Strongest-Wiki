@@ -1,0 +1,102 @@
+{
+  "id": "100135-sr",
+  "name": "Awakened Cockroach",
+  "imageURL": "/Characters/optimized/100135-sr-600.webp",
+  "tier": "SR",
+  "type": "Grappler",
+  "faction": "Monster",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 186,
+    "hp": 1089,
+    "def": 46,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK (+10) DMG to a single target.",
+      "icon": "/Skill/Awakened Cockroach (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals a 4-hit combo to a single back-row target for 35% ATK (+2) DMG, and reduces the target's chance to inflict [Force Field], [Stun], [Injured] and [Internal Injury] by 50% for 1 turn.",
+      "icon": "/Skill/Awakened Cockroach (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals a 4-hit combo to a single back-row target for 40% ATK (+2) DMG, and reduces the target's chance to inflict [Force Field], [Stun], [Injured] and [Internal Injury] by 50% for 1 turn.",
+      "keepsakeIcon": "/Keepsake/Awakened Cockroach (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Awakened Cockroach (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently gains (+20) HP. After taking fatal DMG, triggers [Regeneration] (while an ally is on the field, restores 15% HP before own next action to keep fighting, triggers up to 1 time). After acting, increases own DMG reduction by 30% for 2 turns.",
+      "icon": "/Skill/Awakened Cockroach (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently gains (+20) HP. After taking fatal DMG, triggers [Regeneration] (while an ally is on the field, restores 15% HP before own next action to keep fighting, triggers up to 2 times). After acting, increases own DMG reduction by 35% for 2 turns.",
+      "icon": "/Skill/Awakened Cockroach (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently gains (+20) HP. After taking fatal DMG, triggers [Regeneration] (while an ally is on the field, restores 15% HP before own next action to keep fighting, triggers up to 2 times). After acting, increases own DMG reduction by 40% for 2 turns.",
+      "icon": "/Skill/Awakened Cockroach (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Stun]",
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+    },
+    {
+      "term": "[Internal Injury]",
+      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+    },
+    {
+      "term": "[Regeneration]",
+      "desc": "Restores Health over time or before the unit's next action."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Awakened Cockroach (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [],
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "classLevel": "Demon",
+  "imageSrcset": "/Characters/optimized/100135-sr-360.webp 360w, /Characters/optimized/100135-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

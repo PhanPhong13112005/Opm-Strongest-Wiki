@@ -1,0 +1,82 @@
+{
+  "id": "100067-n",
+  "name": "Charanko",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 153,
+    "hp": 918,
+    "def": 39,
+    "spd": 89
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 80% ATK DMG to a single target.",
+      "icon": "/Skill/Charanko (N)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 180% ATK DMG to a single enemy, with a 50% chance to inflict [Injured] on the main target for 2 turns (adds bonus Injured DMG equal to 10% ATK when the target is attacked).",
+      "icon": "/Skill/Charanko (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 200% ATK DMG to a single enemy, with a 50% chance to inflict [Injured] on the main target for 2 turns (adds bonus Injured DMG equal to 10% ATK when the target is attacked).",
+      "icon": "/Skill/Charanko (N)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Charanko (N)/Keepsake_N.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently gains +20% HP. When deployed together with Bitterworm, DMG is increased by 20%.",
+      "icon": "/Skill/Charanko (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently gains +30% HP. When deployed together with Bitterworm, DMG is increased by 30%.",
+      "icon": "/Skill/Charanko (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently gains +35% HP. When deployed together with Bitterworm, DMG is increased by 35%.",
+      "icon": "/Skill/Charanko (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "N",
+  "imageURL": "/Characters/optimized/100067-n-600.webp",
+  "type": "Grappler",
+  "faction": "Martial Artist",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Charanko (N)/Keepsake_N.png",
+  "effects": [],
+  "classLevel": "Martial_Artist",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100067-n-360.webp 360w, /Characters/optimized/100067-n-600.webp 508w",
+  "imageWidth": 508,
+  "imageHeight": 612
+}

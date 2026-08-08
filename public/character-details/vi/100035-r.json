@@ -1,0 +1,81 @@
+{
+  "id": "100035-r",
+  "name": "Hố Đen Ba Lỗ",
+  "imageURL": "/Characters/optimized/100035-r-600.webp",
+  "tier": "R",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 155,
+    "hp": 927,
+    "def": 39,
+    "spd": 87
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 90% ST sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Tank Top Blackhole (R)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 190% ST sát thương lên mục tiêu đơn, với 100% tỉ lệ giảm 10% sát thương phải nhận cho bản thân trong 2 lượt.",
+      "icon": "/Skill/Tank Top Blackhole (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 190% ST sát thương lên mục tiêu đơn, với 100% tỉ lệ giảm 20% sát thương phải nhận cho bản thân trong 2 lượt.",
+      "keepsakeIcon": "/Keepsake/Tank Top Blackhole (R)/Keepsake_R.png",
+      "icon": "/Skill/Tank Top Blackhole (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng 20 Máu cho bản thân. Khi cùng ra trận với Tank Top Tiger, tăng 20% tỉ lệ giảm sát thương cho bản thân, kéo dài đến hết trận đấu.",
+      "icon": "/Skill/Tank Top Blackhole (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng 20 Máu cho bản thân. Khi cùng ra trận với Tank Top Tiger, tăng 30% tỉ lệ giảm sát thương cho bản thân, kéo dài đến hết trận đấu.",
+      "icon": "/Skill/Tank Top Blackhole (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng 20 Máu cho bản thân. Khi cùng ra trận với Tank Top Tiger, tăng 35% tỉ lệ giảm sát thương cho bản thân, kéo dài đến hết trận đấu.",
+      "icon": "/Skill/Tank Top Blackhole (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Tank Top Blackhole (R)/Keepsake_R.png",
+  "classLevel": "B",
+  "classIcon": "/Class/B.png",
+  "imageSrcset": "/Characters/optimized/100035-r-360.webp 360w, /Characters/optimized/100035-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

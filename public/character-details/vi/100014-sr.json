@@ -1,0 +1,84 @@
+{
+  "id": "100014-sr",
+  "name": "Stinger",
+  "tier": "SR",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hỗ Trợ",
+    "Tạo Khiên"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 180,
+    "hp": 1079,
+    "def": 46,
+    "spd": 93
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 50% ST sát thương lên mục tiêu đơn với 2 đòn liên kích.",
+      "icon": "/Skill/Stinger (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 30% ST sát thương lên mỗi kẻ địch trong một cột với 5 đòn liên kích, với 100% cơ hội gây [Vỡ Vụn] lên mục tiêu chính trong 2 lượt (giảm tỉ lệ Giảm ST đi 35%).",
+      "icon": "/Skill/Stinger (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 30% ST sát thương lên mỗi kẻ địch trong một cột với 5 đòn liên kích, với 100% cơ hội gây [Vỡ Vụn] lên mục tiêu chính và 50% cơ hội lên các mục tiêu cùng cột trong 2 lượt (giảm tỉ lệ Giảm ST đi 35%).",
+      "icon": "/Skill/Stinger (SR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Stinger (SR)/Keepsake_SR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi hạ gục kẻ địch, gây 100% ST sát thương phụ trội lên kẻ địch có phần trăm Máu thấp nhất. Có thể kích hoạt tối đa 2 lần.",
+      "icon": "/Skill/Stinger (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi hạ gục kẻ địch, gây 120% ST sát thương phụ trội lên kẻ địch có phần trăm Máu thấp nhất. Có thể kích hoạt tối đa 4 lần.",
+      "icon": "/Skill/Stinger (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi hạ gục kẻ địch, gây 130% ST sát thương phụ trội lên kẻ địch có phần trăm Máu thấp nhất. Có thể kích hoạt tối đa 4 lần.",
+      "icon": "/Skill/Stinger (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100014-sr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Stinger (SR)/Keepsake_SR.png",
+  "effects": [],
+  "classLevel": "A",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100014-sr-360.webp 360w, /Characters/optimized/100014-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

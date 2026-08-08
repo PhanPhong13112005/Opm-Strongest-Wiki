@@ -1,0 +1,93 @@
+{
+  "id": "100059-ssr",
+  "name": "Geryuganshoop",
+  "tier": "SSR",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "DMG (ATK)",
+    "Support",
+    "Weaken"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 367,
+    "hp": 2203,
+    "def": 93,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 40% ATK (+3) damage to a single target in 3 hit combos. After acting, randomly puts one ally into the [Berserk] state (deals 30% more damage when attacking).",
+      "icon": "/Skill/Geryuganshoop (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 26% ATK (+2) damage to each enemy in the entire row in 5 hit combos, and inflicts [Panic] on the enemy (seals the enemy's energy for several turns; when the same effect is present, the highest value takes effect).",
+      "icon": "/Skill/Geryuganshoop (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 33% ATK (+2) damage to each enemy in the entire row in 5 hit combos, and inflicts [Panic] on the enemy (seals the enemy's energy for several turns; when the same effect is present, the highest value takes effect).",
+      "icon": "/Skill/Geryuganshoop (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Geryuganshoop (SSR)/Keepsake_SSR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own max HP by (+20). After each action, drains the sealed energy from the main target (can only drain once per turn; after a successful drain, cannot inflict [Panic] on enemies again that turn). For each point of energy drained, deals 40% ATK extra damage to all enemies.",
+      "icon": "/Skill/Geryuganshoop (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own max HP by (+20). After each action, drains the sealed energy from the main target (can only drain once per turn; after a successful drain, cannot inflict [Panic] on enemies again that turn). For each point of energy drained, deals 50% ATK extra damage to all enemies.",
+      "icon": "/Skill/Geryuganshoop (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own max HP by (+20). After each action, drains the sealed energy from the main target (can only drain once per turn; after a successful drain, cannot inflict [Panic] on enemies again that turn). For each point of energy drained, deals 55% ATK extra damage to all enemies.",
+      "icon": "/Skill/Geryuganshoop (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100059-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Geryuganshoop (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "effects": [
+    {
+      "term": "[Panic]",
+      "desc": "Control status interrupts the target's actions."
+    }
+  ],
+  "releaseDate": "16/06/2020",
+  "classLevel": "Dragon",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "imageSrcset": "/Characters/optimized/100059-ssr-360.webp 360w, /Characters/optimized/100059-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

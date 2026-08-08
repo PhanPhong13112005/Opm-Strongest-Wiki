@@ -1,0 +1,135 @@
+{
+  "id": "100191-ur",
+  "name": "Hellfire Flame",
+  "tier": "UR",
+  "type": "Vũ Trang",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Tạo Khiên"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 116
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST cho một mục tiêu đơn.",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tấn công kẻ địch theo hàng với 3 đòn liên tiếp, gây 900% ST. Mỗi đòn có 50% tỉ lệ thêm một lớp [Thiêu Đốt Chuyên Biệt] (gây 300% ST sát thương theo thời gian, biến mất sau khi có hiệu lực 3 lần; sau khi bất kỳ nhân vật nào hành động, chuyển sang các mục tiêu có thể nhận sát thương). Có 100% tỉ lệ giảm Tỉ lệ chí mạng của toàn bộ đội kẻ địch đi 40% trong 2 lượt.",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "ST Tối Thượng 900% → 1200% ST. Giảm Tỉ lệ chí mạng kẻ địch 40% → 60%. ST [Thiêu Đốt Chuyên Biệt] 300% → 400% ST.",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Hellfire Flame (UR)/Keepsake_UR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Khi trận đấu bắt đầu, có 100% tỉ lệ giảm Tỉ lệ hồi máu của đội kẻ địch đi 60%. Vào đầu trận đấu, nhận 60% tỉ lệ [Khả Năng Né Tránh] (giảm ST trực tiếp/phụ trội/tích lũy/cuồng bạo xuống còn 1 ST).",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Giảm Tỉ lệ hồi máu kẻ địch 60% → 70%. Tỉ lệ [Khả Năng Né Tránh] 60% → 70%.",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Giảm Tỉ lệ hồi máu kẻ địch 70% → 80%. Tỉ lệ [Khả Năng Né Tránh] 70% → 80%.",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Toàn bộ đồng minh vĩnh viễn nhận 60% [Đệm Sát Thương] (Giảm ST dựa trên Máu tối đa). Khi bất kỳ nhân vật nào hành động, gỡ bỏ [Choáng/Choáng Chuyên Biệt] khỏi 1 đồng minh (Có thể gỡ bỏ mỗi hiệu ứng giảm trong mỗi lượt, tối đa 3 lần).",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Buffer 60% > 80% Gỡ bỏ hiệu ứng giảm tối đa 3 lần > Không giới hạn",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Hellfire Flame (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100191-ur-600.webp",
+  "debut": "05 / 2024",
+  "keepsakeIcon": "/Keepsake/Hellfire Flame (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/11/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Tạo Khiên"
+  ],
+  "effects": [
+    {
+      "term": "[Né Tránh]",
+      "desc": "Trạng thái né giúp giảm sát thương Trực Tiếp, Thêm, Tích Lũy và Cuồng Nộ nhận vào chỉ còn 1 điểm trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Thiêu Đốt Chuyên Biệt]",
+      "desc": "Bậc PvP của Thiêu Đốt — sát thương liên tục mạnh hơn, khó giải hơn."
+    }
+  ],
+  "classLevel": "Demon",
+  "releaseSea": "01/03/2025",
+  "classIcon": "/Class/Demon.png",
+  "imageSrcset": "/Characters/optimized/100191-ur-360.webp 360w, /Characters/optimized/100191-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

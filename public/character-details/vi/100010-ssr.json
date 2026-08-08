@@ -1,0 +1,94 @@
+{
+  "id": "100010-ssr",
+  "name": "Tia Chớp Chói Lóa",
+  "imageURL": "/Characters/optimized/100010-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Sụp Đổ",
+    "Truy Kích"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 409,
+    "hp": 2300,
+    "def": 97,
+    "spd": 110
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung 2 liên kích lên mục tiêu đơn, mỗi đòn gây 60% ST sát thương, và tăng 20% Tốc độ bản thân trong 1 lượt.",
+      "icon": "/Skill/Flashy Flash (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 5 liên kích lên mỗi kẻ địch trong cả hàng, mỗi đòn gây 28% ST sát thương, và nhận hiệu ứng [Kiên Cường] với cường độ bằng 60% Máu tối đa. Đồng thời có 70% tỉ lệ gây [Băng Hoại] lên mục tiêu trúng đòn trong 2 lượt (tỉ lệ giảm sát thương bị hạ 30%).",
+      "icon": "/Skill/Flashy Flash (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung 5 liên kích lên mỗi kẻ địch trong cả hàng, mỗi đòn gây 34% ST sát thương, và nhận hiệu ứng [Kiên Cường] với cường độ bằng 65% Máu tối đa. Đồng thời có 80% tỉ lệ gây [Băng Hoại] lên mục tiêu trúng đòn trong 2 lượt (tỉ lệ giảm sát thương bị hạ 35%).",
+      "keepsakeIcon": "/Keepsake/Flashy Flash (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Flashy Flash (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi kẻ địch hành động và có Tốc độ thấp hơn bản thân, thực hiện [Truy Kích] (tấn công bằng 80% sát thương và hiệu ứng của đòn thường, tối đa 3 lần mỗi lượt). Sau khi phe ta thực hiện truy kích, Flashy Flash gây 80% ST sát thương phụ trội lên toàn bộ kẻ địch, tối đa 3 lần mỗi lượt.",
+      "icon": "/Skill/Flashy Flash (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi kẻ địch hành động và có Tốc độ thấp hơn bản thân, thực hiện [Truy Kích] (tấn công bằng 80% sát thương và hiệu ứng của đòn thường, tối đa 4 lần mỗi lượt). Sau khi phe ta thực hiện truy kích, Flashy Flash gây 90% ST sát thương phụ trội lên toàn bộ kẻ địch, tối đa 3 lần mỗi lượt.",
+      "icon": "/Skill/Flashy Flash (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi kẻ địch hành động và có Tốc độ thấp hơn bản thân, thực hiện [Truy Kích] (tấn công bằng 80% sát thương và hiệu ứng của đòn thường, tối đa 4 lần mỗi lượt). Sau khi phe ta thực hiện truy kích, Flashy Flash gây 100% ST sát thương phụ trội lên toàn bộ kẻ địch, tối đa 3 lần mỗi lượt.",
+      "icon": "/Skill/Flashy Flash (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Lá Chắn]",
+      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Flashy Flash (SSR)/Keepsake_SSR.png",
+  "releaseDate": "01/02/2021",
+  "classLevel": "Class_S",
+  "releaseSea": "01/01/2020",
+  "releaseTrung": "01/09/2019",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100010-ssr-360.webp 360w, /Characters/optimized/100010-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

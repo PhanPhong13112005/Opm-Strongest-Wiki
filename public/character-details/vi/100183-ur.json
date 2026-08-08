@@ -1,0 +1,139 @@
+{
+  "id": "100183-ur",
+  "name": "Suiryu",
+  "imageURL": "/Characters/optimized/100183-ur-600.webp",
+  "tier": "UR",
+  "type": "Giác Đấu",
+  "faction": "Võ Thuật",
+  "roles": [
+    "Chủ Lực (Công)"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 2 đòn liên tiếp lên một mục tiêu đơn, gây 120% ST, 100% tỉ lệ gây [Nội Thương] (gây 100% ST của Suiryu khi mục tiêu tấn công, biến mất sau khi kích hoạt).",
+      "icon": "/Skill/Suiryu (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tấn công cả một hàng kẻ địch với 5 đòn liên tiếp, gây 400% ST.Kích hoạt [Đột Phá] (hủy [Bất Khuất Chuyên Biệt], mỗi lần tấn công một lần).75% tỉ lệ gây [Nội Thương] lên mục tiêu chính và 3 kẻ địch ngẫu nhiên (gây 600% ST của Suiryu khi mục tiêu tấn công, biến mất sau khi kích hoạt).Cấp cho bản thân [Phòng Hộ Chuyên Biệt] bằng 400% ST.",
+      "icon": "/Skill/Suiryu (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "ST Tối Thượng 400% → 600%Tỉ lệ [Nội Thương] 75% → 90%ST [Nội Thương] 600% → 750%Tự nhận [Phòng Hộ Chuyên Biệt] 400% → 600%",
+      "keepsakeIcon": "/Keepsake/Suiryu (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Suiryu (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn cấp cho bản thân 50% tăng Thương Tổn.Cấp cho bản thân 50% Giảm ST Non-Crit, kéo dài 4 lượt.Sau khi nhận ST chí tử, hồi 50% Máu tối đa, mỗi trận một lần.",
+      "icon": "/Skill/Suiryu (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Tăng Thương Tổn 50% → 65%Hồi phục sau khi nhận ST chí tử 1 lần → 2 lần",
+      "icon": "/Skill/Suiryu (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Tăng Thương Tổn 65% → 80%Tự nhận Giảm ST Non-Crit 50% → 60%Hồi máu sau khi nhận ST chí tử 50% → 80%",
+      "icon": "/Skill/Suiryu (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Sau khi tung Tối thượng, thực hiện [Truy Kích Liên Tục] lên 2 kẻ địch ngẫu nhiên đang chịu [Nội Thương] (100% sát thương và hiệu ứng của Tối thượng, nếu ít hơn 2 kẻ địch, có thể truy kích trên cùng một mục tiêu). Miễn nhiễm [Bám Dính/Tê Liệt]",
+      "icon": "/Skill/Suiryu (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "[Continuous Follow-up] tới 2 kẻ địch > 3 kẻ địch Đánh đuổi theo nếu ít hơn 2 kẻ địch > 3 kẻ địch Bổ sung: Sau khi hồi phục từ [Kiên Cường Chuyên Biệt], tung [Continuous Follow-up] vào 2 kẻ địch ngẫu nhiên (80% ST Tối thượng và 100% hiệu ứng Tối thượng, nếu ít hơn 2 kẻ địch, có thể đánh đuổi theo cùng một mục tiêu).",
+      "icon": "/Skill/Suiryu (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Suiryu (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
+    },
+    {
+      "term": "[Phòng Hộ Chuyên Biệt]",
+      "desc": "Khiên bậc PvP hấp thụ sát thương nhận vào, được cấp theo giá trị dựa trên Tấn Công (ví dụ 400% ST)."
+    },
+    {
+      "term": "[Nội Thương]",
+      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+    },
+    {
+      "term": "[Đột Phá]",
+      "desc": "Hủy khiên Kiên Cường của mục tiêu và tăng tấn công cho đòn đó."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Suiryu (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/09/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Sát Thương (Máu)",
+    "Tạo Khiên"
+  ],
+  "classLevel": "Martial_Artist",
+  "releaseSea": "01/01/2024",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100183-ur-360.webp 360w, /Characters/optimized/100183-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

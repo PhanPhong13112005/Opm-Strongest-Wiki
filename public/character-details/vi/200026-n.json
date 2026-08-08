@@ -1,0 +1,82 @@
+{
+  "id": "200026-n",
+  "name": "Côn Đồ",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 164,
+    "hp": 981,
+    "def": 41,
+    "spd": 80
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 80% ST (+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Paradiser Thug (N)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 100% ST (+10) sát thương lên cả hàng mục tiêu.",
+      "icon": "/Skill/Paradiser Thug (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 120% ST (+10) sát thương lên cả hàng mục tiêu.",
+      "icon": "/Skill/Paradiser Thug (N)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Paradiser Thug (N)/Keepsake_N.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Tăng vĩnh viễn Máu (+20) của bản thân. Nếu có Tùy Tùng Nhóm Đào Nguyên trên sân, tăng 20% sát thương của bản thân, kéo dài đến hết trận đấu.",
+      "icon": "/Skill/Paradiser Thug (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Tăng vĩnh viễn Máu (+20) của bản thân. Nếu có Tùy Tùng Nhóm Đào Nguyên trên sân, tăng 25% sát thương của bản thân, kéo dài đến hết trận đấu.",
+      "icon": "/Skill/Paradiser Thug (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Tăng vĩnh viễn Máu (+20) của bản thân. Nếu có Tùy Tùng Nhóm Đào Nguyên trên sân, tăng 28% sát thương của bản thân, kéo dài đến hết trận đấu.",
+      "icon": "/Skill/Paradiser Thug (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "N",
+  "imageURL": "/Characters/optimized/200026-n-600.webp",
+  "type": "Công Nghệ",
+  "faction": "Khác",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Paradiser Thug (N)/Keepsake_N.png",
+  "effects": [],
+  "classLevel": "Other",
+  "classIcon": "/Class/Other.png",
+  "imageSrcset": "/Characters/optimized/200026-n-360.webp 360w, /Characters/optimized/200026-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 664
+}

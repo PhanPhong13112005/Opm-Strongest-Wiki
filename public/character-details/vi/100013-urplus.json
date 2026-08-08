@@ -1,0 +1,148 @@
+{
+  "id": "100013-urplus",
+  "name": "Zombieman",
+  "imageURL": "/Characters/optimized/100013-urplus-600.webp",
+  "tier": "UR+",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Gây mù diện rộng",
+    "Tiên phong bất tử"
+  ],
+  "duyen": "Heavy Vanguard",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung combo 3 đòn lên mục tiêu đơn, gây 120% ATK sát thương.",
+      "animation": "/Animation/Zombie_Man_Urplus/Base.gif",
+      "type": "Kỹ năng thường",
+      "icon": "/Skill/Source/100013-urplus/basic.webp",
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung combo 5 đòn lên cả hàng địch, gây 4500% ATK [Sát Thương Trực Tiếp Chuyên Biệt] (chỉ chịu ảnh hưởng bởi tăng/giảm sát thương nâng cao), bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Trong 6 hồi đầu, khi dùng Tối Thượng có 120% khả năng gây [Gây Mù] lên mục tiêu chính và 1 kẻ địch ngẫu nhiên trong 1 hồi. ———- [Gây Mù]: giảm 20% [Giảm Sát Thương Đấu Trường], không thể dùng Tối Thượng và không thể truy kích; tối đa 2 lớp cùng tồn tại; được tính là hiệu ứng dạng [Choáng].",
+      "icon": "/Skill/Zombieman (URplus)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": "/Animation/Zombie_Man_Urplus/ult.gif",
+      "keepsakeIcon": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Ngoài ra ban cho toàn bộ đồng minh 15% [Cuồng Nộ] và [Phá Giáp]. [Sát Thương Trực Tiếp Chuyên Biệt] 4500% > 6000% ATK; bỏ qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] 45% > 60%. Cửa sổ [Gây Mù] kéo dài 6 > 7 hồi đầu với khả năng 120% > 180%, và [Gây Mù] giảm [Giảm Sát Thương Đấu Trường] 20% > 30%.",
+      "keepsakeIcon": "/Keepsake/Zombieman (URplus)/Keepsake_URplus.png",
+      "icon": "/Skill/Zombieman (URplus)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": "/Animation/Zombie_Man_Urplus/ult.gif",
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn nhận +20 Máu tối đa. Khi vào trận, nhận 60% [Giảm Sát Thương Không Bạo Kích] và miễn nhiễm [Gây Mù]. Trước khi bất kỳ nhân vật nào hành động, giải [Choáng], [Choáng Chuyên Biệt], [Uy Hiếp] và [Câm Lặng] khỏi toàn bộ đồng minh. Vào đầu Hồi 3, xóa [Liên Kết Sinh Mệnh] khỏi toàn bộ kẻ địch. Trong 4 hồi đầu, đồng minh cùng cột dùng Tối Thượng tốn 0 Năng lượng.",
+      "icon": "/Skill/Zombieman (URplus)/Skill_pas.png",
+      "animation": "/Animation/Zombie_Man_Urplus/Passive.gif",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] khi vào trận 60% > 70%. Cửa sổ Tối Thượng miễn phí năng lượng 4 > 5 hồi.",
+      "icon": "/Skill/Zombieman (URplus)/Skill_pas.png",
+      "animation": "/Animation/Zombie_Man_Urplus/Passive.gif",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] khi vào trận 70% > 80%. Cửa sổ Tối Thượng miễn phí năng lượng 5 > 6 hồi.",
+      "icon": "/Skill/Zombieman (URplus)/Skill_pas.png",
+      "animation": "/Animation/Zombie_Man_Urplus/Passive.gif",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi chịu sát thương chí mạng, kích hoạt [Hồi Phục Chuyên Biệt]. ———- [Hồi Phục Chuyên Biệt]: Khi vào trận, vĩnh viễn giảm 30% sát thương phải chịu. Khi còn đồng minh, trước hành động kế tiếp của bản thân, hồi đầy máu và tiếp tục chiến đấu, tăng 15% ST bản thân và 30% HP tối đa (cộng dồn), tối đa 3 lần kích hoạt. Sau khi kích hoạt, bản thân không nhận sát thương cho đến hết lượt hành động của mình.",
+      "icon": "/Skill/Zombieman (URplus)/zombie_skill_awk.png",
+      "animation": "/Animation/Zombie_Man_Urplus/awken+.gif",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Giảm sát thương 30% > 60%. Số lần kích hoạt tối đa 3 > 4. Ngoài ra, khi một đồng minh cùng hàng kích hoạt [Re-Battle] trong lúc bản thân đang có [Hồi Phục Chuyên Biệt], tung [Truy Kích Tụ Lực] với 120% sức mạnh kỹ năng.",
+      "icon": "/Skill/Zombieman (URplus)/zombie_skill_awk.png",
+      "animation": "/Animation/Zombie_Man_Urplus/awken+.gif",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Zombieman (URplus)/zombie_skill_awk.png",
+      "animation": "/Animation/Zombie_Man_Urplus/awken+.gif",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Gây Mù]",
+      "desc": "Giảm 20% Arena DMG Free, không thể dùng chiêu cuối, không thể truy kích. Tối đa 2 lớp; tính là hiệu ứng loại choáng."
+    },
+    {
+      "term": "[Hồi Sinh]",
+      "desc": "Cơ chế hồi sinh/trở lại gắn với sự sống của đồng minh, đưa đơn vị trở lại trận đấu."
+    },
+    {
+      "term": "[Liên Kết]",
+      "desc": "Gắn sự sống của người triển khai với một đồng minh; không thể bị hạ chừng nào đồng minh đó còn sống."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+    },
+    {
+      "term": "[Hồi Phục Chuyên Biệt]",
+      "desc": "Khi vào trận, vĩnh viễn giảm sát thương; khi còn đồng minh, hồi đầy máu và tiếp tục chiến đấu một số lần giới hạn."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Zombieman (URplus)/Keepsake_URplus.png",
+  "bio": "A new URplus awakening of Zombieman — the “Heavy Vanguard” (重装先锋): an undying Duelist frontline that cleanses crowd-control for the team, blinds and pierces enemy defenses, and revives with stacking ATK/HP. CV: Takahiro Sakurai.",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "HỒI SINH",
+    "HỖ TRỢ",
+    "GIẢI HIỆU ỨNG",
+    "GÂY MÙ",
+    "XÓA LIÊN KẾT",
+    "TRUY KÍCH"
+  ],
+  "bondList": "Clone 1 + Paquino Family",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/11/2026",
+  "releaseTrung": "01/07/2026",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100013-urplus-360.webp 360w, /Characters/optimized/100013-urplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

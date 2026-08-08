@@ -1,0 +1,124 @@
+{
+  "id": "100057-ssrplus",
+  "name": "Pig God",
+  "roles": [
+    "Heal"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 107
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals Direct DMG of 60% ATK to a single target.",
+      "icon": "/Skill/Pig God (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Grants [Undying] to the target for 2 turns, then deals Direct DMG of 75% ATK and [Devour]s the target (removes it from the field / [Exit]).",
+      "icon": "/Skill/Pig God (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Grants [Undying] to the target for 2 > 4 turns, then deals Direct DMG of 75% > 100% ATK and [Devour]s the target (removes it from the field / [Exit]).",
+      "icon": "/Skill/Pig God (SSR+)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Pig God (SSRplus)/Keepsake_SSRplus.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by 20%. When battle begins, gains [Specialized Guard] of 1000% ATK (removes DMG; stacks with extra-HP effects; total DMG removed cannot exceed 15x its original HP). After entering [Specialized Unyielding], gains another [Specialized Guard] of 600% ATK. Unable to [Off Battle] and immune to [Devour].",
+      "icon": "/Skill/Pig God (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Specialized Guard] 1000% &gt; 1100% ATK. Second [Specialized Guard] 600% &gt; 700% ATK.",
+      "icon": "/Skill/Pig God (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Specialized Guard] 1100% &gt; 1200% ATK. Second [Specialized Guard] 700% &gt; 800% ATK.",
+      "icon": "/Skill/Pig God (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When an ally triggers [Off Battle], inflicts [Specialized Corrode] (DoT by 150% ATK; after any character acts, transfers the effect to a random enemy, disappears after transferring 3 times). Once a surrounding ally is defeated, Pig God can [Devour] an ally; after any character acts, the ally returns to battle and recovers 60% Max HP, up to 3 times.",
+      "icon": "/Skill/Pig God (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "[Specialized Corrode] DoT 150% > 200% ATK. On [Devour], the ally recovers 60% > 75% Max HP, and [Devour] can trigger up to 3 > 4 times.",
+      "icon": "/Skill/Pig God (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Pig God (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR+",
+  "imageURL": "/Characters/optimized/100057-ssrplus-600.webp",
+  "type": "Esper",
+  "faction": "Hero",
+  "debut": "06 / 2022",
+  "keepsakeIcon": "/Keepsake/Pig God (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "06 / 2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Heal"
+  ],
+  "effects": [
+    {
+      "term": "[Immortal]",
+      "desc": "Survival status keeps the bearer alive by drastically reducing damage taken (e.g. only taking 20%)."
+    }
+  ],
+  "classLevel": "Class_SS",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100057-ssrplus-360.webp 360w, /Characters/optimized/100057-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

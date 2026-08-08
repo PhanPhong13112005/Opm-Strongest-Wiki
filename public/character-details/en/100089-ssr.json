@@ -1,0 +1,91 @@
+{
+  "id": "100089-ssr",
+  "name": "Gouketsu",
+  "imageURL": "/Characters/optimized/100089-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Grappler",
+  "faction": "Monster",
+  "roles": [
+    "Reduce Non-Crit DMG",
+    "Increase Shield Rate"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 405,
+    "hp": 2531,
+    "def": 107,
+    "spd": 99
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK (+10) damage to a single target, with a 100% chance to inflict [Internal Injury] on the target (when the target is hit, adds Internal Injury damage equal to 100% of Gouketsu's ATK; the effect disappears after triggering).",
+      "icon": "/Skill/Gouketsu (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 60% ATK (+3) damage to all targets with a 3-hit combo, and simultaneously restores HP equal to 20% of own max HP.",
+      "icon": "/Skill/Gouketsu (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 70% ATK (+3) damage to all targets with a 3-hit combo, and simultaneously restores HP equal to 30% of own max HP.",
+      "keepsakeIcon": "/Keepsake/Gouketsu (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Gouketsu (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). Self gains 30% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect). At the start of battle, grants self and surrounding allies 70% Healing rate and Shield rate for 2 turns.",
+      "icon": "/Skill/Gouketsu (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). Self gains 35% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect). At the start of battle, grants self and surrounding allies 80% Healing rate and Shield rate for 2 turns.",
+      "icon": "/Skill/Gouketsu (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). Self gains 38% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect). At the start of battle, grants self and surrounding allies 90% Healing rate and Shield rate for 2 turns.",
+      "icon": "/Skill/Gouketsu (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Internal Injury]",
+      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Gouketsu (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseDate": "01/03/2021",
+  "classLevel": "Dragon",
+  "releaseSea": "01/02/2020",
+  "releaseTrung": "01/10/2019",
+  "imageSrcset": "/Characters/optimized/100089-ssr-360.webp 360w, /Characters/optimized/100089-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

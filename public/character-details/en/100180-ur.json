@@ -1,0 +1,168 @@
+{
+  "id": "100180-ur",
+  "name": "Tatsumaki/Terrible Tornado",
+  "imageURL": "/Characters/optimized/100180-ur-600.webp",
+  "tier": "UR",
+  "type": "Esper",
+  "faction": "Hero",
+  "roles": [
+    "Force Field",
+    "Chain Detonation"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 108
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 200% ATK to a single target.",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 5000% ATK of Specialized Direct DMG (only affected by high-level DMG Free) to all targets, ignores 45% [Specialized Evasion] and [Non-Crit DMG Free], and pierces through [Unyielding] and [Specialized Unyielding].Inflicts [Energy Suppression] on the 3 enemies with highest ATK, lasting 2 turns.——— [Energy Suppression]: when dealing DMG to HP/[Specialized HP], causes the target to activate 1x [Energy Conversion] (reduces DMG received and converts it into [Shield]).",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Gain 20% [Rage] and [Shield Break]. ATK 5000% → 7000%. Ignores [Specialized Evasion] 45% → 60%. Inflicts [Energy Suppression] on 3 enemies → all enemies.——— [Shield Break]: during an attack, ignore the enemy's 30% DMG Free and Specialized DEF.",
+      "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (UR)/Keepsake_UR.png",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). After any ally acts, launches an [Ultimate Follow-up] on the whole enemy team for 80%, up to 2 times per round, and restores [Specialized Guard] equal to 50% of the DoT from [Detonation].",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Ultimate Follow-up] 80% &gt; 100%. Restore [Specialized Guard] 50% &gt; 65%.",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Ultimate Follow-up] 100% &gt; 120%. Restore [Specialized Guard] 65% &gt; 80%.",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When battle begins, summons Hellish Blizzard to assist in battle, 100% ATK of UR TT. After UR TT acts or launching Ultimate Follow-Up, Hellish Blizzard will attack with the same style. Basic - Deals 100% ATK damage to a random target. Ultimate - Attacks all enemies with 3 consecutive strikes and deals DMG by 100% ATK and detonates [Field] (DOT by 100%) After any character acts, recover from [Stun/Specialized Stun].",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "When battle begins, summons Hellish Blizzard to assist (100% (120%) ATK of Terrible Tornado). After Terrible Tornado acts or launches an [Ultimate Follow-up], Hellish Blizzard attacks in the same style. Basic: deals 100% ATK DMG to a random target. Ultimate: attacks all enemies with 3 consecutive strikes for 100% ATK and detonates [Field] (DoT 100% (160%) ATK). After any character acts, recovers from [Stun]/[Specialized Stun].",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Spec. Unyielding]",
+      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+    },
+    {
+      "term": "[Unyielding]",
+      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+    },
+    {
+      "term": "[Energy Conversion]",
+      "desc": "When an enemy carrying [Energy Suppression] damages the carrier, the damage is reduced by 20% and the reduction is converted into energy."
+    },
+    {
+      "term": "[Shield]",
+      "desc": "The shield absorbs damage up to a portion of the subject's Health; Charge DMG ignores it."
+    },
+    {
+      "term": "[Non-Crit DMG Immunity]",
+      "desc": "Reduces all non-critical damage (usually to 1). Cannot survive and avoid Agility."
+    },
+    {
+      "term": "[Spec. HP]",
+      "desc": "The PvP tier's unique health bar stacks on top of regular health, must also be depleted, and can be restored independently."
+    },
+    {
+      "term": "[Spec. Dodge]",
+      "desc": "Evasion PvP tier — reduces specialized attacks to 1 damage; pierced by the ignore dodge effect."
+    },
+    {
+      "term": "[Shield Break]",
+      "desc": "While attacking, ignore the enemy's 30% Damage Immunity and Unique Defense to allow the attack to penetrate their shield."
+    },
+    {
+      "term": "[Wrath]",
+      "desc": "Attack buff increases unit damage, often accompanied by [Shield Break]."
+    },
+    {
+      "term": "[Formation]",
+      "desc": "The battlefield effect deals damage over time (100%) and can be detonated for a burst of damage, and helps the character recover from Stun after an action."
+    },
+    {
+      "term": "[Energy Suppression]",
+      "desc": "When dealing damage to health, forces the target to activate Energy Conversion, reducing the damage they deal and choking their mana source."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/06/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Debuff",
+    "DoT",
+    "Generate Shield"
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/10/2023",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100180-ur-360.webp 360w, /Characters/optimized/100180-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,81 @@
+{
+  "id": "100032-r",
+  "name": "D-pad",
+  "imageURL": "/Characters/optimized/100032-r-600.webp",
+  "tier": "R",
+  "type": "Grappler",
+  "faction": "Hero",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 159,
+    "hp": 954,
+    "def": 40,
+    "spd": 88
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 45% ATK DMG to a single target with 2 combo strikes.",
+      "icon": "/Skill/D-pad (R)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 48% ATK DMG to a single target with 4 combo strikes, with a 100% chance to reduce self [Injured] by 10% for 2 turns.",
+      "icon": "/Skill/D-pad (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 48% ATK DMG to a single target with 4 combo strikes, with a 100% chance to reduce self [Injured] by 20% for 2 turns.",
+      "keepsakeIcon": "/Keepsake/D-pad (R)/Keepsake_R.png",
+      "icon": "/Skill/D-pad (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases self max HP. When deployed together with Sangfu Overall Suit, D-Pad DMG is increased by 20% until the end of the battle.",
+      "icon": "/Skill/D-pad (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases self max HP. When deployed together with Sangfu Overall Suit, D-Pad DMG is increased by 30% until the end of the battle.",
+      "icon": "/Skill/D-pad (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases self max HP. When deployed together with Sangfu Overall Suit, D-Pad DMG is increased by 35% until the end of the battle.",
+      "icon": "/Skill/D-pad (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/D-pad (R)/Keepsake_R.png",
+  "classLevel": "C",
+  "classIcon": "/Class/C.png",
+  "imageSrcset": "/Characters/optimized/100032-r-360.webp 360w, /Characters/optimized/100032-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

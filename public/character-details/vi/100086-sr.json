@@ -1,0 +1,89 @@
+{
+  "id": "100086-sr",
+  "name": "Người Lòng Đất",
+  "roles": [
+    "Suy Yếu",
+    "Sát Thương (Máu)"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 175,
+    "hp": 1049,
+    "def": 44,
+    "spd": 90
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST lên một mục tiêu đơn, và gây thêm 10% Máu tối đa làm sát thương phụ trội.",
+      "icon": "/Skill/Subterranean (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 200% ST lên một mục tiêu đơn, và gây thêm 15% Máu tối đa làm sát thương phụ trội.",
+      "icon": "/Skill/Subterranean (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 200% ST lên một mục tiêu đơn, với 100% khả năng gây thêm 15% Máu tối đa làm sát thương phụ trội lên mục tiêu chính, và 50% khả năng gây lên các mục tiêu cùng cột với mục tiêu chính.",
+      "icon": "/Skill/Subterranean (SR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Subterranean (SR)/Keepsake_SR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh cùng cột tấn công, lập tức tung ra một đòn [Truy Kích] (tấn công với 80% sát thương và hiệu ứng của đòn đánh thường).",
+      "icon": "/Skill/Subterranean (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh cùng cột tấn công, lập tức tung ra một đòn [Truy Kích] (tấn công với 80% sát thương và hiệu ứng của đòn đánh thường).",
+      "icon": "/Skill/Subterranean (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh cùng cột tấn công, lập tức tung ra một đòn [Truy Kích] (tấn công với 115% sát thương và hiệu ứng của đòn đánh thường).",
+      "icon": "/Skill/Subterranean (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SR",
+  "imageURL": "/Characters/optimized/100086-sr-600.webp",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Subterranean (SR)/Keepsake_SR.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "effects": [
+    {
+      "term": "[Truy Kích]",
+      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+    }
+  ],
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100086-sr-360.webp 360w, /Characters/optimized/100086-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 660
+}

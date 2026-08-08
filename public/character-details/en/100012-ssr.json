@@ -1,0 +1,93 @@
+{
+  "id": "100012-ssr",
+  "name": "Metal Bat",
+  "roles": [
+    "DMG (HP)",
+    "Generate Shield"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 364,
+    "hp": 2182,
+    "def": 92,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK (+10) damage to a single target and restores HP equal to 10% of max HP, up to 3 times per turn.",
+      "icon": "/Skill/Metal Bat (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 30% ATK (+2) damage to each enemy in the entire column in a 5-hit combo, with a 50% chance to inflict [Injured] on each target hit for 2 turns (takes additional Injured damage equal to 50% ATK when attacked), and grants self [Tenacity] (absorbs damage equal to 10% of own HP).",
+      "icon": "/Skill/Metal Bat (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 38% ATK (+2) damage to each enemy in the entire column in a 5-hit combo, with a 60% chance to inflict [Injured] on each target hit for 2 turns (takes additional Injured damage equal to 50% ATK when attacked), and grants self [Tenacity] (absorbs damage equal to 20% of own HP).",
+      "icon": "/Skill/Metal Bat (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Metal Bat (SSR)/Keepsake_SSR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). The lower its HP, the higher its [DMG Free] (reduces up to 50% of Direct and Bonus DMG). After being attacked, if own HP is below 80%, counterattacks the enemy with a [Follow-up] (80% Basic ATK DMG and effects).",
+      "icon": "/Skill/Metal Bat (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[DMG Free] up to 50% &gt; 55%. [Follow-up] 80% &gt; 110% Basic ATK.",
+      "icon": "/Skill/Metal Bat (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[DMG Free] up to 55% &gt; 58%. [Follow-up] 110% &gt; 120% Basic ATK.",
+      "icon": "/Skill/Metal Bat (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR",
+  "imageURL": "/Characters/optimized/100012-ssr-600.webp",
+  "type": "Duelist",
+  "faction": "Hero",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Metal Bat (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Tenacity]",
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+    }
+  ],
+  "releaseDate": "01/10/2020",
+  "classLevel": "Class_S",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100012-ssr-360.webp 360w, /Characters/optimized/100012-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

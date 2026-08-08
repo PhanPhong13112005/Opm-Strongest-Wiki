@@ -1,0 +1,87 @@
+{
+  "id": "100091-sr",
+  "name": "Magicman",
+  "imageURL": "/Characters/optimized/100091-sr-600.webp",
+  "tier": "SR",
+  "type": "Duelist",
+  "faction": "Hero",
+  "roles": [
+    "Burn",
+    "Reduce Extra DMG"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 167,
+    "hp": 1000,
+    "def": 42,
+    "spd": 92
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 100% ATK DMG to a single target.",
+      "icon": "/Skill/Magicman (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 60% ATK DMG to an entire row with 2 hit combo, with a 100% chance to inflict [Burn] on targets that are crit for 2 turns (50% ATK as DoT).",
+      "icon": "/Skill/Magicman (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 60% ATK DMG to an entire row with 2 hit combo, with a 100% chance to inflict [Burn] on targets that are crit for 2 turns (80% ATK as DoT).",
+      "keepsakeIcon": "/Keepsake/Magicman (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Magicman (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own max HP by 20%. When battle begins, grants 20% Bonus DMG RED. to allies in the same row and self for 3 turns.",
+      "icon": "/Skill/Magicman (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own max HP by 20%. When battle begins, grants 30% Bonus DMG RED. to allies in the same row and self for 3 turns.",
+      "icon": "/Skill/Magicman (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own max HP by 20%. When battle begins, grants 35% Bonus DMG RED. to allies in the same row and self for 3 turns.",
+      "icon": "/Skill/Magicman (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Thiêu Đốt]",
+      "desc": "Continuous fire damage over time to the target."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Magicman (SR)/Keepsake_SR.png",
+  "classLevel": "A",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100091-sr-360.webp 360w, /Characters/optimized/100091-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

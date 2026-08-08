@@ -1,0 +1,82 @@
+{
+  "id": "100023-n",
+  "name": "Slugrus",
+  "imageURL": "/Characters/optimized/100023-n-600.webp",
+  "tier": "N",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 153,
+    "hp": 918,
+    "def": 39,
+    "spd": 82
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 80% ATK (+10) DMG to a single target.",
+      "icon": "/Skill/Slugrus (N)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 180% ATK (+10) DMG to a single target.",
+      "icon": "/Skill/Slugrus (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 200% ATK (+10) DMG to a single target.",
+      "keepsakeIcon": "/Keepsake/Slugrus (N)/Keepsake_N.png",
+      "icon": "/Skill/Slugrus (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). If Froggy Man is present, increases own DMG by 20% until the end of battle.",
+      "icon": "/Skill/Slugrus (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). If Froggy Man is present, increases own DMG by 25% until the end of battle.",
+      "icon": "/Skill/Slugrus (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). If Froggy Man is present, increases own DMG by 28% until the end of battle.",
+      "icon": "/Skill/Slugrus (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Slugrus (N)/Keepsake_N.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100023-n-360.webp 360w, /Characters/optimized/100023-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}
