@@ -68,7 +68,7 @@ const sectionsVi = [
   {
     title: 'Liên hệ và thay đổi chính sách',
     short: 'Liên hệ',
-    paragraphs: ['Chủ sở hữu quyền hoặc người dùng có thể gửi yêu cầu hỗ trợ, chỉnh sửa ghi nhận hoặc gỡ nội dung qua email chính thức: phanluuphong13112005@gmail.com hoặc các kênh ban quản trị. Chúng tôi sẽ xem xét yêu cầu hợp lệ và hỗ trợ trong thời gian sớm nhất. Chính sách có thể được cập nhật khi tính năng, nhà cung cấp hoặc quy định thay đổi; ngày cập nhật mới nhất luôn hiển thị ở đầu trang.']
+    paragraphs: ['Chủ sở hữu quyền hoặc người dùng có thể gửi yêu cầu hỗ trợ, chỉnh sửa ghi nhận hoặc gỡ nội dung qua email chính thức: luuphongphan12@gmail.com hoặc các kênh ban quản trị. Chúng tôi sẽ xem xét yêu cầu hợp lệ và hỗ trợ trong thời gian sớm nhất. Chính sách có thể được cập nhật khi tính năng, nhà cung cấp hoặc quy định thay đổi; ngày cập nhật mới nhất luôn hiển thị ở đầu trang.']
   }
 ]
 
@@ -80,7 +80,7 @@ const sectionsEn = [
   { title: 'Security and third parties', short: 'Security', paragraphs: ['Passwords are stored as hashes, write APIs require JWT authorization and role checks, and production uses HTTPS. No Internet system can guarantee absolute security. Links to Facebook, YouTube, other wikis, Vercel, or AI providers are governed by those services’ own policies.'] },
   { title: 'Copyright and affiliation disclaimer', short: 'Copyright', paragraphs: ['OPM Strongest Wiki is fan-made and is not affiliated with, endorsed by, or representative of the authors, franchise owners, game developers, or publishers.', 'Appearance on the wiki or in its repository does not transfer ownership. Game materials are presented for reference, commentary, and community guidance; no commercial rights over those materials are claimed.'], bullets: [['One Punch Man', 'character names and related properties belong to ONE, Yusuke Murata, and their respective rights holders.'], ['Game assets', 'images, icons, animations, audio, and data belong to their respective developers/publishers, including Playcrab, FingerFun, VNGGames, or regional operators.'], ['Original work', 'project code, interface, and documentation © 2026 OPM Strongest Wiki contributors.']] },
   { title: 'Acknowledgements', short: 'Sources', bullets: [['', 'Data and images cross-checked directly in the game.'], ['', 'YouTube guides and gameplay recordings.'], ['', 'Posts, images, and discussions in Facebook community groups.'], ['', 'OPM Wiki and related community wikis.']], sourceLink: 'Community materials shared and compiled by ParkSoongNak; Facebook may require sign-in.' },
-  { title: 'Contact and policy changes', short: 'Contact', paragraphs: ['Rights holders or users may send support requests, attribution corrections, or content removal requests to official email: phanluuphong13112005@gmail.com. We will review valid requests and assist as soon as possible. This policy may change as features, providers, or regulations evolve; the latest revision date is shown at the top of this page.'] }
+  { title: 'Contact and policy changes', short: 'Contact', paragraphs: ['Rights holders or users may send support requests, attribution corrections, or content removal requests to official email: luuphongphan12@gmail.com. We will review valid requests and assist as soon as possible. This policy may change as features, providers, or regulations evolve; the latest revision date is shown at the top of this page.'] }
 ]
 
 const sections = computed(() => locale.value === 'vi' ? sectionsVi : sectionsEn)
