@@ -7,6 +7,7 @@
 ## Mốc kiểm tra gần nhất
 
 - Ngày 09/08/2026, working tree trên branch `codex/fix-plus-asset-paths` đã trích xuất, Việt hóa và đồng bộ thuộc tính Vai trò (`Roles`) cho toàn bộ 177 nhân vật từ `DANH_SACH_KY_NANG_NHAN_VAT_EN.md`.
+- Ngày 08/08/2026, đã triển khai hoàn thành trang Trang bị (Gear) (lên ý tưởng 03/08/2026), hoàn tất sửa bộ kỹ năng nhân vật theo đúng dữ liệu in-game, đang triển khai trang Thẻ Bổ trợ (Buff Gear), và cập nhật ý tưởng mới cho trang Thiên phú (Talents), Chỉ số (Stats), Ấn ký (Insignias) và Trang bị Khuyên dùng (Recommended Gear).
 - `characterApi.js` và `loadLocalCharacterDetail.js` được cập nhật ưu tiên dữ liệu local và vô hiệu hóa disk cache đĩa khi Dev để tránh stale data.
 - Kiểm tra gần nhất: toàn bộ Node/Frontend test đạt 74/74 và Vite production build thành công.
 
