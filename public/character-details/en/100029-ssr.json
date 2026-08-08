@@ -1,0 +1,96 @@
+{
+  "id": "100029-ssr",
+  "name": "Amai Mask",
+  "imageURL": "/Characters/optimized/100029-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Grappler",
+  "faction": "Hero",
+  "roles": [
+    "Team Speed Up",
+    "Tenacity",
+    "Reduce Max HP"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 392,
+    "hp": 2389,
+    "def": 99,
+    "spd": 100
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Strikes a single target with a 3-hit combo, dealing 35% ATK(+3) damage.",
+      "icon": "/Skill/Amai Mask (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Attacks a single target in the back row 2 to 5 times, dealing up to 100% ATK(+2) damage.",
+      "icon": "/Skill/Amai Mask (SSR)/skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Attacks a single target in the back row 3 to 5 times, dealing up to 100% ATK(+2) damage.",
+      "keepsakeIcon": "/Keepsake/Amai Mask (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Amai Mask (SSR)/skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). At the start of the round, grants [Tenacity] to all allies (absorbs 30% of each ally's own Max HP). For every enemy slower than its own SPD, increases own [Ultimate DMG Reduction] by 15% (up to 3 stacks). After acting, launches a [Follow-up] on the enemy with the highest Max HP (80% Basic ATK DMG and effects, 70% chance, up to 3 times per round).",
+      "icon": "/Skill/Amai Mask (SSR)/skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Ultimate DMG Reduction] per stack 15% &gt; 18%. [Follow-up] 80% &gt; 100% Basic ATK.",
+      "icon": "/Skill/Amai Mask (SSR)/skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Grants self a Shield equal to 40% of HP. [Ultimate DMG Reduction] per stack 18% &gt; 20%. [Follow-up] up to 3 &gt; 4 times per round.",
+      "icon": "/Skill/Amai Mask (SSR)/skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Amai Mask (SSR)/Keepsake_SSR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Core"
+  ],
+  "releaseDate": "01/06/2022",
+  "classLevel": "A",
+  "releaseSea": "01/09/2021",
+  "releaseTrung": "01/05/2021",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100029-ssr-360.webp 360w, /Characters/optimized/100029-ssr-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

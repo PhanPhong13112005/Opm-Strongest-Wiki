@@ -1,0 +1,144 @@
+{
+  "id": "100009-ur",
+  "name": "Hellish Blizzard",
+  "imageURL": "/Characters/optimized/100009-ur-600.webp",
+  "tier": "UR",
+  "type": "Esper",
+  "faction": "Hero",
+  "roles": [
+    "Barrier"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 117
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals Direct DMG of 120% ATK to a single target.",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals Direct DMG of 160% ATK to all enemies, plus [Ice] DMG to all enemies.",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals Direct DMG of 160% > 200% ATK to all enemies, plus [Ice] DMG to all enemies.",
+      "keepsakeIcon": "/Keepsake/Hellish Blizzard (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "On entry: +20% HP to self, +60% [Non-Crit DMG Free], and +60% [DoT Bonus].",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "On entry: +20% HP to self, [Non-Crit DMG Free] 60% &gt; 70%, and [DoT Bonus] 60% &gt; 80%.",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "On entry: +20% HP to self, [Non-Crit DMG Free] 70% &gt; 80%, and [DoT Bonus] 80% &gt; 100%.",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "After any enemy character triggers [Locked], inflicts [Continuous Explosion]. ———- [Continuous Explosion]: Immediately splash to surrounding target, dealing 80% [Locked] DoT",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "When battle begins, inflicts 50% ATK of [Locked] to the whole enemy team, lasts for 1 round.",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Enhance]",
+      "desc": "A general positive enhancing effect applies to the character, raising stats or granting benefits (e.g. increasing Hit Rate or damage dealt)."
+    },
+    {
+      "term": "[Lock Target]",
+      "desc": "The control state prevents the target from activating Charge, Continuous Charge, Link, and Special attacks."
+    },
+    {
+      "term": "[Chain Detonate]",
+      "desc": "The effect immediately spreads to surrounding targets, dealing 80% ST over Locked's duration."
+    },
+    {
+      "term": "[Crit DMG]",
+      "desc": "Additional damage dealt by critical hits; is often adjusted via [Crit DMG Reduction] to cut down on this addition."
+    },
+    {
+      "term": "[Freeze]",
+      "desc": "Ice damage effects are added to attacks, dealing them to enemies along with the main attack."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Hellish Blizzard (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/01/2025",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Heal",
+    "DMG (HP)",
+    "Generate Shield"
+  ],
+  "bondList": "Fubuki (Hellish Blizzard) + Eyelashes + Mountain Ape + Lily of the Three Section Staff",
+  "classLevel": "B",
+  "releaseSea": "01/05/2025",
+  "classIcon": "/Class/B.png",
+  "imageSrcset": "/Characters/optimized/100009-ur-360.webp 360w, /Characters/optimized/100009-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

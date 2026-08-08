@@ -1,0 +1,149 @@
+{
+  "id": "100315-urplus",
+  "name": "Bang & Bomb",
+  "imageURL": "/Characters/optimized/100315-urplus-600.webp",
+  "tier": "UR+",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Sát thương theo HP",
+    "Bảo kê tuyệt đối"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung combo 3 đòn lên mục tiêu đơn, gây 120% ATK sát thương trực tiếp.",
+      "icon": "/Skill/Bang & Bomb (URplus)/Skill_base.png",
+      "animation": "/Animation/Bang_URplus/Base.gif",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây Specialized Direct DMG bằng 500% HP của mục tiêu lên toàn bộ kẻ địch (chỉ chịu ảnh hưởng bởi tăng/giảm sát thương nâng cao), bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], và xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Mỗi lần dùng Tối Thượng tăng thêm 15% ST Tối Thượng của đơn vị này (tối đa 2 lớp). Sau lần Tối Thượng đầu tiên, nếu một kẻ địch trên sân thoát khỏi trạng thái [Bất Khuất Tuyệt Kỹ], Silverfang & Bomb tung combo [Quyền Hư Vô] 5 đòn lên mục tiêu đó, gây Specialized Direct DMG bằng 600% HP của mục tiêu (mỗi lượt một lần).",
+      "icon": "/Skill/Bang & Bomb (URplus)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": "/Animation/Bang_URplus/ult.gif",
+      "keepsakeIcon": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Ngoài ra, tăng cho toàn bộ đồng minh +35% [Tăng Sát Thương Đấu Trường] và giảm 35% [Giảm Sát Thương Đấu Trường] của toàn bộ kẻ địch (không thể giải trừ). Specialized Direct DMG 500% > 700%; bỏ qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] 45% > 60%; mỗi lần dùng tăng ST Tối Thượng 15% > 20%; combo [Quyền Hư Vô] 600% > 800%.",
+      "keepsakeIcon": "/Keepsake/Bang & Bomb (URplus)/Keepsake_URplus.png",
+      "icon": "/Skill/Bang & Bomb (URplus)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": "/Animation/Bang_URplus/ult.gif",
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn nhận +20 Máu tối đa. Khi vào trận, nhận 60% [Giảm Sát Thương Không Bạo Kích]. Vĩnh viễn gỡ bỏ [Chuyển Hóa Năng Lượng] của kẻ địch, ban cho toàn bộ đồng minh miễn nhiễm [Áp Lực Năng Lượng], và ngăn toàn bộ kẻ địch hồi [HP Chuyên Biệt].",
+      "icon": "/Skill/Bang & Bomb (URplus)/Skill_pas.png",
+      "animation": "/Animation/Bang_URplus/Passive.gif",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] khi vào trận 60% > 70%.",
+      "icon": "/Skill/Bang & Bomb (URplus)/Skill_pas.png",
+      "animation": "/Animation/Bang_URplus/Passive.gif",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] khi vào trận 70% > 80%.",
+      "icon": "/Skill/Bang & Bomb (URplus)/Skill_pas.png",
+      "animation": "/Animation/Bang_URplus/Passive.gif",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Vĩnh viễn tăng 60% Máu tối đa của bản thân. Khi bắt đầu trận đấu, ban cho bản thân [Tăng ST Kháng Tính] và [Giảm ST Kháng Tính]. Khi Máu/[HP Chuyên Biệt] của đồng minh chịu sát thương, sát thương này được giảm 99%, và 99% sát thương gốc được chuyển hóa thành [Kháng Giảm Năng Lượng] (tổng lượng [Kháng Giảm Năng Lượng] nhận được theo cách này tối đa bằng 28 lần Máu tối đa gốc của Silverfang & Bomb. Hiệu ứng này và [Hồi Sinh] chỉ có thể hoạt động một cái tại một thời điểm. Khi [Kháng Giảm Năng Lượng] đạt mức tối đa, hiệu ứng Giảm sát thương sẽ không còn hiệu lực).\n[Tăng ST Kháng Tính]: Tăng 30% sát thương gây ra và tăng thêm lên 1.5 lần khi máu gốc cao hơn của kẻ tấn công. [Giảm ST Kháng Tính]: Giảm 30% sát thương phải chịu, và tăng thêm lên 1.5 lần khi máu gốc cao hơn của kẻ tấn công.",
+      "icon": "/Skill/Bang & Bomb (URplus)/skill_awk.png",
+      "animation": "/Animation/Bang_URplus/awken.gif",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Tăng Máu tối đa của bản thân 60% > 80% Chuyển hóa 10% [Kháng Giảm Năng Lượng] mà đồng minh nhận được thành [HP Chuyên Biệt] (tỉ lệ tự chuyển hóa tăng thêm 50%) [Tăng ST Kháng Tính]+[Giảm ST Kháng Tính]: 30% > 50%, Tăng thêm 1.5 > 1.7",
+      "icon": "/Skill/Bang & Bomb (URplus)/skill_awk.png",
+      "animation": "/Animation/Bang_URplus/awken.gif",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Bang & Bomb (URplus)/skill_awk.png",
+      "animation": "/Animation/Bang_URplus/awken.gif",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Giảm Kháng Sát Thương]",
+      "desc": "Giảm 30% sát thương phải chịu, tăng lên 1.5 lần khi máu gốc của người mang cao hơn của kẻ tấn công."
+    },
+    {
+      "term": "[Giảm Sát Thương Bạo Kích]",
+      "desc": "Giảm sát thương nhận từ đòn chí mạng theo một tỷ lệ phần trăm nhất định."
+    },
+    {
+      "term": "[Hồi Sinh]",
+      "desc": "Cơ chế hồi sinh/trở lại gắn với sự sống của đồng minh, đưa đơn vị trở lại trận đấu."
+    },
+    {
+      "term": "[Kiên Cường Năng Lượng]",
+      "desc": "Loại khiên chuyển giá trị tích lũy thành giảm sát thương, giới hạn theo bội số Máu tối đa của đơn vị và không dùng chung được với Hồi Sinh."
+    },
+    {
+      "term": "[HP Chuyên Biệt]",
+      "desc": "Thanh máu riêng bậc PvP xếp chồng lên máu thường, cũng phải bị hạ và có thể được hồi độc lập."
+    },
+    {
+      "term": "[Tăng Kháng Sát Thương]",
+      "desc": "Tăng 30% sát thương gây ra, tăng lên 1.5 lần khi HP gốc của người mang cao hơn của kẻ tấn công."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Bang & Bomb (URplus)/Keepsake_URplus.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "ST THEO HP",
+    "SIÊU BẢO KÊ",
+    "XÓA NỘI TẠI ĐỊCH",
+    "THANH TẨY",
+    "GIẢM NÉ/CHÍ MẠNG"
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/09/2026",
+  "releaseTrung": "01/05/2026",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100315-urplus-360.webp 360w, /Characters/optimized/100315-urplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,146 @@
+{
+  "id": "100054-ssrplus",
+  "name": "Melzargard",
+  "imageURL": "/Characters/optimized/100054-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Revive Ally",
+    "Breakthrough",
+    "Silence Immunity"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 104
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 60% ATK Direct DMG to a single target.",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals Direct DMG equal to 12% of each enemy's Max HP to all enemies, then applies a [Mark] to himself.",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Direct DMG to all enemies increased to 12% > 16% of their Max HP. The self-[Mark] is upgraded to a stronger version.",
+      "keepsakeIcon": "/Keepsake/Melzargard (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "On entry, gains +20% HP. After any character in his row attacks, triggers [Breakthrough] on the main target. Permanently grants [Immunity against Silence] to his entire row.",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Additionally grants [Immunity against Stun].",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Breakthrough] trigger: after any character in his row attacks &gt; after any character around Melzargard attacks.",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When battle begins, grants the entire team 50% Shield Rate, lasts 2 rounds. Triggers [Reborn] after taking fatal damage (When ally is present, recovers 50% HP before action, up to 2 times)",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Shield Rate 50% > 70% Recovers HP before action up to 2x > 3x\n[Revive] can be stacked with SSR+ Phoenixman and SSR+ Pig God Revived characters do not get [Specialized Protection] from SSR+ Drive Knight but still can get from their own skills",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Stun]",
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+    },
+    {
+      "term": "[Silence]",
+      "desc": "The target cannot use his ultimate. Counts as a control effect."
+    },
+    {
+      "term": "[Mark]",
+      "desc": "Mark a unit, unlocking a raid condition or bonus effect associated with the mark."
+    },
+    {
+      "term": "[Resurrect]",
+      "desc": "Status returns downed units to battle, granting a limited number of respawns that anti-revive effects can remove."
+    },
+    {
+      "term": "[Regeneration]",
+      "desc": "Restores Health over time or before the unit's next action."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Melzargard (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/12/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Heal",
+    "DMG (HP)",
+    "Generate Shield",
+    "Speed"
+  ],
+  "classLevel": "Dragon",
+  "releaseSea": "01/04/2023",
+  "imageSrcset": "/Characters/optimized/100054-ssrplus-360.webp 360w, /Characters/optimized/100054-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

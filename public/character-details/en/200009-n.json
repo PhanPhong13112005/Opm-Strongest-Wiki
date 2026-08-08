@@ -1,0 +1,82 @@
+{
+  "id": "200009-n",
+  "name": "Skyfolk Raider",
+  "imageURL": "/Characters/optimized/200009-n-600.webp",
+  "tier": "N",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 159,
+    "hp": 954,
+    "def": 40,
+    "spd": 84
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 80% ATK DMG to a single target.",
+      "icon": "/Skill/Skyfolk Raider (N)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Strikes a single target with a 4-hit combo, dealing 45% ATK DMG per hit.",
+      "icon": "/Skill/Skyfolk Raider (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Strikes a single target with a 4-hit combo, dealing 50% ATK DMG per hit.",
+      "keepsakeIcon": "/Keepsake/Skyfolk Raider (N)/Keepsake_N.png",
+      "icon": "/Skill/Skyfolk Raider (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). After an ally acts, has a 20% chance to launch a Follow-up against the enemy with the lowest HP, dealing 80% of Basic Attack damage (up to 2 Follow-ups per turn).",
+      "icon": "/Skill/Skyfolk Raider (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). After an ally acts, has a 20% chance to launch a Follow-up against the enemy with the lowest HP, dealing 100% of Basic Attack damage (up to 2 Follow-ups per turn).",
+      "icon": "/Skill/Skyfolk Raider (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). After an ally acts, has a 20% chance to launch a Follow-up against the enemy with the lowest HP, dealing 110% of Basic Attack damage (up to 2 Follow-ups per turn).",
+      "icon": "/Skill/Skyfolk Raider (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Skyfolk Raider (N)/Keepsake_N.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/200009-n-360.webp 360w, /Characters/optimized/200009-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

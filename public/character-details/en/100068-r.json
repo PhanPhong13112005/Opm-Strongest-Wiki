@@ -1,0 +1,87 @@
+{
+  "id": "100068-r",
+  "name": "Dark Matter Thief",
+  "imageURL": "/Characters/optimized/100068-r-600.webp",
+  "tier": "R",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 159,
+    "hp": 954,
+    "def": 40,
+    "spd": 88
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deal 90% ATK DMG to a single target.",
+      "icon": "/Skill/Dark Matter Thief (R)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deal 70% ATK DMG to all enemies, with a 30% chance to inflict [Collapse] on the main target for 1 turn (DMG reduction rate lowered by 30%).",
+      "icon": "/Skill/Dark Matter Thief (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deal 70% ATK DMG to all enemies, with a 30% chance to inflict [Collapse] on the main target for 1 turn (DMG reduction rate lowered by 40%).",
+      "keepsakeIcon": "/Keepsake/Dark Matter Thief (R)/Keepsake_R.png",
+      "icon": "/Skill/Dark Matter Thief (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increase own max HP. After being hit, has a 20% chance to increase own DMG dealt by 10% for 1 turn.",
+      "icon": "/Skill/Dark Matter Thief (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increase own max HP. After being hit, has a 20% chance to increase own DMG dealt by 20% for 1 turn.",
+      "icon": "/Skill/Dark Matter Thief (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increase own max HP. After being hit, has a 20% chance to increase own DMG dealt by 25% for 1 turn.",
+      "icon": "/Skill/Dark Matter Thief (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Collapse]",
+      "desc": "Damage/disadvantage effect breaks target's defense."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Dark Matter Thief (R)/Keepsake_R.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100068-r-360.webp 360w, /Characters/optimized/100068-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

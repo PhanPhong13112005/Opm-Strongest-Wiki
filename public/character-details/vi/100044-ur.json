@@ -1,0 +1,137 @@
+{
+  "id": "100044-ur",
+  "name": "Hiệp Sĩ Cơ động",
+  "imageURL": "/Characters/optimized/100044-ur-600.webp",
+  "tier": "UR",
+  "type": "Công Nghệ",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Khống Chế"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST sát thương trực tiếp lên mục tiêu đơn.",
+      "icon": "/Skill/Drive Knight (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Nhận [Miễn Nhiễm Sát Thương] cho bản thân (chỉ chịu 20% sát thương nhận vào) và giải hiệu ứng bất lợi của chính mình. Áp [Áp Chế Bất Tử] lên toàn bộ cột của mục tiêu, sau đó gây sát thương trực tiếp theo Máu bằng 35% ST cùng [Sát Thương Chuẩn] lên cột đó.",
+      "icon": "/Skill/Drive Knight (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "[Miễn Nhiễm Sát Thương] của bản thân trở nên tuyệt đối — sát thương nhận vào 20% > 0%. Sát thương trực tiếp theo Máu 35% > 45% ST.",
+      "keepsakeIcon": "/Keepsake/Drive Knight (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Drive Knight (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Khi vào trận, nhận +20% Máu và +60% Non-Crit DMG Free, đồng thời nhận [Trả Thù+] (hồi sinh tối đa 4 lần).",
+      "icon": "/Skill/Drive Knight (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Miễn Sát Thương Không Bạo Kích] 60% &gt; 70%.",
+      "icon": "/Skill/Drive Knight (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Non-Crit DMG Free 70% &gt; 80%. Hồi sinh 4 &gt; 5 lần.",
+      "icon": "/Skill/Drive Knight (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Ban cho bản thân [Báo Thù]. ———- [Báo Thù]: Nếu Drive Knight bị hạ gục sau khi bất kỳ nhân vật nào hành động, hồi sinh với 80% Máu. và tung [Truy Kích Báo Thù] (150% ST Tối thượng, không tốn năng lượng). Có 4 lần [Phục Sinh] khi bắt đầu trận đấu.",
+      "icon": "/Skill/Drive Knight (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Máu hồi sinh 80% > 100% ST Truy kích 150% > 200%",
+      "icon": "/Skill/Drive Knight (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Drive Knight (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Miễn Nhiễm Sát Thương]",
+      "desc": "Người mang chỉ chịu một phần (ví dụ 20%, hoặc 0% khi được cường hóa) toàn bộ sát thương nhận vào."
+    },
+    {
+      "term": "[Hồi Sinh]",
+      "desc": "Trạng thái đưa đơn vị bị hạ gục trở lại trận, cấp số lần hồi sinh giới hạn mà các hiệu ứng chống hồi sinh có thể gỡ bỏ."
+    },
+    {
+      "term": "[Sát Thương Chuẩn]",
+      "desc": "Loại sát thương thưởng gây thêm ngoài đòn đánh, bị giảm bởi các hiệu ứng kiểu Né và có thể được miễn nhiễm sau một số lượt nhất định."
+    },
+    {
+      "term": "[Trả Thù]",
+      "desc": "Trạng thái phản đòn có thể kéo dài thời gian trên bản thân hoặc rút ngắn trên kẻ địch, cấp sức cho các hiệu ứng trả đũa."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Drive Knight (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/02/2025",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Tốc Độ"
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/06/2025",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100044-ur-360.webp 360w, /Characters/optimized/100044-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

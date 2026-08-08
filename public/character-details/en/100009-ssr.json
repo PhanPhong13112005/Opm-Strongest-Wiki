@@ -1,0 +1,91 @@
+{
+  "id": "100009-ssr",
+  "name": "Hellish Blizzard",
+  "tier": "SSR",
+  "type": "Esper",
+  "faction": "Hero",
+  "roles": [
+    "Support",
+    "Heal",
+    "DMG (HP)",
+    "Generate Shield"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 391,
+    "hp": 2480,
+    "def": 97,
+    "spd": 100
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals a 3-hit combo to a single target for 35% ATK (+3) damage.",
+      "icon": "/Skill/Hellish Blizzard (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals a 5-hit combo to all enemies for 17% ATK (+2) damage. If self is in the [Berserk] state, restore HP.",
+      "icon": "/Skill/Hellish Blizzard (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals a 5-hit combo to all enemies for 17% ATK (+2) damage, and directly restores own HP. At the same time, attacks from surrounding allies ignore 20% DEF for a duration.",
+      "icon": "/Skill/Hellish Blizzard (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Hellish Blizzard (SSR)/Keepsake_SSR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). When battle begins, grants herself 30% [Non-Crit DMG Free] (effective for all DMG types, cannot co-exist with [Agility]). Removes [Fear] from allies after they act.",
+      "icon": "/Skill/Hellish Blizzard (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). When battle begins, grants herself 30% [Non-Crit DMG Free] and an ally in the same column 10% [Non-Crit DMG Free] (all DMG types, cannot co-exist with [Agility]). Removes [Fear] from allies after they act.",
+      "icon": "/Skill/Hellish Blizzard (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). When battle begins, grants herself 35% [Non-Crit DMG Free] and an ally in the same column 15% [Non-Crit DMG Free] (all DMG types, cannot co-exist with [Agility]). Removes [Fear] from allies after they act.",
+      "icon": "/Skill/Hellish Blizzard (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100009-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Hellish Blizzard (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Tenacity]",
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+    }
+  ],
+  "releaseDate": "16/06/2020",
+  "classLevel": "B",
+  "classIcon": "/Class/B.png",
+  "imageSrcset": "/Characters/optimized/100009-ssr-360.webp 360w, /Characters/optimized/100009-ssr-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

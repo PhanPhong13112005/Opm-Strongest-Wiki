@@ -1,0 +1,138 @@
+{
+  "id": "100184-urplus",
+  "name": "Boros",
+  "imageURL": "/Characters/optimized/100184-urplus-600.webp",
+  "tier": "UR+",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Main DPS (ATK)"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 106
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK Direct DMG to a single target. After casting the first Ultimate, can reduce the target's [Non-Critical Hit Invincibility].",
+      "icon": "/Skill/Boros (URplus)/Skill_base.png",
+      "type": "Basic",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Reduces the target's [Non-Critical Hit Invincibility] by 1 round. Deals 7000% ATK Direct DMG to a single target (only affected by high-level DMG Reduction), negates 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and pierces [Unyielding] and [Specialized Unyielding].",
+      "icon": "/Skill/Boros (URplus)/skill_ult.png",
+      "type": "Ultimate",
+      "animation": "/Animation/Boros_Urplus/ult.gif",
+      "keepsakeIcon": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Additionally gains +50% Crit Rate. Ultimate DMG 7000% > 10,000% ATK.",
+      "keepsakeIcon": "/Keepsake/Boros (URplus)/Keepsake_URplus.png",
+      "icon": "/Skill/Boros (URplus)/skill_ult.png",
+      "type": "Ultimate",
+      "animation": "/Animation/Boros_Urplus/ult.gif",
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Gains 60% [Non-Crit DMG Reduction]. After any character is defeated, gains 1 layer of [Explosion], up to 2 layers; each layer of [Explosion] adds 1 target to the Ultimate.",
+      "icon": "/Skill/Boros (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Non-Crit DMG Reduction] 60% > 70%.",
+      "icon": "/Skill/Boros (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Non-Crit DMG Reduction] 70% > 80%. Max [Explosion] layers 2 > 3.",
+      "icon": "/Skill/Boros (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When near-death, enters [Resurrection], absorbing all DMG types; the next round recovers 50% HP and gains [Energy Resilience] equal to the amount absorbed, at most 3 times. At the start of the battle, gains 30% [Suppression DMG Reduction]. — [Suppression DMG Reduction]: Reduces DMG received by 30%; when ATK is higher than the attacker, reduces by 150%.",
+      "icon": "/Skill/Boros (URplus)/skill_awk.png",
+      "type": "Awakening",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Gains [Suppression DMG Reduction] 30% > 40%. — [Suppression DMG Reduction]: Reduces DMG received 30% > 40%; when ATK is higher than the attacker, reduces by 150% > 170%.",
+      "icon": "/Skill/Boros (URplus)/skill_awk.png",
+      "type": "Awakening",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Boros (URplus)/skill_awk.png",
+      "type": "Awakening",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Crit]",
+      "desc": "Đòn chí mạng gây thêm sát thương; Some units may be immune to [Crit]."
+    },
+    {
+      "term": "[Revive]",
+      "desc": "The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match."
+    },
+    {
+      "term": "[Energy Tenacity]",
+      "desc": "The shield type converts its cumulative value into damage reduction, is limited to a multiple of the unit's maximum Health, and cannot be used with Resurrection."
+    },
+    {
+      "term": "[Control DMG Immunity]",
+      "desc": "The defensive effect reduces damage taken (30–40%), increasing to a 150–170% reduction when the bearer's ST is higher than the attacker's."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Boros (URplus)/Keepsake_URplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/11/2025",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Heal"
+  ],
+  "classLevel": "Dragon",
+  "releaseSea": "01/03/2026",
+  "imageSrcset": "/Characters/optimized/100184-urplus-360.webp 360w, /Characters/optimized/100184-urplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

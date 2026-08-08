@@ -1,0 +1,87 @@
+{
+  "id": "100002-ssr",
+  "name": "Speed-o-Sound Sonic V1",
+  "tier": "SSR",
+  "type": "Duelist",
+  "faction": "Outlaw",
+  "roles": [
+    "Support",
+    "Generate Shield",
+    "Speed"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 369,
+    "hp": 2214,
+    "def": 93,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK (+10) DMG to a single target, with a 100% chance to inflict [Corruption] on the target for 2 turns (reduces DMG reduction rate by 30%).",
+      "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 210% ATK (+10) DMG to a single target and grants an acceleration buff for 1 turn; if this attack lands a critical hit, the acceleration effect is guaranteed to trigger. Has a 100% chance to immediately raise the SPD of yourself and surrounding allies.",
+      "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 263% ATK (+10) DMG to a single target and grants an acceleration buff for 1 turn; if this attack lands a critical hit, the acceleration effect is guaranteed to trigger. Has a 100% chance to immediately raise the SPD of all allies.",
+      "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Speed-o-Sound Sonic V1 (SSR)/Keepsake_SSR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). After each action, attacking a [Corrupted] enemy deals an extra 75% ATK DMG.",
+      "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). After each action, attacking a [Corrupted] enemy deals an extra 85% ATK DMG.",
+      "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). After each action, attacking a [Corrupted] enemy deals an extra 100% ATK DMG.",
+      "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100002-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Speed-o-Sound Sonic V1 (SSR)/Keepsake_SSR.png",
+  "releaseDate": "16/06/2020",
+  "effects": [],
+  "classLevel": "Outlaw",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "classIcon": "/Class/Outlaw.png",
+  "imageSrcset": "/Characters/optimized/100002-ssr-360.webp 360w, /Characters/optimized/100002-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

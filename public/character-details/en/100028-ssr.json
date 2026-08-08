@@ -1,0 +1,89 @@
+{
+  "id": "100028-ssr",
+  "name": "Tank Top Master",
+  "imageURL": "/Characters/optimized/100028-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Grappler",
+  "faction": "Hero",
+  "roles": [
+    "Tenacity"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 364,
+    "hp": 2182,
+    "def": 92,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK(+10) damage to a single target, and reduces damage taken by self by 20% for 1 turn.",
+      "icon": "/Skill/Tank Top Master (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 75% ATK(+5) damage to each enemy in the entire column, and grants self and allies in the same row [Tenacity] (absorbs damage equal to 20% of own HP).",
+      "icon": "/Skill/Tank Top Master (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 94% ATK(+5) damage to each enemy in the entire column, and grants self and allies in the same row [Tenacity] (absorbs damage equal to 30% of own HP).",
+      "keepsakeIcon": "/Keepsake/Tank Top Master (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Tank Top Master (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP(+20). Deals extra damage equal to 8% of own max HP to enemies.",
+      "icon": "/Skill/Tank Top Master (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP(+20). Deals extra damage equal to 9% of own max HP to enemies, and has a 50% chance to deal an equal amount of extra damage to enemies in the same row as the main target.",
+      "icon": "/Skill/Tank Top Master (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP(+20). Deals extra damage equal to 9.5% of own max HP to enemies, and has a 50% chance to deal an equal amount of extra damage to enemies in the same row as the main target.",
+      "icon": "/Skill/Tank Top Master (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Tenacity]",
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Tank Top Master (SSR)/Keepsake_SSR.png",
+  "releaseDate": "16/06/2020",
+  "classLevel": "Class_S",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100028-ssr-360.webp 360w, /Characters/optimized/100028-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

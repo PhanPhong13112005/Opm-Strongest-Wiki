@@ -1,0 +1,125 @@
+{
+  "id": "100011-ssrplus",
+  "name": "Samurai Nguyên Tử",
+  "imageURL": "/Characters/optimized/100011-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Giảm Bất Khuất Chuyên Biệt",
+    "Giảm HP Tối Đa"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 104
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 60% ST dưới dạng sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Atomic Samurai (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 130% ST dưới dạng sát thương lên cả cột của mục tiêu và trao [Bất Khuất] cho cột đó.",
+      "icon": "/Skill/Atomic Samurai (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 130% > 150% ST dưới dạng sát thương lên cả cột của mục tiêu, trao [Bất Khuất] cho cột đó, đồng thời trao thêm [Bất Khuất] cho toàn bộ đồng minh.",
+      "keepsakeIcon": "/Keepsake/Atomic Samurai (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Atomic Samurai (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "+20% Máu. Khi vào trận, nhận +60% [Miễn Sát Thương Không Bạo Kích]. Sau khi bất kỳ đơn vị nào hành động, hồi cho bản thân 10% Máu tối đa.",
+      "icon": "/Skill/Atomic Samurai (SSR+)/Skill_pas.png",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Miễn Sát Thương Không Bạo Kích] 60% &gt; 70%. Hồi máu sau khi đơn vị bất kỳ hành động 10% &gt; 15% Máu tối đa.",
+      "icon": "/Skill/Atomic Samurai (SSR+)/Skill_pas.png",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Miễn Sát Thương Không Bạo Kích] 70% &gt; 80%. Hồi máu sau khi đơn vị bất kỳ hành động 15% &gt; 20% Máu tối đa.",
+      "icon": "/Skill/Atomic Samurai (SSR+)/Skill_pas.png",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Đánh dấu mục tiêu chính, giảm HP Tối đa của mục tiêu bằng 600% ATK của Atomic Samurai (tối đa 50% HP Tối đa của mục tiêu), và vô hiệu mọi hiệu ứng tăng HP Tối đa của mục tiêu. Sau khi hành động, nếu Atomic Samurai hạ gục mục tiêu bị đánh dấu hoặc kích hoạt [Bất Khuất] / [Bất Khuất Cường Hóa] lên nó, kích hoạt [Truy Kích] (Ultimate Follow-up) lên một kẻ địch ngẫu nhiên, gây 80% ST của Ultimate.",
+      "icon": "/Skill/Source/100011-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Hiệu ứng thêm: giảm vĩnh viễn 40% ATK của kẻ địch bị đánh dấu. ATK của Ultimate Follow-up 80% > 120% (nay kích hoạt sau bất kỳ hành động nào).",
+      "icon": "/Skill/Source/100011-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Source/100011-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "cost": null,
+      "keepsakeIcon": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Atomic Samurai (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/04/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)"
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/08/2022",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100011-ssrplus-360.webp 360w, /Characters/optimized/100011-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

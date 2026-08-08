@@ -1,0 +1,82 @@
+{
+  "id": "100022-n",
+  "name": "Người Ếch",
+  "imageURL": "/Characters/optimized/100022-n-600.webp",
+  "tier": "N",
+  "type": "Vũ Trang",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 159,
+    "hp": 954,
+    "def": 40,
+    "spd": 82
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 80% ST (+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Frog Man (N)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 180% ST (+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Frog Man (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 200% ST (+10) sát thương lên mục tiêu đơn.",
+      "keepsakeIcon": "/Keepsake/Frog Man (N)/Keepsake_N.png",
+      "icon": "/Skill/Frog Man (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Nếu Slugerous có mặt, tăng sát thương bản thân gây ra thêm 20%, kéo dài đến hết trận.",
+      "icon": "/Skill/Frog Man (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Nếu Slugerous có mặt, tăng sát thương bản thân gây ra thêm 25%, kéo dài đến hết trận.",
+      "icon": "/Skill/Frog Man (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Nếu Slugerous có mặt, tăng sát thương bản thân gây ra thêm 28%, kéo dài đến hết trận.",
+      "icon": "/Skill/Frog Man (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Frog Man (N)/Keepsake_N.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100022-n-360.webp 360w, /Characters/optimized/100022-n-600.webp 540w",
+  "imageWidth": 540,
+  "imageHeight": 688
+}

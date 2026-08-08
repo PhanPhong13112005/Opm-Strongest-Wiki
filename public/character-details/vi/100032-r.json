@@ -1,0 +1,81 @@
+{
+  "id": "100032-r",
+  "name": "D-pad",
+  "imageURL": "/Characters/optimized/100032-r-600.webp",
+  "tier": "R",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 159,
+    "hp": 954,
+    "def": 40,
+    "spd": 88
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 45% ST lên mục tiêu đơn với 2 đòn liên kích.",
+      "icon": "/Skill/D-pad (R)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 48% ST lên mục tiêu đơn với 4 đòn liên kích, có 100% cơ hội giảm 10% [Thương Tổn] bản thân, kéo dài 2 lượt.",
+      "icon": "/Skill/D-pad (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 48% ST lên mục tiêu đơn với 4 đòn liên kích, có 100% cơ hội giảm 20% [Thương Tổn] bản thân, kéo dài 2 lượt.",
+      "keepsakeIcon": "/Keepsake/D-pad (R)/Keepsake_R.png",
+      "icon": "/Skill/D-pad (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Khi xuất trận cùng với Yếm Tang Áo Liền, ST Phím Chữ Thập tăng 20%, kéo dài đến hết trận đấu.",
+      "icon": "/Skill/D-pad (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Khi xuất trận cùng với Yếm Tang Áo Liền, ST Phím Chữ Thập tăng 30%, kéo dài đến hết trận đấu.",
+      "icon": "/Skill/D-pad (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Khi xuất trận cùng với Yếm Tang Áo Liền, ST Phím Chữ Thập tăng 35%, kéo dài đến hết trận đấu.",
+      "icon": "/Skill/D-pad (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/D-pad (R)/Keepsake_R.png",
+  "classLevel": "C",
+  "classIcon": "/Class/C.png",
+  "imageSrcset": "/Characters/optimized/100032-r-360.webp 360w, /Characters/optimized/100032-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

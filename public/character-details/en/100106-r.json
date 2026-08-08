@@ -1,0 +1,82 @@
+{
+  "id": "100106-r",
+  "name": "Maiko Plasma",
+  "imageURL": "/Characters/optimized/100106-r-600.webp",
+  "tier": "R",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 159,
+    "hp": 954,
+    "def": 40,
+    "spd": 88
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 100% ATK (+10) Direct Damage to a single target.",
+      "icon": "/Skill/Maiko Plasma (R)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 5 consecutive strikes to all targets for 24% ATK (+2) Direct Damage, and increases the DMG reflection rate of all allies by 20%.",
+      "icon": "/Skill/Maiko Plasma (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 5 consecutive strikes to all targets for 26% ATK (+2) Direct Damage, and increases the DMG reflection rate of all allies by 25%.",
+      "keepsakeIcon": "/Keepsake/Maiko Plasma (R)/Keepsake_R.png",
+      "icon": "/Skill/Maiko Plasma (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). Reduces incoming damage from Hi-Tech enemies by 20% and recovers 10% HP.",
+      "icon": "/Skill/Maiko Plasma (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). When self is attacked by a Tech-type enemy, damage taken is reduced by 30% and self restores 15% HP.",
+      "icon": "/Skill/Maiko Plasma (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). When self is attacked by a Tech-type enemy, damage taken is reduced by 30% and self restores 20% HP.",
+      "icon": "/Skill/Maiko Plasma (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Maiko Plasma (R)/Keepsake_R.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100106-r-360.webp 360w, /Characters/optimized/100106-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

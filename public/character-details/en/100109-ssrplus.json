@@ -1,0 +1,151 @@
+{
+  "id": "100109-ssrplus",
+  "name": "Gyoro-Gyoro",
+  "imageURL": "/Characters/optimized/100109-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Outlaw Support",
+    "Silence"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Restores HP to an ally.",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Direct DMG 32% ATK to all enemies. [Silence] the target and 1 random enemy.",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Direct DMG 32% > 50% ATK to all enemies. [Silence] the target and 1 > 2 random enemies.",
+      "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "+20% HP. After any character's action, if a summon/support dies, launches an [Ultimate Follow-up] (80% damage and effects). Permanently grants 60% [Non-Crit DMG Free] (effective for all DMG types, cannot co-exist with [Agility]).",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Ultimate Follow-up] 80% &gt; 100%. [Non-Crit DMG Free] 60% &gt; 65%.",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Ultimate Follow-up] 100% &gt; 120%. [Non-Crit DMG Free] 65% &gt; 70%.",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When battle begins, summons 1 Candle Monster for itself and ally in the same column separately. (Unable to summon if ally has more support characters than Gyoro-gyoro). Candle Monster will inherit 100% basic ATK of Gyoro-gyoro. After any character's action, every Candle Monster has a 50% chance to launch [Follow-up] against any enemy which is not in any [Unyielding] state, dealing damage by 150% ATK. After Candle Monster moves 4 times or [Self-detonation] when Gyoro-gyoro is defeated, deals 200% ATK to 3 random enemies.",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Summons Candle 1 > 2\n1. [Silence] cannot be stacked. Faster character is unable to perform Ultimate in the next round. 2. Formal set works for [Silence] 3. Gyoro's [Ultimate Follow-up] only triggers once per round and only if the support character dies. (CE+ dog does not die so it is not counted) 4. [Ultimate Follow-up] can also inflict [Silence] 5. Silence can be affected by Hit% and Res% (At present, the beta server is not affected by hit and resistance, but will be tested after the official server is released) 6. Keepsake is recommended if you have characters that summon support 7. [Silence] is removed after [Reborn]",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Unyielding]",
+      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+    },
+    {
+      "term": "[Silence]",
+      "desc": "The target cannot use his ultimate. Counts as a control effect."
+    },
+    {
+      "term": "[Crit DMG]",
+      "desc": "Additional damage dealt by critical hits; is often adjusted via [Crit DMG Reduction] to cut down on this addition."
+    },
+    {
+      "term": "[Ult Follow-up]",
+      "desc": "Out of turn attacks deal 70% of the ultimate's damage and effects, without consuming mana, up to 3 times per round."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+    },
+    {
+      "term": "[Rebirth]",
+      "desc": "Activate revival: after receiving critical damage, if there are allies, restore 50% Health before acting, limited to a certain number of times."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/08/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "Core",
+    "Heal",
+    "DMG (HP)",
+    "Revive"
+  ],
+  "classLevel": "Dragon",
+  "releaseSea": "01/12/2022",
+  "imageSrcset": "/Characters/optimized/100109-ssrplus-360.webp 360w, /Characters/optimized/100109-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

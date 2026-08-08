@@ -1,0 +1,98 @@
+{
+  "id": "100083-sr",
+  "name": "Tiến Sĩ Genus",
+  "tier": "SR",
+  "type": "Công Nghệ",
+  "faction": "Tội Phạm",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hỗ Trợ",
+    "Hạt Nhân",
+    "Hồi Phục"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 173,
+    "hp": 1040,
+    "def": 44,
+    "spd": 95
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 30% ST sát thương lên mục tiêu đơn với 4 đòn liên kích.",
+      "icon": "/Skill/Doctor Genus (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Hồi 250% ST làm Máu cho mục tiêu đơn phe ta, và tăng Tốc độ 20% cho mục tiêu.",
+      "icon": "/Skill/Doctor Genus (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Hồi 250% ST làm Máu cho mục tiêu đơn phe ta, và tăng Tốc độ 30% cho mục tiêu.",
+      "icon": "/Skill/Doctor Genus (SR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Doctor Genus (SR)/Keepsake_SR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Tăng ST 20% cho đồng minh đã được hồi Máu.",
+      "icon": "/Skill/Doctor Genus (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Tăng ST 30% cho đồng minh đã được hồi Máu.",
+      "icon": "/Skill/Doctor Genus (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Tăng ST 35% cho đồng minh đã được hồi Máu.",
+      "icon": "/Skill/Doctor Genus (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100083-sr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Doctor Genus (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Hạt Nhân",
+    "Hồi Phục"
+  ],
+  "bondList": "Speed-o'-Sound Sonic + Hammerhead + Dr. Genus",
+  "effects": [],
+  "classLevel": "Outlaw",
+  "classIcon": "/Class/Outlaw.png",
+  "imageSrcset": "/Characters/optimized/100083-sr-360.webp 360w, /Characters/optimized/100083-sr-600.webp 560w",
+  "imageWidth": 560,
+  "imageHeight": 688
+}

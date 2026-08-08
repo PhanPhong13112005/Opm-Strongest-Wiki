@@ -1,0 +1,81 @@
+{
+  "id": "100042-n",
+  "name": "Allback-man",
+  "imageURL": "/Characters/optimized/100042-n-600.webp",
+  "tier": "N",
+  "type": "Grappler",
+  "faction": "Hero",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 152,
+    "hp": 909,
+    "def": 38,
+    "spd": 83
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 80% ATK DMG to a single target.",
+      "icon": "/Skill/Allback-man (N)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 180% ATK DMG to a single target.",
+      "icon": "/Skill/Allback-man (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 200% ATK DMG to a single target.",
+      "keepsakeIcon": "/Keepsake/Allback-man (N)/Keepsake_N.png",
+      "icon": "/Skill/Allback-man (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20).Before each action, increases own DMG dealt by 10% for 1 turn.",
+      "icon": "/Skill/Allback-man (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20).Before each action, increases own DMG dealt by 15% for 1 turn.",
+      "icon": "/Skill/Allback-man (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20).Before each action, increases own DMG dealt by 18% for 1 turn.",
+      "icon": "/Skill/Allback-man (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Allback-man (N)/Keepsake_N.png",
+  "classLevel": "C",
+  "classIcon": "/Class/C.png",
+  "imageSrcset": "/Characters/optimized/100042-n-360.webp 360w, /Characters/optimized/100042-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

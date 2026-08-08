@@ -1,0 +1,173 @@
+{
+  "id": "100029-urplus",
+  "name": "Amai Mask",
+  "imageURL": "/Characters/optimized/100029-urplus-600.webp",
+  "tier": "UR+",
+  "type": "Grappler",
+  "faction": "Hero",
+  "roles": [
+    "Core"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 125
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK Direct DMG to a single target with 2 consecutive strikes.",
+      "icon": "/Skill/Amai Mask (URplus)/Skill_base.png",
+      "type": "Basic",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 3 consecutive strikes to a single target for 1500% ATK as [Specialized Direct DMG] (only affected by high-level DMG Reduction), negating 45% of the target's [Specialized Evasion] and [Non-Crit DMG Reduction], and piercing [Unyielding] and [Specialized Unyielding]. Heals all allies for 10% Max HP as [Specialized HP] (can crit).",
+      "icon": "/Skill/Amai Mask (URplus)/skill_ult.png",
+      "type": "Ultimate",
+      "animation": "/Animation/Amai_Urplus/ult.gif",
+      "keepsakeIcon": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "[Specialized Direct DMG] 1500% > 2400% ATK. Negates [Specialized Evasion] and [Non-Crit DMG Reduction] 45% > 60%. Heals all allies for 10% > 15% Max HP as [Specialized HP].",
+      "keepsakeIcon": "/Keepsake/Amai Mask (URplus)/Keepsake_URplus.png",
+      "icon": "/Skill/Amai Mask (URplus)/skill_ult.png",
+      "type": "Ultimate",
+      "animation": "/Animation/Amai_Urplus/ult.gif",
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Gains 60% [Specialized Evasion]. Reduces enemies' [Rapid Divinity - ATK] and [Rapid Divinity - DEF] by 40%. Before any character acts, cleanses [Stun], [Specialized Stun] and [Deterrence] from all allies.",
+      "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
+      "type": "Passive",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Specialized Evasion] 60% > 70%.",
+      "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
+      "type": "Passive",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Specialized Evasion] 70% > 80%. Reduces enemies' [Rapid Divinity - ATK] and [Rapid Divinity - DEF] by 40% > 70%.",
+      "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
+      "type": "Passive",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "If an ally's Max HP is lower than 70% of Amai Mask's Max HP, permanently increases Max HP by 30%. When battle begins, gains 30% [Reduced DMG from Resistance]. — [Reduced DMG from Resistance]: reduces DMG received by 30%; if original HP is higher than the attacker's, increases to 150%.",
+      "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
+      "type": "Awakening",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Max HP 30% > 50%. [Reduced DMG from Resistance] 30% > 40% (if HP is higher, 150% > 170%).",
+      "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
+      "type": "Awakening",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
+      "type": "Awakening",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Spec. Unyielding]",
+      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+    },
+    {
+      "term": "[Unyielding]",
+      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+    },
+    {
+      "term": "[Spec. Stun]",
+      "desc": "PvP tier of Stun — harder to resist or resolve."
+    },
+    {
+      "term": "[Stun]",
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+    },
+    {
+      "term": "[Armor]",
+      "desc": "Buff grants 15% damage reduction and condensed defense when the bearer is attacked."
+    },
+    {
+      "term": "[Resist DMG Immunity]",
+      "desc": "Reduces damage taken by 30%, increasing to a 150% reduction if the bearer's base HP is higher than the attacker's."
+    },
+    {
+      "term": "[Spec. HP]",
+      "desc": "The PvP tier's unique health bar stacks on top of regular health, must also be depleted, and can be restored independently."
+    },
+    {
+      "term": "[Spec. Dodge]",
+      "desc": "Evasion PvP tier — reduces specialized attacks to 1 damage; pierced by the ignore dodge effect."
+    },
+    {
+      "term": "[Shatter]",
+      "desc": "Attack buff allows the bearer to ignore a portion of the enemy's Damage Reduction and Specialized Defense when attacking."
+    },
+    {
+      "term": "[Spec. Direct DMG]",
+      "desc": "Advanced tier of direct damage, only affected by advanced damage increase/decrease and passes through normal defenses."
+    },
+    {
+      "term": "[Hyper Speed Field: ATK]",
+      "desc": "Attack speed area index helps increase damage in PvP; Enemies can have Hyperspeed Field·ATK reduced (e.g. 40–60%) to weaken attacks."
+    },
+    {
+      "term": "[Hyper Speed Field: DEF]",
+      "desc": "Defense zone is based on speed, reducing damage taken in PvP when the attacker's speed is no higher than the defender's."
+    },
+    {
+      "term": "[Threaten]",
+      "desc": "The stun control effect renders the target unable to act and reduces its overall damage immunity by 30%."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Amai Mask (URplus)/Keepsake_URplus.png",
+  "releaseTrung": "01/12/2025",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Core"
+  ],
+  "classLevel": "A",
+  "releaseSea": "01/04/2026",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100029-urplus-360.webp 360w, /Characters/optimized/100029-urplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

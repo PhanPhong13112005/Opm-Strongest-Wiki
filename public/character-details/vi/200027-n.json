@@ -1,0 +1,82 @@
+{
+  "id": "200027-n",
+  "name": "Nhà Vô Địch Lòng Đất",
+  "imageURL": "/Characters/optimized/200027-n-600.webp",
+  "tier": "N",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 152,
+    "hp": 909,
+    "def": 38,
+    "spd": 82
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 80% ST(+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Subterranean Champion (N)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 30% ST(+2) sát thương lên cả cột mục tiêu với liên kích 4 đòn.",
+      "icon": "/Skill/Subterranean Champion (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 35% ST(+2) sát thương lên cả cột mục tiêu với liên kích 4 đòn.",
+      "keepsakeIcon": "/Keepsake/Subterranean Brute (N)/Keepsake_N.png",
+      "icon": "/Skill/Subterranean Champion (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước mỗi hành động, tăng 10% sát thương của bản thân trong 1 lượt.",
+      "icon": "/Skill/Subterranean Champion (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước mỗi hành động, tăng 15% sát thương của bản thân trong 1 lượt.",
+      "icon": "/Skill/Subterranean Champion (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước mỗi hành động, tăng 18% sát thương của bản thân trong 1 lượt.",
+      "icon": "/Skill/Subterranean Champion (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Subterranean Brute (N)/Keepsake_N.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/200027-n-360.webp 360w, /Characters/optimized/200027-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 660
+}

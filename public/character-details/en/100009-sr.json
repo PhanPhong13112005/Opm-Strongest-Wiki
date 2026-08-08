@@ -1,0 +1,86 @@
+{
+  "id": "100009-sr",
+  "name": "Hellish Blizzard",
+  "imageURL": "/Characters/optimized/100009-sr-600.webp",
+  "tier": "SR",
+  "type": "Esper",
+  "faction": "Hero",
+  "roles": [
+    "Team Tenacity"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 180,
+    "hp": 1079,
+    "def": 46,
+    "spd": 94
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals a 3-hit combo to a single target for 35% ATK (+3) damage.",
+      "icon": "/Skill/Hellish Blizzard (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals a 5-hit combo to all enemies for 17% ATK (+2) damage. If self is in the [Berserk] state, restore HP.",
+      "icon": "/Skill/Hellish Blizzard (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals a 5-hit combo to all enemies for 17% ATK (+2) damage, and directly restores own HP. At the same time, attacks from surrounding allies ignore 20% DEF for a duration.",
+      "keepsakeIcon": "/Keepsake/Hellish Blizzard (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Hellish Blizzard (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). After acting, grants the ally with the lowest HP percentage (including self) [Tenacity] (absorbs damage equal to 25% of own max HP).",
+      "icon": "/Skill/Hellish Blizzard (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). After acting, grants the ally with the lowest HP percentage (excluding self) [Tenacity] (absorbs damage equal to 25% of own max HP), and has a 50% chance to grant self [Tenacity].",
+      "icon": "/Skill/Hellish Blizzard (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). After acting, grants the ally with the lowest HP percentage (excluding self) [Tenacity] (absorbs damage equal to 35% of own max HP), and has a 50% chance to grant self [Tenacity].",
+      "icon": "/Skill/Hellish Blizzard (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Tenacity]",
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Hellish Blizzard (SR)/Keepsake_SR.png",
+  "classLevel": "B",
+  "classIcon": "/Class/B.png",
+  "imageSrcset": "/Characters/optimized/100009-sr-360.webp 360w, /Characters/optimized/100009-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

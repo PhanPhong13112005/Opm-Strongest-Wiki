@@ -1,0 +1,95 @@
+{
+  "id": "100075-ssr",
+  "name": "Hiệp Sĩ Kim Loại",
+  "imageURL": "/Characters/optimized/100075-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Công Nghệ",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Trọng Thương",
+    "Thiêu Đốt",
+    "Tăng/Giảm Công"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 422,
+    "hp": 2531,
+    "def": 107,
+    "spd": 100
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST lên mục tiêu đơn, với 100% cơ hội khiến mục tiêu bị [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 50% ST).",
+      "icon": "/Skill/Metal Knight (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 5 liên kích 20% ST lên toàn bộ địch, với 50% cơ hội khiến mục tiêu bị [Thương Tổn] trong 2 lượt (bổ sung ST thương tổn bằng 50% ST khi bị tấn công), và 100% cơ hội khiến mục tiêu chính bị [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 50% ST).",
+      "icon": "/Skill/Metal Knight (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 5 liên kích 24% ST lên toàn bộ địch, với 50% cơ hội khiến mục tiêu bị [Thương Tổn] trong 2 lượt (bổ sung ST thương tổn bằng 65% ST khi bị tấn công), và 100% cơ hội khiến mục tiêu chính bị [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 100% ST).",
+      "keepsakeIcon": "/Keepsake/Metal Knight (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Metal Knight (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Tăng vĩnh viễn Máu tối đa của bản thân. Mỗi kẻ địch bị [Thương Tổn] tăng cho phe ta +100% ST, tối đa 3 tầng, và khiến kẻ địch bị [Thiêu Đốt] trở nên [Suy Yếu] (giảm 10% ST trong một số lượt).",
+      "icon": "/Skill/Metal Knight (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Tăng vĩnh viễn Máu tối đa của bản thân. Mỗi kẻ địch bị [Thương Tổn] tăng cho phe ta +100% ST, tối đa 4 tầng, và khiến kẻ địch bị [Thiêu Đốt] trở nên [Suy Yếu] (giảm 20% ST trong một số lượt).",
+      "icon": "/Skill/Metal Knight (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Tăng vĩnh viễn Máu tối đa của bản thân. Mỗi kẻ địch bị [Thương Tổn] tăng cho phe ta +100% ST, tối đa 4 tầng, và khiến kẻ địch bị [Thiêu Đốt] trở nên [Suy Yếu] (giảm 25% ST trong một số lượt).",
+      "icon": "/Skill/Metal Knight (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Làm Suy Yếu]",
+      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Thiêu Đốt]",
+      "desc": "Sát thương lửa liên tục theo thời gian lên mục tiêu."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Metal Knight (SSR)/Keepsake_SSR.png",
+  "releaseDate": "16/06/2020",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/09/2020",
+  "releaseTrung": "01/05/2020",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100075-ssr-360.webp 360w, /Characters/optimized/100075-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

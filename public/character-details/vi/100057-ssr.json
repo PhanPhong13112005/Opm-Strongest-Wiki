@@ -1,0 +1,88 @@
+{
+  "id": "100057-ssr",
+  "name": "Thần Heo",
+  "roles": [
+    "Hồi Phục"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 394,
+    "hp": 2562,
+    "def": 100,
+    "spd": 106
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung liên kích 2 đòn gây 60% ST lên mục tiêu đơn, và cấp cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 30% Máu bản thân).",
+      "icon": "/Skill/Pig God (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây sát thương lên mục tiêu đơn bằng 45% Máu tối đa của Pig God, và [Nuốt Chửng] mục tiêu khiến nó rời chiến trận 1 lượt (mỗi lượt hiệu lực 1 lần).",
+      "icon": "/Skill/Pig God (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây sát thương lên mục tiêu đơn bằng 60% Máu tối đa của Pig God, và [Nuốt Chửng] mục tiêu khiến nó rời chiến trận 1 lượt (mỗi lượt hiệu lực 1 lần).",
+      "icon": "/Skill/Pig God (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Pig God (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Nhận 15% Miễn Sát Thương Không Chí Mạng (giảm mọi loại sát thương; hiệu ứng này và [Khéo Léo] chỉ một cái có tác dụng), và miễn nhiễm [Rời Chiến Trận] cùng [Nuốt Chửng Rời Chiến Trận].",
+      "icon": "/Skill/Pig God (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Nhận 20% Miễn Sát Thương Không Chí Mạng (giảm mọi loại sát thương; hiệu ứng này và [Khéo Léo] chỉ một cái có tác dụng), và miễn nhiễm [Rời Chiến Trận] cùng [Nuốt Chửng Rời Chiến Trận].",
+      "icon": "/Skill/Pig God (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Nhận 25% Miễn Sát Thương Không Chí Mạng (giảm mọi loại sát thương; hiệu ứng này và [Khéo Léo] chỉ một cái có tác dụng), và miễn nhiễm [Rời Chiến Trận] cùng [Nuốt Chửng Rời Chiến Trận].",
+      "icon": "/Skill/Pig God (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR",
+  "imageURL": "/Characters/optimized/100057-ssr-600.webp",
+  "type": "Tâm Linh",
+  "faction": "Anh Hùng",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Pig God (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Lá Chắn]",
+      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+    }
+  ],
+  "releaseDate": "16/06/2020",
+  "classLevel": "Class_SS",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100057-ssr-360.webp 360w, /Characters/optimized/100057-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

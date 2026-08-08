@@ -1,0 +1,86 @@
+{
+  "id": "100148-sr",
+  "name": "Hamukichi",
+  "imageURL": "/Characters/optimized/100148-sr-600.webp",
+  "tier": "SR",
+  "type": "Giác Đấu",
+  "faction": "Võ Thuật",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 183,
+    "hp": 1128,
+    "def": 48,
+    "spd": 95
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 40% ST (+3) sát thương cho mục tiêu đơn với liên kích 3 đòn.",
+      "icon": "/Skill/Hamukichi (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 180% ST (+10) sát thương cho mục tiêu đơn, 100% xác suất khiến mục tiêu chính chịu [Thương Tổn] trong 2 lượt (khi bị tấn công chịu thêm sát thương Thương Tổn bằng 60% ST), và khiến mục tiêu [Suy Yếu] (giảm 30% ST trong 2 lượt).",
+      "icon": "/Skill/Hamukichi (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 220% ST (+10) sát thương cho mục tiêu đơn, 100% xác suất khiến mục tiêu chính chịu [Thương Tổn] trong 2 lượt (khi bị tấn công chịu thêm sát thương Thương Tổn bằng 80% ST), và khiến mục tiêu [Suy Yếu] (giảm 40% ST trong 2 lượt).",
+      "keepsakeIcon": "/Keepsake/Hamukichi (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Hamukichi (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Đòn đánh cuối có 60% xác suất khiến mục tiêu chính và địch xung quanh chịu [Thương Tổn] trong 2 lượt (khi bị tấn công chịu thêm sát thương Thương Tổn bằng 60% ST).",
+      "icon": "/Skill/Hamukichi (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Đòn đánh cuối có 80% xác suất khiến mục tiêu chính và địch xung quanh chịu [Thương Tổn] trong 2 lượt (khi bị tấn công chịu thêm sát thương Thương Tổn bằng 60% ST).",
+      "icon": "/Skill/Hamukichi (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Đòn đánh cuối có 80% xác suất khiến mục tiêu chính và địch xung quanh chịu [Thương Tổn] trong 2 lượt (khi bị tấn công chịu thêm sát thương Thương Tổn bằng 80% ST).",
+      "icon": "/Skill/Hamukichi (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Làm Suy Yếu]",
+      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Hamukichi (SR)/Keepsake_SR.png",
+  "classLevel": "Martial_Artist",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100148-sr-360.webp 360w, /Characters/optimized/100148-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 652
+}

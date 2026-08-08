@@ -1,0 +1,87 @@
+{
+  "id": "100002-ssr",
+  "name": "Sonic Siêu Thanh V1",
+  "tier": "SSR",
+  "type": "Vũ Trang",
+  "faction": "Tội Phạm",
+  "roles": [
+    "Hỗ Trợ",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 369,
+    "hp": 2214,
+    "def": 93,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST (+10) sát thương lên mục tiêu đơn, với 100% tỉ lệ khiến mục tiêu bị [Băng Hoại] trong 2 lượt (giảm 30% tỉ lệ giảm sát thương).",
+      "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 210% ST (+10) sát thương lên mục tiêu đơn và ban hiệu ứng tăng tốc trong 1 lượt; nếu đòn này chí mạng thì chắc chắn kích hoạt hiệu ứng tăng tốc. Có 100% tỉ lệ lập tức tăng Tốc độ cho bản thân và đồng minh xung quanh.",
+      "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 263% ST (+10) sát thương lên mục tiêu đơn và ban hiệu ứng tăng tốc trong 1 lượt; nếu đòn này chí mạng thì chắc chắn kích hoạt hiệu ứng tăng tốc. Có 100% tỉ lệ lập tức tăng Tốc độ cho toàn bộ đồng minh.",
+      "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Speed-o-Sound Sonic V1 (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau mỗi lần hành động, tấn công kẻ địch đang bị [Băng Hoại] sẽ gây thêm 75% ST sát thương.",
+      "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau mỗi lần hành động, tấn công kẻ địch đang bị [Băng Hoại] sẽ gây thêm 85% ST sát thương.",
+      "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau mỗi lần hành động, tấn công kẻ địch đang bị [Băng Hoại] sẽ gây thêm 100% ST sát thương.",
+      "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100002-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Speed-o-Sound Sonic V1 (SSR)/Keepsake_SSR.png",
+  "releaseDate": "16/06/2020",
+  "effects": [],
+  "classLevel": "Outlaw",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "classIcon": "/Class/Outlaw.png",
+  "imageSrcset": "/Characters/optimized/100002-ssr-360.webp 360w, /Characters/optimized/100002-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

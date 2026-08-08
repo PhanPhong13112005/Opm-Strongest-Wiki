@@ -1,0 +1,128 @@
+{
+  "id": "100186-ur",
+  "name": "Bomb/Bengpu",
+  "imageURL": "/Characters/optimized/100186-ur-600.webp",
+  "tier": "UR",
+  "type": "Giác Đấu",
+  "faction": "Võ Thuật",
+  "roles": [
+    "Hạt Nhân"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST, 100% tỉ lệ gây [Nội Thương] (gây 100% ST của Bomb khi mục tiêu bị tấn công, rồi biến mất sau khi kích hoạt).",
+      "icon": "/Skill/BomBengpu (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tấn công kẻ địch cùng hàng với 6 đòn liên tiếp, gây 510% ST. 100% tỉ lệ gây [Nội Thương] lên mục tiêu chính (gây 500% ST của Bomb khi bị tấn công, rồi biến mất sau khi kích hoạt).",
+      "icon": "/Skill/BomBengpu (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "ST 510% → 600%ST [Nội Thương] 500% → 750%",
+      "keepsakeIcon": "/Keepsake/Bom/Bengpu (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/BomBengpu (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Khi bắt đầu trận đấu, nhận 60% tỉ lệ [Né Đòn] (giảm ST Trực Tiếp/Phụ Trội/Tích Lũy/Cuồng Bạo xuống còn 1 ST), kéo dài 5 lượt.Sau khi bất kỳ nhân vật nào hành động, hấp thụ 40% ST [Nội Thương] trên kẻ địch và gây [ST Phụ Trội Chuyên Biệt] (có thể Chí Mạng, không bị ảnh hưởng bởi [Phản ST Chuyên Biệt]) lên toàn bộ địch.Trong 5 lượt đầu, trước khi bất kỳ nhân vật nào hành động, hồi phục Máu bằng 500% ST, 3 lần mỗi lượt.",
+      "icon": "/Skill/BomBengpu (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Tỉ lệ [Né Đòn] 60% → 70%Hấp thụ ST [Nội Thương] 40% → 50%Hồi Máu 3 lần mỗi lượt → 4 lần mỗi lượt",
+      "icon": "/Skill/BomBengpu (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Thời gian [Né Đòn] 5 lượt → 8 lượtHấp thụ ST [Nội Thương] 50% → 60%Hồi Máu 500% → 650%",
+      "icon": "/Skill/BomBengpu (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi Bomb tấn công, triệu hồi Silverfang để thực hiện [Tấn Công Liên Kích] với cùng kiểu tấn công. Cơ bản - Gây 100% sát thương Tấn công của Bomb lên một mục tiêu ngẫu nhiên. Tối thượng - Tấn công toàn bộ kẻ địch với 5 đòn liên tiếp và gây sát thương bằng 150% Tấn công của Bomb, đồng thời có 75% tỉ lệ gây [Nội Thương] lên mục tiêu chính (gây 450% Tấn công của Bomb khi bị tấn công và biến mất sau khi kích hoạt)",
+      "icon": "/Skill/BomBengpu (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Sát thương tối thượng của Silverfang 150% > 200% Tỉ lệ Internal Injury 75% > 90% Sát thương Internal Injury 450% > 600%",
+      "icon": "/Skill/BomBengpu (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/BomBengpu (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Nội Thương]",
+      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Bom/Bengpu (SSR)/Keepsake_SSR.png",
+  "releaseTrung": "01/06/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Hạt Nhân",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Tạo Khiên"
+  ],
+  "classLevel": "Martial_Artist",
+  "releaseSea": "01/10/2024",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100186-ur-360.webp 360w, /Characters/optimized/100186-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 684
+}

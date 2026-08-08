@@ -1,0 +1,81 @@
+{
+  "id": "100016-sr",
+  "name": "Spring Mustachio",
+  "imageURL": "/Characters/optimized/100016-sr-600.webp",
+  "tier": "SR",
+  "type": "Duelist",
+  "faction": "Hero",
+  "roles": [
+    "Collapse"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 180,
+    "hp": 1079,
+    "def": 46,
+    "spd": 92
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals a 2-hit combo of 50% ATK DMG to a single target.",
+      "icon": "/Skill/Spring Mustachio (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals a 2-hit combo of 70% ATK DMG to each enemy in the entire column. Has a 100% chance to inflict [Shatter] on back-row targets for 2 turns (reduces DMG RED. rate by 35%).",
+      "icon": "/Skill/Spring Mustachio (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals a 2-hit combo of 70% ATK DMG to each enemy in the entire column. Has a 100% chance to inflict [Shatter] on all targets in the column for 2 turns (reduces DMG RED. rate by 35%).",
+      "keepsakeIcon": "/Keepsake/Spring Mustachio (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Spring Mustachio (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by 20%. When Spring Mustachio is attacked, if the attacker is in the [Shatter] state, the DMG is reduced by 40%.",
+      "icon": "/Skill/Spring Mustachio (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by 20%. When Spring Mustachio is attacked, if the attacker is in the [Shatter] state, the DMG is reduced by 50%.",
+      "icon": "/Skill/Spring Mustachio (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by 20%. When Spring Mustachio is attacked, if the attacker is in the [Shatter] state, the DMG is reduced by 60%.",
+      "icon": "/Skill/Spring Mustachio (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Spring Mustachio (SR)/Keepsake_SR.png",
+  "classLevel": "A",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100016-sr-360.webp 360w, /Characters/optimized/100016-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

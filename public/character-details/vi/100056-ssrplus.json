@@ -1,0 +1,137 @@
+{
+  "id": "100056-ssrplus",
+  "name": "King",
+  "imageURL": "/Characters/optimized/100056-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Tâm Linh",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Giảm Năng Lượng",
+    "Tăng Tốc",
+    "Chia Sẻ Sát Thương"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 120
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "King khích lệ ý chí bản thân, hồi cho bản thân 150% (+10) ST Máu.",
+      "icon": "/Skill/King (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "King khởi động Đế Vương Chi Cơ, khiến mục tiêu chính rơi vào [Hoảng Loạn] (phong ấn 2 năng lượng trong 1 lượt). Giải trừ [Bất Khuất]/[Lá Chắn] của 3 kẻ địch có Máu tối đa cao nhất rồi áp lại phiên bản hạ cấp thành hiệu ứng [Lá Chắn] bằng 60% giá trị vừa giải trừ, đồng thời hồi cho 2 đồng minh có % Máu thấp nhất 300% (+10) ST Máu.",
+      "icon": "/Skill/King (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Năng lượng [Hoảng Loạn] phong ấn 2 > 3Mục tiêu giải trừ/hạ cấp — 3 kẻ địch Máu tối đa cao nhất > toàn bộ kẻ địchLực hiệu ứng [Lá Chắn] hạ cấp 60% > 50%Đồng minh được hồi máu — 2 > 4 đồng minh % Máu thấp nhất, 300% (+10) ST",
+      "keepsakeIcon": "/Keepsake/King (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/King (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân thêm 20%.Khi vào trận, nâng Tốc Độ của đồng minh cùng hàng lên 90% Tốc Độ của King (nếu Tốc Độ của đồng minh đã cao hơn thì giữ nguyên).",
+      "icon": "/Skill/King (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Khi vào trận — đồng thời tăng Tốc Độ của bản thân thêm 16%Tốc Độ đồng minh cùng hàng được nâng lên 90% Tốc Độ của King",
+      "icon": "/Skill/King (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Khi vào trận — Tốc Độ bản thân tăng 16% > 20%Tốc Độ đồng minh cùng hàng được nâng lên 90% > 95% Tốc Độ của King",
+      "icon": "/Skill/King (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Triệu hồi drone khi bắt đầu trận đấu (Tấn công & Máu lần lượt bằng 100% & 800% Tấn công của King). Drone sẽ hấp thụ 90% mọi loại ST mà King nhận (không tính hiệu ứng huy hiệu và phản sát thương) cho đến khi Máu của nó còn 1%. Drone sẽ truy kích (sau khi đồng minh hành động) vào 1 kẻ địch ngẫu nhiên (350% Tấn công, tối đa 2 lần mỗi lượt).\nẢnh do Gibrah Noah cung cấp",
+      "icon": "/Skill/King (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Số drone triệu hồi 1 > 2.",
+      "icon": "/Skill/King (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/King (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    },
+    {
+      "term": "[Hoảng Loạn]",
+      "desc": "Trạng thái khống chế làm gián đoạn hành động của mục tiêu."
+    },
+    {
+      "term": "[Khiên]",
+      "desc": "Khiên hấp thụ sát thương tới một phần Máu của chủ thể; Charge DMG bỏ qua nó."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/King (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "10 / 2021",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Debuff",
+    "Hồi Phục",
+    "Tốc Độ"
+  ],
+  "classLevel": "Class_SS",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100056-ssrplus-360.webp 360w, /Characters/optimized/100056-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

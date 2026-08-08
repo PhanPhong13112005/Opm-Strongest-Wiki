@@ -1,0 +1,82 @@
+{
+  "id": "200010-n",
+  "name": "Kẻ Hủy Diệt Biển Sâu",
+  "imageURL": "/Characters/optimized/200010-n-600.webp",
+  "tier": "N",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 164,
+    "hp": 981,
+    "def": 41,
+    "spd": 83
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 80% ST (+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Deep Sea Destroyer (N)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung liên kích 2 đòn lên mục tiêu đơn gây 90% ST (+5) sát thương, với 100% xác suất khiến mục tiêu [Băng Hoại] trong 2 lượt (giảm tỷ lệ miễn thương 30%).",
+      "icon": "/Skill/Deep Sea Destroyer (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung liên kích 2 đòn lên mục tiêu đơn gây 100% ST (+5) sát thương, với 100% xác suất khiến mục tiêu [Băng Hoại] trong 2 lượt (giảm tỷ lệ miễn thương 30%).",
+      "keepsakeIcon": "/Keepsake/Deep Sea Destroyer (N)/Keepsake_N.png",
+      "icon": "/Skill/Deep Sea Destroyer (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi Kẻ Hủy Diệt Thâm Hải có mặt, tăng 20% sát thương của bản thân cho đến khi kết thúc trận đấu.",
+      "icon": "/Skill/Deep Sea Destroyer (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi Kẻ Hủy Diệt Thâm Hải có mặt, tăng 25% sát thương của bản thân cho đến khi kết thúc trận đấu.",
+      "icon": "/Skill/Deep Sea Destroyer (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi Kẻ Hủy Diệt Thâm Hải có mặt, tăng 28% sát thương của bản thân cho đến khi kết thúc trận đấu.",
+      "icon": "/Skill/Deep Sea Destroyer (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Deep Sea Destroyer (N)/Keepsake_N.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/200010-n-360.webp 360w, /Characters/optimized/200010-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

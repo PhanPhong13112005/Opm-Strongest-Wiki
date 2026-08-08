@@ -1,0 +1,145 @@
+{
+  "id": "100024-ssrplus",
+  "name": "Bang",
+  "tier": "SSR+",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hỗ Trợ",
+    "Tạo Khiên"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 103
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "ST trực tiếp 60% ST lên một mục tiêu đơn.",
+      "icon": "/Skill/Bang (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "ST trực tiếp 60% ST lên toàn bộ kẻ địch. Gây [Nội Thương Vũ Trang] lên 3 kẻ địch ngẫu nhiên.",
+      "icon": "/Skill/Bang (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "ST trực tiếp 60% > 70% ST lên toàn bộ kẻ địch. Gây [Nội Thương Vũ Trang] lên 3 kẻ địch ngẫu nhiên > toàn bộ kẻ địch.",
+      "icon": "/Skill/Bang (SSR+)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Bang (SSRplus)/Keepsake_SSRplus.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Khi Round &lt; 3, sau khi hành động, gỡ [Energy] của kẻ địch mục tiêu (tối đa 1 lần mỗi lượt; sau khi gỡ thành công không thể gây [Sợ Hãi] lên kẻ địch đó trong cùng lượt). Đầu trận, vĩnh viễn nhận +30% [Né Sát Thương Tức Thì].[Né Sát Thương Tức Thì]: ST Trực Tiếp, ST Ex, ST Charge và ST Cuồng Nộ chỉ gây 1 ST.",
+      "icon": "/Skill/Bang (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Cửa sổ Round .",
+      "icon": "/Skill/Bang (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Cửa sổ Round .",
+      "icon": "/Skill/Bang (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Mỗi khi Bang tấn công, triệu hồi Bomb để [Tấn Công Liên Kích] với đòn tương tự: Đánh Thường — gây 100% ATK lên một kẻ địch ngẫu nhiên; Ultimate — đánh AoE 3 đòn với 180% ATK. [Tấn Công Liên Kích] dùng ATK của Bang làm ST (Bomb không cần có trong đội).",
+      "icon": "/Skill/Source/100024-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "ATK Ultimate của [Tấn Công Liên Kích] 180% > 210%. Với mỗi kẻ địch có [Nội Thương], giảm 250 [Thanh Năng Lượng] của kẻ địch đó.",
+      "icon": "/Skill/Source/100024-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Source/100024-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "cost": null,
+      "keepsakeIcon": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100024-ssrplus-600.webp",
+  "debut": "12 / 2021",
+  "keepsakeIcon": "/Keepsake/Bang (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/03/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Tạo Khiên"
+  ],
+  "effects": [
+    {
+      "term": "[Cắt Giảm Năng Lượng]",
+      "desc": "Debuff áp lên toàn bộ kẻ địch khi Năng lượng của chúng giảm, chặn hoặc phá Năng lượng khiến chúng không thể dùng chiêu cuối."
+    },
+    {
+      "term": "[Đánh Dấu]",
+      "desc": "Đánh dấu một đơn vị, mở điều kiện truy kích hoặc hiệu ứng thưởng gắn với dấu."
+    },
+    {
+      "term": "[Né Tức Thì]",
+      "desc": "Các tầng mà mỗi tầng khiến một đòn đánh trực tiếp, bổ sung, charge hoặc berserk chỉ gây 1 sát thương."
+    },
+    {
+      "term": "[Sụp Đổ (Vũ Trang)]",
+      "desc": "Hiệu ứng bất lợi gây sát thương trì hoãn, tích trữ sát thương bổ sung (600-800% ST của Gouketsu), giải phóng khi mục tiêu bị đánh trúng hoặc khi bị [Kích Nổ]."
+    },
+    {
+      "term": "[Thanh Tẩy]",
+      "desc": "Xóa các hiệu ứng/buff đang có trên toàn bộ kẻ địch."
+    }
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/07/2022",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100024-ssrplus-360.webp 360w, /Characters/optimized/100024-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

@@ -1,0 +1,95 @@
+{
+  "id": "100046-sr",
+  "name": "Blue Fire",
+  "imageURL": "/Characters/optimized/100046-sr-600.webp",
+  "tier": "SR",
+  "type": "Hi-Tech",
+  "faction": "Hero",
+  "roles": [
+    "Burn"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 173,
+    "hp": 1040,
+    "def": 44,
+    "spd": 94
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 100% ATK(+10) DMG to a single target.",
+      "icon": "/Skill/Blue Fire (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Strikes each enemy in the entire row with a 4-hit combo, dealing 30% ATK(+2) DMG per hit, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 80% ATK).",
+      "icon": "/Skill/Blue Fire (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Strikes each enemy in the entire row with a 4-hit combo, dealing 30% ATK(+2) DMG per hit, with a 100% chance to inflict [Burn] on the main target and a 50% chance on enemies in the main target's row for 2 turns (DoT equal to 80% ATK).",
+      "keepsakeIcon": "/Keepsake/Blue Fire (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Blue Fire (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). When an enemy's [Burn] expires, inflicts [Burn] on a random enemy target for 2 turns (DoT equal to 50% ATK).",
+      "icon": "/Skill/Blue Fire (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). When an enemy's [Burn] expires, inflicts [Burn] on a random enemy target for 2 turns (DoT equal to 70% ATK).",
+      "icon": "/Skill/Blue Fire (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). When an enemy's [Burn] expires, inflicts [Burn] on a random enemy target for 2 turns (DoT equal to 80% ATK).",
+      "icon": "/Skill/Blue Fire (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Thiêu Đốt]",
+      "desc": "Continuous fire damage over time to the target."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Blue Fire (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)"
+  ],
+  "classLevel": "A",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100046-sr-360.webp 360w, /Characters/optimized/100046-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

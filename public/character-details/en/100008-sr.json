@@ -1,0 +1,87 @@
+{
+  "id": "100008-sr",
+  "name": "Mosquito Girl",
+  "tier": "SR",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "DMG (ATK)",
+    "Core",
+    "Heal",
+    "DMG (HP)",
+    "Revive"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 173,
+    "hp": 1040,
+    "def": 33,
+    "spd": 91
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Strikes a single target with 2 combo hits, dealing 50% ATK DMG each.",
+      "icon": "/Skill/Mosquito Girl (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Strikes enemies in a cross-shaped area with 3 combo hits, dealing 40% ATK DMG each; the final hit drains 100% of the DMG dealt to heal herself.",
+      "icon": "/Skill/Mosquito Girl (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Strikes enemies in a cross-shaped area with 3 combo hits, dealing 40% ATK DMG each; the final hit drains 100% of the DMG dealt to heal herself, and the first and second hits each have a 100% chance to drain 100% of the DMG dealt to heal as well.",
+      "icon": "/Skill/Mosquito Girl (SR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Mosquito Girl (SR)/Keepsake_SR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP. After each action, heals the 1 ally with the lowest HP percentage, healing for 100% of Mosquito Girl's ATK.",
+      "icon": "/Skill/Mosquito Girl (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP. After each action, heals the 2 allies with the lowest HP percentage, healing for 100% of Mosquito Girl's ATK.",
+      "icon": "/Skill/Mosquito Girl (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP. After each action, heals the 2 allies with the lowest HP percentage, healing for 105% of Mosquito Girl's ATK.",
+      "icon": "/Skill/Mosquito Girl (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100008-sr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Mosquito Girl (SR)/Keepsake_SR.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "effects": [],
+  "classLevel": "Demon",
+  "imageSrcset": "/Characters/optimized/100008-sr-360.webp 360w, /Characters/optimized/100008-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

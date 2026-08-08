@@ -1,0 +1,146 @@
+{
+  "id": "100054-ssrplus",
+  "name": "Melzargard",
+  "imageURL": "/Characters/optimized/100054-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Hồi Sinh Đồng Minh",
+    "Đột Phá",
+    "Miễn Nhiễm Câm Lặng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 104
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 60% ST sát thương trực tiếp lên mục tiêu đơn.",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây sát thương trực tiếp bằng 12% Máu tối đa của mỗi kẻ địch lên toàn bộ kẻ địch, sau đó áp một [Đánh Dấu] lên bản thân.",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Sát thương trực tiếp lên toàn bộ kẻ địch tăng lên 12% > 16% Máu tối đa của chúng. [Đánh Dấu] tự thân được nâng cấp lên phiên bản mạnh hơn.",
+      "keepsakeIcon": "/Keepsake/Melzargard (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Khi vào trận, tăng +20% Máu. Sau khi bất kỳ nhân vật cùng hàng tấn công, kích hoạt [Đột Phá] lên mục tiêu chính. Vĩnh viễn cấp [Miễn Nhiễm Câm Lặng] cho toàn hàng.",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Bổ sung cấp [Miễn Nhiễm Choáng].",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Kích hoạt [Đột Phá]: sau khi nhân vật cùng hàng tấn công &gt; sau khi nhân vật quanh Melzargard tấn công.",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi trận đấu bắt đầu, ban cho toàn đội 50% Tỉ lệ Khiên, kéo dài 2 lượt. Kích hoạt [Tái Sinh] sau khi nhận sát thương chí tử (Khi có đồng minh, hồi 50% Máu trước khi hành động, tối đa 2 lần)",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Tỉ lệ Khiên 50% > 70% Hồi Máu trước khi hành động tối đa 2 lần > 3 lần\n[Hồi Sinh] có thể cộng dồn với SSR+ Phoenixman và SSR+ Pig God Các nhân vật được hồi sinh không nhận được [Bảo vệ chuyên biệt] từ SSR+ Drive Knight nhưng vẫn có thể nhận từ kỹ năng của chính mình",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Melzargard (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Câm Lặng]",
+      "desc": "Mục tiêu không thể dùng chiêu cuối. Được tính là hiệu ứng khống chế."
+    },
+    {
+      "term": "[Đánh Dấu]",
+      "desc": "Đánh dấu một đơn vị, mở điều kiện truy kích hoặc hiệu ứng thưởng gắn với dấu."
+    },
+    {
+      "term": "[Hồi Sinh]",
+      "desc": "Trạng thái đưa đơn vị bị hạ gục trở lại trận, cấp số lần hồi sinh giới hạn mà các hiệu ứng chống hồi sinh có thể gỡ bỏ."
+    },
+    {
+      "term": "[Hồi Phục]",
+      "desc": "Hồi Máu theo thời gian hoặc trước hành động kế tiếp của đơn vị."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Melzargard (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/12/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "classLevel": "Dragon",
+  "releaseSea": "01/04/2023",
+  "imageSrcset": "/Characters/optimized/100054-ssrplus-360.webp 360w, /Characters/optimized/100054-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

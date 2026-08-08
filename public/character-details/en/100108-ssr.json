@@ -1,0 +1,91 @@
+{
+  "id": "100108-ssr",
+  "name": "Bom/Bengpu",
+  "imageURL": "/Characters/optimized/100108-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Grappler",
+  "faction": "Martial Artist",
+  "roles": [
+    "Tenacity Core",
+    "Increase Agility",
+    "Reduce Healing"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 394,
+    "hp": 2562,
+    "def": 100,
+    "spd": 96
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 130% ATK DMG to a single target, and reduces the target's [Heal Rate] by 30% for 2 turns.",
+      "icon": "/Skill/BomBengpu (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Strikes each enemy in the entire row with 3 combo strikes for 65% ATK DMG each, with a 100% chance to reduce the main target's [Heal Rate], and a 50% chance to reduce the [Heal Rate] of targets in the same row (Heal effect reduced by 45% for 2 turns).",
+      "icon": "/Skill/BomBengpu (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Strikes each enemy in the entire row with 3 combo strikes for 80% ATK DMG each, with a 100% chance to reduce the main target's [Heal Rate], and a 50% chance to reduce the [Heal Rate] of targets in the same row (Heal effect reduced by 65% for 2 turns).",
+      "keepsakeIcon": "/Keepsake/Bom/Bengpu (UR)/Keepsake_UR.png",
+      "icon": "/Skill/BomBengpu (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP (+20). When battle starts, grants [Agility] to self and surrounding allies (reduces higher Direct DMG (12% - 60%) while taking fewer incoming strikes; cannot co-exist with [Non-Crit DMG Free]). The first time it takes fatal damage each battle, revives with 40% Max HP.",
+      "icon": "/Skill/BomBengpu (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP. At the start of battle, permanently grants [Agility] to all allies (the fewer strikes taken from enemy attacks, the more Direct DMG is evaded, up to 60% and no less than 12%; this effect and Non-Crit DMG RED can only have one active). The first time fatal DMG is taken each battle, revives with 45% of Max HP.",
+      "icon": "/Skill/BomBengpu (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP. At the start of battle, permanently grants [Agility] to all allies (the fewer strikes taken from enemy attacks, the more Direct DMG is evaded, up to 65% and no less than 16%; this effect and Non-Crit DMG RED can only have one active). The first time fatal DMG is taken each battle, revives with 50% of Max HP.",
+      "icon": "/Skill/BomBengpu (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Agility]",
+      "desc": "Evasion type buff; mutually exclusive with Non-Crit Damage Immunity."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Bom/Bengpu (UR)/Keepsake_UR.png",
+  "releaseDate": "01/11/2021",
+  "classLevel": "Martial_Artist",
+  "releaseSea": "01/10/2021",
+  "releaseTrung": "01/06/2021",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100108-ssr-360.webp 360w, /Characters/optimized/100108-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

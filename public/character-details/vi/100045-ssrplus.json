@@ -1,0 +1,125 @@
+{
+  "id": "100045-ssrplus",
+  "name": "Đồng Đế",
+  "imageURL": "/Characters/optimized/100045-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Công Nghệ",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Tăng Chí Mạng Đồng Minh",
+    "Miễn Nhiễm Đốt/Lực Trường/Trọng Thương"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "2 đòn liên tiếp lên mục tiêu đơn gây 120% ST sát thương.",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây sát thương lên toàn bộ kẻ địch bằng 5 đòn liên tiếp với 250% ST, và giảm Max HP của mục tiêu chính đi 20% trong 2 lượt.",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây sát thương lên toàn bộ kẻ địch bằng 5 đòn liên tiếp với 250% > 300% ST, và giảm Max HP của mục tiêu chính đi 20% > 30% trong 2 lượt.",
+      "keepsakeIcon": "/Keepsake/Child Emperor (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Khi vào trận, tăng 25% tỉ lệ chí mạng cho bản thân và cùng hàng trong 2 lượt. Cấp cho bản thân và cùng hàng miễn nhiễm vĩnh viễn với [Thiêu Đốt/Trường Lực/Trọng Thương/Nội Thương].",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Khi vào trận, tăng 25% > 30% tỉ lệ chí mạng cho bản thân và cùng hàng trong 2 > 3 lượt. Cấp cho bản thân và cùng hàng miễn nhiễm vĩnh viễn với [Thiêu Đốt/Trường Lực/Trọng Thương/Nội Thương].",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Khi vào trận, tăng 25% > 35% tỉ lệ chí mạng cho bản thân và cùng hàng trong 2 > 3 lượt. Cấp cho bản thân và cùng hàng miễn nhiễm vĩnh viễn với [Thiêu Đốt/Trường Lực/Trọng Thương/Nội Thương].",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi vào trận, triệu hồi 1 robot chó ([100%] ST của Child Emperor). Sau hành động của đồng minh, robot chó gây sát thương trực tiếp lên kẻ địch có tỉ lệ HP thấp nhất bằng 200% ST dưới dạng sát thương thêm, và hồi 25% HP cho đồng minh có tỉ lệ HP thấp nhất.",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Số robot chó triệu hồi 1 > 2.",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Child Emperor (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Child Emperor (SSRplus)/Keepsake_SSRplus.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Hạt Nhân",
+    "Debuff",
+    "Tạo Khiên"
+  ],
+  "bondList": "Genos + Metal Knight (Bofoi) + Dr. Genus",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/02/2022",
+  "releaseTrung": "01/10/2021",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100045-ssrplus-360.webp 360w, /Characters/optimized/100045-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

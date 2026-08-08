@@ -1,0 +1,139 @@
+{
+  "id": "100013-ssrplus",
+  "name": "Zombieman",
+  "imageURL": "/Characters/optimized/100013-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Tăng Tốc Cùng Hàng",
+    "Khích Lệ Đồng Minh"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 120
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây ST Trực Tiếp bằng 40% ST lên mục tiêu đơn.",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây ST Trực Tiếp bằng 90% ST lên hàng của mục tiêu. Nếu SPD của bản thân (×0.9) vượt SPD của mục tiêu, cướp phần chênh lệch SPD dưới dạng [Siêu Tốc]. Ban [Siêu Tốc] cho hàng của bản thân trong 2 lượt.",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây ST Trực Tiếp bằng 90% > 125% ST lên hàng của mục tiêu. Nếu SPD của bản thân (×0.9) vượt SPD của mục tiêu, cướp phần chênh lệch SPD dưới dạng [Siêu Tốc]. Ban [Siêu Tốc] cho hàng của bản thân trong 2 lượt.",
+      "keepsakeIcon": "/Keepsake/Zombieman (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Đầu trận nhận [Gia Tốc Chuyên Biệt] (tăng 20% Tốc; nếu Tốc mục tiêu chính thấp hơn Zombieman, gây 500% ATK sát thương phụ). Trước trận, [Cổ Vũ] đồng minh (nhận 2 năng lượng đầu lượt, kéo dài 3 lượt). Kích hoạt [Hồi Sinh] sau khi nhận sát thương chí mạng (khi có đồng minh, hồi 60% Máu trước hành động, tối đa 3 lần).",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Gia Tốc Chuyên Biệt] Tốc +20% &gt; +25%. [Cổ Vũ] 2 &gt; 3 năng lượng.",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Gia Tốc Chuyên Biệt] Tốc +25% &gt; +30%. [Cổ Vũ] kéo dài 3 &gt; 5 lượt. [Hồi Sinh] tối đa 3 &gt; 4 lần.",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Trước khi trận đấu bắt đầu, [Khích lệ] đồng minh (nhận 2 năng lượng khi bắt đầu lượt, kéo dài 3 lượt). Kích hoạt [Hồi Sinh] sau khi nhận sát thương chí tử (Khi có đồng minh, hồi 60% Máu trước khi hành động, tối đa 3 lần)",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Khích lệ đồng minh 2 năng lượng > 3 năng lượng Kéo dài 3 lượt > 5 lượt Kích hoạt Hồi sinh 3 lần > 4 lần",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Hồi Sinh]",
+      "desc": "Cơ chế hồi sinh/trở lại gắn với sự sống của đồng minh, đưa đơn vị trở lại trận đấu."
+    },
+    {
+      "term": "[Hồi Sinh]",
+      "desc": "Trạng thái đưa đơn vị bị hạ gục trở lại trận, cấp số lần hồi sinh giới hạn mà các hiệu ứng chống hồi sinh có thể gỡ bỏ."
+    },
+    {
+      "term": "[Siêu Tốc]",
+      "desc": "Buff tốc độ mà khi còn hiệu lực cho phép người mang và tối đa 6 đồng minh hành động lại và vượt qua kẻ địch có tốc độ thấp hơn."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Zombieman (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/03/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Hạt Nhân",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Tạo Khiên"
+  ],
+  "bondList": "Clone 1 + Paquino Family",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/07/2023",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100013-ssrplus-360.webp 360w, /Characters/optimized/100013-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

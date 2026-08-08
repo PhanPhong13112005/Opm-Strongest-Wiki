@@ -1,0 +1,83 @@
+{
+  "id": "100031-r",
+  "name": "Mumen Rider",
+  "roles": [
+    "Support",
+    "Speed"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 156,
+    "hp": 936,
+    "def": 40,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 90% ATK DMG to a single target.",
+      "icon": "/Skill/Mumen Rider (R)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Grants an ally [Berserk] state for 1 turn(s) and increases their SPD by 20%.[Berserk]: Increases DMG dealt by 30% when attacking.",
+      "icon": "/Skill/Mumen Rider (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Grants an ally [Berserk] state for 1 turn(s) and increases their SPD by 30%.[Berserk]: Increases DMG dealt by 35% when attacking.",
+      "icon": "/Skill/Mumen Rider (R)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Mumen Rider (R)/Keepsake_R.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases self max HP. The first time taking fatal DMG each battle, revives with HP equal to 5% of self max HP.",
+      "icon": "/Skill/Mumen Rider (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases self max HP. The first time taking fatal DMG each battle, revives with HP equal to 10% of self max HP.",
+      "icon": "/Skill/Mumen Rider (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases self max HP. The first time taking fatal DMG each battle, revives with HP equal to 13% of self max HP.",
+      "icon": "/Skill/Mumen Rider (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "R",
+  "imageURL": "/Characters/optimized/100031-r-600.webp",
+  "type": "Grappler",
+  "faction": "Hero",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Mumen Rider (R)/Keepsake_R.png",
+  "effects": [],
+  "classLevel": "C",
+  "classIcon": "/Class/C.png",
+  "imageSrcset": "/Characters/optimized/100031-r-360.webp 360w, /Characters/optimized/100031-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

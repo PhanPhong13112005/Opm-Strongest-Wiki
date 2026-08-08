@@ -1,0 +1,82 @@
+{
+  "id": "200017-n",
+  "name": "Chiến Binh Tấn Công Tộc Trời",
+  "imageURL": "/Characters/optimized/200017-n-600.webp",
+  "tier": "N",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 158,
+    "hp": 945,
+    "def": 40,
+    "spd": 84
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 80% ST (+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Skyfolk Striker (N)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 90% ST (+10) sát thương lên cả hàng mục tiêu.",
+      "icon": "/Skill/Skyfolk Striker (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 100% ST (+10) sát thương lên cả hàng mục tiêu.",
+      "keepsakeIcon": "/Keepsake/Skyfolk Striker (N)/Keepsake_N.png",
+      "icon": "/Skill/Skyfolk Striker (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh hành động, có 20% xác suất tung một đòn truy kích với sát thương đòn thường lên mục tiêu địch có Máu thấp nhất (tối đa 2 lần truy kích mỗi lượt).",
+      "icon": "/Skill/Skyfolk Striker (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh hành động, có 20% xác suất tung một đòn truy kích gây 100% sát thương đòn thường lên mục tiêu địch có Máu thấp nhất (tối đa 2 lần truy kích mỗi lượt).",
+      "icon": "/Skill/Skyfolk Striker (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh hành động, có 20% xác suất tung một đòn truy kích gây 110% sát thương đòn thường lên mục tiêu địch có Máu thấp nhất (tối đa 2 lần truy kích mỗi lượt).",
+      "icon": "/Skill/Skyfolk Striker (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Skyfolk Striker (N)/Keepsake_N.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/200017-n-360.webp 360w, /Characters/optimized/200017-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

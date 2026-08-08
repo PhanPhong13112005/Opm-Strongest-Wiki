@@ -1,0 +1,124 @@
+{
+  "id": "100057-ssrplus",
+  "name": "Thần Heo",
+  "roles": [
+    "Hồi Phục"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 107
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây ST trực tiếp bằng 60% ST lên một mục tiêu đơn.",
+      "icon": "/Skill/Pig God (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Ban [Bất Tử] cho mục tiêu trong 2 lượt, rồi gây ST trực tiếp bằng 75% ST và [Nuốt Chửng] mục tiêu (loại khỏi sân / [Rời Trận]).",
+      "icon": "/Skill/Pig God (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Ban [Bất Tử] cho mục tiêu trong 2 > 4 lượt, rồi gây ST trực tiếp bằng 75% > 100% ST và [Nuốt Chửng] mục tiêu (loại khỏi sân / [Rời Trận]).",
+      "icon": "/Skill/Pig God (SSR+)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Pig God (SSRplus)/Keepsake_SSRplus.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng 20% Máu. Khi trận đấu bắt đầu, nhận [Phòng Hộ Chuyên Biệt] bằng 1000% ATK (khử ST; cộng dồn với hiệu ứng thêm Máu; tổng ST khử không quá 15x Máu gốc). Sau khi vào [Bất Khuất Chuyên Biệt], nhận thêm [Phòng Hộ Chuyên Biệt] bằng 600% ATK. Không thể [Rời Trận] và miễn nhiễm [Nuốt Chửng].",
+      "icon": "/Skill/Pig God (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Phòng Hộ Chuyên Biệt] 1000% &gt; 1100% ATK. [Phòng Hộ Chuyên Biệt] thứ hai 600% &gt; 700% ATK.",
+      "icon": "/Skill/Pig God (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Phòng Hộ Chuyên Biệt] 1100% &gt; 1200% ATK. [Phòng Hộ Chuyên Biệt] thứ hai 700% &gt; 800% ATK.",
+      "icon": "/Skill/Pig God (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi một đồng minh kích hoạt [Rời Trận], gây [Ăn Mòn Chuyên Biệt] (DoT bằng 150% ST; sau khi nhân vật bất kỳ hành động, chuyển hiệu ứng sang kẻ địch ngẫu nhiên, biến mất sau khi chuyển 3 lần). Khi một đồng minh xung quanh bị hạ gục, Pig God có thể [Nuốt Chửng] một đồng minh; sau khi nhân vật bất kỳ hành động, đồng minh trở lại trận và hồi 60% HP Tối đa, tối đa 3 lần.",
+      "icon": "/Skill/Pig God (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "[Ăn Mòn Chuyên Biệt] DoT 150% > 200% ST. Khi [Nuốt Chửng], đồng minh hồi 60% > 75% HP Tối đa, và [Nuốt Chửng] kích hoạt tối đa 3 > 4 lần.",
+      "icon": "/Skill/Pig God (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Pig God (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR+",
+  "imageURL": "/Characters/optimized/100057-ssrplus-600.webp",
+  "type": "Tâm Linh",
+  "faction": "Anh Hùng",
+  "debut": "06 / 2022",
+  "keepsakeIcon": "/Keepsake/Pig God (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "06 / 2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Hồi Phục"
+  ],
+  "effects": [
+    {
+      "term": "[Bất Tử]",
+      "desc": "Trạng thái sinh tồn giữ người mang sống sót bằng cách giảm mạnh sát thương nhận vào (ví dụ chỉ chịu 20%)."
+    }
+  ],
+  "classLevel": "Class_SS",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100057-ssrplus-360.webp 360w, /Characters/optimized/100057-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

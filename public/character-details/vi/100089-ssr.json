@@ -1,0 +1,91 @@
+{
+  "id": "100089-ssr",
+  "name": "Gouketsu",
+  "imageURL": "/Characters/optimized/100089-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Giảm ST Không Chí Mạng",
+    "Tăng Tỷ Lệ Khiên"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 405,
+    "hp": 2531,
+    "def": 107,
+    "spd": 99
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST (+10) sát thương lên mục tiêu đơn, có 100% tỷ lệ khiến mục tiêu bị [Nội Thương] (khi bị đánh trúng, thêm sát thương Nội Thương bằng 100% ST của Gouketsu; hiệu ứng biến mất sau khi kích hoạt).",
+      "icon": "/Skill/Gouketsu (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 60% ST (+3) sát thương lên toàn bộ mục tiêu bằng liên kích 3 đòn, đồng thời hồi Máu bằng 20% Máu tối đa của bản thân.",
+      "icon": "/Skill/Gouketsu (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 70% ST (+3) sát thương lên toàn bộ mục tiêu bằng liên kích 3 đòn, đồng thời hồi Máu bằng 30% Máu tối đa của bản thân.",
+      "keepsakeIcon": "/Keepsake/Gouketsu (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Gouketsu (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Bản thân nhận 30% miễn sát thương không Chí mạng (giảm ST bao gồm mọi loại sát thương; hiệu ứng này và [Linh Xảo] chỉ một cái có hiệu lực). Khi vào trận, trao cho bản thân và đồng minh xung quanh 70% tỷ lệ hồi máu và tỷ lệ khiên trong 2 lượt.",
+      "icon": "/Skill/Gouketsu (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Bản thân nhận 35% miễn sát thương không Chí mạng (giảm ST bao gồm mọi loại sát thương; hiệu ứng này và [Linh Xảo] chỉ một cái có hiệu lực). Khi vào trận, trao cho bản thân và đồng minh xung quanh 80% tỷ lệ hồi máu và tỷ lệ khiên trong 2 lượt.",
+      "icon": "/Skill/Gouketsu (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Bản thân nhận 38% miễn sát thương không Chí mạng (giảm ST bao gồm mọi loại sát thương; hiệu ứng này và [Linh Xảo] chỉ một cái có hiệu lực). Khi vào trận, trao cho bản thân và đồng minh xung quanh 90% tỷ lệ hồi máu và tỷ lệ khiên trong 2 lượt.",
+      "icon": "/Skill/Gouketsu (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Nội Thương]",
+      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Gouketsu (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseDate": "01/03/2021",
+  "classLevel": "Dragon",
+  "releaseSea": "01/02/2020",
+  "releaseTrung": "01/10/2019",
+  "imageSrcset": "/Characters/optimized/100089-ssr-360.webp 360w, /Characters/optimized/100089-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

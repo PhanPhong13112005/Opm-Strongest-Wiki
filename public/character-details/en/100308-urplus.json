@@ -1,0 +1,130 @@
+{
+  "id": "100308-urplus",
+  "name": "Genos",
+  "imageURL": "/Characters/optimized/100308-urplus-600.webp",
+  "tier": "UR+",
+  "type": "Hi-Tech",
+  "faction": "Hero",
+  "roles": [
+    "Core"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK Direct DMG to a single target.",
+      "icon": "/Skill/Genos (URplus)/Skill_base.png",
+      "type": "Basic",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 5000% ATK [Specialized Direct DMG] with 5 consecutive strikes to all enemies. Negates 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and penetrates [Unyielding] and [Specialized Unyielding].",
+      "icon": "/Skill/Genos (URplus)/skill_ult.png",
+      "type": "Ultimate",
+      "animation": "/Animation/Genos_Urplus/ult.gif",
+      "keepsakeIcon": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Increases Crit Rate by 30% for 1 round. If ATK is higher than the target, 130% chance to reduce the target's Specialized-HP damage reduction by 2% for 4 rounds. Ultimate DMG 5000% > 7000% ATK; [Specialized Evasion] negation 45% > 60%.",
+      "keepsakeIcon": "/Keepsake/Genos (URplus)/Keepsake_URplus.png",
+      "icon": "/Skill/Genos (URplus)/skill_ult.png",
+      "type": "Ultimate",
+      "animation": "/Animation/Genos_Urplus/ult.gif",
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Gains 60% [Non-Crit DMG Reduction]. When there are 2 or fewer targets, [Specialized Direct DMG] increases by 30%.",
+      "icon": "/Skill/Genos (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Non-Crit DMG Reduction] 60% > 70%. [Specialized Direct DMG] 30% > 40%.",
+      "icon": "/Skill/Genos (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Non-Crit DMG Reduction] 70% > 80%. [Specialized Direct DMG] 40% > 50%.",
+      "icon": "/Skill/Genos (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "Gains 30% [Suppression DMG Reduction]. Allies with [Suppression DMG Reduction] and Genos gain 30% [Suppression DMG Increase]. — [Suppression DMG Reduction]: reduces DMG received by 30%; when ATK is higher than the attacker, reduces by 150%. [Suppression DMG Increase]: increases DMG dealt by 30%; when ATK is higher than the target, increases by 150%.",
+      "icon": "/Skill/Genos (URplus)/skill_awk.png",
+      "type": "Awakening",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "[Suppression DMG Reduction] 30% > 40% (when ATK is higher than the attacker, 150% > 170%). [Suppression DMG Increase] 30% > 40% (when ATK is higher than the target, 150% > 170%).",
+      "icon": "/Skill/Genos (URplus)/skill_awk.png",
+      "type": "Awakening",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Genos (URplus)/skill_awk.png",
+      "type": "Awakening",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Control DMG Immunity]",
+      "desc": "The defensive effect reduces damage taken (30–40%), increasing to a 150–170% reduction when the bearer's ST is higher than the attacker's."
+    },
+    {
+      "term": "[Increase Control DMG]",
+      "desc": "Attack buff gives 30-40% mana and increases damage, increasing by 150-170% when the bearer's Attack is higher than the target."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Genos (URplus)/Keepsake_URplus.png",
+  "releaseTrung": "01/10/2025",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "Core"
+  ],
+  "classLevel": "Class_S",
+  "releaseSea": "01/02/2026",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100308-urplus-360.webp 360w, /Characters/optimized/100308-urplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

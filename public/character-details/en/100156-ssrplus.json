@@ -1,0 +1,124 @@
+{
+  "id": "100156-ssrplus",
+  "name": "Carnage Kabuto",
+  "imageURL": "/Characters/optimized/100156-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Grappler",
+  "faction": "Monster",
+  "roles": [
+    "Ultimate Follow-up",
+    "Reflect DMG"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 96
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Kabuto Rage: Deals damage to a single target with 5 consecutive strikes for 100% ATK(+10) plus 25% of Max HP as extra DMG.",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Chaos Dancer: Deals 400% ATK(+10) DMG to a single target and grants [Charge DMG] equal to 35% of Max HP. After release, gains [Wild] this round and performs [Ultimate Follow-up] when an enemy takes action. [Ultimate Follow-up]: deals 100% of the DMG and effect of the Ultimate skill, no Follow-up cost, up to 2 times per round. Heals self up to 35% of Max HP within 1 round.",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Chaos Dancer (upgraded): Deals 400% ATK(+10) DMG to a single target and grants [Charge DMG] equal to 35% > 45% of Max HP. After release, gains [Wild] this round and performs [Ultimate Follow-up] when an enemy takes action. [Ultimate Follow-up]: deals 100% of the DMG and effect of the Ultimate skill, no Follow-up cost, up to 2 times per round. Heals self up to 35% of Max HP within 1 round.",
+      "keepsakeIcon": "/Keepsake/Carnage Kabuto (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Highly Evolved: Upon taking damage (even through shields) or being defeated, reflects 50% of DMG received onto 4 random enemies. Damage includes all Tenacity effects and HP-consumption effects. Only one effect of the same type per battle. Permanently increases HP by 20.",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Highly Evolved (upgraded): Upon taking damage (even through shields) or being defeated, reflects 50% > 60% of DMG received onto 4 random enemies. Damage includes all Tenacity effects and HP-consumption effects. Only one effect of the same type per battle. Permanently increases HP by 20.",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Highly Evolved (5P): Upon taking damage (even through shields) or being defeated, reflects 60% of DMG received onto all enemies (upgraded from 4 random enemies). Damage includes all Tenacity effects and HP-consumption effects. Only one effect of the same type per battle. Permanently increases HP by 20.",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "Heavily Armored: When battle begins, increases Max HP by 25%, quadruples the Max HP boost effect on himself (same as the Gyoro core, not stackable with WDM HP boost), and recovers 50% of Max HP.",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Max HP boost 25% > 30%. After being defeated, revives with 70% HP the next round (once per battle).",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Ult Follow-up]",
+      "desc": "Out of turn attacks deal 70% of the ultimate's damage and effects, without consuming mana, up to 3 times per round."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Carnage Kabuto (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [],
+  "classLevel": "Dragon",
+  "releaseSea": "01/04/2022",
+  "releaseTrung": "01/12/2021",
+  "imageSrcset": "/Characters/optimized/100156-ssrplus-360.webp 360w, /Characters/optimized/100156-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

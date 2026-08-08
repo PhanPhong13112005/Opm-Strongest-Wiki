@@ -1,0 +1,82 @@
+{
+  "id": "200018-n",
+  "name": "Đạo Tặc Tộc Trời",
+  "imageURL": "/Characters/optimized/200018-n-600.webp",
+  "tier": "N",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 155,
+    "hp": 927,
+    "def": 39,
+    "spd": 84
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 80% ST lên một mục tiêu đơn.",
+      "icon": "/Skill/Skyfolk Rogue (N)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Đánh 2 liên kích lên cả hàng mục tiêu, mỗi đòn gây 60% ST.",
+      "icon": "/Skill/Skyfolk Rogue (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Đánh 2 liên kích lên cả hàng mục tiêu, mỗi đòn gây 70% ST.",
+      "keepsakeIcon": "/Keepsake/Skyfolk Rogue (N)/Keepsake_N.png",
+      "icon": "/Skill/Skyfolk Rogue (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh hành động, có 20% khả năng tung đòn Truy Kích vào kẻ địch có Máu thấp nhất, gây 80% sát thương đòn đánh thường (tối đa 2 lần Truy Kích mỗi lượt).",
+      "icon": "/Skill/Skyfolk Rogue (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh hành động, có 20% khả năng tung đòn Truy Kích vào kẻ địch có Máu thấp nhất, gây 100% sát thương đòn đánh thường (tối đa 2 lần Truy Kích mỗi lượt).",
+      "icon": "/Skill/Skyfolk Rogue (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh hành động, có 20% khả năng tung đòn Truy Kích vào kẻ địch có Máu thấp nhất, gây 110% sát thương đòn đánh thường (tối đa 2 lần Truy Kích mỗi lượt).",
+      "icon": "/Skill/Skyfolk Rogue (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Skyfolk Rogue (N)/Keepsake_N.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/200018-n-360.webp 360w, /Characters/optimized/200018-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

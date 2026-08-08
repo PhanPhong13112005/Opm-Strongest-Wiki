@@ -1,0 +1,150 @@
+{
+  "id": "100314-urplus",
+  "name": "G5",
+  "tier": "UR+",
+  "type": "Công Nghệ",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Sát Thương (Công)",
+    "Suy Yếu",
+    "Hồi Sinh",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ATK lên mục tiêu đơn.",
+      "icon": "/Skill/G5 (URplus)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung combo 4 đòn lên cả hàng kẻ địch, gây 12000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] chia được (chỉ chịu ảnh hưởng bởi tăng/giảm sát thương nâng cao), bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Sát thương này không chia cho mục tiêu không thể bị gây sát thương; mỗi mục tiêu chia được làm sát thương tăng thêm 30%.",
+      "icon": "/Skill/G5 (URplus)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tấn công 12000% > 15000%. Với mỗi mục tiêu có thể được chia, ST 30% > 40%. Giảm số lượt [Hồi Sinh] của toàn bộ kẻ địch 2 > 3. Giảm số lượt [Trả Thù] của toàn bộ kẻ địch đi 5.",
+      "icon": "/Skill/G5 (URplus)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": "/Keepsake/G5 (URplus)/Keepsake_URplus.png",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn nhận +20 Máu tối đa. Khi vào trận, nhận 60% [Khả Năng Né Tránh Chuyên Biệt], và giảm số lần [Hồi Sinh] của toàn bộ kẻ địch 2 và số lượt [Vô Địch Trước Đòn Không Bạo Kích] 4.",
+      "icon": "/Skill/G5 (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Né tránh chuyên biệt 60% > 70%.",
+      "icon": "/Skill/G5 (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Né tránh chuyên biệt 70% > 78%. Giảm số lượt [Vô Địch Trước Đòn Không Bạo Kích] đi 4 > 5. Giảm số lượt [Trả Thù] của toàn bộ kẻ địch 5 > 7.",
+      "icon": "/Skill/G5 (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi Máu/[HP Chuyên Biệt] của bản thân chịu sát thương, sát thương đó giảm 60%, và 60% sát thương gốc chuyển thành [Kháng Giảm Năng Lượng]. Trước khi bất kỳ nhân vật nào hành động, G5 có 40% khả năng thực hiện [Truy Kích Tụ Lực] với 80% sức mạnh kỹ năng (nếu hàng trước không có mục tiêu nào có thể bị gây sát thương thì truy kích hàng sau), tối đa 2 lần mỗi lượt. Khả năng truy kích tăng thêm 40% sau mỗi kẻ địch bị hạ. ———- [Truy Kích Tụ Lực]: dùng tuyệt kỹ sát thương/hồi máu nhóm để truy kích mục tiêu ngẫu nhiên, không tốn năng lượng.",
+      "icon": "/Skill/G5 (URplus)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Vĩnh viễn giảm sát thương phải chịu 60% > 80%. Sát thương gốc chuyển hóa thành [Kháng Giảm Năng Lượng] 60% > 80%. Cơ hội thực hiện [Truy Kích Tụ Lực] 40% > 60%, sức mạnh kỹ năng 80% > 100%, tối đa 2 > 3 lần mỗi lượt.",
+      "icon": "/Skill/G5 (URplus)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/G5 (URplus)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100314-urplus-600.webp",
+  "debut": "04 / 2026",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Debuff",
+    "Hồi Sinh",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "effects": [
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
+    },
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    },
+    {
+      "term": "[Hồi Sinh]",
+      "desc": "Cơ chế hồi sinh/trở lại gắn với sự sống của đồng minh, đưa đơn vị trở lại trận đấu."
+    },
+    {
+      "term": "[Kiên Cường Năng Lượng]",
+      "desc": "Loại khiên chuyển giá trị tích lũy thành giảm sát thương, giới hạn theo bội số Máu tối đa của đơn vị và không dùng chung được với Hồi Sinh."
+    },
+    {
+      "term": "[Trả Thù]",
+      "desc": "Trạng thái phản đòn có thể kéo dài thời gian trên bản thân hoặc rút ngắn trên kẻ địch, cấp sức cho các hiệu ứng trả đũa."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/G5 (URplus)/Keepsake_URplus.png",
+  "classLevel": "Demon",
+  "releaseSea": "01/08/2026",
+  "releaseTrung": "01/04/2026",
+  "imageSrcset": "/Characters/optimized/100314-urplus-360.webp 360w, /Characters/optimized/100314-urplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

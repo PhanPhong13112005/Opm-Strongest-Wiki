@@ -1,0 +1,139 @@
+{
+  "id": "100012-ssrplus",
+  "name": "Chày Sắt",
+  "imageURL": "/Characters/optimized/100012-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Miễn Nhiễm Choáng",
+    "Truy Kích",
+    "Hồi Sinh"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung 3 đòn liên hoàn vào mục tiêu đơn, mỗi đòn gây 50% ST Sát Thương Trực Tiếp.",
+      "icon": "/Skill/Metal Bat (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Trao [Giận Dữ] cho bản thân, cộng ST tích lũy bằng 380% ST. Đánh mục tiêu chính 3 lần, mỗi lần gây 40% ST Sát Thương Trực Tiếp, sau đó thực hiện [Truy Kích Liên Hoàn] lên 2 kẻ địch có HP thấp nhất.",
+      "icon": "/Skill/Metal Bat (SSR+)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "ST tích lũy [Giận Dữ] 380% > 420% ST. Số kẻ địch HP thấp nhất bị [Truy Kích Liên Hoàn] 2 > 3. Sát Thương Trực Tiếp mỗi đòn lên mục tiêu chính 40% > 50% ST. Ngoài ra hồi 12% HP tối đa cho bản thân mỗi đòn đánh.",
+      "keepsakeIcon": "/Keepsake/Metal Bat (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Metal Bat (SSR+)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Vĩnh viễn cấp [Miễn Nhiễm Choáng] cho đồng minh cùng hàng. Sau 2 lượt, tự nhận [Miễn Nhiễm Sát Thương Bổ Sung].",
+      "icon": "/Skill/Metal Bat (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Tự [Miễn Nhiễm Sát Thương Bổ Sung]: sau 2 lượt &gt; sau 1 lượt.",
+      "icon": "/Skill/Metal Bat (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Tự [Miễn Nhiễm Sát Thương Bổ Sung]: sau 1 lượt &gt; vĩnh viễn (ngay từ đầu).",
+      "icon": "/Skill/Metal Bat (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi Metal Bat bị hạ gục, anh hồi sinh (kiểu zombie, tối đa 3 lần, và có thể hồi sinh ngay cả khi toàn bộ đồng minh khác đã chết). Khi hồi sinh, nhận 40% HP Tối đa và tung [Tuyệt Kỹ] lên kẻ địch có HP thấp nhất.",
+      "icon": "/Skill/Source/100012-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Số lần hồi sinh 3 > 4. Hồi máu khi hồi sinh 40% > 70% HP Tối đa. [Tuyệt Kỹ] đánh 1 > 3 kẻ địch.",
+      "icon": "/Skill/Source/100012-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Source/100012-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Thức tỉnh",
+      "cost": null,
+      "keepsakeIcon": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Giận Dữ]",
+      "desc": "Buff tấn công có sát thương tăng theo điều kiện (ví dụ mỗi kẻ địch bị đánh dấu), khuếch đại lượng sát thương loại Cuồng Nộ mà đơn vị gây ra."
+    },
+    {
+      "term": "[Miễn Nhiễm]",
+      "desc": "Trạng thái khiến người mang không bị ảnh hưởng bởi một hiệu ứng hoặc loại khống chế nhất định, như [Đột Phá], Choáng hay Mê Hoặc."
+    },
+    {
+      "term": "[Truy Kích Liên Hoàn]",
+      "desc": "Đòn tấn công thêm ngoài lượt (thường sau khi đồng minh hành động) gây một phần ST và hiệu ứng của chiêu cuối lên mục tiêu ngẫu nhiên, không tốn năng lượng."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Metal Bat (SSRplus)/Keepsake_SSRplus.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Máu)",
+    "Tạo Khiên"
+  ],
+  "classLevel": "Class_S",
+  "releaseSea": "01/05/2022",
+  "releaseTrung": "01/01/2022",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100012-ssrplus-360.webp 360w, /Characters/optimized/100012-ssrplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

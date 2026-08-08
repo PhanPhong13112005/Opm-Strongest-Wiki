@@ -1,0 +1,99 @@
+{
+  "id": "100092-sr",
+  "name": "Bakuzan",
+  "roles": [
+    "DMG (ATK)",
+    "Support"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 191,
+    "hp": 1148,
+    "def": 48,
+    "spd": 95
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 100% ATK DMG to a single target.",
+      "icon": "/Skill/Bakuzan (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 200% ATK DMG to a single target, with a 100% chance to inflict [Internal Injury] (when hit, adds Mountain-Bursting DMG equal to 140% ATK; the effect is removed after triggering).",
+      "icon": "/Skill/Bakuzan (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 200% ATK DMG to a single target, with a 100% chance to inflict [Internal Injury] (when hit, adds Mountain-Bursting DMG equal to 160% ATK; the effect is removed after triggering).",
+      "icon": "/Skill/Bakuzan (SR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Bakuzan (SR)/Keepsake_SR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own max HP by 20%. If any enemy is afflicted with [Internal Injury], self enters [Berserk] state (increases DMG dealt when attacking by 30%).",
+      "icon": "/Skill/Bakuzan (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own max HP by 20%. If any enemy is afflicted with [Internal Injury], self enters [Berserk] state (increases DMG dealt when attacking by 40%).",
+      "icon": "/Skill/Bakuzan (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own max HP by 20%. If any enemy is afflicted with [Internal Injury], self enters [Berserk] state (increases DMG dealt when attacking by 45%).",
+      "icon": "/Skill/Bakuzan (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SR",
+  "imageURL": "/Characters/optimized/100092-sr-600.webp",
+  "type": "Grappler",
+  "faction": "Martial Artist",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Bakuzan (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff"
+  ],
+  "bondList": "Bitter Bug + Charanko",
+  "effects": [
+    {
+      "term": "[Internal Injury]",
+      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+    }
+  ],
+  "classLevel": "Martial_Artist",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100092-sr-360.webp 360w, /Characters/optimized/100092-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

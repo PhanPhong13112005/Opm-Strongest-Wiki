@@ -1,0 +1,173 @@
+{
+  "id": "100180-urplus",
+  "name": "Tatsumaki/Terrible Tornado",
+  "imageURL": "/Characters/optimized/100180-urplus-600.webp",
+  "tier": "UR+",
+  "type": "Esper",
+  "faction": "Hero",
+  "roles": [
+    "Erase Unyielding",
+    "Ultimate Support"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 200% ATK to a single target.",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_base.png",
+      "type": "Basic",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 5000% ATK of Specialized Direct DMG (only affected by high-level DMG Free) to all enemies, ignores 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and pierces through [Unyielding] and [Specialized Unyielding].Inflicts [Energy Suppression] on the 3 enemies with highest ATK, lasting 2 turns.——— [Energy Suppression]: when dealing DMG to HP/[Specialized HP], causes the target to activate 1x [Energy Conversion] (reduces DMG received and converts it into [Shield]).",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_ult.png",
+      "type": "Ultimate",
+      "animation": "/Animation/Tat_Urplus/ult.gif",
+      "keepsakeIcon": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Gains 20% [Rage] and [Shield Break]. ATK 5000% > 7000%. Ignores [Specialized Evasion] and [Non-Crit DMG Reduction] 45% > 60%. Inflicts [Energy Suppression] on 3 enemies > all enemies (marked for 3 turns).——— [Shield Break]: during an attack, ignore the enemy's 30% DMG Free and Specialized DEF.",
+      "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (URplus)/Keepsake_URplus.png",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_ult.png",
+      "type": "Ultimate",
+      "animation": "/Animation/Tat_Urplus/ult.gif",
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "On entry, gains 60% [Non-Crit DMG Reduction], and reduces to 0 the energy used by the ally with highest ATK when casting their Ultimate.",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Non-Crit DMG Reduction] on entry 60% > 70%. Energy-reduction window 4 > 6 rounds.",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Non-Crit DMG Reduction] on entry 70% > 80%. Energy-reduction window 6 > 8 rounds.",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "Allow Hero/Martial Artist allies to obtain [Energy Conversion]. Ownself gains 2.5x of allies' [Energy Conversion] effect, and when activating [Energy Conversion], no need [Energy Suppression]. ——— [Energy Conversion]: When an enemy with [Energy Suppression] attacks DMG to us, reduce DMG by 20%, 20% of original DMG is converted to [Energy Resilience]",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
+      "type": "Awakening",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "When battle begins, inflict [Energy Suppression] to all enemies, lasts for 1 round. [Energy Conversion]: reduce DMG by 20% > 30% Original DMG is converted to [Energy Resilience] 20% > 30%",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
+      "type": "Awakening",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
+      "type": "Awakening",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Spec. Unyielding]",
+      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+    },
+    {
+      "term": "[Unyielding]",
+      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+    },
+    {
+      "term": "[Energy Conversion]",
+      "desc": "When an enemy carrying [Energy Suppression] damages the carrier, the damage is reduced by 20% and the reduction is converted into energy."
+    },
+    {
+      "term": "[Reduce Crit DMG]",
+      "desc": "Reduces damage taken from critical hits by a certain percentage."
+    },
+    {
+      "term": "[Energy Tenacity]",
+      "desc": "The shield type converts its cumulative value into damage reduction, is limited to a multiple of the unit's maximum Health, and cannot be used with Resurrection."
+    },
+    {
+      "term": "[Non-Crit DMG Immunity]",
+      "desc": "Reduces all non-critical damage (usually to 1). Cannot survive and avoid Agility."
+    },
+    {
+      "term": "[Spec. HP]",
+      "desc": "The PvP tier's unique health bar stacks on top of regular health, must also be depleted, and can be restored independently."
+    },
+    {
+      "term": "[Spec. Dodge]",
+      "desc": "Evasion PvP tier — reduces specialized attacks to 1 damage; pierced by the ignore dodge effect."
+    },
+    {
+      "term": "[Shield Break]",
+      "desc": "While attacking, ignore the enemy's 30% Damage Immunity and Unique Defense to allow the attack to penetrate their shield."
+    },
+    {
+      "term": "[Wrath]",
+      "desc": "Attack buff increases unit damage, often accompanied by [Shield Break]."
+    },
+    {
+      "term": "[Generate Shield]",
+      "desc": "The absorption barrier, usually created from transmogrified damage, absorbs damage before health is affected."
+    },
+    {
+      "term": "[Energy Suppression]",
+      "desc": "When dealing damage to health, forces the target to activate Energy Conversion, reducing the damage they deal and choking their mana source."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (URplus)/Keepsake_URplus.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "MASSIVE AOE DMG",
+    "PIERCE UNYIELDING",
+    "0 ENERGY BUFF",
+    "SUPPRESS ENEMY",
+    "GENERATE SHIELD"
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/05/2026",
+  "releaseTrung": "01/01/2026",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100180-urplus-360.webp 360w, /Characters/optimized/100180-urplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

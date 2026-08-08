@@ -1,0 +1,83 @@
+{
+  "id": "100031-r",
+  "name": "Xe đạp Thầm lặng",
+  "roles": [
+    "Hỗ Trợ",
+    "Tốc Độ"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 156,
+    "hp": 936,
+    "def": 40,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 90% ST lên mục tiêu đơn.",
+      "icon": "/Skill/Mumen Rider (R)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Cấp cho một đồng minh trạng thái [Cuồng Nộ] trong 1 lượt và tăng 20% Tốc độ của họ.[Cuồng Nộ]: Tăng 30% ST gây ra khi tấn công.",
+      "icon": "/Skill/Mumen Rider (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Cấp cho một đồng minh trạng thái [Cuồng Nộ] trong 1 lượt và tăng 30% Tốc độ của họ.[Cuồng Nộ]: Tăng 35% ST gây ra khi tấn công.",
+      "icon": "/Skill/Mumen Rider (R)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Mumen Rider (R)/Keepsake_R.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Lần đầu nhận sát thương chí mạng mỗi trận, hồi sinh với Máu bằng 5% Máu tối đa của bản thân.",
+      "icon": "/Skill/Mumen Rider (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Lần đầu nhận sát thương chí mạng mỗi trận, hồi sinh với Máu bằng 10% Máu tối đa của bản thân.",
+      "icon": "/Skill/Mumen Rider (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Lần đầu nhận sát thương chí mạng mỗi trận, hồi sinh với Máu bằng 13% Máu tối đa của bản thân.",
+      "icon": "/Skill/Mumen Rider (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "R",
+  "imageURL": "/Characters/optimized/100031-r-600.webp",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Mumen Rider (R)/Keepsake_R.png",
+  "effects": [],
+  "classLevel": "C",
+  "classIcon": "/Class/C.png",
+  "imageSrcset": "/Characters/optimized/100031-r-360.webp 360w, /Characters/optimized/100031-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

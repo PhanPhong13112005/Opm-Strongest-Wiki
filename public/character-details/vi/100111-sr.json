@@ -1,0 +1,89 @@
+{
+  "id": "100111-sr",
+  "name": "Kẻ Xé Mặt",
+  "imageURL": "/Characters/optimized/100111-sr-600.webp",
+  "tier": "SR",
+  "type": "Vũ Trang",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 186,
+    "hp": 1089,
+    "def": 48,
+    "spd": 96
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 100% ST (+10) sát thương lên mục tiêu đơn, với 70% xác suất khiến mục tiêu [Băng Hoại] trong 1 lượt (giảm 30% tỷ lệ miễn sát thương).",
+      "icon": "/Skill/Face Ripper (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Lập tức nhận 30% tỷ lệ hút máu trong 1 lượt, tung chuỗi 2 liên kích gây 140% ST (+5) sát thương lên mục tiêu đơn, với 100% xác suất khiến mục tiêu [Băng Hoại] trong 2 lượt (giảm 30% tỷ lệ miễn sát thương).",
+      "icon": "/Skill/Face Ripper (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Lập tức trao cho bản thân và đồng minh cùng cột 40% tỷ lệ hút máu trong 1 lượt, tung chuỗi 2 liên kích gây 160% ST (+5) sát thương lên mục tiêu đơn, với 100% xác suất khiến mục tiêu [Băng Hoại] trong 2 lượt (giảm 30% tỷ lệ miễn sát thương).",
+      "keepsakeIcon": "/Keepsake/Face Ripper (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Face Ripper (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Khi Máu bản thân dưới 50%, sát thương trực tiếp phải chịu giảm 50%, đồng thời tăng 25% ST.",
+      "icon": "/Skill/Face Ripper (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Khi Máu bản thân dưới 60%, sát thương trực tiếp phải chịu giảm 60%, đồng thời tăng 30% ST.",
+      "icon": "/Skill/Face Ripper (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Khi Máu bản thân dưới 65%, sát thương trực tiếp phải chịu giảm 65%, đồng thời tăng 35% ST.",
+      "icon": "/Skill/Face Ripper (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Face Ripper (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [],
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "classLevel": "Demon",
+  "imageSrcset": "/Characters/optimized/100111-sr-360.webp 360w, /Characters/optimized/100111-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

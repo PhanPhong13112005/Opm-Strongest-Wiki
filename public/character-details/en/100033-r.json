@@ -1,0 +1,86 @@
+{
+  "id": "100033-r",
+  "name": "Funeral Suspenders",
+  "imageURL": "/Characters/optimized/100033-r-600.webp",
+  "tier": "R",
+  "type": "Grappler",
+  "faction": "Hero",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 162,
+    "hp": 972,
+    "def": 41,
+    "spd": 86
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 90% ATK DMG to a single target.",
+      "icon": "/Skill/Funeral Suspenders (R)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 130% ATK DMG to each enemy in the entire column, with a 100% chance to inflict [Weaken] on the main target (ATK reduced by 20% for 1 turn).",
+      "icon": "/Skill/Funeral Suspenders (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 130% ATK DMG to each enemy in the entire column, with a 100% chance to inflict [Weaken] on the main target (ATK reduced by 30% for 1 turn).",
+      "keepsakeIcon": "/Keepsake/Funeral Suspenders (R)/Keepsake_R.png",
+      "icon": "/Skill/Funeral Suspenders (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by 20. When deployed together with the Cross Button, the Mourning Overall Pants' ATK is increased by 20% until the end of battle.",
+      "icon": "/Skill/Funeral Suspenders (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by 20. When deployed together with the Cross Button, the Mourning Overall Pants' ATK is increased by 30% until the end of battle.",
+      "icon": "/Skill/Funeral Suspenders (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by 20. When deployed together with the Cross Button, the Mourning Overall Pants' ATK is increased by 35% until the end of battle.",
+      "icon": "/Skill/Funeral Suspenders (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Weaken]",
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Funeral Suspenders (R)/Keepsake_R.png",
+  "classLevel": "C",
+  "classIcon": "/Class/C.png",
+  "imageSrcset": "/Characters/optimized/100033-r-360.webp 360w, /Characters/optimized/100033-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

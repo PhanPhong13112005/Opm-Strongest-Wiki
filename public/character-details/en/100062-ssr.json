@@ -1,0 +1,92 @@
+{
+  "id": "100062-ssr",
+  "name": "Groribas",
+  "roles": [
+    "DMG (ATK)",
+    "Support"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 364,
+    "hp": 2182,
+    "def": 92,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Strikes a single target with 2 consecutive hits dealing 60% ATK DMG each; on a critical hit, has a 100% chance to inflict [Corrode] on the main target for 2 turns (DoT equal to 15% ATK).",
+      "icon": "/Skill/Groribas (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Strikes each enemy in the entire row with 5 consecutive hits dealing 26% ATK DMG each, has a 100% chance to inflict [Corrode] on the main target for 2 turns (DoT equal to 20% ATK), and enemies that are critically hit have a 100% chance to take [Corrode] for 2 turns.",
+      "icon": "/Skill/Groribas (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Strikes each enemy in the entire row with 5 consecutive hits dealing 33% ATK DMG each, has a 100% chance to inflict [Corrode] on the main target for 2 turns (DoT equal to 30% ATK), and enemies that are critically hit have a 100% chance to take [Corrode] for 2 turns.",
+      "icon": "/Skill/Groribas (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Groribas (SSR)/Keepsake_SSR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP. Each enemy on the field afflicted with [Corrode] raises the ATK of all allies by 10%, stacking up to 3 times.",
+      "icon": "/Skill/Groribas (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP. Each enemy on the field afflicted with [Corrode] raises the ATK of all allies by 15%, stacking up to 3 times.",
+      "icon": "/Skill/Groribas (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP. Each enemy on the field afflicted with [Corrode] raises the ATK of all allies by 18%, stacking up to 3 times.",
+      "icon": "/Skill/Groribas (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR",
+  "imageURL": "/Characters/optimized/100062-ssr-600.webp",
+  "type": "Esper",
+  "faction": "Monster",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Groribas (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "effects": [
+    {
+      "term": "[Corrode]",
+      "desc": "Corrosive damage over time effect, each turn dealing damage equal to a percentage of ST (e.g. 300%) to the target."
+    }
+  ],
+  "releaseDate": "16/06/2020",
+  "classLevel": "Dragon",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "imageSrcset": "/Characters/optimized/100062-ssr-360.webp 360w, /Characters/optimized/100062-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

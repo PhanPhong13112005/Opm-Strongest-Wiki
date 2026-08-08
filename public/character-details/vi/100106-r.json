@@ -1,0 +1,82 @@
+{
+  "id": "100106-r",
+  "name": "Maiko Plasma",
+  "imageURL": "/Characters/optimized/100106-r-600.webp",
+  "tier": "R",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 159,
+    "hp": 954,
+    "def": 40,
+    "spd": 88
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 100% ST (+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Maiko Plasma (R)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 5 đòn liên kích lên toàn bộ mục tiêu, gây 24% ST (+2) sát thương, và tăng 20% tỉ lệ phản sát thương cho toàn bộ đồng minh.",
+      "icon": "/Skill/Maiko Plasma (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung 5 đòn liên kích lên toàn bộ mục tiêu, gây 26% ST (+2) sát thương, và tăng 25% tỉ lệ phản sát thương cho toàn bộ đồng minh.",
+      "keepsakeIcon": "/Keepsake/Maiko Plasma (R)/Keepsake_R.png",
+      "icon": "/Skill/Maiko Plasma (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Giảm 20% sát thương nhận từ địch hệ Công Nghệ và hồi 10% Máu.",
+      "icon": "/Skill/Maiko Plasma (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi bản thân bị kẻ địch hệ Công Nghệ tấn công, sát thương nhận vào giảm 30% và bản thân hồi 15% Máu.",
+      "icon": "/Skill/Maiko Plasma (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi bản thân bị kẻ địch hệ Công Nghệ tấn công, sát thương nhận vào giảm 30% và bản thân hồi 20% Máu.",
+      "icon": "/Skill/Maiko Plasma (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Maiko Plasma (R)/Keepsake_R.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100106-r-360.webp 360w, /Characters/optimized/100106-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

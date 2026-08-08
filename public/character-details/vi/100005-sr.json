@@ -1,0 +1,91 @@
+{
+  "id": "100005-sr",
+  "name": "Max Chân Điện",
+  "imageURL": "/Characters/optimized/100005-sr-600.webp",
+  "tier": "SR",
+  "type": "Công Nghệ",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Choáng",
+    "Thiêu Đốt"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 170,
+    "hp": 1020,
+    "def": 43,
+    "spd": 92
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 100% ST tấn công lên mục tiêu đơn, có 100% tỉ lệ khiến mục tiêu bị [Thiêu Đốt] trong 2 lượt (ST theo thời gian bằng 40% ST tấn công).",
+      "icon": "/Skill/Lightning Max (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 200% ST tấn công lên mục tiêu đơn, có 100% tỉ lệ khiến mục tiêu đang bị [Thiêu Đốt] rơi vào [Choáng] trong 1 lượt (không thể hành động; mỗi bên tối đa 4 người cùng lúc ở trạng thái dạng choáng).",
+      "icon": "/Skill/Lightning Max (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 200% ST tấn công lên mục tiêu đơn, có 100% tỉ lệ khiến mục tiêu rơi vào [Choáng] trong 1 lượt (không thể hành động; mỗi bên tối đa 4 người cùng lúc ở trạng thái dạng choáng), đồng thời có 100% tỉ lệ khiến mục tiêu bị [Thiêu Đốt] trong 1 lượt (ST theo thời gian bằng 50% ST tấn công).",
+      "keepsakeIcon": "/Keepsake/Lightning Max (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Lightning Max (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu của bản thân. Tấn công kẻ địch đang bị [Thiêu Đốt] gây ST phụ trội bằng 100% ST tấn công.",
+      "icon": "/Skill/Lightning Max (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu của bản thân. Tấn công kẻ địch đang bị [Thiêu Đốt] gây ST phụ trội bằng 120% ST tấn công.",
+      "icon": "/Skill/Lightning Max (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu của bản thân. Tấn công kẻ địch đang bị [Thiêu Đốt] gây ST phụ trội bằng 130% ST tấn công.",
+      "icon": "/Skill/Lightning Max (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Thiêu Đốt]",
+      "desc": "Sát thương lửa liên tục theo thời gian lên mục tiêu."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Lightning Max (SR)/Keepsake_SR.png",
+  "classLevel": "A",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100005-sr-360.webp 360w, /Characters/optimized/100005-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

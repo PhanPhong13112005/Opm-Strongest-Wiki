@@ -1,0 +1,82 @@
+{
+  "id": "200030-n",
+  "name": "Paradiser Trooper",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 158,
+    "hp": 945,
+    "def": 40,
+    "spd": 80
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deal 80% ATK (+10) damage to a single target.",
+      "icon": "/Skill/Paradiser Trooper (N)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deal 120% ATK (+10) damage to the entire target row.",
+      "icon": "/Skill/Paradiser Trooper (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deal 130% ATK (+10) damage to the entire target row.",
+      "icon": "/Skill/Paradiser Trooper (N)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Paradiser Trooper (N)/Keepsake_N.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increase self HP by (+20). If a Peach Garden minion is on the field, increase self damage by 20% until the end of battle.",
+      "icon": "/Skill/Paradiser Trooper (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increase self HP by (+20). If a Peach Garden minion is on the field, increase self damage by 25% until the end of battle.",
+      "icon": "/Skill/Paradiser Trooper (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increase self HP by (+20). If a Peach Garden minion is on the field, increase self damage by 28% until the end of battle.",
+      "icon": "/Skill/Paradiser Trooper (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "N",
+  "imageURL": "/Characters/optimized/200030-n-600.webp",
+  "type": "Hi-Tech",
+  "faction": "Other",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Paradiser Trooper (N)/Keepsake_N.png",
+  "effects": [],
+  "classLevel": "Other",
+  "classIcon": "/Class/Other.png",
+  "imageSrcset": "/Characters/optimized/200030-n-360.webp 360w, /Characters/optimized/200030-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 656
+}

@@ -1,0 +1,90 @@
+{
+  "id": "100027-ssr",
+  "name": "Superalloy Darkshine",
+  "imageURL": "/Characters/optimized/100027-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Grappler",
+  "faction": "Hero",
+  "roles": [
+    "Reduce Ultimate DMG",
+    "Share DMG"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 381,
+    "hp": 2284,
+    "def": 96,
+    "spd": 97
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Strikes a single target with a 2-hit combo, dealing 60% ATK(+5) damage. Grants self [Tenacity] (absorbs damage equal to 10% of own HP).",
+      "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 130% ATK(+10) damage to targets in a cross area. Has a 100% chance to inflict [Injured] on the main target for 2 turns (adds Injured damage equal to 50% ATK when attacked). Shares 40% of the damage taken by the 2 lowest-HP allies for 2 turns, reducing the shared damage taken by 20% (no longer shares once HP drops below 20%).",
+      "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 160% ATK(+10) damage to targets in a cross area. Has a 100% chance to inflict [Injured] on the main target for 2 turns (adds Injured damage equal to 50% ATK when attacked). Shares 40% of the damage taken by the 2 lowest-HP allies for 2 turns, reducing the shared damage taken by 40% (no longer shares once HP drops below 20%).",
+      "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP (+20). When battle begins, grants allies in the same row and self 40% Ultimate DMG Free for 2 turns. The first time fatal damage is taken each battle, heals self for 30% of max HP.",
+      "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP (+20). When battle begins, grants allies in the same row and self 50% Ultimate DMG Free for 2 turns. The first time fatal damage is taken each battle, heals self for 40% of max HP.",
+      "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP (+20). When battle begins, grants allies in the same row and self 55% Ultimate DMG Free for 2 turns. The first time fatal damage is taken each battle, heals self for 45% of max HP.",
+      "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Tenacity]",
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSR)/Keepsake_SSR.png",
+  "releaseDate": "16/06/2020",
+  "classLevel": "Class_S",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100027-ssr-360.webp 360w, /Characters/optimized/100027-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 672
+}

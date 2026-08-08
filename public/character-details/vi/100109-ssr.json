@@ -1,0 +1,91 @@
+{
+  "id": "100109-ssr",
+  "name": "Gyoro-Gyoro",
+  "imageURL": "/Characters/optimized/100109-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Hạt Nhân HP Tối Đa",
+    "Truy Kích"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 390,
+    "hp": 2340,
+    "def": 99,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Phái máy bay trinh sát dò xét mục tiêu đơn, chỉ thị đồng minh có ST cao nhất tung [Truy Kích], và hồi Máu cho bản thân bằng 120% ST.",
+      "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Giảm Máu tối đa của mục tiêu trong vài lượt (phần Máu vượt quá giới hạn mới bị cắt giảm ngay lập tức). Gây 110% ST sát thương lên toàn bộ mục tiêu.",
+      "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Giảm Máu tối đa của mục tiêu trong vài lượt (phần Máu vượt quá giới hạn mới bị cắt giảm ngay lập tức). Gây 140% ST sát thương lên toàn bộ mục tiêu.",
+      "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu bản thân. Tăng 15% Máu tối đa cho toàn bộ đồng minh trong 2 lượt. Khi đồng minh cùng cột là Quái nhân, Đại Quýnh Nhãn gánh chịu một phần sát thương họ nhận vào (ngừng gánh chịu khi Máu của họ xuống dưới một ngưỡng nhất định).",
+      "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu bản thân. Tăng 20% Máu tối đa cho toàn bộ đồng minh trong 2 lượt. Khi đồng minh cùng cột là Quái nhân, Đại Quýnh Nhãn gánh chịu một phần sát thương họ nhận vào (ngừng gánh chịu khi Máu của họ xuống dưới một ngưỡng nhất định).",
+      "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu bản thân. Tăng 25% Máu tối đa cho toàn bộ đồng minh trong 2 lượt. Khi đồng minh cùng cột là Quái nhân, Đại Quýnh Nhãn gánh chịu một phần sát thương họ nhận vào (ngừng gánh chịu khi Máu của họ xuống dưới một ngưỡng nhất định).",
+      "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Truy Kích]",
+      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseDate": "01/05/2021",
+  "classLevel": "Dragon",
+  "releaseSea": "01/04/2021",
+  "releaseTrung": "01/12/2020",
+  "imageSrcset": "/Characters/optimized/100109-ssr-360.webp 360w, /Characters/optimized/100109-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

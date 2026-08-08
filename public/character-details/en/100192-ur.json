@@ -1,0 +1,146 @@
+{
+  "id": "100192-ur",
+  "name": "Genos",
+  "imageURL": "/Characters/optimized/100192-ur-600.webp",
+  "tier": "UR",
+  "type": "Hi-Tech",
+  "faction": "Hero",
+  "roles": [
+    "Core"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 170,
+    "hp": 1020,
+    "def": 43,
+    "spd": 92
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK to a single target.",
+      "icon": "/Skill/Genos (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Attacks all enemies with 2 consecutive strikes, dealing DMG by 500% ATK. Every strike has a 50% chance to add 1 stack of [Specialized Burn] (DoT by 300% ATK; after any character acts, transfers the effect to a random target, disappears after transferring 3 times) to the target.",
+      "icon": "/Skill/Genos (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Ultimate ATK: 500% → 700%.[Specialized Burn] stack chance: 50% → 80%.[Specialized Burn] DoT: 300% → 400%.",
+      "keepsakeIcon": "/Keepsake/Genos (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Genos (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "When battle begins, grants 60% Non-Crit DMG Free (reduces all types of Non-Crit DMG, cannot co-exist with [Agility]).After any character acts, [Detonate] the [Specialized Burn] (400% of a single [Specialized Burn]'s DMG turns into [Detonation] DMG).",
+      "icon": "/Skill/Genos (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Non-Crit DMG Free: 60% → 70%.Detonate: 400% → 450%.",
+      "icon": "/Skill/Genos (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Non-Crit DMG Free: 70% → 80%.Detonate: 450% → 500%.",
+      "icon": "/Skill/Genos (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "After any character acts, absorbs 40% [Detonation] DMG and deals [True DMG] ( Not affected by DMG Rate and DMG Free, deal direct DMG without [DMG Sharing] or [Evasion]) to 3 characters with the lowest HP",
+      "icon": "/Skill/Genos (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Deals True Damage to 3 characters with the lowest HP > entire enemy team",
+      "icon": "/Skill/Genos (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Genos (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Share DMG]",
+      "desc": "Effect disperses damage taken to allies; [True DMG] bypasses it by hitting Blood directly."
+    },
+    {
+      "term": "[Detonate]",
+      "desc": "Activate a stack of damage over time or stored [Collapse] to instantly explode, turning it into an instant multiplier (e.g. 3 times the stored damage)."
+    },
+    {
+      "term": "[Agility]",
+      "desc": "Evasion type buff; mutually exclusive with Non-Crit Damage Immunity."
+    },
+    {
+      "term": "[Dodge]",
+      "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+    },
+    {
+      "term": "[True DMG]",
+      "desc": "This type of bonus damage is dealt on top of attacks, is reduced by Evasion-type effects, and can be immune after a certain number of turns."
+    },
+    {
+      "term": "[Spec. Burn]",
+      "desc": "Burning PvP tier — stronger burst damage, harder to deal with."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Genos (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/12/2023",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "Core"
+  ],
+  "classLevel": "Class_S",
+  "releaseSea": "01/04/2024",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100192-ur-360.webp 360w, /Characters/optimized/100192-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

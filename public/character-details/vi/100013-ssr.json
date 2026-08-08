@@ -1,0 +1,95 @@
+{
+  "id": "100013-ssr",
+  "name": "Zombieman",
+  "tier": "SSR",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hỗ Trợ",
+    "Hạt Nhân",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Tạo Khiên"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 382,
+    "hp": 2480,
+    "def": 97,
+    "spd": 96
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST (+10) sát thương lên mục tiêu đơn, có 100% xác suất khiến mục tiêu bị trúng đòn nhận [Thương Tổn] trong 2 lượt (khi bị tấn công, chịu thêm sát thương [Thương Tổn] bằng 100% ST).",
+      "icon": "/Skill/Zombieman (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung combo 5 đòn lên mục tiêu đơn, gây 48% ST (+2) sát thương, đồng thời hồi toàn bộ đồng minh lượng Máu bằng 100% ST.",
+      "icon": "/Skill/Zombieman (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung combo 5 đòn lên mục tiêu đơn, gây 60% ST (+2) sát thương, đồng thời hồi toàn bộ đồng minh lượng Máu bằng 150% ST.",
+      "icon": "/Skill/Zombieman (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Zombieman (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn nhận +20 Máu. Đồng thời nhận [Tái Sinh] (khi có đồng minh, trước lượt hành động kế tiếp hồi 10% Máu và tiếp tục chiến đấu, kích hoạt tối đa 4 lần).Sau khi nhận sát thương chí mạng, gây thêm sát thương bằng 60% ST lên toàn bộ kẻ địch.",
+      "icon": "/Skill/Zombieman (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn nhận +20 Máu. Đồng thời nhận [Tái Sinh] (khi có đồng minh, trước lượt hành động kế tiếp hồi 15% Máu và tiếp tục chiến đấu, kích hoạt tối đa 6 lần).Sau khi nhận sát thương chí mạng, gây thêm sát thương bằng 80% ST lên toàn bộ kẻ địch.",
+      "icon": "/Skill/Zombieman (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn nhận +20 Máu. Đồng thời nhận [Tái Sinh] (khi có đồng minh, trước lượt hành động kế tiếp hồi 18% Máu và tiếp tục chiến đấu, kích hoạt tối đa 6 lần).Sau khi nhận sát thương chí mạng, gây thêm sát thương bằng 90% ST lên toàn bộ kẻ địch.",
+      "icon": "/Skill/Zombieman (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100013-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Zombieman (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Hồi Phục]",
+      "desc": "Hồi Máu theo thời gian hoặc trước hành động kế tiếp của đơn vị."
+    }
+  ],
+  "releaseDate": "01/12/2020",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/11/2020",
+  "releaseTrung": "01/07/2020",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100013-ssr-360.webp 360w, /Characters/optimized/100013-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

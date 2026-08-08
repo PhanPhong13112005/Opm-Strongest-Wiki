@@ -1,0 +1,82 @@
+{
+  "id": "200013-n",
+  "name": "Men's Esthetician Man",
+  "imageURL": "/Characters/optimized/200013-n-600.webp",
+  "tier": "N",
+  "type": "Vũ Trang",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 158,
+    "hp": 945,
+    "def": 40,
+    "spd": 84
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 80% ST (+10) sát thương lên mục tiêu đơn. Có 100% xác suất khiến mục tiêu [Băng Hoại] trong 2 lượt (tỉ lệ giảm sát thương bị hạ 30%).",
+      "icon": "/Skill/Mens Esthetician Man (N)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 180% ST (+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Mens Esthetician Man (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 200% ST (+10) sát thương lên mục tiêu đơn.",
+      "keepsakeIcon": "/Keepsake/Men's Esthetician Man (N)/Keepsake_N.png",
+      "icon": "/Skill/Mens Esthetician Man (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Tăng vĩnh viễn Máu (+20) của bản thân. Sau khi bị tấn công, có 25% xác suất tăng 10% sát thương của bản thân trong 1 lượt.",
+      "icon": "/Skill/Mens Esthetician Man (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Tăng vĩnh viễn Máu (+20) của bản thân. Sau khi bị tấn công, có 25% xác suất tăng 15% sát thương của bản thân trong 1 lượt.",
+      "icon": "/Skill/Mens Esthetician Man (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Tăng vĩnh viễn Máu (+20) của bản thân. Sau khi bị tấn công, có 25% xác suất tăng 18% sát thương của bản thân trong 1 lượt.",
+      "icon": "/Skill/Mens Esthetician Man (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Men's Esthetician Man (N)/Keepsake_N.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/200013-n-360.webp 360w, /Characters/optimized/200013-n-600.webp 544w",
+  "imageWidth": 544,
+  "imageHeight": 684
+}

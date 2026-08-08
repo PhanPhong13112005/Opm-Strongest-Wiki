@@ -1,0 +1,135 @@
+{
+  "id": "100028-ssrplus",
+  "name": "Tank Top Master",
+  "imageURL": "/Characters/optimized/100028-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Grappler",
+  "faction": "Hero",
+  "roles": [
+    "Breakthrough",
+    "Reflect DMG",
+    "Nullify DMG Share"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 104
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Direct DMG 60% ATK to a single target.",
+      "icon": "/Skill/Tank Top Master (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Grants [Immune to Death] to the target's column. Direct DMG 22% of Max HP to the target's column.",
+      "icon": "/Skill/Tank Top Master (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Grants [Immune to Death] to the target's column. Direct DMG 22% > 28% of Max HP to the target's column.",
+      "keepsakeIcon": "/Keepsake/Tank Top Master (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Tank Top Master (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "+20% HP to self. At own turn start, Dispel all enemies. On entry, heals self based on Max HP. If it took damage or lost HP, at own turn end and on death deals Extra DMG 51% ATK (scaling with damage/HP lost) to 4 random enemies.",
+      "icon": "/Skill/Tank Top Master (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Reflect Extra DMG now hits 4 random > all enemies.",
+      "icon": "/Skill/Tank Top Master (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Reflect Extra DMG 51% > 61% ATK to all enemies.",
+      "icon": "/Skill/Tank Top Master (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When battle begins, summons Tank-Top Tiger (ATK by 30% of TTM's HP). After an ally acts, Tank-Top Tiger will deal damage to 1 random enemy by 100% ATK. Prioritises enemies in [Specialized Unyielding] and trigger [Breakthrough] (cancels specialized and normal unyielding state). Restores Tank-Top Master's [Specialized Protection] by 20% Max HP",
+      "icon": "/Skill/Tank Top Master (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Summons Tank-Top Blackhole\nTank-Top brothers can still [Follow-up] if TTM is [Stuck] Tank-Top brothers never fall even if TTM is dead Only 1 DMG reflect will be triggered Can reflect DMG received in [Specialized Protection] Removal of [DMG Sharing] applies to all support characters Tank-Top brothers have no follow-up limit Cannot reflect if TTM is [Exited] TTM can restore [Specialized Protection] faster with SSR+ DSK",
+      "icon": "/Skill/Tank Top Master (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Tank Top Master (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Adhere]",
+      "desc": "Control status prevents the target from casting [Follow-up] and [Consecutive Follow-up], usually for 2 turns."
+    },
+    {
+      "term": "[Death Immunity]",
+      "desc": "Unfavorable effects negate the target's invincibility/anti-death effects, allowing it to be knocked down as normal."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Tank Top Master (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/10/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Debuff",
+    "DMG (HP)",
+    "Generate Shield",
+    "Speed"
+  ],
+  "bondList": "Tank-Top Master + Tank-Top Tiger + Tank-Top Black Hole",
+  "classLevel": "Class_S",
+  "releaseSea": "01/02/2023",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100028-ssrplus-360.webp 360w, /Characters/optimized/100028-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

@@ -1,0 +1,88 @@
+{
+  "id": "100044-ssr",
+  "name": "Drive Knight",
+  "imageURL": "/Characters/optimized/100044-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Hi-Tech",
+  "faction": "Hero",
+  "roles": [
+    "Accumulated DMG",
+    "Increase DoT"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 384,
+    "hp": 2363,
+    "def": 97,
+    "spd": 90
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 130% ATK(+10) DMG to a single target.",
+      "icon": "/Skill/Drive Knight (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "In [Silver] form, deals [Charged] DMG split evenly across the number of targets attacked. (After an enemy takes [Force Field] DMG, 1 stack of 240% ATK Charge accumulates, up to 4 stacks.) Strikes the entire enemy row with a 3-hit combo, then inflicts [Force Field] on the main target (taking DoT before it acts). Each stack grants your side 0.4 Energy.",
+      "icon": "/Skill/Drive Knight (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "In [Silver] form, deals [Charged] DMG split evenly across the number of targets attacked. (After an enemy takes [Force Field] DMG, 1 stack of 330% ATK Charge accumulates, up to 4 stacks.) Strikes the entire enemy row with a 3-hit combo, then inflicts [Force Field] on the main target (taking DoT before it acts). Each stack grants your side 0.5 Energy.",
+      "keepsakeIcon": "/Keepsake/Drive Knight (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Drive Knight (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). On entry, grants all allies 90% Ultimate DMG Immunity for a duration. Permanently gains 40% Non-Crit DMG Free (reduces all types of DMG; only one of this and [Agility] takes effect). At the start of battle, lowers own SPD by 50%. After an enemy takes [Force Field] DMG, Drive Knight transforms into [Silver] form.",
+      "icon": "/Skill/Drive Knight (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). On entry, grants all allies 90% Ultimate DMG Immunity for a duration. Permanently gains 45% Non-Crit DMG Free (reduces all types of DMG; only one of this and [Agility] takes effect). At the start of battle, lowers own SPD by 55%. After an enemy takes [Force Field] DMG, Drive Knight transforms into [Silver] form.",
+      "icon": "/Skill/Drive Knight (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). On entry, grants all allies 90% Ultimate DMG Immunity for a duration. Permanently gains 50% Non-Crit DMG Free (reduces all types of DMG; only one of this and [Agility] takes effect). At the start of battle, lowers own SPD by 65%. After an enemy takes [Force Field] DMG, Drive Knight transforms into [Silver] form.",
+      "icon": "/Skill/Drive Knight (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Agility]",
+      "desc": "Evasion type buff; mutually exclusive with Non-Crit Damage Immunity."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Drive Knight (SSR)/Keepsake_SSR.png",
+  "releaseDate": "01/02/2022",
+  "classLevel": "Class_SS",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100044-ssr-360.webp 360w, /Characters/optimized/100044-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,129 @@
+{
+  "id": "100059-ssrplus",
+  "name": "Geryuganshoop",
+  "imageURL": "/Characters/optimized/100059-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Spec. Unyielding Core",
+    "Spec. Berserk"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals Direct DMG of 120% ATK to a single target.",
+      "icon": "/Skill/Geryuganshoop (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals Direct DMG of 24% ATK to all enemies. Grants this unit's row +200% ATK-based [DMG Amplification], dispelling their positive effects.",
+      "icon": "/Skill/Geryuganshoop (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals Direct DMG of 24% > 30% ATK to all enemies. [DMG Amplification] target expands from this unit's row to all allies.",
+      "keepsakeIcon": "/Keepsake/Geryuganshoop (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Geryuganshoop (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Gains +20% HP. On entry, applies 30% [Weaken] to up to 6 enemy heroes for 1 round. From round 2 onward, at round start gains 35% [Charge DMG Reduction].",
+      "icon": "/Skill/Geryuganshoop (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Weaken] target expands to all enemies. [Charge DMG Reduction] 35% > 45%.",
+      "icon": "/Skill/Geryuganshoop (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Weaken] 30% > 40%, duration 1 > 2 rounds. [Charge DMG Reduction] 45% > 50% and now applies from round 1 instead of round 2.",
+      "icon": "/Skill/Geryuganshoop (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "(Basic Effect) (1 Grappler, 2 Esper): Gains 3 energy per round.(Advance Effect) (2 Grappler, 2 Esper): When any ally takes fatal damage, they enter [Specialized Unyielding] — disappears after actions of any 4 characters, recovers 100% Max HP, triggers twice per character every battle. [Specialized Unyielding]: Take no damage, replaces [Unyielding] and is unaffected by Ignore Unyielding effects.",
+      "icon": "/Skill/Source/100059-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Awakening",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Additionally gains 1 energy once per round when any support character launches Follow-up.",
+      "icon": "/Skill/Source/100059-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Awakening",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "When this character acts, grants the whole team 150 [Energy Gauge].",
+      "icon": "/Skill/Source/100059-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Awakening",
+      "cost": null,
+      "keepsakeIcon": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Weaken]",
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Geryuganshoop (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/02/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "Debuff"
+  ],
+  "bondList": "Tatsumaki (Terrible Tornado) + Fubuki (Hellish Blizzard)",
+  "classLevel": "Dragon",
+  "releaseSea": "01/06/2022",
+  "imageSrcset": "/Characters/optimized/100059-ssrplus-360.webp 360w, /Characters/optimized/100059-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

@@ -1,0 +1,136 @@
+{
+  "id": "100109-ur",
+  "name": "Gyoro-Gyoro",
+  "tier": "UR",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hỗ Trợ",
+    "Hạt Nhân",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Hồi Sinh"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 117
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Hồi HP bằng 100% ST cho một mục tiêu đơn đồng minh.",
+      "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Hồi HP bằng 100% ST cho toàn bộ đồng minh. Có 100% tỷ lệ gắn [Khóa] lên toàn bộ kẻ địch trong 2 lượt. [Khóa]: không thể phát động truy kích; gây 150% ST sát thương khóa trước khi bất kỳ nhân vật nào hành động (có thể chí mạng, không thể né).",
+      "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 120% ST sát thương cho toàn bộ kẻ địch qua 5 đòn. Hồi HP bằng 150% ST cho toàn bộ đồng minh. Có 100% tỷ lệ gắn [Khóa] lên toàn bộ kẻ địch trong 2 lượt. [Khóa]: không thể phát động truy kích; gây 200% ST sát thương khóa trước khi bất kỳ nhân vật nào hành động (có thể chí mạng, không thể né).",
+      "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (UR)/Keepsake_UR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Tăng vĩnh viễn HP bản thân 20%. Khi vào trận, nhận 60% [Giảm ST Không Chí Mạng] và có 100% tỷ lệ gắn [Khóa] gây 150% ST lên toàn bộ kẻ địch trong 1 lượt trọn vẹn. [Giảm ST Không Chí Mạng]: giảm mọi sát thương không chí mạng phải nhận (chỉ một trong hiệu ứng này hoặc [Khéo Léo] có hiệu lực).",
+      "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Giảm ST Không Chí Mạng] 60% > 70%.",
+      "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Giảm ST Không Chí Mạng] 70% > 80%.",
+      "icon": "/Skill/Gyoro-Gyoro (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Trong 5 lượt đầu, vào đầu mỗi lượt, áp [Giới Hạn Trừ Năng Lượng] lên toàn bộ kẻ địch. ———— [Giới Hạn Trừ Năng Lượng]: Trừ 4 điểm năng lượng (một lần mỗi lượt); sau khi trừ thành công, kẻ địch không thể bị [Hoảng Loạn]/[Hoảng Loạn Chuyên Biệt] lần nữa trong cùng lượt.",
+      "type": "Thức tỉnh",
+      "icon": "/Skill/Source/100109-ur/awakened.webp",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "[Basic Effect]: Nhận 3 Năng lượng mỗi lượt. Ban cho đồng minh [Miễn Sát Thương Không Bạo Kích] và Né tránh chuyên biệt có hiệu lực chống [Sát Thương Chuẩn]. Nhân đôi hiệu quả giảm sát thương của [HP Chuyên Biệt]. Trong 5 lượt đầu, vào đầu mỗi lượt, gây [Rút Năng Lượng Cực Hạn] lên kẻ địch (trừ 4 Năng lượng; chỉ kích hoạt một lần mỗi lượt. Sau khi trừ thành công, mục tiêu không thể bị [Sợ Hãi/Sợ Hãi Chuyên Biệt] trong cùng lượt, và mức tăng Tổng Sát Thương của chúng bị giảm 25% trong 1 lượt).\n[Require]: Triển khai 1 Duelist, 1 Grappler, 1 Esper.\n[Advanced Effect]: Khi triển khai, toàn bộ đồng minh nhận hiệu ứng [HP Chuyên Biệt]. Mỗi khi tiêu hao tích lũy [HP Chuyên Biệt] bằng 175% Máu Tối Đa, nhận [Bất Khuất Cực Hạn].\n———— [HP Chuyên Biệt]: Ban cho đơn vị [HP Chuyên Biệt] bằng 250% Máu Tối Đa gốc, tối đa tích lũy 700%. [HP Chuyên Biệt] giảm 30% mọi sát thương nhận vào. [Bất Khuất Cực Hạn]: Miễn nhiễm toàn bộ sát thương. Hiệu ứng bị gỡ sau khi có 3 nhân vật bất kỳ hành động.\n[Require]: Triển khai 1 Duelist, 1 Grappler, 2 Esper.",
+      "type": "Thức tỉnh",
+      "icon": "/Skill/Source/100109-ur/awakened.webp",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "[Basic Effect]: Nhận 4 Năng lượng mỗi lượt. Ban cho đồng minh [Miễn Sát Thương Không Bạo Kích] và Né tránh chuyên biệt có hiệu lực chống [Sát Thương Chuẩn]. Tăng hiệu quả giảm sát thương của [HP Chuyên Biệt] lên 2.2 lần. Trong 5 lượt đầu, vào đầu mỗi lượt, gây [Rút Năng Lượng Cực Hạn] lên kẻ địch (trừ 5 Năng lượng; chỉ kích hoạt một lần mỗi lượt. Sau khi trừ thành công, mục tiêu không thể bị [Sợ Hãi/Sợ Hãi Chuyên Biệt] trong cùng lượt, và mức tăng Tổng Sát Thương của chúng bị giảm 25% trong 1 lượt).\n[Require]: Triển khai 1 Duelist, 1 Grappler, 1 Esper.\n[Advanced Effect]: Khi triển khai, toàn bộ đồng minh nhận hiệu ứng [HP Chuyên Biệt]. Mỗi khi tiêu hao tích lũy [HP Chuyên Biệt] bằng 175% Máu Tối Đa, nhận [Bất Khuất Cực Hạn].\n———— [HP Chuyên Biệt]: Ban cho đơn vị [HP Chuyên Biệt] bằng 250% Máu Tối Đa gốc, tối đa tích lũy 700%. [HP Chuyên Biệt] giảm 30% mọi sát thương nhận vào. [Bất Khuất Cực Hạn]: Miễn nhiễm toàn bộ sát thương. Hiệu ứng bị gỡ sau khi có 3 nhân vật bất kỳ hành động.\n[Require]: Triển khai 1 Duelist, 1 Grappler, 2 Esper.",
+      "type": "Thức tỉnh",
+      "icon": "/Skill/Source/100109-ur/awakened.webp",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100109-ur-600.webp",
+  "debut": "09 / 2025",
+  "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (UR)/Keepsake_UR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/09/2025",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Hạt Nhân",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Hồi Sinh"
+  ],
+  "effects": [
+    {
+      "term": "[Hoảng Loạn]",
+      "desc": "Trạng thái khống chế làm gián đoạn hành động của mục tiêu."
+    }
+  ],
+  "classLevel": "Dragon",
+  "releaseSea": "01/01/2026",
+  "imageSrcset": "/Characters/optimized/100109-ur-360.webp 360w, /Characters/optimized/100109-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

@@ -1,0 +1,138 @@
+{
+  "id": "100003-ur",
+  "name": "Vua Biển Sâu",
+  "tier": "UR",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Hỗ Trợ",
+    "Hạt Nhân",
+    "Sát Thương (Máu)"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 116
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây sát thương trực tiếp 120% ST lên mục tiêu đơn.",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Đánh dấu toàn bộ kẻ địch, sau đó vào trạng thái [Giận Dữ] tăng theo số kẻ địch bị đánh dấu (250% ST mỗi kẻ địch bị đánh dấu). Gây sát thương trực tiếp 800% ST lên toàn bộ kẻ địch, đồng thời phong ấn rồi rút cạn năng lượng của mục tiêu.",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Đánh dấu toàn bộ kẻ địch, sau đó vào trạng thái [Giận Dữ] tăng theo số kẻ địch bị đánh dấu (250% > 325% ST mỗi kẻ địch bị đánh dấu). Gây sát thương trực tiếp 800% > 1000% ST lên toàn bộ kẻ địch, đồng thời phong ấn rồi rút cạn năng lượng của mục tiêu.",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Deep Sea King (UR)/Keepsake_UR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "+20% HP tối đa. Khi vào trận, nhận +60% giảm sát thương chí mạng và +100% sát thương [Sụp Đổ].",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Giảm sát thương chí mạng 60% > 70%. Sát thương [Sụp Đổ] 100% > 125%.",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Giảm sát thương chí mạng 70% > 80%. Sát thương [Sụp Đổ] 125% > 150%.",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi trận đấu bắt đầu, [Cổ Vũ] đồng minh. Cấp [Phản Sát Thương Chuyên Biệt] cho toàn bộ đồng minh trong suốt trận đấu. Tăng Chính xác hiệu ứng thêm 50%.\n———- [Cổ Vũ]: Vào đầu mỗi lượt, nhận 2 năng lượng, trong 3 lượt. [Phản Sát Thương Chuyên Biệt]: Giảm ST trực tiếp và ST phụ trội đi 40%, phản lại 40% ST gốc về phía kẻ tấn công.",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Tăng Chính xác hiệu ứng 50% > 70% Nhận năng lượng 2x > 3x Trong 3 lượt > 5 lượt Giảm ST trực tiếp/phụ trội đi 40% > 70% Phản sát thương 40% > 70%",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Deep Sea King (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100003-ur-600.webp",
+  "debut": "12 / 2024",
+  "keepsakeIcon": "/Keepsake/Deep Sea King (UR)/Keepsake_UR.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "releaseTrung": "01/12/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Hạt Nhân",
+    "Sát Thương (Máu)"
+  ],
+  "effects": [
+    {
+      "term": "[Giận Dữ]",
+      "desc": "Buff tấn công có sát thương tăng theo điều kiện (ví dụ mỗi kẻ địch bị đánh dấu), khuếch đại lượng sát thương loại Cuồng Nộ mà đơn vị gây ra."
+    },
+    {
+      "term": "[Cổ Vũ]",
+      "desc": "Cấp năng lượng vào đầu mỗi vòng trong vài vòng."
+    },
+    {
+      "term": "[Sụp Đổ]",
+      "desc": "Hiệu ứng sát thương/bất lợi phá vỡ phòng thủ của mục tiêu."
+    }
+  ],
+  "classLevel": "Demon",
+  "releaseSea": "01/04/2025",
+  "imageSrcset": "/Characters/optimized/100003-ur-360.webp 360w, /Characters/optimized/100003-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

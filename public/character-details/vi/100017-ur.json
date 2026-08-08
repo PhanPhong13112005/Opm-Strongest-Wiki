@@ -1,0 +1,138 @@
+{
+  "id": "100017-ur",
+  "name": "Vua Lòng Đất",
+  "imageURL": "/Characters/optimized/100017-ur-600.webp",
+  "tier": "UR",
+  "type": "Vũ Trang",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Chủ Lực (Công)"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 119
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây sát thương trực tiếp 60% ST lên mục tiêu đơn.",
+      "icon": "/Skill/Subterranean King (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây sát thương trực tiếp 90% ST lên hàng của mục tiêu. Khi còn trước Round 6, áp [Uy Hiếp] lên 2 kẻ địch ngẫu nhiên (tỉ lệ 30%).",
+      "icon": "/Skill/Subterranean King (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây sát thương trực tiếp 90% > 120% ST lên hàng của mục tiêu. Khi còn trước Round 6, áp [Uy Hiếp] lên 2 > 3 kẻ địch ngẫu nhiên (tỉ lệ 30% > 40%).",
+      "keepsakeIcon": "/Keepsake/Subterranean King (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Subterranean King (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Nhận +20% HP. Khi vào trận, nhận [Né Tránh Chuyên Biệt] 60%. Vào đầu lượt của mình, giải trừ [Bất Tỉnh], [Bất Tỉnh Cuối Cùng] và [Câm Lặng] cho mỗi loại 1 đồng minh đang bị dính.",
+      "icon": "/Skill/Subterranean King (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Nhận +20% HP. Khi vào trận, nhận [Né Tránh Chuyên Biệt] 60% &gt; 70%. Vào đầu lượt của mình, giải trừ [Bất Tỉnh], [Bất Tỉnh Cuối Cùng] và [Câm Lặng] cho mỗi loại 1 &gt; 2 đồng minh đang bị dính.",
+      "icon": "/Skill/Subterranean King (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Né Tránh Chuyên Biệt] 70% &gt; 80%. Giải trừ [Bất Tỉnh], [Bất Tỉnh Cuối Cùng] và [Câm Lặng] cho mỗi loại 2 &gt; 3 đồng minh đang bị dính.",
+      "icon": "/Skill/Subterranean King (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Bỏ qua hiệu ứng tiêu hao bổ sung gây ra bởi [Sợ Hãi Chuyên Biệt]. Tăng 30% tỉ lệ Chính xác hiệu ứng của toàn bộ đồng minh.",
+      "icon": "/Skill/Subterranean King (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Tỉ lệ Chính xác hiệu ứng 30% > 40% Khi bắt đầu trận đấu, có 100% khả năng thêm [Răn Đe] cho 3 kẻ địch ngẫu nhiên trong 1 lượt.",
+      "icon": "/Skill/Subterranean King (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Subterranean King (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Choáng Tuyệt Đối]",
+      "desc": "Bậc choáng mạnh và cuối cùng của [Bất Tỉnh], chỉ có thể được gỡ bằng các đòn giải hiệu ứng chuyên biệt."
+    },
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Câm Lặng]",
+      "desc": "Mục tiêu không thể dùng chiêu cuối. Được tính là hiệu ứng khống chế."
+    },
+    {
+      "term": "[Uy Hiếp]",
+      "desc": "Hiệu ứng khống chế dạng choáng khiến mục tiêu không thể hành động và giảm toàn bộ khả năng miễn sát thương của nó đi 30%."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Subterranean King (UR)/Keepsake_UR.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "releaseTrung": "01/03/2025",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Debuff"
+  ],
+  "classLevel": "Demon",
+  "releaseSea": "01/07/2025",
+  "imageSrcset": "/Characters/optimized/100017-ur-360.webp 360w, /Characters/optimized/100017-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

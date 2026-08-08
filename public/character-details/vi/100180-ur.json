@@ -1,0 +1,168 @@
+{
+  "id": "100180-ur",
+  "name": "Lốc Xoáy Kinh Hoàng",
+  "imageURL": "/Characters/optimized/100180-ur-600.webp",
+  "tier": "UR",
+  "type": "Tâm Linh",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Lực Trường",
+    "Kích Nổ Liên Tục"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 108
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 200% ST cho mục tiêu đơn.",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 5000% ST sát thương trực tiếp chuyên biệt (chỉ chịu ảnh hưởng bởi Giảm sát thương cấp cao) cho toàn bộ mục tiêu, bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Miễn Sát Thương Không Bạo Kích], xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt].Gây [Áp Chế Năng Lượng] cho 3 kẻ địch có ST cao nhất, kéo dài 2 lượt.——— [Áp Chế Năng Lượng]: Khi gây ST lên Máu/[HP Chuyên Biệt], khiến mục tiêu kích hoạt 1 lần [Chuyển Hóa Năng Lượng] (giảm ST nhận vào và chuyển hóa thành [Khiên]).",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Nhận 20% [Cuồng Nộ] và [Phá Khiên]. ST 5000% → 7000%. Bỏ qua [Khả Năng Né Tránh Chuyên Biệt] 45% → 60%. Gây [Áp Chế Năng Lượng] cho 3 kẻ địch → toàn bộ kẻ địch.——— [Phá Khiên]: Trong lúc tấn công, bỏ qua 30% Giảm sát thương và Phòng thủ chuyên biệt của kẻ địch.",
+      "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (UR)/Keepsake_UR.png",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi đồng minh hành động, tung [Truy Kích Tuyệt Kỹ] lên toàn đội địch bằng 80%, tối đa 2 lần/lượt, và hồi [Phòng Hộ Chuyên Biệt] bằng 50% ST theo thời gian từ [Kích Nổ].",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Truy Kích Tuyệt Kỹ] 80% &gt; 100%. Hồi [Phòng Hộ Chuyên Biệt] 50% &gt; 65%.",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Truy Kích Tuyệt Kỹ] 100% &gt; 120%. Hồi [Phòng Hộ Chuyên Biệt] 65% &gt; 80%.",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi trận đấu bắt đầu, triệu hồi Hellish Blizzard hỗ trợ chiến đấu, 100% Tấn công của UR TT. Sau khi UR TT hành động hoặc tung đánh đuổi theo Tối thượng, Hellish Blizzard sẽ tấn công với cùng kiểu. Cơ bản - Gây 100% ST Tấn công lên một mục tiêu ngẫu nhiên. Tối thượng - Tấn công toàn bộ kẻ địch với 3 đòn liên tiếp và gây ST bằng 100% Tấn công và kích nổ [Lĩnh Vực] (ST theo thời gian bằng 100%). Sau khi bất kỳ nhân vật nào hành động, hồi phục từ [Choáng/Specialized Stun].",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Khi trận đấu bắt đầu, triệu hồi Hellish Blizzard trợ chiến (100% (120%) ATK của Terrible Tornado). Sau khi Terrible Tornado hành động hoặc tung [Truy Kích Tuyệt Kỹ], Hellish Blizzard tấn công cùng kiểu. Đòn thường: 100% ATK lên mục tiêu ngẫu nhiên. Tuyệt kỹ: đánh toàn địch 3 đòn liên tiếp 100% ATK và kích nổ [Lĩnh Vực] (DoT 100% (160%) ATK). Sau hành động của bất kỳ nhân vật nào, gỡ [Choáng]/[Choáng Chuyên Biệt].",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/TatsumakiTerrible Tornado (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
+    },
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    },
+    {
+      "term": "[Chuyển Hóa Năng Lượng]",
+      "desc": "Khi một kẻ địch mang [Áp Chế Năng Lượng] gây sát thương cho người mang, sát thương giảm 20% và phần bị giảm được chuyển hóa thành năng lượng."
+    },
+    {
+      "term": "[Khiên]",
+      "desc": "Khiên hấp thụ sát thương tới một phần Máu của chủ thể; Charge DMG bỏ qua nó."
+    },
+    {
+      "term": "[Miễn Nhiễm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm mọi sát thương không chí mạng (thường về 1). Không thể tồn tại cùng né tránh loại Agility."
+    },
+    {
+      "term": "[HP Chuyên Biệt]",
+      "desc": "Thanh máu riêng bậc PvP xếp chồng lên máu thường, cũng phải bị hạ và có thể được hồi độc lập."
+    },
+    {
+      "term": "[Né Tránh Chuyên Biệt]",
+      "desc": "Bậc PvP của Né Tránh — giảm đòn chuyên biệt về 1 sát thương; bị xuyên bởi hiệu ứng bỏ qua né tránh."
+    },
+    {
+      "term": "[Phá Khiên]",
+      "desc": "Trong lúc tấn công, bỏ qua 30% Miễn Sát Thương và Phòng Thủ Đặc Hóa của kẻ địch để đòn đánh xuyên qua khiên của chúng."
+    },
+    {
+      "term": "[Phẫn Nộ]",
+      "desc": "Buff tấn công tăng sát thương gây ra của đơn vị, thường đi kèm với [Phá Khiên]."
+    },
+    {
+      "term": "[Trận Hình]",
+      "desc": "Hiệu ứng vùng chiến trường gây sát thương theo thời gian (100%) và có thể được kích nổ để bùng sát thương, đồng thời giúp nhân vật hồi phục khỏi Choáng sau khi hành động."
+    },
+    {
+      "term": "[Áp Chế Năng Lượng]",
+      "desc": "Khi gây sát thương lên máu, buộc mục tiêu kích hoạt Chuyển Hóa Năng Lượng, làm giảm sát thương chúng gây ra và bóp nghẹt nguồn năng lượng của chúng."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/06/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Debuff",
+    "Sát Thương Duy Trì",
+    "Tạo Khiên"
+  ],
+  "classLevel": "Class_SS",
+  "releaseSea": "01/10/2023",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100180-ur-360.webp 360w, /Characters/optimized/100180-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

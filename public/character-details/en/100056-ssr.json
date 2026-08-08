@@ -1,0 +1,94 @@
+{
+  "id": "100056-ssr",
+  "name": "King",
+  "tier": "SSR",
+  "type": "Esper",
+  "faction": "Hero",
+  "roles": [
+    "DMG (ATK)",
+    "Support",
+    "Weaken",
+    "Heal",
+    "Speed"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 394,
+    "hp": 2363,
+    "def": 100,
+    "spd": 99
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "KING fixes an imperial gaze upon a single target, inflicting [Collapse] for 2 turns (DMG reduction rate lowered by 30%), and restores own HP by 80% ATK.",
+      "icon": "/Skill/King (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "KING strides to the center of the battlefield and intimidates all enemies, plunging all enemies into [Panic] (sealing 2 energy for 1 turn; when the same effect exists, the highest value applies), and restores HP to all allies by 200% ATK.",
+      "icon": "/Skill/King (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "KING strides to the center of the battlefield and intimidates all enemies, plunging all enemies into [Panic] (sealing 2 energy for 1 turn; when the same effect exists, the highest value applies), and restores HP to all allies by 200% ATK.",
+      "icon": "/Skill/King (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/King (SSR)/Keepsake_SSR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own max HP. Deals up to 120% ATK extra damage.When acting, deals 20% ATK extra damage to affected enemies, and this extra damage increases by 20% ATK for each point of energy your team currently has.",
+      "icon": "/Skill/King (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own max HP. Deals up to 175% ATK extra damage.When acting, deals 25% ATK extra damage to affected enemies, and this extra damage increases by 25% ATK for each point of energy your team currently has.",
+      "icon": "/Skill/King (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own max HP. Deals up to 196% ATK extra damage.When acting, deals 28% ATK extra damage to affected enemies, and this extra damage increases by 28% ATK for each point of energy your team currently has.",
+      "icon": "/Skill/King (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100056-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/King (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Panic]",
+      "desc": "Control status interrupts the target's actions."
+    }
+  ],
+  "releaseDate": "01/09/2020",
+  "classLevel": "Class_SS",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100056-ssr-360.webp 360w, /Characters/optimized/100056-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

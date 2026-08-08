@@ -1,0 +1,137 @@
+{
+  "id": "100025-ssrplus",
+  "name": "Watchdog Man",
+  "imageURL": "/Characters/optimized/100025-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Grappler",
+  "faction": "Hero",
+  "roles": [
+    "Tactical Combo",
+    "Column Control"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 110
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 24% ATK DMG to a single target.",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Watchdog Man unleashes a rapid chase-combo on the target, each hit dealing 150% ATK [Chase DMG]. The combo grows with his [Rampage] stacks, escalating from 4 up to 13 consecutive hits.",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Chase-combo ATK per hit 150% > 180%. Still escalates from 4 up to 13 consecutive [Chase DMG] hits.",
+      "keepsakeIcon": "/Keepsake/Watchdog Man (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Gains +20% HP. On entry, gains +20% Crit (3 rounds). On a max-multiplier hit, inflicts [Disabled] on the target's column.",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Disabled] range on max-multiplier hit: target's column > selected area.",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Disabled] range on max-multiplier hit: selected area > selected area.",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When battle begins, permanently grant 70% chance of [Evade] (Reduce Direct/Extra/Charge/Berserk DMG to 1 DMG). After any character acts, if Watchdogman triggered [Evade], adds 1 consecutive strike.",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "After any character acts, if Watchdogman triggered [Evade], increases 30% ATK for self for 1 round.",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Watchdog Man (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Dodge]",
+      "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+    },
+    {
+      "term": "[Follow-up DMG]",
+      "desc": "This type of attack damage is dealt as Attack attacks in a series of rapid attacks, gradually increasing the number of consecutive attacks."
+    },
+    {
+      "term": "[Nullify]",
+      "desc": "Disabled status applies to a target area/column, rendering affected units unable to act or be effective."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Watchdog Man (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/01/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Debuff",
+    "Heal",
+    "DMG (HP)",
+    "Revive"
+  ],
+  "classLevel": "Class_S",
+  "releaseSea": "01/05/2023",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100025-ssrplus-360.webp 360w, /Characters/optimized/100025-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

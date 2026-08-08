@@ -1,0 +1,92 @@
+{
+  "id": "100136-sr",
+  "name": "Gatling Tử Thần",
+  "imageURL": "/Characters/optimized/100136-sr-600.webp",
+  "tier": "SR",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Sụp Đổ",
+    "Giảm Kháng Chí Mạng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 186,
+    "hp": 1089,
+    "def": 46,
+    "spd": 97
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tấn công một mục tiêu đơn với 3 đòn liên kích gây 40% ST (+3) sát thương.",
+      "icon": "/Skill/Death Gatling (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tấn công mỗi kẻ địch trong cả hàng với 5 đòn liên kích gây 50% ST (+2) sát thương, có 75% cơ hội gây [Vỡ Vụn] lên mục tiêu chính trong 2 lượt (giảm Tỉ lệ Giảm sát thương 35%), và có 75% cơ hội gây [Vỡ Vụn] lên các mục tiêu còn lại trong cùng hàng trong 2 lượt (giảm Tỉ lệ Giảm sát thương 30%).",
+      "icon": "/Skill/Death Gatling (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tấn công mỗi kẻ địch trong cả hàng với 5 đòn liên kích gây 55% ST (+2) sát thương, có 100% cơ hội gây [Vỡ Vụn] lên mục tiêu chính trong 2 lượt (giảm Tỉ lệ Giảm sát thương 35%), và có 100% cơ hội gây [Vỡ Vụn] lên các mục tiêu còn lại trong cùng hàng trong 2 lượt (giảm Tỉ lệ Giảm sát thương 30%).",
+      "keepsakeIcon": "/Keepsake/Death Gatling (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Death Gatling (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Giảm Tỉ lệ Kháng Chí Mạng của kẻ địch bị [Vỡ Vụn] 25% trong 2 lượt.",
+      "icon": "/Skill/Death Gatling (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Giảm Tỉ lệ Kháng Chí Mạng của kẻ địch bị [Vỡ Vụn] 30% trong 2 lượt.",
+      "icon": "/Skill/Death Gatling (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Giảm Tỉ lệ Kháng Chí Mạng của kẻ địch bị [Vỡ Vụn] 35% trong 2 lượt.",
+      "icon": "/Skill/Death Gatling (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Death Gatling (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Tốc Độ"
+  ],
+  "classLevel": "A",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100136-sr-360.webp 360w, /Characters/optimized/100136-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

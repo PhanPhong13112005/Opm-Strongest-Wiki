@@ -7,4 +7,11 @@ import i18n from './i18n'
 const app = createApp(App)
 app.use(router)
 app.use(i18n)
-router.isReady().then(() => app.mount('#app'))
+
+const mount = () => app.mount('#app')
+
+if (document.querySelector('[data-app-boot]')) {
+  router.isReady().then(mount, mount)
+} else {
+  mount()
+}

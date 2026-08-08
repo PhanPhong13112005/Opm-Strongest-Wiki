@@ -1,0 +1,151 @@
+{
+  "id": "100109-ssrplus",
+  "name": "Gyoro-Gyoro",
+  "imageURL": "/Characters/optimized/100109-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Hỗ Trợ Tội Phạm",
+    "Gây Câm Lặng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Hồi HP cho một đồng minh.",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "ST trực tiếp 32% ST lên toàn bộ kẻ địch. [Câm Lặng] mục tiêu và 1 kẻ địch ngẫu nhiên.",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "ST trực tiếp 32% > 50% ST lên toàn bộ kẻ địch. [Câm Lặng] mục tiêu và 1 > 2 kẻ địch ngẫu nhiên.",
+      "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "+20% Máu. Sau hành động của bất kỳ nhân vật nào, nếu một triệu hồi/hỗ trợ chết, tung [Truy Kích Tuyệt Kỹ] (80% sát thương và hiệu ứng). Vĩnh viễn cấp 60% [Miễn Sát Thương Không Bạo Kích] (hiệu lực mọi loại ST, không thể tồn tại cùng [Nhanh Nhẹn]).",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Truy Kích Tuyệt Kỹ] 80% &gt; 100%. [Miễn Sát Thương Không Bạo Kích] 60% &gt; 65%.",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Truy Kích Tuyệt Kỹ] 100% &gt; 120%. [Miễn Sát Thương Không Bạo Kích] 65% &gt; 70%.",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi trận chiến bắt đầu, triệu hồi 1 Candle Monster riêng cho bản thân và đồng minh cùng cột. (Không thể triệu hồi nếu đồng minh có nhiều nhân vật support hơn Gyoro-gyoro). Candle Monster sẽ kế thừa 100% ATK cơ bản của Gyoro-gyoro. Sau hành động của bất kỳ nhân vật nào, mỗi Candle Monster có 50% khả năng tung [Truy Kích] vào bất kỳ kẻ địch nào không ở trạng thái [Kiên Cường], gây sát thương bằng 150% ATK. Sau khi Candle Monster di chuyển 4 lần hoặc [Tự Bạo] khi Gyoro-gyoro bị đánh bại, gây 200% ATK lên 3 kẻ địch ngẫu nhiên.",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Triệu hồi Candle 1 > 2\n1. [Câm Lặng] không thể cộng dồn. Nhân vật nhanh hơn không thể tung Ultimate ở lượt kế tiếp. 2. Formal set có tác dụng với [Câm Lặng]. 3. [Truy Kích Chiêu Cuối] của Gyoro chỉ kích hoạt một lần mỗi lượt và chỉ khi nhân vật support chết. (Chó CE+ không chết nên không được tính) 4. [Truy Kích Chiêu Cuối] cũng có thể gây [Câm Lặng]. 5. Silence có thể bị ảnh hưởng bởi Chính xác hiệu ứng% và Kháng hiệu ứng% (Hiện tại, máy chủ beta không bị ảnh hưởng bởi chính xác và kháng, nhưng sẽ được kiểm tra sau khi máy chủ chính thức ra mắt) 6. Khuyến nghị dùng Keepsake nếu bạn có nhân vật triệu hồi support. 7. [Câm Lặng] bị loại bỏ sau [Đã Tái Sinh]",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    },
+    {
+      "term": "[Câm Lặng]",
+      "desc": "Mục tiêu không thể dùng chiêu cuối. Được tính là hiệu ứng khống chế."
+    },
+    {
+      "term": "[Sát Thương Bạo Kích]",
+      "desc": "Phần sát thương bổ sung do đòn chí mạng gây ra; thường bị điều chỉnh qua [Giảm Sát Thương Bạo Kích] để cắt giảm phần bổ sung này."
+    },
+    {
+      "term": "[Truy Kích Tuyệt Kỹ]",
+      "desc": "Đòn ngoài lượt gây 70% sát thương và hiệu ứng của chiêu cuối, không tốn năng lượng, tối đa 3 lần mỗi vòng."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+    },
+    {
+      "term": "[Tái Sinh]",
+      "desc": "Kích hoạt hồi sinh: sau khi nhận sát thương chí mạng, nếu có đồng minh, hồi 50% Máu trước khi hành động, giới hạn số lần nhất định."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/08/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Hạt Nhân",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Hồi Sinh"
+  ],
+  "classLevel": "Dragon",
+  "releaseSea": "01/12/2022",
+  "imageSrcset": "/Characters/optimized/100109-ssrplus-360.webp 360w, /Characters/optimized/100109-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

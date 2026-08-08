@@ -1,0 +1,98 @@
+{
+  "id": "100001-sr",
+  "name": "Genos",
+  "imageURL": "/Characters/optimized/100001-sr-600.webp",
+  "tier": "SR",
+  "type": "Công Nghệ",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Thiêu Đốt",
+    "Hạt Nhân Cuồng Bạo"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 170,
+    "hp": 1020,
+    "def": 43,
+    "spd": 93
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung 5 đòn liên kích vào mục tiêu đơn, mỗi đòn gây 20% ST (+2) sát thương.",
+      "icon": "/Skill/Genos (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 4 đòn liên kích vào mỗi kẻ địch trong cả hàng, mỗi đòn gây 35% ST (+2) sát thương, với 100% tỉ lệ khiến mục tiêu chính bị [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 50% ST).",
+      "icon": "/Skill/Genos (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung 4 đòn liên kích vào mỗi kẻ địch trong cả hàng, mỗi đòn gây 35% ST (+2) sát thương, với 100% tỉ lệ khiến mục tiêu chính và 50% tỉ lệ khiến kẻ địch cùng cột với mục tiêu chính bị [Thiêu Đốt] trong 2 lượt (sát thương theo thời gian bằng 50% ST).",
+      "keepsakeIcon": "/Keepsake/Genos (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Genos (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu có kẻ địch đang bị [Thiêu Đốt], bản thân vào trạng thái [Cuồng Nộ] (gây thêm 30% sát thương khi tấn công).",
+      "icon": "/Skill/Genos (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu có kẻ địch đang bị [Thiêu Đốt], bản thân vào trạng thái [Cuồng Nộ] (gây thêm 40% sát thương khi tấn công).",
+      "icon": "/Skill/Genos (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu có kẻ địch đang bị [Thiêu Đốt], bản thân vào trạng thái [Cuồng Nộ] (gây thêm 45% sát thương khi tấn công).",
+      "icon": "/Skill/Genos (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Thiêu Đốt]",
+      "desc": "Sát thương lửa liên tục theo thời gian lên mục tiêu."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Genos (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Hạt Nhân"
+  ],
+  "classLevel": "Class_S",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100001-sr-360.webp 360w, /Characters/optimized/100001-sr-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

@@ -1,0 +1,92 @@
+{
+  "id": "100090-ssr",
+  "name": "Suiryu",
+  "imageURL": "/Characters/optimized/100090-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Giác Đấu",
+  "faction": "Võ Thuật",
+  "roles": [
+    "Sát Thương Tích Tụ",
+    "Giảm ST Không Chí Mạng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 411,
+    "hp": 2469,
+    "def": 196,
+    "spd": 96
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 70% ST (+5) sát thương lên mục tiêu đơn bằng liên kích 2 đòn, và trao cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 25% Máu của bản thân).",
+      "icon": "/Skill/Suiryu (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Mỗi tầng [Tích Lực] gây thêm sát thương Tích Lực bằng 24% ST lên mục tiêu bị đánh trúng. Gây 160% ST sát thương lên mỗi kẻ địch hàng sau bằng liên kích 5 đòn.",
+      "icon": "/Skill/Suiryu (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Mỗi tầng [Tích Lực] gây thêm sát thương Tích Lực bằng 30% ST lên mục tiêu bị đánh trúng. Gây 240% ST sát thương lên mỗi kẻ địch hàng sau bằng liên kích 5 đòn, có 100% tỷ lệ khiến mục tiêu bị chí mạng dính [Suy Yếu] (giảm 30% ST trong 2 lượt).",
+      "keepsakeIcon": "/Keepsake/Suiryu (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Suiryu (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Mỗi lần bản thân nhận trạng thái [Kiên Cường] sẽ nhận 1 tầng [Tích Lực], tối đa 2 tầng. Vĩnh viễn tăng 25% ST cho đồng minh đang ở trạng thái [Tích Lực]. Bản thân vĩnh viễn nhận 40% miễn sát thương không Chí mạng (giảm ST bao gồm mọi loại sát thương; hiệu ứng này và [Linh Xảo] chỉ một cái có hiệu lực).",
+      "icon": "/Skill/Suiryu (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Mỗi lần bản thân nhận trạng thái [Kiên Cường] sẽ nhận 1 tầng [Tích Lực], tối đa 2 tầng. Vĩnh viễn tăng 35% ST cho đồng minh đang ở trạng thái [Tích Lực]. Bản thân vĩnh viễn nhận 45% miễn sát thương không Chí mạng (giảm ST bao gồm mọi loại sát thương; hiệu ứng này và [Linh Xảo] chỉ một cái có hiệu lực).",
+      "icon": "/Skill/Suiryu (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Mỗi lần bản thân nhận trạng thái [Kiên Cường] sẽ nhận 1 tầng [Tích Lực], tối đa 2 tầng. Vĩnh viễn tăng 45% ST cho đồng minh đang ở trạng thái [Tích Lực]. Bản thân vĩnh viễn nhận 55% miễn sát thương không Chí mạng (giảm ST bao gồm mọi loại sát thương; hiệu ứng này và [Linh Xảo] chỉ một cái có hiệu lực).",
+      "icon": "/Skill/Suiryu (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Lá Chắn]",
+      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+    },
+    {
+      "term": "[Làm Suy Yếu]",
+      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Suiryu (SSR)/Keepsake_SSR.png",
+  "releaseDate": "01/03/2022",
+  "classLevel": "Martial_Artist",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100090-ssr-360.webp 360w, /Characters/optimized/100090-ssr-600.webp 564w",
+  "imageWidth": 564,
+  "imageHeight": 688
+}

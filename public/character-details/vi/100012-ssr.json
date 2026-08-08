@@ -1,0 +1,93 @@
+{
+  "id": "100012-ssr",
+  "name": "Chày Sắt",
+  "roles": [
+    "Sát Thương (Máu)",
+    "Tạo Khiên"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 364,
+    "hp": 2182,
+    "def": 92,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST (+10) sát thương lên mục tiêu đơn và hồi Máu bằng 10% Máu tối đa, tối đa 3 lần mỗi lượt.",
+      "icon": "/Skill/Metal Bat (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 30% ST (+2) sát thương lên mỗi kẻ địch trong cả hàng bằng 5 liên kích, có 50% tỉ lệ khiến mỗi mục tiêu bị đánh trúng [Thương Tổn] 2 lượt (nhận thêm sát thương Thương Tổn bằng 50% ST khi bị tấn công), và cấp cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 10% Máu của bản thân).",
+      "icon": "/Skill/Metal Bat (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 38% ST (+2) sát thương lên mỗi kẻ địch trong cả hàng bằng 5 liên kích, có 60% tỉ lệ khiến mỗi mục tiêu bị đánh trúng [Thương Tổn] 2 lượt (nhận thêm sát thương Thương Tổn bằng 50% ST khi bị tấn công), và cấp cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 20% Máu của bản thân).",
+      "icon": "/Skill/Metal Bat (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Metal Bat (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Máu càng thấp, [Miễn Sát Thương] càng cao (giảm tối đa 50% ST Trực Tiếp và Phụ). Sau khi bị tấn công, nếu Máu dưới 80%, phản đòn bằng [Truy Kích] (80% ST Đòn Thường và hiệu ứng).",
+      "icon": "/Skill/Metal Bat (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Miễn Sát Thương] tối đa 50% &gt; 55%. [Truy Kích] 80% &gt; 110% ST Đòn Thường.",
+      "icon": "/Skill/Metal Bat (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Miễn Sát Thương] tối đa 55% &gt; 58%. [Truy Kích] 110% &gt; 120% ST Đòn Thường.",
+      "icon": "/Skill/Metal Bat (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR",
+  "imageURL": "/Characters/optimized/100012-ssr-600.webp",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Metal Bat (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Lá Chắn]",
+      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+    }
+  ],
+  "releaseDate": "01/10/2020",
+  "classLevel": "Class_S",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100012-ssr-360.webp 360w, /Characters/optimized/100012-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

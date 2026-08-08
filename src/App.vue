@@ -311,9 +311,11 @@ onBeforeUnmount(() => {
       </div>
     </div>
 
-    <RouterView v-else class="flex-grow" v-slot="{ Component, route: currentRoute }">
-      <transition name="page" mode="out-in"><component :is="Component" :key="currentRoute.path" /></transition>
-    </RouterView>
+    <div v-else class="flex-grow min-h-screen">
+      <RouterView v-slot="{ Component, route: currentRoute }">
+        <transition name="page" mode="out-in"><component :is="Component" :key="currentRoute.path" /></transition>
+      </RouterView>
+    </div>
 
     <footer v-if="!isWorkspaceRoute" class="site-footer">
       <div class="site-footer__accent" aria-hidden="true"></div>

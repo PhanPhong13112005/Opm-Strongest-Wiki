@@ -1,0 +1,81 @@
+{
+  "id": "200001-n",
+  "name": "Bộ Binh",
+  "imageURL": "/Characters/optimized/200001-n-600.webp",
+  "tier": "N",
+  "type": "Công Nghệ",
+  "faction": "Khác",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 153,
+    "hp": 918,
+    "def": 39,
+    "spd": 80
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 80% ST (+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Paradiser Footsoldier (N)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 180% ST (+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Paradiser Footsoldier (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 200% ST (+10) sát thương lên mục tiêu đơn.",
+      "keepsakeIcon": "/Keepsake/Paradiser Footsoldier (N)/Keepsake_N.png",
+      "icon": "/Skill/Paradiser Footsoldier (N)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Tăng vĩnh viễn Máu (+20) của bản thân. Nếu có Du Côn Nhóm Đào Nguyên trên sân, tăng 20% sát thương của bản thân, kéo dài đến hết trận đấu.",
+      "icon": "/Skill/Paradiser Footsoldier (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Tăng vĩnh viễn Máu (+20) của bản thân. Nếu có Du Côn Nhóm Đào Nguyên trên sân, tăng 25% sát thương của bản thân, kéo dài đến hết trận đấu.",
+      "icon": "/Skill/Paradiser Footsoldier (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Tăng vĩnh viễn Máu (+20) của bản thân. Nếu có Du Côn Nhóm Đào Nguyên trên sân, tăng 28% sát thương của bản thân, kéo dài đến hết trận đấu.",
+      "icon": "/Skill/Paradiser Footsoldier (N)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Paradiser Footsoldier (N)/Keepsake_N.png",
+  "classLevel": "Other",
+  "classIcon": "/Class/Other.png",
+  "imageSrcset": "/Characters/optimized/200001-n-360.webp 360w, /Characters/optimized/200001-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

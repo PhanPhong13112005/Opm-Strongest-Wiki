@@ -1,0 +1,137 @@
+{
+  "id": "100056-ssrplus",
+  "name": "King",
+  "imageURL": "/Characters/optimized/100056-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Esper",
+  "faction": "Hero",
+  "roles": [
+    "Reduce Energy",
+    "Speed Up",
+    "Share DMG"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 120
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "King rallies his own resolve, restoring own HP by 150% (+10) ATK.",
+      "icon": "/Skill/King (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "King fires up the Imperial Engine, inflicting [Panic] on the main target (sealing 2 energy for 1 turn). Dispels the [Unyielding]/[Tenacity] of the 3 enemies with the highest max HP and re-applies it downgraded to a [Tenacity] effect worth 60% of the dispelled value, and restores HP to the 2 lowest-HP% allies by 300% (+10) ATK.",
+      "icon": "/Skill/King (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "[Panic] energy sealed 2 > 3Dispel/downgrade target — 3 highest-max-HP enemies > all enemiesDowngraded [Tenacity] power 60% > 50%Allies healed — 2 > 4 lowest-HP% allies, 300% (+10) ATK",
+      "keepsakeIcon": "/Keepsake/King (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/King (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own max HP by 20%.At battle start, raises the SPD of allies in the same row to 90% of King's SPD (if an ally's own SPD is already higher, it is unchanged).",
+      "icon": "/Skill/King (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "At battle start — also raises own SPD by 16%Same-row allies' SPD raised to 90% of King's SPD",
+      "icon": "/Skill/King (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "At battle start — own SPD raised 16% > 20%Same-row allies' SPD raised to 90% > 95% of King's SPD",
+      "icon": "/Skill/King (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "Summon drone at start of match (ATK &HP are 100% & 800% respectively of King's ATK). Drone will absorb 90% of all types of DMG received by King (excluding emblem and reflect effect) until its HP is 1%. Drone will follow up (after allies move) on 1 random enemy (350% ATK, up to 2 times each round).\nPic credits to Gibrah Noah",
+      "icon": "/Skill/King (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Number of drones summoned 1 > 2.",
+      "icon": "/Skill/King (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/King (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Unyielding]",
+      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+    },
+    {
+      "term": "[Panic]",
+      "desc": "Control status interrupts the target's actions."
+    },
+    {
+      "term": "[Shield]",
+      "desc": "The shield absorbs damage up to a portion of the subject's Health; Charge DMG ignores it."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/King (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "10 / 2021",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "Debuff",
+    "Heal",
+    "Speed"
+  ],
+  "classLevel": "Class_SS",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100056-ssrplus-360.webp 360w, /Characters/optimized/100056-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

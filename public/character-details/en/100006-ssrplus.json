@@ -1,0 +1,122 @@
+{
+  "id": "100006-ssrplus",
+  "name": "Puri-Puri Prisoner",
+  "roles": [
+    "Enhance Back Row, DoT Res"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 104
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Restores HP to a single ally.",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 750% ATK DMG to a single target with 2 consecutive strikes and inflicts [Charm].",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 750% &gt; 900% ATK DMG to a single target with 2 consecutive strikes and inflicts [Charm]. Additionally inflicts [Stun] on the target and its entire column for 1 round.",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Puri-Puri Prisoner (SSRplus)/Keepsake_SSRplus.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Gains +20% HP. At the start of each round, inflicts a debuff on all enemies. On entry, gains [Charm Immunity] on self.",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Retains the base passive effects; CN data shows no numeric upgrade at this tier.",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Retains the base passive effects; CN data shows no numeric upgrade at this tier.",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "Increase Non-Crit DMG by 30% for the entire row, lasts 3 rounds. After action, inflict [Paralysis] (Unable to Follow-Up, Continuous Follow-Up, Combo Follow-Up) on the target and its column",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Non-CRIT DMG free 30% > 40%",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR+",
+  "imageURL": "/Characters/optimized/100006-ssrplus-600.webp",
+  "type": "Grappler",
+  "faction": "Hero",
+  "debut": "03 / 2023",
+  "keepsakeIcon": "/Keepsake/Puri-Puri Prisoner (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "03 / 2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [],
+  "effects": [
+    {
+      "term": "[Stun]",
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+    }
+  ],
+  "classLevel": "Class_S",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100006-ssrplus-360.webp 360w, /Characters/optimized/100006-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

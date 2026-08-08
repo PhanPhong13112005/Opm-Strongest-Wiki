@@ -1,0 +1,133 @@
+{
+  "id": "100057-ur",
+  "name": "Thần Heo",
+  "roles": [
+    "Hồi Phục"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 117
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST [Sát Thương Trực Tiếp] lên mục tiêu đơn.",
+      "icon": "/Skill/Pig God (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 800% ST [Sát Thương Trực Tiếp] lên vùng mục tiêu, sau đó đánh toàn bộ kẻ địch với 150% ST [Sát Thương Băng]. Giảm [Tỷ Lệ Khiên Năng Lượng] của toàn bộ kẻ địch đi 30% và tăng cho toàn bộ đồng minh thêm 30%. Gây [Ăn Mòn] lên mục tiêu chính, gây 300% ST sát thương theo thời gian.",
+      "icon": "/Skill/Pig God (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 800% > 1100% ST [Sát Thương Trực Tiếp] lên vùng mục tiêu, sau đó đánh toàn bộ kẻ địch với 150% > 200% ST [Sát Thương Băng]. Giảm [Tỷ Lệ Khiên Năng Lượng] của toàn bộ kẻ địch đi 30% > 50% và tăng cho toàn bộ đồng minh thêm 30% > 50%. Gây [Ăn Mòn] lên mục tiêu chính, gây 300% > 400% ST sát thương theo thời gian.",
+      "icon": "/Skill/Pig God (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Pig God (UR)/Keepsake_UR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng 20% Máu. Nhận 60% [Miễn Sát Thương Không Bạo Kích]. Giảm 60% ST [Bạo Nổ Lan Truyền] nhận vào.[Miễn Sát Thương Không Bạo Kích]: hiệu lực mọi loại ST; không tồn tại cùng [Nhanh Nhẹn].",
+      "icon": "/Skill/Pig God (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Miễn Sát Thương Không Bạo Kích] 60% &gt; 70%. Giảm ST [Bạo Nổ Lan Truyền] 60% &gt; 70%.",
+      "icon": "/Skill/Pig God (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Miễn Sát Thương Không Bạo Kích] 70% &gt; 80%. Giảm ST [Bạo Nổ Lan Truyền] 70% &gt; 80%.",
+      "icon": "/Skill/Pig God (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi trận đấu bắt đầu, toàn bộ đồng minh nhận hiệu ứng [Bền Bỉ/Kiên Cường] bằng 100% Máu tối đa của bản thân. Sau khi bất kỳ nhân vật nào hành động, 4 nhân vật kẻ địch ngẫu nhiên nhận [Sát Thương Thật] bằng 100% tổng sát thương bị khóa ban đầu. ———- [Bền Bỉ/Kiên Cường]: Hấp thụ sát thương bằng 100% Máu của bản thân. [Sát Thương Chuẩn]: Không bị ảnh hưởng bởi tăng sát thương hay giảm sát thương, đây là sát thương gây trực tiếp lên Máu của mục tiêu mà không thể chia sẻ hoặc né tránh.",
+      "icon": "/Skill/Pig God (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Khi trận đấu bắt đầu, toàn bộ đồng minh nhận [Bền Bỉ] bằng 100% (150%) Máu tối đa của chính mình và 100% xác suất áp [Đã Khóa Mục Tiêu] bằng 100% ATK. Sau hành động của bất kỳ nhân vật nào, gây tổng [Đã Khóa Mục Tiêu] dưới dạng 100% (150%) [Sát Thương Chuẩn] lên 4 địch ngẫu nhiên (toàn đội địch ở bậc nâng).[Bền Bỉ]: hấp thụ ST bằng 100% (150%) Máu.[Sát Thương Chuẩn]: không bị ảnh hưởng bởi DMG Rate/DMG Free; gây ST trực tiếp bỏ qua [Chia Sẻ Sát Thương]/[Né Sát Thương Tức Thì].",
+      "icon": "/Skill/Pig God (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Pig God (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "UR",
+  "imageURL": "/Characters/optimized/100057-ur-600.webp",
+  "type": "Tâm Linh",
+  "faction": "Anh Hùng",
+  "debut": "05 / 2025",
+  "keepsakeIcon": "/Keepsake/Pig God (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/05/2025",
+  "releaseSea": "01/09/2025",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Hồi Phục"
+  ],
+  "effects": [
+    {
+      "term": "[Sức Bền]",
+      "desc": "Lá chắn hấp thụ sát thương bằng 100% Máu Tối đa của bản thân người mang."
+    },
+    {
+      "term": "[Sát Thương Chuẩn]",
+      "desc": "Loại sát thương thưởng gây thêm ngoài đòn đánh, bị giảm bởi các hiệu ứng kiểu Né và có thể được miễn nhiễm sau một số lượt nhất định."
+    },
+    {
+      "term": "[Ăn Mòn]",
+      "desc": "Hiệu ứng sát thương theo thời gian dạng ăn mòn, mỗi lượt gây sát thương bằng một tỷ lệ ST (ví dụ 300%) lên mục tiêu."
+    }
+  ],
+  "classLevel": "Class_SS",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100057-ur-360.webp 360w, /Characters/optimized/100057-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

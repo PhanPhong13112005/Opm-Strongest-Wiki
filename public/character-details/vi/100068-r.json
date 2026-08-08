@@ -1,0 +1,87 @@
+{
+  "id": "100068-r",
+  "name": "Dark Matter Thief",
+  "imageURL": "/Characters/optimized/100068-r-600.webp",
+  "tier": "R",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 159,
+    "hp": 954,
+    "def": 40,
+    "spd": 88
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 90% ST lên mục tiêu đơn.",
+      "icon": "/Skill/Dark Matter Thief (R)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 70% ST lên toàn bộ địch, với 30% cơ hội khiến mục tiêu chính bị [Sụp Đổ] trong 1 lượt (giảm tỷ lệ giảm ST đi 30%).",
+      "icon": "/Skill/Dark Matter Thief (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 70% ST lên toàn bộ địch, với 30% cơ hội khiến mục tiêu chính bị [Sụp Đổ] trong 1 lượt (giảm tỷ lệ giảm ST đi 40%).",
+      "keepsakeIcon": "/Keepsake/Dark Matter Thief (R)/Keepsake_R.png",
+      "icon": "/Skill/Dark Matter Thief (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Tăng vĩnh viễn Máu tối đa của bản thân. Sau khi bị tấn công, có 20% cơ hội tăng ST bản thân gây ra thêm 10% trong 1 lượt.",
+      "icon": "/Skill/Dark Matter Thief (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Tăng vĩnh viễn Máu tối đa của bản thân. Sau khi bị tấn công, có 20% cơ hội tăng ST bản thân gây ra thêm 20% trong 1 lượt.",
+      "icon": "/Skill/Dark Matter Thief (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Tăng vĩnh viễn Máu tối đa của bản thân. Sau khi bị tấn công, có 20% cơ hội tăng ST bản thân gây ra thêm 25% trong 1 lượt.",
+      "icon": "/Skill/Dark Matter Thief (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Sụp Đổ]",
+      "desc": "Hiệu ứng sát thương/bất lợi phá vỡ phòng thủ của mục tiêu."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Dark Matter Thief (R)/Keepsake_R.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100068-r-360.webp 360w, /Characters/optimized/100068-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

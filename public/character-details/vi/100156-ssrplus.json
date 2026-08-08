@@ -1,0 +1,124 @@
+{
+  "id": "100156-ssrplus",
+  "name": "Hung Thần Kabuto",
+  "imageURL": "/Characters/optimized/100156-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Truy Kích Tuyệt Kĩ",
+    "Phản Sát Thương"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 96
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Kabuto Rage: Đánh 5 đòn liên tiếp vào mục tiêu đơn, mỗi lượt gây 100% ST(+10) cộng thêm 25% HP tối đa dưới dạng sát thương cộng thêm.",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Chaos Dancer: Gây 400% ST(+10) sát thương cho mục tiêu đơn và ban [Sát Thương Tụ Lực] bằng 35% HP tối đa. Sau khi tung, nhận [Cuồng Dã] trong lượt này và thực hiện [Truy Kích Tuyệt Kỹ] khi kẻ địch hành động. [Truy Kích Tuyệt Kỹ]: gây 100% sát thương và hiệu ứng của kỹ năng Ultimate, không tốn Follow-up, tối đa 2 lần mỗi lượt. Hồi tối đa 35% HP tối đa cho bản thân trong 1 lượt.",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Chaos Dancer (nâng cấp): Gây 400% ST(+10) sát thương cho mục tiêu đơn và ban [Sát Thương Tụ Lực] bằng 35% > 45% HP tối đa. Sau khi tung, nhận [Cuồng Dã] trong lượt này và thực hiện [Truy Kích Tuyệt Kỹ] khi kẻ địch hành động. [Truy Kích Tuyệt Kỹ]: gây 100% sát thương và hiệu ứng của kỹ năng Ultimate, không tốn Follow-up, tối đa 2 lần mỗi lượt. Hồi tối đa 35% HP tối đa cho bản thân trong 1 lượt.",
+      "keepsakeIcon": "/Keepsake/Carnage Kabuto (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Highly Evolved: Khi nhận sát thương (kể cả qua khiên) hoặc bị hạ gục, phản lại 50% sát thương đã nhận lên 4 kẻ địch ngẫu nhiên. Sát thương bao gồm tất cả hiệu ứng Tenacity và hiệu ứng tiêu hao HP. Mỗi trận chỉ một hiệu ứng cùng loại. Vĩnh viễn tăng 20 HP.",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Highly Evolved (nâng cấp): Khi nhận sát thương (kể cả qua khiên) hoặc bị hạ gục, phản lại 50% > 60% sát thương đã nhận lên 4 kẻ địch ngẫu nhiên. Sát thương bao gồm tất cả hiệu ứng Tenacity và hiệu ứng tiêu hao HP. Mỗi trận chỉ một hiệu ứng cùng loại. Vĩnh viễn tăng 20 HP.",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Highly Evolved (5P): Khi nhận sát thương (kể cả qua khiên) hoặc bị hạ gục, phản lại 60% sát thương đã nhận lên toàn bộ kẻ địch (nâng cấp từ 4 kẻ địch ngẫu nhiên). Sát thương bao gồm tất cả hiệu ứng Tenacity và hiệu ứng tiêu hao HP. Mỗi trận chỉ một hiệu ứng cùng loại. Vĩnh viễn tăng 20 HP.",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Heavily Armored: Khi vào trận, tăng 25% HP Tối đa, nhân bốn hiệu ứng tăng HP Tối đa lên bản thân (giống core Gyoro, không cộng dồn với tăng HP của WDM), và hồi 50% HP Tối đa.",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Tăng HP Tối đa 25% > 30%. Sau khi bị hạ gục, hồi sinh với 70% HP vào lượt kế tiếp (một lần mỗi trận).",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Truy Kích Tuyệt Kỹ]",
+      "desc": "Đòn ngoài lượt gây 70% sát thương và hiệu ứng của chiêu cuối, không tốn năng lượng, tối đa 3 lần mỗi vòng."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Carnage Kabuto (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [],
+  "classLevel": "Dragon",
+  "releaseSea": "01/04/2022",
+  "releaseTrung": "01/12/2021",
+  "imageSrcset": "/Characters/optimized/100156-ssrplus-360.webp 360w, /Characters/optimized/100156-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

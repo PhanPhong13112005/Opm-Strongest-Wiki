@@ -1,0 +1,98 @@
+{
+  "id": "100001-sr",
+  "name": "Genos",
+  "imageURL": "/Characters/optimized/100001-sr-600.webp",
+  "tier": "SR",
+  "type": "Hi-Tech",
+  "faction": "Hero",
+  "roles": [
+    "Burn",
+    "Berserk Core"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 170,
+    "hp": 1020,
+    "def": 43,
+    "spd": 93
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 5 combo strikes to a single target for 20% ATK (+2) DMG each.",
+      "icon": "/Skill/Genos (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 4 combo strikes to each enemy in the entire row for 35% ATK (+2) DMG each, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 50% ATK).",
+      "icon": "/Skill/Genos (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 4 combo strikes to each enemy in the entire row for 35% ATK (+2) DMG each, with a 100% chance to inflict [Burn] on the main target and a 50% chance to inflict [Burn] on enemies in the main target's column, for 2 turns (DoT equal to 50% ATK).",
+      "keepsakeIcon": "/Keepsake/Genos (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Genos (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). If there is a [Burning] enemy among the foes, you enter [Berserk] state (deals 30% more DMG when attacking).",
+      "icon": "/Skill/Genos (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). If there is a [Burning] enemy among the foes, you enter [Berserk] state (deals 40% more DMG when attacking).",
+      "icon": "/Skill/Genos (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). If there is a [Burning] enemy among the foes, you enter [Berserk] state (deals 45% more DMG when attacking).",
+      "icon": "/Skill/Genos (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Thiêu Đốt]",
+      "desc": "Continuous fire damage over time to the target."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Genos (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "Core"
+  ],
+  "classLevel": "Class_S",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100001-sr-360.webp 360w, /Characters/optimized/100001-sr-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

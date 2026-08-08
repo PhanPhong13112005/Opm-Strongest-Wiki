@@ -1,0 +1,91 @@
+{
+  "id": "100007-sr",
+  "name": "Hammerhead",
+  "imageURL": "/Characters/optimized/100007-sr-600.webp",
+  "tier": "SR",
+  "type": "Hi-Tech",
+  "faction": "Outlaw",
+  "roles": [
+    "Stun",
+    "Tenacity"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 173,
+    "hp": 1040,
+    "def": 44,
+    "spd": 91
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 100% ATK DMG to a single target.",
+      "icon": "/Skill/Hammerhead (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Strikes a single target with 5 combo hits, dealing 40% ATK DMG each, and has a 50% chance to inflict [Stun] on the target for 1 turn (cannot act; at most 4 characters per side can be under stun-type states at the same time).",
+      "icon": "/Skill/Hammerhead (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Strikes a single target with 5 combo hits, dealing 40% ATK DMG each, and has a 50% chance to inflict [Stun] on the target for 1 turn (cannot act; at most 4 characters per side can be under stun-type states at the same time).Additionally has a 50% chance to gain 50% reflected DMG on self for 2 turns.",
+      "keepsakeIcon": "/Keepsake/Hammerhead (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Hammerhead (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP. When attacked by an enemy, if the last hit is a Critical Strike, Hammerhead has a 50% chance to enter [Tenacity] state (power is 20%); otherwise has a 50% chance to enter [Berserk] state (power is 30%).",
+      "icon": "/Skill/Hammerhead (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP. When attacked by an enemy, if the last hit is a Critical Strike, Hammerhead has a 100% chance to enter [Tenacity] state (power is 20%); otherwise has a 100% chance to enter [Berserk] state (power is 30%).",
+      "icon": "/Skill/Hammerhead (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP. When attacked by an enemy, if the last hit is a Critical Strike, Hammerhead has a 100% chance to enter [Tenacity] state (power is 35%); otherwise has a 100% chance to enter [Berserk] state (power is 30%).",
+      "icon": "/Skill/Hammerhead (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Stun]",
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+    },
+    {
+      "term": "[Tenacity]",
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Hammerhead (SR)/Keepsake_SR.png",
+  "classLevel": "Outlaw",
+  "classIcon": "/Class/Outlaw.png",
+  "imageSrcset": "/Characters/optimized/100007-sr-360.webp 360w, /Characters/optimized/100007-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

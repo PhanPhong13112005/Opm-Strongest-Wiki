@@ -1,0 +1,156 @@
+{
+  "id": "100312-urplus",
+  "name": "Nyan",
+  "tier": "UR+",
+  "type": "Grappler",
+  "faction": "Monster",
+  "roles": [
+    "DMG (ATK)",
+    "Support",
+    "Weaken",
+    "DMG (HP)",
+    "Generate Shield",
+    "Speed"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 138
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK DMG to a single target.",
+      "icon": "/Skill/Nyan (URplus)/Skill_base.png",
+      "type": "Basic",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 1500% ATK [Specialized Direct DMG] to a single enemy target in the back row in a 4-hit combo (affected only by advanced DMG reduction), ignoring 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and penetrating [Unyielding] and [Specialized Unyielding]. Permanently grants [Specialized Acceleration] to non-row allies. When using the ultimate skill for the first 6 rounds, additionally applies [Specialized Charm] to the main target. — [Specialized Acceleration]: Speed is increased to 94% of Nyan's speed; if a teammate's own speed is higher, it stays unchanged. [Specialized Charm]: The target immediately disengages from combat, uses some special skills and passive effects to attack a random enemy, then returns and skips their next active action; enemies with [Specialized Charm] have [All DMG Reduction] reduced by 20% for 1 turn.",
+      "icon": "/Skill/Nyan (URplus)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": "/Animation/Nyan_Urplus/ult.gif",
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 1500% > 2400% ATK [Specialized Direct DMG]. Ignore [Specialized Evasion] and [Non-Crit DMG Reduction] 45% > 60%. [Specialized Acceleration] speed increased to 94% > 98% of Nyan's speed.",
+      "icon": "/Skill/Nyan (URplus)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Nyan (URplus)/Keepsake_URplus.png",
+      "type": "Ultimate",
+      "animation": "/Animation/Nyan_Urplus/ult.gif",
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Gains 60% [Non-Crit DMG Reduction] at the start of the battle. Removes all enemy [Suppression DMG Increase] and [Suppression DMG Reduction] debuffs. Immune to [Charm]/[Specialized Charm]. Reduces the amount of energy deducted by 2 when allies suffer additional energy loss during the first 5 rounds. Self has [Monster Affinity]. — [Monster Affinity]: When the core skill of a Monster character is activated, Nyan can be treated as one of any other currently missing character element (e.g. missing a duelist slot for the Gyoro Core — Nyan counts as a duelist so the Core activates, even though Nyan is a grappler).",
+      "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Non-Crit DMG Reduction] on entry 60% > 70%. Reduces energy deducted by 2 > 3 when allies suffer additional energy loss during the first 5 rounds.",
+      "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Non-Crit DMG Reduction] on entry 70% > 80%. Reduces energy deducted by 3 when allies suffer additional energy loss during the first 5 rounds.",
+      "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "On entry, gain 46% [Specialized Speed]. Applies [Life Link] to the ally with the highest ATK for 6 turns. After Nyan actively uses its skill, the ally with [Life Link] launches [Charged Pursuit] with 80% skill power, up to once per round. — [Life Link]: Nyan will not be defeated as long as the [Life Link] teammate is alive; if they are defeated, [Life Link] transfers to the next-highest-ATK teammate, up to 3 times. [Charged Pursuit]: Performs a DMG-type or AoE-healing Ultimate as a follow-up ATK; targets random, no energy cost.",
+      "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
+      "type": "Awakening",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "On entry, gain [Specialized Speed] 46% > 54%. [Life Link] ally launches [Charged Pursuit] with 80% > 120% skill power.",
+      "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
+      "type": "Awakening",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
+      "type": "Awakening",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100312-urplus-600.webp",
+  "debut": "02 / 2026",
+  "keepsakeIcon": "/Keepsake/Nyan (URplus)/Keepsake_URplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "Debuff",
+    "DMG (HP)",
+    "Generate Shield",
+    "Speed"
+  ],
+  "effects": [
+    {
+      "term": "[Spec. Unyielding]",
+      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+    },
+    {
+      "term": "[Unyielding]",
+      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+    },
+    {
+      "term": "[Reduce Non-Crit DMG]",
+      "desc": "Reduced damage taken from non-critical attacks."
+    },
+    {
+      "term": "[Spec. Dodge]",
+      "desc": "Evasion PvP tier — reduces specialized attacks to 1 damage; pierced by the ignore dodge effect."
+    },
+    {
+      "term": "[Spec. Direct DMG]",
+      "desc": "Advanced tier of direct damage, only affected by advanced damage increase/decrease and passes through normal defenses."
+    },
+    {
+      "term": "[Spec. Speed Up]",
+      "desc": "Increases ally's speed to near deployer's speed (remains the same if ally is already faster)."
+    }
+  ],
+  "classLevel": "Dragon",
+  "releaseSea": "01/06/2026",
+  "releaseTrung": "01/02/2026",
+  "imageSrcset": "/Characters/optimized/100312-urplus-360.webp 360w, /Characters/optimized/100312-urplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

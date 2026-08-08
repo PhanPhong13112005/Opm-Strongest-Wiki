@@ -1,0 +1,144 @@
+{
+  "id": "100009-ur",
+  "name": "Bão Tuyết Địa Ngục",
+  "imageURL": "/Characters/optimized/100009-ur-600.webp",
+  "tier": "UR",
+  "type": "Tâm Linh",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Tường Chắn"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 117
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây ST Trực Tiếp 120% ST lên mục tiêu đơn.",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây ST Trực Tiếp 160% ST lên toàn bộ kẻ địch, kèm ST [Băng] lên toàn bộ kẻ địch.",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây ST Trực Tiếp 160% > 200% ST lên toàn bộ kẻ địch, kèm ST [Băng] lên toàn bộ kẻ địch.",
+      "keepsakeIcon": "/Keepsake/Hellish Blizzard (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Khi vào trận: +20% Máu bản thân, +60% [Miễn Sát Thương Không Bạo Kích], và +60% [Tăng Sát Thương Duy Trì].",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Khi vào trận: +20% Máu bản thân, [Miễn Sát Thương Không Bạo Kích] 60% &gt; 70%, và [Tăng Sát Thương Duy Trì] 60% &gt; 80%.",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Khi vào trận: +20% Máu bản thân, [Miễn Sát Thương Không Bạo Kích] 70% &gt; 80%, và [Tăng Sát Thương Duy Trì] 80% &gt; 100%.",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Sau khi bất kỳ nhân vật địch nào kích hoạt [Đã Khóa], gây [Bạo Nổ Liên Tục]. ———- [Bạo Nổ Liên Tục]: Ngay lập tức lan sang mục tiêu xung quanh, gây 80% ST theo thời gian của [Đã Khóa]",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Khi trận đấu bắt đầu, gây [Đã Khóa] bằng 50% Tấn công lên toàn bộ đội địch, kéo dài 1 lượt.",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Hellish Blizzard (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Cường Hóa]",
+      "desc": "Hiệu ứng tăng cường tích cực chung áp lên nhân vật, nâng chỉ số hoặc trao lợi ích (ví dụ tăng Tỉ lệ Trúng hoặc ST gây ra)."
+    },
+    {
+      "term": "[Khóa Mục Tiêu]",
+      "desc": "Trạng thái khống chế khiến mục tiêu không thể kích hoạt các đòn Truy Kích, Truy Kích Liên Tục, Liên Kết và Đặc Biệt."
+    },
+    {
+      "term": "[Kích Nổ Liên Hoàn]",
+      "desc": "Hiệu ứng ngay lập tức lan sang các mục tiêu xung quanh, gây 80% ST theo thời gian của Locked."
+    },
+    {
+      "term": "[Sát Thương Bạo Kích]",
+      "desc": "Phần sát thương bổ sung do đòn chí mạng gây ra; thường bị điều chỉnh qua [Giảm Sát Thương Bạo Kích] để cắt giảm phần bổ sung này."
+    },
+    {
+      "term": "[Đóng Băng]",
+      "desc": "Hiệu ứng sát thương hệ Băng thêm vào đòn đánh, gây lên kẻ địch kèm theo đòn chính."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Hellish Blizzard (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/01/2025",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Tạo Khiên"
+  ],
+  "bondList": "Fubuki (Hellish Blizzard) + Eyelashes + Mountain Ape + Lily of the Three Section Staff",
+  "classLevel": "B",
+  "releaseSea": "01/05/2025",
+  "classIcon": "/Class/B.png",
+  "imageSrcset": "/Characters/optimized/100009-ur-360.webp 360w, /Characters/optimized/100009-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

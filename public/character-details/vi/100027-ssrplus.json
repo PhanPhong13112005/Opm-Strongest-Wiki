@@ -1,0 +1,127 @@
+{
+  "id": "100027-ssrplus",
+  "name": "Hợp Kim Đen Bóng",
+  "imageURL": "/Characters/optimized/100027-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Cường Hóa Khiên",
+    "Phản Sát Thương Nhóm"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 104
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây ST trực tiếp bằng 120% ST lên một mục tiêu đơn.",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây ST trực tiếp bằng 30% ST (tính theo HP Tối đa) lên hàng của mục tiêu, sau đó hồi máu cho bản thân.",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây ST trực tiếp bằng 30% > 40% ST (tính theo HP Tối đa) lên hàng của mục tiêu, sau đó hồi máu cho bản thân > cả hàng của mình.",
+      "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Nhận +20% HP. Khi vào trận, cấp +55% Sức mạnh Khiên cho toàn bộ đồng minh và nhận [Bất Tử] cho bản thân.",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Sức mạnh Khiên cho toàn bộ đồng minh 55% > 65%.",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Sức mạnh Khiên cho toàn bộ đồng minh 65% > 75%.",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi trận đấu bắt đầu, trao cho toàn đội [Phản Sát Thương Chuyên Biệt] (giảm ST trực tiếp và ST phụ trội đi 40%, phản lại 40% sát thương gốc về kẻ tấn công, kéo dài suốt trận đấu.)",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Giảm ST 40% > 60% Phản 40% > 60% Trao cho toàn đội [Cuồng bạo chuyên biệt] (Đòn đánh đầu tiên cũng sẽ gây ST Cuồng bạo bằng 50% Máu tối đa của Superalloy Blackluster, với cơ hội Chí mạng), kéo dài suốt trận đấu",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bất Tử]",
+      "desc": "Trạng thái sinh tồn giữ người mang sống sót bằng cách giảm mạnh sát thương nhận vào (ví dụ chỉ chịu 20%)."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/05/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Sát Thương (Máu)",
+    "Tạo Khiên"
+  ],
+  "classLevel": "Class_S",
+  "releaseSea": "01/09/2023",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100027-ssrplus-360.webp 360w, /Characters/optimized/100027-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

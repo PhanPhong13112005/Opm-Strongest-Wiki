@@ -1,10 +1,8 @@
 <script setup>
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onBeforeUnmount, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import charactersDataVi from '../data/characters.json'
-import charactersDataEn from '../data/characters_en.json'
-import coreLabData from '../data/coreLab.json'
+import { loadLocalCharacterDetail } from '../data/loadCharacterDetail'
 import { safeAssetUrl } from '../utils/assetUrl'
 import { getSkillEnergyCost } from '../utils/skillPresentation'
 import { getCharacterById } from '../services/characterApi'
@@ -20,18 +18,26 @@ const router = useRouter()
 
 const safeUrl = safeAssetUrl
 const { t, locale } = useI18n()
-const charactersData = computed(() => locale.value === 'en' ? charactersDataEn : charactersDataVi)
-const localCharacter = computed(() => charactersData.value.find(c => c.id === props.id) || null)
+const localCharacter = ref(null)
 const apiCharacter = ref(null)
 const character = computed(() => apiCharacter.value || localCharacter.value)
+const coreLabData = ref(null)
 let activeDetailRequest = 0
 
 const loadCharacter = async () => {
   const requestId = ++activeDetailRequest
+  const id = props.id
+  const language = locale.value
   apiCharacter.value = null
+  localCharacter.value = null
+
+  const localCharacterPromise = loadLocalCharacterDetail(id, language).then((result) => {
+    if (requestId === activeDetailRequest) localCharacter.value = result
+    return result
+  })
 
   try {
-    const result = await getCharacterById(props.id, locale.value, localCharacter.value)
+    const result = await getCharacterById(id, language, localCharacterPromise, { trackLoading: false })
     if (requestId === activeDetailRequest) apiCharacter.value = result
   } catch {
     if (requestId === activeDetailRequest && !localCharacter.value) router.push('/')
@@ -41,8 +47,8 @@ const loadCharacter = async () => {
 watch([() => props.id, locale], loadCharacter, { immediate: true })
 
 const coreData = computed(() => {
-  if (!character.value) return null
-  return coreLabData.heroes.find(h => h.characterId === character.value.id)
+  if (!character.value || !coreLabData.value) return null
+  return coreLabData.value.heroes.find(h => h.characterId === character.value.id)
 })
 
 const coreLevels = computed(() => {
@@ -120,28 +126,28 @@ const themeColorHex = computed(() => {
 
 const typeIcon = computed(() => {
   const t = character.value?.type?.toLowerCase() || ''
-  if (t.includes('vũ trang') || t.includes('duelist')) return '/Series/Duelist.png'
-  if (t.includes('giác đấu') || t.includes('grappler')) return '/Series/Grappler.png'
-  if (t.includes('tâm linh') || t.includes('esper')) return '/Series/Esper.png'
-  if (t.includes('công nghệ') || t.includes('hi-tech')) return '/Series/Hi-Tech.png'
+  if (t.includes('vũ trang') || t.includes('duelist')) return '/DetailIcons/series-duelist.webp'
+  if (t.includes('giác đấu') || t.includes('grappler')) return '/DetailIcons/series-grappler.webp'
+  if (t.includes('tâm linh') || t.includes('esper')) return '/DetailIcons/series-esper.webp'
+  if (t.includes('công nghệ') || t.includes('hi-tech')) return '/DetailIcons/series-hi-tech.webp'
   return ''
 })
 
 const tierIcon = computed(() => {
   if (character.value?.tier) {
     const safeTier = character.value.tier.replace('UR+', 'URplus')
-    return `/Quality/${safeTier}.png`
+    return `/DetailIcons/quality-${safeTier}.webp`
   }
   return ''
 })
 
 const factionIcon = computed(() => {
   const f = character.value?.faction?.toLowerCase() || ''
-  if (f.includes('anh hùng') || f.includes('hero')) return '/Faction/Hero.png'
-  if (f.includes('quái vật') || f.includes('quái nhân') || f.includes('monster')) return '/Faction/Monster.png'
-  if (f.includes('võ thuật') || f.includes('martial')) return '/Faction/Martial_Artist.png'
-  if (f.includes('tội phạm') || f.includes('outlaw')) return '/Faction/Outlaw.png'
-  if (f.includes('khác') || f.includes('other')) return '/Faction/Other.png'
+  if (f.includes('anh hùng') || f.includes('hero')) return '/DetailIcons/faction-hero.webp'
+  if (f.includes('quái vật') || f.includes('quái nhân') || f.includes('monster')) return '/DetailIcons/faction-monster.webp'
+  if (f.includes('võ thuật') || f.includes('martial')) return '/DetailIcons/faction-martial_artist.webp'
+  if (f.includes('tội phạm') || f.includes('outlaw')) return '/DetailIcons/faction-outlaw.webp'
+  if (f.includes('khác') || f.includes('other')) return '/DetailIcons/faction-other.webp'
   return ''
 })
 
@@ -380,6 +386,43 @@ onMounted(() => {
     }
   }
 })
+const skillsSectionRef = ref(null)
+const skillsMediaReady = ref(false)
+let skillsObserver = null
+let coreLabPromise = null
+
+const loadDeferredSkillData = () => {
+  skillsMediaReady.value = true
+  if (!coreLabPromise) {
+    coreLabPromise = import('../data/coreLab.json').then((module) => {
+      coreLabData.value = module.default
+      return module.default
+    })
+  }
+  return coreLabPromise
+}
+
+watch(skillsSectionRef, (section) => {
+  if (!section) return
+  if (typeof IntersectionObserver !== 'function') {
+    loadDeferredSkillData()
+    return
+  }
+  skillsObserver?.disconnect()
+  skillsObserver = new IntersectionObserver((entries) => {
+    if (!entries.some(entry => entry.isIntersecting)) return
+    skillsObserver?.disconnect()
+    skillsObserver = null
+    loadDeferredSkillData()
+  }, { rootMargin: '200px 0px' })
+  skillsObserver.observe(section)
+}, { flush: 'post' })
+
+onBeforeUnmount(() => {
+  skillsObserver?.disconnect()
+  skillsObserver = null
+  if (window.scrollToEffectDetail) delete window.scrollToEffectDetail
+})
 </script>
 
 <template>
@@ -392,11 +435,18 @@ onMounted(() => {
     <div v-if="character" class="relative w-full rounded-2xl overflow-hidden mb-8 border border-white/5 bg-gradient-to-br from-[#12131a] to-[#0b0c10] shadow-2xl pb-16 pt-8 pl-10 pr-10">
       
       <!-- Background Character Image -->
-      <img 
-        :src="safeUrl(getCharacterImage(character.imageURL))" 
-        class="absolute right-0 bottom-0 h-[90%] max-w-[60%] lg:max-w-[50%] object-contain object-right-bottom opacity-60 z-0 pointer-events-none drop-shadow-2xl"
+      <img
+        :src="safeUrl(getCharacterImage(character.imageURL))"
+        :srcset="character.imageSrcset || undefined"
+        sizes="(max-width: 640px) 60vw, (max-width: 1024px) 50vw, 600px"
+        :width="character.imageWidth || 600"
+        :height="character.imageHeight || 720"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        class="absolute right-0 bottom-0 h-[90%] w-[60%] lg:w-[50%] max-w-[600px] object-contain object-right-bottom opacity-60 z-0 pointer-events-none drop-shadow-2xl"
         style="mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%), linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); mask-composite: intersect; -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%), linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); -webkit-mask-composite: source-in;"
-        alt="Hero Background"
+        :alt="character.name"
       />
       <!-- Gradient overlay for text readability -->
       <div class="absolute inset-0 bg-gradient-to-r from-[#0b0c10] via-[#0b0c10]/80 to-transparent z-0 pointer-events-none"></div>
@@ -412,14 +462,14 @@ onMounted(() => {
         
         <!-- Rarity Badge -->
         <div class="mb-4 animate-pulse">
-          <img v-if="tierIcon" :src="tierIcon" :alt="character.tier" class="h-8 w-auto object-contain drop-shadow-[0_0_15px_rgba(var(--theme-color-rgb),0.8)]" />
+          <img v-if="tierIcon" :src="tierIcon" :alt="character.tier" width="75" height="32" decoding="async" class="h-8 w-auto object-contain drop-shadow-[0_0_15px_rgba(var(--theme-color-rgb),0.8)]" />
         </div>
 
         <div class="flex flex-col space-y-4 mb-10">
           <div class="flex items-center space-x-4">
             <span class="bg-[color:var(--theme-color)] text-[#000000] font-black text-xs tracking-widest px-3 py-1 rounded shadow-sm w-[84px] text-center antialiased flex items-center justify-center leading-none" style="font-family: Arial, sans-serif;">{{ t("detail.typeLabel") }}</span>
             <div class="flex items-center gap-2.5">
-              <img v-if="typeIcon" :src="typeIcon" class="h-6 w-6 object-contain drop-shadow-md" />
+              <img v-if="typeIcon" :src="typeIcon" width="24" height="24" decoding="async" class="h-6 w-6 object-contain drop-shadow-md" alt="" />
               <span class="text-white font-bold text-lg drop-shadow-md">{{ character.type }}</span>
             </div>
           </div>
@@ -427,7 +477,7 @@ onMounted(() => {
           <div class="flex items-center space-x-4">
             <span class="bg-[color:var(--theme-color)] text-[#000000] font-black text-xs tracking-widest px-3 py-1 rounded shadow-sm w-[84px] text-center antialiased flex items-center justify-center leading-none" style="font-family: Arial, sans-serif;">{{ t("detail.factionLabel") }}</span>
             <div class="flex items-center gap-2.5">
-              <img v-if="factionIcon" :src="factionIcon" class="h-6 w-6 object-contain drop-shadow-md" />
+              <img v-if="factionIcon" :src="factionIcon" width="24" height="24" decoding="async" class="h-6 w-6 object-contain drop-shadow-md" alt="" />
               <span class="text-white font-bold text-lg drop-shadow-md">{{ character.faction }}</span>
             </div>
           </div>
@@ -466,6 +516,7 @@ onMounted(() => {
       </div>
     </div>
 
+    <template v-if="character">
     <!-- STATS & BIO SECTION -->
     <div class="flex flex-col xl:flex-row gap-6 mb-12">
       <!-- 3 STAT PANELS -->
@@ -616,7 +667,8 @@ onMounted(() => {
     </div>
 
     <!-- SKILLS SECTION WITH TABS AND ANIMATION -->
-    <div class="mb-16">
+    <div ref="skillsSectionRef" data-testid="character-skills" class="deferred-detail-section mb-16">
+      <template v-if="skillsMediaReady">
       <div class="flex items-center mb-6">
         <span class="text-[#ffb300] font-bold text-xs tracking-widest uppercase">{{ t("detail.skillsLabel") }}</span>
         <div class="flex-grow h-px bg-gray-800 ml-4"></div>
@@ -644,9 +696,9 @@ onMounted(() => {
         <!-- LEFT: ANIMATION PLAYER -->
         <div v-if="activeSkillTab !== 'core'" class="lg:col-span-2 relative w-full aspect-video bg-[#05060a] rounded-xl border border-gray-800 overflow-hidden shadow-2xl flex items-center justify-center group">
           
-          <template v-if="currentExpandedSkillObj?.animation">
-            <video v-if="currentExpandedSkillObj.animation.endsWith('.mp4')" :src="safeUrl(currentExpandedSkillObj.animation.startsWith('/') ? currentExpandedSkillObj.animation : getCharacterImage(currentExpandedSkillObj.animation))" autoplay loop muted class="absolute inset-0 w-full h-full object-cover z-0"></video>
-            <img v-else :src="safeUrl(currentExpandedSkillObj.animation.startsWith('/') ? currentExpandedSkillObj.animation : getCharacterImage(currentExpandedSkillObj.animation))" class="absolute inset-0 w-full h-full object-cover z-0" />
+          <template v-if="skillsMediaReady && currentExpandedSkillObj?.animation">
+            <video v-if="currentExpandedSkillObj.animation.endsWith('.mp4')" :src="safeUrl(currentExpandedSkillObj.animation.startsWith('/') ? currentExpandedSkillObj.animation : getCharacterImage(currentExpandedSkillObj.animation))" autoplay loop muted playsinline preload="metadata" class="absolute inset-0 w-full h-full object-cover z-0"></video>
+            <img v-else :src="safeUrl(currentExpandedSkillObj.animation.startsWith('/') ? currentExpandedSkillObj.animation : getCharacterImage(currentExpandedSkillObj.animation))" loading="lazy" fetchpriority="low" decoding="async" class="absolute inset-0 w-full h-full object-cover z-0" alt="" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 pointer-events-none"></div>
           </template>
           <template v-else>
@@ -677,7 +729,7 @@ onMounted(() => {
               <div class="p-4 flex justify-between items-center bg-gradient-to-r from-[color:var(--theme-color)]/10 to-transparent">
                 <div class="flex items-center gap-4">
                   <div class="w-14 h-14 flex-shrink-0 rounded-full border-2 border-[color:var(--theme-color)] flex items-center justify-center bg-gray-900 shadow-[0_0_10px_rgba(var(--theme-color-rgb),0.3)] overflow-hidden">
-                    <img v-if="getCoreSkillIcon(lvl, coreData)" :src="safeUrl(getCoreSkillIcon(lvl, coreData))" :alt="`Core Level ${lvl.lv}`" class="w-full h-full object-cover transform scale-110" />
+                    <img v-if="getCoreSkillIcon(lvl, coreData)" :src="safeUrl(getCoreSkillIcon(lvl, coreData))" :alt="`Core Level ${lvl.lv}`" width="56" height="56" loading="lazy" fetchpriority="low" decoding="async" class="w-full h-full object-cover transform scale-110" />
                     <span v-else class="text-[color:var(--theme-color)] font-black text-2xl">{{ lvl.lv }}</span>
                   </div>
                   <h3 class="font-bold text-lg text-[color:var(--theme-color)]">
@@ -712,7 +764,7 @@ onMounted(() => {
               <div class="p-4 flex justify-between items-center">
                 <div class="flex items-center gap-4">
                   <div class="w-14 h-14 flex-shrink-0 rounded-full border-2 border-[color:var(--theme-color)] flex items-center justify-center bg-gray-900 shadow-[0_0_10px_rgba(var(--theme-color-rgb),0.3)] overflow-hidden">
-                    <img v-if="skill.icon" :src="safeUrl(skill.icon)" class="w-full h-full object-cover transform scale-110" />
+                    <img v-if="skill.icon" :src="safeUrl(skill.icon)" width="56" height="56" loading="lazy" fetchpriority="low" decoding="async" class="w-full h-full object-cover transform scale-110" alt="" />
                     <span v-else class="text-2xl opacity-80">💥</span>
                   </div>
                   <div class="flex flex-wrap items-center gap-2">
@@ -721,7 +773,7 @@ onMounted(() => {
                     <!-- KEEPSAKE BADGE -->
                     <router-link v-if="skill.keepsakeIcon || (skill.name.toLowerCase().includes('siêu') && character?.keepsakeIcon)" :to="`/keepsake/${character.id}`" class="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-red-900/80 to-red-600/50 border border-red-500/50 rounded-full ml-2 shadow-[0_0_10px_rgba(255,0,0,0.4)] cursor-pointer hover:scale-105 hover:shadow-[0_0_15px_rgba(255,0,0,0.6)] transition-all duration-300">
                       <span class="text-xs text-red-100 uppercase tracking-wider font-bold">{{ t("detail.unlockedBy") }}</span>
-                      <img :src="safeUrl(getKeepsakeImage(skill))" class="h-10 w-auto object-contain drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] animate-pulse" alt="Keepsake" title="Xem chi tiết Vũ Khí Duyên" />
+                      <img :src="safeUrl(getKeepsakeImage(skill))" width="80" height="40" loading="lazy" fetchpriority="low" decoding="async" class="h-10 w-auto object-contain drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] animate-pulse" alt="Keepsake" title="Xem chi tiết Vũ Khí Duyên" />
                     </router-link>
 
                     <!-- Stars for Extreme Passives -->
@@ -766,10 +818,12 @@ onMounted(() => {
 
       </div>
     </transition>
+      </template>
+      <div v-else class="min-h-[620px]" aria-hidden="true"></div>
     </div>
   
     <!-- EFFECT GLOSSARY -->
-    <div class="mb-16" v-if="chuThichHieuUng && chuThichHieuUng.length > 0">
+    <div class="deferred-detail-section mb-16" v-if="skillsMediaReady && chuThichHieuUng && chuThichHieuUng.length > 0">
       <div class="flex items-center mb-6">
         <span class="text-[color:var(--theme-color)] font-bold text-xs tracking-widest uppercase">{{ t("detail.effectsLabel") }}</span>
         <div class="flex-grow h-px bg-gray-800 ml-4"></div>
@@ -786,10 +840,16 @@ onMounted(() => {
         </div>
       </div>
     </div>
+    </template>
 </main>
 </template>
 
 <style scoped>
+.deferred-detail-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
+}
+
 .flash-highlight {
   animation: flash 1s ease-out;
 }

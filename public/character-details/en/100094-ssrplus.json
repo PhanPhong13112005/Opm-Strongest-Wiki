@@ -1,0 +1,138 @@
+{
+  "id": "100094-ssrplus",
+  "name": "Garou",
+  "imageURL": "/Characters/optimized/100094-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Grappler",
+  "faction": "Martial Artist",
+  "roles": [
+    "Unyielding Breakthrough",
+    "Spec. Guard"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 103
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 30% ATK Direct DMG to a single target.",
+      "icon": "/Skill/Garou (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 190% ATK Direct DMG to a single target. On [Crit], if the target has no death-immunity, applies [ImmuneNotDeath] to it (disables its undying/death-prevention effect).",
+      "icon": "/Skill/Garou (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 190% > 240% ATK Direct DMG to a single target. Applies [ImmuneNotDeath] to the target if it has no death-immunity (on Crit > always, no [Crit] required). If the target already had death-immunity, heals self for a portion of Max HP instead.",
+      "keepsakeIcon": "/Keepsake/Garou (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Garou (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases HP by (+20). Removes [Stun] from himself after any character's action. After an ally acts, launches an [Ultimate Follow-up] on 1 random enemy in the [Ignore DMG] state, up to 2 times per round.[Ultimate Follow-up]: deals 50% of the Ultimate skill's DMG (same effects).",
+      "icon": "/Skill/Garou (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Ultimate Follow-up] DMG 50% &gt; 60% (still up to 2 times per round).",
+      "icon": "/Skill/Garou (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Ultimate Follow-up] DMG 60% &gt; 70% (still up to 2 times per round).",
+      "icon": "/Skill/Garou (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "At the start of match, Garou obtains 2x unyielding effect based on 50% MAX HP. Once unyielding effect is reduced, Garou activates specialised protection effect (120% of MAX HP, removes damage, stackable with extra HP effects, remove damage will not be 5x of original HP).",
+      "icon": "/Skill/Garou (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Once allies under unyielding/special unyielding condition is expired, Garou obtains 100% of own MAX HP specialised protection, max 3 times per match.",
+      "icon": "/Skill/Garou (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Garou (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Crit]",
+      "desc": "Đòn chí mạng gây thêm sát thương; Some units may be immune to [Crit]."
+    },
+    {
+      "term": "[Mark]",
+      "desc": "Mark a unit, unlocking a raid condition or bonus effect associated with the mark."
+    },
+    {
+      "term": "[Death Immunity]",
+      "desc": "Unfavorable effects negate the target's invincibility/anti-death effects, allowing it to be knocked down as normal."
+    },
+    {
+      "term": "[Cleanse]",
+      "desc": "Removes existing effects/buffs on all enemies."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Garou (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/05/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Generate Shield"
+  ],
+  "classLevel": "Martial_Artist",
+  "releaseSea": "01/09/2022",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100094-ssrplus-360.webp 360w, /Characters/optimized/100094-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

@@ -1,0 +1,139 @@
+{
+  "id": "100013-ssrplus",
+  "name": "Zombieman",
+  "imageURL": "/Characters/optimized/100013-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Duelist",
+  "faction": "Hero",
+  "roles": [
+    "Row Speed Up",
+    "Encourage Allies"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 120
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals Direct DMG of 40% ATK to a single target.",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals Direct DMG of 90% ATK to the target's row. If own SPD (×0.9) exceeds the target's SPD, steals the SPD difference as [Super Speed]. Grants [Super Speed] to own row for 2 turns.",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals Direct DMG of 90% > 125% ATK to the target's row. If own SPD (×0.9) exceeds the target's SPD, steals the SPD difference as [Super Speed]. Grants [Super Speed] to own row for 2 turns.",
+      "keepsakeIcon": "/Keepsake/Zombieman (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). At the start of battle, grants [Specialized Acceleration] (increases SPD by 20%; if the main target's SPD is lower than Zombieman, deals 500% ATK as Extra DMG). Before battle begins, [Encourage] allies (gain 2 energy at the start of the round, lasting 3 rounds). Triggers [Resurrection] after taking fatal DMG (while an ally is present, recovers 60% HP before action, up to 3 times).",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Specialized Acceleration] SPD +20% &gt; +25%. [Encourage] 2 &gt; 3 energy.",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Specialized Acceleration] SPD +25% &gt; +30%. [Encourage] duration 3 &gt; 5 rounds. [Resurrection] up to 3 &gt; 4 times.",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "Before battle begins, [Encourage] the allies (gains 2 energy at the start of the round, lasts 3 rounds). Triggers [Resurrection] after receiving fatal damage (When ally is present, recovers 60% HP before action, up to 3 times)",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Encourage allies 2 energy > 3 energy Last 3 rounds > 5 rounds Trigger Resurrection 3x > 4x",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Zombieman (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Revive]",
+      "desc": "The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match."
+    },
+    {
+      "term": "[Resurrect]",
+      "desc": "Status returns downed units to battle, granting a limited number of respawns that anti-revive effects can remove."
+    },
+    {
+      "term": "[Hyper Speed]",
+      "desc": "Speed ​​buff that while in effect allows the bearer and up to 6 allies to act against and overcome enemies with lower speed."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Zombieman (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/03/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "Core",
+    "Heal",
+    "DMG (HP)",
+    "Generate Shield"
+  ],
+  "bondList": "Clone 1 + Paquino Family",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/07/2023",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100013-ssrplus-360.webp 360w, /Characters/optimized/100013-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

@@ -1,0 +1,95 @@
+{
+  "id": "100013-ssr",
+  "name": "Zombieman",
+  "tier": "SSR",
+  "type": "Duelist",
+  "faction": "Hero",
+  "roles": [
+    "DMG (ATK)",
+    "Support",
+    "Core",
+    "Heal",
+    "DMG (HP)",
+    "Generate Shield"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 382,
+    "hp": 2480,
+    "def": 97,
+    "spd": 96
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK (+10) damage to a single target, with a 100% chance to inflict [Injured] on the struck target for 2 turns (when attacked, takes additional [Injured] damage equal to 100% ATK).",
+      "icon": "/Skill/Zombieman (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals a 5-hit combo to a single target for 48% ATK (+2) damage, and simultaneously heals all allies for 100% ATK worth of HP.",
+      "icon": "/Skill/Zombieman (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals a 5-hit combo to a single target for 60% ATK (+2) damage, and simultaneously heals all allies for 150% ATK worth of HP.",
+      "icon": "/Skill/Zombieman (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Zombieman (SSR)/Keepsake_SSR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently gains +20 HP. Also grants [Regeneration] (while allies are present, before your next action restore 10% HP and keep fighting, triggering up to 4 times).After taking fatal damage, deals additional damage equal to 60% ATK to all enemies.",
+      "icon": "/Skill/Zombieman (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently gains +20 HP. Also grants [Regeneration] (while allies are present, before your next action restore 15% HP and keep fighting, triggering up to 6 times).After taking fatal damage, deals additional damage equal to 80% ATK to all enemies.",
+      "icon": "/Skill/Zombieman (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently gains +20 HP. Also grants [Regeneration] (while allies are present, before your next action restore 18% HP and keep fighting, triggering up to 6 times).After taking fatal damage, deals additional damage equal to 90% ATK to all enemies.",
+      "icon": "/Skill/Zombieman (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100013-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Zombieman (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Regeneration]",
+      "desc": "Restores Health over time or before the unit's next action."
+    }
+  ],
+  "releaseDate": "01/12/2020",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/11/2020",
+  "releaseTrung": "01/07/2020",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100013-ssr-360.webp 360w, /Characters/optimized/100013-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

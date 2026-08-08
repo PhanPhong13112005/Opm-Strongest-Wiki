@@ -1,0 +1,94 @@
+{
+  "id": "100010-ssr",
+  "name": "Flashy Flash",
+  "imageURL": "/Characters/optimized/100010-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Duelist",
+  "faction": "Hero",
+  "roles": [
+    "Collapse",
+    "Follow-up"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 409,
+    "hp": 2300,
+    "def": 97,
+    "spd": 110
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Strikes a single target with 2 combo hits, dealing 60% ATK DMG each, and increases own Speed by 20% for 1 turn.",
+      "icon": "/Skill/Flashy Flash (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Strikes each enemy in the entire row with 5 combo hits, dealing 28% ATK DMG each, and gains a [Tenacity] effect with power equal to 60% of max HP. Also has a 70% chance to inflict [Collapse] on hit targets for 2 turns (DMG reduction rate lowered by 30%).",
+      "icon": "/Skill/Flashy Flash (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Strikes each enemy in the entire row with 5 combo hits, dealing 34% ATK DMG each, and gains a [Tenacity] effect with power equal to 65% of max HP. Also has an 80% chance to inflict [Collapse] on hit targets for 2 turns (DMG reduction rate lowered by 35%).",
+      "keepsakeIcon": "/Keepsake/Flashy Flash (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Flashy Flash (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP. When an enemy acts and its Speed is lower than his own, performs a [Follow-up] (attacking with 80% of the basic attack's DMG and effects, up to 3 times per turn). After an ally performs a follow-up, Flashy Flash deals 80% ATK extra DMG to all enemies, up to 3 times per turn.",
+      "icon": "/Skill/Flashy Flash (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP. When an enemy acts and its Speed is lower than his own, performs a [Follow-up] (attacking with 80% of the basic attack's DMG and effects, up to 4 times per turn). After an ally performs a follow-up, Flashy Flash deals 90% ATK extra DMG to all enemies, up to 3 times per turn.",
+      "icon": "/Skill/Flashy Flash (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP. When an enemy acts and its Speed is lower than his own, performs a [Follow-up] (attacking with 80% of the basic attack's DMG and effects, up to 4 times per turn). After an ally performs a follow-up, Flashy Flash deals 100% ATK extra DMG to all enemies, up to 3 times per turn.",
+      "icon": "/Skill/Flashy Flash (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Tenacity]",
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Flashy Flash (SSR)/Keepsake_SSR.png",
+  "releaseDate": "01/02/2021",
+  "classLevel": "Class_S",
+  "releaseSea": "01/01/2020",
+  "releaseTrung": "01/09/2019",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100010-ssr-360.webp 360w, /Characters/optimized/100010-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

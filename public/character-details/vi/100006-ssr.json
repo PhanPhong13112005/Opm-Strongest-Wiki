@@ -1,0 +1,90 @@
+{
+  "id": "100006-ssr",
+  "name": "Tù Nhân Du Hí",
+  "imageURL": "/Characters/optimized/100006-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Giảm Công",
+    "Sát Thương Lan"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 365,
+    "hp": 2192,
+    "def": 93,
+    "spd": 96
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST tấn công lên mục tiêu đơn.",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 5 đòn liên kích lên mục tiêu đơn hàng sau gây 42% ST tấn công, và khiến mục tiêu rơi vào [Suy Yếu] (giảm 40% ST tấn công trong 2 lượt).",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung 5 đòn liên kích lên mục tiêu đơn hàng sau gây 53% ST tấn công, và khiến mục tiêu rơi vào [Suy Yếu] (giảm 50% ST tấn công trong 2 lượt).",
+      "keepsakeIcon": "/Keepsake/Puri-Puri Prisoner (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu của bản thân. Đòn cuối cùng gây ST lan tỏa bằng 40% ST tấn công lên các địch xung quanh mục tiêu; Chí mạng tăng ST lan tỏa thêm 1 lần, cộng dồn tối đa 2 lần.",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu của bản thân. Đòn cuối cùng gây ST lan tỏa bằng 45% ST tấn công lên các địch xung quanh mục tiêu; Chí mạng tăng ST lan tỏa thêm 1 lần, cộng dồn tối đa 3 lần.",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu của bản thân. Đòn cuối cùng gây ST lan tỏa bằng 48% ST tấn công lên các địch xung quanh mục tiêu; Chí mạng tăng ST lan tỏa thêm 1 lần, cộng dồn tối đa 3 lần.",
+      "icon": "/Skill/Puri-Puri Prisoner (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Làm Suy Yếu]",
+      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Puri-Puri Prisoner (SSR)/Keepsake_SSR.png",
+  "releaseDate": "16/06/2020",
+  "classLevel": "Class_S",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100006-ssr-360.webp 360w, /Characters/optimized/100006-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

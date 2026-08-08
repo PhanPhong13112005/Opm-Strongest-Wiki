@@ -1,0 +1,93 @@
+{
+  "id": "100017-ssr",
+  "name": "Subterranean King",
+  "imageURL": "/Characters/optimized/100017-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Duelist",
+  "faction": "Monster",
+  "roles": [
+    "Burn",
+    "Burn Follow-up"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 365,
+    "hp": 2192,
+    "def": 93,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals a 2-hit combo of 65% ATK DMG to a single target.",
+      "icon": "/Skill/Subterranean King (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals a 5-hit combo of 28% ATK DMG to each enemy in the entire row, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 80% ATK), and a 50% chance to inflict [Burn] on other targets in the same row for 2 turns (DoT equal to 80% ATK).",
+      "icon": "/Skill/Subterranean King (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals a 5-hit combo of 35% ATK DMG to each enemy in the entire row, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 90% ATK), and a 50% chance to inflict [Burn] on other targets in the same row for 2 turns (DoT equal to 90% ATK).",
+      "keepsakeIcon": "/Keepsake/Subterranean King (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Subterranean King (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by 20%. After an enemy in the [Burn] state acts, Subterranean King immediately performs a [Follow-up] (attacking with 80% of the Basic Attack's DMG and effects, up to 3 times per turn).",
+      "icon": "/Skill/Subterranean King (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by 20%. After an enemy in the [Burn] state acts, Subterranean King immediately performs a [Follow-up] (attacking with 120% of the Basic Attack's DMG and effects, up to 3 times per turn).",
+      "icon": "/Skill/Subterranean King (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by 20%. After an enemy in the [Burn] state acts, Subterranean King immediately performs a [Follow-up] (attacking with 130% of the Basic Attack's DMG and effects, up to 3 times per turn).",
+      "icon": "/Skill/Subterranean King (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Thiêu Đốt]",
+      "desc": "Continuous fire damage over time to the target."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Subterranean King (SSR)/Keepsake_SSR.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "releaseDate": "16/06/2020",
+  "classLevel": "Demon",
+  "imageSrcset": "/Characters/optimized/100017-ssr-360.webp 360w, /Characters/optimized/100017-ssr-600.webp 400w",
+  "imageWidth": 400,
+  "imageHeight": 400
+}

@@ -1,0 +1,93 @@
+{
+  "id": "100034-sr",
+  "name": "Sứ Giả Biển Sâu",
+  "roles": [
+    "Hỗ Trợ",
+    "Tốc Độ"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 168,
+    "hp": 1010,
+    "def": 43,
+    "spd": 93
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tấn công mục tiêu đơn với 2 đòn liên kích, mỗi đòn gây 50% ST sát thương.",
+      "icon": "/Skill/Messenger of the Seafolk (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tấn công toàn bộ địch với 3 đòn liên kích, mỗi đòn gây 27% ST sát thương, với 100% tỉ lệ gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (sát thương theo thời gian bằng 20% ST).",
+      "icon": "/Skill/Messenger of the Seafolk (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tấn công toàn bộ địch với 3 đòn liên kích, mỗi đòn gây 27% ST sát thương, với 100% tỉ lệ gây [Ăn Mòn] lên mục tiêu chính và 50% tỉ lệ gây [Ăn Mòn] lên những kẻ địch xung quanh mục tiêu chính trong 2 lượt (sát thương theo thời gian bằng 20% ST).",
+      "icon": "/Skill/Messenger of the Seafolk (SR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Messenger of the Seafolk (SR)/Keepsake_SR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng 20 Máu cho bản thân. Gây [Suy Yếu] lên kẻ địch đang bị [Ăn Mòn] (giảm 20% ST trong 1 lượt).",
+      "icon": "/Skill/Messenger of the Seafolk (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng 20 Máu cho bản thân. Gây [Suy Yếu] lên kẻ địch đang bị [Ăn Mòn] (giảm 30% ST trong 1 lượt).",
+      "icon": "/Skill/Messenger of the Seafolk (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng 20 Máu cho bản thân. Gây [Suy Yếu] lên kẻ địch đang bị [Ăn Mòn] (giảm 37% ST trong 1 lượt).",
+      "icon": "/Skill/Messenger of the Seafolk (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SR",
+  "imageURL": "/Characters/optimized/100034-sr-600.webp",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Messenger of the Seafolk (SR)/Keepsake_SR.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "effects": [
+    {
+      "term": "[Làm Suy Yếu]",
+      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Ăn Mòn]",
+      "desc": "Hiệu ứng sát thương theo thời gian dạng ăn mòn, mỗi lượt gây sát thương bằng một tỷ lệ ST (ví dụ 300%) lên mục tiêu."
+    }
+  ],
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100034-sr-360.webp 360w, /Characters/optimized/100034-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

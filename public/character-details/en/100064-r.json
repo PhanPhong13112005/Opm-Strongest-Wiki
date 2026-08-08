@@ -1,0 +1,82 @@
+{
+  "id": "100064-r",
+  "name": "Kamakyuri",
+  "imageURL": "/Characters/optimized/100064-r-600.webp",
+  "tier": "R",
+  "type": "Grappler",
+  "faction": "Monster",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 155,
+    "hp": 927,
+    "def": 39,
+    "spd": 85
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 90% ATK DMG to a single target.",
+      "icon": "/Skill/Kamakyuri (R)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 190% ATK DMG to a single target, with a 100% chance to increase self ATK by 10% for 2 turns.",
+      "icon": "/Skill/Kamakyuri (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 200% ATK DMG to a single target, with a 100% chance to increase self ATK by 20% for 2 turns.",
+      "keepsakeIcon": "/Keepsake/Kamakyuri (R)/Keepsake_R.png",
+      "icon": "/Skill/Kamakyuri (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases self max HP by 20%. Before taking action, increases self Crit Rate by 5% for 1 turn.",
+      "icon": "/Skill/Kamakyuri (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases self max HP by 20%. Before taking action, increases self Crit Rate by 10% for 1 turn.",
+      "icon": "/Skill/Kamakyuri (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases self max HP by 20%. Before taking action, increases self Crit Rate by 13% for 1 turn.",
+      "icon": "/Skill/Kamakyuri (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Kamakyuri (R)/Keepsake_R.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100064-r-360.webp 360w, /Characters/optimized/100064-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

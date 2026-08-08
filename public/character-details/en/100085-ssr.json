@@ -1,0 +1,97 @@
+{
+  "id": "100085-ssr",
+  "name": "Vaccine Man V2",
+  "tier": "SSR",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "DMG (ATK)",
+    "DMG (HP)",
+    "Revive"
+  ],
+  "duyen": "Awakened",
+  "baseStats": {
+    "atk": 391,
+    "hp": 2578,
+    "def": 109,
+    "spd": 96
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 2 combo strikes to a single target for 60% ATK DMG, with a 100% chance to inflict [Field] on the target for 1 turn.[Field]: Takes DoT equal to 150% ATK before taking action.",
+      "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 3 combo strikes to all enemies for 50% ATK DMG; if in the [Giant] state, increases DoT Boost by 50%. Has a 100% chance to inflict [Field] on all enemies for 1 turn.[Field]: Takes DoT equal to 160% ATK before taking action.",
+      "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 3 combo strikes to all enemies for 60% ATK DMG; if in the [Giant] state, increases DoT Boost by 50%. Has a 100% chance to inflict [Field] on all enemies for 1 turn.[Field]: Takes DoT equal to 230% ATK before taking action.",
+      "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Vaccine Man V2 (SSR)/Keepsake_SSR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). After any character's action, [detonates] all enemy [Fields] 3 times per round (instantly converts the original DMG into 100% Detonation DMG). After Detonation, enters [Giant] state. Revives with 50% Max HP after taking fatal damage (up to 2 times).",
+      "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Detonation DMG 100% &gt; 110%. Revive HP 50% &gt; 60% Max HP.",
+      "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Detonation DMG 110% &gt; 120%. Revive HP 60% &gt; 80% Max HP.",
+      "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100085-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Vaccine Man V2 (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "effects": [
+    {
+      "term": "[Detonate]",
+      "desc": "Activate a stack of damage over time or stored [Collapse] to instantly explode, turning it into an instant multiplier (e.g. 3 times the stored damage)."
+    },
+    {
+      "term": "[Force Field]",
+      "desc": "Tatsumaki's damage over time area; Every time an enemy takes damage from the Field, it will accumulate a level of Charge (maximum 4 levels)."
+    }
+  ],
+  "releaseDate": "01/05/2022",
+  "classLevel": "Dragon",
+  "releaseSea": "01/12/2021",
+  "releaseTrung": "01/08/2021",
+  "imageSrcset": "/Characters/optimized/100085-ssr-360.webp 360w, /Characters/optimized/100085-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

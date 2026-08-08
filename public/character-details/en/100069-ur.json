@@ -1,0 +1,141 @@
+{
+  "id": "100069-ur",
+  "name": "Sonic V2",
+  "tier": "UR",
+  "type": "Duelist",
+  "faction": "Outlaw",
+  "roles": [
+    "DMG (ATK)",
+    "Support",
+    "Weaken",
+    "Generate Shield",
+    "Speed"
+  ],
+  "duyen": "V2",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 135
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Attack a single target with 2 consecutive strikes for 120% ATK DMG.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deal 4 consecutive hits to the entire enemy row, causing Direct DMG equal to 900% ATK. Make same-row teammates permanently gain [Specialized Speed Up]. Make all allies gain [Speed Field Attack] for 3 rounds. — [Specialized Speed Up]: Speed is increased to 94% of Sonic's; if the teammate's own speed is higher, it stays unchanged. [Speed Field Attack]: when attacking in PvP, if the target's speed is not higher than the attacker's, total DMG to the target is increased by 20%.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Ultimate DMG 900% > 1160% ATK. [Specialized Speed Up] to 94% > 98% of Sonic's speed. [Speed Field Attack] DMG increase 20% > 30%.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Sonic V2 (UR)/Keepsake_UR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Gains 60% [Instant DMG Evasion] at the start of battle. Immune to [Deterrence], [Stun] and [Specialized Stun]. — [Instant DMG Evasion]: Direct DMG, Ex. DMG, Charge DMG and Berserk DMG only deal 1 DMG.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Instant DMG Evasion] 60% > 70%.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Instant DMG Evasion] 70% > 80%.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "On entry, increases own [Specialized Speed] by 39% and teammates' by 20%. All allies permanently gain 30% [Speed Field Defense]. Before battle, [Encourage] the team (gain 2 extra energy for 3 rounds at the start of the round). — [Speed Field Defense]: when attacked in PvP, if the attacker's speed is not higher than the defender's, DMG received is reduced.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Own [Specialized Speed] 35% > 42%. Allies' [Specialized Speed] 20% > 30%. [Speed Field Defense] 30% > 40% (others), 60% for Sonic.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100069-ur-600.webp",
+  "debut": "07 / 2025",
+  "keepsakeIcon": "/Keepsake/Sonic V2 (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/07/2025",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "Debuff",
+    "Generate Shield",
+    "Speed"
+  ],
+  "effects": [
+    {
+      "term": "[Stun]",
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+    },
+    {
+      "term": "[Encourage]",
+      "desc": "Power up at the beginning of each round for several rounds."
+    },
+    {
+      "term": "[Threaten]",
+      "desc": "The stun control effect renders the target unable to act and reduces its overall damage immunity by 30%."
+    }
+  ],
+  "classLevel": "Outlaw",
+  "releaseSea": "01/11/2025",
+  "classIcon": "/Class/Outlaw.png",
+  "imageSrcset": "/Characters/optimized/100069-ur-360.webp 360w, /Characters/optimized/100069-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

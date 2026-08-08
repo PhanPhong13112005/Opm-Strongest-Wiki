@@ -1,0 +1,125 @@
+{
+  "id": "100103-ssrplus",
+  "name": "Phoenix Man",
+  "tier": "SSR+",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Heal",
+    "DMG (HP)",
+    "Revive"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 30% ATK DMG to a single target.",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 75% ATK DMG to a single target and marks self. Deals additional DMG equal to 40% of the target's max HP, then marks the target for [Banish].",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 75% ATK DMG to a single target and marks self. Deals additional DMG equal to 40% > 50% of the target's max HP, then marks the target for [Banish].",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Phoenix Man (SSRplus)/Keepsake_SSRplus.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases self HP by 20%. On entry, gains +100% max HP and becomes immune to [Banish] and to max-HP reduction. At the start of each round, recovers 50% of max HP. Each turn end, gains a counter mark that lets self [Banish] 1 marked enemy from battle. After taking fatal damage, revives, up to 1 time.",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases self HP by 20%. On entry, gains +100% max HP and becomes immune to [Banish] and to max-HP reduction. At the start of each round, recovers 50% of max HP. Each turn end, gains a counter mark that lets self [Banish] 1 marked enemy from battle. After taking fatal damage, revives, up to 1 > 2 times.",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases self HP by 20%. On entry, gains +100% max HP and becomes immune to [Banish] and to max-HP reduction. At the start of each round, recovers 50% of max HP. Each turn end, gains a counter mark that lets self [Banish] 1 marked enemy from battle. After taking fatal damage, revives, up to 2 times.",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "Immediately let defeated allies return to battle with 100% HP (total 4 times per battle) (Effect will be removed if Phoenixman dies before the number of revival is used up.)",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Revive allies 4x > 6x Additional effect - Grants allies 30% non-CRIT DMG FREE (cannot co-exist with Agility)\nThings to note:\nSSR+ CK does not reflect damage if removed from battle Cannot remove Bosses (pve) from the battle, like Boros Club Challenge (obviously) Cannot remove units that are dead but waiting to revive (eg ZBM on the ground) If there is only one enemy unit left, then cannot remove that unit from the battle",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Phoenix Man (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100103-ssrplus-600.webp",
+  "debut": "03 / 2022",
+  "keepsakeIcon": "/Keepsake/Phoenix Man (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Demon.png",
+  "releaseTrung": "03 / 2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Heal",
+    "DMG (HP)",
+    "Revive"
+  ],
+  "bondList": "Silverfang (Bang) + Bomb (Bengpu) + Genos",
+  "effects": [],
+  "classLevel": "Demon",
+  "imageSrcset": "/Characters/optimized/100103-ssrplus-360.webp 360w, /Characters/optimized/100103-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

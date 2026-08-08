@@ -1,0 +1,82 @@
+{
+  "id": "100064-r",
+  "name": "Kamakyuri",
+  "imageURL": "/Characters/optimized/100064-r-600.webp",
+  "tier": "R",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 155,
+    "hp": 927,
+    "def": 39,
+    "spd": 85
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 90% ST sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Kamakyuri (R)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 190% ST sát thương lên mục tiêu đơn, với 100% tỉ lệ tăng 10% ST của bản thân trong 2 lượt.",
+      "icon": "/Skill/Kamakyuri (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 200% ST sát thương lên mục tiêu đơn, với 100% tỉ lệ tăng 20% ST của bản thân trong 2 lượt.",
+      "keepsakeIcon": "/Keepsake/Kamakyuri (R)/Keepsake_R.png",
+      "icon": "/Skill/Kamakyuri (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Trước khi hành động, tăng 5% tỉ lệ Bạo Kích của bản thân trong 1 lượt.",
+      "icon": "/Skill/Kamakyuri (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Trước khi hành động, tăng 10% tỉ lệ Bạo Kích của bản thân trong 1 lượt.",
+      "icon": "/Skill/Kamakyuri (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Trước khi hành động, tăng 13% tỉ lệ Bạo Kích của bản thân trong 1 lượt.",
+      "icon": "/Skill/Kamakyuri (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Kamakyuri (R)/Keepsake_R.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100064-r-360.webp 360w, /Characters/optimized/100064-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

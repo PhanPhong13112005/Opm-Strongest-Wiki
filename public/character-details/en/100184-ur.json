@@ -1,0 +1,142 @@
+{
+  "id": "100184-ur",
+  "name": "Boros",
+  "imageURL": "/Characters/optimized/100184-ur-600.webp",
+  "tier": "UR",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Main DPS (ATK)"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 106
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK to a single target. After casting the first Ultimate, can reduce [No Crit No Death].",
+      "icon": "/Skill/Boros (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Reduces the target's [No Crit No Death] by 1 turn.Deals 7000% ATK of Direct DMG to a single target (only affected by high-level DMG Free), negates 45% [Specialized Evade] and [Non-Crit DMG Free], and pierces [Unyielding] and [Specialized Unyielding].",
+      "icon": "/Skill/Boros (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Increase Crit Rate by 50%Ultimate ATK DMG 7000% → 10,000%",
+      "keepsakeIcon": "/Keepsake/Boros (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Boros (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). After taking an action, self and surrounding allies trigger [Evolve] on the target. Before each round, restores HP to all allies equal to 300% of Max HP, lasting 2 rounds. Permanently gains +50% [Non-Crit DMG Free].[Evolve]: immediately cancels the target's [Unyielding] and [Ignore DMG] statuses.[Non-Crit DMG Free]: effective against all DMG types; cannot co-exist with [Agility].",
+      "icon": "/Skill/Boros (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). After all allies take an action, trigger [Evolve] on the target. Before each round, restores HP to all allies equal to 350% of Max HP, lasting 2 rounds. Permanently gains +55% [Non-Crit DMG Free].",
+      "icon": "/Skill/Boros (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). After all allies take an action, trigger [Evolve] on the target. Before each round, restores HP to all allies equal to 350% of Max HP, lasting 3 rounds. Permanently gains +60% [Non-Crit DMG Free].",
+      "icon": "/Skill/Boros (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "(Basic Core Effect) (1 Grappler, 2 Esper): Grants 3 energy per round. In the first 3 rounds, allies gain 30% Combat DMG increase.(Advance Core Effect) (1 Grappler, 1 Duelist, 2 Esper): When battle begins, grants allies permanent [Excess Recovery] (excess HP healing is converted to [HP Shield] to offset DMG received, cannot exceed 20x Max HP). All allies gain 30% Combat immunity. When battle begins, front-row allies are healed by 80% of their Max HP, lasting 3 rounds.",
+      "icon": "/Skill/Source/100184-ur/awakened.webp",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "(Basic & Advanced Core): Combat DMG increase 30% > 50%. When allies perform a follow-up, gain another 1 energy (1x per round).",
+      "icon": "/Skill/Source/100184-ur/awakened.webp",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "(Basic & Advanced Core): Combat DMG increase 30% > 50%. When allies perform a follow-up, gain another 1 energy (2x per round).",
+      "icon": "/Skill/Source/100184-ur/awakened.webp",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Spec. Unyielding]",
+      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+    },
+    {
+      "term": "[Unyielding]",
+      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+    },
+    {
+      "term": "[Non-Crit Immunity]",
+      "desc": "Survival buff that, when present, prevents the unit from being crited and cannot die, retaining 70% of its health for the duration of the effect."
+    },
+    {
+      "term": "[Non-Crit DMG Immunity]",
+      "desc": "Reduces all non-critical damage (usually to 1). Cannot survive and avoid Agility."
+    },
+    {
+      "term": "[Detonate]",
+      "desc": "Cumulative explosive classes that each (up to a limit) add one target to the Ultimate skill."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Boros (UR)/Keepsake_UR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/10/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Heal"
+  ],
+  "classLevel": "Dragon",
+  "releaseSea": "01/02/2024",
+  "imageSrcset": "/Characters/optimized/100184-ur-360.webp 360w, /Characters/optimized/100184-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

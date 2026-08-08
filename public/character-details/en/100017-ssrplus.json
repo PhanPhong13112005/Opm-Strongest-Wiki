@@ -1,0 +1,142 @@
+{
+  "id": "100017-ssrplus",
+  "name": "Subterranean King",
+  "imageURL": "/Characters/optimized/100017-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Duelist",
+  "faction": "Monster",
+  "roles": [
+    "Full Breakthrough",
+    "Spec. Burn"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 107
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 60% ATK Direct DMG to a single target.",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 60% ATK Direct DMG to all enemies, then applies [No Revival] (ImmuneNotDeathMix) to all enemies that are not already death-immune, preventing them from becoming immune to death.",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Direct DMG to all enemies increases 60% > 100% ATK. Still applies [No Revival] to all enemies that are not already death-immune.",
+      "keepsakeIcon": "/Keepsake/Subterranean King (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by 20%. When battle begins, obtains [Specialized Protection] equal to 800% ATK (absorbs incoming damage, stacks with extra-HP effects; total damage absorbed cannot exceed 15x his original HP).",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Specialized Protection] 800% &gt; 1500% ATK.",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Specialized Protection] 1500% &gt; 2200% ATK.",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "Has a 50% chance to inflict [Specialized Burn] (DOT by 150% ATK. After any character acts, transfers the effect to a random target, disappears after transferring 3 times). Absorbs [Specialized Burn] DOT DMG on enemies to restore [Specialized Protection].",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Inflict chance 50% > 90% Specialized Burn DoT 150% > 200% Permanently grants 30% bonus ULT DMG\n1. [Specialized Burn] can be affected by HIT%/RES%. 2. [Specialized Burn] will first transfer to characters which are not in any [Unyielding] state. 3. [Specialized Burn] can be stacked up to 6 times. 4. M.Choze and Vaccine Man can deal Extra DMG by the [Specialized Burn] 5. [Specialized Burn] can transfer to [Revived] and [Resurrected] characters. 6. [Specialized Burn] can be affected by Formal Set. 7. [Specialized Burn] is not affected by [Evade].",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Spec. Protect]",
+      "desc": "PvP shields reduce or negate damage to allies."
+    },
+    {
+      "term": "[Unyielding]",
+      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+    },
+    {
+      "term": "[Heal Block]",
+      "desc": "The death immunity blocking debuff is applied to enemies that are not immune to death, preventing them from becoming immune to death or respawns."
+    },
+    {
+      "term": "[Dodge]",
+      "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+    },
+    {
+      "term": "[Spec. Burn]",
+      "desc": "Burning PvP tier — stronger burst damage, harder to deal with."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Subterranean King (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "releaseTrung": "07 / 2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Debuff"
+  ],
+  "classLevel": "Demon",
+  "imageSrcset": "/Characters/optimized/100017-ssrplus-360.webp 360w, /Characters/optimized/100017-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

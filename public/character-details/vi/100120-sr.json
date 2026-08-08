@@ -1,0 +1,89 @@
+{
+  "id": "100120-sr",
+  "name": "Rinrin",
+  "tier": "SR",
+  "type": "Giác Đấu",
+  "faction": "Võ Thuật",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hỗ Trợ",
+    "Hồi Phục"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 178,
+    "hp": 1157,
+    "def": 49,
+    "spd": 95
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 34% ST (+3) sát thương lên mục tiêu đơn với đòn liên hoàn 3 đòn. Có 100% cơ hội khiến mục tiêu chịu [Nội Thương] (khi bị đánh trúng, gây thêm sát thương Nội Thương bằng 100% ST của Linh Linh; hiệu ứng biến mất sau khi kích hoạt).",
+      "icon": "/Skill/Rinrin (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 35% ST (+2) sát thương lên mục tiêu đơn với đòn liên hoàn 4 đòn, và hồi Máu bằng 100% ST cho toàn bộ đồng minh.",
+      "icon": "/Skill/Rinrin (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 35% ST (+2) sát thương lên mục tiêu đơn với đòn liên hoàn 4 đòn, và hồi Máu bằng 120% ST cho toàn bộ đồng minh.",
+      "icon": "/Skill/Rinrin (SR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Rinrin (SR)/Keepsake_SR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu bản thân. Khi mở màn, cung cấp 50% tỷ lệ trị liệu cho toàn bộ đồng minh trong 3 lượt.",
+      "icon": "/Skill/Rinrin (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu bản thân. Khi mở màn, cung cấp 60% tỷ lệ trị liệu cho toàn bộ đồng minh trong 3 lượt.",
+      "icon": "/Skill/Rinrin (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu bản thân. Khi mở màn, cung cấp 70% tỷ lệ trị liệu cho toàn bộ đồng minh trong 3 lượt.",
+      "icon": "/Skill/Rinrin (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100120-sr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Rinrin (SR)/Keepsake_SR.png",
+  "effects": [
+    {
+      "term": "[Nội Thương]",
+      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+    }
+  ],
+  "classLevel": "Martial_Artist",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100120-sr-360.webp 360w, /Characters/optimized/100120-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

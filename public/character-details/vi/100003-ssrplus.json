@@ -1,0 +1,149 @@
+{
+  "id": "100003-ssrplus",
+  "name": "Vua Biển Sâu",
+  "imageURL": "/Characters/optimized/100003-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Ăn Mòn Chuyên Biệt",
+    "Đột Phá",
+    "Vô Hiệu Truy Kích"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 104
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 100% ST sát thương trực tiếp lên mục tiêu đơn, sau đó gây [Ăn Mòn] lên mục tiêu.",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 210% ST sát thương trực tiếp lên mục tiêu đơn, nhận [Bất Khuất] (không thể bị hạ dưới 1 HP), gây [Ăn Mòn] lên toàn bộ vùng đã chọn, và hồi máu cho bản thân.",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Sát thương trực tiếp 210% > 260% ST. Vẫn nhận [Bất Khuất], lan [Ăn Mòn] lên vùng đã chọn, và tự hồi máu.",
+      "keepsakeIcon": "/Keepsake/Deep Sea King (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Nhận +20% Máu. Vào cuối lượt của bản thân, nếu có kẻ địch đang chịu DoT, gây 60% ST sát thương bổ sung lên toàn bộ kẻ địch.",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Sát thương bổ sung 60% > 80% ST.",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Sát thương bổ sung 80% > 86% ST.",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khiến kẻ địch đang chịu [Ăn Mòn Chuyên Biệt] bị [Kẹt] (Không thể tung [Truy Kích] và [Truy Kích Liên Tiếp], kéo dài 2 lượt). Sau khi bất kỳ đồng minh nào hành động, có 60% khả năng gây [Truy Kích Liên Kích] lên một kẻ địch ngẫu nhiên (Deep Sea King và đồng minh cùng cột sẽ tung [Truy Kích Chiêu Cuối], một lần mỗi lượt)",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Tỉ lệ kích hoạt 60% > 70% Combo Follow-up mỗi lượt 1x > 2x",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Deep Sea King (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bám Dính]",
+      "desc": "Trạng thái khống chế ngăn mục tiêu tung [Truy Kích] và [Truy Kích Liên Tiếp], thường trong 2 lượt."
+    },
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    },
+    {
+      "term": "[Truy Kích Liên Hoàn]",
+      "desc": "Đòn tấn công thêm ngoài lượt (thường sau khi đồng minh hành động) gây một phần ST và hiệu ứng của chiêu cuối lên mục tiêu ngẫu nhiên, không tốn năng lượng."
+    },
+    {
+      "term": "[Truy Kích Tuyệt Kỹ]",
+      "desc": "Đòn ngoài lượt gây 70% sát thương và hiệu ứng của chiêu cuối, không tốn năng lượng, tối đa 3 lần mỗi vòng."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+    },
+    {
+      "term": "[Ăn Mòn]",
+      "desc": "Hiệu ứng sát thương theo thời gian dạng ăn mòn, mỗi lượt gây sát thương bằng một tỷ lệ ST (ví dụ 300%) lên mục tiêu."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Deep Sea King (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "releaseTrung": "01/09/2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Hạt Nhân",
+    "Sát Thương (Máu)"
+  ],
+  "classLevel": "Demon",
+  "releaseSea": "01/01/2023",
+  "imageSrcset": "/Characters/optimized/100003-ssrplus-360.webp 360w, /Characters/optimized/100003-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

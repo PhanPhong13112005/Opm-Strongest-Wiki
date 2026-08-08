@@ -1,0 +1,81 @@
+{
+  "id": "100019-sr",
+  "name": "Smile Man",
+  "imageURL": "/Characters/optimized/100019-sr-600.webp",
+  "tier": "SR",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Hồi Máu"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 175,
+    "hp": 1049,
+    "def": 44,
+    "spd": 92
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 100% ST lên mục tiêu đơn.",
+      "icon": "/Skill/Smile Man (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 5 đòn liên kích gây 24% ST lên mỗi kẻ địch trong cả hàng, và hồi cho bản thân 20% Máu tối đa.",
+      "icon": "/Skill/Smile Man (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung 5 đòn liên kích gây 24% ST lên mỗi kẻ địch trong cả hàng, và hồi cho bản thân 30% Máu tối đa, đồng thời có 50% khả năng hồi máu cho đồng minh cùng hàng.",
+      "keepsakeIcon": "/Keepsake/Smile Man (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Smile Man (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Chừng nào Smile Man còn trên sân, mỗi khi bản thân hồi máu, anh ta cũng hồi máu cho đồng minh cùng cột bằng 80% lượng máu đã hồi.",
+      "icon": "/Skill/Smile Man (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Chừng nào Smile Man còn trên sân, mỗi khi bản thân hồi máu, anh ta cũng hồi máu cho đồng minh cùng cột bằng 100% lượng máu đã hồi.",
+      "icon": "/Skill/Smile Man (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Chừng nào Smile Man còn trên sân, mỗi khi bản thân hồi máu, anh ta cũng hồi máu cho đồng minh cùng cột bằng 110% lượng máu đã hồi.",
+      "icon": "/Skill/Smile Man (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Smile Man (SR)/Keepsake_SR.png",
+  "classLevel": "A",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100019-sr-360.webp 360w, /Characters/optimized/100019-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

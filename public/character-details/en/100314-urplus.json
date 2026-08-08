@@ -1,0 +1,150 @@
+{
+  "id": "100314-urplus",
+  "name": "G5",
+  "tier": "UR+",
+  "type": "Hi-Tech",
+  "faction": "Monster",
+  "roles": [
+    "DMG (ATK)",
+    "Weaken",
+    "Revive",
+    "Generate Shield",
+    "Speed"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK DMG to a single target.",
+      "icon": "/Skill/G5 (URplus)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals a 4-hit combo to an entire enemy row for 12000% ATK splittable [Specialized Direct DMG] (affected only by advanced DMG modifiers), ignoring 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and penetrating [Unyielding] and [Specialized Unyielding]. This damage is not split among targets that cannot be damaged; each splittable target increases the damage by an additional 30%.",
+      "icon": "/Skill/G5 (URplus)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "ATK 12000% > 15000%. For each target that can be split, DMG 30% > 40%. Reduces the number of [Resurrection] turns for all enemies by 2 > 3. Reduces the number of [Revenge] turns for all enemies by 5.",
+      "icon": "/Skill/G5 (URplus)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": "/Keepsake/G5 (URplus)/Keepsake_URplus.png",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently gains +20 Max HP. On entry, gains 60% [Specialized Evasion], and reduces all enemies' [Resurrection] count by 2 and [Non-Critical Hit Invincibility] turns by 4.",
+      "icon": "/Skill/G5 (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Specialized Evasion 60% > 70%.",
+      "icon": "/Skill/G5 (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Specialized Evasion 70% > 78%. Reduce number of [Non-Critical Hit Invincibility] turns by 4 > 5. Reduces the number of [Revenge] turns for all enemies by 5 > 7.",
+      "icon": "/Skill/G5 (URplus)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When the user's own HP/[Specialized HP] takes damage, that damage is reduced by 60%, and 60% of the original damage converts into [Energy Resilience]. Before any character acts, G5 has a 40% chance to perform a [Charged Pursuit] at 80% skill power (if the front row has no target that can take damage, it pursues the back row instead), up to 2 times per turn. The follow-up chance increases by an additional 40% after each enemy is defeated. ———- [Charged Pursuit]: uses a damage or group-healing Ultimate to pursue random targets, with no energy cost.",
+      "icon": "/Skill/G5 (URplus)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Permanently reduces damage taken 60% > 80%. Original damage converted into [Energy Resilience] 60% > 80%. Chance to perform a [Charged Pursuit] 40% > 60%, skill strength 80% > 100%, up to 2 > 3 times per turn.",
+      "icon": "/Skill/G5 (URplus)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/G5 (URplus)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100314-urplus-600.webp",
+  "debut": "04 / 2026",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Debuff",
+    "Revive",
+    "Generate Shield",
+    "Speed"
+  ],
+  "effects": [
+    {
+      "term": "[Spec. Unyielding]",
+      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+    },
+    {
+      "term": "[Unyielding]",
+      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+    },
+    {
+      "term": "[Revive]",
+      "desc": "The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match."
+    },
+    {
+      "term": "[Energy Tenacity]",
+      "desc": "The shield type converts its cumulative value into damage reduction, is limited to a multiple of the unit's maximum Health, and cannot be used with Resurrection."
+    },
+    {
+      "term": "[Revenge]",
+      "desc": "The counterattack state can extend the duration on yourself or shorten it on enemies, granting retaliatory effects."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/G5 (URplus)/Keepsake_URplus.png",
+  "classLevel": "Demon",
+  "releaseSea": "01/08/2026",
+  "releaseTrung": "01/04/2026",
+  "imageSrcset": "/Characters/optimized/100314-urplus-360.webp 360w, /Characters/optimized/100314-urplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,94 @@
+{
+  "id": "100025-ssr",
+  "name": "Người Chó Canh",
+  "tier": "SSR",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Hỗ Trợ",
+    "Suy Yếu",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Hồi Sinh"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 385,
+    "hp": 2504,
+    "def": 98,
+    "spd": 100
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 150% ST (+10) sát thương lên mục tiêu đơn, và hồi Máu bằng 30% Máu tối đa.",
+      "icon": "/Skill/Watchdog Man (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 5 liên kích gây sát thương bằng 5% (+2) Máu tối đa của Watchdog Man lên cả hàng mục tiêu, và khiến kẻ địch rơi vào [Hoảng Loạn] (phong tỏa năng lượng trong một số lượt; khi cùng hiệu ứng tồn tại, lấy giá trị cao nhất).",
+      "icon": "/Skill/Watchdog Man (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung 5 liên kích gây sát thương bằng 6% (+2) Máu tối đa của Watchdog Man lên cả hàng mục tiêu, và khiến kẻ địch rơi vào [Hoảng Loạn] (phong tỏa năng lượng trong một số lượt; khi cùng hiệu ứng tồn tại, lấy giá trị cao nhất).",
+      "icon": "/Skill/Watchdog Man (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Watchdog Man (SSR)/Keepsake_SSR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước khi trận đấu bắt đầu, Watchdog Man [Cổ Vũ] phe ta (nhận thêm 2 điểm năng lượng khi bắt đầu lượt, kéo dài 2 lượt). Tăng 25% Máu tối đa cho bản thân và đồng minh cùng cột trong 3 lượt. Sau khi nhận sát thương chí mạng, hồi sinh với 20% Máu tối đa (tối đa 2 lần).",
+      "icon": "/Skill/Watchdog Man (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước khi trận đấu bắt đầu, Watchdog Man [Cổ Vũ] phe ta (nhận thêm 2 điểm năng lượng khi bắt đầu lượt, kéo dài 2 lượt). Tăng 30% Máu tối đa cho bản thân và đồng minh cùng cột trong 5 lượt. Sau khi nhận sát thương chí mạng, hồi sinh với 25% Máu tối đa (tối đa 2 lần).",
+      "icon": "/Skill/Watchdog Man (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước khi trận đấu bắt đầu, Watchdog Man [Cổ Vũ] phe ta (nhận thêm 2 điểm năng lượng khi bắt đầu lượt, kéo dài 3 lượt). Tăng 33% Máu tối đa cho bản thân và đồng minh cùng cột trong 10 lượt. Sau khi nhận sát thương chí mạng, hồi sinh với 50% Máu tối đa (tối đa 2 lần).",
+      "icon": "/Skill/Watchdog Man (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100025-ssr-600.webp",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Watchdog Man (SSR)/Keepsake_SSR.png",
+  "effects": [
+    {
+      "term": "[Hoảng Loạn]",
+      "desc": "Trạng thái khống chế làm gián đoạn hành động của mục tiêu."
+    }
+  ],
+  "releaseDate": "01/07/2021",
+  "classLevel": "Class_S",
+  "releaseSea": "01/06/2021",
+  "releaseTrung": "01/02/2021",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100025-ssr-360.webp 360w, /Characters/optimized/100025-ssr-600.webp 496w",
+  "imageWidth": 496,
+  "imageHeight": 688
+}

@@ -1,0 +1,88 @@
+{
+  "id": "100044-ssr",
+  "name": "Hiệp Sĩ Cơ Động",
+  "imageURL": "/Characters/optimized/100044-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Công Nghệ",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Sát Thương Tích Tụ",
+    "Tăng Sát Thương Duy Trì"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 384,
+    "hp": 2363,
+    "def": 97,
+    "spd": 90
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 130% ST(+10) sát thương cho mục tiêu đơn.",
+      "icon": "/Skill/Drive Knight (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Ở dạng [Bạc], gây sát thương [Tích Lực] chia đều theo số mục tiêu bị tấn công. (Sau khi kẻ địch nhận sát thương [Lực Trường], tích lũy 1 lớp Tích Lực 240% ST, tối đa 4 lớp.) Tung 3 đòn liên kích vào cả hàng địch, rồi khiến mục tiêu chính dính [Lực Trường] (nhận sát thương theo thời gian trước khi hành động). Mỗi lớp cấp cho phe ta 0.4 Chiến Ý.",
+      "icon": "/Skill/Drive Knight (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Ở dạng [Bạc], gây sát thương [Tích Lực] chia đều theo số mục tiêu bị tấn công. (Sau khi kẻ địch nhận sát thương [Lực Trường], tích lũy 1 lớp Tích Lực 330% ST, tối đa 4 lớp.) Tung 3 đòn liên kích vào cả hàng địch, rồi khiến mục tiêu chính dính [Lực Trường] (nhận sát thương theo thời gian trước khi hành động). Mỗi lớp cấp cho phe ta 0.5 Chiến Ý.",
+      "keepsakeIcon": "/Keepsake/Drive Knight (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Drive Knight (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi ra trận, cấp cho toàn bộ đồng minh 90% Miễn Sát Thương Tuyệt Kỹ trong một số lượt. Vĩnh viễn nhận 40% Giảm Sát Thương Không Chí Mạng (giảm mọi loại sát thương; chỉ một trong hiệu ứng này và [Nhanh Nhẹn] có tác dụng). Khi vào trận, giảm 50% tốc độ bản thân. Sau khi kẻ địch nhận sát thương [Lực Trường], Drive Knight biến hình sang dạng [Bạc].",
+      "icon": "/Skill/Drive Knight (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi ra trận, cấp cho toàn bộ đồng minh 90% Miễn Sát Thương Tuyệt Kỹ trong một số lượt. Vĩnh viễn nhận 45% Giảm Sát Thương Không Chí Mạng (giảm mọi loại sát thương; chỉ một trong hiệu ứng này và [Nhanh Nhẹn] có tác dụng). Khi vào trận, giảm 55% tốc độ bản thân. Sau khi kẻ địch nhận sát thương [Lực Trường], Drive Knight biến hình sang dạng [Bạc].",
+      "icon": "/Skill/Drive Knight (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi ra trận, cấp cho toàn bộ đồng minh 90% Miễn Sát Thương Tuyệt Kỹ trong một số lượt. Vĩnh viễn nhận 50% Giảm Sát Thương Không Chí Mạng (giảm mọi loại sát thương; chỉ một trong hiệu ứng này và [Nhanh Nhẹn] có tác dụng). Khi vào trận, giảm 65% tốc độ bản thân. Sau khi kẻ địch nhận sát thương [Lực Trường], Drive Knight biến hình sang dạng [Bạc].",
+      "icon": "/Skill/Drive Knight (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Nhanh Nhẹn]",
+      "desc": "Buff loại né tránh; loại trừ lẫn nhau với Miễn Sát Thương Non-Crit."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Drive Knight (SSR)/Keepsake_SSR.png",
+  "releaseDate": "01/02/2022",
+  "classLevel": "Class_SS",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100044-ssr-360.webp 360w, /Characters/optimized/100044-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,81 @@
+{
+  "id": "100020-r",
+  "name": "Triple-Staff Lilly",
+  "imageURL": "/Characters/optimized/100020-r-600.webp",
+  "tier": "R",
+  "type": "Duelist",
+  "faction": "Hero",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 164,
+    "hp": 981,
+    "def": 41,
+    "spd": 89
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals a 2-hit combo of 45% ATK (+5) DMG to a single target.",
+      "icon": "/Skill/Triple-Staff Lilly (R)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals a 5-hit combo of 22% ATK (+2) DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 10% ATK extra DMG.",
+      "icon": "/Skill/Triple-Staff Lilly (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals a 5-hit combo of 22% ATK (+2) DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 20% ATK extra DMG.",
+      "keepsakeIcon": "/Keepsake/Triple-Staff Lilly (R)/Keepsake_R.png",
+      "icon": "/Skill/Triple-Staff Lilly (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently gains (+20) HP. On the first turn, if Hellish Blizzard is present, increases DMG dealt by 20%, lasting until the end of battle.",
+      "icon": "/Skill/Triple-Staff Lilly (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently gains (+20) HP. On the first turn, if Hellish Blizzard is present, increases DMG dealt by 30%, lasting until the end of battle.",
+      "icon": "/Skill/Triple-Staff Lilly (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently gains (+20) HP. On the first turn, if Hellish Blizzard is present, increases DMG dealt by 35%, lasting until the end of battle.",
+      "icon": "/Skill/Triple-Staff Lilly (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Triple-Staff Lilly (R)/Keepsake_R.png",
+  "classLevel": "B",
+  "classIcon": "/Class/B.png",
+  "imageSrcset": "/Characters/optimized/100020-r-360.webp 360w, /Characters/optimized/100020-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

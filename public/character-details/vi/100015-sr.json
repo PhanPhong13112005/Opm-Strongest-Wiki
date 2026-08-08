@@ -1,0 +1,90 @@
+{
+  "id": "100015-sr",
+  "name": "Bi Vàng",
+  "imageURL": "/Characters/optimized/100015-sr-600.webp",
+  "tier": "SR",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Sụp Đổ",
+    "Sát Thương Diện Rộng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 173,
+    "hp": 1040,
+    "def": 44,
+    "spd": 95
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 100% ST (+10) sát thương lên mục tiêu đơn.",
+      "icon": "/Skill/Golden Ball (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 16% ST (+2) sát thương lên toàn bộ địch bằng 5 liên kích, có 100% tỉ lệ khiến 2 mục tiêu ngẫu nhiên [Vỡ Vụn] 2 lượt (giảm 30% tỉ lệ giảm sát thương).",
+      "icon": "/Skill/Golden Ball (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây 16% ST (+2) sát thương lên toàn bộ địch bằng 5 liên kích, có 100% tỉ lệ khiến 3 mục tiêu ngẫu nhiên [Vỡ Vụn] 2 lượt (giảm 30% tỉ lệ giảm sát thương).",
+      "keepsakeIcon": "/Keepsake/Golden Ball (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Golden Ball (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau mỗi lần hành động, nếu phía địch có nhân vật đang [Vỡ Vụn], gây thêm sát thương bằng 10% ST lên mục tiêu vừa bị tấn công, và mỗi kẻ địch [Vỡ Vụn] thêm sẽ gây thêm 10% ST sát thương phụ trội.",
+      "icon": "/Skill/Golden Ball (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau mỗi lần hành động, nếu phía địch có nhân vật đang [Vỡ Vụn], gây thêm sát thương bằng 15% ST lên mục tiêu vừa bị tấn công, và mỗi kẻ địch [Vỡ Vụn] thêm sẽ gây thêm 15% ST sát thương phụ trội.",
+      "icon": "/Skill/Golden Ball (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau mỗi lần hành động, nếu phía địch có nhân vật đang [Vỡ Vụn], gây thêm sát thương bằng 17% ST lên mục tiêu vừa bị tấn công, và mỗi kẻ địch [Vỡ Vụn] thêm sẽ gây thêm 17% ST sát thương phụ trội.",
+      "icon": "/Skill/Golden Ball (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Golden Ball (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [],
+  "bondList": "Lily of the Three Section Staff + Eyelashes + Smile Man",
+  "classLevel": "A",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100015-sr-360.webp 360w, /Characters/optimized/100015-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

@@ -1,0 +1,148 @@
+{
+  "id": "100089-ur",
+  "name": "Gouketsu",
+  "imageURL": "/Characters/optimized/100089-ur-600.webp",
+  "tier": "UR",
+  "type": "Grappler",
+  "faction": "Monster",
+  "roles": [
+    "Barrier"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 106
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK (+10) DMG to a single target.",
+      "icon": "/Skill/Gouketsu (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Delivers a 2-hit combo for 400% ATK DMG to the front-row target. The first hit has a 50% chance to inflict [Armed Collapse] on the struck target (stores bonus [Armed Collapse] DMG equal to 600% of Gouketsu's ATK, dealt when that target is struck, then the stack is consumed).",
+      "icon": "/Skill/Gouketsu (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Combo DMG 400% > 500% ATK. [Armed Collapse] apply chance on the first hit 50% > 80%, and its stored DMG 600% > 800% of Gouketsu's ATK. Additionally inflicts [Weaken] on the target, reducing its ATK by 50% for 2 turns.",
+      "keepsakeIcon": "/Keepsake/Gouketsu (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Gouketsu (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently gains +20% HP. On entry, gains +60% [Instant Miss] (each stack causes one incoming direct/extra/charge/berserk hit to deal only 1 DMG). After any character acts, [Detonate] the [Armed Collapse] on all enemies, converting 3x a single stored [Armed Collapse]'s DMG into Detonate damage.",
+      "icon": "/Skill/Gouketsu (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Instant Miss] 60% > 70%. [Detonate] [Armed Collapse] DMG 3x > 3.5x.",
+      "icon": "/Skill/Gouketsu (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Instant Miss] 70% > 80%. [Detonate] [Armed Collapse] DMG 3.5x > 4x.",
+      "icon": "/Skill/Gouketsu (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "Grants himself and surrounding allies [Specialized Unyielding], and [Immune] to [Breakthrough] ———- [Specialized Unyielding]: When allies receive Fatal DMG, enter [Specialized Unyielding]. Removes after 5 characters act, recovers 100% HP, each character can activate twice in the whole battle",
+      "icon": "/Skill/Gouketsu (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Grants the whole team Specialized Unyielding and Immune to Breakthrough.",
+      "icon": "/Skill/Gouketsu (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Gouketsu (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Detonate]",
+      "desc": "Activate a stack of damage over time or stored [Collapse] to instantly explode, turning it into an instant multiplier (e.g. 3 times the stored damage)."
+    },
+    {
+      "term": "[Immunity]",
+      "desc": "Status that causes the bearer to be unaffected by a certain effect or type of control, such as [Breakthrough], Stun, or Charm."
+    },
+    {
+      "term": "[Insta-Dodge]",
+      "desc": "Floors that each cause a direct, additional, charge, or berserk attack to only deal 1 damage."
+    },
+    {
+      "term": "[Weaken]",
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
+    },
+    {
+      "term": "[Collapse (Duelist)]",
+      "desc": "Unfavorable effects cause delayed damage, storing additional damage (600-800% of Gouketsu's ST), releasing when the target is hit or when [Detonate]."
+    },
+    {
+      "term": "[Breakthrough]",
+      "desc": "Removes the target's Resilience shield and increases the attack for that attack."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Gouketsu (UR)/Keepsake_UR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/01/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "Heal",
+    "Generate Shield"
+  ],
+  "classLevel": "Dragon",
+  "releaseSea": "01/05/2024",
+  "imageSrcset": "/Characters/optimized/100089-ur-360.webp 360w, /Characters/optimized/100089-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

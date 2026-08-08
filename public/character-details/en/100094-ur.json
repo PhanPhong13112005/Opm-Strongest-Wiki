@@ -1,0 +1,149 @@
+{
+  "id": "100094-ur",
+  "name": "Garou",
+  "imageURL": "/Characters/optimized/100094-ur-600.webp",
+  "tier": "UR",
+  "type": "Grappler",
+  "faction": "Martial Artist",
+  "roles": [
+    "Main DPS (ATK)"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 114
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals Direct DMG equal to 20% of the target's Max HP to a single enemy.",
+      "icon": "/Skill/Garou (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Buffs self with +20% True DMG dealt for 2 turns, then applies [ImmuneNotDeathMix2] to all enemies (strips their undying/immunity so they can be killed). Deals Direct DMG equal to 26% of Max HP to all enemies, plus [True DMG] equal to 100% of each enemy's remaining Max HP.",
+      "icon": "/Skill/Garou (UR)/skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Buffs self with +20% True DMG dealt for 2 turns, then applies [ImmuneNotDeathMix2] to all enemies (strips their undying/immunity so they can be killed). Deals Direct DMG equal to 26% > 34% of Max HP to all enemies, plus [True DMG] equal to 100% of each enemy's remaining Max HP.",
+      "keepsakeIcon": "/Keepsake/Garou (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Garou (UR)/skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Gains +20% Max HP. On entry, gains 60% [Instant DMG Evasion], becomes immune to [Deterrence], [Stun] and [Specialized Stun], and gains +25% Block Rate.[Instant DMG Evasion]: reduces Direct/Extra/Charge/Berserk DMG to 1.",
+      "icon": "/Skill/Garou (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Instant DMG Evasion] 60% &gt; 70%. Block Rate 25% &gt; 30%.",
+      "icon": "/Skill/Garou (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Instant DMG Evasion] 70% &gt; 80%. Block Rate 30% &gt; 35%.",
+      "icon": "/Skill/Garou (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When battle begins, gain [No Crit No Death], lasts for 6 rounds. Permanently gain 100% Crit Res Rate. After triggering [Block], reflect 200% Max HP of [True DMG] to the attacker. ———- [No Crit No Death]: For the duration, retains 70% of HP and remain [Undefeated] from fatal Non-Crit hits, and resists fatal Crit hits up to 6 times. (Only sees the first strike for Crit hit)",
+      "icon": "/Skill/Garou (UR)/skill_awk.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "True DMG (max HP) 200% > 300% HP retain 70% > 100% Resist Fatal Crit HIts 6x > 9x",
+      "icon": "/Skill/Garou (UR)/skill_awk.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Garou (UR)/skill_awk.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Invincible]",
+      "desc": "Survive non-fatal attacks (hold about 20% HP without collapsing) and resist a limited number of fatal attacks."
+    },
+    {
+      "term": "[Absolute Stun]",
+      "desc": "[Faint's] powerful and final stun, which can only be removed with specialized debuffs."
+    },
+    {
+      "term": "[Stun]",
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+    },
+    {
+      "term": "[Non-Crit Immunity]",
+      "desc": "Survival buff that, when present, prevents the unit from being crited and cannot die, retaining 70% of its health for the duration of the effect."
+    },
+    {
+      "term": "[Mixed Death Immunity]",
+      "desc": "Unfavorable effects remove the enemy's invulnerability/immunity so they can be destroyed."
+    },
+    {
+      "term": "[True DMG]",
+      "desc": "This type of bonus damage is dealt on top of attacks, is reduced by Evasion-type effects, and can be immune after a certain number of turns."
+    },
+    {
+      "term": "[Threaten]",
+      "desc": "The stun control effect renders the target unable to act and reduces its overall damage immunity by 30%."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Garou (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/06/2025",
+  "releaseSea": "01/10/2025",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Generate Shield"
+  ],
+  "classLevel": "Martial_Artist",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100094-ur-360.webp 360w, /Characters/optimized/100094-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

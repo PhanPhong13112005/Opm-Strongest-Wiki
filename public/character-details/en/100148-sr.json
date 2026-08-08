@@ -1,0 +1,86 @@
+{
+  "id": "100148-sr",
+  "name": "Hamukichi",
+  "imageURL": "/Characters/optimized/100148-sr-600.webp",
+  "tier": "SR",
+  "type": "Grappler",
+  "faction": "Martial Artist",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 183,
+    "hp": 1128,
+    "def": 48,
+    "spd": 95
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 40% ATK (+3) DMG to a single target in a 3-hit combo.",
+      "icon": "/Skill/Hamukichi (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 180% ATK (+10) DMG to a single target, with a 100% chance to inflict [Injured] on the main target for 2 turns (adds 60% ATK worth of Injured DMG when the target is attacked), and inflicts [Weaken] on the target (ATK reduced by 30% for 2 turns).",
+      "icon": "/Skill/Hamukichi (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 220% ATK (+10) DMG to a single target, with a 100% chance to inflict [Injured] on the main target for 2 turns (adds 80% ATK worth of Injured DMG when the target is attacked), and inflicts [Weaken] on the target (ATK reduced by 40% for 2 turns).",
+      "keepsakeIcon": "/Keepsake/Hamukichi (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Hamukichi (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). The final hit has a 60% chance to inflict [Injured] on the main target and surrounding enemies for 2 turns (adds 60% ATK worth of Injured DMG when they are attacked).",
+      "icon": "/Skill/Hamukichi (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own HP by (+20). The final hit has an 80% chance to inflict [Injured] on the main target and surrounding enemies for 2 turns (adds 60% ATK worth of Injured DMG when they are attacked).",
+      "icon": "/Skill/Hamukichi (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own HP by (+20). The final hit has an 80% chance to inflict [Injured] on the main target and surrounding enemies for 2 turns (adds 80% ATK worth of Injured DMG when they are attacked).",
+      "icon": "/Skill/Hamukichi (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Weaken]",
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Hamukichi (SR)/Keepsake_SR.png",
+  "classLevel": "Martial_Artist",
+  "classIcon": "/Class/Martial_Artist.png",
+  "imageSrcset": "/Characters/optimized/100148-sr-360.webp 360w, /Characters/optimized/100148-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 652
+}

@@ -1,0 +1,87 @@
+{
+  "id": "100055-ssr",
+  "name": "Boros",
+  "roles": [
+    "Support",
+    "Heal"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 398,
+    "hp": 2385,
+    "def": 101,
+    "spd": 97
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK damage to a single target and enters the [Berserk] state for 1 turn (DMG dealt increased by 30%).",
+      "icon": "/Skill/Boros (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Each Esper-type ally raises Boros' ATK, increasing skill strength by 105%, up to 3 stacks (+50% ATK per stack). Strikes a single target with a 3-hit combo, dealing 70% ATK damage per hit.",
+      "icon": "/Skill/Boros (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Each Esper-type ally raises Boros' ATK, increasing skill strength by 158%, up to 3 stacks (+60% ATK per stack). Strikes a single target with a 3-hit combo, dealing 88% ATK damage per hit.",
+      "icon": "/Skill/Boros (SSR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Boros (SSR)/Keepsake_SSR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own max HP. When allies restore HP, Boros is healed for 60% of that value, triggering up to 6 times per turn.",
+      "icon": "/Skill/Boros (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases own max HP. When allies restore HP, Boros is healed for 80% of that value, triggering up to 8 times per turn.",
+      "icon": "/Skill/Boros (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases own max HP. When allies restore HP, Boros is healed for 85% of that value, triggering up to 8 times per turn.",
+      "icon": "/Skill/Boros (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SSR",
+  "imageURL": "/Characters/optimized/100055-ssr-600.webp",
+  "type": "Esper",
+  "faction": "Monster",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Boros (SSR)/Keepsake_SSR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseDate": "01/08/2020",
+  "effects": [],
+  "classLevel": "Dragon",
+  "releaseSea": "01/07/2020",
+  "releaseTrung": "01/03/2020",
+  "imageSrcset": "/Characters/optimized/100055-ssr-360.webp 360w, /Characters/optimized/100055-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

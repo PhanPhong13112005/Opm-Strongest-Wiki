@@ -1,0 +1,127 @@
+{
+  "id": "100027-ssrplus",
+  "name": "Superalloy Darkshine",
+  "imageURL": "/Characters/optimized/100027-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Grappler",
+  "faction": "Hero",
+  "roles": [
+    "Enhance Shield",
+    "Group Reflect DMG"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 104
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals Direct DMG of 120% ATK to a single target.",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals Direct DMG of 30% ATK (scales with Max HP) to the target's row, then heals self.",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals Direct DMG of 30% > 40% ATK (scales with Max HP) to the target's row, then heals self > own row.",
+      "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Gains +20% HP. On entry, grants +55% Shield power to all allies and gains [Undying] on self.",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Shield power to all allies 55% > 65%.",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Shield power to all allies 65% > 75%.",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When battle begins, grants the whole team [Specialized DMG Reflect] (reduce direct DMG and Extra DMG by 40%, reflects 40% of the original DMG back to the attacker, lasts for the whole battle.)",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Reduce dmg 40% > 60% Reflect 40% > 60% Grants the whole team [Specialized Berserk] (First strike will also deal Berserk DMG by 50% of Superalloy Blackluster Max HP, with a chance of Crit), lasts the whole battle",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Immortal]",
+      "desc": "Survival status keeps the bearer alive by drastically reducing damage taken (e.g. only taking 20%)."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSRplus)/Keepsake_SSRplus.png",
+  "releaseTrung": "01/05/2023",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "DMG (HP)",
+    "Generate Shield"
+  ],
+  "classLevel": "Class_S",
+  "releaseSea": "01/09/2023",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100027-ssrplus-360.webp 360w, /Characters/optimized/100027-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

@@ -1,0 +1,99 @@
+{
+  "id": "100126-ssr",
+  "name": "Gale Wind",
+  "imageURL": "/Characters/optimized/100126-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Giác Đấu",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Choáng",
+    "Nội Thương"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 391,
+    "hp": 2558,
+    "def": 108,
+    "spd": 95
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tấn công mục tiêu đơn với 2 liên kích gây 80% ST tấn công (+5). Có 100% khả năng gây [Nội Thương] lên mục tiêu (khi bị tấn công, chịu ST Nội thương bằng 155% ST tấn công của Gale Wind; hiệu ứng biến mất sau khi kích hoạt).",
+      "icon": "/Skill/Gale Wind (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tấn công các mục tiêu trong vùng hình chữ thập với 4 liên kích gây 50% ST tấn công (+thưởng). Trong 2 lượt đầu, có 100% khả năng gây [Choáng] lên 2 mục tiêu ngẫu nhiên trong 1 lượt (không thể hành động; mỗi đội tối đa 4 nhân vật bị choáng cùng lúc; có 50% khả năng xuyên miễn nhiễm). Đồng thời tăng [Chiến Ý] của bạn -900.",
+      "icon": "/Skill/Gale Wind (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tấn công các mục tiêu trong vùng hình chữ thập với 4 liên kích gây 65% ST tấn công (+thưởng). Trong 2 lượt đầu, có 100% khả năng gây [Choáng] lên 3 mục tiêu ngẫu nhiên trong 1 lượt (không thể hành động; mỗi đội tối đa 4 nhân vật bị choáng cùng lúc; có 50% khả năng xuyên miễn nhiễm). Đồng thời tăng [Chiến Ý] của bạn -950.",
+      "keepsakeIcon": "/Keepsake/Gale Wind (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Gale Wind (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Bản thân nhận 40% Giảm ST Không Chí mạng (giảm mọi loại ST; hiệu ứng này và [Linh Xảo] chỉ một cái có hiệu lực). Sau hành động của bất kỳ nhân vật nào, tung đòn [Truy Kích] vào kẻ địch có ST tấn công cao nhất (tấn công bằng 80% ST và hiệu ứng của Đòn Cơ bản, 3 lần mỗi lượt).",
+      "icon": "/Skill/Gale Wind (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Bản thân nhận 50% Giảm ST Không Chí mạng (giảm mọi loại ST; hiệu ứng này và [Linh Xảo] chỉ một cái có hiệu lực). Sau hành động của bất kỳ nhân vật nào, tung đòn [Truy Kích] vào kẻ địch có ST tấn công cao nhất (tấn công bằng 100% ST và hiệu ứng của Đòn Cơ bản, 4 lần mỗi lượt).",
+      "icon": "/Skill/Gale Wind (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Bản thân nhận 50% Giảm ST Không Chí mạng (giảm mọi loại ST; hiệu ứng này và [Linh Xảo] chỉ một cái có hiệu lực). Sau hành động của bất kỳ nhân vật nào, tung đòn [Truy Kích] vào kẻ địch có ST tấn công cao nhất (tấn công bằng 120% ST và hiệu ứng của Đòn Cơ bản, 4 lần mỗi lượt).",
+      "icon": "/Skill/Gale Wind (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Nội Thương]",
+      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Gale Wind (SSR)/Keepsake_SSR.png",
+  "releaseDate": "01/04/2022",
+  "class": "Demon",
+  "classLevel": "Demon",
+  "releaseSea": "01/01/2022",
+  "releaseTrung": "01/09/2021",
+  "classIcon": "/Class/Demon.png",
+  "imageSrcset": "/Characters/optimized/100126-ssr-360.webp 360w, /Characters/optimized/100126-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

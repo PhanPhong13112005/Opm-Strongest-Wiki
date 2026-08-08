@@ -1,0 +1,156 @@
+{
+  "id": "100190-ur",
+  "name": "Melzargard",
+  "tier": "UR",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 130% ST cho một mục tiêu đơn.",
+      "icon": "/Skill/Melzargard (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tấn công kẻ địch theo hình chữ thập với 3 đòn liên tiếp, gây 600% ST. Đòn cuối có 100% tỉ lệ gây [Nứt Vỡ Chuyên Biệt] cho mục tiêu chính trong 3 lượt (giảm Giảm Sát Thương đi 10%, gây 250% ST sát thương [Nứt Vỡ] khi bị tấn công, cộng dồn tối đa 3 lần, không cộng dồn với [Nứt Vỡ]).",
+      "icon": "/Skill/Melzargard (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "ST Tối Thượng 600% → 750% ST. [Nứt Vỡ Chuyên Biệt] giảm Giảm Sát Thương 10% → 15%. ST [Nứt Vỡ Chuyên Biệt] 250% → 350% ST.",
+      "icon": "/Skill/Melzargard (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Melzargard (UR)/Keepsake_UR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Sau khi Melzargard và đồng minh hành động, kéo dài trạng thái [Nứt Vỡ Chuyên Biệt] của kẻ địch lên 4 lượt. Sau khi bất kỳ nhân vật nào hành động, nếu nhân vật kẻ địch có 3 lớp [Nứt Vỡ Chuyên Biệt], ngay lập tức [Kích Nổ] (ST [Nứt Vỡ] đơn bằng 500% chuyển thành ST [Kích Nổ]). Gỡ bỏ hiệu ứng [Hồi Sinh] khỏi kẻ địch, kéo dài suốt trận đấu.",
+      "icon": "/Skill/Melzargard (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "ST [Nứt Vỡ] khi [Kích Nổ] 500% → 650% ST.",
+      "icon": "/Skill/Melzargard (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "ST [Nứt Vỡ] khi [Kích Nổ] 650% → 800% ST.",
+      "icon": "/Skill/Melzargard (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Vào đầu trận đấu, duy trì [Bất Bại] trong 3 lượt (Nếu nhận ST chí tử không chí mạng, vẫn giữ 20% Máu mà không bị hạ gục, và kháng ST chí tử chí mạng 3 lần. Tùy thuộc vào việc đòn đầu tiên có gây Sát thương chí mạng hay không). Vĩnh viễn nhận 100% Tỉ lệ kháng chí mạng và 50% Giảm ST không chí mạng, [Miễn Nhiễm] với [Mê Hoặc/Rời Trận].",
+      "icon": "/Skill/Melzargard (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Undefeated 3 lượt > 5 lượt Kháng Sát thương chí tử 3 lần > 55 lần Tỉ lệ kháng chí mạng 100% > 130% Giảm ST không chí mạng 50% > 65% Ghi chú\n1. Detonation không thể bị [Đã Né Tránh], 1 ST là do [Kiên Cường Chuyên Biệt] 2. ST [Vỡ Vụn] và [Vỡ Vụn] trong ST [Kích Nổ] được tính riêng biệt, AS sẽ gây 200% của mình và Melz sẽ gây 250% ST [Vỡ Vụn] (không có keepsake)",
+      "icon": "/Skill/Melzargard (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Melzargard (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100190-ur-600.webp",
+  "debut": "04 / 2024",
+  "keepsakeIcon": "/Keepsake/Melzargard (UR)/Keepsake_UR.png",
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "releaseTrung": "01/10/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "effects": [
+    {
+      "term": "[Vô Địch]",
+      "desc": "Sống sót trước các đòn không chí mạng gây chết (giữ khoảng 20% HP mà không gục) và kháng một số lượng giới hạn đòn chí mạng gây chết."
+    },
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
+    },
+    {
+      "term": "[Kích Nổ]",
+      "desc": "Kích hoạt một tầng sát thương theo thời gian hoặc [Sụp Đổ] đang tích trữ để nổ ngay, biến nó thành một đòn tức thời nhân lên (ví dụ 3 lần sát thương tích trữ)."
+    },
+    {
+      "term": "[Miễn Nhiễm]",
+      "desc": "Trạng thái khiến người mang không bị ảnh hưởng bởi một hiệu ứng hoặc loại khống chế nhất định, như [Đột Phá], Choáng hay Mê Hoặc."
+    },
+    {
+      "term": "[Hồi Sinh]",
+      "desc": "Trạng thái đưa đơn vị bị hạ gục trở lại trận, cấp số lần hồi sinh giới hạn mà các hiệu ứng chống hồi sinh có thể gỡ bỏ."
+    },
+    {
+      "term": "[Sụp Đổ Chuyên Biệt]",
+      "desc": "Debuff PvP giảm 10% Giảm Sát Thương của mục tiêu và gây 250% ST dạng Shatter mỗi khi mục tiêu bị tấn công."
+    },
+    {
+      "term": "[Sụp Đổ]",
+      "desc": "Hiệu ứng sát thương/bất lợi phá vỡ phòng thủ của mục tiêu."
+    }
+  ],
+  "classLevel": "Dragon",
+  "releaseSea": "01/02/2025",
+  "imageSrcset": "/Characters/optimized/100190-ur-360.webp 360w, /Characters/optimized/100190-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

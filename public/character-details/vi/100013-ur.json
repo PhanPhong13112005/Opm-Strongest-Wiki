@@ -1,0 +1,142 @@
+{
+  "id": "100013-ur",
+  "name": "Zombieman",
+  "imageURL": "/Characters/optimized/100013-ur-600.webp",
+  "tier": "UR",
+  "type": "Vũ Trang",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Hạt Nhân"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 131
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 60% ST sát thương trực tiếp lên mục tiêu đơn.",
+      "icon": "/Skill/Zombieman (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 150% ST sát thương trực tiếp lên toàn bộ hàng của mục tiêu. Cấp [Siêu Tốc] cho đồng minh cùng hàng (trừ bản thân) khi tốc độ của hắn đủ cao. Đặt dấu [Phản Kích] lên toàn bộ kẻ địch, và gây [Phong Ấn Năng Lượng] lên mục tiêu (phong ấn 3 năng lượng) khi dấu còn hiệu lực.",
+      "icon": "/Skill/Zombieman (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Sát thương trực tiếp 150% > 200% ST lên hàng của mục tiêu. Nới lỏng ngưỡng kích hoạt [Siêu Tốc]. Ngoài ra tăng +30% ST cho toàn bộ đồng minh (2 lượt). Dấu [Phản Kích] và [Phong Ấn Năng Lượng] (3 năng lượng) giữ nguyên.",
+      "keepsakeIcon": "/Keepsake/Zombieman (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Zombieman (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn nhận +20% HP. Khi vào trận, nhận +60% Né tránh. Khi nhận sát thương chí mạng, kích hoạt [Giả Chết] và hồi sinh với 60% HP tối đa, tối đa 3 lần.",
+      "icon": "/Skill/Zombieman (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Né tránh 60% > 70%. HP hồi sinh [Giả Chết] 60% > 80% HP tối đa. Hồi sinh 3 lần.",
+      "icon": "/Skill/Zombieman (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Né tránh 70% > 80%. Hồi sinh 3 > 4 lần với 80% HP tối đa.",
+      "icon": "/Skill/Zombieman (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Nhận 32% [Tăng Tốc Chuyên Biệt] vào đầu trận đấu. Trước khi các đồng minh xung quanh hành động, họ sẽ kích hoạt [Đột Phá Chuyên Biệt] một lần lên mục tiêu chính (chỉ có thể kích hoạt một lần mỗi lượt). ———- [Đột Phá Chuyên Biệt]: Ngay lập tức hủy bỏ [Kiên Cường] của mục tiêu và tăng Tấn công thêm 20% cho đến khi kết thúc đòn tấn công này",
+      "icon": "/Skill/Zombieman (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Specialized Acceleration 32% > 40% Đồng minh xung quanh > TOÀN BỘ đồng minh Tăng Tấn công 20% > 30%",
+      "icon": "/Skill/Zombieman (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Zombieman (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    },
+    {
+      "term": "[Hồi Sinh]",
+      "desc": "Cơ chế hồi sinh/trở lại gắn với sự sống của đồng minh, đưa đơn vị trở lại trận đấu."
+    },
+    {
+      "term": "[Phản Kích]",
+      "desc": "Dấu phản đòn mà số lớp của nó làm tăng dần sát thương trực tiếp truy kích của người dùng lên các kẻ địch bị đánh dấu."
+    },
+    {
+      "term": "[Tăng Tốc Chuyên Biệt]",
+      "desc": "Tăng tốc độ của đồng minh tới gần tốc độ của người triển khai (giữ nguyên nếu đồng minh đã nhanh hơn)."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Zombieman (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/05/2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Hạt Nhân",
+    "Hồi Phục",
+    "Sát Thương (Máu)",
+    "Tạo Khiên"
+  ],
+  "bondList": "Clone 1 + Paquino Family",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/09/2024",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100013-ur-360.webp 360w, /Characters/optimized/100013-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

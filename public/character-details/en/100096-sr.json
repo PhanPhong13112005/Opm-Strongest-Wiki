@@ -1,0 +1,98 @@
+{
+  "id": "100096-sr",
+  "name": "Bushidoriru",
+  "roles": [
+    "DMG (ATK)",
+    "Generate Shield"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 191,
+    "hp": 1199,
+    "def": 51,
+    "spd": 97
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 100% ATK DMG to a single target.",
+      "icon": "/Skill/Bushidoriru (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 35% ATK DMG to an entire column of targets with 4 combo strikes, with a 100% chance to inflict [Shatter] on the main target for 2 turns (reduces DMG RED. Rate by 30%). In addition, deals bonus damage equal to 50% ATK to enemies surrounding the main target.",
+      "icon": "/Skill/Bushidoriru (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 35% ATK DMG to an entire column of targets with 4 combo strikes, with a 100% chance to inflict [Shatter] on the main target for 2 turns (reduces DMG RED. Rate by 35%). In addition, deals bonus damage equal to 70% ATK to enemies surrounding the main target.",
+      "icon": "/Skill/Bushidoriru (SR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Bushidoriru (SR)/Keepsake_SR.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently gains +20% HP. After each action, if there is a Shattered enemy on the battlefield, gains [Tenacity] (absorbs DMG equal to 30% of its own HP).",
+      "icon": "/Skill/Bushidoriru (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently gains +20% HP. After each action, if there is a Shattered enemy on the battlefield, gains [Tenacity] (absorbs DMG equal to 35% of its own HP).",
+      "icon": "/Skill/Bushidoriru (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently gains +20% HP. After each action, if there is a Shattered enemy on the battlefield, gains [Tenacity] (absorbs DMG equal to 40% of its own HP).",
+      "icon": "/Skill/Bushidoriru (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "SR",
+  "imageURL": "/Characters/optimized/100096-sr-600.webp",
+  "type": "Duelist",
+  "faction": "Hero",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Bushidoriru (SR)/Keepsake_SR.png",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Generate Shield"
+  ],
+  "effects": [
+    {
+      "term": "[Tenacity]",
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+    }
+  ],
+  "classLevel": "A",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100096-sr-360.webp 360w, /Characters/optimized/100096-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

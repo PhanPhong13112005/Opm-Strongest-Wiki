@@ -1,0 +1,141 @@
+{
+  "id": "100069-ur",
+  "name": "Sonic Siêu Thanh V2",
+  "tier": "UR",
+  "type": "Vũ Trang",
+  "faction": "Tội Phạm",
+  "roles": [
+    "Sát Thương (Công)",
+    "Hỗ Trợ",
+    "Suy Yếu",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "duyen": "V2",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 135
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tấn công một mục tiêu đơn bằng 2 đòn liên tiếp, gây 120% ST.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 4 đòn liên tiếp lên toàn bộ hàng địch, gây ST trực tiếp bằng 900% ST. Đồng minh cùng hàng vĩnh viễn nhận [Tăng Tốc Chuyên Biệt]. Toàn bộ đồng minh nhận [Lĩnh Vực Tốc Độ: Tấn Công] trong 3 lượt. — [Tăng Tốc Chuyên Biệt]: Tốc độ tăng lên 94% Tốc độ của Sonic; nếu đồng minh vốn nhanh hơn thì giữ nguyên. [Lĩnh Vực Tốc Độ: Tấn Công]: khi tấn công trong PvP, nếu Tốc độ mục tiêu không cao hơn người tấn công, tổng ST lên mục tiêu tăng 20%.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "ST Tối Thượng 900% > 1160% ST. [Tăng Tốc Chuyên Biệt] lên 94% > 98% Tốc độ của Sonic. [Lĩnh Vực Tốc Độ: Tấn Công] tăng ST 20% > 30%.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Sonic V2 (UR)/Keepsake_UR.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Nhận 60% [Né Sát Thương Tức Thì] khi vào trận. Miễn nhiễm [Uy Hiếp], [Choáng] và [Choáng Chuyên Biệt]. — [Né Sát Thương Tức Thì]: Sát thương Trực tiếp, Ex. DMG, Charge DMG và Berserk DMG chỉ gây 1 ST.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Né Sát Thương Tức Thì] 60% > 70%.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Né Sát Thương Tức Thì] 70% > 80%.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi vào sân, tăng 39% [Tốc Độ Chuyên Biệt] của bản thân và 20% của đồng minh. Toàn bộ đồng minh vĩnh viễn nhận 30% [Lĩnh Vực Tốc Độ: Phòng Thủ]. Trước trận, [Cổ Vũ] cho đội (nhận thêm 2 năng lượng trong 3 lượt đầu mỗi lượt). — [Lĩnh Vực Tốc Độ: Phòng Thủ]: khi bị tấn công trong PvP, nếu Tốc độ người tấn công không cao hơn người thủ, ST nhận vào được giảm.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "[Tốc Độ Chuyên Biệt] bản thân 35% > 42%. [Tốc Độ Chuyên Biệt] đồng minh 20% > 30%. [Lĩnh Vực Tốc Độ: Phòng Thủ] 30% > 40% (người khác), 60% cho Sonic.",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Sonic V2 (UR)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "imageURL": "/Characters/optimized/100069-ur-600.webp",
+  "debut": "07 / 2025",
+  "keepsakeIcon": "/Keepsake/Sonic V2 (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/07/2025",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Debuff",
+    "Tạo Khiên",
+    "Tốc Độ"
+  ],
+  "effects": [
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Cổ Vũ]",
+      "desc": "Cấp năng lượng vào đầu mỗi vòng trong vài vòng."
+    },
+    {
+      "term": "[Uy Hiếp]",
+      "desc": "Hiệu ứng khống chế dạng choáng khiến mục tiêu không thể hành động và giảm toàn bộ khả năng miễn sát thương của nó đi 30%."
+    }
+  ],
+  "classLevel": "Outlaw",
+  "releaseSea": "01/11/2025",
+  "classIcon": "/Class/Outlaw.png",
+  "imageSrcset": "/Characters/optimized/100069-ur-360.webp 360w, /Characters/optimized/100069-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

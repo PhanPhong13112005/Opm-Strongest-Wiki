@@ -1,0 +1,81 @@
+{
+  "id": "100038-r",
+  "name": "Bunbun Man",
+  "imageURL": "/Characters/optimized/100038-r-600.webp",
+  "tier": "R",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Đa Dụng"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 158,
+    "hp": 945,
+    "def": 40,
+    "spd": 88
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung liên kích 5 đòn lên mục tiêu đơn, gây 18% ST(+2) sát thương.",
+      "icon": "/Skill/Bunbun Man (R)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung liên kích 5 đòn lên mục tiêu đơn, gây 38% ST(+2) sát thương. Có 100% xác suất tăng 10% ST cho bản thân trong 2 lượt.",
+      "icon": "/Skill/Bunbun Man (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung liên kích 5 đòn lên mục tiêu đơn, gây 38% ST(+2) sát thương. Có 100% xác suất tăng 20% ST cho bản thân trong 2 lượt.",
+      "keepsakeIcon": "/Keepsake/Bunbun Man (R)/Keepsake_R.png",
+      "icon": "/Skill/Bunbun Man (R)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước khi hành động, tăng 5% Bạo Kích cho bản thân trong 1 lượt.",
+      "icon": "/Skill/Bunbun Man (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước khi hành động, tăng 10% Bạo Kích cho bản thân trong 1 lượt.",
+      "icon": "/Skill/Bunbun Man (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước khi hành động, tăng 15% Bạo Kích cho bản thân trong 1 lượt.",
+      "icon": "/Skill/Bunbun Man (R)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Bunbun Man (R)/Keepsake_R.png",
+  "classLevel": "C",
+  "classIcon": "/Class/C.png",
+  "imageSrcset": "/Characters/optimized/100038-r-360.webp 360w, /Characters/optimized/100038-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

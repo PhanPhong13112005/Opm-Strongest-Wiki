@@ -1,0 +1,83 @@
+{
+  "id": "100039-r",
+  "name": "Crablante",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 156,
+    "hp": 936,
+    "def": 40,
+    "spd": 86
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 90% ATK(+10) DMG to a single target.",
+      "icon": "/Skill/Crablante (R)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Strikes a single target with a 5-hit combo dealing 38% ATK(+2) DMG, and has a 100% chance to reduce DMG taken by self by 10% for 2 turns.",
+      "icon": "/Skill/Crablante (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Strikes a single target with a 5-hit combo dealing 38% ATK(+2) DMG. Has a 100% chance to reduce DMG taken by self by 20% for 2 turns.",
+      "icon": "/Skill/Crablante (R)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Crablante (R)/Keepsake_R.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases self HP by (+20). After being attacked, has a 25% chance to increase self DMG by 10% for 1 turn.",
+      "icon": "/Skill/Crablante (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases self HP by (+20). After being attacked, has a 25% chance to increase self DMG by 20% for 1 turn.",
+      "icon": "/Skill/Crablante (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases self HP by (+20). After being attacked, has a 25% chance to increase self DMG by 25% for 1 turn.",
+      "icon": "/Skill/Crablante (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "R",
+  "imageURL": "/Characters/optimized/100039-r-600.webp",
+  "type": "Grappler",
+  "faction": "Monster",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Crablante (R)/Keepsake_R.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "effects": [],
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100039-r-360.webp 360w, /Characters/optimized/100039-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

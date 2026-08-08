@@ -1,0 +1,82 @@
+{
+  "id": "200007-n",
+  "name": "Clone",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 153,
+    "hp": 918,
+    "def": 39,
+    "spd": 81
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Strike a single target with a 4-hit combo, dealing 20% ATK (+2) damage.",
+      "icon": "/Skill/Clone (N)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Strike a single target with a 4-hit combo, dealing 45% ATK (+2) damage.",
+      "icon": "/Skill/Clone (N)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Strike a single target with a 4-hit combo, dealing 50% ATK (+2) damage.",
+      "icon": "/Skill/Clone (N)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Clone (N)/Keepsake_N.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increase self HP by (+20). The first time self takes fatal damage each battle, revive with 5% of max HP.",
+      "icon": "/Skill/Clone (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increase self HP by (+20). The first time self takes fatal damage each battle, revive with 10% of max HP.",
+      "icon": "/Skill/Clone (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increase self HP by (+20). The first time self takes fatal damage each battle, revive with 13% of max HP.",
+      "icon": "/Skill/Clone (N)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "N",
+  "imageURL": "/Characters/optimized/200007-n-600.webp",
+  "type": "Hi-Tech",
+  "faction": "Other",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Clone (N)/Keepsake_N.png",
+  "effects": [],
+  "classLevel": "Other",
+  "classIcon": "/Class/Other.png",
+  "imageSrcset": "/Characters/optimized/200007-n-360.webp 360w, /Characters/optimized/200007-n-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 680
+}

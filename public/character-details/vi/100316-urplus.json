@@ -1,0 +1,164 @@
+{
+  "id": "100316-urplus",
+  "name": "Overgrown Rover",
+  "imageURL": "/Characters/optimized/100316-urplus-600.webp",
+  "tier": "UR+",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Chủ Lực (Công)"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ATK lên mục tiêu đơn.",
+      "icon": "/Skill/Overgrown Rover (URplus)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung combo 3 đòn lên toàn bộ kẻ địch, gây 7000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] (chỉ chịu ảnh hưởng bởi tăng/giảm sát thương nâng cao), bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Đòn thứ 1 có 150% khả năng gây [Rối Loạn]. ———- [Rối Loạn]: Trước khi bất kỳ nhân vật nào hành động, nếu mục tiêu không có [Bất Khuất Chuyên Biệt] hoặc [Bất Khuất Tuyệt Kỹ], gây 4000% [Sát Thương Rối Loạn] (dựa trên ATK của Rover), bỏ qua 100% [Giảm Sát Thương Duy Trì] và xuyên [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích]. Mỗi [Rối Loạn] kích hoạt tối đa 3 lần và có thể cộng dồn.",
+      "icon": "/Skill/Overgrown Rover (URplus)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "[Sát Thương Trực Tiếp Chuyên Biệt] 7000% > 9000% ATK. Bỏ qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] 45% > 60%. [Sát Thương Rối Loạn] 4000% > 5500%.",
+      "keepsakeIcon": "/Keepsake/Overgrown Rover (URplus)/Keepsake_URplus.png",
+      "icon": "/Skill/Overgrown Rover (URplus)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn nhận +20 Máu tối đa. Khi vào trận, nhận 60% [Giảm Sát Thương Không Bạo Kích], và ban cho toàn bộ đồng minh 70% [Giảm Sát Thương Chuẩn] đồng thời gỡ [Giảm Phần Tăng Sát Thương Duy Trì] khỏi toàn bộ đồng minh trong suốt trận đấu. Khi [Re-Battle] kích hoạt, uy lực đòn Tối Thượng [Truy Kích Tụ Lực] của đơn vị này tăng lên 1.1x.",
+      "icon": "/Skill/Overgrown Rover (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] 60% > 70%. [Giảm Sát Thương Chuẩn] của toàn bộ đồng minh 70% > 75%. Uy lực [Truy Kích Tụ Lực] khi [Re-Battle] 1.1x > 1.2x.",
+      "icon": "/Skill/Overgrown Rover (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Giảm Sát Thương Không Bạo Kích] 70% > 80%. [Giảm Sát Thương Chuẩn] của toàn bộ đồng minh 75% > 80%. Uy lực [Truy Kích Tụ Lực] khi [Re-Battle] 1.2x > 1.25x.",
+      "icon": "/Skill/Overgrown Rover (URplus)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Khi vào trận, vĩnh viễn giảm số hành động bỏ qua ST của [Bất Khuất Tuyệt Kỹ] của toàn bộ kẻ địch đi 1, và nhận 3 lớp [Tái Chiến]. ———- [Tái Chiến]: Vĩnh viễn giảm 75% ST nhận vào (+2.5% mỗi lần trở lại sân). Khi đồng minh cùng hàng (hoặc toàn bộ đồng minh) bị hạ trong lúc đơn vị này cũng đã bị hạ, tiêu 1 lớp [Tái Chiến] để trở lại với 100% HP và tung [Truy Kích Tụ Lực] lên mục tiêu ngẫu nhiên với 120% uy lực Tối Thượng; các đồng minh cùng hàng đã bị hạ khác có 70% khả năng cũng kích hoạt. (Chỉ một trong [Tái Chiến], [Trả Thù], [Tập Hợp Lại] hoặc [Hoàn Trả Động Lực] có hiệu lực tại một thời điểm.)",
+      "icon": "/Skill/Overgrown Rover (URplus)/skill_awk.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Số hành động bỏ qua ST của [Bất Khuất Tuyệt Kỹ] của toàn bộ kẻ địch 1 > 2. Số lớp [Tái Chiến] 3 > 5. Giảm ST của [Tái Chiến] 75% > 78% (+2.5% > 2.8% mỗi lần trở lại). Uy lực [Truy Kích Tụ Lực] 120% > 135%. Khả năng kích hoạt của đồng minh cùng hàng khác 70% > 100%.",
+      "icon": "/Skill/Overgrown Rover (URplus)/skill_awk.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Overgrown Rover (URplus)/skill_awk.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
+    },
+    {
+      "term": "[Bất Khuất Cực Hạn]",
+      "desc": "Khiên bỏ qua sát thương bậc cao nhất, chặn một số đòn nhận vào nhất định và khi kích hoạt có thể tung sát thương Hỗn Loạn cực lớn, xuyên qua các hiệu ứng né/giảm thông thường."
+    },
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    },
+    {
+      "term": "[Giảm Sát Thương Chuẩn]",
+      "desc": "Giảm sát thương chuẩn nhận vào theo tỷ lệ lớn (ví dụ 70%), một lá chắn hiếm hoi chống lại loại sát thương thường không thể chặn."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm lượng sát thương nhận vào từ các đòn đánh không phải chí mạng."
+    },
+    {
+      "term": "[Nhiễu Loạn]",
+      "desc": "Trước khi một nhân vật hành động, nếu không có khiên, chịu Disorder DMG nặng dựa trên ST. Cộng dồn; biến mất sau khi kích hoạt."
+    },
+    {
+      "term": "[Né Tránh Chuyên Biệt]",
+      "desc": "Bậc PvP của Né Tránh — giảm đòn chuyên biệt về 1 sát thương; bị xuyên bởi hiệu ứng bỏ qua né tránh."
+    },
+    {
+      "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
+      "desc": "Bậc cao cấp của sát thương trực tiếp, chỉ chịu ảnh hưởng của tăng/giảm sát thương cao cấp và xuyên qua phòng thủ thường."
+    },
+    {
+      "term": "[Sát Thương Nhiễu Loạn]",
+      "desc": "Loại sát thương lớn theo ST gắn với debuff Disorder, bỏ qua Giảm ST theo thời gian và xuyên Specialized Evasion, biến mất sau khi kích hoạt."
+    },
+    {
+      "term": "[Tái Đấu]",
+      "desc": "Vĩnh viễn giảm sát thương phải chịu; khi bị hạ, tiêu một lớp để trở lại với 100% Máu và truy kích."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Overgrown Rover (URplus)/Keepsake_URplus.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Buff",
+    "Hồi Sinh",
+    "Tạo Khiên"
+  ],
+  "class": "Dragon",
+  "classIcon": "/Class/Dragon.png",
+  "classLevel": "Dragon",
+  "releaseSea": "01/10/2026",
+  "releaseTrung": "01/06/2026",
+  "imageSrcset": "/Characters/optimized/100316-urplus-360.webp 360w, /Characters/optimized/100316-urplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

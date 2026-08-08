@@ -1,0 +1,86 @@
+{
+  "id": "100008-ssr",
+  "name": "Cô Gái Muỗi",
+  "imageURL": "/Characters/optimized/100008-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Tâm Linh",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Sát Thương Đơn Mục Tiêu",
+    "Truy Kích"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 394,
+    "hp": 2363,
+    "def": 100,
+    "spd": 100
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tung 2 liên kích lên mục tiêu đơn, mỗi đòn gây 50% ST sát thương.",
+      "icon": "/Skill/Mosquito Girl (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 3 liên kích lên kẻ địch trong vùng chữ thập, mỗi đòn gây 40% ST sát thương; đòn cuối hút 100% sát thương gây ra để hồi máu cho bản thân.",
+      "icon": "/Skill/Mosquito Girl (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung 3 liên kích lên kẻ địch trong vùng chữ thập, mỗi đòn gây 40% ST sát thương; đòn cuối hút 100% sát thương gây ra để hồi máu cho bản thân, đồng thời đòn thứ nhất và thứ hai mỗi đòn có 100% tỉ lệ hút 100% sát thương gây ra để hồi máu.",
+      "keepsakeIcon": "/Keepsake/Mosquito Girl (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Mosquito Girl (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng (+20) Máu. Nhận 33% [Miễn Sát Thương Không Bạo Kích] (hiệu lực mọi loại ST, không tồn tại cùng [Nhanh Nhẹn]). Sau khi đồng minh tấn công (từ lượt 2), [Thức Tỉnh] Mosquito Girl tung [Truy Kích] lên địch có tỉ lệ Máu thấp nhất (80% ST Đòn Thường kèm hiệu ứng đặc biệt, 4 lần/lượt).",
+      "icon": "/Skill/Mosquito Girl (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Miễn Sát Thương Không Bạo Kích] 33% &gt; 38%. [Truy Kích] 80% &gt; 90% ST Đòn Thường, 4 &gt; 5 lần/lượt.",
+      "icon": "/Skill/Mosquito Girl (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Miễn Sát Thương Không Bạo Kích] 38% &gt; 45%. [Truy Kích] 90% &gt; 100% ST Đòn Thường. Kích hoạt: từ lượt 2 &gt; từ lượt 1.",
+      "icon": "/Skill/Mosquito Girl (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Mosquito Girl (SSR)/Keepsake_SSR.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "releaseDate": "01/08/2021",
+  "classLevel": "Demon",
+  "releaseSea": "01/07/2021",
+  "releaseTrung": "01/03/2021",
+  "imageSrcset": "/Characters/optimized/100008-ssr-360.webp 360w, /Characters/optimized/100008-ssr-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

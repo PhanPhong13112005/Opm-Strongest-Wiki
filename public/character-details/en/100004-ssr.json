@@ -1,0 +1,90 @@
+{
+  "id": "100004-ssr",
+  "name": "Tatsumaki/Terrible Tornado V1",
+  "imageURL": "/Characters/optimized/100004-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Esper",
+  "faction": "Hero",
+  "roles": [
+    "AoE Injury",
+    "Reduce ATK"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 399,
+    "hp": 2396,
+    "def": 101,
+    "spd": 99
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 3 combo strikes to a single target for 40% ATK DMG. If a Critical Strike is triggered, inflicts [Weaken] on the target (ATK decreased by 10% for 1 turn).",
+      "icon": "/Skill/TatsumakiTerrible Tornado V1 (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 5 combo strikes to all enemies for 20% ATK DMG, with 60% increased CRIT rate for this attack. Has a 100% chance to inflict [Injured] on the main target and those around it for 1 turn (when attacked, adds Injury DMG equal to 20% ATK).",
+      "icon": "/Skill/TatsumakiTerrible Tornado V1 (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 5 combo strikes to all enemies for 24% ATK DMG, with 75% increased CRIT rate for this attack. Has a 100% chance to inflict [Injured] on all targets for 1 turn (when attacked, adds Injury DMG equal to 20% ATK).",
+      "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado V1 (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/TatsumakiTerrible Tornado V1 (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). Every enemy afflicted with [Injured] increases Terrible Tornado's [Crit DMG] by 30%, up to a maximum of 3 stacks.",
+      "icon": "/Skill/TatsumakiTerrible Tornado V1 (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "[Crit DMG] per [Injured] enemy 30% &gt; 40% (up to 3 stacks).",
+      "icon": "/Skill/TatsumakiTerrible Tornado V1 (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Crit DMG] per [Injured] enemy 40% &gt; 45% (up to 3 stacks).",
+      "icon": "/Skill/TatsumakiTerrible Tornado V1 (SSR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Weaken]",
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado V1 (SSR)/Keepsake_SSR.png",
+  "releaseDate": "16/06/2020",
+  "classLevel": "Class_SS",
+  "releaseSea": "01/08/2021",
+  "releaseTrung": "01/04/2021",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100004-ssr-360.webp 360w, /Characters/optimized/100004-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

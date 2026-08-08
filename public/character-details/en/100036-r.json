@@ -1,0 +1,82 @@
+{
+  "id": "100036-r",
+  "name": "Wild Monkey",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 158,
+    "hp": 945,
+    "def": 40,
+    "spd": 85
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 90% ATK(+10) DMG to a single target.",
+      "icon": "/Skill/Wild Monkey (R)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 110% ATK(+10) DMG to each enemy in the entire row, and has a 100% chance to reduce DMG taken by self by 10% for 2 turns.",
+      "icon": "/Skill/Wild Monkey (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 110% ATK(+10) DMG to each enemy in the entire row, and has a 100% chance to reduce DMG taken by self by 20% for 2 turns.",
+      "icon": "/Skill/Wild Monkey (R)/Skill_ult.png",
+      "keepsakeIcon": "/Keepsake/Wild Monkey (R)/Keepsake_R.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases self HP by (+20). When deployed alongside Eyelashes, increases DMG by 20% until the end of battle.",
+      "icon": "/Skill/Wild Monkey (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases self HP by (+20). When deployed alongside Eyelashes, increases DMG by 30% until the end of battle.",
+      "icon": "/Skill/Wild Monkey (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases self HP by (+20). When deployed alongside Eyelashes, increases DMG by 35% until the end of battle.",
+      "icon": "/Skill/Wild Monkey (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "tier": "R",
+  "imageURL": "/Characters/optimized/100036-r-600.webp",
+  "type": "Grappler",
+  "faction": "Hero",
+  "debut": null,
+  "keepsakeIcon": "/Keepsake/Wild Monkey (R)/Keepsake_R.png",
+  "effects": [],
+  "classLevel": "B",
+  "classIcon": "/Class/B.png",
+  "imageSrcset": "/Characters/optimized/100036-r-360.webp 360w, /Characters/optimized/100036-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

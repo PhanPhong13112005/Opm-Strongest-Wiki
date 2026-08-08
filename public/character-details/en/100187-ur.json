@@ -1,0 +1,131 @@
+{
+  "id": "100187-ur",
+  "name": "King",
+  "imageURL": "/Characters/optimized/100187-ur-600.webp",
+  "tier": "UR",
+  "type": "Esper",
+  "faction": "Hero",
+  "roles": [
+    "Speed Up"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 105
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Threatens a single target, causing it to [Break] for 2 rounds (decreases DMG Rate by 20%), and recovers 20% ATK of HP.",
+      "icon": "/Skill/King (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Heals all allies by 150% of King's max HP, and grants allies in the same row [Specialized Berserk] (the first strike deals Berserk DMG equal to 50% of King's max HP, with a chance to Crit, consuming 150 points of Energy Gauge per enemy hit), lasting 1 round.",
+      "icon": "/Skill/King (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Healing — additional 100% max HP of [Specialized Guard]Same row → All alliesBerserk DMG 50% → 150%Energy Gauge consumed 150 → 100",
+      "keepsakeIcon": "/Keepsake/King (UR)/Keepsake_UR.png",
+      "icon": "/Skill/King (UR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "When battle begins, allies in the same row gain 3 rounds of [Overflow Recovery] (excess HP from Heal and Drain turns into an equivalent amount of [Life Shield]; accumulated DMG removed cannot exceed 20x his original HP). Heals by 450% of King's max HP.Before any character acts, removes [Paralysis] from himself and allies in the same row.",
+      "icon": "/Skill/King (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Heals 450% → 600%Before actions — also removes [Adhesion] from himself and all allies in the same row",
+      "icon": "/Skill/King (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "[Overflow Recovery] 3 rounds → 5 rounds",
+      "icon": "/Skill/King (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "After any ally acts, King and allies in the same row perform [Combo Follow-up] (100% DMG and 100% effect of Ultimate skill, random targets, not affected by Hit/Res), once per round. Allies in the same row share 50% Direct DMG with King. Shared DMG is reduced by 50%, cannot share DMG when HP is below 30%",
+      "icon": "/Skill/King (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Combo Follow-up DMG 100% > 150% Perform Combo Follow-up once in first round > twice in first round Allies same row share DMG 50% > 60% Shared DMG reduction 50% > 80%",
+      "icon": "/Skill/King (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/King (UR)/Skill_Awken.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Adhere]",
+      "desc": "Control status prevents the target from casting [Follow-up] and [Consecutive Follow-up], usually for 2 turns."
+    },
+    {
+      "term": "[Overheal]",
+      "desc": "Converts excess Health from healing and lifesteal into an equivalent Health Shield, up to a limit based on base Health."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/King (UR)/Keepsake_UR.png",
+  "releaseTrung": "01 / 2024",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)",
+    "Buff",
+    "Debuff",
+    "Heal",
+    "Speed"
+  ],
+  "classLevel": "Class_SS",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100187-ur-360.webp 360w, /Characters/optimized/100187-ur-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

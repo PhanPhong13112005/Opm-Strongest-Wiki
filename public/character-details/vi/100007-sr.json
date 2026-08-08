@@ -1,0 +1,91 @@
+{
+  "id": "100007-sr",
+  "name": "Đầu Búa",
+  "imageURL": "/Characters/optimized/100007-sr-600.webp",
+  "tier": "SR",
+  "type": "Công Nghệ",
+  "faction": "Tội Phạm",
+  "roles": [
+    "Choáng",
+    "Kiên Cường"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 173,
+    "hp": 1040,
+    "def": 44,
+    "spd": 91
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây sát thương 100% ST lên mục tiêu đơn.",
+      "icon": "/Skill/Hammerhead (SR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 5 liên kích lên mục tiêu đơn, mỗi đòn gây 40% ST sát thương, và có 50% tỉ lệ gây [Choáng] lên mục tiêu trong 1 lượt (không thể hành động; mỗi phe tối đa 4 nhân vật cùng lúc chịu trạng thái dạng choáng).",
+      "icon": "/Skill/Hammerhead (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Tung 5 liên kích lên mục tiêu đơn, mỗi đòn gây 40% ST sát thương, và có 50% tỉ lệ gây [Choáng] lên mục tiêu trong 1 lượt (không thể hành động; mỗi phe tối đa 4 nhân vật cùng lúc chịu trạng thái dạng choáng).Đồng thời có 50% tỉ lệ khiến bản thân phản đòn 50% sát thương trong 2 lượt.",
+      "keepsakeIcon": "/Keepsake/Hammerhead (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Hammerhead (SR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi bị kẻ địch tấn công, nếu đòn cuối là đòn Chí Mạng, Hammerhead có 50% tỉ lệ vào trạng thái [Kiên Cường] (cường độ 20%); nếu không thì có 50% tỉ lệ vào trạng thái [Cuồng Nộ] (cường độ 30%).",
+      "icon": "/Skill/Hammerhead (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi bị kẻ địch tấn công, nếu đòn cuối là đòn Chí Mạng, Hammerhead có 100% tỉ lệ vào trạng thái [Kiên Cường] (cường độ 20%); nếu không thì có 100% tỉ lệ vào trạng thái [Cuồng Nộ] (cường độ 30%).",
+      "icon": "/Skill/Hammerhead (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Vĩnh viễn tăng Máu bản thân. Khi bị kẻ địch tấn công, nếu đòn cuối là đòn Chí Mạng, Hammerhead có 100% tỉ lệ vào trạng thái [Kiên Cường] (cường độ 35%); nếu không thì có 100% tỉ lệ vào trạng thái [Cuồng Nộ] (cường độ 30%).",
+      "icon": "/Skill/Hammerhead (SR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Lá Chắn]",
+      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Hammerhead (SR)/Keepsake_SR.png",
+  "classLevel": "Outlaw",
+  "classIcon": "/Class/Outlaw.png",
+  "imageSrcset": "/Characters/optimized/100007-sr-360.webp 360w, /Characters/optimized/100007-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

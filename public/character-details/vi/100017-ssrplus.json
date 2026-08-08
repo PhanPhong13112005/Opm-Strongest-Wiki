@@ -1,0 +1,142 @@
+{
+  "id": "100017-ssrplus",
+  "name": "Vua Lòng Đất",
+  "imageURL": "/Characters/optimized/100017-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Vũ Trang",
+  "faction": "Quái Nhân",
+  "roles": [
+    "Đột Phá Toàn Diện",
+    "Thiêu Đốt Chuyên Biệt"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 107
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 60% ST sát thương trực tiếp lên một mục tiêu.",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây 60% ST sát thương trực tiếp lên toàn bộ kẻ địch, sau đó áp [Cấm Hồi Sinh] (ImmuneNotDeathMix) lên toàn bộ kẻ địch chưa có trạng thái miễn tử vong, khiến chúng không thể trở nên bất tử.",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Sát thương trực tiếp lên toàn bộ kẻ địch tăng 60% > 100% ST. Vẫn áp [Cấm Hồi Sinh] lên toàn bộ kẻ địch chưa có trạng thái miễn tử vong.",
+      "keepsakeIcon": "/Keepsake/Subterranean King (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Vĩnh viễn tăng 20% Máu bản thân. Khi trận đấu bắt đầu, nhận [Bảo Hộ Chuyên Biệt] bằng 800% ATK (hấp thụ sát thương nhận vào, cộng dồn với hiệu ứng thêm Máu; tổng sát thương hấp thụ không quá 15x Máu gốc).",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Bảo Hộ Chuyên Biệt] 800% &gt; 1500% ATK.",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Bảo Hộ Chuyên Biệt] 1500% &gt; 2200% ATK.",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Có 50% khả năng gây [Thiêu Đốt Chuyên Biệt] (ST theo thời gian bằng 150% ATK. Sau khi bất kỳ nhân vật nào hành động, hiệu ứng chuyển sang một mục tiêu ngẫu nhiên, biến mất sau khi chuyển 3 lần). Hấp thụ ST theo thời gian của [Thiêu Đốt Chuyên Biệt] trên kẻ địch để khôi phục [Bảo Hộ Chuyên Biệt].",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Tỉ lệ gây hiệu ứng 50% > 90% Specialized Burn ST theo thời gian 150% > 200% Vĩnh viễn tăng 30% ST Tối thượng\n1. [Thiêu Đốt Chuyên Biệt] có thể bị ảnh hưởng bởi Chính xác hiệu ứng%/Kháng hiệu ứng%. 2. [Thiêu Đốt Chuyên Biệt] sẽ chuyển trước tiên sang các nhân vật không ở bất kỳ trạng thái [Kiên Cường] nào. 3. [Thiêu Đốt Chuyên Biệt] có thể cộng dồn tối đa 6 lần. 4. M.Choze và Vaccine Man có thể gây ST phụ trội từ [Thiêu Đốt Chuyên Biệt]. 5. [Thiêu Đốt Chuyên Biệt] có thể chuyển sang các nhân vật [Đã Hồi Sinh] và [Đã Hồi Sinh]. 6. [Thiêu Đốt Chuyên Biệt] có thể bị ảnh hưởng bởi Formal Set. 7. [Thiêu Đốt Chuyên Biệt] không bị ảnh hưởng bởi [Né Tránh].",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Subterranean King (SSR+)/Skill_Awken.png",
+      "type": "Thức tỉnh",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bảo Hộ Chuyên Biệt]",
+      "desc": "Khiên bảo hộ PvP giảm hoặc vô hiệu sát thương lên đồng minh."
+    },
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    },
+    {
+      "term": "[Cấm Hồi Máu]",
+      "desc": "Debuff chặn miễn tử vong áp lên kẻ địch chưa có trạng thái miễn tử vong, ngăn chúng trở nên miễn tử vong hoặc hồi sinh."
+    },
+    {
+      "term": "[Né Tránh]",
+      "desc": "Trạng thái né giúp giảm sát thương Trực Tiếp, Thêm, Tích Lũy và Cuồng Nộ nhận vào chỉ còn 1 điểm trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Thiêu Đốt Chuyên Biệt]",
+      "desc": "Bậc PvP của Thiêu Đốt — sát thương liên tục mạnh hơn, khó giải hơn."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Subterranean King (SSRplus)/Keepsake_SSRplus.png",
+  "class": "Demon",
+  "classIcon": "/Class/Demon.png",
+  "releaseTrung": "07 / 2022",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Sát Thương (Công)",
+    "Debuff"
+  ],
+  "classLevel": "Demon",
+  "imageSrcset": "/Characters/optimized/100017-ssrplus-360.webp 360w, /Characters/optimized/100017-ssrplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

@@ -1,0 +1,81 @@
+{
+  "id": "100038-r",
+  "name": "Bunbun Man",
+  "imageURL": "/Characters/optimized/100038-r-600.webp",
+  "tier": "R",
+  "type": "Grappler",
+  "faction": "Hero",
+  "roles": [
+    "Versatile"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 158,
+    "hp": 945,
+    "def": 40,
+    "spd": 88
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Strikes a single target with a 5-hit combo, dealing 18% ATK(+2) DMG.",
+      "icon": "/Skill/Bunbun Man (R)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Strikes a single target with a 5-hit combo, dealing 38% ATK(+2) DMG. Has a 100% chance to increase self ATK by 10% for 2 turns.",
+      "icon": "/Skill/Bunbun Man (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Strikes a single target with a 5-hit combo, dealing 38% ATK(+2) DMG. Has a 100% chance to increase self ATK by 20% for 2 turns.",
+      "keepsakeIcon": "/Keepsake/Bunbun Man (R)/Keepsake_R.png",
+      "icon": "/Skill/Bunbun Man (R)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases self HP by (+20). Before acting, increases self Crit by 5% for 1 turn.",
+      "icon": "/Skill/Bunbun Man (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases self HP by (+20). Before acting, increases self Crit by 10% for 1 turn.",
+      "icon": "/Skill/Bunbun Man (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases self HP by (+20). Before acting, increases self Crit by 15% for 1 turn.",
+      "icon": "/Skill/Bunbun Man (R)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [],
+  "keepsakeIcon": "/Keepsake/Bunbun Man (R)/Keepsake_R.png",
+  "classLevel": "C",
+  "classIcon": "/Class/C.png",
+  "imageSrcset": "/Characters/optimized/100038-r-360.webp 360w, /Characters/optimized/100038-r-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

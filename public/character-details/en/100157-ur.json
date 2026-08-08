@@ -1,0 +1,148 @@
+{
+  "id": "100157-ur",
+  "name": "Metal Bat V2",
+  "imageURL": "/Characters/optimized/100157-ur-600.webp",
+  "tier": "UR",
+  "type": "Duelist",
+  "faction": "Hero",
+  "roles": [
+    "Main DPS (ATK)"
+  ],
+  "duyen": "V2",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 117
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 120% ATK Direct DMG to a single target with a 3-hit combo.",
+      "icon": "/Skill/Metal Bat V2 (UR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Increase own Hit and Specialized Hit by 50%. Negates target 30% [Evasion], [Specialized Evasion], [Non-Crit DMG Reduction]. Grants ownself 100% [Berserk]. Each strike can trigger 1 [Specialized Breakthrough]. Deals damage with 3 consecutive strikes to the entire row a fixed total of 3900% ATK of Direct Damage.",
+      "icon": "/Skill/Metal Bat V2 (UR)/skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Specialized Hit 50% > 70%. Negates target [Evasion] 30% > 50%. Self [Berserk] 100% > 130%. Entire row total DMG 3900% > 5400%.",
+      "keepsakeIcon": "/Keepsake/Metal Bat V2 (UR)/Keepsake_UR.png",
+      "icon": "/Skill/Metal Bat V2 (UR)/skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Obtains 60% [Non-Crit DMG Reduction]. Reduce [Regroup] and [Revenge Revival] chances by 3. Negates enemies [Specialized DMG Reflect]. Grants [Immunity] to [Deterrence], [Stun], [Specialized Stun], to himself and ally in the same column.",
+      "icon": "/Skill/Metal Bat V2 (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Gains [Non-Crit DMG Reduction] 60% > 70%. Reduce no. of resurrections by 3 > 5.",
+      "icon": "/Skill/Metal Bat V2 (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Gains [Non-Crit DMG Reduction] 70% > 80%. Reduce no. of resurrections by 5 > 7.",
+      "icon": "/Skill/Metal Bat V2 (UR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "Gains [Momentum Return] 2 times. Obtains 30% [Suppression DMG Reduction]. — [Momentum Return]: After all allies are defeated, return to battle with 110% (200%) Max HP. [Suppression DMG Reduction]: Reduce 30% DMG received, if ATK is higher than the Attacker, reduce by 150%.",
+      "icon": "/Skill/Metal Bat V2 (UR)/skill_awk.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Gain [Momentum Return] 2 > 3. Gain [Suppression DMG Reduction] 30% > 40%. Reduce DMG 30% > 40%. If ATK is higher, reduce by 150% > 170%.",
+      "icon": "/Skill/Metal Bat V2 (UR)/skill_awk.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Metal Bat V2 (UR)/skill_awk.png",
+      "type": "Awakening",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Stun]",
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+    },
+    {
+      "term": "[Mark]",
+      "desc": "Mark a unit, unlocking a raid condition or bonus effect associated with the mark."
+    },
+    {
+      "term": "[Kinetic Recovery]",
+      "desc": "Revive effect: after all allies are down, the unit returns to battle with most of its maximum Health (110%–200%)."
+    },
+    {
+      "term": "[Control DMG Immunity]",
+      "desc": "The defensive effect reduces damage taken (30–40%), increasing to a 150–170% reduction when the bearer's ST is higher than the attacker's."
+    },
+    {
+      "term": "[Counter]",
+      "desc": "A counter mark whose class number gradually increases the user's direct counter damage to marked enemies."
+    },
+    {
+      "term": "[Threaten]",
+      "desc": "The stun control effect renders the target unable to act and reduces its overall damage immunity by 30%."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Metal Bat V2 (UR)/Keepsake_UR.png",
+  "releaseTrung": "01/08/2025",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Debuff",
+    "DMG (HP)",
+    "Revive",
+    "Generate Shield"
+  ],
+  "classLevel": "Class_S",
+  "releaseSea": "01/12/2025",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100157-ur-360.webp 360w, /Characters/optimized/100157-ur-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

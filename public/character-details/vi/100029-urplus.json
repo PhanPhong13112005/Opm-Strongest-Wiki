@@ -1,0 +1,173 @@
+{
+  "id": "100029-urplus",
+  "name": "Mặt Nạ Ngọt Ngào",
+  "imageURL": "/Characters/optimized/100029-urplus-600.webp",
+  "tier": "UR+",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Hạt Nhân"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 125
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Gây 120% ST trực tiếp lên một mục tiêu đơn bằng 2 đòn liên tiếp.",
+      "icon": "/Skill/Amai Mask (URplus)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Tung 3 đòn liên tiếp vào một mục tiêu đơn, gây 1500% ST dưới dạng [Sát Thương Trực Tiếp Chuyên Biệt] (chỉ chịu ảnh hưởng của DMG Reduction cấp cao), vô hiệu 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] của mục tiêu, đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Hồi cho toàn bộ đồng minh 10% Máu tối đa dưới dạng [HP Chuyên Biệt] (có thể chí mạng).",
+      "icon": "/Skill/Amai Mask (URplus)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": "/Animation/Amai_Urplus/ult.gif",
+      "keepsakeIcon": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "[Sát Thương Trực Tiếp Chuyên Biệt] 1500% > 2400% ST. Vô hiệu [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] 45% > 60%. Hồi cho toàn bộ đồng minh 10% > 15% Máu tối đa dưới dạng [HP Chuyên Biệt].",
+      "keepsakeIcon": "/Keepsake/Amai Mask (URplus)/Keepsake_URplus.png",
+      "icon": "/Skill/Amai Mask (URplus)/skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": "/Animation/Amai_Urplus/ult.gif",
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Nhận 60% [Khả Năng Né Tránh Chuyên Biệt]. Giảm 40% [Thần Tốc - Tấn Công] và [Thần Tốc - Phòng Thủ] của kẻ địch. Trước khi bất kỳ nhân vật nào hành động, giải trừ [Choáng], [Choáng Chuyên Biệt] và [Uy Hiếp] cho toàn bộ đồng minh.",
+      "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
+      "type": "Nội tại",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "[Khả Năng Né Tránh Chuyên Biệt] 60% > 70%.",
+      "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
+      "type": "Nội tại",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "[Khả Năng Né Tránh Chuyên Biệt] 70% > 80%. Giảm 40% > 70% [Thần Tốc - Tấn Công] và [Thần Tốc - Phòng Thủ] của kẻ địch.",
+      "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
+      "type": "Nội tại",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 1",
+      "desc": "Nếu Máu tối đa của đồng minh thấp hơn 70% Máu tối đa của Amai Mask, vĩnh viễn tăng 30% Máu tối đa. Khi trận đấu bắt đầu, nhận 30% [Giảm Sát Thương Theo Kháng]. — [Giảm Sát Thương Theo Kháng]: giảm 30% ST nhận vào; nếu Máu gốc cao hơn kẻ tấn công thì tăng lên 150%.",
+      "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
+      "type": "Thức tỉnh",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 2",
+      "desc": "Máu tối đa 30% > 50%. [Giảm Sát Thương Theo Kháng] 30% > 40% (nếu Máu cao hơn thì 150% > 170%).",
+      "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
+      "type": "Thức tỉnh",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Nội tại Thức tỉnh 3",
+      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
+      "type": "Thức tỉnh",
+      "animation": null,
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
+    },
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+    },
+    {
+      "term": "[Choáng Chuyên Biệt]",
+      "desc": "Bậc PvP của Choáng — khó kháng hoặc giải hơn."
+    },
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Giáp]",
+      "desc": "Buff cho 15% giảm sát thương và phòng thủ đặc hóa khi người mang bị tấn công."
+    },
+    {
+      "term": "[Miễn Nhiễm Sát Thương Kháng]",
+      "desc": "Giảm 30% sát thương nhận vào, tăng lên mức giảm 150% nếu HP gốc của người mang cao hơn của kẻ tấn công."
+    },
+    {
+      "term": "[HP Chuyên Biệt]",
+      "desc": "Thanh máu riêng bậc PvP xếp chồng lên máu thường, cũng phải bị hạ và có thể được hồi độc lập."
+    },
+    {
+      "term": "[Né Tránh Chuyên Biệt]",
+      "desc": "Bậc PvP của Né Tránh — giảm đòn chuyên biệt về 1 sát thương; bị xuyên bởi hiệu ứng bỏ qua né tránh."
+    },
+    {
+      "term": "[Nứt Vỡ]",
+      "desc": "Buff tấn công cho phép người mang bỏ qua một phần Giảm Sát Thương và Phòng Thủ Chuyên Biệt của kẻ địch khi tấn công."
+    },
+    {
+      "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
+      "desc": "Bậc cao cấp của sát thương trực tiếp, chỉ chịu ảnh hưởng của tăng/giảm sát thương cao cấp và xuyên qua phòng thủ thường."
+    },
+    {
+      "term": "[Lĩnh Vực Siêu Tốc: Tấn Công]",
+      "desc": "Chỉ số vùng tốc độ tấn công giúp tăng sát thương trong PvP; kẻ địch có thể bị giảm Hyperspeed Field·ATK (ví dụ 40–60%) để làm yếu đòn đánh."
+    },
+    {
+      "term": "[Lĩnh Vực Siêu Tốc: Phòng Thủ]",
+      "desc": "Vùng phòng thủ dựa trên tốc độ, giảm sát thương nhận vào trong PvP khi tốc độ của kẻ tấn công không cao hơn phe phòng thủ."
+    },
+    {
+      "term": "[Uy Hiếp]",
+      "desc": "Hiệu ứng khống chế dạng choáng khiến mục tiêu không thể hành động và giảm toàn bộ khả năng miễn sát thương của nó đi 30%."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Amai Mask (URplus)/Keepsake_URplus.png",
+  "releaseTrung": "01/12/2025",
+  "pvpStats": {
+    "atk": 50,
+    "hp": 50,
+    "def": 50,
+    "spd": 1
+  },
+  "dacTinh": [
+    "Buff",
+    "Hạt Nhân"
+  ],
+  "classLevel": "A",
+  "releaseSea": "01/04/2026",
+  "classIcon": "/Class/A.png",
+  "imageSrcset": "/Characters/optimized/100029-urplus-360.webp 360w, /Characters/optimized/100029-urplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

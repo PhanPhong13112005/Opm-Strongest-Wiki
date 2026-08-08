@@ -1,0 +1,98 @@
+{
+  "id": "100045-ssr",
+  "name": "Đồng Đế",
+  "imageURL": "/Characters/optimized/100045-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Công Nghệ",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Choáng",
+    "Hạt Nhân Sụp Đổ"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 388,
+    "hp": 2329,
+    "def": 98,
+    "spd": 99
+  },
+  "skills": [
+    {
+      "name": "Cơ bản",
+      "desc": "Tấn công mục tiêu đơn gây 120% ST sát thương.",
+      "icon": "/Skill/Child Emperor (SSR)/Skill_base.png",
+      "type": "Kỹ năng thường",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Tuyệt kĩ",
+      "desc": "Gây sát thương lên từng kẻ địch trong một hàng bằng 5 đòn liên tiếp, mỗi đòn gây 130% ST(+XX) sát thương, với 50% tỉ lệ gây [Choáng] cho mục tiêu chính trong 1 lượt (không thể hành động và hiệu ứng này không bị ảnh hưởng bởi Hit). Gây sát thương Chí Mạng sẽ khiến mục tiêu chịu [Nứt Vỡ] trong 2 lượt (nhận thêm 30% sát thương).",
+      "icon": "/Skill/Child Emperor (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Siêu tuyệt kĩ",
+      "desc": "Gây sát thương lên từng kẻ địch trong một hàng bằng 5 đòn liên tiếp, mỗi đòn gây 130% > 165% ST(+XX) sát thương, với 50% tỉ lệ gây [Choáng] cho mục tiêu chính trong 1 lượt (không thể hành động và hiệu ứng này không bị ảnh hưởng bởi Hit). Gây sát thương Chí Mạng sẽ khiến mục tiêu chịu [Nứt Vỡ] trong 2 lượt (nhận thêm 30% > 40% sát thương).",
+      "keepsakeIcon": "/Keepsake/Child Emperor (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Child Emperor (SSR)/Skill_ult.png",
+      "type": "Tuyệt kĩ",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động",
+      "desc": "Mỗi khi Child Emperor kết thúc hành động, các đồng minh cùng hàng vào trạng thái [Giận Dữ] trong 1 lượt (sát thương tăng 30%). Tăng vĩnh viễn HP.",
+      "icon": "/Skill/Child Emperor (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động cực hạn",
+      "desc": "Mỗi khi Child Emperor kết thúc hành động, các đồng minh cùng hàng vào trạng thái [Giận Dữ] trong 1 lượt (sát thương tăng 45%). Tăng vĩnh viễn HP.",
+      "icon": "/Skill/Child Emperor (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Bị động 5 sao",
+      "desc": "Mỗi khi Child Emperor kết thúc hành động, các đồng minh cùng hàng vào trạng thái [Giận Dữ] trong 1 lượt (sát thương tăng 50%). Tăng vĩnh viễn HP.",
+      "icon": "/Skill/Child Emperor (SSR)/Skill_pas.png",
+      "type": "Nội tại",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Choáng]",
+      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+    },
+    {
+      "term": "[Giận Dữ]",
+      "desc": "Buff tấn công có sát thương tăng theo điều kiện (ví dụ mỗi kẻ địch bị đánh dấu), khuếch đại lượng sát thương loại Cuồng Nộ mà đơn vị gây ra."
+    },
+    {
+      "term": "[Sụp Đổ]",
+      "desc": "Hiệu ứng sát thương/bất lợi phá vỡ phòng thủ của mục tiêu."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Child Emperor (SSR)/Keepsake_SSR.png",
+  "releaseDate": "16/06/2020",
+  "classLevel": "Class_SS",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100045-ssr-360.webp 360w, /Characters/optimized/100045-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

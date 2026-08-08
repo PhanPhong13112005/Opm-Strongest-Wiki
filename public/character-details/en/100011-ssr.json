@@ -1,0 +1,99 @@
+{
+  "id": "100011-ssr",
+  "name": "Atomic Samurai",
+  "imageURL": "/Characters/optimized/100011-ssr-600.webp",
+  "tier": "SSR",
+  "type": "Duelist",
+  "faction": "Hero",
+  "roles": [
+    "Collapse",
+    "Duelist Follow-up"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 392,
+    "hp": 2351,
+    "def": 99,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 130% ATK (+10) damage to a single target.",
+      "icon": "/Skill/Atomic Samurai (SSR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 20% ATK (+2) damage to all enemies in a 5-hit combo. The first hit has a 50% chance to inflict [Collapse] on the target for 2 turns (DMG reduction rate lowered by 30%).",
+      "icon": "/Skill/Atomic Samurai (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Deals 25% ATK (+2) damage to all enemies in a 5-hit combo. The first hit has a 50% chance to inflict [Collapse] on the target for 2 turns (DMG reduction rate lowered by 30%).",
+      "keepsakeIcon": "/Keepsake/Atomic Samurai (SSR)/Keepsake_SSR.png",
+      "icon": "/Skill/Atomic Samurai (SSR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently grants self (+20) HP. After an Armament-type ally attacks, Atomic Samurai immediately performs a [Follow-up] (attacks with 80% of his basic attack's damage and effects, up to 3 times per turn).",
+      "icon": "/Skill/Atomic Samurai (SSR)/Skill_pas.png",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently grants self (+20) HP. After an Armament-type ally attacks, Atomic Samurai immediately performs a [Follow-up] (attacks with 120% of his basic attack's damage and effects, up to 3 times per turn).",
+      "icon": "/Skill/Atomic Samurai (SSR)/Skill_pas.png",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently grants self (+20) HP. After an Armament-type ally attacks, Atomic Samurai immediately performs a [Follow-up] (attacks with 130% of his basic attack's damage and effects, up to 3 times per turn).",
+      "icon": "/Skill/Atomic Samurai (SSR)/Skill_pas.png",
+      "animation": "/Animation/Sam_Urplus/Passive.gif",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Truy Kích]",
+      "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Atomic Samurai (SSR)/Keepsake_SSR.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (ATK)"
+  ],
+  "releaseDate": "16/06/2020",
+  "classLevel": "Class_SS",
+  "releaseSea": "16/06/2020",
+  "releaseTrung": "16/02/2020",
+  "classIcon": "/Class/Class_SS.png",
+  "imageSrcset": "/Characters/optimized/100011-ssr-360.webp 360w, /Characters/optimized/100011-ssr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

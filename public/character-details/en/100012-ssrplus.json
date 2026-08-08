@@ -1,0 +1,139 @@
+{
+  "id": "100012-ssrplus",
+  "name": "Metal Bat",
+  "imageURL": "/Characters/optimized/100012-ssrplus-600.webp",
+  "tier": "SSR+",
+  "type": "Duelist",
+  "faction": "Hero",
+  "roles": [
+    "Stun Immunity",
+    "Follow-up",
+    "Revive"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 585,
+    "hp": 3510,
+    "def": 148,
+    "spd": 98
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Deals 3 consecutive strikes to a single target, each dealing 50% ATK Direct DMG.",
+      "icon": "/Skill/Metal Bat (SSR+)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Grants [Berserk] to self, adding charge DMG equal to 380% ATK. Strikes the main target 3 times for 40% ATK Direct DMG each, then performs a [Continuous Pursuit] on the 2 enemies with the lowest HP.",
+      "icon": "/Skill/Metal Bat (SSR+)/skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "[Berserk] charge DMG 380% > 420% ATK. Lowest-HP enemies pursued by [Continuous Pursuit] 2 > 3. Per-hit Direct DMG on the main target 40% > 50% ATK. Additionally heals self for 12% max HP on each strike.",
+      "keepsakeIcon": "/Keepsake/Metal Bat (SSRplus)/Keepsake_SSRplus.png",
+      "icon": "/Skill/Metal Bat (SSR+)/skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases own HP by (+20). Permanently grants [Immunity against Stun] to other allies in its row. After 2 rounds, grants itself [Immunity against Extra DMG].",
+      "icon": "/Skill/Metal Bat (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Self [Immunity against Extra DMG]: after 2 rounds &gt; after 1 round.",
+      "icon": "/Skill/Metal Bat (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Self [Immunity against Extra DMG]: after 1 round &gt; permanent (from the start).",
+      "icon": "/Skill/Metal Bat (SSR+)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Awaken 1 Passive",
+      "desc": "When Metal Bat dies, he revives (zombie-like, up to 3 times, and can revive even when all other allies have died). Upon reviving, he gains 40% Max HP and performs [Ultimate] on the lowest-HP enemy.",
+      "icon": "/Skill/Source/100012-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Awakening",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Awaken 2 Passive",
+      "desc": "Revive count 3 > 4 times. Revival heal 40% > 70% Max HP. [Ultimate] targets 1 > 3 enemies.",
+      "icon": "/Skill/Source/100012-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Awakening",
+      "cost": null,
+      "keepsakeIcon": null
+    },
+    {
+      "name": "Awaken 3 Passive",
+      "desc": "• Restores 150 [Energy Gauge] (when attacking)",
+      "icon": "/Skill/Source/100012-ssrplus/awakened.webp",
+      "animation": null,
+      "type": "Awakening",
+      "cost": null,
+      "keepsakeIcon": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Stun]",
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+    },
+    {
+      "term": "[Berserk]",
+      "desc": "Attack buffs increase damage based on conditions (e.g. each marked enemy), amplifying the amount of Fury-type damage the unit deals."
+    },
+    {
+      "term": "[Immunity]",
+      "desc": "Status that causes the bearer to be unaffected by a certain effect or type of control, such as [Breakthrough], Stun, or Charm."
+    },
+    {
+      "term": "[Chain Follow-up]",
+      "desc": "Extra attacks outside of turn (usually after an ally acts) apply a portion of the ultimate's ST and effects to a random target, at no mana cost."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Metal Bat (SSRplus)/Keepsake_SSRplus.png",
+  "pvpStats": {
+    "atk": 30,
+    "hp": 30,
+    "def": 30,
+    "spd": 1
+  },
+  "dacTinh": [
+    "DMG (HP)",
+    "Generate Shield"
+  ],
+  "classLevel": "Class_S",
+  "releaseSea": "01/05/2022",
+  "releaseTrung": "01/01/2022",
+  "classIcon": "/Class/Class_S.png",
+  "imageSrcset": "/Characters/optimized/100012-ssrplus-360.webp 360w, /Characters/optimized/100012-ssrplus-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}

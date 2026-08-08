@@ -1,0 +1,87 @@
+{
+  "id": "100063-sr",
+  "name": "Konbu Infinity",
+  "imageURL": "/Characters/optimized/100063-sr-600.webp",
+  "tier": "SR",
+  "type": "Esper",
+  "faction": "Monster",
+  "roles": [
+    "Corrode"
+  ],
+  "duyen": "",
+  "baseStats": {
+    "atk": 172,
+    "hp": 1030,
+    "def": 43,
+    "spd": 93
+  },
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Attacks a single target with 2 combo strikes for 50% ATK DMG.",
+      "icon": "/Skill/Konbu Infinity (SR)/Skill_base.png",
+      "type": "Basic",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Attacks all enemies with 2 combo strikes for 40% ATK DMG, with a 100% chance to inflict [Corrosion] on the main target for 2 turns (DoT equal to 20% ATK).",
+      "icon": "/Skill/Konbu Infinity (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": 2
+    },
+    {
+      "name": "Ultra-Ultimate",
+      "desc": "Attacks all enemies with 2 combo strikes for 40% ATK DMG, with a 100% chance to inflict [Corrosion] on the main target and a 50% chance to inflict [Corrosion] on the units around the main target for 2 turns (DoT equal to 20% ATK).",
+      "keepsakeIcon": "/Keepsake/Konbu Infinity (SR)/Keepsake_SR.png",
+      "icon": "/Skill/Konbu Infinity (SR)/Skill_ult.png",
+      "type": "Ultimate",
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Passive",
+      "desc": "Permanently increases self max HP by 20%. When an enemy afflicted with [Corrosion] takes action, heals self for 10% of max HP (up to 3 times per turn).",
+      "icon": "/Skill/Konbu Infinity (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "Extreme Passive",
+      "desc": "Permanently increases self max HP by 20%. When an enemy afflicted with [Corrosion] takes action, heals self for 15% of max HP (up to 3 times per turn).",
+      "icon": "/Skill/Konbu Infinity (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    },
+    {
+      "name": "5★ Passive",
+      "desc": "Permanently increases self max HP by 20%. When an enemy afflicted with [Corrosion] takes action, heals self for 17% of max HP (up to 3 times per turn).",
+      "icon": "/Skill/Konbu Infinity (SR)/Skill_pas.png",
+      "type": "Passive",
+      "keepsakeIcon": null,
+      "animation": null,
+      "cost": null
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Corrode]",
+      "desc": "Corrosive damage over time effect, each turn dealing damage equal to a percentage of ST (e.g. 300%) to the target."
+    }
+  ],
+  "keepsakeIcon": "/Keepsake/Konbu Infinity (SR)/Keepsake_SR.png",
+  "class": "Tiger",
+  "classIcon": "/Class/Tiger.png",
+  "classLevel": "Tiger",
+  "imageSrcset": "/Characters/optimized/100063-sr-360.webp 360w, /Characters/optimized/100063-sr-600.webp 568w",
+  "imageWidth": 568,
+  "imageHeight": 688
+}
