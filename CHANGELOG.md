@@ -1,5 +1,14 @@
 # Lịch sử phiên bản OPM Strongest Wiki
 
+## 09/08/2026 — Đồng bộ Vai trò nhân vật từ Markdown và tối ưu Caching Local
+
+- Trích xuất tự động thuộc tính Vai trò (`Roles`) cho toàn bộ 177 nhân vật từ [DANH_SACH_KY_NANG_NHAN_VAT_EN.md](file:///d:/Code/OpmWiki/docs/DANH_SACH_KY_NANG_NHAN_VAT_EN.md).
+- Dịch và chuẩn hóa 179 thuật ngữ Vai trò sang Tiếng Việt cho catalog chính (`src/data/characters.json`), đồng thời tự động lọc bớt thẻ `Hạt Nhân` cũ khỏi `dacTinh` cho các nhân vật không phải Core.
+- Mở rộng script import `update-character-skills-from-markdown.mjs` và `update-vietnamese-skills-from-english.mjs` để duy trì đồng bộ Vai trò song ngữ khi re-run pipeline.
+- Sinh lại toàn bộ 177 cặp file JSON chi tiết tại `public/character-details/vi/` và `public/character-details/en/` cùng `homeCharacterSummaries.json`.
+- Cập nhật `characterApi.js` ưu tiên dữ liệu local mới nhất và chuyển `loadLocalCharacterDetail` sang `no-cache` trong môi trường DEV để không bị dính đĩa cache trình duyệt.
+- Đã kiểm thử thành công 74/74 test tự động.
+
 ## 04/08/2026 — Hoàn tất Việt hóa hiệu ứng và tìm kiếm tên song ngữ
 
 - Áp dụng bảng chốt gồm 318 thuật ngữ/hiệu ứng và 177 tên nhân vật vào catalog tiếng Việt.

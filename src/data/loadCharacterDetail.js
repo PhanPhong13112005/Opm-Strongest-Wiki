@@ -6,7 +6,8 @@ export const loadLocalCharacterDetail = async (id, language = 'vi') => {
   const url = `/character-details/${locale}/${encodeURIComponent(id)}.json`
 
   if (!detailRequestCache.has(url)) {
-    detailRequestCache.set(url, fetch(url, { cache: 'force-cache' })
+    const fetchOptions = import.meta.env?.DEV ? { cache: 'no-cache' } : { cache: 'force-cache' }
+    detailRequestCache.set(url, fetch(url, fetchOptions)
       .then(response => response.ok ? response.json() : null)
       .catch(() => null))
   }
