@@ -9,6 +9,15 @@
 - Cập nhật `characterApi.js` ưu tiên dữ liệu local mới nhất và chuyển `loadLocalCharacterDetail` sang `no-cache` trong môi trường DEV để không bị dính đĩa cache trình duyệt.
 - Đã kiểm thử thành công 74/74 test tự động.
 
+## 08/08/2026 — Triển khai Trang bị, Chuẩn hóa Kỹ năng và Ý tưởng Hệ thống Mới
+
+- **Trang Trang bị (Gear):** Triển khai thành công hệ thống Trang bị với 20 bộ trang bị, giả lập nâng cấp/tiến hóa/tinh luyện và tính toán chỉ số chuẩn game.
+- **Trang Thẻ Bổ trợ (Buff Gear):** Tiến hành phát triển và triển khai hệ thống Thẻ Bổ trợ độc lập.
+- **Chuẩn hóa Kỹ năng Nhân vật:** Hoàn thành chỉnh sửa và làm mới toàn bộ bộ kỹ năng cho 177 nhân vật khớp với dữ liệu thực tế in-game.
+- **Lên ý tưởng Tính năng mới (08/08/2026):**
+  - Khởi động ý tưởng phát triển các trang **Thiên phú (Talents)** và **Chỉ số (Stats)**.
+  - Cập nhật thêm định hướng phát triển tính năng **Ấn ký (Insignias)** và **Trang bị Khuyên dùng (Recommended Gear)** cho từng nhân vật.
+
 ## 04/08/2026 — Hoàn tất Việt hóa hiệu ứng và tìm kiếm tên song ngữ
 
 - Áp dụng bảng chốt gồm 318 thuật ngữ/hiệu ứng và 177 tên nhân vật vào catalog tiếng Việt.
@@ -16,6 +25,10 @@
 - Không để dữ liệu API cũ ghi đè tên hoặc hiệu ứng vừa Việt hóa; tên tùy chỉnh của Admin vẫn được ưu tiên.
 - Tìm kiếm nhân vật bằng tên Việt, tên Anh, tên cũ, ID hoặc tiếng Việt không dấu ở cả giao diện VI và EN.
 - Bổ sung kiểm thử tính đầy đủ của bảng Việt hóa, tương thích dữ liệu API cũ và tìm kiếm song ngữ; toàn bộ 46 test đạt và build production thành công.
+
+## 03/08/2026 — Lên ý tưởng Trang bị và Thẻ Bổ trợ
+
+- Khởi động định hướng thiết kế và xây dựng dữ liệu cho tính năng **Trang bị (Gear)** và **Thẻ Bổ trợ (Buff Gear)**.
 
 Tài liệu này ghi lại các mốc đã được đối chiếu với lịch sử Git và trạng thái mã nguồn. Dự án hiện
 chưa phát hành theo Semantic Versioning và `package.json` vẫn dùng phiên bản `0.0.0`.

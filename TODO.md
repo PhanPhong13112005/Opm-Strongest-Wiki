@@ -19,28 +19,17 @@ _(Bạn có thể điền thêm chi tiết vào đây nếu phát hiện ra lỗ
 - [x] **Lỗi hiển thị Lịch sử (Fake Dates):**
   - Đã lọc sạch ngày ảo của Zombieman UR+ và đồng bộ từ trước.
 
----
-
-**🚀 Tính năng mới cần làm cho ngày mai:**
-
-- [ ] **Trang Kỷ vật:** Xây dựng danh sách và chi tiết các Kỷ vật, tập trung vào thông tin "Lấy ở đâu" (Nguồn gốc nhận).
-- [ ] **Trang Huy Hiệu:** Thiết kế trang tổng hợp các loại Huy Hiệu, chỉ rõ nguồn gốc "Lấy ở đâu" và cách sở hữu.
-- [ ] **Trang Hướng Dẫn Tân Thủ:** Soạn thảo và thiết kế trang "Hướng Dẫn người chơi mới 10 ngày đầu" với lộ trình cày cuốc, mẹo chơi và cách tiêu thụ tài nguyên hiệu quả nhất.
-- [ ] **Đồng bộ Ngôn ngữ (Localization):** Rà soát và dịch thuật lại toàn bộ Wiki, khắc phục tình trạng "nửa nạc nửa mỡ" (một số trang chưa sang tiếng Việt hẳn, cũng chưa ra tiếng Anh hẳn).
+- [x] **Trang Trang bị (Gear):** Lên ý tưởng 03/08/2026, triển khai hoàn thành 08/08/2026 với 20 bộ trang bị, giả lập nâng cấp/tiến hóa/tinh luyện.
+- [/] **Trang Thẻ Bổ trợ (Buff Gear):** Lên ý tưởng 03/08/2026, hiện đang triển khai phát triển.
+- [x] **Sửa Kỹ năng Nhân vật:** Hoàn thành 08/08/2026, điều chỉnh toàn bộ kỹ năng của 177 nhân vật khớp dữ liệu thực tế in-game.
 
 ---
 
-**💡 Ghi chú cho ngày mai:**
-Khi bắt đầu phiên làm việc mới, chúng ta sẽ ưu tiên bắt tay vào các Trang tính năng mới này nhé! Tôi sẽ lo phần Code và Thiết kế giao diện (UI/UX).
+**🚀 Các ý tưởng tính năng mới (Cập nhật 08/08/2026):**
 
-**📋 Phần việc của bạn (Chuẩn bị dữ liệu):**
+- [ ] **Trang Thiên phú (Talents):** Lên ý tưởng 08/08/2026.
+- [ ] **Trang Chỉ số (Stats):** Lên ý tưởng 08/08/2026.
+- [ ] **Tính năng Ấn ký (Insignias):** Ý tưởng hệ thống trang bị/ấn ký nâng cao.
+- [ ] **Trang bị Khuyên dùng (Recommended Gear):** Ý tưởng gợi ý bộ trang bị tối ưu cho từng nhân vật.
+- [ ] **Trang Hướng Dẫn Tân Thủ:** Soạn thảo lộ trình cày cuốc 10 ngày đầu cho người chơi mới.
 
-- [ ] Chuẩn bị thông tin Nguồn gốc ("Lấy ở đâu") của các loại Kỷ vật và Huy Hiệu để tôi đưa vào hệ thống.
-- [ ] Soạn sẵn dàn ý hoặc các gạch đầu dòng kinh nghiệm cày cuốc trong "10 ngày đầu" để tôi thiết kế thành trang Cẩm nang đẹp mắt.
-- [ ] Trong lúc rảnh, nếu bạn lướt Wiki mà thấy chỗ nào chữ tiếng Anh/tiếng Việt lẫn lộn thì hãy chụp màn hình lại để ngày mai ném cho tôi sửa một lượt luôn nhé!
-
-Hôm nay chúng ta sẽ làm 2 trang:
-1 Trang về TÍnh năng Huy Chương (level 70 mở)
-1 Trang về Tính năng Chiến thuật (level 75 mở)
-[Feature](file;file:///d%3A/Code/OpmWiki/public/Feature)
-bạn có thể đổi tên ảnh để dễ hiểu
