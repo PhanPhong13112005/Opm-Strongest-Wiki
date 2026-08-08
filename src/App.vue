@@ -1,9 +1,7 @@
 <script setup>
-import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { computed, defineAsyncComponent, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { RouterView, RouterLink, useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { Analytics } from '@vercel/analytics/vue'
-import { SpeedInsights } from '@vercel/speed-insights/vue'
 import GlobalDataLoader from './components/GlobalDataLoader.vue'
 import { pendingApiRequests } from './services/apiClient'
 import { authState, clearSession, hasRole, hasValidSession } from './services/authApi'
@@ -11,6 +9,11 @@ import { authState, clearSession, hasRole, hasValidSession } from './services/au
 const { t, locale } = useI18n()
 const route = useRoute()
 const router = useRouter()
+const DeferredAnalytics = defineAsyncComponent(() => import('@vercel/analytics/vue').then(module => module.Analytics))
+const DeferredSpeedInsights = defineAsyncComponent(() => import('@vercel/speed-insights/vue').then(module => module.SpeedInsights))
+const telemetryReady = ref(false)
+let telemetryDelayTimer = null
+let telemetryIdleHandle = null
 const isRouteLoading = ref(false)
 const isGlobalLoading = computed(() => isRouteLoading.value || pendingApiRequests.value > 0)
 const removeLoadingBeforeGuard = router.beforeEach(() => {
@@ -115,9 +118,27 @@ watch(() => route.fullPath, () => {
   isMobileSystemsOpen.value = false
   isAccountMenuOpen.value = false
 })
-onMounted(() => document.addEventListener('pointerdown', closeAccountMenuOutside))
+onMounted(() => {
+  document.addEventListener('pointerdown', closeAccountMenuOutside)
+  telemetryDelayTimer = globalThis.setTimeout(() => {
+    telemetryDelayTimer = null
+    const enableTelemetry = () => {
+      telemetryIdleHandle = null
+      telemetryReady.value = true
+    }
+    if (typeof globalThis.requestIdleCallback === 'function') {
+      telemetryIdleHandle = globalThis.requestIdleCallback(enableTelemetry, { timeout: 1_500 })
+    } else {
+      enableTelemetry()
+    }
+  }, 3_500)
+})
 onBeforeUnmount(() => {
   document.removeEventListener('pointerdown', closeAccountMenuOutside)
+  if (telemetryDelayTimer !== null) globalThis.clearTimeout(telemetryDelayTimer)
+  if (telemetryIdleHandle !== null && typeof globalThis.cancelIdleCallback === 'function') {
+    globalThis.cancelIdleCallback(telemetryIdleHandle)
+  }
   removeLoadingBeforeGuard()
   removeLoadingAfterHook()
   removeLoadingErrorHook()
@@ -336,7 +357,10 @@ onBeforeUnmount(() => {
       </div>
     </footer>
 
-    <Analytics /><SpeedInsights />
+    <template v-if="telemetryReady">
+      <DeferredAnalytics />
+      <DeferredSpeedInsights />
+    </template>
   </div>
 </template>
 

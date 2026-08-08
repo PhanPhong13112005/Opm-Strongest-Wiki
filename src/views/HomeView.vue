@@ -1,46 +1,61 @@
 <script setup>
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onBeforeUnmount, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { getAllCharacters } from '../services/characterApi'
 import { getReleaseSchedule } from '../services/releaseScheduleApi'
 import HomeRadar from '../components/HomeRadar.vue'
+import homeCharacterSummaries from '../data/homeCharacterSummaries.json'
 import { safeAssetUrl } from '../utils/assetUrl'
 
 const { t, locale } = useI18n()
-const localCatalogs = ref({ vi: null, en: null })
-const localCharactersData = computed(() => localCatalogs.value[locale.value] || [])
 const apiCharacters = ref(null)
-const charactersData = computed(() => apiCharacters.value || localCharactersData.value)
+const compactCharacters = computed(() => Object.values(homeCharacterSummaries[locale.value] || {}))
+const charactersData = computed(() => {
+  if (!apiCharacters.value) return compactCharacters.value
+
+  const merged = new Map(compactCharacters.value.map(character => [character.id, character]))
+  apiCharacters.value.forEach(character => merged.set(character.id, character))
+  return [...merged.values()]
+})
 let activeRequest = 0
+let characterRefreshTimer = null
 const releaseScheduleRows = ref([])
 let activeScheduleRequest = 0
 
-const loadLocalCharacters = async (language) => {
-  if (localCatalogs.value[language]) return localCatalogs.value[language]
-  const module = language === 'en'
-    ? await import('../data/characters_en.json')
-    : await import('../data/characters.json')
-  const catalog = module.default
-  localCatalogs.value = { ...localCatalogs.value, [language]: catalog }
-  return catalog
-}
-
 const loadCharacters = async () => {
   const requestId = ++activeRequest
-  apiCharacters.value = null
   const language = locale.value
-  const localCharacters = await loadLocalCharacters(language)
+  const [{ getAllCharacters }, localModule] = await Promise.all([
+    import('../services/characterApi'),
+    language === 'en'
+      ? import('../data/characters_en.json')
+      : import('../data/characters.json'),
+  ])
+  const localCharacters = localModule.default
   if (requestId !== activeRequest) return
 
   try {
-    const result = await getAllCharacters(language, localCharacters)
+    const result = await getAllCharacters(language, localCharacters, { trackLoading: false })
     if (requestId === activeRequest) apiCharacters.value = result
   } catch {
-    // JSON local remains the visible source when the API is unavailable.
+    if (requestId === activeRequest) apiCharacters.value = localCharacters
   }
 }
 
-watch(locale, loadCharacters, { immediate: true })
+const scheduleCharacterRefresh = () => {
+  activeRequest += 1
+  apiCharacters.value = null
+  if (characterRefreshTimer !== null) globalThis.clearTimeout(characterRefreshTimer)
+  characterRefreshTimer = globalThis.setTimeout(() => {
+    characterRefreshTimer = null
+    loadCharacters()
+  }, 5_000)
+}
+
+watch(locale, scheduleCharacterRefresh, { immediate: true })
+onBeforeUnmount(() => {
+  activeRequest += 1
+  if (characterRefreshTimer !== null) globalThis.clearTimeout(characterRefreshTimer)
+})
 
 const loadReleaseSchedule = async () => {
   const requestId = ++activeScheduleRequest
@@ -55,11 +70,15 @@ const loadReleaseSchedule = async () => {
 watch(locale, loadReleaseSchedule, { immediate: true })
 
 const safeUrl = safeAssetUrl
+const optimizedHomeImages = new Map([
+  ['/Characters/Full_Background/Black_Sperm_Ur_plus.png', '/Characters/Full_Background/Black_Sperm_Ur_plus.webp'],
+])
 
 const getCharacterImage = (filename) => {
   if (!filename) return ''
-  if (filename.startsWith('/')) return safeUrl(filename)
-  return safeUrl(new URL(`../assets/characters/${filename}`, import.meta.url).href)
+  const optimizedFilename = optimizedHomeImages.get(filename) || filename
+  if (optimizedFilename.startsWith('/')) return safeUrl(optimizedFilename)
+  return safeUrl(new URL(`../assets/characters/${optimizedFilename}`, import.meta.url).href)
 }
 
 const getChar = (id) => charactersData.value.find(c => c.id === id) || {}
@@ -90,26 +109,6 @@ const prevMonthStr = computed(() => {
   const y = d.getFullYear()
   const m = String(d.getMonth() + 1).padStart(2, '0')
   return `${y}-${m}`
-})
-
-onMounted(() => {
-  const banners = [];
-  Object.values(scheduleData.value).forEach(month => {
-    month.forEach(sv => {
-       sv.items.forEach(item => {
-          if (item.bannerImage) {
-            banners.push(safeUrl(item.bannerImage));
-          }
-       })
-    })
-  })
-  
-  setTimeout(() => {
-      banners.forEach(url => {
-          const img = new window.Image();
-          img.src = url;
-      })
-  }, 1000);
 })
 
 const fallbackScheduleData = computed(() => ({

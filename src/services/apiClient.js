@@ -73,14 +73,17 @@ const cacheKey = (path, params = {}) => {
   return query ? `${path}?${query}` : path
 }
 
-export const requestApiCached = async (path, params, { ttlMs = DEFAULT_CACHE_TTL_MS } = {}) => {
+export const requestApiCached = async (path, params, {
+  ttlMs = DEFAULT_CACHE_TTL_MS,
+  trackLoading = true,
+} = {}) => {
   const key = cacheKey(path, params)
   const now = Date.now()
   const cached = responseCache.get(key)
   if (cached?.value !== undefined && cached.expiresAt > now) return cached.value
   if (cached?.promise) return cached.promise
 
-  const promise = requestApi(path, params)
+  const promise = requestApi(path, params, { trackLoading })
     .then((value) => {
       responseCache.set(key, { value, expiresAt: Date.now() + Math.max(0, ttlMs) })
       return value

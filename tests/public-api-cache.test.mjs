@@ -64,3 +64,25 @@ test('global GET loading counter covers success and failure without getting stuc
   await assert.rejects(requestApi('api/loading-error'), /Network unavailable/)
   assert.equal(pendingApiRequests.value, 0)
 })
+test('cached background GET can opt out of the global loading overlay', async () => {
+  let resolveFetch
+  globalThis.fetch = () => new Promise(resolve => {
+    resolveFetch = resolve
+  })
+  invalidateApiCache('api/background-refresh')
+
+  const pendingRequest = requestApiCached(
+    'api/background-refresh',
+    {},
+    { trackLoading: false },
+  )
+  await Promise.resolve()
+  assert.equal(pendingApiRequests.value, 0)
+
+  resolveFetch(new Response(JSON.stringify({ items: [] }), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json' },
+  }))
+  await pendingRequest
+  assert.equal(pendingApiRequests.value, 0)
+})

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scrollbar-gutter: stable;
+}
+
 @layer components {
   .glass-card {
     @apply bg-opm-card/80 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden;
