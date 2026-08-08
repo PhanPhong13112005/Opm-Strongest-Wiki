@@ -51,3 +51,21 @@ test('home boot shell matches the default August featured release', () => {
   assert.match(indexHtml, /Black_Sperm_Ur_plus\.webp/)
   assert.match(indexHtml, /08 \/ 2026/)
 })
+test('home never loads the full character catalogs after first paint', () => {
+  const homeView = fs.readFileSync(path.join(root, 'src/views/HomeView.vue'), 'utf8')
+
+  assert.doesNotMatch(homeView, /characters(?:_en)?\.json/)
+  assert.doesNotMatch(homeView, /getAllCharacters/)
+  assert.match(homeView, /loadMissingScheduleCharacters/)
+  assert.match(homeView, /loadLocalCharacterDetail/)
+})
+test('document language follows the default Vietnamese locale', () => {
+  const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8')
+  const appView = fs.readFileSync(path.join(root, 'src/App.vue'), 'utf8')
+  const mainEntry = fs.readFileSync(path.join(root, 'src/main.js'), 'utf8')
+
+  assert.match(indexHtml, /<html lang="vi">/)
+  assert.match(appView, /document\.documentElement\.lang/)
+  assert.doesNotMatch(appView, /class="flex-grow min-h-screen"/)
+  assert.match(mainEntry, /router\.isReady\(\)\.then\(mount, mount\)/)
+})

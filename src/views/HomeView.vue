@@ -4,58 +4,20 @@ import { useI18n } from 'vue-i18n'
 import { getReleaseSchedule } from '../services/releaseScheduleApi'
 import HomeRadar from '../components/HomeRadar.vue'
 import homeCharacterSummaries from '../data/homeCharacterSummaries.json'
+import { loadLocalCharacterDetail } from '../data/loadCharacterDetail'
 import { safeAssetUrl } from '../utils/assetUrl'
 
 const { t, locale } = useI18n()
-const apiCharacters = ref(null)
+const supplementalCharacters = ref([])
 const compactCharacters = computed(() => Object.values(homeCharacterSummaries[locale.value] || {}))
 const charactersData = computed(() => {
-  if (!apiCharacters.value) return compactCharacters.value
-
   const merged = new Map(compactCharacters.value.map(character => [character.id, character]))
-  apiCharacters.value.forEach(character => merged.set(character.id, character))
+  supplementalCharacters.value.forEach(character => merged.set(character.id, character))
   return [...merged.values()]
 })
-let activeRequest = 0
-let characterRefreshTimer = null
 const releaseScheduleRows = ref([])
 let activeScheduleRequest = 0
-
-const loadCharacters = async () => {
-  const requestId = ++activeRequest
-  const language = locale.value
-  const [{ getAllCharacters }, localModule] = await Promise.all([
-    import('../services/characterApi'),
-    language === 'en'
-      ? import('../data/characters_en.json')
-      : import('../data/characters.json'),
-  ])
-  const localCharacters = localModule.default
-  if (requestId !== activeRequest) return
-
-  try {
-    const result = await getAllCharacters(language, localCharacters, { trackLoading: false })
-    if (requestId === activeRequest) apiCharacters.value = result
-  } catch {
-    if (requestId === activeRequest) apiCharacters.value = localCharacters
-  }
-}
-
-const scheduleCharacterRefresh = () => {
-  activeRequest += 1
-  apiCharacters.value = null
-  if (characterRefreshTimer !== null) globalThis.clearTimeout(characterRefreshTimer)
-  characterRefreshTimer = globalThis.setTimeout(() => {
-    characterRefreshTimer = null
-    loadCharacters()
-  }, 5_000)
-}
-
-watch(locale, scheduleCharacterRefresh, { immediate: true })
-onBeforeUnmount(() => {
-  activeRequest += 1
-  if (characterRefreshTimer !== null) globalThis.clearTimeout(characterRefreshTimer)
-})
+let activeCharacterRequest = 0
 
 const loadReleaseSchedule = async () => {
   const requestId = ++activeScheduleRequest
@@ -404,6 +366,45 @@ const apiScheduleData = computed(() => {
 const scheduleData = computed(() => releaseScheduleRows.value.length > 0
   ? apiScheduleData.value
   : fallbackScheduleData.value)
+
+const scheduleCharacterIds = computed(() => [...new Set(
+  Object.values(scheduleData.value)
+    .flatMap(month => month)
+    .flatMap(server => server.items)
+    .map(item => item.id)
+    .filter(id => id && id !== 'unknown'),
+)])
+
+const loadMissingScheduleCharacters = async () => {
+  const requestId = ++activeCharacterRequest
+  const language = locale.value
+  const compactIds = new Set(Object.keys(homeCharacterSummaries[language] || {}))
+  const missingIds = scheduleCharacterIds.value.filter(id => !compactIds.has(id))
+
+  if (missingIds.length === 0) {
+    supplementalCharacters.value = []
+    return
+  }
+
+  const { getCharacterById } = await import('../services/characterApi')
+  const results = await Promise.all(missingIds.map(async (id) => {
+    const localCharacter = loadLocalCharacterDetail(id, language)
+    try {
+      return await getCharacterById(id, language, localCharacter, { trackLoading: false })
+    } catch {
+      return await localCharacter
+    }
+  }))
+
+  if (requestId === activeCharacterRequest) {
+    supplementalCharacters.value = results.filter(Boolean)
+  }
+}
+
+watch([locale, scheduleCharacterIds], loadMissingScheduleCharacters, { immediate: true })
+onBeforeUnmount(() => {
+  activeCharacterRequest += 1
+})
 
 const hasNextMonth = computed(() => !!scheduleData.value[nextMonthStr.value])
 const hasPrevMonth = computed(() => !!scheduleData.value[prevMonthStr.value])

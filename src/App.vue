@@ -118,6 +118,9 @@ watch(() => route.fullPath, () => {
   isMobileSystemsOpen.value = false
   isAccountMenuOpen.value = false
 })
+watch(locale, (value) => {
+  document.documentElement.lang = value === 'en' ? 'en' : 'vi'
+}, { immediate: true })
 onMounted(() => {
   document.addEventListener('pointerdown', closeAccountMenuOutside)
   telemetryDelayTimer = globalThis.setTimeout(() => {
@@ -311,7 +314,7 @@ onBeforeUnmount(() => {
       </div>
     </div>
 
-    <div v-else class="flex-grow min-h-screen">
+    <div v-else class="flex-grow">
       <RouterView v-slot="{ Component, route: currentRoute }">
         <transition name="page" mode="out-in"><component :is="Component" :key="currentRoute.path" /></transition>
       </RouterView>

@@ -97,7 +97,8 @@ test('mobile character route meets the production performance budget and loads o
   await page.getByRole('button', { name: 'TUYỆT KĨ', exact: true }).click()
   await expect(page.getByText('Tuyệt kĩ', { exact: true }).last()).toBeVisible()
   await expect.poll(async () => page.evaluate(() => performance.getEntriesByType('resource')
-    .some(entry => entry.name.includes('coreLab-')))).toBe(true)
+    .some(entry => entry.name.includes('coreLab-') ||
+      entry.name.includes('/src/data/coreLab.json')))).toBe(true)
   await expect(page.locator('img[loading="lazy"]').first()).toHaveJSProperty('complete', true)
 })
 
