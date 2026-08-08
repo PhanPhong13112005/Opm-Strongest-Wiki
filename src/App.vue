@@ -355,6 +355,7 @@ onBeforeUnmount(() => {
           <p class="site-footer__label">{{ t('footer.systemStatus') }}</p>
           <div class="site-footer__online"><span></span><strong>{{ t('footer.online') }}</strong></div>
           <p>{{ t('footer.independent') }}</p>
+          <p class="site-footer__contact-email"><a href="mailto:phanluuphong13112005@gmail.com" class="text-amber-400 hover:underline">phanluuphong13112005@gmail.com</a></p>
           <div class="site-footer__coordinates"><span>VN / SEA</span><span>2026</span></div>
         </section>
       </div>
