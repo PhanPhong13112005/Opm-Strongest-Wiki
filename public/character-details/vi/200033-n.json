@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 80% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 80% sát thương ATK cho một mục tiêu.",
       "icon": "/Skill/Deep Sea Invader (N)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung liên kích 3 đòn lên cả cột mục tiêu gây 40% ST (+3) sát thương, với 100% xác suất khiến mục tiêu chính [Băng Hoại] trong 2 lượt (giảm tỷ lệ miễn thương 30%).",
+      "desc": "Tấn công toàn bộ cột mục tiêu bằng combo 3 đòn gây 40% sát thương ATK (+3), với 100% cơ hội gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (tỷ lệ Giảm Sát Thương giảm 30%).",
       "icon": "/Skill/Deep Sea Invader (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung liên kích 3 đòn lên cả cột mục tiêu gây 45% ST (+3) sát thương, với 100% xác suất khiến mục tiêu chính [Băng Hoại] trong 2 lượt (giảm tỷ lệ miễn thương 30%).",
+      "desc": "Tấn công toàn bộ cột mục tiêu bằng combo 3 đòn gây 45% ATK (+3) sát thương, với 100% cơ hội gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (tỷ lệ Giảm Sát Thương giảm 30%).",
       "keepsakeIcon": "/Keepsake/Deep Sea Invader (N)/Keepsake_N.png",
       "icon": "/Skill/Deep Sea Invader (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi Kẻ Cướp Bóc Thâm Hải có mặt, tăng 20% sát thương của bản thân cho đến khi kết thúc trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi Deep Sea Raider ở trên chiến trường, tăng % sát thương của bản thân cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Deep Sea Invader (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi Kẻ Cướp Bóc Thâm Hải có mặt, tăng 25% sát thương của bản thân cho đến khi kết thúc trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi Deep Sea Raider ở trên chiến trường, tăng sát thương của bản thân thêm 25% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Deep Sea Invader (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi Kẻ Cướp Bóc Thâm Hải có mặt, tăng 28% sát thương của bản thân cho đến khi kết thúc trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi Deep Sea Raider ở trên chiến trường, tăng sát thương của bản thân thêm 28% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Deep Sea Invader (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

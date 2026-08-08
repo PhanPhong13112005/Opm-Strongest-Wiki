@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). After acting, grants the ally with the lowest HP percentage (including self) [Tenacity] (absorbs damage equal to 25% of own max HP).",
+      "desc": "Permanently increases own HP by. After acting, grants the ally with the lowest HP percentage (including self) [Tenacity] (absorbs damage equal to 25% of own max HP).",
       "icon": "/Skill/Hellish Blizzard (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). After acting, grants the ally with the lowest HP percentage (excluding self) [Tenacity] (absorbs damage equal to 25% of own max HP), and has a 50% chance to grant self [Tenacity].",
+      "desc": "Permanently increases own HP by. After acting, grants the ally with the lowest HP percentage (excluding self) [Tenacity] (absorbs damage equal to 25% of own max HP), and has a 50% chance to grant self [Tenacity].",
       "icon": "/Skill/Hellish Blizzard (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). After acting, grants the ally with the lowest HP percentage (excluding self) [Tenacity] (absorbs damage equal to 35% of own max HP), and has a 50% chance to grant self [Tenacity].",
+      "desc": "Permanently increases own HP by. After acting, grants the ally with the lowest HP percentage (excluding self) [Tenacity] (absorbs damage equal to 35% of own max HP), and has a 50% chance to grant self [Tenacity].",
       "icon": "/Skill/Hellish Blizzard (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

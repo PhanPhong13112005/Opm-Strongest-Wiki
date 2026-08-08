@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Gouketsu (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung combo 2 đòn gây 400% ST sát thương lên mục tiêu hàng trước. Đòn đầu tiên có 50% khả năng gây [Nội Thương Vũ Trang] lên mục tiêu bị đánh (tích trữ sát thương [Nội Thương Vũ Trang] bổ sung bằng 600% ST của Gouketsu, kích hoạt khi mục tiêu đó bị đánh trúng, sau đó tiêu hao lớp hiệu ứng).",
+      "desc": "Tấn công kẻ địch liên tiếp bằng 2 đòn liên tiếp, gây 800% ATK DMG. Đòn tấn công đầu tiên có 50% cơ hội gây [Nội Thương] và [Làm Suy Yếu] lên mục tiêu. [Nội Thương]: Gây 600% ATK của Gouketsu thành Nội thương DMG và biến mất sau khi kích hoạt. [Làm Suy Yếu]: Giảm 50% ATK của mục tiêu trong 2 lượt.",
       "icon": "/Skill/Gouketsu (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Sát thương combo 400% > 500% ST. Khả năng gây [Nội Thương Vũ Trang] ở đòn đầu 50% > 80%, và sát thương tích trữ của nó 600% > 800% ST của Gouketsu. Thêm vào đó gây [Làm Suy Yếu] lên mục tiêu, giảm 50% ST của nó trong 2 lượt.",
+      "desc": "Tấn công kẻ địch liên tiếp bằng 2 đòn liên tiếp, gây 1000% ATK DMG. Đòn đánh đầu tiên có 80% cơ hội gây [Nội Thương] và [Làm Suy Yếu] lên mục tiêu. [Nội Thương]: Gây 800% ATK của Gouketsu thành Nội thương DMG và biến mất sau khi kích hoạt. [Làm Suy Yếu]: Giảm 50% ATK của mục tiêu trong 2 lượt.",
       "keepsakeIcon": "/Keepsake/Gouketsu (UR)/Keepsake_UR.png",
       "icon": "/Skill/Gouketsu (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn nhận +20% Máu. Khi vào trận, nhận +60% [Trượt Tức Thì] (mỗi lớp khiến một đòn sát thương trực tiếp/bổ sung/dồn lực/cuồng bạo tới chỉ gây 1 sát thương). Sau khi bất kỳ nhân vật nào hành động, [Kích Nổ] [Nội Thương Vũ Trang] trên toàn bộ kẻ địch, chuyển 3x sát thương của một lớp [Nội Thương Vũ Trang] đã tích trữ thành sát thương Detonate.",
+      "desc": "Khi trận chiến bắt đầu, có 60% cơ hội nhận được [Khả Năng Né Tránh]. Sau khi bất kỳ nhân vật nào hành động, [Kích Nổ] sẽ kích hoạt trên [Nội Thương]. [Khả Năng Né Tránh]: Giảm Sát Thương Trực Tiếp, Extra DMG, Sạc DMG và Berserk DMG nhận được còn 1 DMG. [Kích Nổ]: Chuyển đổi một phiên bản [Nội Thương] DMG duy nhất bằng 300% ATK thành [Kích Nổ] DMG.",
       "icon": "/Skill/Gouketsu (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Trượt Tức Thì] 60% > 70%. Sát thương [Kích Nổ] [Nội Thương Vũ Trang] 3x > 3.5x.",
+      "desc": "Khi trận chiến bắt đầu, có 70% cơ hội nhận được [Khả Năng Né Tránh]. Sau khi bất kỳ nhân vật nào hành động, [Kích Nổ] sẽ kích hoạt trên [Nội Thương]. [Khả Năng Né Tránh]: Giảm Sát Thương Trực Tiếp, Extra DMG, Sạc DMG và Berserk DMG nhận được còn 1 DMG. [Kích Nổ]: Chuyển đổi một phiên bản [Nội Thương] DMG duy nhất bằng 350% ATK thành [Kích Nổ] DMG.",
       "icon": "/Skill/Gouketsu (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Trượt Tức Thì] 70% > 80%. Sát thương [Kích Nổ] [Nội Thương Vũ Trang] 3.5x > 4x.",
+      "desc": "Khi trận chiến bắt đầu, có 80% cơ hội nhận được [Khả Năng Né Tránh]. Sau khi bất kỳ nhân vật nào hành động, [Kích Nổ] sẽ kích hoạt trên [Nội Thương]. [Khả Năng Né Tránh]: Giảm Sát Thương Trực Tiếp, Extra DMG, Sạc DMG và Berserk DMG nhận được còn 1 DMG. [Kích Nổ]: Chuyển đổi một phiên bản [Nội Thương] DMG duy nhất bằng 400% ATK thành [Kích Nổ] DMG.",
       "icon": "/Skill/Gouketsu (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Trao cho bản thân và các đồng minh xung quanh [Bất khuất chuyên biệt], và [Miễn Nhiễm] [Đột Phá] ———- [Bất khuất chuyên biệt]: Khi đồng minh nhận sát thương Chí tử, vào trạng thái [Bất khuất chuyên biệt]. Gỡ bỏ sau khi 5 nhân vật hành động, hồi phục 100% Máu, mỗi nhân vật có thể kích hoạt hai lần trong toàn trận đấu",
+      "desc": "Cấp cho bản thân và các đồng minh xung quanh [Bất Khuất Chuyên Biệt] và khiến họ miễn nhiễm với [Đột Phá]. [Bất Khuất Chuyên Biệt]: Khi một đồng minh bị ảnh hưởng nhận được sát thương kết liễu, sẽ chuyển sang trạng thái [Bất Khuất Chuyên Biệt]. Trạng thái bị xóa sau hành động của 5 ký tự, sau đó đồng minh bị ảnh hưởng sẽ khôi phục 100% HP. Mỗi nhân vật có thể kích hoạt hiệu ứng này tối đa 2 lần trong mỗi trận chiến.",
       "icon": "/Skill/Gouketsu (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Trao cho toàn đội Bất khuất chuyên biệt và Miễn nhiễm Đột phá.",
+      "desc": "Cấp cho toàn đội [Bất Khuất Chuyên Biệt] và khiến tất cả đồng minh miễn nhiễm với [Đột Phá]. [Bất Khuất Chuyên Biệt]: Khi một đồng minh bị ảnh hưởng nhận được sát thương kết liễu, sẽ chuyển sang trạng thái [Bất Khuất Chuyên Biệt]. Trạng thái bị xóa sau hành động của 5 ký tự, sau đó đồng minh bị ảnh hưởng sẽ khôi phục 100% HP. Mỗi nhân vật có thể kích hoạt hiệu ứng này tối đa 2 lần trong mỗi trận chiến.",
       "icon": "/Skill/Gouketsu (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Gouketsu (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

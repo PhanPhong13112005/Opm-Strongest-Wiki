@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 190% ATK DMG to a single target, with a 100% chance to reduce own DMG taken by 20% for 2 turns.",
+      "desc": "Deals 190% ATK DMG to a single target, with a 100% chance to reduce own DMG taken% for 2 turns.",
       "keepsakeIcon": "/Keepsake/Tank Top Blackhole (R)/Keepsake_R.png",
       "icon": "/Skill/Tank Top Blackhole (R)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by 20. When deployed together with the Tank Top Tiger, increases own DMG reduction by 20% until the end of battle.",
+      "desc": "Permanently increases own HP. When deployed together with the Tank Top Tiger, increases own DMG reduction% until the end of battle.",
       "icon": "/Skill/Tank Top Blackhole (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by 20. When deployed together with the Tank Top Tiger, increases own DMG reduction by 30% until the end of battle.",
+      "desc": "Permanently increases own HP. When deployed together with the Tank Top Tiger, increases own DMG reduction by 30% until the end of battle.",
       "icon": "/Skill/Tank Top Blackhole (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by 20. When deployed together with the Tank Top Tiger, increases own DMG reduction by 35% until the end of battle.",
+      "desc": "Permanently increases own HP. When deployed together with the Tank Top Tiger, increases own DMG reduction by 35% until the end of battle.",
       "icon": "/Skill/Tank Top Blackhole (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

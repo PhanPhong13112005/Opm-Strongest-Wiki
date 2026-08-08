@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 60% ATK Direct DMG to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Zombieman (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 150% ATK Direct DMG to the target's entire row. Grants same-row allies (except himself) [Super Speed] when his speed is high enough. Places a [Counter] mark on all enemies, and inflicts [Energy Seal] on the target (seals 3 energy) while the mark holds.",
+      "desc": "Performs a 3-hit combo against all enemies in a row, dealing 450% ATK DMG. Grants teammates in the same row [Specialized Acceleration] for 1 turn. Inflicts [Specialized Fear] on all enemies for 1 round. [Specialized Acceleration]: Increases SPD to 94% of Zombie Man’s SPD. If a teammate’s original SPD is higher than the increased value, their SPD remains unchanged. [Specialized Fear]: Locks 3 Energy and overrides [Fear]. The Energy lock does not affect enemies whose Energy has already been deducted. Additionally, when an affected enemy uses an Ultimate, including a Pursuit Ultimate, they consume 1 additional Energy. Can trigger up to 3 times per round for each character.",
       "icon": "/Skill/Zombieman (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Direct DMG 150% > 200% ATK to the target's row. [Super Speed] trigger threshold eased. Additionally buffs all allies with +30% ATK (2 rounds). [Counter] mark and [Energy Seal] (3 energy) unchanged.",
+      "desc": "Performs a 3-hit combo against all enemies in a row, dealing 600% ATK DMG. Grants teammates in the same row [Specialized Acceleration] for 1 turn. Inflicts [Specialized Fear] on all enemies for 1 round. [Specialized Acceleration]: Increases SPD to 98% of Zombie Man’s SPD. If a teammate’s original SPD is higher than the increased value, their SPD remains unchanged. [Specialized Fear]: Locks 4 Energy and overrides [Fear]. The Energy lock does not affect enemies whose Energy has already been deducted. Additionally, when an affected enemy uses an Ultimate, including a Pursuit Ultimate, they consume 1 additional Energy. Can trigger up to 4 times per round for each character.",
       "keepsakeIcon": "/Keepsake/Zombieman (UR)/Keepsake_UR.png",
       "icon": "/Skill/Zombieman (UR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently gains +20% HP. When entering battle, gains +60% Dodge. On taking fatal damage, triggers [Feign Death] and revives at 60% max HP, up to 3 times.",
+      "desc": "At battle start, gains 60% [Instant DMG Evasion]. When receiving fatal DMG, triggers [Regeneration]. [Instant DMG Evasion]: Reduces Direct DMG, Additional DMG, Charge DMG, and Berserk DMG to 1 point. [Regeneration]: As long as at least one teammate remains on the battlefield, restores 60% HP before the next action and continues fighting. Can trigger up to 3 times.",
       "icon": "/Skill/Zombieman (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Dodge 60% > 70%. [Feign Death] revive HP 60% > 80% max HP. Revives 3 times.",
+      "desc": "At battle start, gains 70% [Instant DMG Evasion]. When receiving fatal DMG, triggers [Regeneration]. [Instant DMG Evasion]: Reduces Direct DMG, Additional DMG, Charge DMG, and Berserk DMG to 1 point. [Regeneration]: As long as at least one teammate remains on the battlefield, restores 80% HP before the next action and continues fighting. Can trigger up to 3 times.",
       "icon": "/Skill/Zombieman (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Dodge 70% > 80%. Revives 3 > 4 times at 80% max HP.",
+      "desc": "At battle start, gains 80% [Instant DMG Evasion]. When receiving fatal DMG, triggers [Regeneration]. [Instant DMG Evasion]: Reduces Direct DMG, Additional DMG, Charge DMG, and Berserk DMG to 1 point. [Regeneration]: As long as at least one teammate remains on the battlefield, restores 80% HP before the next action and continues fighting. Can trigger up to 4 times.",
       "icon": "/Skill/Zombieman (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Gain 32% [Specialized Acceleration] at the start of battle. Before surrounding allies take action, they will trigger [Specialized Breakthrough] once on the main target (can only trigger once per round). ———- [Specialized Breakthrough]: Immediately cancel the target's [Unyielding] and increase attack power by 20% until end of this attack",
+      "desc": "At battle start, gains [Specialized Acceleration]. Before a surrounding teammate attacks an enemy, triggers [Specialized Breakthrough] once on the primary target. Each teammate can trigger this effect once per turn. [Specialized Acceleration]: Increases own SPD by 32%. [Specialized Breakthrough]: Immediately removes the target’s Indomitable or DMG-negating status and increases the attacker’s ATK% until the end of the current attack.",
       "icon": "/Skill/Zombieman (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Specialized Acceleration 32% > 40% Surrounding allies > ALL allies Attack power increase 20% > 30%",
+      "desc": "At battle start, gains [Specialized Acceleration]. Before any teammate attacks an enemy, triggers [Specialized Breakthrough] once on the primary target. Each teammate can trigger this effect once per turn. [Specialized Acceleration]: Increases own SPD by 40%. [Specialized Breakthrough]: Immediately removes the target’s Indomitable or DMG-negating status and increases the attacker’s ATK by 30% until the end of the current attack.",
       "icon": "/Skill/Zombieman (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

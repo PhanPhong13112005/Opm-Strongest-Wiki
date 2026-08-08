@@ -3,7 +3,8 @@
     "eyebrow": "ĐANG KẾT NỐI KHO DỮ LIỆU",
     "title": "Đang lấy dữ liệu",
     "message": "Vui lòng chờ vài giây để tải."
-  },  "home": {
+  },
+  "home": {
     "eyebrow": "TIÊU ĐIỂM NHÂN VẬT CỦA THÁNG NÀY",
     "title": "Radar ra mắt",
     "subtitle": "Theo dõi nhịp phát hành nhân vật giữa máy chủ Trung Quốc và Đông Nam Á trên một dòng thời gian duy nhất.",
@@ -29,11 +30,12 @@
   "equipmentCatalog": {
     "eyebrow": "TÍNH NĂNG TRANG BỊ",
     "title": "Trang Bị",
-    "description": "Khu vực tra cứu Trang Bị đang được xây dựng và hoàn thiện dữ liệu.",
+    "description": "Tra cứu 20 bộ Trang Bị, hiệu ứng đủ 4 món, nhánh tiến hóa và kế hoạch nâng cấp trong cùng một nơi.",
     "pendingStatus": "ĐANG PHÁT TRIỂN",
     "pendingTitle": "Tính năng này đang được phát triển",
     "pendingDesc": "Vui lòng chờ hoàn thành để đọc nội dung."
-  },  "buffGear": {
+  },
+  "buffGear": {
     "eyebrow": "KHO DỮ LIỆU THẺ BỔ TRỢ",
     "title": "Thẻ Bổ Trợ",
     "description": "Danh mục Thẻ Bổ Trợ được phân loại riêng theo Hệ, Cấp và Phe.",
@@ -50,7 +52,8 @@
     "dragon": "Rồng",
     "demon": "Quỷ",
     "tiger": "Hổ"
-  },  "nav": {
+  },
+  "nav": {
     "characters": "Nhân vật",
     "equipment": "Trang bị",
     "buffGear": "Thẻ bổ trợ",
@@ -67,7 +70,9 @@
     "login": "Đăng nhập",
     "forum": "Diễn đàn",
     "advisor": "Tư vấn AI",
-    "topup": "Nạp thẻ"
+    "topup": "Nạp thẻ",
+    "stats": "Chỉ Số",
+    "talents": "Thiên Phú"
   },
   "footer": {
     "eyebrow": "Kho dữ liệu cộng đồng",
@@ -159,7 +164,14 @@
     "coreBase": "Cơ bản",
     "coreMilestone": "Cột mốc Lv {level}",
     "viewCoreLab": "Xem chi tiết Phòng Nghiên Cứu",
-    "animUpdatingSmall": "Đang cập nhật hoạt ảnh"
+    "animUpdatingSmall": "Đang cập nhật hoạt ảnh",
+    "recommendationsLabel": "GỢI Ý XÂY DỰNG",
+    "requiredInsignia": "Ấn ký cần thiết",
+    "recommendedGear": "Set đồ khuyên dùng",
+    "recommendationPending": "Đang cập nhật",
+    "recommendationEmpty": "Chưa có dữ liệu khuyến nghị cho nhân vật này.",
+    "browseInsignias": "Xem tất cả Ấn ký",
+    "browseGear": "Xem tất cả Trang bị"
   },
   "corelab": {
     "title": "Phòng Nghiên Cứu",
@@ -332,5 +344,24 @@
     "crescentTowerRules": "Quy tắc Tháp Trăng Khuyết",
     "autoRules": "Quy tắc Khiêu chiến Tự động",
     "levelRequired": "Cấp 75 mở khóa"
+  },
+  "statsPage": {
+    "eyebrow": "CƠ SỞ DỮ LIỆU CHỈ SỐ",
+    "title": "Chỉ Số",
+    "status": "ĐANG PHÁT TRIỂN",
+    "description": "Tính năng này đang được hoàn thiện. Vui lòng quay lại sau để tra cứu công thức và chỉ số trong game."
+  },
+  "talentsPage": {
+    "eyebrow": "HỆ THỐNG PHÁT TRIỂN",
+    "title": "Thiên Phú",
+    "description": "Tra cứu lộ trình Thiên Phú và Ấn ký. Dữ liệu chi tiết đang được cập nhật.",
+    "pending": "Đang cập nhật dữ liệu",
+    "pendingDescription": "Nội dung mục này đang được biên tập và sẽ được bổ sung sớm.",
+    "tabs": {
+      "basic": "Thiên Phú Cơ bản",
+      "intermediate": "Thiên Phú Trung",
+      "advanced": "Thiên Phú Nâng cao",
+      "sigils": "Tất cả Ấn ký"
+    }
   }
 }

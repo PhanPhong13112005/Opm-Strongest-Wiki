@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Strikes a single target with a 2-hit combo, dealing 60% ATK(+5) damage. Grants self [Tenacity] (absorbs damage equal to 10% of own HP).",
+      "desc": "Strikes a single target with a 2-hit combo, dealing 60% AT damage. Grants self [Tenacity] (absorbs damage equal to 10% of own HP).",
       "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 130% ATK(+10) damage to targets in a cross area. Has a 100% chance to inflict [Injured] on the main target for 2 turns (adds Injured damage equal to 50% ATK when attacked). Shares 40% of the damage taken by the 2 lowest-HP allies for 2 turns, reducing the shared damage taken by 20% (no longer shares once HP drops below 20%).",
+      "desc": "Deals 130% AT damage to targets in a cross area. Has a 100% chance to inflict [Injured] on the main target for 2 turns (adds Injured damage equal to 50% ATK when attacked). Shares 40% of the damage taken by the 2 lowest-HP allies for 2 turns, reducing the shared damage taken% (no longer shares once HP drops below 20%).",
       "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 160% ATK(+10) damage to targets in a cross area. Has a 100% chance to inflict [Injured] on the main target for 2 turns (adds Injured damage equal to 50% ATK when attacked). Shares 40% of the damage taken by the 2 lowest-HP allies for 2 turns, reducing the shared damage taken by 40% (no longer shares once HP drops below 20%).",
+      "desc": "Deals 160% AT damage to targets in a cross area. Has a 100% chance to inflict [Injured] on the main target for 2 turns (adds Injured damage equal to 50% ATK when attacked). Shares 40% of the damage taken by the 2 lowest-HP allies for 2 turns, reducing the shared damage taken by 40% (no longer shares once HP drops below 20%).",
       "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP (+20). When battle begins, grants allies in the same row and self 40% Ultimate DMG Free for 2 turns. The first time fatal damage is taken each battle, heals self for 30% of max HP.",
+      "desc": "Permanently increases own HP. When battle begins, grants allies in the same row and self 40% Ultimate DMG Free for 2 turns. The first time fatal damage is taken each battle, heals self for 30% of max HP.",
       "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP (+20). When battle begins, grants allies in the same row and self 50% Ultimate DMG Free for 2 turns. The first time fatal damage is taken each battle, heals self for 40% of max HP.",
+      "desc": "Permanently increases own HP. When battle begins, grants allies in the same row and self 50% Ultimate DMG Free for 2 turns. The first time fatal damage is taken each battle, heals self for 40% of max HP.",
       "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP (+20). When battle begins, grants allies in the same row and self 55% Ultimate DMG Free for 2 turns. The first time fatal damage is taken each battle, heals self for 45% of max HP.",
+      "desc": "Permanently increases own HP. When battle begins, grants allies in the same row and self 55% Ultimate DMG Free for 2 turns. The first time fatal damage is taken each battle, heals self for 45% of max HP.",
       "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 70% ATK (+5) DMG with 2 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 15%).",
+      "desc": "Deals 70% ATK DMG with 2 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 15%).",
       "icon": "/Skill/G4 (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). If a [Shatter]ed enemy exists, enters [Tenacity] state (absorbs DMG equal to 20% of own HP, up to 1 time per turn).For each type of debuff simultaneously present on enemies, gain [Charge] (deals 117% ATK Charge DMG when attacking, up to 3 stacks).",
+      "desc": "Permanently increases own HP by. If a [Shatter]ed enemy exists, enters [Tenacity] state (absorbs DMG equal to 20% of own HP, up to 1 time per turn).For each type of debuff simultaneously present on enemies, gain [Charge] (deals 117% ATK Charge DMG when attacking, up to 3 stacks).",
       "icon": "/Skill/G4 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). If a [Shatter]ed enemy exists, enters [Tenacity] state (absorbs DMG equal to 20% of own HP, up to 1 time per turn).For each type of debuff simultaneously present on enemies, gain [Charge] (deals 117% ATK Charge DMG when attacking, up to 3 stacks).",
+      "desc": "Permanently increases own HP by. If a [Shatter]ed enemy exists, enters [Tenacity] state (absorbs DMG equal to 20% of own HP, up to 1 time per turn).For each type of debuff simultaneously present on enemies, gain [Charge] (deals 117% ATK Charge DMG when attacking, up to 3 stacks).",
       "icon": "/Skill/G4 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). If a [Shatter]ed enemy exists, enters [Tenacity] state (absorbs DMG equal to 25% of own HP, up to 1 time per turn).For each type of debuff simultaneously present on enemies, gain [Charge] (deals 117% ATK Charge DMG when attacking, up to 3 stacks).",
+      "desc": "Permanently increases own HP by. If a [Shatter]ed enemy exists, enters [Tenacity] state (absorbs DMG equal to 25% of own HP, up to 1 time per turn).For each type of debuff simultaneously present on enemies, gain [Charge] (deals 117% ATK Charge DMG when attacking, up to 3 stacks).",
       "icon": "/Skill/G4 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

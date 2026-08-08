@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Snek (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 40% ST lên mục tiêu đơn ở hàng sau với 5 đòn liên kích, có 100% cơ hội cấp cho bản thân [Kiên Cường].[Kiên Cường]: Hấp thụ ST bằng 20% Máu tối đa của bản thân.",
+      "desc": "Gây 40% ATK DMG cho một mục tiêu ở hàng sau bằng 5 đòn kết hợp, với 100% cơ hội nhận được [Lá Chắn].[Lá Chắn]: Hấp thụ DMG bằng 20% ​​HP tối đa của bản thân.",
       "icon": "/Skill/Snek (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 40% ST lên mục tiêu đơn ở hàng sau với 5 đòn liên kích, có 100% cơ hội cấp cho bản thân [Kiên Cường].[Kiên Cường]: Hấp thụ ST bằng 30% Máu tối đa của bản thân.",
+      "desc": "Gây 40% ATK DMG cho một mục tiêu ở hàng sau bằng 5 đòn kết hợp, với 100% cơ hội nhận được [Lá Chắn].[Lá Chắn]: Hấp thụ DMG bằng 30% HP tối đa của bản thân.",
       "keepsakeIcon": "/Keepsake/Snek (SR)/Keepsake_SR.png",
       "icon": "/Skill/Snek (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Khi [Kiên Cường] của đồng minh biến mất, tung ra một đòn [Truy Kích] nhắm vào kẻ tấn công.[Truy Kích]: Tấn công với 80% ST và hiệu ứng của Đòn đánh Cơ bản.",
+      "desc": "Tự tăng vĩnh viễn HP tối đa. Khi [Lá Chắn] của đồng minh biến mất, phóng [Truy Kích] chống lại kẻ tấn công.[Truy Kích]: Tấn công bằng 80% DMG của đòn tấn công cơ bản và các hiệu ứng.",
       "icon": "/Skill/Snek (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Khi [Kiên Cường] của đồng minh biến mất, tung ra một đòn [Truy Kích] nhắm vào kẻ tấn công.[Truy Kích]: Tấn công với 80% ST và hiệu ứng của Đòn đánh Cơ bản.",
+      "desc": "Tự tăng vĩnh viễn HP tối đa. Khi [Lá Chắn] của đồng minh biến mất, phóng [Truy Kích] chống lại kẻ tấn công.[Truy Kích]: Tấn công bằng 80% DMG của đòn tấn công cơ bản và các hiệu ứng.",
       "icon": "/Skill/Snek (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Khi [Kiên Cường] của đồng minh biến mất, tung ra một đòn [Truy Kích] nhắm vào kẻ tấn công.[Truy Kích]: Tấn công với 105% ST và hiệu ứng của Đòn đánh Cơ bản.",
+      "desc": "Tự tăng vĩnh viễn HP tối đa. Khi [Lá Chắn] của đồng minh biến mất, phóng [Truy Kích] chống lại kẻ tấn công.[Truy Kích]: Tấn công với 105% DMG của đòn tấn công cơ bản và các hiệu ứng.",
       "icon": "/Skill/Snek (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

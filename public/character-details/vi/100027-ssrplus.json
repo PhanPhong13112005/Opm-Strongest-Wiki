@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây ST trực tiếp bằng 120% ST lên một mục tiêu đơn.",
+      "desc": "Tấn công một mục tiêu, gây 120% ATK DMG.",
       "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây ST trực tiếp bằng 30% ST (tính theo HP Tối đa) lên hàng của mục tiêu, sau đó hồi máu cho bản thân.",
+      "desc": "Tấn công tất cả kẻ địch liên tiếp bằng 4 đòn liên tiếp, gây DMG bằng 120% HP tối đa. Tự cấp [Phòng Hộ Chuyên Biệt] bằng 150% HP tối đa. [Phòng Hộ Chuyên Biệt]: Phủ nhận DMG đã nhận và ghi đè các hiệu ứng HP Tiền thưởng. Tổng số tiền không được vượt quá 15 lần HP tối đa ban đầu của thiết bị.",
       "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây ST trực tiếp bằng 30% > 40% ST (tính theo HP Tối đa) lên hàng của mục tiêu, sau đó hồi máu cho bản thân > cả hàng của mình.",
+      "desc": "Tấn công tất cả kẻ địch liên tiếp bằng 4 đòn liên tiếp, gây DMG bằng 160% HP tối đa. Cấp cho bản thân và đồng minh trong cùng một hàng [Phòng Hộ Chuyên Biệt] bằng 200% HP tối đa. [Phòng Hộ Chuyên Biệt]: Phủ nhận DMG đã nhận và ghi đè các hiệu ứng HP Tiền thưởng. Tổng số tiền không được vượt quá 15 lần HP tối đa ban đầu của thiết bị.",
       "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Nhận +20% HP. Khi vào trận, cấp +55% Sức mạnh Khiên cho toàn bộ đồng minh và nhận [Bất Tử] cho bản thân.",
+      "desc": "Khi bắt đầu trận chiến, cấp cho tất cả đồng minh 55% [Tỷ Lệ Khiên] trong 3 hiệp. Sau khi nhận được sát thương kết liễu, hồi sinh với 20% HP tối đa. Có thể kích hoạt tối đa 2 lần mỗi trận. [Tỷ Lệ Khiên]: Tăng hiệu quả của [Lá Chắn] và [Phòng Hộ Chuyên Biệt] được tạo.",
       "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Sức mạnh Khiên cho toàn bộ đồng minh 55% > 65%.",
+      "desc": "Khi bắt đầu trận chiến, cấp cho tất cả đồng minh 65% [Tỷ Lệ Khiên] trong 4 hiệp. Sau khi nhận được sát thương kết liễu, hồi sinh với 20% HP tối đa. Có thể kích hoạt tối đa 2 lần mỗi trận. [Tỷ Lệ Khiên]: Tăng hiệu quả của [Lá Chắn] và [Phòng Hộ Chuyên Biệt] được tạo.",
       "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Sức mạnh Khiên cho toàn bộ đồng minh 65% > 75%.",
+      "desc": "Khi bắt đầu trận chiến, cấp cho tất cả đồng minh 75% [Tỷ Lệ Khiên] trong 5 hiệp. Sau khi nhận được sát thương kết liễu, hồi sinh với 20% HP tối đa. Có thể kích hoạt tối đa 3 lần mỗi trận. [Tỷ Lệ Khiên]: Tăng hiệu quả của [Lá Chắn] và [Phòng Hộ Chuyên Biệt] được tạo.",
       "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi trận đấu bắt đầu, trao cho toàn đội [Phản Sát Thương Chuyên Biệt] (giảm ST trực tiếp và ST phụ trội đi 40%, phản lại 40% sát thương gốc về kẻ tấn công, kéo dài suốt trận đấu.)",
+      "desc": "Khi bắt đầu trận chiến, cấp vĩnh viễn cho tất cả đồng minh [Phản Sát Thương Chuyên Biệt]. [Phản Sát Thương Chuyên Biệt]: Giảm 40% Sát Thương Trực Tiếp và Extra DMG nhận được và phản ánh Extra DMG bằng 40% DMG ban đầu trở lại kẻ tấn công.",
       "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Giảm ST 40% > 60% Phản 40% > 60% Trao cho toàn đội [Cuồng bạo chuyên biệt] (Đòn đánh đầu tiên cũng sẽ gây ST Cuồng bạo bằng 50% Máu tối đa của Superalloy Blackluster, với cơ hội Chí mạng), kéo dài suốt trận đấu",
+      "desc": "Khi bắt đầu trận chiến, cấp vĩnh viễn cho tất cả đồng minh [Phản Sát Thương Chuyên Biệt] và [Cuồng Bạo Chuyên Biệt]. [Phản Sát Thương Chuyên Biệt]: Giảm 60% Sát Thương Trực Tiếp và Extra DMG nhận được và phản ánh Extra DMG bằng 60% DMG ban đầu trở lại kẻ tấn công. [Cuồng Bạo Chuyên Biệt]: Đòn đánh đầu tiên cũng gây ra [Sát Thương Cuồng Bạo] bằng 50% HP tối đa của Hợp Kim Đen Bóng và có thể CRIT. Đối với mỗi kẻ địch bị [Sát Thương Cuồng Bạo] tấn công, tiêu tốn 150 điểm từ Máy đo năng lượng.",
       "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -91,7 +91,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Superalloy Darkshine (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

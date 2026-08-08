@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 200% ATK DMG to a single target, with a 100% chance to increase self ATK by 20% for 2 turns.",
+      "desc": "Deals 200% ATK DMG to a single target, with a 100% chance to increase self ATK% for 2 turns.",
       "keepsakeIcon": "/Keepsake/Kamakyuri (R)/Keepsake_R.png",
       "icon": "/Skill/Kamakyuri (R)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases self max HP by 20%. Before taking action, increases self Crit Rate by 5% for 1 turn.",
+      "desc": "Permanently increases self max HP%. Before taking action, increases self Crit Rate by 5% for 1 turn.",
       "icon": "/Skill/Kamakyuri (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases self max HP by 20%. Before taking action, increases self Crit Rate by 10% for 1 turn.",
+      "desc": "Permanently increases self max HP%. Before taking action, increases self Crit Rate by 10% for 1 turn.",
       "icon": "/Skill/Kamakyuri (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases self max HP by 20%. Before taking action, increases self Crit Rate by 13% for 1 turn.",
+      "desc": "Permanently increases self max HP%. Before taking action, increases self Crit Rate by 13% for 1 turn.",
       "icon": "/Skill/Kamakyuri (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

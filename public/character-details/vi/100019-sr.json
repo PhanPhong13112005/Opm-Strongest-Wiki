@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 100% ST lên mục tiêu đơn.",
+      "desc": "Gây 100% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Smile Man (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 5 đòn liên kích gây 24% ST lên mỗi kẻ địch trong cả hàng, và hồi cho bản thân 20% Máu tối đa.",
+      "desc": "Gây combo 5 đòn gồm 24% ATK DMG cho mỗi kẻ địch trong toàn hàng và tự hồi phục cho bản thân 20% HP tối đa.",
       "icon": "/Skill/Smile Man (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung 5 đòn liên kích gây 24% ST lên mỗi kẻ địch trong cả hàng, và hồi cho bản thân 30% Máu tối đa, đồng thời có 50% khả năng hồi máu cho đồng minh cùng hàng.",
+      "desc": "Gây combo 5 đòn gồm 24% ATK DMG cho mỗi kẻ địch trong toàn bộ hàng và tự hồi phục cho bản thân 30% HP tối đa, đồng thời có 50% cơ hội chữa lành vết thương cho đồng minh trong cùng hàng.",
       "keepsakeIcon": "/Keepsake/Smile Man (SR)/Keepsake_SR.png",
       "icon": "/Skill/Smile Man (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Chừng nào Smile Man còn trên sân, mỗi khi bản thân hồi máu, anh ta cũng hồi máu cho đồng minh cùng cột bằng 80% lượng máu đã hồi.",
+      "desc": "Tăng vĩnh viễn HP% của chính mình. Chỉ cần Smile Man còn ở trên sân, bất cứ khi nào anh ta tự chữa lành vết thương cho mình, anh ta cũng chữa lành vết thương cho các đồng minh trong cột của mình với 80% số tiền đã hồi phục.",
       "icon": "/Skill/Smile Man (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Chừng nào Smile Man còn trên sân, mỗi khi bản thân hồi máu, anh ta cũng hồi máu cho đồng minh cùng cột bằng 100% lượng máu đã hồi.",
+      "desc": "Tăng vĩnh viễn HP% của chính mình. Chỉ cần Smile Man còn ở trên sân, bất cứ khi nào anh ta tự chữa lành vết thương cho mình, anh ta cũng chữa lành vết thương cho các đồng minh trong cột của mình với 100% số tiền đã được chữa lành.",
       "icon": "/Skill/Smile Man (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Chừng nào Smile Man còn trên sân, mỗi khi bản thân hồi máu, anh ta cũng hồi máu cho đồng minh cùng cột bằng 110% lượng máu đã hồi.",
+      "desc": "Tăng vĩnh viễn HP% của chính mình. Chỉ cần Smile Man còn ở trên sân, bất cứ khi nào anh ta tự chữa lành vết thương cho mình, anh ta cũng chữa lành vết thương cho các đồng minh trong cột của mình với mức 110% số tiền đã hồi phục.",
       "icon": "/Skill/Smile Man (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

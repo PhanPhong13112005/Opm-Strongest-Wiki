@@ -24,7 +24,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Grants an ally [Berserk] state for 1 turn(s) and increases their SPD by 20%.[Berserk]: Increases DMG dealt by 30% when attacking.",
+      "desc": "Grants an ally [Berserk] state for 1 turn(s) and increases their SPD%.[Berserk]: Increases DMG dealt by 30% when attacking.",
       "icon": "/Skill/Mumen Rider (R)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,

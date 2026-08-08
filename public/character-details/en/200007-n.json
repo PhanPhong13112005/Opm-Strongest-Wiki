@@ -41,7 +41,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increase self HP by (+20). The first time self takes fatal damage each battle, revive with 5% of max HP.",
+      "desc": "Permanently increase self HP by. The first time self takes fatal damage each battle, revive with 5% of max HP.",
       "icon": "/Skill/Clone (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increase self HP by (+20). The first time self takes fatal damage each battle, revive with 10% of max HP.",
+      "desc": "Permanently increase self HP by. The first time self takes fatal damage each battle, revive with 10% of max HP.",
       "icon": "/Skill/Clone (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increase self HP by (+20). The first time self takes fatal damage each battle, revive with 13% of max HP.",
+      "desc": "Permanently increase self HP by. The first time self takes fatal damage each battle, revive with 13% of max HP.",
       "icon": "/Skill/Clone (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

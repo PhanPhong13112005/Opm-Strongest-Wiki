@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 90% ST lên mục tiêu đơn.",
+      "desc": "Gây 90% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Tank Top Tiger (R)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 190% ST lên mục tiêu đơn.Có 100% cơ hội mang lại cho bản thân [Kiên Cường] (hấp thụ ST bằng 20% Máu của bản thân).",
+      "desc": "Gây 190% ATK DMG cho một mục tiêu. Có 100% cơ hội nhận được [Lá Chắn] cho bản thân (hấp thụ DMG bằng 20% ​​HP của bản thân).",
       "icon": "/Skill/Tank Top Tiger (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 190% ST lên mục tiêu đơn.Có 100% cơ hội mang lại cho bản thân [Kiên Cường] (hấp thụ ST bằng 30% Máu của bản thân).",
+      "desc": "Gây 190% ATK DMG cho một mục tiêu. Có 100% cơ hội nhận được [Lá Chắn] cho bản thân (hấp thụ DMG bằng 30% HP của bản thân).",
       "keepsakeIcon": "/Keepsake/Tank Top Tiger (R)/Keepsake_R.png",
       "icon": "/Skill/Tank Top Tiger (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân.Khi cùng ra trận với Áo Vest Hố Đen, tăng tỷ lệ giảm ST 20% cho bản thân, kéo dài đến hết trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của bản thân thêm. Khi được triển khai cùng với Vest Black Hole, tăng Giảm Sát Thương% của bản thân, kéo dài cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Tank Top Tiger (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân.Khi cùng ra trận với Áo Vest Hố Đen, tăng tỷ lệ giảm ST 30% cho bản thân, kéo dài đến hết trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của bản thân thêm. Khi triển khai cùng với Vest Black Hole, tăng Giảm Sát Thương của bản thân thêm 30%, tồn tại cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Tank Top Tiger (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân.Khi cùng ra trận với Áo Vest Hố Đen, tăng tỷ lệ giảm ST 35% cho bản thân, kéo dài đến hết trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của bản thân thêm. Khi triển khai cùng với Vest Black Hole, tăng Giảm Sát Thương của bản thân thêm 35%, tồn tại cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Tank Top Tiger (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

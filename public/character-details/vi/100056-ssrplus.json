@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "King khích lệ ý chí bản thân, hồi cho bản thân 150% (+10) ST Máu.",
+      "desc": "Phục hồi HP của đồng minh thêm 150% ATK.",
       "icon": "/Skill/King (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "King khởi động Đế Vương Chi Cơ, khiến mục tiêu chính rơi vào [Hoảng Loạn] (phong ấn 2 năng lượng trong 1 lượt). Giải trừ [Bất Khuất]/[Lá Chắn] của 3 kẻ địch có Máu tối đa cao nhất rồi áp lại phiên bản hạ cấp thành hiệu ứng [Lá Chắn] bằng 60% giá trị vừa giải trừ, đồng thời hồi cho 2 đồng minh có % Máu thấp nhất 300% (+10) ST Máu.",
+      "desc": "Không tiêu thụ năng lượng. Áp dụng [Sợ Hãi] cho tất cả kẻ địch, phong ấn 2 Năng lượng trong 1 lượt. Giảm [Bền Bỉ/Kiên Cường] của 3 kẻ thù có HP cao nhất đi 40%. Khôi phục HP cho 2 đồng minh có HP thấp nhất bằng 300% ATK của họ.",
       "icon": "/Skill/King (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Năng lượng [Hoảng Loạn] phong ấn 2 > 3Mục tiêu giải trừ/hạ cấp — 3 kẻ địch Máu tối đa cao nhất > toàn bộ kẻ địchLực hiệu ứng [Lá Chắn] hạ cấp 60% > 50%Đồng minh được hồi máu — 2 > 4 đồng minh % Máu thấp nhất, 300% (+10) ST",
+      "desc": "Không tiêu thụ năng lượng. Áp dụng [Sợ Hãi] cho tất cả kẻ địch, phong ấn 3 Năng lượng trong 1 lượt. Giảm 50% [Bền Bỉ/Kiên Cường] của tất cả kẻ thù. Khôi phục HP cho 4 đồng minh có HP thấp nhất bằng 300% ATK của họ.",
       "keepsakeIcon": "/Keepsake/King (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/King (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân thêm 20%.Khi vào trận, nâng Tốc Độ của đồng minh cùng hàng lên 90% Tốc Độ của King (nếu Tốc Độ của đồng minh đã cao hơn thì giữ nguyên).",
+      "desc": "Tăng SPD của các đồng minh trong cùng hàng lên 90% SPD của King. Hiệu ứng này vẫn hoạt động ngay cả khi King bị đánh bại.",
       "icon": "/Skill/King (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Khi vào trận — đồng thời tăng Tốc Độ của bản thân thêm 16%Tốc Độ đồng minh cùng hàng được nâng lên 90% Tốc Độ của King",
+      "desc": "Tăng vĩnh viễn SPD của bản thân thêm 16%. Tăng SPD của các đồng minh trong cùng hàng lên 90% SPD của King. Hiệu ứng này vẫn hoạt động ngay cả khi King bị đánh bại.",
       "icon": "/Skill/King (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Khi vào trận — Tốc Độ bản thân tăng 16% > 20%Tốc Độ đồng minh cùng hàng được nâng lên 90% > 95% Tốc Độ của King",
+      "desc": "Tăng vĩnh viễn SPD của bản thân thêm 20%. Tăng SPD của các đồng minh trong cùng hàng lên 95% SPD của King. Hiệu ứng này vẫn hoạt động ngay cả khi King bị đánh bại.",
       "icon": "/Skill/King (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Triệu hồi drone khi bắt đầu trận đấu (Tấn công & Máu lần lượt bằng 100% & 800% Tấn công của King). Drone sẽ hấp thụ 90% mọi loại ST mà King nhận (không tính hiệu ứng huy hiệu và phản sát thương) cho đến khi Máu của nó còn 1%. Drone sẽ truy kích (sau khi đồng minh hành động) vào 1 kẻ địch ngẫu nhiên (350% Tấn công, tối đa 2 lần mỗi lượt).\nẢnh do Gibrah Noah cung cấp",
+      "desc": "Khi trận chiến bắt đầu, triệu hồi 1 [Máy Bay Không Người Lái]. Drone kế thừa ATK bằng 100% ATK của King và HP bằng 800% ATK của King. Drone hấp thụ 90% tất cả các loại DMG mà King nhận được, ngoại trừ Biểu tượng DMG và DMG phản ánh, cho đến khi HP của Drone giảm xuống 1%. Sau khi đồng minh hành động, Máy bay không người lái thực hiện [Truy Kích] chống lại 1 kẻ thù ngẫu nhiên, gây ra 350% ATK DMG. Có thể kích hoạt tối đa 2 lần mỗi vòng.",
       "icon": "/Skill/King (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Số drone triệu hồi 1 > 2.",
+      "desc": "Khi trận chiến bắt đầu, triệu hồi 2 [Máy Bay Không Người Lái]. Mỗi Drone thừa hưởng ATK bằng 100% ATK của King và HP bằng 800% ATK của King. Máy bay không người lái hấp thụ 90% tất cả các loại DMG mà King nhận được, ngoại trừ Biểu tượng DMG và DMG phản ánh, cho đến khi HP của chúng giảm xuống 1%. Sau khi một đồng minh hành động, Máy bay không người lái thực hiện [Truy Kích] chống lại 1 kẻ thù ngẫu nhiên, gây ra 350% ATK DMG. Có thể kích hoạt tối đa 2 lần mỗi vòng.",
       "icon": "/Skill/King (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -92,7 +92,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/King (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

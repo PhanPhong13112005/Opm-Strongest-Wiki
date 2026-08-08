@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 80% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 80% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Slugrus (N)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 180% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 180% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Slugrus (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 200% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 200% ATK DMG cho một mục tiêu.",
       "keepsakeIcon": "/Keepsake/Slugrus (N)/Keepsake_N.png",
       "icon": "/Skill/Slugrus (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu Froggy Man có mặt, tăng 20% sát thương của bản thân cho đến khi kết thúc trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Nếu Người Ếch xuất hiện, hãy tăng DMG% của bản thân cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Slugrus (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu Froggy Man có mặt, tăng 25% sát thương của bản thân cho đến khi kết thúc trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Nếu Người Ếch xuất hiện, hãy tăng DMG của bản thân thêm 25% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Slugrus (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu Froggy Man có mặt, tăng 28% sát thương của bản thân cho đến khi kết thúc trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Nếu Người Ếch xuất hiện, hãy tăng DMG của bản thân thêm 28% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Slugrus (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

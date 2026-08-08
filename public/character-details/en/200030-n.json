@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deal 80% ATK (+10) damage to a single target.",
+      "desc": "Deal 80% ATK damage to a single target.",
       "icon": "/Skill/Paradiser Trooper (N)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deal 120% ATK (+10) damage to the entire target row.",
+      "desc": "Deal 120% ATK damage to the entire target row.",
       "icon": "/Skill/Paradiser Trooper (N)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deal 130% ATK (+10) damage to the entire target row.",
+      "desc": "Deal 130% ATK damage to the entire target row.",
       "icon": "/Skill/Paradiser Trooper (N)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Paradiser Trooper (N)/Keepsake_N.png",
       "type": "Ultimate",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increase self HP by (+20). If a Peach Garden minion is on the field, increase self damage by 20% until the end of battle.",
+      "desc": "Permanently increase self HP by. If a Peach Garden minion is on the field, increase self damage% until the end of battle.",
       "icon": "/Skill/Paradiser Trooper (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increase self HP by (+20). If a Peach Garden minion is on the field, increase self damage by 25% until the end of battle.",
+      "desc": "Permanently increase self HP by. If a Peach Garden minion is on the field, increase self damage by 25% until the end of battle.",
       "icon": "/Skill/Paradiser Trooper (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increase self HP by (+20). If a Peach Garden minion is on the field, increase self damage by 28% until the end of battle.",
+      "desc": "Permanently increase self HP by. If a Peach Garden minion is on the field, increase self damage by 28% until the end of battle.",
       "icon": "/Skill/Paradiser Trooper (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung 2 đòn liên kích gây 65% ST lên mục tiêu đơn.",
+      "desc": "Gây combo 2 đòn 65% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Subterranean King (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 5 đòn liên kích gây 28% ST lên mỗi kẻ địch trong cả hàng, có 100% khả năng gây [Thiêu Đốt] lên mục tiêu chính trong 2 lượt (sát thương theo thời gian bằng 80% ST), và 50% khả năng gây [Thiêu Đốt] lên các mục tiêu cùng hàng trong 2 lượt (sát thương theo thời gian bằng 80% ST).",
+      "desc": "Gây combo 5 đòn gồm 28% ATK DMG cho mỗi kẻ địch trong toàn hàng, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính trong 2 lượt (DoT bằng 80% ATK) và 50% cơ hội gây sát thương [Thiêu Đốt] lên các mục tiêu khác trong cùng hàng trong 2 lượt (DoT bằng 80% ATK).",
       "icon": "/Skill/Subterranean King (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung 5 đòn liên kích gây 35% ST lên mỗi kẻ địch trong cả hàng, có 100% khả năng gây [Thiêu Đốt] lên mục tiêu chính trong 2 lượt (sát thương theo thời gian bằng 90% ST), và 50% khả năng gây [Thiêu Đốt] lên các mục tiêu cùng hàng trong 2 lượt (sát thương theo thời gian bằng 90% ST).",
+      "desc": "Gây combo 5 đòn gồm 35% ATK DMG cho mỗi kẻ địch trong toàn hàng, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính trong 2 lượt (DoT bằng 90% ATK) và 50% cơ hội gây sát thương [Thiêu Đốt] lên các mục tiêu khác trong cùng hàng trong 2 lượt (DoT bằng 90% ATK).",
       "keepsakeIcon": "/Keepsake/Subterranean King (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Subterranean King (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Sau khi một kẻ địch đang ở trạng thái [Thiêu Đốt] hành động, Subterranean King lập tức thực hiện [Truy Kích] (tấn công với 80% sát thương và hiệu ứng của đòn thường, tối đa 3 lần mỗi lượt).",
+      "desc": "Tăng vĩnh viễn HP% của chính mình. Sau khi kẻ địch ở trạng thái [Thiêu Đốt] hành động, Vua Lòng Đất ngay lập tức thực hiện [Truy Kích] (tấn công bằng 80% DMG và hiệu ứng của đòn đánh cơ bản, tối đa 3 lần mỗi lượt).",
       "icon": "/Skill/Subterranean King (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Sau khi một kẻ địch đang ở trạng thái [Thiêu Đốt] hành động, Subterranean King lập tức thực hiện [Truy Kích] (tấn công với 120% sát thương và hiệu ứng của đòn thường, tối đa 3 lần mỗi lượt).",
+      "desc": "Tăng vĩnh viễn HP% của chính mình. Sau khi kẻ địch ở trạng thái [Thiêu Đốt] hành động, Vua Lòng Đất ngay lập tức thực hiện [Truy Kích] (tấn công bằng 120% DMG của đòn đánh cơ bản và các hiệu ứng, tối đa 3 lần mỗi lượt).",
       "icon": "/Skill/Subterranean King (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Sau khi một kẻ địch đang ở trạng thái [Thiêu Đốt] hành động, Subterranean King lập tức thực hiện [Truy Kích] (tấn công với 130% sát thương và hiệu ứng của đòn thường, tối đa 3 lần mỗi lượt).",
+      "desc": "Tăng vĩnh viễn HP% của chính mình. Sau khi kẻ địch ở trạng thái [Thiêu Đốt] hành động, Vua Lòng Đất ngay lập tức thực hiện [Truy Kích] (tấn công bằng 130% DMG và hiệu ứng của đòn đánh cơ bản, tối đa 3 lần mỗi lượt).",
       "icon": "/Skill/Subterranean King (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

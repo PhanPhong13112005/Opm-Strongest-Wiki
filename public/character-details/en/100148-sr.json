@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 180% ATK (+10) DMG to a single target, with a 100% chance to inflict [Injured] on the main target for 2 turns (adds 60% ATK worth of Injured DMG when the target is attacked), and inflicts [Weaken] on the target (ATK reduced by 30% for 2 turns).",
+      "desc": "Deals 180% ATK DMG to a single target, with a 100% chance to inflict [Injured] on the main target for 2 turns (adds 60% ATK worth of Injured DMG when the target is attacked), and inflicts [Weaken] on the target (ATK reduced by 30% for 2 turns).",
       "icon": "/Skill/Hamukichi (SR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 220% ATK (+10) DMG to a single target, with a 100% chance to inflict [Injured] on the main target for 2 turns (adds 80% ATK worth of Injured DMG when the target is attacked), and inflicts [Weaken] on the target (ATK reduced by 40% for 2 turns).",
+      "desc": "Deals 220% ATK DMG to a single target, with a 100% chance to inflict [Injured] on the main target for 2 turns (adds 80% ATK worth of Injured DMG when the target is attacked), and inflicts [Weaken] on the target (ATK reduced by 40% for 2 turns).",
       "keepsakeIcon": "/Keepsake/Hamukichi (SR)/Keepsake_SR.png",
       "icon": "/Skill/Hamukichi (SR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). The final hit has a 60% chance to inflict [Injured] on the main target and surrounding enemies for 2 turns (adds 60% ATK worth of Injured DMG when they are attacked).",
+      "desc": "Permanently increases own HP by. The final hit has a 60% chance to inflict [Injured] on the main target and surrounding enemies for 2 turns (adds 60% ATK worth of Injured DMG when they are attacked).",
       "icon": "/Skill/Hamukichi (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). The final hit has an 80% chance to inflict [Injured] on the main target and surrounding enemies for 2 turns (adds 60% ATK worth of Injured DMG when they are attacked).",
+      "desc": "Permanently increases own HP by. The final hit has an 80% chance to inflict [Injured] on the main target and surrounding enemies for 2 turns (adds 60% ATK worth of Injured DMG when they are attacked).",
       "icon": "/Skill/Hamukichi (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). The final hit has an 80% chance to inflict [Injured] on the main target and surrounding enemies for 2 turns (adds 80% ATK worth of Injured DMG when they are attacked).",
+      "desc": "Permanently increases own HP by. The final hit has an 80% chance to inflict [Injured] on the main target and surrounding enemies for 2 turns (adds 80% ATK worth of Injured DMG when they are attacked).",
       "icon": "/Skill/Hamukichi (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

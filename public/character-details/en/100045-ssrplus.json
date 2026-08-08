@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals DMG to all enemies with 5 consecutive strikes for 250% ATK, and reduces the main target's Max HP by 20% for 2 rounds.",
+      "desc": "Deals DMG to all enemies with 5 consecutive strikes for 250% ATK, and reduces the main target's Max HP% for 2 rounds.",
       "icon": "/Skill/Child Emperor (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals DMG to all enemies with 5 consecutive strikes for 250% > 300% ATK, and reduces the main target's Max HP by 20% > 30% for 2 rounds.",
+      "desc": "Deals DMG to all enemies with 5 consecutive strikes for 250% > 300% ATK, and reduces the main target's Max HP% > 30% for 2 rounds.",
       "keepsakeIcon": "/Keepsake/Child Emperor (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Child Emperor (SSR+)/Skill_ult.png",
       "type": "Ultimate",

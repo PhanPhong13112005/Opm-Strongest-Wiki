@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 100% ST (+10) sát thương cho mục tiêu đơn.",
+      "desc": "Gây 100% sát thương ATK cho một mục tiêu.",
       "icon": "/Skill/Sky King (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 35% ST (+2) sát thương cho mỗi kẻ địch trong cả cột với 4 liên kích, với 50% cơ hội gây [Choáng] lên mục tiêu chính trong 1 lượt (không thể hành động; mỗi bên tối đa 4 nhân vật cùng lúc ở trạng thái dạng choáng).",
+      "desc": "Gây 35% ATK (+2) sát thương cho mỗi kẻ địch trong toàn cột trong 4 đòn combo, kèm theo 50% cơ hội khiến [Choáng] trở thành mục tiêu chính trong 1 lượt (không thể thực hiện hành động; chỉ 4 nhân vật mỗi bên có thể ở trạng thái choáng cùng lúc).",
       "icon": "/Skill/Sky King (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 35% ST (+2) sát thương cho mỗi kẻ địch trong cả cột với 4 liên kích, với 50% cơ hội gây [Choáng] lên mục tiêu chính trong 1 lượt (không thể hành động; mỗi bên tối đa 4 nhân vật cùng lúc ở trạng thái dạng choáng), và tăng Kháng Hiệu Ứng của đồng minh cùng cột thêm 40% trong 2 lượt.",
+      "desc": "Gây 35% ATK (+2) sát thương cho mỗi kẻ địch trong toàn cột trong 4 combo, có 50% cơ hội khiến [Choáng] trở thành mục tiêu chính trong 1 lượt (không thể hành động; chỉ 4 nhân vật mỗi bên có thể ở trạng thái choáng cùng lúc) và tăng Kháng hiệu ứng của đồng minh cùng cột lên 40% trong 2 lượt.",
       "keepsakeIcon": "/Keepsake/Sky King (SR)/Keepsake_SR.png",
       "icon": "/Skill/Sky King (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu tối đa cho bản thân. Khi trận đấu bắt đầu, cấp cho toàn bộ đồng minh 20% ST phụ trội trong 2 lượt.",
+      "desc": "Tăng vĩnh viễn HP tối đa của riêng bạn lên. Khi trận chiến bắt đầu, cấp cho tất cả đồng minh 20% Tiền thưởng DMG trong 2 lượt.",
       "icon": "/Skill/Sky King (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu tối đa cho bản thân. Khi trận đấu bắt đầu, cấp cho toàn bộ đồng minh 30% ST phụ trội trong 2 lượt.",
+      "desc": "Tăng vĩnh viễn HP tối đa của riêng bạn lên. Khi trận chiến bắt đầu, cấp cho tất cả đồng minh 30% Tiền thưởng DMG trong 2 lượt.",
       "icon": "/Skill/Sky King (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu tối đa cho bản thân. Khi trận đấu bắt đầu, cấp cho toàn bộ đồng minh 35% ST phụ trội trong 2 lượt.",
+      "desc": "Tăng vĩnh viễn HP tối đa của riêng bạn lên. Khi trận chiến bắt đầu, cấp cho tất cả đồng minh 35% tiền thưởng DMG trong 2 lượt.",
       "icon": "/Skill/Sky King (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

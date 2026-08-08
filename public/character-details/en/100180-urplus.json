@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 200% ATK to a single target.",
+      "desc": "Deals 200% ATK DMG to a single target.",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_base.png",
       "type": "Basic",
       "animation": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 5000% ATK of Specialized Direct DMG (only affected by high-level DMG Free) to all enemies, ignores 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and pierces through [Unyielding] and [Specialized Unyielding].Inflicts [Energy Suppression] on the 3 enemies with highest ATK, lasting 2 turns.——— [Energy Suppression]: when dealing DMG to HP/[Specialized HP], causes the target to activate 1x [Energy Conversion] (reduces DMG received and converts it into [Shield]).",
+      "desc": "Deals 5000% ATK [Specialized Direct DMG] to all enemies (only affected by advanced DMG modifiers). Ignores 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and pierces [Unyielding] and [Specialized Unyielding]. Applies [Energy Pressure] to the 3 enemies with the highest ATK, lasting 2 turns. [Energy Pressure]: When dealing DMG to HP or [Specialized HP], triggers 1 instance of [Energy Conversion] on the affected enemy unit (reduces the DMG taken and converts it into a shield).",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_ult.png",
       "type": "Ultimate",
       "animation": "/Animation/Tat_Urplus/ult.gif",
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Gains 20% [Rage] and [Shield Break]. ATK 5000% > 7000%. Ignores [Specialized Evasion] and [Non-Crit DMG Reduction] 45% > 60%. Inflicts [Energy Suppression] on 3 enemies > all enemies (marked for 3 turns).——— [Shield Break]: during an attack, ignore the enemy's 30% DMG Free and Specialized DEF.",
+      "desc": "Grants self 20% [Enrage] and [Armor Break]. Deals 7000% ATK [Specialized Direct DMG] to all enemies (only affected by advanced DMG modifiers). Ignores 60% [Specialized Evasion] and [Non-Crit DMG Reduction], and pierces [Unyielding] and [Specialized Unyielding]. Applies [Energy Pressure] to all enemies, lasting 2 turns. [Energy Pressure]: When dealing DMG to HP or [Specialized HP], triggers 1 instance of [Energy Conversion] on the affected enemy unit (reduces the DMG taken and converts it into a shield).",
       "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (URplus)/Keepsake_URplus.png",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "On entry, gains 60% [Non-Crit DMG Reduction], and reduces to 0 the energy used by the ally with highest ATK when casting their Ultimate.",
+      "desc": "At battle start, gains 60% [Non-Crit DMG Reduction]. For the first 4 turns, the ally with the highest ATK spends 0 Energy when using their Ultimate.",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
       "type": "Passive",
       "animation": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Non-Crit DMG Reduction] on entry 60% > 70%. Energy-reduction window 4 > 6 rounds.",
+      "desc": "At battle start, gains 70% [Non-Crit DMG Reduction]. For the first 6 turns, the ally with the highest ATK spends 0 Energy when using their Ultimate.",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
       "type": "Passive",
       "animation": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Non-Crit DMG Reduction] on entry 70% > 80%. Energy-reduction window 6 > 8 rounds.",
+      "desc": "At battle start, gains 80% [Non-Crit DMG Reduction]. For the first 8 turns, the ally with the highest ATK spends 0 Energy when using their Ultimate.",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
       "type": "Passive",
       "animation": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Allow Hero/Martial Artist allies to obtain [Energy Conversion]. Ownself gains 2.5x of allies' [Energy Conversion] effect, and when activating [Energy Conversion], no need [Energy Suppression]. ——— [Energy Conversion]: When an enemy with [Energy Suppression] attacks DMG to us, reduce DMG by 20%, 20% of original DMG is converted to [Energy Resilience]",
+      "desc": "Grants allied [Hero / Martial Artist] units [Energy Conversion]. Self gains 2.5× the effect of allies’ [Energy Conversion] and can trigger [Energy Conversion] without requiring [Energy Pressure]. [Energy Conversion]: When an enemy affected by [Energy Pressure] deals DMG to the unit, that DMG is reduced%, and 20% of the original DMG value is converted into [Energy Shield].",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
       "type": "Awakening",
       "animation": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "When battle begins, inflict [Energy Suppression] to all enemies, lasts for 1 round. [Energy Conversion]: reduce DMG by 20% > 30% Original DMG is converted to [Energy Resilience] 20% > 30%",
+      "desc": "Grants allied [Hero / Martial Artist] units [Energy Conversion]. Self gains 2.5× the effect of allies’ [Energy Conversion] and can trigger [Energy Conversion] without requiring [Energy Pressure]. At battle start, inflicts [Energy Pressure] on all enemies for 1 turn. [Energy Conversion]: When an enemy affected by [Energy Pressure] deals DMG to the unit, that DMG is reduced by 30%, and 30% of the original DMG value is converted into [Energy Shield].",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
       "type": "Awakening",
       "animation": null,

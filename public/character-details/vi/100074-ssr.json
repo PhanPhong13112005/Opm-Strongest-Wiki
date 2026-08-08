@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung 2 liên kích lên mục tiêu đơn, mỗi đòn gây 90% ST(+5) sát thương.",
+      "desc": "Tấn công một mục tiêu bằng 2 đòn liên tiếp, gây 90% ATK DMG mỗi đòn.",
       "icon": "/Skill/Genos (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 2 liên kích lên toàn bộ địch, gây sát thương bằng 24% Máu tối đa(+1) của Genos, với 100% khả năng gây [Thiêu Đốt] lên mục tiêu chính và các mục tiêu xung quanh trong 2 lượt (sát thương theo thời gian bằng 70% ST).Sau khi thi triển, Genos mất 70% Máu tối đa cho đến khi kết thúc lượt hiện tại.",
+      "desc": "Tấn công tất cả kẻ địch bằng 2 đòn liên tiếp, gây DMG bằng 24% HP tối đa của Genos. Có 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính và kẻ địch xung quanh trong 2 lượt. [Thiêu Đốt]: Gây DMG liên tục bằng 70% ATK. Sau khi sử dụng, Genos mất 70% HP tối đa cho đến hết lượt hiện tại.",
       "icon": "/Skill/Genos (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung 2 liên kích lên toàn bộ địch, gây sát thương bằng 32% Máu tối đa(+1) của Genos, với 100% khả năng gây [Thiêu Đốt] lên mục tiêu chính và các mục tiêu xung quanh trong 2 lượt (sát thương theo thời gian bằng 90% ST).Sau khi thi triển, Genos mất 90% Máu tối đa cho đến khi kết thúc lượt hiện tại.",
+      "desc": "Tấn công tất cả kẻ địch bằng 2 đòn liên tiếp, gây DMG bằng 32% HP tối đa của Genos. Có 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính và kẻ địch xung quanh trong 2 lượt. [Thiêu Đốt]: Gây DMG liên tục bằng 90% ATK. Sau khi thi triển, Genos mất 90% HP tối đa cho đến hết lượt hiện tại.",
       "icon": "/Skill/Genos (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Genos (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Tăng vĩnh viễn (+20) Máu cho bản thân.Sau khi chịu sát thương chí tử, kích hoạt [Tái Sinh] (khi có đồng minh hiện diện, hồi 50% Máu trước lượt hành động kế tiếp của bản thân để tiếp tục chiến đấu, tối đa 1 lần). Khi [Tái Sinh] kích hoạt, gây sát thương phụ trội bằng 160% ST lên toàn bộ địch.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Sau khi nhận được sát thương kết liễu, kích hoạt [Hồi Phục]. [Hồi Phục]: Khi còn lại ít nhất 1 đồng minh, khôi phục 50% HP trước hành động tiếp theo của Genos và cho phép anh ta tiếp tục chiến đấu. Có thể kích hoạt tối đa 1 lần trong mỗi trận chiến. Khi [Hồi Phục] kích hoạt, gây Extra DMG tương đương 160% ATK cho tất cả kẻ địch.",
       "icon": "/Skill/Genos (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Tăng vĩnh viễn (+20) Máu cho bản thân.Sau khi chịu sát thương chí tử, kích hoạt [Tái Sinh] (khi có đồng minh hiện diện, hồi 75% Máu trước lượt hành động kế tiếp của bản thân để tiếp tục chiến đấu, tối đa 1 lần). Khi [Tái Sinh] kích hoạt, gây sát thương phụ trội bằng 180% ST lên toàn bộ địch.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Sau khi nhận được sát thương kết liễu, kích hoạt [Hồi Phục]. [Hồi Phục]: Khi còn lại ít nhất 1 đồng minh, khôi phục 75% HP trước hành động tiếp theo của Genos và cho phép anh ta tiếp tục chiến đấu. Có thể kích hoạt tối đa 1 lần trong mỗi trận chiến. Khi [Hồi Phục] kích hoạt, gây Extra DMG tương đương 180% ATK cho tất cả kẻ địch.",
       "icon": "/Skill/Genos (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Tăng vĩnh viễn (+20) Máu cho bản thân.Sau khi chịu sát thương chí tử, kích hoạt [Tái Sinh] (khi có đồng minh hiện diện, hồi 75% Máu trước lượt hành động kế tiếp của bản thân để tiếp tục chiến đấu, tối đa 2 lần). Khi [Tái Sinh] kích hoạt, gây sát thương phụ trội bằng 200% ST lên toàn bộ địch.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Sau khi nhận được sát thương kết liễu, kích hoạt [Hồi Phục]. [Hồi Phục]: Khi còn lại ít nhất 1 đồng minh, khôi phục 75% HP trước hành động tiếp theo của Genos và cho phép anh ta tiếp tục chiến đấu. Có thể kích hoạt tối đa 2 lần mỗi trận. Khi [Hồi Phục] kích hoạt, gây Extra DMG tương đương 200% ATK cho tất cả kẻ địch.",
       "icon": "/Skill/Genos (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

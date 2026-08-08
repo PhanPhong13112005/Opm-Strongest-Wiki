@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20).Before each action, increases own DMG dealt by 10% for 1 turn.",
+      "desc": "Permanently increases own HP by.Before each action, increases own DMG dealt by 10% for 1 turn.",
       "icon": "/Skill/Allback-man (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20).Before each action, increases own DMG dealt by 15% for 1 turn.",
+      "desc": "Permanently increases own HP by.Before each action, increases own DMG dealt by 15% for 1 turn.",
       "icon": "/Skill/Allback-man (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20).Before each action, increases own DMG dealt by 18% for 1 turn.",
+      "desc": "Permanently increases own HP by.Before each action, increases own DMG dealt by 18% for 1 turn.",
       "icon": "/Skill/Allback-man (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

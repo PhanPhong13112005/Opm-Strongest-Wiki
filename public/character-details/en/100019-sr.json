@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by 20%. As long as Smile Man is on the field, whenever he heals himself, he also heals allies in his column for 80% of the amount healed.",
+      "desc": "Permanently increases own HP%. As long as Smile Man is on the field, whenever he heals himself, he also heals allies in his column for 80% of the amount healed.",
       "icon": "/Skill/Smile Man (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by 20%. As long as Smile Man is on the field, whenever he heals himself, he also heals allies in his column for 100% of the amount healed.",
+      "desc": "Permanently increases own HP%. As long as Smile Man is on the field, whenever he heals himself, he also heals allies in his column for 100% of the amount healed.",
       "icon": "/Skill/Smile Man (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by 20%. As long as Smile Man is on the field, whenever he heals himself, he also heals allies in his column for 110% of the amount healed.",
+      "desc": "Permanently increases own HP%. As long as Smile Man is on the field, whenever he heals himself, he also heals allies in his column for 110% of the amount healed.",
       "icon": "/Skill/Smile Man (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

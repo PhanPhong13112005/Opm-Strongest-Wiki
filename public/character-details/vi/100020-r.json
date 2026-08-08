@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung liên kích 2 đòn gây 45% ST (+5) sát thương lên mục tiêu đơn.",
+      "desc": "Gây combo 2 đòn 45% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Triple-Staff Lilly (R)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung liên kích 5 đòn gây 22% ST (+2) sát thương lên mỗi kẻ địch cả hàng. Mỗi đòn có 50% xác suất gây thêm 10% ST sát thương phụ.",
+      "desc": "Gây combo 5 đòn 22% ATK (+2) DMG cho mỗi kẻ địch trong toàn hàng. Mỗi đòn đánh có 50% cơ hội gây thêm 10% ATK extra DMG.",
       "icon": "/Skill/Triple-Staff Lilly (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung liên kích 5 đòn gây 22% ST (+2) sát thương lên mỗi kẻ địch cả hàng. Mỗi đòn có 50% xác suất gây thêm 20% ST sát thương phụ.",
+      "desc": "Gây combo 5 đòn 22% ATK (+2) DMG cho mỗi kẻ địch trong toàn hàng. Mỗi đòn đánh có 50% cơ hội gây thêm 20% ATK extra DMG.",
       "keepsakeIcon": "/Keepsake/Triple-Staff Lilly (R)/Keepsake_R.png",
       "icon": "/Skill/Triple-Staff Lilly (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Ở lượt đầu, nếu Bão Tuyết Địa Ngục có mặt, tăng sát thương gây ra thêm 20%, kéo dài đến hết trận.",
+      "desc": "Nhận vĩnh viễn HP. Ở lượt đầu tiên, nếu có Bão Tuyết Địa Ngục, DMG sẽ tăng% xử lý, kéo dài cho đến cuối trận.",
       "icon": "/Skill/Triple-Staff Lilly (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Ở lượt đầu, nếu Bão Tuyết Địa Ngục có mặt, tăng sát thương gây ra thêm 30%, kéo dài đến hết trận.",
+      "desc": "Nhận vĩnh viễn HP. Ở lượt đầu tiên, nếu có Bão Tuyết Địa Ngục, DMG sẽ tăng thêm 30% sức mạnh xử lý, tồn tại cho đến cuối trận.",
       "icon": "/Skill/Triple-Staff Lilly (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Ở lượt đầu, nếu Bão Tuyết Địa Ngục có mặt, tăng sát thương gây ra thêm 35%, kéo dài đến hết trận.",
+      "desc": "Nhận vĩnh viễn HP. Ở lượt đầu tiên, nếu có Bão Tuyết Địa Ngục, DMG sẽ tăng 35% sức mạnh xử lý, tồn tại cho đến cuối trận.",
       "icon": "/Skill/Triple-Staff Lilly (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 80% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 80% sát thương ATK cho một mục tiêu.",
       "icon": "/Skill/Paradiser Thug (N)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 100% ST (+10) sát thương lên cả hàng mục tiêu.",
+      "desc": "Gây 100% sát thương ATK cho toàn bộ hàng mục tiêu.",
       "icon": "/Skill/Paradiser Thug (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 120% ST (+10) sát thương lên cả hàng mục tiêu.",
+      "desc": "Gây 120% sát thương ATK cho toàn bộ hàng mục tiêu.",
       "icon": "/Skill/Paradiser Thug (N)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Paradiser Thug (N)/Keepsake_N.png",
       "type": "Tuyệt kĩ",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Tăng vĩnh viễn Máu (+20) của bản thân. Nếu có Tùy Tùng Nhóm Đào Nguyên trên sân, tăng 20% sát thương của bản thân, kéo dài đến hết trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Nếu Người theo nhóm Paradise có mặt trên sân, sẽ tăng% sát thương của bản thân, kéo dài cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Paradiser Thug (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Tăng vĩnh viễn Máu (+20) của bản thân. Nếu có Tùy Tùng Nhóm Đào Nguyên trên sân, tăng 25% sát thương của bản thân, kéo dài đến hết trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Nếu Người theo nhóm Paradise có mặt trên sân, tăng 25% sát thương của bản thân, kéo dài cho đến cuối trận chiến.",
       "icon": "/Skill/Paradiser Thug (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Tăng vĩnh viễn Máu (+20) của bản thân. Nếu có Tùy Tùng Nhóm Đào Nguyên trên sân, tăng 28% sát thương của bản thân, kéo dài đến hết trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Nếu Người theo nhóm Thiên đường có mặt trên sân, sát thương của bản thân sẽ tăng thêm 28%, kéo dài cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Paradiser Thug (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

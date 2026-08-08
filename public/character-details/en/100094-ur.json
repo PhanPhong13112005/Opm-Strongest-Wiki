@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals Direct DMG equal to 20% of the target's Max HP to a single enemy.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Garou (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Buffs self with +20% True DMG dealt for 2 turns, then applies [ImmuneNotDeathMix2] to all enemies (strips their undying/immunity so they can be killed). Deals Direct DMG equal to 26% of Max HP to all enemies, plus [True DMG] equal to 100% of each enemy's remaining Max HP.",
+      "desc": "Deals a 5-hit combo to all targets, inflicting Direct DMG equal to 130% of Max HP. Each hit can trigger [Special Breakthrough] once and deals additional [True DMG] equal to 100% of original Max HP. Increases own [True DMG Bonus]% for 2 turns. [Special Breakthrough]: Immediately removes the target’s [Specialized Unyielding]. [True DMG]: Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion].",
       "icon": "/Skill/Garou (UR)/skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Buffs self with +20% True DMG dealt for 2 turns, then applies [ImmuneNotDeathMix2] to all enemies (strips their undying/immunity so they can be killed). Deals Direct DMG equal to 26% > 34% of Max HP to all enemies, plus [True DMG] equal to 100% of each enemy's remaining Max HP.",
+      "desc": "Deals a 5-hit combo to all targets, inflicting Direct DMG equal to 170% of Max HP. Each hit can trigger [Special Breakthrough] once and deals additional [True DMG] equal to 140% of original Max HP. Increases own [True DMG Bonus] by 35% for 2 turns. [Special Breakthrough]: Immediately removes the target’s [Specialized Unyielding]. [True DMG]: Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion].",
       "keepsakeIcon": "/Keepsake/Garou (UR)/Keepsake_UR.png",
       "icon": "/Skill/Garou (UR)/skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Gains +20% Max HP. On entry, gains 60% [Instant DMG Evasion], becomes immune to [Deterrence], [Stun] and [Specialized Stun], and gains +25% Block Rate.[Instant DMG Evasion]: reduces Direct/Extra/Charge/Berserk DMG to 1.",
+      "desc": "Gains 60% [Special Evasion]. Becomes immune to [Fear], [Stun], and [Special Stun]. Increases own Block Rate by 25%. [Special Evasion]: Direct DMG, DoT DMG, Received DMG, and Bonus DMG only deal 1 point of DMG per instance.",
       "icon": "/Skill/Garou (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Instant DMG Evasion] 60% &gt; 70%. Block Rate 25% &gt; 30%.",
+      "desc": "Gains 70% [Special Evasion]. Becomes immune to [Fear], [Stun], and [Special Stun]. Increases own Block Rate by 30%. [Special Evasion]: Direct DMG, DoT DMG, Received DMG, and Bonus DMG only deal 1 point of DMG per instance.",
       "icon": "/Skill/Garou (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Instant DMG Evasion] 70% &gt; 80%. Block Rate 30% &gt; 35%.",
+      "desc": "Gains 80% [Special Evasion]. Becomes immune to [Fear], [Stun], and [Special Stun]. Increases own Block Rate by 35%. [Special Evasion]: Direct DMG, DoT DMG, Received DMG, and Bonus DMG only deal 1 point of DMG per instance.",
       "icon": "/Skill/Garou (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "When battle begins, gain [No Crit No Death], lasts for 6 rounds. Permanently gain 100% Crit Res Rate. After triggering [Block], reflect 200% Max HP of [True DMG] to the attacker. ———- [No Crit No Death]: For the duration, retains 70% of HP and remain [Undefeated] from fatal Non-Crit hits, and resists fatal Crit hits up to 6 times. (Only sees the first strike for Crit hit)",
+      "desc": "Upon entering battle, gains [Non-Crit Undying] for 6 turns. Permanently gains 100% [CRIT Resistance]. When triggering a Block, reflects [True DMG] equal to 200% of own Max HP to the attacker. [Non-Crit Undying]: While active, fatal DMG from non-critical hits will not defeat the character, and HP is retained at 70%. Additionally, blocks up to 6 instances of fatal DMG from critical hits. Only the first hit of an attack determines whether it is a critical hit.",
       "icon": "/Skill/Garou (UR)/skill_awk.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "True DMG (max HP) 200% > 300% HP retain 70% > 100% Resist Fatal Crit HIts 6x > 9x",
+      "desc": "Upon entering battle, gains [Non-Crit Undying] for 6 turns. Permanently gains 100% [CRIT Resistance]. When triggering a Block, reflects [True DMG] equal to 300% of own Max HP to the attacker. [Non-Crit Undying]: While active, fatal DMG from non-critical hits will not defeat the character, and HP is retained at 100%. Additionally, blocks up to 9 instances of fatal DMG from critical hits. Only the first hit of an attack determines whether it is a critical hit.",
       "icon": "/Skill/Garou (UR)/skill_awk.png",
       "type": "Awakening",
       "keepsakeIcon": null,

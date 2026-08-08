@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 100% ST(+10) sát thương cho mục tiêu đơn.",
+      "desc": "Gây 100% AT DMG cho một mục tiêu.",
       "icon": "/Skill/Armored Gorilla (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 120% ST(+10) sát thương cho kẻ địch trong khu vực hình chữ thập, với 100% cơ hội cấp cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 20% Máu bản thân).",
+      "desc": "Gây 120% AT DMG cho kẻ địch trong khu vực hình chữ thập, với 100% cơ hội nhận được [Lá Chắn] (hấp thụ DMG bằng 20% ​​HP của bản thân).",
       "icon": "/Skill/Armored Gorilla (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 120% ST(+10) sát thương cho kẻ địch trong khu vực hình chữ thập, với 100% cơ hội cấp cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 20% Máu bản thân). Sau khi hành động, [Giải Trừ] trạng thái bất lợi của bản thân.",
+      "desc": "Gây 120% AT DMG cho kẻ địch trong khu vực hình chữ thập, với 100% cơ hội nhận được [Lá Chắn] (hấp thụ DMG bằng 20% ​​HP của chính mình). Sau khi hành động, [Giải Trừ] sẽ tự gỡ lỗi.",
       "keepsakeIcon": "/Keepsake/Armored Gorilla (SR)/Keepsake_SR.png",
       "icon": "/Skill/Armored Gorilla (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Với mỗi đồng minh Giác Đấu trong đội, Tỉ Lệ Giảm Sát Thương của Armored Gorilla tăng 15%, tối đa 3 lớp.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Đối với mỗi đồng minh Grappler trong nhóm, Tỷ lệ Giảm Sát Thương của Khỉ Đột Bọc Giáp tăng 15%, tối đa 3 điểm.",
       "icon": "/Skill/Armored Gorilla (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Với mỗi đồng minh Giác Đấu trong đội, Tỉ Lệ Giảm Sát Thương của Armored Gorilla tăng 15%, tối đa 4 lớp.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Đối với mỗi đồng minh Grappler trong nhóm, Tỷ lệ Giảm Sát Thương của Khỉ Đột Bọc Giáp tăng 15%, tối đa 4 điểm.",
       "icon": "/Skill/Armored Gorilla (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Với mỗi đồng minh Giác Đấu trong đội, Tỉ Lệ Giảm Sát Thương của Armored Gorilla tăng 18%, tối đa 4 lớp.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Đối với mỗi đồng minh Grappler trong nhóm, Tỷ lệ Giảm Sát Thương của Khỉ Đột Bọc Giáp tăng 18%, tối đa 4 điểm.",
       "icon": "/Skill/Armored Gorilla (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

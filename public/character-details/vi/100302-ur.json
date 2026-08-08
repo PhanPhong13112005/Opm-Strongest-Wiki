@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Arrow Combo: 2 đòn liên hoàn, gây 240% ST(+10) lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Knuckle High: 3 đòn liên hoàn lên cột mục tiêu của kẻ địch, gây 900% ST(+9). Mỗi đòn cộng thêm 600% ST dưới dạng [Sát Thương Chuẩn]. Mỗi đòn có thể kích hoạt [Tiến Hóa Chuyên Biệt] 1 lần. [Sát Thương Chuẩn]: không bị ảnh hưởng bởi tăng/giảm sát thương, không thể né hay chia sẻ, đánh thẳng vào HP. [Tiến Hóa Chuyên Biệt]: lập tức xóa trạng thái Bất Khuất và bỏ qua sát thương của mục tiêu.",
+      "desc": "Gây 900% ATK dưới dạng Sát Thương Trực Tiếp cho tất cả kẻ thù trong một cột bằng combo 3 đòn. Mỗi đòn đánh gây thêm 600% ATK DMG tương đương [Sát Thương Chuẩn]. Mỗi lần đánh có thể kích hoạt [Đột Phá Chuyên Biệt] một lần. [Sát Thương Chuẩn]: Không bị ảnh hưởng bởi Tỷ lệ DMG hoặc DMG miễn phí và giao dịch Sát Thương Trực Tiếp không có [Chia Sẻ Sát Thương] hoặc [Khả Năng Né Tránh]. [Đột Phá Chuyên Biệt]: Loại bỏ ngay [Bỏ Qua Sát Thương].",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Knuckle High (nâng cấp): 3 đòn liên hoàn lên cột mục tiêu của kẻ địch, gây 900% > 1200% ST(+9). Mỗi đòn cộng thêm 600% > 840% ST dưới dạng [Sát Thương Chuẩn]. Mỗi đòn có thể kích hoạt [Tiến Hóa Chuyên Biệt] 1 lần. [Sát Thương Chuẩn]: không bị ảnh hưởng bởi tăng/giảm sát thương, không thể né hay chia sẻ, đánh thẳng vào HP. [Tiến Hóa Chuyên Biệt]: lập tức xóa trạng thái Bất Khuất và bỏ qua sát thương của mục tiêu.",
+      "desc": "Gây 1200% ATK dưới dạng Sát Thương Trực Tiếp cho tất cả kẻ thù trong một cột với combo 3 đòn. Mỗi đòn đánh gây thêm 840% ATK DMG tương đương [Sát Thương Chuẩn]. Mỗi lần đánh có thể kích hoạt [Đột Phá Chuyên Biệt] một lần. [Sát Thương Chuẩn]: Không bị ảnh hưởng bởi Tỷ lệ DMG hoặc DMG miễn phí và giao dịch Sát Thương Trực Tiếp không có [Chia Sẻ Sát Thương] hoặc [Khả Năng Né Tránh]. [Đột Phá Chuyên Biệt]: Loại bỏ ngay [Bỏ Qua Sát Thương].",
       "keepsakeIcon": "/Keepsake/Carnage Kabuto (UR)/Keepsake_UR.png",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Focused Rage: Vĩnh viễn +20 HP. Nhận 60% [Khả Năng Né Tránh Chuyên Biệt]. Sau khi bất kỳ nhân vật nào hành động, nếu tổng sát thương đã nhận vượt quá HP tối đa của bản thân, tung ra [Truy Kích Cuồng Dã] gây 180% Sức Mạnh Kỹ Năng Tối Thượng (bỏ qua chi phí Năng Lượng thêm, ưu tiên hàng trước), tối đa 10 lần mỗi trận. [Khả Năng Né Tránh Chuyên Biệt]: giảm mọi Sát thương Trực tiếp/DoT/Injury/Sát thương Thêm xuống chỉ còn 1 điểm.",
+      "desc": "Tăng 60% [Né Tránh Chuyên Biệt]. Khi bất kỳ nhân vật nào hành động, nếu DMG tích lũy của bản thân vượt quá HP tối đa, sẽ kích hoạt đòn tấn công [Truy Kích Cuồng Bạo] với DMG Tuyệt Kĩ 180%. Kỹ năng này không bị ảnh hưởng bởi hiệu ứng tiêu hao bổ sung do [Hoảng Loạn Chuyên Biệt] gây ra và ưu tiên ở hàng ghế đầu. Có thể kích hoạt tối đa 10 lần mỗi trận. [Né Tránh Chuyên Biệt]: Sát Thương Trực Tiếp, DMG liên tục, Chấn thương DMG và Extra DMG chỉ gây được 1 điểm DMG.",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Focused Rage (nâng cấp): Vĩnh viễn +20 HP. Nhận 60% > 70% [Khả Năng Né Tránh Chuyên Biệt]. Sau khi bất kỳ nhân vật nào hành động, nếu tổng sát thương đã nhận vượt quá HP tối đa của bản thân, tung ra [Truy Kích Cuồng Dã] gây 180% Sức Mạnh Kỹ Năng Tối Thượng (bỏ qua chi phí Năng Lượng thêm, ưu tiên hàng trước), tối đa 10 > 11 lần mỗi trận. [Khả Năng Né Tránh Chuyên Biệt]: giảm mọi Sát thương Trực tiếp/DoT/Injury/Sát thương Thêm xuống chỉ còn 1 điểm.",
+      "desc": "Tăng 70% [Né Tránh Chuyên Biệt]. Khi bất kỳ nhân vật nào hành động, nếu DMG tích lũy của bản thân vượt quá HP tối đa, sẽ kích hoạt đòn tấn công [Truy Kích Cuồng Bạo] với DMG Tuyệt Kĩ 180%. Kỹ năng này không bị ảnh hưởng bởi hiệu ứng tiêu hao bổ sung do [Hoảng Loạn Chuyên Biệt] gây ra và ưu tiên ở hàng ghế đầu. Có thể kích hoạt tối đa 11 lần mỗi trận. [Né Tránh Chuyên Biệt]: Sát Thương Trực Tiếp, DMG liên tục, Chấn thương DMG và Extra DMG chỉ gây được 1 điểm DMG.",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Focused Rage (5P): Vĩnh viễn +20 HP. Nhận 60% > 80% [Khả Năng Né Tránh Chuyên Biệt]. Sau khi bất kỳ nhân vật nào hành động, nếu tổng sát thương đã nhận vượt quá HP tối đa của bản thân, tung ra [Truy Kích Cuồng Dã] gây 180% Sức Mạnh Kỹ Năng Tối Thượng (bỏ qua chi phí Năng Lượng thêm, ưu tiên hàng trước), tối đa 10 > 12 lần mỗi trận. [Khả Năng Né Tránh Chuyên Biệt]: giảm mọi Sát thương Trực tiếp/DoT/Injury/Sát thương Thêm xuống chỉ còn 1 điểm.",
+      "desc": "Tăng 80% [Né Tránh Chuyên Biệt]. Khi bất kỳ nhân vật nào hành động, nếu DMG tích lũy của bản thân vượt quá HP tối đa, sẽ kích hoạt đòn tấn công [Truy Kích Cuồng Bạo] với DMG Tuyệt Kĩ 180%. Kỹ năng này không bị ảnh hưởng bởi hiệu ứng tiêu hao bổ sung do [Hoảng Loạn Chuyên Biệt] gây ra và ưu tiên ở hàng ghế đầu. Có thể kích hoạt tối đa 12 lần mỗi trận. [Né Tránh Chuyên Biệt]: Sát Thương Trực Tiếp, DMG liên tục, Chấn thương DMG và Extra DMG chỉ gây được 1 điểm DMG.",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Cấp cho bản thân [Làm Mới]. Cấp cho toàn bộ đồng minh 150% > 200% [Miễn Sát Thương Trọng Thương]. [Làm Mới]: sau khi bị đánh bại, trở lại trận với 80% > 100% HP và tăng ST bản thân thêm 20% trong 1 lượt, tối đa 7 > 10 lần. [Miễn Sát Thương Trọng Thương]: giảm sát thương [Trọng Thương], [Nội Thương] và [Tụ Lực].",
+      "desc": "Khi bắt đầu trận chiến, nhận được [Tập Hợp Lại] và cấp cho tất cả đồng minh 150% [Giảm Trọng Thương]. [Tập Hợp Lại]: Sau khi bị đánh bại, quay trở lại chiến trường với 80% HP và tăng ATK% của bản thân trong 1 hiệp. Có thể kích hoạt tối đa 7 lần. [Giảm Trọng Thương]: Giảm [Trọng Thương], [Nội Thương] và [Tụ Lực] DMG.",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Giảm ST Thương Tổn 150% > 200% Máu hồi sinh 80% > 100% Tăng Tấn công bản thân 7x > 10x",
+      "desc": "Khi bắt đầu trận chiến, nhận được [Tập Hợp Lại] và cấp cho tất cả đồng minh 200% [Giảm Trọng Thương]. [Tập Hợp Lại]: Sau khi bị đánh bại, quay trở lại chiến trường với 100% HP và tăng ATK của bản thân thêm 35% trong 1 hiệp. Có thể kích hoạt tối đa 10 lần. [Giảm Trọng Thương]: Giảm [Trọng Thương], [Nội Thương] và [Tụ Lực] DMG.",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Carnage Kabuto (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

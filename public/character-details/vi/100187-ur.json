@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Đe dọa một mục tiêu đơn, khiến mục tiêu [Phá Vỡ] trong 2 lượt (giảm Tăng ST đi 20%), hồi phục Máu bằng 20% ST.",
+      "desc": "Tấn công một mục tiêu duy nhất, gây ra [Phá Vỡ] trong 2 lượt và phục hồi HP của chính mình bằng 20% ​​ATK. [Phá Vỡ]: Giảm tỷ lệ DMG%.",
       "icon": "/Skill/King (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Hồi máu cho toàn bộ đồng minh bằng 150% Máu tối đa của King, ban cho đồng minh cùng hàng [Cuồng Bạo Chuyên Biệt] (đòn đầu tiên gây ST Cuồng Bạo bằng 50% Máu tối đa của King, có tỉ lệ Chí Mạng, tiêu hao 150 điểm Thanh Năng Lượng cho mỗi kẻ địch bị đánh trúng), kéo dài 1 lượt.",
+      "desc": "Chữa lành vết thương cho tất cả đồng minh cho HP bằng 150% HP tối đa của King. Cấp cho đồng minh cùng hàng [Cuồng Bạo Chuyên Biệt] trong 1 vòng. [Cuồng Bạo Chuyên Biệt]: Đòn tấn công đầu tiên gây ra [Sát Thương Cuồng Bạo] bằng 50% HP tối đa của King, có thể CRIT và tiêu tốn 150 Năng lượng cho mỗi kẻ địch trúng đòn.",
       "icon": "/Skill/King (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Hồi máu — thêm 100% Máu tối đa [Phòng Vệ Chuyên Biệt]Cùng hàng → Toàn bộ đồng minhST Cuồng Bạo 50% → 150%Thanh Năng Lượng tiêu hao 150 → 100",
+      "desc": "Chữa lành vết thương cho tất cả đồng minh cho HP bằng 150% HP tối đa của King. Cấp cho tất cả đồng minh [Cuồng Bạo Chuyên Biệt] trong 1 lượt. [Cuồng Bạo Chuyên Biệt]: Đòn tấn công đầu tiên gây ra [Sát Thương Cuồng Bạo] bằng 150% HP tối đa của King cộng với 100% [Phòng Hộ Chuyên Biệt] HP tối đa, có thể CRIT và tiêu tốn 100 Năng lượng cho mỗi đòn đánh của kẻ địch.",
       "keepsakeIcon": "/Keepsake/King (UR)/Keepsake_UR.png",
       "icon": "/Skill/King (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Khi bắt đầu trận đấu, đồng minh cùng hàng nhận 3 lượt [Hồi Phục Tràn] (lượng Máu dư từ Hồi máu và Hút máu chuyển thành lượng [Khiên Sinh Mệnh] tương ứng; ST tích lũy bị loại bỏ không vượt quá 20 lần Máu gốc của hắn). Hồi máu bằng 450% Máu tối đa của King.Trước khi bất kỳ nhân vật nào hành động, loại bỏ [Tê Liệt] khỏi bản thân và đồng minh cùng hàng.",
+      "desc": "Khi trận chiến bắt đầu, các đồng minh trong cùng hàng nhận được [Hồi Phục Tràn] trong 3 hiệp và hồi phục HP bằng 450% HP tối đa của King. [Hồi Phục Tràn]: HP dư thừa từ Chữa bệnh và Hút máu được chuyển đổi thành một lượng [Khiên Sinh Mệnh] tương đương. Tổng số DMG tích lũy đã loại bỏ không thể vượt quá 20× HP ban đầu của thiết bị.",
       "icon": "/Skill/King (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Hồi máu 450% → 600%Trước khi hành động — đồng thời loại bỏ [Bám Dính] khỏi bản thân và toàn bộ đồng minh cùng hàng",
+      "desc": "Khi trận chiến bắt đầu, các đồng minh trong cùng hàng nhận được [Hồi Phục Tràn] trong 5 hiệp và hồi phục HP bằng 600% HP tối đa của King. [Hồi Phục Tràn]: HP dư thừa từ Chữa bệnh và Hút máu được chuyển đổi thành một lượng [Khiên Sinh Mệnh] tương đương. Tổng số DMG tích lũy đã loại bỏ không thể vượt quá 20× HP ban đầu của thiết bị.",
       "icon": "/Skill/King (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Hồi Phục Tràn] 3 lượt → 5 lượt",
+      "desc": "[Hồi Phục Tràn] 3 vòng → 5 vòng",
       "icon": "/Skill/King (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Sau khi bất kỳ đồng minh nào hành động, King và đồng minh cùng hàng thực hiện [Truy Kích Combo] (100% ST và 100% hiệu ứng của kỹ năng Tối thượng, mục tiêu ngẫu nhiên, không bị ảnh hưởng bởi Chính xác hiệu ứng/Kháng hiệu ứng), một lần mỗi vòng. Đồng minh cùng hàng chia sẻ 50% ST trực tiếp với King. ST được chia sẻ bị giảm 50%, không thể chia sẻ ST khi Máu dưới 30%",
+      "desc": "Sau bất kỳ hành động nào của đồng minh, King và các đồng minh trong cùng hàng thực hiện [Truy Kích Liên Kích], một lần mỗi hiệp. Đồng minh trong cùng hàng chia sẻ 50% Sát Thương Trực Tiếp với King. [Sát Thương Chia Sẻ] giảm 50%. Không thể chia sẻ DMG khi HP của King dưới 30%. [Truy Kích Liên Kích]: Gây 100% DMG Tuyệt Kĩ với 100% hiệu ứng của nó cho các mục tiêu ngẫu nhiên và không bị ảnh hưởng bởi Tỷ lệ trúng hoặc Kháng hiệu ứng.",
       "icon": "/Skill/King (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "ST Truy Kích Combo 100% > 150% Thực hiện Truy Kích Combo một lần ở vòng đầu > hai lần ở vòng đầu Đồng minh cùng hàng chia sẻ ST 50% > 60% Mức giảm ST được chia sẻ 50% > 80%",
+      "desc": "Sau bất kỳ hành động nào của đồng minh, King và các đồng minh trong cùng hàng thực hiện [Truy Kích Liên Kích], một lần mỗi vòng và hai lần trong vòng đầu tiên. Đồng minh trong cùng hàng chia sẻ 60% Sát Thương Trực Tiếp với King. [Sát Thương Chia Sẻ] giảm 80%. Không thể chia sẻ DMG khi HP của King dưới 30%. Trước khi bất kỳ nhân vật nào hành động, hãy loại bỏ [Tê Liệt] khỏi Vua và các đồng minh trong cùng một hàng. [Truy Kích Liên Kích]: Gây 150% DMG Tuyệt Kĩ với 100% hiệu ứng của nó cho các mục tiêu ngẫu nhiên và không bị ảnh hưởng bởi Tỷ lệ trúng hoặc Kháng hiệu ứng.",
       "icon": "/Skill/King (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/King (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

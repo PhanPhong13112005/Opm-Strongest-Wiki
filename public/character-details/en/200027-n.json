@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 80% ATK(+10) DMG to a single target.",
+      "desc": "Deals 80% ATK DMG to a single target.",
       "icon": "/Skill/Subterranean Champion (N)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 30% ATK(+2) DMG to the entire column with a 4-hit combo.",
+      "desc": "Deals 30% ATK DMG to the entire column with a 4-hit combo.",
       "icon": "/Skill/Subterranean Champion (N)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 35% ATK(+2) DMG to the entire column with a 4-hit combo.",
+      "desc": "Deals 35% ATK DMG to the entire column with a 4-hit combo.",
       "keepsakeIcon": "/Keepsake/Subterranean Brute (N)/Keepsake_N.png",
       "icon": "/Skill/Subterranean Champion (N)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). Before each action, increases own DMG by 10% for 1 turn.",
+      "desc": "Permanently increases own HP by. Before each action, increases own DMG by 10% for 1 turn.",
       "icon": "/Skill/Subterranean Champion (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). Before each action, increases own DMG by 15% for 1 turn.",
+      "desc": "Permanently increases own HP by. Before each action, increases own DMG by 15% for 1 turn.",
       "icon": "/Skill/Subterranean Champion (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). Before each action, increases own DMG by 18% for 1 turn.",
+      "desc": "Permanently increases own HP by. Before each action, increases own DMG by 18% for 1 turn.",
       "icon": "/Skill/Subterranean Champion (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

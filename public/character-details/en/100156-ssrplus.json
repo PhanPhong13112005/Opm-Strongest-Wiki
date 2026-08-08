@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Kabuto Rage: Deals damage to a single target with 5 consecutive strikes for 100% ATK(+10) plus 25% of Max HP as extra DMG.",
+      "desc": "Kabuto Rage: Deals damage to a single target with 5 consecutive strikes for 100% ATK plus 25% of Max HP as extra DMG.",
       "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Chaos Dancer: Deals 400% ATK(+10) DMG to a single target and grants [Charge DMG] equal to 35% of Max HP. After release, gains [Wild] this round and performs [Ultimate Follow-up] when an enemy takes action. [Ultimate Follow-up]: deals 100% of the DMG and effect of the Ultimate skill, no Follow-up cost, up to 2 times per round. Heals self up to 35% of Max HP within 1 round.",
+      "desc": "Chaos Dancer: Deals 400% ATK DMG to a single target and grants [Charge DMG] equal to 35% of Max HP. After release, gains [Wild] this round and performs [Ultimate Follow-up] when an enemy takes action. [Ultimate Follow-up]: deals 100% of the DMG and effect of the Ultimate skill, no Follow-up cost, up to 2 times per round. Heals self up to 35% of Max HP within 1 round.",
       "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Chaos Dancer (upgraded): Deals 400% ATK(+10) DMG to a single target and grants [Charge DMG] equal to 35% > 45% of Max HP. After release, gains [Wild] this round and performs [Ultimate Follow-up] when an enemy takes action. [Ultimate Follow-up]: deals 100% of the DMG and effect of the Ultimate skill, no Follow-up cost, up to 2 times per round. Heals self up to 35% of Max HP within 1 round.",
+      "desc": "Chaos Dancer (upgraded): Deals 400% ATK DMG to a single target and grants [Charge DMG] equal to 35% > 45% of Max HP. After release, gains [Wild] this round and performs [Ultimate Follow-up] when an enemy takes action. [Ultimate Follow-up]: deals 100% of the DMG and effect of the Ultimate skill, no Follow-up cost, up to 2 times per round. Heals self up to 35% of Max HP within 1 round.",
       "keepsakeIcon": "/Keepsake/Carnage Kabuto (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Highly Evolved: Upon taking damage (even through shields) or being defeated, reflects 50% of DMG received onto 4 random enemies. Damage includes all Tenacity effects and HP-consumption effects. Only one effect of the same type per battle. Permanently increases HP by 20.",
+      "desc": "Highly Evolved: Upon taking damage (even through shields) or being defeated, reflects 50% of DMG received onto 4 random enemies. Damage includes all Tenacity effects and HP-consumption effects. Only one effect of the same type per battle. Permanently increases HP.",
       "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Highly Evolved (upgraded): Upon taking damage (even through shields) or being defeated, reflects 50% > 60% of DMG received onto 4 random enemies. Damage includes all Tenacity effects and HP-consumption effects. Only one effect of the same type per battle. Permanently increases HP by 20.",
+      "desc": "Highly Evolved (upgraded): Upon taking damage (even through shields) or being defeated, reflects 50% > 60% of DMG received onto 4 random enemies. Damage includes all Tenacity effects and HP-consumption effects. Only one effect of the same type per battle. Permanently increases HP.",
       "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Highly Evolved (5P): Upon taking damage (even through shields) or being defeated, reflects 60% of DMG received onto all enemies (upgraded from 4 random enemies). Damage includes all Tenacity effects and HP-consumption effects. Only one effect of the same type per battle. Permanently increases HP by 20.",
+      "desc": "Highly Evolved (5P): Upon taking damage (even through shields) or being defeated, reflects 60% of DMG received onto all enemies (upgraded from 4 random enemies). Damage includes all Tenacity effects and HP-consumption effects. Only one effect of the same type per battle. Permanently increases HP.",
       "icon": "/Skill/Carnage Kabuto (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

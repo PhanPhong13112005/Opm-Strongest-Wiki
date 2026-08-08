@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung 2 đòn liên kích gây 50% ST lên mục tiêu đơn.",
+      "desc": "Gây combo 2 đòn 50% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Spring Mustachio (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 2 đòn liên kích gây 70% ST lên mỗi kẻ địch trong cả cột. Có 100% khả năng gây [Vỡ Vụn] lên mục tiêu hàng sau trong 2 lượt (giảm tỉ lệ giảm ST đi 35%).",
+      "desc": "Gây combo 2 đòn 70% ATK DMG cho mỗi kẻ địch trong toàn bộ cột. Có 100% cơ hội gây [Nứt Vỡ] lên các mục tiêu ở hàng sau trong 2 lượt (giảm 35% tỷ lệ Giảm Sát Thương.).",
       "icon": "/Skill/Spring Mustachio (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung 2 đòn liên kích gây 70% ST lên mỗi kẻ địch trong cả cột. Có 100% khả năng gây [Vỡ Vụn] lên toàn bộ mục tiêu trong cột trong 2 lượt (giảm tỉ lệ giảm ST đi 35%).",
+      "desc": "Gây combo 2 đòn 70% ATK DMG cho mỗi kẻ địch trong toàn bộ cột. Có 100% cơ hội gây [Nứt Vỡ] lên tất cả mục tiêu trong cột trong 2 lượt (giảm 35% tỷ lệ Giảm Sát Thương.).",
       "keepsakeIcon": "/Keepsake/Spring Mustachio (SR)/Keepsake_SR.png",
       "icon": "/Skill/Spring Mustachio (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Khi Spring Mustachio bị tấn công, nếu kẻ tấn công đang ở trạng thái [Vỡ Vụn] thì sát thương nhận vào giảm 40%.",
+      "desc": "Tăng vĩnh viễn HP% của chính mình. Khi Ria Mép Mùa Xuân bị tấn công, nếu kẻ tấn công ở trạng thái [Nứt Vỡ] thì DMG bị giảm 40%.",
       "icon": "/Skill/Spring Mustachio (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Khi Spring Mustachio bị tấn công, nếu kẻ tấn công đang ở trạng thái [Vỡ Vụn] thì sát thương nhận vào giảm 50%.",
+      "desc": "Tăng vĩnh viễn HP% của chính mình. Khi Ria Mép Mùa Xuân bị tấn công, nếu kẻ tấn công ở trạng thái [Nứt Vỡ] thì DMG bị giảm 50%.",
       "icon": "/Skill/Spring Mustachio (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng 20% Máu cho bản thân. Khi Spring Mustachio bị tấn công, nếu kẻ tấn công đang ở trạng thái [Vỡ Vụn] thì sát thương nhận vào giảm 60%.",
+      "desc": "Tăng vĩnh viễn HP% của chính mình. Khi Ria Mép Mùa Xuân bị tấn công, nếu kẻ tấn công ở trạng thái [Nứt Vỡ] thì DMG bị giảm 60%.",
       "icon": "/Skill/Spring Mustachio (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

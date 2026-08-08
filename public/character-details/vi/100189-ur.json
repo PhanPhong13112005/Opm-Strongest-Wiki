@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST cho một mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Gale Wind (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công kẻ địch theo cột với 5 đòn liên tiếp, gây 450% ST. Đòn cuối có 100% tỉ lệ gây [Nứt Vỡ Chuyên Biệt] cho mục tiêu chính trong 2 lượt (giảm Giảm Sát Thương đi 12%, gây 180% ST sát thương [Nứt Vỡ] khi bị tấn công, cộng dồn tối đa 3 lần, không cộng dồn với [Nứt Vỡ]), và có 100% tỉ lệ gây [Choáng] lên mục tiêu chính trong 1 lượt (không thể hành động, tối đa 4 nhân vật có thể bị choáng cùng lúc).",
+      "desc": "Tấn công kẻ địch trong một cột bằng 5 đòn liên tiếp, gây 450% ATK DMG. Đòn đánh cuối cùng có 100% cơ hội gây [Sụp Đổ Chuyên Biệt] lên mục tiêu chính trong 2 lượt và 100% cơ hội gây [Choáng] lên mục tiêu chính trong 1 lượt. [Sụp Đổ Chuyên Biệt]: Giảm 12% DMG miễn phí và gây 180% ATK [Sát Thương Sụp Đổ] khi mục tiêu bị ảnh hưởng bị tấn công. Cộng dồn tối đa 3 lần và không cộng dồn với [Sụp Đổ]. [Choáng]: Ngăn chặn thiết bị bị ảnh hưởng hoạt động. Tối đa 4 nhân vật có thể bị choáng cùng lúc.",
       "icon": "/Skill/Gale Wind (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "ST Tối Thượng 450% → 600% ST. Giảm Sát Thương giảm đi 12% → 15%. ST [Nứt Vỡ] 180% → 230% ST. Tỉ lệ gây [Choáng] cho mục tiêu chính → thêm kẻ địch cùng cột.",
+      "desc": "Tấn công kẻ địch trong một cột bằng 5 đòn liên tiếp, gây 600% ATK DMG. Đòn đánh cuối cùng có 100% cơ hội gây [Sụp Đổ Chuyên Biệt] lên mục tiêu chính trong 2 lượt và 100% cơ hội gây [Choáng] lên mục tiêu chính và kẻ địch khác trong cùng một cột trong 1 lượt. [Sụp Đổ Chuyên Biệt]: Giảm 15% DMG miễn phí và gây 230% ATK [Sát Thương Sụp Đổ] khi mục tiêu bị ảnh hưởng bị tấn công. Cộng dồn tối đa 3 lần và không cộng dồn với [Sụp Đổ]. [Choáng]: Ngăn chặn thiết bị bị ảnh hưởng hoạt động. Tối đa 4 nhân vật có thể bị choáng cùng lúc.",
       "keepsakeIcon": "/Keepsake/Gale Wind (UR)/Keepsake_UR.png",
       "icon": "/Skill/Gale Wind (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn nhận cho bản thân 55% tỉ lệ [Khả Năng Né Tránh] (giảm ST trực tiếp/phụ trội/tích lũy/cuồng bạo xuống còn 1 ST). Sau khi bất kỳ nhân vật nào hành động, gây 500% ST phụ trội lên kẻ địch có [Nứt Vỡ Chuyên Biệt], tối đa 2 lần mỗi lượt.",
+      "desc": "Tự cấp cho mình vĩnh viễn 55% cơ hội nhận được [Khả Năng Né Tránh]. Sau khi bất kỳ nhân vật nào hành động, gây 500% ATK dưới dạng Extra DMG cho kẻ địch bị ảnh hưởng bởi [Sụp Đổ Chuyên Biệt], tối đa 2 lần mỗi vòng. [Khả Năng Né Tránh]: Giảm Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG nhận được còn 1 DMG.",
       "icon": "/Skill/Gale Wind (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Khả Năng Né Tránh] cho bản thân → thêm đồng minh cùng cột. Tấn công kẻ địch có [Nứt Vỡ Chuyên Biệt] 2 lần mỗi lượt → 3 lần mỗi lượt.",
+      "desc": "Cấp vĩnh viễn cho các đồng minh ở cùng hàng 60% cơ hội nhận được [Khả Năng Né Tránh]. Sau khi bất kỳ nhân vật nào hành động, gây 650% ATK dưới dạng Extra DMG cho kẻ địch bị ảnh hưởng bởi [Sụp Đổ Chuyên Biệt], tối đa 3 lần mỗi vòng. [Khả Năng Né Tránh]: Giảm Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG nhận được còn 1 DMG.",
       "icon": "/Skill/Gale Wind (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Tỉ lệ [Khả Năng Né Tránh] 55% → 60%. ST phụ trội 500% → 650% ST.",
+      "desc": "[Khả Năng Né Tránh] cơ hội 55% → 60%. Extra DMG 500% → 650% ATK.",
       "icon": "/Skill/Gale Wind (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi bắt đầu trận đấu, nhận [Tăng Tốc Chuyên Biệt] (Tăng 28% Tốc độ, nếu Tốc độ của mục tiêu chính thấp hơn Gale Wind, gây ST phụ trội bằng 500% Tấn công). Vào đầu mỗi vòng, tăng Tốc độ của đồng minh cùng hàng lên 92% Tốc độ của Gale Wind, chỉ khi Tốc độ của đồng minh thấp hơn kỳ vọng). Miễn nhiễm với [Sợ Hãi] và [Loại Bỏ Năng Lượng]. Khi vòng đấu bắt đầu, [Khích Lệ] đồng minh (nhận 2 năng lượng vào đầu vòng, kéo dài 3 vòng).",
+      "desc": "Khi bắt đầu trận chiến, nhận được [Gia Tốc Chuyên Biệt]. Khi bắt đầu mỗi vòng, tăng SPD của các đồng minh trong cùng hàng lên 92% SPD của Gale Wind nếu SPD hiện tại của họ thấp hơn. Cấp khả năng miễn nhiễm cho [Sợ Hãi] và [Xóa Năng Lượng]. [Gia Tốc Chuyên Biệt]: Tăng SPD thêm 28%. Nếu SPD của mục tiêu chính thấp hơn SPD của Gale Wind, gây 500% ATK là Extra DMG.",
       "icon": "/Skill/Gale Wind (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Tăng Tốc Chuyên Biệt 28% > 32% ST phụ trội Tấn công 500% > 600% Tăng Tốc độ của đồng minh cùng hàng 92% > 96% Khích Lệ đồng minh nhận năng lượng 2 > 3 Miễn nhiễm Choáng vĩnh viễn",
+      "desc": "Khi bắt đầu trận chiến, nhận được [Gia Tốc Chuyên Biệt]. Khi bắt đầu mỗi vòng, tăng SPD của các đồng minh trong cùng hàng lên 96% SPD của Gale Wind nếu SPD hiện tại của họ thấp hơn. Cấp khả năng miễn nhiễm cho [Sợ Hãi] và [Xóa Năng Lượng]. Vào đầu mỗi vòng, áp dụng [Cổ Vũ] cho đồng minh. Cấp vĩnh viễn khả năng miễn nhiễm cho [Choáng]. [Gia Tốc Chuyên Biệt]: Tăng SPD thêm 32%. Nếu SPD của mục tiêu chính thấp hơn SPD của Gale Wind, gây sát thương 600% ATK thành Extra DMG. [Cổ Vũ]: Tăng 3 Năng lượng khi bắt đầu mỗi hiệp trong 3 hiệp.",
       "icon": "/Skill/Gale Wind (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Gale Wind (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

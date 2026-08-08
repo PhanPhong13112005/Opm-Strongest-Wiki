@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 90% ATK(+10) DMG to a single target.",
+      "desc": "Deals 90% AT DMG to a single target.",
       "icon": "/Skill/Crablante (R)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Strikes a single target with a 5-hit combo dealing 38% ATK(+2) DMG. Has a 100% chance to reduce DMG taken by self by 20% for 2 turns.",
+      "desc": "Strikes a single target with a 5-hit combo dealing 38% ATK(+2) DMG. Has a 100% chance to reduce DMG taken by self% for 2 turns.",
       "icon": "/Skill/Crablante (R)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Crablante (R)/Keepsake_R.png",
       "type": "Ultimate",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases self HP by (+20). After being attacked, has a 25% chance to increase self DMG by 10% for 1 turn.",
+      "desc": "Permanently increases self HP by. After being attacked, has a 25% chance to increase self DMG by 10% for 1 turn.",
       "icon": "/Skill/Crablante (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases self HP by (+20). After being attacked, has a 25% chance to increase self DMG by 20% for 1 turn.",
+      "desc": "Permanently increases self HP by. After being attacked, has a 25% chance to increase self DMG% for 1 turn.",
       "icon": "/Skill/Crablante (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases self HP by (+20). After being attacked, has a 25% chance to increase self DMG by 25% for 1 turn.",
+      "desc": "Permanently increases self HP by. After being attacked, has a 25% chance to increase self DMG by 25% for 1 turn.",
       "icon": "/Skill/Crablante (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK (+10) DMG to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Gouketsu (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Delivers a 2-hit combo for 400% ATK DMG to the front-row target. The first hit has a 50% chance to inflict [Armed Collapse] on the struck target (stores bonus [Armed Collapse] DMG equal to 600% of Gouketsu's ATK, dealt when that target is struck, then the stack is consumed).",
+      "desc": "Attacks enemies in a row with 2 consecutive strikes, dealing 800% ATK DMG. The first strike has a 50% chance to inflict [Internal Injury] and [Weaken] on the target. [Internal Injury]: Deals 600% of Gouketsu’s ATK as Internal Injury DMG and disappears after triggering. [Weaken]: Decreases the target’s ATK by 50% for 2 rounds.",
       "icon": "/Skill/Gouketsu (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Combo DMG 400% > 500% ATK. [Armed Collapse] apply chance on the first hit 50% > 80%, and its stored DMG 600% > 800% of Gouketsu's ATK. Additionally inflicts [Weaken] on the target, reducing its ATK by 50% for 2 turns.",
+      "desc": "Attacks enemies in a row with 2 consecutive strikes, dealing 1000% ATK DMG. The first strike has an 80% chance to inflict [Internal Injury] and [Weaken] on the target. [Internal Injury]: Deals 800% of Gouketsu’s ATK as Internal Injury DMG and disappears after triggering. [Weaken]: Decreases the target’s ATK by 50% for 2 rounds.",
       "keepsakeIcon": "/Keepsake/Gouketsu (UR)/Keepsake_UR.png",
       "icon": "/Skill/Gouketsu (UR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently gains +20% HP. On entry, gains +60% [Instant Miss] (each stack causes one incoming direct/extra/charge/berserk hit to deal only 1 DMG). After any character acts, [Detonate] the [Armed Collapse] on all enemies, converting 3x a single stored [Armed Collapse]'s DMG into Detonate damage.",
+      "desc": "When battle begins, gains a 60% chance of [Evasion]. After any character acts, [Detonate] activates on [Internal Injury]. [Evasion]: Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG. [Detonate]: Converts a single [Internal Injury] DMG instance equal to 300% ATK into [Detonation] DMG.",
       "icon": "/Skill/Gouketsu (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Instant Miss] 60% > 70%. [Detonate] [Armed Collapse] DMG 3x > 3.5x.",
+      "desc": "When battle begins, gains a 70% chance of [Evasion]. After any character acts, [Detonate] activates on [Internal Injury]. [Evasion]: Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG. [Detonate]: Converts a single [Internal Injury] DMG instance equal to 350% ATK into [Detonation] DMG.",
       "icon": "/Skill/Gouketsu (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Instant Miss] 70% > 80%. [Detonate] [Armed Collapse] DMG 3.5x > 4x.",
+      "desc": "When battle begins, gains an 80% chance of [Evasion]. After any character acts, [Detonate] activates on [Internal Injury]. [Evasion]: Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG. [Detonate]: Converts a single [Internal Injury] DMG instance equal to 400% ATK into [Detonation] DMG.",
       "icon": "/Skill/Gouketsu (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Grants himself and surrounding allies [Specialized Unyielding], and [Immune] to [Breakthrough] ———- [Specialized Unyielding]: When allies receive Fatal DMG, enter [Specialized Unyielding]. Removes after 5 characters act, recovers 100% HP, each character can activate twice in the whole battle",
+      "desc": "Grants self and surrounding allies [Specialized Unyielding] and makes them immune to [Breakthrough]. [Specialized Unyielding]: When an affected ally receives fatal DMG, enters the [Specialized Unyielding] state. The state is removed after 5 characters act, then the affected ally restores 100% HP. Each character can activate this effect up to 2 times per battle.",
       "icon": "/Skill/Gouketsu (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Grants the whole team Specialized Unyielding and Immune to Breakthrough.",
+      "desc": "Grants the entire team [Specialized Unyielding] and makes all allies immune to [Breakthrough]. [Specialized Unyielding]: When an affected ally receives fatal DMG, enters the [Specialized Unyielding] state. The state is removed after 5 characters act, then the affected ally restores 100% HP. Each character can activate this effect up to 2 times per battle.",
       "icon": "/Skill/Gouketsu (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

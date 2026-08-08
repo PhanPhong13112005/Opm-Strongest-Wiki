@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Threatens a single target, causing it to [Break] for 2 rounds (decreases DMG Rate by 20%), and recovers 20% ATK of HP.",
+      "desc": "Attacks a single target, inflicts [Break] for 2 rounds, and restores own HP equal to 20% of ATK. [Break]: Decreases DMG Rate%.",
       "icon": "/Skill/King (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Heals all allies by 150% of King's max HP, and grants allies in the same row [Specialized Berserk] (the first strike deals Berserk DMG equal to 50% of King's max HP, with a chance to Crit, consuming 150 points of Energy Gauge per enemy hit), lasting 1 round.",
+      "desc": "Heals all allies for HP equal to 150% of King’s Max HP. Grants allies in the same row [Specialized Berserk] for 1 round. [Specialized Berserk]: The first strike deals [Berserk DMG] equal to 50% of King’s Max HP, can CRIT, and consumes 150 Energy Gauge for each enemy hit.",
       "icon": "/Skill/King (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Healing — additional 100% max HP of [Specialized Guard]Same row → All alliesBerserk DMG 50% → 150%Energy Gauge consumed 150 → 100",
+      "desc": "Heals all allies for HP equal to 150% of King’s Max HP. Grants all allies [Specialized Berserk] for 1 round. [Specialized Berserk]: The first strike deals [Berserk DMG] equal to 150% of King’s Max HP plus 100% of [Specialized Guard] Max HP, can CRIT, and consumes 100 Energy Gauge for each enemy hit.",
       "keepsakeIcon": "/Keepsake/King (UR)/Keepsake_UR.png",
       "icon": "/Skill/King (UR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "When battle begins, allies in the same row gain 3 rounds of [Overflow Recovery] (excess HP from Heal and Drain turns into an equivalent amount of [Life Shield]; accumulated DMG removed cannot exceed 20x his original HP). Heals by 450% of King's max HP.Before any character acts, removes [Paralysis] from himself and allies in the same row.",
+      "desc": "When battle begins, allies in the same row gain [Overflow Recovery] for 3 rounds and recover HP equal to 450% of King’s Max HP. [Overflow Recovery]: Excess HP from Healing and Drain is converted into an equal amount of [Life Shield]. The total accumulated DMG removed cannot exceed 20× the unit’s original HP.",
       "icon": "/Skill/King (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Heals 450% → 600%Before actions — also removes [Adhesion] from himself and all allies in the same row",
+      "desc": "When battle begins, allies in the same row gain [Overflow Recovery] for 5 rounds and recover HP equal to 600% of King’s Max HP. [Overflow Recovery]: Excess HP from Healing and Drain is converted into an equal amount of [Life Shield]. The total accumulated DMG removed cannot exceed 20× the unit’s original HP.",
       "icon": "/Skill/King (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "After any ally acts, King and allies in the same row perform [Combo Follow-up] (100% DMG and 100% effect of Ultimate skill, random targets, not affected by Hit/Res), once per round. Allies in the same row share 50% Direct DMG with King. Shared DMG is reduced by 50%, cannot share DMG when HP is below 30%",
+      "desc": "After any ally acts, King and allies in the same row perform a [Combo Follow-Up], once per round. Allies in the same row share 50% Direct DMG with King. [Shared DMG] is reduced by 50%. DMG cannot be shared when King’s HP is below 30%. [Combo Follow-Up]: Deals 100% of the Ultimate’s DMG with 100% of its effects to random targets and is not affected by Hit Rate or Effect Resistance.",
       "icon": "/Skill/King (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Combo Follow-up DMG 100% > 150% Perform Combo Follow-up once in first round > twice in first round Allies same row share DMG 50% > 60% Shared DMG reduction 50% > 80%",
+      "desc": "After any ally acts, King and allies in the same row perform a [Combo Follow-Up], once per round and twice during the first round. Allies in the same row share 60% Direct DMG with King. [Shared DMG] is reduced by 80%. DMG cannot be shared when King’s HP is below 30%. Before any character acts, removes [Paralysis] from King and allies in the same row. [Combo Follow-Up]: Deals 150% of the Ultimate’s DMG with 100% of its effects to random targets and is not affected by Hit Rate or Effect Resistance.",
       "icon": "/Skill/King (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

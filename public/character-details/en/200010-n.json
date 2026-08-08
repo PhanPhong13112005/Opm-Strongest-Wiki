@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 80% ATK (+10) damage to a single target.",
+      "desc": "Deals 80% ATK damage to a single target.",
       "icon": "/Skill/Deep Sea Destroyer (N)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Strikes a single target with a 2-hit combo for 90% ATK (+5) damage, with a 100% chance to inflict [Corrosion] for 2 turns (DMG reduction rate lowered by 30%).",
+      "desc": "Strikes a single target with a 2-hit combo for 90% ATK damage, with a 100% chance to inflict [Corrosion] for 2 turns (DMG reduction rate lowered by 30%).",
       "icon": "/Skill/Deep Sea Destroyer (N)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Strikes a single target with a 2-hit combo for 100% ATK (+5) damage, with a 100% chance to inflict [Corrosion] for 2 turns (DMG reduction rate lowered by 30%).",
+      "desc": "Strikes a single target with a 2-hit combo for 100% ATK damage, with a 100% chance to inflict [Corrosion] for 2 turns (DMG reduction rate lowered by 30%).",
       "keepsakeIcon": "/Keepsake/Deep Sea Destroyer (N)/Keepsake_N.png",
       "icon": "/Skill/Deep Sea Destroyer (N)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). While Deep Sea Destroyer is on the field, increases own damage by 20% until the end of battle.",
+      "desc": "Permanently increases own HP by. While Deep Sea Destroyer is on the field, increases own damage% until the end of battle.",
       "icon": "/Skill/Deep Sea Destroyer (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). While Deep Sea Destroyer is on the field, increases own damage by 25% until the end of battle.",
+      "desc": "Permanently increases own HP by. While Deep Sea Destroyer is on the field, increases own damage by 25% until the end of battle.",
       "icon": "/Skill/Deep Sea Destroyer (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). While Deep Sea Destroyer is on the field, increases own damage by 28% until the end of battle.",
+      "desc": "Permanently increases own HP by. While Deep Sea Destroyer is on the field, increases own damage by 28% until the end of battle.",
       "icon": "/Skill/Deep Sea Destroyer (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

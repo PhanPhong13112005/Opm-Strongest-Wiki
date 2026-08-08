@@ -42,7 +42,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). After an ally in the same column attacks, immediately launches a [Follow-up] (attacks with 80% of Basic Attack's damage and effects).",
+      "desc": "Permanently increases own HP by. After an ally in the same column attacks, immediately launches a [Follow-up] (attacks with 80% of Basic Attack's damage and effects).",
       "icon": "/Skill/Subterranean (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). After an ally in the same column attacks, immediately launches a [Follow-up] (attacks with 80% of Basic Attack's damage and effects).",
+      "desc": "Permanently increases own HP by. After an ally in the same column attacks, immediately launches a [Follow-up] (attacks with 80% of Basic Attack's damage and effects).",
       "icon": "/Skill/Subterranean (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). After an ally in the same column attacks, immediately launches a [Follow-up] (attacks with 115% of Basic Attack's damage and effects).",
+      "desc": "Permanently increases own HP by. After an ally in the same column attacks, immediately launches a [Follow-up] (attacks with 115% of Basic Attack's damage and effects).",
       "icon": "/Skill/Subterranean (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

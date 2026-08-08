@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST trực tiếp lên một mục tiêu đơn bằng 3 đòn liên tiếp.",
+      "desc": "Tấn công một mục tiêu bằng 3 đòn liên tiếp, gây 120% ATK DMG.",
       "icon": "/Skill/Metal Bat V2 (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tăng Hit và Specialized Hit của bản thân 50%. Vô hiệu 30% [Khả Năng Né Tránh], [Khả Năng Né Tránh Chuyên Biệt], [Giảm Sát Thương Không Bạo Kích] của mục tiêu. Ban cho bản thân 100% [Giận Dữ]. Mỗi đòn đánh có thể kích hoạt 1 [Đột Phá Chuyên Biệt]. Tung 3 đòn liên tiếp lên toàn bộ hàng, gây tổng cố định 3900% ST sát thương trực tiếp.",
+      "desc": "Tăng [Tỷ Lệ Chính Xác Sát Thương Tức Thời] và [Tỷ Lệ Chính Xác Chuyên Biệt] của riêng mình thêm 50%. Bỏ qua 30% [Khả Năng Né Tránh], [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] của mục tiêu. Chuyển sang trạng thái [Giận Dữ] với 100% ATK. Mỗi lần đánh có thể kích hoạt [Đột Phá Chuyên Biệt] một lần. Gây combo 3 đòn liên tiếp cho tất cả kẻ địch, gây Sát Thương Trực Tiếp bằng 3900% ATK.",
       "icon": "/Skill/Metal Bat V2 (UR)/skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Specialized Hit 50% > 70%. Vô hiệu [Khả Năng Né Tránh] của mục tiêu 30% > 50%. [Giận Dữ] của bản thân 100% > 130%. Tổng ST lên toàn bộ hàng 3900% > 5400%.",
+      "desc": "Tăng [Tỷ Lệ Chính Xác Sát Thương Tức Thời] và [Tỷ Lệ Chính Xác Chuyên Biệt] của riêng mình lên 70%. Bỏ qua 50% [Khả Năng Né Tránh], [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] của mục tiêu. Chuyển sang trạng thái [Giận Dữ] với 130% ATK. Mỗi lần đánh có thể kích hoạt [Đột Phá Chuyên Biệt] một lần. Gây combo 3 đòn liên tiếp cho tất cả kẻ địch, gây Sát Thương Trực Tiếp bằng 5400% ATK.",
       "keepsakeIcon": "/Keepsake/Metal Bat V2 (UR)/Keepsake_UR.png",
       "icon": "/Skill/Metal Bat V2 (UR)/skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Nhận 60% [Giảm Sát Thương Không Bạo Kích]. Giảm tỉ lệ [Tập Hợp Lại] và [Hồi Sinh Báo Thù] đi 3. Vô hiệu [Phản Sát Thương Chuyên Biệt] của kẻ địch. Ban [Miễn Nhiễm] với [Uy Hiếp], [Choáng], [Choáng Chuyên Biệt] cho bản thân và đồng minh cùng cột.",
+      "desc": "Tự cấp cho mình 60% [Giảm Sát Thương Không Bạo Kích]. Giảm số lần hồi sinh từ [Tập Hợp Lại] và [Trả Thù] xuống 3. Loại bỏ hiệu ứng [Sát Thương Phản Đòn Chuyên Biệt] của kẻ thù và cấp cho bản thân và đồng minh trong cùng một cột khả năng miễn nhiễm với [Sợ Hãi], [Choáng] và [Choáng Chuyên Biệt].",
       "icon": "/Skill/Metal Bat V2 (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Nhận [Giảm Sát Thương Không Bạo Kích] 60% > 70%. Giảm số lần hồi sinh đi 3 > 5.",
+      "desc": "Tự cấp 70% [Giảm Sát Thương Không Bạo Kích]. Giảm số lần hồi sinh từ [Tập Hợp Lại] và [Trả Thù] xuống 5. Loại bỏ hiệu ứng [Sát Thương Phản Đòn Chuyên Biệt] của kẻ thù và cấp cho bản thân và đồng minh trong cùng một cột khả năng miễn nhiễm với [Sợ Hãi], [Choáng] và [Choáng Chuyên Biệt].",
       "icon": "/Skill/Metal Bat V2 (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Nhận [Giảm Sát Thương Không Bạo Kích] 70% > 80%. Giảm số lần hồi sinh đi 5 > 7.",
+      "desc": "Tự cấp cho mình 80% [Giảm Sát Thương Không Bạo Kích]. Giảm số lần hồi sinh từ [Tập Hợp Lại] và [Trả Thù] xuống 7. Loại bỏ hiệu ứng [Sát Thương Phản Đòn Chuyên Biệt] của kẻ thù và cấp cho bản thân và đồng minh trong cùng một cột khả năng miễn nhiễm với [Sợ Hãi], [Choáng] và [Choáng Chuyên Biệt].",
       "icon": "/Skill/Metal Bat V2 (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Nhận [Hoàn Trả Động Lực] 2 lần. Nhận 30% [Giảm Sát Thương Áp Chế]. — [Hoàn Trả Động Lực]: Sau khi toàn bộ đồng minh bị đánh bại, trở lại trận đấu với 110% (200%) Máu Tối đa. [Giảm Sát Thương Áp Chế]: Giảm 30% ST nhận vào, nếu ATK cao hơn kẻ tấn công, giảm thêm 150%.",
+      "desc": "Nhận được 2 điểm tích lũy [Hoàn Trả Động Lực]. Khi bắt đầu trận chiến, nhận được 30% [Giảm Sát Thương Áp Chế]. [Hoàn Trả Động Lực]: Khi tất cả đồng minh bị đánh bại, đơn vị trở lại chiến trường với 110% HP. Mọi HP dư thừa sẽ được chuyển đổi thành HP tối đa bổ sung. [Giảm Sát Thương Áp Chế]: Giảm 30% DMG phải chịu. Nếu ATK của đơn vị cao hơn mục tiêu thì Giảm Sát Thương sẽ tăng lên 150%.",
       "icon": "/Skill/Metal Bat V2 (UR)/skill_awk.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Nhận [Hoàn Trả Động Lực] 2 > 3. Nhận [Giảm Sát Thương Áp Chế] 30% > 40%. Giảm ST 30% > 40%. Nếu ATK cao hơn, giảm thêm 150% > 170%.",
+      "desc": "Nhận được 3 điểm tích lũy [Hoàn Trả Động Lực]. Khi bắt đầu trận chiến, nhận được 40% [Giảm Sát Thương Áp Chế]. [Hoàn Trả Động Lực]: Khi tất cả đồng minh bị đánh bại, đơn vị trở lại chiến trường với 200% HP. Mọi HP dư thừa sẽ được chuyển đổi thành HP tối đa bổ sung. [Giảm Sát Thương Áp Chế]: Giảm 40% DMG phải chịu. Nếu ATK của đơn vị cao hơn mục tiêu thì Giảm Sát Thương sẽ tăng lên 170%.",
       "icon": "/Skill/Metal Bat V2 (UR)/skill_awk.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Metal Bat V2 (UR)/skill_awk.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

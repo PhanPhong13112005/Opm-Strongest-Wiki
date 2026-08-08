@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST sát thương lên mục tiêu đơn, sau đó hồi cho bản thân lượng Máu bằng 120% ST.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu và nhận [HP Chuyên Biệt] bằng 120% ATK của chính mình.",
       "icon": "/Skill/Sonic V1 (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 80% ST sát thương lên hàng của mục tiêu. Ban [Siêu Tốc] cho bản thân và tối đa 6 đồng minh khác; khi [Siêu Tốc] còn hiệu lực, đồng minh có Tốc độ vượt mục tiêu sẽ gây thêm 500% ST sát thương khi tấn công. Đồng minh cùng hàng được tăng Tốc độ khi Tốc độ của họ cao hơn mục tiêu (kiểm tra Tốc độ ở mức 92%). Nếu mục tiêu có Năng lượng, rút Năng lượng (3 lần ST Năng lượng) và áp [Cắt Giảm Năng Lượng] lên toàn bộ kẻ địch khi Năng lượng của chúng giảm.",
+      "desc": "Tấn công kẻ địch liên tiếp 5 đòn liên tiếp, gây 400% ATK DMG. Cấp cho các đồng minh trong cùng hàng [Gia Tốc Chuyên Biệt] trong 1 hiệp, tăng SPD của họ lên 92% SPD của Sonic. Nếu SPD ban đầu của đồng minh cao hơn giá trị tăng lên, SPD của họ vẫn không thay đổi. Loại bỏ 3 Năng lượng khỏi đội địch, tối đa một lần mỗi vòng. Sau khi loại bỏ Năng lượng thành công, [Hoảng Loạn] không thể được kích hoạt trong cùng một vòng.",
       "icon": "/Skill/Sonic V1 (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 80% > 120% ST sát thương lên hàng của mục tiêu. Ban [Siêu Tốc] cho bản thân và tối đa 6 đồng minh khác; khi [Siêu Tốc] còn hiệu lực, đồng minh có Tốc độ vượt mục tiêu sẽ gây thêm 500% ST sát thương khi tấn công. Đồng minh cùng hàng được tăng Tốc độ khi Tốc độ của họ cao hơn mục tiêu (kiểm tra Tốc độ ở mức 92% > 96%). Nếu mục tiêu có Năng lượng, rút Năng lượng (3 lần > 5 lần ST Năng lượng) và áp [Cắt Giảm Năng Lượng] lên toàn bộ kẻ địch khi Năng lượng của chúng giảm. Ngoài ra hồi 1000 Năng lượng cho bản thân.",
+      "desc": "Tấn công kẻ địch liên tiếp 5 đòn liên tiếp, gây 600% ATK DMG. Cấp cho các đồng minh trong cùng hàng [Gia Tốc Chuyên Biệt] trong 1 hiệp, tăng SPD của họ lên 96% SPD của Sonic. Nếu SPD ban đầu của đồng minh cao hơn giá trị tăng lên, SPD của họ vẫn không thay đổi. Loại bỏ 5 Năng lượng khỏi đội địch, tối đa một lần mỗi vòng. Sau khi loại bỏ Năng lượng thành công, [Hoảng Loạn] không thể được kích hoạt trong cùng một vòng. Sau khi sử dụng Tuyệt Kĩ sẽ nhận được 1000 điểm Tinh Thần Chiến Đấu.",
       "keepsakeIcon": "/Keepsake/Sonic V1 (UR)/Keepsake_UR.png",
       "icon": "/Skill/Sonic V1 (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Trước trận, [Cổ Vũ] đồng minh. 100% xác suất dùng Tuyệt kỹ của mình tấn công mục tiêu kèm [Thiêu Đốt Chuyên Biệt].[Cổ Vũ]: nhận thêm 2 Năng lượng đầu lượt, kéo dài 3 lượt.[Thiêu Đốt Chuyên Biệt]: 150% ATK sát thương liên tục; biến mất sau 3 lần kích hoạt; chuyển sang mục tiêu có thể chịu ST sau khi bất kỳ nhân vật nào hành động.",
+      "desc": "Khi bắt đầu trận chiến, áp dụng [Cổ Vũ] cho tất cả đồng minh. Khi Sonic sử dụng Tuyệt Kĩ của mình, có 100% cơ hội gây [Thiêu Đốt Chuyên Biệt] lên kẻ địch trúng đòn. [Cổ Vũ]: Cấp 2 Năng lượng khi bắt đầu mỗi hiệp trong 3 hiệp. [Thiêu Đốt Chuyên Biệt]: Gây 150% ATK thành DoT DMG cho 3 hành động tiếp theo, sau đó biến mất.",
       "icon": "/Skill/Sonic V1 (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Cổ Vũ] năng lượng 2 &gt; 3. [Thiêu Đốt Chuyên Biệt] DoT 150% &gt; 200% ATK.",
+      "desc": "Khi bắt đầu trận chiến, áp dụng [Cổ Vũ] cho tất cả đồng minh. Khi Sonic sử dụng Tuyệt Kĩ của mình, có 100% cơ hội gây [Thiêu Đốt Chuyên Biệt] lên kẻ địch trúng đòn. [Cổ Vũ]: Cấp 3 Năng lượng khi bắt đầu mỗi hiệp trong 3 hiệp. [Thiêu Đốt Chuyên Biệt]: Gây 200% ATK thành DoT DMG cho 3 hành động tiếp theo, sau đó biến mất.",
       "icon": "/Skill/Sonic V1 (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Cổ Vũ] kéo dài 3 &gt; 5 lượt. [Thiêu Đốt Chuyên Biệt] DoT 200% &gt; 250% ATK.",
+      "desc": "Khi bắt đầu trận chiến, áp dụng [Cổ Vũ] cho tất cả đồng minh. Khi Sonic sử dụng Tuyệt Kĩ của mình, có 100% cơ hội gây [Thiêu Đốt Chuyên Biệt] lên kẻ địch trúng đòn. [Cổ Vũ]: Cấp 3 Năng lượng khi bắt đầu mỗi hiệp trong 5 hiệp. [Thiêu Đốt Chuyên Biệt]: Gây 250% ATK thành DoT DMG cho 3 hành động tiếp theo, sau đó biến mất.",
       "icon": "/Skill/Sonic V1 (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi bắt đầu trận đấu, ban [Tăng Tốc Chuyên Biệt] (Tăng Tốc độ 25%, nếu Tốc độ của mục tiêu chính thấp hơn Sonic, gây 500% Tấn công thành ST phụ trội). Tự nhận vĩnh viễn 65% tỉ lệ [Né Tránh] (Giảm ST trực tiếp/phụ trội/tích lũy/Cuồng bạo xuống còn 1 ST)",
+      "desc": "Khi bắt đầu trận chiến, nhận được vĩnh viễn 25% [Gia Tốc Chuyên Biệt]. Khi tấn công, nếu SPD của mục tiêu chính thấp hơn SPD của Sonic, gây ra [Sát Thương Chuẩn] bằng 500% ATK. vĩnh viễn có 65% cơ hội nhận được [Né Sát Thương Tức Thì]. [Né Sát Thương Tức Thì]: Sát Thương Trực Tiếp, True DMG, Charge DMG và Berserk DMG chỉ gây được 1 điểm DMG.",
       "icon": "/Skill/Sonic V1 (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Tăng Tốc độ 25% > 30% [Né Tránh] > + đồng minh cùng hàng @ 45% tỉ lệ",
+      "desc": "Khi bắt đầu trận chiến, nhận được vĩnh viễn 30% [Gia Tốc Chuyên Biệt]. Khi tấn công, nếu SPD của mục tiêu chính thấp hơn SPD của Sonic, gây ra [Sát Thương Chuẩn] bằng 500% ATK. vĩnh viễn nhận được 65% cơ hội [Né Sát Thương Tức Thì] và cấp cho các đồng minh trong cùng hàng 45% cơ hội [Né Sát Thương Tức Thì]. [Né Sát Thương Tức Thì]: Sát Thương Trực Tiếp, True DMG, Charge DMG và Berserk DMG chỉ gây được 1 điểm DMG.",
       "icon": "/Skill/Sonic V1 (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -91,7 +91,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Sonic V1 (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

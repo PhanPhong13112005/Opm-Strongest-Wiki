@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK (+10) DMG to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Awakened Cockroach (SR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently gains (+20) HP. After taking fatal DMG, triggers [Regeneration] (while an ally is on the field, restores 15% HP before own next action to keep fighting, triggers up to 1 time). After acting, increases own DMG reduction by 30% for 2 turns.",
+      "desc": "Permanently gains HP. After taking fatal DMG, triggers [Regeneration] (while an ally is on the field, restores 15% HP before own next action to keep fighting, triggers up to 1 time). After acting, increases own DMG reduction by 30% for 2 turns.",
       "icon": "/Skill/Awakened Cockroach (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently gains (+20) HP. After taking fatal DMG, triggers [Regeneration] (while an ally is on the field, restores 15% HP before own next action to keep fighting, triggers up to 2 times). After acting, increases own DMG reduction by 35% for 2 turns.",
+      "desc": "Permanently gains HP. After taking fatal DMG, triggers [Regeneration] (while an ally is on the field, restores 15% HP before own next action to keep fighting, triggers up to 2 times). After acting, increases own DMG reduction by 35% for 2 turns.",
       "icon": "/Skill/Awakened Cockroach (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently gains (+20) HP. After taking fatal DMG, triggers [Regeneration] (while an ally is on the field, restores 15% HP before own next action to keep fighting, triggers up to 2 times). After acting, increases own DMG reduction by 40% for 2 turns.",
+      "desc": "Permanently gains HP. After taking fatal DMG, triggers [Regeneration] (while an ally is on the field, restores 15% HP before own next action to keep fighting, triggers up to 2 times). After acting, increases own DMG reduction by 40% for 2 turns.",
       "icon": "/Skill/Awakened Cockroach (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

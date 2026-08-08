@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 200% ST cho mục tiêu đơn.",
+      "desc": "Gây 200% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_base.png",
       "type": "Kỹ năng thường",
       "animation": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 5000% ST sát thương trực tiếp chuyên biệt (chỉ chịu ảnh hưởng bởi Giảm sát thương cấp cao) cho toàn bộ kẻ địch, bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt].Gây [Áp Chế Năng Lượng] cho 3 kẻ địch có ST cao nhất, kéo dài 2 lượt.——— [Áp Chế Năng Lượng]: Khi gây ST lên Máu/[HP Chuyên Biệt], khiến mục tiêu kích hoạt 1 lần [Chuyển Hóa Năng Lượng] (giảm ST nhận vào và chuyển hóa thành [Khiên]).",
+      "desc": "Gây 5000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] cho tất cả kẻ thù (chỉ bị ảnh hưởng bởi các công cụ sửa đổi DMG nâng cao). Bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Áp dụng [Áp Lực Năng Lượng] cho 3 kẻ địch có ATK cao nhất, kéo dài 2 lượt. [Áp Lực Năng Lượng]: Khi xử lý DMG thành HP hoặc [HP Chuyên Biệt], kích hoạt 1 phiên bản [Chuyển Hóa Năng Lượng] trên đơn vị kẻ địch bị ảnh hưởng (giảm DMG phải chịu và chuyển nó thành một lá chắn).",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_ult.png",
       "type": "Tuyệt kĩ",
       "animation": "/Animation/Tat_Urplus/ult.gif",
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Nhận 20% [Cuồng Nộ] và [Phá Khiên]. ST 5000% > 7000%. Bỏ qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] 45% > 60%. Gây [Áp Chế Năng Lượng] cho 3 kẻ địch > toàn bộ kẻ địch (đánh dấu 3 lượt).——— [Phá Khiên]: Trong lúc tấn công, bỏ qua 30% Giảm sát thương và Phòng thủ chuyên biệt của kẻ địch.",
+      "desc": "Tự cấp cho mình 20% [Cuồng Nộ] và [Phá Giáp]. Gây 7000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] cho tất cả kẻ thù (chỉ bị ảnh hưởng bởi các công cụ sửa đổi DMG nâng cao). Bỏ qua 60% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Áp dụng [Áp Lực Năng Lượng] lên tất cả kẻ địch, kéo dài 2 lượt. [Áp Lực Năng Lượng]: Khi xử lý DMG thành HP hoặc [HP Chuyên Biệt], kích hoạt 1 phiên bản [Chuyển Hóa Năng Lượng] trên đơn vị kẻ địch bị ảnh hưởng (giảm DMG phải chịu và chuyển nó thành một lá chắn).",
       "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (URplus)/Keepsake_URplus.png",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Khi vào trận, nhận 60% [Giảm Sát Thương Không Bạo Kích], và giảm xuống 0 năng lượng mà đồng minh có ST cao nhất sử dụng khi dùng Tối Thượng.",
+      "desc": "Khi bắt đầu trận chiến, tăng 60% [Giảm Sát Thương Không Bạo Kích]. Trong 4 lượt đầu tiên, đồng minh có ATK cao nhất tiêu tốn 0 Năng lượng khi sử dụng Tuyệt Kĩ của họ.",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "animation": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] khi vào trận 60% > 70%. Cửa sổ giảm năng lượng 4 > 6 lượt.",
+      "desc": "Khi bắt đầu trận chiến, tăng 70% [Giảm Sát Thương Không Bạo Kích]. Trong 6 lượt đầu tiên, đồng minh có ATK cao nhất tiêu tốn 0 Năng lượng khi sử dụng Tuyệt Kĩ của họ.",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "animation": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] khi vào trận 70% > 80%. Cửa sổ giảm năng lượng 6 > 8 lượt.",
+      "desc": "Khi bắt đầu trận chiến, tăng 80% [Giảm Sát Thương Không Bạo Kích]. Trong 8 lượt đầu tiên, đồng minh có ATK cao nhất tiêu tốn 0 Năng lượng khi sử dụng Tuyệt Kĩ của họ.",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "animation": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Cho phép đồng minh Anh hùng/Võ sĩ nhận được [Chuyển Hóa Năng Lượng]. Bản thân nhận 2.5 lần hiệu ứng [Chuyển Hóa Năng Lượng] của đồng minh, và khi kích hoạt [Chuyển Hóa Năng Lượng] không cần [Áp Chế Năng Lượng]. ——— [Chuyển Hóa Năng Lượng]: Khi một kẻ địch có [Áp Chế Năng Lượng] gây ST cho ta, giảm 20% ST, 20% ST gốc được chuyển hóa thành [Kháng Giảm Năng Lượng]",
+      "desc": "Cấp cho các đơn vị [Anh Hùng / Võ Sĩ] [Chuyển Hóa Năng Lượng] của đồng minh. Bản thân nhận được 2,5× hiệu ứng [Chuyển Hóa Năng Lượng] của đồng minh và có thể kích hoạt [Chuyển Hóa Năng Lượng] mà không cần [Áp Lực Năng Lượng]. [Chuyển Hóa Năng Lượng]: Khi kẻ địch bị ảnh hưởng bởi [Áp Lực Năng Lượng] gây DMG cho đơn vị, DMG đó bị giảm% và 20% giá trị DMG ban đầu được chuyển đổi thành [Lá Chắn Năng Lượng].",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
       "type": "Thức tỉnh",
       "animation": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Khi trận đấu bắt đầu, gây [Áp Chế Năng Lượng] cho toàn bộ kẻ địch, kéo dài 1 lượt. [Chuyển Hóa Năng Lượng]: giảm ST 20% > 30% ST gốc được chuyển hóa thành [Kháng Giảm Năng Lượng] 20% > 30%",
+      "desc": "Cấp cho các đơn vị [Anh Hùng / Võ Sĩ] [Chuyển Hóa Năng Lượng] của đồng minh. Bản thân nhận được 2,5× hiệu ứng [Chuyển Hóa Năng Lượng] của đồng minh và có thể kích hoạt [Chuyển Hóa Năng Lượng] mà không cần [Áp Lực Năng Lượng]. Khi bắt đầu trận chiến, gây [Áp Lực Năng Lượng] lên tất cả kẻ địch trong 1 lượt. [Chuyển Hóa Năng Lượng]: Khi kẻ địch bị ảnh hưởng bởi [Áp Lực Năng Lượng] gây DMG cho đơn vị, DMG đó bị giảm 30% và 30% giá trị DMG ban đầu được chuyển đổi thành [Lá Chắn Năng Lượng].",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
       "type": "Thức tỉnh",
       "animation": null,
@@ -91,7 +91,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/TatsumakiTerrible Tornado (URplus)/skill_awk.png",
       "type": "Thức tỉnh",
       "animation": null,

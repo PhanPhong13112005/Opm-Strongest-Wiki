@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Strikes a single target with 2 combo hits, dealing 60% ATK DMG each, and increases own Speed by 20% for 1 turn.",
+      "desc": "Strikes a single target with 2 combo hits, dealing 60% ATK DMG each, and increases own Speed% for 1 turn.",
       "icon": "/Skill/Flashy Flash (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,

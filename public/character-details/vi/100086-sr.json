@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST lên một mục tiêu đơn, và gây thêm 10% Máu tối đa làm sát thương phụ trội.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu và gây thêm 10% HP tối đa làm sát thương thưởng.",
       "icon": "/Skill/Subterranean (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 200% ST lên một mục tiêu đơn, và gây thêm 15% Máu tối đa làm sát thương phụ trội.",
+      "desc": "Gây 200% ATK DMG cho một mục tiêu và gây thêm 15% HP tối đa làm sát thương thưởng.",
       "icon": "/Skill/Subterranean (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 200% ST lên một mục tiêu đơn, với 100% khả năng gây thêm 15% Máu tối đa làm sát thương phụ trội lên mục tiêu chính, và 50% khả năng gây lên các mục tiêu cùng cột với mục tiêu chính.",
+      "desc": "Gây 200% ATK DMG cho một mục tiêu, với 100% cơ hội gây thêm 15% HP tối đa dưới dạng sát thương bổ sung cho mục tiêu chính và 50% cơ hội gây sát thương cho các mục tiêu trong cùng cột với mục tiêu chính.",
       "icon": "/Skill/Subterranean (SR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Subterranean (SR)/Keepsake_SR.png",
       "type": "Tuyệt kĩ",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh cùng cột tấn công, lập tức tung ra một đòn [Truy Kích] (tấn công với 80% sát thương và hiệu ứng của đòn đánh thường).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Sau khi đồng minh cùng cột tấn công, ngay lập tức tung ra [Truy Kích] (tấn công với 80% sát thương và hiệu ứng của Đòn đánh cơ bản).",
       "icon": "/Skill/Subterranean (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh cùng cột tấn công, lập tức tung ra một đòn [Truy Kích] (tấn công với 80% sát thương và hiệu ứng của đòn đánh thường).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Sau khi đồng minh cùng cột tấn công, ngay lập tức tung ra [Truy Kích] (tấn công với 80% sát thương và hiệu ứng của Đòn đánh cơ bản).",
       "icon": "/Skill/Subterranean (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh cùng cột tấn công, lập tức tung ra một đòn [Truy Kích] (tấn công với 115% sát thương và hiệu ứng của đòn đánh thường).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Sau khi đồng minh cùng cột tấn công, ngay lập tức tung ra [Truy Kích] (tấn công với 115% sát thương và hiệu ứng của Đòn đánh cơ bản).",
       "icon": "/Skill/Subterranean (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

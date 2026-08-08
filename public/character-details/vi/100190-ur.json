@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 130% ST cho một mục tiêu đơn.",
+      "desc": "Gây 130% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Melzargard (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công kẻ địch theo hình chữ thập với 3 đòn liên tiếp, gây 600% ST. Đòn cuối có 100% tỉ lệ gây [Nứt Vỡ Chuyên Biệt] cho mục tiêu chính trong 3 lượt (giảm Giảm Sát Thương đi 10%, gây 250% ST sát thương [Nứt Vỡ] khi bị tấn công, cộng dồn tối đa 3 lần, không cộng dồn với [Nứt Vỡ]).",
+      "desc": "Tấn công kẻ địch trong khu vực hình chữ thập bằng 3 đòn liên tiếp, gây 600% ATK DMG. Đòn đánh cuối cùng có 100% cơ hội gây [Sụp Đổ Chuyên Biệt] lên mục tiêu chính trong 3 lượt. [Sụp Đổ Chuyên Biệt]: Giảm 10% DMG miễn phí và gây 250% ATK [Sát Thương Sụp Đổ] khi mục tiêu bị ảnh hưởng bị tấn công. Cộng dồn tối đa 3 lần và không cộng dồn với [Sụp Đổ].",
       "icon": "/Skill/Melzargard (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "ST Tối Thượng 600% → 750% ST. [Nứt Vỡ Chuyên Biệt] giảm Giảm Sát Thương 10% → 15%. ST [Nứt Vỡ Chuyên Biệt] 250% → 350% ST.",
+      "desc": "Tấn công kẻ địch trong khu vực hình chữ thập bằng 3 đòn liên tiếp, gây 750% ATK DMG. Đòn đánh cuối cùng có 100% cơ hội gây [Sụp Đổ Chuyên Biệt] lên mục tiêu chính trong 3 lượt. [Sụp Đổ Chuyên Biệt]: Giảm 15% DMG miễn phí và gây 350% ATK [Sát Thương Sụp Đổ] khi mục tiêu bị ảnh hưởng bị tấn công. Cộng dồn tối đa 3 lần và không cộng dồn với [Sụp Đổ].",
       "icon": "/Skill/Melzargard (UR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Melzargard (UR)/Keepsake_UR.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Sau khi Melzargard và đồng minh hành động, kéo dài trạng thái [Nứt Vỡ Chuyên Biệt] của kẻ địch lên 4 lượt. Sau khi bất kỳ nhân vật nào hành động, nếu nhân vật kẻ địch có 3 lớp [Nứt Vỡ Chuyên Biệt], ngay lập tức [Kích Nổ] (ST [Nứt Vỡ] đơn bằng 500% chuyển thành ST [Kích Nổ]). Gỡ bỏ hiệu ứng [Hồi Sinh] khỏi kẻ địch, kéo dài suốt trận đấu.",
+      "desc": "Sau khi Melzargard hoặc đồng minh hành động, kéo dài thời gian tồn tại của [Sụp Đổ Chuyên Biệt] của kẻ địch lên 4 lượt. Sau khi bất kỳ nhân vật nào hành động, nếu kẻ địch có 3 điểm cộng dồn [Sụp Đổ Chuyên Biệt], ngay lập tức kích hoạt [Kích Nổ]. Loại bỏ [Hồi Sinh] khỏi kẻ thù trong toàn bộ trận chiến. [Kích Nổ]: Chuyển đổi một phiên bản ATK [Sát Thương Sụp Đổ] 500% duy nhất thành [Kích Nổ] DMG.",
       "icon": "/Skill/Melzargard (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "ST [Nứt Vỡ] khi [Kích Nổ] 500% → 650% ST.",
+      "desc": "Sau khi Melzargard hoặc đồng minh hành động, kéo dài thời gian tồn tại của [Sụp Đổ Chuyên Biệt] của kẻ địch lên 4 lượt. Sau khi bất kỳ nhân vật nào hành động, nếu kẻ địch có 3 điểm cộng dồn [Sụp Đổ Chuyên Biệt], ngay lập tức kích hoạt [Kích Nổ]. Loại bỏ [Hồi Sinh] khỏi kẻ thù trong toàn bộ trận chiến. [Kích Nổ]: Chuyển đổi một phiên bản ATK [Sát Thương Sụp Đổ] 650% duy nhất thành [Kích Nổ] DMG.",
       "icon": "/Skill/Melzargard (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "ST [Nứt Vỡ] khi [Kích Nổ] 650% → 800% ST.",
+      "desc": "Sau khi Melzargard hoặc đồng minh hành động, kéo dài thời gian tồn tại của [Sụp Đổ Chuyên Biệt] của kẻ địch lên 4 lượt. Sau khi bất kỳ nhân vật nào hành động, nếu kẻ địch có 3 điểm cộng dồn [Sụp Đổ Chuyên Biệt], ngay lập tức kích hoạt [Kích Nổ]. Loại bỏ [Hồi Sinh] khỏi kẻ thù trong toàn bộ trận chiến. [Kích Nổ]: Chuyển đổi một phiên bản ATK [Sát Thương Sụp Đổ] 800% duy nhất thành [Kích Nổ] DMG.",
       "icon": "/Skill/Melzargard (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Vào đầu trận đấu, duy trì [Bất Bại] trong 3 lượt (Nếu nhận ST chí tử không chí mạng, vẫn giữ 20% Máu mà không bị hạ gục, và kháng ST chí tử chí mạng 3 lần. Tùy thuộc vào việc đòn đầu tiên có gây Sát thương chí mạng hay không). Vĩnh viễn nhận 100% Tỉ lệ kháng chí mạng và 50% Giảm ST không chí mạng, [Miễn Nhiễm] với [Mê Hoặc/Rời Trận].",
+      "desc": "Khi bắt đầu trận chiến, nhận được [Bất Bại] trong 3 hiệp. Tăng vĩnh viễn 100% Tỷ lệ kháng CRIT và 50% [Miễn Sát Thương Không Bạo Kích]. Trở nên miễn nhiễm với [Mê Hoặc] và [Rời Trận]. [Bất Bại]: Khi nhận được CRIT DMG chí mạng, vẫn tiếp tục chiến đấu với 20% HP thay vì bị đánh bại. Có thể chống lại CRIT DMG chí mạng tới 3 lần. Cuộc tấn công có được coi là CRIT hay không tùy thuộc vào đòn tấn công đầu tiên của nó.",
       "icon": "/Skill/Melzargard (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Undefeated 3 lượt > 5 lượt Kháng Sát thương chí tử 3 lần > 55 lần Tỉ lệ kháng chí mạng 100% > 130% Giảm ST không chí mạng 50% > 65% Ghi chú\n1. Detonation không thể bị [Đã Né Tránh], 1 ST là do [Kiên Cường Chuyên Biệt] 2. ST [Vỡ Vụn] và [Vỡ Vụn] trong ST [Kích Nổ] được tính riêng biệt, AS sẽ gây 200% của mình và Melz sẽ gây 250% ST [Vỡ Vụn] (không có keepsake)",
+      "desc": "Khi bắt đầu trận chiến, nhận được [Bất Bại] trong 5 hiệp. Tăng vĩnh viễn 130% Tỷ lệ kháng CRIT và 65% [Miễn Sát Thương Không Bạo Kích]. Trở nên miễn nhiễm với [Mê Hoặc] và [Rời Trận]. [Bất Bại]: Khi nhận được CRIT DMG chí mạng, vẫn tiếp tục chiến đấu với 20% HP thay vì bị đánh bại. Có thể chống lại CRIT DMG chí mạng tới 5 lần. Cuộc tấn công có được coi là CRIT hay không tùy thuộc vào đòn tấn công đầu tiên của nó.",
       "icon": "/Skill/Melzargard (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -92,7 +92,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Melzargard (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

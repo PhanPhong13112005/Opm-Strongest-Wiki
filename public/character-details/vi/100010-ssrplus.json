@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST tấn công ST Trực Tiếp lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK Sát Thương Trực Tiếp cho một mục tiêu.",
       "icon": "/Skill/Flashy Flash (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công toàn bộ kẻ địch với 5 liên kích gây 120% ST tấn công (+10) ST Trực Tiếp. Trao cho đồng minh cùng cột [Tăng Tốc Đặc Hóa] trong 1 lượt. Loại bỏ 1 Năng lượng của kẻ địch (tối đa 1 lần mỗi lượt; sau khi loại bỏ thành công, kẻ địch không thể bị [Khiếp Sợ] trong cùng lượt).[Tăng Tốc Đặc Hóa]: tăng SPD lên tối đa 90% SPD của Flashy Flash.",
+      "desc": "Tấn công tất cả kẻ địch bằng 5 đòn liên tiếp với tổng sát thương bằng 120% ATK Sát Thương Trực Tiếp. Cấp cho các đồng minh cùng cột [Tăng Tốc Chuyên Biệt] trong 1 vòng. Loại bỏ 1 Năng lượng khỏi kẻ thù (tối đa một lần mỗi hiệp; sau khi loại bỏ thành công, kẻ địch không thể bị gây [Sợ Hãi] trong cùng một hiệp).[Tăng Tốc Chuyên Biệt]: tăng SPD lên tới 90% Tia Chớp Chói Lóa của SPD.",
       "icon": "/Skill/Flashy Flash (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Nâng cấp Tối Thượng — ST 120% → 150% ST tấn công; [Tăng Tốc Đặc Hóa] nâng SPD đồng minh cùng cột lên 90% → 95% SPD của Flashy Flash; loại bỏ 1 → 3 Năng lượng của kẻ địch.",
+      "desc": "Nâng cấp Tuyệt Kĩ — DMG 120% → 150% ATK; [Tăng Tốc Chuyên Biệt] tăng SPD của đồng minh cùng cột lên 90% → 95% SPD của Tia Chớp Chói Lóa; loại bỏ 1 → 3 Năng lượng khỏi kẻ thù.",
       "icon": "/Skill/Flashy Flash (SSR+)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Flashy Flash (SSRplus)/Keepsake_SSRplus.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Khi vào trận, nhận [Tăng Tốc Đặc Hóa] (+5% SPD). Nếu SPD mục tiêu chính thấp hơn Flashy Flash, gây 300% ST tấn công ST Phụ Trội. Sau khi bất kỳ nhân vật nào hành động, loại bỏ [Gia Tốc Cơ Bản] của kẻ địch.",
+      "desc": "Khi bắt đầu trận chiến, nhận cho bản thân [Tăng Tốc Chuyên Biệt] (+5% SPD). Nếu SPD của mục tiêu chính thấp hơn Tia Chớp Chói Lóa, gây sát thương 300% ATK Extra DMG. Sau khi bất kỳ nhân vật nào hành động, hãy loại bỏ [Gia Tốc Cơ Bản] của kẻ thù.",
       "icon": "/Skill/Flashy Flash (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Khi vào trận, nhận [Tăng Tốc Đặc Hóa] (+20% SPD). Nếu SPD mục tiêu chính thấp hơn Flashy Flash, gây 300% ST tấn công ST Phụ Trội. Sau khi bất kỳ nhân vật nào hành động, loại bỏ [Gia Tốc Cơ Bản] của kẻ địch.",
+      "desc": "Khi bắt đầu trận chiến, nhận cho bản thân [Tăng Tốc Chuyên Biệt] (+20% SPD). Nếu SPD của mục tiêu chính thấp hơn Tia Chớp Chói Lóa, gây sát thương 300% ATK Extra DMG. Sau khi bất kỳ nhân vật nào hành động, hãy loại bỏ [Gia Tốc Cơ Bản] của kẻ thù.",
       "icon": "/Skill/Flashy Flash (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Khi vào trận, nhận [Tăng Tốc Đặc Hóa] (+25% SPD). Nếu SPD mục tiêu chính thấp hơn Flashy Flash, gây 300% ST tấn công ST Phụ Trội. Sau khi bất kỳ nhân vật nào hành động, loại bỏ [Gia Tốc Cơ Bản] của kẻ địch.",
+      "desc": "Khi bắt đầu trận chiến, nhận cho bản thân [Tăng Tốc Chuyên Biệt] (+25% SPD). Nếu SPD của mục tiêu chính thấp hơn Tia Chớp Chói Lóa, gây sát thương 300% ATK Extra DMG. Sau khi bất kỳ nhân vật nào hành động, hãy loại bỏ [Gia Tốc Cơ Bản] của kẻ thù.",
       "icon": "/Skill/Flashy Flash (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Flashy Flash có 70% cơ hội và đồng minh cùng cột có 50% cơ hội kích hoạt [Né Tránh] (Giảm ST trực tiếp/phụ trội/tích lũy/cuồng bạo xuống còn 1 ST). Sau khi bất kỳ nhân vật nào hành động, nếu Flashy Flash kích hoạt [Né Tránh], gây 400% Tấn công dưới dạng ST phụ trội lên 1 kẻ địch ngẫu nhiên không đang ở trạng thái [Kiên Cường] nào và hồi phục Máu bằng 150% Tấn công (3 [4] lần mỗi lượt).",
+      "desc": "Tia Chớp Chói Lóa có 70% cơ hội và đồng minh trong cùng một cột có 50% cơ hội kích hoạt [Né Tránh] (Giảm trực tiếp/extra/charge/berserk DMG xuống 1 DMG). Sau khi bất kỳ nhân vật nào hành động, nếu Tia Chớp Chói Lóa kích hoạt [Né Tránh], gây 400% ATK dưới dạng Extra DMG cho 1 kẻ thù ngẫu nhiên không ở bất kỳ trạng thái [Bất Khuất] nào và khôi phục HP bằng cách 150% ATK (3 [4] lần mỗi vòng).",
       "icon": "/Skill/Flashy Flash (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Đồng minh cùng cột có 50% cơ hội kích hoạt [Né Tránh]; khi [Né Tránh], hồi phục Máu bằng 150% ST tấn công, tối đa 4 lần mỗi lượt.",
+      "desc": "Đồng minh trong cùng một cột có 50% cơ hội kích hoạt [Né Tránh]; trên [Né Tránh], khôi phục HP 150% ATK, tối đa 4 lần mỗi vòng.",
       "icon": "/Skill/Flashy Flash (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -92,7 +92,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Flashy Flash (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

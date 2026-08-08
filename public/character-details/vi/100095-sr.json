@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 50% ST lên mục tiêu đơn với 2 đòn liên kích.",
+      "desc": "Gây 50% ATK DMG cho một mục tiêu bằng 2 đòn combo.",
       "icon": "/Skill/Choze (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 50% ST lên mục tiêu đơn với 4 đòn liên kích, và gây [Suy Yếu] lên mục tiêu đang Thương Tổn hoặc Nội Thương (giảm 30% ST trong 1 lượt).",
+      "desc": "Gây 50% ATK DMG cho một mục tiêu bằng 4 đòn đánh kết hợp và gây [Làm Suy Yếu] cho các mục tiêu bị thương hoặc gục ngã có vũ trang (giảm 30% ATK trong 1 lượt).",
       "icon": "/Skill/Choze (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 50% ST lên mục tiêu đơn với 4 đòn liên kích, và gây [Suy Yếu] lên mục tiêu đang Thương Tổn hoặc Nội Thương (giảm 40% ST trong 1 lượt).",
+      "desc": "Gây 50% ATK DMG cho một mục tiêu bằng 4 đòn đánh kết hợp và gây [Làm Suy Yếu] cho các mục tiêu bị thương hoặc có vũ khí gục ngã (giảm 40% ATK trong 1 lượt).",
       "keepsakeIcon": "/Keepsake/Choze (SR)/Keepsake_SR.png",
       "icon": "/Skill/Choze (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng +20% Máu. Khi tấn công, nếu ST của bản thân cao hơn mục tiêu bị đánh, mục tiêu bị đánh chịu [Nội Thương] (thêm ST Nội Thương bằng 120% ST của Choze khi bị đánh; hiệu ứng biến mất sau khi kích hoạt).",
+      "desc": "Tăng vĩnh viễn +20% HP. Khi tấn công, nếu ATK của chính nó cao hơn mục tiêu bị tấn công, mục tiêu bị tấn công phải chịu [Nội Thương] (thêm Nội thương DMG bằng 120% ATK của Choze khi bị tấn công; hiệu ứng biến mất sau khi kích hoạt).",
       "icon": "/Skill/Choze (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng +20% Máu. Khi tấn công, nếu ST của bản thân cao hơn mục tiêu bị đánh, mục tiêu bị đánh chịu [Nội Thương] (thêm ST Nội Thương bằng 140% ST của Choze khi bị đánh; hiệu ứng biến mất sau khi kích hoạt).",
+      "desc": "Tăng vĩnh viễn +20% HP. Khi tấn công, nếu ATK của chính nó cao hơn mục tiêu bị tấn công, mục tiêu bị tấn công phải chịu [Nội Thương] (thêm Nội thương DMG bằng 140% ATK của Choze khi bị tấn công; hiệu ứng biến mất sau khi kích hoạt).",
       "icon": "/Skill/Choze (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng +20% Máu. Khi tấn công, nếu ST của bản thân cao hơn mục tiêu bị đánh, mục tiêu bị đánh chịu [Nội Thương] (thêm ST Nội Thương bằng 160% ST của Choze khi bị đánh; hiệu ứng biến mất sau khi kích hoạt).",
+      "desc": "Tăng vĩnh viễn +20% HP. Khi tấn công, nếu ATK của chính nó cao hơn mục tiêu bị tấn công, mục tiêu bị tấn công phải chịu [Nội Thương] (thêm Nội thương DMG bằng 160% ATK của Choze khi bị tấn công; hiệu ứng biến mất sau khi kích hoạt).",
       "icon": "/Skill/Choze (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

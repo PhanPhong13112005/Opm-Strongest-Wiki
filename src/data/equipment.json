@@ -1,0 +1,482 @@
+{
+  "maxLevel": 120,
+  "maxGoldStars": 6,
+  "maxPurpleStars": 6,
+  "evolutionRequirement": {
+    "baseLevel": 85,
+    "goldCostPerPiece": 2000000,
+    "blueprintPerPiece": 1,
+    "catalystPerPiece": 100
+  },
+  "slots": [
+    {
+      "id": 1,
+      "nameVi": "Áo",
+      "nameEn": "Shirt"
+    },
+    {
+      "id": 2,
+      "nameVi": "Quần",
+      "nameEn": "Pants"
+    },
+    {
+      "id": 3,
+      "nameVi": "Giày",
+      "nameEn": "Shoes"
+    },
+    {
+      "id": 4,
+      "nameVi": "Mũ",
+      "nameEn": "Hat"
+    }
+  ],
+  "statPools": {
+    "main": [
+      {
+        "id": "attack",
+        "nameVi": "Tấn công",
+        "nameEn": "ATK"
+      },
+      {
+        "id": "hp",
+        "nameVi": "Máu",
+        "nameEn": "HP"
+      },
+      {
+        "id": "defense",
+        "nameVi": "Phòng thủ",
+        "nameEn": "DEF"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "attackRate",
+        "nameVi": "Tấn công %",
+        "nameEn": "ATK %"
+      },
+      {
+        "id": "hpRate",
+        "nameVi": "Máu %",
+        "nameEn": "HP %"
+      },
+      {
+        "id": "defenseRate",
+        "nameVi": "Phòng thủ %",
+        "nameEn": "DEF %"
+      },
+      {
+        "id": "speed",
+        "nameVi": "Tốc độ",
+        "nameEn": "SPD"
+      },
+      {
+        "id": "crit",
+        "nameVi": "Chí mạng",
+        "nameEn": "Crit"
+      },
+      {
+        "id": "block",
+        "nameVi": "Đỡ đòn",
+        "nameEn": "Block"
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "ninja",
+      "nameVi": "Nhánh Ninja",
+      "nameEn": "Ninja branch",
+      "baseSetIds": [
+        "20002",
+        "20004",
+        "20005"
+      ],
+      "redSetId": "40001",
+      "blueprint": "/Gear/Item_212021.png",
+      "blueprintNameVi": "Bản vé Ninja",
+      "blueprintNameEn": "Ninja Blueprint"
+    },
+    {
+      "id": "machine",
+      "nameVi": "Nhánh Thần Cơ",
+      "nameEn": "Machine branch",
+      "baseSetIds": [
+        "10003",
+        "10004",
+        "10005",
+        "20001",
+        "20003",
+        "20006"
+      ],
+      "redSetId": "40002",
+      "blueprint": "/Gear/Item_212022.png",
+      "blueprintNameVi": "Bản vé Thần Cơ",
+      "blueprintNameEn": "Machine Blueprint"
+    },
+    {
+      "id": "fiery",
+      "nameVi": "Nhánh Hỏa Lực",
+      "nameEn": "Fiery branch",
+      "baseSetIds": [
+        "20007",
+        "20008",
+        "20009"
+      ],
+      "redSetId": "40003",
+      "blueprint": "/Gear/Item_212023.png",
+      "blueprintNameVi": "Bản vé Hỏa Lực",
+      "blueprintNameEn": "Fiery Blueprint"
+    },
+    {
+      "id": "drive",
+      "nameVi": "Nhánh Phát Động",
+      "nameEn": "Drive branch",
+      "baseSetIds": [
+        "10001",
+        "10002",
+        "10009",
+        "30001"
+      ],
+      "redSetId": "40004",
+      "blueprint": "/Gear/Item_212024.png",
+      "blueprintNameVi": "Bản vé Phát Động",
+      "blueprintNameEn": "Drive Blueprint"
+    }
+  ],
+  "evolutionMaterials": [
+    {
+      "id": "blueprint",
+      "nameVi": "Bản vẽ tương ứng",
+      "nameEn": "Matching blueprint",
+      "amountPerPiece": 1
+    },
+    {
+      "id": "catalyst",
+      "nameVi": "Chất xúc tác",
+      "nameEn": "Fusion Catalyst",
+      "amountPerPiece": 100,
+      "icon": "/Gear/Item_212006.png"
+    }
+  ],
+  "sets": [
+    {
+      "id": "10001",
+      "nameEn": "Knight",
+      "nameVi": "Hiệp Sĩ",
+      "category": "basic",
+      "effectEn": "Each attack on an enemy deals 10% extra damage to that target, stacking up to 3 times. The main target takes twice the extra damage.",
+      "effectVi": "Mỗi lần một kẻ địch bị tấn công, gây thêm 10% sát thương lên mục tiêu đó, cộng dồn tối đa 3 lớp. Mục tiêu chính nhận gấp đôi sát thương thêm."
+    },
+    {
+      "id": "10002",
+      "nameEn": "Suit",
+      "nameVi": "Thanh Lịch",
+      "category": "basic",
+      "effectEn": "Increases reflected damage by 20%. After taking action, restores 10% HP.",
+      "effectVi": "Tăng 20% phản sát thương. Sau khi hành động, hồi 10% HP."
+    },
+    {
+      "id": "10003",
+      "nameEn": "Swordsman",
+      "nameVi": "Kiếm Sĩ",
+      "category": "basic",
+      "effectEn": "Each attack on an enemy deals 10% extra damage to that target, stacking up to 3 times.",
+      "effectVi": "Mỗi lần một kẻ địch bị tấn công, gây thêm 10% sát thương lên mục tiêu đó, cộng dồn tối đa 3 lớp."
+    },
+    {
+      "id": "10004",
+      "nameEn": "Gangster",
+      "nameVi": "Xạ Thủ",
+      "category": "basic",
+      "effectEn": "Basic attacks deal additional damage equal to 35% of the attacker's ATK.",
+      "effectVi": "Đòn đánh thường gây thêm sát thương bằng 35% ATK của người tấn công."
+    },
+    {
+      "id": "10005",
+      "nameEn": "Lightning",
+      "nameVi": "Tia Chớp",
+      "category": "basic",
+      "effectEn": "Enemies in the main target's column take 30% of the damage dealt to the main target.",
+      "effectVi": "Kẻ địch cùng cột với mục tiêu chính nhận 30% sát thương gây lên mục tiêu chính."
+    },
+    {
+      "id": "10009",
+      "nameEn": "Primal",
+      "nameVi": "Móng Vuốt",
+      "category": "basic",
+      "effectEn": "Enemies in the main target's column take 30% of the damage dealt to it; the main target also takes the same amount as extra damage.",
+      "effectVi": "Kẻ địch cùng cột với mục tiêu chính nhận 30% sát thương gây lên mục tiêu chính; mục tiêu chính cũng nhận lượng sát thương thêm tương đương."
+    },
+    {
+      "id": "20001",
+      "nameEn": "Martial Arts",
+      "nameVi": "Võ Thuật",
+      "category": "basic",
+      "effectEn": "Increases ATK by 10%.",
+      "effectVi": "Tăng 10% ATK."
+    },
+    {
+      "id": "20002",
+      "nameEn": "Prisoner",
+      "nameVi": "Ngục Tù",
+      "category": "basic",
+      "effectEn": "Triggering a critical hit increases all damage types by 15%.",
+      "effectVi": "Kích hoạt đòn chí mạng làm tăng 15% mọi loại sát thương."
+    },
+    {
+      "id": "20003",
+      "nameEn": "Battle",
+      "nameVi": "Chiến Đấu",
+      "category": "basic",
+      "effectEn": "Increases HP by 10%.",
+      "effectVi": "Tăng 10% HP."
+    },
+    {
+      "id": "20004",
+      "nameEn": "Scholar",
+      "nameVi": "Gậy Sắt",
+      "category": "basic",
+      "effectEn": "Triggering a block restores HP equal to 10% of damage taken.",
+      "effectVi": "Kích hoạt đỡ đòn hồi HP bằng 10% sát thương phải chịu."
+    },
+    {
+      "id": "20005",
+      "nameEn": "Monk",
+      "nameVi": "Tốc Độ",
+      "category": "basic",
+      "effectEn": "Increases SPD by 10%.",
+      "effectVi": "Tăng 10% Tốc độ."
+    },
+    {
+      "id": "20006",
+      "nameEn": "Casual",
+      "nameVi": "Hộ Mệnh",
+      "category": "basic",
+      "effectEn": "After taking action, restores 10% HP.",
+      "effectVi": "Sau khi hành động, hồi 10% HP."
+    },
+    {
+      "id": "20007",
+      "nameEn": "Flash",
+      "nameVi": "Chớp Nhoáng",
+      "category": "basic",
+      "effectEn": "Increases Drain Rate by 10% and SPD by 10%.",
+      "effectVi": "Tăng 10% Tỉ lệ Hút Máu và 10% Tốc độ."
+    },
+    {
+      "id": "20008",
+      "nameEn": "Gunner",
+      "nameVi": "Cao Bồi",
+      "category": "basic",
+      "effectEn": "Triggering a critical hit increases all damage types by 15% and ATK by 8%.",
+      "effectVi": "Kích hoạt đòn chí mạng làm tăng 15% mọi loại sát thương và tăng 8% ATK."
+    },
+    {
+      "id": "20009",
+      "nameEn": "Magic",
+      "nameVi": "Phép Thuật",
+      "category": "basic",
+      "effectEn": "Triggering a block restores HP equal to 10% of damage taken and increases HP by 8%.",
+      "effectVi": "Kích hoạt đỡ đòn hồi HP bằng 10% sát thương phải chịu và tăng 8% HP."
+    },
+    {
+      "id": "30001",
+      "nameEn": "Formal",
+      "nameVi": "Lễ Phục",
+      "category": "basic",
+      "effectEn": "When attacking a debuffed target, has a 50% chance to spread that debuff across the main target's column.",
+      "effectVi": "Khi tấn công mục tiêu đang mang hiệu ứng bất lợi, có 50% cơ hội lan hiệu ứng đó sang cả cột của mục tiêu chính."
+    },
+    {
+      "id": "40001",
+      "nameEn": "Ninja",
+      "nameVi": "Ninja",
+      "category": "red",
+      "effectEn": "Increases SPD by 12%, and ATK and HP by 10%.",
+      "effectVi": "Tăng 12% Tốc độ, 10% ATK và HP."
+    },
+    {
+      "id": "40002",
+      "nameEn": "Machine",
+      "nameVi": "Thần Cơ",
+      "category": "red",
+      "effectEn": "Increases ATK and HP by 12%.",
+      "effectVi": "Tăng 12% ATK và HP."
+    },
+    {
+      "id": "40003",
+      "nameEn": "Fiery",
+      "nameVi": "Hỏa Lực",
+      "category": "red",
+      "effectEn": "Gains 12% All DMG Boost and increases SPD by 15%.",
+      "effectVi": "Nhận 12% Tăng Toàn Bộ Sát Thương, tăng 15% Tốc độ."
+    },
+    {
+      "id": "40004",
+      "nameEn": "Drive",
+      "nameVi": "Phát Động",
+      "category": "red",
+      "effectEn": "Gains 30% All DMG Reduction and increases ATK and HP by 10%.",
+      "effectVi": "Nhận 30% Giảm Toàn Bộ Sát Thương, tăng 10% ATK và HP."
+    }
+  ],
+  "statProgression": {
+    "main": {
+      "basic": {
+        "attack": [3750, 32],
+        "hp": [22500, 192],
+        "defense": [938, 16]
+      },
+      "red": {
+        "attack": [7500, 32],
+        "hp": [45000, 192],
+        "defense": [7500, 32]
+      }
+    },
+    "secondary": {
+      "attackRate": [0.06, 0.04, true],
+      "hpRate": [0.06, 0.04, true],
+      "defenseRate": [0.06, 0.04, true],
+      "speed": [50, 8, false],
+      "crit": [0.06, 0.04, true],
+      "block": [0.06, 0.04, true]
+    },
+    "purple": {
+      "attackPerStar": 2500,
+      "hpPerStar": 15000,
+      "bonusLineStars": [3, 4, 5]
+    }
+  },
+  "bonusEffects": [
+    {
+      "line": 1, "unlockStar": 3, "kindEn": "Choose one stat", "kindVi": "Chọn một chỉ số",
+      "options": [
+        { "id": "arenaDmgFree", "nameEn": "Arena DMG Free", "nameVi": "Giảm ST Đấu Trường", "values": ["+10%", "+20%"] },
+        { "id": "sAtkBoost", "nameEn": "S.ATK Boost", "nameVi": "Tăng S.ATK", "values": ["+3%", "+6%"] },
+        { "id": "rAtkBoost", "nameEn": "R.ATK Boost", "nameVi": "Tăng R.ATK", "values": ["+3%", "+6%"] },
+        { "id": "cAtkBoost", "nameEn": "C.ATK Boost", "nameVi": "Tăng C.ATK", "values": ["+3%", "+6%"] },
+        { "id": "gAtkBoost", "nameEn": "G.ATK Boost", "nameVi": "Tăng G.ATK", "values": ["+3%", "+6%"] }
+      ]
+    },
+    {
+      "line": 2, "unlockStar": 4, "kindEn": "Choose one skill", "kindVi": "Chọn một kỹ năng",
+      "options": [
+        { "id": "energyGauge", "nameEn": "Energy Gauge Increase", "nameVi": "Tăng Thanh Năng Lượng", "values": ["+250", "+500"], "descriptionEn": "Gain {value} Energy Gauge after attacking.", "descriptionVi": "Tăng {value} Thanh Năng Lượng sau khi tấn công." },
+        { "id": "lowHpIgnition", "nameEn": "Low HP Ignition", "nameVi": "Kích Nổ Khi Thấp Máu", "values": ["+7%", "+15%"], "descriptionEn": "After acting, when any character first falls below 20% HP, deal Extra DMG equal to {value} Max HP to all enemies.", "descriptionVi": "Sau khi hành động, nếu HP của nhân vật nào lần đầu tụt dưới 20%, gây Sát Thương Thêm bằng {value} HP tối đa lên toàn bộ kẻ địch." },
+        { "id": "actionHealing", "nameEn": "Action Healing", "nameVi": "Hồi Máu Trước Hành Động", "values": ["+12%", "+25%"], "descriptionEn": "Restore {value} Max HP before acting.", "descriptionVi": "Hồi {value} HP tối đa trước khi hành động." }
+      ]
+    },
+    {
+      "line": 3, "unlockStar": 5, "kindEn": "Choose one stat", "kindVi": "Chọn một chỉ số",
+      "options": [
+        { "id": "arenaDmg", "nameEn": "Arena DMG+", "nameVi": "Tăng ST Đấu Trường", "values": ["+10%", "+20%"] },
+        { "id": "attack", "nameEn": "ATK", "nameVi": "ATK", "values": ["+3%", "+6%"] },
+        { "id": "defense", "nameEn": "DEF", "nameVi": "DEF", "values": ["+3%", "+6%"] },
+        { "id": "hp", "nameEn": "HP", "nameVi": "HP", "values": ["+3%", "+6%"] }
+      ]
+    }
+  ],
+  "enhanceCurves": {
+    "basic": [
+      [1, 4, 60, 2, 0],
+      [5, 9, 120, 2, 0],
+      [10, 14, 240, 3, 0],
+      [15, 19, 600, 4, 0],
+      [20, 24, 1200, 5, 0],
+      [25, 29, 2400, 10, 0],
+      [30, 34, 4200, 20, 0],
+      [35, 39, 6600, 34, 0],
+      [40, 44, 9600, 53, 0],
+      [45, 49, 13200, 72, 0],
+      [50, 54, 17400, 92, 0],
+      [55, 59, 22200, 111, 0],
+      [60, 64, 27600, 130, 0],
+      [65, 69, 33600, 149, 0],
+      [70, 74, 40800, 168, 0],
+      [75, 79, 49200, 188, 0],
+      [80, 84, 58800, 207, 0],
+      [85, 89, 69600, 245, 0],
+      [90, 94, 81600, 284, 0],
+      [95, 99, 96000, 322, 0],
+      [100, 104, 112800, 476, 0],
+      [105, 109, 132000, 783, 0],
+      [110, 114, 153600, 1397, 0],
+      [115, 120, 177600, 2626, 0]
+    ],
+    "red": [
+      [1, 4, 4000, 190, 25],
+      [5, 9, 5000, 195, 26],
+      [10, 14, 6500, 210, 28],
+      [15, 19, 8000, 225, 30],
+      [20, 24, 10000, 240, 32],
+      [25, 29, 13000, 255, 34],
+      [30, 34, 16500, 270, 36],
+      [35, 39, 20000, 285, 38],
+      [40, 44, 24000, 300, 40],
+      [45, 49, 28500, 315, 42],
+      [50, 54, 33000, 330, 44],
+      [55, 59, 38000, 345, 46],
+      [60, 64, 43500, 360, 48],
+      [65, 69, 49000, 375, 50],
+      [70, 74, 58500, 415, 55],
+      [75, 79, 70000, 450, 60],
+      [80, 84, 79500, 465, 62],
+      [85, 89, 86500, 480, 64],
+      [90, 94, 93500, 490, 65],
+      [95, 99, 105000, 525, 70],
+      [100, 104, 113000, 565, 75],
+      [105, 109, 120000, 600, 80],
+      [110, 114, 135000, 675, 90],
+      [115, 120, 150000, 750, 100]
+    ],
+    "redAccessory": [
+      [1, 4, 6000, 190, 25],
+      [5, 9, 7500, 195, 26],
+      [10, 14, 10500, 210, 28],
+      [15, 19, 13000, 225, 30],
+      [20, 24, 15500, 240, 32],
+      [25, 29, 20500, 255, 34],
+      [30, 34, 26000, 270, 36],
+      [35, 39, 32000, 285, 38],
+      [40, 44, 38500, 300, 40],
+      [45, 49, 45500, 315, 42],
+      [50, 54, 53000, 330, 44],
+      [55, 59, 61000, 345, 46],
+      [60, 64, 69500, 360, 48],
+      [65, 69, 78000, 375, 50],
+      [70, 74, 92500, 415, 55],
+      [75, 79, 112000, 450, 60],
+      [80, 84, 126500, 465, 62],
+      [85, 89, 138500, 480, 64],
+      [90, 94, 148500, 490, 65],
+      [95, 99, 168000, 525, 70],
+      [100, 104, 180000, 565, 75],
+      [105, 109, 192000, 600, 80],
+      [110, 114, 216000, 675, 90],
+      [115, 120, 240000, 750, 100]
+    ]
+  },
+  "upgradeCosts": {
+    "goldStarCards": [
+      4,
+      8,
+      16,
+      24,
+      32,
+      64
+    ],
+    "purpleStarCards": [
+      6,
+      12,
+      18,
+      24,
+      30,
+      36
+    ],
+    "goldIcon": "/Core_Skill/Items/gold.png",
+    "levelCardIcon": "/Gear/Item_212001.png",
+    "bindingCardIcon": "/Gear/Item_212007.png",
+    "goldStarCardIcon": "/Gear/Item_213001.png",
+    "purpleStarCardIcon": "/Gear/Item_212008.png"
+  }
+}

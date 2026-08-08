@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals a 3-hit combo to all enemies for 7000% ATK [Specialized Direct DMG] (affected only by advanced DMG modifiers), ignoring 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and penetrating [Unyielding] and [Specialized Unyielding]. The 1st hit has a 150% chance to inflict [Disorder]. ———- [Disorder]: Before any character acts, if the target is not under [Specialized Unyielding] or [Ultimate Unyielding], deals 4000% [Disorder DMG] (based on Rover's ATK), ignoring 100% [DoT DMG Reduction] and penetrating [Specialized Evasion] and [Non-Crit DMG Reduction]. Each [Disorder] triggers up to 3 times and can stack.",
+      "desc": "Deals a 3-hit combo to all enemies, each hit dealing 7000% ATK [Specialized Direct DMG] (only affected by advanced DMG modifiers). Ignores 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and pierces [Unyielding] and [Specialized Unyielding]. The 1st hit has a 150% chance to inflict [Disorder] on targets hit for 3 turns. [Disorder]: Before any character takes action, if the target is not under [Specialized Unyielding] or [Extreme Tenacity], deals 4000% ATK [Disorder DMG] based on Overgrown Rover’s ATK. The effect disappears after triggering and can stack. Ignores 100% [DoT DMG Reduction], and pierces [Specialized Evasion] and [Non-Crit DMG Reduction].",
       "icon": "/Skill/Overgrown Rover (URplus)/skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "[Specialized Direct DMG] 7000% > 9000% ATK. Ignores [Specialized Evasion] and [Non-Crit DMG Reduction] 45% > 60%. [Disorder DMG] 4000% > 5500%.",
+      "desc": "Deals a 3-hit combo to all enemies, each hit dealing 9000% ATK [Specialized Direct DMG] (only affected by advanced DMG modifiers). Ignores 60% [Specialized Evasion] and [Non-Crit DMG Reduction], and pierces [Unyielding] and [Specialized Unyielding]. The 1st hit has a 150% chance to inflict [Disorder] on targets hit for 3 turns. [Disorder]: Before any character takes action, if the target is not under [Specialized Unyielding] or [Extreme Tenacity], deals 5500% ATK [Disorder DMG] based on Overgrown Rover’s ATK. The effect disappears after triggering and can stack. Ignores 100% [DoT DMG Reduction], and pierces [Specialized Evasion] and [Non-Crit DMG Reduction].",
       "keepsakeIcon": "/Keepsake/Overgrown Rover (URplus)/Keepsake_URplus.png",
       "icon": "/Skill/Overgrown Rover (URplus)/skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently gains +20 Max HP. On entry, gains 60% [Non-Crit DMG Reduction], and grants all allies 70% [True DMG Reduction] while dispelling [DoT DMG Bonus Reduction] from all allies for the entire battle. When [Re-Battle] triggers, this unit's [Charged Pursuit] Ultimate power rises to 1.1x.",
+      "desc": "At battle start, gains 60% [Non-Crit DMG Reduction]. All allies also gain 70% [True DMG Reduction]. Dispels [DoT DMG Bonus Reduction] effects from all allies for the entire battle. When [Rebattle] is triggered, the power of this unit’s [Charge Follow-Up] Ultimate is increased to 1.1 times.",
       "icon": "/Skill/Overgrown Rover (URplus)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Non-Crit DMG Reduction] 60% > 70%. All allies' [True DMG Reduction] 70% > 75%. [Re-Battle] [Charged Pursuit] power 1.1x > 1.2x.",
+      "desc": "At battle start, gains 70% [Non-Crit DMG Reduction]. All allies also gain 75% [True DMG Reduction]. Dispels [DoT DMG Bonus Reduction] effects from all allies for the entire battle. When [Rebattle] is triggered, the power of this unit’s [Charge Follow-Up] Ultimate is increased to 1.2 times.",
       "icon": "/Skill/Overgrown Rover (URplus)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Non-Crit DMG Reduction] 70% > 80%. All allies' [True DMG Reduction] 75% > 80%. [Re-Battle] [Charged Pursuit] power 1.2x > 1.25x.",
+      "desc": "At battle start, gains 80% [Non-Crit DMG Reduction]. All allies also gain 80% [True DMG Reduction]. Dispels [DoT DMG Bonus Reduction] effects from all allies for the entire battle. When [Rebattle] is triggered, the power of this unit’s [Charge Follow-Up] Ultimate is increased to 1.25 times.",
       "icon": "/Skill/Overgrown Rover (URplus)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "On entry, permanently reduces the ignore-DMG action count of all enemies' [Ultimate Unyielding] by 1, and gains 3 stacks of [Re-Fight]. ———- [Re-Fight]: Permanently reduces DMG taken by 75% (+2.5% each return to the field). When a same-row ally (or all allies) are defeated while this unit is also defeated, consume 1 [Re-Fight] stack to return at 100% HP and launch a [Charged Pursuit] on a random target at 120% Ultimate power; other defeated same-row allies have a 70% chance to also trigger. (Only one of [Re-Fight], [Revenge], [Regroup] or [Momentum Return] can be active at a time.)",
+      "desc": "On entry, permanently reduces the action count of all enemies’ [Extreme Tenacity] ignore-DMG effect by 1. Gains 4 stacks of [Rebattle]. [Rebattle]: Permanently reduces DMG taken by 75% (each return to battle increases this effect by an additional 2.5%). When an ally in the same row, or all allies, are defeated, if this unit is already defeated, consumes 1 stack of [Rebattle] to immediately return to battle, restores 100% HP, and performs a [Charge Follow-Up] on a random target at 120% Ultimate power. If there are other defeated allies in the same row, there is a 70% chance to trigger this effect for them as well.",
       "icon": "/Skill/Overgrown Rover (URplus)/skill_awk.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "All enemies' [Ultimate Unyielding] ignore-DMG action count 1 > 2. [Re-Fight] stacks 3 > 5. [Re-Fight] DMG reduction 75% > 78% (+2.5% > 2.8% each return). [Charged Pursuit] power 120% > 135%. Other same-row allies' trigger chance 70% > 100%.",
+      "desc": "On entry, permanently reduces the action count of all enemies’ [Extreme Tenacity] ignore-DMG effect by 2. Gains 5 stacks of [Rebattle]. [Rebattle]: Permanently reduces DMG taken by 78% (each return to battle increases this effect by an additional 2.8%). When an ally in the same row, or all allies, are defeated, if this unit is already defeated, consumes 1 stack of [Rebattle] to immediately return to battle, restores 100% HP, and performs a [Charge Follow-Up] on a random target at 135% Ultimate power. If there are other defeated allies in the same row, there is a 100% chance to trigger this effect for them as well.",
       "icon": "/Skill/Overgrown Rover (URplus)/skill_awk.png",
       "type": "Awakening",
       "keepsakeIcon": null,

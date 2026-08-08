@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung combo 3 đòn vào mục tiêu đơn, gây 35% ST (+3) sát thương.",
+      "desc": "Gây combo 3 đòn vào một mục tiêu với 35% sát thương ATK (+3).",
       "icon": "/Skill/Hellish Blizzard (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung combo 5 đòn vào toàn bộ địch, gây 17% ST (+2) sát thương. Nếu bản thân đang ở trạng thái [Cuồng Nộ], hồi phục Máu.",
+      "desc": "Gây combo 5 đòn cho tất cả kẻ địch với 17% sát thương ATK (+2). Nếu self ở trạng thái [Giận Dữ], hãy khôi phục HP.",
       "icon": "/Skill/Hellish Blizzard (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung combo 5 đòn vào toàn bộ địch, gây 17% ST (+2) sát thương, đồng thời trực tiếp hồi phục Máu bản thân. Cùng lúc, đòn đánh của đồng minh xung quanh bỏ qua 20% Phòng thủ trong một số lượt.",
+      "desc": "Gây combo 5 đòn cho tất cả kẻ địch với 17% sát thương ATK (+2) và trực tiếp phục hồi HP của chính mình. Đồng thời, các đòn tấn công từ đồng minh xung quanh bỏ qua 20% DEF trong một thời gian.",
       "icon": "/Skill/Hellish Blizzard (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Hellish Blizzard (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Khi trận đấu bắt đầu, cấp cho bản thân 30% [Miễn Sát Thương Không Bạo Kích] (hiệu lực mọi loại ST, không thể tồn tại cùng [Nhanh Nhẹn]). Gỡ [Sợ Hãi] khỏi đồng minh sau khi họ hành động.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi trận chiến bắt đầu, tự cấp cho mình 30% [Miễn Sát Thương Không Bạo Kích] (có hiệu lực với tất cả các loại DMG, không thể cùng tồn tại với [Nhanh Nhẹn]). Loại bỏ [Sợ Hãi] khỏi đồng minh sau khi họ hành động.",
       "icon": "/Skill/Hellish Blizzard (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Khi trận đấu bắt đầu, cấp cho bản thân 30% [Miễn Sát Thương Không Bạo Kích] và đồng minh cùng cột 10% [Miễn Sát Thương Không Bạo Kích] (mọi loại ST, không thể tồn tại cùng [Nhanh Nhẹn]). Gỡ [Sợ Hãi] khỏi đồng minh sau khi họ hành động.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi trận chiến bắt đầu, cấp cho bản thân 30% [Miễn Sát Thương Không Bạo Kích] và một đồng minh trong cùng cột 10% [Miễn Sát Thương Không Bạo Kích] (tất cả các loại DMG, không thể cùng tồn tại với [Nhanh Nhẹn]). Loại bỏ [Sợ Hãi] khỏi đồng minh sau khi họ hành động.",
       "icon": "/Skill/Hellish Blizzard (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Khi trận đấu bắt đầu, cấp cho bản thân 35% [Miễn Sát Thương Không Bạo Kích] và đồng minh cùng cột 15% [Miễn Sát Thương Không Bạo Kích] (mọi loại ST, không thể tồn tại cùng [Nhanh Nhẹn]). Gỡ [Sợ Hãi] khỏi đồng minh sau khi họ hành động.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi trận chiến bắt đầu, cấp cho bản thân 35% [Miễn Sát Thương Không Bạo Kích] và một đồng minh trong cùng cột 15% [Miễn Sát Thương Không Bạo Kích] (tất cả các loại DMG, không thể cùng tồn tại với [Nhanh Nhẹn]). Loại bỏ [Sợ Hãi] khỏi đồng minh sau khi họ hành động.",
       "icon": "/Skill/Hellish Blizzard (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

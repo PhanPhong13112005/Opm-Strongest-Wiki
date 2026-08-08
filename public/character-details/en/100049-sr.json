@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own max HP by 20%. Whenever an ally attacks a target inflicted with [Injured], Beast King launches a [Follow-up] against that target (attacking with 80% of Basic Attack's DMG and effects, up to 3 times each turn).",
+      "desc": "Permanently increases own max HP%. Whenever an ally attacks a target inflicted with [Injured], Beast King launches a [Follow-up] against that target (attacking with 80% of Basic Attack's DMG and effects, up to 3 times each turn).",
       "icon": "/Skill/Beast King (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own max HP by 20%. Whenever an ally attacks a target inflicted with [Injured], Beast King launches a [Follow-up] against that target (attacking with 80% of Basic Attack's DMG and effects, up to 3 times each turn).",
+      "desc": "Permanently increases own max HP%. Whenever an ally attacks a target inflicted with [Injured], Beast King launches a [Follow-up] against that target (attacking with 80% of Basic Attack's DMG and effects, up to 3 times each turn).",
       "icon": "/Skill/Beast King (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own max HP by 20%. Whenever an ally attacks a target inflicted with [Injured], Beast King launches a [Follow-up] against that target (attacking with 110% of Basic Attack's DMG and effects, up to 3 times each turn).",
+      "desc": "Permanently increases own max HP%. Whenever an ally attacks a target inflicted with [Injured], Beast King launches a [Follow-up] against that target (attacking with 110% of Basic Attack's DMG and effects, up to 3 times each turn).",
       "icon": "/Skill/Beast King (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

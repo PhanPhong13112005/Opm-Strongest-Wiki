@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST sát thương trực tiếp lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Drive Knight (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Nhận [Miễn Nhiễm Sát Thương] cho bản thân (chỉ chịu 20% sát thương nhận vào) và giải hiệu ứng bất lợi của chính mình. Áp [Áp Chế Bất Tử] lên toàn bộ cột của mục tiêu, sau đó gây sát thương trực tiếp theo Máu bằng 35% ST cùng [Sát Thương Chuẩn] lên cột đó.",
+      "desc": "Gây Sát Thương Trực Tiếp bằng 105% HP tối đa cho một mục tiêu bằng một đòn kết hợp 3 đòn, với mỗi đòn đánh gây thêm 110% HP tối đa ban đầu dưới dạng [Sát Thương Chuẩn]. Có 80% cơ hội xuyên thủng [Đệm Sát Thương] (bùa lợi của Hellfire UR). Mỗi lần đánh có thể kích hoạt [Đột Phá Chuyên Biệt] một lần. [Sát Thương Chuẩn]: Không bị ảnh hưởng bởi Tỷ lệ DMG hoặc DMG miễn phí và giao dịch Sát Thương Trực Tiếp không có [Chia Sẻ Sát Thương] hoặc [Khả Năng Né Tránh]. [Đột Phá Chuyên Biệt]: Loại bỏ ngay [Bỏ Qua Sát Thương].",
       "icon": "/Skill/Drive Knight (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "[Miễn Nhiễm Sát Thương] của bản thân trở nên tuyệt đối — sát thương nhận vào 20% > 0%. Sát thương trực tiếp theo Máu 35% > 45% ST.",
+      "desc": "Gây Sát Thương Trực Tiếp bằng 135% HP tối đa cho một mục tiêu bằng combo 3 đòn, mỗi đòn gây thêm 145% HP tối đa ban đầu dưới dạng [Sát Thương Chuẩn]. Có 80% cơ hội xuyên thủng [Đệm Sát Thương] (bùa lợi của Hellfire UR). Mỗi lần đánh có thể kích hoạt [Đột Phá Chuyên Biệt] một lần. [Sát Thương Chuẩn]: Không bị ảnh hưởng bởi Tỷ lệ DMG hoặc DMG miễn phí và giao dịch Sát Thương Trực Tiếp không có [Chia Sẻ Sát Thương] hoặc [Khả Năng Né Tránh]. [Đột Phá Chuyên Biệt]: Loại bỏ ngay [Bỏ Qua Sát Thương].",
       "keepsakeIcon": "/Keepsake/Drive Knight (UR)/Keepsake_UR.png",
       "icon": "/Skill/Drive Knight (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Khi vào trận, nhận +20% Máu và +60% Non-Crit DMG Free, đồng thời nhận [Trả Thù+] (hồi sinh tối đa 4 lần).",
+      "desc": "Khi bắt đầu trận chiến, tăng 60% [Miễn Sát Thương Không Bạo Kích]. Sau khi bất kỳ nhân vật nào không phải là bản thân bị đánh bại lần đầu tiên, hãy tăng số lượng [Trả Thù] của bản thân lên 1, tối đa 4 lần. [Miễn Sát Thương Không Bạo Kích]: Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Drive Knight (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Miễn Sát Thương Không Bạo Kích] 60% &gt; 70%.",
+      "desc": "Khi bắt đầu trận chiến, tăng 70% [Miễn Sát Thương Không Bạo Kích]. Sau khi bất kỳ nhân vật nào không phải là bản thân bị đánh bại lần đầu tiên, hãy tăng số lượng [Trả Thù] của bản thân lên 1, tối đa 4 lần. [Miễn Sát Thương Không Bạo Kích]: Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Drive Knight (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Non-Crit DMG Free 70% &gt; 80%. Hồi sinh 4 &gt; 5 lần.",
+      "desc": "Khi bắt đầu trận chiến, tăng 80% [Miễn Sát Thương Không Bạo Kích]. Sau khi bất kỳ nhân vật nào không phải là bản thân bị đánh bại lần đầu tiên, hãy tăng số lượng [Trả Thù] của bản thân lên 1, tối đa 5 lần. [Miễn Sát Thương Không Bạo Kích]: Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Drive Knight (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Ban cho bản thân [Báo Thù]. ———- [Báo Thù]: Nếu Drive Knight bị hạ gục sau khi bất kỳ nhân vật nào hành động, hồi sinh với 80% Máu. và tung [Truy Kích Báo Thù] (150% ST Tối thượng, không tốn năng lượng). Có 4 lần [Phục Sinh] khi bắt đầu trận đấu.",
+      "desc": "Nhận được [Trả Thù] khi bắt đầu trận chiến. [Trả Thù]: Nếu bất kỳ nhân vật nào bị đánh bại sau một hành động, đơn vị này sẽ ngay lập tức hồi sinh, khôi phục 80% HP và thực hiện [Truy Kích Phản Đòn] lên bất kỳ mục tiêu nào với 150% sức mạnh Kỹ năng Đặc biệt. Kỹ năng này không bị ảnh hưởng bởi [Sợ Hãi Chuyên Biệt]. Ban đầu có 4 lần hồi sinh.",
       "icon": "/Skill/Drive Knight (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Máu hồi sinh 80% > 100% ST Truy kích 150% > 200%",
+      "desc": "Nhận được [Trả Thù] khi bắt đầu trận chiến. [Trả Thù]: Nếu bất kỳ nhân vật nào bị đánh bại sau một hành động, đơn vị này sẽ ngay lập tức hồi sinh, khôi phục 100% HP và thực hiện [Truy Kích Phản Đòn] lên bất kỳ mục tiêu nào với 200% sức mạnh Kỹ năng đặc biệt. Kỹ năng này không bị ảnh hưởng bởi [Sợ Hãi Chuyên Biệt]. Ban đầu có 4 lần hồi sinh.",
       "icon": "/Skill/Drive Knight (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Drive Knight (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

@@ -21,7 +21,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST sát thương trực tiếp lên một mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Mosquito Girl (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -30,7 +30,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tăng 50% chính xác đòn đánh tức thời của bản thân, sau đó tung combo 2 đòn lên mọi kẻ địch trong cột của mục tiêu, gây 1500% ST sát thương trực tiếp chia đều cho các mục tiêu trong cột đó. Trước khi tấn công, có thể kích hoạt [Đột Phá Chuyên Biệt] 1 lần: lập tức hủy trạng thái miễn sát thương loại [Bất Khuất] của mục tiêu, đồng thời tăng 20% ST của bản thân cho đến khi kết thúc đoạn tấn công đó.",
+      "desc": "Tăng [Tỷ Lệ Chính Xác Sát Thương Tức Thời] của bản thân thêm 50%. Gây 3000% ATK DMG cho kẻ địch trong một cột bằng 2 đòn đánh liên tiếp và kích hoạt [Đột Phá Chuyên Biệt] 1 lần. [Đột Phá Chuyên Biệt]: Loại bỏ ngay lập tức [Bỏ Qua Sát Thương] và tăng ATK% của bản thân cho đến khi kết thúc cuộc tấn công này.",
       "icon": "/Skill/Mosquito Girl (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -39,7 +39,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Chính xác đòn đánh tức thời 50% > 65%. Sát thương trực tiếp lên cột 1500% > 2000% ST. [Đột Phá Chuyên Biệt] kích hoạt 1 > 2 lần, và buff ST của nó 20% > 40%.",
+      "desc": "Tăng [Tỷ Lệ Chính Xác Sát Thương Tức Thời] của bản thân thêm 65%. Gây 4000% ATK DMG cho kẻ địch trong một cột bằng 2 đòn đánh liên tiếp và kích hoạt [Đột Phá Chuyên Biệt] 2 lần. [Đột Phá Chuyên Biệt]: Loại bỏ ngay lập tức [Bỏ Qua Sát Thương] và tăng ATK của bản thân thêm 40% cho đến khi kết thúc cuộc tấn công này.",
       "icon": "/Skill/Mosquito Girl (UR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Mosquito Girl (UR)/Keepsake_UR.png",
       "type": "Tuyệt kĩ",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn nhận +20% Máu. Khi vào trận, nhận 60% [Giảm Sát Thương Không Bạo Kích]. Khi bất kỳ nhân vật nào hành động, giải trừ [Choáng] / [Choáng Chuyên Biệt] / [Câm Lặng] cho 1 đồng minh đang chịu (mỗi loại hiệu ứng).",
+      "desc": "Tăng 60% [Miễn Sát Thương Không Bạo Kích]. Khi bất kỳ nhân vật nào hành động, sẽ loại bỏ [Choáng], [Choáng Chuyên Biệt] hoặc [Câm Lặng] khỏi 1 đồng minh. [Miễn Sát Thương Không Bạo Kích]: Giảm tất cả các loại DMG và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Mosquito Girl (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -57,7 +57,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] 60% > 70%. Số đồng minh được giải trừ [Choáng] / [Choáng Chuyên Biệt] / [Câm Lặng] 1 > 2 (mỗi loại).",
+      "desc": "Tăng 70% [Miễn Sát Thương Không Bạo Kích]. Khi bất kỳ nhân vật nào hành động, sẽ loại bỏ [Choáng], [Choáng Chuyên Biệt] hoặc [Câm Lặng] khỏi 2 đồng minh. [Miễn Sát Thương Không Bạo Kích]: Giảm tất cả các loại DMG và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Mosquito Girl (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -66,7 +66,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] 70% > 80%. Số đồng minh được giải trừ [Choáng] / [Choáng Chuyên Biệt] / [Câm Lặng] 2 > 3 (mỗi loại).",
+      "desc": "Tăng 80% [Miễn Sát Thương Không Bạo Kích]. Khi bất kỳ nhân vật nào hành động, sẽ loại bỏ [Choáng], [Choáng Chuyên Biệt] hoặc [Câm Lặng] khỏi 3 đồng minh. [Miễn Sát Thương Không Bạo Kích]: Giảm tất cả các loại DMG và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Mosquito Girl (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -75,7 +75,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi trận đấu bắt đầu, triệu hồi 10 con muỗi hỗ trợ chiến đấu, mỗi con muỗi kế thừa 800% Tấn công của Mosquito Girl làm Máu. Muỗi chia sẻ 80% mọi loại sát thương (trừ sát thương Emblem) với toàn đội, giảm 80% sát thương nhận vào. Miễn nhiễm [Tách rời].",
+      "desc": "Khi bắt đầu trận chiến, triệu hồi 10 con Muỗi để hỗ trợ trận chiến. Mỗi Mosquito thừa hưởng 800% cơ sở ATK của Cô Gái Muỗi. Bầy Muỗi chia sẻ 80% tất cả các loại DMG mà toàn đội nhận được, ngoại trừ Biểu tượng DMG. Bầy Muỗi giảm 80% DMG được chia sẻ và có thể bị loại bỏ.",
       "icon": "/Skill/Mosquito Girl (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -84,7 +84,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Máu muỗi triệu hồi kế thừa Tấn công 800% > 1000% Trao cho toàn đội kẻ địch 40% Giảm sát thương Kích nổ, và 40% Giảm sát thương ST theo thời gian",
+      "desc": "Khi bắt đầu trận chiến, triệu hồi 10 con Muỗi để hỗ trợ trận chiến. Mỗi Mosquito kế thừa 1000% cơ sở ATK của Cô Gái Muỗi. Bầy Muỗi chia sẻ 80% tất cả các loại DMG mà toàn đội nhận được, ngoại trừ Biểu tượng DMG. Bầy Muỗi giảm 80% DMG được chia sẻ và có thể bị loại bỏ. Toàn đội nhận được 40% [Miễn Sát Thương Kích Nổ] và 40% [Miễn Sát Thương Duy Trì].",
       "icon": "/Skill/Mosquito Girl (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -93,7 +93,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Mosquito Girl (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

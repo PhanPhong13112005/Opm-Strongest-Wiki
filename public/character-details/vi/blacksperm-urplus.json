@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ATK (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK (+10) DMG cho một mục tiêu.",
       "icon": "/Skill/Source/blacksperm-urplus/basic.webp",
       "animation": null,
       "type": "Kỹ năng thường",
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Sát thương này không chia đều cho mục tiêu không thể nhận sát thương. Trước khi chủ động dùng Tối Thượng, hấp thụ toàn bộ Hắc Tinh phân thân trên sân; mỗi phân thân tăng thêm 20% sát thương Tối Thượng, kéo dài đến lần chủ động dùng kỹ năng kế tiếp. Tung combo 5 đòn lên cả hàng địch, gây 2400% ATK (+2) [Sát Thương Trực Tiếp Chuyên Biệt] có thể chia đều (chỉ chịu ảnh hưởng bởi tăng/giảm sát thương nâng cao), bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Miễn Sát Thương Không Bạo Kích], xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt].",
+      "desc": "Gây 12000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] có thể chia sẻ cho tất cả kẻ địch liên tiếp trong 5 đòn đánh (chỉ bị ảnh hưởng bởi các công cụ sửa đổi sát thương nâng cao). Bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Sát thương này không được chia sẻ với các mục tiêu không thể nhận sát thương. Trước khi chủ động sử dụng Tuyệt Kĩ, hãy hấp thụ toàn bộ Phân Thân Tinh Trùng Đen trên chiến trường. Mỗi Phân Thân Tinh Trùng Đen được hấp thụ sẽ tăng DMG của Tuyệt Kĩ thêm 20%, tồn tại cho đến lượt hoạt động tiếp theo của đơn vị này.",
       "icon": "/Skill/Black Sperm (UR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "animation": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tăng 20% [Tăng Sát Thương Toàn Phần] cho bản thân và giảm 20% [Giảm Sát Thương Toàn Phần] của hàng chứa mục tiêu trong 2 hồi (không thể giải trừ). Sát thương này không chia đều cho mục tiêu không thể nhận sát thương. Trước khi chủ động dùng Tối Thượng, hấp thụ toàn bộ Hắc Tinh phân thân trên sân; mỗi phân thân tăng thêm 30% sát thương Tối Thượng, kéo dài đến lần chủ động dùng kỹ năng kế tiếp. Tung combo 5 đòn lên cả hàng địch, gây 3000% ATK (+2) [Sát Thương Trực Tiếp Chuyên Biệt] có thể chia đều (chỉ chịu ảnh hưởng bởi tăng/giảm sát thương nâng cao), bỏ qua 60% [Khả Năng Né Tránh Chuyên Biệt] và [Miễn Sát Thương Không Bạo Kích], xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt].",
+      "desc": "Gây 15000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] có thể chia sẻ cho tất cả kẻ địch liên tiếp trong 5 đòn đánh (chỉ bị ảnh hưởng bởi các công cụ sửa đổi sát thương nâng cao). Bỏ qua 60% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Sát thương này không được chia sẻ với các mục tiêu không thể nhận sát thương. Trước khi chủ động sử dụng Tuyệt Kĩ, hãy hấp thụ toàn bộ Phân Thân Tinh Trùng Đen trên chiến trường. Mỗi Phân Thân Tinh Trùng Đen được hấp thụ sẽ tăng DMG của Tuyệt Kĩ thêm 30%, tồn tại cho đến lượt hoạt động tiếp theo của đơn vị này. Cấp vĩnh viễn 20% [Tăng Toàn Bộ Sát Thương] cho tất cả đồng minh và giảm [Giảm Sát Thương Toàn Phần] của tất cả kẻ thù% (không thể xua tan). Bản thân và đồng minh có ATK cao nhất sẽ vĩnh viễn nhận được [Sự Trả Thù Của Tinh Trùng Đen]. [Sự Trả Thù Của Tinh Trùng Đen]: Khi sử dụng Tuyệt Kĩ, nhân vật gây [Sát Thương Bổ Sung Chuyên Biệt] bằng 800% HP tối đa của mình cho kẻ địch có HP tối đa cao nhất (chỉ có thể CRIT, PvP).",
       "keepsakeIcon": "/Keepsake/Black Sperm (URplus)/Keepsake_URplus.webp",
       "icon": "/Skill/Black Sperm (UR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) HP bản thân. Khi vào trận, nhận 60% [Miễn Sát Thương Không Bạo Kích]. Vĩnh viễn nhận 20% [Tăng Cường Hỗ Trợ]. Trong 9 hồi đầu, khi sắp bị hạ, bản thân vào trạng thái [Bất Bại] và hấp thụ toàn bộ sát thương phải chịu; đến lượt hành động kế tiếp hồi 100% HP và tiếp tục chiến đấu, tối đa 4 lần.",
+      "desc": "Khi bắt đầu trận chiến, tăng 60% [Giảm Sát Thương Không Bạo Kích]. Tăng vĩnh viễn 20% [Tăng Cường Hỗ Trợ]. Khi sắp bị hạ gục ở 9 hiệp đầu tiên sẽ rơi vào trạng thái [Vô Địch], hấp thụ toàn bộ DMG nhận vào. Trước hành động tiếp theo của đơn vị này, khôi phục 100% HP và tiếp tục chiến đấu. Có thể kích hoạt tối đa 4 lần.",
       "icon": "/Skill/Black Sperm (UR+)/Skill_pas.png",
       "animation": null,
       "type": "Nội tại",
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) HP bản thân. Khi vào trận, nhận 70% [Miễn Sát Thương Không Bạo Kích]. Vĩnh viễn nhận 30% [Tăng Cường Hỗ Trợ]. Trong 9 hồi đầu, khi sắp bị hạ, bản thân vào trạng thái [Bất Bại] và hấp thụ toàn bộ sát thương phải chịu; đến lượt hành động kế tiếp hồi 100% HP và tiếp tục chiến đấu, tối đa 5 lần.",
+      "desc": "Khi bắt đầu trận chiến, tăng 70% [Giảm Sát Thương Không Bạo Kích]. Tăng vĩnh viễn 30% [Tăng Cường Hỗ Trợ]. Khi sắp bị hạ gục ở 9 hiệp đầu tiên sẽ rơi vào trạng thái [Vô Địch], hấp thụ toàn bộ DMG nhận vào. Trước hành động tiếp theo của đơn vị này, khôi phục 100% HP và tiếp tục chiến đấu. Có thể kích hoạt tối đa 5 lần.",
       "icon": "/Skill/Black Sperm (UR+)/Skill_pas.png",
       "animation": null,
       "type": "Nội tại",
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) HP bản thân. Khi vào trận, nhận 80% [Miễn Sát Thương Không Bạo Kích]. Vĩnh viễn nhận 40% [Tăng Cường Hỗ Trợ]. Trong 9 hồi đầu, khi sắp bị hạ, bản thân vào trạng thái [Bất Bại] và hấp thụ toàn bộ sát thương phải chịu; đến lượt hành động kế tiếp hồi 100% HP và tiếp tục chiến đấu, tối đa 6 lần.",
+      "desc": "Khi bắt đầu trận chiến, tăng 80% [Giảm Sát Thương Không Bạo Kích]. Tăng vĩnh viễn 40% [Tăng Cường Hỗ Trợ]. Khi sắp bị hạ gục ở 9 hiệp đầu tiên sẽ rơi vào trạng thái [Vô Địch], hấp thụ toàn bộ DMG nhận vào. Trước hành động tiếp theo của đơn vị này, khôi phục 100% HP và tiếp tục chiến đấu. Có thể kích hoạt tối đa 6 lần.",
       "icon": "/Skill/Black Sperm (UR+)/Skill_pas.png",
       "animation": null,
       "type": "Nội tại",
@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Sau khi bất kỳ địch nào hành động, toàn bộ Hắc Tinh phân thân trên sân có 70% tỉ lệ truy kích toàn thể địch, mỗi phân thân gây 480% ATK [Sát Thương Trực Tiếp Chuyên Biệt]. Khi vào trận, vĩnh viễn giảm 30% sát thương phải chịu. Sau mỗi lần trúng đòn, phân tách ra 2 Hắc Tinh hỗ trợ chiến đấu; phân thân kế thừa 100% ATK gốc của bản thể, tối đa 8 con cùng lúc (không thể triệu hồi khi trùng vị trí chư hầu).",
+      "desc": "Khi bước vào trận chiến, giảm vĩnh viễn 30% DMG phải chịu. Sau mỗi lần đơn vị này bị tấn công, 2 Phân Thân Tinh Trùng Đen được tạo ra để hỗ trợ trong trận chiến. Mỗi Phân Thân Tinh Trùng Đen kế thừa 100% ATK cơ bản của đơn vị này. Tối đa 8 con có thể tồn tại trên chiến trường cùng lúc (không thể triệu hồi nếu không có sẵn vị trí đơn vị hỗ trợ). Sau khi bất kỳ kẻ thù nào thực hiện hành động, tất cả Phân Thân Tinh Trùng Đen trên chiến trường có 70% cơ hội thực hiện Truy Kích chống lại tất cả kẻ thù. Mỗi Phân Thân Tinh Trùng Đen gây ra 480% ATK dưới dạng [Sát Thương Trực Tiếp Chuyên Biệt].",
       "icon": "/Skill/Black Sperm (UR+)/Skill_awk.png",
       "animation": null,
       "type": "Thức tỉnh",
@@ -82,7 +82,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Sau khi bất kỳ địch nào hành động, toàn bộ Hắc Tinh phân thân trên sân có 100% tỉ lệ truy kích toàn thể địch, mỗi phân thân gây 620% ATK [Sát Thương Trực Tiếp Chuyên Biệt]. Khi đồng minh cùng hàng kích hoạt [Tập Hợp Lại], Hắc Tinh lập tức phân tách tới giới hạn số lượng và tung [Truy Kích Tụ Lực] với 120% cường độ kỹ năng. Khi vào trận, vĩnh viễn giảm 50% sát thương phải chịu. Sau mỗi lần trúng đòn, phân tách ra 4 Hắc Tinh hỗ trợ chiến đấu; phân thân kế thừa 120% ATK gốc của bản thể, tối đa 8 con cùng lúc (không thể triệu hồi khi trùng vị trí chư hầu).",
+      "desc": "Khi bước vào trận chiến, giảm vĩnh viễn 50% DMG phải chịu. Sau mỗi lần đơn vị này bị tấn công, 4 Phân Thân Tinh Trùng Đen được tạo ra để hỗ trợ trong trận chiến. Mỗi Phân Thân Tinh Trùng Đen kế thừa 120% ATK cơ bản của đơn vị này. Tối đa 8 con có thể tồn tại trên chiến trường cùng lúc (không thể triệu hồi nếu không có sẵn vị trí đơn vị hỗ trợ). Sau khi bất kỳ kẻ thù nào thực hiện hành động, tất cả Phân Thân Tinh Trùng Đen trên chiến trường có 100% cơ hội thực hiện Truy Kích chống lại tất cả kẻ thù. Mỗi Phân Thân Tinh Trùng Đen gây ra 620% ATK dưới dạng [Sát Thương Trực Tiếp Chuyên Biệt]. Khi một anh hùng đồng minh trong cùng hàng kích hoạt [Tái Chiến], Phân Thân Tinh Trùng Đen ngay lập tức nhân lên cho đến khi đạt giới hạn tối đa, sau đó thực hiện [Truy Kích Tích Lực] với 120% sức mạnh kỹ năng.",
       "icon": "/Skill/Black Sperm (UR+)/Skill_awk.png",
       "animation": null,
       "type": "Thức tỉnh",
@@ -91,7 +91,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Black Sperm (UR+)/Skill_awk.png",
       "animation": null,
       "type": "Thức tỉnh",

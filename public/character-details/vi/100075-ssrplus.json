@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây ST trực tiếp 30% ST lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu bằng 4 đòn đánh liên tiếp.",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gắn [Đánh Dấu] và [Phản Kích] lên toàn bộ kẻ địch, sau đó gây ST trực tiếp 20% ST cho mỗi [Đánh Dấu] (tối thiểu 3) lên toàn bộ kẻ địch. 30% cơ hội [Bất Tỉnh] cả cột của mục tiêu trong 2 lượt khi [Hiệp] < 6.",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 5 đòn liên tiếp, gây 300% ATK DMG. Khi tấn công nhiều hơn 3 kẻ thù, mỗi kẻ địch bổ sung sẽ tăng DMG của kỹ năng thêm 100% ATK. Trong 5 lượt đầu tiên, có 100% cơ hội gây [Choáng Chuyên Biệt] lên mục tiêu chính và kẻ địch trong cùng hàng trong 1 lượt. [Choáng Chuyên Biệt]: Ngăn chặn đơn vị bị ảnh hưởng hoạt động và giảm vĩnh viễn 30% ATK của nó. Tối đa 4 ký tự có thể bị ảnh hưởng bởi [Choáng] hoặc [Choáng Chuyên Biệt] cùng một lúc.",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gắn [Đánh Dấu] và [Phản Kích] lên toàn bộ kẻ địch, sau đó gây ST trực tiếp 20% > 30% ST cho mỗi [Đánh Dấu] (tối thiểu 3) lên toàn bộ kẻ địch. 30% cơ hội [Bất Tỉnh] cả cột của mục tiêu > toàn bộ vùng chọn trong 2 > 6 lượt khi [Hiệp] < 6.",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 5 đòn liên tiếp, gây 450% ATK DMG. Khi tấn công nhiều hơn 3 kẻ thù, mỗi kẻ địch bổ sung sẽ tăng DMG của kỹ năng thêm 150% ATK. Trong 5 lượt đầu tiên, có 100% cơ hội gây [Choáng Chuyên Biệt] lên mục tiêu chính và kẻ địch xung quanh trong 1 lượt. [Choáng Chuyên Biệt]: Ngăn chặn đơn vị bị ảnh hưởng hoạt động và giảm vĩnh viễn 30% ATK của nó. Tối đa 4 ký tự có thể bị ảnh hưởng bởi [Choáng] hoặc [Choáng Chuyên Biệt] cùng một lúc.",
       "keepsakeIcon": "/Keepsake/Metal Knight (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Đầu trận, tăng +20% Máu. Khi vào trận và khi hồi sinh, bản thân và đồng minh xung quanh miễn nhiễm [Ăn Mòn] và [Ăn Mòn Chuyên Biệt] trong 5 lượt.",
+      "desc": "Khi bắt đầu trận chiến, cấp cho bản thân và đồng minh xung quanh khả năng miễn nhiễm [Ăn Mòn] và [Ăn Mòn Chuyên Biệt] trong 5 hiệp.",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Thời gian miễn nhiễm [Ăn Mòn]/[Ăn Mòn Chuyên Biệt] 5 lượt &gt; Vĩnh viễn.",
+      "desc": "Khi bắt đầu trận chiến, vĩnh viễn cấp cho bản thân và đồng minh xung quanh khả năng miễn nhiễm [Ăn Mòn] và [Ăn Mòn Chuyên Biệt].",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Phạm vi miễn nhiễm bản thân và đồng minh xung quanh &gt; toàn bộ đồng minh.",
+      "desc": "Khi bắt đầu trận chiến, vĩnh viễn cấp cho tất cả đồng minh khả năng miễn nhiễm [Ăn Mòn] và [Ăn Mòn Chuyên Biệt].",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi bắt đầu trận đấu, trao 45% cơ hội [Né Tránh] (Giảm ST trực tiếp/phụ trội/Charge/Cuồng bạo xuống còn 1 ST). Loại bỏ [Combo Truy kích] khỏi toàn bộ đội địch, kéo dài suốt trận đấu.",
+      "desc": "Khi bắt đầu trận chiến, có 45% cơ hội nhận được [Né Tránh]. Loại bỏ [Truy Kích Liên Kích] khỏi toàn bộ đội địch trong toàn bộ trận chiến. [Né Tránh]: Giảm Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG nhận được còn 1 DMG.",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Né tránh 45% > 60% Hiệu ứng bổ sung: Sau khi bất kỳ nhân vật nào hành động, với mỗi kẻ địch đang trong trạng thái [Choáng Chuyên Biệt], tăng [Bảo Hộ Chuyên Biệt] của toàn bộ đồng minh thêm 100% Tấn công của Metal Knight, 3 lần mỗi lượt.\n[Choáng Chuyên Biệt] không bị ảnh hưởng bởi SSR+ Metal Bat, SSR+ Gouketsu và SSR+ Melzargard [Liên Kích] từ SSR+ Deep Sea King và [Truy kích Tối thượng] từ Cruel Tactic có thể gây [Choáng Chuyên Biệt]",
+      "desc": "Khi bắt đầu trận chiến, có 60% cơ hội nhận được [Né Tránh]. Loại bỏ [Truy Kích Liên Kích] khỏi toàn bộ đội địch trong toàn bộ trận chiến. Sau bất kỳ hành động nào của nhân vật, đối với mỗi kẻ địch bị ảnh hưởng bởi [Choáng Chuyên Biệt], [Bảo Hộ Chuyên Biệt] của tất cả đồng minh sẽ tăng lên một lượng bằng 100% ATK của Hiệp Sĩ Kim Loại. Có thể kích hoạt tối đa 3 lần mỗi vòng. [Né Tránh]: Giảm Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG nhận được còn 1 DMG.",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -91,7 +91,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

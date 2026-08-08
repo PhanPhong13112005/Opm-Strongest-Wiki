@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 100% ATK(+10) DMG to a single target.",
+      "desc": "Deals 100% AT DMG to a single target.",
       "icon": "/Skill/Armored Gorilla (SR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 120% ATK(+10) DMG to enemies in a cross-shaped area, with a 100% chance to grant himself [Tenacity] (absorbs DMG equal to 20% of own HP).",
+      "desc": "Deals 120% AT DMG to enemies in a cross-shaped area, with a 100% chance to grant himself [Tenacity] (absorbs DMG equal to 20% of own HP).",
       "icon": "/Skill/Armored Gorilla (SR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 120% ATK(+10) DMG to enemies in a cross-shaped area, with a 100% chance to grant himself [Tenacity] (absorbs DMG equal to 20% of own HP). After acting, [Dispels] his own debuffs.",
+      "desc": "Deals 120% AT DMG to enemies in a cross-shaped area, with a 100% chance to grant himself [Tenacity] (absorbs DMG equal to 20% of own HP). After acting, [Dispels] his own debuffs.",
       "keepsakeIcon": "/Keepsake/Armored Gorilla (SR)/Keepsake_SR.png",
       "icon": "/Skill/Armored Gorilla (SR)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). For each Grappler ally in the team, Armored Gorilla's DMG Reduction Rate increases by 15%, up to 3 stacks.",
+      "desc": "Permanently increases own HP by. For each Grappler ally in the team, Armored Gorilla's DMG Reduction Rate increases by 15%, up to 3 stacks.",
       "icon": "/Skill/Armored Gorilla (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). For each Grappler ally in the team, Armored Gorilla's DMG Reduction Rate increases by 15%, up to 4 stacks.",
+      "desc": "Permanently increases own HP by. For each Grappler ally in the team, Armored Gorilla's DMG Reduction Rate increases by 15%, up to 4 stacks.",
       "icon": "/Skill/Armored Gorilla (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). For each Grappler ally in the team, Armored Gorilla's DMG Reduction Rate increases by 18%, up to 4 stacks.",
+      "desc": "Permanently increases own HP by. For each Grappler ally in the team, Armored Gorilla's DMG Reduction Rate increases by 18%, up to 4 stacks.",
       "icon": "/Skill/Armored Gorilla (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

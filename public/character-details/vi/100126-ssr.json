@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tấn công mục tiêu đơn với 2 liên kích gây 80% ST tấn công (+5). Có 100% khả năng gây [Nội Thương] lên mục tiêu (khi bị tấn công, chịu ST Nội thương bằng 155% ST tấn công của Gale Wind; hiệu ứng biến mất sau khi kích hoạt).",
+      "desc": "Tấn công một mục tiêu bằng 2 đòn liên tiếp, gây 80% ATK DMG. Có 100% cơ hội gây [Nội Thương] lên mục tiêu. [Nội Thương]: Khi đơn vị bị ảnh hưởng bị tấn công, nhận DMG bằng 155% ATK của Gale Wind. Hiệu ứng biến mất sau khi kích hoạt một lần.",
       "icon": "/Skill/Gale Wind (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công các mục tiêu trong vùng hình chữ thập với 4 liên kích gây 50% ST tấn công (+thưởng). Trong 2 lượt đầu, có 100% khả năng gây [Choáng] lên 2 mục tiêu ngẫu nhiên trong 1 lượt (không thể hành động; mỗi đội tối đa 4 nhân vật bị choáng cùng lúc; có 50% khả năng xuyên miễn nhiễm). Đồng thời tăng [Chiến Ý] của bạn -900.",
+      "desc": "Tấn công kẻ địch trong khu vực hình chữ thập bằng 4 đòn liên tiếp, gây 50% ATK DMG cộng thêm DMG. Trong 2 lượt đầu tiên, có 100% cơ hội gây [Choáng] lên 2 mục tiêu ngẫu nhiên trong 1 lượt. [Choáng]: Ngăn chặn thiết bị bị ảnh hưởng hoạt động. Tối đa 4 nhân vật trong mỗi đội có thể bị ảnh hưởng bởi [Choáng] cùng lúc. Có 50% cơ hội bỏ qua khả năng miễn nhiễm Choáng. Giảm [Thanh Năng Lượng] đi 900 điểm.",
       "icon": "/Skill/Gale Wind (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tấn công các mục tiêu trong vùng hình chữ thập với 4 liên kích gây 65% ST tấn công (+thưởng). Trong 2 lượt đầu, có 100% khả năng gây [Choáng] lên 3 mục tiêu ngẫu nhiên trong 1 lượt (không thể hành động; mỗi đội tối đa 4 nhân vật bị choáng cùng lúc; có 50% khả năng xuyên miễn nhiễm). Đồng thời tăng [Chiến Ý] của bạn -950.",
+      "desc": "Tấn công kẻ địch trong khu vực hình chữ thập bằng 4 đòn liên tiếp, gây 65% ​​ATK DMG cộng thêm DMG. Trong 2 lượt đầu tiên, có 100% cơ hội gây [Choáng] lên 3 mục tiêu ngẫu nhiên trong 1 lượt. [Choáng]: Ngăn chặn thiết bị bị ảnh hưởng hoạt động. Tối đa 4 nhân vật trong mỗi đội có thể bị ảnh hưởng bởi [Choáng] cùng lúc. Có 50% cơ hội bỏ qua khả năng miễn nhiễm Choáng. Giảm [Thanh Năng Lượng] đi 950 điểm.",
       "keepsakeIcon": "/Keepsake/Gale Wind (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Gale Wind (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Bản thân nhận 40% Giảm ST Không Chí mạng (giảm mọi loại ST; hiệu ứng này và [Linh Xảo] chỉ một cái có hiệu lực). Sau hành động của bất kỳ nhân vật nào, tung đòn [Truy Kích] vào kẻ địch có ST tấn công cao nhất (tấn công bằng 80% ST và hiệu ứng của Đòn Cơ bản, 3 lần mỗi lượt).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Tăng vĩnh viễn 40% [Giảm Sát Thương Không Bạo Kích], giúp loại bỏ tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]. Sau khi bất kỳ nhân vật nào hành động, hãy phóng [Truy Kích] chống lại kẻ thù có ATK cao nhất. [Truy Kích]: Gây 80% DMG của đòn tấn công cơ bản và giữ nguyên hiệu ứng của nó. Có thể kích hoạt tối đa 3 lần mỗi lượt.",
       "icon": "/Skill/Gale Wind (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Bản thân nhận 50% Giảm ST Không Chí mạng (giảm mọi loại ST; hiệu ứng này và [Linh Xảo] chỉ một cái có hiệu lực). Sau hành động của bất kỳ nhân vật nào, tung đòn [Truy Kích] vào kẻ địch có ST tấn công cao nhất (tấn công bằng 100% ST và hiệu ứng của Đòn Cơ bản, 4 lần mỗi lượt).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Tăng vĩnh viễn 50% [Giảm Sát Thương Không Bạo Kích], giúp loại bỏ tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]. Sau khi bất kỳ nhân vật nào hành động, hãy phóng [Truy Kích] chống lại kẻ thù có ATK cao nhất. [Truy Kích]: Gây 100% DMG của đòn tấn công cơ bản và giữ nguyên hiệu ứng của nó. Có thể kích hoạt tối đa 4 lần mỗi lượt.",
       "icon": "/Skill/Gale Wind (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Bản thân nhận 50% Giảm ST Không Chí mạng (giảm mọi loại ST; hiệu ứng này và [Linh Xảo] chỉ một cái có hiệu lực). Sau hành động của bất kỳ nhân vật nào, tung đòn [Truy Kích] vào kẻ địch có ST tấn công cao nhất (tấn công bằng 120% ST và hiệu ứng của Đòn Cơ bản, 4 lần mỗi lượt).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Tăng vĩnh viễn 50% [Giảm Sát Thương Không Bạo Kích], giúp loại bỏ tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]. Sau khi bất kỳ nhân vật nào hành động, hãy phóng [Truy Kích] chống lại kẻ thù có ATK cao nhất. [Truy Kích]: Gây 120% DMG của đòn tấn công cơ bản và giữ nguyên hiệu ứng của nó. Có thể kích hoạt tối đa 4 lần mỗi lượt.",
       "icon": "/Skill/Gale Wind (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

@@ -47,7 +47,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). When battle begins, grants herself 30% [Non-Crit DMG Free] (effective for all DMG types, cannot co-exist with [Agility]). Removes [Fear] from allies after they act.",
+      "desc": "Permanently increases own HP by. When battle begins, grants herself 30% [Non-Crit DMG Free] (effective for all DMG types, cannot co-exist with [Agility]). Removes [Fear] from allies after they act.",
       "icon": "/Skill/Hellish Blizzard (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). When battle begins, grants herself 30% [Non-Crit DMG Free] and an ally in the same column 10% [Non-Crit DMG Free] (all DMG types, cannot co-exist with [Agility]). Removes [Fear] from allies after they act.",
+      "desc": "Permanently increases own HP by. When battle begins, grants herself 30% [Non-Crit DMG Free] and an ally in the same column 10% [Non-Crit DMG Free] (all DMG types, cannot co-exist with [Agility]). Removes [Fear] from allies after they act.",
       "icon": "/Skill/Hellish Blizzard (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). When battle begins, grants herself 35% [Non-Crit DMG Free] and an ally in the same column 15% [Non-Crit DMG Free] (all DMG types, cannot co-exist with [Agility]). Removes [Fear] from allies after they act.",
+      "desc": "Permanently increases own HP by. When battle begins, grants herself 35% [Non-Crit DMG Free] and an ally in the same column 15% [Non-Crit DMG Free] (all DMG types, cannot co-exist with [Agility]). Removes [Fear] from allies after they act.",
       "icon": "/Skill/Hellish Blizzard (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

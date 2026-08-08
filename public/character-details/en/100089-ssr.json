@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK (+10) damage to a single target, with a 100% chance to inflict [Internal Injury] on the target (when the target is hit, adds Internal Injury damage equal to 100% of Gouketsu's ATK; the effect disappears after triggering).",
+      "desc": "Deals 120% ATK DMG to a single target. Has a 100% chance to inflict [Internal Injury] on the target. [Internal Injury]: When the affected unit is attacked, takes DMG equal to 100% of Gouketsu's ATK. The effect disappears after triggering once.",
       "icon": "/Skill/Gouketsu (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 60% ATK (+3) damage to all targets with a 3-hit combo, and simultaneously restores HP equal to 20% of own max HP.",
+      "desc": "Attacks all enemies with 3 consecutive strikes, dealing 60% ATK DMG per strike. Restores HP equal to 20% of Max HP.",
       "icon": "/Skill/Gouketsu (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 70% ATK (+3) damage to all targets with a 3-hit combo, and simultaneously restores HP equal to 30% of own max HP.",
+      "desc": "Attacks all enemies with 3 consecutive strikes, dealing 70% ATK DMG per strike. Restores HP equal to 30% of Max HP.",
       "keepsakeIcon": "/Keepsake/Gouketsu (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Gouketsu (SSR)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). Self gains 30% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect). At the start of battle, grants self and surrounding allies 70% Healing rate and Shield rate for 2 turns.",
+      "desc": "Permanently increases own HP. Permanently gains 30% [Non-Crit DMG Reduction], which reduces all types of non-critical DMG and cannot coexist with [Agility]. At battle start, increases Heal Rate and Shield Rate by 70% for self and surrounding allies for 2 turns.",
       "icon": "/Skill/Gouketsu (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). Self gains 35% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect). At the start of battle, grants self and surrounding allies 80% Healing rate and Shield rate for 2 turns.",
+      "desc": "Permanently increases own HP. Permanently gains 35% [Non-Crit DMG Reduction], which reduces all types of non-critical DMG and cannot coexist with [Agility]. At battle start, increases Heal Rate and Shield Rate by 80% for self and surrounding allies for 2 turns.",
       "icon": "/Skill/Gouketsu (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). Self gains 38% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect). At the start of battle, grants self and surrounding allies 90% Healing rate and Shield rate for 2 turns.",
+      "desc": "Permanently increases own HP. Permanently gains 38% [Non-Crit DMG Reduction], which reduces all types of non-critical DMG and cannot coexist with [Agility]. At battle start, increases Heal Rate and Shield Rate by 90% for self and surrounding allies for 2 turns.",
       "icon": "/Skill/Gouketsu (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

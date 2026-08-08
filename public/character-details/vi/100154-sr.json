@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 100% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 100% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Butterfly DX (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Đánh mục tiêu đơn với 3 đòn liên kích, gây 180% ST (+2) sát thương, với 100% cơ hội gây [Lực Trường] lên mục tiêu trong 1 lượt (trước khi hành động, nhận sát thương theo thời gian bằng 60% ST, với 50% cơ hội xuyên thủng hiệu ứng miễn nhiễm).",
+      "desc": "Tấn công một mục tiêu bằng 3 đòn combo, gây 180% ATK (+2) DMG, với 100% cơ hội gây [Lĩnh Vực] lên mục tiêu trong 1 lượt (trước khi hành động, lấy DoT bằng 60% ATK, với 50% cơ hội để thâm nhập vào các hiệu ứng miễn dịch).",
       "icon": "/Skill/Butterfly DX (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Đánh mục tiêu đơn với 3 đòn liên kích, gây 180% ST (+2) sát thương, với 100% cơ hội gây [Lực Trường] lên mục tiêu trong 1 lượt (trước khi hành động, nhận sát thương theo thời gian bằng 70% ST, với 50% cơ hội xuyên thủng hiệu ứng miễn nhiễm).",
+      "desc": "Tấn công một mục tiêu bằng 3 đòn combo, gây 180% ATK (+2) DMG, với 100% cơ hội gây [Lĩnh Vực] lên mục tiêu trong 1 lượt (trước khi hành động, lấy DoT bằng 70% ATK, với 50% cơ hội để thâm nhập vào các hiệu ứng miễn dịch).",
       "icon": "/Skill/Butterfly DX (SR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Butterfly DX (SR)/Keepsake_SR.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu (+20) cho bản thân. Khi vào trận, vĩnh viễn cấp 20% Tăng ST theo thời gian cho bản thân và đồng minh cùng hàng, đồng thời cấp cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 20% Máu bản thân).",
+      "desc": "Tự tăng vĩnh viễn HP. Khi bắt đầu trận chiến, cấp vĩnh viễn 20% DoT Boost cho bản thân và đồng minh trong cùng một hàng, đồng thời cấp cho bản thân [Lá Chắn] (hấp thụ DMG bằng 20% ​​HP của chính mình).",
       "icon": "/Skill/Butterfly DX (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu (+20) cho bản thân. Khi vào trận, vĩnh viễn cấp 25% Tăng ST theo thời gian cho bản thân và đồng minh cùng hàng, đồng thời cấp cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 25% Máu bản thân).",
+      "desc": "Tự tăng vĩnh viễn HP. Khi bắt đầu trận chiến, cấp vĩnh viễn 25% DoT Boost cho bản thân và đồng minh trong cùng một hàng, đồng thời cấp cho bản thân [Lá Chắn] (hấp thụ DMG bằng 25% HP của chính mình).",
       "icon": "/Skill/Butterfly DX (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu (+20) cho bản thân. Khi vào trận, vĩnh viễn cấp 30% Tăng ST theo thời gian cho bản thân và đồng minh cùng hàng, đồng thời cấp cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 30% Máu bản thân).",
+      "desc": "Tự tăng vĩnh viễn HP. Khi bắt đầu trận chiến, cấp vĩnh viễn 30% DoT Boost cho bản thân và đồng minh trong cùng một hàng, đồng thời cấp cho bản thân [Lá Chắn] (hấp thụ DMG bằng 30% HP của chính mình).",
       "icon": "/Skill/Butterfly DX (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

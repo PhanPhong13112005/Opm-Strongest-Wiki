@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 100% ATK(+10) DMG to a single target.",
+      "desc": "Deals 100% AT DMG to a single target.",
       "icon": "/Skill/Blue Fire (SR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). When an enemy's [Burn] expires, inflicts [Burn] on a random enemy target for 2 turns (DoT equal to 50% ATK).",
+      "desc": "Permanently increases own HP by. When an enemy's [Burn] expires, inflicts [Burn] on a random enemy target for 2 turns (DoT equal to 50% ATK).",
       "icon": "/Skill/Blue Fire (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). When an enemy's [Burn] expires, inflicts [Burn] on a random enemy target for 2 turns (DoT equal to 70% ATK).",
+      "desc": "Permanently increases own HP by. When an enemy's [Burn] expires, inflicts [Burn] on a random enemy target for 2 turns (DoT equal to 70% ATK).",
       "icon": "/Skill/Blue Fire (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). When an enemy's [Burn] expires, inflicts [Burn] on a random enemy target for 2 turns (DoT equal to 80% ATK).",
+      "desc": "Permanently increases own HP by. When an enemy's [Burn] expires, inflicts [Burn] on a random enemy target for 2 turns (DoT equal to 80% ATK).",
       "icon": "/Skill/Blue Fire (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

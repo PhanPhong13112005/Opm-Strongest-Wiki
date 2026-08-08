@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST trực tiếp lên một mục tiêu đơn bằng 2 đòn liên tiếp.",
+      "desc": "Gây 120% ATK Sát Thương Trực Tiếp cho một mục tiêu bằng 2 đòn đánh liên tiếp.",
       "icon": "/Skill/Amai Mask (URplus)/Skill_base.png",
       "type": "Kỹ năng thường",
       "animation": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 3 đòn liên tiếp vào một mục tiêu đơn, gây 1500% ST dưới dạng [Sát Thương Trực Tiếp Chuyên Biệt] (chỉ chịu ảnh hưởng của DMG Reduction cấp cao), vô hiệu 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] của mục tiêu, đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Hồi cho toàn bộ đồng minh 10% Máu tối đa dưới dạng [HP Chuyên Biệt] (có thể chí mạng).",
+      "desc": "Gây 1500% ATK sát thương dưới dạng [Sát Thương Trực Tiếp Chuyên Biệt] (chỉ chịu ảnh hưởng bởi Tăng Sát Thương Nâng Cao và Kháng Sát Thương) lên một mục tiêu địch bằng 3 đòn liên tiếp, bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên thủng [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Phục hồi HP của tất cả đồng minh bằng 10% HP tối đa × [HP Chuyên Biệt] của chính họ (có thể CRIT).",
       "icon": "/Skill/Amai Mask (URplus)/skill_ult.png",
       "type": "Tuyệt kĩ",
       "animation": "/Animation/Amai_Urplus/ult.gif",
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "[Sát Thương Trực Tiếp Chuyên Biệt] 1500% > 2400% ST. Vô hiệu [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] 45% > 60%. Hồi cho toàn bộ đồng minh 10% > 15% Máu tối đa dưới dạng [HP Chuyên Biệt].",
+      "desc": "[Sát Thương Trực Tiếp Chuyên Biệt] 1500% > 2400% ATK. Phủ định [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] 45% > 60%. Chữa lành vết thương cho tất cả đồng minh 10% > 15% HP tối đa dưới dạng [HP Chuyên Biệt].",
       "keepsakeIcon": "/Keepsake/Amai Mask (URplus)/Keepsake_URplus.png",
       "icon": "/Skill/Amai Mask (URplus)/skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Nhận 60% [Khả Năng Né Tránh Chuyên Biệt]. Giảm 40% [Thần Tốc - Tấn Công] và [Thần Tốc - Phòng Thủ] của kẻ địch. Trước khi bất kỳ nhân vật nào hành động, giải trừ [Choáng], [Choáng Chuyên Biệt] và [Uy Hiếp] cho toàn bộ đồng minh.",
+      "desc": "Tăng vĩnh viễn HP của riêng mình theo điểm. Khi trận chiến bắt đầu, nhận được 60% [Khả Năng Né Tránh Chuyên Biệt]. Giảm 40% [Thần Tốc - Tấn Công] và [Thần Tốc - Phòng Thủ] áp dụng cho mục tiêu. Sau khi bất kỳ nhân vật nào thực hiện hành động, hãy loại bỏ [Choáng], [Choáng Chuyên Biệt] và [Uy Hiếp] khỏi tất cả các đồng minh.",
       "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
       "type": "Nội tại",
       "animation": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Khả Năng Né Tránh Chuyên Biệt] 60% > 70%.",
+      "desc": "Tăng vĩnh viễn HP của riêng mình theo điểm. Khi trận chiến bắt đầu, nhận được 70% [Khả Năng Né Tránh Chuyên Biệt]. Giảm 60% [Thần Tốc - Tấn Công] và [Thần Tốc - Phòng Thủ] áp dụng cho mục tiêu. Sau khi bất kỳ nhân vật nào thực hiện hành động, hãy loại bỏ [Choáng], [Choáng Chuyên Biệt] và [Uy Hiếp] khỏi tất cả các đồng minh.",
       "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
       "type": "Nội tại",
       "animation": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Khả Năng Né Tránh Chuyên Biệt] 70% > 80%. Giảm 40% > 70% [Thần Tốc - Tấn Công] và [Thần Tốc - Phòng Thủ] của kẻ địch.",
+      "desc": "Tăng vĩnh viễn HP của riêng mình theo điểm. Khi trận chiến bắt đầu, nhận được 80% [Khả Năng Né Tránh Chuyên Biệt]. Giảm 70% [Thần Tốc - Tấn Công] và [Thần Tốc - Phòng Thủ] áp dụng cho mục tiêu. Sau khi bất kỳ nhân vật nào thực hiện hành động, hãy loại bỏ [Choáng], [Choáng Chuyên Biệt] và [Uy Hiếp] khỏi tất cả các đồng minh.",
       "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
       "type": "Nội tại",
       "animation": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Nếu Máu tối đa của đồng minh thấp hơn 70% Máu tối đa của Amai Mask, vĩnh viễn tăng 30% Máu tối đa. Khi trận đấu bắt đầu, nhận 30% [Giảm Sát Thương Theo Kháng]. — [Giảm Sát Thương Theo Kháng]: giảm 30% ST nhận vào; nếu Máu gốc cao hơn kẻ tấn công thì tăng lên 150%.",
+      "desc": "Nếu HP tối đa ban đầu của đồng minh thấp hơn 70% HP tối đa của Mặt Nạ Ngọt Ngào, thì HP tối đa ban đầu của họ sẽ tăng vĩnh viễn thêm 30%. Nhận được 30% [Giảm Sát Thương Đối Kháng] khi bắt đầu trận chiến. [Giảm Sát Thương Đối Kháng]: Giảm 30% DMG phải chịu. Khi HP ban đầu cao hơn của kẻ tấn công, Mức tăng Kháng Sát Thương được nâng lên 1,5×.",
       "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
       "type": "Thức tỉnh",
       "animation": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Máu tối đa 30% > 50%. [Giảm Sát Thương Theo Kháng] 30% > 40% (nếu Máu cao hơn thì 150% > 170%).",
+      "desc": "Nếu HP tối đa ban đầu của một đồng minh thấp hơn 70% HP tối đa ban đầu của Mặt Nạ Ngọt Ngào, thì HP tối đa ban đầu của đồng minh đó sẽ tăng vĩnh viễn thêm 42%. Khi trận chiến bắt đầu, Mặt Nạ Ngọt Ngào tăng 40% [Phòng Thủ Phản Kháng]. Khi vòng thứ hai bắt đầu, tất cả đồng minh sẽ hồi phục [HP Chuyên Biệt] bằng 20% ​​HP tối đa của chính họ (lần hồi phục này có thể là CRIT). [Phòng Thủ Phản Kháng]: Giảm 40% DMG phải chịu. Nếu HP tối đa ban đầu của Mặt Nạ Ngọt Ngào cao hơn kẻ tấn công thì Giảm Sát Thương sẽ tăng lên 1,7×.",
       "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
       "type": "Thức tỉnh",
       "animation": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
       "type": "Thức tỉnh",
       "animation": null,

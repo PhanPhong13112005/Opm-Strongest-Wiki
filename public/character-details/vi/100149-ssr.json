@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Nhận 50% [Hút Máu] cho bản thân. Gây 120% ST lên mục tiêu đơn.",
+      "desc": "Tăng 50% Hút máu trong 1 lượt, sau đó tấn công một mục tiêu, gây 120% ATK DMG.",
       "icon": "/Skill/Eyesight (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Nhận 50% [Hút Máu] cho bản thân. Gây 30% ST lên toàn bộ kẻ địch và [Choáng] mục tiêu. Tăng 20% [Sát Thương Gây Ra] cho toàn bộ đồng minh Quái nhân.",
+      "desc": "Tăng 50% Hút máu trong 2 lượt, sau đó tấn công tất cả kẻ địch bằng 5 đòn đánh liên tiếp, gây 150% ATK DMG. Có 100% cơ hội gây [Choáng] lên mục tiêu chính trong 1 lượt. [Choáng]: Ngăn chặn thiết bị bị ảnh hưởng hoạt động. Tối đa 4 ký tự có thể bị ảnh hưởng bởi [Choáng] cùng một lúc. Sau khi tấn công, cấp cho tất cả các đồng minh Quái vật [Cuồng Nộ] cho hành động tiếp theo của họ. [Cuồng Nộ]: Tăng ATK thêm 20% trong lần hành động trực tiếp tiếp theo.",
       "icon": "/Skill/Eyesight (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Nhận 50% [Hút Máu]; mục tiêu mở rộng từ bản thân thành toàn bộ đồng minh Quái nhân. Gây 30% > 40% ST lên toàn bộ kẻ địch và [Choáng] mục tiêu. Tăng 20% > 30% [Sát Thương Gây Ra] cho toàn bộ đồng minh Quái nhân.",
+      "desc": "Cấp cho tất cả Quái vật đồng minh 50% Hút máu trong 2 lượt, sau đó tấn công tất cả kẻ địch bằng 5 đòn liên tiếp, gây 200% ATK DMG. Có 100% cơ hội gây [Choáng] lên mục tiêu chính trong 1 lượt. [Choáng]: Ngăn chặn thiết bị bị ảnh hưởng hoạt động. Tối đa 4 ký tự có thể bị ảnh hưởng bởi [Choáng] cùng một lúc. Sau khi tấn công, cấp cho tất cả các đồng minh Quái vật [Cuồng Nộ] cho hành động tiếp theo của họ. [Cuồng Nộ]: Tăng ATK thêm 30% trong lần hành động trực tiếp tiếp theo.",
       "keepsakeIcon": "/Keepsake/Eyesight (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Eyesight (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Trong 2 lượt đầu, tăng ST của các nhân vật hệ Tâm Linh đồng minh thêm 25%. Ngoài ra, giảm ST của toàn bộ nhân vật phe Anh Hùng địch đi 25%.",
+      "desc": "Trong 2 vòng đầu tiên, tăng 25% ATK của tất cả đồng minh Esper và giảm 25% ATK của tất cả kẻ thù.",
       "icon": "/Skill/Eyesight (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi vào trận, tăng 25% > 30% [ATK] cho toàn bộ đồng minh Tâm Linh. Ngoài ra tăng 40% DMG Reduction cho toàn bộ đồng minh Quái nhân.",
+      "desc": "Trong 2 vòng đầu tiên, tăng 30% ATK của tất cả đồng minh Esper và giảm 30% ATK của tất cả kẻ thù. Ngoài ra, các đồng minh Quái vật nhận ít hơn 40% DMG từ [Trọng Thương], [Nội Thương] và [Tụ Lực] trong 2 hiệp.",
       "icon": "/Skill/Eyesight (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi vào trận, tăng 30% [ATK] cho toàn bộ đồng minh Tâm Linh và 40% DMG Reduction cho toàn bộ đồng minh Quái nhân.",
+      "desc": "Trong 3 vòng đầu tiên, tăng 30% ATK của tất cả đồng minh Esper và giảm 30% ATK của tất cả kẻ thù. Ngoài ra, các đồng minh Quái vật nhận ít DMG hơn 40% từ [Trọng Thương], [Nội Thương] và [Tụ Lực] trong 3 hiệp.",
       "icon": "/Skill/Eyesight (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

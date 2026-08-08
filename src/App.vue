@@ -54,8 +54,8 @@ const roleMenuItem = computed(() => {
   }
   return { to: '/forum', label: 'Vào Diễn đàn', hint: 'Trao đổi cùng cộng đồng', code: 'DD' }
 })
-const systemRoutes = ['/equipment', '/buff-gear', '/backgear', '/keepsakes', '/insignias']
-const featureRoutes = ['/mastery', '/core-lab', '/medals', '/tactics']
+const systemRoutes = ['/equipment', '/buff-gear', '/stats', '/backgear', '/keepsakes', '/insignias']
+const featureRoutes = ['/mastery', '/core-lab', '/medals', '/tactics', '/talents']
 const isSystemsRoute = computed(() => systemRoutes.some(path => route.path.startsWith(path)))
 const isFeaturesRoute = computed(() => featureRoutes.some(path => route.path.startsWith(path)))
 const toggleMobileMenu = () => {
@@ -177,6 +177,7 @@ onBeforeUnmount(() => {
               <RouterLink to="/core-lab">{{ t('nav.corelab') }}</RouterLink>
               <RouterLink to="/medals">{{ t('nav.medals') }}</RouterLink>
               <RouterLink to="/tactics">{{ t('nav.tactics') }}</RouterLink>
+              <RouterLink to="/talents">{{ t('nav.talents') }}</RouterLink>
             </div>
           </div>
           <div class="group relative">
@@ -187,6 +188,7 @@ onBeforeUnmount(() => {
             <div class="site-nav-menu">
               <RouterLink to="/equipment">{{ t('nav.equipment') }}</RouterLink>
               <RouterLink to="/buff-gear">{{ t('nav.buffGear') }}</RouterLink>
+              <RouterLink to="/stats">{{ t('nav.stats') }}</RouterLink>
               <RouterLink to="/backgear">{{ t('nav.backgear') }}</RouterLink>
               <RouterLink to="/keepsakes">{{ t('nav.keepsakes') }}</RouterLink>
               <RouterLink to="/insignias">{{ t('nav.insignias') }}</RouterLink>
@@ -260,7 +262,7 @@ onBeforeUnmount(() => {
           <section class="mobile-command-menu__section">
             <button type="button" class="mobile-command-menu__toggle" :class="{ 'is-active': isFeaturesRoute }" :aria-expanded="isMobileFeaturesOpen" @click="isMobileFeaturesOpen = !isMobileFeaturesOpen">
               <span>{{ t('nav.features') }}</span>
-              <small>04</small>
+              <small>05</small>
               <svg :class="{ 'is-open': isMobileFeaturesOpen }" viewBox="0 0 20 20" fill="none" stroke="currentColor"><path d="m5 7.5 5 5 5-5" stroke-width="1.8" /></svg>
             </button>
             <transition name="mobile-features">
@@ -269,6 +271,7 @@ onBeforeUnmount(() => {
                 <RouterLink to="/core-lab">{{ t('nav.corelab') }}</RouterLink>
                 <RouterLink to="/medals">{{ t('nav.medals') }}</RouterLink>
                 <RouterLink to="/tactics">{{ t('nav.tactics') }}</RouterLink>
+              <RouterLink to="/talents">{{ t('nav.talents') }}</RouterLink>
               </div>
             </transition>
           </section>
@@ -276,13 +279,14 @@ onBeforeUnmount(() => {
           <section class="mobile-command-menu__section">
             <button type="button" class="mobile-command-menu__toggle" :class="{ 'is-active': isSystemsRoute }" :aria-expanded="isMobileSystemsOpen" @click="isMobileSystemsOpen = !isMobileSystemsOpen">
               <span>{{ t('nav.systems') }}</span>
-              <small>05</small>
+              <small>06</small>
               <svg :class="{ 'is-open': isMobileSystemsOpen }" viewBox="0 0 20 20" fill="none" stroke="currentColor"><path d="m5 7.5 5 5 5-5" stroke-width="1.8" /></svg>
             </button>
             <transition name="mobile-features">
               <div v-if="isMobileSystemsOpen" class="mobile-command-menu__features">
                 <RouterLink to="/equipment">{{ t('nav.equipment') }}</RouterLink>
                 <RouterLink to="/buff-gear">{{ t('nav.buffGear') }}</RouterLink>
+              <RouterLink to="/stats">{{ t('nav.stats') }}</RouterLink>
                 <RouterLink to="/backgear">{{ t('nav.backgear') }}</RouterLink>
                 <RouterLink to="/keepsakes">{{ t('nav.keepsakes') }}</RouterLink>
                 <RouterLink to="/insignias">{{ t('nav.insignias') }}</RouterLink>

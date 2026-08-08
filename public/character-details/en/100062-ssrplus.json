@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 60% ATK direct DMG to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target with 2 consecutive strikes.",
       "icon": "/Skill/Groribas (SSR+)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 50% ATK direct DMG to all enemies, then inflicts [Smart Corrosion] (a corrosion damage-over-time) on the target area and applies [Nullity] to all enemies.",
+      "desc": "Attacks all enemies with 2 consecutive strikes, dealing 250% ATK DMG. Has a 100% chance to inflict [Specialized Corrode] on the main target and surrounding units. [Specialized Corrode]: Deals 120% ATK as Continuous DMG. After any character acts, transfers to a random valid target and disappears after transferring 5 times. Negates Extra DMG caused by DMG Reflect for the entire battle.",
       "icon": "/Skill/Groribas (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 50% > 80% ATK direct DMG to all enemies, then inflicts [Smart Corrosion] (a corrosion damage-over-time) on the target area > all enemies and applies [Nullity] to all enemies.",
+      "desc": "Attacks all enemies with 2 consecutive strikes, dealing 400% ATK DMG. Has a 100% chance to inflict [Specialized Corrode] on the main target and surrounding units. [Specialized Corrode]: Deals 180% ATK as Continuous DMG. After any character acts, transfers to a random valid target and disappears after transferring 5 times. Negates Extra DMG caused by DMG Reflect for the entire battle.",
       "keepsakeIcon": "/Keepsake/Groribas (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Groribas (SSR+)/Skill_ult.png",
       "type": "Ultimate",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by 20%. At the end of its own turn, if any enemy is afflicted with a DoT, deals 60% ATK extra DMG to all enemies and applies [Stick] to up to 6 enemies afflicted with [Smart Corrosion].",
+      "desc": "When enemies receive Continuous DMG, immediately deals Extra DMG to all enemies equal to 60% of that Continuous DMG. Only one effect of this type can take effect throughout the battle. Enemies affected by [Specialized Corrode] also gain [Stuck] for 2 rounds. [Stuck]: Prevents the affected unit from initiating [Follow-Up] and [Continuous Follow-Up].",
       "icon": "/Skill/Groribas (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by 20%. At the end of its own turn, if any enemy is afflicted with a DoT, deals 60% > 70% ATK extra DMG to all enemies and applies [Stick] to up to 6 enemies afflicted with [Smart Corrosion].",
+      "desc": "When enemies receive Continuous DMG, immediately deals Extra DMG to all enemies equal to 75% of that Continuous DMG. Only one effect of this type can take effect throughout the battle. Enemies affected by [Specialized Corrode] also gain [Stuck] for 2 rounds. [Stuck]: Prevents the affected unit from initiating [Follow-Up] and [Continuous Follow-Up].",
       "icon": "/Skill/Groribas (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by 20%. At the end of its own turn, if any enemy is afflicted with a DoT, deals 70% > 80% ATK extra DMG to all enemies and applies [Stick] to up to 6 enemies afflicted with [Smart Corrosion].",
+      "desc": "When enemies receive Continuous DMG, immediately deals Extra DMG to all enemies equal to 80% of that Continuous DMG. Only one effect of this type can take effect throughout the battle. Enemies affected by [Specialized Corrode] also gain [Stuck] for 2 rounds. [Stuck]: Prevents the affected unit from initiating [Follow-Up] and [Continuous Follow-Up].",
       "icon": "/Skill/Groribas (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "When battle begins, grants [Specialized DMG Reflect] (reduce direct DMG and Extra DMG by 50%, reflects 50% of the original DMG back to the attacker, lasts for the whole battle.) After any character acts, restores Groribas' and its column [Specialized Guard] by 100% of the DOT on enemies.",
+      "desc": "At battle start, permanently gains [Specialized DMG Reflect]. [Specialized DMG Reflect]: Reduces Direct DMG and Extra DMG received by 50%, and reflects Extra DMG equal to 50% of the original DMG back to the attacker. After any character acts, absorbs 100% of the Continuous DMG suffered by enemies to restore own [Specialized Guard].",
       "icon": "/Skill/Groribas (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "After any character acts, Groribas and its column …",
+      "desc": "At battle start, permanently gains [Specialized DMG Reflect]. [Specialized DMG Reflect]: Reduces Direct DMG and Extra DMG received by 50%, and reflects Extra DMG equal to 50% of the original DMG back to the attacker. After any character acts, absorbs 100% of the Continuous DMG suffered by enemies to restore [Specialized Guard] for self and allies in the same row.",
       "icon": "/Skill/Groribas (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

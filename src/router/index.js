@@ -19,6 +19,8 @@ const HistoryView = () => import('../views/HistoryView.vue')
 const MedalsView = () => import('../views/MedalsView.vue')
 const TacticsView = () => import('../views/TacticsView.vue')
 const BackgearView = () => import('../views/BackgearView.vue')
+const StatsView = () => import('../views/StatsView.vue')
+const TalentsView = () => import('../views/TalentsView.vue')
 const AdminLoginView = () => import('../views/AdminLoginView.vue')
 const AdminCharactersView = () => import('../views/AdminCharactersView.vue')
 const UserPortalView = () => import('../views/UserPortalView.vue')
@@ -51,6 +53,15 @@ const router = createRouter({
       component: BackgearView
     },
     {
+      path: '/stats',
+      name: 'stats',
+      component: StatsView
+    },
+    {
+      path: '/talents',
+      name: 'talents',
+      component: TalentsView
+    },    {
       path: '/',
       name: 'home',
       component: HomeView

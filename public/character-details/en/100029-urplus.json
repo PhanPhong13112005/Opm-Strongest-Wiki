@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 3 consecutive strikes to a single target for 1500% ATK as [Specialized Direct DMG] (only affected by high-level DMG Reduction), negating 45% of the target's [Specialized Evasion] and [Non-Crit DMG Reduction], and piercing [Unyielding] and [Specialized Unyielding]. Heals all allies for 10% Max HP as [Specialized HP] (can crit).",
+      "desc": "Deals 1500% ATK damage as [Specialized Direct Damage] (influenced only by advanced DMG Boost and DMG Res) to a single enemy target with 3 consecutive strikes, ignoring 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and penetrating [Unyielding] and [Specialized Unyielding]. Restores all allies’ HP equal to 10% of their own Max HP × [Specialized HP] (can crit).",
       "icon": "/Skill/Amai Mask (URplus)/skill_ult.png",
       "type": "Ultimate",
       "animation": "/Animation/Amai_Urplus/ult.gif",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Gains 60% [Specialized Evasion]. Reduces enemies' [Rapid Divinity - ATK] and [Rapid Divinity - DEF] by 40%. Before any character acts, cleanses [Stun], [Specialized Stun] and [Deterrence] from all allies.",
+      "desc": "Permanently increases own HP by points. When battle begins, gains 60% [Specialized Evasion]. Reduces [Rapid Divinity - Attack] and [Rapid Divinity - Defend] applied to the target by 40%. After any character takes action, removes [Stun], [Specialized Stun], and [Intimidation] from all allies.",
       "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
       "type": "Passive",
       "animation": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Specialized Evasion] 60% > 70%.",
+      "desc": "Permanently increases own HP by points. When battle begins, gains 70% [Specialized Evasion]. Reduces [Rapid Divinity - Attack] and [Rapid Divinity - Defend] applied to the target by 60%. After any character takes action, removes [Stun], [Specialized Stun], and [Intimidation] from all allies.",
       "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
       "type": "Passive",
       "animation": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Specialized Evasion] 70% > 80%. Reduces enemies' [Rapid Divinity - ATK] and [Rapid Divinity - DEF] by 40% > 70%.",
+      "desc": "Permanently increases own HP by points. When battle begins, gains 80% [Specialized Evasion]. Reduces [Rapid Divinity - Attack] and [Rapid Divinity - Defend] applied to the target by 70%. After any character takes action, removes [Stun], [Specialized Stun], and [Intimidation] from all allies.",
       "icon": "/Skill/Amai Mask (URplus)/skill_pas.png",
       "type": "Passive",
       "animation": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "If an ally's Max HP is lower than 70% of Amai Mask's Max HP, permanently increases Max HP by 30%. When battle begins, gains 30% [Reduced DMG from Resistance]. — [Reduced DMG from Resistance]: reduces DMG received by 30%; if original HP is higher than the attacker's, increases to 150%.",
+      "desc": "If an ally’s original Max HP is below 70% of Amai Mask’s Max HP, permanently increases their original Max HP by 30%. Gains 30% [Struggle DMG Reduction] at the start of battle. [Struggle DMG Reduction]: Reduces the DMG taken by 30%. When original HP is higher than the attacker’s, DMG Res Increase is raised to 1.5×.",
       "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
       "type": "Awakening",
       "animation": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Max HP 30% > 50%. [Reduced DMG from Resistance] 30% > 40% (if HP is higher, 150% > 170%).",
+      "desc": "If an ally’s original Max HP is lower than 70% of Amai Mask’s original Max HP, permanently increases that ally’s original Max HP by 42%. When battle begins, Amai Mask gains 40% [Defiance Guard]. When the second round begins, all allies recover [Specialized HP] equal to 20% of their own Max HP (this recovery can crit). [Defiance Guard]: Reduces DMG taken by 40%. If Amai Mask’s original Max HP is higher than the attacker’s, the DMG reduction increases to 1.7×.",
       "icon": "/Skill/Amai Mask (URplus)/skill_awk.png",
       "type": "Awakening",
       "animation": null,

@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tấn công mục tiêu đơn với 2 đòn liên kích gây 50% ST sát thương.",
+      "desc": "Tấn công một mục tiêu bằng 2 đòn kết hợp gây 50% ATK DMG.",
       "icon": "/Skill/Konbu Infinity (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công toàn bộ địch với 2 đòn liên kích gây 40% ST sát thương, với 100% tỉ lệ gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (sát thương theo thời gian bằng 20% ST).",
+      "desc": "Tấn công tất cả kẻ thù bằng 2 đòn kết hợp gây ra 40% ATK DMG, với 100% cơ hội gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (DoT bằng 20% ​​ATK).",
       "icon": "/Skill/Konbu Infinity (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tấn công toàn bộ địch với 2 đòn liên kích gây 40% ST sát thương, với 100% tỉ lệ gây [Ăn Mòn] lên mục tiêu chính và 50% tỉ lệ gây [Ăn Mòn] lên các đơn vị xung quanh mục tiêu chính trong 2 lượt (sát thương theo thời gian bằng 20% ST).",
+      "desc": "Tấn công tất cả kẻ địch bằng 2 đòn combo gây 40% ATK DMG, với 100% cơ hội gây [Ăn Mòn] lên mục tiêu chính và 50% cơ hội gây [Ăn Mòn] lên các đơn vị xung quanh mục tiêu chính trong 2 lượt (DoT bằng 20% ATK).",
       "keepsakeIcon": "/Keepsake/Konbu Infinity (SR)/Keepsake_SR.png",
       "icon": "/Skill/Konbu Infinity (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Khi một kẻ địch bị [Ăn Mòn] hành động, hồi phục cho bản thân 10% Máu tối đa (tối đa 3 lần mỗi lượt).",
+      "desc": "Tự tăng vĩnh viễn HP tối đa%. Khi kẻ địch bị nhiễm [Ăn Mòn] hành động, bản thân sẽ tự hồi phục 10% HP tối đa (tối đa 3 lần mỗi lượt).",
       "icon": "/Skill/Konbu Infinity (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Khi một kẻ địch bị [Ăn Mòn] hành động, hồi phục cho bản thân 15% Máu tối đa (tối đa 3 lần mỗi lượt).",
+      "desc": "Tự tăng vĩnh viễn HP tối đa%. Khi kẻ địch dính [Ăn Mòn] hành động, bản thân sẽ tự hồi phục 15% HP tối đa (tối đa 3 lần mỗi lượt).",
       "icon": "/Skill/Konbu Infinity (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Khi một kẻ địch bị [Ăn Mòn] hành động, hồi phục cho bản thân 17% Máu tối đa (tối đa 3 lần mỗi lượt).",
+      "desc": "Tự tăng vĩnh viễn HP tối đa%. Khi kẻ địch dính [Ăn Mòn] hành động, bản thân sẽ tự hồi phục 17% HP tối đa (tối đa 3 lần mỗi lượt).",
       "icon": "/Skill/Konbu Infinity (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

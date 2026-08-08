@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK [Direct DMG] to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Pig God (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 800% ATK [Direct DMG] to the target area, then hits all enemies with 150% ATK [Ice DMG]. Lowers [Energy Shield Rate] of all enemies by 30% and raises it for all allies by 30%. Inflicts [Corrosion] on the main target, dealing 300% ATK DoT.",
+      "desc": "Deals 800% ATK as Direct DMG to enemies within a cross-shaped area and has a 100% chance to inflict [Lock] on all enemies for 2 rounds. Reduces all enemies’ [Specialized Resilience Rate] by 30% and increases all allies’ [Specialized Resilience Rate] by 30%. Has a 100% chance to inflict [Specialized Corrosion] on the main target. [Lock]: Prevents [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]. Before any character acts, deals 150% ATK [Lock] DoT (can CRIT and cannot be [Evaded]). [Specialized Corrosion]: Deals Continuous DMG equal to 300% ATK. Disappears after triggering 10 times. After any character acts, transfers to a target that can receive DMG. [Specialized Resilience Rate]: Affects the amount of DMG that [Specialized Resilience] can absorb for each Shield point.",
       "icon": "/Skill/Pig God (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 800% > 1100% ATK [Direct DMG] to the target area, then hits all enemies with 150% > 200% ATK [Ice DMG]. Lowers [Energy Shield Rate] of all enemies by 30% > 50% and raises it for all allies by 30% > 50%. Inflicts [Corrosion] on the main target, dealing 300% > 400% ATK DoT.",
+      "desc": "Deals 1100% ATK as Direct DMG to enemies within a cross-shaped area and has a 100% chance to inflict [Lock] on all enemies for 2 rounds. Reduces all enemies’ [Specialized Resilience Rate] by 50% and increases all allies’ [Specialized Resilience Rate] by 50%. Has a 100% chance to inflict [Specialized Corrosion] on the main target. [Lock]: Prevents [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]. Before any character acts, deals 200% ATK [Lock] DoT (can CRIT and cannot be [Evaded]). [Specialized Corrosion]: Deals Continuous DMG equal to 300% ATK. Disappears after triggering 10 times. After any character acts, transfers to a target that can receive DMG. [Specialized Resilience Rate]: Affects the amount of DMG that [Specialized Resilience] can absorb for each Shield point.",
       "icon": "/Skill/Pig God (UR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Pig God (UR)/Keepsake_UR.png",
       "type": "Ultimate",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by 20%. Gains 60% [Non-Crit DMG Free]. Reduces [Chain Explosion] DMG received by 60%.[Non-Crit DMG Free]: effective for all DMG types; cannot co-exist with [Agility].",
+      "desc": "Gains 60% [Non-Crit DMG Free]. Reduces [Continuous Explosion DMG] received by all allies by 60%.",
       "icon": "/Skill/Pig God (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Non-Crit DMG Free] 60% &gt; 70%. [Chain Explosion] DMG reduction 60% &gt; 70%.",
+      "desc": "Gains 70% [Non-Crit DMG Free]. Reduces [Continuous Explosion DMG] received by all allies by 70%.",
       "icon": "/Skill/Pig God (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Non-Crit DMG Free] 70% &gt; 80%. [Chain Explosion] DMG reduction 70% &gt; 80%.",
+      "desc": "Gains 80% [Non-Crit DMG Free]. Reduces [Continuous Explosion DMG] received by all allies by 80%.",
       "icon": "/Skill/Pig God (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -68,7 +68,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "When battle begins, all allies gain a [Toughness] effect equal to 100% of their own Max HP. After any character takes action, 4 random enemy characters receive [True DMG] equal to 100% of the original Locked total DMG. ———- [Toughness]: Absorbs 100% of own health in damage. [True Damage]: Not affected by damage increase or damage reduction, it is damage directly inflicted on the target's HP that cannot be shared or avoided.",
+      "desc": "At battle start, all allies gain [Specialized Resilience] equal to 100% of their own Max HP. Before any character acts, 4 random enemies receive [True DMG] equal to 100% of the original total [Lock] DMG. [Specialized Resilience]: Absorbs DMG equal to 100% of the affected unit’s Max HP. [True DMG]: Not affected by DMG Rate or DMG Free and deals Direct DMG without [DMG Sharing] or [Evasion].",
       "icon": "/Skill/Pig God (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -77,7 +77,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "When battle begins, all allies obtain [Resilience] equal to 100% (150%) of their own Max HP and a 100% chance to inflict [Locked On] equal to 100% ATK. After any character acts, inflicts the total [Locked On] as 100% (150%) [True DMG] to 4 random enemies (the entire enemy team at the upgraded rank).[Resilience]: absorbs DMG equal to 100% (150%) HP.[True DMG]: not affected by DMG Rate or DMG Free; deals direct DMG unaffected by [DMG Sharing] or [Instant DMG Evasion].",
+      "desc": "At battle start, all allies gain [Specialized Resilience] equal to 150% of their own Max HP. Before any character acts, 4 random enemies receive [True DMG] equal to 150% of the original total [Lock] DMG. At battle start, has a 100% chance to inflict [Lock] on all enemies, dealing 100% ATK DMG for 1 turn. [Specialized Resilience]: Absorbs DMG equal to 150% of the affected unit’s Max HP. [True DMG]: Not affected by DMG Rate or DMG Free and deals Direct DMG without [DMG Sharing] or [Evasion].",
       "icon": "/Skill/Pig God (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

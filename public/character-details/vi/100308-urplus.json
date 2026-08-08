@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST trực tiếp lên một mục tiêu đơn.",
+      "desc": "Gây combo 2 đòn cho một mục tiêu, mỗi đòn gây 120% ATK DMG.",
       "icon": "/Skill/Genos (URplus)/Skill_base.png",
       "type": "Kỹ năng thường",
       "animation": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 5 đòn liên tiếp gây 5000% ST [Sát Thương Trực Tiếp Chuyên Biệt] lên toàn bộ kẻ địch. Vô hiệu 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt].",
+      "desc": "Gây một combo 5 đòn cho tất cả kẻ thù, mỗi đòn gây ra 5000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] (chỉ bị ảnh hưởng bởi các công cụ sửa đổi DMG nâng cao). Bỏ qua 45% [Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt].",
       "icon": "/Skill/Genos (URplus)/skill_ult.png",
       "type": "Tuyệt kĩ",
       "animation": "/Animation/Genos_Urplus/ult.gif",
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tăng 30% Tỉ lệ Chí mạng trong 1 lượt. Nếu ST cao hơn mục tiêu, có 130% khả năng giảm 2% giảm-ST-Specialized-HP của mục tiêu trong 4 lượt. Sát thương Tối Thượng 5000% > 7000% ST; mức vô hiệu [Khả Năng Né Tránh Chuyên Biệt] 45% > 60%.",
+      "desc": "Gây một combo 5 đòn cho tất cả kẻ thù, mỗi đòn gây ra 7000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] (chỉ bị ảnh hưởng bởi các công cụ sửa đổi DMG nâng cao). Bỏ qua 60% [Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Tăng Tỷ lệ CRIT của bản thân thêm 30% trong 1 lượt. Nếu ATK cao hơn mục tiêu, có 130% cơ hội giảm 3% [Giảm Sát Thương HP Chuyên Biệt] của mục tiêu trong 4 lượt.",
       "keepsakeIcon": "/Keepsake/Genos (URplus)/Keepsake_URplus.png",
       "icon": "/Skill/Genos (URplus)/skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Nhận 60% [Giảm Sát Thương Không Bạo Kích]. Khi có 2 mục tiêu trở xuống, [Sát Thương Trực Tiếp Chuyên Biệt] tăng 30%.",
+      "desc": "Khi bắt đầu trận chiến, tăng 60% [Giảm Sát Thương Không Bạo Kích]. Khi số lượng mục tiêu tấn công là 2 hoặc ít hơn, [Sát Thương Trực Tiếp Chuyên Biệt] được tăng thêm 30%.",
       "icon": "/Skill/Genos (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "animation": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] 60% > 70%. [Sát Thương Trực Tiếp Chuyên Biệt] 30% > 40%.",
+      "desc": "Khi bắt đầu trận chiến, tăng 70% [Giảm Sát Thương Không Bạo Kích]. Khi số lượng mục tiêu tấn công là 2 hoặc ít hơn, [Sát Thương Trực Tiếp Chuyên Biệt] được tăng thêm 40%.",
       "icon": "/Skill/Genos (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "animation": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] 70% > 80%. [Sát Thương Trực Tiếp Chuyên Biệt] 40% > 50%.",
+      "desc": "Khi bắt đầu trận chiến, tăng 80% [Giảm Sát Thương Không Bạo Kích]. Khi số lượng mục tiêu tấn công là 2 hoặc ít hơn, [Sát Thương Trực Tiếp Chuyên Biệt] được tăng thêm 50%.",
       "icon": "/Skill/Genos (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "animation": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Nhận 30% [Giảm Sát Thương Áp Chế]. Đồng minh có [Giảm Sát Thương Áp Chế] và Genos nhận 30% [Tăng Sát Thương Áp Chế]. — [Giảm Sát Thương Áp Chế]: giảm 30% ST nhận vào; khi ATK cao hơn kẻ tấn công, giảm thêm 150%. [Tăng Sát Thương Áp Chế]: tăng 30% ST gây ra; khi ATK cao hơn mục tiêu, tăng thêm 150%.",
+      "desc": "Khi bắt đầu trận chiến, nhận được 30% [Phòng Thủ Áp Chế]. Đồng minh (bao gồm cả bản thân) với [Phòng Thủ Áp Chế] cũng nhận được 30% [Tăng Cường Áp Chế]. [Phòng Thủ Áp Chế]: Giảm 40% DMG phải chịu. Nếu Sức tấn công của bản thân cao hơn của kẻ tấn công, Giảm Sát Thương được tăng lên 1,5 lần. [Tăng Cường Áp Chế]: Tăng DMG lên 40%. Nếu Sức tấn công của bản thân cao hơn mục tiêu, Tăng Sát Thương được tăng lên 1,5 lần.",
       "icon": "/Skill/Genos (URplus)/skill_awk.png",
       "type": "Thức tỉnh",
       "animation": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "[Giảm Sát Thương Áp Chế] 30% > 40% (khi ATK cao hơn kẻ tấn công, 150% > 170%). [Tăng Sát Thương Áp Chế] 30% > 40% (khi ATK cao hơn mục tiêu, 150% > 170%).",
+      "desc": "Khi bắt đầu trận chiến, nhận được 40% [Phòng Thủ Áp Chế]. Đồng minh (bao gồm cả bản thân) với [Phòng Thủ Áp Chế] cũng nhận được 40% [Tăng Cường Áp Chế]. [Phòng Thủ Áp Chế]: Giảm 40% DMG phải chịu. Nếu Sức tấn công của bản thân cao hơn của kẻ tấn công, Giảm Sát Thương được tăng lên 1,7 lần. [Tăng Cường Áp Chế]: Tăng DMG lên 40%. Nếu Sức tấn công của bản thân cao hơn mục tiêu, Tăng Sát Thương được tăng lên 1,7 lần.",
       "icon": "/Skill/Genos (URplus)/skill_awk.png",
       "type": "Thức tỉnh",
       "animation": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Genos (URplus)/skill_awk.png",
       "type": "Thức tỉnh",
       "animation": null,

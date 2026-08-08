@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 60% ATK Direct DMG to a single target.",
+      "desc": "Deals damage to a single target with 2 Combos for 120% ATK",
       "icon": "/Skill/Melzargard (SSR+)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals Direct DMG equal to 12% of each enemy's Max HP to all enemies, then applies a [Mark] to himself.",
+      "desc": "Deals damage to all targets with 4 Combos for 48% Max HP . After using Ultimate Skill, 1 defeated Character will return to the battle with 100% HP. Can trigger up to 4 times per battle.",
       "icon": "/Skill/Melzargard (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Direct DMG to all enemies increased to 12% > 16% of their Max HP. The self-[Mark] is upgraded to a stronger version.",
+      "desc": "Deals damage to all targets with 4 Combos for 64% Max HP (+2663). After using Ultimate Skill, 2 defeated Characters will return to the battle with 100% HP. Can trigger up to 6 times per battle.",
       "keepsakeIcon": "/Keepsake/Melzargard (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Melzargard (SSR+)/Skill_ult.png",
       "type": "Ultimate",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Passive",
-      "desc": "On entry, gains +20% HP. After any character in his row attacks, triggers [Breakthrough] on the main target. Permanently grants [Immunity against Silence] to his entire row.",
+      "desc": "After taking an action or an ally takes an action, triggers [Evolve] on the target. Permanently grants immunity against [Silence] to all Allies in the row. Permanently increases own HP by points. [Evolve]: Immediately cancels the target’s Unyielding and Ignore DMG statuses.",
       "icon": "/Skill/Melzargard (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Additionally grants [Immunity against Stun].",
+      "desc": "After taking an action or an ally takes an action, triggers [Evolve] on the target. Permanently grants immunity against [Stun/Silence] to all Allies in the row. This effect cannot be ignored. Permanently increases own HP by points. [Evolve]: Immediately cancels the target’s Unyielding and Ignore DMG statuses.",
       "icon": "/Skill/Melzargard (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Breakthrough] trigger: after any character in his row attacks &gt; after any character around Melzargard attacks.",
+      "desc": "After taking an action or surrounding allies take an action, triggers [Evolve] on the target. Permanently grants immunity against [Stun/Silence] to all Allies in the row. This effect cannot be ignored. Permanently increases own HP by points. [Evolve]: Immediately cancels the target’s Unyielding and Ignore DMG statuses.",
       "icon": "/Skill/Melzargard (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "When battle begins, grants the entire team 50% Shield Rate, lasts 2 rounds. Triggers [Reborn] after taking fatal damage (When ally is present, recovers 50% HP before action, up to 2 times)",
+      "desc": "When battle begins, grants 50% Shield Rate to all Allies for 2 rounds. After taking fatal damage, triggers [Reborn]. [Reborn]: When allies are present, recovers 50% HP before the next action, up to 2 times.",
       "icon": "/Skill/Melzargard (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Shield Rate 50% > 70% Recovers HP before action up to 2x > 3x\n[Revive] can be stacked with SSR+ Phoenixman and SSR+ Pig God Revived characters do not get [Specialized Protection] from SSR+ Drive Knight but still can get from their own skills",
+      "desc": "Shield Rate increases from 50% to 70%. The maximum number of [Reborn] activations increases from 2 to 3 times.",
       "icon": "/Skill/Melzargard (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

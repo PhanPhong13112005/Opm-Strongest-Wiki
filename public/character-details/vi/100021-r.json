@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 90% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 90% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Eyelashes (R)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung liên kích 5 đòn gây 38% ST (+2) sát thương lên mục tiêu đơn. Mỗi đòn có 50% xác suất gây 10% ST sát thương lên kẻ địch xung quanh mục tiêu chính.",
+      "desc": "Gây combo 5 đòn 38% ATK (+2) DMG cho một mục tiêu. Mỗi đòn đánh có 50% cơ hội gây 10% ATK DMG cho kẻ địch xung quanh mục tiêu chính.",
       "icon": "/Skill/Eyelashes (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung liên kích 5 đòn gây 38% ST (+2) sát thương lên mục tiêu đơn. Mỗi đòn có 50% xác suất gây 15% ST sát thương lên kẻ địch xung quanh mục tiêu chính.",
+      "desc": "Gây combo 5 đòn 38% ATK (+2) DMG cho một mục tiêu. Mỗi đòn đánh có 50% cơ hội gây 15% ATK DMG cho kẻ thù xung quanh mục tiêu chính.",
       "keepsakeIcon": "/Keepsake/Eyelashes (R)/Keepsake_R.png",
       "icon": "/Skill/Eyelashes (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Ở lượt đầu, nếu Sơn Viên có mặt, tăng sát thương do Eyelash gây ra thêm 20%, kéo dài đến hết trận.",
+      "desc": "Nhận vĩnh viễn HP. Ở lượt đầu tiên, nếu có mặt Khỉ núi, sẽ tăng DMG do Eyelash% gây ra, kéo dài cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Eyelashes (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Ở lượt đầu, nếu Sơn Viên có mặt, tăng sát thương do Eyelash gây ra thêm 30%, kéo dài đến hết trận.",
+      "desc": "Nhận vĩnh viễn HP. Ở lượt đầu tiên, nếu có mặt Mountain Ape, sẽ tăng 30% DMG do Eyelash xử lý, tồn tại cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Eyelashes (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Ở lượt đầu, nếu Sơn Viên có mặt, tăng sát thương do Eyelash gây ra thêm 35%, kéo dài đến hết trận.",
+      "desc": "Nhận vĩnh viễn HP. Ở lượt đầu tiên, nếu có mặt Mountain Ape, sẽ tăng 35% DMG do Eyelash xử lý, tồn tại cho đến cuối trận.",
       "icon": "/Skill/Eyelashes (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

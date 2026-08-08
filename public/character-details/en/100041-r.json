@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20).When deployed together with Vest Black Hole, increases own DMG reduction by 20%, lasting until the end of battle.",
+      "desc": "Permanently increases own HP by.When deployed together with Vest Black Hole, increases own DMG reduction%, lasting until the end of battle.",
       "icon": "/Skill/Tank Top Tiger (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20).When deployed together with Vest Black Hole, increases own DMG reduction by 30%, lasting until the end of battle.",
+      "desc": "Permanently increases own HP by.When deployed together with Vest Black Hole, increases own DMG reduction by 30%, lasting until the end of battle.",
       "icon": "/Skill/Tank Top Tiger (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20).When deployed together with Vest Black Hole, increases own DMG reduction by 35%, lasting until the end of battle.",
+      "desc": "Permanently increases own HP by.When deployed together with Vest Black Hole, increases own DMG reduction by 35%, lasting until the end of battle.",
       "icon": "/Skill/Tank Top Tiger (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

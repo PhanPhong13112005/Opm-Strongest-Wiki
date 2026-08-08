@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung đòn vào mục tiêu đơn, gây 60% ST sát thương.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 400% ST sát thương lên toàn bộ kẻ địch. Gây [Giảm Máu Tối Đa] và [Vô Hiệu Đòn Phụ] (vô hiệu hóa đòn phụ) lên 3 kẻ địch ngẫu nhiên.",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 2 đòn liên tiếp, gây 800% ATK DMG. Đòn tấn công cuối cùng có 100% cơ hội gây [Sụp Đổ Chuyên Biệt] lên 3 kẻ địch ngẫu nhiên trong 3 lượt. Đồng thời có 100% cơ hội gây [Vô Hiệu Hóa Chuyên Biệt] lên 3 kẻ địch ngẫu nhiên trong 2 lượt. [Sụp Đổ Chuyên Biệt]: Giảm DMG miễn phí 10%. Khi bị tấn công, gây 250% ATK của Tia Chớp Chói Lóa thành DMG. Cộng dồn tối đa 3 lần và không cộng dồn với [Nứt Vỡ]. [Vô Hiệu Hóa Chuyên Biệt]: Ngăn chặn theo dõi và theo dõi kết hợp, đồng thời giảm Tỷ lệ DMG%.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 400% > 500% ST sát thương lên toàn bộ kẻ địch. Gây [Giảm Máu Tối Đa] và [Vô Hiệu Đòn Phụ] (vô hiệu hóa đòn phụ) lên 3 kẻ địch ngẫu nhiên > toàn bộ kẻ địch.",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 2 đòn liên tiếp, gây 1000% ATK DMG. Đòn tấn công cuối cùng có 100% cơ hội gây [Sụp Đổ Chuyên Biệt] lên 3 kẻ địch ngẫu nhiên trong 3 lượt. Đồng thời có 100% cơ hội gây [Vô Hiệu Hóa Chuyên Biệt] lên tất cả kẻ địch trong 2 lượt. [Sụp Đổ Chuyên Biệt]: Giảm DMG miễn phí 15%. Khi bị tấn công, gây 350% ATK của Tia Chớp Chói Lóa thành DMG. Cộng dồn tối đa 3 lần và không cộng dồn với [Nứt Vỡ]. [Vô Hiệu Hóa Chuyên Biệt]: Ngăn chặn theo dõi và theo dõi kết hợp, đồng thời giảm 40% Tỷ lệ DMG.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Flashy Flash (UR)/Keepsake_UR.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Đầu trận nhận 60% [Né Sát Thương Tức Thì], tự nhận [Tăng Tốc Chuyên Biệt] (+30% Tốc), và miễn nhiễm [Vô Hiệu Hóa] và [Vô Hiệu Hóa Chuyên Biệt].[Né Sát Thương Tức Thì]: ST Trực Tiếp/Phụ/Charge/Cuồng Nộ chỉ gây 1.",
+      "desc": "Khi trận chiến bắt đầu, nhận được 60% [Né Sát Thương Tức Thì] và [Gia Tốc Chuyên Biệt]. Miễn dịch với [Vô Hiệu Hóa Chuyên Biệt] và [Bám Dính]. [Né Sát Thương Tức Thì]: Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG chỉ gây được 1 điểm DMG. [Gia Tốc Chuyên Biệt]: Tăng tốc độ của bản thân thêm 30%.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Né Sát Thương Tức Thì] 60% &gt; 70%. [Tăng Tốc Chuyên Biệt] Tốc +30% &gt; +34%.",
+      "desc": "Khi trận chiến bắt đầu, nhận được 70% [Né Sát Thương Tức Thì] và [Gia Tốc Chuyên Biệt]. Miễn dịch với [Vô Hiệu Hóa Chuyên Biệt] và [Bám Dính]. [Né Sát Thương Tức Thì]: Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG chỉ gây được 1 điểm DMG. [Gia Tốc Chuyên Biệt]: Tăng tốc độ của bản thân thêm 34%.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Né Sát Thương Tức Thì] 70% &gt; 80%. [Tăng Tốc Chuyên Biệt] Tốc +34% &gt; +38%. Miễn nhiễm thêm [Bám Dính].",
+      "desc": "Khi trận chiến bắt đầu, nhận được 80% [Né Sát Thương Tức Thì] và [Gia Tốc Chuyên Biệt]. Miễn dịch với [Vô Hiệu Hóa Chuyên Biệt] và [Bám Dính]. [Né Sát Thương Tức Thì]: Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG chỉ gây được 1 điểm DMG. [Gia Tốc Chuyên Biệt]: Tăng tốc độ của bản thân thêm 38%.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Sau khi bất kỳ kẻ địch nào hành động, nếu Tốc độ của nó thấp hơn Flashy Flash, anh ta sẽ kích hoạt [Truy kích Tối thượng] lên kẻ địch đó. ———- [Truy kích Tối thượng]: 70% sát thương và hiệu ứng của Tối thượng, không tốn năng lượng, tối đa 3 lần mỗi lượt.",
+      "desc": "Sau khi bất kỳ kẻ thù nào hành động, nếu Tốc độ của chúng thấp hơn Tốc độ của Tia Chớp Chói Lóa, hãy tung ra [Truy Kích Tuyệt Kỹ]. Trước khi bất kỳ nhân vật nào hành động, hãy tung ra [Truy Kích Tuyệt Kỹ], một lần mỗi vòng. [Truy Kích Tuyệt Kỹ]: Gây 70% DMG của Tuyệt Kĩ. Có thể kích hoạt tối đa 3 lần mỗi vòng.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Sát thương Truy kích Tối thượng 70% > 100% 3 lần mỗi lượt > 5 lần mỗi lượt",
+      "desc": "Sau khi bất kỳ kẻ thù nào hành động, nếu Tốc độ của chúng thấp hơn Tốc độ của Tia Chớp Chói Lóa, hãy tung ra [Truy Kích Tuyệt Kỹ]. Trước khi bất kỳ nhân vật nào hành động, hãy tung ra [Truy Kích Tuyệt Kỹ], một lần mỗi vòng. [Truy Kích Tuyệt Kỹ]: Gây 100% DMG của Tuyệt Kĩ. Có thể kích hoạt tối đa 5 lần mỗi vòng.",
       "icon": "/Skill/Flashy Flash (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -92,7 +92,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Flashy Flash (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

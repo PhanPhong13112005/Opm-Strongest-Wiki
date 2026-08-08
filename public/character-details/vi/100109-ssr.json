@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Phái máy bay trinh sát dò xét mục tiêu đơn, chỉ thị đồng minh có ST cao nhất tung [Truy Kích], và hồi Máu cho bản thân bằng 120% ST.",
+      "desc": "Gửi một máy bay không người lái trinh sát để trinh sát một mục tiêu duy nhất, khiến đồng minh có ATK cao nhất thực hiện [Truy Kích]. Khôi phục HP của riêng mình bằng 120% ATK.",
       "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Giảm Máu tối đa của mục tiêu trong vài lượt (phần Máu vượt quá giới hạn mới bị cắt giảm ngay lập tức). Gây 110% ST sát thương lên toàn bộ mục tiêu.",
+      "desc": "Tấn công tất cả kẻ địch, gây 110% ATK DMG. Giảm HP tối đa của họ đi 15% trong 2 lượt. Bất kỳ HP nào vượt quá HP tối đa đã giảm sẽ bị xóa ngay lập tức.",
       "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Giảm Máu tối đa của mục tiêu trong vài lượt (phần Máu vượt quá giới hạn mới bị cắt giảm ngay lập tức). Gây 140% ST sát thương lên toàn bộ mục tiêu.",
+      "desc": "Tấn công tất cả kẻ địch, gây 140% ATK DMG. Giảm HP tối đa của họ đi 15% trong 2 lượt. Bất kỳ HP nào vượt quá HP tối đa đã giảm sẽ bị xóa ngay lập tức.",
       "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu bản thân. Tăng 15% Máu tối đa cho toàn bộ đồng minh trong 2 lượt. Khi đồng minh cùng cột là Quái nhân, Đại Quýnh Nhãn gánh chịu một phần sát thương họ nhận vào (ngừng gánh chịu khi Máu của họ xuống dưới một ngưỡng nhất định).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi bắt đầu trận chiến, tăng 15% HP tối đa của tất cả đồng minh trong 2 lượt. Khi một Quái vật đồng minh ở cùng một cột, Gyoro-Gyoro chia sẻ 50% DMG mà đồng minh đó nhận được. DMG Chia sẻ dừng khi HP của đồng minh giảm xuống dưới 20%.",
       "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu bản thân. Tăng 20% Máu tối đa cho toàn bộ đồng minh trong 2 lượt. Khi đồng minh cùng cột là Quái nhân, Đại Quýnh Nhãn gánh chịu một phần sát thương họ nhận vào (ngừng gánh chịu khi Máu của họ xuống dưới một ngưỡng nhất định).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi bắt đầu trận chiến, tăng HP tối đa của tất cả đồng minh trong 2 lượt. Khi một Quái vật đồng minh ở cùng một cột, Gyoro-Gyoro chia sẻ 50% DMG mà đồng minh đó nhận được. DMG Chia sẻ dừng khi HP của đồng minh giảm xuống dưới 20%.",
       "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu bản thân. Tăng 25% Máu tối đa cho toàn bộ đồng minh trong 2 lượt. Khi đồng minh cùng cột là Quái nhân, Đại Quýnh Nhãn gánh chịu một phần sát thương họ nhận vào (ngừng gánh chịu khi Máu của họ xuống dưới một ngưỡng nhất định).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi bắt đầu trận chiến, tăng 25% HP tối đa của tất cả đồng minh trong 2 lượt. Khi một Quái vật đồng minh ở cùng một cột, Gyoro-Gyoro chia sẻ 50% DMG mà đồng minh đó nhận được. DMG Chia sẻ dừng khi HP của đồng minh giảm xuống dưới 20%.",
       "icon": "/Skill/Gyoro-Gyoro (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

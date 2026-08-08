@@ -21,7 +21,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Attack a single target with 2 consecutive strikes for 120% ATK DMG.",
+      "desc": "Deals 120% ATK DMG to a single target with 2 consecutive hits.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -30,7 +30,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deal 4 consecutive hits to the entire enemy row, causing Direct DMG equal to 900% ATK. Make same-row teammates permanently gain [Specialized Speed Up]. Make all allies gain [Speed Field Attack] for 3 rounds. — [Specialized Speed Up]: Speed is increased to 94% of Sonic's; if the teammate's own speed is higher, it stays unchanged. [Speed Field Attack]: when attacking in PvP, if the target's speed is not higher than the attacker's, total DMG to the target is increased by 20%.",
+      "desc": "Deals a 4-hit combo to all enemies in a column, inflicting Direct DMG equal to 900% ATK. Permanently grants [Specialized Acceleration] to all allies in the same row. Grants all allies [Speed Zone · Offense] for 3 turns. [Specialized Acceleration]: Increases an ally’s SPD to 94% of Sonic’s SPD. If the ally’s original SPD is higher than the increased value, their SPD remains unchanged. [Speed Zone · Offense]: In PvP, when attacking a target whose SPD is equal to or lower than the attacker’s, all DMG dealt to that target is increased%.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -39,7 +39,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Ultimate DMG 900% > 1160% ATK. [Specialized Speed Up] to 94% > 98% of Sonic's speed. [Speed Field Attack] DMG increase 20% > 30%.",
+      "desc": "Deals a 4-hit combo to all enemies in a column, inflicting Direct DMG equal to 1160% ATK. Permanently grants [Specialized Acceleration] to all allies in the same row. Grants all allies [Speed Zone · Offense] for 3 turns. [Specialized Acceleration]: Increases an ally’s SPD to 98% of Sonic’s SPD. If the ally’s original SPD is higher than the increased value, their SPD remains unchanged. [Speed Zone · Offense]: In PvP, when attacking a target whose SPD is equal to or lower than the attacker’s, all DMG dealt to that target is increased by 30%.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Sonic V2 (UR)/Keepsake_UR.png",
       "type": "Ultimate",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Gains 60% [Instant DMG Evasion] at the start of battle. Immune to [Deterrence], [Stun] and [Specialized Stun]. — [Instant DMG Evasion]: Direct DMG, Ex. DMG, Charge DMG and Berserk DMG only deal 1 DMG.",
+      "desc": "Gains 60% [Specialized Evasion]. Becomes immune to [Fear], [Stun], and [Specialized Stun]. Grants all allies immunity to [Specialized Panic]. [Specialized Evasion]: Reduces Direct DMG, DoT DMG, [Received DMG], and [Extra DMG] to 1 point of DMG.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -57,7 +57,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Instant DMG Evasion] 60% > 70%.",
+      "desc": "Gains 70% [Specialized Evasion]. Becomes immune to [Fear], [Stun], and [Specialized Stun]. Grants all allies immunity to [Specialized Panic]. [Specialized Evasion]: Reduces Direct DMG, DoT DMG, [Received DMG], and [Extra DMG] to 1 point of DMG.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -66,7 +66,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Instant DMG Evasion] 70% > 80%.",
+      "desc": "Gains 80% [Specialized Evasion]. Becomes immune to [Fear], [Stun], and [Specialized Stun]. Grants all allies immunity to [Specialized Panic]. [Specialized Evasion]: Reduces Direct DMG, DoT DMG, [Received DMG], and [Extra DMG] to 1 point of DMG.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -75,7 +75,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "On entry, increases own [Specialized Speed] by 39% and teammates' by 20%. All allies permanently gain 30% [Speed Field Defense]. Before battle, [Encourage] the team (gain 2 extra energy for 3 rounds at the start of the round). — [Speed Field Defense]: when attacked in PvP, if the attacker's speed is not higher than the defender's, DMG received is reduced.",
+      "desc": "Upon entering battle, gains 39% [Specialized Acceleration] and grants all allies 20% [Specialized Acceleration]. All allied characters permanently gain 30% [Speed Zone · Defense]. Before battle begins, applies [Inspire] to all allies. [Inspire]: Grants 2 additional Energy at the start of each turn for 3 turns. [Speed Zone · Defense]: In PvP, when attacked by an enemy whose SPD is equal to or lower than the defender’s, all DMG received from that attack is reduced.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -84,7 +84,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Own [Specialized Speed] 35% > 42%. Allies' [Specialized Speed] 20% > 30%. [Speed Field Defense] 30% > 40% (others), 60% for Sonic.",
+      "desc": "Upon entering battle, gains 42% [Specialized Acceleration] and grants all allies 30% [Specialized Acceleration]. All allied characters permanently gain 40% [Speed Zone · Defense]. Self permanently gains an additional 60% [Speed Zone · Defense]. Before battle begins, applies [Inspire] to all allies. [Inspire]: Grants 2 additional Energy at the start of each turn for 3 turns. [Speed Zone · Defense]: In PvP, when attacked by an enemy whose SPD is equal to or lower than the defender’s, all DMG received from that attack is reduced.",
       "icon": "/Skill/Sonic V2 (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

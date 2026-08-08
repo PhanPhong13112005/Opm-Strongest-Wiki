@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 100% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 100% ATK sát thương trực tiếp cho một mục tiêu.",
       "icon": "/Skill/Maiko Plasma (R)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 5 đòn liên kích lên toàn bộ mục tiêu, gây 24% ST (+2) sát thương, và tăng 20% tỉ lệ phản sát thương cho toàn bộ đồng minh.",
+      "desc": "Gây 5 đòn liên tiếp lên tất cả mục tiêu, gây 24% ATK (+2) sát thương trực tiếp và tăng tỷ lệ phản xạ DMG của tất cả đồng minh%.",
       "icon": "/Skill/Maiko Plasma (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung 5 đòn liên kích lên toàn bộ mục tiêu, gây 26% ST (+2) sát thương, và tăng 25% tỉ lệ phản sát thương cho toàn bộ đồng minh.",
+      "desc": "Gây 5 đòn đánh liên tiếp lên tất cả mục tiêu, gây 26% ATK (+2) sát thương trực tiếp và tăng tỷ lệ phản xạ DMG của tất cả đồng minh thêm 25%.",
       "keepsakeIcon": "/Keepsake/Maiko Plasma (R)/Keepsake_R.png",
       "icon": "/Skill/Maiko Plasma (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Giảm 20% sát thương nhận từ địch hệ Công Nghệ và hồi 10% Máu.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Giảm sát thương nhận vào từ kẻ thù Công nghệ cao% và phục hồi 10% HP.",
       "icon": "/Skill/Maiko Plasma (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi bản thân bị kẻ địch hệ Công Nghệ tấn công, sát thương nhận vào giảm 30% và bản thân hồi 15% Máu.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi bản thân bị kẻ thù loại Công nghệ tấn công, sát thương nhận vào sẽ giảm 30% và bản thân phục hồi 15% HP.",
       "icon": "/Skill/Maiko Plasma (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi bản thân bị kẻ địch hệ Công Nghệ tấn công, sát thương nhận vào giảm 30% và bản thân hồi 20% Máu.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Khi bản thân bị kẻ thù loại Công nghệ tấn công, sát thương nhận vào sẽ giảm 30% và bản thân phục hồi 20% HP.",
       "icon": "/Skill/Maiko Plasma (R)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

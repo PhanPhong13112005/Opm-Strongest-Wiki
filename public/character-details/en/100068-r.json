@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increase own max HP. After being hit, has a 20% chance to increase own DMG dealt by 20% for 1 turn.",
+      "desc": "Permanently increase own max HP. After being hit, has a 20% chance to increase own DMG dealt% for 1 turn.",
       "icon": "/Skill/Dark Matter Thief (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

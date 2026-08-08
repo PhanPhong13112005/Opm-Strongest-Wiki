@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 3 liên kích 40% ST lên mục tiêu đơn.",
+      "desc": "Gây 3 đòn liên tiếp 40% ATK DMG vào một mục tiêu.",
       "icon": "/Skill/Speed-o-Sound Sonic V2 (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Bổ sung ST tích lũy bằng 600% Máu tối đa của mục tiêu (giới hạn bởi một tỷ lệ ST của Sonic), sau đó gây 5 liên kích 60% ST lên mục tiêu đơn hàng sau. Liên tục tự hồi máu trong 1 lượt (tối đa 120% ST mà tuyệt kỹ này gây ra).",
+      "desc": "Thêm điện tích DMG bằng 600% HP tối đa của mục tiêu (giới hạn theo phần trăm ATK của Sonic), sau đó gây 5 đòn liên tiếp với 60% ATK DMG vào một mục tiêu ở hàng sau. Tự hồi máu liên tục trong 1 lượt (lên tới 120% DMG do Tuyệt Kĩ này gây ra).",
       "icon": "/Skill/Speed-o-Sound Sonic V2 (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Bổ sung ST tích lũy bằng 800% Máu tối đa của mục tiêu (giới hạn bởi một tỷ lệ ST của Sonic), sau đó gây 5 liên kích 80% ST lên mục tiêu đơn hàng sau. Liên tục tự hồi máu trong 1 lượt (tối đa 150% ST mà tuyệt kỹ này gây ra).",
+      "desc": "Thêm điện tích DMG bằng 800% HP tối đa của mục tiêu (giới hạn theo phần trăm ATK của Sonic), sau đó gây 5 đòn liên tiếp với 80% ATK DMG vào một mục tiêu ở hàng sau. Tự hồi máu liên tục trong 1 lượt (tối đa 150% DMG do Tuyệt Kĩ này gây ra).",
       "keepsakeIcon": "/Keepsake/Speed-o-Sound Sonic V2 (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Speed-o-Sound Sonic V2 (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Tăng vĩnh viễn Máu tối đa của bản thân. Khi vào trận, tăng 15% Tốc độ bản thân. Trong trận đấu, trao cho đồng đội cùng hàng chưa có [Kiên Cường] hiệu ứng [Kiên Cường] bằng 20% Máu tối đa của họ, tối đa 2 lần mỗi đồng đội.",
+      "desc": "Tăng vĩnh viễn HP tối đa của riêng bạn. Khi bắt đầu trận chiến, tăng SPD của riêng bạn lên 15%. Trong trận chiến, cấp cho các đồng minh cùng hàng không có [Lá Chắn] hiệu ứng extra [Lá Chắn] bằng 20% ​​HP tối đa của họ, tối đa 2 lần cho mỗi đồng minh.",
       "icon": "/Skill/Speed-o-Sound Sonic V2 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Tăng vĩnh viễn Máu tối đa của bản thân. Khi vào trận, tăng 15% Tốc độ bản thân và nâng Tốc độ của đồng đội cùng hàng lên 90% Tốc độ của Sonic (nếu Tốc độ của đồng đội đã cao hơn giá trị đã tăng thì giữ nguyên). Trong trận đấu, trao cho đồng đội cùng hàng chưa có [Kiên Cường] hiệu ứng [Kiên Cường] bằng 25% Máu tối đa của họ, tối đa 2 lần mỗi đồng đội.",
+      "desc": "Tăng vĩnh viễn HP tối đa của riêng bạn. Khi bắt đầu trận chiến, tăng SPD của riêng bạn lên 15% và tăng SPD của các đồng minh cùng hàng lên tới 90% SPD của Sonic (nếu SPD của đồng minh đã cao hơn giá trị được tăng thì SPD của họ không thay đổi). Trong trận chiến, cấp cho các đồng minh cùng hàng không có [Lá Chắn] hiệu ứng [Lá Chắn] bằng 25% HP tối đa của họ, tối đa 2 lần cho mỗi đồng minh.",
       "icon": "/Skill/Speed-o-Sound Sonic V2 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Tăng vĩnh viễn Máu tối đa của bản thân. Khi vào trận, tăng 20% Tốc độ bản thân và nâng Tốc độ của đồng đội cùng hàng lên 95% Tốc độ của Sonic (nếu Tốc độ của đồng đội đã cao hơn giá trị đã tăng thì giữ nguyên). Trong trận đấu, trao cho đồng đội cùng hàng chưa có [Kiên Cường] hiệu ứng [Kiên Cường] bằng 30% Máu tối đa của họ, tối đa 2 lần mỗi đồng đội.",
+      "desc": "Tăng vĩnh viễn HP tối đa của riêng bạn. Khi bắt đầu trận chiến, hãy tăng SPD% của chính mình và nâng SPD của các đồng minh cùng hàng lên tới 95% SPD của Sonic (nếu SPD của đồng minh đã cao hơn giá trị được tăng thì SPD của họ không thay đổi). Trong trận chiến, cấp cho các đồng minh cùng hàng không có [Lá Chắn] hiệu ứng [Lá Chắn] bằng 30% HP tối đa của họ, tối đa 2 lần cho mỗi đồng minh.",
       "icon": "/Skill/Speed-o-Sound Sonic V2 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

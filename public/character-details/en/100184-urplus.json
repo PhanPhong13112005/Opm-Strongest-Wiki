@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK Direct DMG to a single target. After casting the first Ultimate, can reduce the target's [Non-Critical Hit Invincibility].",
+      "desc": "Deals 120% ATK DMG to a single target. After using the Ultimate for the first time, Normal Attacks can reduce the duration of [Non-Crit Undying].",
       "icon": "/Skill/Boros (URplus)/Skill_base.png",
       "type": "Basic",
       "animation": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Reduces the target's [Non-Critical Hit Invincibility] by 1 round. Deals 7000% ATK Direct DMG to a single target (only affected by high-level DMG Reduction), negates 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and pierces [Unyielding] and [Specialized Unyielding].",
+      "desc": "When attacking, reduces the target’s [Non-Crit Undying] duration by 1 turn. Deals 7000% ATK [Specialized Direct DMG] to a single enemy (only affected by advanced DMG modifiers). Ignores 45% [Specialized Dodge] and [Non-Crit DMG Reduction], and pierces [Unyielding] and [Specialized Unyielding].",
       "icon": "/Skill/Boros (URplus)/skill_ult.png",
       "type": "Ultimate",
       "animation": "/Animation/Boros_Urplus/ult.gif",
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Additionally gains +50% Crit Rate. Ultimate DMG 7000% > 10,000% ATK.",
+      "desc": "When attacking, reduces the target’s [Non-Crit Undying] duration by 1 turn. Deals 10000% ATK [Specialized Direct DMG] to a single enemy (only affected by advanced DMG modifiers). Ignores 45% [Specialized Dodge] and [Non-Crit DMG Reduction], and pierces [Unyielding] and [Specialized Unyielding]. Increases own CRIT Rate by 50%.",
       "keepsakeIcon": "/Keepsake/Boros (URplus)/Keepsake_URplus.png",
       "icon": "/Skill/Boros (URplus)/skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Gains 60% [Non-Crit DMG Reduction]. After any character is defeated, gains 1 layer of [Explosion], up to 2 layers; each layer of [Explosion] adds 1 target to the Ultimate.",
+      "desc": "At battle start, gains 60% [Non-Crit DMG Reduction]. Whenever any character is defeated, gains 1 stack of [Rage], up to 2 stacks. Each stack of [Rage] allows the Ultimate to target 1 additional enemy.",
       "icon": "/Skill/Boros (URplus)/Skill_pas.png",
       "type": "Passive",
       "animation": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Non-Crit DMG Reduction] 60% > 70%.",
+      "desc": "At battle start, gains 70% [Non-Crit DMG Reduction]. Whenever any character is defeated, gains 1 stack of [Rage], up to 2 stacks. Each stack of [Rage] allows the Ultimate to target 1 additional enemy.",
       "icon": "/Skill/Boros (URplus)/Skill_pas.png",
       "type": "Passive",
       "animation": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Non-Crit DMG Reduction] 70% > 80%. Max [Explosion] layers 2 > 3.",
+      "desc": "At battle start, gains 80% [Non-Crit DMG Reduction]. Whenever any character is defeated, gains 1 stack of [Rage], up to 3 stacks. Each stack of [Rage] allows the Ultimate to target 1 additional enemy.",
       "icon": "/Skill/Boros (URplus)/Skill_pas.png",
       "type": "Passive",
       "animation": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "When near-death, enters [Resurrection], absorbing all DMG types; the next round recovers 50% HP and gains [Energy Resilience] equal to the amount absorbed, at most 3 times. At the start of the battle, gains 30% [Suppression DMG Reduction]. — [Suppression DMG Reduction]: Reduces DMG received by 30%; when ATK is higher than the attacker, reduces by 150%.",
+      "desc": "When about to be defeated, enters the [Rebirth] state, absorbing all incoming DMG during that time. On the next turn, restores 50% HP and gains [Energy Shield] equal to the total amount of absorbed DMG. Can trigger up to 3 times. At battle start, gains 30% [Suppression Guard]. [Suppression Guard]: Reduces DMG taken by 30%. If own Attack is higher than the attacker’s, the DMG reduction is increased to 1.5×.",
       "icon": "/Skill/Boros (URplus)/skill_awk.png",
       "type": "Awakening",
       "animation": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Gains [Suppression DMG Reduction] 30% > 40%. — [Suppression DMG Reduction]: Reduces DMG received 30% > 40%; when ATK is higher than the attacker, reduces by 150% > 170%.",
+      "desc": "When about to be defeated, enters the [Rebirth] state, absorbing all incoming DMG during that time. On the next turn, restores 100% HP and gains [Energy Shield] equal to the total amount of absorbed DMG. Can trigger up to 5 times. At battle start, gains 40% [Suppression Guard]. [Suppression Guard]: Reduces DMG taken by 40%. If own Attack is higher than the attacker’s, the DMG reduction is increased to 1.7×.",
       "icon": "/Skill/Boros (URplus)/skill_awk.png",
       "type": "Awakening",
       "animation": null,

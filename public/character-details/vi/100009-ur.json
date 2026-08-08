@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây ST Trực Tiếp 120% ST lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây ST Trực Tiếp 160% ST lên toàn bộ kẻ địch, kèm ST [Băng] lên toàn bộ kẻ địch.",
+      "desc": "Gây 800% ATK DMG cho tất cả kẻ địch bằng 5 đòn đánh liên tiếp. Có 100% cơ hội gây [Khóa] lên tất cả kẻ địch trong 2 lượt. [Khóa]: Ngăn thiết bị bị ảnh hưởng kích hoạt [Truy Kích], [Truy Kích Liên Tục] và [Truy Kích Liên Kích]. Trước khi bất kỳ nhân vật nào hành động, gây 100% ATK [Khóa] DoT cho đơn vị bị ảnh hưởng. DMG này có thể là CRIT và không thể là [Đã Né Tránh].",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây ST Trực Tiếp 160% > 200% ST lên toàn bộ kẻ địch, kèm ST [Băng] lên toàn bộ kẻ địch.",
+      "desc": "Gây 1000% ATK DMG cho tất cả kẻ địch bằng 5 đòn đánh liên tiếp. Có 100% cơ hội gây [Khóa] lên tất cả kẻ địch trong 2 lượt. [Khóa]: Ngăn thiết bị bị ảnh hưởng kích hoạt [Truy Kích], [Truy Kích Liên Tục] và [Truy Kích Liên Kích]. Trước khi bất kỳ nhân vật nào hành động, gây 130% ATK [Khóa] DoT cho đơn vị bị ảnh hưởng. DMG này có thể là CRIT và không thể là [Đã Né Tránh].",
       "keepsakeIcon": "/Keepsake/Hellish Blizzard (UR)/Keepsake_UR.png",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Khi vào trận: +20% Máu bản thân, +60% [Miễn Sát Thương Không Bạo Kích], và +60% [Tăng Sát Thương Duy Trì].",
+      "desc": "Tăng 60% [Miễn Sát Thương Không Bạo Kích]. Tăng vĩnh viễn DMG của bản thân thêm 60%. [Miễn Sát Thương Không Bạo Kích]: Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Khi vào trận: +20% Máu bản thân, [Miễn Sát Thương Không Bạo Kích] 60% &gt; 70%, và [Tăng Sát Thương Duy Trì] 60% &gt; 80%.",
+      "desc": "Tăng 70% [Miễn Sát Thương Không Bạo Kích]. Tăng vĩnh viễn DMG của bản thân thêm 80%. [Miễn Sát Thương Không Bạo Kích]: Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Khi vào trận: +20% Máu bản thân, [Miễn Sát Thương Không Bạo Kích] 70% &gt; 80%, và [Tăng Sát Thương Duy Trì] 80% &gt; 100%.",
+      "desc": "Tăng 80% [Miễn Sát Thương Không Bạo Kích]. Tăng vĩnh viễn DMG của bản thân thêm 100%. [Miễn Sát Thương Không Bạo Kích]: Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Sau khi bất kỳ nhân vật địch nào kích hoạt [Đã Khóa], gây [Bạo Nổ Liên Tục]. ———- [Bạo Nổ Liên Tục]: Ngay lập tức lan sang mục tiêu xung quanh, gây 80% ST theo thời gian của [Đã Khóa]",
+      "desc": "Sau khi bất kỳ kẻ địch nào kích hoạt [Khóa], ngay lập tức kích hoạt [Bạo Nổ Liên Tục]. [Bạo Nổ Liên Tục]: Ngay lập tức văng sang các mục tiêu xung quanh, gây sát thương 80% [Khóa] DMG và DoT DMG. DMG này có thể CRIT và không thể tránh được.",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Khi trận đấu bắt đầu, gây [Đã Khóa] bằng 50% Tấn công lên toàn bộ đội địch, kéo dài 1 lượt.",
+      "desc": "Sau khi bất kỳ kẻ địch nào kích hoạt [Khóa], ngay lập tức kích hoạt [Bạo Nổ Liên Tục]. Khi trận chiến bắt đầu, có 100% cơ hội gây [Khóa] lên tất cả kẻ địch với 50% ATK DMG trong 1 hiệp. [Bạo Nổ Liên Tục]: Ngay lập tức văng sang toàn bộ kẻ địch, gây sát thương 90% [Khóa] DMG và DoT DMG. DMG này có thể CRIT và không thể né được.",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Hellish Blizzard (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

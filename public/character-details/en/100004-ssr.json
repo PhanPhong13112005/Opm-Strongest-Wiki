@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). Every enemy afflicted with [Injured] increases Terrible Tornado's [Crit DMG] by 30%, up to a maximum of 3 stacks.",
+      "desc": "Permanently increases own HP by. Every enemy afflicted with [Injured] increases Terrible Tornado's [Crit DMG] by 30%, up to a maximum of 3 stacks.",
       "icon": "/Skill/TatsumakiTerrible Tornado V1 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Crit DMG] per [Injured] enemy 30% &gt; 40% (up to 3 stacks).",
+      "desc": "[Crit DMG] per [Injured] enemy 30% > 40% (up to 3 stacks).",
       "icon": "/Skill/TatsumakiTerrible Tornado V1 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Crit DMG] per [Injured] enemy 40% &gt; 45% (up to 3 stacks).",
+      "desc": "[Crit DMG] per [Injured] enemy 40% > 45% (up to 3 stacks).",
       "icon": "/Skill/TatsumakiTerrible Tornado V1 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

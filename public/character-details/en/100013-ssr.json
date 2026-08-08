@@ -22,7 +22,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK (+10) damage to a single target, with a 100% chance to inflict [Injured] on the struck target for 2 turns (when attacked, takes additional [Injured] damage equal to 100% ATK).",
+      "desc": "Deals 120% ATK damage to a single target, with a 100% chance to inflict [Injured] on the struck target for 2 turns (when attacked, takes additional [Injured] damage equal to 100% ATK).",
       "icon": "/Skill/Zombieman (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,

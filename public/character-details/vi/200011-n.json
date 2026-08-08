@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 80% ST(+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 80% AT DMG cho một mục tiêu.",
       "icon": "/Skill/Subterranean Brute (N)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 180% ST(+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 180% AT DMG cho một mục tiêu.",
       "icon": "/Skill/Subterranean Brute (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 200% ST(+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 200% AT DMG cho một mục tiêu.",
       "keepsakeIcon": "/Keepsake/Subterranean Brute (N)/Keepsake_N.png",
       "icon": "/Skill/Subterranean Brute (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước mỗi hành động, tăng 10% sát thương của bản thân trong 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Trước mỗi hành động, tăng DMG của bản thân thêm 10% trong 1 lượt.",
       "icon": "/Skill/Subterranean Brute (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước mỗi hành động, tăng 15% sát thương của bản thân trong 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Trước mỗi hành động, tăng DMG của bản thân thêm 15% trong 1 lượt.",
       "icon": "/Skill/Subterranean Brute (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Trước mỗi hành động, tăng 18% sát thương của bản thân trong 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Trước mỗi hành động, tăng DMG của bản thân thêm 18% trong 1 lượt.",
       "icon": "/Skill/Subterranean Brute (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

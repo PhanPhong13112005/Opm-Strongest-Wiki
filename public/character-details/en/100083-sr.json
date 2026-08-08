@@ -29,7 +29,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Heals an ally single target for 250% ATK as HP, and increases the target's SPD by 20%.",
+      "desc": "Heals an ally single target for 250% ATK as HP, and increases the target's SPD%.",
       "icon": "/Skill/Doctor Genus (SR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -47,7 +47,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP. Increases ATK by 20% for allies who restored HP.",
+      "desc": "Permanently increases own HP. Increases ATK% for allies who restored HP.",
       "icon": "/Skill/Doctor Genus (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

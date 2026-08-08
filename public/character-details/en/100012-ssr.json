@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK (+10) damage to a single target and restores HP equal to 10% of max HP, up to 3 times per turn.",
+      "desc": "Deals 120% ATK damage to a single target and restores HP equal to 10% of max HP, up to 3 times per turn.",
       "icon": "/Skill/Metal Bat (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -42,7 +42,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). The lower its HP, the higher its [DMG Free] (reduces up to 50% of Direct and Bonus DMG). After being attacked, if own HP is below 80%, counterattacks the enemy with a [Follow-up] (80% Basic ATK DMG and effects).",
+      "desc": "Permanently increases own HP by. The lower its HP, the higher its [DMG Free] (reduces up to 50% of Direct and Bonus DMG). After being attacked, if own HP is below 80%, counterattacks the enemy with a [Follow-up] (80% Basic ATK DMG and effects).",
       "icon": "/Skill/Metal Bat (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[DMG Free] up to 50% &gt; 55%. [Follow-up] 80% &gt; 110% Basic ATK.",
+      "desc": "[DMG Free] up to 50% > 55%. [Follow-up] 80% > 110% Basic ATK.",
       "icon": "/Skill/Metal Bat (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[DMG Free] up to 55% &gt; 58%. [Follow-up] 110% &gt; 120% Basic ATK.",
+      "desc": "[DMG Free] up to 55% > 58%. [Follow-up] 110% > 120% Basic ATK.",
       "icon": "/Skill/Metal Bat (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

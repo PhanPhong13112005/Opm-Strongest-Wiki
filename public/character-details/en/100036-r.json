@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 90% ATK(+10) DMG to a single target.",
+      "desc": "Deals 90% AT DMG to a single target.",
       "icon": "/Skill/Wild Monkey (R)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 110% ATK(+10) DMG to each enemy in the entire row, and has a 100% chance to reduce DMG taken by self by 10% for 2 turns.",
+      "desc": "Deals 110% AT DMG to each enemy in the entire row, and has a 100% chance to reduce DMG taken by self by 10% for 2 turns.",
       "icon": "/Skill/Wild Monkey (R)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 110% ATK(+10) DMG to each enemy in the entire row, and has a 100% chance to reduce DMG taken by self by 20% for 2 turns.",
+      "desc": "Deals 110% AT DMG to each enemy in the entire row, and has a 100% chance to reduce DMG taken by self% for 2 turns.",
       "icon": "/Skill/Wild Monkey (R)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Wild Monkey (R)/Keepsake_R.png",
       "type": "Ultimate",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases self HP by (+20). When deployed alongside Eyelashes, increases DMG by 20% until the end of battle.",
+      "desc": "Permanently increases self HP by. When deployed alongside Eyelashes, increases DMG% until the end of battle.",
       "icon": "/Skill/Wild Monkey (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases self HP by (+20). When deployed alongside Eyelashes, increases DMG by 30% until the end of battle.",
+      "desc": "Permanently increases self HP by. When deployed alongside Eyelashes, increases DMG by 30% until the end of battle.",
       "icon": "/Skill/Wild Monkey (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases self HP by (+20). When deployed alongside Eyelashes, increases DMG by 35% until the end of battle.",
+      "desc": "Permanently increases self HP by. When deployed alongside Eyelashes, increases DMG by 35% until the end of battle.",
       "icon": "/Skill/Wild Monkey (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

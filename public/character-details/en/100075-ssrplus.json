@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Direct DMG 30% ATK to the target.",
+      "desc": "Deals 120% ATK DMG to a single target with 4 consecutive strikes.",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Applies [Mark] and [Counter] to all enemies, then deals Direct DMG 20% ATK per [Mark] (minimum 3) to all enemies. 30% chance to [Faint] the target's column for 2 rounds while [Round] < 6.",
+      "desc": "Attacks all enemies with 5 consecutive strikes, dealing 300% ATK DMG. When attacking more than 3 enemies, each additional enemy increases the skill’s DMG by an additional 100% ATK. During the first 5 rounds, has a 100% chance to inflict [Specialized Stun] on the main target and enemies in the same row for 1 round. [Specialized Stun]: Prevents the affected unit from acting and permanently reduces its ATK by 30%. At most 4 characters can be affected by [Stun] or [Specialized Stun] at the same time.",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Applies [Mark] and [Counter] to all enemies, then deals Direct DMG 20% > 30% ATK per [Mark] (minimum 3) to all enemies. 30% chance to [Faint] the target's column > entire selected area for 2 > 6 rounds while [Round] < 6.",
+      "desc": "Attacks all enemies with 5 consecutive strikes, dealing 450% ATK DMG. When attacking more than 3 enemies, each additional enemy increases the skill’s DMG by an additional 150% ATK. During the first 5 rounds, has a 100% chance to inflict [Specialized Stun] on the main target and surrounding enemies for 1 round. [Specialized Stun]: Prevents the affected unit from acting and permanently reduces its ATK by 30%. At most 4 characters can be affected by [Stun] or [Specialized Stun] at the same time.",
       "keepsakeIcon": "/Keepsake/Metal Knight (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "At battle start, gain +20% HP. On entry and on revive, himself and surrounding allies become immune to [Corrode] and [Specialized Corrode] for 5 rounds.",
+      "desc": "At battle start, grants self and surrounding allies immunity to [Corrode] and [Specialized Corrode] for 5 rounds.",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Immunity to [Corrode]/[Specialized Corrode] duration 5 rounds &gt; Permanent.",
+      "desc": "At battle start, permanently grants self and surrounding allies immunity to [Corrode] and [Specialized Corrode].",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Immunity scope himself and surrounding allies &gt; all allies.",
+      "desc": "At battle start, permanently grants all allies immunity to [Corrode] and [Specialized Corrode].",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "At the start of the battle, grants 45% chance of [Evade] (Reduce Direct/Extra/Charge/Berserk DMG to 1 DMG). Removes [Combo Follow-up] from the whole enemy team, lasts the whole battle.",
+      "desc": "At battle start, gains a 45% chance of [Evade]. Removes [Combo Follow-Up] from the entire enemy team for the whole battle. [Evade]: Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG.",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Evade 45% > 60% Additional effect: After any character acts, for every enemy in [Specialized Stun], increases [Specialized Protection] of all allies by 100% Metal Knight ATK, 3 times per round.\n[Specialized Stun] is not affected by SSR+ Metal Bat, SSR+ Gouketsu and SSR+ Melzargard [Combo] from SSR+ Deep Sea King and [Ultimate Follow-up] from Cruel Tactic can inflict [Specialized Stun]",
+      "desc": "At battle start, gains a 60% chance of [Evade]. Removes [Combo Follow-Up] from the entire enemy team for the whole battle. After any character acts, for each enemy affected by [Specialized Stun], increases all allies’ [Specialized Protection] by an amount equal to 100% of Metal Knight’s ATK. Can trigger up to 3 times per round. [Evade]: Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG.",
       "icon": "/Skill/Metal Knight (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

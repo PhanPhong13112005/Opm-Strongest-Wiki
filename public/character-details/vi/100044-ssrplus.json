@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "ST trực tiếp 120% ST lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Drive Knight (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "ST trực tiếp 150% ST lên cả cột của mục tiêu, sau đó áp [Tăng Sát Thương Phải Chịu] 30% lên toàn bộ kẻ địch (chúng nhận nhiều ST hơn).",
+      "desc": "Tấn công tất cả kẻ địch trong một cột bằng 2 đòn liên tiếp, gây 300% ATK DMG. Giảm 30% Tỷ lệ DMG của tất cả kẻ thù trong 1 lượt.",
       "icon": "/Skill/Drive Knight (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "ST trực tiếp 150% > 225% ST lên cả cột của mục tiêu, sau đó áp [Tăng Sát Thương Phải Chịu] 30% > 50% lên toàn bộ kẻ địch.",
+      "desc": "Tấn công tất cả kẻ địch trong một cột bằng 2 đòn liên tiếp, gây 450% ATK DMG. Giảm 50% Tỷ lệ DMG của tất cả kẻ thù trong 1 lượt.",
       "icon": "/Skill/Drive Knight (SSR+)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Drive Knight (SSRplus)/Keepsake_SSRplus.png",
       "type": "Tuyệt kĩ",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Tăng +20% Máu. Sau hành động của bất kỳ nhân vật nào, [Tiến Hóa] 2 mục tiêu đang ở trạng thái [Bất Khuất]/[Bỏ Qua Sát Thương] và gây 200% ATK sát thương phụ. Khi trận đấu bắt đầu, nhận 60% [Né Sát Thương Tức Thì] trong 2 lượt.[Tiến Hóa]: lập tức hủy trạng thái [Bất Khuất] và [Bỏ Qua Sát Thương] của mục tiêu.",
+      "desc": "Sau khi bất kỳ nhân vật nào hành động, [Tiến Hóa] 2 nhắm mục tiêu ở trạng thái [Bất Khuất] hoặc Bỏ qua DMG và gây 200% ATK dưới dạng Extra DMG. Khi bắt đầu trận chiến, tăng 60% [Né Sát Thương Tức Thì] trong 2 hiệp. Tăng vĩnh viễn HP của chính mình. [Tiến Hóa]: Loại bỏ ngay trạng thái [Bất Khuất] của mục tiêu và Bỏ qua trạng thái DMG. Không có giới hạn kích hoạt cho [Tiến Hóa]. [Né Sát Thương Tức Thì]: Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG chỉ gây được 1 điểm DMG.",
       "icon": "/Skill/Drive Knight (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Tiến Hóa] 3 mục tiêu; sát thương phụ 200% ATK; [Né Sát Thương Tức Thì] 60% &gt; 65%. Không giới hạn [Tiến Hóa].",
+      "desc": "Sau khi bất kỳ nhân vật nào hành động, [Tiến Hóa] 3 nhắm mục tiêu ở trạng thái [Bất Khuất] hoặc Bỏ qua DMG và gây 200% ATK dưới dạng Extra DMG. Khi bắt đầu trận chiến, tăng 65% [Né Sát Thương Tức Thì] trong 2 hiệp. Tăng vĩnh viễn HP của chính mình. [Tiến Hóa]: Loại bỏ ngay trạng thái [Bất Khuất] của mục tiêu và Bỏ qua trạng thái DMG. Không có giới hạn kích hoạt cho [Tiến Hóa]. [Né Sát Thương Tức Thì]: Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG chỉ gây được 1 điểm DMG.",
       "icon": "/Skill/Drive Knight (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Tiến Hóa] 3 mục tiêu; sát thương phụ 200% &gt; 300% ATK; [Né Sát Thương Tức Thì] 65% &gt; 70%. Không giới hạn [Tiến Hóa].",
+      "desc": "Sau khi bất kỳ nhân vật nào hành động, [Tiến Hóa] 3 nhắm mục tiêu ở trạng thái [Bất Khuất] hoặc Bỏ qua DMG và gây ra 300% ATK dưới dạng Extra DMG. Khi bắt đầu trận chiến, tăng 70% [Né Sát Thương Tức Thì] trong 2 hiệp. Tăng vĩnh viễn HP của chính mình. [Tiến Hóa]: Loại bỏ ngay trạng thái [Bất Khuất] của mục tiêu và Bỏ qua trạng thái DMG. Không có giới hạn kích hoạt cho [Tiến Hóa]. [Né Sát Thương Tức Thì]: Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG chỉ gây được 1 điểm DMG.",
       "icon": "/Skill/Drive Knight (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -69,7 +69,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "(Hiệu ứng Cơ bản) (1 Giác đấu, 1 Vũ trang, 1 Công nghệ): Nhận 3 Năng Lượng mỗi lượt.(Hiệu ứng Nâng cao) (1 Giác đấu, 1 Vũ trang, 1 Công nghệ, 1 Tâm linh): Khi vào trận, toàn bộ đồng minh nhận [Bảo Hộ Chuyên Biệt] bằng 600% Máu Tối đa gốc (xóa sát thương, cộng dồn với hiệu ứng HP thêm, sát thương bị xóa tích lũy không quá 15 lần HP gốc, có thể cộng dồn).",
+      "desc": "(Hiệu ứng cơ bản) (1 Grappler, 1 Duelist, 1 Hi-Tech): Nhận 3 năng lượng mỗi hiệp. (Hiệu ứng nâng cao) (1 Grappler, 1 Duelist, 1 Hi-Tech, 1 Esper): Khi trận chiến bắt đầu, tất cả đồng minh nhận được [Bảo Hộ Chuyên Biệt] của HP tối đa gốc 600% (loại bỏ sát thương, có thể xếp chồng với extra Hiệu ứng HP, sát thương tích lũy được loại bỏ sẽ không quá 15 lần so với HP ban đầu của anh ta, có thể cộng dồn).",
       "type": "Thức tỉnh",
       "icon": "/Skill/Source/100044-ssrplus/awakened.webp",
       "keepsakeIcon": null,
@@ -78,7 +78,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Nhận 1 Năng Lượng một lần mỗi lượt nếu bất kỳ đồng minh nào kích hoạt CRIT.",
+      "desc": "Nhận 1 năng lượng một lần mỗi vòng nếu bất kỳ đồng minh nào kích hoạt CRIT.",
       "type": "Thức tỉnh",
       "icon": "/Skill/Source/100044-ssrplus/awakened.webp",
       "keepsakeIcon": null,
@@ -87,7 +87,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "Nhận 1 Năng Lượng hai lần mỗi lượt nếu bất kỳ đồng minh nào kích hoạt CRIT.",
+      "desc": "Nhận 1 năng lượng hai lần mỗi vòng nếu bất kỳ đồng minh nào kích hoạt CRIT.",
       "type": "Thức tỉnh",
       "icon": "/Skill/Source/100044-ssrplus/awakened.webp",
       "keepsakeIcon": null,

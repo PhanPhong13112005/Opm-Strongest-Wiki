@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung combo 3 đòn lên mục tiêu đơn, gây 120% ATK sát thương.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu trong 3 lần đánh.",
       "animation": "/Animation/Zombie_Man_Urplus/Base.gif",
       "type": "Kỹ năng thường",
       "icon": "/Skill/Source/100013-urplus/basic.webp",
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung combo 5 đòn lên cả hàng địch, gây 4500% ATK [Sát Thương Trực Tiếp Chuyên Biệt] (chỉ chịu ảnh hưởng bởi tăng/giảm sát thương nâng cao), bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Trong 6 hồi đầu, khi dùng Tối Thượng có 120% khả năng gây [Gây Mù] lên mục tiêu chính và 1 kẻ địch ngẫu nhiên trong 1 hồi. ———- [Gây Mù]: giảm 20% [Giảm Sát Thương Đấu Trường], không thể dùng Tối Thượng và không thể truy kích; tối đa 2 lớp cùng tồn tại; được tính là hiệu ứng dạng [Choáng].",
+      "desc": "Gây 4500% ATK [Sát Thương Trực Tiếp Chuyên Biệt] cho tất cả kẻ thù liên tiếp trong 5 đòn đánh (chỉ bị ảnh hưởng bởi các công cụ sửa đổi DMG nâng cao). Bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Trong 7 lượt đầu tiên, khi sử dụng Tuyệt Kĩ, có 120% cơ hội gây [Gây Mù] lên mục tiêu chính và 1 kẻ địch ngẫu nhiên, kéo dài 1 lượt. [Gây Mù]: Giảm [Giảm Sát Thương Đấu Trường]%, ngăn việc sử dụng Ultimates và vô hiệu hóa Theo dõi. Hiệu ứng này có thể tồn tại tối đa 2 ngăn xếp cùng lúc và được coi là [Hiệu Ứng Choáng].",
       "icon": "/Skill/Zombieman (URplus)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "animation": "/Animation/Zombie_Man_Urplus/ult.gif",
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Ngoài ra ban cho toàn bộ đồng minh 15% [Cuồng Nộ] và [Phá Giáp]. [Sát Thương Trực Tiếp Chuyên Biệt] 4500% > 6000% ATK; bỏ qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] 45% > 60%. Cửa sổ [Gây Mù] kéo dài 6 > 7 hồi đầu với khả năng 120% > 180%, và [Gây Mù] giảm [Giảm Sát Thương Đấu Trường] 20% > 30%.",
+      "desc": "Gây 6000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] cho tất cả kẻ thù liên tiếp trong 5 đòn đánh (chỉ bị ảnh hưởng bởi các công cụ sửa đổi DMG nâng cao). Bỏ qua 60% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Trong 7 lượt đầu tiên, khi sử dụng Tuyệt Kĩ, có 180% cơ hội gây [Gây Mù] lên mục tiêu chính và 1 kẻ địch ngẫu nhiên, kéo dài 1 lượt. Cấp cho tất cả đồng minh 15% [Cuồng Nộ] và [Phá Giáp]. [Gây Mù]: Giảm 30% [Giảm Sát Thương Đấu Trường], ngăn việc sử dụng Ultimates và vô hiệu hóa Theo dõi. Hiệu ứng này có thể tồn tại tối đa 2 ngăn xếp cùng lúc và được coi là [Hiệu Ứng Choáng].",
       "keepsakeIcon": "/Keepsake/Zombieman (URplus)/Keepsake_URplus.png",
       "icon": "/Skill/Zombieman (URplus)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn nhận +20 Máu tối đa. Khi vào trận, nhận 60% [Giảm Sát Thương Không Bạo Kích] và miễn nhiễm [Gây Mù]. Trước khi bất kỳ nhân vật nào hành động, giải [Choáng], [Choáng Chuyên Biệt], [Uy Hiếp] và [Câm Lặng] khỏi toàn bộ đồng minh. Vào đầu Hồi 3, xóa [Liên Kết Sinh Mệnh] khỏi toàn bộ kẻ địch. Trong 4 hồi đầu, đồng minh cùng cột dùng Tối Thượng tốn 0 Năng lượng.",
+      "desc": "Khi bắt đầu trận chiến, tăng 60% [Giảm Sát Thương Không Bạo Kích]. Miễn dịch với [Gây Mù]. Trước khi bất kỳ nhân vật nào hành động, hãy loại bỏ [Choáng], [Choáng Chuyên Biệt], [Uy Hiếp] và [Câm Lặng] khỏi tất cả các đồng minh. Khi bắt đầu Lượt 3, loại bỏ [Liên Kết HP] khỏi tất cả kẻ thù. Trong 4 lượt đầu tiên, đồng minh trong cùng một cột tiêu tốn 0 Năng lượng khi sử dụng Tuyệt Kĩ.",
       "icon": "/Skill/Zombieman (URplus)/Skill_pas.png",
       "animation": "/Animation/Zombie_Man_Urplus/Passive.gif",
       "type": "Nội tại",
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] khi vào trận 60% > 70%. Cửa sổ Tối Thượng miễn phí năng lượng 4 > 5 hồi.",
+      "desc": "Khi bắt đầu trận chiến, tăng 70% [Giảm Sát Thương Không Bạo Kích]. Miễn dịch với [Gây Mù]. Trước khi bất kỳ nhân vật nào hành động, hãy loại bỏ [Choáng], [Choáng Chuyên Biệt], [Uy Hiếp] và [Câm Lặng] khỏi tất cả các đồng minh. Khi bắt đầu Lượt 3, loại bỏ [Liên Kết HP] khỏi tất cả kẻ thù. Trong 5 lượt đầu tiên, đồng minh trong cùng một cột tiêu tốn 0 Năng lượng khi sử dụng Tuyệt Kĩ.",
       "icon": "/Skill/Zombieman (URplus)/Skill_pas.png",
       "animation": "/Animation/Zombie_Man_Urplus/Passive.gif",
       "type": "Nội tại",
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] khi vào trận 70% > 80%. Cửa sổ Tối Thượng miễn phí năng lượng 5 > 6 hồi.",
+      "desc": "Khi bắt đầu trận chiến, tăng 80% [Giảm Sát Thương Không Bạo Kích]. Miễn dịch với [Gây Mù]. Trước khi bất kỳ nhân vật nào hành động, hãy loại bỏ [Choáng], [Choáng Chuyên Biệt], [Uy Hiếp] và [Câm Lặng] khỏi tất cả các đồng minh. Khi bắt đầu Lượt 3, loại bỏ [Liên Kết HP] khỏi tất cả kẻ thù. Trong 6 lượt đầu tiên, đồng minh trong cùng một cột tiêu tốn 0 Năng lượng khi sử dụng Tuyệt Kĩ.",
       "icon": "/Skill/Zombieman (URplus)/Skill_pas.png",
       "animation": "/Animation/Zombie_Man_Urplus/Passive.gif",
       "type": "Nội tại",
@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi chịu sát thương chí mạng, kích hoạt [Hồi Phục Chuyên Biệt]. ———- [Hồi Phục Chuyên Biệt]: Khi vào trận, vĩnh viễn giảm 30% sát thương phải chịu. Khi còn đồng minh, trước hành động kế tiếp của bản thân, hồi đầy máu và tiếp tục chiến đấu, tăng 15% ST bản thân và 30% HP tối đa (cộng dồn), tối đa 3 lần kích hoạt. Sau khi kích hoạt, bản thân không nhận sát thương cho đến hết lượt hành động của mình.",
+      "desc": "Kích hoạt [Hồi Phục Chuyên Biệt] khi trúng đòn chí mạng. Sau khi kích hoạt [Hồi Phục Chuyên Biệt], đơn vị này miễn nhiễm với tất cả DMG cho đến hết lượt. [Hồi Phục Chuyên Biệt]: Khi kích hoạt, DMG phải chịu sẽ giảm vĩnh viễn 30%. Khi ít nhất một đồng minh vẫn còn trên chiến trường, hồi phục 100% HP trước hành động tiếp theo và tiếp tục chiến đấu. Đồng thời tăng 15% ATK và 30% HP tối đa (có thể xếp chồng) mỗi khi kích hoạt. Có thể kích hoạt tối đa 3 lần.",
       "icon": "/Skill/Zombieman (URplus)/zombie_skill_awk.png",
       "animation": "/Animation/Zombie_Man_Urplus/awken+.gif",
       "type": "Thức tỉnh",
@@ -82,7 +82,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Giảm sát thương 30% > 60%. Số lần kích hoạt tối đa 3 > 4. Ngoài ra, khi một đồng minh cùng hàng kích hoạt [Re-Battle] trong lúc bản thân đang có [Hồi Phục Chuyên Biệt], tung [Truy Kích Tụ Lực] với 120% sức mạnh kỹ năng.",
+      "desc": "Kích hoạt [Hồi Phục Chuyên Biệt] khi trúng đòn chí mạng. Sau khi kích hoạt [Hồi Phục Chuyên Biệt], đơn vị này miễn nhiễm với tất cả DMG cho đến hết lượt. Khi một đồng minh trong cùng hàng kích hoạt [Tái Chiến], nếu đơn vị này ở trạng thái [Hồi Phục Chuyên Biệt], hãy tung ra [Truy Kích Tụ Lực] với 120% sức mạnh kỹ năng. [Hồi Phục Chuyên Biệt]: Khi kích hoạt, DMG phải chịu sẽ giảm vĩnh viễn 60%. Khi ít nhất một đồng minh vẫn còn trên chiến trường, hồi phục 100% HP trước hành động tiếp theo và tiếp tục chiến đấu. Đồng thời tăng 15% ATK và 30% HP tối đa (có thể xếp chồng) mỗi khi kích hoạt. Có thể kích hoạt tối đa 4 lần.",
       "icon": "/Skill/Zombieman (URplus)/zombie_skill_awk.png",
       "animation": "/Animation/Zombie_Man_Urplus/awken+.gif",
       "type": "Thức tỉnh",
@@ -91,7 +91,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Zombieman (URplus)/zombie_skill_awk.png",
       "animation": "/Animation/Zombie_Man_Urplus/awken+.gif",
       "type": "Thức tỉnh",

@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 80% ST(+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 80% AT DMG cho một mục tiêu.",
       "icon": "/Skill/Deep Sea Ravager (N)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 33% ST(+3) sát thương lên cả hàng mục tiêu với liên kích 3 đòn. Có 100% khả năng khiến mục tiêu chính bị [Băng Hoại] trong 2 lượt (tỷ lệ giảm sát thương chịu vào giảm 30%).",
+      "desc": "Gây 33% ATK(+3) DMG cho toàn bộ hàng bằng combo 3 đòn. Có 100% cơ hội gây [Tha Hóa] lên mục tiêu chính trong 2 lượt (tỷ lệ Giảm Sát Thương giảm 30%).",
       "icon": "/Skill/Deep Sea Ravager (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 40% ST(+3) sát thương lên cả hàng mục tiêu với liên kích 3 đòn. Có 100% khả năng khiến mục tiêu chính bị [Băng Hoại] trong 2 lượt (tỷ lệ giảm sát thương chịu vào giảm 30%).",
+      "desc": "Gây 40% ATK(+3) DMG cho toàn bộ hàng bằng combo 3 đòn. Có 100% cơ hội gây [Tha Hóa] lên mục tiêu chính trong 2 lượt (tỷ lệ Giảm Sát Thương giảm 30%).",
       "keepsakeIcon": "/Keepsake/Deep Sea Ravager (N)/Keepsake_N.png",
       "icon": "/Skill/Deep Sea Ravager (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu có Kẻ Xâm Lược Biển Sâu trên sân, tăng 20% sát thương của bản thân cho đến khi kết thúc trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Nếu có Kẻ Xâm Lược Biển Sâu, hãy tăng DMG% của bản thân cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Deep Sea Ravager (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu có Kẻ Xâm Lược Biển Sâu trên sân, tăng 25% sát thương của bản thân cho đến khi kết thúc trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Nếu có Kẻ Xâm Lược Biển Sâu, hãy tăng DMG của bản thân thêm 25% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Deep Sea Ravager (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu có Kẻ Xâm Lược Biển Sâu trên sân, tăng 28% sát thương của bản thân cho đến khi kết thúc trận đấu.",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Nếu có Kẻ Xâm Lược Biển Sâu, hãy tăng DMG của bản thân thêm 28% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Deep Sea Ravager (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

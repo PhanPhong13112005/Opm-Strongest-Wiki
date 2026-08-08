@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung 2 đòn liên kích lên mục tiêu đơn gây 60% ST, với 100% tỉ lệ khiến mục tiêu dính [Trường Lực] trong 1 lượt.[Trường Lực]: Chịu ST theo thời gian bằng 150% ST trước khi hành động.",
+      "desc": "Tấn công một mục tiêu bằng 2 đòn liên tiếp, gây 60% ATK DMG mỗi đòn. Có 100% cơ hội gây [Lĩnh Vực] lên mục tiêu trong 1 lượt. [Lĩnh Vực]: Trước khi hành động, thiết bị bị ảnh hưởng phải chịu DMG liên tục bằng 150% ATK.",
       "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 3 đòn liên kích lên toàn bộ địch gây 50% ST; nếu đang ở trạng thái [Khổng Lồ] thì tăng Tăng ST theo thời gian thêm 50%. Có 100% tỉ lệ khiến toàn bộ địch dính [Trường Lực] trong 1 lượt.[Trường Lực]: Chịu ST theo thời gian bằng 160% ST trước khi hành động.",
+      "desc": "Tấn công tất cả kẻ địch bằng 3 đòn liên tiếp, gây 50% ATK DMG mỗi đòn. Khi ở [Trạng Thái Khổng Lồ], tăng Tỷ lệ DMG liên tục thêm 50%. Có 100% cơ hội gây [Lĩnh Vực] lên tất cả kẻ địch trong 1 lượt. [Lĩnh Vực]: Trước khi hành động, thiết bị bị ảnh hưởng phải chịu DMG liên tục bằng 160% ATK.",
       "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung 3 đòn liên kích lên toàn bộ địch gây 60% ST; nếu đang ở trạng thái [Khổng Lồ] thì tăng Tăng ST theo thời gian thêm 50%. Có 100% tỉ lệ khiến toàn bộ địch dính [Trường Lực] trong 1 lượt.[Trường Lực]: Chịu ST theo thời gian bằng 230% ST trước khi hành động.",
+      "desc": "Tấn công tất cả kẻ địch bằng 3 đòn liên tiếp, gây 60% ATK DMG mỗi đòn. Khi ở [Trạng Thái Khổng Lồ], tăng Tỷ lệ DMG liên tục thêm 50%. Có 100% cơ hội gây [Lĩnh Vực] lên tất cả kẻ địch trong 1 lượt. [Lĩnh Vực]: Trước khi hành động, thiết bị bị ảnh hưởng phải chịu DMG liên tục bằng 230% ATK.",
       "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Vaccine Man V2 (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Sau hành động của bất kỳ nhân vật nào, [Kích Nổ] toàn bộ [Các Lĩnh Vực] địch 3 lần/lượt (chuyển ngay ST gốc thành 100% ST Detonation). Sau Detonation, vào trạng thái [Khổng Lồ]. Hồi sinh với 50% Máu tối đa sau khi nhận sát thương chí mạng (tối đa 2 lần).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Sau khi bất kỳ nhân vật nào hành động, sẽ kích nổ tất cả hiệu ứng [Lĩnh Vực] của kẻ thù, tối đa 3 lần mỗi hiệp. [Kích Nổ]: Chuyển đổi ngay [Lĩnh Vực] DMG ban đầu thành DMG Nổ 100%. Sau khi kích hoạt [Kích Nổ], hãy nhập [Trạng Thái Khổng Lồ]. Sau khi nhận được sát thương kết liễu, hồi sinh với 50% HP tối đa. Có thể kích hoạt tối đa 2 lần mỗi trận.",
       "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "ST Detonation 100% &gt; 110%. Máu hồi sinh 50% &gt; 60% Máu tối đa.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Sau khi bất kỳ nhân vật nào hành động, sẽ kích nổ tất cả hiệu ứng [Lĩnh Vực] của kẻ thù, tối đa 3 lần mỗi hiệp. [Kích Nổ]: Chuyển đổi ngay [Lĩnh Vực] DMG ban đầu thành DMG Nổ 110%. Sau khi kích hoạt [Kích Nổ], hãy nhập [Trạng Thái Khổng Lồ]. Sau khi nhận được sát thương kết liễu, hồi sinh với 60% HP tối đa. Có thể kích hoạt tối đa 2 lần mỗi trận.",
       "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "ST Detonation 110% &gt; 120%. Máu hồi sinh 60% &gt; 80% Máu tối đa.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Sau khi bất kỳ nhân vật nào hành động, sẽ kích nổ tất cả hiệu ứng [Lĩnh Vực] của kẻ thù, tối đa 3 lần mỗi hiệp. [Kích Nổ]: Chuyển ngay [Lĩnh Vực] DMG ban đầu thành DMG Nổ 120%. Sau khi kích hoạt [Kích Nổ], hãy nhập [Trạng Thái Khổng Lồ]. Sau khi nhận được sát thương kết liễu, hồi sinh với 80% HP tối đa. Có thể kích hoạt tối đa 2 lần mỗi trận.",
       "icon": "/Skill/Vaccine Man V2 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

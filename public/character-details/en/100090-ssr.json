@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 70% ATK (+5) damage to a single target with a 2-hit combo, and grants self [Tenacity] (absorbs damage equal to 25% of own HP).",
+      "desc": "Deals 70% ATK damage to a single target with a 2-hit combo, and grants self [Tenacity] (absorbs damage equal to 25% of own HP).",
       "icon": "/Skill/Suiryu (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). Each time self gains a [Tenacity] state, gains 1 stack of [Charge], up to 2 stacks. Permanently increases the ATK of allies in a [Charge] state by 25%. Self permanently gains 40% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect).",
+      "desc": "Permanently increases own HP by. Each time self gains a [Tenacity] state, gains 1 stack of [Charge], up to 2 stacks. Permanently increases the ATK of allies in a [Charge] state by 25%. Self permanently gains 40% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect).",
       "icon": "/Skill/Suiryu (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). Each time self gains a [Tenacity] state, gains 1 stack of [Charge], up to 2 stacks. Permanently increases the ATK of allies in a [Charge] state by 35%. Self permanently gains 45% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect).",
+      "desc": "Permanently increases own HP by. Each time self gains a [Tenacity] state, gains 1 stack of [Charge], up to 2 stacks. Permanently increases the ATK of allies in a [Charge] state by 35%. Self permanently gains 45% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect).",
       "icon": "/Skill/Suiryu (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). Each time self gains a [Tenacity] state, gains 1 stack of [Charge], up to 2 stacks. Permanently increases the ATK of allies in a [Charge] state by 45%. Self permanently gains 55% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect).",
+      "desc": "Permanently increases own HP by. Each time self gains a [Tenacity] state, gains 1 stack of [Charge], up to 2 stacks. Permanently increases the ATK of allies in a [Charge] state by 45%. Self permanently gains 55% Non-CRIT DMG immunity (the reduction includes all damage types; this effect and [Agility] only one takes effect).",
       "icon": "/Skill/Suiryu (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 100% ST sát thương lên mục tiêu đơn.",
+      "desc": "Gây 100% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Iairon (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 60% ST sát thương lên mỗi kẻ địch trong một hàng với 2 đòn liên kích, với 100% cơ hội gây [Vỡ Vụn] lên mục tiêu chính trong 2 lượt (giảm tỉ lệ Giảm ST đi 30%).",
+      "desc": "Gây 60% ATK DMG cho mỗi kẻ địch liên tiếp bằng 2 đòn kết hợp, với 100% cơ hội gây [Nứt Vỡ] lên mục tiêu chính trong 2 lượt (giảm 30% tỷ lệ Giảm Sát Thương).",
       "icon": "/Skill/Iairon (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 60% ST sát thương lên mỗi kẻ địch trong một hàng với 2 đòn liên kích, với 100% cơ hội gây [Vỡ Vụn] lên mục tiêu chính và 50% cơ hội lên kẻ địch cùng hàng với mục tiêu chính trong 2 lượt (giảm tỉ lệ Giảm ST đi 30%).",
+      "desc": "Gây 60% ATK DMG cho mỗi kẻ địch liên tiếp bằng 2 đòn kết hợp, với 100% cơ hội gây [Nứt Vỡ] lên mục tiêu chính và 50% cơ hội gây ra [Nứt Vỡ] lên mục tiêu chính và 50% cơ hội lên kẻ địch cùng hàng với mục tiêu chính trong 2 lượt (giảm 30% tỷ lệ Giảm Sát Thương.).",
       "keepsakeIcon": "/Keepsake/Iairon (SR)/Keepsake_SR.png",
       "icon": "/Skill/Iairon (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi đồng minh tấn công kẻ địch đang trong trạng thái [Vỡ Vụn], Iairon vào trạng thái [Cuồng Nộ] trong 99 lượt (tăng ST gây ra 30%).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi một đồng minh tấn công kẻ thù ở trạng thái [Nứt Vỡ], Iairon sẽ chuyển sang trạng thái [Giận Dữ] trong 99 lượt (tăng xử lý DMG thêm 30%).",
       "icon": "/Skill/Iairon (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi nhân vật phe ta tấn công kẻ địch đang trong trạng thái [Vỡ Vụn], Iairon vào trạng thái [Cuồng Nộ] trong 99 lượt (tăng ST gây ra 40%).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi một nhân vật đồng minh tấn công kẻ thù ở trạng thái [Nứt Vỡ], Iairon sẽ chuyển sang trạng thái [Giận Dữ] trong 99 lượt (tăng DMG xử lý thêm 40%).",
       "icon": "/Skill/Iairon (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi nhân vật phe ta tấn công kẻ địch đang trong trạng thái [Vỡ Vụn], Iairon vào trạng thái [Cuồng Nộ] trong 99 lượt (tăng ST gây ra 45%).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi một nhân vật đồng minh tấn công kẻ thù ở trạng thái [Nứt Vỡ], Iairon sẽ chuyển sang trạng thái [Giận Dữ] trong 99 lượt (tăng DMG xử lý thêm 45%).",
       "icon": "/Skill/Iairon (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

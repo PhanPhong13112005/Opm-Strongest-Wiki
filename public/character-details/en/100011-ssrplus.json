@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 60% ATK as DMG to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Atomic Samurai (SSR+)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 130% ATK as DMG to the target's column and grants them [Unyielding].",
+      "desc": "Attacks all enemies in a column with 5 consecutive slashes, dealing 650% ATK DMG. Reduces the remaining action count of enemies currently under [Specialized Unyielding] by 2. If an affected enemy is not currently under [Specialized Unyielding], the next [Specialized Unyielding] they trigger has its action count reduced by 2.",
       "icon": "/Skill/Atomic Samurai (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 130% > 150% ATK as DMG to the target's column, grants them [Unyielding], and additionally grants [Unyielding] to all allies.",
+      "desc": "Attacks all enemies in a column with 5 consecutive slashes, dealing 750% ATK DMG. Reduces the remaining action count of enemies currently under [Specialized Unyielding] by 2. If an affected enemy is not currently under [Specialized Unyielding], the next [Specialized Unyielding] they trigger has its action count reduced by 2. When casting the Ultimate, increases the action count of all allies’ [Specialized Unyielding] by 1.",
       "keepsakeIcon": "/Keepsake/Atomic Samurai (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Atomic Samurai (SSR+)/Skill_ult.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "+20% HP. On entry, gains +60% [Non-Crit DMG Free]. After any unit acts, heals self for 10% of max HP.",
+      "desc": "Permanently gains 60% [Non-Crit DMG Reduction]. After any character acts, restores 10% Max HP. This recovery has no activation limit per round.",
       "icon": "/Skill/Atomic Samurai (SSR+)/Skill_pas.png",
       "animation": "/Animation/Sam_Urplus/Passive.gif",
       "type": "Passive",
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Non-Crit DMG Free] 60% &gt; 70%. Heal after any unit acts 10% &gt; 15% of max HP.",
+      "desc": "Permanently gains 70% [Non-Crit DMG Reduction]. After any character acts, restores 15% Max HP. This recovery has no activation limit per round.",
       "icon": "/Skill/Atomic Samurai (SSR+)/Skill_pas.png",
       "animation": "/Animation/Sam_Urplus/Passive.gif",
       "type": "Passive",
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Non-Crit DMG Free] 70% &gt; 80%. Heal after any unit acts 15% &gt; 20% of max HP.",
+      "desc": "Permanently gains 80% [Non-Crit DMG Reduction]. After any character acts, restores 20% Max HP. This recovery has no activation limit per round.",
       "icon": "/Skill/Atomic Samurai (SSR+)/Skill_pas.png",
       "animation": "/Animation/Sam_Urplus/Passive.gif",
       "type": "Passive",
@@ -73,7 +73,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Marks the main target, reducing its Max HP by 600% of Atomic Samurai's ATK (up to 50% of the target's Max HP), and negates any Max HP increase effects on the target. After action, if Atomic Samurai defeats the marked target or triggers [Unyielding] / [Enhanced Unyielding] on it, activates [Chase] (Ultimate Follow-up) on a random enemy, dealing 80% of the Ultimate DMG.",
+      "desc": "When Atomic Samurai actively attacks, first removes [4× Max HP Increase] from enemies hit, then permanently reduces their Max HP by an amount equal to 600% of Atomic Samurai’s ATK. An enemy’s Max HP cannot be reduced below 50% of its original value by this effect. After Atomic Samurai acts, if he defeats an enemy or causes an enemy to trigger [Unyielding] or [Specialized Unyielding], performs an [Ultimate Pursuit] against a random enemy column, dealing 80% of the Ultimate’s original DMG. This pursuit does not reduce Max HP and can trigger once per round.",
       "icon": "/Skill/Source/100011-ssrplus/awakened.webp",
       "animation": null,
       "type": "Awakening",
@@ -82,7 +82,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Additional effect: permanently decreases the marked enemy's ATK by 40%. Ultimate Follow-up ATK 80% > 120% (now triggers after any action).",
+      "desc": "When Atomic Samurai actively attacks, first removes [4× Max HP Increase] from enemies hit, then permanently reduces their Max HP by an amount equal to 600% of Atomic Samurai’s ATK. An enemy’s Max HP cannot be reduced below 50% of its original value by this effect. After Atomic Samurai finishes acting, always performs an [Ultimate Pursuit] against a random enemy column without requiring an enemy to be defeated or trigger [Unyielding] or [Specialized Unyielding]. The pursuit deals 120% of the Ultimate’s original DMG, does not reduce Max HP, and can trigger once per round. Enemies directly attacked by Atomic Samurai also permanently lose 40% ATK.",
       "icon": "/Skill/Source/100011-ssrplus/awakened.webp",
       "animation": null,
       "type": "Awakening",

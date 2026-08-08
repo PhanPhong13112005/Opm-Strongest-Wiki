@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 90% ATK (+10) DMG to a single target.",
+      "desc": "Deals 90% ATK DMG to a single target.",
       "icon": "/Skill/Eyelashes (R)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently gains (+20) HP. On the first turn, if Mountain Ape is present, increases DMG dealt by Eyelash by 20%, lasting until the end of battle.",
+      "desc": "Permanently gains HP. On the first turn, if Mountain Ape is present, increases DMG dealt by Eyelash%, lasting until the end of battle.",
       "icon": "/Skill/Eyelashes (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently gains (+20) HP. On the first turn, if Mountain Ape is present, increases DMG dealt by Eyelash by 30%, lasting until the end of battle.",
+      "desc": "Permanently gains HP. On the first turn, if Mountain Ape is present, increases DMG dealt by Eyelash by 30%, lasting until the end of battle.",
       "icon": "/Skill/Eyelashes (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently gains (+20) HP. On the first turn, if Mountain Ape is present, increases DMG dealt by Eyelash by 35%, lasting until the end of battle.",
+      "desc": "Permanently gains HP. On the first turn, if Mountain Ape is present, increases DMG dealt by Eyelash by 35%, lasting until the end of battle.",
       "icon": "/Skill/Eyelashes (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

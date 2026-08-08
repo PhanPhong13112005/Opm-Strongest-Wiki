@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 100% ST lên mục tiêu đơn.",
+      "desc": "Gây 100% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Bushidoriru (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 35% ST lên cả hàng dọc mục tiêu với 4 đòn liên kích, với 100% cơ hội gây [Vỡ Vụn] lên mục tiêu chính trong 2 lượt (giảm Tỉ lệ Giảm ST 30%). Ngoài ra, gây ST phụ trội bằng 50% ST lên kẻ địch xung quanh mục tiêu chính.",
+      "desc": "Gây 35% ATK DMG cho toàn bộ cột mục tiêu bằng 4 đòn đánh kết hợp, với 100% cơ hội gây [Nứt Vỡ] lên mục tiêu chính trong 2 lượt (giảm Giảm Sát Thương. Tỷ lệ 30%). Ngoài ra, còn gây thêm sát thương bằng 50% ATK cho kẻ địch xung quanh mục tiêu chính.",
       "icon": "/Skill/Bushidoriru (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 35% ST lên cả hàng dọc mục tiêu với 4 đòn liên kích, với 100% cơ hội gây [Vỡ Vụn] lên mục tiêu chính trong 2 lượt (giảm Tỉ lệ Giảm ST 35%). Ngoài ra, gây ST phụ trội bằng 70% ST lên kẻ địch xung quanh mục tiêu chính.",
+      "desc": "Gây 35% ATK DMG cho toàn bộ cột mục tiêu bằng 4 đòn đánh kết hợp, với 100% cơ hội gây [Nứt Vỡ] lên mục tiêu chính trong 2 lượt (giảm Giảm Sát Thương. Tỷ lệ 35%). Ngoài ra, còn gây thêm sát thương bằng 70% ATK cho kẻ địch xung quanh mục tiêu chính.",
       "icon": "/Skill/Bushidoriru (SR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Bushidoriru (SR)/Keepsake_SR.png",
       "type": "Tuyệt kĩ",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng +20% Máu. Sau mỗi lần hành động, nếu có kẻ địch bị Vỡ Vụn trên chiến trường, nhận [Kiên Cường] (hấp thụ ST bằng 30% Máu của bản thân).",
+      "desc": "Tăng vĩnh viễn +20% HP. Sau mỗi hành động, nếu có kẻ địch bị Shattered trên chiến trường, sẽ nhận được [Lá Chắn] (hấp thụ DMG bằng 30% HP của chính nó).",
       "icon": "/Skill/Bushidoriru (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng +20% Máu. Sau mỗi lần hành động, nếu có kẻ địch bị Vỡ Vụn trên chiến trường, nhận [Kiên Cường] (hấp thụ ST bằng 35% Máu của bản thân).",
+      "desc": "Tăng vĩnh viễn +20% HP. Sau mỗi hành động, nếu có kẻ địch bị Shattered trên chiến trường, sẽ nhận được [Lá Chắn] (hấp thụ DMG bằng 35% HP của chính nó).",
       "icon": "/Skill/Bushidoriru (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng +20% Máu. Sau mỗi lần hành động, nếu có kẻ địch bị Vỡ Vụn trên chiến trường, nhận [Kiên Cường] (hấp thụ ST bằng 40% Máu của bản thân).",
+      "desc": "Tăng vĩnh viễn +20% HP. Sau mỗi hành động, nếu có kẻ địch bị Shattered trên chiến trường, sẽ nhận được [Lá Chắn] (hấp thụ DMG bằng 40% HP của chính nó).",
       "icon": "/Skill/Bushidoriru (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

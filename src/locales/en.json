@@ -3,7 +3,8 @@
     "eyebrow": "CONNECTING TO DATA ARCHIVE",
     "title": "Loading data",
     "message": "Please wait a few seconds while the page loads."
-  },  "home": {
+  },
+  "home": {
     "eyebrow": "THIS MONTH'S FEATURED CHARACTER",
     "title": "Release radar",
     "subtitle": "Track character releases across China and Southeast Asia servers on one unified timeline.",
@@ -29,11 +30,12 @@
   "equipmentCatalog": {
     "eyebrow": "GEAR FEATURE",
     "title": "Gear",
-    "description": "The Gear reference area is currently being built and its data is being completed.",
+    "description": "Browse 20 Gear sets, their four-piece bonuses, evolution paths, and upgrade planning in one place.",
     "pendingStatus": "IN DEVELOPMENT",
     "pendingTitle": "This feature is under development",
     "pendingDesc": "Please wait until it is complete to read the content."
-  },  "buffGear": {
+  },
+  "buffGear": {
     "eyebrow": "BUFF GEAR DATA ARCHIVE",
     "title": "Buff Gear",
     "description": "Browse the planned Buff Gear groups organized by combat type, grade, and faction.",
@@ -50,7 +52,8 @@
     "dragon": "Dragon",
     "demon": "Demon",
     "tiger": "Tiger"
-  },  "nav": {
+  },
+  "nav": {
     "characters": "Characters",
     "equipment": "Gear",
     "buffGear": "Buff Gear",
@@ -67,7 +70,9 @@
     "login": "Login",
     "forum": "Forum",
     "advisor": "AI Advisor",
-    "topup": "Top up"
+    "topup": "Top up",
+    "stats": "Stats",
+    "talents": "Talents"
   },
   "footer": {
     "eyebrow": "Community data archive",
@@ -159,7 +164,14 @@
     "coreBase": "Basic",
     "coreMilestone": "Level {level} milestone",
     "viewCoreLab": "View Core Lab details",
-    "animUpdatingSmall": "Animation updating"
+    "animUpdatingSmall": "Animation updating",
+    "recommendationsLabel": "BUILD RECOMMENDATIONS",
+    "requiredInsignia": "Required Sigils",
+    "recommendedGear": "Recommended Gear Set",
+    "recommendationPending": "Updating",
+    "recommendationEmpty": "Recommendations for this character are not available yet.",
+    "browseInsignias": "Browse all Sigils",
+    "browseGear": "Browse all Gear"
   },
   "corelab": {
     "title": "Core Skill",
@@ -332,5 +344,24 @@
     "crescentTowerRules": "Crescent Tower Rules",
     "autoRules": "Continuous Challenge Rules",
     "levelRequired": "Lv.75 Unlock"
+  },
+  "statsPage": {
+    "eyebrow": "STAT DATABASE",
+    "title": "Stats",
+    "status": "IN DEVELOPMENT",
+    "description": "This feature is being developed. Please check back later for in-game stats and formulas."
+  },
+  "talentsPage": {
+    "eyebrow": "PROGRESSION SYSTEM",
+    "title": "Talents",
+    "description": "Explore Talent progression and Sigils. Detailed data is currently being updated.",
+    "pending": "Data update in progress",
+    "pendingDescription": "This section is being edited and will be available soon.",
+    "tabs": {
+      "basic": "Basic Talents",
+      "intermediate": "Intermediate Talents",
+      "advanced": "Advanced Talents",
+      "sigils": "All Sigils"
+    }
   }
 }

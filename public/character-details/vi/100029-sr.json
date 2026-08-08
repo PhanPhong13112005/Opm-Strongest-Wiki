@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung liên kích 3 đòn lên mục tiêu đơn, gây 35% ST(+3) sát thương.",
+      "desc": "Tấn công một mục tiêu bằng combo 3 đòn, gây 35% ATK(+3) sát thương.",
       "icon": "/Skill/Amai Mask (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công mục tiêu đơn ở hàng sau 2 đến 5 lần, gây tối đa 100% ST(+2) sát thương.",
+      "desc": "Tấn công một mục tiêu ở hàng sau từ 2 đến 5 lần, gây sát thương lên tới 100% ATK(+2).",
       "icon": "/Skill/Amai Mask (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tấn công mục tiêu đơn ở hàng sau 3 đến 5 lần, gây tối đa 100% ST(+2) sát thương.",
+      "desc": "Tấn công một mục tiêu ở hàng sau từ 3 đến 5 lần, gây sát thương lên tới 100% ATK(+2).",
       "icon": "/Skill/Amai Mask (SR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Amai Mask (SR)/Keepsake_SR.png",
       "type": "Tuyệt kĩ",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân(+20). Khi tấn công Quái Nhân hoặc Tội Phạm Truy Nã, khiến mục tiêu [Thương Tổn] 2 lượt (khi bị tấn công sẽ thêm sát thương Thương Tổn bằng 50% ST).",
+      "desc": "Tăng vĩnh viễn H của bản thân. Khi tấn công Quái vật hoặc Tội phạm tiền thưởng, gây [Bị Thương] cho mục tiêu trong 2 lượt (thêm sát thương bị thương bằng 50% ATK khi bị tấn công).",
       "icon": "/Skill/Amai Mask (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân(+20). Đòn tấn công khiến mục tiêu [Thương Tổn] 2 lượt (khi bị tấn công sẽ thêm sát thương Thương Tổn bằng 70% ST).",
+      "desc": "Tăng vĩnh viễn H của bản thân. Các đòn tấn công gây [Bị Thương] lên mục tiêu trong 2 lượt (thêm sát thương bị thương bằng 70% ATK khi bị tấn công).",
       "icon": "/Skill/Amai Mask (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân(+20). Đòn tấn công khiến mục tiêu [Thương Tổn] 2 lượt (khi bị tấn công sẽ thêm sát thương Thương Tổn bằng 75% ST).",
+      "desc": "Tăng vĩnh viễn H của bản thân. Các đòn tấn công gây [Bị Thương] lên mục tiêu trong 2 lượt (thêm sát thương bị thương bằng 75% ATK khi bị tấn công).",
       "icon": "/Skill/Amai Mask (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

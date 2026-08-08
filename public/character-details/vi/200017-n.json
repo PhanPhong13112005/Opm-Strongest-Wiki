@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 80% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 80% sát thương ATK cho một mục tiêu.",
       "icon": "/Skill/Skyfolk Striker (N)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 90% ST (+10) sát thương lên cả hàng mục tiêu.",
+      "desc": "Gây 90% sát thương ATK cho toàn bộ hàng kẻ địch.",
       "icon": "/Skill/Skyfolk Striker (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 100% ST (+10) sát thương lên cả hàng mục tiêu.",
+      "desc": "Gây 100% sát thương ATK cho toàn bộ hàng kẻ địch.",
       "keepsakeIcon": "/Keepsake/Skyfolk Striker (N)/Keepsake_N.png",
       "icon": "/Skill/Skyfolk Striker (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh hành động, có 20% xác suất tung một đòn truy kích với sát thương đòn thường lên mục tiêu địch có Máu thấp nhất (tối đa 2 lần truy kích mỗi lượt).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Sau khi đồng minh hành động, có 20% cơ hội phóng Truy Kích với sát thương đòn đánh cơ bản lên kẻ địch có HP thấp nhất (tối đa 2 lần theo dõi mỗi lượt).",
       "icon": "/Skill/Skyfolk Striker (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh hành động, có 20% xác suất tung một đòn truy kích gây 100% sát thương đòn thường lên mục tiêu địch có Máu thấp nhất (tối đa 2 lần truy kích mỗi lượt).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Sau khi đồng minh hành động, có 20% cơ hội phóng Truy Kích gây 100% sát thương Đòn tấn công cơ bản lên kẻ địch có HP thấp nhất (tối đa 2 lần theo dõi mỗi lượt).",
       "icon": "/Skill/Skyfolk Striker (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Sau khi đồng minh hành động, có 20% xác suất tung một đòn truy kích gây 110% sát thương đòn thường lên mục tiêu địch có Máu thấp nhất (tối đa 2 lần truy kích mỗi lượt).",
+      "desc": "Tăng vĩnh viễn HP của riêng bạn lên. Sau khi đồng minh hành động, có 20% cơ hội phóng Truy Kích gây 110% sát thương Đòn tấn công cơ bản lên kẻ địch có HP thấp nhất (tối đa 2 lần theo dõi mỗi lượt).",
       "icon": "/Skill/Skyfolk Striker (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

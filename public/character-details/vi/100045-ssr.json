@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tấn công mục tiêu đơn gây 120% ST sát thương.",
+      "desc": "Tấn công một mục tiêu duy nhất trong 120% ATK DMG.",
       "icon": "/Skill/Child Emperor (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây sát thương lên từng kẻ địch trong một hàng bằng 5 đòn liên tiếp, mỗi đòn gây 130% ST(+XX) sát thương, với 50% tỉ lệ gây [Choáng] cho mục tiêu chính trong 1 lượt (không thể hành động và hiệu ứng này không bị ảnh hưởng bởi Hit). Gây sát thương Chí Mạng sẽ khiến mục tiêu chịu [Nứt Vỡ] trong 2 lượt (nhận thêm 30% sát thương).",
+      "desc": "Gây sát thương liên tiếp cho mỗi kẻ địch bằng 5 đòn liên tiếp gây 130% ATK(+XX) DMG, kèm theo 50% cơ hội gây [Choáng] cho mục tiêu chính trong 1 lượt (không thể hành động và hiệu ứng này không bị ảnh hưởng bởi Hit). Xử lý CRIT DMG tấn công mục tiêu bằng [Nứt Vỡ] trong 2 lượt (nhận thêm 30% DMG).",
       "icon": "/Skill/Child Emperor (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây sát thương lên từng kẻ địch trong một hàng bằng 5 đòn liên tiếp, mỗi đòn gây 130% > 165% ST(+XX) sát thương, với 50% tỉ lệ gây [Choáng] cho mục tiêu chính trong 1 lượt (không thể hành động và hiệu ứng này không bị ảnh hưởng bởi Hit). Gây sát thương Chí Mạng sẽ khiến mục tiêu chịu [Nứt Vỡ] trong 2 lượt (nhận thêm 30% > 40% sát thương).",
+      "desc": "Gây sát thương liên tiếp cho mỗi kẻ địch bằng 5 đòn liên tiếp gây 130% > 165% ATK(+XX) DMG, có 50% cơ hội gây [Choáng] lên mục tiêu chính trong 1 lượt (không thể hành động và hiệu ứng này không bị ảnh hưởng bởi Đòn đánh). Xử lý CRIT DMG tấn công mục tiêu bằng [Nứt Vỡ] trong 2 lượt (nhận thêm 30% > 40% DMG).",
       "keepsakeIcon": "/Keepsake/Child Emperor (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Child Emperor (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Mỗi khi Child Emperor kết thúc hành động, các đồng minh cùng hàng vào trạng thái [Giận Dữ] trong 1 lượt (sát thương tăng 30%). Tăng vĩnh viễn HP.",
+      "desc": "Mỗi khi Đồng Đế kết thúc hành động của mình, các đồng minh trong cùng hàng sẽ chuyển sang trạng thái [Giận Dữ] trong 1 hiệp (DMG tăng 30%). Tăng vĩnh viễn HP.",
       "icon": "/Skill/Child Emperor (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Mỗi khi Child Emperor kết thúc hành động, các đồng minh cùng hàng vào trạng thái [Giận Dữ] trong 1 lượt (sát thương tăng 45%). Tăng vĩnh viễn HP.",
+      "desc": "Mỗi khi Đồng Đế kết thúc hành động của mình, các đồng minh trong cùng hàng sẽ chuyển sang trạng thái [Giận Dữ] trong 1 hiệp (DMG tăng 45%). Tăng vĩnh viễn HP.",
       "icon": "/Skill/Child Emperor (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Mỗi khi Child Emperor kết thúc hành động, các đồng minh cùng hàng vào trạng thái [Giận Dữ] trong 1 lượt (sát thương tăng 50%). Tăng vĩnh viễn HP.",
+      "desc": "Mỗi khi Đồng Đế kết thúc hành động của mình, các đồng minh trong cùng hàng sẽ chuyển sang trạng thái [Giận Dữ] trong 1 hiệp (DMG tăng 50%). Tăng vĩnh viễn HP.",
       "icon": "/Skill/Child Emperor (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

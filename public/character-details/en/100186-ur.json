@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK, 100% chance to inflict [Internal Injury] (deals 100% of Bomb's ATK when the target is attacked, then disappears after triggering).",
+      "desc": "Deals 120% ATK DMG to a single target, with a 100% chance to inflict [Internal Injury]. [Internal Injury]: Deals 100% of Bomb’s ATK when the affected target is attacked and disappears after triggering.",
       "icon": "/Skill/BomBengpu (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Attacks enemies in a row with 6 consecutive strikes, dealing 510% ATK. 100% chance to inflict [Internal Injury] on the main target (deals 500% of Bomb's ATK when attacked, then disappears after triggering).",
+      "desc": "Attacks enemies in a row with 6 consecutive strikes, dealing 510% ATK DMG. Has a 100% chance to inflict [Internal Injury] on the main target. [Internal Injury]: Deals 500% of Bomb’s ATK when the affected target is attacked and disappears after triggering.",
       "icon": "/Skill/BomBengpu (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "ATK 510% → 600%[Internal Injury] ATK 500% → 750%",
+      "desc": "Attacks enemies in a row with 6 consecutive strikes, dealing 600% ATK DMG. Has a 100% chance to inflict [Internal Injury] on the main target. [Internal Injury]: Deals 750% of Bomb’s ATK when the affected target is attacked and disappears after triggering.",
       "keepsakeIcon": "/Keepsake/Bom/Bengpu (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/BomBengpu (UR)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "When battle begins, gains 60% chance of [Evade] (reduces Direct/Extra/Charge/Berserk DMG to 1 DMG), lasting 5 rounds.After any character acts, absorbs 40% of [Internal Injury] DMG on enemies and deals [Specialized Extra DMG] (can Crit, not affected by [Specialized DMG Reflect]) to all enemies.For the first 5 rounds, before any character acts, recovers 500% ATK of HP, 3 times per round.",
+      "desc": "When battle begins, gains a 60% chance of [Evade] for 5 rounds. After any character acts, absorbs 40% of the [Internal Injury] DMG on enemies and deals [Specialized Extra DMG] to the entire enemy team. For the first 5 rounds, before any character acts, recovers HP equal to 500% of ATK, up to 3 times per round. [Evade]: Reduces Direct, Extra, Charge, and Berserk DMG to 1 DMG. [Specialized Extra DMG]: Can CRIT and is not affected by [Specialized DMG Reflect].",
       "icon": "/Skill/BomBengpu (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Evade] chance 60% → 70%[Internal Injury] DMG absorbed 40% → 50%HP recovery 3 times per round → 4 times per round",
+      "desc": "When battle begins, gains a 70% chance of [Evade] for 8 rounds. After any character acts, absorbs 50% of the [Internal Injury] DMG on enemies and deals [Specialized Extra DMG] to the entire enemy team. For the first 5 rounds, before any character acts, recovers HP equal to 650% of ATK, up to 4 times per round. [Evade]: Reduces Direct, Extra, Charge, and Berserk DMG to 1 DMG. [Specialized Extra DMG]: Can CRIT and is not affected by [Specialized DMG Reflect].",
       "icon": "/Skill/BomBengpu (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Evade] duration 5 rounds → 8 rounds[Internal Injury] DMG absorbed 50% → 60%HP recovery 500% → 650%",
+      "desc": "When battle begins, gains a 70% chance of [Evade] for 8 rounds. After any character acts, absorbs 60% of the [Internal Injury] DMG on enemies and deals [Specialized Extra DMG] to the entire enemy team. For the first 5 rounds, before any character acts, recovers HP equal to 650% of ATK, up to 4 times per round. [Evade]: Reduces Direct, Extra, Charge, and Berserk DMG to 1 DMG. [Specialized Extra DMG]: Can CRIT and is not affected by [Specialized DMG Reflect].",
       "icon": "/Skill/BomBengpu (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "When Bomb attacks, summons Silverfang to deal [Combo Attack] with the same attack style. Basic - Deals 100% Bomb's ATK damage to a random target. Ultimate - Attacks all enemies with 5 consecutive strikes and deals damage by 150% Bomb's ATK and have 75% chance of inflicting [Internal Injury] on main target (deals 450% of Bomb's ATK when attacked and disappears after triggered)",
+      "desc": "When Bomb attacks, summons Silverfang to perform a [Combo Attack] using the same attack style. Basic: Deals 100% of Bomb’s ATK as DMG to a random target. Ultimate: Attacks all enemies with 5 consecutive strikes, dealing 150% of Bomb’s ATK as DMG, and has a 75% chance to inflict [Internal Injury] on the main target. [Internal Injury]: Deals 450% of Bomb’s ATK when the affected target is attacked and disappears after triggering.",
       "icon": "/Skill/BomBengpu (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Silverfang ult dmg 150% > 200% Internal Injury chance 75% > 90% Internal Injury dmg 450% > 600%",
+      "desc": "When Bomb attacks, summons Silverfang to perform a [Combo Attack] using the same attack style. Basic: Deals 100% of Bomb’s ATK as DMG to a random target. Ultimate: Attacks all enemies with 5 consecutive strikes, dealing 200% of Bomb’s ATK as DMG, and has a 90% chance to inflict [Internal Injury] on the main target. [Internal Injury]: Deals 600% of Bomb’s ATK when the affected target is attacked and disappears after triggering.",
       "icon": "/Skill/BomBengpu (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

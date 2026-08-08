@@ -41,7 +41,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently gains +20% HP. When deployed together with Bitterworm, DMG is increased by 20%.",
+      "desc": "Permanently gains +20% HP. When deployed together with Bitterworm, DMG is increased%.",
       "icon": "/Skill/Charanko (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

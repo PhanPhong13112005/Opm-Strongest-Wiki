@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung liên kích 2 đòn lên mục tiêu đơn, gây 60% ST(+5) sát thương. Trao cho bản thân [Kiên Cường] (hấp thụ sát thương bằng 10% Máu của bản thân).",
+      "desc": "Tấn công một mục tiêu bằng combo 2 đòn, gây sát thương 60% AT. Nhận cho bản thân [Lá Chắn] (hấp thụ sát thương bằng 10% HP của bản thân).",
       "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 130% ST(+10) sát thương lên mục tiêu trong vùng chữ thập. Có 100% khả năng khiến mục tiêu chính [Thương Tổn] 2 lượt (khi bị tấn công sẽ thêm sát thương Thương Tổn bằng 50% ST). Gánh 40% sát thương nhận vào cho 2 đồng minh có Máu thấp nhất trong 2 lượt, giảm 20% sát thương gánh chịu (không còn gánh khi Máu dưới 20%).",
+      "desc": "Gây sát thương 130% AT cho các mục tiêu trong phạm vi chéo. Có 100% cơ hội gây [Bị Thương] lên mục tiêu chính trong 2 lượt (thêm sát thương bị thương bằng 50% ATK khi bị tấn công). Chia sẻ 40% sát thương mà 2 đồng minh HP thấp nhất phải gánh chịu trong 2 lượt, giảm % sát thương chung nhận vào (không còn chia sẻ khi HP giảm xuống dưới 20%).",
       "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 160% ST(+10) sát thương lên mục tiêu trong vùng chữ thập. Có 100% khả năng khiến mục tiêu chính [Thương Tổn] 2 lượt (khi bị tấn công sẽ thêm sát thương Thương Tổn bằng 50% ST). Gánh 40% sát thương nhận vào cho 2 đồng minh có Máu thấp nhất trong 2 lượt, giảm 40% sát thương gánh chịu (không còn gánh khi Máu dưới 20%).",
+      "desc": "Gây sát thương 160% AT cho các mục tiêu trong phạm vi chéo. Có 100% cơ hội gây [Bị Thương] lên mục tiêu chính trong 2 lượt (thêm sát thương bị thương bằng 50% ATK khi bị tấn công). Chia sẻ 40% sát thương mà 2 đồng minh HP thấp nhất phải gánh chịu trong 2 lượt, giảm 40% sát thương chung phải gánh chịu (không còn chia sẻ khi HP giảm xuống dưới 20%).",
       "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Khi trận đấu bắt đầu, trao cho đồng minh cùng hàng và bản thân 40% Miễn ST Tuyệt Kỹ, kéo dài 2 lượt. Lần đầu tiên nhận sát thương chí mạng mỗi trận, hồi cho bản thân 30% Máu tối đa.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi trận chiến bắt đầu, cấp cho đồng minh trong cùng hàng và cho bản thân 40% DMG Tuyệt Kĩ Miễn phí trong 2 lượt. Lần đầu tiên nhận sát thương chí mạng trong mỗi trận chiến, tự hồi phục 30% HP tối đa.",
       "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Khi trận đấu bắt đầu, trao cho đồng minh cùng hàng và bản thân 50% Miễn ST Tuyệt Kỹ, kéo dài 2 lượt. Lần đầu tiên nhận sát thương chí mạng mỗi trận, hồi cho bản thân 40% Máu tối đa.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi trận chiến bắt đầu, cấp cho đồng minh trong cùng hàng và bản thân 50% DMG Tuyệt Kĩ Miễn phí trong 2 lượt. Lần đầu tiên nhận sát thương chí mạng trong mỗi trận chiến, tự hồi phục 40% HP tối đa.",
       "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân (+20). Khi trận đấu bắt đầu, trao cho đồng minh cùng hàng và bản thân 55% Miễn ST Tuyệt Kỹ, kéo dài 2 lượt. Lần đầu tiên nhận sát thương chí mạng mỗi trận, hồi cho bản thân 45% Máu tối đa.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi trận chiến bắt đầu, cấp cho đồng minh trong cùng hàng và bản thân DMG Tuyệt Kĩ miễn phí 55% trong 2 lượt. Lần đầu tiên nhận sát thương chí mạng trong mỗi trận chiến, bản thân sẽ tự hồi phục 45% HP tối đa.",
       "icon": "/Skill/Superalloy Darkshine (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

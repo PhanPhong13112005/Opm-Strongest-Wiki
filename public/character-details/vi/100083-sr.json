@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 30% ST sát thương lên mục tiêu đơn với 4 đòn liên kích.",
+      "desc": "Gây 30% ATK DMG cho một mục tiêu bằng 4 đòn combo.",
       "icon": "/Skill/Doctor Genus (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Hồi 250% ST làm Máu cho mục tiêu đơn phe ta, và tăng Tốc độ 20% cho mục tiêu.",
+      "desc": "Hồi máu cho một mục tiêu đồng minh 250% ATK dưới dạng HP và tăng SPD% của mục tiêu.",
       "icon": "/Skill/Doctor Genus (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Hồi 250% ST làm Máu cho mục tiêu đơn phe ta, và tăng Tốc độ 30% cho mục tiêu.",
+      "desc": "Hồi máu cho một mục tiêu đồng minh 250% ATK dưới dạng HP và tăng SPD của mục tiêu thêm 30%.",
       "icon": "/Skill/Doctor Genus (SR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Doctor Genus (SR)/Keepsake_SR.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Tăng ST 20% cho đồng minh đã được hồi Máu.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Tăng ATK% cho các đồng minh đã khôi phục HP.",
       "icon": "/Skill/Doctor Genus (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Tăng ST 30% cho đồng minh đã được hồi Máu.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Tăng ATK thêm 30% cho các đồng minh đã khôi phục HP.",
       "icon": "/Skill/Doctor Genus (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Tăng ST 35% cho đồng minh đã được hồi Máu.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Tăng ATK thêm 35% cho các đồng minh đã khôi phục HP.",
       "icon": "/Skill/Doctor Genus (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK (+10) DMG to a single target, with a 100% chance to inflict [Corruption] on the target for 2 turns (reduces DMG reduction rate by 30%).",
+      "desc": "Deals 120% ATK DMG to a single target, with a 100% chance to inflict [Corruption] on the target for 2 turns (reduces DMG reduction rate by 30%).",
       "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 210% ATK (+10) DMG to a single target and grants an acceleration buff for 1 turn; if this attack lands a critical hit, the acceleration effect is guaranteed to trigger. Has a 100% chance to immediately raise the SPD of yourself and surrounding allies.",
+      "desc": "Deals 210% ATK DMG to a single target and grants an acceleration buff for 1 turn; if this attack lands a critical hit, the acceleration effect is guaranteed to trigger. Has a 100% chance to immediately raise the SPD of yourself and surrounding allies.",
       "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 263% ATK (+10) DMG to a single target and grants an acceleration buff for 1 turn; if this attack lands a critical hit, the acceleration effect is guaranteed to trigger. Has a 100% chance to immediately raise the SPD of all allies.",
+      "desc": "Deals 263% ATK DMG to a single target and grants an acceleration buff for 1 turn; if this attack lands a critical hit, the acceleration effect is guaranteed to trigger. Has a 100% chance to immediately raise the SPD of all allies.",
       "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Speed-o-Sound Sonic V1 (SSR)/Keepsake_SSR.png",
       "type": "Ultimate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). After each action, attacking a [Corrupted] enemy deals an extra 75% ATK DMG.",
+      "desc": "Permanently increases own HP by. After each action, attacking a [Corrupted] enemy deals an extra 75% ATK DMG.",
       "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). After each action, attacking a [Corrupted] enemy deals an extra 85% ATK DMG.",
+      "desc": "Permanently increases own HP by. After each action, attacking a [Corrupted] enemy deals an extra 85% ATK DMG.",
       "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). After each action, attacking a [Corrupted] enemy deals an extra 100% ATK DMG.",
+      "desc": "Permanently increases own HP by. After each action, attacking a [Corrupted] enemy deals an extra 100% ATK DMG.",
       "icon": "/Skill/Speed-o-Sound Sonic V1 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

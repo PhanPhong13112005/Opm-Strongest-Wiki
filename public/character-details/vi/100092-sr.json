@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 100% ST lên mục tiêu đơn.",
+      "desc": "Gây 100% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Bakuzan (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 200% ST lên mục tiêu đơn, với 100% tỉ lệ khiến mục tiêu dính [Nội Thương] (khi bị đánh, thêm sát thương Bạo Sơn bằng 140% ST; hiệu ứng biến mất sau khi kích hoạt).",
+      "desc": "Gây 200% ATK DMG cho một mục tiêu, với 100% cơ hội gây ra [Nội Thương] (khi đánh, thêm DMG Mountain-Bursting bằng 140% ATK; hiệu ứng bị loại bỏ sau khi kích hoạt).",
       "icon": "/Skill/Bakuzan (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 200% ST lên mục tiêu đơn, với 100% tỉ lệ khiến mục tiêu dính [Nội Thương] (khi bị đánh, thêm sát thương Bạo Sơn bằng 160% ST; hiệu ứng biến mất sau khi kích hoạt).",
+      "desc": "Gây 200% ATK DMG cho một mục tiêu, với 100% cơ hội gây ra [Nội Thương] (khi đánh, thêm DMG Mountain-Bursting bằng 160% ATK; hiệu ứng bị loại bỏ sau khi kích hoạt).",
       "icon": "/Skill/Bakuzan (SR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Bakuzan (SR)/Keepsake_SR.png",
       "type": "Tuyệt kĩ",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Nếu trong hàng ngũ địch có kẻ dính [Nội Thương], bản thân vào trạng thái [Cuồng Nộ] (tăng 30% sát thương khi tấn công).",
+      "desc": "Tăng vĩnh viễn HP tối đa% của chính mình. Nếu bất kỳ kẻ địch nào dính [Nội Thương], bản thân sẽ chuyển sang trạng thái [Giận Dữ] (tăng DMG khi tấn công thêm 30%).",
       "icon": "/Skill/Bakuzan (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Nếu trong hàng ngũ địch có kẻ dính [Nội Thương], bản thân vào trạng thái [Cuồng Nộ] (tăng 40% sát thương khi tấn công).",
+      "desc": "Tăng vĩnh viễn HP tối đa% của chính mình. Nếu bất kỳ kẻ địch nào bị nhiễm [Nội Thương], bản thân sẽ chuyển sang trạng thái [Giận Dữ] (tăng DMG khi tấn công thêm 40%).",
       "icon": "/Skill/Bakuzan (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Nếu trong hàng ngũ địch có kẻ dính [Nội Thương], bản thân vào trạng thái [Cuồng Nộ] (tăng 45% sát thương khi tấn công).",
+      "desc": "Tăng vĩnh viễn HP tối đa% của chính mình. Nếu bất kỳ kẻ địch nào dính [Nội Thương], bản thân sẽ chuyển sang trạng thái [Giận Dữ] (tăng DMG khi tấn công thêm 45%).",
       "icon": "/Skill/Bakuzan (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

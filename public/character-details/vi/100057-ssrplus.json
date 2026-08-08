@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây ST trực tiếp bằng 60% ST lên một mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu bằng 2 đòn đánh liên tiếp.",
       "icon": "/Skill/Pig God (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Ban [Bất Tử] cho mục tiêu trong 2 lượt, rồi gây ST trực tiếp bằng 75% ST và [Nuốt Chửng] mục tiêu (loại khỏi sân / [Rời Trận]).",
+      "desc": "Tấn công một mục tiêu bằng 4 đòn liên tiếp, gây 300% ATK DMG. [Nuốt Chửng] mục tiêu và khiến nó đạt [Rời Trận] trong 1 hiệp. Sau [Nuốt Chửng], giảm thời lượng [Bất Khuất Cường Hóa] còn lại của mục tiêu xuống 2 hành động.",
       "icon": "/Skill/Pig God (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Ban [Bất Tử] cho mục tiêu trong 2 > 4 lượt, rồi gây ST trực tiếp bằng 75% > 100% ST và [Nuốt Chửng] mục tiêu (loại khỏi sân / [Rời Trận]).",
+      "desc": "Cấp [Bất Tử] cho mục tiêu trong 2 > 4 lượt, sau đó gây Sát Thương Trực Tiếp với tỷ lệ 75% > 100% ATK và [Nuốt Chửng] cho mục tiêu (loại bỏ nó khỏi sân / [Rời Trận]).",
       "icon": "/Skill/Pig God (SSR+)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Pig God (SSRplus)/Keepsake_SSRplus.png",
       "type": "Tuyệt kĩ",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20% Máu. Khi trận đấu bắt đầu, nhận [Phòng Hộ Chuyên Biệt] bằng 1000% ATK (khử ST; cộng dồn với hiệu ứng thêm Máu; tổng ST khử không quá 15x Máu gốc). Sau khi vào [Bất Khuất Chuyên Biệt], nhận thêm [Phòng Hộ Chuyên Biệt] bằng 600% ATK. Không thể [Rời Trận] và miễn nhiễm [Nuốt Chửng].",
+      "desc": "Khi bắt đầu trận chiến, nhận được [Bảo Hộ Cường Hóa] bằng 1000% ATK. [Bảo Hộ Cường Hóa] phủ nhận DMG đã nhận, có thể cộng dồn với các hiệu ứng Extra HP và tổng số DMG mà nó có thể phủ nhận không thể vượt quá 15 lần HP tối đa ban đầu của Thần Heo. Sau khi nhập [Bất Khuất Cường Hóa], nhận thêm [Bảo Hộ Cường Hóa] bằng 600% ATK. Thần Heo miễn nhiễm với [Thoát Ly] và [Nuốt Chửng].",
       "icon": "/Skill/Pig God (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Phòng Hộ Chuyên Biệt] 1000% &gt; 1100% ATK. [Phòng Hộ Chuyên Biệt] thứ hai 600% &gt; 700% ATK.",
+      "desc": "[Bảo Hộ Cường Hóa] 1000% > 1100% ATK. [Bảo Hộ Cường Hóa] thứ hai 600% > 700% ATK.",
       "icon": "/Skill/Pig God (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Phòng Hộ Chuyên Biệt] 1100% &gt; 1200% ATK. [Phòng Hộ Chuyên Biệt] thứ hai 700% &gt; 800% ATK.",
+      "desc": "[Bảo Hộ Cường Hóa] 1100% > 1200% ATK. [Bảo Hộ Cường Hóa] thứ hai 700% > 800% ATK.",
       "icon": "/Skill/Pig God (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -68,7 +68,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi một đồng minh kích hoạt [Rời Trận], gây [Ăn Mòn Chuyên Biệt] (DoT bằng 150% ST; sau khi nhân vật bất kỳ hành động, chuyển hiệu ứng sang kẻ địch ngẫu nhiên, biến mất sau khi chuyển 3 lần). Khi một đồng minh xung quanh bị hạ gục, Pig God có thể [Nuốt Chửng] một đồng minh; sau khi nhân vật bất kỳ hành động, đồng minh trở lại trận và hồi 60% HP Tối đa, tối đa 3 lần.",
+      "desc": "Khi một đồng minh kích hoạt [Thoát Ly], giải phóng 1 [Ăn Mòn Chuyên Biệt], gây ra 150% ATK dưới dạng DMG liên tục. Sau khi bất kỳ nhân vật nào hành động, [Ăn Mòn Chuyên Biệt] chuyển sang kẻ thù ngẫu nhiên, tối đa 3 lần chuyển. Khi một đồng minh xung quanh bị đánh bại, Thần Heo có thể [Nuốt Chửng] đồng minh đó. Sau khi bất kỳ nhân vật nào hành động, Thần Heo thả đồng minh bị nuốt chửng trở lại chiến trường và khôi phục HP của đồng minh thành 60% HP tối đa. Có thể kích hoạt tối đa 3 lần.",
       "icon": "/Skill/Pig God (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -77,7 +77,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "[Ăn Mòn Chuyên Biệt] DoT 150% > 200% ST. Khi [Nuốt Chửng], đồng minh hồi 60% > 75% HP Tối đa, và [Nuốt Chửng] kích hoạt tối đa 3 > 4 lần.",
+      "desc": "[Ăn Mòn Chuyên Biệt] DoT 150% > 200% ATK. Trên [Nuốt Chửng], đồng minh hồi phục 60% > 75% HP tối đa và [Nuốt Chửng] có thể kích hoạt tối đa 3 > 4 lần.",
       "icon": "/Skill/Pig God (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -86,7 +86,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Pig God (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

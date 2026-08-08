@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 100% ATK Direct DMG to a single target, then inflicts [Corrosion] on it.",
+      "desc": "Deals 100% ATK DMG to a single target, with a 50% chance to inflict [Specialized Corrode]. [Specialized Corrode]: Deals 100% ATK as Continuous DMG. Disappears after triggering 1 time. After any character acts, transfers to another target that can take DMG.",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 210% ATK Direct DMG to a single target, gains [Unyielding] (cannot be reduced below 1 HP), inflicts [Corrosion] across the selected area, and heals himself.",
+      "desc": "Attacks a single target with 5 consecutive strikes, dealing 1050% ATK DMG. Can trigger [Evolve], with each target triggering it only once per attack. Has a 75% chance to inflict [Specialized Corrode] on the main target and surrounding allies. Additionally, gains [Specialized Guard] equal to 450% ATK. [Evolve]: Immediately removes the target’s [Unyielding] and Ignore DMG statuses. [Specialized Corrode]: Deals 100% ATK as Continuous DMG. Disappears after triggering 3 times. After any character acts, transfers to another target that can take DMG. [Specialized Guard]: Negates received DMG and overwrites Extra HP effects. The total amount cannot exceed 15 times the unit’s original HP.",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -47,7 +47,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Gains +20% HP. At the end of his turn, if any enemy is afflicted by a DoT, deals 60% ATK Extra DMG to all enemies.",
+      "desc": "When an enemy receives Continuous DMG, immediately absorbs 60% of the Continuous DMG and deals it as Extra DMG. Only one effect of this type can be effective throughout the battle. Permanently increases own HP.",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Extra DMG 60% > 80% ATK.",
+      "desc": "When an enemy receives Continuous DMG, immediately absorbs 80% of the Continuous DMG and deals it as Extra DMG. Only one effect of this type can be effective throughout the battle. Permanently increases own HP.",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Extra DMG 80% > 86% ATK.",
+      "desc": "When an enemy receives Continuous DMG, immediately absorbs 86% of the Continuous DMG and deals it as Extra DMG. Only one effect of this type can be effective throughout the battle. Permanently increases own HP.",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Causes enemies with [Specialized Corrode] to be [Stuck] (Unable to launch [Follow-up] and [Consecutive Follow-up], lasts for 2 rounds) After any ally acts, has a 60% chance of inflicting [Combo Follow-up] to a random enemy (Deep Sea King and ally in the same column will launch [Ultimate Follow-up], once per round)",
+      "desc": "Inflicts [Adhesion] on enemies affected by [Specialized Corrode] for 2 rounds. After an ally acts, Deep Sea King has a 60% chance to perform a [Joint Follow-Up] against a random enemy target, up to 1 time per round. [Adhesion]: Prevents the affected unit from initiating [Follow-Up] and [Continuous Follow-Up]. [Joint Follow-Up]: Deep Sea King and allies in the same column activate their Ultimate Skills.",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Proc chance 60% > 70% Combo Follow-up per round 1x > 2x",
+      "desc": "Inflicts [Adhesion] on enemies affected by [Specialized Corrode] for 2 rounds. After an ally acts, Deep Sea King has a 70% chance to perform a [Joint Follow-Up] against a random enemy target, up to 2 times per round. [Adhesion]: Prevents the affected unit from initiating [Follow-Up] and [Continuous Follow-Up]. [Joint Follow-Up]: Deep Sea King and allies in the same column activate their Ultimate Skills.",
       "icon": "/Skill/Deep Sea King (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

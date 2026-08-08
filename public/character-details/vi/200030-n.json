@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 80% ST (+10) sát thương lên mục tiêu đơn.",
+      "desc": "Gây 80% sát thương ATK cho một mục tiêu.",
       "icon": "/Skill/Paradiser Trooper (N)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 120% ST (+10) sát thương lên cả hàng mục tiêu.",
+      "desc": "Gây 120% sát thương ATK cho toàn bộ hàng mục tiêu.",
       "icon": "/Skill/Paradiser Trooper (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 130% ST (+10) sát thương lên cả hàng mục tiêu.",
+      "desc": "Gây 130% sát thương ATK cho toàn bộ hàng mục tiêu.",
       "icon": "/Skill/Paradiser Trooper (N)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Paradiser Trooper (N)/Keepsake_N.png",
       "type": "Tuyệt kĩ",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu có lính Đào Nguyên trên sân, tăng sát thương bản thân 20% đến hết trận.",
+      "desc": "Tăng vĩnh viễn HP của bản thân lên. Nếu có lính của Vườn Đào ở trên sân, hãy tăng% sát thương cho bản thân cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Paradiser Trooper (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu có lính Đào Nguyên trên sân, tăng sát thương bản thân 25% đến hết trận.",
+      "desc": "Tăng vĩnh viễn HP của bản thân lên. Nếu có lính của Vườn Đào ở trên sân, hãy tăng sát thương cho bản thân thêm 25% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Paradiser Trooper (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Nếu có lính Đào Nguyên trên sân, tăng sát thương bản thân 28% đến hết trận.",
+      "desc": "Tăng vĩnh viễn HP của bản thân lên. Nếu có lính của Vườn Đào ở trên sân, hãy tăng sát thương cho bản thân thêm 28% cho đến khi kết thúc trận chiến.",
       "icon": "/Skill/Paradiser Trooper (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

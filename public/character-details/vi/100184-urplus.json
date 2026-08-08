@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST trực tiếp lên một mục tiêu đơn. Sau khi tung Tối Thượng lần đầu, có thể giảm [Vô Địch Trước Đòn Không Bạo Kích] của mục tiêu.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu. Sau khi sử dụng Tuyệt Kĩ lần đầu tiên, đòn tấn công thông thường có thể giảm thời gian tồn tại của [Bất Khuất Không Bạo Kích].",
       "icon": "/Skill/Boros (URplus)/Skill_base.png",
       "type": "Kỹ năng thường",
       "animation": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Giảm [Vô Địch Trước Đòn Không Bạo Kích] của mục tiêu đi 1 lượt. Gây 7000% ST trực tiếp lên một mục tiêu đơn (chỉ chịu ảnh hưởng của DMG Reduction cấp cao), vô hiệu 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt].",
+      "desc": "Khi tấn công, giảm thời lượng [Bất Khuất Không Bạo Kích] của mục tiêu đi 1 lượt. Gây 7000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] cho một kẻ địch (chỉ bị ảnh hưởng bởi các công cụ sửa đổi DMG nâng cao). Bỏ qua 45% [Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt].",
       "icon": "/Skill/Boros (URplus)/skill_ult.png",
       "type": "Tuyệt kĩ",
       "animation": "/Animation/Boros_Urplus/ult.gif",
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Ngoài ra nhận thêm +50% Tỉ lệ Chí mạng. Sát thương Tối Thượng 7000% > 10,000% ST.",
+      "desc": "Khi tấn công, giảm thời lượng [Bất Khuất Không Bạo Kích] của mục tiêu đi 1 lượt. Gây 10000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] cho một kẻ địch (chỉ bị ảnh hưởng bởi các công cụ sửa đổi DMG nâng cao). Bỏ qua 45% [Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên qua [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Tăng tỷ lệ CRIT của bản thân thêm 50%.",
       "keepsakeIcon": "/Keepsake/Boros (URplus)/Keepsake_URplus.png",
       "icon": "/Skill/Boros (URplus)/skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Nhận 60% [Giảm Sát Thương Không Bạo Kích]. Sau khi bất kỳ nhân vật nào bị hạ, nhận 1 lớp [Bạo Nổ], tối đa 2 lớp; mỗi lớp [Bạo Nổ] tăng thêm 1 mục tiêu cho Tối Thượng.",
+      "desc": "Khi bắt đầu trận chiến, tăng 60% [Giảm Sát Thương Không Bạo Kích]. Bất cứ khi nào nhân vật bất kỳ bị đánh bại, nhận được 1 điểm [Cuồng Nộ], tối đa 2 điểm. Mỗi điểm cộng dồn [Cuồng Nộ] cho phép Tuyệt Kĩ nhắm mục tiêu thêm 1 kẻ địch.",
       "icon": "/Skill/Boros (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "animation": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] 60% > 70%.",
+      "desc": "Khi bắt đầu trận chiến, tăng 70% [Giảm Sát Thương Không Bạo Kích]. Bất cứ khi nào nhân vật bất kỳ bị đánh bại, nhận được 1 điểm [Cuồng Nộ], tối đa 2 điểm. Mỗi điểm cộng dồn [Cuồng Nộ] cho phép Tuyệt Kĩ nhắm mục tiêu thêm 1 kẻ địch.",
       "icon": "/Skill/Boros (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "animation": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] 70% > 80%. Số lớp [Bạo Nổ] tối đa 2 > 3.",
+      "desc": "Khi bắt đầu trận chiến, tăng 80% [Giảm Sát Thương Không Bạo Kích]. Bất cứ khi nào nhân vật bất kỳ bị đánh bại, nhận được 1 điểm [Cuồng Nộ], tối đa 3 điểm. Mỗi điểm cộng dồn [Cuồng Nộ] cho phép Tuyệt Kĩ nhắm mục tiêu thêm 1 kẻ địch.",
       "icon": "/Skill/Boros (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "animation": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi cận tử, vào trạng thái [Hồi Sinh], hấp thụ mọi loại ST; lượt kế tiếp hồi 50% HP và nhận [Kháng Giảm Năng Lượng] bằng lượng đã hấp thụ, tối đa 3 lần. Khi bắt đầu trận đấu, nhận 30% [Giảm Sát Thương Áp Chế]. — [Giảm Sát Thương Áp Chế]: Giảm 30% ST nhận vào; khi ATK cao hơn kẻ tấn công, giảm thêm 150%.",
+      "desc": "Khi sắp bị đánh bại, chuyển sang trạng thái [Tái Sinh], hấp thụ toàn bộ DMG nhận vào trong thời gian đó. Ở lượt tiếp theo, phục hồi 50% HP và nhận [Lá Chắn Năng Lượng] bằng tổng lượng DMG đã hấp thụ. Có thể kích hoạt tối đa 3 lần. Khi bắt đầu trận chiến, tăng 30% [Phòng Thủ Áp Chế]. [Phòng Thủ Áp Chế]: Giảm 30% DMG phải chịu. Nếu Sức tấn công của bản thân cao hơn của kẻ tấn công, Giảm Sát Thương được tăng lên 1,5×.",
       "icon": "/Skill/Boros (URplus)/skill_awk.png",
       "type": "Thức tỉnh",
       "animation": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Nhận [Giảm Sát Thương Áp Chế] 30% > 40%. — [Giảm Sát Thương Áp Chế]: Giảm ST nhận vào 30% > 40%; khi ATK cao hơn kẻ tấn công, giảm thêm 150% > 170%.",
+      "desc": "Khi sắp bị đánh bại, chuyển sang trạng thái [Tái Sinh], hấp thụ toàn bộ DMG nhận vào trong thời gian đó. Ở lượt tiếp theo, khôi phục 100% HP và nhận [Lá Chắn Năng Lượng] bằng tổng lượng DMG đã hấp thụ. Có thể kích hoạt tối đa 5 lần. Khi bắt đầu trận chiến, tăng 40% [Phòng Thủ Áp Chế]. [Phòng Thủ Áp Chế]: Giảm 40% DMG phải chịu. Nếu Sức tấn công của bản thân cao hơn của kẻ tấn công, Giảm Sát Thương được tăng lên 1,7×.",
       "icon": "/Skill/Boros (URplus)/skill_awk.png",
       "type": "Thức tỉnh",
       "animation": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Boros (URplus)/skill_awk.png",
       "type": "Thức tỉnh",
       "animation": null,

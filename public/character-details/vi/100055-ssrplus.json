@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 70% ST sát thương cho mục tiêu đơn.",
+      "desc": "Gây 70% sát thương ATK cho một mục tiêu.",
       "icon": "/Skill/Boros (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Nhận trạng thái Bất Tử (sống sót qua đòn chí mạng tối đa 3 lần). Đánh dấu toàn bộ cột của mục tiêu, rồi gây 260% ST sát thương lên cột đó (điều chỉnh theo số dấu). Sau đó, giải trừ toàn bộ hiệu ứng bất lợi khỏi bản thân.",
+      "desc": "Đạt được trạng thái Bất tử (sống sót sau sát thương chí mạng tối đa 3 lần). Đánh dấu toàn bộ cột của mục tiêu, sau đó gây 260% sát thương ATK cho cột đó (tỷ lệ theo số dấu). Sau đó, Xóa bỏ mọi debuff của bản thân.",
       "icon": "/Skill/Boros (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Nhận trạng thái Bất Tử (sống sót qua đòn chí mạng tối đa 3 lần) và +40% ST Chí Mạng cho bản thân. Đánh dấu toàn bộ cột của mục tiêu, rồi gây 260% > 300% ST sát thương lên cột đó (điều chỉnh theo số dấu). Sau đó, giải trừ toàn bộ hiệu ứng bất lợi khỏi bản thân.",
+      "desc": "Nhận được trạng thái Bất tử (sống sót sau sát thương chí mạng tối đa 3 lần) và +40% CRIT DMG cho bản thân. Đánh dấu toàn bộ cột của mục tiêu, sau đó gây sát thương 260% > 300% ATK cho cột đó (tỷ lệ theo số dấu). Sau đó, Xóa bỏ mọi debuff của bản thân.",
       "icon": "/Skill/Boros (SSR+)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Boros (SSRplus)/Keepsake_SSRplus.png",
       "type": "Tuyệt kĩ",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu tối đa 20% của bản thân. Vào cuối lượt của mình, tính tổng lượng hồi máu của toàn bộ đồng minh và hồi cho bản thân một phần của tổng đó.",
+      "desc": "Tăng vĩnh viễn HP tối đa% của chính mình. Vào cuối lượt của mình, tính toán tất cả các vết thương được thực hiện bởi tất cả các đồng minh và tự chữa lành vết thương bằng một phần trong tổng số đó.",
       "icon": "/Skill/Boros (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu tối đa 20% của bản thân. Vào cuối lượt của mình, tính tổng lượng hồi máu của toàn bộ đồng minh và hồi cho bản thân một phần của tổng đó.",
+      "desc": "Tăng vĩnh viễn HP tối đa% của chính mình. Vào cuối lượt của mình, tính toán tất cả các vết thương được thực hiện bởi tất cả các đồng minh và tự chữa lành vết thương bằng một phần trong tổng số đó.",
       "icon": "/Skill/Boros (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu tối đa 20% của bản thân. Vào cuối lượt của mình, tính tổng lượng hồi máu của toàn bộ đồng minh và hồi cho bản thân một phần của tổng đó.",
+      "desc": "Tăng vĩnh viễn HP tối đa% của chính mình. Vào cuối lượt của mình, tính toán tất cả các vết thương được thực hiện bởi tất cả các đồng minh và tự chữa lành vết thương bằng một phần trong tổng số đó.",
       "icon": "/Skill/Boros (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -69,7 +69,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi vào trận, triệu hồi 1 Dark Pirate Member với HP bằng 1800% ATK của Boros. Đơn vị triệu hồi chia sẻ 80% ST mà đồng minh cùng hàng nhận (mọi loại ST trừ ST Emblem Skill hoặc Reflect). Sau khi HP cạn, gây ST cộng thêm bằng 30% HP Tối đa của đơn vị triệu hồi lên 3 kẻ địch ngẫu nhiên.",
+      "desc": "Khi bắt đầu trận chiến, triệu tập 1 Thành viên Cướp biển Bóng tối có HP bằng 1800% ATK của Boros. Đơn vị được triệu tập chia sẻ 80% DMG phải chịu bởi các đồng minh trong cùng một hàng (tất cả các loại DMG ngoại trừ Kỹ năng Biểu tượng ATK hoặc Phản ánh DMG). Sau khi HP của nó cạn kiệt, gây extra DMG bằng 30% HP tối đa của đơn vị được triệu tập cho 3 kẻ thù ngẫu nhiên.",
       "icon": "/Skill/Source/100055-ssrplus/awakened.webp",
       "animation": null,
       "type": "Thức tỉnh",
@@ -78,7 +78,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Số Dark Pirate Member triệu hồi 1 > 2. Mục tiêu chia sẻ ST: đồng minh cùng hàng > toàn bộ đồng minh.",
+      "desc": "Các thành viên của Dark Pirate đã triệu tập 1 > 2. Mục tiêu chia sẻ DMG: đồng minh cùng hàng > tất cả đồng minh.",
       "icon": "/Skill/Source/100055-ssrplus/awakened.webp",
       "animation": null,
       "type": "Thức tỉnh",
@@ -87,7 +87,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Source/100055-ssrplus/awakened.webp",
       "animation": null,
       "type": "Thức tỉnh",

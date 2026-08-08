@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 80% ST lên mục tiêu đơn.",
+      "desc": "Gây 80% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Allback-man (N)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 180% ST lên mục tiêu đơn.",
+      "desc": "Gây 180% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Allback-man (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 200% ST lên mục tiêu đơn.",
+      "desc": "Gây 200% ATK DMG cho một mục tiêu.",
       "keepsakeIcon": "/Keepsake/Allback-man (N)/Keepsake_N.png",
       "icon": "/Skill/Allback-man (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân.Trước mỗi lượt hành động, tăng ST gây ra 10% cho bản thân, kéo dài 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP của bản thân thêm. Trước mỗi hành động, tăng DMG của bản thân thêm 10% trong 1 lượt.",
       "icon": "/Skill/Allback-man (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân.Trước mỗi lượt hành động, tăng ST gây ra 15% cho bản thân, kéo dài 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP của bản thân thêm. Trước mỗi hành động, tăng DMG của bản thân thêm 15% trong 1 lượt.",
       "icon": "/Skill/Allback-man (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân.Trước mỗi lượt hành động, tăng ST gây ra 18% cho bản thân, kéo dài 1 lượt.",
+      "desc": "Tăng vĩnh viễn HP của bản thân thêm. Trước mỗi hành động, tăng DMG của bản thân thêm 18% trong 1 lượt.",
       "icon": "/Skill/Allback-man (N)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây sát thương trực tiếp 60% ST lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Subterranean King (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây sát thương trực tiếp 90% ST lên hàng của mục tiêu. Khi còn trước Round 6, áp [Uy Hiếp] lên 2 kẻ địch ngẫu nhiên (tỉ lệ 30%).",
+      "desc": "Gây 450% ATK dưới dạng Sát Thương Trực Tiếp cho tất cả kẻ địch liên tiếp bằng combo 5 đòn. Trong 5 hiệp đầu tiên, có 80% cơ hội gây [Uy Hiếp] lên 2 kẻ địch ngẫu nhiên trong 1 hiệp. [Uy Hiếp]: Ngăn chặn thiết bị bị ảnh hưởng hoạt động và giảm 30% tất cả Miễn Sát Thương. Hiệu ứng này được coi là trạng thái [Choáng].",
       "icon": "/Skill/Subterranean King (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây sát thương trực tiếp 90% > 120% ST lên hàng của mục tiêu. Khi còn trước Round 6, áp [Uy Hiếp] lên 2 > 3 kẻ địch ngẫu nhiên (tỉ lệ 30% > 40%).",
+      "desc": "Gây 600% ATK dưới dạng Sát Thương Trực Tiếp cho tất cả kẻ địch liên tiếp bằng combo 5 đòn. Trong 5 lượt đầu tiên, có 100% cơ hội gây [Uy Hiếp] lên 3 kẻ địch ngẫu nhiên trong 1 lượt. [Uy Hiếp]: Ngăn chặn thiết bị bị ảnh hưởng hoạt động và giảm 40% tất cả Miễn Sát Thương. Hiệu ứng này được coi là trạng thái [Choáng].",
       "keepsakeIcon": "/Keepsake/Subterranean King (UR)/Keepsake_UR.png",
       "icon": "/Skill/Subterranean King (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Nhận +20% HP. Khi vào trận, nhận [Né Tránh Chuyên Biệt] 60%. Vào đầu lượt của mình, giải trừ [Bất Tỉnh], [Bất Tỉnh Cuối Cùng] và [Câm Lặng] cho mỗi loại 1 đồng minh đang bị dính.",
+      "desc": "Tăng 60% [Né Tránh Chuyên Biệt]. Sau khi bất kỳ nhân vật nào hành động, loại bỏ [Choáng], [Choáng Chuyên Biệt] hoặc [Câm Lặng] khỏi 1 đồng minh. [Né Tránh Chuyên Biệt]: Sát Thương Trực Tiếp, DMG liên tục, Chấn thương DMG và Extra DMG chỉ gây được 1 điểm DMG.",
       "icon": "/Skill/Subterranean King (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Nhận +20% HP. Khi vào trận, nhận [Né Tránh Chuyên Biệt] 60% &gt; 70%. Vào đầu lượt của mình, giải trừ [Bất Tỉnh], [Bất Tỉnh Cuối Cùng] và [Câm Lặng] cho mỗi loại 1 &gt; 2 đồng minh đang bị dính.",
+      "desc": "Tăng 70% [Né Tránh Chuyên Biệt]. Sau khi bất kỳ nhân vật nào hành động, loại bỏ [Choáng], [Choáng Chuyên Biệt] hoặc [Câm Lặng] khỏi 2 đồng minh. [Né Tránh Chuyên Biệt]: Sát Thương Trực Tiếp, DMG liên tục, Chấn thương DMG và Extra DMG chỉ gây được 1 điểm DMG.",
       "icon": "/Skill/Subterranean King (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Né Tránh Chuyên Biệt] 70% &gt; 80%. Giải trừ [Bất Tỉnh], [Bất Tỉnh Cuối Cùng] và [Câm Lặng] cho mỗi loại 2 &gt; 3 đồng minh đang bị dính.",
+      "desc": "Tăng 80% [Né Tránh Chuyên Biệt]. Sau khi bất kỳ nhân vật nào hành động, loại bỏ [Choáng], [Choáng Chuyên Biệt] hoặc [Câm Lặng] khỏi 3 đồng minh. [Né Tránh Chuyên Biệt]: Sát Thương Trực Tiếp, DMG liên tục, Chấn thương DMG và Extra DMG chỉ gây được 1 điểm DMG.",
       "icon": "/Skill/Subterranean King (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Bỏ qua hiệu ứng tiêu hao bổ sung gây ra bởi [Sợ Hãi Chuyên Biệt]. Tăng 30% tỉ lệ Chính xác hiệu ứng của toàn bộ đồng minh.",
+      "desc": "Bỏ qua hiệu ứng tiêu thụ bổ sung do [Hoảng Loạn Chuyên Biệt] gây ra. Tăng chỉ số [Chính Xác] của tất cả đồng minh thêm 30%.",
       "icon": "/Skill/Subterranean King (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Tỉ lệ Chính xác hiệu ứng 30% > 40% Khi bắt đầu trận đấu, có 100% khả năng thêm [Răn Đe] cho 3 kẻ địch ngẫu nhiên trong 1 lượt.",
+      "desc": "Bỏ qua hiệu ứng tiêu thụ bổ sung do [Hoảng Loạn Chuyên Biệt] gây ra. Tăng chỉ số [Chính Xác] của tất cả đồng minh thêm 40%. Khi bắt đầu trận chiến, có 100% cơ hội gây [Uy Hiếp] lên 3 kẻ địch ngẫu nhiên trong 1 hiệp.",
       "icon": "/Skill/Subterranean King (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Subterranean King (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

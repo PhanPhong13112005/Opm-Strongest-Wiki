@@ -56,7 +56,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increase own max HP. Each [Injured] enemy grants allies +100% ATK, up to 4 stacks, and makes [Burn] enemies [Weakened] (ATK reduced by 20% for a number of turns).",
+      "desc": "Permanently increase own max HP. Each [Injured] enemy grants allies +100% ATK, up to 4 stacks, and makes [Burn] enemies [Weakened] (ATK reduced% for a number of turns).",
       "icon": "/Skill/Metal Knight (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

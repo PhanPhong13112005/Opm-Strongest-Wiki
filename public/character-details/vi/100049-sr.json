@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 100% ST tấn công lên mục tiêu đơn.",
+      "desc": "Gây 100% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Beast King (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Đánh mỗi kẻ địch trong một hàng với chuỗi 5 liên kích, gây 24% ST tấn công mỗi đòn (tổng 120% ST tấn công), có 100% cơ hội gây [Thương Tổn] lên mục tiêu chính trong 2 lượt.[Thương Tổn]: Khi bị tấn công, chịu thêm ST Thương Tổn bằng 50% ST tấn công.",
+      "desc": "Tấn công liên tiếp từng kẻ địch bằng combo 5 đòn, gây 24% ATK DMG mỗi đòn (tổng 120% ATK), với 100% cơ hội gây [Bị Thương] lên mục tiêu chính trong 2 lượt.[Bị Thương]: Khi bị tấn công, sẽ mất thêm Chấn thương DMG bằng 50% ATK.",
       "icon": "/Skill/Beast King (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Đánh mỗi kẻ địch trong một hàng với chuỗi 5 liên kích, gây 24% ST tấn công mỗi đòn (tổng 120% ST tấn công), có 100% cơ hội gây [Thương Tổn] lên mục tiêu chính và 50% cơ hội gây [Thương Tổn] lên các kẻ địch cùng hàng với mục tiêu chính trong 2 lượt.[Thương Tổn]: Khi bị tấn công, chịu thêm ST Thương Tổn bằng 50% ST tấn công.",
+      "desc": "Tấn công liên tiếp từng kẻ địch bằng combo 5 đòn, gây 24% ATK DMG mỗi đòn (tổng 120% ATK), với 100% cơ hội gây [Bị Thương] lên mục tiêu chính và 50% cơ hội gây [Bị Thương] lên kẻ địch chính hàng của mục tiêu trong 2 lượt.[Bị Thương]: Khi bị tấn công, nhận thêm Chấn thương DMG bằng 50% ATK.",
       "keepsakeIcon": "/Keepsake/Beast King (SR)/Keepsake_SR.png",
       "icon": "/Skill/Beast King (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Mỗi khi một đồng minh tấn công mục tiêu bị dính [Thương Tổn], Beast King tung ra một đòn [Truy Kích] lên mục tiêu đó (tấn công bằng 80% ST và hiệu ứng của Đòn Đánh Cơ Bản, tối đa 3 lần mỗi lượt).",
+      "desc": "Tăng vĩnh viễn HP tối đa% của chính mình. Bất cứ khi nào một đồng minh tấn công một mục tiêu bị nhiễm [Bị Thương], Vua Thú sẽ phóng [Truy Kích] lên mục tiêu đó (tấn công bằng 80% DMG của đòn tấn công cơ bản và các hiệu ứng, tối đa 3 lần mỗi lượt).",
       "icon": "/Skill/Beast King (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Mỗi khi một đồng minh tấn công mục tiêu bị dính [Thương Tổn], Beast King tung ra một đòn [Truy Kích] lên mục tiêu đó (tấn công bằng 80% ST và hiệu ứng của Đòn Đánh Cơ Bản, tối đa 3 lần mỗi lượt).",
+      "desc": "Tăng vĩnh viễn HP tối đa% của chính mình. Bất cứ khi nào một đồng minh tấn công một mục tiêu bị nhiễm [Bị Thương], Vua Thú sẽ phóng [Truy Kích] lên mục tiêu đó (tấn công bằng 80% DMG của đòn tấn công cơ bản và các hiệu ứng, tối đa 3 lần mỗi lượt).",
       "icon": "/Skill/Beast King (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng 20% Máu tối đa của bản thân. Mỗi khi một đồng minh tấn công mục tiêu bị dính [Thương Tổn], Beast King tung ra một đòn [Truy Kích] lên mục tiêu đó (tấn công bằng 110% ST và hiệu ứng của Đòn Đánh Cơ Bản, tối đa 3 lần mỗi lượt).",
+      "desc": "Tăng vĩnh viễn HP tối đa% của chính mình. Bất cứ khi nào một đồng minh tấn công một mục tiêu bị nhiễm [Bị Thương], Vua Thú sẽ phóng [Truy Kích] lên mục tiêu đó (tấn công bằng 110% DMG của đòn đánh cơ bản và các hiệu ứng, tối đa 3 lần mỗi lượt).",
       "icon": "/Skill/Beast King (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

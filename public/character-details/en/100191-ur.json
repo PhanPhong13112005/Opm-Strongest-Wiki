@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Attacks enemies in a row with 3 consecutive strikes, dealing 900% ATK. Each strike has a 50% chance to add a stack of [Specialized Burn] (deals 300% ATK as DoT, disappears after taking effect 3 times; after any character acts, transfers to targets that can receive damage). Has a 100% chance to decrease the whole enemy team's Crit Rate by 40% for 2 turns.",
+      "desc": "Attacks enemies in a row with 3 consecutive strikes, dealing 900% ATK DMG. Each strike has a 50% chance to add 1 stack of [Specialized Burn]. Has a 100% chance to reduce the entire enemy team’s Crit Rate by 40% for 2 rounds. [Specialized Burn]: Deals 300% ATK as DoT DMG. Disappears after triggering 3 times. After any character acts, transfers to a target that can receive DMG.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Ultimate DMG 900% → 1200% ATK. Decrease enemy Crit Rate 40% → 60%. [Specialized Burn] DMG 300% → 400% ATK.",
+      "desc": "Attacks enemies in a row with 3 consecutive strikes, dealing 1200% ATK DMG. Each strike has an 80% chance to add 1 stack of [Specialized Burn]. Has a 100% chance to reduce the entire enemy team’s Crit Rate by 60% for 2 rounds. [Specialized Burn]: Deals 400% ATK as DoT DMG. Disappears after triggering 3 times. After any character acts, transfers to a target that can receive DMG.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Hellfire Flame (UR)/Keepsake_UR.png",
       "type": "Ultimate",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Passive",
-      "desc": "When the battle begins, has a 100% chance to lower the enemy team's Heal Rate by 60%. At the start of the battle, obtains a 60% chance of [Evasion] (reduces Direct/Extra/Charge/Berserk DMG to 1 DMG).",
+      "desc": "When battle begins, has a 100% chance to reduce the enemy team’s Heal Rate by 60%. At battle start, gains a 60% chance of [Evasion]. [Evasion]: Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Lower enemy's Heal Rate 60% → 70%. [Evasion] chance 60% → 70%.",
+      "desc": "When battle begins, has a 100% chance to reduce the enemy team’s Heal Rate by 70%. At battle start, gains a 70% chance of [Evasion]. [Evasion]: Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Lower enemy's Heal Rate 70% → 80%. [Evasion] chance 70% → 80%.",
+      "desc": "When battle begins, has a 100% chance to reduce the enemy team’s Heal Rate by 80%. At battle start, gains an 80% chance of [Evasion]. [Evasion]: Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "All allies permanently get 60% [Buffer] (Reduce DMG based on Max HP). When any character acts, removes [Stun/Specialized Stun] from 1 ally (Can remove each debuff in every round, up to 3 times).",
+      "desc": "All allies permanently gain 60% [Buffer]. After any character acts, removes [Stun] or [Specialized Stun] from 1 ally. Each debuff can be removed up to 3 times per round. [Buffer]: Reduces DMG based on Max HP.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Buffer 60% > 80% Remove debuff up to 3x > Unlimited",
+      "desc": "All allies permanently gain 80% [Buffer]. After any character acts, removes [Stun] or [Specialized Stun] from 1 ally. Each debuff can be removed an unlimited number of times per round. [Buffer]: Reduces DMG based on Max HP.",
       "icon": "/Skill/Hellfire Flame (UR)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 100% ATK (+10) damage to a single target.",
+      "desc": "Deals 100% ATK damage to a single target.",
       "icon": "/Skill/Golden Ball (SR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently grants self (+20) HP. After each action, if there is an enemy in [Collapse], deals additional damage equal to 10% ATK to the target just attacked, and each additional enemy in [Collapse] deals a further 10% ATK of additional damage.",
+      "desc": "Permanently grants self HP. After each action, if there is an enemy in [Collapse], deals additional damage equal to 10% ATK to the target just attacked, and each additional enemy in [Collapse] deals a further 10% ATK of additional damage.",
       "icon": "/Skill/Golden Ball (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently grants self (+20) HP. After each action, if there is an enemy in [Collapse], deals additional damage equal to 15% ATK to the target just attacked, and each additional enemy in [Collapse] deals a further 15% ATK of additional damage.",
+      "desc": "Permanently grants self HP. After each action, if there is an enemy in [Collapse], deals additional damage equal to 15% ATK to the target just attacked, and each additional enemy in [Collapse] deals a further 15% ATK of additional damage.",
       "icon": "/Skill/Golden Ball (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently grants self (+20) HP. After each action, if there is an enemy in [Collapse], deals additional damage equal to 17% ATK to the target just attacked, and each additional enemy in [Collapse] deals a further 17% ATK of additional damage.",
+      "desc": "Permanently grants self HP. After each action, if there is an enemy in [Collapse], deals additional damage equal to 17% ATK to the target just attacked, and each additional enemy in [Collapse] deals a further 17% ATK of additional damage.",
       "icon": "/Skill/Golden Ball (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

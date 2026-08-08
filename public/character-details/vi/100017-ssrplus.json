@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 60% ST sát thương trực tiếp lên một mục tiêu.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu bằng 2 đòn đánh liên tiếp.",
       "icon": "/Skill/Subterranean King (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 60% ST sát thương trực tiếp lên toàn bộ kẻ địch, sau đó áp [Cấm Hồi Sinh] (ImmuneNotDeathMix) lên toàn bộ kẻ địch chưa có trạng thái miễn tử vong, khiến chúng không thể trở nên bất tử.",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 4 đòn liên tiếp, gây 240% ATK DMG. Có thể kích hoạt [Đột Phá], loại bỏ trạng thái [Bất Khuất] của mục tiêu. [Đột Phá] chỉ có thể kích hoạt một lần trên mỗi mục tiêu trong mỗi đòn tấn công.",
       "icon": "/Skill/Subterranean King (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Sát thương trực tiếp lên toàn bộ kẻ địch tăng 60% > 100% ST. Vẫn áp [Cấm Hồi Sinh] lên toàn bộ kẻ địch chưa có trạng thái miễn tử vong.",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 4 đòn liên tiếp, gây 400% ATK DMG. Có thể kích hoạt [Đột Phá], loại bỏ trạng thái [Bất Khuất] của mục tiêu. [Đột Phá] chỉ có thể kích hoạt một lần trên mỗi mục tiêu trong mỗi đòn tấn công.",
       "keepsakeIcon": "/Keepsake/Subterranean King (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Subterranean King (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng 20% Máu bản thân. Khi trận đấu bắt đầu, nhận [Bảo Hộ Chuyên Biệt] bằng 800% ATK (hấp thụ sát thương nhận vào, cộng dồn với hiệu ứng thêm Máu; tổng sát thương hấp thụ không quá 15x Máu gốc).",
+      "desc": "Khi bắt đầu trận chiến, nhận được [Bảo Hộ Chuyên Biệt] bằng 800% ATK. [Bảo Hộ Chuyên Biệt] phủ nhận DMG đã nhận, có thể cộng dồn với các hiệu ứng Extra HP và tổng số DMG bị phủ định không thể vượt quá 15 lần HP tối đa ban đầu của đơn vị.",
       "icon": "/Skill/Subterranean King (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Bảo Hộ Chuyên Biệt] 800% &gt; 1500% ATK.",
+      "desc": "Khi bắt đầu trận chiến, nhận được [Bảo Hộ Chuyên Biệt] bằng 1000% ATK. [Bảo Hộ Chuyên Biệt] phủ nhận DMG đã nhận, có thể cộng dồn với các hiệu ứng Extra HP và tổng số DMG bị phủ định không thể vượt quá 15 lần HP tối đa ban đầu của đơn vị.",
       "icon": "/Skill/Subterranean King (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Bảo Hộ Chuyên Biệt] 1500% &gt; 2200% ATK.",
+      "desc": "Khi bắt đầu trận chiến, nhận được [Bảo Hộ Chuyên Biệt] tương đương 1200% ATK. [Bảo Hộ Chuyên Biệt] phủ nhận DMG đã nhận, có thể cộng dồn với các hiệu ứng Extra HP và tổng số DMG bị phủ định không thể vượt quá 15 lần HP tối đa ban đầu của đơn vị.",
       "icon": "/Skill/Subterranean King (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Có 50% khả năng gây [Thiêu Đốt Chuyên Biệt] (ST theo thời gian bằng 150% ATK. Sau khi bất kỳ nhân vật nào hành động, hiệu ứng chuyển sang một mục tiêu ngẫu nhiên, biến mất sau khi chuyển 3 lần). Hấp thụ ST theo thời gian của [Thiêu Đốt Chuyên Biệt] trên kẻ địch để khôi phục [Bảo Hộ Chuyên Biệt].",
+      "desc": "Có 50% cơ hội gây ra [Thiêu Đốt Chuyên Biệt]. [Thiêu Đốt Chuyên Biệt]: Gây 150% ATK dưới dạng DMG liên tục. Sau khi bất kỳ nhân vật nào hành động, chuyển sang kẻ thù ngẫu nhiên và biến mất sau khi chuyển 3 lần. Hấp thụ DMG liên tục do [Thiêu Đốt Chuyên Biệt] gây ra lên kẻ thù để khôi phục [Bảo Hộ Chuyên Biệt] của chính mình.",
       "icon": "/Skill/Subterranean King (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Tỉ lệ gây hiệu ứng 50% > 90% Specialized Burn ST theo thời gian 150% > 200% Vĩnh viễn tăng 30% ST Tối thượng\n1. [Thiêu Đốt Chuyên Biệt] có thể bị ảnh hưởng bởi Chính xác hiệu ứng%/Kháng hiệu ứng%. 2. [Thiêu Đốt Chuyên Biệt] sẽ chuyển trước tiên sang các nhân vật không ở bất kỳ trạng thái [Kiên Cường] nào. 3. [Thiêu Đốt Chuyên Biệt] có thể cộng dồn tối đa 6 lần. 4. M.Choze và Vaccine Man có thể gây ST phụ trội từ [Thiêu Đốt Chuyên Biệt]. 5. [Thiêu Đốt Chuyên Biệt] có thể chuyển sang các nhân vật [Đã Hồi Sinh] và [Đã Hồi Sinh]. 6. [Thiêu Đốt Chuyên Biệt] có thể bị ảnh hưởng bởi Formal Set. 7. [Thiêu Đốt Chuyên Biệt] không bị ảnh hưởng bởi [Né Tránh].",
+      "desc": "Có 90% cơ hội gây ra [Thiêu Đốt Chuyên Biệt]. [Thiêu Đốt Chuyên Biệt]: Gây 200% ATK liên tục DMG. Sau khi bất kỳ nhân vật nào hành động, chuyển sang kẻ thù ngẫu nhiên và biến mất sau khi chuyển 3 lần. Hấp thụ DMG liên tục do [Thiêu Đốt Chuyên Biệt] gây ra lên kẻ thù để khôi phục [Bảo Hộ Chuyên Biệt] của chính mình. Tăng vĩnh viễn DMG Tuyệt Kĩ thêm 30%.",
       "icon": "/Skill/Subterranean King (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -91,7 +91,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Subterranean King (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST lên một mục tiêu đơn, 100% tỉ lệ khiến mục tiêu [Suy Sụp] trong 2 lượt (giảm Giảm ST đi 20%).",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu, với 100% cơ hội gây ra [Sụp Đổ] trong 2 lượt. [Sụp Đổ]: Giảm DMG %.",
       "icon": "/Skill/Atomic Samurai (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công toàn bộ địch với 5 đòn liên tiếp, gây 350% ST. Đòn cuối có 100% tỉ lệ khiến mục tiêu chính nhận [Suy Sụp Chuyên Biệt] trong 2 lượt (giảm Tăng ST đi 10%, gây ST [Suy Sụp] bằng 200% ST khi bị tấn công, cộng dồn tối đa 3 lần, không cộng dồn với [Suy Sụp]).",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 5 đòn liên tiếp, gây 350% ATK DMG. Đòn đánh cuối cùng có 100% cơ hội gây [Sụp Đổ Chuyên Biệt] lên mục tiêu chính trong 2 lượt. [Sụp Đổ Chuyên Biệt]: Giảm 10% Tỷ lệ DMG và gây 200% ATK [Sát Thương Sụp Đổ] khi bị tấn công. Cộng dồn tối đa 3 lần và không cộng dồn với [Sụp Đổ].",
       "icon": "/Skill/Atomic Samurai (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "ST 350% → 450%Giảm Tăng ST 10% → 15%ST [Suy Sụp Chuyên Biệt] 200% → 250%",
+      "desc": "Tấn công toàn bộ kẻ địch bằng 5 đòn liên tiếp, gây 450% ATK DMG. Đòn đánh cuối cùng có 100% cơ hội gây [Sụp Đổ Chuyên Biệt] lên mục tiêu chính trong 2 lượt. [Sụp Đổ Chuyên Biệt]: Giảm 15% Tỷ lệ DMG và gây 250% ATK [Sát Thương Sụp Đổ] khi bị tấn công. Cộng dồn tối đa 3 lần và không cộng dồn với [Sụp Đổ].",
       "keepsakeIcon": "/Keepsake/Atomic Samurai (UR)/Keepsake_UR.png",
       "icon": "/Skill/Atomic Samurai (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Tự nhận 50% Giảm ST Không Chí Mạng (hiệu lực với mọi loại ST, không thể tồn tại cùng [Nhanh Nhẹn]), kéo dài 4 lượt.Sau khi nhận ST chí tử, hồi sinh với 50% Máu tối đa.",
+      "desc": "Tự nhận 50% [Miễn Sát Thương Không Bạo Kích] trong 4 vòng. Sau khi nhận được sát thương kết liễu, hồi sinh với 50% HP tối đa. [Miễn Sát Thương Không Bạo Kích]: Có hiệu quả chống lại tất cả các loại DMG và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Atomic Samurai (UR)/Skill_pas.png",
       "animation": "/Animation/Sam_Urplus/Passive.gif",
       "type": "Nội tại",
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Giảm ST Không Chí Mạng 50% → 60%Hồi sinh 1 lần → 2 lần",
+      "desc": "Tự cấp cho mình 60% [Miễn Sát Thương Không Bạo Kích] trong 5 vòng. Sau khi nhận được sát thương kết liễu, hồi sinh với 100% HP tối đa. Có thể hồi sinh tối đa 2 lần. [Miễn Sát Thương Không Bạo Kích]: Có hiệu quả chống lại tất cả các loại DMG và không thể cùng tồn tại với [Nhanh Nhẹn].",
       "icon": "/Skill/Atomic Samurai (UR)/Skill_pas.png",
       "animation": "/Animation/Sam_Urplus/Passive.gif",
       "type": "Nội tại",
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Thời gian Giảm ST Không Chí Mạng 4 lượt → 5 lượtMáu hồi sinh 50% → 100%",
+      "desc": "Miễn Sát Thương Không Bạo Kích thời lượng 4 hiệp → 5 hiệp Hồi sinh HP 50% → 100%",
       "icon": "/Skill/Atomic Samurai (UR)/Skill_pas.png",
       "animation": "/Animation/Sam_Urplus/Passive.gif",
       "type": "Nội tại",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi bắt đầu trận đấu, giảm 30% Tấn công của toàn bộ kẻ địch, nhận 20% Tỉ lệ Hút máu, kéo dài 2 vòng. Trước khi bất kỳ nhân vật nào hành động, tung [Truy Kích Tối Thượng] (60% ST và 100% hiệu ứng), một lần mỗi vòng.",
+      "desc": "Khi trận chiến bắt đầu, giảm 30% ATK của tất cả kẻ thù và tăng 20% ​​Tỷ lệ tiêu hao trong 2 hiệp. Trước khi bất kỳ nhân vật nào hành động, hãy tung ra [Truy Kích Tuyệt Kỹ], một lần mỗi vòng. [Truy Kích Tuyệt Kỹ]: Gây 60% DMG với hiệu ứng 100%.",
       "icon": "/Skill/Atomic Samurai (UR)/Skill_Awken.png",
       "animation": "/Animation/Sam_Urplus/awken.gif",
       "type": "Thức tỉnh",
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Giảm Tấn công của kẻ địch 30% > 40% Nhận 20% Tỉ lệ Suy Sụp Tỉ lệ Hút máu 20% > 30% ST Truy Kích 60% > 100%",
+      "desc": "Khi trận chiến bắt đầu, giảm 40% ATK của tất cả kẻ thù và tăng 30% Tỷ lệ tiêu hao trong 2 hiệp. Trước khi bất kỳ nhân vật nào hành động, hãy tung ra [Truy Kích Tuyệt Kỹ], một lần mỗi vòng. Tăng 20% ​​[Tỷ Lệ Sụp Đổ]. [Truy Kích Tuyệt Kỹ]: Gây 100% DMG với hiệu ứng 100%.",
       "icon": "/Skill/Atomic Samurai (UR)/Skill_Awken.png",
       "animation": "/Animation/Sam_Urplus/awken.gif",
       "type": "Thức tỉnh",
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Atomic Samurai (UR)/Skill_Awken.png",
       "animation": "/Animation/Sam_Urplus/awken.gif",
       "type": "Thức tỉnh",

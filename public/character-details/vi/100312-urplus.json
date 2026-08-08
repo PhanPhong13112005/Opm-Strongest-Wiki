@@ -22,7 +22,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST lên mục tiêu đơn.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu. Sau khi sử dụng Tuyệt Kĩ lần đầu tiên, đòn tấn công thông thường có thể giảm thời gian tồn tại của [Bất Khuất Không Bạo Kích].",
       "icon": "/Skill/Nyan (URplus)/Skill_base.png",
       "type": "Kỹ năng thường",
       "animation": null,
@@ -31,7 +31,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 1500% ST [Sát Thương Trực Tiếp Chuyên Biệt] lên một mục tiêu địch ở hàng sau bằng chuỗi 4 đòn (chỉ chịu ảnh hưởng bởi giảm ST nâng cao), bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Vĩnh viễn ban [Gia Tốc Chuyên Biệt] cho đồng minh khác hàng. Khi dùng chiêu cuối trong 6 lượt đầu, áp thêm [Mê Hoặc Chuyên Biệt] lên mục tiêu chính. — [Gia Tốc Chuyên Biệt]: Tốc độ được tăng lên 94% tốc độ của Nyan; nếu tốc độ của đồng minh cao hơn thì giữ nguyên. [Mê Hoặc Chuyên Biệt]: Mục tiêu lập tức rời khỏi giao tranh, dùng một số kỹ năng đặc biệt và hiệu ứng nội tại để tấn công một kẻ địch ngẫu nhiên, sau đó quay về và bỏ qua hành động chủ động kế tiếp; kẻ địch dính [Mê Hoặc Chuyên Biệt] bị giảm 20% [Giảm Sát Thương Toàn Phần] trong 1 lượt.",
+      "desc": "Gây 1500% ATK [Sát Thương Trực Tiếp Chuyên Biệt] cho một mục tiêu kẻ địch ở hàng sau trong combo 4 đòn (chỉ bị ảnh hưởng bởi Giảm Sát Thương nâng cao), bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên thủng [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Cấp vĩnh viễn [Gia Tốc Chuyên Biệt] cho các đồng minh không theo hàng. Khi sử dụng Tuyệt Kĩ trong 6 vòng đầu tiên, hãy áp dụng thêm [Mê Hoặc Chuyên Biệt] cho mục tiêu chính. [Gia Tốc Chuyên Biệt]: Tốc độ tăng lên 94% Tốc độ của Nyan. Nếu Tốc độ của đồng đội cao hơn Tốc độ tăng lên, Tốc độ của họ không thay đổi. [Mê Hoặc Chuyên Biệt]: Mục tiêu ngay lập tức rời khỏi trận chiến, sử dụng một số kỹ năng đặc biệt và hiệu ứng thụ động để tấn công kẻ thù ngẫu nhiên, sau đó ngay lập tức quay trở lại vị trí ban đầu và bỏ qua hành động hoạt động tiếp theo. Đơn vị địch nhận được [Mê Hoặc Chuyên Biệt] bị giảm [Giảm Sát Thương Toàn Phần]% trong 1 lượt.",
       "icon": "/Skill/Nyan (URplus)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "animation": "/Animation/Nyan_Urplus/ult.gif",
@@ -40,7 +40,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 1500% > 2400% ST [Sát Thương Trực Tiếp Chuyên Biệt]. Bỏ qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích] 45% > 60%. [Gia Tốc Chuyên Biệt] tăng tốc độ lên 94% > 98% tốc độ của Nyan.",
+      "desc": "Gây 2400% ATK [Sát Thương Trực Tiếp Chuyên Biệt] cho một mục tiêu kẻ địch ở hàng sau trong combo 4 đòn (chỉ bị ảnh hưởng bởi Giảm Sát Thương nâng cao), bỏ qua 60% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên thủng [Bất Khuất] và [Bất Khuất Chuyên Biệt]. Cấp vĩnh viễn [Gia Tốc Chuyên Biệt] cho các đồng minh không theo hàng. Khi sử dụng Tuyệt Kĩ trong 6 vòng đầu tiên, hãy áp dụng thêm [Mê Hoặc Chuyên Biệt] cho mục tiêu chính. [Gia Tốc Chuyên Biệt]: Tốc độ tăng lên 98% Tốc độ của Nyan. Nếu Tốc độ của đồng đội cao hơn Tốc độ tăng lên, Tốc độ của họ không thay đổi. [Mê Hoặc Chuyên Biệt]: Mục tiêu ngay lập tức rời khỏi trận chiến, sử dụng một số kỹ năng đặc biệt và hiệu ứng thụ động để tấn công kẻ thù ngẫu nhiên, sau đó ngay lập tức quay trở lại vị trí ban đầu và bỏ qua hành động hoạt động tiếp theo. Đơn vị địch nhận được [Mê Hoặc Chuyên Biệt] bị giảm [Giảm Sát Thương Toàn Phần]% trong 1 lượt.",
       "icon": "/Skill/Nyan (URplus)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Nyan (URplus)/Keepsake_URplus.png",
       "type": "Tuyệt kĩ",
@@ -49,7 +49,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Nhận 60% [Giảm Sát Thương Không Bạo Kích] khi vào trận. Xóa toàn bộ debuff [Tăng Sát Thương Áp Chế] và [Giảm Sát Thương Áp Chế] của kẻ địch. Miễn nhiễm [Mê Hoặc]/[Mê Hoặc Chuyên Biệt]. Giảm lượng năng lượng bị trừ đi 2 khi đồng minh chịu mất năng lượng thêm trong 5 lượt đầu. Bản thân có [Tương Hợp Quái Nhân]. — [Tương Hợp Quái Nhân]: Khi kỹ năng core của một nhân vật Monster được kích hoạt, Nyan có thể được tính là bất kỳ nguyên tố nhân vật nào đang thiếu (ví dụ thiếu một suất duelist cho Gyoro Core — Nyan được tính là duelist nên Core kích hoạt, dù Nyan là grappler).",
+      "desc": "Khi bắt đầu trận chiến, tăng 60% [Khả Năng Né Tránh Chuyên Biệt]. Miễn dịch với [Mê Hoặc] và [Mê Hoặc Chuyên Biệt]. Trong 5 hiệp đầu tiên, khi đồng minh bị mất thêm Năng lượng, lượng Năng lượng bị trừ sẽ giảm đi 2. Bản thân có [Tương Hợp Quái Nhân]. [Tương Hợp Quái Nhân]: Khi Kỹ năng cốt lõi của nhân vật Quái vật được kích hoạt, Nyan có thể được coi là một nhân vật hiện đang bị thiếu trong bất kỳ nguyên tố nào.",
       "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "animation": null,
@@ -58,7 +58,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] khi vào trận 60% > 70%. Giảm lượng năng lượng bị trừ 2 > 3 khi đồng minh chịu mất năng lượng thêm trong 5 lượt đầu.",
+      "desc": "Khi bắt đầu trận chiến, tăng 70% [Khả Năng Né Tránh Chuyên Biệt]. Miễn dịch với [Mê Hoặc] và [Mê Hoặc Chuyên Biệt]. Trong 5 hiệp đầu tiên, khi đồng minh bị mất thêm Năng lượng, lượng Năng lượng bị trừ sẽ giảm đi 3. Bản thân có [Tương Hợp Quái Nhân]. [Tương Hợp Quái Nhân]: Khi Kỹ năng cốt lõi của nhân vật Quái vật được kích hoạt, Nyan có thể được coi là một nhân vật hiện đang bị thiếu trong bất kỳ nguyên tố nào.",
       "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "animation": null,
@@ -67,7 +67,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "[Giảm Sát Thương Không Bạo Kích] khi vào trận 70% > 80%. Giảm lượng năng lượng bị trừ 3 khi đồng minh chịu mất năng lượng thêm trong 5 lượt đầu.",
+      "desc": "Khi bắt đầu trận chiến, tăng 80% [Khả Năng Né Tránh Chuyên Biệt]. Miễn dịch với [Mê Hoặc] và [Mê Hoặc Chuyên Biệt]. Trong 5 hiệp đầu tiên, khi đồng minh bị mất thêm Năng lượng, lượng Năng lượng bị trừ sẽ giảm đi 3. Bản thân có [Tương Hợp Quái Nhân]. [Tương Hợp Quái Nhân]: Khi Kỹ năng cốt lõi của nhân vật Quái vật được kích hoạt, Nyan có thể được coi là một nhân vật hiện đang bị thiếu trong bất kỳ nguyên tố nào.",
       "icon": "/Skill/Nyan (URplus)/Skill_pas.png",
       "type": "Nội tại",
       "animation": null,
@@ -76,7 +76,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi vào trận, nhận 46% [Tốc Độ Chuyên Biệt]. Áp [Liên Kết Sinh Mệnh] lên đồng minh có ST cao nhất trong 6 lượt. Sau khi Nyan chủ động dùng kỹ năng, đồng minh mang [Liên Kết Sinh Mệnh] tung [Truy Kích Tụ Lực] với 80% sức mạnh kỹ năng, tối đa một lần mỗi lượt. — [Liên Kết Sinh Mệnh]: Nyan sẽ không bị hạ gục chừng nào đồng đội mang [Liên Kết Sinh Mệnh] còn sống; nếu họ bị hạ, [Liên Kết Sinh Mệnh] chuyển sang đồng đội có ST cao kế tiếp, tối đa 3 lần. [Truy Kích Tụ Lực]: Thực hiện một chiêu cuối gây ST hoặc hồi máu diện rộng như một đòn truy kích; mục tiêu ngẫu nhiên, không tốn năng lượng.",
+      "desc": "Khi tham gia, tăng 46% [Tốc Độ Chuyên Biệt]. Áp dụng [Liên Kết HP] cho đồng minh có ATK cao nhất trong 6 lượt. Sau khi Nyan chủ động sử dụng một kỹ năng, đồng minh có [Liên Kết HP] sẽ tung ra [Truy Kích Tích Lực] với 80% sức mạnh kỹ năng, tối đa một lần mỗi hiệp. [Liên Kết HP]: Nyan sẽ không bị đánh bại chừng nào đồng đội có [Liên Kết HP] còn sống. Nếu đồng đội đó bị đánh bại, [Liên Kết HP] ngay lập tức được chuyển cho đồng đội khác có ATK cao nhất trên sân, tối đa 3 lần. [Truy Kích Tích Lực]: Thực hiện Tuyệt Kĩ hồi máu kiểu DMG hoặc AoE dưới dạng đòn tấn công Truy Kích. Mục tiêu là ngẫu nhiên và không tiêu tốn năng lượng.",
       "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "animation": null,
@@ -85,7 +85,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Khi vào trận, nhận [Tốc Độ Chuyên Biệt] 46% > 54%. Đồng minh mang [Liên Kết Sinh Mệnh] tung [Truy Kích Tụ Lực] với 80% > 120% sức mạnh kỹ năng.",
+      "desc": "Khi tham gia, tăng 54% [Tốc Độ Chuyên Biệt]. Áp dụng [Liên Kết HP] cho đồng minh có ATK cao nhất trong 6 lượt. Sau khi Nyan chủ động sử dụng một kỹ năng, đồng minh có [Liên Kết HP] sẽ tung ra [Truy Kích Tích Lực] với 120% sức mạnh kỹ năng, tối đa một lần mỗi hiệp. [Liên Kết HP]: Nyan sẽ không bị đánh bại chừng nào đồng đội có [Liên Kết HP] còn sống. Nếu đồng đội đó bị đánh bại, [Liên Kết HP] ngay lập tức được chuyển cho đồng đội khác có ATK cao nhất trên sân, tối đa 3 lần. [Truy Kích Tích Lực]: Thực hiện Tuyệt Kĩ hồi máu kiểu DMG hoặc AoE dưới dạng đòn tấn công Truy Kích. Mục tiêu là ngẫu nhiên và không tiêu tốn năng lượng.",
       "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "animation": null,
@@ -94,7 +94,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Nyan (URplus)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "animation": null,

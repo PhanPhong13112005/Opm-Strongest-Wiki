@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK Direct DMG to a single target.",
+      "desc": "Deals a 2-hit combo to a single target, each hit dealing 120% ATK DMG.",
       "icon": "/Skill/Genos (URplus)/Skill_base.png",
       "type": "Basic",
       "animation": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 5000% ATK [Specialized Direct DMG] with 5 consecutive strikes to all enemies. Negates 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and penetrates [Unyielding] and [Specialized Unyielding].",
+      "desc": "Deals a 5-hit combo to all enemies, each hit inflicting 5000% ATK [Specialized Direct DMG] (only affected by advanced DMG modifiers). Ignores 45% [Specialized Dodge] and [Non-Crit DMG Reduction], and pierces through [Unyielding] and [Specialized Unyielding].",
       "icon": "/Skill/Genos (URplus)/skill_ult.png",
       "type": "Ultimate",
       "animation": "/Animation/Genos_Urplus/ult.gif",
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Increases Crit Rate by 30% for 1 round. If ATK is higher than the target, 130% chance to reduce the target's Specialized-HP damage reduction by 2% for 4 rounds. Ultimate DMG 5000% > 7000% ATK; [Specialized Evasion] negation 45% > 60%.",
+      "desc": "Deals a 5-hit combo to all enemies, each hit inflicting 7000% ATK [Specialized Direct DMG] (only affected by advanced DMG modifiers). Ignores 60% [Specialized Dodge] and [Non-Crit DMG Reduction], and pierces through [Unyielding] and [Specialized Unyielding]. Increases own Crit Rate by 30% for 1 turn. If ATK is higher than the target’s, there is a 130% chance to reduce the target’s [Specialized HP DMG Reduction] by 3% for 4 turns.",
       "keepsakeIcon": "/Keepsake/Genos (URplus)/Keepsake_URplus.png",
       "icon": "/Skill/Genos (URplus)/skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Gains 60% [Non-Crit DMG Reduction]. When there are 2 or fewer targets, [Specialized Direct DMG] increases by 30%.",
+      "desc": "At battle start, gains 60% [Non-Crit DMG Reduction]. When the number of attack targets is 2 or fewer, [Specialized Direct DMG] is increased by 30%.",
       "icon": "/Skill/Genos (URplus)/Skill_pas.png",
       "type": "Passive",
       "animation": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Non-Crit DMG Reduction] 60% > 70%. [Specialized Direct DMG] 30% > 40%.",
+      "desc": "At battle start, gains 70% [Non-Crit DMG Reduction]. When the number of attack targets is 2 or fewer, [Specialized Direct DMG] is increased by 40%.",
       "icon": "/Skill/Genos (URplus)/Skill_pas.png",
       "type": "Passive",
       "animation": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Non-Crit DMG Reduction] 70% > 80%. [Specialized Direct DMG] 40% > 50%.",
+      "desc": "At battle start, gains 80% [Non-Crit DMG Reduction]. When the number of attack targets is 2 or fewer, [Specialized Direct DMG] is increased by 50%.",
       "icon": "/Skill/Genos (URplus)/Skill_pas.png",
       "type": "Passive",
       "animation": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Gains 30% [Suppression DMG Reduction]. Allies with [Suppression DMG Reduction] and Genos gain 30% [Suppression DMG Increase]. — [Suppression DMG Reduction]: reduces DMG received by 30%; when ATK is higher than the attacker, reduces by 150%. [Suppression DMG Increase]: increases DMG dealt by 30%; when ATK is higher than the target, increases by 150%.",
+      "desc": "At the start of battle, gains 30% [Suppression Guard]. Allies (including self) with [Suppression Guard] also gain 30% [Suppression Boost]. [Suppression Guard]: Reduces DMG taken by 40%. If own Attack is higher than the attacker’s, the DMG reduction is increased to 1.5x. [Suppression Boost]: Increases DMG dealt by 40%. If own Attack is higher than the target’s, the DMG boost is increased to 1.5x.",
       "icon": "/Skill/Genos (URplus)/skill_awk.png",
       "type": "Awakening",
       "animation": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "[Suppression DMG Reduction] 30% > 40% (when ATK is higher than the attacker, 150% > 170%). [Suppression DMG Increase] 30% > 40% (when ATK is higher than the target, 150% > 170%).",
+      "desc": "At the start of battle, gains 40% [Suppression Guard]. Allies (including self) with [Suppression Guard] also gain 40% [Suppression Boost]. [Suppression Guard]: Reduces DMG taken by 40%. If own Attack is higher than the attacker’s, the DMG reduction is increased to 1.7x. [Suppression Boost]: Increases DMG dealt by 40%. If own Attack is higher than the target’s, the DMG boost is increased to 1.7x.",
       "icon": "/Skill/Genos (URplus)/skill_awk.png",
       "type": "Awakening",
       "animation": null,

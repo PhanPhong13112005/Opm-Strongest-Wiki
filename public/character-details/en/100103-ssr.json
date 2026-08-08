@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases self HP by (+20). After taking fatal damage, triggers [Regeneration] (while an ally is present, recovers 15% HP before the next self action and keeps fighting, up to 3 times). When attacking, deals additional DMG equal to 35% of self's lost HP to the target.",
+      "desc": "Permanently increases self HP by. After taking fatal damage, triggers [Regeneration] (while an ally is present, recovers 15% HP before the next self action and keeps fighting, up to 3 times). When attacking, deals additional DMG equal to 35% of self's lost HP to the target.",
       "icon": "/Skill/Phoenix Man (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases self HP by (+20). After taking fatal damage, triggers [Regeneration] (while an ally is present, recovers 20% HP before the next self action and keeps fighting, up to 4 times). After triggering [Regeneration], self's Speed is increased to 2x. When attacking, deals additional DMG equal to 40% of self's lost HP to the target.",
+      "desc": "Permanently increases self HP by. After taking fatal damage, triggers [Regeneration] (while an ally is present, recovers 20% HP before the next self action and keeps fighting, up to 4 times). After triggering [Regeneration], self's Speed is increased to 2x. When attacking, deals additional DMG equal to 40% of self's lost HP to the target.",
       "icon": "/Skill/Phoenix Man (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases self HP by (+20). After taking fatal damage, triggers [Regeneration] (while an ally is present, recovers 22% HP before the next self action and keeps fighting, up to 5 times). After triggering [Regeneration], self's Speed is increased to 2x. When attacking, deals additional DMG equal to 45% of self's lost HP to the target.",
+      "desc": "Permanently increases self HP by. After taking fatal damage, triggers [Regeneration] (while an ally is present, recovers 22% HP before the next self action and keeps fighting, up to 5 times). After triggering [Regeneration], self's Speed is increased to 2x. When attacking, deals additional DMG equal to 45% of self's lost HP to the target.",
       "icon": "/Skill/Phoenix Man (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

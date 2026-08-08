@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Direct DMG 120% ATK to the target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Drive Knight (SSR+)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Direct DMG 150% ATK to the target's column, then applies [Damage Taken Up] 30% to all enemies (they take more DMG).",
+      "desc": "Attacks all enemies in a column with 2 consecutive strikes, dealing 300% ATK DMG. Reduces the DMG Rate of all enemies by 30% for 1 round.",
       "icon": "/Skill/Drive Knight (SSR+)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Direct DMG 150% > 225% ATK to the target's column, then applies [Damage Taken Up] 30% > 50% to all enemies.",
+      "desc": "Attacks all enemies in a column with 2 consecutive strikes, dealing 450% ATK DMG. Reduces the DMG Rate of all enemies by 50% for 1 round.",
       "icon": "/Skill/Drive Knight (SSR+)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Drive Knight (SSRplus)/Keepsake_SSRplus.png",
       "type": "Ultimate",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Gains +20% HP. After any character's action, [Evolve] 2 targets that are in an [Unyielding]/[Ignore DMG] state and deals 200% ATK as Extra DMG. When battle begins, gains 60% [Instant DMG Evasion] for 2 rounds.[Evolve]: immediately cancels the target's [Unyielding] and [Ignore DMG] statuses.",
+      "desc": "After any character acts, [Evolve] 2 targets that are under [Unyielding] or an Ignore DMG state and deals 200% ATK as Extra DMG. At battle start, gains 60% [Instant DMG Evasion] for 2 rounds. Permanently increases own HP. [Evolve]: Immediately removes the target’s [Unyielding] and Ignore DMG statuses. There is no activation limit for [Evolve]. [Instant DMG Evasion]: Direct DMG, Extra DMG, Charge DMG, and Berserk DMG only deal 1 point of DMG.",
       "icon": "/Skill/Drive Knight (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Evolve] 3 targets; Extra DMG 200% ATK; [Instant DMG Evasion] 60% &gt; 65%. No [Evolve] limit.",
+      "desc": "After any character acts, [Evolve] 3 targets that are under [Unyielding] or an Ignore DMG state and deals 200% ATK as Extra DMG. At battle start, gains 65% [Instant DMG Evasion] for 2 rounds. Permanently increases own HP. [Evolve]: Immediately removes the target’s [Unyielding] and Ignore DMG statuses. There is no activation limit for [Evolve]. [Instant DMG Evasion]: Direct DMG, Extra DMG, Charge DMG, and Berserk DMG only deal 1 point of DMG.",
       "icon": "/Skill/Drive Knight (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Evolve] 3 targets; Extra DMG 200% &gt; 300% ATK; [Instant DMG Evasion] 65% &gt; 70%. No [Evolve] limit.",
+      "desc": "After any character acts, [Evolve] 3 targets that are under [Unyielding] or an Ignore DMG state and deals 300% ATK as Extra DMG. At battle start, gains 70% [Instant DMG Evasion] for 2 rounds. Permanently increases own HP. [Evolve]: Immediately removes the target’s [Unyielding] and Ignore DMG statuses. There is no activation limit for [Evolve]. [Instant DMG Evasion]: Direct DMG, Extra DMG, Charge DMG, and Berserk DMG only deal 1 point of DMG.",
       "icon": "/Skill/Drive Knight (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

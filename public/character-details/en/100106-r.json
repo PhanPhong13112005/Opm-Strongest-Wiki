@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 100% ATK (+10) Direct Damage to a single target.",
+      "desc": "Deals 100% ATK Direct Damage to a single target.",
       "icon": "/Skill/Maiko Plasma (R)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 5 consecutive strikes to all targets for 24% ATK (+2) Direct Damage, and increases the DMG reflection rate of all allies by 20%.",
+      "desc": "Deals 5 consecutive strikes to all targets for 24% ATK (+2) Direct Damage, and increases the DMG reflection rate of all allies%.",
       "icon": "/Skill/Maiko Plasma (R)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). Reduces incoming damage from Hi-Tech enemies by 20% and recovers 10% HP.",
+      "desc": "Permanently increases own HP by. Reduces incoming damage from Hi-Tech enemies% and recovers 10% HP.",
       "icon": "/Skill/Maiko Plasma (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). When self is attacked by a Tech-type enemy, damage taken is reduced by 30% and self restores 15% HP.",
+      "desc": "Permanently increases own HP by. When self is attacked by a Tech-type enemy, damage taken is reduced by 30% and self restores 15% HP.",
       "icon": "/Skill/Maiko Plasma (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). When self is attacked by a Tech-type enemy, damage taken is reduced by 30% and self restores 20% HP.",
+      "desc": "Permanently increases own HP by. When self is attacked by a Tech-type enemy, damage taken is reduced by 30% and self restores 20% HP.",
       "icon": "/Skill/Maiko Plasma (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

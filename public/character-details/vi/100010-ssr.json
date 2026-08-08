@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tung 2 liên kích lên mục tiêu đơn, mỗi đòn gây 60% ST sát thương, và tăng 20% Tốc độ bản thân trong 1 lượt.",
+      "desc": "Tấn công một mục tiêu bằng 2 đòn combo, gây 60% ATK DMG cho mỗi mục tiêu và tăng% Tốc độ của bản thân trong 1 lượt.",
       "icon": "/Skill/Flashy Flash (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tung 5 liên kích lên mỗi kẻ địch trong cả hàng, mỗi đòn gây 28% ST sát thương, và nhận hiệu ứng [Kiên Cường] với cường độ bằng 60% Máu tối đa. Đồng thời có 70% tỉ lệ gây [Băng Hoại] lên mục tiêu trúng đòn trong 2 lượt (tỉ lệ giảm sát thương bị hạ 30%).",
+      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng 5 đòn combo, gây 28% ATK DMG cho mỗi kẻ địch và nhận được hiệu ứng [Lá Chắn] với sức mạnh bằng 60% HP tối đa. Đồng thời có 70% cơ hội gây [Sụp Đổ] lên các mục tiêu bị trúng đòn trong 2 lượt (tỷ lệ Giảm Sát Thương giảm 30%).",
       "icon": "/Skill/Flashy Flash (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tung 5 liên kích lên mỗi kẻ địch trong cả hàng, mỗi đòn gây 34% ST sát thương, và nhận hiệu ứng [Kiên Cường] với cường độ bằng 65% Máu tối đa. Đồng thời có 80% tỉ lệ gây [Băng Hoại] lên mục tiêu trúng đòn trong 2 lượt (tỉ lệ giảm sát thương bị hạ 35%).",
+      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng 5 đòn kết hợp, gây 34% ATK DMG cho mỗi kẻ địch và nhận được hiệu ứng [Lá Chắn] với sức mạnh bằng 65% HP tối đa. Đồng thời có 80% cơ hội gây [Sụp Đổ] lên các mục tiêu bị trúng đòn trong 2 lượt (tỷ lệ Giảm Sát Thương giảm 35%).",
       "keepsakeIcon": "/Keepsake/Flashy Flash (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Flashy Flash (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi kẻ địch hành động và có Tốc độ thấp hơn bản thân, thực hiện [Truy Kích] (tấn công bằng 80% sát thương và hiệu ứng của đòn thường, tối đa 3 lần mỗi lượt). Sau khi phe ta thực hiện truy kích, Flashy Flash gây 80% ST sát thương phụ trội lên toàn bộ kẻ địch, tối đa 3 lần mỗi lượt.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi kẻ địch hành động và Tốc độ của nó thấp hơn kẻ địch, thực hiện [Truy Kích] (tấn công bằng 80% DMG của đòn tấn công cơ bản và các hiệu ứng, tối đa 3 lần mỗi lượt). Sau khi một đồng minh thực hiện Truy Kích, Tia Chớp Chói Lóa gây 80% ATK extra DMG cho tất cả kẻ thù, tối đa 3 lần mỗi lượt.",
       "icon": "/Skill/Flashy Flash (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi kẻ địch hành động và có Tốc độ thấp hơn bản thân, thực hiện [Truy Kích] (tấn công bằng 80% sát thương và hiệu ứng của đòn thường, tối đa 4 lần mỗi lượt). Sau khi phe ta thực hiện truy kích, Flashy Flash gây 90% ST sát thương phụ trội lên toàn bộ kẻ địch, tối đa 3 lần mỗi lượt.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi kẻ địch hành động và Tốc độ của nó thấp hơn kẻ địch, thực hiện [Truy Kích] (tấn công bằng 80% DMG của đòn tấn công cơ bản và các hiệu ứng, tối đa 4 lần mỗi lượt). Sau khi một đồng minh thực hiện Truy Kích, Tia Chớp Chói Lóa gây 90% ATK extra DMG cho tất cả kẻ thù, tối đa 3 lần mỗi lượt.",
       "icon": "/Skill/Flashy Flash (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Khi kẻ địch hành động và có Tốc độ thấp hơn bản thân, thực hiện [Truy Kích] (tấn công bằng 80% sát thương và hiệu ứng của đòn thường, tối đa 4 lần mỗi lượt). Sau khi phe ta thực hiện truy kích, Flashy Flash gây 100% ST sát thương phụ trội lên toàn bộ kẻ địch, tối đa 3 lần mỗi lượt.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi kẻ địch hành động và Tốc độ của nó thấp hơn kẻ địch, thực hiện [Truy Kích] (tấn công bằng 80% DMG của đòn tấn công cơ bản và các hiệu ứng, tối đa 4 lần mỗi lượt). Sau khi một đồng minh thực hiện Truy Kích, Tia Chớp Chói Lóa gây 100% ATK extra DMG cho tất cả kẻ thù, tối đa 3 lần mỗi lượt.",
       "icon": "/Skill/Flashy Flash (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

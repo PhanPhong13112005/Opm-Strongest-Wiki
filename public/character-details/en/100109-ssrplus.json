@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Ultimate Follow-up] 80% &gt; 100%. [Non-Crit DMG Free] 60% &gt; 65%.",
+      "desc": "[Ultimate Follow-up] 80% > 100%. [Non-Crit DMG Free] 60% > 65%.",
       "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Ultimate Follow-up] 100% &gt; 120%. [Non-Crit DMG Free] 65% &gt; 70%.",
+      "desc": "[Ultimate Follow-up] 100% > 120%. [Non-Crit DMG Free] 65% > 70%.",
       "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -82,7 +82,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Summons Candle 1 > 2\n1. [Silence] cannot be stacked. Faster character is unable to perform Ultimate in the next round. 2. Formal set works for [Silence] 3. Gyoro's [Ultimate Follow-up] only triggers once per round and only if the support character dies. (CE+ dog does not die so it is not counted) 4. [Ultimate Follow-up] can also inflict [Silence] 5. Silence can be affected by Hit% and Res% (At present, the beta server is not affected by hit and resistance, but will be tested after the official server is released) 6. Keepsake is recommended if you have characters that summon support 7. [Silence] is removed after [Reborn]",
+      "desc": "Summons Candle 1 > 2 1. [Silence] cannot be stacked. Faster character is unable to perform Ultimate in the next round. 2. Formal set works for [Silence] 3. Gyoro's [Ultimate Follow-up] only triggers once per round and only if the support character dies. (CE+ dog does not die so it is not counted) 4. [Ultimate Follow-up] can also inflict [Silence] 5. Silence can be affected by Hit% and Res% (At present, the beta server is not affected by hit and resistance, but will be tested after the official server is released) 6. Keepsake is recommended if you have characters that summon support 7. [Silence] is removed after [Reborn]",
       "icon": "/Skill/Gyoro-Gyoro (SSR+)/Skill_Awken.png",
       "type": "Awakening",
       "keepsakeIcon": null,

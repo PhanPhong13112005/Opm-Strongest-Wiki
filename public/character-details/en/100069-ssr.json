@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increase own max HP. At the start of battle, increase own SPD by 20% and raise the SPD of same-row allies up to 95% of Sonic's SPD (if an ally's own SPD is already higher than the boosted value, their SPD is unchanged). During battle, grant same-row allies without [Tenacity] a [Tenacity] effect equal to 30% of their max HP, up to 2 times per ally.",
+      "desc": "Permanently increase own max HP. At the start of battle, increase own SPD% and raise the SPD of same-row allies up to 95% of Sonic's SPD (if an ally's own SPD is already higher than the boosted value, their SPD is unchanged). During battle, grant same-row allies without [Tenacity] a [Tenacity] effect equal to 30% of their max HP, up to 2 times per ally.",
       "icon": "/Skill/Speed-o-Sound Sonic V2 (SSR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

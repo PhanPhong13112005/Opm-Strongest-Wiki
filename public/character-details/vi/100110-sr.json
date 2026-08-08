@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 100% ST tấn công lên mục tiêu đơn.",
+      "desc": "Gây 100% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Heavy Tank Loincloth (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Đánh mục tiêu đơn với 3 đòn liên kích gây 70% ST tấn công mỗi đòn, có 100% tỉ lệ gây [Thương Tổn] lên mục tiêu trong 2 lượt (khi bị tấn công, chịu thêm ST Thương Tổn bằng 75% ST tấn công).",
+      "desc": "Tấn công một mục tiêu bằng 3 đòn kết hợp gây 70% ATK DMG mỗi đòn, với 100% cơ hội gây [Bị Thương] lên mục tiêu trong 2 lượt (khi bị tấn công, sẽ nhận thêm Chấn thương DMG bằng 75% ATK).",
       "icon": "/Skill/Heavy Tank Loincloth (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Đánh mục tiêu đơn với 3 đòn liên kích gây 85% ST tấn công mỗi đòn, có 100% tỉ lệ gây [Thương Tổn] lên mục tiêu trong 2 lượt (khi bị tấn công, chịu thêm ST Thương Tổn bằng 100% ST tấn công).",
+      "desc": "Tấn công một mục tiêu bằng 3 đòn kết hợp gây 85% ATK DMG mỗi đòn, với 100% cơ hội gây [Bị Thương] lên mục tiêu trong 2 lượt (khi bị tấn công, sẽ nhận thêm Chấn thương DMG bằng 100% ATK).",
       "keepsakeIcon": "/Keepsake/Heavy Tank Loincloth (SR)/Keepsake_SR.png",
       "icon": "/Skill/Heavy Tank Loincloth (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Sau khi hành động, cấp [Kiên Cường] cho các đồng minh xung quanh (hấp thụ ST bằng 15% Máu bản thân).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Sau khi hành động, cấp [Lá Chắn] cho các đồng minh xung quanh (hấp thụ DMG bằng 15% HP của chính mình).",
       "icon": "/Skill/Heavy Tank Loincloth (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Sau khi hành động, cấp [Kiên Cường] cho các đồng minh xung quanh và bản thân (hấp thụ ST bằng 15% Máu bản thân).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Sau khi hành động, cấp [Lá Chắn] cho đồng minh xung quanh và bản thân (hấp thụ DMG bằng 15% HP của chính mình).",
       "icon": "/Skill/Heavy Tank Loincloth (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Sau khi hành động, cấp [Kiên Cường] cho các đồng minh xung quanh và bản thân (hấp thụ ST bằng 20% Máu bản thân).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Sau khi hành động, cấp [Lá Chắn] cho đồng minh xung quanh và bản thân (hấp thụ DMG bằng 20% ​​HP của chính mình).",
       "icon": "/Skill/Heavy Tank Loincloth (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

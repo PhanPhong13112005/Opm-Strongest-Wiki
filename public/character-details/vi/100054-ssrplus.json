@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 60% ST sát thương trực tiếp lên mục tiêu đơn.",
+      "desc": "Gây sát thương cho một mục tiêu bằng 2 Combo với tổng sát thương bằng 120% ATK",
       "icon": "/Skill/Melzargard (SSR+)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây sát thương trực tiếp bằng 12% Máu tối đa của mỗi kẻ địch lên toàn bộ kẻ địch, sau đó áp một [Đánh Dấu] lên bản thân.",
+      "desc": "Gây sát thương cho tất cả mục tiêu bằng 4 Combo với tổng sát thương bằng 48% HP tối đa. Sau khi sử dụng Tuyệt Kĩ, 1 Nhân vật bị đánh bại sẽ quay lại trận chiến với 100% HP. Có thể kích hoạt tối đa 4 lần mỗi trận.",
       "icon": "/Skill/Melzargard (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Sát thương trực tiếp lên toàn bộ kẻ địch tăng lên 12% > 16% Máu tối đa của chúng. [Đánh Dấu] tự thân được nâng cấp lên phiên bản mạnh hơn.",
+      "desc": "Gây sát thương cho tất cả mục tiêu bằng 4 Combo với tổng sát thương bằng 64% HP tối đa (+2663). Sau khi sử dụng Tuyệt Kĩ, 2 Nhân vật bị đánh bại sẽ quay lại trận chiến với 100% HP. Có thể kích hoạt tối đa 6 lần mỗi trận.",
       "keepsakeIcon": "/Keepsake/Melzargard (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Melzargard (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Khi vào trận, tăng +20% Máu. Sau khi bất kỳ nhân vật cùng hàng tấn công, kích hoạt [Đột Phá] lên mục tiêu chính. Vĩnh viễn cấp [Miễn Nhiễm Câm Lặng] cho toàn hàng.",
+      "desc": "Sau khi thực hiện hành động hoặc đồng minh thực hiện hành động, kích hoạt [Tiến Hóa] trên mục tiêu. Cấp vĩnh viễn khả năng miễn nhiễm chống lại [Câm Lặng] cho tất cả Đồng minh trong hàng. Tăng vĩnh viễn HP của riêng mình theo điểm. [Tiến Hóa]: Hủy ngay lập tức trạng thái Bất khuất và Bỏ qua DMG của mục tiêu.",
       "icon": "/Skill/Melzargard (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Bổ sung cấp [Miễn Nhiễm Choáng].",
+      "desc": "Sau khi thực hiện hành động hoặc đồng minh thực hiện hành động, kích hoạt [Tiến Hóa] trên mục tiêu. Cấp vĩnh viễn khả năng miễn nhiễm chống lại [Choáng/Câm Lặng] cho tất cả Đồng minh trong hàng. Hiệu ứng này không thể bỏ qua. Tăng vĩnh viễn HP của riêng mình theo điểm. [Tiến Hóa]: Hủy ngay lập tức trạng thái Bất khuất và Bỏ qua DMG của mục tiêu.",
       "icon": "/Skill/Melzargard (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Kích hoạt [Đột Phá]: sau khi nhân vật cùng hàng tấn công &gt; sau khi nhân vật quanh Melzargard tấn công.",
+      "desc": "Sau khi thực hiện hành động hoặc các đồng minh xung quanh thực hiện hành động, kích hoạt [Tiến Hóa] trên mục tiêu. Cấp vĩnh viễn khả năng miễn nhiễm chống lại [Choáng/Câm Lặng] cho tất cả Đồng minh trong hàng. Hiệu ứng này không thể bỏ qua. Tăng vĩnh viễn HP của riêng mình theo điểm. [Tiến Hóa]: Hủy ngay lập tức trạng thái Bất khuất và Bỏ qua DMG của mục tiêu.",
       "icon": "/Skill/Melzargard (SSR+)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Khi trận đấu bắt đầu, ban cho toàn đội 50% Tỉ lệ Khiên, kéo dài 2 lượt. Kích hoạt [Tái Sinh] sau khi nhận sát thương chí tử (Khi có đồng minh, hồi 50% Máu trước khi hành động, tối đa 2 lần)",
+      "desc": "Khi trận chiến bắt đầu, cấp 50% Tỷ Lệ Khiên cho tất cả Đồng minh trong 2 hiệp. Sau khi nhận sát thương chí mạng, kích hoạt [Đã Tái Sinh]. [Đã Tái Sinh]: Khi có đồng minh hiện diện, hồi phục 50% HP trước hành động tiếp theo, tối đa 2 lần.",
       "icon": "/Skill/Melzargard (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "Tỉ lệ Khiên 50% > 70% Hồi Máu trước khi hành động tối đa 2 lần > 3 lần\n[Hồi Sinh] có thể cộng dồn với SSR+ Phoenixman và SSR+ Pig God Các nhân vật được hồi sinh không nhận được [Bảo vệ chuyên biệt] từ SSR+ Drive Knight nhưng vẫn có thể nhận từ kỹ năng của chính mình",
+      "desc": "Tỷ Lệ Khiên tăng từ 50% lên 70%. Số lần kích hoạt [Đã Tái Sinh] tối đa tăng từ 2 đến 3 lần.",
       "icon": "/Skill/Melzargard (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -92,7 +92,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Melzargard (SSR+)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

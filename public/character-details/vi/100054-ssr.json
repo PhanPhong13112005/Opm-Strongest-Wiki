@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST lên mục tiêu đơn, đồng thời giảm 20% sát thương bản thân phải nhận, kéo dài 1 lượt.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu và giảm% sát thương mà bản thân phải gánh chịu trong 1 lượt.",
       "icon": "/Skill/Melzargard (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Đánh kẻ địch trong vùng hình chữ thập với 5 đòn liên kích, mỗi đòn gây 26% ST, hồi 20% Máu tối đa của bản thân, và hồi cho toàn bộ đồng minh 8% Máu tối đa của Melzargard.",
+      "desc": "Tấn công kẻ thù trong một khu vực chéo với 5 đòn liên tiếp gây ra 26% ATK DMG mỗi đòn, phục hồi 20% HP tối đa của bản thân và hồi máu cho tất cả đồng minh bằng 8% HP tối đa của Melzargard.",
       "icon": "/Skill/Melzargard (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Đánh kẻ địch trong vùng hình chữ thập với 5 đòn liên kích, mỗi đòn gây 33% ST, hồi 25% Máu tối đa của bản thân, và hồi cho toàn bộ đồng minh 12% Máu tối đa của Melzargard.",
+      "desc": "Tấn công kẻ thù trong một khu vực chéo với 5 đòn liên tiếp gây ra 33% ATK DMG mỗi đòn, phục hồi 25% HP tối đa của bản thân và hồi máu cho tất cả đồng minh bằng 12% HP tối đa của Melzargard.",
       "keepsakeIcon": "/Keepsake/Melzargard (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Melzargard (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Gánh 20% sát thương mà toàn bộ đồng minh phải nhận; Melzargard giảm 50% sát thương nhận được thông qua việc gánh này (không còn gánh khi Máu dưới 20%).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Chia sẻ 20% thiệt hại cho tất cả đồng minh; Melzargard giảm 50% sát thương nhận được thông qua việc chia sẻ này (không còn chia sẻ khi HP dưới 20%).",
       "icon": "/Skill/Melzargard (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Gánh 30% sát thương mà toàn bộ đồng minh phải nhận; Melzargard giảm 65% sát thương nhận được thông qua việc gánh này (không còn gánh khi Máu dưới 20%).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Chia sẻ 30% thiệt hại cho tất cả đồng minh; Melzargard giảm 65% sát thương nhận được thông qua việc chia sẻ này (không còn chia sẻ khi HP dưới 20%).",
       "icon": "/Skill/Melzargard (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu bản thân. Gánh 30% sát thương mà toàn bộ đồng minh phải nhận; Melzargard giảm 85% sát thương nhận được thông qua việc gánh này (không còn gánh khi Máu dưới 20%).",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Chia sẻ 30% thiệt hại cho tất cả đồng minh; Melzargard giảm 85% sát thương nhận được thông qua việc chia sẻ này (không còn chia sẻ khi HP dưới 20%).",
       "icon": "/Skill/Melzargard (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

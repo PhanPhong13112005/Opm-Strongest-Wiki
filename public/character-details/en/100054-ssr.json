@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK DMG to a single target, and reduces damage taken by self by 20% for 1 turn.",
+      "desc": "Deals 120% ATK DMG to a single target, and reduces damage taken by self% for 1 turn.",
       "icon": "/Skill/Melzargard (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,

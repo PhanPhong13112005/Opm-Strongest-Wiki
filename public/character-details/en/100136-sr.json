@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). Reduces the CRIT RES Rate of enemies with [Shatter] by 25% for 2 turn(s).",
+      "desc": "Permanently increases own HP by. Reduces the CRIT RES Rate of enemies with [Shatter] by 25% for 2 turn(s).",
       "icon": "/Skill/Death Gatling (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). Reduces the CRIT RES Rate of enemies with [Shatter] by 30% for 2 turn(s).",
+      "desc": "Permanently increases own HP by. Reduces the CRIT RES Rate of enemies with [Shatter] by 30% for 2 turn(s).",
       "icon": "/Skill/Death Gatling (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). Reduces the CRIT RES Rate of enemies with [Shatter] by 35% for 2 turn(s).",
+      "desc": "Permanently increases own HP by. Reduces the CRIT RES Rate of enemies with [Shatter] by 35% for 2 turn(s).",
       "icon": "/Skill/Death Gatling (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

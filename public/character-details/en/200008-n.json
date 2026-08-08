@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Strike a single target with a 2-hit combo, dealing 40% ATK (+5) damage.",
+      "desc": "Strike a single target with a 2-hit combo, dealing 40% ATK damage.",
       "icon": "/Skill/Don Pacino (N)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Strike the entire target row with a 2-hit combo, dealing 60% ATK (+5) damage.",
+      "desc": "Strike the entire target row with a 2-hit combo, dealing 60% ATK damage.",
       "icon": "/Skill/Don Pacino (N)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Strike the entire target row with a 2-hit combo, dealing 70% ATK (+5) damage.",
+      "desc": "Strike the entire target row with a 2-hit combo, dealing 70% ATK damage.",
       "icon": "/Skill/Don Pacino (N)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Don Pacino (N)/Keepsake_N.png",
       "type": "Ultimate",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increase self HP by (+20). Before acting, increase self Crit Rate by 5% for 1 turn.",
+      "desc": "Permanently increase self HP by. Before acting, increase self Crit Rate by 5% for 1 turn.",
       "icon": "/Skill/Don Pacino (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increase self HP by (+20). Before acting, increase self Crit Rate by 8% for 1 turn.",
+      "desc": "Permanently increase self HP by. Before acting, increase self Crit Rate by 8% for 1 turn.",
       "icon": "/Skill/Don Pacino (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increase self HP by (+20). Before acting, increase self Crit Rate by 10% for 1 turn.",
+      "desc": "Permanently increase self HP by. Before acting, increase self Crit Rate by 10% for 1 turn.",
       "icon": "/Skill/Don Pacino (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 100% ATK (+10) damage to a single target.",
+      "desc": "Deals 100% ATK damage to a single target.",
       "icon": "/Skill/Sky King (SR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own max HP by (+20). When battle begins, grants all allies 20% Bonus DMG for 2 turns.",
+      "desc": "Permanently increases own max HP by. When battle begins, grants all allies 20% Bonus DMG for 2 turns.",
       "icon": "/Skill/Sky King (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own max HP by (+20). When battle begins, grants all allies 30% Bonus DMG for 2 turns.",
+      "desc": "Permanently increases own max HP by. When battle begins, grants all allies 30% Bonus DMG for 2 turns.",
       "icon": "/Skill/Sky King (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own max HP by (+20). When battle begins, grants all allies 35% Bonus DMG for 2 turns.",
+      "desc": "Permanently increases own max HP by. When battle begins, grants all allies 35% Bonus DMG for 2 turns.",
       "icon": "/Skill/Sky King (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

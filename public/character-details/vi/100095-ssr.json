@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 50% ST lên mục tiêu đơn với 2 đòn liên kích.",
+      "desc": "Tấn công một mục tiêu bằng 3 đòn liên tiếp, gây 120% ATK DMG.",
       "icon": "/Skill/Choze (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 50% ST lên mục tiêu đơn với 4 đòn liên kích, và gây [Suy Yếu] lên mục tiêu đang Thương Tổn hoặc Nội Thương (giảm 30% ST trong 1 lượt).",
+      "desc": "Tấn công tất cả kẻ địch liên tiếp bằng 3 đòn liên tiếp, gây 195% ATK DMG. Có 100% cơ hội gây [Lĩnh Vực] lên mục tiêu chính trong 1 lượt và 50% cơ hội gây [Lĩnh Vực] lên các mục tiêu khác trong cùng hàng trong 1 lượt. [Lĩnh Vực]: Trước khi hành động, thiết bị bị ảnh hưởng phải chịu DMG liên tục bằng 160% ATK.",
       "icon": "/Skill/Choze (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 50% ST lên mục tiêu đơn với 4 đòn liên kích, và gây [Suy Yếu] lên mục tiêu đang Thương Tổn hoặc Nội Thương (giảm 40% ST trong 1 lượt).",
+      "desc": "Tấn công tất cả kẻ địch liên tiếp bằng 3 đòn liên tiếp, gây 244% ATK DMG. Có 100% cơ hội gây [Lĩnh Vực] lên mục tiêu chính trong 1 lượt và 50% cơ hội gây [Lĩnh Vực] lên các mục tiêu khác trong cùng hàng trong 1 lượt. [Lĩnh Vực]: Trước khi hành động, thiết bị bị ảnh hưởng phải chịu DMG liên tục bằng 180% ATK.",
       "icon": "/Skill/Choze (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Choze (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng +20% Máu. Khi tấn công, nếu ST của bản thân cao hơn mục tiêu bị đánh, mục tiêu bị đánh chịu [Nội Thương] (thêm ST Nội Thương bằng 120% ST của Choze khi bị đánh; hiệu ứng biến mất sau khi kích hoạt).",
+      "desc": "Tăng vĩnh viễn +20% HP. Khi tấn công, nếu ATK của chính nó cao hơn mục tiêu bị tấn công, mục tiêu bị tấn công phải chịu [Nội Thương Vũ Trang] (thêm phần thưởng Thu gọn vũ trang DMG bằng 120% ATK của Choze khi bị tấn công; hiệu ứng biến mất sau khi kích hoạt).",
       "icon": "/Skill/Choze (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng +20% Máu. Khi tấn công, nếu ST của bản thân cao hơn mục tiêu bị đánh, mục tiêu bị đánh chịu [Nội Thương] (thêm ST Nội Thương bằng 140% ST của Choze khi bị đánh; hiệu ứng biến mất sau khi kích hoạt).",
+      "desc": "Tăng vĩnh viễn +20% HP. Khi tấn công, nếu ATK của chính nó cao hơn mục tiêu bị tấn công, mục tiêu bị tấn công phải chịu [Nội Thương Vũ Trang] (thêm phần thưởng Thu gọn vũ trang DMG bằng 140% ATK của Choze khi bị tấn công; hiệu ứng biến mất sau khi kích hoạt).",
       "icon": "/Skill/Choze (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -60,7 +60,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng +20% Máu. Khi tấn công, nếu ST của bản thân cao hơn mục tiêu bị đánh, mục tiêu bị đánh chịu [Nội Thương] (thêm ST Nội Thương bằng 160% ST của Choze khi bị đánh; hiệu ứng biến mất sau khi kích hoạt).",
+      "desc": "Tăng vĩnh viễn +20% HP. Khi tấn công, nếu ATK của chính nó cao hơn mục tiêu bị tấn công, mục tiêu bị tấn công phải chịu [Nội Thương Vũ Trang] (thêm phần thưởng Thu gọn vũ trang DMG bằng 160% ATK của Choze khi bị tấn công; hiệu ứng biến mất sau khi kích hoạt).",
       "icon": "/Skill/Choze (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

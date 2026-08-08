@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 130% ST(+10) sát thương cho mục tiêu đơn.",
+      "desc": "Tấn công một mục tiêu bằng 3 đòn liên tiếp, gây 120% ATK DMG.",
       "icon": "/Skill/Drive Knight (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Ở dạng [Bạc], gây sát thương [Tích Lực] chia đều theo số mục tiêu bị tấn công. (Sau khi kẻ địch nhận sát thương [Lực Trường], tích lũy 1 lớp Tích Lực 240% ST, tối đa 4 lớp.) Tung 3 đòn liên kích vào cả hàng địch, rồi khiến mục tiêu chính dính [Lực Trường] (nhận sát thương theo thời gian trước khi hành động). Mỗi lớp cấp cho phe ta 0.4 Chiến Ý.",
+      "desc": "Tấn công tất cả kẻ địch liên tiếp bằng 3 đòn liên tiếp, gây 195% ATK DMG. Có 100% cơ hội gây [Lĩnh Vực] lên mục tiêu chính trong 1 lượt và 50% cơ hội gây [Lĩnh Vực] lên các mục tiêu khác trong cùng hàng trong 1 lượt. [Lĩnh Vực]: Trước khi hành động, thiết bị bị ảnh hưởng phải chịu DMG liên tục bằng 160% ATK.",
       "icon": "/Skill/Drive Knight (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Ở dạng [Bạc], gây sát thương [Tích Lực] chia đều theo số mục tiêu bị tấn công. (Sau khi kẻ địch nhận sát thương [Lực Trường], tích lũy 1 lớp Tích Lực 330% ST, tối đa 4 lớp.) Tung 3 đòn liên kích vào cả hàng địch, rồi khiến mục tiêu chính dính [Lực Trường] (nhận sát thương theo thời gian trước khi hành động). Mỗi lớp cấp cho phe ta 0.5 Chiến Ý.",
+      "desc": "Tấn công tất cả kẻ địch liên tiếp bằng 3 đòn liên tiếp, gây 244% ATK DMG. Có 100% cơ hội gây [Lĩnh Vực] lên mục tiêu chính trong 1 lượt và 50% cơ hội gây [Lĩnh Vực] lên các mục tiêu khác trong cùng hàng trong 1 lượt. [Lĩnh Vực]: Trước khi hành động, thiết bị bị ảnh hưởng phải chịu DMG liên tục bằng 180% ATK.",
       "keepsakeIcon": "/Keepsake/Drive Knight (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Drive Knight (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi ra trận, cấp cho toàn bộ đồng minh 90% Miễn Sát Thương Tuyệt Kỹ trong một số lượt. Vĩnh viễn nhận 40% Giảm Sát Thương Không Chí Mạng (giảm mọi loại sát thương; chỉ một trong hiệu ứng này và [Nhanh Nhẹn] có tác dụng). Khi vào trận, giảm 50% tốc độ bản thân. Sau khi kẻ địch nhận sát thương [Lực Trường], Drive Knight biến hình sang dạng [Bạc].",
+      "desc": "Khi bắt đầu trận chiến, cấp cho tất cả đồng minh 40% Giảm Sát Thương Tuyệt Kĩ trong 2 lượt và cấp vĩnh viễn cho tất cả đồng minh 50% [Giảm Sát Thương Không Bạo Kích]. [Giảm Sát Thương Không Bạo Kích] có hiệu quả chống lại tất cả các loại DMG và không thể cùng tồn tại với [Nhanh Nhẹn]. Khi bắt đầu trận chiến, giảm 90% SPD của bản thân. Khi kẻ địch gặp phải [Lĩnh Vực] DMG, Hiệp Sĩ Cơ Động sẽ biến thành [Trạng Thái Bạc].",
       "icon": "/Skill/Drive Knight (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi ra trận, cấp cho toàn bộ đồng minh 90% Miễn Sát Thương Tuyệt Kỹ trong một số lượt. Vĩnh viễn nhận 45% Giảm Sát Thương Không Chí Mạng (giảm mọi loại sát thương; chỉ một trong hiệu ứng này và [Nhanh Nhẹn] có tác dụng). Khi vào trận, giảm 55% tốc độ bản thân. Sau khi kẻ địch nhận sát thương [Lực Trường], Drive Knight biến hình sang dạng [Bạc].",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi tham gia, cấp cho tất cả đồng minh 90% Miễn Sát Thương Tuyệt Kĩ trong một thời gian. Tăng vĩnh viễn 45% [Miễn Sát Thương Không Bạo Kích]. [Miễn Sát Thương Không Bạo Kích] giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]. Khi bắt đầu trận chiến, giảm 55% SPD của bản thân. Khi kẻ địch gặp phải [Lĩnh Vực] DMG, Hiệp Sĩ Cơ Động sẽ biến thành [Trạng Thái Bạc].",
       "icon": "/Skill/Drive Knight (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu cho bản thân. Khi ra trận, cấp cho toàn bộ đồng minh 90% Miễn Sát Thương Tuyệt Kỹ trong một số lượt. Vĩnh viễn nhận 50% Giảm Sát Thương Không Chí Mạng (giảm mọi loại sát thương; chỉ một trong hiệu ứng này và [Nhanh Nhẹn] có tác dụng). Khi vào trận, giảm 65% tốc độ bản thân. Sau khi kẻ địch nhận sát thương [Lực Trường], Drive Knight biến hình sang dạng [Bạc].",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Khi tham gia, cấp cho tất cả đồng minh 90% Miễn Sát Thương Tuyệt Kĩ trong một thời gian. Tăng vĩnh viễn 50% [Miễn Sát Thương Không Bạo Kích]. [Miễn Sát Thương Không Bạo Kích] giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]. Khi bắt đầu trận chiến, giảm 65% SPD của bản thân. Khi kẻ địch gặp phải [Lĩnh Vực] DMG, Hiệp Sĩ Cơ Động sẽ biến thành [Trạng Thái Bạc].",
       "icon": "/Skill/Drive Knight (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

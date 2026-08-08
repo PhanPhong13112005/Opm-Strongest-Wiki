@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 100% ST tấn công lên mục tiêu đơn, có 100% tỉ lệ khiến mục tiêu bị [Thiêu Đốt] trong 2 lượt (ST theo thời gian bằng 40% ST tấn công).",
+      "desc": "Gây 100% ATK DMG cho một mục tiêu, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (DoT bằng 40% ATK).",
       "icon": "/Skill/Lightning Max (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 200% ST tấn công lên mục tiêu đơn, có 100% tỉ lệ khiến mục tiêu đang bị [Thiêu Đốt] rơi vào [Choáng] trong 1 lượt (không thể hành động; mỗi bên tối đa 4 người cùng lúc ở trạng thái dạng choáng).",
+      "desc": "Gây 200% ATK DMG cho một mục tiêu, với 100% cơ hội gây [Choáng] cho mục tiêu [Thiêu Đốt]ing trong 1 lượt (không thể thực hiện hành động; chỉ 4 nhân vật trong mỗi đội có thể ở trạng thái kiểu Choáng cùng một lúc).",
       "icon": "/Skill/Lightning Max (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 200% ST tấn công lên mục tiêu đơn, có 100% tỉ lệ khiến mục tiêu rơi vào [Choáng] trong 1 lượt (không thể hành động; mỗi bên tối đa 4 người cùng lúc ở trạng thái dạng choáng), đồng thời có 100% tỉ lệ khiến mục tiêu bị [Thiêu Đốt] trong 1 lượt (ST theo thời gian bằng 50% ST tấn công).",
+      "desc": "Gây 200% ATK DMG cho một mục tiêu, với 100% cơ hội gây [Choáng] cho mục tiêu trong 1 lượt (không thể thực hiện hành động; chỉ 4 nhân vật trong mỗi đội có thể ở trạng thái loại Choáng cùng lúc) và 100% cơ hội gây [Thiêu Đốt] lên mục tiêu trong 1 lượt (DoT bằng 50% ATK).",
       "keepsakeIcon": "/Keepsake/Lightning Max (SR)/Keepsake_SR.png",
       "icon": "/Skill/Lightning Max (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu của bản thân. Tấn công kẻ địch đang bị [Thiêu Đốt] gây ST phụ trội bằng 100% ST tấn công.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Tấn công kẻ địch [Thiêu Đốt]ing gây thêm sát thương bằng 100% ATK.",
       "icon": "/Skill/Lightning Max (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu của bản thân. Tấn công kẻ địch đang bị [Thiêu Đốt] gây ST phụ trội bằng 120% ST tấn công.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Tấn công kẻ địch [Thiêu Đốt]ing gây thêm sát thương bằng 120% ATK.",
       "icon": "/Skill/Lightning Max (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu của bản thân. Tấn công kẻ địch đang bị [Thiêu Đốt] gây ST phụ trội bằng 130% ST tấn công.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Tấn công kẻ địch [Thiêu Đốt]ing gây thêm sát thương bằng 130% ATK.",
       "icon": "/Skill/Lightning Max (SR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

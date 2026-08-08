@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 140% ST (+10) sát thương lên mục tiêu đơn, và khiến bản thân nhận [Kiên Cường] (hấp thụ sát thương bằng 30% Máu bản thân).",
+      "desc": "Gây 140% ATK DMG cho một mục tiêu và tự nhận [Lá Chắn]. [Lá Chắn]: Hấp thụ DMG bằng 30% HP tối đa của chính mình.",
       "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 50% ST sát thương với 3 đòn liên kích lên toàn bộ địch, vĩnh viễn trao cho bản thân 50% Tăng ST liên tục, và có 100% khả năng khiến tất cả mục tiêu trên sân rơi vào [Lực Trường] trong 1 lượt (chịu sát thương theo thời gian bằng 50% ST trước khi hành động; 50% khả năng xuyên thủng hiệu ứng miễn nhiễm).",
+      "desc": "Tấn công tất cả kẻ địch bằng 3 đòn liên tiếp, gây 50% ATK DMG mỗi đòn. Tăng vĩnh viễn Tỷ lệ DMG liên tục của bản thân thêm 50%. Có 100% cơ hội gây [Trường Lực] lên tất cả kẻ địch trong 1 lượt. [Trường Lực]: Trước khi hành động, thiết bị bị ảnh hưởng phải chịu DMG liên tục bằng 50% ATK. Có 50% cơ hội bỏ qua khả năng miễn dịch.",
       "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 60% ST sát thương với 3 đòn liên kích lên toàn bộ địch, vĩnh viễn trao cho bản thân 60% Tăng ST liên tục, và có 100% khả năng khiến tất cả mục tiêu trên sân rơi vào [Lực Trường] trong 1 lượt (chịu sát thương theo thời gian bằng 50% ST trước khi hành động; 50% khả năng xuyên thủng hiệu ứng miễn nhiễm).",
+      "desc": "Tấn công tất cả kẻ địch bằng 3 đòn liên tiếp, gây 60% ATK DMG mỗi đòn. Tăng vĩnh viễn Tỷ lệ DMG liên tục của bản thân thêm 60%. Có 100% cơ hội gây [Trường Lực] lên tất cả kẻ địch trong 1 lượt. [Trường Lực]: Trước khi hành động, thiết bị bị ảnh hưởng phải chịu DMG liên tục bằng 50% ATK. Có 50% cơ hội bỏ qua khả năng miễn dịch.",
       "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado V2 (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi hành động, rút năng lượng kẻ địch đang bị khóa (mỗi lượt 1 lần; sau khi rút thành công, không thể [Đã Hoảng Loạn] lại trong cùng lượt). Nhận 30% [Miễn Sát Thương Không Bạo Kích] (mọi loại ST; hiệu ứng này và [Nhanh Nhẹn] chỉ một cái hiệu lực). Chuyển 50% DoT nhận vào thành Máu.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Sau khi hành động, loại bỏ Năng lượng bị phong ấn khỏi kẻ thù một lần mỗi lượt. Sau khi loại bỏ thành công Năng lượng bị phong ấn, những kẻ địch đó không thể bị gây lại [Đã Hoảng Loạn] trong cùng một lượt. Tăng vĩnh viễn 30% [Miễn Sát Thương Không Bạo Kích], giúp loại bỏ tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]. Chuyển đổi 50% DMG liên tục đến thành phục hồi HP.",
       "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi hành động, rút năng lượng kẻ địch đang bị khóa (mỗi lượt 1 lần; sau khi rút thành công, không thể [Đã Hoảng Loạn] lại trong cùng lượt). Nhận 35% [Miễn Sát Thương Không Bạo Kích] (mọi loại ST; hiệu ứng này và [Nhanh Nhẹn] chỉ một cái hiệu lực). Chuyển 75% DoT nhận vào thành Máu.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Sau khi hành động, loại bỏ Năng lượng bị phong ấn khỏi kẻ thù một lần mỗi lượt. Sau khi loại bỏ thành công Năng lượng bị phong ấn, những kẻ địch đó không thể bị gây lại [Đã Hoảng Loạn] trong cùng một lượt. Tăng vĩnh viễn 35% [Miễn Sát Thương Không Bạo Kích], giúp loại bỏ tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]. Chuyển đổi 75% DMG liên tục đến thành phục hồi HP.",
       "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -65,7 +65,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi hành động, rút năng lượng kẻ địch đang bị khóa (mỗi lượt 1 lần; sau khi rút thành công, không thể [Đã Hoảng Loạn] lại trong cùng lượt). Nhận 40% [Miễn Sát Thương Không Bạo Kích] (mọi loại ST; hiệu ứng này và [Nhanh Nhẹn] chỉ một cái hiệu lực). Chuyển 100% DoT nhận vào thành Máu.",
+      "desc": "Tăng vĩnh viễn HP của chính mình. Sau khi hành động, loại bỏ Năng lượng bị phong ấn khỏi kẻ thù một lần mỗi lượt. Sau khi loại bỏ thành công Năng lượng bị phong ấn, những kẻ địch đó không thể bị gây lại [Đã Hoảng Loạn] trong cùng một lượt. Tăng vĩnh viễn 40% [Miễn Sát Thương Không Bạo Kích], giúp loại bỏ tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]. Chuyển đổi 100% DMG liên tục đến thành khôi phục HP.",
       "icon": "/Skill/TatsumakiTerrible Tornado V2 (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

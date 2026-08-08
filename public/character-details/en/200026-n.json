@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 80% ATK (+10) damage to a single target.",
+      "desc": "Deals 80% ATK damage to a single target.",
       "icon": "/Skill/Paradiser Thug (N)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 100% ATK (+10) damage to the entire row of targets.",
+      "desc": "Deals 100% ATK damage to the entire row of targets.",
       "icon": "/Skill/Paradiser Thug (N)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 120% ATK (+10) damage to the entire row of targets.",
+      "desc": "Deals 120% ATK damage to the entire row of targets.",
       "icon": "/Skill/Paradiser Thug (N)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Paradiser Thug (N)/Keepsake_N.png",
       "type": "Ultimate",
@@ -41,7 +41,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP (+20). If a Paradise Group Follower is on the field, increases own damage by 20%, lasting until the end of battle.",
+      "desc": "Permanently increases own HP. If a Paradise Group Follower is on the field, increases own damage%, lasting until the end of battle.",
       "icon": "/Skill/Paradiser Thug (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP (+20). If a Paradise Group Follower is on the field, increases own damage by 25%, lasting until the end of battle.",
+      "desc": "Permanently increases own HP. If a Paradise Group Follower is on the field, increases own damage by 25%, lasting until the end of battle.",
       "icon": "/Skill/Paradiser Thug (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP (+20). If a Paradise Group Follower is on the field, increases own damage by 28%, lasting until the end of battle.",
+      "desc": "Permanently increases own HP. If a Paradise Group Follower is on the field, increases own damage by 28%, lasting until the end of battle.",
       "icon": "/Skill/Paradiser Thug (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

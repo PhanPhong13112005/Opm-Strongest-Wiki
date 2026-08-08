@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own max HP by 20%. After being attacked, has a 100% chance to reduce DMG taken by 10% for 2 turns.",
+      "desc": "Permanently increases own max HP%. After being attacked, has a 100% chance to reduce DMG taken by 10% for 2 turns.",
       "icon": "/Skill/YO649Z Mk II (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own max HP by 20%. After being attacked, has a 100% chance to reduce DMG taken by 20% for 2 turns.",
+      "desc": "Permanently increases own max HP%. After being attacked, has a 100% chance to reduce DMG taken% for 2 turns.",
       "icon": "/Skill/YO649Z Mk II (R)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

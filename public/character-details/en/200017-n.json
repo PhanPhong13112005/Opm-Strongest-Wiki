@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 80% ATK (+10) damage to a single target.",
+      "desc": "Deals 80% ATK damage to a single target.",
       "icon": "/Skill/Skyfolk Striker (N)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 90% ATK (+10) damage to the entire enemy row.",
+      "desc": "Deals 90% ATK damage to the entire enemy row.",
       "icon": "/Skill/Skyfolk Striker (N)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 100% ATK (+10) damage to the entire enemy row.",
+      "desc": "Deals 100% ATK damage to the entire enemy row.",
       "keepsakeIcon": "/Keepsake/Skyfolk Striker (N)/Keepsake_N.png",
       "icon": "/Skill/Skyfolk Striker (N)/Skill_ult.png",
       "type": "Ultimate",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). After an ally acts, has a 20% chance to launch a follow-up with basic-attack damage against the enemy with the lowest HP (up to 2 follow-ups per turn).",
+      "desc": "Permanently increases own HP by. After an ally acts, has a 20% chance to launch a follow-up with basic-attack damage against the enemy with the lowest HP (up to 2 follow-ups per turn).",
       "icon": "/Skill/Skyfolk Striker (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). After an ally acts, has a 20% chance to launch a follow-up dealing 100% of Basic Attack damage against the enemy with the lowest HP (up to 2 follow-ups per turn).",
+      "desc": "Permanently increases own HP by. After an ally acts, has a 20% chance to launch a follow-up dealing 100% of Basic Attack damage against the enemy with the lowest HP (up to 2 follow-ups per turn).",
       "icon": "/Skill/Skyfolk Striker (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). After an ally acts, has a 20% chance to launch a follow-up dealing 110% of Basic Attack damage against the enemy with the lowest HP (up to 2 follow-ups per turn).",
+      "desc": "Permanently increases own HP by. After an ally acts, has a 20% chance to launch a follow-up dealing 110% of Basic Attack damage against the enemy with the lowest HP (up to 2 follow-ups per turn).",
       "icon": "/Skill/Skyfolk Striker (N)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

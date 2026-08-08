@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 50% ATK DMG to a single target with 2 combo strikes.",
+      "desc": "Attacks a single target with 3 consecutive strikes, dealing 120% ATK DMG.",
       "icon": "/Skill/Choze (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 50% ATK DMG to a single target with 4 combo strikes, and inflicts [Weaken] on Injured or Armed Collapse targets (reduces ATK by 30% for 1 turn).",
+      "desc": "Attacks all enemies in a row with 3 consecutive strikes, dealing 195% ATK DMG. Has a 100% chance to inflict [Field] on the main target for 1 turn, and a 50% chance to inflict [Field] on other targets in the same row for 1 turn. [Field]: Before taking action, the affected unit suffers Continuous DMG equal to 160% ATK.",
       "icon": "/Skill/Choze (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 50% ATK DMG to a single target with 4 combo strikes, and inflicts [Weaken] on Injured or Armed Collapse targets (reduces ATK by 40% for 1 turn).",
+      "desc": "Attacks all enemies in a row with 3 consecutive strikes, dealing 244% ATK DMG. Has a 100% chance to inflict [Field] on the main target for 1 turn, and a 50% chance to inflict [Field] on other targets in the same row for 1 turn. [Field]: Before taking action, the affected unit suffers Continuous DMG equal to 180% ATK.",
       "icon": "/Skill/Choze (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Choze (SSR)/Keepsake_SSR.png",
       "type": "Ultimate",

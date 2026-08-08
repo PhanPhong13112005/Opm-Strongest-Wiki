@@ -46,7 +46,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Permanently increases own HP by (+20). At the start of battle, grants 50% Healing rate to all allies for 3 turns.",
+      "desc": "Permanently increases own HP by. At the start of battle, grants 50% Healing rate to all allies for 3 turns.",
       "icon": "/Skill/Rinrin (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -55,7 +55,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "Permanently increases own HP by (+20). At the start of battle, grants 60% Healing rate to all allies for 3 turns.",
+      "desc": "Permanently increases own HP by. At the start of battle, grants 60% Healing rate to all allies for 3 turns.",
       "icon": "/Skill/Rinrin (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,
@@ -64,7 +64,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "Permanently increases own HP by (+20). At the start of battle, grants 70% Healing rate to all allies for 3 turns.",
+      "desc": "Permanently increases own HP by. At the start of battle, grants 70% Healing rate to all allies for 3 turns.",
       "icon": "/Skill/Rinrin (SR)/Skill_pas.png",
       "type": "Passive",
       "keepsakeIcon": null,

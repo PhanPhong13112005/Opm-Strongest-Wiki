@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ST lên một mục tiêu đơn. Sau khi tung Tối Thượng đầu tiên, có thể giảm [Không Bạo Kích, Không Tử].",
+      "desc": "Gây 150% ATK DMG cho một mục tiêu và khôi phục HP của chính mình bằng 150% ATK của chính mình.",
       "icon": "/Skill/Boros (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Giảm [Không Bạo Kích, Không Tử] của mục tiêu đi 1 lượt.Gây 7000% ST ST trực tiếp lên một mục tiêu đơn (chỉ chịu ảnh hưởng bởi Giảm ST cấp cao), vô hiệu 45% [Né Tránh Chuyên Biệt] và [Miễn Sát Thương Không Bạo Kích], xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt].",
+      "desc": "Thực hiện đòn tấn công 5 đòn, gây tổng cộng 600% ATK DMG cho tất cả kẻ địch. Nếu mục tiêu có [Bất Khuất], [Bất Khuất Chuyên Biệt] hoặc [HP Chuyên Biệt], Boros sẽ chuyển sang trạng thái [Cuồng Nộ], tăng ATK lên 50% cho hành động hoạt động tiếp theo của anh ta.",
       "icon": "/Skill/Boros (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tăng Tỉ lệ Chí mạng thêm 50%ST Tấn công Tối Thượng 7000% → 10,000%",
+      "desc": "Trước khi sử dụng Tuyệt Kĩ, Boros tăng 30% Tỷ lệ tiêu hao trong 1 lượt. Thực hiện đòn tấn công 5 đòn, gây tổng cộng 800% ATK DMG cho tất cả kẻ địch. Nếu mục tiêu có [Bất Khuất], [Bất Khuất Chuyên Biệt] hoặc [HP Chuyên Biệt], Boros sẽ chuyển sang trạng thái [Cuồng Nộ], tăng ATK lên 100% cho hành động hoạt động tiếp theo của anh ta.",
       "keepsakeIcon": "/Keepsake/Boros (UR)/Keepsake_UR.png",
       "icon": "/Skill/Boros (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi hành động, bản thân và đồng minh xung quanh kích hoạt [Tiến Hóa] lên mục tiêu. Trước mỗi hiệp, hồi Máu cho toàn bộ đồng minh bằng 300% Máu tối đa, kéo dài 2 hiệp. Vĩnh viễn nhận +50% [Miễn Sát Thương Không Bạo Kích].[Tiến Hóa]: lập tức hủy trạng thái [Bất Khuất] và [Bỏ Qua Sát Thương] của mục tiêu.[Miễn Sát Thương Không Bạo Kích]: hiệu lực với mọi loại ST; không thể tồn tại cùng [Nhanh Nhẹn].",
+      "desc": "Sau khi Boros hoặc đồng minh lân cận hành động, họ có thể kích hoạt [Đột Phá]. [Đột Phá] ngay lập tức loại bỏ [Bất Khuất Chuyên Biệt] khỏi tất cả mục tiêu trên chiến trường. Hiệu ứng này kéo dài trong 2 lượt. Trước mỗi hiệp, khôi phục HP của tất cả đồng minh bằng 300% HP tối đa của mỗi đồng minh trong 2 hiệp. Boros tăng vĩnh viễn 50% [Giảm Sát Thương Không Bạo Kích].",
       "icon": "/Skill/Boros (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi toàn bộ đồng minh hành động, kích hoạt [Tiến Hóa] lên mục tiêu. Trước mỗi hiệp, hồi Máu cho toàn bộ đồng minh bằng 350% Máu tối đa, kéo dài 2 hiệp. Vĩnh viễn nhận +55% [Miễn Sát Thương Không Bạo Kích].",
+      "desc": "Sau khi bất kỳ đồng minh nào hành động, họ có thể kích hoạt [Đột Phá]. [Đột Phá] ngay lập tức loại bỏ [Bất Khuất Chuyên Biệt] khỏi tất cả mục tiêu trên chiến trường. Hiệu ứng này kéo dài trong 2 lượt. Trước mỗi hiệp, khôi phục HP của tất cả đồng minh bằng 350% HP tối đa của mỗi đồng minh trong 2 hiệp. Boros tăng vĩnh viễn 55% [Giảm Sát Thương Không Bạo Kích].",
       "icon": "/Skill/Boros (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng (+20) Máu. Sau khi toàn bộ đồng minh hành động, kích hoạt [Tiến Hóa] lên mục tiêu. Trước mỗi hiệp, hồi Máu cho toàn bộ đồng minh bằng 350% Máu tối đa, kéo dài 3 hiệp. Vĩnh viễn nhận +60% [Miễn Sát Thương Không Bạo Kích].",
+      "desc": "Sau khi bất kỳ đồng minh nào hành động, họ có thể kích hoạt [Đột Phá]. [Đột Phá] ngay lập tức loại bỏ [Bất Khuất Chuyên Biệt] khỏi tất cả mục tiêu trên chiến trường. Hiệu ứng này kéo dài trong 2 lượt. Trước mỗi hiệp, khôi phục HP của tất cả đồng minh bằng 350% HP tối đa của mỗi đồng minh trong 3 hiệp. Boros tăng vĩnh viễn 60% [Giảm Sát Thương Không Bạo Kích].",
       "icon": "/Skill/Boros (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "(Lõi Cơ bản) (1 Grappler, 2 Esper): Cấp 3 năng lượng mỗi lượt. Trong 3 lượt đầu, đồng minh nhận 30% tăng sát thương chiến đấu.(Lõi Nâng cao) (1 Grappler, 1 Duelist, 2 Esper): Khi vào trận, ban cho đồng minh [Hồi Phục Dư Thừa] vĩnh viễn (phần hồi HP vượt mức được chuyển thành [Khiên Sinh Lực] để chống ST nhận vào, không vượt quá 20 lần HP Tối đa). Toàn bộ đồng minh nhận 30% Combat immunity. Khi vào trận, đồng minh hàng trước được hồi 80% HP Tối đa, kéo dài 3 lượt.",
+      "desc": "Lõi cơ bản: Cung cấp 3 năng lượng mỗi vòng. Trong 3 hiệp đầu tiên, tất cả đồng minh đều nhận được 30% [Sát Thương Đấu Trường]. Yêu cầu: Triển khai 1 Grappler và 2 Esper. Advanced Core: Tất cả các nhân vật đồng minh nhận được [Hồi Phục Dư Thừa] vĩnh viễn khi tham gia trận chiến. Tất cả đồng minh đều nhận được 30% [Miễn Sát Thương Đấu Trường]. Vào đầu mỗi vòng, các đồng minh ở hàng đầu sẽ khôi phục HP bằng 80% HP tối đa của họ. Hiệu ứng này kéo dài trong 3 lượt. [Hồi Phục Dư Thừa]: Hồi máu và Hút máu quá mức được chuyển đổi thành một lượng [Khiên Sinh Lực] tương đương để hấp thụ DMG nhận vào. Tổng lượng DMG được hấp thụ không được vượt quá 20× HP ban đầu của thiết bị. Yêu cầu: Triển khai 1 Duelist, 1 Grappler và 2 Esper.",
       "icon": "/Skill/Source/100184-ur/awakened.webp",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "(Lõi Cơ bản & Nâng cao): Tăng sát thương chiến đấu 30% > 50%. Khi đồng minh thực hiện đòn truy kích, nhận thêm 1 năng lượng (1 lần mỗi lượt).",
+      "desc": "Cung cấp 3 năng lượng mỗi vòng. Trong 3 hiệp đầu tiên, tất cả đồng minh đều nhận được 50% [Sát Thương Đấu Trường]. Khi đồng minh kích hoạt [Truy Kích], nhận thêm 1 Năng lượng. Có thể kích hoạt một lần mỗi vòng.",
       "icon": "/Skill/Source/100184-ur/awakened.webp",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "(Lõi Cơ bản & Nâng cao): Tăng sát thương chiến đấu 30% > 50%. Khi đồng minh thực hiện đòn truy kích, nhận thêm 1 năng lượng (2 lần mỗi lượt).",
+      "desc": "Cung cấp 3 năng lượng mỗi vòng. Trong 3 hiệp đầu tiên, tất cả đồng minh đều nhận được 50% [Sát Thương Đấu Trường]. Khi đồng minh kích hoạt [Truy Kích], nhận thêm 2 Năng lượng. Có thể kích hoạt một lần mỗi vòng.",
       "icon": "/Skill/Source/100184-ur/awakened.webp",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,

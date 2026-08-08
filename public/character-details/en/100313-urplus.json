@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK DMG to a single target.",
+      "desc": "Deals a 2-hit combo to a single target, each hit dealing 120% ATK DMG.",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_base.png",
       "type": "Basic",
       "animation": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Atomic Samurai launches 30 slashes, each Crit Hit reducing all enemies' [Total DMG Reduction] by 1%. He then unleashes a powerful slash dealing 5000% ATK Specialized Direct DMG to all enemies (affected only by advanced DMG reduction), ignoring 55% [Specialized Evasion] and [Non-Crit DMG Reduction], and penetrating [Unyielding] and [Specialized Unyielding]. On the first cast, additionally reduces all enemies' [Specialized HP] by 100%.",
+      "desc": "Atomic Samurai unleashes 30 slashes. Each CRIT slash reduces all enemies’ [Total DMG Reduction] by 1%. Then delivers a powerful final slash, dealing 5000% ATK [Specialized Direct DMG] to all enemies (only affected by advanced DMG modifiers). Ignores 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and pierces [Unyielding] and [Specialized Unyielding]. On the first Ultimate cast, additionally removes 100% of all enemies’ [Specialized HP].",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_ult.png",
       "type": "Ultimate",
       "animation": "/Animation/Sam_Urplus/ult.gif",
@@ -33,7 +33,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Slashes 30 > 50 times. ATK 5000% > 7000%. Ignore Specialized Evasion and [Non-Crit DMG Reduction] 55% > 80%. Reduce [Specialized HP] of all enemies 100% > 175%.",
+      "desc": "Atomic Samurai unleashes 50 slashes. Each CRIT slash reduces all enemies’ [Total DMG Reduction] by 1%. Then delivers a powerful final slash, dealing 7000% ATK [Specialized Direct DMG] to all enemies (only affected by advanced DMG modifiers). Ignores 80% [Specialized Evasion] and [Non-Crit DMG Reduction], and pierces [Unyielding] and [Specialized Unyielding]. On the first Ultimate cast, additionally removes 150% of all enemies’ [Specialized HP].",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Atomic Samurai (URplus)/Keepsake_URplus.png",
       "type": "Ultimate",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Passive",
-      "desc": "Gains 60% [Non-Crit DMG Reduction] at the start of battle. Removes all enemy [Suppression DMG Increase] and [Suppression DMG Reduction] debuffs. When dealing Specialized Direct DMG, ignores 40% of the enemy's [Critical Resistance].",
+      "desc": "At battle start, gains 60% [Non-Crit DMG Reduction]. Removes [Suppression Boost] and [Suppression Guard] from all enemies. When dealing [Specialized Direct DMG], ignores 40% of the enemy’s [Crit Resistance].",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
       "type": "Passive",
       "animation": "/Animation/Sam_Urplus/Passive.gif",
@@ -51,7 +51,7 @@
     },
     {
       "name": "Extreme Passive",
-      "desc": "[Non-Crit DMG Reduction] 60% > 70%. Ignore enemy's [Critical Resistance] 40% > 60%.",
+      "desc": "At battle start, gains 70% [Non-Crit DMG Reduction]. Removes [Suppression Boost] and [Suppression Guard] from all enemies. When dealing [Specialized Direct DMG], ignores 70% of the enemy’s [Crit Resistance].",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
       "type": "Passive",
       "animation": "/Animation/Sam_Urplus/Passive.gif",
@@ -60,7 +60,7 @@
     },
     {
       "name": "5★ Passive",
-      "desc": "[Non-Crit DMG Reduction] 70% > 80%. Ignore enemy's [Critical Resistance] 60% > 80%.",
+      "desc": "At battle start, gains 80% [Non-Crit DMG Reduction]. Removes [Suppression Boost] and [Suppression Guard] from all enemies. When dealing [Specialized Direct DMG], ignores 80% of the enemy’s [Crit Resistance].",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_pas.png",
       "type": "Passive",
       "animation": "/Animation/Sam_Urplus/Passive.gif",
@@ -69,7 +69,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "At the start of battle, grants Atomic Samurai 20% SPD boost to Specialization. When taking damage, there is a chance to reduce that damage by 40% (the chance is twice the user's current Crit Hit rate). If the user is among the first two allies to act, they gain 30% Crit Hit rate and 50% Crit Hit DMG.",
+      "desc": "On entry, gains 20% [Specialized Speed]. When receiving DMG, has a chance to reduce the DMG taken by 40% (the activation chance equals 2× current [Crit Rate]). If this unit is one of the first two allies to act, gains 30% [Crit Rate] and 50% [Crit DMG].",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
       "type": "Awakening",
       "animation": "/Animation/Sam_Urplus/awken.gif",
@@ -78,7 +78,7 @@
     },
     {
       "name": "Awaken 2 Passive",
-      "desc": "Speed boost 20% > 30% Reduce dmg by 40% > 70% Crit hit rate 30% > 50% Crit hit dmg 50% > 80%",
+      "desc": "On entry, gains 30% [Specialized Speed]. When receiving DMG, has a chance to reduce the DMG taken by 70% (the activation chance equals 2× current [Crit Rate]). If this unit is one of the first two allies to act, gains 50% [Crit Rate] and 80% [Crit DMG].",
       "icon": "/Skill/Atomic Samurai (URplus)/Skill_Awken.png",
       "type": "Awakening",
       "animation": "/Animation/Sam_Urplus/awken.gif",

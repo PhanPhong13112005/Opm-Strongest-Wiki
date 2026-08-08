@@ -21,7 +21,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "KING phóng ánh nhìn đế vương vào mục tiêu đơn, khiến mục tiêu [Băng Hoại] 2 lượt (giảm tỉ lệ miễn thương 30%), và hồi cho bản thân 80% ST Máu.",
+      "desc": "KING sửa ánh nhìn của đế quốc lên một mục tiêu duy nhất, gây ra [Sụp Đổ] trong 2 lượt (tỷ lệ Giảm Sát Thương giảm 30%) và phục hồi HP của chính mình 80% ATK.",
       "icon": "/Skill/King (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -30,7 +30,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "KING bước ra giữa chiến trường uy hiếp toàn bộ địch, khiến toàn bộ kẻ địch rơi vào [Hoảng Loạn] (phong ấn 2 năng lượng trong 1 lượt, khi cùng hiệu ứng tồn tại thì lấy giá trị cao nhất), đồng thời hồi cho toàn bộ đồng minh 200% ST Máu.",
+      "desc": "KING sải bước đến trung tâm chiến trường và đe dọa tất cả kẻ thù, lao tất cả kẻ thù vào [Hoảng Loạn] (phong ấn 2 năng lượng trong 1 lượt; khi hiệu ứng tương tự tồn tại, giá trị cao nhất sẽ được áp dụng) và khôi phục HP cho tất cả đồng minh0% ATK.",
       "icon": "/Skill/King (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -39,7 +39,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "KING bước ra giữa chiến trường uy hiếp toàn bộ địch, khiến toàn bộ kẻ địch rơi vào [Hoảng Loạn] (phong ấn 2 năng lượng trong 1 lượt, khi cùng hiệu ứng tồn tại thì lấy giá trị cao nhất), đồng thời hồi cho toàn bộ đồng minh 200% ST Máu.",
+      "desc": "KING sải bước đến trung tâm chiến trường và đe dọa tất cả kẻ thù, lao tất cả kẻ thù vào [Hoảng Loạn] (phong ấn 2 năng lượng trong 1 lượt; khi hiệu ứng tương tự tồn tại, giá trị cao nhất sẽ được áp dụng) và khôi phục HP cho tất cả đồng minh0% ATK.",
       "icon": "/Skill/King (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/King (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Gây tối đa 120% ST sát thương phụ trội.Khi hành động, gây 20% ST sát thương phụ trội cho kẻ địch bị ảnh hưởng, và cứ mỗi 1 điểm năng lượng đội của bạn đang có thì sát thương phụ trội tăng thêm 20% ST.",
+      "desc": "Tăng vĩnh viễn HP tối đa của chính mình. Gây sát thương lên tới 120% ATK extra. Khi hành động, gây sát thương 20% ​​ATK extra cho kẻ thù bị ảnh hưởng và sát thương extra này tăng% ATK cho mỗi điểm năng lượng mà đội của bạn hiện có.",
       "icon": "/Skill/King (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -57,7 +57,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Gây tối đa 175% ST sát thương phụ trội.Khi hành động, gây 25% ST sát thương phụ trội cho kẻ địch bị ảnh hưởng, và cứ mỗi 1 điểm năng lượng đội của bạn đang có thì sát thương phụ trội tăng thêm 25% ST.",
+      "desc": "Tăng vĩnh viễn HP tối đa của chính mình. Gây sát thương lên tới 175% ATK extra. Khi hành động, gây sát thương 25% ATK extra cho kẻ địch bị ảnh hưởng và sát thương extra này tăng thêm 25% ATK cho mỗi điểm năng lượng mà đội của bạn hiện có.",
       "icon": "/Skill/King (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -66,7 +66,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Vĩnh viễn tăng Máu tối đa của bản thân. Gây tối đa 196% ST sát thương phụ trội.Khi hành động, gây 28% ST sát thương phụ trội cho kẻ địch bị ảnh hưởng, và cứ mỗi 1 điểm năng lượng đội của bạn đang có thì sát thương phụ trội tăng thêm 28% ST.",
+      "desc": "Tăng vĩnh viễn HP tối đa của chính mình. Gây sát thương lên tới 196% ATK extra. Khi hành động, gây sát thương 28% ATK extra cho kẻ địch bị ảnh hưởng và sát thương extra này tăng thêm 28% ATK cho mỗi điểm năng lượng mà đội của bạn hiện có.",
       "icon": "/Skill/King (SSR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,

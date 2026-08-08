@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 2 đòn liên tiếp lên một mục tiêu đơn, gây 120% ST, 100% tỉ lệ gây [Nội Thương] (gây 100% ST của Suiryu khi mục tiêu tấn công, biến mất sau khi kích hoạt).",
+      "desc": "Gây 2 đòn liên tiếp vào một mục tiêu với 120% ATK, với 100% cơ hội gây ra [Nội Thương]. [Nội Thương]: Gây 100% ATK của Suiryu khi mục tiêu bị ảnh hưởng bị tấn công, sau đó biến mất sau khi kích hoạt.",
       "icon": "/Skill/Suiryu (UR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công cả một hàng kẻ địch với 5 đòn liên tiếp, gây 400% ST.Kích hoạt [Đột Phá] (hủy [Bất Khuất Chuyên Biệt], mỗi lần tấn công một lần).75% tỉ lệ gây [Nội Thương] lên mục tiêu chính và 3 kẻ địch ngẫu nhiên (gây 600% ST của Suiryu khi mục tiêu tấn công, biến mất sau khi kích hoạt).Cấp cho bản thân [Phòng Hộ Chuyên Biệt] bằng 400% ST.",
+      "desc": "Tấn công toàn bộ kẻ địch liên tiếp bằng 5 đòn liên tiếp, gây 400% ATK DMG. Kích hoạt [Đột Phá], xóa 1 phiên bản [Bất Khuất] hoặc [Bất Khuất Chuyên Biệt]. [Đột Phá] có thể kích hoạt tối đa một lần trong mỗi hành động. Có 75% cơ hội gây [Nội Thương] lên mục tiêu chính và 3 kẻ thù ngẫu nhiên. [Nội Thương]: Gây 600% ATK của Suiryu khi mục tiêu bị ảnh hưởng bị tấn công, sau đó biến mất sau khi kích hoạt. Tự cấp [Phòng Hộ Chuyên Biệt] bằng 400% ATK, tối đa 15 ngăn xếp.",
       "icon": "/Skill/Suiryu (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "ST Tối Thượng 400% → 600%Tỉ lệ [Nội Thương] 75% → 90%ST [Nội Thương] 600% → 750%Tự nhận [Phòng Hộ Chuyên Biệt] 400% → 600%",
+      "desc": "Tấn công toàn bộ kẻ địch liên tiếp bằng 5 đòn liên tiếp, gây 600% ATK DMG. Mỗi lần truy cập có thể kích hoạt [Đột Phá], loại bỏ 1 phiên bản [Bất Khuất] hoặc [Bất Khuất Chuyên Biệt] mà không có giới hạn kích hoạt trong khi hành động. Có 90% cơ hội gây [Nội Thương] lên mục tiêu chính và 3 kẻ thù ngẫu nhiên. [Nội Thương]: Gây 750% ATK của Suiryu khi mục tiêu bị ảnh hưởng bị tấn công, sau đó biến mất sau khi kích hoạt. Tự cấp [Phòng Hộ Chuyên Biệt] bằng 600% ATK, tối đa 15 ngăn xếp.",
       "keepsakeIcon": "/Keepsake/Suiryu (UR)/Keepsake_UR.png",
       "icon": "/Skill/Suiryu (UR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Bị động",
-      "desc": "Vĩnh viễn cấp cho bản thân 50% tăng Thương Tổn.Cấp cho bản thân 50% Giảm ST Non-Crit, kéo dài 4 lượt.Sau khi nhận ST chí tử, hồi 50% Máu tối đa, mỗi trận một lần.",
+      "desc": "Tăng vĩnh viễn 50% [Tăng Cường Trọng Thương]. Tự nhận 50% [Miễn Sát Thương Không Bạo Kích] trong 4 lượt. Khi nhận được sát thương kết liễu, hãy kích hoạt [Bất Khuất] và khôi phục 50% HP tối đa. Có thể kích hoạt một lần trong mỗi trận chiến.",
       "icon": "/Skill/Suiryu (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -54,7 +54,7 @@
     },
     {
       "name": "Bị động cực hạn",
-      "desc": "Tăng Thương Tổn 50% → 65%Hồi phục sau khi nhận ST chí tử 1 lần → 2 lần",
+      "desc": "Tăng vĩnh viễn 65% [Tăng Cường Trọng Thương]. Cấp cho bản thân và đồng minh trong cùng một cột 50% [Miễn Sát Thương Không Bạo Kích] trong 4 lượt. Khi nhận được sát thương kết liễu, hãy kích hoạt [Bất Khuất] và khôi phục 50% HP tối đa. Có thể kích hoạt tối đa 2 lần mỗi trận.",
       "icon": "/Skill/Suiryu (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Bị động 5 sao",
-      "desc": "Tăng Thương Tổn 65% → 80%Tự nhận Giảm ST Non-Crit 50% → 60%Hồi máu sau khi nhận ST chí tử 50% → 80%",
+      "desc": "Tăng vĩnh viễn 80% [Tăng Cường Trọng Thương]. Cấp cho bản thân và đồng minh trong cùng một cột 60% [Miễn Sát Thương Không Bạo Kích] trong 4 lượt. Khi nhận được sát thương kết liễu, hãy kích hoạt [Bất Khuất] và khôi phục 80% HP tối đa. Có thể kích hoạt tối đa 2 lần mỗi trận.",
       "icon": "/Skill/Suiryu (UR)/Skill_pas.png",
       "type": "Nội tại",
       "keepsakeIcon": null,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Sau khi tung Tối thượng, thực hiện [Truy Kích Liên Tục] lên 2 kẻ địch ngẫu nhiên đang chịu [Nội Thương] (100% sát thương và hiệu ứng của Tối thượng, nếu ít hơn 2 kẻ địch, có thể truy kích trên cùng một mục tiêu). Miễn nhiễm [Bám Dính/Tê Liệt]",
+      "desc": "Sau khi chủ động sử dụng Tuyệt Kĩ, thực hiện [Truy Kích Liên Tục] 2 lần trước các hàng kẻ địch ngẫu nhiên bị ảnh hưởng bởi [Nội Thương], gây ra 100% DMG của Tuyệt Kĩ với 100% hiệu ứng của nó. Nếu còn lại ít hơn 2 kẻ thù, những kẻ thù còn lại vẫn có thể bị nhắm mục tiêu liên tục. Suiryu miễn nhiễm vĩnh viễn với [Bám Dính] và [Tê Liệt] khi thực hiện Truy Kích.",
       "icon": "/Skill/Suiryu (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -81,7 +81,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 2",
-      "desc": "[Continuous Follow-up] tới 2 kẻ địch > 3 kẻ địch Đánh đuổi theo nếu ít hơn 2 kẻ địch > 3 kẻ địch Bổ sung: Sau khi hồi phục từ [Kiên Cường Chuyên Biệt], tung [Continuous Follow-up] vào 2 kẻ địch ngẫu nhiên (80% ST Tối thượng và 100% hiệu ứng Tối thượng, nếu ít hơn 2 kẻ địch, có thể đánh đuổi theo cùng một mục tiêu).",
+      "desc": "Sau khi chủ động sử dụng Tuyệt Kĩ, thực hiện [Truy Kích Liên Tục] 3 lần trước các hàng kẻ địch ngẫu nhiên bị ảnh hưởng bởi [Nội Thương], gây ra 100% DMG của Tuyệt Kĩ với 100% hiệu ứng của nó. Nếu còn lại ít hơn 3 kẻ thù, những kẻ thù còn lại vẫn có thể bị nhắm mục tiêu liên tục. Sau khi hồi phục từ [Bất Khuất] hoặc [Bất Khuất Chuyên Biệt], ngay lập tức thực hiện [Truy Kích Liên Tục] 2 lần lên hàng địch ngẫu nhiên, gây 80% DMG của Tuyệt Kĩ với 100% hiệu ứng. Nếu còn lại ít hơn 2 kẻ thù, những kẻ thù còn lại vẫn có thể bị nhắm mục tiêu liên tục. Suiryu miễn nhiễm vĩnh viễn với [Bám Dính] và [Tê Liệt] khi thực hiện Truy Kích.",
       "icon": "/Skill/Suiryu (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 3",
-      "desc": "• Hồi phục 150 [Chiến Ý] (khi tấn công)",
+      "desc": "• Phục hồi 150 [Thanh Năng Lượng] (khi tấn công)",
       "icon": "/Skill/Suiryu (UR)/Skill_Awken.png",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
