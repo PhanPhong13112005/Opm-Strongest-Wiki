@@ -10,8 +10,4 @@ app.use(i18n)
 
 const mount = () => app.mount('#app')
 
-if (document.querySelector('[data-app-boot]')) {
-  router.isReady().then(mount, mount)
-} else {
-  mount()
-}
+router.isReady().then(mount, mount)

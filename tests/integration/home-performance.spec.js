@@ -125,13 +125,14 @@ test('home defers but does not disable Vercel telemetry', async ({ page }, testI
   await expect(page.locator('.release-hero h1')).toBeVisible()
   await page.waitForTimeout(5_500)
 
-  const telemetryResources = await page.evaluate(() => (
+  const resources = await page.evaluate(() => (
     performance.getEntriesByType('resource')
       .map(entry => new URL(entry.name).pathname)
-      .filter(pathname => pathname.startsWith('/_vercel/'))
   ))
+  const telemetryResources = resources.filter(pathname => pathname.startsWith('/_vercel/'))
   expect(telemetryResources).toContain('/_vercel/insights/script.js')
   expect(telemetryResources).toContain('/_vercel/speed-insights/script.js')
+  expect(resources.some(pathname => /characters(?:_en)?-[^/]+\.js$/.test(pathname))).toBe(false)
 })
 for (const width of [360, 390, 430]) {
   test(`home remains usable without horizontal overflow at ${width}px`, async ({ page }) => {

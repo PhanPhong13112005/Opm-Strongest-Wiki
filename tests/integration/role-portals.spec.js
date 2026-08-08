@@ -55,6 +55,10 @@ test('Public mobile menu exposes every wiki feature and requires login only when
 
   await page.getByRole('button', { name: 'Mở menu' }).click()
   const mobileMenu = page.locator('.mobile-command-menu')
+  const mobileSections = mobileMenu.locator('.mobile-command-menu__toggle')
+  await expect(mobileSections).toHaveCount(2)
+  await mobileSections.nth(0).click()
+  await mobileSections.nth(1).click()
   const expectedFeaturePaths = [
     '/characters',
     '/mastery',
@@ -62,6 +66,8 @@ test('Public mobile menu exposes every wiki feature and requires login only when
     '/medals',
     '/tactics',
     '/backgear',
+    '/equipment',
+    '/buff-gear',
     '/keepsakes',
     '/insignias',
     '/events',
