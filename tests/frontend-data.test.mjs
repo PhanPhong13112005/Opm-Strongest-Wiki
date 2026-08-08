@@ -6,12 +6,14 @@ import { decodeAssetUrlForLocalServer, safeAssetUrl } from '../src/utils/assetUr
 import { getSkillEnergyCost } from '../src/utils/skillPresentation.js'
 import { mapCharacterSummary, mergeCharacterDetail, reconcileCharacterPage } from '../src/services/characterApi.js'
 import { mergeKeepsakeCatalog } from '../src/services/keepsakeApi.js'
+import characterNameAliases from '../src/data/characterNameAliases.js'
 
 const root = path.resolve(import.meta.dirname, '..')
 const readJson = (relativePath) => JSON.parse(fs.readFileSync(path.join(root, relativePath), 'utf8'))
 
 const charactersVi = readJson('src/data/characters.json')
 const charactersEn = readJson('src/data/characters_en.json')
+
 const coreLab = readJson('src/data/coreLab.json')
 const events = readJson('src/data/events.json')
 const releaseSchedule = readJson('src/data/releaseSchedule.json')
@@ -102,6 +104,93 @@ test('localized character catalogs share stable IDs', () => {
   )
 })
 
+test('Vietnamese character names and effects match the completed localization guide', () => {
+  const guide = fs.readFileSync(
+    path.join(root, 'docs/VIET_HOA_HIEU_UNG_VA_TEN_NHAN_VAT_HOAN_CHINH.md'),
+    'utf8',
+  )
+  const lines = guide.split(/\r?\n/)
+  const characterSection = lines.findIndex(line => line.startsWith('## 2.'))
+  const tick = String.fromCharCode(96)
+  const parseCells = (line) => {
+    const cells = line.split('|').slice(1)
+    if (cells.at(-1)?.trim() === '') cells.pop()
+    return cells.map(cell => cell.trim().replaceAll(tick, ''))
+  }
+  const parseRows = rows => rows
+    .filter(line => /^\|\s*\d+\s*\|/.test(line))
+    .map(parseCells)
+
+  assert.notEqual(characterSection, -1)
+  const effectRows = parseRows(lines.slice(0, characterSection))
+  const characterRows = parseRows(lines.slice(characterSection))
+  assert.equal(effectRows.length, 318)
+  assert.equal(characterRows.length, 177)
+  assert.ok(effectRows.every(cells => /\[x\]/i.test(cells[1]) && cells[2] && cells[3]))
+  assert.ok(characterRows.every(cells => /\[x\]/i.test(cells[1]) && cells[2] && cells[6]))
+
+  const effectMappings = new Map(effectRows.map(cells => [cells[2], cells[3]]))
+  const localizedEffectNames = new Set(effectMappings.values())
+  const characterNames = new Map(characterRows.map(cells => [cells[2], cells[6]]))
+  const englishById = new Map(charactersEn.map(character => [character.id, character]))
+
+  assert.equal(effectMappings.size, 318)
+  assert.equal(characterNames.size, 177)
+  for (const [id, aliases] of Object.entries(characterNameAliases)) {
+    assert.ok(characterNames.has(id), id + ' alias references an unknown character')
+    assert.ok(Array.isArray(aliases) && aliases.length > 0, id + ' must expose at least one legacy name')
+    assert.ok(!aliases.includes(characterNames.get(id)), id + ' alias repeats the completed Vietnamese name')
+  }
+
+  for (const character of charactersVi) {
+    assert.equal(character.name, characterNames.get(character.id), character.id + ' has a stale Vietnamese name')
+    const englishCharacter = englishById.get(character.id)
+    assert.ok(englishCharacter, character.id + ' is missing from the English catalog')
+    assert.equal(character.effects?.length || 0, englishCharacter.effects?.length || 0)
+
+    for (let index = 0; index < (englishCharacter.effects?.length || 0); index += 1) {
+      const source = String(englishCharacter.effects[index].term || '').replace(/^\[/, '').replace(/\]$/, '')
+      const target = effectMappings.get(source) || (localizedEffectNames.has(source) ? source : '')
+      assert.ok(target, character.id + ' is missing a localization for ' + source)
+      assert.equal(character.effects[index].term, '[' + target + ']')
+    }
+  }
+
+  const serializedVietnameseCatalog = JSON.stringify(charactersVi)
+  for (const [source, target] of effectMappings) {
+    if (source !== target && !localizedEffectNames.has(source)) {
+      assert.ok(!serializedVietnameseCatalog.includes('[' + source + ']'), 'stale effect remains: ' + source)
+    }
+  }
+})
+test('stale seeded names localize while Admin custom names stay intact', () => {
+  const localCharacter = charactersVi.find(character => character.id === '100313-urplus')
+  const englishCharacter = charactersEn.find(character => character.id === localCharacter.id)
+  assert.ok(localCharacter)
+  assert.ok(englishCharacter)
+
+  const staleSummary = mapCharacterSummary({
+    id: localCharacter.id,
+    name: 'Atomic Samurai',
+  }, localCharacter, 'vi')
+  const staleDetail = mergeCharacterDetail({
+    id: localCharacter.id,
+    name: 'Atomic Samurai',
+  }, localCharacter, 'vi')
+  const adminSummary = mapCharacterSummary({
+    id: localCharacter.id,
+    name: 'Samurai do Admin chỉnh sửa',
+  }, localCharacter, 'vi')
+  const englishSummary = mapCharacterSummary({
+    id: localCharacter.id,
+    name: englishCharacter.name,
+  }, englishCharacter, 'en')
+
+  assert.equal(staleSummary.name, 'Samurai Nguyên Tử')
+  assert.equal(staleDetail.name, 'Samurai Nguyên Tử')
+  assert.equal(adminSummary.name, 'Samurai do Admin chỉnh sửa')
+  assert.equal(englishSummary.name, 'Atomic Samurai')
+})
 test('character pages restore local entries missing from a stale production API', () => {
   const staleApiItems = charactersVi
     .filter(character => character.id !== 'blacksperm-urplus')
@@ -130,6 +219,44 @@ test('character pages restore local entries missing from a stale production API'
   assert.deepEqual(searched.items.map(character => character.id), ['blacksperm-urplus'])
 })
 
+test('character search matches Vietnamese, English, legacy, and accentless names in either locale', () => {
+  const emptyApiPage = {
+    items: [], page: 1, pageSize: 12, totalCount: 0, totalPages: 1, source: 'api',
+  }
+  const query = { page: 1, pageSize: 12, sort: 'release_desc' }
+
+  const vietnameseFromEnglish = reconcileCharacterPage(
+    emptyApiPage,
+    charactersVi,
+    { ...query, search: 'Atomic Samurai' },
+    charactersEn,
+  )
+  const localizedAtomicSamurai = vietnameseFromEnglish.items.find(
+    character => character.id === '100313-urplus',
+  )
+  assert.ok(localizedAtomicSamurai)
+  assert.equal(localizedAtomicSamurai.name, 'Samurai Nguyên Tử')
+
+  const englishFromVietnamese = reconcileCharacterPage(
+    emptyApiPage,
+    charactersEn,
+    { ...query, search: 'Samurai Nguyên Tử' },
+    charactersVi,
+  )
+  const englishAtomicSamurai = englishFromVietnamese.items.find(
+    character => character.id === '100313-urplus',
+  )
+  assert.ok(englishAtomicSamurai)
+  assert.equal(englishAtomicSamurai.name, 'Atomic Samurai')
+
+  const accentlessVietnamese = reconcileCharacterPage(
+    emptyApiPage,
+    charactersVi,
+    { ...query, search: 'tinh trung den' },
+    charactersEn,
+  )
+  assert.ok(accentlessVietnamese.items.some(character => character.id === 'blacksperm-urplus'))
+})
 
 test('Vietnamese ultimate labels and explicit energy costs stay accurate', () => {
   const skillNames = charactersVi.flatMap(character => character.skills.map(skill => skill.name))
@@ -233,12 +360,18 @@ test('local skill catalog keeps awakening levels when the API seed is stale', ()
     animationUrl: null,
     keepsakeIconUrl: null,
   }))
+  const staleApiEffects = localCharacter.effects.map((effect, sortOrder) => ({
+    sortOrder,
+    term: '[Stale API effect ' + sortOrder + ']',
+    description: 'Stale API effect description ' + sortOrder,
+  }))
   const merged = mergeCharacterDetail({
     id: localCharacter.id,
     name: localCharacter.name,
     imageUrl: '/Characters/missing-api-image.png',
     keepsakeIcon: '/Keepsake/missing-api-keepsake.png',
     skills: staleApiSkills,
+    effects: staleApiEffects,
   }, localCharacter)
   const summary = mapCharacterSummary({
     id: localCharacter.id,
@@ -261,6 +394,7 @@ test('local skill catalog keeps awakening levels when the API seed is stale', ()
   assert.equal(summary.keepsakeIcon, localCharacter.keepsakeIcon)
   assert.equal(merged.skills[0].desc, localCharacter.skills[0].desc)
   assert.equal(merged.skills[8].name, localCharacter.skills[8].name)
+  assert.deepEqual(merged.effects, localCharacter.effects)
 })
 
 test('awakening skills stay hidden for SSR, SR, R, and N characters', () => {

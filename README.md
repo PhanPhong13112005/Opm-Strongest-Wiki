@@ -10,6 +10,7 @@ kỹ năng, sự kiện, lịch ra mắt CN/SEA và các hệ thống nâng cấ
 ## Tính năng chính
 
 - Thư viện và chi tiết nhân vật, kỹ năng, hiệu ứng, chỉ số, Kỷ vật và Huy hiệu.
+- Tìm nhân vật bằng tên Việt, tên Anh, tên cũ, ID hoặc tiếng Việt không dấu ở cả hai giao diện.
 - Lịch ra mắt nhân vật CN/SEA và lịch sự kiện song ngữ.
 - Core Skill, Tinh thông, Thẻ Hình nền, Chiến thuật và Huy chương.
 - Tài khoản cộng đồng với ba vai trò `User`, `Staff`, `Admin`.
@@ -100,6 +101,8 @@ Admin qua API, sửa một nhân vật, mở trang chi tiết Vue công khai, x�
 nguyên fixture sau khi chạy.
 
 ## Lịch sử phiên bản
+
+- **04/08/2026:** Hoàn tất Việt hóa 318 hiệu ứng và 177 tên nhân vật; bổ sung tìm kiếm tên song ngữ.
 
 - **11–16/07/2026:** Nền tảng Vue, dữ liệu nhân vật, Core Skill, Sự kiện, Tactics, Huy chương,
   Kỷ vật, Huy hiệu và hoàn thiện giao diện song ngữ.

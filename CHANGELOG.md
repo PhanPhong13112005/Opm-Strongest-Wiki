@@ -1,5 +1,13 @@
 # Lịch sử phiên bản OPM Strongest Wiki
 
+## 04/08/2026 — Hoàn tất Việt hóa hiệu ứng và tìm kiếm tên song ngữ
+
+- Áp dụng bảng chốt gồm 318 thuật ngữ/hiệu ứng và 177 tên nhân vật vào catalog tiếng Việt.
+- Giữ catalog tiếng Anh làm nguồn đối chiếu ổn định theo ID và bổ sung danh sách tên seed cũ để tương thích API production.
+- Không để dữ liệu API cũ ghi đè tên hoặc hiệu ứng vừa Việt hóa; tên tùy chỉnh của Admin vẫn được ưu tiên.
+- Tìm kiếm nhân vật bằng tên Việt, tên Anh, tên cũ, ID hoặc tiếng Việt không dấu ở cả giao diện VI và EN.
+- Bổ sung kiểm thử tính đầy đủ của bảng Việt hóa, tương thích dữ liệu API cũ và tìm kiếm song ngữ; toàn bộ 46 test đạt và build production thành công.
+
 Tài liệu này ghi lại các mốc đã được đối chiếu với lịch sử Git và trạng thái mã nguồn. Dự án hiện
 chưa phát hành theo Semantic Versioning và `package.json` vẫn dùng phiên bản `0.0.0`.
 

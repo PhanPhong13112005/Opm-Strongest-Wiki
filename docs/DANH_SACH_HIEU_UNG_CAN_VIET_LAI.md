@@ -1,5 +1,10 @@
 # Danh sách hiệu ứng song ngữ cần đọc và viết lại
 
+> **TÀI LIỆU RÀ SOÁT ĐÃ LƯU TRỮ**
+>
+> Danh sách này chỉ phản ánh đợt rà soát cũ. Nguồn Việt hóa chuẩn hiện tại là
+> `docs/VIET_HOA_HIEU_UNG_VA_TEN_NHAN_VAT_HOAN_CHINH.md`, đã được áp dụng vào dữ liệu ngày 04/08/2026.
+
 File này chỉ phục vụ việc rà soát nội dung. Đã hoàn tất rà soát và chuẩn hóa thuật ngữ song ngữ VI / EN.
 
 ## Cách ghi

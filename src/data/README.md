@@ -1,5 +1,12 @@
 # Thư mục Dữ Liệu Tĩnh (`/src/data`)
 
+## Việt hóa nhân vật
+
+- `characters.json` và `characters_en.json` phải giữ cùng **177 ID ổn định** để có thể đối chiếu hai ngôn ngữ.
+- Nguồn chốt cho 318 hiệu ứng và 177 tên nhân vật nằm tại `docs/VIET_HOA_HIEU_UNG_VA_TEN_NHAN_VAT_HOAN_CHINH.md`.
+- `characterNameAliases.js` lưu tên tiếng Anh/tên seed cũ theo ID. Frontend dùng file này để nhận biết tên cũ từ API nhưng vẫn giữ nguyên tên tùy chỉnh do Admin nhập.
+- Không sửa thứ tự hoặc ID nhân vật chỉ để đổi bản dịch. Sau khi cập nhật phải chạy `npm.cmd run test:frontend`.
+
 Thư mục này chứa toàn bộ dữ liệu cấu trúc dưới dạng JSON, hoạt động như cơ sở dữ liệu chính cho ứng dụng.
 
 ## Chi tiết các tệp JSON
