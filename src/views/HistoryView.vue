@@ -13,7 +13,12 @@ const timelineVi = [
   { stage: 'Đang phát triển', title: 'Kỷ Vật, Huy Hiệu & Hoàn Thiện Song Ngữ', date: '16/07/2026', desc: 'Hoàn thiện danh sách Kỷ vật và 10 Huy hiệu hợp lệ với bộ lọc, phân trang 12 mục và trạng thái xem chi tiết khi rê chuột. Đồng thời sửa phản ứng i18n của lịch Trang Chủ và bổ sung lịch sử CN/SEA cho Garou UR, Pig God UR.', domain: 'Dữ liệu game' },
   { stage: 'Nền tảng dữ liệu', title: 'ASP.NET Core, PostgreSQL & API-First', date: '17–18/07/2026', desc: 'Bổ sung backend ASP.NET Core, Entity Framework Core và PostgreSQL. Chuyển Tinh thông, Kỷ vật, Huy hiệu, Thẻ Hình nền và Chiến thuật sang mô hình API-first có JSON dự phòng; đồng thời hoàn thiện dữ liệu sao và sửa tài nguyên SSR+ trên Vercel.', domain: 'Backend' },
   { stage: 'Cộng đồng & vận hành', title: 'Tài Khoản User, Staff & Admin', date: '19–20/07/2026', desc: 'Thêm xác thực JWT, bình luận sự kiện, diễn đàn, trợ lý dữ liệu, yêu cầu nạp và các portal riêng theo vai trò. Admin có Dashboard cùng công cụ quản lý Nhân vật, Kỷ vật, Sự kiện và Lịch ra mắt; Staff có luồng kiểm duyệt và duyệt yêu cầu.', domain: 'Cộng đồng' },
-  { stage: 'Production & kiểm thử', title: 'Neon, Vercel Functions, Cache & Playwright', date: '22/07/2026', desc: 'Đưa API cộng đồng và Admin lên Vercel Functions với Neon PostgreSQL. Trang Nhân vật, Sự kiện và Lịch ra mắt đọc dữ liệu công khai từ Neon, dùng JSON fallback khi lỗi và cache client/CDN. Bổ sung smoke test production và Playwright integration test cho luồng Admin API đến giao diện Vue công khai.', domain: 'Production' }
+  { stage: 'Production & kiểm thử', title: 'Neon, Vercel Functions, Cache & Playwright', date: '22/07/2026', desc: 'Đưa API cộng đồng và Admin lên Vercel Functions với Neon PostgreSQL. Trang Nhân vật, Sự kiện và Lịch ra mắt đọc dữ liệu công khai từ Neon, dùng JSON fallback khi lỗi và cache client/CDN. Bổ sung smoke test production và Playwright integration test cho luồng Admin API đến giao diện Vue công khai.', domain: 'Production' },
+  { stage: 'Hàng đợi Admin', title: 'Audit Đơn Coupon & Tối Ưu Phân Quyền', date: '28/07/2026', desc: 'Bổ sung trang và API quản lý nạp Coupon cho Admin với luồng kiểm tra UID/SID, lý do từ chối, khóa thao tác tự duyệt và audit người xử lý. Tối ưu phân quyền Vercel và ASP.NET Core.', domain: 'Admin' },
+  { stage: 'Định hướng tính năng', title: 'Ý Tưởng Trang Bị & Thẻ Bổ Trợ', date: '03/08/2026', desc: 'Khởi động định hướng thiết kế và mô hình dữ liệu cho các hệ thống tính năng bổ trợ gồm Trang bị (Gear) và Thẻ Bổ trợ (Buff Gear).', domain: 'Thiết kế' },
+  { stage: 'Dữ liệu song ngữ', title: 'Việt Hóa Hiệu Ứng & Tìm Kiếm Tên Song Ngữ', date: '04/08/2026', desc: 'Áp dụng bảng chuẩn hóa 318 hiệu ứng và 177 tên nhân vật vào catalog Tiếng Việt. Hỗ trợ tìm kiếm theo tên Việt, tên Anh, tên seed cũ, ID và tiếng Việt không dấu.', domain: 'Dữ liệu game' },
+  { stage: 'Triển khai tính năng', title: 'Hệ Thống Trang Bị & Chuẩn Hóa Kỹ Năng', date: '08/08/2026', desc: 'Triển khai hoàn thành trang Trang bị (Gear) với 20 bộ trang bị, giả lập nâng cấp/tiến hóa/tinh luyện. Tiến hành phát triển trang Thẻ Bổ trợ (Buff Gear). Chỉnh sửa toàn bộ kỹ năng 177 nhân vật khớp dữ liệu thực tế in-game và bổ sung ý tưởng các trang Thiên phú, Chỉ số, Ấn ký, Trang bị Khuyên dùng.', domain: 'Tính năng' },
+  { stage: 'Đồng bộ hệ thống', title: 'Trích Xuất Vai Trò & Tối Ưu Caching Local', date: '09/08/2026', desc: 'Tự động trích xuất thuộc tính Vai trò (Roles) cho 177 nhân vật từ Markdown, dịch sang Tiếng Việt và loại bỏ thẻ Hạt Nhân thừa. Cập nhật characterApi.js và loadLocalCharacterDetail.js ưu tiên dữ liệu local mới nhất và vô hiệu đĩa cache khi Dev.', domain: 'Hệ thống' }
 ]
 
 const timelineEn = [
@@ -24,7 +29,12 @@ const timelineEn = [
   { stage: 'In development', title: 'Keepsakes, Insignias & Bilingual Polish', date: '16 Jul 2026', desc: 'Refined the Keepsakes catalog and the 10 valid Insignias with filters, 12-item pagination, and hover detail states. Also fixed reactive translations on the Home schedule and added CN/SEA history for UR Garou and UR Pig God.', domain: 'Game data' },
   { stage: 'Data platform', title: 'ASP.NET Core, PostgreSQL & API-First', date: '17–18 Jul 2026', desc: 'Added ASP.NET Core, Entity Framework Core, and PostgreSQL. Moved Mastery, Keepsakes, Insignias, Backgear, and Tactics to an API-first model with JSON fallback, completed star-level data, and repaired SSR+ production assets.', domain: 'Backend' },
   { stage: 'Community & operations', title: 'User, Staff & Admin Accounts', date: '19–20 Jul 2026', desc: 'Added JWT authentication, event comments, forums, the data advisor, top-up requests, and role-specific portals. Admins received dashboards and content management while Staff received moderation and request review workflows.', domain: 'Community' },
-  { stage: 'Production & testing', title: 'Neon, Vercel Functions, Cache & Playwright', date: '22 Jul 2026', desc: 'Moved community and Admin APIs to Vercel Functions backed by Neon PostgreSQL. Public Character, Event, and Release Schedule pages now use Neon with JSON fallback and client/CDN caching. Added production smoke coverage and a Playwright integration test from Admin API mutation to the public Vue UI.', domain: 'Production' }
+  { stage: 'Production & testing', title: 'Neon, Vercel Functions, Cache & Playwright', date: '22 Jul 2026', desc: 'Moved community and Admin APIs to Vercel Functions backed by Neon PostgreSQL. Public Character, Event, and Release Schedule pages now use Neon with JSON fallback and client/CDN caching. Added production smoke coverage and a Playwright integration test from Admin API mutation to the public Vue UI.', domain: 'Production' },
+  { stage: 'Admin queue', title: 'Coupon Audit & Authorization Hardening', date: '28 Jul 2026', desc: 'Added Admin Coupon top-up queue management with UID/SID validation, rejection reasons, self-review locks, and audit trails. Hardened authorization across Vercel and ASP.NET Core.', domain: 'Admin' },
+  { stage: 'Feature roadmap', title: 'Gear & Buff Gear Concepts', date: '03 Aug 2026', desc: 'Initiated design direction and data model definitions for Gear and Buff Gear systems.', domain: 'Design' },
+  { stage: 'Bilingual data', title: 'Effect Localization & Bilingual Search', date: '04 Aug 2026', desc: 'Applied normalized effect glossary (318 terms) and character names (177 entries) to the Vietnamese catalog. Supported character searches by VI name, EN name, legacy seed name, ID, and accentless text.', domain: 'Game data' },
+  { stage: 'Feature deployment', title: 'Gear System & Skill Realignment', date: '08 Aug 2026', desc: 'Deployed the complete Gear system with 20 set items, enhancement/evolution/refinement simulator, and in-game stat curves. Progressed Buff Gear implementation. Realigned all 177 character skills with actual in-game data, and outlined new Talents, Stats, Insignias, and Recommended Gear modules.', domain: 'Features' },
+  { stage: 'System sync', title: 'Role Extraction & Local Cache Optimization', date: '09 Aug 2026', desc: 'Extracted character Role attributes from Markdown for 177 characters, translated to Vietnamese, and pruned stale Core tags. Updated characterApi.js and loadLocalCharacterDetail.js to prioritize local data and bypass disk cache during DEV mode.', domain: 'System' }
 ]
 
 const copy = computed(() => locale.value === 'vi'
@@ -40,7 +50,7 @@ const copy = computed(() => locale.value === 'vi'
       archiveHint: 'Các cột mốc được sắp xếp từ mới đến cũ để bạn nắm thay đổi gần nhất trước.',
       version: 'Phiên bản package',
       note: 'Dự án chưa áp dụng Semantic Versioning; ngày thay đổi Git được dùng làm mốc phát hành.',
-      updated: 'Cập nhật lần cuối 22/07/2026 · Bao gồm thay đổi đang chờ phát hành.'
+      updated: 'Cập nhật lần cuối 09/08/2026 · Bao gồm thay đổi đang chờ phát hành.'
     }
   : {
       eyebrow: 'Change archive // 2026',
@@ -54,7 +64,7 @@ const copy = computed(() => locale.value === 'vi'
       archiveHint: 'Milestones are ordered newest first so the most relevant changes are immediately visible.',
       version: 'Package version',
       note: 'Semantic Versioning is not in use yet; Git change dates act as release markers.',
-      updated: 'Last updated 22 Jul 2026 · Includes changes pending release.'
+      updated: 'Last updated 09 Aug 2026 · Includes changes pending release.'
     })
 
 const timeline = computed(() => [...(locale.value === 'vi' ? timelineVi : timelineEn)].reverse())
@@ -75,7 +85,7 @@ const archive = computed(() => timeline.value.slice(1))
           <div class="history-status"><i></i>{{ copy.live }} · ONLINE</div>
         </div>
         <div class="history-metrics" aria-label="Project history summary">
-          <div><span>08</span><small>{{ copy.milestones }}</small></div>
+          <div><span>{{ timeline.length.toString().padStart(2, '0') }}</span><small>{{ copy.milestones }}</small></div>
           <div><span>12</span><small>{{ copy.days }}</small></div>
           <div><span>0.0.0</span><small>{{ copy.version }}</small></div>
         </div>
