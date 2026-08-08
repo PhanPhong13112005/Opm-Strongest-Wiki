@@ -110,7 +110,11 @@ const visibleCards = computed(() => {
   return tacticCards.value.slice(start, start + itemsPerPage)
 })
 
-const maxRarityTier = rarity => rarity?.tiers?.at(-1) || null
+const maxRarityTier = rarity => {
+  const tiers = rarity?.tiers
+  return tiers?.length ? tiers[tiers.length - 1] : null
+}
+
 const rarityTextClass = key => key === 'orange'
   ? 'text-orange-400'
   : key === 'purple'

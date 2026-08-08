@@ -22,6 +22,10 @@ const encodedPlusAssetCompatibility = () => ({
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [encodedPlusAssetCompatibility(), vue()],
+  build: {
+    // Support Safari 14+ (iOS 14.5+/15.x on iPhone 7 Plus and similar devices).
+    target: ['es2020', 'safari14'],
+  },
   server: {
     watch: {
       // .NET creates and locks temporary build files on Windows. They are not
