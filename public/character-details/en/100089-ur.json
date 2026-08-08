@@ -6,7 +6,8 @@
   "type": "Grappler",
   "faction": "Monster",
   "roles": [
-    "Barrier"
+    "Ignite Internal Injury",
+    "Group Unyielding"
   ],
   "duyen": "",
   "baseStats": {

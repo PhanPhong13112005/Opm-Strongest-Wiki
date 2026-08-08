@@ -6,9 +6,9 @@
   "type": "Giác Đấu",
   "faction": "Quái Nhân",
   "roles": [
-    "Ăn Mòn Chuyên Biệt",
-    "Đột Phá",
-    "Vô Hiệu Truy Kích"
+    "Spec",
+    "Ăn Mòn",
+    "Truy Kích Cùng Cột"
   ],
   "duyen": "",
   "baseStats": {
@@ -138,7 +138,6 @@
   },
   "dacTinh": [
     "Buff",
-    "Hạt Nhân",
     "Sát Thương (Máu)"
   ],
   "classLevel": "Demon",

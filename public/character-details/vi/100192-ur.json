@@ -6,7 +6,9 @@
   "type": "Công Nghệ",
   "faction": "Anh Hùng",
   "roles": [
-    "Hạt Nhân"
+    "Thiêu Đốt",
+    "Thiêu Đốt",
+    "Gây Sát Thương Chuẩn"
   ],
   "duyen": "",
   "baseStats": {
@@ -134,8 +136,7 @@
   },
   "dacTinh": [
     "Sát Thương (Công)",
-    "Buff",
-    "Hạt Nhân"
+    "Buff"
   ],
   "classLevel": "Class_S",
   "releaseSea": "01/04/2024",

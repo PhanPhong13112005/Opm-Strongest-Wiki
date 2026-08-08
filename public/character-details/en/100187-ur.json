@@ -6,7 +6,8 @@
   "type": "Esper",
   "faction": "Hero",
   "roles": [
-    "Speed Up"
+    "Group Healing",
+    "Same Row Nullification"
   ],
   "duyen": "",
   "baseStats": {

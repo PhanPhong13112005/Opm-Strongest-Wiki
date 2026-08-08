@@ -6,8 +6,9 @@
   "type": "Esper",
   "faction": "Monster",
   "roles": [
-    "Spec. Unyielding Core",
-    "Spec. Berserk"
+    "Spec",
+    "Berserk",
+    "Survival Core"
   ],
   "duyen": "",
   "baseStats": {

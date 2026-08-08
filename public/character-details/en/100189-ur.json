@@ -6,7 +6,8 @@
   "type": "Grappler",
   "faction": "Monster",
   "roles": [
-    "Control"
+    "Same Row Speed up",
+    "Specialized Shatter"
   ],
   "duyen": "",
   "baseStats": {

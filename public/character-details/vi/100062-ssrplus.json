@@ -6,9 +6,9 @@
   "type": "Tâm Linh",
   "faction": "Quái Nhân",
   "roles": [
-    "Ăn Mòn Chuyên Biệt",
-    "Vô Hiệu Truy Kích",
-    "Phản Sát Thương Chuyên Biệt"
+    "Spec",
+    "DMG Reflect",
+    "Kết Dính Ăn Mòn"
   ],
   "duyen": "",
   "baseStats": {

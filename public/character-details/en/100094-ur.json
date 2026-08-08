@@ -6,7 +6,8 @@
   "type": "Grappler",
   "faction": "Martial Artist",
   "roles": [
-    "Main DPS (ATK)"
+    "AOE True DMG",
+    "Triggers counterattack on block"
   ],
   "duyen": "",
   "baseStats": {

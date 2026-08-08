@@ -5,10 +5,8 @@
   "type": "Esper",
   "faction": "Monster",
   "roles": [
-    "Heal",
-    "DMG (HP)",
-    "Generate Shield",
-    "Speed"
+    "No critical hit no death",
+    "ignite and shatter all enemies"
   ],
   "duyen": "",
   "baseStats": {

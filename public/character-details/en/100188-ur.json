@@ -6,7 +6,8 @@
   "type": "Duelist",
   "faction": "Hero",
   "roles": [
-    "Main DPS (ATK)"
+    "Specialized Shatter",
+    "Start of battle Suppression"
   ],
   "duyen": "",
   "baseStats": {

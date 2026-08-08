@@ -6,8 +6,9 @@
   "type": "Duelist",
   "faction": "Outlaw",
   "roles": [
-    "Row Speed Up",
-    "Spec. Burn"
+    "Same Row Speed Up",
+    "Spec",
+    "Burn"
   ],
   "duyen": "",
   "baseStats": {

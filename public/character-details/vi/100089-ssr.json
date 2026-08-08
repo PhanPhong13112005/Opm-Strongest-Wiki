@@ -6,8 +6,8 @@
   "type": "Giác Đấu",
   "faction": "Quái Nhân",
   "roles": [
-    "Giảm ST Không Chí Mạng",
-    "Tăng Tỷ Lệ Khiên"
+    "Reduce Non-Crit DMG",
+    "Increase Shield Rate"
   ],
   "duyen": "",
   "baseStats": {

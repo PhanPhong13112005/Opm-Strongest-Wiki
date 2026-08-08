@@ -5,11 +5,8 @@
   "type": "Esper",
   "faction": "Monster",
   "roles": [
-    "DMG (ATK)",
-    "Core",
-    "Heal",
-    "DMG (HP)",
-    "Revive"
+    "Breakthrough Unyielding",
+    "Share Damage"
   ],
   "duyen": "",
   "baseStats": {

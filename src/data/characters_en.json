@@ -7,8 +7,8 @@
     "type": "Grappler",
     "faction": "Monster",
     "roles": [
-      "Infinite splitting",
-      "One person becomes an army"
+      "Infinity Split",
+      "One-Man Army"
     ],
     "duyen": "Combat Grandmaster",
     "baseStats": {
@@ -142,8 +142,8 @@
     "type": "Duelist",
     "faction": "Hero",
     "roles": [
-      "AoE Blind",
-      "Immortal Vanguard"
+      "Blindness Control",
+      "Undying"
     ],
     "duyen": "Heavy Vanguard",
     "baseStats": {
@@ -287,7 +287,8 @@
     "type": "Esper",
     "faction": "Monster",
     "roles": [
-      "Main DPS (ATK)"
+      "Disorder DMG",
+      "Rebattle"
     ],
     "duyen": "",
     "baseStats": {
@@ -448,8 +449,8 @@
     "type": "Grappler",
     "faction": "Hero",
     "roles": [
-      "HP-based DMG",
-      "Absolute Guard"
+      "HP Conversion",
+      "Battle Momentum"
     ],
     "duyen": "",
     "baseStats": {
@@ -593,11 +594,8 @@
     "type": "Hi-Tech",
     "faction": "Monster",
     "roles": [
-      "DMG (ATK)",
-      "Weaken",
-      "Revive",
-      "Generate Shield",
-      "Speed"
+      "Frontline Suppress",
+      "Endless Hunt"
     ],
     "duyen": "",
     "baseStats": {
@@ -737,8 +735,8 @@
     "id": "100313-urplus",
     "name": "Atomic Samurai",
     "roles": [
-      "AoE Pierce",
-      "Speed Assassin"
+      "Enhanced Crit Strikes",
+      "Strike first"
     ],
     "duyen": "",
     "baseStats": {
@@ -882,12 +880,7 @@
     "type": "Grappler",
     "faction": "Monster",
     "roles": [
-      "DMG (ATK)",
-      "Support",
-      "Weaken",
-      "DMG (HP)",
-      "Generate Shield",
-      "Speed"
+      "Applies Haste and [Life Link] to the ally full row"
     ],
     "duyen": "",
     "baseStats": {
@@ -1036,8 +1029,8 @@
     "type": "Esper",
     "faction": "Hero",
     "roles": [
-      "Erase Unyielding",
-      "Ultimate Support"
+      "Balanced Offense and Defense",
+      "Energy Conversion"
     ],
     "duyen": "",
     "baseStats": {
@@ -1206,7 +1199,8 @@
     "type": "Grappler",
     "faction": "Hero",
     "roles": [
-      "Core"
+      "Universal Support",
+      "HP Amplification"
     ],
     "duyen": "",
     "baseStats": {
@@ -1376,7 +1370,8 @@
     "type": "Esper",
     "faction": "Monster",
     "roles": [
-      "Main DPS (ATK)"
+      "Rebirth Recovery",
+      "Rampage Combo"
     ],
     "duyen": "",
     "baseStats": {
@@ -1511,7 +1506,7 @@
     "type": "Hi-Tech",
     "faction": "Hero",
     "roles": [
-      "Core"
+      "Deals powerful direct damage and restrains damage boost"
     ],
     "duyen": "",
     "baseStats": {
@@ -1637,12 +1632,8 @@
     "type": "Esper",
     "faction": "Monster",
     "roles": [
-      "DMG (ATK)",
-      "Support",
-      "Core",
-      "Heal",
-      "DMG (HP)",
-      "Revive"
+      "Extreme captain",
+      "HP Enhancement"
     ],
     "duyen": "",
     "baseStats": {
@@ -1771,7 +1762,8 @@
     "type": "Duelist",
     "faction": "Hero",
     "roles": [
-      "Main DPS (ATK)"
+      "Mighty Direct Dmg",
+      "Momentum DMG Free"
     ],
     "duyen": "V2",
     "baseStats": {
@@ -1915,11 +1907,7 @@
     "type": "Duelist",
     "faction": "Outlaw",
     "roles": [
-      "DMG (ATK)",
-      "Support",
-      "Weaken",
-      "Generate Shield",
-      "Speed"
+      "Same row speed up in Rapid Divinity"
     ],
     "duyen": "V2",
     "baseStats": {
@@ -2054,7 +2042,8 @@
     "type": "Grappler",
     "faction": "Martial Artist",
     "roles": [
-      "Main DPS (ATK)"
+      "AOE True DMG",
+      "Triggers counterattack on block"
     ],
     "duyen": "",
     "baseStats": {
@@ -2196,7 +2185,8 @@
     "id": "100057-ur",
     "name": "Pig God",
     "roles": [
-      "Heal"
+      "Shield Energy Charge",
+      "Locked Burst"
     ],
     "duyen": "",
     "baseStats": {
@@ -2330,7 +2320,8 @@
     "type": "Grappler",
     "faction": "Monster",
     "roles": [
-      "Barrier"
+      "Focused Rage",
+      "Powerful Counterattack"
     ],
     "duyen": "",
     "baseStats": {
@@ -2466,7 +2457,8 @@
     "type": "Duelist",
     "faction": "Monster",
     "roles": [
-      "Main DPS (ATK)"
+      "King's Deterrence",
+      "Control removed"
     ],
     "duyen": "",
     "baseStats": {
@@ -2601,7 +2593,8 @@
     "type": "Hi-Tech",
     "faction": "Hero",
     "roles": [
-      "Control"
+      "Offensive Breakthrough",
+      "Revenge Follow-Up"
     ],
     "duyen": "",
     "baseStats": {
@@ -2735,7 +2728,7 @@
     "type": "Esper",
     "faction": "Hero",
     "roles": [
-      "Barrier"
+      "Follow-up Lockdown and Continuous Damage"
     ],
     "duyen": "",
     "baseStats": {
@@ -2875,9 +2868,8 @@
     "type": "Grappler",
     "faction": "Monster",
     "roles": [
-      "Support",
-      "Core",
-      "DMG (HP)"
+      "Charged Attack",
+      "Team Damage Reflection"
     ],
     "duyen": "",
     "baseStats": {
@@ -3011,7 +3003,8 @@
     "type": "Duelist",
     "faction": "Hero",
     "roles": [
-      "Core"
+      "Same Row Speed up",
+      "Specialized Fear"
     ],
     "duyen": "",
     "baseStats": {
@@ -3150,7 +3143,8 @@
     "type": "Hi-Tech",
     "faction": "Hero",
     "roles": [
-      "Core"
+      "Tenacious Core",
+      "Enhanced Block"
     ],
     "duyen": "",
     "baseStats": {
@@ -3287,11 +3281,8 @@
     "type": "Esper",
     "faction": "Monster",
     "roles": [
-      "DMG (ATK)",
-      "Core",
-      "Heal",
-      "DMG (HP)",
-      "Revive"
+      "Breakthrough Unyielding",
+      "Share Damage"
     ],
     "duyen": "",
     "baseStats": {
@@ -3434,10 +3425,8 @@
     "type": "Duelist",
     "faction": "Hero",
     "roles": [
-      "Support",
-      "DMG (HP)",
-      "Generate Shield",
-      "Speed"
+      "Increase speed",
+      "Ultimate Follow-up"
     ],
     "duyen": "",
     "baseStats": {
@@ -3571,7 +3560,8 @@
     "type": "Grappler",
     "faction": "Monster",
     "roles": [
-      "Barrier"
+      "Ignite Internal Injury",
+      "Group Unyielding"
     ],
     "duyen": "",
     "baseStats": {
@@ -3716,7 +3706,9 @@
     "type": "Hi-Tech",
     "faction": "Hero",
     "roles": [
-      "Core"
+      "Burn",
+      "ignite",
+      "inflict true dame"
     ],
     "duyen": "",
     "baseStats": {
@@ -3858,10 +3850,8 @@
     "type": "Duelist",
     "faction": "Monster",
     "roles": [
-      "DMG (ATK)",
-      "Heal",
-      "DMG (HP)",
-      "Generate Shield"
+      "Specialized Burn",
+      "All-out Support"
     ],
     "duyen": "",
     "baseStats": {
@@ -3990,10 +3980,8 @@
     "type": "Esper",
     "faction": "Monster",
     "roles": [
-      "Heal",
-      "DMG (HP)",
-      "Generate Shield",
-      "Speed"
+      "No critical hit no death",
+      "ignite and shatter all enemies"
     ],
     "duyen": "",
     "baseStats": {
@@ -4144,7 +4132,8 @@
     "type": "Grappler",
     "faction": "Monster",
     "roles": [
-      "Control"
+      "Same Row Speed up",
+      "Specialized Shatter"
     ],
     "duyen": "",
     "baseStats": {
@@ -4287,7 +4276,8 @@
     "type": "Duelist",
     "faction": "Hero",
     "roles": [
-      "Main DPS (ATK)"
+      "Specialized Shatter",
+      "Start of battle Suppression"
     ],
     "duyen": "",
     "baseStats": {
@@ -4408,7 +4398,8 @@
     "type": "Esper",
     "faction": "Hero",
     "roles": [
-      "Speed Up"
+      "Group Healing",
+      "Same Row Nullification"
     ],
     "duyen": "",
     "baseStats": {
@@ -4536,7 +4527,8 @@
     "type": "Grappler",
     "faction": "Martial Artist",
     "roles": [
-      "Core"
+      "Internal Injury Bonus",
+      "Action Healing"
     ],
     "duyen": "",
     "baseStats": {
@@ -4657,8 +4649,7 @@
     "id": "100185-ur",
     "name": "Metal Bat",
     "roles": [
-      "DMG (HP)",
-      "Generate Shield"
+      "Specialized Extra and CRIT Aura"
     ],
     "duyen": "",
     "baseStats": {
@@ -4780,7 +4771,8 @@
     "type": "Esper",
     "faction": "Monster",
     "roles": [
-      "Main DPS (ATK)"
+      "Excess Recovery",
+      "Arena Core"
     ],
     "duyen": "",
     "baseStats": {
@@ -4919,7 +4911,7 @@
     "type": "Grappler",
     "faction": "Martial Artist",
     "roles": [
-      "Main DPS (ATK)"
+      "Continuous Follow-up and High Internal Injury"
     ],
     "duyen": "",
     "baseStats": {
@@ -5196,8 +5188,9 @@
     "type": "Duelist",
     "faction": "Outlaw",
     "roles": [
-      "Row Speed Up",
-      "Spec. Burn"
+      "Same Row Speed Up",
+      "Spec",
+      "Burn"
     ],
     "duyen": "",
     "baseStats": {
@@ -5342,8 +5335,8 @@
     "type": "Esper",
     "faction": "Hero",
     "roles": [
-      "Force Field",
-      "Chain Detonation"
+      "Psychic Barrier Suppression",
+      "Combined Detonation"
     ],
     "duyen": "",
     "baseStats": {
@@ -5632,7 +5625,7 @@
     "faction": "Hero",
     "roles": [
       "AoE Stun",
-      "Corrode Immunity"
+      "Corrosion Immunity"
     ],
     "duyen": "",
     "baseStats": {
@@ -5785,7 +5778,8 @@
     "id": "100006-ssrplus",
     "name": "Puri-Puri Prisoner",
     "roles": [
-      "Enhance Back Row, DoT Res"
+      "Back Row Charm",
+      "Continuous Rebellion"
     ],
     "duyen": "",
     "baseStats": {
@@ -5908,7 +5902,7 @@
     "type": "Duelist",
     "faction": "Hero",
     "roles": [
-      "Row Speed Up",
+      "Same Row Speed Up",
       "Encourage Allies"
     ],
     "duyen": "",
@@ -6044,9 +6038,9 @@
     "type": "Esper",
     "faction": "Monster",
     "roles": [
-      "Spec. Corrode",
-      "Nullify Follow-up",
-      "Spec. Reflect DMG"
+      "Spec",
+      "DMG Reflect",
+      "Corrosive Adhesion"
     ],
     "duyen": "",
     "baseStats": {
@@ -6179,7 +6173,7 @@
     "faction": "Hero",
     "roles": [
       "Tactical Combo",
-      "Column Control"
+      "Column Disabler"
     ],
     "duyen": "",
     "baseStats": {
@@ -6312,9 +6306,8 @@
     "type": "Esper",
     "faction": "Monster",
     "roles": [
-      "Revive Ally",
-      "Breakthrough",
-      "Silence Immunity"
+      "Guard Bonus",
+      "Asists teammates"
     ],
     "duyen": "",
     "baseStats": {
@@ -6451,8 +6444,8 @@
     "id": "100044-ssrplus",
     "name": "Drive Knight",
     "roles": [
-      "DMG (ATK)",
-      "Speed"
+      "Drive Knight",
+      "Tactical Transformation"
     ],
     "duyen": "",
     "baseStats": {
@@ -6579,9 +6572,8 @@
     "type": "Grappler",
     "faction": "Hero",
     "roles": [
-      "Breakthrough",
-      "Reflect DMG",
-      "Nullify DMG Share"
+      "Breakthrough and Unyielding",
+      "DMG Reflecion"
     ],
     "duyen": "",
     "baseStats": {
@@ -6711,9 +6703,9 @@
     "type": "Grappler",
     "faction": "Monster",
     "roles": [
-      "Spec. Corrode",
-      "Breakthrough",
-      "Nullify Follow-up"
+      "Spec",
+      "Corrode",
+      "Column Combo"
     ],
     "duyen": "",
     "baseStats": {
@@ -6857,8 +6849,9 @@
     "type": "Duelist",
     "faction": "Monster",
     "roles": [
-      "Full Breakthrough",
-      "Spec. Burn"
+      "All Breakthrough",
+      "Spec",
+      "Burn"
     ],
     "duyen": "",
     "baseStats": {
@@ -6996,8 +6989,8 @@
     "type": "Esper",
     "faction": "Monster",
     "roles": [
-      "Outlaw Support",
-      "Silence"
+      "Monster Assist",
+      "Addtional Silence"
     ],
     "duyen": "",
     "baseStats": {
@@ -7140,7 +7133,8 @@
     "id": "100057-ssrplus",
     "name": "Pig God",
     "roles": [
-      "Heal"
+      "Specialized Corrode",
+      "Glutton Everything"
     ],
     "duyen": "",
     "baseStats": {
@@ -7264,10 +7258,8 @@
     "type": "Duelist",
     "faction": "Hero",
     "roles": [
-      "Support",
-      "DMG (HP)",
-      "Generate Shield",
-      "Speed"
+      "Specialized Acceleration",
+      "Counterattack"
     ],
     "duyen": "",
     "baseStats": {
@@ -7409,8 +7401,8 @@
     "type": "Grappler",
     "faction": "Monster",
     "roles": [
-      "Breakthrough",
-      "Share DMG"
+      "Column Breakthrough",
+      "Damage Taker"
     ],
     "duyen": "",
     "baseStats": {
@@ -7546,9 +7538,8 @@
     "type": "Esper",
     "faction": "Monster",
     "roles": [
-      "Heal",
-      "DMG (HP)",
-      "Revive"
+      "Enemy off battle",
+      "ally reborn"
     ],
     "duyen": "",
     "baseStats": {
@@ -7670,7 +7661,8 @@
     "faction": "Martial Artist",
     "roles": [
       "Unyielding Breakthrough",
-      "Spec. Guard"
+      "Spec",
+      "Guard"
     ],
     "duyen": "",
     "baseStats": {
@@ -7804,8 +7796,8 @@
     "type": "Duelist",
     "faction": "Hero",
     "roles": [
-      "Reduce Spec. Unyielding",
-      "Reduce Max HP"
+      "Slay Lives",
+      "Ultimate DMG Free"
     ],
     "duyen": "",
     "baseStats": {
@@ -7925,9 +7917,8 @@
     "type": "Grappler",
     "faction": "Hero",
     "roles": [
-      "DMG (ATK)",
-      "Support",
-      "Generate Shield"
+      "Instant DMG Evasion",
+      "Combo Support"
     ],
     "duyen": "",
     "baseStats": {
@@ -8068,8 +8059,9 @@
     "type": "Esper",
     "faction": "Monster",
     "roles": [
-      "Spec. Unyielding Core",
-      "Spec. Berserk"
+      "Spec",
+      "Berserk",
+      "Survival Core"
     ],
     "duyen": "",
     "baseStats": {
@@ -8194,9 +8186,8 @@
     "type": "Esper",
     "faction": "Hero",
     "roles": [
-      "Reduce Energy",
-      "Speed Up",
-      "Share DMG"
+      "Energy Blocker",
+      "Resilience Remove"
     ],
     "duyen": "",
     "baseStats": {
@@ -8324,8 +8315,9 @@
     "id": "100055-ssrplus",
     "name": "Boros",
     "roles": [
-      "Support",
-      "Heal"
+      "Ignores Unyielding",
+      "Healing Absorpotion",
+      "Damage Taker"
     ],
     "duyen": "",
     "baseStats": {
@@ -8449,8 +8441,9 @@
     "type": "Grappler",
     "faction": "Monster",
     "roles": [
-      "Ultimate Follow-up",
-      "Reflect DMG"
+      "Out of Control",
+      "Follow-up",
+      "Damage Reflection"
     ],
     "duyen": "",
     "baseStats": {
@@ -8570,8 +8563,9 @@
     "type": "Hi-Tech",
     "faction": "Hero",
     "roles": [
-      "Increase Ally Crit",
-      "Immune Burn/Field/Injury"
+      "Increase",
+      "Robot Support",
+      "Follow-up and Heal"
     ],
     "duyen": "",
     "baseStats": {
@@ -8693,8 +8687,8 @@
     "faction": "Hero",
     "roles": [
       "Stun Immunity",
-      "Follow-up",
-      "Revive"
+      "Constant Follow-up",
+      "Specialized Reborn"
     ],
     "duyen": "",
     "baseStats": {
@@ -8828,9 +8822,9 @@
     "type": "Grappler",
     "faction": "Monster",
     "roles": [
-      "Accumulated DMG",
-      "Remove ATK Buff",
-      "Revive & Tenacity"
+      "Charge Damage",
+      "Attack Restraint",
+      "Tenacity and Resurrection"
     ],
     "duyen": "",
     "baseStats": {
@@ -8955,9 +8949,9 @@
     "type": "Grappler",
     "faction": "Hero",
     "roles": [
-      "Team Speed Up",
-      "Tenacity",
-      "Reduce Max HP"
+      "Same-row acceleration",
+      "massive Tenacity",
+      "consecutive Follow-up"
     ],
     "duyen": "",
     "baseStats": {
@@ -9048,8 +9042,9 @@
     "type": "Duelist",
     "faction": "Hero",
     "roles": [
-      "Collapse",
-      "Duelist Follow-up"
+      "AoE Shatter",
+      "Strong Follow-up",
+      "Core Duelist"
     ],
     "duyen": "",
     "baseStats": {
@@ -9143,9 +9138,8 @@
     "type": "Grappler",
     "faction": "Hero",
     "roles": [
-      "DMG (ATK)",
-      "Support",
-      "Generate Shield"
+      "Internal Injury",
+      "Team Block"
     ],
     "duyen": "",
     "baseStats": {
@@ -9237,9 +9231,9 @@
     "type": "Grappler",
     "faction": "Martial Artist",
     "roles": [
-      "Tenacity Core",
-      "Increase Agility",
-      "Reduce Healing"
+      "Healing Restraint",
+      "Multi-Ally Agility",
+      "Resilience Core"
     ],
     "duyen": "",
     "baseStats": {
@@ -9321,8 +9315,8 @@
     "id": "100055-ssr",
     "name": "Boros",
     "roles": [
-      "Support",
-      "Heal"
+      "Single-target Attacker",
+      "Strongest Burst"
     ],
     "duyen": "",
     "baseStats": {
@@ -9405,7 +9399,8 @@
     "id": "100043-ssr",
     "name": "Carnage Kabuto",
     "roles": [
-      "Reflect DMG, Injury DMG"
+      "Reflect DMG",
+      "Injury DMG"
     ],
     "duyen": "",
     "baseStats": {

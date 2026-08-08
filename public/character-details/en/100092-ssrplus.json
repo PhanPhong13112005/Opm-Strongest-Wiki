@@ -6,9 +6,9 @@
   "type": "Grappler",
   "faction": "Monster",
   "roles": [
-    "Accumulated DMG",
-    "Remove ATK Buff",
-    "Revive & Tenacity"
+    "Charge Damage",
+    "Attack Restraint",
+    "Tenacity and Resurrection"
   ],
   "duyen": "",
   "baseStats": {

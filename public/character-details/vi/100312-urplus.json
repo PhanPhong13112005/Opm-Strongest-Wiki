@@ -5,12 +5,7 @@
   "type": "Giác Đấu",
   "faction": "Quái Nhân",
   "roles": [
-    "Sát Thương (Công)",
-    "Hỗ Trợ",
-    "Suy Yếu",
-    "Sát Thương (Máu)",
-    "Tạo Khiên",
-    "Tốc Độ"
+    "Tăng Tốc & Liên Kết HP Cùng Hàng"
   ],
   "duyen": "",
   "baseStats": {

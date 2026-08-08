@@ -2,7 +2,8 @@
   "id": "100006-ssrplus",
   "name": "Puri-Puri Prisoner",
   "roles": [
-    "Enhance Back Row, DoT Res"
+    "Back Row Charm",
+    "Continuous Rebellion"
   ],
   "duyen": "",
   "baseStats": {

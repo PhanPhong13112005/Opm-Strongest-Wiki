@@ -5,10 +5,8 @@
   "type": "Duelist",
   "faction": "Hero",
   "roles": [
-    "Support",
-    "DMG (HP)",
-    "Generate Shield",
-    "Speed"
+    "Specialized Acceleration",
+    "Counterattack"
   ],
   "duyen": "",
   "baseStats": {

@@ -5,10 +5,8 @@
   "type": "Duelist",
   "faction": "Monster",
   "roles": [
-    "DMG (ATK)",
-    "Heal",
-    "DMG (HP)",
-    "Generate Shield"
+    "Specialized Burn",
+    "All-out Support"
   ],
   "duyen": "",
   "baseStats": {

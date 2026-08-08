@@ -6,7 +6,8 @@
   "type": "Giác Đấu",
   "faction": "Võ Thuật",
   "roles": [
-    "Hạt Nhân"
+    "Tăng Sát Thương Nội Thương",
+    "Hồi Phục Khi Hành Động"
   ],
   "duyen": "",
   "baseStats": {
@@ -114,7 +115,6 @@
   },
   "dacTinh": [
     "Buff",
-    "Hạt Nhân",
     "Hồi Phục",
     "Sát Thương (Máu)",
     "Tạo Khiên"

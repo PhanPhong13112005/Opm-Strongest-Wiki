@@ -6,9 +6,8 @@
   "type": "Esper",
   "faction": "Hero",
   "roles": [
-    "Reduce Energy",
-    "Speed Up",
-    "Share DMG"
+    "Energy Blocker",
+    "Resilience Remove"
   ],
   "duyen": "",
   "baseStats": {

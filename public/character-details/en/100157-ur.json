@@ -6,7 +6,8 @@
   "type": "Duelist",
   "faction": "Hero",
   "roles": [
-    "Main DPS (ATK)"
+    "Mighty Direct Dmg",
+    "Momentum DMG Free"
   ],
   "duyen": "V2",
   "baseStats": {

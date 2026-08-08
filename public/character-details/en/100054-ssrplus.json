@@ -6,9 +6,8 @@
   "type": "Esper",
   "faction": "Monster",
   "roles": [
-    "Revive Ally",
-    "Breakthrough",
-    "Silence Immunity"
+    "Guard Bonus",
+    "Asists teammates"
   ],
   "duyen": "",
   "baseStats": {

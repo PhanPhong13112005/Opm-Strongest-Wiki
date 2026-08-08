@@ -25,10 +25,23 @@ const normalize = value => value
   .replace(/awaken \d /g, '')
   .replace(/[^a-z0-9]/g, '')
 
+const parseRoles = (raw) => {
+  if (!raw) return []
+  return raw
+    .split(/,\s*|\.\s+|\s+-\s+/)
+    .map(s => s.trim())
+    .filter(Boolean)
+    .map(s => s.replace(/\.$/, '').trim())
+    .filter(Boolean)
+}
+
 const entries = []
 for (const block of markdown.split(/(?=^### )/m)) {
   const id = block.match(/^- \*\*ID:\*\* `([^`]+)`/m)?.[1]
   if (!id) continue
+
+  const rolesMatch = block.match(/^- \*\*Roles:\*\*\s*(.*?)$/m)
+  const roles = parseRoles(rolesMatch ? rolesMatch[1] : '')
 
   const rows = []
   for (const line of block.split('\n')) {
@@ -41,7 +54,7 @@ for (const block of markdown.split(/(?=^### )/m)) {
       desc: decodeEntities(match[4].trim()),
     })
   }
-  entries.push({ id, rows })
+  entries.push({ id, roles, rows })
 }
 
 const entryById = new Map()
@@ -65,10 +78,18 @@ const specialRowMaps = {
 let updated = 0
 let unchanged = 0
 let skippedPlaceholders = 0
+let updatedRoles = 0
 
 for (const character of catalog) {
   const entry = entryById.get(character.id)
   if (!entry) throw new Error(`Markdown is missing character ID: ${character.id}`)
+
+  if (entry.roles && entry.roles.length > 0) {
+    if (JSON.stringify(character.roles) !== JSON.stringify(entry.roles)) {
+      character.roles = entry.roles
+      updatedRoles++
+    }
+  }
 
   const rowMap = specialRowMaps[character.id] || character.skills.map((_, index) => [index])
   if (rowMap.length !== character.skills.length) {
@@ -115,4 +136,5 @@ for (const entry of entries) {
 }
 
 fs.writeFileSync(catalogPath, `${JSON.stringify(catalog, null, 2)}\n`, 'utf8')
-console.log(JSON.stringify({ characters: catalog.length, updated, unchanged, skippedPlaceholders }, null, 2))
+console.log(JSON.stringify({ characters: catalog.length, updated, updatedRoles, unchanged, skippedPlaceholders }, null, 2))
+

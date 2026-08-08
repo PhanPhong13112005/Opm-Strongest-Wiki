@@ -6,7 +6,8 @@
   "type": "Esper",
   "faction": "Monster",
   "roles": [
-    "Main DPS (ATK)"
+    "Rebirth Recovery",
+    "Rampage Combo"
   ],
   "duyen": "",
   "baseStats": {

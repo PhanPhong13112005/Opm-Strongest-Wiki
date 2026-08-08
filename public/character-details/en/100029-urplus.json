@@ -6,7 +6,8 @@
   "type": "Grappler",
   "faction": "Hero",
   "roles": [
-    "Core"
+    "Universal Support",
+    "HP Amplification"
   ],
   "duyen": "",
   "baseStats": {

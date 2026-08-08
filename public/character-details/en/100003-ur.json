@@ -5,9 +5,8 @@
   "type": "Grappler",
   "faction": "Monster",
   "roles": [
-    "Support",
-    "Core",
-    "DMG (HP)"
+    "Charged Attack",
+    "Team Damage Reflection"
   ],
   "duyen": "",
   "baseStats": {

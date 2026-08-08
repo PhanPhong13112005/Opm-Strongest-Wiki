@@ -6,8 +6,9 @@
   "type": "Duelist",
   "faction": "Hero",
   "roles": [
-    "Collapse",
-    "Duelist Follow-up"
+    "AoE Shatter",
+    "Strong Follow-up",
+    "Core Duelist"
   ],
   "duyen": "",
   "baseStats": {

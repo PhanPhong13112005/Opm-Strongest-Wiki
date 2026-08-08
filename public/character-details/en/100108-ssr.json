@@ -6,9 +6,9 @@
   "type": "Grappler",
   "faction": "Martial Artist",
   "roles": [
-    "Tenacity Core",
-    "Increase Agility",
-    "Reduce Healing"
+    "Healing Restraint",
+    "Multi-Ally Agility",
+    "Resilience Core"
   ],
   "duyen": "",
   "baseStats": {

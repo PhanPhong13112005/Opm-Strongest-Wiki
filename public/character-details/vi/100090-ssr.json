@@ -6,8 +6,8 @@
   "type": "Giác Đấu",
   "faction": "Võ Thuật",
   "roles": [
-    "Sát Thương Tích Tụ",
-    "Giảm ST Không Chí Mạng"
+    "Sát Thương Tích Lũy",
+    "Reduce Non-Crit DMG"
   ],
   "duyen": "",
   "baseStats": {

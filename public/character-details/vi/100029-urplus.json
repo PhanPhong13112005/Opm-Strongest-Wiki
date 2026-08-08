@@ -6,7 +6,8 @@
   "type": "Giác Đấu",
   "faction": "Anh Hùng",
   "roles": [
-    "Hạt Nhân"
+    "Hỗ Trợ Toàn Năng",
+    "Tăng Cường HP"
   ],
   "duyen": "",
   "baseStats": {
@@ -161,8 +162,7 @@
     "spd": 1
   },
   "dacTinh": [
-    "Buff",
-    "Hạt Nhân"
+    "Buff"
   ],
   "classLevel": "A",
   "releaseSea": "01/04/2026",

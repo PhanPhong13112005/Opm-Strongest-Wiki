@@ -6,7 +6,8 @@
   "type": "Grappler",
   "faction": "Martial Artist",
   "roles": [
-    "Core"
+    "Internal Injury Bonus",
+    "Action Healing"
   ],
   "duyen": "",
   "baseStats": {

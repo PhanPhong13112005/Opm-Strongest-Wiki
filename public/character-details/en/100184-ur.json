@@ -6,7 +6,8 @@
   "type": "Esper",
   "faction": "Monster",
   "roles": [
-    "Main DPS (ATK)"
+    "Excess Recovery",
+    "Arena Core"
   ],
   "duyen": "",
   "baseStats": {

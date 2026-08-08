@@ -6,8 +6,9 @@
   "type": "Hi-Tech",
   "faction": "Hero",
   "roles": [
-    "Increase Ally Crit",
-    "Immune Burn/Field/Injury"
+    "Increase",
+    "Robot Support",
+    "Follow-up and Heal"
   ],
   "duyen": "",
   "baseStats": {

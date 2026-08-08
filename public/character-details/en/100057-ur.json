@@ -2,7 +2,8 @@
   "id": "100057-ur",
   "name": "Pig God",
   "roles": [
-    "Heal"
+    "Shield Energy Charge",
+    "Locked Burst"
   ],
   "duyen": "",
   "baseStats": {

@@ -6,8 +6,8 @@
   "type": "Esper",
   "faction": "Monster",
   "roles": [
-    "Outlaw Support",
-    "Silence"
+    "Monster Assist",
+    "Addtional Silence"
   ],
   "duyen": "",
   "baseStats": {

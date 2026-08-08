@@ -2,8 +2,9 @@
   "id": "100055-ssrplus",
   "name": "Boros",
   "roles": [
-    "Support",
-    "Heal"
+    "Ignores Unyielding",
+    "Healing Absorpotion",
+    "Damage Taker"
   ],
   "duyen": "",
   "baseStats": {

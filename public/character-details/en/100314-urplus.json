@@ -5,11 +5,8 @@
   "type": "Hi-Tech",
   "faction": "Monster",
   "roles": [
-    "DMG (ATK)",
-    "Weaken",
-    "Revive",
-    "Generate Shield",
-    "Speed"
+    "Frontline Suppress",
+    "Endless Hunt"
   ],
   "duyen": "",
   "baseStats": {

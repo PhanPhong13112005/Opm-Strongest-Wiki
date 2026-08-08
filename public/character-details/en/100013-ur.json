@@ -6,7 +6,8 @@
   "type": "Duelist",
   "faction": "Hero",
   "roles": [
-    "Core"
+    "Same Row Speed up",
+    "Specialized Fear"
   ],
   "duyen": "",
   "baseStats": {

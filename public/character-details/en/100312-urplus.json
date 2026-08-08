@@ -5,12 +5,7 @@
   "type": "Grappler",
   "faction": "Monster",
   "roles": [
-    "DMG (ATK)",
-    "Support",
-    "Weaken",
-    "DMG (HP)",
-    "Generate Shield",
-    "Speed"
+    "Applies Haste and [Life Link] to the ally full row"
   ],
   "duyen": "",
   "baseStats": {
