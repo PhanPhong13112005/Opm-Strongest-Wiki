@@ -2,7 +2,8 @@
   "id": "100043-ssr",
   "name": "Carnage Kabuto",
   "roles": [
-    "Reflect DMG, Injury DMG"
+    "Reflect DMG",
+    "Injury DMG"
   ],
   "duyen": "",
   "baseStats": {

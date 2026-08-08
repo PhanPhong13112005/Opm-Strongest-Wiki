@@ -6,8 +6,8 @@
   "type": "Grappler",
   "faction": "Hero",
   "roles": [
-    "HP-based DMG",
-    "Absolute Guard"
+    "HP Conversion",
+    "Battle Momentum"
   ],
   "duyen": "",
   "baseStats": {

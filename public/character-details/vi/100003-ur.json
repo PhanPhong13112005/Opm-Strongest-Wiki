@@ -5,9 +5,8 @@
   "type": "Giác Đấu",
   "faction": "Quái Nhân",
   "roles": [
-    "Hỗ Trợ",
-    "Hạt Nhân",
-    "Sát Thương (Máu)"
+    "Tấn Công Tích Lực",
+    "Phản Sát Thương Toàn Đội"
   ],
   "duyen": "",
   "baseStats": {
@@ -113,7 +112,6 @@
   },
   "dacTinh": [
     "Buff",
-    "Hạt Nhân",
     "Sát Thương (Máu)"
   ],
   "effects": [

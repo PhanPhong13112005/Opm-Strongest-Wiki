@@ -6,8 +6,8 @@
   "type": "Tâm Linh",
   "faction": "Quái Nhân",
   "roles": [
-    "Hỗ Trợ Tội Phạm",
-    "Gây Câm Lặng"
+    "Hỗ Trợ Quái Nhân",
+    "Câm Lặng Bổ Sung"
   ],
   "duyen": "",
   "baseStats": {
@@ -138,7 +138,6 @@
   "dacTinh": [
     "Sát Thương (Công)",
     "Buff",
-    "Hạt Nhân",
     "Hồi Phục",
     "Sát Thương (Máu)",
     "Hồi Sinh"

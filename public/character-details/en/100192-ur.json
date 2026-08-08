@@ -6,7 +6,9 @@
   "type": "Hi-Tech",
   "faction": "Hero",
   "roles": [
-    "Core"
+    "Burn",
+    "ignite",
+    "inflict true dame"
   ],
   "duyen": "",
   "baseStats": {

@@ -6,8 +6,9 @@
   "type": "Duelist",
   "faction": "Monster",
   "roles": [
-    "Full Breakthrough",
-    "Spec. Burn"
+    "All Breakthrough",
+    "Spec",
+    "Burn"
   ],
   "duyen": "",
   "baseStats": {

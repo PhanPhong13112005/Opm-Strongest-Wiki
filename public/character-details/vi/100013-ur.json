@@ -6,7 +6,8 @@
   "type": "Vũ Trang",
   "faction": "Anh Hùng",
   "roles": [
-    "Hạt Nhân"
+    "Tăng Tốc Cùng Hàng",
+    "Nỗi Sợ Chuyên Biệt"
   ],
   "duyen": "",
   "baseStats": {
@@ -127,7 +128,6 @@
   "dacTinh": [
     "Sát Thương (Công)",
     "Buff",
-    "Hạt Nhân",
     "Hồi Phục",
     "Sát Thương (Máu)",
     "Tạo Khiên"

@@ -5,9 +5,8 @@
   "type": "Grappler",
   "faction": "Hero",
   "roles": [
-    "DMG (ATK)",
-    "Support",
-    "Generate Shield"
+    "Internal Injury",
+    "Team Block"
   ],
   "duyen": "",
   "baseStats": {

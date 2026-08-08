@@ -2,8 +2,9 @@
   "id": "100055-ssrplus",
   "name": "Boros",
   "roles": [
-    "Hỗ Trợ",
-    "Hồi Phục"
+    "Bỏ Qua Bất Khuất",
+    "Hấp Thụ Trị Liệu",
+    "Gánh Sát Thương"
   ],
   "duyen": "",
   "baseStats": {

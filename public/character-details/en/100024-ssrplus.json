@@ -5,9 +5,8 @@
   "type": "Grappler",
   "faction": "Hero",
   "roles": [
-    "DMG (ATK)",
-    "Support",
-    "Generate Shield"
+    "Instant DMG Evasion",
+    "Combo Support"
   ],
   "duyen": "",
   "baseStats": {

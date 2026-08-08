@@ -6,9 +6,9 @@
   "type": "Giác Đấu",
   "faction": "Anh Hùng",
   "roles": [
-    "Tăng Tốc Toàn Đội",
-    "Kiên Cường",
-    "Giảm HP Tối Đa"
+    "Tăng Tốc Cùng Hàng",
+    "Kiên Cường Khổng Lồ",
+    "Truy Kích Liên Tiếp"
   ],
   "duyen": "",
   "baseStats": {
@@ -82,8 +82,7 @@
     "spd": 1
   },
   "dacTinh": [
-    "Buff",
-    "Hạt Nhân"
+    "Buff"
   ],
   "releaseDate": "01/06/2022",
   "classLevel": "A",

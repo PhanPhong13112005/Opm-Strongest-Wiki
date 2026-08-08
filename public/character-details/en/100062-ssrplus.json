@@ -6,9 +6,9 @@
   "type": "Esper",
   "faction": "Monster",
   "roles": [
-    "Spec. Corrode",
-    "Nullify Follow-up",
-    "Spec. Reflect DMG"
+    "Spec",
+    "DMG Reflect",
+    "Corrosive Adhesion"
   ],
   "duyen": "",
   "baseStats": {

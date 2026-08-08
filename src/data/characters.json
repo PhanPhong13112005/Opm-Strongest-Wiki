@@ -7,8 +7,8 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Phân chia vô hạn",
-      "Một người trở thành một đội quân"
+      "Phân Chia Vô Hạn",
+      "Một Người Thành Một Đội Quân"
     ],
     "duyen": "Đấu Thuật Tông Sư",
     "baseStats": {
@@ -142,8 +142,8 @@
     "type": "Vũ Trang",
     "faction": "Anh Hùng",
     "roles": [
-      "Gây mù diện rộng",
-      "Tiên phong bất tử"
+      "Khống Chế Gây Mù",
+      "Bất Tử"
     ],
     "duyen": "Heavy Vanguard",
     "baseStats": {
@@ -287,7 +287,8 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Chủ Lực (Công)"
+      "Sát Thương Rối Loạn",
+      "Tái Chiến"
     ],
     "duyen": "",
     "baseStats": {
@@ -448,8 +449,8 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "roles": [
-      "Sát thương theo HP",
-      "Bảo kê tuyệt đối"
+      "Chuyển Đổi HP",
+      "Khí Thế Chiến Đấu"
     ],
     "duyen": "",
     "baseStats": {
@@ -593,11 +594,8 @@
     "type": "Công Nghệ",
     "faction": "Quái Nhân",
     "roles": [
-      "Sát Thương (Công)",
-      "Suy Yếu",
-      "Hồi Sinh",
-      "Tạo Khiên",
-      "Tốc Độ"
+      "Áp Chế Tiền Tuyến",
+      "Săn Đuổi Vô Tận"
     ],
     "duyen": "",
     "baseStats": {
@@ -737,8 +735,8 @@
     "id": "100313-urplus",
     "name": "Samurai Nguyên Tử",
     "roles": [
-      "Xuyên phá diện rộng",
-      "Sát thủ tốc độ"
+      "Tăng Chí Mạng Cường Hóa",
+      "Tấn Công Trước"
     ],
     "duyen": "",
     "baseStats": {
@@ -882,12 +880,7 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Sát Thương (Công)",
-      "Hỗ Trợ",
-      "Suy Yếu",
-      "Sát Thương (Máu)",
-      "Tạo Khiên",
-      "Tốc Độ"
+      "Tăng Tốc & Liên Kết HP Cùng Hàng"
     ],
     "duyen": "",
     "baseStats": {
@@ -1036,8 +1029,8 @@
     "type": "Tâm Linh",
     "faction": "Anh Hùng",
     "roles": [
-      "Xóa sổ Bất khuất",
-      "Hỗ trợ tối thượng"
+      "Công Thủ Toàn Diện",
+      "Chuyển Đổi Năng Lượng"
     ],
     "duyen": "",
     "baseStats": {
@@ -1206,7 +1199,8 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "roles": [
-      "Hạt Nhân"
+      "Hỗ Trợ Toàn Năng",
+      "Tăng Cường HP"
     ],
     "duyen": "",
     "baseStats": {
@@ -1361,8 +1355,7 @@
       "spd": 1
     },
     "dacTinh": [
-      "Buff",
-      "Hạt Nhân"
+      "Buff"
     ],
     "classLevel": "A",
     "releaseSea": "01/04/2026",
@@ -1376,7 +1369,8 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Chủ Lực (Công)"
+      "Hồi Sinh Hồi Phục",
+      "Truy Kích Cuồng Bạo"
     ],
     "duyen": "",
     "baseStats": {
@@ -1511,7 +1505,7 @@
     "type": "Công Nghệ",
     "faction": "Anh Hùng",
     "roles": [
-      "Hạt Nhân"
+      "Gây Sát Thương Trực Tiếp Mạnh & Giới Hạn Tăng Sát Thương"
     ],
     "duyen": "",
     "baseStats": {
@@ -1623,8 +1617,7 @@
     },
     "dacTinh": [
       "Sát Thương (Công)",
-      "Buff",
-      "Hạt Nhân"
+      "Buff"
     ],
     "classLevel": "Class_S",
     "releaseSea": "01/02/2026",
@@ -1637,12 +1630,8 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Sát Thương (Công)",
-      "Hỗ Trợ",
-      "Hạt Nhân",
-      "Hồi Phục",
-      "Sát Thương (Máu)",
-      "Hồi Sinh"
+      "Đội Trưởng Cực Hạn",
+      "Tăng Cường HP"
     ],
     "duyen": "",
     "baseStats": {
@@ -1749,7 +1738,6 @@
     "dacTinh": [
       "Sát Thương (Công)",
       "Buff",
-      "Hạt Nhân",
       "Hồi Phục",
       "Sát Thương (Máu)",
       "Hồi Sinh"
@@ -1771,7 +1759,8 @@
     "type": "Vũ Trang",
     "faction": "Anh Hùng",
     "roles": [
-      "Chủ Lực (Công)"
+      "Sát Thương Trực Tiếp Mạnh",
+      "Miễn Sát Thương Khí Thế"
     ],
     "duyen": "V2",
     "baseStats": {
@@ -1915,11 +1904,7 @@
     "type": "Vũ Trang",
     "faction": "Tội Phạm",
     "roles": [
-      "Sát Thương (Công)",
-      "Hỗ Trợ",
-      "Suy Yếu",
-      "Tạo Khiên",
-      "Tốc Độ"
+      "Tăng Tốc Cùng Hàng Thần Tốc"
     ],
     "duyen": "V2",
     "baseStats": {
@@ -2054,7 +2039,8 @@
     "type": "Giác Đấu",
     "faction": "Võ Thuật",
     "roles": [
-      "Chủ Lực (Công)"
+      "Sát Thương Chuẩn Diện Rộng",
+      "Phản Đòn Khi Đỡ Đòn"
     ],
     "duyen": "",
     "baseStats": {
@@ -2196,7 +2182,8 @@
     "id": "100057-ur",
     "name": "Thần Heo",
     "roles": [
-      "Hồi Phục"
+      "Nạp Năng Lượng Khiên",
+      "Bộc Phá Khóa Mục Tiêu"
     ],
     "duyen": "",
     "baseStats": {
@@ -2330,7 +2317,8 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Tường Chắn"
+      "Tích Lực Nổi Giận",
+      "Phản Đòn Mạnh Vẽ"
     ],
     "duyen": "",
     "baseStats": {
@@ -2466,7 +2454,8 @@
     "type": "Vũ Trang",
     "faction": "Quái Nhân",
     "roles": [
-      "Chủ Lực (Công)"
+      "Uy Áp Của Vua",
+      "Xóa Khống Chế"
     ],
     "duyen": "",
     "baseStats": {
@@ -2601,7 +2590,8 @@
     "type": "Công Nghệ",
     "faction": "Anh Hùng",
     "roles": [
-      "Khống Chế"
+      "Đột Phá Tấn Công",
+      "Truy Kích Phản Đòn"
     ],
     "duyen": "",
     "baseStats": {
@@ -2735,7 +2725,7 @@
     "type": "Tâm Linh",
     "faction": "Anh Hùng",
     "roles": [
-      "Tường Chắn"
+      "Khóa Truy Kích & Sát Thương Duy Trì"
     ],
     "duyen": "",
     "baseStats": {
@@ -2875,9 +2865,8 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Hỗ Trợ",
-      "Hạt Nhân",
-      "Sát Thương (Máu)"
+      "Tấn Công Tích Lực",
+      "Phản Sát Thương Toàn Đội"
     ],
     "duyen": "",
     "baseStats": {
@@ -2983,7 +2972,6 @@
     },
     "dacTinh": [
       "Buff",
-      "Hạt Nhân",
       "Sát Thương (Máu)"
     ],
     "effects": [
@@ -3011,7 +2999,8 @@
     "type": "Vũ Trang",
     "faction": "Anh Hùng",
     "roles": [
-      "Hạt Nhân"
+      "Tăng Tốc Cùng Hàng",
+      "Nỗi Sợ Chuyên Biệt"
     ],
     "duyen": "",
     "baseStats": {
@@ -3132,7 +3121,6 @@
     "dacTinh": [
       "Sát Thương (Công)",
       "Buff",
-      "Hạt Nhân",
       "Hồi Phục",
       "Sát Thương (Máu)",
       "Tạo Khiên"
@@ -3150,7 +3138,8 @@
     "type": "Công Nghệ",
     "faction": "Anh Hùng",
     "roles": [
-      "Hạt Nhân"
+      "Hạt Nhân Kiên Cường",
+      "Đỡ Đòn Cường Hóa"
     ],
     "duyen": "",
     "baseStats": {
@@ -3287,11 +3276,8 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Sát Thương (Công)",
-      "Hạt Nhân",
-      "Hồi Phục",
-      "Sát Thương (Máu)",
-      "Hồi Sinh"
+      "Đột Phá Bất Khuất",
+      "Chia Sẻ Sát Thương"
     ],
     "duyen": "",
     "baseStats": {
@@ -3397,7 +3383,6 @@
     },
     "dacTinh": [
       "Sát Thương (Công)",
-      "Hạt Nhân",
       "Hồi Phục",
       "Sát Thương (Máu)",
       "Hồi Sinh"
@@ -3434,10 +3419,8 @@
     "type": "Vũ Trang",
     "faction": "Anh Hùng",
     "roles": [
-      "Hỗ Trợ",
-      "Sát Thương (Máu)",
-      "Tạo Khiên",
-      "Tốc Độ"
+      "Tăng Tốc Độ",
+      "Truy Kích Tuyệt Kĩ"
     ],
     "duyen": "",
     "baseStats": {
@@ -3571,7 +3554,8 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Tường Chắn"
+      "Kích Nổ Nội Thương",
+      "Bất Khuất Toàn Đội"
     ],
     "duyen": "",
     "baseStats": {
@@ -3716,7 +3700,9 @@
     "type": "Công Nghệ",
     "faction": "Anh Hùng",
     "roles": [
-      "Hạt Nhân"
+      "Thiêu Đốt",
+      "Thiêu Đốt",
+      "Gây Sát Thương Chuẩn"
     ],
     "duyen": "",
     "baseStats": {
@@ -3844,8 +3830,7 @@
     },
     "dacTinh": [
       "Sát Thương (Công)",
-      "Buff",
-      "Hạt Nhân"
+      "Buff"
     ],
     "classLevel": "Class_S",
     "releaseSea": "01/04/2024",
@@ -3858,10 +3843,8 @@
     "type": "Vũ Trang",
     "faction": "Quái Nhân",
     "roles": [
-      "Sát Thương (Công)",
-      "Hồi Phục",
-      "Sát Thương (Máu)",
-      "Tạo Khiên"
+      "Thiêu Đốt Chuyên Biệt",
+      "Hỗ Trợ Toàn Diện"
     ],
     "duyen": "",
     "baseStats": {
@@ -3990,10 +3973,8 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Hồi Phục",
-      "Sát Thương (Máu)",
-      "Tạo Khiên",
-      "Tốc Độ"
+      "Bất Khuất Không Bạo Kích",
+      "Thiêu Đốt & Phá Giáp Toàn Địch"
     ],
     "duyen": "",
     "baseStats": {
@@ -4144,7 +4125,8 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Khống Chế"
+      "Tăng Tốc Cùng Hàng",
+      "Phá Giáp Chuyên Biệt"
     ],
     "duyen": "",
     "baseStats": {
@@ -4287,7 +4269,8 @@
     "type": "Vũ Trang",
     "faction": "Anh Hùng",
     "roles": [
-      "Chủ Lực (Công)"
+      "Phá Giáp Chuyên Biệt",
+      "Áp Chế Đầu Trận"
     ],
     "duyen": "",
     "baseStats": {
@@ -4408,7 +4391,8 @@
     "type": "Tâm Linh",
     "faction": "Anh Hùng",
     "roles": [
-      "Kích Tốc"
+      "Hồi Phục Toàn Đội",
+      "Vô Hiệu Cùng Hàng"
     ],
     "duyen": "",
     "baseStats": {
@@ -4536,7 +4520,8 @@
     "type": "Giác Đấu",
     "faction": "Võ Thuật",
     "roles": [
-      "Hạt Nhân"
+      "Tăng Sát Thương Nội Thương",
+      "Hồi Phục Khi Hành Động"
     ],
     "duyen": "",
     "baseStats": {
@@ -4644,7 +4629,6 @@
     },
     "dacTinh": [
       "Buff",
-      "Hạt Nhân",
       "Hồi Phục",
       "Sát Thương (Máu)",
       "Tạo Khiên"
@@ -4657,8 +4641,7 @@
     "id": "100185-ur",
     "name": "Chày Sắt",
     "roles": [
-      "Sát Thương (Máu)",
-      "Tạo Khiên"
+      "Hào Quang Chí Mạng & Sát Thương Bổ Sung Chuyên Biệt"
     ],
     "duyen": "",
     "baseStats": {
@@ -4780,7 +4763,8 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Chủ Lực (Công)"
+      "Hồi Phục Dư Thừa",
+      "Hạt Nhân Đấu Trường"
     ],
     "duyen": "",
     "baseStats": {
@@ -4919,7 +4903,7 @@
     "type": "Giác Đấu",
     "faction": "Võ Thuật",
     "roles": [
-      "Chủ Lực (Công)"
+      "Truy Kích Liên Tục & Nội Thương Cao"
     ],
     "duyen": "",
     "baseStats": {
@@ -5055,7 +5039,7 @@
     "type": "Công Nghệ",
     "faction": "Quái Nhân",
     "roles": [
-      "Sát Thương Duy Trì & Phục Hồi Hộ Thể"
+      "Hồi Phục Bảo Hộ & DoT"
     ],
     "duyen": "",
     "baseStats": {
@@ -5197,7 +5181,8 @@
     "faction": "Tội Phạm",
     "roles": [
       "Tăng Tốc Cùng Hàng",
-      "Thiêu Đốt Chuyên Biệt"
+      "Spec",
+      "Thiêu Đốt"
     ],
     "duyen": "",
     "baseStats": {
@@ -5342,8 +5327,8 @@
     "type": "Tâm Linh",
     "faction": "Anh Hùng",
     "roles": [
-      "Lực Trường",
-      "Kích Nổ Liên Tục"
+      "Áp Chế Rào Cản Tâm Linh",
+      "Kích Nổ Kết Hợp"
     ],
     "duyen": "",
     "baseStats": {
@@ -5507,8 +5492,8 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "roles": [
-      "Cường Hóa Khiên",
-      "Phản Sát Thương Nhóm"
+      "Tăng Cường Khiên",
+      "Phản Sát Thương Toàn Đội"
     ],
     "duyen": "",
     "baseStats": {
@@ -5632,7 +5617,7 @@
     "faction": "Anh Hùng",
     "roles": [
       "Choáng Diện Rộng",
-      "Miễn Nhiễm Ăn Mòn"
+      "Miễn Ăn Mòn"
     ],
     "duyen": "",
     "baseStats": {
@@ -5785,7 +5770,8 @@
     "id": "100006-ssrplus",
     "name": "Tù Nhân Du Hí",
     "roles": [
-      "Cường Hóa Hàng Sau, Kháng Liên Tục"
+      "Mê Hoặc Hàng Sau",
+      "Phản Kháng Liên Tục"
     ],
     "duyen": "",
     "baseStats": {
@@ -6026,7 +6012,6 @@
     "dacTinh": [
       "Sát Thương (Công)",
       "Buff",
-      "Hạt Nhân",
       "Hồi Phục",
       "Sát Thương (Máu)",
       "Tạo Khiên"
@@ -6044,9 +6029,9 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Ăn Mòn Chuyên Biệt",
-      "Vô Hiệu Truy Kích",
-      "Phản Sát Thương Chuyên Biệt"
+      "Spec",
+      "DMG Reflect",
+      "Kết Dính Ăn Mòn"
     ],
     "duyen": "",
     "baseStats": {
@@ -6178,8 +6163,8 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "roles": [
-      "Combo Chiến Thuật",
-      "Khống Chế Cột"
+      "Truy Kích Chiến Thuật",
+      "Khống Chế Cùng Cột"
     ],
     "duyen": "",
     "baseStats": {
@@ -6312,9 +6297,8 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Hồi Sinh Đồng Minh",
-      "Đột Phá",
-      "Miễn Nhiễm Câm Lặng"
+      "Tăng Cường Phòng Thủ",
+      "Hỗ Trợ Đồng Minh"
     ],
     "duyen": "",
     "baseStats": {
@@ -6451,8 +6435,8 @@
     "id": "100044-ssrplus",
     "name": "Hiệp Sĩ Cơ động",
     "roles": [
-      "Sát Thương (Công)",
-      "Tốc Độ"
+      "Hiệp Sĩ Lái Xe",
+      "Biến Hình Chiến Thuật"
     ],
     "duyen": "",
     "baseStats": {
@@ -6579,9 +6563,8 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "roles": [
-      "Đột Phá",
-      "Phản Sát Thương",
-      "Vô Hiệu Chia Sẻ Sát Thương"
+      "Đột Phá & Bất Khuất",
+      "Phản Sát Thương"
     ],
     "duyen": "",
     "baseStats": {
@@ -6711,9 +6694,9 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Ăn Mòn Chuyên Biệt",
-      "Đột Phá",
-      "Vô Hiệu Truy Kích"
+      "Spec",
+      "Ăn Mòn",
+      "Truy Kích Cùng Cột"
     ],
     "duyen": "",
     "baseStats": {
@@ -6843,7 +6826,6 @@
     },
     "dacTinh": [
       "Buff",
-      "Hạt Nhân",
       "Sát Thương (Máu)"
     ],
     "classLevel": "Demon",
@@ -6857,8 +6839,9 @@
     "type": "Vũ Trang",
     "faction": "Quái Nhân",
     "roles": [
-      "Đột Phá Toàn Diện",
-      "Thiêu Đốt Chuyên Biệt"
+      "Đột Phá Toàn Bộ",
+      "Spec",
+      "Thiêu Đốt"
     ],
     "duyen": "",
     "baseStats": {
@@ -6996,8 +6979,8 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Hỗ Trợ Tội Phạm",
-      "Gây Câm Lặng"
+      "Hỗ Trợ Quái Nhân",
+      "Câm Lặng Bổ Sung"
     ],
     "duyen": "",
     "baseStats": {
@@ -7128,7 +7111,6 @@
     "dacTinh": [
       "Sát Thương (Công)",
       "Buff",
-      "Hạt Nhân",
       "Hồi Phục",
       "Sát Thương (Máu)",
       "Hồi Sinh"
@@ -7140,7 +7122,8 @@
     "id": "100057-ssrplus",
     "name": "Thần Heo",
     "roles": [
-      "Hồi Phục"
+      "Ăn Mòn Chuyên Biệt",
+      "Thôn Phệ Tất Cả"
     ],
     "duyen": "",
     "baseStats": {
@@ -7264,10 +7247,8 @@
     "type": "Vũ Trang",
     "faction": "Anh Hùng",
     "roles": [
-      "Hỗ Trợ",
-      "Sát Thương (Máu)",
-      "Tạo Khiên",
-      "Tốc Độ"
+      "Tăng Tốc Chuyên Biệt",
+      "Phản Đòn"
     ],
     "duyen": "",
     "baseStats": {
@@ -7409,8 +7390,8 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Đột Phá",
-      "Chia Sẻ Sát Thương"
+      "Đột Phá Cùng Cột",
+      "Gánh Sát Thương"
     ],
     "duyen": "",
     "baseStats": {
@@ -7546,9 +7527,8 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Hồi Phục",
-      "Sát Thương (Máu)",
-      "Hồi Sinh"
+      "Đẩy Kẻ Địch Vẫn Trận",
+      "Hồi Sinh Đồng Minh"
     ],
     "duyen": "",
     "baseStats": {
@@ -7670,7 +7650,8 @@
     "faction": "Võ Thuật",
     "roles": [
       "Đột Phá Bất Khuất",
-      "Hộ Thể Chuyên Biệt"
+      "Spec",
+      "Guard"
     ],
     "duyen": "",
     "baseStats": {
@@ -7804,8 +7785,8 @@
     "type": "Vũ Trang",
     "faction": "Anh Hùng",
     "roles": [
-      "Giảm Bất Khuất Chuyên Biệt",
-      "Giảm HP Tối Đa"
+      "Trảm Sát",
+      "Miễn Sát Thương Tuyệt Kĩ"
     ],
     "duyen": "",
     "baseStats": {
@@ -7925,9 +7906,8 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "roles": [
-      "Sát Thương (Công)",
-      "Hỗ Trợ",
-      "Tạo Khiên"
+      "Né Sát Thương Tức Thời",
+      "Hỗ Trợ Truy Kích"
     ],
     "duyen": "",
     "baseStats": {
@@ -8068,8 +8048,9 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Hạt Nhân Bất Khuất Chuyên Biệt",
-      "Cuồng Bạo Chuyên Biệt"
+      "Spec",
+      "Berserk",
+      "Hạt Nhân Sinh Tồn"
     ],
     "duyen": "",
     "baseStats": {
@@ -8194,9 +8175,8 @@
     "type": "Tâm Linh",
     "faction": "Anh Hùng",
     "roles": [
-      "Giảm Năng Lượng",
-      "Tăng Tốc",
-      "Chia Sẻ Sát Thương"
+      "Khóa Năng Lượng",
+      "Xóa Bền Bỉ"
     ],
     "duyen": "",
     "baseStats": {
@@ -8324,8 +8304,9 @@
     "id": "100055-ssrplus",
     "name": "Boros",
     "roles": [
-      "Hỗ Trợ",
-      "Hồi Phục"
+      "Bỏ Qua Bất Khuất",
+      "Hấp Thụ Trị Liệu",
+      "Gánh Sát Thương"
     ],
     "duyen": "",
     "baseStats": {
@@ -8449,7 +8430,8 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Truy Kích Tuyệt Kĩ",
+      "Mất Kiểm Soát",
+      "Truy Kích",
       "Phản Sát Thương"
     ],
     "duyen": "",
@@ -8570,8 +8552,9 @@
     "type": "Công Nghệ",
     "faction": "Anh Hùng",
     "roles": [
-      "Tăng Chí Mạng Đồng Minh",
-      "Miễn Nhiễm Đốt/Lực Trường/Trọng Thương"
+      "Increase",
+      "Hỗ Trợ Robot",
+      "Truy Kích & Hồi Phục"
     ],
     "duyen": "",
     "baseStats": {
@@ -8674,7 +8657,6 @@
     "dacTinh": [
       "Sát Thương (Công)",
       "Buff",
-      "Hạt Nhân",
       "Debuff",
       "Tạo Khiên"
     ],
@@ -8692,9 +8674,9 @@
     "type": "Vũ Trang",
     "faction": "Anh Hùng",
     "roles": [
-      "Miễn Nhiễm Choáng",
-      "Truy Kích",
-      "Hồi Sinh"
+      "Miễn Choáng",
+      "Truy Kích Liền Tay",
+      "Tái Sinh Chuyên Biệt"
     ],
     "duyen": "",
     "baseStats": {
@@ -8828,9 +8810,9 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Sát Thương Tích Tụ",
-      "Xóa Tăng Công",
-      "Hồi Sinh và Kiên Cường"
+      "Sát Thương Tích Lực",
+      "Hạn Chế Tấn Công",
+      "Kiên Cường & Hồi Sinh"
     ],
     "duyen": "",
     "baseStats": {
@@ -8955,9 +8937,9 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "roles": [
-      "Tăng Tốc Toàn Đội",
-      "Kiên Cường",
-      "Giảm HP Tối Đa"
+      "Tăng Tốc Cùng Hàng",
+      "Kiên Cường Khổng Lồ",
+      "Truy Kích Liên Tiếp"
     ],
     "duyen": "",
     "baseStats": {
@@ -9031,8 +9013,7 @@
       "spd": 1
     },
     "dacTinh": [
-      "Buff",
-      "Hạt Nhân"
+      "Buff"
     ],
     "releaseDate": "01/06/2022",
     "classLevel": "A",
@@ -9048,8 +9029,9 @@
     "type": "Vũ Trang",
     "faction": "Anh Hùng",
     "roles": [
-      "Sụp Đổ",
-      "Truy Kích Vũ Trang"
+      "Phá Giáp Diện Rộng",
+      "Truy Kích Mạnh Vẽ",
+      "Hạt Nhân Đấu Sĩ"
     ],
     "duyen": "",
     "baseStats": {
@@ -9143,9 +9125,8 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "roles": [
-      "Sát Thương (Công)",
-      "Hỗ Trợ",
-      "Tạo Khiên"
+      "Nội Thương",
+      "Đỡ Đòn Đồng Minh"
     ],
     "duyen": "",
     "baseStats": {
@@ -9237,9 +9218,9 @@
     "type": "Giác Đấu",
     "faction": "Võ Thuật",
     "roles": [
-      "Hạt Nhân Kiên Cường",
-      "Tăng Nhanh Nhẹn",
-      "Giảm Trị Liệu"
+      "Hạn Chế Trị Liệu",
+      "Nhanh Nhẹn Nhiều Đồng Minh",
+      "Hạt Nhân Bền Bỉ"
     ],
     "duyen": "",
     "baseStats": {
@@ -9321,8 +9302,8 @@
     "id": "100055-ssr",
     "name": "Boros",
     "roles": [
-      "Hỗ Trợ",
-      "Hồi Phục"
+      "Sát Thương Đơn Thể",
+      "Bộc Phá Mạnh Nhất"
     ],
     "duyen": "",
     "baseStats": {
@@ -9405,7 +9386,8 @@
     "id": "100043-ssr",
     "name": "Hung Thần Kabuto",
     "roles": [
-      "Phản Sát Thương, Sát Thương Trọng Thương"
+      "Phản Sát Thương",
+      "Sát Thương Trọng Thương"
     ],
     "duyen": "",
     "baseStats": {
@@ -9772,7 +9754,7 @@
     "type": "Công Nghệ",
     "faction": "Anh Hùng",
     "roles": [
-      "Sát Thương Tích Tụ",
+      "Sát Thương Tích Lũy",
       "Tăng Sát Thương Duy Trì"
     ],
     "duyen": "",
@@ -9949,7 +9931,7 @@
     "faction": "Quái Nhân",
     "roles": [
       "Sụp Đổ",
-      "Sát Thương Tích Tụ"
+      "Sát Thương Tích Lũy"
     ],
     "duyen": "",
     "baseStats": {
@@ -10498,8 +10480,8 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Giảm ST Không Chí Mạng",
-      "Tăng Tỷ Lệ Khiên"
+      "Reduce Non-Crit DMG",
+      "Increase Shield Rate"
     ],
     "duyen": "",
     "baseStats": {
@@ -10853,7 +10835,7 @@
     "faction": "Anh Hùng",
     "roles": [
       "Hỗ Trợ",
-      "Hồi Phục",
+      "Heal",
       "Sát Thương (Máu)",
       "Tạo Khiên"
     ],
@@ -10943,7 +10925,7 @@
       "Sát Thương (Công)",
       "Hỗ Trợ",
       "Suy Yếu",
-      "Hồi Phục",
+      "Heal",
       "Tốc Độ"
     ],
     "duyen": "",
@@ -11033,7 +11015,7 @@
     "faction": "Quái Nhân",
     "roles": [
       "Chia Sẻ Sát Thương",
-      "Hồi Máu Đồng Minh"
+      "Heal Allies"
     ],
     "duyen": "",
     "baseStats": {
@@ -11207,7 +11189,7 @@
     "roles": [
       "Trọng Thương",
       "Thiêu Đốt",
-      "Tăng/Giảm Công"
+      "Increase/Reduce ATK"
     ],
     "duyen": "",
     "baseStats": {
@@ -11297,7 +11279,7 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Sát Thương Đơn Mục Tiêu",
+      "Sát Thương Đơn Thể",
       "Truy Kích"
     ],
     "duyen": "",
@@ -11468,7 +11450,7 @@
     "id": "100057-ssr",
     "name": "Thần Heo",
     "roles": [
-      "Hồi Phục"
+      "Heal"
     ],
     "duyen": "",
     "baseStats": {
@@ -11557,7 +11539,7 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "roles": [
-      "Giảm Công",
+      "Giảm ATK",
       "Sát Thương Lan"
     ],
     "duyen": "",
@@ -11728,8 +11710,8 @@
     "type": "Vũ Trang",
     "faction": "Tội Phạm",
     "roles": [
-      "Sát Thương Tích Tụ",
-      "Tăng Tốc Độ"
+      "Sát Thương Tích Lũy",
+      "Increase SPD"
     ],
     "duyen": "V2",
     "baseStats": {
@@ -11816,7 +11798,7 @@
     "faction": "Quái Nhân",
     "roles": [
       "Thiêu Đốt",
-      "Truy Kích Thiêu Đốt"
+      "Burn Follow-up"
     ],
     "duyen": "",
     "baseStats": {
@@ -11905,8 +11887,8 @@
     "type": "Giác Đấu",
     "faction": "Võ Thuật",
     "roles": [
-      "Sát Thương Tích Tụ",
-      "Giảm ST Không Chí Mạng"
+      "Sát Thương Tích Lũy",
+      "Reduce Non-Crit DMG"
     ],
     "duyen": "",
     "baseStats": {
@@ -12168,7 +12150,7 @@
     "faction": "Anh Hùng",
     "roles": [
       "Trọng Thương Diện Rộng",
-      "Giảm Công"
+      "Giảm ATK"
     ],
     "duyen": "",
     "baseStats": {
@@ -12530,7 +12512,7 @@
     "roles": [
       "Hỗ Trợ",
       "Suy Yếu",
-      "Hồi Phục",
+      "Heal",
       "Sát Thương (Máu)",
       "Hồi Sinh"
     ],
@@ -12622,7 +12604,7 @@
       "Sát Thương (Công)",
       "Hỗ Trợ",
       "Hạt Nhân",
-      "Hồi Phục",
+      "Heal",
       "Sát Thương (Máu)",
       "Tạo Khiên"
     ],
@@ -12877,7 +12859,7 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -13355,7 +13337,7 @@
     "roles": [
       "Sát Thương (Công)",
       "Hỗ Trợ",
-      "Hồi Phục",
+      "Heal",
       "Tạo Khiên"
     ],
     "duyen": "",
@@ -13552,7 +13534,7 @@
     "faction": "Anh Hùng",
     "roles": [
       "Sụp Đổ",
-      "Giảm Kháng Chí Mạng"
+      "Giảm Kháng Bạo"
     ],
     "duyen": "",
     "baseStats": {
@@ -13642,7 +13624,7 @@
       "Sát Thương (Công)",
       "Hỗ Trợ",
       "Hạt Nhân",
-      "Hồi Phục"
+      "Heal"
     ],
     "duyen": "",
     "baseStats": {
@@ -13735,7 +13717,7 @@
     "type": "Vũ Trang",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -13821,7 +13803,7 @@
     "faction": "Quái Nhân",
     "roles": [
       "Sát Thương (Công)",
-      "Hồi Phục",
+      "Heal",
       "Tốc Độ"
     ],
     "duyen": "",
@@ -14281,7 +14263,7 @@
     "type": "Giác Đấu",
     "faction": "Võ Thuật",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -14448,7 +14430,7 @@
     "type": "Tâm Linh",
     "faction": "Anh Hùng",
     "roles": [
-      "Kiên Cường Toàn Đội"
+      "Team Tenacity"
     ],
     "duyen": "",
     "baseStats": {
@@ -14693,7 +14675,7 @@
     "type": "Công Nghệ",
     "faction": "Anh Hùng",
     "roles": [
-      "Tăng Công"
+      "Tăng ATK"
     ],
     "duyen": "",
     "baseStats": {
@@ -14865,7 +14847,7 @@
     "faction": "Anh Hùng",
     "roles": [
       "Thiêu Đốt",
-      "Giảm Sát Thương Thêm"
+      "Giảm Sát Thương Bổ Sung"
     ],
     "duyen": "",
     "baseStats": {
@@ -15039,7 +15021,7 @@
     "roles": [
       "Sát Thương (Công)",
       "Hạt Nhân",
-      "Hồi Phục",
+      "Heal",
       "Sát Thương (Máu)",
       "Hồi Sinh"
     ],
@@ -15123,7 +15105,7 @@
     "roles": [
       "Sát Thương (Công)",
       "Hỗ Trợ",
-      "Hồi Phục"
+      "Heal"
     ],
     "duyen": "",
     "baseStats": {
@@ -15293,7 +15275,7 @@
     "type": "Vũ Trang",
     "faction": "Anh Hùng",
     "roles": [
-      "Hồi Máu"
+      "Heal"
     ],
     "duyen": "",
     "baseStats": {
@@ -15790,7 +15772,7 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -15864,7 +15846,7 @@
     "id": "100039-r",
     "name": "Cua Càng Bựa",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -15948,7 +15930,7 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -16026,7 +16008,7 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -16110,7 +16092,7 @@
     "type": "Vũ Trang",
     "faction": "Anh Hùng",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -16188,7 +16170,7 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -16267,7 +16249,7 @@
     "id": "100065-r",
     "name": "Chuột Chũi",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -16356,7 +16338,7 @@
     "type": "Công Nghệ",
     "faction": "Anh Hùng",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -16439,7 +16421,7 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -16518,7 +16500,7 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -16677,7 +16659,7 @@
     "type": "Giác Đấu",
     "faction": "Võ Thuật",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -16755,7 +16737,7 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -16833,7 +16815,7 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -16916,7 +16898,7 @@
     "type": "Vũ Trang",
     "faction": "Anh Hùng",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -16990,7 +16972,7 @@
     "id": "100036-r",
     "name": "Khỉ Hoang",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -17073,7 +17055,7 @@
     "type": "Công Nghệ",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -17157,7 +17139,7 @@
     "type": "Giác Đấu",
     "faction": "Anh Hùng",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -17231,7 +17213,7 @@
     "id": "100067-n",
     "name": "Charanko",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -17310,7 +17292,7 @@
     "id": "200007-n",
     "name": "Bản Sao",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -17393,7 +17375,7 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -17472,7 +17454,7 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -17551,7 +17533,7 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -17626,7 +17608,7 @@
     "id": "200008-n",
     "name": "Don Pacino",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -17709,7 +17691,7 @@
     "type": "Vũ Trang",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -17788,7 +17770,7 @@
     "type": "Vũ Trang",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -17867,7 +17849,7 @@
     "type": "Công Nghệ",
     "faction": "Khác",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -17941,7 +17923,7 @@
     "id": "200026-n",
     "name": "Côn Đồ",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -18020,7 +18002,7 @@
     "id": "200030-n",
     "name": "Binh Sĩ",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -18103,7 +18085,7 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -18182,7 +18164,7 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -18261,7 +18243,7 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -18340,7 +18322,7 @@
     "type": "Tâm Linh",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -18419,7 +18401,7 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {
@@ -18498,7 +18480,7 @@
     "type": "Giác Đấu",
     "faction": "Quái Nhân",
     "roles": [
-      "Đa Dụng"
+      "Linh Hoạt"
     ],
     "duyen": "",
     "baseStats": {

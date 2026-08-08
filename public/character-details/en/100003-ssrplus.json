@@ -6,9 +6,9 @@
   "type": "Grappler",
   "faction": "Monster",
   "roles": [
-    "Spec. Corrode",
-    "Breakthrough",
-    "Nullify Follow-up"
+    "Spec",
+    "Corrode",
+    "Column Combo"
   ],
   "duyen": "",
   "baseStats": {

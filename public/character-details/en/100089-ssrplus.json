@@ -6,8 +6,8 @@
   "type": "Grappler",
   "faction": "Monster",
   "roles": [
-    "Breakthrough",
-    "Share DMG"
+    "Column Breakthrough",
+    "Damage Taker"
   ],
   "duyen": "",
   "baseStats": {

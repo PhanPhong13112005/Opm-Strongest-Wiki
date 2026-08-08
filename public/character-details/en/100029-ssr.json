@@ -6,9 +6,9 @@
   "type": "Grappler",
   "faction": "Hero",
   "roles": [
-    "Team Speed Up",
-    "Tenacity",
-    "Reduce Max HP"
+    "Same-row acceleration",
+    "massive Tenacity",
+    "consecutive Follow-up"
   ],
   "duyen": "",
   "baseStats": {

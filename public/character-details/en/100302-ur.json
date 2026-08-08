@@ -6,7 +6,8 @@
   "type": "Grappler",
   "faction": "Monster",
   "roles": [
-    "Barrier"
+    "Focused Rage",
+    "Powerful Counterattack"
   ],
   "duyen": "",
   "baseStats": {

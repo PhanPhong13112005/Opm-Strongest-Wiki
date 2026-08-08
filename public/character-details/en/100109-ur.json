@@ -5,12 +5,8 @@
   "type": "Esper",
   "faction": "Monster",
   "roles": [
-    "DMG (ATK)",
-    "Support",
-    "Core",
-    "Heal",
-    "DMG (HP)",
-    "Revive"
+    "Extreme captain",
+    "HP Enhancement"
   ],
   "duyen": "",
   "baseStats": {

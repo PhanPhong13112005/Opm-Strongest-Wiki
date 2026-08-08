@@ -6,7 +6,8 @@
   "type": "Hi-Tech",
   "faction": "Hero",
   "roles": [
-    "Control"
+    "Offensive Breakthrough",
+    "Revenge Follow-Up"
   ],
   "duyen": "",
   "baseStats": {

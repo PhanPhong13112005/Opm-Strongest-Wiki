@@ -6,8 +6,9 @@
   "type": "Công Nghệ",
   "faction": "Anh Hùng",
   "roles": [
-    "Tăng Chí Mạng Đồng Minh",
-    "Miễn Nhiễm Đốt/Lực Trường/Trọng Thương"
+    "Increase",
+    "Hỗ Trợ Robot",
+    "Truy Kích & Hồi Phục"
   ],
   "duyen": "",
   "baseStats": {
@@ -110,7 +111,6 @@
   "dacTinh": [
     "Sát Thương (Công)",
     "Buff",
-    "Hạt Nhân",
     "Debuff",
     "Tạo Khiên"
   ],

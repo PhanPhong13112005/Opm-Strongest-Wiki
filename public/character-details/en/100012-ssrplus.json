@@ -7,8 +7,8 @@
   "faction": "Hero",
   "roles": [
     "Stun Immunity",
-    "Follow-up",
-    "Revive"
+    "Constant Follow-up",
+    "Specialized Reborn"
   ],
   "duyen": "",
   "baseStats": {

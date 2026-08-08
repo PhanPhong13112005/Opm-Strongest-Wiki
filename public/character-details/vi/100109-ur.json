@@ -5,12 +5,8 @@
   "type": "Tâm Linh",
   "faction": "Quái Nhân",
   "roles": [
-    "Sát Thương (Công)",
-    "Hỗ Trợ",
-    "Hạt Nhân",
-    "Hồi Phục",
-    "Sát Thương (Máu)",
-    "Hồi Sinh"
+    "Đội Trưởng Cực Hạn",
+    "Tăng Cường HP"
   ],
   "duyen": "",
   "baseStats": {
@@ -117,7 +113,6 @@
   "dacTinh": [
     "Sát Thương (Công)",
     "Buff",
-    "Hạt Nhân",
     "Hồi Phục",
     "Sát Thương (Máu)",
     "Hồi Sinh"

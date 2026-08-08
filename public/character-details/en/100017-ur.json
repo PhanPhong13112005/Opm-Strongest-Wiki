@@ -6,7 +6,8 @@
   "type": "Duelist",
   "faction": "Monster",
   "roles": [
-    "Main DPS (ATK)"
+    "King's Deterrence",
+    "Control removed"
   ],
   "duyen": "",
   "baseStats": {

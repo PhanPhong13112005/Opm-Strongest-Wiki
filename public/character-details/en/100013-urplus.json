@@ -6,8 +6,8 @@
   "type": "Duelist",
   "faction": "Hero",
   "roles": [
-    "AoE Blind",
-    "Immortal Vanguard"
+    "Blindness Control",
+    "Undying"
   ],
   "duyen": "Heavy Vanguard",
   "baseStats": {

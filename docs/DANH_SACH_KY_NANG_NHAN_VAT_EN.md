@@ -10,7 +10,7 @@
 ### Amai Mask
 - **ID:** `100029-urplus`
 - **Type:** Grappler | **Faction:** Hero
-- **Roles:** Univerval Support, HP Amplifiication
+- **Roles:** Universal Support, HP Amplification
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
@@ -161,7 +161,7 @@
 ### Boros
 - **ID:** `100184-urplus`
 - **Type:** Esper | **Faction:** Monster
-- **Roles:** Rebirth Recovery, Rape Combo
+- **Roles:** Rebirth Recovery, Rampage Combo
 
 | # | Skill Type | Name | Description |
 |---:|---|---|---|
@@ -419,7 +419,7 @@
 ### Atomic Samurai
 - **ID:** `100188-ur`
 - **Type:** Duelist | **Faction:** Hero
-- **Roles:** Specialized Shatter. Start of battle Supperssion
+- **Roles:** Specialized Shatter, Start of battle Suppression
 
 | # | Skill Type | Name | Description |
 |---:|---|---|---|
@@ -1007,7 +1007,7 @@
 ### Metal Bat
 - **ID:** `100185-ur`
 - **Type:** Duelist | **Faction:** Hero
-- **Roles:**Specializzed Extra and CRIT Aura
+- **Roles:** Specialized Extra and CRIT Aura
 
 | # | Skill Type | Name | Description |
 |---:|---|---|---|
@@ -1313,7 +1313,7 @@
 ### Zombieman
 - **ID:** `100013-ur`
 - **Type:** Duelist | **Faction:** Hero
-- **Roles:** Same Row Speed up, Specializzed Fear
+- **Roles:** Same Row Speed up, Specialized Fear
 
 | # | Skill Type | Name | Description |
 |---:|---|---|---|
@@ -2185,7 +2185,7 @@
 ### Boros
 - **ID:** `100055-ssr`
 - **Type:** Esper | **Faction:** Monster
-- **Roles:** Single-targer Attacker, Strongest Burst
+- **Roles:** Single-target Attacker, Strongest Burst
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|

@@ -5,11 +5,7 @@
   "type": "Duelist",
   "faction": "Outlaw",
   "roles": [
-    "DMG (ATK)",
-    "Support",
-    "Weaken",
-    "Generate Shield",
-    "Speed"
+    "Same row speed up in Rapid Divinity"
   ],
   "duyen": "V2",
   "baseStats": {

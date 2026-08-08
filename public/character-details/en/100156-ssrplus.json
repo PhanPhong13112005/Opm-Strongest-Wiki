@@ -6,8 +6,9 @@
   "type": "Grappler",
   "faction": "Monster",
   "roles": [
-    "Ultimate Follow-up",
-    "Reflect DMG"
+    "Out of Control",
+    "Follow-up",
+    "Damage Reflection"
   ],
   "duyen": "",
   "baseStats": {

@@ -6,9 +6,8 @@
   "type": "Grappler",
   "faction": "Hero",
   "roles": [
-    "Breakthrough",
-    "Reflect DMG",
-    "Nullify DMG Share"
+    "Breakthrough and Unyielding",
+    "DMG Reflecion"
   ],
   "duyen": "",
   "baseStats": {

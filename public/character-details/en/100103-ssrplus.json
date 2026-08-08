@@ -5,9 +5,8 @@
   "type": "Esper",
   "faction": "Monster",
   "roles": [
-    "Heal",
-    "DMG (HP)",
-    "Revive"
+    "Enemy off battle",
+    "ally reborn"
   ],
   "duyen": "",
   "baseStats": {
