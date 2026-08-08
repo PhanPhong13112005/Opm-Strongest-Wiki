@@ -1784,30 +1784,33 @@
 - **Roles:** AoE Stun, Corrosion Immunity
 
 | # | Skill Type | Name | Description |
-|---|---|---|---|
-| 1 | Basic | **Basic** | Direct DMG 30% ATK to the target. |
-| 2 | Ultimate | **Ultimate** | Applies [Mark] and [Counter] to all enemies, then deals Direct DMG 20% ATK per [Mark] (minimum 3) to all enemies. 30% chance to [Faint] the target's column for 2 rounds while [Round] < 6. |
-| 3 | Ultimate | **Ultra-Ultimate** | Applies [Mark] and [Counter] to all enemies, then deals Direct DMG 20% > 30% ATK per [Mark] (minimum 3) to all enemies. 30% chance to [Faint] the target's column > entire selected area for 2 > 6 rounds while [Round] < 6. |
-| 4 | Passive | **Passive** | At battle start, gain +20% HP. On entry and on revive, himself and surrounding allies become immune to [Corrode] and [Specialized Corrode] for 5 rounds. |
-| 5 | Passive | **Extreme Passive** | Immunity to [Corrode]/[Specialized Corrode] duration 5 rounds &gt; Permanent. |
-| 6 | Passive | **5★ Passive** | Immunity scope himself and surrounding allies &gt; all allies. |
-| 7 | Awakening | **Awaken 1 Passive** | At the start of the battle, grants 45% chance of [Evade] (Reduce Direct/Extra/Charge/Berserk DMG to 1 DMG). Removes [Combo Follow-up] from the whole enemy team, lasts the whole battle. |
-| 8 | Awakening | **Awaken 2 Passive** | Evade 45% > 60% Additional effect: After any character acts, for every enemy in [Specialized Stun], increases [Specialized Protection] of all allies by 100% Metal Knight ATK, 3 times per round. [Specialized Stun] is not affected by SSR+ Metal Bat, SSR+ Gouketsu and SSR+ Melzargard [Combo] from SSR+ Deep Sea King and [Ultimate Follow-up] from Cruel Tactic can inflict [Specialized Stun] |
+|---:|---|---|---|
+| 1 | Basic | **Basic** | Deals 120% ATK DMG to a single target with 4 consecutive strikes. |
+| 2 | Ultimate | **Ultimate** | Attacks all enemies with 5 consecutive strikes, dealing 300% ATK DMG. When attacking more than 3 enemies, each additional enemy increases the skill’s DMG by an additional 100% ATK. During the first 5 rounds, has a 100% chance to inflict [Specialized Stun] on the main target and enemies in the same row for 1 round. [Specialized Stun]: Prevents the affected unit from acting and permanently reduces its ATK by 30%. At most 4 characters can be affected by [Stun] or [Specialized Stun] at the same time. |
+| 3 | Ultra-Ultimate | **Ultra-Ultimate** | Attacks all enemies with 5 consecutive strikes, dealing 450% ATK DMG. When attacking more than 3 enemies, each additional enemy increases the skill’s DMG by an additional 150% ATK. During the first 5 rounds, has a 100% chance to inflict [Specialized Stun] on the main target and surrounding enemies for 1 round. [Specialized Stun]: Prevents the affected unit from acting and permanently reduces its ATK by 30%. At most 4 characters can be affected by [Stun] or [Specialized Stun] at the same time. |
+| 4 | Passive | **Passive** | At battle start, grants self and surrounding allies immunity to [Corrode] and [Specialized Corrode] for 5 rounds. |
+| 5 | Passive | **Extreme Passive** | At battle start, permanently grants self and surrounding allies immunity to [Corrode] and [Specialized Corrode]. |
+| 6 | Passive | **5★ Passive** | At battle start, permanently grants all allies immunity to [Corrode] and [Specialized Corrode]. |
+| 7 | Awakening | **Awaken 1 Passive** | At battle start, gains a 45% chance of [Evade]. Removes [Combo Follow-Up] from the entire enemy team for the whole battle. [Evade]: Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG. |
+| 8 | Awakening | **Awaken 2 Passive** | At battle start, gains a 60% chance of [Evade]. Removes [Combo Follow-Up] from the entire enemy team for the whole battle. After any character acts, for each enemy affected by [Specialized Stun], increases all allies’ [Specialized Protection] by an amount equal to 100% of Metal Knight’s ATK. Can trigger up to 3 times per round. [Evade]: Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG. |
 | 9 | Awakening | **Awaken 3 Passive** | • Restores 150 [Energy Gauge] (when attacking) |
 
 **Effect Glossary:**
 
 | Term | Description |
 |---|---|
-| [Spec. Protect] | PvP shields reduce or negate damage to allies. |
-| [Spec. Stun] | PvP tier of Stun — harder to resist or resolve. |
-| [Stun] | The stun-type control effect prevents the target from taking action during the duration. |
-| [Mark] | Mark a unit, unlocking a raid condition or bonus effect associated with the mark. |
-| [Round] | One turn in a match; Many effects are limited to the current number of turns (e.g. only effective when Round < 6). |
-| [Dodge] | The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration. |
-| [Counter] | A counter mark whose class number gradually increases the user's direct counter damage to marked enemies. |
-| [Smart Corrode DMG] | The enhanced Corrosion over Time damage variant has the ability to retarget itself, to which some units may be immune. |
-| [Corrode DMG] | Continuous corrosive damage over time gradually erodes Health, which can be blocked by zone immunity. |
+| [Specialized Stun] | Prevents the affected unit from acting and permanently reduces its ATK by 30%. At most 4 characters can be affected by [Stun] or [Specialized Stun] simultaneously. |
+| [Stun] | Prevents the affected unit from acting. Shares the 4-character simultaneous limit with [Specialized Stun]. |
+| [Corrode] | A Continuous DMG effect. Metal Knight can grant allies immunity to it. |
+| [Specialized Corrode] | A specialized Continuous DMG effect. Metal Knight can grant allies immunity to it. |
+| [Evade] | Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG. |
+| [Combo Follow-Up] | A coordinated Follow-Up effect. Metal Knight’s Awaken Passive removes this effect from the entire enemy team for the whole battle. |
+| [Specialized Protection] | A defensive effect increased by Metal Knight’s Awaken 2 Passive based on Metal Knight’s ATK. |
+
+### Additional Notes
+
+- [Specialized Stun] is not affected by the corresponding anti-control effects of SSR+ Metal Bat, SSR+ Gouketsu, and SSR+ Melzargard.
+- SSR+ Deep Sea King’s [Combo] and Cruel Tactic’s [Ultimate Follow-Up] can trigger Metal Knight’s [Specialized Stun].
 
 ---
 
