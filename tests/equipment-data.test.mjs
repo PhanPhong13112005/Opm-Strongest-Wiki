@@ -78,7 +78,10 @@ test('Gear upgrade materials and Red refinement milestones are complete', () => 
 })
 
 test('Gear simulator supports automatic full-set equip and explicit per-slot actions', () => {
-  assert.match(workbench, /v-model="selectedSetId" @change="equipFullSet"/)
+  assert.match(workbench, /class="set-picker-trigger"[^>]*@click="setPickerOpen = true"/)
+  assert.match(workbench, /const chooseFullSet = setId =>/)
+  assert.match(workbench, /selectedSetId\.value = setId[\s\S]*equipFullSet\(\)/)
+  assert.doesNotMatch(workbench, /class="desktop-set-select"/)
   assert.match(workbench, /const equipSetInSlot = \(index, setId\)/)
   assert.match(workbench, /const clearSlot = index =>/)
   assert.match(workbench, /class="gear-piece-main"[^>]*@click="activeSlot = index"/)

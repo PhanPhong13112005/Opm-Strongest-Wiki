@@ -1,0 +1,1458 @@
+{
+  "pages": [
+    {
+      "id": "TAR_1",
+      "nameEn": "Energy Refinement",
+      "nameVi": "Tinh Luyện Năng Lượng",
+      "nameZh": "能量精炼",
+      "theme": "blue",
+      "maxLevel": 15,
+      "slotCount": 4,
+      "lockMax": 4,
+      "accountLevelReq": 78,
+      "unlocksAtLevel": 11,
+      "unlocksPageId": "TAR_2",
+      "levels": [
+        {
+          "level": 1,
+          "expToNext": 20
+        },
+        {
+          "level": 2,
+          "expToNext": 40
+        },
+        {
+          "level": 3,
+          "expToNext": 80
+        },
+        {
+          "level": 4,
+          "expToNext": 150
+        },
+        {
+          "level": 5,
+          "expToNext": 280
+        },
+        {
+          "level": 6,
+          "expToNext": 750
+        },
+        {
+          "level": 7,
+          "expToNext": 1000
+        },
+        {
+          "level": 8,
+          "expToNext": 1500
+        },
+        {
+          "level": 9,
+          "expToNext": 1750
+        },
+        {
+          "level": 10,
+          "expToNext": 1000
+        },
+        {
+          "level": 11,
+          "expToNext": 1500
+        },
+        {
+          "level": 12,
+          "expToNext": 2000
+        },
+        {
+          "level": 13,
+          "expToNext": 2500
+        },
+        {
+          "level": 14,
+          "expToNext": 3000
+        },
+        {
+          "level": 15,
+          "expToNext": 0
+        }
+      ],
+      "lockTiers": [
+        {
+          "lockedCount": 0,
+          "expPerRoll": 1
+        },
+        {
+          "lockedCount": 1,
+          "expPerRoll": 2
+        },
+        {
+          "lockedCount": 2,
+          "expPerRoll": 3
+        },
+        {
+          "lockedCount": 3,
+          "expPerRoll": 5
+        },
+        {
+          "lockedCount": 4,
+          "expPerRoll": 8
+        }
+      ],
+      "slots": [
+        {
+          "slotIndex": 1,
+          "openAtLevel": 1
+        },
+        {
+          "slotIndex": 2,
+          "openAtLevel": 3
+        },
+        {
+          "slotIndex": 3,
+          "openAtLevel": 6
+        },
+        {
+          "slotIndex": 4,
+          "openAtLevel": 10
+        }
+      ],
+      "rollCost": 10,
+      "lockCosts": [
+        {
+          "scope": 1,
+          "amount": 1
+        },
+        {
+          "scope": 2,
+          "amount": 2
+        },
+        {
+          "scope": 3,
+          "amount": 3
+        },
+        {
+          "scope": 4,
+          "amount": 4
+        }
+      ],
+      "pool": [
+        {
+          "tier": "SSR",
+          "rank": 3,
+          "stats": [
+            {
+              "attr": "speed",
+              "nameEn": "SPD",
+              "nameVi": "Tốc Độ",
+              "descEn": "Decides action sequence in battle.",
+              "descVi": "Quyết định thứ tự hành động của các nhân vật trong mỗi lượt.",
+              "percent": false,
+              "cap": 50,
+              "glossaryHref": null,
+              "appear": 0.058823529411764705
+            }
+          ]
+        },
+        {
+          "tier": "SR",
+          "rank": 2,
+          "stats": [
+            {
+              "attr": "combatda",
+              "nameEn": "Specialized DEF",
+              "nameVi": "Phòng Thủ Chuyên Biệt",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.1,
+              "glossaryHref": null,
+              "appear": 0.058823529411764705
+            },
+            {
+              "attr": "armor",
+              "nameEn": "Shield",
+              "nameVi": "Giáp",
+              "descEn": "Amplifies YOUR DMG Reduction (减伤) and Specialized DEF (特防) effects. A mitigation multiplier — not the 护盾 shield buffer, not Armor HP.",
+              "descVi": "Khuếch đại hiệu quả Giảm Sát Thương (减伤) và Phòng Thủ Đặc Biệt (特防) của bạn. Là hệ số giảm sát thương — không phải lớp khiên 护盾, cũng không phải Armor HP.",
+              "percent": true,
+              "cap": 0.3,
+              "glossaryHref": "/damage#cg-armor",
+              "appear": 0.058823529411764705
+            },
+            {
+              "attr": "crit",
+              "nameEn": "Crit Rate",
+              "nameVi": "Tỉ Lệ Bạo Kích",
+              "descEn": "Increases the chance of a Crit attack. Direct DMG is greatly increased during a Crit attack.",
+              "descVi": "Tăng xác suất bạo kích, khi bạo kích sát thương trực tiếp gây ra sẽ tăng đáng kể.",
+              "percent": true,
+              "cap": 0.25,
+              "glossaryHref": "/damage#cg-crit",
+              "appear": 0.058823529411764705
+            },
+            {
+              "attr": "extrainstantmiss",
+              "nameEn": "Specialized Dodge",
+              "nameVi": "Né Chuyên Biệt",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.2,
+              "glossaryHref": null,
+              "appear": 0.058823529411764705
+            }
+          ]
+        },
+        {
+          "tier": "R",
+          "rank": 1,
+          "stats": [
+            {
+              "attr": "unblock",
+              "nameEn": "Crush Rate",
+              "nameVi": "Xuyên Đỡ",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.3,
+              "glossaryHref": "/damage#cg-crush",
+              "appear": 0.058823529411764705
+            },
+            {
+              "attr": "uncrit",
+              "nameEn": "Crit Res Rate",
+              "nameVi": "Kháng Bạo Kích",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.3,
+              "glossaryHref": "/damage#cg-crit-res",
+              "appear": 0.058823529411764705
+            },
+            {
+              "attr": "effecthit",
+              "nameEn": "Effect Hit",
+              "nameVi": "Hiệu Ứng Tấn Công",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.25,
+              "glossaryHref": "/damage#cg-effect-hit",
+              "appear": 0.058823529411764705
+            },
+            {
+              "attr": "effectdodge",
+              "nameEn": "Effect Resist",
+              "nameVi": "Kháng Hiệu Ứng",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.25,
+              "glossaryHref": "/damage#cg-effect-resist",
+              "appear": 0.058823529411764705
+            },
+            {
+              "attr": "attack",
+              "nameEn": "ATK",
+              "nameVi": "ATK",
+              "descEn": "The higher a character's ATK is, the more damage they inflict.",
+              "descVi": "Nhân vật có ATK càng cao thì gây ra càng nhiều sát thương cho kẻ địch.",
+              "percent": false,
+              "cap": 70000,
+              "glossaryHref": null,
+              "appear": 0.058823529411764705
+            },
+            {
+              "attr": "hp",
+              "nameEn": "HP",
+              "nameVi": "HP",
+              "descEn": "The higher a character's HP, the harder it'll be for them to die in battle.",
+              "descVi": "Nhân vật có HP càng cao thì càng khó bị đánh bại trong trận đấu.",
+              "percent": false,
+              "cap": 420000,
+              "glossaryHref": null,
+              "appear": 0.058823529411764705
+            },
+            {
+              "attr": "hurt",
+              "nameEn": "DMG Rate",
+              "nameVi": "Tăng Sát Thương",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.25,
+              "glossaryHref": "/damage#cg-dmg-rate",
+              "appear": 0.058823529411764705
+            },
+            {
+              "attr": "unhurt",
+              "nameEn": "DMG Free",
+              "nameVi": "Giảm Sát Thương",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.25,
+              "glossaryHref": "/damage#cg-dmg-free",
+              "appear": 0.058823529411764705
+            },
+            {
+              "attr": "attack_rate",
+              "nameEn": "ATK %",
+              "nameVi": "ATK %",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.3,
+              "glossaryHref": null,
+              "appear": 0.058823529411764705
+            },
+            {
+              "attr": "hp_rate",
+              "nameEn": "HP %",
+              "nameVi": "HP %",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.3,
+              "glossaryHref": null,
+              "appear": 0.058823529411764705
+            },
+            {
+              "attr": "skillhurt",
+              "nameEn": "Ultimate DMG Amplify",
+              "nameVi": "Tăng Sát Thương Tuyệt Kỹ",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.25,
+              "glossaryHref": null,
+              "appear": 0.058823529411764705
+            },
+            {
+              "attr": "skillunhurt",
+              "nameEn": "Ultimate DMG Reduction",
+              "nameVi": "Giảm Sát Thương Tuyệt Kỹ",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.25,
+              "glossaryHref": "/damage#cg-ultimate_dmg_reduction",
+              "appear": 0.058823529411764705
+            }
+          ]
+        }
+      ],
+      "quality": {
+        "unlock": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "5": 4,
+          "6": 6
+        },
+        "rates": {
+          "1": {
+            "1": 0.75,
+            "2": 0.15,
+            "3": 0.08,
+            "4": 0.02
+          },
+          "2": {
+            "1": 0.729,
+            "2": 0.16,
+            "3": 0.088,
+            "4": 0.023
+          },
+          "3": {
+            "1": 0.708,
+            "2": 0.17,
+            "3": 0.096,
+            "4": 0.026
+          },
+          "4": {
+            "1": 0.677,
+            "2": 0.18,
+            "3": 0.104,
+            "4": 0.029,
+            "5": 0.01
+          },
+          "5": {
+            "1": 0.655,
+            "2": 0.19,
+            "3": 0.112,
+            "4": 0.032,
+            "5": 0.011
+          },
+          "6": {
+            "1": 0.631,
+            "2": 0.2,
+            "3": 0.12,
+            "4": 0.035,
+            "5": 0.012,
+            "6": 0.002
+          },
+          "7": {
+            "1": 0.6085,
+            "2": 0.21,
+            "3": 0.128,
+            "4": 0.038,
+            "5": 0.013,
+            "6": 0.0025
+          },
+          "8": {
+            "1": 0.586,
+            "2": 0.22,
+            "3": 0.136,
+            "4": 0.041,
+            "5": 0.014,
+            "6": 0.003
+          },
+          "9": {
+            "1": 0.5635,
+            "2": 0.23,
+            "3": 0.144,
+            "4": 0.044,
+            "5": 0.015,
+            "6": 0.0035
+          },
+          "10": {
+            "1": 0.533,
+            "2": 0.25,
+            "3": 0.15,
+            "4": 0.047,
+            "5": 0.016,
+            "6": 0.004
+          },
+          "11": {
+            "1": 0.508,
+            "2": 0.26,
+            "3": 0.16,
+            "4": 0.05,
+            "5": 0.018,
+            "6": 0.004
+          },
+          "12": {
+            "1": 0.482,
+            "2": 0.27,
+            "3": 0.17,
+            "4": 0.054,
+            "5": 0.02,
+            "6": 0.004
+          },
+          "13": {
+            "1": 0.462,
+            "2": 0.28,
+            "3": 0.18,
+            "4": 0.054,
+            "5": 0.02,
+            "6": 0.004
+          },
+          "14": {
+            "1": 0.442,
+            "2": 0.29,
+            "3": 0.19,
+            "4": 0.054,
+            "5": 0.02,
+            "6": 0.004
+          },
+          "15": {
+            "1": 0.422,
+            "2": 0.3,
+            "3": 0.2,
+            "4": 0.054,
+            "5": 0.02,
+            "6": 0.004
+          }
+        },
+        "maxLevel": 15
+      },
+      "pityByLevel": {
+        "1": [
+          {
+            "quality": 4,
+            "rolls": 300
+          }
+        ],
+        "2": [
+          {
+            "quality": 4,
+            "rolls": 215
+          }
+        ],
+        "3": [
+          {
+            "quality": 4,
+            "rolls": 167
+          }
+        ],
+        "4": [
+          {
+            "quality": 4,
+            "rolls": 137
+          },
+          {
+            "quality": 5,
+            "rolls": 1000
+          }
+        ],
+        "5": [
+          {
+            "quality": 4,
+            "rolls": 116
+          },
+          {
+            "quality": 5,
+            "rolls": 850
+          }
+        ],
+        "6": [
+          {
+            "quality": 4,
+            "rolls": 100
+          },
+          {
+            "quality": 5,
+            "rolls": 780
+          },
+          {
+            "quality": 6,
+            "rolls": 1395
+          }
+        ],
+        "7": [
+          {
+            "quality": 4,
+            "rolls": 89
+          },
+          {
+            "quality": 5,
+            "rolls": 400
+          },
+          {
+            "quality": 6,
+            "rolls": 1275
+          }
+        ],
+        "8": [
+          {
+            "quality": 4,
+            "rolls": 79
+          },
+          {
+            "quality": 5,
+            "rolls": 250
+          },
+          {
+            "quality": 6,
+            "rolls": 1195
+          }
+        ],
+        "9": [
+          {
+            "quality": 4,
+            "rolls": 72
+          },
+          {
+            "quality": 5,
+            "rolls": 215
+          },
+          {
+            "quality": 6,
+            "rolls": 340
+          }
+        ],
+        "10": [
+          {
+            "quality": 4,
+            "rolls": 66
+          },
+          {
+            "quality": 5,
+            "rolls": 188
+          },
+          {
+            "quality": 6,
+            "rolls": 300
+          }
+        ],
+        "11": [
+          {
+            "quality": 4,
+            "rolls": 60
+          },
+          {
+            "quality": 5,
+            "rolls": 167
+          },
+          {
+            "quality": 6,
+            "rolls": 1050
+          }
+        ],
+        "12": [
+          {
+            "quality": 4,
+            "rolls": 56
+          },
+          {
+            "quality": 5,
+            "rolls": 150
+          },
+          {
+            "quality": 6,
+            "rolls": 3950
+          }
+        ],
+        "13": [
+          {
+            "quality": 4,
+            "rolls": 56
+          },
+          {
+            "quality": 5,
+            "rolls": 150
+          },
+          {
+            "quality": 6,
+            "rolls": 3550
+          }
+        ],
+        "14": [
+          {
+            "quality": 4,
+            "rolls": 56
+          },
+          {
+            "quality": 5,
+            "rolls": 150
+          },
+          {
+            "quality": 6,
+            "rolls": 3050
+          }
+        ],
+        "15": [
+          {
+            "quality": 4,
+            "rolls": 56
+          },
+          {
+            "quality": 5,
+            "rolls": 150
+          },
+          {
+            "quality": 6,
+            "rolls": 2950
+          }
+        ]
+      }
+    },
+    {
+      "id": "TAR_2",
+      "nameEn": "Module Refinement",
+      "nameVi": "Tinh Luyện Mô-đun",
+      "nameZh": "模块精炼",
+      "theme": "purple",
+      "maxLevel": 20,
+      "slotCount": 5,
+      "lockMax": 5,
+      "accountLevelReq": 78,
+      "unlocksAtLevel": null,
+      "unlocksPageId": null,
+      "levels": [
+        {
+          "level": 1,
+          "expToNext": 550
+        },
+        {
+          "level": 2,
+          "expToNext": 600
+        },
+        {
+          "level": 3,
+          "expToNext": 800
+        },
+        {
+          "level": 4,
+          "expToNext": 1200
+        },
+        {
+          "level": 5,
+          "expToNext": 1500
+        },
+        {
+          "level": 6,
+          "expToNext": 1500
+        },
+        {
+          "level": 7,
+          "expToNext": 1500
+        },
+        {
+          "level": 8,
+          "expToNext": 1500
+        },
+        {
+          "level": 9,
+          "expToNext": 1500
+        },
+        {
+          "level": 10,
+          "expToNext": 1500
+        },
+        {
+          "level": 11,
+          "expToNext": 2000
+        },
+        {
+          "level": 12,
+          "expToNext": 2500
+        },
+        {
+          "level": 13,
+          "expToNext": 3000
+        },
+        {
+          "level": 14,
+          "expToNext": 4000
+        },
+        {
+          "level": 15,
+          "expToNext": 3000
+        },
+        {
+          "level": 16,
+          "expToNext": 3000
+        },
+        {
+          "level": 17,
+          "expToNext": 3000
+        },
+        {
+          "level": 18,
+          "expToNext": 3000
+        },
+        {
+          "level": 19,
+          "expToNext": 3000
+        },
+        {
+          "level": 20,
+          "expToNext": 0
+        }
+      ],
+      "lockTiers": [
+        {
+          "lockedCount": 0,
+          "expPerRoll": 1
+        },
+        {
+          "lockedCount": 1,
+          "expPerRoll": 2
+        },
+        {
+          "lockedCount": 2,
+          "expPerRoll": 3
+        },
+        {
+          "lockedCount": 3,
+          "expPerRoll": 5
+        },
+        {
+          "lockedCount": 4,
+          "expPerRoll": 8
+        },
+        {
+          "lockedCount": 5,
+          "expPerRoll": 10
+        }
+      ],
+      "slots": [
+        {
+          "slotIndex": 1,
+          "openAtLevel": 1
+        },
+        {
+          "slotIndex": 2,
+          "openAtLevel": 3
+        },
+        {
+          "slotIndex": 3,
+          "openAtLevel": 6
+        },
+        {
+          "slotIndex": 4,
+          "openAtLevel": 10
+        },
+        {
+          "slotIndex": 5,
+          "openAtLevel": 15
+        }
+      ],
+      "rollCost": 10,
+      "lockCosts": [
+        {
+          "scope": 1,
+          "amount": 1
+        },
+        {
+          "scope": 2,
+          "amount": 2
+        },
+        {
+          "scope": 3,
+          "amount": 3
+        },
+        {
+          "scope": 4,
+          "amount": 4
+        },
+        {
+          "scope": 5,
+          "amount": 5
+        }
+      ],
+      "pool": [
+        {
+          "tier": "SSR",
+          "rank": 3,
+          "stats": [
+            {
+              "attr": "speed_rate",
+              "nameEn": "SPD %",
+              "nameVi": "Tốc Độ %",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.1,
+              "glossaryHref": null,
+              "appear": 0.05555555555555555
+            }
+          ]
+        },
+        {
+          "tier": "SR",
+          "rank": 2,
+          "stats": [
+            {
+              "attr": "combatoa",
+              "nameEn": "Specialized ATK",
+              "nameVi": "Tấn Công Chuyên Biệt",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.1,
+              "glossaryHref": null,
+              "appear": 0.05555555555555555
+            },
+            {
+              "attr": "pierce",
+              "nameEn": "Pierce (Armor Break)",
+              "nameVi": "Xuyên Giáp",
+              "descEn": "Ignores the target's DMG Reduction (减伤) and Specialized DEF (特防) effects — the direct counter to Armor. Not Red. DEF, which ignores flat Defense.",
+              "descVi": "Bỏ qua hiệu quả Giảm Sát Thương (减伤) và Phòng Thủ Đặc Biệt (特防) của mục tiêu — khắc trực tiếp Armor. Không phải Xuyên Thủ (Red DEF) vốn bỏ qua Phòng Thủ phẳng.",
+              "percent": true,
+              "cap": 0.3,
+              "glossaryHref": "/damage#cg-armor_break",
+              "appear": 0.05555555555555555
+            },
+            {
+              "attr": "block",
+              "nameEn": "Block Rate",
+              "nameVi": "Tỉ Lệ Chặn Đỡ",
+              "descEn": "Increases the chance of blocking. Direct DMG is greatly reduced when you block an attack.",
+              "descVi": "Tăng xác suất chặn đỡ đòn tấn công, khi chặn thành công sát thương trực tiếp nhận vào sẽ giảm đáng kể.",
+              "percent": true,
+              "cap": 0.25,
+              "glossaryHref": "/damage#cg-block",
+              "appear": 0.05555555555555555
+            },
+            {
+              "attr": "extrainstanthit",
+              "nameEn": "Specialized Hit",
+              "nameVi": "Chính Xác Chuyên Biệt",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.3,
+              "glossaryHref": null,
+              "appear": 0.05555555555555555
+            },
+            {
+              "attr": "critunhurt",
+              "nameEn": "Non-Crit DMG Reduction",
+              "nameVi": "Miễn Sát Thương Không Chí Mạng",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.2,
+              "glossaryHref": "/damage#cg-non-crit-dmg-free",
+              "appear": 0.05555555555555555
+            }
+          ]
+        },
+        {
+          "tier": "R",
+          "rank": 1,
+          "stats": [
+            {
+              "attr": "skillunhurt",
+              "nameEn": "Ultimate DMG Reduction",
+              "nameVi": "Giảm Sát Thương Tuyệt Kỹ",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.35,
+              "glossaryHref": "/damage#cg-ultimate_dmg_reduction",
+              "appear": 0.05555555555555555
+            },
+            {
+              "attr": "unblock",
+              "nameEn": "Crush Rate",
+              "nameVi": "Xuyên Đỡ",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.4,
+              "glossaryHref": "/damage#cg-crush",
+              "appear": 0.05555555555555555
+            },
+            {
+              "attr": "uncrit",
+              "nameEn": "Crit Res Rate",
+              "nameVi": "Kháng Bạo Kích",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.4,
+              "glossaryHref": "/damage#cg-crit-res",
+              "appear": 0.05555555555555555
+            },
+            {
+              "attr": "effecthit",
+              "nameEn": "Effect Hit",
+              "nameVi": "Hiệu Ứng Tấn Công",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.35,
+              "glossaryHref": "/damage#cg-effect-hit",
+              "appear": 0.05555555555555555
+            },
+            {
+              "attr": "effectdodge",
+              "nameEn": "Effect Resist",
+              "nameVi": "Kháng Hiệu Ứng",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.35,
+              "glossaryHref": "/damage#cg-effect-resist",
+              "appear": 0.05555555555555555
+            },
+            {
+              "attr": "attack",
+              "nameEn": "ATK",
+              "nameVi": "ATK",
+              "descEn": "The higher a character's ATK is, the more damage they inflict.",
+              "descVi": "Nhân vật có ATK càng cao thì gây ra càng nhiều sát thương cho kẻ địch.",
+              "percent": false,
+              "cap": 100000,
+              "glossaryHref": null,
+              "appear": 0.05555555555555555
+            },
+            {
+              "attr": "hp",
+              "nameEn": "HP",
+              "nameVi": "HP",
+              "descEn": "The higher a character's HP, the harder it'll be for them to die in battle.",
+              "descVi": "Nhân vật có HP càng cao thì càng khó bị đánh bại trong trận đấu.",
+              "percent": false,
+              "cap": 600000,
+              "glossaryHref": null,
+              "appear": 0.05555555555555555
+            },
+            {
+              "attr": "hurt",
+              "nameEn": "DMG Rate",
+              "nameVi": "Tăng Sát Thương",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.35,
+              "glossaryHref": "/damage#cg-dmg-rate",
+              "appear": 0.05555555555555555
+            },
+            {
+              "attr": "unhurt",
+              "nameEn": "DMG Free",
+              "nameVi": "Giảm Sát Thương",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.35,
+              "glossaryHref": "/damage#cg-dmg-free",
+              "appear": 0.05555555555555555
+            },
+            {
+              "attr": "attack_rate",
+              "nameEn": "ATK %",
+              "nameVi": "ATK %",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.4,
+              "glossaryHref": null,
+              "appear": 0.05555555555555555
+            },
+            {
+              "attr": "hp_rate",
+              "nameEn": "HP %",
+              "nameVi": "HP %",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.4,
+              "glossaryHref": null,
+              "appear": 0.05555555555555555
+            },
+            {
+              "attr": "skillhurt",
+              "nameEn": "Ultimate DMG Amplify",
+              "nameVi": "Tăng Sát Thương Tuyệt Kỹ",
+              "descEn": "",
+              "descVi": "",
+              "percent": true,
+              "cap": 0.35,
+              "glossaryHref": null,
+              "appear": 0.05555555555555555
+            }
+          ]
+        }
+      ],
+      "quality": {
+        "unlock": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "5": 3,
+          "6": 6
+        },
+        "rates": {
+          "1": {
+            "1": 0.79,
+            "2": 0.15,
+            "3": 0.05,
+            "4": 0.01
+          },
+          "2": {
+            "1": 0.766,
+            "2": 0.16,
+            "3": 0.06,
+            "4": 0.014
+          },
+          "3": {
+            "1": 0.738,
+            "2": 0.17,
+            "3": 0.07,
+            "4": 0.018,
+            "5": 0.004
+          },
+          "4": {
+            "1": 0.713,
+            "2": 0.18,
+            "3": 0.08,
+            "4": 0.022,
+            "5": 0.005
+          },
+          "5": {
+            "1": 0.688,
+            "2": 0.19,
+            "3": 0.09,
+            "4": 0.026,
+            "5": 0.006
+          },
+          "6": {
+            "1": 0.661,
+            "2": 0.2,
+            "3": 0.1,
+            "4": 0.03,
+            "5": 0.007,
+            "6": 0.002
+          },
+          "7": {
+            "1": 0.636,
+            "2": 0.21,
+            "3": 0.11,
+            "4": 0.034,
+            "5": 0.008,
+            "6": 0.002
+          },
+          "8": {
+            "1": 0.611,
+            "2": 0.22,
+            "3": 0.12,
+            "4": 0.038,
+            "5": 0.009,
+            "6": 0.002
+          },
+          "9": {
+            "1": 0.586,
+            "2": 0.23,
+            "3": 0.13,
+            "4": 0.042,
+            "5": 0.01,
+            "6": 0.002
+          },
+          "10": {
+            "1": 0.5605,
+            "2": 0.24,
+            "3": 0.14,
+            "4": 0.046,
+            "5": 0.011,
+            "6": 0.0025
+          },
+          "11": {
+            "1": 0.5355,
+            "2": 0.25,
+            "3": 0.15,
+            "4": 0.05,
+            "5": 0.012,
+            "6": 0.0025
+          },
+          "12": {
+            "1": 0.5105,
+            "2": 0.26,
+            "3": 0.16,
+            "4": 0.054,
+            "5": 0.013,
+            "6": 0.0025
+          },
+          "13": {
+            "1": 0.4855,
+            "2": 0.27,
+            "3": 0.17,
+            "4": 0.058,
+            "5": 0.014,
+            "6": 0.0025
+          },
+          "14": {
+            "1": 0.4605,
+            "2": 0.28,
+            "3": 0.18,
+            "4": 0.062,
+            "5": 0.015,
+            "6": 0.0025
+          },
+          "15": {
+            "1": 0.435,
+            "2": 0.29,
+            "3": 0.19,
+            "4": 0.066,
+            "5": 0.016,
+            "6": 0.003
+          },
+          "16": {
+            "1": 0.41,
+            "2": 0.3,
+            "3": 0.2,
+            "4": 0.07,
+            "5": 0.017,
+            "6": 0.003
+          },
+          "17": {
+            "1": 0.39,
+            "2": 0.31,
+            "3": 0.21,
+            "4": 0.07,
+            "5": 0.017,
+            "6": 0.003
+          },
+          "18": {
+            "1": 0.37,
+            "2": 0.32,
+            "3": 0.22,
+            "4": 0.07,
+            "5": 0.017,
+            "6": 0.003
+          },
+          "19": {
+            "1": 0.35,
+            "2": 0.33,
+            "3": 0.23,
+            "4": 0.07,
+            "5": 0.017,
+            "6": 0.003
+          },
+          "20": {
+            "1": 0.33,
+            "2": 0.34,
+            "3": 0.24,
+            "4": 0.07,
+            "5": 0.017,
+            "6": 0.003
+          }
+        },
+        "maxLevel": 20
+      },
+      "pityByLevel": {
+        "1": [
+          {
+            "quality": 4,
+            "rolls": 300
+          }
+        ],
+        "2": [
+          {
+            "quality": 4,
+            "rolls": 215
+          }
+        ],
+        "3": [
+          {
+            "quality": 4,
+            "rolls": 167
+          }
+        ],
+        "4": [
+          {
+            "quality": 4,
+            "rolls": 137
+          },
+          {
+            "quality": 5,
+            "rolls": 950
+          }
+        ],
+        "5": [
+          {
+            "quality": 4,
+            "rolls": 116
+          },
+          {
+            "quality": 5,
+            "rolls": 850
+          }
+        ],
+        "6": [
+          {
+            "quality": 4,
+            "rolls": 100
+          },
+          {
+            "quality": 5,
+            "rolls": 780
+          },
+          {
+            "quality": 6,
+            "rolls": 956
+          }
+        ],
+        "7": [
+          {
+            "quality": 4,
+            "rolls": 89
+          },
+          {
+            "quality": 5,
+            "rolls": 375
+          },
+          {
+            "quality": 6,
+            "rolls": 956
+          }
+        ],
+        "8": [
+          {
+            "quality": 4,
+            "rolls": 79
+          },
+          {
+            "quality": 5,
+            "rolls": 334
+          },
+          {
+            "quality": 6,
+            "rolls": 956
+          }
+        ],
+        "9": [
+          {
+            "quality": 4,
+            "rolls": 72
+          },
+          {
+            "quality": 5,
+            "rolls": 300
+          },
+          {
+            "quality": 6,
+            "rolls": 556
+          }
+        ],
+        "10": [
+          {
+            "quality": 4,
+            "rolls": 66
+          },
+          {
+            "quality": 5,
+            "rolls": 273
+          },
+          {
+            "quality": 6,
+            "rolls": 445
+          }
+        ],
+        "11": [
+          {
+            "quality": 4,
+            "rolls": 60
+          },
+          {
+            "quality": 5,
+            "rolls": 250
+          },
+          {
+            "quality": 6,
+            "rolls": 445
+          }
+        ],
+        "12": [
+          {
+            "quality": 4,
+            "rolls": 56
+          },
+          {
+            "quality": 5,
+            "rolls": 231
+          },
+          {
+            "quality": 6,
+            "rolls": 445
+          }
+        ],
+        "13": [
+          {
+            "quality": 4,
+            "rolls": 52
+          },
+          {
+            "quality": 5,
+            "rolls": 215
+          },
+          {
+            "quality": 6,
+            "rolls": 445
+          }
+        ],
+        "14": [
+          {
+            "quality": 4,
+            "rolls": 49
+          },
+          {
+            "quality": 5,
+            "rolls": 200
+          },
+          {
+            "quality": 6,
+            "rolls": 445
+          }
+        ],
+        "15": [
+          {
+            "quality": 4,
+            "rolls": 46
+          },
+          {
+            "quality": 5,
+            "rolls": 188
+          },
+          {
+            "quality": 6,
+            "rolls": 371
+          }
+        ],
+        "16": [
+          {
+            "quality": 4,
+            "rolls": 43
+          },
+          {
+            "quality": 5,
+            "rolls": 177
+          },
+          {
+            "quality": 6,
+            "rolls": 1450
+          }
+        ],
+        "17": [
+          {
+            "quality": 4,
+            "rolls": 43
+          },
+          {
+            "quality": 5,
+            "rolls": 177
+          },
+          {
+            "quality": 6,
+            "rolls": 2252
+          }
+        ],
+        "18": [
+          {
+            "quality": 4,
+            "rolls": 43
+          },
+          {
+            "quality": 5,
+            "rolls": 177
+          },
+          {
+            "quality": 6,
+            "rolls": 3700
+          }
+        ],
+        "19": [
+          {
+            "quality": 4,
+            "rolls": 43
+          },
+          {
+            "quality": 5,
+            "rolls": 177
+          },
+          {
+            "quality": 6,
+            "rolls": 2950
+          }
+        ],
+        "20": [
+          {
+            "quality": 4,
+            "rolls": 43
+          },
+          {
+            "quality": 5,
+            "rolls": 177
+          },
+          {
+            "quality": 6,
+            "rolls": 4200
+          }
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "pageCard": {
+      "TAR_1": "/Core%20Refinement/pic_jl_bar_01.webp",
+      "TAR_2": "/Core%20Refinement/pic_jl_bar_02.webp"
+    },
+    "chip": "/Core%20Refinement/Item_219114.webp",
+    "lockComponent": "/Core%20Refinement/Item_219115.webp"
+  }
+}

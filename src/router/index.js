@@ -11,6 +11,7 @@ const MasteryView = () => import('../views/MasteryView.vue')
 const GearCatalogView = () => import('../views/GearCatalogView.vue')
 const BuffGearView = () => import('../views/BuffGearView.vue')
 const CoreLabView = () => import('../views/CoreLabView.vue')
+const CoreRefinementView = () => import('../views/CoreRefinementView.vue')
 const EquipmentView = () => import('../views/EquipmentView.vue')
 const EventsView = () => import('../views/EventsView.vue')
 const EventDetailView = () => import('../views/EventDetailView.vue')
@@ -86,6 +87,11 @@ const router = createRouter({
       path: '/core-lab',
       name: 'core-lab',
       component: CoreLabView
+    },
+    {
+      path: '/core-refinement',
+      name: 'core-refinement',
+      component: CoreRefinementView
     },
     {
       path: '/equipment',

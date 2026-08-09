@@ -58,7 +58,7 @@ test('Gear and Buff Gear expose independent routes, menu links, and catalogs', (
   assert.equal(vi.nav.features, 'Tính Năng')
   assert.equal(en.nav.systems, 'Systems')
   assert.equal(en.nav.features, 'Features')
-  assert.ok(appSource.includes("const featureRoutes = ['/mastery', '/core-lab', '/medals', '/tactics', '/talents']"))
+  assert.ok(appSource.includes("const featureRoutes = ['/mastery', '/core-lab', '/core-refinement', '/medals', '/tactics', '/talents']"))
   assert.ok(appSource.includes("const systemRoutes = ['/equipment', '/buff-gear', '/stats', '/backgear', '/keepsakes', '/insignias']"))
   assert.equal((appSource.match(/to="\/gear"/g) || []).length, 0)
   assert.ok(equipmentView.includes('GearCatalogWorkbench'))
