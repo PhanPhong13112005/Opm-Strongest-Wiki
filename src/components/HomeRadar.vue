@@ -37,8 +37,13 @@ const getTierAccent = (item) => {
   const character = item ? props.getCharacter(item.id) : {}
   const tier = String(item?.overrideTier || character.tier || '').toUpperCase()
 
-  if (tier === 'UR+') return '#ff3366'
-  return '#ffffff'
+  if (tier.includes('UR+')) return '#ff3366'
+  if (tier.includes('UR')) return '#ff4d4d'
+  if (tier.includes('SSR+')) return '#ffb300'
+  if (tier.includes('SSR')) return '#f59e0b'
+  if (tier.includes('SR')) return '#a855f7'
+  if (tier.includes('R')) return '#3b82f6'
+  return '#94a3b8'
 }
 const getFactionAccent = (item) => {
   const character = item ? props.getCharacter(item.id) : {}
