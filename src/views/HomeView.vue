@@ -504,7 +504,7 @@ const servers = computed(() => {
             <img 
               :src="getCharacterImage(item.bannerImage || getChar(item.id).imageURL)" 
               :alt="getChar(item.id).name" 
-              class="absolute right-0 bottom-0 h-[105%] w-[65%] object-contain object-right-bottom z-0 group-hover:scale-[1.03] transition-transform duration-700 transform translate-x-2 translate-y-1" 
+              class="absolute right-0 bottom-0 h-[105%] w-[65%] object-contain object-right-bottom z-0 group-hover:scale-[1.03] transition-transform duration-700 transform animate-[heroFloat_3.6s_ease-in-out_infinite]" 
               style="-webkit-mask-image: linear-gradient(to left, black 70%, transparent);"
               onerror="this.style.display='none'" 
             />
