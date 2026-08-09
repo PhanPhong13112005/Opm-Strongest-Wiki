@@ -55,7 +55,7 @@ const roleMenuItem = computed(() => {
   return { to: '/forum', label: 'Vào Diễn đàn', hint: 'Trao đổi cùng cộng đồng', code: 'DD' }
 })
 const systemRoutes = ['/equipment', '/buff-gear', '/stats', '/backgear', '/keepsakes', '/insignias']
-const featureRoutes = ['/mastery', '/core-lab', '/medals', '/tactics', '/talents']
+const featureRoutes = ['/mastery', '/core-lab', '/core-refinement', '/medals', '/tactics', '/talents']
 const isSystemsRoute = computed(() => systemRoutes.some(path => route.path.startsWith(path)))
 const isFeaturesRoute = computed(() => featureRoutes.some(path => route.path.startsWith(path)))
 const toggleMobileMenu = () => {
@@ -175,6 +175,7 @@ onBeforeUnmount(() => {
             <div class="site-nav-menu">
               <RouterLink to="/mastery">{{ t('nav.mastery') }}</RouterLink>
               <RouterLink to="/core-lab">{{ t('nav.corelab') }}</RouterLink>
+              <RouterLink to="/core-refinement">{{ t('nav.coreRefinement') }}</RouterLink>
               <RouterLink to="/medals">{{ t('nav.medals') }}</RouterLink>
               <RouterLink to="/tactics">{{ t('nav.tactics') }}</RouterLink>
               <RouterLink to="/talents">{{ t('nav.talents') }}</RouterLink>
@@ -262,13 +263,14 @@ onBeforeUnmount(() => {
           <section class="mobile-command-menu__section">
             <button type="button" class="mobile-command-menu__toggle" :class="{ 'is-active': isFeaturesRoute }" :aria-expanded="isMobileFeaturesOpen" @click="isMobileFeaturesOpen = !isMobileFeaturesOpen">
               <span>{{ t('nav.features') }}</span>
-              <small>05</small>
+              <small>06</small>
               <svg :class="{ 'is-open': isMobileFeaturesOpen }" viewBox="0 0 20 20" fill="none" stroke="currentColor"><path d="m5 7.5 5 5 5-5" stroke-width="1.8" /></svg>
             </button>
             <transition name="mobile-features">
               <div v-if="isMobileFeaturesOpen" class="mobile-command-menu__features">
                 <RouterLink to="/mastery">{{ t('nav.mastery') }}</RouterLink>
                 <RouterLink to="/core-lab">{{ t('nav.corelab') }}</RouterLink>
+                <RouterLink to="/core-refinement">{{ t('nav.coreRefinement') }}</RouterLink>
                 <RouterLink to="/medals">{{ t('nav.medals') }}</RouterLink>
                 <RouterLink to="/tactics">{{ t('nav.tactics') }}</RouterLink>
               <RouterLink to="/talents">{{ t('nav.talents') }}</RouterLink>

@@ -23,6 +23,18 @@ test('Stats and Talents are lazy routes in the Systems and Features menus', () =
   assert.match(app, /const systemRoutes = \[[^\]]*'\/stats'/)
 })
 
+test('Core Refinement is a lazy route in the Features menu', () => {
+  const router = read('src/router/index.js')
+  const app = read('src/App.vue')
+
+  assert.match(router, /const CoreRefinementView = \(\) => import\('\.\.\/views\/CoreRefinementView\.vue'\)/)
+  assert.match(router, /path: '\/core-refinement'/)
+  assert.equal((app.match(/to="\/core-refinement"/g) || []).length, 2)
+  assert.match(app, /const featureRoutes = \[[^\]]*'\/core-refinement'/)
+  assert.ok(vi.nav.coreRefinement)
+  assert.ok(en.nav.coreRefinement)
+})
+
 test('new page and recommendation translation keys remain bilingual', () => {
   for (const locale of [vi, en]) {
     assert.ok(locale.nav.stats)
