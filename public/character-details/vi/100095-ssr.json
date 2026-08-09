@@ -78,12 +78,12 @@
   "classIcon": "/Class/Dragon.png",
   "effects": [
     {
-      "term": "[Nội Thương]",
-      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+      "term": "[Lĩnh Vực]",
+      "desc": "Trước khi thực hiện hành động, thiết bị bị ảnh hưởng phải chịu DMG liên tục bằng 160% ATK."
     },
     {
-      "term": "[Làm Suy Yếu]",
-      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+      "term": "[Nội Thương Vũ Trang]",
+      "desc": "Sát thương theo thời gian được áp dụng riêng biệt với đòn tấn công ban đầu."
     }
   ],
   "releaseDate": "01/01/2022",

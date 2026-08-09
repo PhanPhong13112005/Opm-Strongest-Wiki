@@ -102,24 +102,20 @@
   ],
   "effects": [
     {
-      "term": "[Bảo Hộ Chuyên Biệt]",
-      "desc": "Khiên bảo hộ PvP giảm hoặc vô hiệu sát thương lên đồng minh."
+      "term": "[Đột Phá]",
+      "desc": "Loại bỏ trạng thái [Bất Khuất] của mục tiêu. Chỉ có thể kích hoạt một lần trên mỗi mục tiêu trong mỗi đòn tấn công."
     },
     {
       "term": "[Bất Khuất]",
-      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+      "desc": "Hiệu ứng sinh tồn giúp đơn vị bị ảnh hưởng không bị đánh bại trong các điều kiện cụ thể."
     },
     {
-      "term": "[Cấm Hồi Máu]",
-      "desc": "Debuff chặn miễn tử vong áp lên kẻ địch chưa có trạng thái miễn tử vong, ngăn chúng trở nên miễn tử vong hoặc hồi sinh."
-    },
-    {
-      "term": "[Né Tránh]",
-      "desc": "Trạng thái né giúp giảm sát thương Trực Tiếp, Thêm, Tích Lũy và Cuồng Nộ nhận vào chỉ còn 1 điểm trong thời gian hiệu lực."
+      "term": "[Bảo Hộ Chuyên Biệt]",
+      "desc": "Phủ định đã nhận được DMG và có thể cộng dồn với các hiệu ứng Extra HP. Tổng lượng DMG bị phủ định không thể vượt quá 15 lần HP tối đa ban đầu của đơn vị."
     },
     {
       "term": "[Thiêu Đốt Chuyên Biệt]",
-      "desc": "Bậc PvP của Thiêu Đốt — sát thương liên tục mạnh hơn, khó giải hơn."
+      "desc": "Ưu đãi liên tục DMG dựa trên ATK. Sau khi bất kỳ nhân vật nào hành động, chuyển sang kẻ thù khác và biến mất sau khi chuyển 3 lần. Nó có thể xếp chồng tới 6 lần."
     }
   ],
   "keepsakeIcon": "/Keepsake/Subterranean King (SSRplus)/Keepsake_SSRplus.png",

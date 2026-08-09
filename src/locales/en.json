@@ -92,6 +92,9 @@
   "list": {
     "title": "Character Library",
     "search": "Search character name...",
+    "search_btn": "Search",
+    "suggestions": "Suggestions",
+    "press_enter": "Press Enter to search",
     "tier_all": "Tier: All",
     "type_all": "Type: All",
     "faction_all": "Faction: All",

@@ -118,28 +118,56 @@
   ],
   "effects": [
     {
-      "term": "[Bất Khuất Chuyên Biệt]",
-      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
-    },
-    {
-      "term": "[Bất Khuất]",
-      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
-    },
-    {
       "term": "[Giảm Sát Thương Không Bạo Kích]",
-      "desc": "Giảm lượng sát thương nhận vào từ các đòn đánh không phải chí mạng."
-    },
-    {
-      "term": "[Né Tránh Chuyên Biệt]",
-      "desc": "Bậc PvP của Né Tránh — giảm đòn chuyên biệt về 1 sát thương; bị xuyên bởi hiệu ứng bỏ qua né tránh."
+      "desc": "Một hiệu ứng bất diệt với thời gian giới hạn có thể bị giảm đi bởi một số đòn tấn công nhất định."
     },
     {
       "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
-      "desc": "Bậc cao cấp của sát thương trực tiếp, chỉ chịu ảnh hưởng của tăng/giảm sát thương cao cấp và xuyên qua phòng thủ thường."
+      "desc": "Một loại sát thương trực tiếp đặc biệt chỉ bị ảnh hưởng bởi các công cụ sửa đổi sát thương nâng cao hoặc giảm sát thương."
     },
     {
-      "term": "[Tăng Tốc Chuyên Biệt]",
-      "desc": "Tăng tốc độ của đồng minh tới gần tốc độ của người triển khai (giữ nguyên nếu đồng minh đã nhanh hơn)."
+      "term": "[Khả Năng Né Tránh Chuyên Biệt]",
+      "desc": "Một hiệu ứng phòng thủ đặc biệt có thể bị bỏ qua một phần bởi một số kỹ năng nhất định."
+    },
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Ngăn chặn đơn vị bị ảnh hưởng bị đánh bại trong các điều kiện cụ thể."
+    },
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Bất Khuất]."
+    },
+    {
+      "term": "[Gia Tốc Chuyên Biệt]",
+      "desc": "Tăng Tốc độ của đồng minh lên một tỷ lệ phần trăm nhất định so với Tốc độ của Nyan. Nếu Tốc độ ban đầu của đồng minh cao hơn, nó sẽ không thay đổi."
+    },
+    {
+      "term": "[Mê Hoặc]",
+      "desc": "Hiệu ứng kiểm soát buộc đơn vị bị ảnh hưởng hành động chống lại đội của chính mình hoặc mất quyền kiểm soát hành động của mình."
+    },
+    {
+      "term": "[Mê Hoặc Chuyên Biệt]",
+      "desc": "Buộc mục tiêu tạm thời rời khỏi trận chiến, tấn công kẻ thù ngẫu nhiên, quay trở lại vị trí ban đầu và bỏ qua hành động hoạt động tiếp theo. Đồng thời giảm [Giảm Sát Thương Toàn Phần]% trong 1 lượt."
+    },
+    {
+      "term": "[Giảm Sát Thương Toàn Phần]",
+      "desc": "Giảm tất cả thiệt hại mà đơn vị bị ảnh hưởng nhận được."
+    },
+    {
+      "term": "[Tương Hợp Quái Nhân]",
+      "desc": "Cho phép Nyan được tính là nhân vật hiện bị thiếu của bất kỳ nguyên tố nào khi kích hoạt Kỹ năng cốt lõi của nhân vật Quái vật."
+    },
+    {
+      "term": "[Tốc Độ Chuyên Biệt]",
+      "desc": "Một hiệu ứng đặc biệt giúp tăng Tốc độ hành động của đơn vị."
+    },
+    {
+      "term": "[Liên Kết Sinh Mệnh]",
+      "desc": "Ngăn chặn Nyan bị đánh bại trong khi đồng đội được liên kết vẫn còn sống. Liên kết chuyển sang một đồng đội ATK cao nhất khác khi đơn vị được liên kết bị đánh bại, tối đa 3 lần."
+    },
+    {
+      "term": "[Truy Kích Tụ Lực]",
+      "desc": "Thực hiện Tuyệt Kĩ hồi máu loại DMG hoặc AoE dưới dạng đòn tấn công Truy Kích chống lại các mục tiêu ngẫu nhiên mà không tiêu tốn Năng lượng."
     }
   ],
   "classLevel": "Dragon",

@@ -101,20 +101,20 @@
   ],
   "effects": [
     {
-      "term": "[Unyielding]",
-      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+      "term": "[Breakthrough]",
+      "desc": "Removes 1 instance of [Specialized Unyielding] from the affected target."
     },
     {
-      "term": "[Immortal]",
-      "desc": "Survival status keeps the bearer alive by drastically reducing damage taken (e.g. only taking 20%)."
+      "term": "[Specialized Unyielding]",
+      "desc": "A specialized survival state that prevents the affected unit from being defeated for a limited number of actions."
     },
     {
       "term": "[Stun]",
-      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+      "desc": "Prevents the affected unit from taking action."
     },
     {
       "term": "[Immunity]",
-      "desc": "Status that causes the bearer to be unaffected by a certain effect or type of control, such as [Breakthrough], Stun, or Charm."
+      "desc": "A summoned unit that inherits HP based on Gouketsu’s initial Max HP and absorbs DMG for Gouketsu and allied units in its protected row. When defeated, it explodes and deals Max-HP-based DMG to enemies."
     }
   ],
   "keepsakeIcon": "/Keepsake/Gouketsu (SSRplus)/Keepsake_SSRplus.png",

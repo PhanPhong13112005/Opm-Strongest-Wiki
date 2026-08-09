@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 33% ATK(+3) DMG to the entire row with a 3-hit combo. Has a 100% chance to inflict [Corruption] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
+      "desc": "Deals 33% ATK DMG to the entire row with a 3-hit combo. Has a 100% chance to inflict [Corruption] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
       "icon": "/Skill/Deep Sea Ravager (N)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 40% ATK(+3) DMG to the entire row with a 3-hit combo. Has a 100% chance to inflict [Corruption] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
+      "desc": "Deals 40% ATK DMG to the entire row with a 3-hit combo. Has a 100% chance to inflict [Corruption] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
       "keepsakeIcon": "/Keepsake/Deep Sea Ravager (N)/Keepsake_N.png",
       "icon": "/Skill/Deep Sea Ravager (N)/Skill_ult.png",
       "type": "Ultimate",

@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals a 3-hit combo to a single target for 35% ATK (+3) damage.",
+      "desc": "Deals a 3-hit combo to a single target for 35% ATK damage.",
       "icon": "/Skill/Hellish Blizzard (SR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals a 5-hit combo to all enemies for 17% ATK (+2) damage. If self is in the [Berserk] state, restore HP.",
+      "desc": "Deals a 5-hit combo to all enemies for 17% ATK damage. If self is in the [Berserk] state, restore HP.",
       "icon": "/Skill/Hellish Blizzard (SR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals a 5-hit combo to all enemies for 17% ATK (+2) damage, and directly restores own HP. At the same time, attacks from surrounding allies ignore 20% DEF for a duration.",
+      "desc": "Deals a 5-hit combo to all enemies for 17% ATK damage, and directly restores own HP. At the same time, attacks from surrounding allies ignore 20% DEF for a duration.",
       "keepsakeIcon": "/Keepsake/Hellish Blizzard (SR)/Keepsake_SR.png",
       "icon": "/Skill/Hellish Blizzard (SR)/Skill_ult.png",
       "type": "Ultimate",

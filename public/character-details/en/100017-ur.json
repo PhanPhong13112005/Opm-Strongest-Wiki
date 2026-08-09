@@ -101,20 +101,28 @@
   ],
   "effects": [
     {
-      "term": "[Absolute Stun]",
-      "desc": "[Faint's] powerful and final stun, which can only be removed with specialized debuffs."
+      "term": "[Fear]",
+      "desc": "Prevents the affected unit from acting and reduces all DMG Immunity. This effect is treated as a [Stun] state."
+    },
+    {
+      "term": "[Specialized Dodge]",
+      "desc": "Causes Direct DMG, Continuous DMG, Injury DMG, and Extra DMG to deal only 1 point of DMG."
     },
     {
       "term": "[Stun]",
-      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+      "desc": "Prevents the affected unit from acting."
+    },
+    {
+      "term": "[Specialized Stun]",
+      "desc": "A specialized form of [Stun]."
     },
     {
       "term": "[Silence]",
-      "desc": "The target cannot use his ultimate. Counts as a control effect."
+      "desc": "Prevents the affected unit from using its Ultimate."
     },
     {
-      "term": "[Threaten]",
-      "desc": "The stun control effect renders the target unable to act and reduces its overall damage immunity by 30%."
+      "term": "[Specialized Panic]",
+      "desc": "A specialized effect that causes additional consumption. This Awakening ignores that additional consumption."
     }
   ],
   "keepsakeIcon": "/Keepsake/Subterranean King (UR)/Keepsake_UR.png",

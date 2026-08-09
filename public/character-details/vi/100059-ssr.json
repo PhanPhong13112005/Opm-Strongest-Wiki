@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 40% ATK (+3) sát thương cho một mục tiêu trong 3 đòn combo. Sau khi hành động, ngẫu nhiên đưa một đồng minh vào trạng thái [Giận Dữ] (gây thêm 30% sát thương khi tấn công).",
+      "desc": "Gây 40% sát thương ATK cho một mục tiêu trong 3 đòn combo. Sau khi hành động, ngẫu nhiên đưa một đồng minh vào trạng thái [Giận Dữ] (gây thêm 30% sát thương khi tấn công).",
       "icon": "/Skill/Geryuganshoop (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 26% ATK (+2) sát thương cho mỗi kẻ địch trong toàn hàng trong 5 đòn combo và gây [Hoảng Loạn] cho kẻ địch (phong ấn năng lượng của kẻ địch trong nhiều lượt; khi hiệu ứng tương tự xuất hiện, giá trị cao nhất sẽ có hiệu lực).",
+      "desc": "Gây 26% ATK cho mỗi kẻ địch trong toàn hàng trong 5 đòn combo và gây [Hoảng Loạn] cho kẻ địch (phong ấn năng lượng của kẻ địch trong nhiều lượt; khi xuất hiện cùng một hiệu ứng, giá trị cao nhất sẽ có hiệu lực).",
       "icon": "/Skill/Geryuganshoop (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 33% ATK (+2) sát thương cho mỗi kẻ địch trong toàn hàng trong 5 đòn combo và gây [Hoảng Loạn] cho kẻ địch (phong ấn năng lượng của kẻ địch trong nhiều lượt; khi hiệu ứng tương tự xuất hiện, giá trị cao nhất sẽ có hiệu lực).",
+      "desc": "Gây 33% sát thương ATK cho mỗi kẻ địch trong toàn hàng trong 5 đòn combo và gây [Hoảng Loạn] cho kẻ địch (phong ấn năng lượng của kẻ địch trong nhiều lượt; khi hiệu ứng tương tự xuất hiện, giá trị cao nhất sẽ có hiệu lực).",
       "icon": "/Skill/Geryuganshoop (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Geryuganshoop (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -80,7 +80,7 @@
   "effects": [
     {
       "term": "[Hoảng Loạn]",
-      "desc": "Trạng thái khống chế làm gián đoạn hành động của mục tiêu."
+      "desc": "Control status interrupts the target's actions."
     }
   ],
   "releaseDate": "16/06/2020",

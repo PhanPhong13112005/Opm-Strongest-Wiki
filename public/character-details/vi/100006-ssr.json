@@ -75,7 +75,7 @@
   "effects": [
     {
       "term": "[Làm Suy Yếu]",
-      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
     }
   ],
   "keepsakeIcon": "/Keepsake/Puri-Puri Prisoner (SSR)/Keepsake_SSR.png",

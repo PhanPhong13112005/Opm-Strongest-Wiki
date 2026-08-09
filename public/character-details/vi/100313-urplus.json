@@ -116,23 +116,23 @@
   "effects": [
     {
       "term": "[Giảm Sát Thương Khống Chế]",
-      "desc": "Giảm lượng sát thương nhận vào nhờ hiệu ứng Áp Chế."
+      "desc": "Reduces the amount of damage taken thanks to the Suppression effect."
     },
     {
       "term": "[Giảm Sát Thương Không Bạo Kích]",
-      "desc": "Giảm lượng sát thương nhận vào từ các đòn đánh không phải chí mạng."
+      "desc": "Reduced damage taken from non-critical attacks."
     },
     {
       "term": "[HP Chuyên Biệt]",
-      "desc": "Thanh máu riêng bậc PvP xếp chồng lên máu thường, cũng phải bị hạ và có thể được hồi độc lập."
+      "desc": "The PvP tier's unique health bar stacks on top of regular health, must also be depleted, and can be restored independently."
     },
     {
       "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
-      "desc": "Bậc cao cấp của sát thương trực tiếp, chỉ chịu ảnh hưởng của tăng/giảm sát thương cao cấp và xuyên qua phòng thủ thường."
+      "desc": "Advanced tier of direct damage, only affected by advanced damage increase/decrease and passes through normal defenses."
     },
     {
       "term": "[Tăng Sát Thương Khống Chế]",
-      "desc": "Buff tấn công cho 30-40% năng lượng và tăng sát thương, tăng thêm 150-170% khi Tấn công của người mang cao hơn mục tiêu."
+      "desc": "Attack buff gives 30-40% mana and increases damage, increasing by 150-170% when the bearer's Attack is higher than the target."
     }
   ],
   "classLevel": "Class_SS",

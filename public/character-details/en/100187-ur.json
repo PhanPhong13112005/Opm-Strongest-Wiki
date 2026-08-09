@@ -101,12 +101,36 @@
   ],
   "effects": [
     {
-      "term": "[Adhere]",
-      "desc": "Control status prevents the target from casting [Follow-up] and [Consecutive Follow-up], usually for 2 turns."
+      "term": "[Break]",
+      "desc": "Decreases the affected target’s DMG Rate%."
     },
     {
-      "term": "[Overheal]",
-      "desc": "Converts excess Health from healing and lifesteal into an equivalent Health Shield, up to a limit based on base Health."
+      "term": "[Specialized Berserk]",
+      "desc": "Causes the first strike to deal [Berserk DMG] based on King’s Max HP. The DMG can CRIT and consumes Energy Gauge for each enemy hit."
+    },
+    {
+      "term": "[Specialized Guard]",
+      "desc": "A defensive effect whose Max HP value contributes additional DMG to the Ultra-Ultimate’s [Specialized Berserk]."
+    },
+    {
+      "term": "[Overflow Recovery]",
+      "desc": "Converts excess Healing and Drain into an equal amount of [Life Shield]. The accumulated DMG removed cannot exceed 20× the unit’s original HP."
+    },
+    {
+      "term": "[Life Shield]",
+      "desc": "A shield generated from excess Healing and Drain through [Overflow Recovery]."
+    },
+    {
+      "term": "[Paralysis]",
+      "desc": "A negative control effect removed from King and allies in the same row by Awaken 2 Passive."
+    },
+    {
+      "term": "[Combo Follow-up]",
+      "desc": "Performs the Ultimate as a follow-up against random targets with a specified DMG percentage and 100% of its effects. It is not affected by Hit Rate or Effect Resistance."
+    },
+    {
+      "term": "[DMG Sharing]",
+      "desc": "Direct DMG transferred from allies in the same row to King. The transferred DMG is reduced before King receives it."
     }
   ],
   "keepsakeIcon": "/Keepsake/King (UR)/Keepsake_UR.png",

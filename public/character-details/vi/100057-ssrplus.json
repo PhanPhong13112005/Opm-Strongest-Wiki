@@ -113,8 +113,28 @@
   ],
   "effects": [
     {
-      "term": "[Bất Tử]",
-      "desc": "Trạng thái sinh tồn giữ người mang sống sót bằng cách giảm mạnh sát thương nhận vào (ví dụ chỉ chịu 20%)."
+      "term": "[Nuốt Chửng]",
+      "desc": "Loại bỏ mục tiêu khỏi chiến trường thông qua kỹ năng của Thần Heo. Chống lại kẻ thù, nó gây ra [Rời Trận] trong 1 lượt. Nội tại Thức tỉnh của Thần Heo cũng có thể sử dụng [Nuốt Chửng] lên một đồng minh xung quanh bị đánh bại và sau đó đưa đồng minh đó trở lại chiến đấu."
+    },
+    {
+      "term": "[Rời Trận]",
+      "desc": "Tạm thời loại bỏ đơn vị bị ảnh hưởng khỏi chiến trường trong thời gian được chỉ định."
+    },
+    {
+      "term": "[Phòng Hộ Chuyên Biệt]",
+      "desc": "Phủ định đã nhận được DMG và có thể cộng dồn với các hiệu ứng Extra HP. Tổng lượng DMG bị phủ định không thể vượt quá 15 lần HP tối đa ban đầu của đơn vị."
+    },
+    {
+      "term": "[Bất Khuất Cường Hóa]",
+      "desc": "Trạng thái sinh tồn nâng cao được đo bằng các hành động còn lại. Tuyệt Kĩ của Thần Heo giảm thời gian còn lại của nó đi 2 hành động sau [Nuốt Chửng]."
+    },
+    {
+      "term": "[Rời Trận]",
+      "desc": "Hiệu ứng khiến nhân vật phải rời khỏi chiến trường. Thần Heo miễn nhiễm với nó, trong khi [Thoát Ly] đồng minh có thể kích hoạt Nội tại Thức tỉnh của anh ta."
+    },
+    {
+      "term": "[Ăn Mòn Chuyên Biệt]",
+      "desc": "Gây 150% ATK dưới dạng DMG liên tục. Sau khi bất kỳ nhân vật nào hành động, nó sẽ chuyển sang một kẻ thù ngẫu nhiên, tối đa 3 lần chuyển."
     }
   ],
   "classLevel": "Class_SS",

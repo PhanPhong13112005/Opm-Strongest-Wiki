@@ -116,16 +116,48 @@
   ],
   "effects": [
     {
+      "term": "[Khả Năng Né Tránh Chuyên Biệt]",
+      "desc": "Giảm Sát Thương Trực Tiếp, DoT DMG, [Sát Thương Phải Chịu] và [Sát Thương Bổ Sung] xuống 1 điểm DMG."
+    },
+    {
+      "term": "[Sợ Hãi]",
+      "desc": "Một hiệu ứng khống chế mà nhân vật này miễn nhiễm."
+    },
+    {
       "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "desc": "Ngăn chặn các đơn vị bị ảnh hưởng hành động."
+    },
+    {
+      "term": "[Choáng Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Choáng]."
+    },
+    {
+      "term": "[Hoảng Loạn Chuyên Biệt]",
+      "desc": "Một hiệu ứng tiêu cực chuyên biệt liên quan đến Năng lượng. Tất cả đồng minh đều miễn nhiễm với nó khi Nội tại này đang hoạt động."
+    },
+    {
+      "term": "[Gia Tốc Chuyên Biệt]",
+      "desc": "Tăng SPD của đơn vị hoặc tăng SPD của đồng minh lên một tỷ lệ phần trăm nhất định so với SPD của Sonic. Nếu SPD ban đầu của đồng minh cao hơn, nó không thay đổi."
+    },
+    {
+      "term": "[Lĩnh Vực Tốc Độ: Tấn Công]",
+      "desc": "Trong PvP, tăng tất cả DMG được xử lý khi SPD của mục tiêu bằng hoặc thấp hơn SPD của kẻ tấn công."
+    },
+    {
+      "term": "[Lĩnh Vực Tốc Độ: Phòng Thủ]",
+      "desc": "Trong PvP, giảm tất cả DMG nhận được khi SPD của kẻ tấn công bằng hoặc thấp hơn SPD của người phòng thủ."
     },
     {
       "term": "[Cổ Vũ]",
-      "desc": "Cấp năng lượng vào đầu mỗi vòng trong vài vòng."
+      "desc": "Cấp thêm 2 Năng lượng khi bắt đầu mỗi lượt trong 3 lượt."
     },
     {
       "term": "[Uy Hiếp]",
-      "desc": "Hiệu ứng khống chế dạng choáng khiến mục tiêu không thể hành động và giảm toàn bộ khả năng miễn sát thương của nó đi 30%."
+      "desc": "Loại sát thương giảm xuống 1 điểm bởi [Khả Năng Né Tránh Chuyên Biệt]."
+    },
+    {
+      "term": "[Sát Thương Bổ Sung Chuyên Biệt]",
+      "desc": "DMG bổ sung được kích hoạt riêng biệt với cuộc tấn công ban đầu."
     }
   ],
   "classLevel": "Outlaw",

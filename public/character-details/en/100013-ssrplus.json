@@ -101,16 +101,16 @@
   ],
   "effects": [
     {
-      "term": "[Revive]",
-      "desc": "The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match."
+      "term": "[Specialized Speed Up]",
+      "desc": "A specialized SPD-enhancing effect. Zombieman's Ultimate raises same-row allies to a percentage of his SPD without lowering allies who are already faster. His Passive provides a percentage-based SPD increase."
     },
     {
-      "term": "[Resurrect]",
-      "desc": "Status returns downed units to battle, granting a limited number of respawns that anti-revive effects can remove."
+      "term": "[Encourage]",
+      "desc": "Grants Energy to the team at the start of each round for a limited duration."
     },
     {
-      "term": "[Hyper Speed]",
-      "desc": "Speed ​​buff that while in effect allows the bearer and up to 6 allies to act against and overcome enemies with lower speed."
+      "term": "[Regeneration]",
+      "desc": "After receiving fatal DMG, restores 60% Max HP before Zombieman's action while at least 1 ally remains, allowing him to continue fighting."
     }
   ],
   "keepsakeIcon": "/Keepsake/Zombieman (SSRplus)/Keepsake_SSRplus.png",

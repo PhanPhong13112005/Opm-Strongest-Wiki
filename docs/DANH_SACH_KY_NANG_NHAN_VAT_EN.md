@@ -1731,7 +1731,7 @@
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals damage to a single target with 2 Combos for 120% ATK |
 | 2 | Ultimate | **Ultimate** | Deals damage to all targets with 4 Combos for 48% Max HP . After using Ultimate Skill, 1 defeated Character will return to the battle with 100% HP. Can trigger up to 4 times per battle. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals damage to all targets with 4 Combos for 64% Max HP (+2663). After using Ultimate Skill, 2 defeated Characters will return to the battle with 100% HP. Can trigger up to 6 times per battle. |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals damage to all targets with 4 Combos for 64% Max HP. After using Ultimate Skill, 2 defeated Characters will return to the battle with 100% HP. Can trigger up to 6 times per battle. |
 | 4 | Passive | **Passive** | After taking an action or an ally takes an action, triggers [Evolve] on the target. Permanently grants immunity against [Silence] to all Allies in the row. Permanently increases own HP by points. [Evolve]: Immediately cancels the target’s Unyielding and Ignore DMG statuses.|
 | 5 | Passive | **Extreme Passive** |After taking an action or an ally takes an action, triggers [Evolve] on the target. Permanently grants immunity against [Stun/Silence] to all Allies in the row. This effect cannot be ignored. Permanently increases own HP by points. [Evolve]: Immediately cancels the target’s Unyielding and Ignore DMG statuses. |
 | 6 | Passive | **5★ Passive** | After taking an action or surrounding allies take an action, triggers [Evolve] on the target. Permanently grants immunity against [Stun/Silence] to all Allies in the row. This effect cannot be ignored. Permanently increases own HP by points. [Evolve]: Immediately cancels the target’s Unyielding and Ignore DMG statuses. |
@@ -2101,9 +2101,9 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Strikes a single target with a 3-hit combo, dealing 35% ATK(+3) damage. |
-| 2 | Ultimate | **Ultimate** | Attacks a single target in the back row 2 to 5 times, dealing up to 100% ATK(+2) damage. |
-| 3 | Ultimate | **Ultra-Ultimate** | Attacks a single target in the back row 3 to 5 times, dealing up to 100% ATK(+2) damage. |
+| 1 | Basic | **Basic** | Strikes a single target with a 3-hit combo, dealing 35% ATK damage. |
+| 2 | Ultimate | **Ultimate** | Attacks a single target in the back row 2 to 5 times, dealing up to 100% ATK damage. |
+| 3 | Ultimate | **Ultra-Ultimate** | Attacks a single target in the back row 3 to 5 times, dealing up to 100% ATK damage. |
 | 4 | Passive | **Passive** | Permanently increases own HP by. At the start of the round, grants [Tenacity] to all allies (absorbs 30% of each ally's own Max HP). For every enemy slower than its own SPD, increases own [Ultimate DMG Reduction] by 15% (up to 3 stacks). After acting, launches a [Follow-up] on the enemy with the highest Max HP (80% Basic ATK DMG and effects, 70% chance, up to 3 times per round). |
 | 5 | Passive | **Extreme Passive** | [Ultimate DMG Reduction] per stack 15% &gt; 18%. [Follow-up] 80% &gt; 100% Basic ATK. |
 | 6 | Passive | **5★ Passive** | Grants self a Shield equal to 40% of HP. [Ultimate DMG Reduction] per stack 18% &gt; 20%. [Follow-up] up to 3 &gt; 4 times per round. |
@@ -2269,8 +2269,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 120% ATK DMG to a single target, with a 100% chance to inflict [Corrosion] on the main target for 2 turns (DoT equal to 8% ATK). |
-| 2 | Ultimate | **Ultimate** | Deals 3 combo strikes to a single target for 70% ATK (+3) DMG each, plus extra DMG equal to 50% of your own lost HP. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 3 combo strikes to a single target for 88% ATK (+3) DMG each, plus extra DMG equal to 75% of your own lost HP. |
+| 2 | Ultimate | **Ultimate** | Deals 3 combo strikes to a single target for 70% ATK DMG each, plus extra DMG equal to 50% of your own lost HP. |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals 3 combo strikes to a single target for 88% ATK DMG each, plus extra DMG equal to 75% of your own lost HP. |
 | 4 | Passive | **Passive** | Permanently increases own HP by. While own HP is below 50%, continuously grants yourself [Tenacity] (absorbs DMG equal to 10% of own max HP), up to 3 times per turn. |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP by. While own HP is below 50%, continuously grants yourself [Tenacity] (absorbs DMG equal to 15% of own max HP), up to 3 times per turn. |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP by. While own HP is below 50%, continuously grants yourself [Tenacity] (absorbs DMG equal to 18% of own max HP), up to 3 times per turn. |
@@ -2367,8 +2367,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 70% ATK DMG with 2 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 15%). |
-| 2 | Ultimate | **Ultimate** | Deals 80% ATK (+3) DMG with 3 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 30%); triggering a Critical Strike inflicts [Weaken] on the target (ATK reduced by 25% for 1 turn). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 100% ATK (+3) DMG with 3 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 40%); triggering a Critical Strike inflicts [Weaken] on the target (ATK reduced by 45% for 1 turn). |
+| 2 | Ultimate | **Ultimate** | Deals 80% ATK DMG with 3 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 30%); triggering a Critical Strike inflicts [Weaken] on the target (ATK reduced by 25% for 1 turn). |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals 100% ATK DMG with 3 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 40%); triggering a Critical Strike inflicts [Weaken] on the target (ATK reduced by 45% for 1 turn). |
 | 4 | Passive | **Passive** | Permanently increases own HP by. If a [Shatter]ed enemy exists, enters [Tenacity] state (absorbs DMG equal to 20% of own HP, up to 1 time per turn).For each type of debuff simultaneously present on enemies, gain [Charge] (deals 117% ATK Charge DMG when attacking, up to 3 stacks). |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP by. If a [Shatter]ed enemy exists, enters [Tenacity] state (absorbs DMG equal to 20% of own HP, up to 1 time per turn).For each type of debuff simultaneously present on enemies, gain [Charge] (deals 117% ATK Charge DMG when attacking, up to 3 stacks). |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP by. If a [Shatter]ed enemy exists, enters [Tenacity] state (absorbs DMG equal to 25% of own HP, up to 1 time per turn).For each type of debuff simultaneously present on enemies, gain [Charge] (deals 117% ATK Charge DMG when attacking, up to 3 stacks). |
@@ -2461,9 +2461,9 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals 40% ATK (+3) damage to a single target in 3 hit combos. After acting, randomly puts one ally into the [Berserk] state (deals 30% more damage when attacking). |
-| 2 | Ultimate | **Ultimate** | Deals 26% ATK (+2) damage to each enemy in the entire row in 5 hit combos, and inflicts [Panic] on the enemy (seals the enemy's energy for several turns; when the same effect is present, the highest value takes effect). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 33% ATK (+2) damage to each enemy in the entire row in 5 hit combos, and inflicts [Panic] on the enemy (seals the enemy's energy for several turns; when the same effect is present, the highest value takes effect). |
+| 1 | Basic | **Basic** | Deals 40% ATK damage to a single target in 3 hit combos. After acting, randomly puts one ally into the [Berserk] state (deals 30% more damage when attacking). |
+| 2 | Ultimate | **Ultimate** | Deals 26% ATK damage to each enemy in the entire row in 5 hit combos, and inflicts [Panic] on the enemy (seals the enemy's energy for several turns; when the same effect is present, the highest value takes effect). |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals 33% ATK damage to each enemy in the entire row in 5 hit combos, and inflicts [Panic] on the enemy (seals the enemy's energy for several turns; when the same effect is present, the highest value takes effect). |
 | 4 | Passive | **Passive** | Permanently increases own max HP by. After each action, drains the sealed energy from the main target (can only drain once per turn; after a successful drain, cannot inflict [Panic] on enemies again that turn). For each point of energy drained, deals 40% ATK extra damage to all enemies. |
 | 5 | Passive | **Extreme Passive** | Permanently increases own max HP by. After each action, drains the sealed energy from the main target (can only drain once per turn; after a successful drain, cannot inflict [Panic] on enemies again that turn). For each point of energy drained, deals 50% ATK extra damage to all enemies. |
 | 6 | Passive | **5★ Passive** | Permanently increases own max HP by. After each action, drains the sealed energy from the main target (can only drain once per turn; after a successful drain, cannot inflict [Panic] on enemies again that turn). For each point of energy drained, deals 55% ATK extra damage to all enemies. |
@@ -2577,9 +2577,9 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals a 3-hit combo to a single target for 35% ATK (+3) damage. |
-| 2 | Ultimate | **Ultimate** | Deals a 5-hit combo to all enemies for 17% ATK (+2) damage. If self is in the [Berserk] state, restore HP. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals a 5-hit combo to all enemies for 17% ATK (+2) damage, and directly restores own HP. At the same time, attacks from surrounding allies ignore 20% DEF for a duration. |
+| 1 | Basic | **Basic** | Deals a 3-hit combo to a single target for 35% ATK damage. |
+| 2 | Ultimate | **Ultimate** | Deals a 5-hit combo to all enemies for 17% ATK damage. If self is in the [Berserk] state, restore HP. |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals a 5-hit combo to all enemies for 17% ATK damage, and directly restores own HP. At the same time, attacks from surrounding allies ignore 20% DEF for a duration. |
 | 4 | Passive | **Passive** | Permanently increases own HP by. When battle begins, grants herself 30% [Non-Crit DMG Free] (effective for all DMG types, cannot co-exist with [Agility]). Removes [Fear] from allies after they act. |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP by. When battle begins, grants herself 30% [Non-Crit DMG Free] and an ally in the same column 10% [Non-Crit DMG Free] (all DMG types, cannot co-exist with [Agility]). Removes [Fear] from allies after they act. |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP by. When battle begins, grants herself 35% [Non-Crit DMG Free] and an ally in the same column 15% [Non-Crit DMG Free] (all DMG types, cannot co-exist with [Agility]). Removes [Fear] from allies after they act. |
@@ -2638,8 +2638,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 120% ATK damage to a single target and restores HP equal to 10% of max HP, up to 3 times per turn. |
-| 2 | Ultimate | **Ultimate** | Deals 30% ATK (+2) damage to each enemy in the entire column in a 5-hit combo, with a 50% chance to inflict [Injured] on each target hit for 2 turns (takes additional Injured damage equal to 50% ATK when attacked), and grants self [Tenacity] (absorbs damage equal to 10% of own HP). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 38% ATK (+2) damage to each enemy in the entire column in a 5-hit combo, with a 60% chance to inflict [Injured] on each target hit for 2 turns (takes additional Injured damage equal to 50% ATK when attacked), and grants self [Tenacity] (absorbs damage equal to 20% of own HP). |
+| 2 | Ultimate | **Ultimate** | Deals 30% ATK damage to each enemy in the entire column in a 5-hit combo, with a 50% chance to inflict [Injured] on each target hit for 2 turns (takes additional Injured damage equal to 50% ATK when attacked), and grants self [Tenacity] (absorbs damage equal to 10% of own HP). |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals 38% ATK damage to each enemy in the entire column in a 5-hit combo, with a 60% chance to inflict [Injured] on each target hit for 2 turns (takes additional Injured damage equal to 50% ATK when attacked), and grants self [Tenacity] (absorbs damage equal to 20% of own HP). |
 | 4 | Passive | **Passive** | Permanently increases own HP by. The lower its HP, the higher its [DMG Free] (reduces up to 50% of Direct and Bonus DMG). After being attacked, if own HP is below 80%, counterattacks the enemy with a [Follow-up] (80% Basic ATK DMG and effects). |
 | 5 | Passive | **Extreme Passive** | [DMG Free] up to 50% &gt; 55%. [Follow-up] 80% &gt; 110% Basic ATK. |
 | 6 | Passive | **5★ Passive** | [DMG Free] up to 55% &gt; 58%. [Follow-up] 110% &gt; 120% Basic ATK. |
@@ -2705,9 +2705,9 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals 40% ATK (+3) DMG to a single target over 3 hit combo. |
-| 2 | Ultimate | **Ultimate** | Deals 50% ATK (+3) DMG to each enemy in the back row over 3 hit combo, with a 70% chance to inflict [Burn] on the target for 2 turns (DoT equal to 20% of max HP). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 60% ATK (+3) DMG to each enemy in the back row over 3 hit combo, with a 100% chance to inflict [Burn] on the target for 2 turns (DoT equal to 25% of max HP). |
+| 1 | Basic | **Basic** | Deals 40% ATK DMG to a single target over 3 hit combo. |
+| 2 | Ultimate | **Ultimate** | Deals 50% ATK DMG to each enemy in the back row over 3 hit combo, with a 70% chance to inflict [Burn] on the target for 2 turns (DoT equal to 20% of max HP). |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals 60% ATK DMG to each enemy in the back row over 3 hit combo, with a 100% chance to inflict [Burn] on the target for 2 turns (DoT equal to 25% of max HP). |
 | 4 | Passive | **Passive** | Permanently increases self HP by. After taking fatal damage, triggers [Regeneration] (while an ally is present, recovers 15% HP before the next self action and keeps fighting, up to 3 times). When attacking, deals additional DMG equal to 35% of self's lost HP to the target. |
 | 5 | Passive | **Extreme Passive** | Permanently increases self HP by. After taking fatal damage, triggers [Regeneration] (while an ally is present, recovers 20% HP before the next self action and keeps fighting, up to 4 times). After triggering [Regeneration], self's Speed is increased to 2x. When attacking, deals additional DMG equal to 40% of self's lost HP to the target. |
 | 6 | Passive | **5★ Passive** | Permanently increases self HP by. After taking fatal damage, triggers [Regeneration] (while an ally is present, recovers 22% HP before the next self action and keeps fighting, up to 5 times). After triggering [Regeneration], self's Speed is increased to 2x. When attacking, deals additional DMG equal to 45% of self's lost HP to the target. |
@@ -2995,8 +2995,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 150% ATK DMG to a single target, and restores HP equal to 30% of max HP. |
-| 2 | Ultimate | **Ultimate** | Deals a 5 hit combo of 5% (+2) of Watchdog Man's max HP as DMG to the entire target row, and inflicts [Panic] on enemies (seals their energy for a number of turns; when the same effect exists, the highest value applies). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals a 5 hit combo of 6% (+2) of Watchdog Man's max HP as DMG to the entire target row, and inflicts [Panic] on enemies (seals their energy for a number of turns; when the same effect exists, the highest value applies). |
+| 2 | Ultimate | **Ultimate** | Deals a 5 hit combo of 5% of Watchdog Man's max HP as DMG to the entire target row, and inflicts [Panic] on enemies (seals their energy for a number of turns; when the same effect exists, the highest value applies). |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals a 5 hit combo of 6% of Watchdog Man's max HP as DMG to the entire target row, and inflicts [Panic] on enemies (seals their energy for a number of turns; when the same effect exists, the highest value applies). |
 | 4 | Passive | **Passive** | Permanently increases own HP by. Before battle begins, Watchdog Man [Encourages] allies (gain 2 extra energy at the start of each turn, lasting 2 turns). Increases the max HP of himself and allies in his column by 25% for 3 turns. After taking lethal DMG, revives with 20% of max HP (up to 2 times). |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP by. Before battle begins, Watchdog Man [Encourages] allies (gain 2 extra energy at the start of each turn, lasting 2 turns). Increases the max HP of himself and allies in his column by 30% for 5 turns. After taking lethal DMG, revives with 25% of max HP (up to 2 times). |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP by. Before battle begins, Watchdog Man [Encourages] allies (gain 2 extra energy at the start of each turn, lasting 3 turns). Increases the max HP of himself and allies in his column by 33% for 10 turns. After taking lethal DMG, revives with 50% of max HP (up to 2 times). |
@@ -3017,8 +3017,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 120% ATK damage to a single target, with a 100% chance to inflict [Injured] on the struck target for 2 turns (when attacked, takes additional [Injured] damage equal to 100% ATK). |
-| 2 | Ultimate | **Ultimate** | Deals a 5-hit combo to a single target for 48% ATK (+2) damage, and simultaneously heals all allies for 100% ATK worth of HP. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals a 5-hit combo to a single target for 60% ATK (+2) damage, and simultaneously heals all allies for 150% ATK worth of HP. |
+| 2 | Ultimate | **Ultimate** | Deals a 5-hit combo to a single target for 48% ATK damage, and simultaneously heals all allies for 100% ATK worth of HP. |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals a 5-hit combo to a single target for 60% ATK damage, and simultaneously heals all allies for 150% ATK worth of HP. |
 | 4 | Passive | **Passive** | Permanently gains +20 HP. Also grants [Regeneration] (while allies are present, before your next action restore 10% HP and keep fighting, triggering up to 4 times).After taking fatal damage, deals additional damage equal to 60% ATK to all enemies. |
 | 5 | Passive | **Extreme Passive** | Permanently gains +20 HP. Also grants [Regeneration] (while allies are present, before your next action restore 15% HP and keep fighting, triggering up to 6 times).After taking fatal damage, deals additional damage equal to 80% ATK to all enemies. |
 | 6 | Passive | **5★ Passive** | Permanently gains +20 HP. Also grants [Regeneration] (while allies are present, before your next action restore 18% HP and keep fighting, triggering up to 6 times).After taking fatal damage, deals additional damage equal to 90% ATK to all enemies. |
@@ -3040,9 +3040,9 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Strikes a single target with a 3-hit combo, dealing 35% ATK(+3) damage. |
-| 2 | Ultimate | **Ultimate** | Attacks a single target in the back row 2 to 5 times, dealing up to 100% ATK(+2) damage. |
-| 3 | Ultimate | **Ultra-Ultimate** | Attacks a single target in the back row 3 to 5 times, dealing up to 100% ATK(+2) damage. |
+| 1 | Basic | **Basic** | Strikes a single target with a 3-hit combo, dealing 35% ATK damage. |
+| 2 | Ultimate | **Ultimate** | Attacks a single target in the back row 2 to 5 times, dealing up to 100% ATK damage. |
+| 3 | Ultimate | **Ultra-Ultimate** | Attacks a single target in the back row 3 to 5 times, dealing up to 100% ATK damage. |
 | 4 | Passive | **Passive** | Permanently increases own H. When attacking a Monster or Bounty Criminal, inflicts [Injured] on the target for 2 turns (adds Injured damage equal to 50% ATK when attacked). |
 | 5 | Passive | **Extreme Passive** | Permanently increases own H. Attacks inflict [Injured] on the target for 2 turns (adds Injured damage equal to 70% ATK when attacked). |
 | 6 | Passive | **5★ Passive** | Permanently increases own H. Attacks inflict [Injured] on the target for 2 turns (adds Injured damage equal to 75% ATK when attacked). |
@@ -3079,8 +3079,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 120% ATK DMG to a single target. |
-| 2 | Ultimate | **Ultimate** | Deals a 4-hit combo to a single back-row target for 35% ATK (+2) DMG, and reduces the target's chance to inflict [Force Field], [Stun], [Injured] and [Internal Injury] by 50% for 1 turn. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals a 4-hit combo to a single back-row target for 40% ATK (+2) DMG, and reduces the target's chance to inflict [Force Field], [Stun], [Injured] and [Internal Injury] by 50% for 1 turn. |
+| 2 | Ultimate | **Ultimate** | Deals a 4-hit combo to a single back-row target for 35% ATK DMG, and reduces the target's chance to inflict [Force Field], [Stun], [Injured] and [Internal Injury] by 50% for 1 turn. |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals a 4-hit combo to a single back-row target for 40% ATK DMG, and reduces the target's chance to inflict [Force Field], [Stun], [Injured] and [Internal Injury] by 50% for 1 turn. |
 | 4 | Passive | **Passive** | Permanently gains HP. After taking fatal DMG, triggers [Regeneration] (while an ally is on the field, restores 15% HP before own next action to keep fighting, triggers up to 1 time). After acting, increases own DMG reduction by 30% for 2 turns. |
 | 5 | Passive | **Extreme Passive** | Permanently gains HP. After taking fatal DMG, triggers [Regeneration] (while an ally is on the field, restores 15% HP before own next action to keep fighting, triggers up to 2 times). After acting, increases own DMG reduction by 35% for 2 turns. |
 | 6 | Passive | **5★ Passive** | Permanently gains HP. After taking fatal DMG, triggers [Regeneration] (while an ally is on the field, restores 15% HP before own next action to keep fighting, triggers up to 2 times). After acting, increases own DMG reduction by 40% for 2 turns. |
@@ -3147,8 +3147,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 100% AT DMG to a single target. |
-| 2 | Ultimate | **Ultimate** | Strikes each enemy in the entire row with a 4-hit combo, dealing 30% ATK(+2) DMG per hit, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 80% ATK). |
-| 3 | Ultimate | **Ultra-Ultimate** | Strikes each enemy in the entire row with a 4-hit combo, dealing 30% ATK(+2) DMG per hit, with a 100% chance to inflict [Burn] on the main target and a 50% chance on enemies in the main target's row for 2 turns (DoT equal to 80% ATK). |
+| 2 | Ultimate | **Ultimate** | Strikes each enemy in the entire row with a 4-hit combo, dealing 30% ATK DMG per hit, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 80% ATK). |
+| 3 | Ultimate | **Ultra-Ultimate** | Strikes each enemy in the entire row with a 4-hit combo, dealing 30% ATK DMG per hit, with a 100% chance to inflict [Burn] on the main target and a 50% chance on enemies in the main target's row for 2 turns (DoT equal to 80% ATK). |
 | 4 | Passive | **Passive** | Permanently increases own HP by. When an enemy's [Burn] expires, inflicts [Burn] on a random enemy target for 2 turns (DoT equal to 50% ATK). |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP by. When an enemy's [Burn] expires, inflicts [Burn] on a random enemy target for 2 turns (DoT equal to 70% ATK). |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP by. When an enemy's [Burn] expires, inflicts [Burn] on a random enemy target for 2 turns (DoT equal to 80% ATK). |
@@ -3191,8 +3191,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 100% ATK DMG to a single target. |
-| 2 | Ultimate | **Ultimate** | Strikes a single target with 3 combo hits, dealing 180% ATK (+2) DMG, with a 100% chance to inflict [Field] on the target for 1 turn (before acting, takes DoT equal to 60% ATK, with a 50% chance to penetrate immunity effects). |
-| 3 | Ultimate | **Ultra-Ultimate** | Strikes a single target with 3 combo hits, dealing 180% ATK (+2) DMG, with a 100% chance to inflict [Field] on the target for 1 turn (before acting, takes DoT equal to 70% ATK, with a 50% chance to penetrate immunity effects). |
+| 2 | Ultimate | **Ultimate** | Strikes a single target with 3 combo hits, dealing 180% ATK DMG, with a 100% chance to inflict [Field] on the target for 1 turn (before acting, takes DoT equal to 60% ATK, with a 50% chance to penetrate immunity effects). |
+| 3 | Ultimate | **Ultra-Ultimate** | Strikes a single target with 3 combo hits, dealing 180% ATK DMG, with a 100% chance to inflict [Field] on the target for 1 turn (before acting, takes DoT equal to 70% ATK, with a 50% chance to penetrate immunity effects). |
 | 4 | Passive | **Passive** | Permanently increases self HP. At the start of battle, permanently grants a 20% DoT Boost to self and allies in the same row, and grants self [Tenacity] (absorbs DMG equal to 20% of own HP). |
 | 5 | Passive | **Extreme Passive** | Permanently increases self HP. At the start of battle, permanently grants a 25% DoT Boost to self and allies in the same row, and grants self [Tenacity] (absorbs DMG equal to 25% of own HP). |
 | 6 | Passive | **5★ Passive** | Permanently increases self HP. At the start of battle, permanently grants a 30% DoT Boost to self and allies in the same row, and grants self [Tenacity] (absorbs DMG equal to 30% of own HP). |
@@ -3235,9 +3235,9 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Attacks a single target with 3 combo strikes for 40% ATK (+3) DMG. |
-| 2 | Ultimate | **Ultimate** | Attacks each enemy in the entire row with 5 combo strikes for 50% ATK (+2) DMG, with a 75% chance to inflict [Shatter] on the main target for 2 turn(s) (reduces DMG RED. Rate by 35%), and a 75% chance to inflict [Shatter] on the remaining targets in the same row for 2 turn(s) (reduces DMG RED. Rate by 30%). |
-| 3 | Ultimate | **Ultra-Ultimate** | Attacks each enemy in the entire row with 5 combo strikes for 55% ATK (+2) DMG, with a 100% chance to inflict [Shatter] on the main target for 2 turn(s) (reduces DMG RED. Rate by 35%), and a 100% chance to inflict [Shatter] on the remaining targets in the same row for 2 turn(s) (reduces DMG RED. Rate by 30%). |
+| 1 | Basic | **Basic** | Attacks a single target with 3 combo strikes for 40% ATK DMG. |
+| 2 | Ultimate | **Ultimate** | Attacks each enemy in the entire row with 5 combo strikes for 50% ATK DMG, with a 75% chance to inflict [Shatter] on the main target for 2 turn(s) (reduces DMG RED. Rate by 35%), and a 75% chance to inflict [Shatter] on the remaining targets in the same row for 2 turn(s) (reduces DMG RED. Rate by 30%). |
+| 3 | Ultimate | **Ultra-Ultimate** | Attacks each enemy in the entire row with 5 combo strikes for 55% ATK DMG, with a 100% chance to inflict [Shatter] on the main target for 2 turn(s) (reduces DMG RED. Rate by 35%), and a 100% chance to inflict [Shatter] on the remaining targets in the same row for 2 turn(s) (reduces DMG RED. Rate by 30%). |
 | 4 | Passive | **Passive** | Permanently increases own HP by. Reduces the CRIT RES Rate of enemies with [Shatter] by 25% for 2 turn(s). |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP by. Reduces the CRIT RES Rate of enemies with [Shatter] by 30% for 2 turn(s). |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP by. Reduces the CRIT RES Rate of enemies with [Shatter] by 35% for 2 turn(s). |
@@ -3300,8 +3300,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 100% ATK damage to a single target. On a critical hit, has a 100% chance to inflict [Corrosion] on the main target for 2 turns (15% ATK as DoT). |
-| 2 | Ultimate | **Ultimate** | Deals 27% ATK (+3) damage to all enemies in 3 hit combos, with a 100% chance to inflict [Injured] on the main target for 2 turns (when attacked, adds Injury damage equal to 50% ATK). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 27% ATK (+3) damage to all enemies in 3 hit combos, with a 100% chance to inflict [Injured] on the main target and a 50% chance to inflict it on the main target's row for 2 turns (when attacked, adds Injury damage equal to 50% ATK). |
+| 2 | Ultimate | **Ultimate** | Deals 27% ATK damage to all enemies in 3 hit combos, with a 100% chance to inflict [Injured] on the main target for 2 turns (when attacked, adds Injury damage equal to 50% ATK). |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals 27% ATK damage to all enemies in 3 hit combos, with a 100% chance to inflict [Injured] on the main target and a 50% chance to inflict it on the main target's row for 2 turns (when attacked, adds Injury damage equal to 50% ATK). |
 | 4 | Passive | **Passive** | Permanently increases own max HP by. Inflicts [Weaken] on enemies afflicted with [Injured] (ATK reduced% for 1 turn). |
 | 5 | Passive | **Extreme Passive** | Permanently increases own max HP by. Inflicts [Weaken] on enemies afflicted with [Injured] (ATK reduced by 30% for 1 turn). |
 | 6 | Passive | **5★ Passive** | Permanently increases own max HP by. Inflicts [Weaken] on enemies afflicted with [Injured] (ATK reduced by 35% for 1 turn). |
@@ -3322,9 +3322,9 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals 5 combo strikes to a single target for 20% ATK (+2) DMG each. |
-| 2 | Ultimate | **Ultimate** | Deals 4 combo strikes to each enemy in the entire row for 35% ATK (+2) DMG each, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 50% ATK). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 4 combo strikes to each enemy in the entire row for 35% ATK (+2) DMG each, with a 100% chance to inflict [Burn] on the main target and a 50% chance to inflict [Burn] on enemies in the main target's column, for 2 turns (DoT equal to 50% ATK). |
+| 1 | Basic | **Basic** | Deals 5 combo strikes to a single target for 20% ATK DMG each. |
+| 2 | Ultimate | **Ultimate** | Deals 4 combo strikes to each enemy in the entire row for 35% ATK DMG each, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 50% ATK). |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals 4 combo strikes to each enemy in the entire row for 35% ATK DMG each, with a 100% chance to inflict [Burn] on the main target and a 50% chance to inflict [Burn] on enemies in the main target's column, for 2 turns (DoT equal to 50% ATK). |
 | 4 | Passive | **Passive** | Permanently increases own HP by. If there is a [Burning] enemy among the foes, you enter [Berserk] state (deals 30% more DMG when attacking). |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP by. If there is a [Burning] enemy among the foes, you enter [Berserk] state (deals 40% more DMG when attacking). |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP by. If there is a [Burning] enemy among the foes, you enter [Berserk] state (deals 45% more DMG when attacking). |
@@ -3345,8 +3345,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 100% ATK damage to a single target. |
-| 2 | Ultimate | **Ultimate** | Deals 16% ATK (+2) damage to all enemies in a 5-hit combo, with a 100% chance to inflict [Collapse] on 2 random targets for 2 turns (DMG reduction rate lowered by 30%). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 16% ATK (+2) damage to all enemies in a 5-hit combo, with a 100% chance to inflict [Collapse] on 3 random targets for 2 turns (DMG reduction rate lowered by 30%). |
+| 2 | Ultimate | **Ultimate** | Deals 16% ATK damage to all enemies in a 5-hit combo, with a 100% chance to inflict [Collapse] on 2 random targets for 2 turns (DMG reduction rate lowered by 30%). |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals 16% ATK damage to all enemies in a 5-hit combo, with a 100% chance to inflict [Collapse] on 3 random targets for 2 turns (DMG reduction rate lowered by 30%). |
 | 4 | Passive | **Passive** | Permanently grants self HP. After each action, if there is an enemy in [Collapse], deals additional damage equal to 10% ATK to the target just attacked, and each additional enemy in [Collapse] deals a further 10% ATK of additional damage. |
 | 5 | Passive | **Extreme Passive** | Permanently grants self HP. After each action, if there is an enemy in [Collapse], deals additional damage equal to 15% ATK to the target just attacked, and each additional enemy in [Collapse] deals a further 15% ATK of additional damage. |
 | 6 | Passive | **5★ Passive** | Permanently grants self HP. After each action, if there is an enemy in [Collapse], deals additional damage equal to 17% ATK to the target just attacked, and each additional enemy in [Collapse] deals a further 17% ATK of additional damage. |
@@ -3383,7 +3383,7 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals 40% ATK (+3) DMG to a single target in a 3-hit combo. |
+| 1 | Basic | **Basic** | Deals 40% ATK DMG to a single target in a 3-hit combo. |
 | 2 | Ultimate | **Ultimate** | Deals 180% ATK DMG to a single target, with a 100% chance to inflict [Injured] on the main target for 2 turns (adds 60% ATK worth of Injured DMG when the target is attacked), and inflicts [Weaken] on the target (ATK reduced by 30% for 2 turns). |
 | 3 | Ultimate | **Ultra-Ultimate** | Deals 220% ATK DMG to a single target, with a 100% chance to inflict [Injured] on the main target for 2 turns (adds 80% ATK worth of Injured DMG when the target is attacked), and inflicts [Weaken] on the target (ATK reduced by 40% for 2 turns). |
 | 4 | Passive | **Passive** | Permanently increases own HP by. The final hit has a 60% chance to inflict [Injured] on the main target and surrounding enemies for 2 turns (adds 60% ATK worth of Injured DMG when they are attacked). |
@@ -3427,9 +3427,9 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals a 3-hit combo to a single target for 35% ATK (+3) damage. |
-| 2 | Ultimate | **Ultimate** | Deals a 5-hit combo to all enemies for 17% ATK (+2) damage. If self is in the [Berserk] state, restore HP. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals a 5-hit combo to all enemies for 17% ATK (+2) damage, and directly restores own HP. At the same time, attacks from surrounding allies ignore 20% DEF for a duration. |
+| 1 | Basic | **Basic** | Deals a 3-hit combo to a single target for 35% ATK damage. |
+| 2 | Ultimate | **Ultimate** | Deals a 5-hit combo to all enemies for 17% ATK damage. If self is in the [Berserk] state, restore HP. |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals a 5-hit combo to all enemies for 17% ATK damage, and directly restores own HP. At the same time, attacks from surrounding allies ignore 20% DEF for a duration. |
 | 4 | Passive | **Passive** | Permanently increases own HP by. After acting, grants the ally with the lowest HP percentage (including self) [Tenacity] (absorbs damage equal to 25% of own max HP). |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP by. After acting, grants the ally with the lowest HP percentage (excluding self) [Tenacity] (absorbs damage equal to 25% of own max HP), and has a 50% chance to grant self [Tenacity]. |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP by. After acting, grants the ally with the lowest HP percentage (excluding self) [Tenacity] (absorbs damage equal to 35% of own max HP), and has a 50% chance to grant self [Tenacity]. |
@@ -3487,9 +3487,9 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Attacks a single target with 3 combo strikes for 40% ATK DMG (+3). |
-| 2 | Ultimate | **Ultimate** | Attacks targets in a cross-shaped area with 3 combo strikes for 50% ATK DMG (+3). Also grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 30% of own HP). |
-| 3 | Ultimate | **Ultra-Ultimate** | Attacks targets in a cross-shaped area with 3 combo strikes for 55% ATK DMG (+3). Also grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 35% of own HP). |
+| 1 | Basic | **Basic** | Attacks a single target with 3 combo strikes for 40% ATK DMG. |
+| 2 | Ultimate | **Ultimate** | Attacks targets in a cross-shaped area with 3 combo strikes for 50% ATK DMG. Also grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 30% of own HP). |
+| 3 | Ultimate | **Ultra-Ultimate** | Attacks targets in a cross-shaped area with 3 combo strikes for 55% ATK DMG. Also grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 35% of own HP). |
 | 4 | Passive | **Passive** | Permanently increases own HP. After any character's action, increases the ATK of allies in a [Tenacity-type state] (Tenacity/Resilience) by 25%. |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP. After any character's action, increases the ATK of allies in a [Tenacity-type state] (Tenacity/Resilience) by 35%. |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP. After any character's action, increases the ATK of allies in a [Tenacity-type state] (Tenacity/Resilience) by 40%. |
@@ -3593,9 +3593,9 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Deals 34% ATK (+3) DMG to a single target in a 3-hit combo. Has a 100% chance to inflict [Internal Injury] on the target (when struck, deals additional Internal Injury DMG equal to 100% of Ringring's ATK; the effect is consumed once triggered). |
-| 2 | Ultimate | **Ultimate** | Deals 35% ATK (+2) DMG to a single target in a 4-hit combo, and restores HP equal to 100% ATK to all allies. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 35% ATK (+2) DMG to a single target in a 4-hit combo, and restores HP equal to 120% ATK to all allies. |
+| 1 | Basic | **Basic** | Deals 34% ATK DMG to a single target in a 3-hit combo. Has a 100% chance to inflict [Internal Injury] on the target (when struck, deals additional Internal Injury DMG equal to 100% of Ringring's ATK; the effect is consumed once triggered). |
+| 2 | Ultimate | **Ultimate** | Deals 35% ATK DMG to a single target in a 4-hit combo, and restores HP equal to 100% ATK to all allies. |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals 35% ATK DMG to a single target in a 4-hit combo, and restores HP equal to 120% ATK to all allies. |
 | 4 | Passive | **Passive** | Permanently increases own HP by. At the start of battle, grants 50% Healing rate to all allies for 3 turns. |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP by. At the start of battle, grants 60% Healing rate to all allies for 3 turns. |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP by. At the start of battle, grants 70% Healing rate to all allies for 3 turns. |
@@ -3616,8 +3616,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 100% ATK damage to a single target. |
-| 2 | Ultimate | **Ultimate** | Deals 35% ATK (+2) damage to each enemy in the entire column in 4 hit combos, with a 50% chance to [Stun] the main target for 1 turn (cannot take actions; only 4 characters on each side can be in a stun-type state at the same time). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 35% ATK (+2) damage to each enemy in the entire column in 4 hit combos, with a 50% chance to [Stun] the main target for 1 turn (cannot take actions; only 4 characters on each side can be in a stun-type state at the same time), and raises the Effect Resistance of allies in the same column by 40% for 2 turns. |
+| 2 | Ultimate | **Ultimate** | Deals 35% ATK damage to each enemy in the entire column in 4 hit combos, with a 50% chance to [Stun] the main target for 1 turn (cannot take actions; only 4 characters on each side can be in a stun-type state at the same time). |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals 35% ATK damage to each enemy in the entire column in 4 hit combos, with a 50% chance to [Stun] the main target for 1 turn (cannot take actions; only 4 characters on each side can be in a stun-type state at the same time), and raises the Effect Resistance of allies in the same column by 40% for 2 turns. |
 | 4 | Passive | **Passive** | Permanently increases own max HP by. When battle begins, grants all allies 20% Bonus DMG for 2 turns. |
 | 5 | Passive | **Extreme Passive** | Permanently increases own max HP by. When battle begins, grants all allies 30% Bonus DMG for 2 turns. |
 | 6 | Passive | **5★ Passive** | Permanently increases own max HP by. When battle begins, grants all allies 35% Bonus DMG for 2 turns. |
@@ -3754,9 +3754,9 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Strikes a single target with a 5-hit combo, dealing 18% ATK(+2) DMG. |
-| 2 | Ultimate | **Ultimate** | Strikes a single target with a 5-hit combo, dealing 38% ATK(+2) DMG. Has a 100% chance to increase self ATK by 10% for 2 turns. |
-| 3 | Ultimate | **Ultra-Ultimate** | Strikes a single target with a 5-hit combo, dealing 38% ATK(+2) DMG. Has a 100% chance to increase self ATK% for 2 turns. |
+| 1 | Basic | **Basic** | Strikes a single target with a 5-hit combo, dealing 18% ATK DMG. |
+| 2 | Ultimate | **Ultimate** | Strikes a single target with a 5-hit combo, dealing 38% ATK DMG. Has a 100% chance to increase self ATK by 10% for 2 turns. |
+| 3 | Ultimate | **Ultra-Ultimate** | Strikes a single target with a 5-hit combo, dealing 38% ATK DMG. Has a 100% chance to increase self ATK% for 2 turns. |
 | 4 | Passive | **Passive** | Permanently increases self HP by. Before acting, increases self Crit by 5% for 1 turn. |
 | 5 | Passive | **Extreme Passive** | Permanently increases self HP by. Before acting, increases self Crit by 10% for 1 turn. |
 | 6 | Passive | **5★ Passive** | Permanently increases self HP by. Before acting, increases self Crit by 15% for 1 turn. |
@@ -3771,8 +3771,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 90% AT DMG to a single target. |
-| 2 | Ultimate | **Ultimate** | Strikes a single target with a 5-hit combo dealing 38% ATK(+2) DMG, and has a 100% chance to reduce DMG taken by self by 10% for 2 turns. |
-| 3 | Ultimate | **Ultra-Ultimate** | Strikes a single target with a 5-hit combo dealing 38% ATK(+2) DMG. Has a 100% chance to reduce DMG taken by self% for 2 turns. |
+| 2 | Ultimate | **Ultimate** | Strikes a single target with a 5-hit combo dealing 38% ATK DMG, and has a 100% chance to reduce DMG taken by self by 10% for 2 turns. |
+| 3 | Ultimate | **Ultra-Ultimate** | Strikes a single target with a 5-hit combo dealing 38% ATK DMG. Has a 100% chance to reduce DMG taken by self% for 2 turns. |
 | 4 | Passive | **Passive** | Permanently increases self HP by. After being attacked, has a 25% chance to increase self DMG by 10% for 1 turn. |
 | 5 | Passive | **Extreme Passive** | Permanently increases self HP by. After being attacked, has a 25% chance to increase self DMG% for 1 turn. |
 | 6 | Passive | **5★ Passive** | Permanently increases self HP by. After being attacked, has a 25% chance to increase self DMG by 25% for 1 turn. |
@@ -3825,8 +3825,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 90% ATK DMG to a single target. |
-| 2 | Ultimate | **Ultimate** | Deals a 5-hit combo of 38% ATK (+2) DMG to a single target. Each hit has a 50% chance to deal 10% ATK DMG to enemies around the primary target. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals a 5-hit combo of 38% ATK (+2) DMG to a single target. Each hit has a 50% chance to deal 15% ATK DMG to enemies around the primary target. |
+| 2 | Ultimate | **Ultimate** | Deals a 5-hit combo of 38% ATK DMG to a single target. Each hit has a 50% chance to deal 10% ATK DMG to enemies around the primary target. |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals a 5-hit combo of 38% ATK DMG to a single target. Each hit has a 50% chance to deal 15% ATK DMG to enemies around the primary target. |
 | 4 | Passive | **Passive** | Permanently gains HP. On the first turn, if Mountain Ape is present, increases DMG dealt by Eyelash%, lasting until the end of battle. |
 | 5 | Passive | **Extreme Passive** | Permanently gains HP. On the first turn, if Mountain Ape is present, increases DMG dealt by Eyelash by 30%, lasting until the end of battle. |
 | 6 | Passive | **5★ Passive** | Permanently gains HP. On the first turn, if Mountain Ape is present, increases DMG dealt by Eyelash by 35%, lasting until the end of battle. |
@@ -3923,8 +3923,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 100% ATK Direct Damage to a single target. |
-| 2 | Ultimate | **Ultimate** | Deals 5 consecutive strikes to all targets for 24% ATK (+2) Direct Damage, and increases the DMG reflection rate of all allies%. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 5 consecutive strikes to all targets for 26% ATK (+2) Direct Damage, and increases the DMG reflection rate of all allies by 25%. |
+| 2 | Ultimate | **Ultimate** | Deals 5 consecutive strikes to all targets for 24% ATK Direct Damage, and increases the DMG reflection rate of all allies%. |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals 5 consecutive strikes to all targets for 26% ATK Direct Damage, and increases the DMG reflection rate of all allies by 25%. |
 | 4 | Passive | **Passive** | Permanently increases own HP by. Reduces incoming damage from Hi-Tech enemies% and recovers 10% HP. |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP by. When self is attacked by a Tech-type enemy, damage taken is reduced by 30% and self restores 15% HP. |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP by. When self is attacked by a Tech-type enemy, damage taken is reduced by 30% and self restores 20% HP. |
@@ -4009,8 +4009,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals a 2-hit combo of 45% ATK DMG to a single target. |
-| 2 | Ultimate | **Ultimate** | Deals a 5-hit combo of 22% ATK (+2) DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 10% ATK extra DMG. |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals a 5-hit combo of 22% ATK (+2) DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 20% ATK extra DMG. |
+| 2 | Ultimate | **Ultimate** | Deals a 5-hit combo of 22% ATK DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 10% ATK extra DMG. |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals a 5-hit combo of 22% ATK DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 20% ATK extra DMG. |
 | 4 | Passive | **Passive** | Permanently gains HP. On the first turn, if Hellish Blizzard is present, increases DMG dealt%, lasting until the end of battle. |
 | 5 | Passive | **Extreme Passive** | Permanently gains HP. On the first turn, if Hellish Blizzard is present, increases DMG dealt by 30%, lasting until the end of battle. |
 | 6 | Passive | **5★ Passive** | Permanently gains HP. On the first turn, if Hellish Blizzard is present, increases DMG dealt by 35%, lasting until the end of battle. |
@@ -4096,9 +4096,9 @@
 
 | # | Skill Type | Name | Description |
 |---|---|---|---|
-| 1 | Basic | **Basic** | Strike a single target with a 4-hit combo, dealing 20% ATK (+2) damage. |
-| 2 | Ultimate | **Ultimate** | Strike a single target with a 4-hit combo, dealing 45% ATK (+2) damage. |
-| 3 | Ultimate | **Ultra-Ultimate** | Strike a single target with a 4-hit combo, dealing 50% ATK (+2) damage. |
+| 1 | Basic | **Basic** | Strike a single target with a 4-hit combo, dealing 20% ATK damage. |
+| 2 | Ultimate | **Ultimate** | Strike a single target with a 4-hit combo, dealing 45% ATK damage. |
+| 3 | Ultimate | **Ultra-Ultimate** | Strike a single target with a 4-hit combo, dealing 50% ATK damage. |
 | 4 | Passive | **Passive** | Permanently increase self HP by. The first time self takes fatal damage each battle, revive with 5% of max HP. |
 | 5 | Passive | **Extreme Passive** | Permanently increase self HP by. The first time self takes fatal damage each battle, revive with 10% of max HP. |
 | 6 | Passive | **5★ Passive** | Permanently increase self HP by. The first time self takes fatal damage each battle, revive with 13% of max HP. |
@@ -4129,8 +4129,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 80% ATK damage to a single target. |
-| 2 | Ultimate | **Ultimate** | Strikes the entire target column with a 3-hit combo for 40% ATK (+3) damage, with a 100% chance to inflict [Corrosion] on the main target for 2 turns (DMG reduction rate lowered by 30%). |
-| 3 | Ultimate | **Ultra-Ultimate** | Strikes the entire target column with a 3-hit combo for 45% ATK (+3) damage, with a 100% chance to inflict [Corrosion] on the main target for 2 turns (DMG reduction rate lowered by 30%). |
+| 2 | Ultimate | **Ultimate** | Strikes the entire target column with a 3-hit combo for 40% ATK damage, with a 100% chance to inflict [Corrosion] on the main target for 2 turns (DMG reduction rate lowered by 30%). |
+| 3 | Ultimate | **Ultra-Ultimate** | Strikes the entire target column with a 3-hit combo for 45% ATK damage, with a 100% chance to inflict [Corrosion] on the main target for 2 turns (DMG reduction rate lowered by 30%). |
 | 4 | Passive | **Passive** | Permanently increases own HP by. While Deep Sea Raider is on the field, increases own damage% until the end of battle. |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP by. While Deep Sea Raider is on the field, increases own damage by 25% until the end of battle. |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP by. While Deep Sea Raider is on the field, increases own damage by 28% until the end of battle. |
@@ -4145,8 +4145,8 @@
 | # | Skill Type | Name | Description |
 |---|---|---|---|
 | 1 | Basic | **Basic** | Deals 80% AT DMG to a single target. |
-| 2 | Ultimate | **Ultimate** | Deals 33% ATK(+3) DMG to the entire row with a 3-hit combo. Has a 100% chance to inflict [Corruption] on the main target for 2 turns (DMG reduction rate lowered by 30%). |
-| 3 | Ultimate | **Ultra-Ultimate** | Deals 40% ATK(+3) DMG to the entire row with a 3-hit combo. Has a 100% chance to inflict [Corruption] on the main target for 2 turns (DMG reduction rate lowered by 30%). |
+| 2 | Ultimate | **Ultimate** | Deals 33% ATK DMG to the entire row with a 3-hit combo. Has a 100% chance to inflict [Corruption] on the main target for 2 turns (DMG reduction rate lowered by 30%). |
+| 3 | Ultimate | **Ultra-Ultimate** | Deals 40% ATK DMG to the entire row with a 3-hit combo. Has a 100% chance to inflict [Corruption] on the main target for 2 turns (DMG reduction rate lowered by 30%). |
 | 4 | Passive | **Passive** | Permanently increases own HP by. If a Deep Sea Invader is present, increases own DMG% until the end of battle. |
 | 5 | Passive | **Extreme Passive** | Permanently increases own HP by. If a Deep Sea Invader is present, increases own DMG by 25% until the end of battle. |
 | 6 | Passive | **5★ Passive** | Permanently increases own HP by. If a Deep Sea Invader is present, increases own DMG by 28% until the end of battle. |

@@ -101,40 +101,32 @@
   ],
   "effects": [
     {
-      "term": "[Bảo Hộ Chuyên Biệt]",
-      "desc": "Khiên bảo hộ PvP giảm hoặc vô hiệu sát thương lên đồng minh."
-    },
-    {
       "term": "[Choáng Chuyên Biệt]",
-      "desc": "Bậc PvP của Choáng — khó kháng hoặc giải hơn."
+      "desc": "Ngăn chặn thiết bị bị ảnh hưởng hoạt động và giảm vĩnh viễn 30% ATK của nó. Tối đa 4 ký tự có thể bị ảnh hưởng đồng thời bởi [Choáng] hoặc [Choáng Chuyên Biệt]."
     },
     {
       "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "desc": "Ngăn chặn các đơn vị bị ảnh hưởng hành động. Chia sẻ giới hạn đồng thời 4 ký tự với [Choáng Chuyên Biệt]."
     },
     {
-      "term": "[Đánh Dấu]",
-      "desc": "Đánh dấu một đơn vị, mở điều kiện truy kích hoặc hiệu ứng thưởng gắn với dấu."
+      "term": "[Ăn Mòn]",
+      "desc": "Hiệu ứng DMG liên tục. Hiệp Sĩ Kim Loại có thể cấp cho đồng minh khả năng miễn nhiễm với nó."
     },
     {
-      "term": "[Hiệp]",
-      "desc": "Một lượt trong trận đấu; nhiều hiệu ứng bị giới hạn theo số lượt hiện tại (ví dụ chỉ hiệu lực khi Round < 6)."
+      "term": "[Ăn Mòn Chuyên Biệt]",
+      "desc": "Hiệu ứng DMG liên tục chuyên dụng. Hiệp Sĩ Kim Loại có thể cấp cho đồng minh khả năng miễn nhiễm với nó."
     },
     {
       "term": "[Né Tránh]",
-      "desc": "Trạng thái né giúp giảm sát thương Trực Tiếp, Thêm, Tích Lũy và Cuồng Nộ nhận vào chỉ còn 1 điểm trong thời gian hiệu lực."
+      "desc": "Giảm Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG xuống còn 1 DMG."
     },
     {
-      "term": "[Phản Kích]",
-      "desc": "Dấu phản đòn mà số lớp của nó làm tăng dần sát thương trực tiếp truy kích của người dùng lên các kẻ địch bị đánh dấu."
+      "term": "[Truy Kích Liên Kích]",
+      "desc": "Hiệu ứng Truy Kích phối hợp. Nội tại Thức tỉnh của Hiệp Sĩ Kim Loại loại bỏ hiệu ứng này khỏi toàn bộ đội địch trong cả trận chiến."
     },
     {
-      "term": "[Sát Thương Ăn Mòn Đặc Hóa]",
-      "desc": "Biến thể sát thương Ăn Mòn theo thời gian nâng cao có khả năng tự chọn lại mục tiêu, mà một số đơn vị có thể miễn nhiễm."
-    },
-    {
-      "term": "[Sát Thương Ăn Mòn]",
-      "desc": "Loại sát thương ăn mòn liên tục theo thời gian bào mòn Máu dần dần, có thể bị chặn bởi miễn nhiễm vùng."
+      "term": "[Bảo Hộ Chuyên Biệt]",
+      "desc": "Hiệu ứng phòng thủ tăng lên nhờ Nội tại Awaken 2 của Hiệp Sĩ Kim Loại dựa trên ATK của Hiệp Sĩ Kim Loại."
     }
   ],
   "keepsakeIcon": "/Keepsake/Metal Knight (SSRplus)/Keepsake_SSRplus.png",

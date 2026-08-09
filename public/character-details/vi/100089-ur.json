@@ -101,28 +101,32 @@
   ],
   "effects": [
     {
-      "term": "[Kích Nổ]",
-      "desc": "Kích hoạt một tầng sát thương theo thời gian hoặc [Sụp Đổ] đang tích trữ để nổ ngay, biến nó thành một đòn tức thời nhân lên (ví dụ 3 lần sát thương tích trữ)."
-    },
-    {
-      "term": "[Miễn Nhiễm]",
-      "desc": "Trạng thái khiến người mang không bị ảnh hưởng bởi một hiệu ứng hoặc loại khống chế nhất định, như [Đột Phá], Choáng hay Mê Hoặc."
-    },
-    {
-      "term": "[Né Tức Thì]",
-      "desc": "Các tầng mà mỗi tầng khiến một đòn đánh trực tiếp, bổ sung, charge hoặc berserk chỉ gây 1 sát thương."
+      "term": "[Nội Thương]",
+      "desc": "Gây DMG dựa trên ATK của Gouketsu khi được kích hoạt, sau đó biến mất."
     },
     {
       "term": "[Làm Suy Yếu]",
-      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+      "desc": "Giảm 50% ATK của mục tiêu bị ảnh hưởng trong 2 lượt."
     },
     {
-      "term": "[Sụp Đổ (Vũ Trang)]",
-      "desc": "Hiệu ứng bất lợi gây sát thương trì hoãn, tích trữ sát thương bổ sung (600-800% ST của Gouketsu), giải phóng khi mục tiêu bị đánh trúng hoặc khi bị [Kích Nổ]."
+      "term": "[Khả Năng Né Tránh]",
+      "desc": "Giảm Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG xuống còn 1 DMG."
+    },
+    {
+      "term": "[Kích Nổ]",
+      "desc": "Chuyển đổi một phiên bản [Nội Thương] DMG thành [Kích Nổ] DMG."
+    },
+    {
+      "term": "[Kích Nổ]",
+      "desc": "Hiệu ứng sát thương được tạo bằng cách chuyển đổi [Nội Thương] DMG."
+    },
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Sau khi nhận được sát thương kết liễu, giữ đơn vị bị ảnh hưởng trong trận chiến cho đến khi 5 nhân vật hành động, sau đó khôi phục 100% HP. Mỗi nhân vật có thể kích hoạt nó tối đa 2 lần trong mỗi trận chiến."
     },
     {
       "term": "[Đột Phá]",
-      "desc": "Hủy khiên Kiên Cường của mục tiêu và tăng tấn công cho đòn đó."
+      "desc": "Một hiệu ứng có khả năng loại bỏ hoặc chống lại các hiệu ứng sinh tồn. Đồng minh được cấp [Bất Khuất Chuyên Biệt] nhờ Thức tỉnh này sẽ miễn nhiễm với nó."
     }
   ],
   "keepsakeIcon": "/Keepsake/Gouketsu (UR)/Keepsake_UR.png",

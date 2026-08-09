@@ -92,6 +92,9 @@
   "list": {
     "title": "Thư viện nhân vật",
     "search": "Nhập tên nhân vật...",
+    "search_btn": "Tìm kiếm",
+    "suggestions": "Gợi ý nhân vật",
+    "press_enter": "Nhấn Enter để tìm",
     "tier_all": "Bậc: Tất cả",
     "type_all": "Hệ: Tất cả",
     "faction_all": "Phe phái: Tất cả",

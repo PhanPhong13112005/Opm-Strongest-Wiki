@@ -101,44 +101,56 @@
   ],
   "effects": [
     {
-      "term": "[Bất Khuất Chuyên Biệt]",
-      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
+      "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
+      "desc": "Một loại sát thương trực tiếp đặc biệt chỉ bị ảnh hưởng bởi công cụ sửa đổi DMG tiên tiến."
     },
     {
-      "term": "[Bất Khuất Cực Hạn]",
-      "desc": "Khiên bỏ qua sát thương bậc cao nhất, chặn một số đòn nhận vào nhất định và khi kích hoạt có thể tung sát thương Hỗn Loạn cực lớn, xuyên qua các hiệu ứng né/giảm thông thường."
-    },
-    {
-      "term": "[Bất Khuất]",
-      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
-    },
-    {
-      "term": "[Giảm Sát Thương Chuẩn]",
-      "desc": "Giảm sát thương chuẩn nhận vào theo tỷ lệ lớn (ví dụ 70%), một lá chắn hiếm hoi chống lại loại sát thương thường không thể chặn."
+      "term": "[Khả Năng Né Tránh Chuyên Biệt]",
+      "desc": "Một hiệu ứng phòng thủ đặc biệt có thể bị xuyên thủng hoặc bỏ qua một phần bởi một số kỹ năng nhất định."
     },
     {
       "term": "[Giảm Sát Thương Không Bạo Kích]",
-      "desc": "Giảm lượng sát thương nhận vào từ các đòn đánh không phải chí mạng."
+      "desc": "Giảm sát thương nhận được từ các đòn tấn công không quan trọng."
     },
     {
-      "term": "[Nhiễu Loạn]",
-      "desc": "Trước khi một nhân vật hành động, nếu không có khiên, chịu Disorder DMG nặng dựa trên ST. Cộng dồn; biến mất sau khi kích hoạt."
+      "term": "[Bất Khuất]",
+      "desc": "Ngăn chặn đơn vị bị ảnh hưởng bị đánh bại trong các điều kiện cụ thể."
     },
     {
-      "term": "[Né Tránh Chuyên Biệt]",
-      "desc": "Bậc PvP của Né Tránh — giảm đòn chuyên biệt về 1 sát thương; bị xuyên bởi hiệu ứng bỏ qua né tránh."
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Bất Khuất]."
     },
     {
-      "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
-      "desc": "Bậc cao cấp của sát thương trực tiếp, chỉ chịu ảnh hưởng của tăng/giảm sát thương cao cấp và xuyên qua phòng thủ thường."
+      "term": "[Rối Loạn]",
+      "desc": "Trước khi bất kỳ nhân vật nào hành động, gây [Sát Thương Rối Loạn] nếu mục tiêu không thuộc [Bất Khuất Chuyên Biệt] hoặc [Kiên Cường Cực Hạn]. Hiệu ứng biến mất sau khi kích hoạt và có thể cộng dồn."
     },
     {
-      "term": "[Sát Thương Nhiễu Loạn]",
-      "desc": "Loại sát thương lớn theo ST gắn với debuff Disorder, bỏ qua Giảm ST theo thời gian và xuyên Specialized Evasion, biến mất sau khi kích hoạt."
+      "term": "[Sát Thương Rối Loạn]",
+      "desc": "Hiệu ứng sát thương dựa trên ATK của Overgrown Rover bỏ qua 100% [Giảm Sát Thương Duy Trì] và xuyên qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích]."
     },
     {
-      "term": "[Tái Đấu]",
-      "desc": "Vĩnh viễn giảm sát thương phải chịu; khi bị hạ, tiêu một lớp để trở lại với 100% Máu và truy kích."
+      "term": "[Giảm Sát Thương Duy Trì]",
+      "desc": "Giảm sát thương nhận được từ các hiệu ứng sát thương theo thời gian."
+    },
+    {
+      "term": "[Né Tức Thì]",
+      "desc": "Một trạng thái đặc biệt có hiệu ứng bỏ qua-DMG có số lượng hành động có thể bị giảm bởi Overgrown Rover."
+    },
+    {
+      "term": "[Giảm Sát Thương Chuẩn]",
+      "desc": "Giảm True DMG mà thiết bị bị ảnh hưởng nhận được."
+    },
+    {
+      "term": "[Giảm Phần Tăng Sát Thương Duy Trì]",
+      "desc": "Giảm sát thương cộng thêm của các hiệu ứng sát thương theo thời gian. Overgrown Rover xua tan hiệu ứng này từ tất cả các đồng minh."
+    },
+    {
+      "term": "[Tái Chiến]",
+      "desc": "Cho phép đơn vị bị đánh bại quay lại trận chiến bằng cách tiêu thụ 1 điểm cộng dồn, khôi phục 100% HP và thực hiện [Truy Kích Tích Lực]."
+    },
+    {
+      "term": "[Truy Kích Tụ Lực]",
+      "desc": "Tuyệt Kĩ Truy Kích thực hiện trên một mục tiêu ngẫu nhiên ở một tỷ lệ phần trăm sức mạnh Tuyệt Kĩ được chỉ định."
     }
   ],
   "keepsakeIcon": "/Keepsake/Overgrown Rover (URplus)/Keepsake_URplus.png",

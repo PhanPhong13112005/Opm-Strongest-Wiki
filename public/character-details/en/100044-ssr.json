@@ -74,8 +74,28 @@
   ],
   "effects": [
     {
+      "term": "[Field]",
+      "desc": "Before taking action, the affected unit suffers Continuous DMG equal to 160% ATK."
+    },
+    {
+      "term": "[Charged]",
+      "desc": "Drive Knight transforms into this state when an enemy suffers [Field] DMG. While in this state, his Ultimate can apply [Charge DMG] to enemies in the target row."
+    },
+    {
+      "term": "[Charge]",
+      "desc": "A stack applied to targets affected by [Field]. Each layer deals 240% ATK as Charge DMG and reduces the Energy Gauge by 500 points. Can stack up to 4 layers."
+    },
+    {
+      "term": "[Charge DMG]",
+      "desc": "A specialized damage type generated through [Charge] stacks."
+    },
+    {
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "Permanently reduces all types of non-critical DMG received by 50%. Cannot coexist with [Agility]."
+    },
+    {
       "term": "[Agility]",
-      "desc": "Evasion type buff; mutually exclusive with Non-Crit Damage Immunity."
+      "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Reduction]."
     }
   ],
   "keepsakeIcon": "/Keepsake/Drive Knight (SSR)/Keepsake_SSR.png",

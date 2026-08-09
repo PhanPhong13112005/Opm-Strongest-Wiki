@@ -102,7 +102,23 @@
   "effects": [
     {
       "term": "[Internal Injury]",
-      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+      "desc": "Deals DMG based on Bomb’s ATK when the affected target is attacked, then disappears after triggering."
+    },
+    {
+      "term": "[Evade]",
+      "desc": "Reduces Direct, Extra, Charge, and Berserk DMG received to 1 DMG."
+    },
+    {
+      "term": "[Specialized Extra DMG]",
+      "desc": "A special type of additional damage that can CRIT and is not affected by [Specialized DMG Reflect]."
+    },
+    {
+      "term": "[Specialized DMG Reflect]",
+      "desc": "A specialized damage-reflection effect that does not affect [Specialized Extra DMG]."
+    },
+    {
+      "term": "[Combo Attack]",
+      "desc": "Summons Silverfang to perform an additional attack using the same attack style as Bomb."
     }
   ],
   "keepsakeIcon": "/Keepsake/Bom/Bengpu (SSR)/Keepsake_SSR.png",

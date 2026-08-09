@@ -116,12 +116,24 @@
   ],
   "effects": [
     {
-      "term": "[Né Tránh]",
-      "desc": "Trạng thái né giúp giảm sát thương Trực Tiếp, Thêm, Tích Lũy và Cuồng Nộ nhận vào chỉ còn 1 điểm trong thời gian hiệu lực."
+      "term": "[Thiêu Đốt Chuyên Biệt]",
+      "desc": "Gây ATK DoT DMG dựa trên ATK, biến mất sau khi kích hoạt 3 lần và chuyển sang mục tiêu hợp lệ khác sau khi bất kỳ nhân vật nào hành động."
     },
     {
-      "term": "[Thiêu Đốt Chuyên Biệt]",
-      "desc": "Bậc PvP của Thiêu Đốt — sát thương liên tục mạnh hơn, khó giải hơn."
+      "term": "[Khả Năng Né Tránh]",
+      "desc": "Giảm Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG xuống còn 1 DMG."
+    },
+    {
+      "term": "[Đệm Sát Thương]",
+      "desc": "Giảm DMG dựa trên HP tối đa."
+    },
+    {
+      "term": "[Choáng]",
+      "desc": "Ngăn chặn các đơn vị bị ảnh hưởng hành động."
+    },
+    {
+      "term": "[Choáng Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Choáng]."
     }
   ],
   "classLevel": "Demon",

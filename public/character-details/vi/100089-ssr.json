@@ -75,7 +75,23 @@
   "effects": [
     {
       "term": "[Nội Thương]",
-      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+      "desc": "Khi đơn vị bị ảnh hưởng bị tấn công, lấy DMG bằng 100% ATK của Gouketsu. Biến mất sau khi kích hoạt một lần."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]."
+    },
+    {
+      "term": "[Nhanh Nhẹn]",
+      "desc": "Hiệu ứng phòng thủ không thể cùng tồn tại với [Giảm Sát Thương Không Bạo Kích]."
+    },
+    {
+      "term": "[Tỷ Lệ Hồi Máu]",
+      "desc": "Tăng hiệu quả phục hồi HP."
+    },
+    {
+      "term": "[Lá Chắn]",
+      "desc": "Tăng hiệu quả của các hiệu ứng loại lá chắn được tạo ra."
     }
   ],
   "keepsakeIcon": "/Keepsake/Gouketsu (SSR)/Keepsake_SSR.png",

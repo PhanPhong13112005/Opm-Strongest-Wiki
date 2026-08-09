@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals a 5-hit combo of 22% ATK (+2) DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 10% ATK extra DMG.",
+      "desc": "Deals a 5-hit combo of 22% ATK DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 10% ATK extra DMG.",
       "icon": "/Skill/Triple-Staff Lilly (R)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals a 5-hit combo of 22% ATK (+2) DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 20% ATK extra DMG.",
+      "desc": "Deals a 5-hit combo of 22% ATK DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 20% ATK extra DMG.",
       "keepsakeIcon": "/Keepsake/Triple-Staff Lilly (R)/Keepsake_R.png",
       "icon": "/Skill/Triple-Staff Lilly (R)/Skill_ult.png",
       "type": "Ultimate",

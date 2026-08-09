@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 80% ATK (+3) DMG with 3 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 30%); triggering a Critical Strike inflicts [Weaken] on the target (ATK reduced by 25% for 1 turn).",
+      "desc": "Deals 80% ATK DMG with 3 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 30%); triggering a Critical Strike inflicts [Weaken] on the target (ATK reduced by 25% for 1 turn).",
       "icon": "/Skill/G4 (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 100% ATK (+3) DMG with 3 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 40%); triggering a Critical Strike inflicts [Weaken] on the target (ATK reduced by 45% for 1 turn).",
+      "desc": "Deals 100% ATK DMG with 3 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 40%); triggering a Critical Strike inflicts [Weaken] on the target (ATK reduced by 45% for 1 turn).",
       "keepsakeIcon": "/Keepsake/G4 (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/G4 (SSR)/Skill_ult.png",
       "type": "Ultimate",

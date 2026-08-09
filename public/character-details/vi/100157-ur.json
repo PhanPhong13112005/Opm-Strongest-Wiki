@@ -101,28 +101,60 @@
   ],
   "effects": [
     {
+      "term": "[Né Sát Thương Tức Thì]",
+      "desc": "Tăng độ chính xác của hiệu ứng DMG tức thì."
+    },
+    {
+      "term": "[Khả Năng Né Tránh Chuyên Biệt]",
+      "desc": "Tăng độ chính xác của các hiệu ứng hoặc đòn tấn công chuyên biệt."
+    },
+    {
+      "term": "[Khả Năng Né Tránh]",
+      "desc": "Cho phép thiết bị bị ảnh hưởng tránh DMG có thể áp dụng."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm DMG nhận được từ các đòn tấn công không quan trọng."
+    },
+    {
+      "term": "[Giận Dữ]",
+      "desc": "Trạng thái tấn công cấp số lượng ATK được chỉ định."
+    },
+    {
+      "term": "[Đột Phá Chuyên Biệt]",
+      "desc": "Một hiệu ứng đột phá đặc biệt có thể được kích hoạt một lần sau mỗi đòn đánh. Chi tiết hiệu ứng chính xác hiện chưa được biết."
+    },
+    {
+      "term": "[Tập Hợp Lại]",
+      "desc": "Cho phép đơn vị bị đánh bại quay trở lại chiến trường với số lần giới hạn."
+    },
+    {
+      "term": "[Trả Thù]",
+      "desc": "Cho phép đơn vị bị đánh bại quay trở lại trận chiến và thực hiện cuộc tấn công truy đuổi trong các điều kiện được chỉ định."
+    },
+    {
+      "term": "[Phản Sát Thương Chuyên Biệt]",
+      "desc": "Một hiệu ứng phản sát thương đặc biệt bị loại bỏ bởi Nội tại này."
+    },
+    {
+      "term": "[Sợ Hãi]",
+      "desc": "Một hiệu ứng khống chế mà nhân vật này và các đồng minh trong cùng một cột sẽ miễn nhiễm với nó."
+    },
+    {
       "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "desc": "Ngăn chặn các đơn vị bị ảnh hưởng hành động."
     },
     {
-      "term": "[Đánh Dấu]",
-      "desc": "Đánh dấu một đơn vị, mở điều kiện truy kích hoặc hiệu ứng thưởng gắn với dấu."
+      "term": "[Choáng Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Choáng]."
     },
     {
-      "term": "[Hồi Phục Động Năng]",
-      "desc": "Hiệu ứng hồi sinh: sau khi toàn bộ đồng minh bị hạ, đơn vị quay lại trận đấu với phần lớn Máu tối đa (110%–200%)."
+      "term": "[Hoàn Trả Động Lực]",
+      "desc": "Khi tất cả đồng minh bị đánh bại, đưa đơn vị trở lại chiến trường với HP đã được khôi phục. Phục hồi dư thừa được chuyển đổi thành HP tối đa bổ sung."
     },
     {
-      "term": "[Miễn Nhiễm Sát Thương Khống Chế]",
-      "desc": "Hiệu ứng phòng thủ giảm sát thương nhận vào (30–40%), tăng lên mức giảm 150–170% khi ST của người mang cao hơn kẻ tấn công."
-    },
-    {
-      "term": "[Phản Kích]",
-      "desc": "Dấu phản đòn mà số lớp của nó làm tăng dần sát thương trực tiếp truy kích của người dùng lên các kẻ địch bị đánh dấu."
-    },
-    {
-      "term": "[Uy Hiếp]",
-      "desc": "Hiệu ứng khống chế dạng choáng khiến mục tiêu không thể hành động và giảm toàn bộ khả năng miễn sát thương của nó đi 30%."
+      "term": "[Giảm Sát Thương Áp Chế]",
+      "desc": "Giảm DMG phải chịu. Mức giảm được tăng lên khi ATK của đơn vị cao hơn mục tiêu."
     }
   ],
   "keepsakeIcon": "/Keepsake/Metal Bat V2 (UR)/Keepsake_UR.png",

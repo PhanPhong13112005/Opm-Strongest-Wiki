@@ -74,8 +74,12 @@
   ],
   "effects": [
     {
-      "term": "[Truy Kích]",
-      "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+      "term": "[Follow-up]",
+      "desc": "An additional attack performed by the ally with the highest ATK when triggered by Gyoro-Gyoro's Basic Attack."
+    },
+    {
+      "term": "[DMG Sharing]",
+      "desc": "Gyoro-Gyoro shares 50% of the DMG received by a Monster ally in the same column. The effect stops when that ally's HP falls below 20%."
     }
   ],
   "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSR)/Keepsake_SSR.png",

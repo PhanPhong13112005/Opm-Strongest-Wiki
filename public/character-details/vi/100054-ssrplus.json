@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây sát thương cho tất cả mục tiêu bằng 4 Combo với tổng sát thương bằng 64% HP tối đa (+2663). Sau khi sử dụng Tuyệt Kĩ, 2 Nhân vật bị đánh bại sẽ quay lại trận chiến với 100% HP. Có thể kích hoạt tối đa 6 lần mỗi trận.",
+      "desc": "Gây sát thương cho tất cả mục tiêu bằng 4 Combo với tổng sát thương bằng 64% HP tối đa. Sau khi sử dụng Tuyệt Kĩ, 2 Nhân vật bị đánh bại sẽ quay lại trận chiến với 100% HP. Có thể kích hoạt tối đa 6 lần mỗi trận.",
       "keepsakeIcon": "/Keepsake/Melzargard (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Melzargard (SSR+)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -102,23 +102,19 @@
   "effects": [
     {
       "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
     },
     {
       "term": "[Câm Lặng]",
-      "desc": "Mục tiêu không thể dùng chiêu cuối. Được tính là hiệu ứng khống chế."
+      "desc": "The target cannot use his Tuyệt Kĩ. Counts as a control effect."
     },
     {
-      "term": "[Đánh Dấu]",
-      "desc": "Đánh dấu một đơn vị, mở điều kiện truy kích hoặc hiệu ứng thưởng gắn với dấu."
-    },
-    {
-      "term": "[Hồi Sinh]",
-      "desc": "Trạng thái đưa đơn vị bị hạ gục trở lại trận, cấp số lần hồi sinh giới hạn mà các hiệu ứng chống hồi sinh có thể gỡ bỏ."
+      "term": "[Đã Tái Sinh]",
+      "desc": "Đưa nhân vật trở lại chiến đấu sau khi nhận sát thương chí mạng và phục hồi một lượng HP được chỉ định."
     },
     {
       "term": "[Hồi Phục]",
-      "desc": "Hồi Máu theo thời gian hoặc trước hành động kế tiếp của đơn vị."
+      "desc": "Phục hồi Sức khỏe theo thời gian hoặc trước hành động tiếp theo của đơn vị."
     }
   ],
   "keepsakeIcon": "/Keepsake/Melzargard (SSRplus)/Keepsake_SSRplus.png",

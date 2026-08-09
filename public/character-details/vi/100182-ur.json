@@ -101,23 +101,23 @@
   "effects": [
     {
       "term": "[Choáng Chuyên Biệt]",
-      "desc": "Bậc PvP của Choáng — khó kháng hoặc giải hơn."
+      "desc": "PvP tier of Stun — harder to resist or resolve."
     },
     {
       "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
     },
     {
       "term": "[Phòng Hộ Chuyên Biệt]",
-      "desc": "Khiên bậc PvP hấp thụ sát thương nhận vào, được cấp theo giá trị dựa trên Tấn Công (ví dụ 400% ST)."
+      "desc": "PvP-tier shields absorb incoming damage, granted at a value based on Attack (e.g. 400% ATK)."
     },
     {
       "term": "[Kích Nổ]",
-      "desc": "Kích hoạt một tầng sát thương theo thời gian hoặc [Sụp Đổ] đang tích trữ để nổ ngay, biến nó thành một đòn tức thời nhân lên (ví dụ 3 lần sát thương tích trữ)."
+      "desc": "Activate a stack of damage over time or stored [Sụp Đổ] to instantly explode, turning it into an instant multiplier (e.g. 3 times the stored damage)."
     },
     {
       "term": "[Thiêu Đốt Chuyên Biệt]",
-      "desc": "Bậc PvP của Thiêu Đốt — sát thương liên tục mạnh hơn, khó giải hơn."
+      "desc": "Burning PvP tier — stronger burst damage, harder to deal with."
     }
   ],
   "keepsakeIcon": "/Keepsake/G4 (UR)/Keepsake_UR.png",

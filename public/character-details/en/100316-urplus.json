@@ -101,44 +101,56 @@
   ],
   "effects": [
     {
-      "term": "[Spec. Unyielding]",
-      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+      "term": "[Specialized Direct DMG]",
+      "desc": "A specialized type of direct damage affected only by advanced DMG modifiers."
     },
     {
-      "term": "[Extreme Unyielding]",
-      "desc": "The shield ignores top tier damage, blocks certain incoming attacks, and when activated can deal massive Chaos damage, bypassing normal dodge/reduction effects."
+      "term": "[Specialized Evasion]",
+      "desc": "A specialized defensive effect that can be pierced or partially ignored by certain skills."
+    },
+    {
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "Reduces damage received from non-critical attacks."
     },
     {
       "term": "[Unyielding]",
-      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+      "desc": "Prevents the affected unit from being defeated under specific conditions."
     },
     {
-      "term": "[Reduce True DMG]",
-      "desc": "Reduces incoming true damage by a large percentage (e.g. 70%), a rare shield against normally unblockable damage."
+      "term": "[Specialized Unyielding]",
+      "desc": "A specialized form of [Unyielding]."
     },
     {
-      "term": "[Reduce Non-Crit DMG]",
-      "desc": "Reduced damage taken from non-critical attacks."
+      "term": "[Disorder]",
+      "desc": "Before any character takes action, deals [Disorder DMG] if the target is not under [Specialized Unyielding] or [Extreme Tenacity]. The effect disappears after triggering and can stack."
     },
     {
-      "term": "[Disrupt]",
-      "desc": "Before a character acts, if without a shield, suffer heavy ST-based Disorder DMG. Cumulative; disappears after activation."
+      "term": "[Disorder DMG]",
+      "desc": "A damage effect based on Overgrown Rover’s ATK that ignores 100% [DoT DMG Reduction] and pierces [Specialized Evasion] and [Non-Crit DMG Reduction]."
     },
     {
-      "term": "[Spec. Dodge]",
-      "desc": "Evasion PvP tier — reduces specialized attacks to 1 damage; pierced by the ignore dodge effect."
+      "term": "[DoT DMG Reduction]",
+      "desc": "Reduces damage received from damage-over-time effects."
     },
     {
-      "term": "[Spec. Direct DMG]",
-      "desc": "Advanced tier of direct damage, only affected by advanced damage increase/decrease and passes through normal defenses."
+      "term": "[Insta-Dodge]",
+      "desc": "A special state with an ignore-DMG effect whose action count can be reduced by Overgrown Rover."
     },
     {
-      "term": "[Disrupt DMG]",
-      "desc": "Massive ST damage type associated with the Disorder debuff, ignores ST Reduction over time and penetrates Specialized Evasion, disappears after activation."
+      "term": "[True DMG Reduction]",
+      "desc": "Reduces True DMG received by the affected unit."
     },
     {
-      "term": "[Rematch]",
-      "desc": "Permanently reduces damage taken; When defeated, spend a layer to return to 100% Health and pursue."
+      "term": "[DoT DMG Bonus Reduction]",
+      "desc": "Reduces the bonus damage of damage-over-time effects. Overgrown Rover dispels this effect from all allies."
+    },
+    {
+      "term": "[Re-battle]",
+      "desc": "Allows a defeated unit to return to battle by consuming 1 stack, restoring 100% HP and performing a [Charge Follow-Up]."
+    },
+    {
+      "term": "[Charged Pursuit]",
+      "desc": "A follow-up Ultimate performed on a random target at a specified percentage of Ultimate power."
     }
   ],
   "keepsakeIcon": "/Keepsake/Overgrown Rover (URplus)/Keepsake_URplus.png",

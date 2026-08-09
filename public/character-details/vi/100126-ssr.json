@@ -74,16 +74,28 @@
   ],
   "effects": [
     {
-      "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "term": "[Nội Thương]",
+      "desc": "Khi đơn vị bị ảnh hưởng bị tấn công, nhận DMG bằng 155% ATK của Gale Wind. Biến mất sau khi kích hoạt một lần."
     },
     {
-      "term": "[Nội Thương]",
-      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+      "term": "[Choáng]",
+      "desc": "Ngăn chặn các đơn vị bị ảnh hưởng hành động. Tối đa 4 nhân vật trong mỗi đội có thể bị ảnh hưởng bởi [Choáng] cùng lúc. Tuyệt Kĩ của Gale Wind có 50% cơ hội bỏ qua khả năng miễn nhiễm Choáng."
+    },
+    {
+      "term": "[Thanh Năng Lượng]",
+      "desc": "Một tài nguyên chiến đấu bị ảnh hưởng bởi Tuyệt Kĩ của Gale Wind. Tuyệt Kĩ của anh ấy giảm 900 điểm, trong khi Ultra-Tuyệt Kĩ giảm 950 điểm."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]."
+    },
+    {
+      "term": "[Nhanh Nhẹn]",
+      "desc": "Hiệu ứng phòng thủ không thể cùng tồn tại với [Giảm Sát Thương Không Bạo Kích]."
     },
     {
       "term": "[Truy Kích]",
-      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+      "desc": "Một cuộc tấn công bổ sung được tung ra nhằm vào kẻ thù có ATK cao nhất sau khi bất kỳ nhân vật nào hành động. Nó sử dụng Đòn đánh cơ bản DMG của Gale Wind và giữ nguyên hiệu ứng của Đòn đánh cơ bản."
     }
   ],
   "keepsakeIcon": "/Keepsake/Gale Wind (SSR)/Keepsake_SSR.png",

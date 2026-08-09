@@ -116,16 +116,48 @@
   ],
   "effects": [
     {
+      "term": "[Specialized Evasion]",
+      "desc": "Reduces Direct DMG, DoT DMG, [Received DMG], and [Extra DMG] to 1 point of DMG."
+    },
+    {
+      "term": "[Fear]",
+      "desc": "A control effect that this character is immune to."
+    },
+    {
       "term": "[Stun]",
-      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+      "desc": "Prevents the affected unit from acting."
+    },
+    {
+      "term": "[Specialized Stun]",
+      "desc": "A specialized form of [Stun]."
+    },
+    {
+      "term": "[Specialized Panic]",
+      "desc": "A specialized Energy-related negative effect. All allies are immune to it while this Passive is active."
+    },
+    {
+      "term": "[Specialized Acceleration]",
+      "desc": "Increases the unit’s SPD or raises an ally’s SPD to a specified percentage of Sonic’s SPD. If the ally’s original SPD is higher, it remains unchanged."
+    },
+    {
+      "term": "[Speed Field Attack]",
+      "desc": "In PvP, increases all DMG dealt when the target’s SPD is equal to or lower than the attacker’s SPD."
+    },
+    {
+      "term": "[Speed Field Defense]",
+      "desc": "In PvP, reduces all DMG received when the attacker’s SPD is equal to or lower than the defender’s SPD."
     },
     {
       "term": "[Encourage]",
-      "desc": "Power up at the beginning of each round for several rounds."
+      "desc": "Grants 2 additional Energy at the start of each turn for 3 turns."
     },
     {
       "term": "[Threaten]",
-      "desc": "The stun control effect renders the target unable to act and reduces its overall damage immunity by 30%."
+      "desc": "A damage category reduced to 1 point by [Specialized Evasion]."
+    },
+    {
+      "term": "[Specialized Extra DMG]",
+      "desc": "Additional DMG triggered separately from the original attack."
     }
   ],
   "classLevel": "Outlaw",

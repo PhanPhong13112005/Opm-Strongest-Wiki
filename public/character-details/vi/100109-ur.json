@@ -119,8 +119,44 @@
   ],
   "effects": [
     {
+      "term": "[Khóa]",
+      "desc": "Ngăn chặn [Truy Kích], [Truy Kích Liên Tục] và [Truy Kích Liên Kích]. Trước khi bất kỳ nhân vật nào hành động, hãy chia DoT dựa trên ATK có thể là CRIT và không thể là [Đã Né Tránh]."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Một cuộc tấn công bổ sung được kích hoạt sau một hành động khác hoặc khi đáp ứng một điều kiện cụ thể."
+    },
+    {
+      "term": "[Truy Kích Liên Tục]",
+      "desc": "Một loại Truy Kích có thể tiếp tục kích hoạt trong các điều kiện được chỉ định."
+    },
+    {
+      "term": "[Truy Kích Liên Kích]",
+      "desc": "Một Truy Kích phối hợp được thực hiện cùng với một đơn vị hoặc cuộc tấn công khác."
+    },
+    {
+      "term": "[Đã Né Tránh]",
+      "desc": "Làm cho đòn tấn công hoặc hiệu ứng sát thương hiện hành bị bỏ lỡ. [Khóa] DoT không thể trốn tránh được."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]."
+    },
+    {
+      "term": "[Nhanh Nhẹn]",
+      "desc": "Hiệu ứng phòng thủ không thể cùng tồn tại với [Giảm Sát Thương Không Bạo Kích]. Chi tiết hiệu ứng chính xác hiện chưa được biết."
+    },
+    {
+      "term": "[Rút Năng Lượng Cực Hạn]",
+      "desc": "Loại bỏ 4 Năng lượng một lần mỗi lượt. Sau khi tiêu hao thành công, ngăn [Hoảng Loạn] và [Hoảng Loạn Chuyên Biệt] được áp dụng trong cùng một lượt và giảm Tổng tiền thưởng DMG đi 25% trong 1 lượt."
+    },
+    {
       "term": "[Hoảng Loạn]",
-      "desc": "Trạng thái khống chế làm gián đoạn hành động của mục tiêu."
+      "desc": "Một tác động tiêu cực liên quan đến năng lượng. Chi tiết hiệu ứng chính xác hiện chưa được biết."
+    },
+    {
+      "term": "[Hoảng Loạn Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Hoảng Loạn]."
     }
   ],
   "classLevel": "Dragon",

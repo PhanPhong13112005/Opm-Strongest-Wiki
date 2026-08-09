@@ -111,7 +111,36 @@
     "DMG (HP)",
     "Generate Shield"
   ],
-  "effects": [],
+  "effects": [
+    {
+      "term": "[Specialized Extra DMG]",
+      "desc": "Additional damage that can CRIT and is unaffected by [Specialized DMG Reflect]."
+    },
+    {
+      "term": "[Specialized DMG Reflect]",
+      "desc": "A specialized effect that reflects applicable damage. It does not affect Metal Bat’s [Specialized Extra DMG]."
+    },
+    {
+      "term": "[Non-Crit DMG Free]",
+      "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+    },
+    {
+      "term": "[Agility]",
+      "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]. Exact effect details are currently unknown."
+    },
+    {
+      "term": "[HP Shield]",
+      "desc": "A shield based on HP that interacts with Metal Bat’s [Momentum]."
+    },
+    {
+      "term": "[Charge]",
+      "desc": "An enhancement gained based on the highest number of Metal Bat’s [Excess Recovery] layers. Each layer increases the Ultimate’s [Specialized Extra DMG]."
+    },
+    {
+      "term": "[Excess Recovery]",
+      "desc": "A recovery-related effect whose accumulated layers determine the number of [Momentum] layers gained."
+    }
+  ],
   "classLevel": "Class_S",
   "releaseSea": "01/03/2024",
   "classIcon": "/Class/Class_S.png",

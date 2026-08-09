@@ -102,28 +102,36 @@
   ],
   "effects": [
     {
-      "term": "[Share DMG]",
-      "desc": "Effect disperses damage taken to allies; [True DMG] bypasses it by hitting Blood directly."
+      "term": "[Specialized Burn]",
+      "desc": "Deals ATK-based DoT DMG. After any character acts, transfers to a random target and disappears after being transferred 3 times."
     },
     {
       "term": "[Detonate]",
-      "desc": "Activate a stack of damage over time or stored [Collapse] to instantly explode, turning it into an instant multiplier (e.g. 3 times the stored damage)."
+      "desc": "Converts a percentage of a single [Specialized Burn] DMG instance into [Detonation] DMG."
+    },
+    {
+      "term": "[Detonation]",
+      "desc": "A damage effect created by converting [Specialized Burn] DMG."
+    },
+    {
+      "term": "[Non-Crit DMG Free]",
+      "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
     },
     {
       "term": "[Agility]",
-      "desc": "Evasion type buff; mutually exclusive with Non-Crit Damage Immunity."
-    },
-    {
-      "term": "[Dodge]",
-      "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+      "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]."
     },
     {
       "term": "[True DMG]",
-      "desc": "This type of bonus damage is dealt on top of attacks, is reduced by Evasion-type effects, and can be immune after a certain number of turns."
+      "desc": "Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion]."
     },
     {
-      "term": "[Spec. Burn]",
-      "desc": "Burning PvP tier — stronger burst damage, harder to deal with."
+      "term": "[DMG Sharing]",
+      "desc": "Distributes incoming DMG between multiple affected units. [True DMG] ignores this effect."
+    },
+    {
+      "term": "[Evasion]",
+      "desc": "Allows the affected unit to avoid applicable DMG. [True DMG] ignores this effect."
     }
   ],
   "keepsakeIcon": "/Keepsake/Genos (UR)/Keepsake_UR.png",

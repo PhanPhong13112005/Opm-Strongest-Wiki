@@ -101,24 +101,56 @@
   ],
   "effects": [
     {
-      "term": "[Refresh]",
-      "desc": "Revive effect: after being defeated, return to the battle with 80% Health and gain +20% ST for 1 turn, up to 7 times."
+      "term": "[True DMG]",
+      "desc": "Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion]."
     },
     {
-      "term": "[Injury DMG Immunity]",
-      "desc": "Effect reduces Injury, Internal Injury and Cumulative damage taken."
+      "term": "[DMG Sharing]",
+      "desc": "Distributes damage between multiple affected units. [True DMG] ignores this effect."
     },
     {
-      "term": "[Spec. Dodge]",
-      "desc": "Evasion PvP tier — reduces specialized attacks to 1 damage; pierced by the ignore dodge effect."
+      "term": "[Evasion]",
+      "desc": "Allows the affected unit to avoid applicable damage. [True DMG] ignores this effect."
+    },
+    {
+      "term": "[Specialized Breakthrough]",
+      "desc": "Instantly removes [DMG Ignoration]."
+    },
+    {
+      "term": "[Ignore DMG]",
+      "desc": "An effect that causes applicable incoming damage to be ignored."
+    },
+    {
+      "term": "[Specialized Dodge]",
+      "desc": "Direct DMG, Continuous DMG, Injury DMG, and Extra DMG only deal 1 point of DMG."
+    },
+    {
+      "term": "[Follow-up]",
+      "desc": "A follow-up attack that deals 180% Ultimate DMG and prioritizes the enemy front row."
+    },
+    {
+      "term": "[Specialized Panic]",
+      "desc": "An effect that causes additional consumption. [Rampage Pursuit] is not affected by this additional consumption."
+    },
+    {
+      "term": "[Regroup]",
+      "desc": "Allows Gouketsu to return to battle with restored HP and increased ATK after being defeated."
+    },
+    {
+      "term": "[Injury DMG Free]",
+      "desc": "Reduces [Injury], [Internal Injury], and [Charge] DMG."
+    },
+    {
+      "term": "[Injury]",
+      "desc": "A damage effect reduced by [Injury Reduction]."
     },
     {
       "term": "[Internal Injury]",
-      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+      "desc": "A damage effect that triggers when the affected target is attacked."
     },
     {
-      "term": "[True DMG]",
-      "desc": "This type of bonus damage is dealt on top of attacks, is reduced by Evasion-type effects, and can be immune after a certain number of turns."
+      "term": "[Charge]",
+      "desc": "A damage type reduced by [Injury Reduction]."
     }
   ],
   "keepsakeIcon": "/Keepsake/Carnage Kabuto (UR)/Keepsake_UR.png",

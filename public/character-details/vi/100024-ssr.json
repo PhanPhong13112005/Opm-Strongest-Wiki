@@ -76,12 +76,20 @@
   "keepsakeIcon": "/Keepsake/Bang (SSR)/Keepsake_SSR.png",
   "effects": [
     {
-      "term": "[Lá Chắn]",
-      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+      "term": "[Giận Dữ]",
+      "desc": "Tăng DMG thêm 30% trong 1 lượt."
     },
     {
       "term": "[Nội Thương]",
-      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+      "desc": "Khi đơn vị bị ảnh hưởng bị tấn công, nhận DMG bằng 140% ATK của Silverfang. Biến mất sau khi kích hoạt một lần."
+    },
+    {
+      "term": "[Đỡ Đòn]",
+      "desc": "Một kích hoạt phòng thủ có thể kích hoạt Nội tại của Silverfang và cấp [Lá Chắn]."
+    },
+    {
+      "term": "[Lá Chắn]",
+      "desc": "Hấp thụ DMG bằng 7% HP tối đa. Có thể kích hoạt tối đa 3 lần mỗi lượt."
     }
   ],
   "releaseDate": "01/11/2020",

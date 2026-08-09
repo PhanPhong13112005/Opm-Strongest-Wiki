@@ -101,20 +101,28 @@
   ],
   "effects": [
     {
-      "term": "[Unyielding]",
-      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+      "term": "[Specialized Acceleration]",
+      "desc": "Increases Zombie Man’s SPD or raises teammates’ SPD to a specified percentage of Zombie Man’s SPD. If their original SPD is higher, it remains unchanged."
     },
     {
-      "term": "[Revive]",
-      "desc": "The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match."
+      "term": "[Specialized Fear]",
+      "desc": "Locks a specified amount of Energy, overrides [Fear], and causes affected enemies to consume 1 additional Energy when using an Ultimate, including Pursuit Ultimates."
     },
     {
-      "term": "[Counter]",
-      "desc": "A counter mark whose class number gradually increases the user's direct counter damage to marked enemies."
+      "term": "[Fear]",
+      "desc": "An Energy-related negative effect overridden by [Specialized Fear]."
     },
     {
-      "term": "[Spec. Speed Up]",
-      "desc": "Increases ally's speed to near deployer's speed (remains the same if ally is already faster)."
+      "term": "[Instant DMG Evasion]",
+      "desc": "Reduces Direct DMG, Additional DMG, Charge DMG, and Berserk DMG to 1 point."
+    },
+    {
+      "term": "[Regeneration]",
+      "desc": "After receiving fatal DMG, restores HP before the next action and allows Zombie Man to continue fighting while at least one teammate remains."
+    },
+    {
+      "term": "[Specialized Breakthrough]",
+      "desc": "Immediately removes the target’s Indomitable or DMG-negating status and temporarily increases the attacker’s ATK for the current attack."
     }
   ],
   "keepsakeIcon": "/Keepsake/Zombieman (UR)/Keepsake_UR.png",

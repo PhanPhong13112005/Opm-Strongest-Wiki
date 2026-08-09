@@ -74,12 +74,28 @@
   ],
   "effects": [
     {
-      "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "term": "[Hút Máu]",
+      "desc": "Khôi phục HP dựa trên phần trăm DMG được xử lý."
     },
     {
-      "term": "[Hút Máu]",
-      "desc": "Buff bản thân hồi máu cho người mang theo một phần trăm (ví dụ 50%) sát thương mà họ gây ra."
+      "term": "[Choáng]",
+      "desc": "Ngăn chặn các đơn vị bị ảnh hưởng hành động. Tối đa 4 ký tự có thể bị ảnh hưởng bởi [Choáng] cùng một lúc."
+    },
+    {
+      "term": "[Cuồng Nộ]",
+      "desc": "Tăng ATK trong hành động trực tiếp tiếp theo của đơn vị."
+    },
+    {
+      "term": "[Trọng Thương]",
+      "desc": "Một hiệu ứng sát thương đặc biệt."
+    },
+    {
+      "term": "[Nội Thương]",
+      "desc": "Một hiệu ứng sát thương đặc biệt được kích hoạt trong những điều kiện nhất định."
+    },
+    {
+      "term": "[Tụ Lực]",
+      "desc": "Hiệu ứng sát thương tích lũy đặc biệt có thể gây ra Charge DMG khi được kích hoạt."
     }
   ],
   "keepsakeIcon": "/Keepsake/Eyesight (SSR)/Keepsake_SSR.png",

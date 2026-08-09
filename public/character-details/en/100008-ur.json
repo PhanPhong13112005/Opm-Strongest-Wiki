@@ -119,24 +119,48 @@
   ],
   "effects": [
     {
-      "term": "[Unyielding]",
-      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+      "term": "[Instant DMG Evasion]",
+      "desc": "Increases the accuracy of Instant DMG effects."
     },
     {
-      "term": "[Spec. Stun]",
-      "desc": "PvP tier of Stun — harder to resist or resolve."
+      "term": "[Specialized Breakthrough]",
+      "desc": "Instantly removes [DMG Ignoration] and increases Mosquito Girl’s ATK until the end of the current attack."
+    },
+    {
+      "term": "[Ignore DMG]",
+      "desc": "An effect that causes applicable incoming DMG to be ignored."
+    },
+    {
+      "term": "[Non-Crit DMG Free]",
+      "desc": "Reduces all types of DMG and cannot coexist with [Agility]."
+    },
+    {
+      "term": "[Agility]",
+      "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]. Exact effect details are currently unknown."
     },
     {
       "term": "[Stun]",
-      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+      "desc": "Prevents the affected unit from acting."
+    },
+    {
+      "term": "[Specialized Stun]",
+      "desc": "A specialized form of [Stun]."
     },
     {
       "term": "[Silence]",
-      "desc": "The target cannot use his ultimate. Counts as a control effect."
+      "desc": "Prevents the affected unit from using its Ultimate."
     },
     {
-      "term": "[Reduce Non-Crit DMG]",
-      "desc": "Reduced damage taken from non-critical attacks."
+      "term": "[Separation]",
+      "desc": "Shares 80% of the DMG received by the entire team, except Emblem DMG, and reduces the shared DMG by 80%."
+    },
+    {
+      "term": "[Detonation]",
+      "desc": "Reduces or prevents applicable Detonation DMG by the specified percentage."
+    },
+    {
+      "term": "[DoT DMG Reduction]",
+      "desc": "Reduces or prevents applicable damage-over-time DMG by the specified percentage."
     }
   ],
   "classLevel": "Demon",

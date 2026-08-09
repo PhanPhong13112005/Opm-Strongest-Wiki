@@ -75,11 +75,11 @@
   "effects": [
     {
       "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
     },
     {
       "term": "[Thiêu Đốt]",
-      "desc": "Sát thương lửa liên tục theo thời gian lên mục tiêu."
+      "desc": "Continuous fire damage over time to the target."
     }
   ],
   "keepsakeIcon": "/Keepsake/Lightning Max (SR)/Keepsake_SR.png",

@@ -78,7 +78,7 @@
   "classIcon": "/Class/Tiger.png",
   "effects": [
     {
-      "term": "[Truy Kích]",
+      "term": "[Follow-up]",
       "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
     }
   ],

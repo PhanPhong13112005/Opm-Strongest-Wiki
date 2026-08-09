@@ -102,28 +102,32 @@
   ],
   "effects": [
     {
-      "term": "[Adhere]",
-      "desc": "Control status prevents the target from casting [Follow-up] and [Consecutive Follow-up], usually for 2 turns."
+      "term": "[Specialized Corrode]",
+      "desc": "Deals 100% ATK as Continuous DMG. After any character acts, transfers to another target that can take DMG. The number of activations depends on the skill that applies it."
+    },
+    {
+      "term": "[Evolve]",
+      "desc": "Immediately removes the target’s [Unyielding] and Ignore DMG statuses."
     },
     {
       "term": "[Unyielding]",
-      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+      "desc": "A survival effect that prevents the affected unit from being defeated under specified conditions."
     },
     {
-      "term": "[Chain Follow-up]",
-      "desc": "Extra attacks outside of turn (usually after an ally acts) apply a portion of the ultimate's ST and effects to a random target, at no mana cost."
+      "term": "[Specialized Guard]",
+      "desc": "Negates received DMG and overwrites Extra HP effects. Its total amount cannot exceed 15 times the unit’s original HP."
     },
     {
-      "term": "[Ult Follow-up]",
-      "desc": "Out of turn attacks deal 70% of the ultimate's damage and effects, without consuming mana, up to 3 times per round."
+      "term": "[Adhesion]",
+      "desc": "Prevents the affected unit from initiating [Follow-Up] and [Continuous Follow-Up]."
     },
     {
-      "term": "[Truy Kích]",
-      "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+      "term": "[Follow-up]",
+      "desc": "An additional attack triggered after another action or when a specified condition is met."
     },
     {
-      "term": "[Corrode]",
-      "desc": "Corrosive damage over time effect, each turn dealing damage equal to a percentage of ST (e.g. 300%) to the target."
+      "term": "[Continuous Follow-Up]",
+      "desc": "A Follow-Up that can repeatedly trigger under specified conditions."
     }
   ],
   "keepsakeIcon": "/Keepsake/Deep Sea King (SSRplus)/Keepsake_SSRplus.png",

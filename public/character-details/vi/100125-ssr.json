@@ -75,11 +75,11 @@
   "effects": [
     {
       "term": "[Lá Chắn]",
-      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
     },
     {
       "term": "[Thiêu Đốt]",
-      "desc": "Sát thương lửa liên tục theo thời gian lên mục tiêu."
+      "desc": "Continuous fire damage over time to the target."
     }
   ],
   "keepsakeIcon": "/Keepsake/Hellfire Flame (SSR)/Keepsake_SSR.png",

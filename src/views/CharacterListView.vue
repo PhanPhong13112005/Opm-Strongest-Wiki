@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import charactersDataVi from '../data/characters.json'
 import charactersDataEn from '../data/characters_en.json'
@@ -14,7 +14,11 @@ const searchCharacters = computed(() => locale.value === 'en' ? charactersDataVi
 const searchCharactersById = computed(() => new Map(
   searchCharacters.value.map(character => [character.id, character]),
 ))
+const searchInputValue = ref('')
 const searchQuery = ref('')
+const showSuggestions = ref(false)
+const searchContainerRef = ref(null)
+
 const selectedTier = ref('')
 const selectedType = ref('')
 const selectedFaction = ref('')
@@ -52,6 +56,44 @@ const tierOptions = computed(() => {
   const tiers = new Set(localCharacters.value.map(c => c.tier).filter(Boolean))
   return TIER_ORDER.filter(t => tiers.has(t))
 })
+
+const suggestions = computed(() => {
+  const query = searchInputValue.value.trim().toLowerCase()
+  if (!query) return []
+
+  return localCharacters.value
+    .filter(c => matchesCharacterSearch(c, query, searchCharactersById.value.get(c.id)))
+    .slice(0, 8)
+})
+
+const onSearchSubmit = () => {
+  searchQuery.value = searchInputValue.value.trim()
+  showSuggestions.value = false
+}
+
+const clearSearch = () => {
+  searchInputValue.value = ''
+  searchQuery.value = ''
+  showSuggestions.value = false
+}
+
+const handleDocumentClick = (e) => {
+  if (searchContainerRef.value && !searchContainerRef.value.contains(e.target)) {
+    showSuggestions.value = false
+  }
+}
+
+const getTierBadgeClass = (tier) => {
+  switch (tier) {
+    case 'UR+': return 'bg-gradient-to-r from-red-600 to-amber-500 text-white shadow-sm font-black'
+    case 'UR': return 'bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold'
+    case 'SSR+': return 'bg-amber-500 text-black font-extrabold'
+    case 'SSR': return 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/40 font-bold'
+    case 'SR': return 'bg-purple-500/20 text-purple-300 border border-purple-500/40 font-semibold'
+    case 'R': return 'bg-blue-500/20 text-blue-300 border border-blue-500/40 font-medium'
+    default: return 'bg-gray-700 text-gray-300 font-medium'
+  }
+}
 
 const parseReleaseDate = (value) => {
   if (!value) return null
@@ -138,7 +180,7 @@ const scheduleLoad = (delay = 0) => {
 watch([locale, searchQuery, selectedTier, selectedType, selectedFaction], () => {
   transitionName.value = 'fade'
   if (currentPage.value !== 1) currentPage.value = 1
-  scheduleLoad(searchQuery.value.trim() ? 250 : 0)
+  scheduleLoad(0)
 })
 
 watch(currentPage, () => scheduleLoad())
@@ -172,7 +214,14 @@ watch(paginatedCharacters, (newChars) => {
   }, 500)
 }, { immediate: true })
 
-onMounted(loadCharacters)
+onMounted(() => {
+  loadCharacters()
+  document.addEventListener('click', handleDocumentClick)
+})
+
+onBeforeUnmount(() => {
+  document.removeEventListener('click', handleDocumentClick)
+})
 </script>
 
 <template>
@@ -182,12 +231,79 @@ onMounted(loadCharacters)
       
       <!-- Filters -->
       <div class="flex flex-col md:flex-row gap-4 mb-2">
-        <input 
-          type="text" 
-          v-model="searchQuery"
-          :placeholder="t('list.search')" 
-          class="flex-1 bg-[#1a1c23] text-white border border-gray-700 rounded-md py-2 px-4 focus:outline-none focus:border-opm-gold transition-colors"
-        />
+        <div class="relative flex-1" ref="searchContainerRef">
+          <div class="flex gap-2">
+            <div class="relative flex-1">
+              <input 
+                type="text" 
+                v-model="searchInputValue"
+                @focus="showSuggestions = true"
+                @keydown.enter="onSearchSubmit"
+                @keydown.esc="showSuggestions = false"
+                :placeholder="t('list.search')" 
+                class="w-full bg-[#1a1c23] text-white border border-gray-700 rounded-md py-2 pl-4 pr-10 focus:outline-none focus:border-opm-gold transition-colors text-sm sm:text-base"
+              />
+              <button 
+                v-if="searchInputValue"
+                @click="clearSearch"
+                type="button"
+                class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors p-1 cursor-pointer"
+                title="Xóa"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+            </div>
+            <button
+              @click="onSearchSubmit"
+              type="button"
+              class="bg-opm-gold text-black font-bold px-5 py-2 rounded-md hover:bg-yellow-400 transition-colors flex items-center gap-2 whitespace-nowrap shadow-md cursor-pointer"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+              <span>{{ t('list.search_btn') }}</span>
+            </button>
+          </div>
+
+          <!-- Dropdown Suggestions -->
+          <div 
+            v-if="showSuggestions && suggestions.length > 0"
+            class="absolute left-0 right-0 top-full mt-1.5 bg-[#14161d]/95 border border-opm-gold/40 rounded-lg shadow-2xl z-50 overflow-hidden backdrop-blur-md max-h-[380px] overflow-y-auto divide-y divide-gray-800/80"
+          >
+            <div class="px-3.5 py-1.5 bg-black/50 text-[11px] font-semibold text-opm-gold uppercase tracking-wider flex justify-between items-center border-b border-gray-800">
+              <span>{{ t('list.suggestions') }} ({{ suggestions.length }})</span>
+              <span class="text-gray-400 font-normal normal-case text-[11px]">{{ t('list.press_enter') }}</span>
+            </div>
+            <router-link
+              v-for="sugg in suggestions"
+              :key="sugg.id"
+              :to="'/character/' + sugg.id"
+              @click="showSuggestions = false"
+              class="flex items-center gap-3.5 px-3.5 py-2.5 hover:bg-opm-gold/10 transition-colors group"
+            >
+              <img 
+                :src="safeUrl(sugg.imageURL)" 
+                :alt="sugg.name"
+                class="w-10 h-10 rounded-md object-cover bg-black/60 border border-gray-700 group-hover:border-opm-gold transition-colors flex-shrink-0"
+              />
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-bold text-white group-hover:text-opm-gold transition-colors truncate">
+                  {{ sugg.name }}
+                </div>
+                <div class="text-xs text-gray-400 flex items-center gap-2 truncate">
+                  <span>{{ sugg.type }}</span>
+                  <span class="text-gray-600">•</span>
+                  <span>{{ sugg.faction }}</span>
+                </div>
+              </div>
+              <span 
+                class="text-[11px] px-2 py-0.5 rounded font-bold uppercase tracking-wider flex-shrink-0"
+                :class="getTierBadgeClass(sugg.tier)"
+              >
+                {{ sugg.tier }}
+              </span>
+            </router-link>
+          </div>
+        </div>
+
         <div class="flex gap-2">
           <select
             v-model="selectedTier"

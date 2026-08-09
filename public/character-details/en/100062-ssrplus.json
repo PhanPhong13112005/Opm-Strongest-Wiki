@@ -102,16 +102,28 @@
   ],
   "effects": [
     {
-      "term": "[Adhere]",
-      "desc": "Control status prevents the target from casting [Follow-up] and [Consecutive Follow-up], usually for 2 turns."
+      "term": "[Specialized Corrode]",
+      "desc": "Deals ATK-based Continuous DMG. After any character acts, transfers to a random valid target and disappears after transferring 5 times."
     },
     {
-      "term": "[Void]",
-      "desc": "Debuffs apply to all enemies, often accompanied by corrosive damage over time, negating their effects."
+      "term": "[Stuck]",
+      "desc": "Prevents the affected unit from initiating [Follow-Up] and [Continuous Follow-Up] for 2 rounds."
     },
     {
-      "term": "[Smart Corrode]",
-      "desc": "Corrosive damage over time applied to the target area, often accompanied by Nullity on all enemies."
+      "term": "[Follow-up]",
+      "desc": "An additional attack triggered after another action or when specified conditions are met."
+    },
+    {
+      "term": "[Continuous Follow-Up]",
+      "desc": "A Follow-Up that can repeatedly trigger under specified conditions."
+    },
+    {
+      "term": "[Specialized DMG Reflect]",
+      "desc": "Reduces Direct DMG and Extra DMG received by 50%, and reflects Extra DMG equal to 50% of the original DMG back to the attacker. Lasts for the entire battle."
+    },
+    {
+      "term": "[Specialized Guard]",
+      "desc": "A specialized defensive effect restored by absorbing 100% of the Continuous DMG suffered by enemies after any character acts."
     }
   ],
   "keepsakeIcon": "/Keepsake/Groribas (SSRplus)/Keepsake_SSRplus.png",

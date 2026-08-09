@@ -74,8 +74,28 @@
   ],
   "effects": [
     {
+      "term": "[Lĩnh Vực]",
+      "desc": "Trước khi thực hiện hành động, thiết bị bị ảnh hưởng phải chịu DMG liên tục bằng 160% ATK."
+    },
+    {
+      "term": "[Đã Tụ Lực]",
+      "desc": "Hiệp Sĩ Cơ Động chuyển sang trạng thái này khi kẻ địch phải chịu [Lĩnh Vực] DMG. Khi ở trạng thái này, Tuyệt Kĩ của anh ta có thể áp dụng [Sát Thương Tụ Lực] lên kẻ thù ở hàng mục tiêu."
+    },
+    {
+      "term": "[Tụ Lực]",
+      "desc": "Một ngăn xếp được áp dụng cho các mục tiêu bị ảnh hưởng bởi [Lĩnh Vực]. Mỗi lớp gây ra 240% ATK dưới dạng Charge DMG và giảm 500 điểm Thanh đo năng lượng. Có thể xếp chồng tối đa 4 lớp."
+    },
+    {
+      "term": "[Sát Thương Tụ Lực]",
+      "desc": "Một loại sát thương đặc biệt được tạo ra thông qua ngăn xếp [Tụ Lực]."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm vĩnh viễn 50% tất cả các loại DMG không quan trọng nhận được. Không thể cùng tồn tại với [Nhanh Nhẹn]."
+    },
+    {
       "term": "[Nhanh Nhẹn]",
-      "desc": "Buff loại né tránh; loại trừ lẫn nhau với Miễn Sát Thương Non-Crit."
+      "desc": "Hiệu ứng phòng thủ không thể cùng tồn tại với [Giảm Sát Thương Không Bạo Kích]."
     }
   ],
   "keepsakeIcon": "/Keepsake/Drive Knight (SSR)/Keepsake_SSR.png",

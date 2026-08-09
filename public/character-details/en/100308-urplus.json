@@ -100,12 +100,36 @@
   ],
   "effects": [
     {
-      "term": "[Control DMG Immunity]",
-      "desc": "The defensive effect reduces damage taken (30–40%), increasing to a 150–170% reduction when the bearer's ST is higher than the attacker's."
+      "term": "[Specialized Direct DMG]",
+      "desc": "A specialized type of direct damage affected only by advanced DMG modifiers."
     },
     {
-      "term": "[Increase Control DMG]",
-      "desc": "Attack buff gives 30-40% mana and increases damage, increasing by 150-170% when the bearer's Attack is higher than the target."
+      "term": "[Specialized Dodge]",
+      "desc": "A specialized defensive effect that provides a chance to avoid applicable damage."
+    },
+    {
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "Reduces damage received from non-critical attacks."
+    },
+    {
+      "term": "[Unyielding]",
+      "desc": "Prevents the affected unit from being defeated under specific conditions."
+    },
+    {
+      "term": "[Specialized Unyielding]",
+      "desc": "A specialized form of [Unyielding]."
+    },
+    {
+      "term": "[Reduced DMG from Resistance]",
+      "desc": "Reduces damage dealt to [Specialized HP]."
+    },
+    {
+      "term": "[Suppression DMG Reduction]",
+      "desc": "Reduces DMG taken by 40%. If own Attack is higher than the attacker’s, the DMG reduction multiplier is increased."
+    },
+    {
+      "term": "[Suppression DMG Increase]",
+      "desc": "Increases DMG dealt by 40%. If own Attack is higher than the target’s, the DMG boost multiplier is increased."
     }
   ],
   "keepsakeIcon": "/Keepsake/Genos (URplus)/Keepsake_URplus.png",

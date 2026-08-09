@@ -101,8 +101,28 @@
   ],
   "effects": [
     {
+      "term": "[Collapse]",
+      "desc": "Decreases DMG Free%."
+    },
+    {
+      "term": "[Specialized Collapse]",
+      "desc": "Decreases DMG Rate and deals [Collapse DMG] whenever the affected unit is attacked. Stacks up to 3 times and does not stack with [Collapse]."
+    },
+    {
+      "term": "[Specialized Shatter]",
+      "desc": "Additional ATK-based damage triggered when a unit affected by [Specialized Collapse] is attacked."
+    },
+    {
+      "term": "[Non-Crit DMG Free]",
+      "desc": "Effective against all types of DMG and cannot coexist with [Agility]."
+    },
+    {
       "term": "[Agility]",
-      "desc": "Evasion type buff; mutually exclusive with Non-Crit Damage Immunity."
+      "desc": "An effect that cannot coexist with [Non-Crit DMG Free]. Exact effect details are currently unknown."
+    },
+    {
+      "term": "[Ultimate Follow-up]",
+      "desc": "Automatically launches the Ultimate as a follow-up with the specified DMG percentage and 100% effect."
     }
   ],
   "keepsakeIcon": "/Keepsake/Atomic Samurai (UR)/Keepsake_UR.png",

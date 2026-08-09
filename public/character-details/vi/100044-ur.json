@@ -101,20 +101,44 @@
   ],
   "effects": [
     {
-      "term": "[Miễn Nhiễm Sát Thương]",
-      "desc": "Người mang chỉ chịu một phần (ví dụ 20%, hoặc 0% khi được cường hóa) toàn bộ sát thương nhận vào."
-    },
-    {
-      "term": "[Hồi Sinh]",
-      "desc": "Trạng thái đưa đơn vị bị hạ gục trở lại trận, cấp số lần hồi sinh giới hạn mà các hiệu ứng chống hồi sinh có thể gỡ bỏ."
-    },
-    {
       "term": "[Sát Thương Chuẩn]",
-      "desc": "Loại sát thương thưởng gây thêm ngoài đòn đánh, bị giảm bởi các hiệu ứng kiểu Né và có thể được miễn nhiễm sau một số lượt nhất định."
+      "desc": "Không bị ảnh hưởng bởi Tỷ lệ DMG hoặc DMG miễn phí và giao dịch Sát Thương Trực Tiếp mà không có [Chia Sẻ Sát Thương] hoặc [Khả Năng Né Tránh]."
+    },
+    {
+      "term": "[Chia Sẻ Sát Thương]",
+      "desc": "Phân phối DMG nhận vào cho nhiều đơn vị bị ảnh hưởng. [Sát Thương Chuẩn] bỏ qua hiệu ứng này."
+    },
+    {
+      "term": "[Khả Năng Né Tránh]",
+      "desc": "Cho phép thiết bị bị ảnh hưởng tránh DMG có thể áp dụng. [Sát Thương Chuẩn] bỏ qua hiệu ứng này."
+    },
+    {
+      "term": "[Đột Phá Chuyên Biệt]",
+      "desc": "Loại bỏ ngay lập tức [Bỏ Qua Sát Thương]."
+    },
+    {
+      "term": "[Bỏ Qua Sát Thương]",
+      "desc": "Một hiệu ứng cho phép bỏ qua DMG nhận vào hiện hành."
+    },
+    {
+      "term": "[Đệm Sát Thương]",
+      "desc": "Một buff liên quan đến Hellfire UR mà Tuyệt Kĩ này có 80% cơ hội xuyên thủng."
+    },
+    {
+      "term": "[Miễn Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]."
+    },
+    {
+      "term": "[Nhanh Nhẹn]",
+      "desc": "Hiệu ứng phòng thủ không thể cùng tồn tại với [Miễn Sát Thương Không Bạo Kích]. Chi tiết hiệu ứng chính xác hiện chưa được biết."
     },
     {
       "term": "[Trả Thù]",
-      "desc": "Trạng thái phản đòn có thể kéo dài thời gian trên bản thân hoặc rút ngắn trên kẻ địch, cấp sức cho các hiệu ứng trả đũa."
+      "desc": "Cho phép đơn vị hồi sinh ngay lập tức sau khi một nhân vật bị đánh bại sau một hành động, khôi phục HP và thực hiện [Truy Kích Phản Đòn]."
+    },
+    {
+      "term": "[Sợ Hãi Chuyên Biệt]",
+      "desc": "Một hiệu ứng đặc biệt mà mức tiêu thụ bổ sung không ảnh hưởng đến [Truy Kích Phản Đòn] của đơn vị này."
     }
   ],
   "keepsakeIcon": "/Keepsake/Drive Knight (UR)/Keepsake_UR.png",

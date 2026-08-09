@@ -102,16 +102,28 @@
   ],
   "effects": [
     {
-      "term": "[Bám Dính]",
-      "desc": "Trạng thái khống chế ngăn mục tiêu tung [Truy Kích] và [Truy Kích Liên Tiếp], thường trong 2 lượt."
+      "term": "[Ăn Mòn Chuyên Biệt]",
+      "desc": "Ưu đãi liên tục DMG dựa trên ATK. Sau khi bất kỳ nhân vật nào hành động, sẽ chuyển đến một mục tiêu hợp lệ ngẫu nhiên và biến mất sau khi chuyển 5 lần."
     },
     {
-      "term": "[Hư Vô]",
-      "desc": "Debuff áp lên toàn bộ kẻ địch, thường đi kèm sát thương ăn mòn theo thời gian, làm vô hiệu hóa các hiệu ứng của chúng."
+      "term": "[Bị Bám Dính]",
+      "desc": "Ngăn chặn thiết bị bị ảnh hưởng khởi tạo [Truy Kích] và [Truy Kích Liên Tục] trong 2 vòng."
     },
     {
-      "term": "[Ăn Mòn Đặc Hóa]",
-      "desc": "Sát thương theo thời gian dạng ăn mòn đặt lên khu vực mục tiêu, thường đi kèm với Nullity lên toàn bộ kẻ địch."
+      "term": "[Truy Kích]",
+      "desc": "Một cuộc tấn công bổ sung được kích hoạt sau một hành động khác hoặc khi đáp ứng các điều kiện cụ thể."
+    },
+    {
+      "term": "[Truy Kích Liên Tục]",
+      "desc": "Truy Kích có thể kích hoạt liên tục trong các điều kiện được chỉ định."
+    },
+    {
+      "term": "[Phản Sát Thương Chuyên Biệt]",
+      "desc": "Giảm 50% Sát Thương Trực Tiếp và Extra DMG nhận được và phản ánh Extra DMG bằng 50% DMG ban đầu trở lại kẻ tấn công. Kéo dài trong toàn bộ trận chiến."
+    },
+    {
+      "term": "[Phòng Hộ Chuyên Biệt]",
+      "desc": "Hiệu ứng phòng thủ chuyên dụng được khôi phục bằng cách hấp thụ 100% DMG liên tục mà kẻ thù phải gánh chịu sau bất kỳ hành động nào của nhân vật."
     }
   ],
   "keepsakeIcon": "/Keepsake/Groribas (SSRplus)/Keepsake_SSRplus.png",

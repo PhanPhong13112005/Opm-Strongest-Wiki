@@ -111,7 +111,36 @@
     "Sát Thương (Máu)",
     "Tạo Khiên"
   ],
-  "effects": [],
+  "effects": [
+    {
+      "term": "[Sát Thương Bổ Sung Chuyên Biệt]",
+      "desc": "Sát thương bổ sung có thể gây ra CRIT và không bị ảnh hưởng bởi [Phản Sát Thương Chuyên Biệt]."
+    },
+    {
+      "term": "[Phản Sát Thương Chuyên Biệt]",
+      "desc": "Một hiệu ứng đặc biệt phản ánh thiệt hại có thể xảy ra. Nó không ảnh hưởng đến Chày Sắt của [Sát Thương Bổ Sung Chuyên Biệt]."
+    },
+    {
+      "term": "[Miễn Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]."
+    },
+    {
+      "term": "[Nhanh Nhẹn]",
+      "desc": "Hiệu ứng phòng thủ không thể cùng tồn tại với [Miễn Sát Thương Không Bạo Kích]. Chi tiết hiệu ứng chính xác hiện chưa được biết."
+    },
+    {
+      "term": "[Khiên Sinh Lực]",
+      "desc": "Một tấm chắn dựa trên HP tương tác với [Khí Thế] của Chày Sắt."
+    },
+    {
+      "term": "[Tụ Lực]",
+      "desc": "Một cải tiến đạt được dựa trên số lớp [Hồi Phục Dư Thừa] của Chày Sắt cao nhất. Mỗi lớp sẽ tăng [Sát Thương Bổ Sung Chuyên Biệt] của Tuyệt Kĩ."
+    },
+    {
+      "term": "[Hồi Phục Dư Thừa]",
+      "desc": "Một hiệu ứng liên quan đến phục hồi có các lớp tích lũy xác định số lượng lớp [Khí Thế] thu được."
+    }
+  ],
   "classLevel": "Class_S",
   "releaseSea": "01/03/2024",
   "classIcon": "/Class/Class_S.png",

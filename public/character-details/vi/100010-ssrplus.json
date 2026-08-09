@@ -117,23 +117,23 @@
   "effects": [
     {
       "term": "[Bất Khuất]",
-      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
     },
     {
       "term": "[Cắt Giảm Năng Lượng]",
-      "desc": "Debuff áp lên toàn bộ kẻ địch khi Năng lượng của chúng giảm, chặn hoặc phá Năng lượng khiến chúng không thể dùng chiêu cuối."
+      "desc": "Debuff applies to all enemies when their Energy is reduced, blocking or destroying their Energy, making them unable to use their Tuyệt Kĩ."
     },
     {
       "term": "[Né Tránh]",
-      "desc": "Trạng thái né giúp giảm sát thương Trực Tiếp, Thêm, Tích Lũy và Cuồng Nộ nhận vào chỉ còn 1 điểm trong thời gian hiệu lực."
+      "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
     },
     {
       "term": "[Siêu Tốc]",
-      "desc": "Buff tốc độ mà khi còn hiệu lực cho phép người mang và tối đa 6 đồng minh hành động lại và vượt qua kẻ địch có tốc độ thấp hơn."
+      "desc": "Speed ​​buff that while in effect allows the bearer and up to 6 allies to act against and overcome enemies with lower speed."
     },
     {
       "term": "[Thanh Tẩy]",
-      "desc": "Xóa các hiệu ứng/buff đang có trên toàn bộ kẻ địch."
+      "desc": "Removes existing effects/buffs on all enemies."
     }
   ],
   "classLevel": "Class_S",

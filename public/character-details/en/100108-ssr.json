@@ -75,8 +75,16 @@
   ],
   "effects": [
     {
+      "term": "[Heal Rate]",
+      "desc": "Reduces the effectiveness of HP recovery received by the affected unit."
+    },
+    {
       "term": "[Agility]",
-      "desc": "Evasion type buff; mutually exclusive with Non-Crit Damage Immunity."
+      "desc": "Reduces higher Direct DMG by 12%–60% depending on the number of incoming strikes. Cannot coexist with [Non-Crit DMG Reduction]."
+    },
+    {
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "A defensive effect that reduces non-critical DMG and cannot coexist with [Agility]."
     }
   ],
   "keepsakeIcon": "/Keepsake/Bom/Bengpu (UR)/Keepsake_UR.png",

@@ -80,7 +80,7 @@
   "effects": [
     {
       "term": "[Hoảng Loạn]",
-      "desc": "Trạng thái khống chế làm gián đoạn hành động của mục tiêu."
+      "desc": "Control status interrupts the target's actions."
     }
   ],
   "releaseDate": "01/09/2020",

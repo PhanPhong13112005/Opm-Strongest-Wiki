@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 24% ATK (+2) DMG with 5 consecutive strikes to all targets. 100% chance to inflict [Internal Injury] on 4 random targets (when the target is hit, an added Internal Injury DMG equal to 145% of Garou's ATK is dealt; the effect is removed after triggering).",
+      "desc": "Deals 24% ATK DMG with 5 consecutive strikes to all targets. 100% chance to inflict [Internal Injury] on 4 random targets (when the target is hit, an added Internal Injury DMG equal to 145% of Garou's ATK is dealt; the effect is removed after triggering).",
       "keepsakeIcon": "/Keepsake/Garou (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Garou (SSR)/Skill_ult.png",
       "type": "Ultimate",
@@ -75,11 +75,11 @@
   "effects": [
     {
       "term": "[Internal Injury]",
-      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+      "desc": "When the affected unit is hit, takes additional ATK-based DMG. The effect disappears after triggering once."
     },
     {
-      "term": "[Truy Kích]",
-      "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+      "term": "[Follow-up]",
+      "desc": "An additional attack triggered after an enemy acts. Garou's Follow-Up uses a percentage of his Basic Attack DMG and retains the Basic Attack's effects. It always triggers when the acting enemy is a Hero."
     }
   ],
   "keepsakeIcon": "/Keepsake/Garou (SSR)/Keepsake_SSR.png",

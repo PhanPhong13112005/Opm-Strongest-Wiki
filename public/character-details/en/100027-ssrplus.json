@@ -101,8 +101,20 @@
   ],
   "effects": [
     {
-      "term": "[Immortal]",
-      "desc": "Survival status keeps the bearer alive by drastically reducing damage taken (e.g. only taking 20%)."
+      "term": "[Specialized Guard]",
+      "desc": "Negates received DMG and overwrites Bonus HP effects. The total amount cannot exceed 15 times the unit's original Max HP."
+    },
+    {
+      "term": "[Tenacity]",
+      "desc": "Increases the effectiveness of generated [Tenacity] and [Specialized Guard]."
+    },
+    {
+      "term": "[Specialized DMG Reflect]",
+      "desc": "Reduces Direct DMG and Extra DMG received and reflects a percentage of the original DMG back to the attacker as Extra DMG."
+    },
+    {
+      "term": "[Specialized Berserk]",
+      "desc": "Causes the first strike to additionally deal [Berserk DMG] equal to 50% of Superalloy Darkshine's Max HP. Lasts for the entire battle."
     }
   ],
   "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSRplus)/Keepsake_SSRplus.png",

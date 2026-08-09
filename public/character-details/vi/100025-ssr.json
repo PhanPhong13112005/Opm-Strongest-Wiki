@@ -30,7 +30,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây ra 5 combo 5% (+2) HP tối đa của Người Chó Canh dưới dạng DMG cho toàn bộ hàng mục tiêu và gây [Hoảng Loạn] lên kẻ thù (phong ấn năng lượng của chúng trong một số lượt; khi hiệu ứng tương tự tồn tại, giá trị cao nhất sẽ được áp dụng).",
+      "desc": "Gây một combo 5 đòn đánh chiếm 5% HP tối đa của Người Chó Canh dưới dạng DMG cho toàn bộ hàng mục tiêu và gây [Hoảng Loạn] lên kẻ thù (phong ấn năng lượng của chúng trong một số lượt; khi hiệu ứng tương tự tồn tại, giá trị cao nhất sẽ được áp dụng).",
       "icon": "/Skill/Watchdog Man (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -39,7 +39,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây ra 5 combo 6% (+2) HP tối đa của Người Chó Canh dưới dạng DMG cho toàn bộ hàng mục tiêu và gây [Hoảng Loạn] lên kẻ thù (phong ấn năng lượng của chúng trong một số lượt; khi hiệu ứng tương tự tồn tại, giá trị cao nhất sẽ được áp dụng).",
+      "desc": "Gây một combo 5 đòn đánh chiếm 6% HP tối đa của Người Chó Canh dưới dạng DMG cho toàn bộ hàng mục tiêu và gây [Hoảng Loạn] lên kẻ thù (phong ấn năng lượng của chúng trong một số lượt; khi hiệu ứng tương tự tồn tại, giá trị cao nhất sẽ được áp dụng).",
       "icon": "/Skill/Watchdog Man (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Watchdog Man (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -80,7 +80,7 @@
   "effects": [
     {
       "term": "[Hoảng Loạn]",
-      "desc": "Trạng thái khống chế làm gián đoạn hành động của mục tiêu."
+      "desc": "Control status interrupts the target's actions."
     }
   ],
   "releaseDate": "01/07/2021",

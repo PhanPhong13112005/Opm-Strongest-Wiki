@@ -75,7 +75,11 @@
   "effects": [
     {
       "term": "[Truy Kích]",
-      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+      "desc": "Một đòn tấn công bổ sung được thực hiện bởi đồng minh có ATK cao nhất khi được kích hoạt bởi Đòn tấn công cơ bản của Gyoro-Gyoro."
+    },
+    {
+      "term": "[Chia Sẻ Sát Thương]",
+      "desc": "Gyoro-Gyoro chia sẻ 50% DMG mà đồng minh Quái vật nhận được trong cùng một cột. Hiệu ứng sẽ dừng khi HP của đồng minh đó giảm xuống dưới 20%."
     }
   ],
   "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSR)/Keepsake_SSR.png",

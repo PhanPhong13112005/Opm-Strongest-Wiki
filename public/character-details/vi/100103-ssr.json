@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 40% ATK (+3) DMG cho một mục tiêu trong 3 đòn combo.",
+      "desc": "Gây 40% ATK DMG cho một mục tiêu trong 3 đòn combo.",
       "icon": "/Skill/Phoenix Man (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 50% ATK (+3) DMG cho mỗi kẻ địch ở hàng sau trong 3 đòn combo, với 70% cơ hội gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (DoT bằng 20% ​​của HP tối đa).",
+      "desc": "Gây 50% ATK DMG cho mỗi kẻ địch ở hàng sau trong 3 đòn combo, với 70% cơ hội gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (DoT bằng 20% ​​của HP tối đa).",
       "icon": "/Skill/Phoenix Man (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 60% ATK (+3) DMG cho mỗi kẻ địch ở hàng sau trong 3 đòn combo, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (DoT bằng 25% HP tối đa).",
+      "desc": "Gây 60% ATK DMG cho mỗi kẻ địch ở hàng sau trong 3 đòn combo, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu trong 2 lượt (DoT bằng 25% HP tối đa).",
       "keepsakeIcon": "/Keepsake/Phoenix Man (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Phoenix Man (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -75,11 +75,11 @@
   "effects": [
     {
       "term": "[Thiêu Đốt]",
-      "desc": "Sát thương lửa liên tục theo thời gian lên mục tiêu."
+      "desc": "Continuous fire damage over time to the target."
     },
     {
       "term": "[Hồi Phục]",
-      "desc": "Hồi Máu theo thời gian hoặc trước hành động kế tiếp của đơn vị."
+      "desc": "Restores Health over time or before the unit's next action."
     }
   ],
   "keepsakeIcon": "/Keepsake/Phoenix Man (SSR)/Keepsake_SSR.png",

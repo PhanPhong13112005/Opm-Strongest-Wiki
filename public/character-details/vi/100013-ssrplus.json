@@ -101,16 +101,16 @@
   ],
   "effects": [
     {
-      "term": "[Hồi Sinh]",
-      "desc": "Cơ chế hồi sinh/trở lại gắn với sự sống của đồng minh, đưa đơn vị trở lại trận đấu."
+      "term": "[Tăng Tốc Chuyên Biệt]",
+      "desc": "Hiệu ứng tăng cường SPD chuyên dụng. Tuyệt Kĩ của Zombieman tăng số đồng minh cùng hàng lên theo tỷ lệ phần trăm SPD của hắn mà không hạ thấp những đồng minh vốn đã nhanh hơn. Nội tại của anh ta cung cấp mức tăng SPD dựa trên tỷ lệ phần trăm."
     },
     {
-      "term": "[Hồi Sinh]",
-      "desc": "Trạng thái đưa đơn vị bị hạ gục trở lại trận, cấp số lần hồi sinh giới hạn mà các hiệu ứng chống hồi sinh có thể gỡ bỏ."
+      "term": "[Cổ Vũ]",
+      "desc": "Cung cấp năng lượng cho đội khi bắt đầu mỗi vòng trong một khoảng thời gian giới hạn."
     },
     {
-      "term": "[Siêu Tốc]",
-      "desc": "Buff tốc độ mà khi còn hiệu lực cho phép người mang và tối đa 6 đồng minh hành động lại và vượt qua kẻ địch có tốc độ thấp hơn."
+      "term": "[Hồi Phục]",
+      "desc": "Sau khi nhận được sát thương kết liễu, khôi phục 60% HP tối đa trước hành động của Zombieman trong khi vẫn còn ít nhất 1 đồng minh, cho phép anh ta tiếp tục chiến đấu."
     }
   ],
   "keepsakeIcon": "/Keepsake/Zombieman (SSRplus)/Keepsake_SSRplus.png",

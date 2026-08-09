@@ -102,28 +102,32 @@
   ],
   "effects": [
     {
-      "term": "[Cắt Giảm Năng Lượng]",
-      "desc": "Debuff áp lên toàn bộ kẻ địch khi Năng lượng của chúng giảm, chặn hoặc phá Năng lượng khiến chúng không thể dùng chiêu cuối."
+      "term": "[HP Chuyên Biệt]",
+      "desc": "Nhóm HP chuyên biệt được tạo ra riêng biệt với HP thông thường."
+    },
+    {
+      "term": "[Gia Tốc Chuyên Biệt]",
+      "desc": "Tăng SPD hoặc tăng SPD của đồng minh lên một tỷ lệ phần trăm nhất định so với SPD của Sonic. Nếu SPD ban đầu của đồng minh cao hơn, nó không thay đổi."
+    },
+    {
+      "term": "[Hoảng Loạn]",
+      "desc": "Hiệu ứng tiêu cực liên quan đến Năng lượng không thể kích hoạt trong cùng một hiệp sau khi Sonic loại bỏ Năng lượng thành công."
     },
     {
       "term": "[Cổ Vũ]",
-      "desc": "Cấp năng lượng vào đầu mỗi vòng trong vài vòng."
+      "desc": "Cung cấp Năng lượng cho đồng minh khi bắt đầu mỗi vòng trong một số vòng nhất định."
     },
     {
-      "term": "[Né Tránh]",
-      "desc": "Trạng thái né giúp giảm sát thương Trực Tiếp, Thêm, Tích Lũy và Cuồng Nộ nhận vào chỉ còn 1 điểm trong thời gian hiệu lực."
+      "term": "[Thiêu Đốt Chuyên Biệt]",
+      "desc": "Gây ATK dựa trên DoT DMG trong 3 hành động tiếp theo, sau đó biến mất."
     },
     {
-      "term": "[Siêu Tốc]",
-      "desc": "Buff tốc độ mà khi còn hiệu lực cho phép người mang và tối đa 6 đồng minh hành động lại và vượt qua kẻ địch có tốc độ thấp hơn."
+      "term": "[Sát Thương Chuẩn]",
+      "desc": "Thiệt hại bỏ qua các hiệu ứng phòng thủ thông thường hiện hành."
     },
     {
-      "term": "[Sát Thương Duy Trì Đặc Hóa]",
-      "desc": "Hiệu ứng sát thương theo thời gian, gây sát thương dựa trên ST lên mục tiêu trong 3 lượt."
-    },
-    {
-      "term": "[Tăng Tốc Chuyên Biệt]",
-      "desc": "Tăng tốc độ của đồng minh tới gần tốc độ của người triển khai (giữ nguyên nếu đồng minh đã nhanh hơn)."
+      "term": "[Né Sát Thương Tức Thì]",
+      "desc": "Tạo cơ hội cho Sát Thương Trực Tiếp, True DMG, Charge DMG và Berserk DMG chỉ gây được 1 điểm DMG."
     }
   ],
   "keepsakeIcon": "/Keepsake/Sonic V1 (UR)/Keepsake_UR.png",

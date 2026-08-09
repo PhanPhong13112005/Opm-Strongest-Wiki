@@ -73,7 +73,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Basic Core: Gains 3 Energy each turn. Advanced Core: Upon entering battle, all allies permanently gain [Specialized Resilience]. Before the start of each turn, all allies receive [Tenacity] equal to 100% of their Max HP, unaffected by Shield Rate. After battle begins, removes enemy buffs that increase or decrease DMG during battle. [Specialized Resilience]: Grants a shield that absorbs all types of DMG, with a maximum capacity equal to 5 times the character’s Max HP. Each Shield point can absorb 10 DMG, and [Tenacity] can recharge the shield.",
+      "desc": "Basic Core: Gains 3 Energy each turn.\n\nAdvanced Core: Upon entering battle, all allies permanently gain [Specialized Resilience]. Before the start of each turn, all allies receive [Tenacity] equal to 100% of their Max HP, unaffected by Shield Rate. After battle begins, removes enemy buffs that increase or decrease DMG during battle. [Specialized Resilience]: Grants a shield that absorbs all types of DMG, with a maximum capacity equal to 5 times the character’s Max HP. Each Shield point can absorb 10 DMG, and [Tenacity] can recharge the shield.",
       "type": "Awakening",
       "icon": "/Skill/Source/100045-ur/awakened.webp",
       "keepsakeIcon": null,
@@ -101,20 +101,20 @@
   ],
   "effects": [
     {
-      "term": "[Shield]",
-      "desc": "The shield absorbs damage up to a portion of the subject's Health; Charge DMG ignores it."
-    },
-    {
-      "term": "[Non-Crit DMG Immunity]",
-      "desc": "Reduces all non-critical damage (usually to 1). Cannot survive and avoid Agility."
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "Reduces all types of DMG received and does not stack with [Agility]."
     },
     {
       "term": "[Agility]",
-      "desc": "Evasion type buff; mutually exclusive with Non-Crit Damage Immunity."
+      "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Reduction]. Exact effect details are currently unknown."
     },
     {
-      "term": "[Generate Shield]",
-      "desc": "The absorption barrier, usually created from transmogrified damage, absorbs damage before health is affected."
+      "term": "[Tenacity]",
+      "desc": "A defensive value based on a percentage of the unit’s Max HP. It can also recharge [Specialized Resilience]."
+    },
+    {
+      "term": "[Specialized Resilience]",
+      "desc": "Grants a shield that absorbs all types of DMG, with a maximum capacity equal to 5 times the character’s Max HP. Each Shield point absorbs 10 DMG, and [Tenacity] can recharge the shield."
     }
   ],
   "keepsakeIcon": "/Keepsake/Child Emperor (UR)/Keepsake_UR.png",

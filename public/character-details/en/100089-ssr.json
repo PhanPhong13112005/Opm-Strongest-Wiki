@@ -75,7 +75,23 @@
   "effects": [
     {
       "term": "[Internal Injury]",
-      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+      "desc": "When the affected unit is attacked, takes DMG equal to 100% of Gouketsu's ATK. Disappears after triggering once."
+    },
+    {
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+    },
+    {
+      "term": "[Agility]",
+      "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Reduction]."
+    },
+    {
+      "term": "[Heal Rate]",
+      "desc": "Increases the effectiveness of HP recovery."
+    },
+    {
+      "term": "[Tenacity]",
+      "desc": "Increases the effectiveness of generated shield-type effects."
     }
   ],
   "keepsakeIcon": "/Keepsake/Gouketsu (SSR)/Keepsake_SSR.png",

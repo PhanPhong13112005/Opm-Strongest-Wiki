@@ -73,7 +73,7 @@
     },
     {
       "name": "Awaken 1 Passive",
-      "desc": "Basic Core: Grants 3 Energy every round. During the first 3 rounds, all allies gain 30% [Arena DMG]. Requirement: Deploy 1 Grappler and 2 Espers. Advanced Core: All allied characters permanently gain [Excess Recovery] upon entering battle. All allies gain 30% [Arena DMG Free]. At the beginning of each round, front-row allies restore HP equal to 80% of their Max HP. This effect lasts for 3 rounds. [Excess Recovery]: Excess Healing and Drain are converted into an equal amount of [HP Shield] that absorbs incoming DMG. The total amount of DMG absorbed cannot exceed 20× the unit’s original HP. Requirement: Deploy 1 Duelist, 1 Grappler, and 2 Espers.",
+      "desc": "Basic Core: Grants 3 Energy every round. During the first 3 rounds, all allies gain 30% [Arena DMG]. Requirement: Deploy 1 Grappler and 2 Espers.\n\nAdvanced Core: All allied characters permanently gain [Excess Recovery] upon entering battle. All allies gain 30% [Arena DMG Free]. At the beginning of each round, front-row allies restore HP equal to 80% of their Max HP. This effect lasts for 3 rounds. [Excess Recovery]: Excess Healing and Drain are converted into an equal amount of [HP Shield] that absorbs incoming DMG. The total amount of DMG absorbed cannot exceed 20× the unit’s original HP. Requirement: Deploy 1 Duelist, 1 Grappler, and 2 Espers.",
       "icon": "/Skill/Source/100184-ur/awakened.webp",
       "type": "Awakening",
       "keepsakeIcon": null,
@@ -101,24 +101,48 @@
   ],
   "effects": [
     {
-      "term": "[Spec. Unyielding]",
-      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
-    },
-    {
       "term": "[Unyielding]",
-      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+      "desc": "Prevents the affected unit from being defeated under specific conditions."
     },
     {
-      "term": "[Non-Crit Immunity]",
-      "desc": "Survival buff that, when present, prevents the unit from being crited and cannot die, retaining 70% of its health for the duration of the effect."
+      "term": "[Specialized Unyielding]",
+      "desc": "A specialized form of [Unyielding] that can be immediately removed by [Breakthrough]."
     },
     {
-      "term": "[Non-Crit DMG Immunity]",
-      "desc": "Reduces all non-critical damage (usually to 1). Cannot survive and avoid Agility."
+      "term": "[Specialized HP]",
+      "desc": "A specialized HP pool that can receive damage separately from normal HP."
     },
     {
-      "term": "[Detonate]",
-      "desc": "Cumulative explosive classes that each (up to a limit) add one target to the Ultimate skill."
+      "term": "[Berserk]",
+      "desc": "Increases Boros’s ATK for his next active action."
+    },
+    {
+      "term": "[Breakthrough]",
+      "desc": "Immediately removes [Specialized Unyielding] from all targets on the battlefield when triggered."
+    },
+    {
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "Reduces damage received from non-critical attacks."
+    },
+    {
+      "term": "[Explosion]",
+      "desc": "Increases damage dealt in Arena or PvP battles."
+    },
+    {
+      "term": "[Non-Crit DMG Free]",
+      "desc": "Reduces Arena or PvP damage received by the specified percentage."
+    },
+    {
+      "term": "[Excess Recovery]",
+      "desc": "Converts excess Healing and Drain into an equal amount of [HP Shield]."
+    },
+    {
+      "term": "[HP Shield]",
+      "desc": "A shield generated from excess recovery that absorbs incoming DMG."
+    },
+    {
+      "term": "[Charged Pursuit]",
+      "desc": "A follow-up attack triggered after another specified action or condition."
     }
   ],
   "keepsakeIcon": "/Keepsake/Boros (UR)/Keepsake_UR.png",

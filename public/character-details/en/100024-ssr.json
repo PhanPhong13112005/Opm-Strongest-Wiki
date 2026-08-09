@@ -76,12 +76,20 @@
   "keepsakeIcon": "/Keepsake/Bang (SSR)/Keepsake_SSR.png",
   "effects": [
     {
-      "term": "[Tenacity]",
-      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+      "term": "[Berserk]",
+      "desc": "Increases DMG by 30% for 1 turn."
     },
     {
       "term": "[Internal Injury]",
-      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+      "desc": "When the affected unit is attacked, takes DMG equal to 140% of Silverfang's ATK. Disappears after triggering once."
+    },
+    {
+      "term": "[Block]",
+      "desc": "A defensive trigger that can activate Silverfang's Passive and grant [Tenacity]."
+    },
+    {
+      "term": "[Tenacity]",
+      "desc": "Absorbs DMG equal to 7% of Max HP. Can trigger up to 3 times per turn."
     }
   ],
   "releaseDate": "01/11/2020",

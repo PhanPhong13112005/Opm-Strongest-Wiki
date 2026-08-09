@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây combo 5 đòn 38% ATK (+2) DMG cho một mục tiêu. Mỗi đòn đánh có 50% cơ hội gây 10% ATK DMG cho kẻ địch xung quanh mục tiêu chính.",
+      "desc": "Gây combo 5 đòn 38% ATK DMG cho một mục tiêu. Mỗi đòn đánh có 50% cơ hội gây 10% ATK DMG cho kẻ địch xung quanh mục tiêu chính.",
       "icon": "/Skill/Eyelashes (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây combo 5 đòn 38% ATK (+2) DMG cho một mục tiêu. Mỗi đòn đánh có 50% cơ hội gây 15% ATK DMG cho kẻ thù xung quanh mục tiêu chính.",
+      "desc": "Gây combo 5 đòn 38% ATK DMG cho một mục tiêu. Mỗi đòn đánh có 50% cơ hội gây 15% ATK DMG cho kẻ thù xung quanh mục tiêu chính.",
       "keepsakeIcon": "/Keepsake/Eyelashes (R)/Keepsake_R.png",
       "icon": "/Skill/Eyelashes (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",

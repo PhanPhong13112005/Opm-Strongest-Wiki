@@ -111,8 +111,36 @@
   "dacTinh": [],
   "effects": [
     {
+      "term": "[Mê Hoặc]",
+      "desc": "Khiến kẻ địch bị ảnh hưởng rơi vào trạng thái [Rời Trận] trên chiến trường và sử dụng Tuyệt Kĩ hoặc Nội tại của chính nó để tấn công một đồng minh ngẫu nhiên. Kẻ địch bị ảnh hưởng sẽ quay trở lại sau khi vòng đấu kết thúc."
+    },
+    {
+      "term": "[Rời Trận]",
+      "desc": "Tạm thời loại bỏ nhân vật bị ảnh hưởng khỏi chiến trường."
+    },
+    {
       "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "desc": "Ngăn chặn đơn vị bị ảnh hưởng hoạt động trong khoảng thời gian được chỉ định."
+    },
+    {
+      "term": "[Tê Liệt]",
+      "desc": "Ngăn thiết bị bị ảnh hưởng kích hoạt [Truy Kích], [Truy Kích Liên Tục] và [Truy Kích Liên Kích]."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Một cuộc tấn công bổ sung được kích hoạt sau một hành động khác hoặc khi đáp ứng các điều kiện cụ thể."
+    },
+    {
+      "term": "[Truy Kích Liên Tục]",
+      "desc": "Hiệu ứng Truy Kích có thể kích hoạt liên tục trong các điều kiện được chỉ định."
+    },
+    {
+      "term": "[Truy Kích Liên Kích]",
+      "desc": "Một cuộc tấn công Truy Kích phối hợp được kích hoạt thông qua hiệu ứng kiểu Combo."
+    },
+    {
+      "term": "[Miễn Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]."
     }
   ],
   "classLevel": "Class_S",

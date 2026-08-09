@@ -78,12 +78,24 @@
   "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado V2 (SSR)/Keepsake_SSR.png",
   "effects": [
     {
-      "term": "[Hoảng Loạn]",
-      "desc": "Trạng thái khống chế làm gián đoạn hành động của mục tiêu."
+      "term": "[Lá Chắn]",
+      "desc": "Hấp thụ DMG bằng 30% HP tối đa của chính mình."
     },
     {
-      "term": "[Lá Chắn]",
-      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+      "term": "[Trường Lực]",
+      "desc": "Trước khi thực hiện hành động, thiết bị bị ảnh hưởng phải chịu DMG liên tục tương đương 50% ATK. Có 50% cơ hội bỏ qua khả năng miễn dịch."
+    },
+    {
+      "term": "[Đã Hoảng Loạn]",
+      "desc": "Hiệu ứng kiểm soát phong ấn năng lượng. Sau khi Năng lượng bị phong ấn được loại bỏ thành công bởi Nội tại này, kẻ địch bị ảnh hưởng sẽ không thể nhận lại [Đã Hoảng Loạn] trong cùng một lượt."
+    },
+    {
+      "term": "[Miễn Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]."
+    },
+    {
+      "term": "[Nhanh Nhẹn]",
+      "desc": "Hiệu ứng phòng thủ không thể cùng tồn tại với [Miễn Sát Thương Không Bạo Kích]."
     }
   ],
   "releaseDate": "01/09/2021",

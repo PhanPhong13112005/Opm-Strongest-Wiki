@@ -78,12 +78,24 @@
   "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado V2 (SSR)/Keepsake_SSR.png",
   "effects": [
     {
-      "term": "[Panic]",
-      "desc": "Control status interrupts the target's actions."
+      "term": "[Tenacity]",
+      "desc": "Absorbs DMG equal to 30% of own Max HP."
     },
     {
-      "term": "[Tenacity]",
-      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+      "term": "[Force Field]",
+      "desc": "Before taking action, the affected unit suffers Continuous DMG equal to 50% ATK. Has a 50% chance to ignore immunity."
+    },
+    {
+      "term": "[Panicked]",
+      "desc": "An Energy-sealing control effect. After sealed Energy is successfully removed by this Passive, the affected enemies cannot receive [Panicked] again during the same turn."
+    },
+    {
+      "term": "[Non-Crit DMG Free]",
+      "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+    },
+    {
+      "term": "[Agility]",
+      "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]."
     }
   ],
   "releaseDate": "01/09/2021",

@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 5 đòn combo vào một mục tiêu với tổng sát thương bằng 20% ATK (+2) DMG mỗi đòn.",
+      "desc": "Gây 5 đòn combo vào một mục tiêu với tổng sát thương bằng 20% ATK DMG mỗi đòn.",
       "icon": "/Skill/Genos (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 4 đòn combo cho mỗi kẻ địch trong toàn hàng với 35% ATK (+2) DMG mỗi kẻ, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính trong 2 lượt (DoT bằng 50% ATK).",
+      "desc": "Gây 4 đòn combo cho mỗi kẻ địch trong toàn hàng với 35% ATK DMG mỗi kẻ, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính trong 2 lượt (DoT bằng 50% ATK).",
       "icon": "/Skill/Genos (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 4 đòn combo cho mỗi kẻ địch trong toàn hàng với 35% ATK (+2) DMG mỗi kẻ, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính và 50% cơ hội gây [Thiêu Đốt] lên kẻ địch trong cột của mục tiêu chính trong 2 lượt (DoT bằng 50% ATK).",
+      "desc": "Gây 4 đòn combo cho mỗi kẻ địch trong toàn bộ hàng với 35% ATK DMG mỗi kẻ, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính và 50% cơ hội gây [Thiêu Đốt] lên kẻ thù trong cột của mục tiêu chính trong 2 lượt (DoT bằng 50% ATK).",
       "keepsakeIcon": "/Keepsake/Genos (SR)/Keepsake_SR.png",
       "icon": "/Skill/Genos (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -75,7 +75,7 @@
   "effects": [
     {
       "term": "[Thiêu Đốt]",
-      "desc": "Sát thương lửa liên tục theo thời gian lên mục tiêu."
+      "desc": "Continuous fire damage over time to the target."
     }
   ],
   "keepsakeIcon": "/Keepsake/Genos (SR)/Keepsake_SR.png",

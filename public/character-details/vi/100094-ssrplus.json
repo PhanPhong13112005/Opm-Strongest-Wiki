@@ -103,19 +103,19 @@
   "effects": [
     {
       "term": "[Bạo Kích]",
-      "desc": "Đòn chí mạng gây thêm sát thương; một số đơn vị có thể miễn nhiễm [Bạo Kích]."
+      "desc": "Đòn chí mạng gây thêm sát thương; Some units may be immune to [Bạo Kích]."
     },
     {
       "term": "[Đánh Dấu]",
-      "desc": "Đánh dấu một đơn vị, mở điều kiện truy kích hoặc hiệu ứng thưởng gắn với dấu."
+      "desc": "Mark a unit, unlocking a raid condition or bonus effect associated with the mark."
     },
     {
       "term": "[Miễn Tử]",
-      "desc": "Hiệu ứng bất lợi vô hiệu hóa các hiệu ứng bất tử/chống chết của mục tiêu, cho phép hạ gục nó như bình thường."
+      "desc": "Unfavorable effects negate the target's invincibility/anti-death effects, allowing it to be knocked down as normal."
     },
     {
       "term": "[Thanh Tẩy]",
-      "desc": "Xóa các hiệu ứng/buff đang có trên toàn bộ kẻ địch."
+      "desc": "Removes existing effects/buffs on all enemies."
     }
   ],
   "keepsakeIcon": "/Keepsake/Garou (SSRplus)/Keepsake_SSRplus.png",

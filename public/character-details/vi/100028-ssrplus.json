@@ -101,12 +101,28 @@
   ],
   "effects": [
     {
-      "term": "[Bám Dính]",
-      "desc": "Trạng thái khống chế ngăn mục tiêu tung [Truy Kích] và [Truy Kích Liên Tiếp], thường trong 2 lượt."
+      "term": "[Đột Phá]",
+      "desc": "Ngay lập tức loại bỏ DMG Bỏ qua do hiệu ứng loại Kiên cường gây ra. Có thể kích hoạt một lần cho mỗi đòn tấn công vào mỗi mục tiêu."
     },
     {
-      "term": "[Miễn Tử]",
-      "desc": "Hiệu ứng bất lợi vô hiệu hóa các hiệu ứng bất tử/chống chết của mục tiêu, cho phép hạ gục nó như bình thường."
+      "term": "[Bỏ Qua Sát Thương]",
+      "desc": "Một hiệu ứng được cấp bởi một số trạng thái loại Không chịu khuất phục nhất định khiến DMG nhận vào hiện hành bị bỏ qua."
+    },
+    {
+      "term": "[Phòng Hộ Chuyên Biệt]",
+      "desc": "Vô hiệu hóa DMG nhận vào và ghi đè các hiệu ứng HP thưởng. Tổng số tiền của nó không thể vượt quá 15 lần HP tối đa ban đầu của đơn vị."
+    },
+    {
+      "term": "[Chia Sẻ Sát Thương]",
+      "desc": "Một hiệu ứng phân phối DMG nhận được giữa các đơn vị bị ảnh hưởng. Tank-Top Master loại bỏ hiệu ứng này khỏi tất cả kẻ địch vào đầu mỗi lượt."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Một cuộc tấn công bổ sung được kích hoạt sau khi một đồng minh hành động. Tank-Top Master được triệu hồi hỗ trợ ưu tiên kẻ thù có DMG Bỏ qua và có thể kích hoạt [Đột Phá]."
+    },
+    {
+      "term": "[Truy Kích Liên Tiếp]",
+      "desc": "Một hỗ trợ được triệu hồi có ATK dựa trên 30% HP tối đa ban đầu của Tank-Top Master và có thể thực hiện các đòn tấn công [Truy Kích]."
     }
   ],
   "keepsakeIcon": "/Keepsake/Tank Top Master (SSRplus)/Keepsake_SSRplus.png",

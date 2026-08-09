@@ -101,16 +101,20 @@
   ],
   "effects": [
     {
-      "term": "[Unyielding]",
-      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+      "term": "[Fear]",
+      "desc": "Seals a specified amount of the enemy team’s Energy for 1 round."
     },
     {
-      "term": "[Panic]",
-      "desc": "Control status interrupts the target's actions."
+      "term": "[Resilience/Tenacity]",
+      "desc": "A defensive value reduced by King’s Ultimate."
     },
     {
       "term": "[Shield]",
-      "desc": "The shield absorbs damage up to a portion of the subject's Health; Charge DMG ignores it."
+      "desc": "A summoned unit that inherits stats from King, absorbs most incoming DMG for King, and performs Follow-Up attacks after allies act."
+    },
+    {
+      "term": "[Follow-up]",
+      "desc": "An additional attack triggered after an ally acts. King’s Drone targets 1 random enemy and deals 350% ATK DMG."
     }
   ],
   "keepsakeIcon": "/Keepsake/King (SSRplus)/Keepsake_SSRplus.png",

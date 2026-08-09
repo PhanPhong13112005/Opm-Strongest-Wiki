@@ -101,16 +101,20 @@
   ],
   "effects": [
     {
-      "term": "[Bất Khuất]",
-      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+      "term": "[Sợ Hãi]",
+      "desc": "Phong ấn một lượng Năng lượng nhất định của đội địch trong 1 lượt."
     },
     {
-      "term": "[Hoảng Loạn]",
-      "desc": "Trạng thái khống chế làm gián đoạn hành động của mục tiêu."
+      "term": "[Bền Bỉ/Kiên Cường]",
+      "desc": "Giá trị phòng thủ bị giảm bởi Tuyệt Kĩ của King."
     },
     {
       "term": "[Khiên]",
-      "desc": "Khiên hấp thụ sát thương tới một phần Máu của chủ thể; Charge DMG bỏ qua nó."
+      "desc": "Đơn vị được triệu hồi kế thừa các chỉ số từ King, hấp thụ hầu hết DMG nhận vào cho King và thực hiện các đòn tấn công Truy Kích sau khi đồng minh hành động."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Một cuộc tấn công bổ sung được kích hoạt sau khi một đồng minh hành động. King's Drone nhắm mục tiêu vào 1 kẻ thù ngẫu nhiên và gây 350% ATK DMG."
     }
   ],
   "keepsakeIcon": "/Keepsake/King (SSRplus)/Keepsake_SSRplus.png",

@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Lõi cơ bản: Nhận 3 Năng lượng mỗi lượt. Advanced Core: Khi tham gia trận chiến, tất cả đồng minh vĩnh viễn nhận được [Bền Bỉ Chuyên Biệt]. Trước khi bắt đầu mỗi lượt, tất cả đồng minh nhận được [Lá Chắn] bằng 100% HP tối đa của họ, không bị ảnh hưởng bởi Tỷ Lệ Khiên. Sau khi trận chiến bắt đầu, loại bỏ các bùa lợi của kẻ thù làm tăng hoặc giảm DMG trong trận chiến. [Bền Bỉ Chuyên Biệt]: Cấp một tấm khiên hấp thụ mọi loại DMG, với sức chứa tối đa gấp 5 lần HP tối đa của nhân vật. Mỗi điểm Khiên có thể hấp thụ 10 DMG và [Lá Chắn] có thể nạp lại lá chắn.",
+      "desc": "Lõi cơ bản: Nhận 3 Năng lượng mỗi lượt.\n\nAdvanced Core: Khi tham gia trận chiến, tất cả đồng minh vĩnh viễn nhận được [Bền Bỉ Chuyên Biệt]. Trước khi bắt đầu mỗi lượt, tất cả đồng minh nhận được [Lá Chắn] bằng 100% HP tối đa của họ, không bị ảnh hưởng bởi Tỷ Lệ Khiên. Sau khi trận chiến bắt đầu, loại bỏ các bùa lợi của kẻ thù làm tăng hoặc giảm DMG trong trận chiến. [Bền Bỉ Chuyên Biệt]: Cấp một tấm khiên hấp thụ mọi loại DMG, với sức chứa tối đa gấp 5 lần HP tối đa của nhân vật. Mỗi điểm Khiên có thể hấp thụ 10 DMG và [Lá Chắn] có thể nạp lại lá chắn.",
       "type": "Thức tỉnh",
       "icon": "/Skill/Source/100045-ur/awakened.webp",
       "keepsakeIcon": null,
@@ -101,20 +101,20 @@
   ],
   "effects": [
     {
-      "term": "[Khiên]",
-      "desc": "Khiên hấp thụ sát thương tới một phần Máu của chủ thể; Charge DMG bỏ qua nó."
-    },
-    {
-      "term": "[Miễn Nhiễm Sát Thương Không Bạo Kích]",
-      "desc": "Giảm mọi sát thương không chí mạng (thường về 1). Không thể tồn tại cùng né tránh loại Agility."
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG đã nhận và không xếp chồng với [Nhanh Nhẹn]."
     },
     {
       "term": "[Nhanh Nhẹn]",
-      "desc": "Buff loại né tránh; loại trừ lẫn nhau với Miễn Sát Thương Non-Crit."
+      "desc": "Hiệu ứng phòng thủ không thể cùng tồn tại với [Giảm Sát Thương Không Bạo Kích]. Chi tiết hiệu ứng chính xác hiện chưa được biết."
     },
     {
-      "term": "[Tạo Khiên]",
-      "desc": "Rào chắn hấp thụ, thường được tạo từ sát thương chuyển hóa, chịu đòn trước khi máu bị ảnh hưởng."
+      "term": "[Lá Chắn]",
+      "desc": "Giá trị phòng thủ dựa trên phần trăm HP tối đa của đơn vị. Nó cũng có thể sạc lại [Bền Bỉ Chuyên Biệt]."
+    },
+    {
+      "term": "[Bền Bỉ Chuyên Biệt]",
+      "desc": "Cấp một tấm khiên có khả năng hấp thụ mọi loại DMG, với công suất tối đa gấp 5 lần HP tối đa của nhân vật. Mỗi điểm Khiên hấp thụ 10 DMG và [Lá Chắn] có thể nạp lại lá chắn."
     }
   ],
   "keepsakeIcon": "/Keepsake/Child Emperor (UR)/Keepsake_UR.png",

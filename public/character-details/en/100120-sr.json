@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 34% ATK (+3) DMG to a single target in a 3-hit combo. Has a 100% chance to inflict [Internal Injury] on the target (when struck, deals additional Internal Injury DMG equal to 100% of Ringring's ATK; the effect is consumed once triggered).",
+      "desc": "Deals 34% ATK DMG to a single target in a 3-hit combo. Has a 100% chance to inflict [Internal Injury] on the target (when struck, deals additional Internal Injury DMG equal to 100% of Ringring's ATK; the effect is consumed once triggered).",
       "icon": "/Skill/Rinrin (SR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 35% ATK (+2) DMG to a single target in a 4-hit combo, and restores HP equal to 100% ATK to all allies.",
+      "desc": "Deals 35% ATK DMG to a single target in a 4-hit combo, and restores HP equal to 100% ATK to all allies.",
       "icon": "/Skill/Rinrin (SR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 35% ATK (+2) DMG to a single target in a 4-hit combo, and restores HP equal to 120% ATK to all allies.",
+      "desc": "Deals 35% ATK DMG to a single target in a 4-hit combo, and restores HP equal to 120% ATK to all allies.",
       "icon": "/Skill/Rinrin (SR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Rinrin (SR)/Keepsake_SR.png",
       "type": "Ultimate",

@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công một mục tiêu bằng 3 đòn combo, gây 180% ATK (+2) DMG, với 100% cơ hội gây [Lĩnh Vực] lên mục tiêu trong 1 lượt (trước khi hành động, lấy DoT bằng 60% ATK, với 50% cơ hội để thâm nhập vào các hiệu ứng miễn dịch).",
+      "desc": "Tấn công một mục tiêu bằng 3 đòn combo, gây 180% ATK DMG, với 100% cơ hội gây [Lĩnh Vực] lên mục tiêu trong 1 lượt (trước khi hành động, nhận DoT bằng 60% ATK, với 50% cơ hội xuyên miễn nhiễm tác dụng).",
       "icon": "/Skill/Butterfly DX (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tấn công một mục tiêu bằng 3 đòn combo, gây 180% ATK (+2) DMG, với 100% cơ hội gây [Lĩnh Vực] lên mục tiêu trong 1 lượt (trước khi hành động, lấy DoT bằng 70% ATK, với 50% cơ hội để thâm nhập vào các hiệu ứng miễn dịch).",
+      "desc": "Tấn công một mục tiêu bằng 3 đòn combo, gây 180% ATK DMG, với 100% cơ hội gây [Lĩnh Vực] lên mục tiêu trong 1 lượt (trước khi hành động, nhận DoT bằng 70% ATK, với 50% cơ hội xuyên miễn nhiễm tác dụng).",
       "icon": "/Skill/Butterfly DX (SR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Butterfly DX (SR)/Keepsake_SR.png",
       "type": "Tuyệt kĩ",
@@ -91,7 +91,7 @@
   "effects": [
     {
       "term": "[Lá Chắn]",
-      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
     }
   ],
   "classLevel": "A",

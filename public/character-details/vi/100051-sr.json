@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tấn công một mục tiêu bằng 3 đòn kết hợp gây 40% ATK DMG (+3).",
+      "desc": "Tấn công một mục tiêu bằng 3 đòn kết hợp gây 40% ATK DMG.",
       "icon": "/Skill/Lightning Genji (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công mục tiêu trong khu vực hình chữ thập bằng 3 đòn combo gây 50% ATK DMG (+3). Đồng thời cấp [Lá Chắn] cho bản thân và đồng minh trong cùng một cột (hấp thụ DMG bằng 30% HP của chính mình).",
+      "desc": "Tấn công mục tiêu trong khu vực hình chữ thập bằng 3 đòn combo gây 50% ATK DMG. Đồng thời cấp [Lá Chắn] cho bản thân và đồng minh trong cùng một cột (hấp thụ DMG bằng 30% HP của chính mình).",
       "icon": "/Skill/Lightning Genji (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tấn công mục tiêu trong khu vực hình chữ thập bằng 3 đòn combo gây 55% ATK DMG (+3). Đồng thời cấp [Lá Chắn] cho bản thân và đồng minh trong cùng một cột (hấp thụ DMG bằng 35% HP của chính mình).",
+      "desc": "Tấn công mục tiêu trong khu vực hình chữ thập bằng 3 đòn combo gây 55% ATK DMG. Đồng thời cấp [Lá Chắn] cho bản thân và đồng minh trong cùng một cột (hấp thụ DMG bằng 35% HP của chính mình).",
       "keepsakeIcon": "/Keepsake/Lightning Genji (SR)/Keepsake_SR.png",
       "icon": "/Skill/Lightning Genji (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -74,7 +74,7 @@
   "effects": [
     {
       "term": "[Lá Chắn]",
-      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
     }
   ],
   "keepsakeIcon": "/Keepsake/Lightning Genji (SR)/Keepsake_SR.png",

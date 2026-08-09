@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tấn công một mục tiêu bằng combo 4 đòn, gây 20% ATK (+2) sát thương.",
+      "desc": "Tấn công một mục tiêu bằng combo 4 đòn, gây 20% sát thương ATK.",
       "icon": "/Skill/Clone (N)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công một mục tiêu bằng combo 4 đòn, gây 45% ATK (+2) sát thương.",
+      "desc": "Tấn công một mục tiêu bằng combo 4 đòn, gây 45% sát thương ATK.",
       "icon": "/Skill/Clone (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tấn công một mục tiêu bằng combo 4 đòn, gây 50% ATK (+2) sát thương.",
+      "desc": "Tấn công một mục tiêu bằng combo 4 đòn, gây 50% sát thương ATK.",
       "icon": "/Skill/Clone (N)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Clone (N)/Keepsake_N.png",
       "type": "Tuyệt kĩ",

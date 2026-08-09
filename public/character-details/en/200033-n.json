@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Strikes the entire target column with a 3-hit combo for 40% ATK (+3) damage, with a 100% chance to inflict [Corrosion] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
+      "desc": "Strikes the entire target column with a 3-hit combo for 40% ATK damage, with a 100% chance to inflict [Corrosion] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
       "icon": "/Skill/Deep Sea Invader (N)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Strikes the entire target column with a 3-hit combo for 45% ATK (+3) damage, with a 100% chance to inflict [Corrosion] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
+      "desc": "Strikes the entire target column with a 3-hit combo for 45% ATK damage, with a 100% chance to inflict [Corrosion] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
       "keepsakeIcon": "/Keepsake/Deep Sea Invader (N)/Keepsake_N.png",
       "icon": "/Skill/Deep Sea Invader (N)/Skill_ult.png",
       "type": "Ultimate",

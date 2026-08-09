@@ -20,7 +20,7 @@
     "skills": [
       {
         "name": "Basic",
-        "desc": "Deals 120% ATK (+10) DMG to a single target.",
+        "desc": "Deals 120% ATK DMG to a single target.",
         "icon": "/Skill/Source/blacksperm-urplus/basic.webp",
         "animation": null,
         "type": "Basic",
@@ -102,16 +102,56 @@
     ],
     "effects": [
       {
+        "term": "[Specialized Direct DMG]",
+        "desc": "A specialized type of direct damage affected only by advanced damage modifiers."
+      },
+      {
+        "term": "[Specialized Evasion]",
+        "desc": "A specialized defensive effect that this Ultimate partially ignores."
+      },
+      {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Reduces damage received from non-critical attacks."
+      },
+      {
+        "term": "[Unyielding]",
+        "desc": "Prevents the affected unit from being defeated under specific conditions."
+      },
+      {
+        "term": "[Specialized Unyielding]",
+        "desc": "A specialized form of [Unyielding]."
+      },
+      {
+        "term": "[All DMG Amplification]",
+        "desc": "Increases all damage dealt by the affected unit."
+      },
+      {
+        "term": "[All DMG Reduction]",
+        "desc": "Reduces all damage received by the affected unit."
+      },
+      {
+        "term": "[Specialized Extra DMG]",
+        "desc": "When the affected character uses an Ultimate, deals [Specialized Bonus DMG] equal to 800% of their Max HP to the enemy with the highest Max HP (can CRIT, PvP only)."
+      },
+      {
+        "term": "[Support Enhancement]",
+        "desc": "Enhances the unit's support-related effects."
+      },
+      {
         "term": "[Invincible]",
-        "desc": "Absorbs all damage received during this period, restoring HP on the next turn."
+        "desc": "Absorbs all incoming DMG while the state is active."
+      },
+      {
+        "term": "[Follow-up]",
+        "desc": "A summoned follower that inherits a percentage of Black Sperm's base Attack and can perform Follow-Up attacks."
       },
       {
         "term": "[Re-battle]",
-        "desc": "Triggers an extra action."
+        "desc": "A special effect that can trigger the additional effect of Awaken 2 Passive."
       },
       {
         "term": "[Charged Pursuit]",
-        "desc": "Attacks out of turn with a predetermined skill strength percentage."
+        "desc": "A special Follow-Up attack performed with the specified skill power."
       }
     ],
     "keepsakeIcon": "/Keepsake/Black Sperm (URplus)/Keepsake_URplus.webp",
@@ -237,24 +277,76 @@
     ],
     "effects": [
       {
+        "term": "[Specialized Direct DMG]",
+        "desc": "A specialized type of direct damage affected only by advanced DMG modifiers."
+      },
+      {
+        "term": "[Specialized Evasion]",
+        "desc": "A specialized defensive effect that can be partially ignored by certain skills."
+      },
+      {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Reduces damage received from non-critical attacks."
+      },
+      {
+        "term": "[Unyielding]",
+        "desc": "Prevents the affected unit from being defeated under specific conditions."
+      },
+      {
+        "term": "[Specialized Unyielding]",
+        "desc": "A specialized form of [Unyielding]."
+      },
+      {
         "term": "[Blind]",
-        "desc": "20% off Arena DMG Free, can't use ultimate, can't attack. Maximum 2 layers; Counts as a stun type effect."
+        "desc": "Reduces [Arena DMG Reduction], prevents the use of Ultimates, and disables Follow-Ups. Can stack up to 2 times and is treated as a [Stun-type effect]."
       },
       {
-        "term": "[Revive]",
-        "desc": "The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match."
+        "term": "[Arena DMG Reduction]",
+        "desc": "Reduces damage received in Arena battles."
       },
       {
-        "term": "[Link]",
-        "desc": "Attach deployer's life to an ally; cannot be defeated as long as that ally is alive."
+        "term": "[Stun/Specialized Stun]",
+        "desc": "A control-effect category that prevents or restricts a unit from acting."
       },
       {
-        "term": "[Truy Kích]",
-        "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+        "term": "[Berserk]",
+        "desc": "An offensive enhancement granted to all allies by the Ultra-Ultimate."
       },
       {
-        "term": "[Spec. Regeneration]",
-        "desc": "When entering battle, permanently reduces damage; While allies remain, heal to full health and continue fighting a limited number of times."
+        "term": "[Break Armor]",
+        "desc": "An offensive effect granted to all allies by the Ultra-Ultimate."
+      },
+      {
+        "term": "[Stun]",
+        "desc": "Prevents the affected unit from taking action during the effect's duration."
+      },
+      {
+        "term": "[Specialized Stun]",
+        "desc": "A specialized form of [Stun]."
+      },
+      {
+        "term": "[Fear]",
+        "desc": "A control effect that can be removed from allies by this Passive."
+      },
+      {
+        "term": "[Silence]",
+        "desc": "Prevents the affected unit from using its Ultimate."
+      },
+      {
+        "term": "[Life Link]",
+        "desc": "A linking effect that can prevent or delay a linked unit from being defeated while its linked ally remains alive."
+      },
+      {
+        "term": "[Specialized Regeneration]",
+        "desc": "After a fatal hit, restores 100% HP before the next action while an ally remains, grants stackable Attack and Max HP, and permanently reduces DMG taken."
+      },
+      {
+        "term": "[Re-battle]",
+        "desc": "Allows a defeated unit to return to battle under specified conditions."
+      },
+      {
+        "term": "[Charged Pursuit]",
+        "desc": "A special follow-up attack launched with a specified percentage of skill strength."
       }
     ],
     "keepsakeIcon": "/Keepsake/Zombieman (URplus)/Keepsake_URplus.png",
@@ -382,44 +474,56 @@
     ],
     "effects": [
       {
-        "term": "[Spec. Unyielding]",
-        "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+        "term": "[Specialized Direct DMG]",
+        "desc": "A specialized type of direct damage affected only by advanced DMG modifiers."
       },
       {
-        "term": "[Extreme Unyielding]",
-        "desc": "The shield ignores top tier damage, blocks certain incoming attacks, and when activated can deal massive Chaos damage, bypassing normal dodge/reduction effects."
+        "term": "[Specialized Evasion]",
+        "desc": "A specialized defensive effect that can be pierced or partially ignored by certain skills."
+      },
+      {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Reduces damage received from non-critical attacks."
       },
       {
         "term": "[Unyielding]",
-        "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+        "desc": "Prevents the affected unit from being defeated under specific conditions."
       },
       {
-        "term": "[Reduce True DMG]",
-        "desc": "Reduces incoming true damage by a large percentage (e.g. 70%), a rare shield against normally unblockable damage."
+        "term": "[Specialized Unyielding]",
+        "desc": "A specialized form of [Unyielding]."
       },
       {
-        "term": "[Reduce Non-Crit DMG]",
-        "desc": "Reduced damage taken from non-critical attacks."
+        "term": "[Disorder]",
+        "desc": "Before any character takes action, deals [Disorder DMG] if the target is not under [Specialized Unyielding] or [Extreme Tenacity]. The effect disappears after triggering and can stack."
       },
       {
-        "term": "[Disrupt]",
-        "desc": "Before a character acts, if without a shield, suffer heavy ST-based Disorder DMG. Cumulative; disappears after activation."
+        "term": "[Disorder DMG]",
+        "desc": "A damage effect based on Overgrown Rover’s ATK that ignores 100% [DoT DMG Reduction] and pierces [Specialized Evasion] and [Non-Crit DMG Reduction]."
       },
       {
-        "term": "[Spec. Dodge]",
-        "desc": "Evasion PvP tier — reduces specialized attacks to 1 damage; pierced by the ignore dodge effect."
+        "term": "[DoT DMG Reduction]",
+        "desc": "Reduces damage received from damage-over-time effects."
       },
       {
-        "term": "[Spec. Direct DMG]",
-        "desc": "Advanced tier of direct damage, only affected by advanced damage increase/decrease and passes through normal defenses."
+        "term": "[Insta-Dodge]",
+        "desc": "A special state with an ignore-DMG effect whose action count can be reduced by Overgrown Rover."
       },
       {
-        "term": "[Disrupt DMG]",
-        "desc": "Massive ST damage type associated with the Disorder debuff, ignores ST Reduction over time and penetrates Specialized Evasion, disappears after activation."
+        "term": "[True DMG Reduction]",
+        "desc": "Reduces True DMG received by the affected unit."
       },
       {
-        "term": "[Rematch]",
-        "desc": "Permanently reduces damage taken; When defeated, spend a layer to return to 100% Health and pursue."
+        "term": "[DoT DMG Bonus Reduction]",
+        "desc": "Reduces the bonus damage of damage-over-time effects. Overgrown Rover dispels this effect from all allies."
+      },
+      {
+        "term": "[Re-battle]",
+        "desc": "Allows a defeated unit to return to battle by consuming 1 stack, restoring 100% HP and performing a [Charge Follow-Up]."
+      },
+      {
+        "term": "[Charged Pursuit]",
+        "desc": "A follow-up Ultimate performed on a random target at a specified percentage of Ultimate power."
       }
     ],
     "keepsakeIcon": "/Keepsake/Overgrown Rover (URplus)/Keepsake_URplus.png",
@@ -544,28 +648,64 @@
     ],
     "effects": [
       {
-        "term": "[Reduce DMG Res]",
-        "desc": "Reduces damage taken by 30%, increased by 1.5 times when the bearer's base health is higher than the attacker's."
+        "term": "[Specialized Direct DMG]",
+        "desc": "A specialized type of direct damage affected only by advanced DMG modifiers."
       },
       {
-        "term": "[Reduce Crit DMG]",
-        "desc": "Reduces damage taken from critical hits by a certain percentage."
+        "term": "[Specialized Evasion]",
+        "desc": "A specialized defensive effect that this Ultimate partially ignores."
       },
       {
-        "term": "[Revive]",
-        "desc": "The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match."
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Reduces damage received from non-critical attacks."
+      },
+      {
+        "term": "[Unyielding]",
+        "desc": "Prevents the affected unit from being defeated under specific conditions."
+      },
+      {
+        "term": "[Specialized Unyielding]",
+        "desc": "A specialized form of [Unyielding]."
+      },
+      {
+        "term": "[Insta-Dodge]",
+        "desc": "A special state. When an enemy leaves this state, [Roaring Aura Sky Ripping Fist] can be triggered."
+      },
+      {
+        "term": "[Void Fist]",
+        "desc": "A follow-up attack performed by Bomb & Bang when an enemy leaves the [Extreme Tenacity] state."
+      },
+      {
+        "term": "[Energy Conversion]",
+        "desc": "An enemy effect permanently removed by Bomb & Bang at battle start."
+      },
+      {
+        "term": "[Energy Pressure]",
+        "desc": "An effect that all allies become immune to at battle start."
+      },
+      {
+        "term": "[Specialized HP]",
+        "desc": "A special HP pool whose restoration can be prevented by certain effects."
+      },
+      {
+        "term": "[Suppression DMG Increase]",
+        "desc": "Increases DMG dealt by a specified percentage. If Bomb & Bang’s base Max HP is higher than the attacker’s, the DMG increase is enhanced."
+      },
+      {
+        "term": "[Suppression DMG Reduction]",
+        "desc": "Reduces DMG taken by a specified percentage. If Bomb & Bang’s base Max HP is higher than the attacker’s, the DMG reduction is enhanced."
       },
       {
         "term": "[Energy Tenacity]",
-        "desc": "The shield type converts its cumulative value into damage reduction, is limited to a multiple of the unit's maximum Health, and cannot be used with Resurrection."
+        "desc": "A special shield generated by converting a percentage of the original DMG received by allies."
       },
       {
-        "term": "[Spec. HP]",
-        "desc": "The PvP tier's unique health bar stacks on top of regular health, must also be depleted, and can be restored independently."
+        "term": "[Revive]",
+        "desc": "A revival effect that cannot coexist with this skill’s [Energy Shield] effect."
       },
       {
-        "term": "[Increase DMG Res]",
-        "desc": "Increases damage dealt by 30%, increased by 1.5 times when the bearer's base HP is higher than the attacker's."
+        "term": "[Reduced DMG from Resistance]",
+        "desc": "Reduces damage dealt to [Specialized HP]. This effect is nullified by Awaken 2 Passive."
       }
     ],
     "keepsakeIcon": "/Keepsake/Bang & Bomb (URplus)/Keepsake_URplus.png",
@@ -706,24 +846,52 @@
     ],
     "effects": [
       {
-        "term": "[Spec. Unyielding]",
-        "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+        "term": "[Specialized Direct DMG]",
+        "desc": "A specialized type of direct damage affected only by advanced damage modifiers."
+      },
+      {
+        "term": "[Specialized Evasion]",
+        "desc": "A specialized defensive effect that can be partially ignored by certain skills."
+      },
+      {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Reduces damage received from non-critical attacks."
       },
       {
         "term": "[Unyielding]",
-        "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+        "desc": "Prevents the affected unit from being defeated under specific conditions."
       },
       {
-        "term": "[Revive]",
-        "desc": "The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match."
+        "term": "[Specialized Unyielding]",
+        "desc": "A specialized form of [Unyielding]."
       },
       {
-        "term": "[Energy Tenacity]",
-        "desc": "The shield type converts its cumulative value into damage reduction, is limited to a multiple of the unit's maximum Health, and cannot be used with Resurrection."
+        "term": "[Breakthrough]",
+        "desc": "Allows an attack to ignore a portion of the target’s defensive effects."
+      },
+      {
+        "term": "[Rebirth]",
+        "desc": "An effect with a limited activation count that allows the affected unit to return to battle."
       },
       {
         "term": "[Revenge]",
-        "desc": "The counterattack state can extend the duration on yourself or shorten it on enemies, granting retaliatory effects."
+        "desc": "An effect with a limited duration that can be reduced by G5’s Passive."
+      },
+      {
+        "term": "[Regroup]",
+        "desc": "An effect with a limited duration that can be reduced by G5’s Passive."
+      },
+      {
+        "term": "[Specialized HP]",
+        "desc": "A specialized HP pool that can take damage separately from normal HP."
+      },
+      {
+        "term": "[Energy Tenacity]",
+        "desc": "A special shield created by converting a percentage of the original DMG received."
+      },
+      {
+        "term": "[Charged Pursuit]",
+        "desc": "Uses a DMG-type or AoE healing Ultimate as a follow-up. Targets are random and it does not consume Energy."
       }
     ],
     "keepsakeIcon": "/Keepsake/G5 (URplus)/Keepsake_URplus.png",
@@ -993,28 +1161,56 @@
     ],
     "effects": [
       {
-        "term": "[Spec. Unyielding]",
-        "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "An undying effect with a limited duration that can be reduced by certain attacks."
+      },
+      {
+        "term": "[Specialized Direct DMG]",
+        "desc": "A specialized type of direct damage affected only by advanced damage modifiers or damage reduction."
+      },
+      {
+        "term": "[Specialized Evasion]",
+        "desc": "A specialized defensive effect that can be partially ignored by certain skills."
       },
       {
         "term": "[Unyielding]",
-        "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+        "desc": "Prevents the affected unit from being defeated under specific conditions."
       },
       {
-        "term": "[Reduce Non-Crit DMG]",
-        "desc": "Reduced damage taken from non-critical attacks."
+        "term": "[Specialized Unyielding]",
+        "desc": "A specialized form of [Unyielding]."
       },
       {
-        "term": "[Spec. Dodge]",
-        "desc": "Evasion PvP tier — reduces specialized attacks to 1 damage; pierced by the ignore dodge effect."
+        "term": "[Specialized Acceleration]",
+        "desc": "Increases an ally’s Speed to a specified percentage of Nyan’s Speed. If the ally’s original Speed is higher, it remains unchanged."
       },
       {
-        "term": "[Spec. Direct DMG]",
-        "desc": "Advanced tier of direct damage, only affected by advanced damage increase/decrease and passes through normal defenses."
+        "term": "[Charm]",
+        "desc": "A control effect that forces the affected unit to act against its own team or otherwise lose control of its actions."
       },
       {
-        "term": "[Spec. Speed Up]",
-        "desc": "Increases ally's speed to near deployer's speed (remains the same if ally is already faster)."
+        "term": "[Specialized Charm]",
+        "desc": "Forces the target to temporarily leave combat, attack a random enemy, return to its original position, and skip its next active action. Also reduces [All DMG Reduction]% for 1 turn."
+      },
+      {
+        "term": "[All DMG Reduction]",
+        "desc": "Reduces all damage received by the affected unit."
+      },
+      {
+        "term": "[Monster Affinity]",
+        "desc": "Allows Nyan to count as a currently missing character of any element when activating the Core Skill of a Monster character."
+      },
+      {
+        "term": "[Specialized Speed]",
+        "desc": "A specialized effect that increases the unit’s action Speed."
+      },
+      {
+        "term": "[Life Link]",
+        "desc": "Prevents Nyan from being defeated while the linked teammate remains alive. The link transfers to another highest-ATK teammate when the linked unit is defeated, up to 3 times."
+      },
+      {
+        "term": "[Charged Pursuit]",
+        "desc": "Performs a DMG-type or AoE healing Ultimate as a follow-up attack against random targets without consuming Energy."
       }
     ],
     "classLevel": "Dragon",
@@ -1124,52 +1320,48 @@
     ],
     "effects": [
       {
-        "term": "[Spec. Unyielding]",
-        "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+        "term": "[Berserk]",
+        "desc": "An enhancement granted to self by the Ultra-Ultimate. Exact effect details are currently unknown."
+      },
+      {
+        "term": "[Break Armor]",
+        "desc": "An effect granted to self by the Ultra-Ultimate. Exact effect details are currently unknown."
+      },
+      {
+        "term": "[Specialized Direct DMG]",
+        "desc": "A specialized type of direct damage affected only by advanced DMG modifiers."
+      },
+      {
+        "term": "[Specialized Evasion]",
+        "desc": "A specialized defensive effect that can be partially ignored by certain skills."
+      },
+      {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Reduces damage received from non-critical attacks."
       },
       {
         "term": "[Unyielding]",
-        "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+        "desc": "Prevents the affected unit from being defeated under specific conditions."
+      },
+      {
+        "term": "[Specialized Unyielding]",
+        "desc": "A specialized form of [Unyielding]."
+      },
+      {
+        "term": "[Energy Pressure]",
+        "desc": "When dealing DMG to HP or [Specialized HP], triggers 1 instance of [Energy Conversion] on the affected enemy unit."
+      },
+      {
+        "term": "[Specialized HP]",
+        "desc": "A specialized HP pool that can receive damage separately from normal HP."
       },
       {
         "term": "[Energy Conversion]",
-        "desc": "When an enemy carrying [Energy Suppression] damages the carrier, the damage is reduced by 20% and the reduction is converted into energy."
-      },
-      {
-        "term": "[Reduce Crit DMG]",
-        "desc": "Reduces damage taken from critical hits by a certain percentage."
+        "desc": "Reduces DMG dealt by an enemy affected by [Energy Pressure] and converts a percentage of the original DMG into [Energy Shield]."
       },
       {
         "term": "[Energy Tenacity]",
-        "desc": "The shield type converts its cumulative value into damage reduction, is limited to a multiple of the unit's maximum Health, and cannot be used with Resurrection."
-      },
-      {
-        "term": "[Non-Crit DMG Immunity]",
-        "desc": "Reduces all non-critical damage (usually to 1). Cannot survive and avoid Agility."
-      },
-      {
-        "term": "[Spec. HP]",
-        "desc": "The PvP tier's unique health bar stacks on top of regular health, must also be depleted, and can be restored independently."
-      },
-      {
-        "term": "[Spec. Dodge]",
-        "desc": "Evasion PvP tier — reduces specialized attacks to 1 damage; pierced by the ignore dodge effect."
-      },
-      {
-        "term": "[Shield Break]",
-        "desc": "While attacking, ignore the enemy's 30% Damage Immunity and Unique Defense to allow the attack to penetrate their shield."
-      },
-      {
-        "term": "[Wrath]",
-        "desc": "Attack buff increases unit damage, often accompanied by [Shield Break]."
-      },
-      {
-        "term": "[Generate Shield]",
-        "desc": "The absorption barrier, usually created from transmogrified damage, absorbs damage before health is affected."
-      },
-      {
-        "term": "[Energy Suppression]",
-        "desc": "When dealing damage to health, forces the target to activate Energy Conversion, reducing the damage they deal and choking their mana source."
+        "desc": "A shield generated by converting a percentage of the original DMG received."
       }
     ],
     "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (URplus)/Keepsake_URplus.png",
@@ -1294,56 +1486,52 @@
     ],
     "effects": [
       {
-        "term": "[Spec. Unyielding]",
-        "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+        "term": "[Specialized Direct DMG]",
+        "desc": "A special type of direct damage influenced only by advanced DMG Boost and DMG Resistance."
+      },
+      {
+        "term": "[Specialized Evasion]",
+        "desc": "A specialized defensive effect that allows the unit to evade applicable damage."
+      },
+      {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Reduces damage received from non-critical attacks."
       },
       {
         "term": "[Unyielding]",
-        "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+        "desc": "Prevents the unit from being defeated under specific conditions."
       },
       {
-        "term": "[Spec. Stun]",
-        "desc": "PvP tier of Stun — harder to resist or resolve."
+        "term": "[Specialized Unyielding]",
+        "desc": "A specialized form of [Unyielding]."
+      },
+      {
+        "term": "[Specialized HP]",
+        "desc": "A specialized HP recovery effect. This recovery can crit when specified."
+      },
+      {
+        "term": "[Agility]",
+        "desc": "An offensive effect associated with Rapid Divinity."
+      },
+      {
+        "term": "[Rapid Divinity - DEF]",
+        "desc": "A defensive effect associated with Rapid Divinity."
       },
       {
         "term": "[Stun]",
-        "desc": "The stun-type control effect prevents the target from taking action during the duration."
+        "desc": "Prevents the affected unit from taking action during the effect's duration."
       },
       {
-        "term": "[Armor]",
-        "desc": "Buff grants 15% damage reduction and condensed defense when the bearer is attacked."
+        "term": "[Specialized Stun]",
+        "desc": "A specialized form of [Stun]."
       },
       {
-        "term": "[Resist DMG Immunity]",
-        "desc": "Reduces damage taken by 30%, increasing to a 150% reduction if the bearer's base HP is higher than the attacker's."
+        "term": "[Fear]",
+        "desc": "A control effect that can prevent or restrict the affected unit's actions."
       },
       {
-        "term": "[Spec. HP]",
-        "desc": "The PvP tier's unique health bar stacks on top of regular health, must also be depleted, and can be restored independently."
-      },
-      {
-        "term": "[Spec. Dodge]",
-        "desc": "Evasion PvP tier — reduces specialized attacks to 1 damage; pierced by the ignore dodge effect."
-      },
-      {
-        "term": "[Shatter]",
-        "desc": "Attack buff allows the bearer to ignore a portion of the enemy's Damage Reduction and Specialized Defense when attacking."
-      },
-      {
-        "term": "[Spec. Direct DMG]",
-        "desc": "Advanced tier of direct damage, only affected by advanced damage increase/decrease and passes through normal defenses."
-      },
-      {
-        "term": "[Hyper Speed Field: ATK]",
-        "desc": "Attack speed area index helps increase damage in PvP; Enemies can have Hyperspeed Field·ATK reduced (e.g. 40–60%) to weaken attacks."
-      },
-      {
-        "term": "[Hyper Speed Field: DEF]",
-        "desc": "Defense zone is based on speed, reducing damage taken in PvP when the attacker's speed is no higher than the defender's."
-      },
-      {
-        "term": "[Threaten]",
-        "desc": "The stun control effect renders the target unable to act and reduces its overall damage immunity by 30%."
+        "term": "[Suppression DMG Reduction]",
+        "desc": "Reduces DMG taken by a specified percentage. If the unit's original Max HP is higher than the attacker's, the DMG reduction multiplier is increased."
       }
     ],
     "keepsakeIcon": "/Keepsake/Amai Mask (URplus)/Keepsake_URplus.png",
@@ -1465,20 +1653,40 @@
     ],
     "effects": [
       {
-        "term": "[Crit]",
-        "desc": "Đòn chí mạng gây thêm sát thương; Some units may be immune to [Crit]."
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "An undying effect with a limited duration that can be reduced by this character’s attacks."
       },
       {
-        "term": "[Revive]",
-        "desc": "The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match."
+        "term": "[Specialized Direct DMG]",
+        "desc": "A specialized type of direct damage affected only by advanced DMG modifiers."
+      },
+      {
+        "term": "[Specialized Dodge]",
+        "desc": "A specialized defensive effect that provides a chance to avoid applicable damage."
+      },
+      {
+        "term": "[Unyielding]",
+        "desc": "Prevents the affected unit from being defeated under specific conditions."
+      },
+      {
+        "term": "[Specialized Unyielding]",
+        "desc": "A specialized form of [Unyielding]."
+      },
+      {
+        "term": "[Rage]",
+        "desc": "Each stack allows the Ultimate to target 1 additional enemy."
+      },
+      {
+        "term": "[Rebirth]",
+        "desc": "When the unit is about to be defeated, absorbs incoming DMG and restores HP on the next turn."
       },
       {
         "term": "[Energy Tenacity]",
-        "desc": "The shield type converts its cumulative value into damage reduction, is limited to a multiple of the unit's maximum Health, and cannot be used with Resurrection."
+        "desc": "A special shield gained based on the total amount of DMG absorbed during [Rebirth]."
       },
       {
-        "term": "[Control DMG Immunity]",
-        "desc": "The defensive effect reduces damage taken (30–40%), increasing to a 150–170% reduction when the bearer's ST is higher than the attacker's."
+        "term": "[Suppression DMG Reduction]",
+        "desc": "Reduces DMG taken by a specified percentage. If the unit’s Attack is higher than the attacker’s, the DMG reduction multiplier is increased."
       }
     ],
     "keepsakeIcon": "/Keepsake/Boros (URplus)/Keepsake_URplus.png",
@@ -1600,12 +1808,36 @@
     ],
     "effects": [
       {
-        "term": "[Control DMG Immunity]",
-        "desc": "The defensive effect reduces damage taken (30–40%), increasing to a 150–170% reduction when the bearer's ST is higher than the attacker's."
+        "term": "[Specialized Direct DMG]",
+        "desc": "A specialized type of direct damage affected only by advanced DMG modifiers."
       },
       {
-        "term": "[Increase Control DMG]",
-        "desc": "Attack buff gives 30-40% mana and increases damage, increasing by 150-170% when the bearer's Attack is higher than the target."
+        "term": "[Specialized Dodge]",
+        "desc": "A specialized defensive effect that provides a chance to avoid applicable damage."
+      },
+      {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Reduces damage received from non-critical attacks."
+      },
+      {
+        "term": "[Unyielding]",
+        "desc": "Prevents the affected unit from being defeated under specific conditions."
+      },
+      {
+        "term": "[Specialized Unyielding]",
+        "desc": "A specialized form of [Unyielding]."
+      },
+      {
+        "term": "[Reduced DMG from Resistance]",
+        "desc": "Reduces damage dealt to [Specialized HP]."
+      },
+      {
+        "term": "[Suppression DMG Reduction]",
+        "desc": "Reduces DMG taken by 40%. If own Attack is higher than the attacker’s, the DMG reduction multiplier is increased."
+      },
+      {
+        "term": "[Suppression DMG Increase]",
+        "desc": "Increases DMG dealt by 40%. If own Attack is higher than the target’s, the DMG boost multiplier is increased."
       }
     ],
     "keepsakeIcon": "/Keepsake/Genos (URplus)/Keepsake_URplus.png",
@@ -1747,8 +1979,44 @@
     ],
     "effects": [
       {
+        "term": "[Lock]",
+        "desc": "Prevents [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]. Before any character acts, deals ATK-based DoT that can CRIT and cannot be [Evaded]."
+      },
+      {
+        "term": "[Follow-up]",
+        "desc": "An additional attack triggered after another action or when a specified condition is met."
+      },
+      {
+        "term": "[Continuous Follow-Up]",
+        "desc": "A type of Follow-Up that can continue triggering under specified conditions."
+      },
+      {
+        "term": "[Combo Follow-up]",
+        "desc": "A coordinated Follow-Up performed together with another unit or attack."
+      },
+      {
+        "term": "[Evaded]",
+        "desc": "Causes an applicable attack or damage effect to miss. [Lock] DoT cannot be evaded."
+      },
+      {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+      },
+      {
+        "term": "[Agility]",
+        "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Reduction]. Exact effect details are currently unknown."
+      },
+      {
+        "term": "[Extreme Energy Drain]",
+        "desc": "Removes 4 Energy once per turn. After a successful drain, prevents [Panic] and [Specialized Panic] from being applied during the same turn and reduces Total DMG Bonus by 25% for 1 turn."
+      },
+      {
         "term": "[Panic]",
-        "desc": "Control status interrupts the target's actions."
+        "desc": "An Energy-related negative effect. Exact effect details are currently unknown."
+      },
+      {
+        "term": "[Specialized Panic]",
+        "desc": "A specialized form of [Panic]."
       }
     ],
     "classLevel": "Dragon",
@@ -1857,28 +2125,60 @@
     ],
     "effects": [
       {
+        "term": "[Instant DMG Evasion]",
+        "desc": "Increases the accuracy of Instant DMG effects."
+      },
+      {
+        "term": "[Specialized Evasion]",
+        "desc": "Increases the accuracy of specialized effects or attacks."
+      },
+      {
+        "term": "[Evasion]",
+        "desc": "Allows the affected unit to avoid applicable DMG."
+      },
+      {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Reduces DMG received from non-critical attacks."
+      },
+      {
+        "term": "[Berserk]",
+        "desc": "An offensive state that grants the specified amount of ATK."
+      },
+      {
+        "term": "[Specialized Breakthrough]",
+        "desc": "A specialized breakthrough effect that can be triggered once by each hit. Exact effect details are currently unknown."
+      },
+      {
+        "term": "[Regroup]",
+        "desc": "Allows a defeated unit to return to the battlefield a limited number of times."
+      },
+      {
+        "term": "[Revenge]",
+        "desc": "Allows a defeated unit to return to battle and perform a pursuit attack under specified conditions."
+      },
+      {
+        "term": "[Specialized DMG Reflect]",
+        "desc": "A specialized counter-damage effect that is dispelled by this Passive."
+      },
+      {
+        "term": "[Fear]",
+        "desc": "A control effect that this character and allies in the same column become immune to."
+      },
+      {
         "term": "[Stun]",
-        "desc": "The stun-type control effect prevents the target from taking action during the duration."
+        "desc": "Prevents the affected unit from acting."
       },
       {
-        "term": "[Mark]",
-        "desc": "Mark a unit, unlocking a raid condition or bonus effect associated with the mark."
+        "term": "[Specialized Stun]",
+        "desc": "A specialized form of [Stun]."
       },
       {
-        "term": "[Kinetic Recovery]",
-        "desc": "Revive effect: after all allies are down, the unit returns to battle with most of its maximum Health (110%–200%)."
+        "term": "[Momentum Return]",
+        "desc": "When all allies are defeated, returns the unit to the battlefield with restored HP. Excess recovery is converted into additional Max HP."
       },
       {
-        "term": "[Control DMG Immunity]",
-        "desc": "The defensive effect reduces damage taken (30–40%), increasing to a 150–170% reduction when the bearer's ST is higher than the attacker's."
-      },
-      {
-        "term": "[Counter]",
-        "desc": "A counter mark whose class number gradually increases the user's direct counter damage to marked enemies."
-      },
-      {
-        "term": "[Threaten]",
-        "desc": "The stun control effect renders the target unable to act and reduces its overall damage immunity by 30%."
+        "term": "[Suppression DMG Reduction]",
+        "desc": "Reduces DMG taken. The reduction is increased when the unit’s ATK is higher than the target’s."
       }
     ],
     "keepsakeIcon": "/Keepsake/Metal Bat V2 (UR)/Keepsake_UR.png",
@@ -2018,16 +2318,48 @@
     ],
     "effects": [
       {
+        "term": "[Specialized Evasion]",
+        "desc": "Reduces Direct DMG, DoT DMG, [Received DMG], and [Extra DMG] to 1 point of DMG."
+      },
+      {
+        "term": "[Fear]",
+        "desc": "A control effect that this character is immune to."
+      },
+      {
         "term": "[Stun]",
-        "desc": "The stun-type control effect prevents the target from taking action during the duration."
+        "desc": "Prevents the affected unit from acting."
+      },
+      {
+        "term": "[Specialized Stun]",
+        "desc": "A specialized form of [Stun]."
+      },
+      {
+        "term": "[Specialized Panic]",
+        "desc": "A specialized Energy-related negative effect. All allies are immune to it while this Passive is active."
+      },
+      {
+        "term": "[Specialized Acceleration]",
+        "desc": "Increases the unit’s SPD or raises an ally’s SPD to a specified percentage of Sonic’s SPD. If the ally’s original SPD is higher, it remains unchanged."
+      },
+      {
+        "term": "[Speed Field Attack]",
+        "desc": "In PvP, increases all DMG dealt when the target’s SPD is equal to or lower than the attacker’s SPD."
+      },
+      {
+        "term": "[Speed Field Defense]",
+        "desc": "In PvP, reduces all DMG received when the attacker’s SPD is equal to or lower than the defender’s SPD."
       },
       {
         "term": "[Encourage]",
-        "desc": "Power up at the beginning of each round for several rounds."
+        "desc": "Grants 2 additional Energy at the start of each turn for 3 turns."
       },
       {
         "term": "[Threaten]",
-        "desc": "The stun control effect renders the target unable to act and reduces its overall damage immunity by 30%."
+        "desc": "A damage category reduced to 1 point by [Specialized Evasion]."
+      },
+      {
+        "term": "[Specialized Extra DMG]",
+        "desc": "Additional DMG triggered separately from the original attack."
       }
     ],
     "classLevel": "Outlaw",
@@ -2137,32 +2469,52 @@
     ],
     "effects": [
       {
-        "term": "[Invincible]",
-        "desc": "Survive non-fatal attacks (hold about 20% HP without collapsing) and resist a limited number of fatal attacks."
+        "term": "[Specialized Breakthrough]",
+        "desc": "Immediately removes the target’s [Specialized Unyielding]."
       },
       {
-        "term": "[Absolute Stun]",
-        "desc": "[Faint's] powerful and final stun, which can only be removed with specialized debuffs."
-      },
-      {
-        "term": "[Stun]",
-        "desc": "The stun-type control effect prevents the target from taking action during the duration."
-      },
-      {
-        "term": "[Non-Crit Immunity]",
-        "desc": "Survival buff that, when present, prevents the unit from being crited and cannot die, retaining 70% of its health for the duration of the effect."
-      },
-      {
-        "term": "[Mixed Death Immunity]",
-        "desc": "Unfavorable effects remove the enemy's invulnerability/immunity so they can be destroyed."
+        "term": "[Specialized Unyielding]",
+        "desc": "A specialized survival effect that prevents the affected unit from being defeated under specific conditions."
       },
       {
         "term": "[True DMG]",
-        "desc": "This type of bonus damage is dealt on top of attacks, is reduced by Evasion-type effects, and can be immune after a certain number of turns."
+        "desc": "Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion]."
       },
       {
-        "term": "[Threaten]",
-        "desc": "The stun control effect renders the target unable to act and reduces its overall damage immunity by 30%."
+        "term": "[DMG Sharing]",
+        "desc": "Distributes incoming DMG between multiple affected units. [True DMG] ignores this effect."
+      },
+      {
+        "term": "[Evasion]",
+        "desc": "Allows the affected unit to avoid applicable DMG. [True DMG] ignores this effect."
+      },
+      {
+        "term": "[Specialized Evasion]",
+        "desc": "Direct DMG, DoT DMG, Received DMG, and Bonus DMG only deal 1 point of DMG per instance."
+      },
+      {
+        "term": "[Fear]",
+        "desc": "A control effect that this character is immune to."
+      },
+      {
+        "term": "[Stun]",
+        "desc": "Prevents the affected unit from acting."
+      },
+      {
+        "term": "[Specialized Stun]",
+        "desc": "A specialized form of [Stun]."
+      },
+      {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Prevents fatal non-critical DMG from defeating the character and blocks a limited number of fatal critical-hit instances."
+      },
+      {
+        "term": "[Reduce Crit DMG]",
+        "desc": "Reduces the chance of receiving a critical hit."
+      },
+      {
+        "term": "[Non-Crit DMG Free]",
+        "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
       }
     ],
     "keepsakeIcon": "/Keepsake/Garou (UR)/Keepsake_UR.png",
@@ -2297,16 +2649,56 @@
     ],
     "effects": [
       {
-        "term": "[Endurance]",
-        "desc": "The shield absorbs damage equal to 100% of the wearer's Maximum Health."
+        "term": "[Lock]",
+        "desc": "Prevents [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]. Before any character acts, deals ATK-based DoT that can CRIT and cannot be [Evaded]."
+      },
+      {
+        "term": "[Follow-up]",
+        "desc": "An additional attack triggered after another action or when a specified condition is met."
+      },
+      {
+        "term": "[Continuous Follow-Up]",
+        "desc": "A Follow-Up that can continue triggering under specified conditions."
+      },
+      {
+        "term": "[Combo Follow-up]",
+        "desc": "A coordinated Follow-Up performed under specified conditions."
+      },
+      {
+        "term": "[Specialized Corrode]",
+        "desc": "Deals Continuous DMG equal to 300% ATK, disappears after triggering 10 times, and transfers to another valid target after any character acts."
+      },
+      {
+        "term": "[Specialized Resilience]",
+        "desc": "Affects how much DMG [Specialized Resilience] can absorb for each Shield point."
+      },
+      {
+        "term": "[Non-Crit DMG Free]",
+        "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+      },
+      {
+        "term": "[Agility]",
+        "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]."
+      },
+      {
+        "term": "[Chain Explosion]",
+        "desc": "Splash DMG generated when a Continuous DMG effect triggers."
       },
       {
         "term": "[True DMG]",
-        "desc": "This type of bonus damage is dealt on top of attacks, is reduced by Evasion-type effects, and can be immune after a certain number of turns."
+        "desc": "Not affected by DMG Rate or DMG Free and deals Direct DMG without [DMG Sharing] or [Evasion]."
       },
       {
-        "term": "[Corrode]",
-        "desc": "Corrosive damage over time effect, each turn dealing damage equal to a percentage of ST (e.g. 300%) to the target."
+        "term": "[DMG Sharing]",
+        "desc": "Distributes incoming DMG among multiple affected units. [True DMG] ignores this effect."
+      },
+      {
+        "term": "[Evasion]",
+        "desc": "Allows an affected unit to avoid applicable DMG. [True DMG] ignores this effect."
+      },
+      {
+        "term": "[Evaded]",
+        "desc": "Causes an applicable attack or DMG effect to miss. [Lock] DoT cannot be evaded."
       }
     ],
     "classLevel": "Class_SS",
@@ -2415,24 +2807,56 @@
     ],
     "effects": [
       {
-        "term": "[Refresh]",
-        "desc": "Revive effect: after being defeated, return to the battle with 80% Health and gain +20% ST for 1 turn, up to 7 times."
+        "term": "[True DMG]",
+        "desc": "Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion]."
       },
       {
-        "term": "[Injury DMG Immunity]",
-        "desc": "Effect reduces Injury, Internal Injury and Cumulative damage taken."
+        "term": "[DMG Sharing]",
+        "desc": "Distributes damage between multiple affected units. [True DMG] ignores this effect."
       },
       {
-        "term": "[Spec. Dodge]",
-        "desc": "Evasion PvP tier — reduces specialized attacks to 1 damage; pierced by the ignore dodge effect."
+        "term": "[Evasion]",
+        "desc": "Allows the affected unit to avoid applicable damage. [True DMG] ignores this effect."
+      },
+      {
+        "term": "[Specialized Breakthrough]",
+        "desc": "Instantly removes [DMG Ignoration]."
+      },
+      {
+        "term": "[Ignore DMG]",
+        "desc": "An effect that causes applicable incoming damage to be ignored."
+      },
+      {
+        "term": "[Specialized Dodge]",
+        "desc": "Direct DMG, Continuous DMG, Injury DMG, and Extra DMG only deal 1 point of DMG."
+      },
+      {
+        "term": "[Follow-up]",
+        "desc": "A follow-up attack that deals 180% Ultimate DMG and prioritizes the enemy front row."
+      },
+      {
+        "term": "[Specialized Panic]",
+        "desc": "An effect that causes additional consumption. [Rampage Pursuit] is not affected by this additional consumption."
+      },
+      {
+        "term": "[Regroup]",
+        "desc": "Allows Gouketsu to return to battle with restored HP and increased ATK after being defeated."
+      },
+      {
+        "term": "[Injury DMG Free]",
+        "desc": "Reduces [Injury], [Internal Injury], and [Charge] DMG."
+      },
+      {
+        "term": "[Injury]",
+        "desc": "A damage effect reduced by [Injury Reduction]."
       },
       {
         "term": "[Internal Injury]",
-        "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+        "desc": "A damage effect that triggers when the affected target is attacked."
       },
       {
-        "term": "[True DMG]",
-        "desc": "This type of bonus damage is dealt on top of attacks, is reduced by Evasion-type effects, and can be immune after a certain number of turns."
+        "term": "[Charge]",
+        "desc": "A damage type reduced by [Injury Reduction]."
       }
     ],
     "keepsakeIcon": "/Keepsake/Carnage Kabuto (UR)/Keepsake_UR.png",
@@ -2552,20 +2976,28 @@
     ],
     "effects": [
       {
-        "term": "[Absolute Stun]",
-        "desc": "[Faint's] powerful and final stun, which can only be removed with specialized debuffs."
+        "term": "[Fear]",
+        "desc": "Prevents the affected unit from acting and reduces all DMG Immunity. This effect is treated as a [Stun] state."
+      },
+      {
+        "term": "[Specialized Dodge]",
+        "desc": "Causes Direct DMG, Continuous DMG, Injury DMG, and Extra DMG to deal only 1 point of DMG."
       },
       {
         "term": "[Stun]",
-        "desc": "The stun-type control effect prevents the target from taking action during the duration."
+        "desc": "Prevents the affected unit from acting."
+      },
+      {
+        "term": "[Specialized Stun]",
+        "desc": "A specialized form of [Stun]."
       },
       {
         "term": "[Silence]",
-        "desc": "The target cannot use his ultimate. Counts as a control effect."
+        "desc": "Prevents the affected unit from using its Ultimate."
       },
       {
-        "term": "[Threaten]",
-        "desc": "The stun control effect renders the target unable to act and reduces its overall damage immunity by 30%."
+        "term": "[Specialized Panic]",
+        "desc": "A specialized effect that causes additional consumption. This Awakening ignores that additional consumption."
       }
     ],
     "keepsakeIcon": "/Keepsake/Subterranean King (UR)/Keepsake_UR.png",
@@ -2688,20 +3120,44 @@
     ],
     "effects": [
       {
-        "term": "[DMG Immunity]",
-        "desc": "The bearer only takes a portion (e.g. 20%, or 0% when enhanced) of all damage taken."
-      },
-      {
-        "term": "[Resurrect]",
-        "desc": "Status returns downed units to battle, granting a limited number of respawns that anti-revive effects can remove."
-      },
-      {
         "term": "[True DMG]",
-        "desc": "This type of bonus damage is dealt on top of attacks, is reduced by Evasion-type effects, and can be immune after a certain number of turns."
+        "desc": "Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion]."
+      },
+      {
+        "term": "[DMG Sharing]",
+        "desc": "Distributes incoming DMG among multiple affected units. [True DMG] ignores this effect."
+      },
+      {
+        "term": "[Evasion]",
+        "desc": "Allows the affected unit to avoid applicable DMG. [True DMG] ignores this effect."
+      },
+      {
+        "term": "[Specialized Breakthrough]",
+        "desc": "Instantly removes [DMG Ignoration]."
+      },
+      {
+        "term": "[Ignore DMG]",
+        "desc": "An effect that allows applicable incoming DMG to be ignored."
+      },
+      {
+        "term": "[Buffer]",
+        "desc": "A buff associated with Hellfire UR that this Ultimate has an 80% chance to penetrate."
+      },
+      {
+        "term": "[Non-Crit DMG Free]",
+        "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+      },
+      {
+        "term": "[Agility]",
+        "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]. Exact effect details are currently unknown."
       },
       {
         "term": "[Revenge]",
-        "desc": "The counterattack state can extend the duration on yourself or shorten it on enemies, granting retaliatory effects."
+        "desc": "Allows the unit to resurrect immediately after a character is defeated following an action, restore HP, and perform a [Revenge Pursuit]."
+      },
+      {
+        "term": "[Specialized Fear]",
+        "desc": "A special effect whose additional consumption does not affect this unit’s [Revenge Pursuit]."
       }
     ],
     "keepsakeIcon": "/Keepsake/Drive Knight (UR)/Keepsake_UR.png",
@@ -2822,24 +3278,36 @@
     ],
     "effects": [
       {
-        "term": "[Enhance]",
-        "desc": "A general positive enhancing effect applies to the character, raising stats or granting benefits (e.g. increasing Hit Rate or damage dealt)."
+        "term": "[Lock]",
+        "desc": "Prevents [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]. Before any character acts, deals ATK-based DoT that can CRIT and cannot be [Evaded]."
       },
       {
-        "term": "[Lock Target]",
-        "desc": "The control state prevents the target from activating Charge, Continuous Charge, Link, and Special attacks."
+        "term": "[Follow-up]",
+        "desc": "An additional attack triggered after another action or when a specified condition is met."
       },
       {
-        "term": "[Chain Detonate]",
-        "desc": "The effect immediately spreads to surrounding targets, dealing 80% ST over Locked's duration."
+        "term": "[Continuous Follow-Up]",
+        "desc": "A Follow-Up that can continue triggering under specified conditions."
       },
       {
-        "term": "[Crit DMG]",
-        "desc": "Additional damage dealt by critical hits; is often adjusted via [Crit DMG Reduction] to cut down on this addition."
+        "term": "[Combo Follow-up]",
+        "desc": "A coordinated Follow-Up attack performed under specified conditions."
       },
       {
-        "term": "[Freeze]",
-        "desc": "Ice damage effects are added to attacks, dealing them to enemies along with the main attack."
+        "term": "[Evaded]",
+        "desc": "Causes applicable attacks or DMG effects to miss. [Lock] DoT cannot be evaded."
+      },
+      {
+        "term": "[Non-Crit DMG Free]",
+        "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+      },
+      {
+        "term": "[Agility]",
+        "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]. Exact effect details are currently unknown."
+      },
+      {
+        "term": "[Continuous Explosion]",
+        "desc": "When an enemy triggers [Lock], spreads a percentage of the [Lock] DMG and DoT DMG to surrounding targets or all enemies. This DMG can CRIT and cannot be dodged."
       }
     ],
     "keepsakeIcon": "/Keepsake/Hellish Blizzard (UR)/Keepsake_UR.png",
@@ -2980,16 +3448,44 @@
     ],
     "effects": [
       {
-        "term": "[Berserk]",
-        "desc": "Attack buffs increase damage based on conditions (e.g. each marked enemy), amplifying the amount of Fury-type damage the unit deals."
+        "term": "[Charged Pursuit]",
+        "desc": "Adds Charge-type DMG based on the number of targets hit and the unit’s ATK."
+      },
+      {
+        "term": "[Specialized Fear]",
+        "desc": "A special effect associated with enemy-team Energy. This skill removes its Energy."
+      },
+      {
+        "term": "[Non-Crit DMG Free]",
+        "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+      },
+      {
+        "term": "[Agility]",
+        "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]. Exact effect details are currently unknown."
+      },
+      {
+        "term": "[Injury]",
+        "desc": "Increases [Injury], [Internal Injury], and [Charge] DMG."
+      },
+      {
+        "term": "[Internal Injury]",
+        "desc": "A damage effect that is usually triggered when the affected target is attacked."
+      },
+      {
+        "term": "[Charge]",
+        "desc": "A damage type increased by [Injury Boost]."
       },
       {
         "term": "[Encourage]",
-        "desc": "Power up at the beginning of each round for several rounds."
+        "desc": "Grants Energy at the start of each round for a specified number of rounds."
       },
       {
-        "term": "[Collapse]",
-        "desc": "Damage/disadvantage effect breaks target's defense."
+        "term": "[Specialized DMG Reflect]",
+        "desc": "Reduces Direct DMG and Additional DMG received, then returns a percentage of the original DMG to the attacker as Extra DMG."
+      },
+      {
+        "term": "[Instant DMG Evasion]",
+        "desc": "Increases the accuracy of Instant DMG effects."
       }
     ],
     "classLevel": "Demon",
@@ -3098,20 +3594,28 @@
     ],
     "effects": [
       {
-        "term": "[Unyielding]",
-        "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+        "term": "[Specialized Acceleration]",
+        "desc": "Increases Zombie Man’s SPD or raises teammates’ SPD to a specified percentage of Zombie Man’s SPD. If their original SPD is higher, it remains unchanged."
       },
       {
-        "term": "[Revive]",
-        "desc": "The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match."
+        "term": "[Specialized Fear]",
+        "desc": "Locks a specified amount of Energy, overrides [Fear], and causes affected enemies to consume 1 additional Energy when using an Ultimate, including Pursuit Ultimates."
       },
       {
-        "term": "[Counter]",
-        "desc": "A counter mark whose class number gradually increases the user's direct counter damage to marked enemies."
+        "term": "[Fear]",
+        "desc": "An Energy-related negative effect overridden by [Specialized Fear]."
       },
       {
-        "term": "[Spec. Speed Up]",
-        "desc": "Increases ally's speed to near deployer's speed (remains the same if ally is already faster)."
+        "term": "[Instant DMG Evasion]",
+        "desc": "Reduces Direct DMG, Additional DMG, Charge DMG, and Berserk DMG to 1 point."
+      },
+      {
+        "term": "[Regeneration]",
+        "desc": "After receiving fatal DMG, restores HP before the next action and allows Zombie Man to continue fighting while at least one teammate remains."
+      },
+      {
+        "term": "[Specialized Breakthrough]",
+        "desc": "Immediately removes the target’s Indomitable or DMG-negating status and temporarily increases the attacker’s ATK for the current attack."
       }
     ],
     "keepsakeIcon": "/Keepsake/Zombieman (UR)/Keepsake_UR.png",
@@ -3210,7 +3714,7 @@
       },
       {
         "name": "Awaken 1 Passive",
-        "desc": "Basic Core: Gains 3 Energy each turn. Advanced Core: Upon entering battle, all allies permanently gain [Specialized Resilience]. Before the start of each turn, all allies receive [Tenacity] equal to 100% of their Max HP, unaffected by Shield Rate. After battle begins, removes enemy buffs that increase or decrease DMG during battle. [Specialized Resilience]: Grants a shield that absorbs all types of DMG, with a maximum capacity equal to 5 times the character’s Max HP. Each Shield point can absorb 10 DMG, and [Tenacity] can recharge the shield.",
+        "desc": "Basic Core: Gains 3 Energy each turn.\n\nAdvanced Core: Upon entering battle, all allies permanently gain [Specialized Resilience]. Before the start of each turn, all allies receive [Tenacity] equal to 100% of their Max HP, unaffected by Shield Rate. After battle begins, removes enemy buffs that increase or decrease DMG during battle. [Specialized Resilience]: Grants a shield that absorbs all types of DMG, with a maximum capacity equal to 5 times the character’s Max HP. Each Shield point can absorb 10 DMG, and [Tenacity] can recharge the shield.",
         "type": "Awakening",
         "icon": "/Skill/Source/100045-ur/awakened.webp",
         "keepsakeIcon": null,
@@ -3238,20 +3742,20 @@
     ],
     "effects": [
       {
-        "term": "[Shield]",
-        "desc": "The shield absorbs damage up to a portion of the subject's Health; Charge DMG ignores it."
-      },
-      {
-        "term": "[Non-Crit DMG Immunity]",
-        "desc": "Reduces all non-critical damage (usually to 1). Cannot survive and avoid Agility."
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Reduces all types of DMG received and does not stack with [Agility]."
       },
       {
         "term": "[Agility]",
-        "desc": "Evasion type buff; mutually exclusive with Non-Crit Damage Immunity."
+        "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Reduction]. Exact effect details are currently unknown."
       },
       {
-        "term": "[Generate Shield]",
-        "desc": "The absorption barrier, usually created from transmogrified damage, absorbs damage before health is affected."
+        "term": "[Tenacity]",
+        "desc": "A defensive value based on a percentage of the unit’s Max HP. It can also recharge [Specialized Resilience]."
+      },
+      {
+        "term": "[Specialized Resilience]",
+        "desc": "Grants a shield that absorbs all types of DMG, with a maximum capacity equal to 5 times the character’s Max HP. Each Shield point absorbs 10 DMG, and [Tenacity] can recharge the shield."
       }
     ],
     "keepsakeIcon": "/Keepsake/Child Emperor (UR)/Keepsake_UR.png",
@@ -3395,24 +3899,48 @@
     ],
     "effects": [
       {
-        "term": "[Unyielding]",
-        "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+        "term": "[Instant DMG Evasion]",
+        "desc": "Increases the accuracy of Instant DMG effects."
       },
       {
-        "term": "[Spec. Stun]",
-        "desc": "PvP tier of Stun — harder to resist or resolve."
+        "term": "[Specialized Breakthrough]",
+        "desc": "Instantly removes [DMG Ignoration] and increases Mosquito Girl’s ATK until the end of the current attack."
+      },
+      {
+        "term": "[Ignore DMG]",
+        "desc": "An effect that causes applicable incoming DMG to be ignored."
+      },
+      {
+        "term": "[Non-Crit DMG Free]",
+        "desc": "Reduces all types of DMG and cannot coexist with [Agility]."
+      },
+      {
+        "term": "[Agility]",
+        "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]. Exact effect details are currently unknown."
       },
       {
         "term": "[Stun]",
-        "desc": "The stun-type control effect prevents the target from taking action during the duration."
+        "desc": "Prevents the affected unit from acting."
+      },
+      {
+        "term": "[Specialized Stun]",
+        "desc": "A specialized form of [Stun]."
       },
       {
         "term": "[Silence]",
-        "desc": "The target cannot use his ultimate. Counts as a control effect."
+        "desc": "Prevents the affected unit from using its Ultimate."
       },
       {
-        "term": "[Reduce Non-Crit DMG]",
-        "desc": "Reduced damage taken from non-critical attacks."
+        "term": "[Separation]",
+        "desc": "Shares 80% of the DMG received by the entire team, except Emblem DMG, and reduces the shared DMG by 80%."
+      },
+      {
+        "term": "[Detonation]",
+        "desc": "Reduces or prevents applicable Detonation DMG by the specified percentage."
+      },
+      {
+        "term": "[DoT DMG Reduction]",
+        "desc": "Reduces or prevents applicable damage-over-time DMG by the specified percentage."
       }
     ],
     "classLevel": "Demon",
@@ -3536,16 +4064,32 @@
     ],
     "effects": [
       {
-        "term": "[Immunity]",
-        "desc": "Status that causes the bearer to be unaffected by a certain effect or type of control, such as [Breakthrough], Stun, or Charm."
+        "term": "[Specialized Collapse]",
+        "desc": "Decreases DMG Free and deals ATK-based DMG when the affected target is attacked. Stacks up to 3 times and does not stack with [Shatter]."
       },
       {
-        "term": "[Hyper Speed]",
-        "desc": "Speed ​​buff that while in effect allows the bearer and up to 6 allies to act against and overcome enemies with lower speed."
+        "term": "[Specialized Disable]",
+        "desc": "Prevents the affected unit from launching Follow-Ups and Combo Follow-Ups, and reduces its DMG Rate."
       },
       {
-        "term": "[Nullify]",
-        "desc": "Disabled status applies to a target area/column, rendering affected units unable to act or be effective."
+        "term": "[Shatter]",
+        "desc": "An effect that cannot coexist with [Specialized Collapse]. Exact effect details are currently unknown."
+      },
+      {
+        "term": "[Instant DMG Evasion]",
+        "desc": "Causes Direct DMG, Extra DMG, Charge DMG, and Berserk DMG to deal only 1 point of DMG."
+      },
+      {
+        "term": "[Specialized Acceleration]",
+        "desc": "Increases Flashy Flash’s Speed by a specified percentage."
+      },
+      {
+        "term": "[Adhesion]",
+        "desc": "An effect that Flashy Flash is immune to. Exact effect details are currently unknown."
+      },
+      {
+        "term": "[Ultimate Follow-up]",
+        "desc": "Automatically performs the Ultimate as a follow-up attack at a specified percentage of its original DMG."
       }
     ],
     "classLevel": "Class_S",
@@ -3655,28 +4199,32 @@
     ],
     "effects": [
       {
-        "term": "[Detonate]",
-        "desc": "Activate a stack of damage over time or stored [Collapse] to instantly explode, turning it into an instant multiplier (e.g. 3 times the stored damage)."
-      },
-      {
-        "term": "[Immunity]",
-        "desc": "Status that causes the bearer to be unaffected by a certain effect or type of control, such as [Breakthrough], Stun, or Charm."
-      },
-      {
-        "term": "[Insta-Dodge]",
-        "desc": "Floors that each cause a direct, additional, charge, or berserk attack to only deal 1 damage."
+        "term": "[Internal Injury]",
+        "desc": "Deals DMG based on Gouketsu’s ATK when triggered, then disappears."
       },
       {
         "term": "[Weaken]",
-        "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
+        "desc": "Decreases the affected target’s ATK by 50% for 2 rounds."
       },
       {
-        "term": "[Collapse (Duelist)]",
-        "desc": "Unfavorable effects cause delayed damage, storing additional damage (600-800% of Gouketsu's ST), releasing when the target is hit or when [Detonate]."
+        "term": "[Evasion]",
+        "desc": "Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG."
+      },
+      {
+        "term": "[Detonate]",
+        "desc": "Converts a single [Internal Injury] DMG instance into [Detonation] DMG."
+      },
+      {
+        "term": "[Detonation]",
+        "desc": "A damage effect created by converting [Internal Injury] DMG."
+      },
+      {
+        "term": "[Specialized Unyielding]",
+        "desc": "After receiving fatal DMG, keeps the affected unit in battle until 5 characters have acted, then restores 100% HP. Each character can activate it up to 2 times per battle."
       },
       {
         "term": "[Breakthrough]",
-        "desc": "Removes the target's Resilience shield and increases the attack for that attack."
+        "desc": "An effect capable of removing or countering survival effects. Allies granted [Specialized Unyielding] by this Awakening are immune to it."
       }
     ],
     "keepsakeIcon": "/Keepsake/Gouketsu (UR)/Keepsake_UR.png",
@@ -3802,28 +4350,36 @@
     ],
     "effects": [
       {
-        "term": "[Share DMG]",
-        "desc": "Effect disperses damage taken to allies; [True DMG] bypasses it by hitting Blood directly."
+        "term": "[Specialized Burn]",
+        "desc": "Deals ATK-based DoT DMG. After any character acts, transfers to a random target and disappears after being transferred 3 times."
       },
       {
         "term": "[Detonate]",
-        "desc": "Activate a stack of damage over time or stored [Collapse] to instantly explode, turning it into an instant multiplier (e.g. 3 times the stored damage)."
+        "desc": "Converts a percentage of a single [Specialized Burn] DMG instance into [Detonation] DMG."
+      },
+      {
+        "term": "[Detonation]",
+        "desc": "A damage effect created by converting [Specialized Burn] DMG."
+      },
+      {
+        "term": "[Non-Crit DMG Free]",
+        "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
       },
       {
         "term": "[Agility]",
-        "desc": "Evasion type buff; mutually exclusive with Non-Crit Damage Immunity."
-      },
-      {
-        "term": "[Dodge]",
-        "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+        "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]."
       },
       {
         "term": "[True DMG]",
-        "desc": "This type of bonus damage is dealt on top of attacks, is reduced by Evasion-type effects, and can be immune after a certain number of turns."
+        "desc": "Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion]."
       },
       {
-        "term": "[Spec. Burn]",
-        "desc": "Burning PvP tier — stronger burst damage, harder to deal with."
+        "term": "[DMG Sharing]",
+        "desc": "Distributes incoming DMG between multiple affected units. [True DMG] ignores this effect."
+      },
+      {
+        "term": "[Evasion]",
+        "desc": "Allows the affected unit to avoid applicable DMG. [True DMG] ignores this effect."
       }
     ],
     "keepsakeIcon": "/Keepsake/Genos (UR)/Keepsake_UR.png",
@@ -3961,12 +4517,24 @@
     ],
     "effects": [
       {
-        "term": "[Dodge]",
-        "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+        "term": "[Specialized Burn]",
+        "desc": "Deals ATK-based DoT DMG, disappears after triggering 3 times, and transfers to another valid target after any character acts."
       },
       {
-        "term": "[Spec. Burn]",
-        "desc": "Burning PvP tier — stronger burst damage, harder to deal with."
+        "term": "[Evasion]",
+        "desc": "Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG."
+      },
+      {
+        "term": "[Buffer]",
+        "desc": "Reduces DMG based on Max HP."
+      },
+      {
+        "term": "[Stun]",
+        "desc": "Prevents the affected unit from acting."
+      },
+      {
+        "term": "[Specialized Stun]",
+        "desc": "A specialized form of [Stun]."
       }
     ],
     "classLevel": "Demon",
@@ -4093,32 +4661,44 @@
     ],
     "effects": [
       {
-        "term": "[Invincible]",
-        "desc": "Survive non-fatal attacks (hold about 20% HP without collapsing) and resist a limited number of fatal attacks."
+        "term": "[Specialized Collapse]",
+        "desc": "Decreases DMG Free and deals [Collapse DMG] whenever the affected target is attacked. Stacks up to 3 times and does not stack with [Collapse]."
       },
       {
-        "term": "[Spec. Unyielding]",
-        "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
-      },
-      {
-        "term": "[Detonate]",
-        "desc": "Activate a stack of damage over time or stored [Collapse] to instantly explode, turning it into an instant multiplier (e.g. 3 times the stored damage)."
-      },
-      {
-        "term": "[Immunity]",
-        "desc": "Status that causes the bearer to be unaffected by a certain effect or type of control, such as [Breakthrough], Stun, or Charm."
-      },
-      {
-        "term": "[Resurrect]",
-        "desc": "Status returns downed units to battle, granting a limited number of respawns that anti-revive effects can remove."
-      },
-      {
-        "term": "[Spec. Collapse]",
-        "desc": "PvP debuff reduces target's Damage Reduction by 10% and deals 250% Shatter damage each time the target is attacked."
+        "term": "[Specialized Shatter]",
+        "desc": "Additional ATK-based DMG triggered when a unit affected by [Specialized Collapse] is attacked."
       },
       {
         "term": "[Collapse]",
-        "desc": "Damage/disadvantage effect breaks target's defense."
+        "desc": "An effect that cannot coexist with [Specialized Collapse]. Exact effect details are currently unknown."
+      },
+      {
+        "term": "[Detonate]",
+        "desc": "Converts a single [Collapse DMG] instance into [Detonation] DMG."
+      },
+      {
+        "term": "[Detonation]",
+        "desc": "A damage effect created by converting [Collapse DMG]."
+      },
+      {
+        "term": "[Revival]",
+        "desc": "A revival effect removed from enemies by Melzargard’s Passive for the entire battle."
+      },
+      {
+        "term": "[Undefeated]",
+        "desc": "Prevents fatal CRIT DMG from defeating Melzargard, leaving him with 20% HP. It can resist a limited number of fatal CRIT DMG instances."
+      },
+      {
+        "term": "[Non-Crit DMG Free]",
+        "desc": "Reduces all types of non-critical DMG."
+      },
+      {
+        "term": "[Charm]",
+        "desc": "A control effect that Melzargard becomes immune to."
+      },
+      {
+        "term": "[Charm/Off Battle]",
+        "desc": "An effect that removes a character from active combat. Melzargard becomes immune to it."
       }
     ],
     "classLevel": "Dragon",
@@ -4227,28 +4807,40 @@
     ],
     "effects": [
       {
-        "term": "[Stun]",
-        "desc": "The stun-type control effect prevents the target from taking action during the duration."
+        "term": "[Specialized Collapse]",
+        "desc": "Decreases DMG Free and deals [Collapse DMG] whenever the affected target is attacked. Stacks up to 3 times and does not stack with [Collapse]."
       },
       {
-        "term": "[Encourage]",
-        "desc": "Power up at the beginning of each round for several rounds."
-      },
-      {
-        "term": "[Dodge]",
-        "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
-      },
-      {
-        "term": "[Spec. Collapse]",
-        "desc": "PvP debuff reduces target's Damage Reduction by 10% and deals 250% Shatter damage each time the target is attacked."
+        "term": "[Specialized Shatter]",
+        "desc": "Additional ATK-based DMG triggered when a unit affected by [Specialized Collapse] is attacked."
       },
       {
         "term": "[Collapse]",
-        "desc": "Damage/disadvantage effect breaks target's defense."
+        "desc": "An effect that cannot coexist with [Specialized Collapse]. Exact effect details are currently unknown."
       },
       {
-        "term": "[Spec. Speed Up]",
-        "desc": "Increases ally's speed to near deployer's speed (remains the same if ally is already faster)."
+        "term": "[Stun]",
+        "desc": "Prevents the affected unit from acting. At most 4 characters can be stunned simultaneously."
+      },
+      {
+        "term": "[Evasion]",
+        "desc": "Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG."
+      },
+      {
+        "term": "[Specialized Acceleration]",
+        "desc": "Increases Gale Wind’s SPD. If the main target’s SPD is lower than Gale Wind’s SPD, deals additional ATK-based Extra DMG."
+      },
+      {
+        "term": "[Fear]",
+        "desc": "A control effect that Gale Wind is immune to."
+      },
+      {
+        "term": "[Energy Removal]",
+        "desc": "An effect that removes Energy. Gale Wind is immune to this effect."
+      },
+      {
+        "term": "[Encourage]",
+        "desc": "Grants Energy at the start of each round for 3 rounds."
       }
     ],
     "keepsakeIcon": "/Keepsake/Gale Wind (UR)/Keepsake_UR.png",
@@ -4371,8 +4963,28 @@
     ],
     "effects": [
       {
+        "term": "[Collapse]",
+        "desc": "Decreases DMG Free%."
+      },
+      {
+        "term": "[Specialized Collapse]",
+        "desc": "Decreases DMG Rate and deals [Collapse DMG] whenever the affected unit is attacked. Stacks up to 3 times and does not stack with [Collapse]."
+      },
+      {
+        "term": "[Specialized Shatter]",
+        "desc": "Additional ATK-based damage triggered when a unit affected by [Specialized Collapse] is attacked."
+      },
+      {
+        "term": "[Non-Crit DMG Free]",
+        "desc": "Effective against all types of DMG and cannot coexist with [Agility]."
+      },
+      {
         "term": "[Agility]",
-        "desc": "Evasion type buff; mutually exclusive with Non-Crit Damage Immunity."
+        "desc": "An effect that cannot coexist with [Non-Crit DMG Free]. Exact effect details are currently unknown."
+      },
+      {
+        "term": "[Ultimate Follow-up]",
+        "desc": "Automatically launches the Ultimate as a follow-up with the specified DMG percentage and 100% effect."
       }
     ],
     "keepsakeIcon": "/Keepsake/Atomic Samurai (UR)/Keepsake_UR.png",
@@ -4493,12 +5105,36 @@
     ],
     "effects": [
       {
-        "term": "[Adhere]",
-        "desc": "Control status prevents the target from casting [Follow-up] and [Consecutive Follow-up], usually for 2 turns."
+        "term": "[Break]",
+        "desc": "Decreases the affected target’s DMG Rate%."
       },
       {
-        "term": "[Overheal]",
-        "desc": "Converts excess Health from healing and lifesteal into an equivalent Health Shield, up to a limit based on base Health."
+        "term": "[Specialized Berserk]",
+        "desc": "Causes the first strike to deal [Berserk DMG] based on King’s Max HP. The DMG can CRIT and consumes Energy Gauge for each enemy hit."
+      },
+      {
+        "term": "[Specialized Guard]",
+        "desc": "A defensive effect whose Max HP value contributes additional DMG to the Ultra-Ultimate’s [Specialized Berserk]."
+      },
+      {
+        "term": "[Overflow Recovery]",
+        "desc": "Converts excess Healing and Drain into an equal amount of [Life Shield]. The accumulated DMG removed cannot exceed 20× the unit’s original HP."
+      },
+      {
+        "term": "[Life Shield]",
+        "desc": "A shield generated from excess Healing and Drain through [Overflow Recovery]."
+      },
+      {
+        "term": "[Paralysis]",
+        "desc": "A negative control effect removed from King and allies in the same row by Awaken 2 Passive."
+      },
+      {
+        "term": "[Combo Follow-up]",
+        "desc": "Performs the Ultimate as a follow-up against random targets with a specified DMG percentage and 100% of its effects. It is not affected by Hit Rate or Effect Resistance."
+      },
+      {
+        "term": "[DMG Sharing]",
+        "desc": "Direct DMG transferred from allies in the same row to King. The transferred DMG is reduced before King receives it."
       }
     ],
     "keepsakeIcon": "/Keepsake/King (UR)/Keepsake_UR.png",
@@ -4623,7 +5259,23 @@
     "effects": [
       {
         "term": "[Internal Injury]",
-        "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+        "desc": "Deals DMG based on Bomb’s ATK when the affected target is attacked, then disappears after triggering."
+      },
+      {
+        "term": "[Evade]",
+        "desc": "Reduces Direct, Extra, Charge, and Berserk DMG received to 1 DMG."
+      },
+      {
+        "term": "[Specialized Extra DMG]",
+        "desc": "A special type of additional damage that can CRIT and is not affected by [Specialized DMG Reflect]."
+      },
+      {
+        "term": "[Specialized DMG Reflect]",
+        "desc": "A specialized damage-reflection effect that does not affect [Specialized Extra DMG]."
+      },
+      {
+        "term": "[Combo Attack]",
+        "desc": "Summons Silverfang to perform an additional attack using the same attack style as Bomb."
       }
     ],
     "keepsakeIcon": "/Keepsake/Bom/Bengpu (SSR)/Keepsake_SSR.png",
@@ -4758,7 +5410,36 @@
       "DMG (HP)",
       "Generate Shield"
     ],
-    "effects": [],
+    "effects": [
+      {
+        "term": "[Specialized Extra DMG]",
+        "desc": "Additional damage that can CRIT and is unaffected by [Specialized DMG Reflect]."
+      },
+      {
+        "term": "[Specialized DMG Reflect]",
+        "desc": "A specialized effect that reflects applicable damage. It does not affect Metal Bat’s [Specialized Extra DMG]."
+      },
+      {
+        "term": "[Non-Crit DMG Free]",
+        "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+      },
+      {
+        "term": "[Agility]",
+        "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]. Exact effect details are currently unknown."
+      },
+      {
+        "term": "[HP Shield]",
+        "desc": "A shield based on HP that interacts with Metal Bat’s [Momentum]."
+      },
+      {
+        "term": "[Charge]",
+        "desc": "An enhancement gained based on the highest number of Metal Bat’s [Excess Recovery] layers. Each layer increases the Ultimate’s [Specialized Extra DMG]."
+      },
+      {
+        "term": "[Excess Recovery]",
+        "desc": "A recovery-related effect whose accumulated layers determine the number of [Momentum] layers gained."
+      }
+    ],
     "classLevel": "Class_S",
     "releaseSea": "01/03/2024",
     "classIcon": "/Class/Class_S.png"
@@ -4838,7 +5519,7 @@
       },
       {
         "name": "Awaken 1 Passive",
-        "desc": "Basic Core: Grants 3 Energy every round. During the first 3 rounds, all allies gain 30% [Arena DMG]. Requirement: Deploy 1 Grappler and 2 Espers. Advanced Core: All allied characters permanently gain [Excess Recovery] upon entering battle. All allies gain 30% [Arena DMG Free]. At the beginning of each round, front-row allies restore HP equal to 80% of their Max HP. This effect lasts for 3 rounds. [Excess Recovery]: Excess Healing and Drain are converted into an equal amount of [HP Shield] that absorbs incoming DMG. The total amount of DMG absorbed cannot exceed 20× the unit’s original HP. Requirement: Deploy 1 Duelist, 1 Grappler, and 2 Espers.",
+        "desc": "Basic Core: Grants 3 Energy every round. During the first 3 rounds, all allies gain 30% [Arena DMG]. Requirement: Deploy 1 Grappler and 2 Espers.\n\nAdvanced Core: All allied characters permanently gain [Excess Recovery] upon entering battle. All allies gain 30% [Arena DMG Free]. At the beginning of each round, front-row allies restore HP equal to 80% of their Max HP. This effect lasts for 3 rounds. [Excess Recovery]: Excess Healing and Drain are converted into an equal amount of [HP Shield] that absorbs incoming DMG. The total amount of DMG absorbed cannot exceed 20× the unit’s original HP. Requirement: Deploy 1 Duelist, 1 Grappler, and 2 Espers.",
         "icon": "/Skill/Source/100184-ur/awakened.webp",
         "type": "Awakening",
         "keepsakeIcon": null,
@@ -4866,24 +5547,48 @@
     ],
     "effects": [
       {
-        "term": "[Spec. Unyielding]",
-        "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
-      },
-      {
         "term": "[Unyielding]",
-        "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+        "desc": "Prevents the affected unit from being defeated under specific conditions."
       },
       {
-        "term": "[Non-Crit Immunity]",
-        "desc": "Survival buff that, when present, prevents the unit from being crited and cannot die, retaining 70% of its health for the duration of the effect."
+        "term": "[Specialized Unyielding]",
+        "desc": "A specialized form of [Unyielding] that can be immediately removed by [Breakthrough]."
       },
       {
-        "term": "[Non-Crit DMG Immunity]",
-        "desc": "Reduces all non-critical damage (usually to 1). Cannot survive and avoid Agility."
+        "term": "[Specialized HP]",
+        "desc": "A specialized HP pool that can receive damage separately from normal HP."
       },
       {
-        "term": "[Detonate]",
-        "desc": "Cumulative explosive classes that each (up to a limit) add one target to the Ultimate skill."
+        "term": "[Berserk]",
+        "desc": "Increases Boros’s ATK for his next active action."
+      },
+      {
+        "term": "[Breakthrough]",
+        "desc": "Immediately removes [Specialized Unyielding] from all targets on the battlefield when triggered."
+      },
+      {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Reduces damage received from non-critical attacks."
+      },
+      {
+        "term": "[Explosion]",
+        "desc": "Increases damage dealt in Arena or PvP battles."
+      },
+      {
+        "term": "[Non-Crit DMG Free]",
+        "desc": "Reduces Arena or PvP damage received by the specified percentage."
+      },
+      {
+        "term": "[Excess Recovery]",
+        "desc": "Converts excess Healing and Drain into an equal amount of [HP Shield]."
+      },
+      {
+        "term": "[HP Shield]",
+        "desc": "A shield generated from excess recovery that absorbs incoming DMG."
+      },
+      {
+        "term": "[Charged Pursuit]",
+        "desc": "A follow-up attack triggered after another specified action or condition."
       }
     ],
     "keepsakeIcon": "/Keepsake/Boros (UR)/Keepsake_UR.png",
@@ -5005,20 +5710,48 @@
     ],
     "effects": [
       {
-        "term": "[Spec. Unyielding]",
-        "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
-      },
-      {
-        "term": "[Spec. Guard]",
-        "desc": "PvP-tier shields absorb incoming damage, granted at a value based on Attack (e.g. 400% ATK)."
-      },
-      {
         "term": "[Internal Injury]",
-        "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+        "desc": "Deals DMG based on Suiryu’s ATK when the affected target is attacked, then disappears after triggering."
       },
       {
         "term": "[Breakthrough]",
-        "desc": "Removes the target's Resilience shield and increases the attack for that attack."
+        "desc": "Removes 1 instance of [Unyielding] or [Specialized Unyielding] from the target."
+      },
+      {
+        "term": "[Unyielding]",
+        "desc": "Prevents fatal DMG from immediately defeating the affected unit under specified conditions."
+      },
+      {
+        "term": "[Specialized Unyielding]",
+        "desc": "A specialized version of [Unyielding] that can be removed by [Breakthrough]."
+      },
+      {
+        "term": "[Specialized Guard]",
+        "desc": "A specialized defensive value that absorbs incoming DMG and is granted based on Suiryu’s ATK."
+      },
+      {
+        "term": "[Injury]",
+        "desc": "Increases DMG dealt by [Injury] and [Internal Injury] effects."
+      },
+      {
+        "term": "[Non-Crit DMG Free]",
+        "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+      },
+      {
+        "term": "[Continuous Follow-Up]",
+        "desc": "Repeatedly performs the Ultimate as a Follow-Up with the specified DMG and effect percentages."
+      },
+      {
+        "term": "[Adhesion]",
+        "desc": "A negative effect that Suiryu is immune to while performing a Follow-Up."
+      },
+      {
+        "term": "[Adhesion/Paralyzed]",
+        "desc": "A control effect that Suiryu is immune to while performing a Follow-Up."
+      },
+      {
+        "term": "[Agility]",
+        "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]."
       }
     ],
     "keepsakeIcon": "/Keepsake/Suiryu (UR)/Keepsake_UR.png",
@@ -5284,28 +6017,32 @@
     ],
     "effects": [
       {
-        "term": "[Energy Cut]",
-        "desc": "Debuff applies to all enemies when their Energy is reduced, blocking or destroying their Energy, making them unable to use their ultimate."
+        "term": "[Specialized HP]",
+        "desc": "A specialized HP pool gained separately from normal HP."
+      },
+      {
+        "term": "[Specialized Acceleration]",
+        "desc": "Increases SPD or raises an ally’s SPD to a specified percentage of Sonic’s SPD. If the ally’s original SPD is higher, it remains unchanged."
+      },
+      {
+        "term": "[Panic]",
+        "desc": "An Energy-related negative effect that cannot trigger during the same round after Sonic successfully removes Energy."
       },
       {
         "term": "[Encourage]",
-        "desc": "Power up at the beginning of each round for several rounds."
+        "desc": "Grants Energy to allies at the start of each round for a specified number of rounds."
       },
       {
-        "term": "[Dodge]",
-        "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+        "term": "[Specialized Burn]",
+        "desc": "Deals ATK-based DoT DMG during the next 3 actions, then disappears."
       },
       {
-        "term": "[Hyper Speed]",
-        "desc": "Speed ​​buff that while in effect allows the bearer and up to 6 allies to act against and overcome enemies with lower speed."
+        "term": "[True DMG]",
+        "desc": "Damage that ignores applicable conventional defensive effects."
       },
       {
-        "term": "[Smart DoT]",
-        "desc": "Damage over time effect, dealing ST-based damage to target over 3 turns."
-      },
-      {
-        "term": "[Spec. Speed Up]",
-        "desc": "Increases ally's speed to near deployer's speed (remains the same if ally is already faster)."
+        "term": "[Instant DMG Evasion]",
+        "desc": "Gives a chance for Direct DMG, True DMG, Charge DMG, and Berserk DMG to deal only 1 point of DMG."
       }
     ],
     "keepsakeIcon": "/Keepsake/Sonic V1 (UR)/Keepsake_UR.png",
@@ -5430,48 +6167,36 @@
     ],
     "effects": [
       {
-        "term": "[Spec. Unyielding]",
-        "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+        "term": "[Force Field]",
+        "desc": "A DoT effect applied to enemies for 1 turn. Before the affected enemy acts, it deals ATK-based DMG and has an 80% chance to bypass immunity."
       },
       {
-        "term": "[Unyielding]",
-        "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+        "term": "[Detonation]",
+        "desc": "Immediately triggers the remaining DMG of [Force Field] or converts its effect into [Detonation DMG]."
       },
       {
-        "term": "[Energy Conversion]",
-        "desc": "When an enemy carrying [Energy Suppression] damages the carrier, the damage is reduced by 20% and the reduction is converted into energy."
+        "term": "[Specialized HP]",
+        "desc": "A specialized HP pool gained separately from normal HP."
       },
       {
-        "term": "[Shield]",
-        "desc": "The shield absorbs damage up to a portion of the subject's Health; Charge DMG ignores it."
+        "term": "[Ultimate Follow-up]",
+        "desc": "Performs the Ultimate as a follow-up with a specified percentage of its original DMG and its effects."
       },
       {
-        "term": "[Non-Crit DMG Immunity]",
-        "desc": "Reduces all non-critical damage (usually to 1). Cannot survive and avoid Agility."
+        "term": "[Adhesion]",
+        "desc": "A negative status removed from Tatsumaki when she uses her Ultimate."
       },
       {
-        "term": "[Spec. HP]",
-        "desc": "The PvP tier's unique health bar stacks on top of regular health, must also be depleted, and can be restored independently."
+        "term": "[Disable]",
+        "desc": "A negative status removed from Tatsumaki when she uses her Ultimate."
       },
       {
-        "term": "[Spec. Dodge]",
-        "desc": "Evasion PvP tier — reduces specialized attacks to 1 damage; pierced by the ignore dodge effect."
+        "term": "[Stun]",
+        "desc": "Prevents the affected unit from taking action."
       },
       {
-        "term": "[Shield Break]",
-        "desc": "While attacking, ignore the enemy's 30% Damage Immunity and Unique Defense to allow the attack to penetrate their shield."
-      },
-      {
-        "term": "[Wrath]",
-        "desc": "Attack buff increases unit damage, often accompanied by [Shield Break]."
-      },
-      {
-        "term": "[Formation]",
-        "desc": "The battlefield effect deals damage over time (100%) and can be detonated for a burst of damage, and helps the character recover from Stun after an action."
-      },
-      {
-        "term": "[Energy Suppression]",
-        "desc": "When dealing damage to health, forces the target to activate Energy Conversion, reducing the damage they deal and choking their mana source."
+        "term": "[Specialized Stun]",
+        "desc": "A specialized form of [Stun]."
       }
     ],
     "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (UR)/Keepsake_UR.png",
@@ -5595,8 +6320,20 @@
     ],
     "effects": [
       {
-        "term": "[Immortal]",
-        "desc": "Survival status keeps the bearer alive by drastically reducing damage taken (e.g. only taking 20%)."
+        "term": "[Specialized Guard]",
+        "desc": "Negates received DMG and overwrites Bonus HP effects. The total amount cannot exceed 15 times the unit's original Max HP."
+      },
+      {
+        "term": "[Tenacity]",
+        "desc": "Increases the effectiveness of generated [Tenacity] and [Specialized Guard]."
+      },
+      {
+        "term": "[Specialized DMG Reflect]",
+        "desc": "Reduces Direct DMG and Extra DMG received and reflects a percentage of the original DMG back to the attacker as Extra DMG."
+      },
+      {
+        "term": "[Specialized Berserk]",
+        "desc": "Causes the first strike to additionally deal [Berserk DMG] equal to 50% of Superalloy Darkshine's Max HP. Lasts for the entire battle."
       }
     ],
     "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSRplus)/Keepsake_SSRplus.png",
@@ -5719,40 +6456,32 @@
     ],
     "effects": [
       {
-        "term": "[Spec. Protect]",
-        "desc": "PvP shields reduce or negate damage to allies."
-      },
-      {
-        "term": "[Spec. Stun]",
-        "desc": "PvP tier of Stun — harder to resist or resolve."
+        "term": "[Specialized Stun]",
+        "desc": "Prevents the affected unit from acting and permanently reduces its ATK by 30%. At most 4 characters can be affected by [Stun] or [Specialized Stun] simultaneously."
       },
       {
         "term": "[Stun]",
-        "desc": "The stun-type control effect prevents the target from taking action during the duration."
+        "desc": "Prevents the affected unit from acting. Shares the 4-character simultaneous limit with [Specialized Stun]."
       },
       {
-        "term": "[Mark]",
-        "desc": "Mark a unit, unlocking a raid condition or bonus effect associated with the mark."
+        "term": "[Corrode]",
+        "desc": "A Continuous DMG effect. Metal Knight can grant allies immunity to it."
       },
       {
-        "term": "[Round]",
-        "desc": "One turn in a match; Many effects are limited to the current number of turns (e.g. only effective when Round < 6)."
+        "term": "[Specialized Corrode]",
+        "desc": "A specialized Continuous DMG effect. Metal Knight can grant allies immunity to it."
       },
       {
-        "term": "[Dodge]",
-        "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+        "term": "[Evade]",
+        "desc": "Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG."
       },
       {
-        "term": "[Counter]",
-        "desc": "A counter mark whose class number gradually increases the user's direct counter damage to marked enemies."
+        "term": "[Combo Follow-up]",
+        "desc": "A coordinated Follow-Up effect. Metal Knight’s Awaken Passive removes this effect from the entire enemy team for the whole battle."
       },
       {
-        "term": "[Smart Corrode DMG]",
-        "desc": "The enhanced Corrosion over Time damage variant has the ability to retarget itself, to which some units may be immune."
-      },
-      {
-        "term": "[Corrode DMG]",
-        "desc": "Continuous corrosive damage over time gradually erodes Health, which can be blocked by zone immunity."
+        "term": "[Specialized Protection]",
+        "desc": "A defensive effect increased by Metal Knight’s Awaken 2 Passive based on Metal Knight’s ATK."
       }
     ],
     "keepsakeIcon": "/Keepsake/Metal Knight (SSRplus)/Keepsake_SSRplus.png",
@@ -5887,8 +6616,36 @@
     "dacTinh": [],
     "effects": [
       {
+        "term": "[Charm]",
+        "desc": "Causes the affected enemy to [Exit] the battlefield and use its own Ultimate or Passive to attack a random ally. The affected enemy returns after the round ends."
+      },
+      {
+        "term": "[Exit]",
+        "desc": "Temporarily removes the affected character from the battlefield."
+      },
+      {
         "term": "[Stun]",
-        "desc": "The stun-type control effect prevents the target from taking action during the duration."
+        "desc": "Prevents the affected unit from acting for the specified duration."
+      },
+      {
+        "term": "[Paralysis]",
+        "desc": "Prevents the affected unit from triggering [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]."
+      },
+      {
+        "term": "[Follow-up]",
+        "desc": "An additional attack triggered after another action or when specified conditions are met."
+      },
+      {
+        "term": "[Continuous Follow-Up]",
+        "desc": "A Follow-Up effect that can trigger repeatedly under specified conditions."
+      },
+      {
+        "term": "[Combo Follow-up]",
+        "desc": "A coordinated Follow-Up attack triggered through a Combo-type effect."
+      },
+      {
+        "term": "[Non-Crit DMG Free]",
+        "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
       }
     ],
     "classLevel": "Class_S",
@@ -5997,16 +6754,16 @@
     ],
     "effects": [
       {
-        "term": "[Revive]",
-        "desc": "The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match."
+        "term": "[Specialized Speed Up]",
+        "desc": "A specialized SPD-enhancing effect. Zombieman's Ultimate raises same-row allies to a percentage of his SPD without lowering allies who are already faster. His Passive provides a percentage-based SPD increase."
       },
       {
-        "term": "[Resurrect]",
-        "desc": "Status returns downed units to battle, granting a limited number of respawns that anti-revive effects can remove."
+        "term": "[Encourage]",
+        "desc": "Grants Energy to the team at the start of each round for a limited duration."
       },
       {
-        "term": "[Hyper Speed]",
-        "desc": "Speed ​​buff that while in effect allows the bearer and up to 6 allies to act against and overcome enemies with lower speed."
+        "term": "[Regeneration]",
+        "desc": "After receiving fatal DMG, restores 60% Max HP before Zombieman's action while at least 1 ally remains, allowing him to continue fighting."
       }
     ],
     "keepsakeIcon": "/Keepsake/Zombieman (SSRplus)/Keepsake_SSRplus.png",
@@ -6134,16 +6891,28 @@
     ],
     "effects": [
       {
-        "term": "[Adhere]",
-        "desc": "Control status prevents the target from casting [Follow-up] and [Consecutive Follow-up], usually for 2 turns."
+        "term": "[Specialized Corrode]",
+        "desc": "Deals ATK-based Continuous DMG. After any character acts, transfers to a random valid target and disappears after transferring 5 times."
       },
       {
-        "term": "[Void]",
-        "desc": "Debuffs apply to all enemies, often accompanied by corrosive damage over time, negating their effects."
+        "term": "[Stuck]",
+        "desc": "Prevents the affected unit from initiating [Follow-Up] and [Continuous Follow-Up] for 2 rounds."
       },
       {
-        "term": "[Smart Corrode]",
-        "desc": "Corrosive damage over time applied to the target area, often accompanied by Nullity on all enemies."
+        "term": "[Follow-up]",
+        "desc": "An additional attack triggered after another action or when specified conditions are met."
+      },
+      {
+        "term": "[Continuous Follow-Up]",
+        "desc": "A Follow-Up that can repeatedly trigger under specified conditions."
+      },
+      {
+        "term": "[Specialized DMG Reflect]",
+        "desc": "Reduces Direct DMG and Extra DMG received by 50%, and reflects Extra DMG equal to 50% of the original DMG back to the attacker. Lasts for the entire battle."
+      },
+      {
+        "term": "[Specialized Guard]",
+        "desc": "A specialized defensive effect restored by absorbing 100% of the Continuous DMG suffered by enemies after any character acts."
       }
     ],
     "keepsakeIcon": "/Keepsake/Groribas (SSRplus)/Keepsake_SSRplus.png",
@@ -6267,16 +7036,24 @@
     ],
     "effects": [
       {
-        "term": "[Dodge]",
-        "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+        "term": "[Specialized Guard]",
+        "desc": "Negates incoming DMG and overwrites Bonus HP effects. Its total amount cannot exceed 15 times the unit's original Max HP."
       },
       {
-        "term": "[Follow-up DMG]",
-        "desc": "This type of attack damage is dealt as Attack attacks in a series of rapid attacks, gradually increasing the number of consecutive attacks."
+        "term": "[Disabled]",
+        "desc": "Prevents the affected unit from triggering [Follow-Up] and [Continuous Follow-Up]."
       },
       {
-        "term": "[Nullify]",
-        "desc": "Disabled status applies to a target area/column, rendering affected units unable to act or be effective."
+        "term": "[Follow-up]",
+        "desc": "An additional attack triggered after another action or when specified conditions are met."
+      },
+      {
+        "term": "[Continuous Follow-Up]",
+        "desc": "A Follow-Up effect that can trigger repeatedly under specified conditions."
+      },
+      {
+        "term": "[Evasion]",
+        "desc": "Causes Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to deal only 1 point of DMG."
       }
     ],
     "keepsakeIcon": "/Keepsake/Watchdog Man (SSRplus)/Keepsake_SSRplus.png",
@@ -6337,7 +7114,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals damage to all targets with 4 Combos for 64% Max HP (+2663). After using Ultimate Skill, 2 defeated Characters will return to the battle with 100% HP. Can trigger up to 6 times per battle.",
+        "desc": "Deals damage to all targets with 4 Combos for 64% Max HP. After using Ultimate Skill, 2 defeated Characters will return to the battle with 100% HP. Can trigger up to 6 times per battle.",
         "keepsakeIcon": "/Keepsake/Melzargard (SSRplus)/Keepsake_SSRplus.png",
         "icon": "/Skill/Melzargard (SSR+)/Skill_ult.png",
         "type": "Ultimate",
@@ -6409,12 +7186,8 @@
         "desc": "The target cannot use his ultimate. Counts as a control effect."
       },
       {
-        "term": "[Mark]",
-        "desc": "Mark a unit, unlocking a raid condition or bonus effect associated with the mark."
-      },
-      {
-        "term": "[Resurrect]",
-        "desc": "Status returns downed units to battle, granting a limited number of respawns that anti-revive effects can remove."
+        "term": "[Reborn]",
+        "desc": "Returns the character to battle after taking fatal damage and restores a specified amount of HP."
       },
       {
         "term": "[Regeneration]",
@@ -6556,8 +7329,20 @@
     ],
     "effects": [
       {
-        "term": "[Insta-Dodge]",
-        "desc": "Floors that each cause a direct, additional, charge, or berserk attack to only deal 1 damage."
+        "term": "[Evolve]",
+        "desc": "Immediately removes the target’s [Unyielding] and Ignore DMG statuses. Drive Knight’s Passive can trigger this effect without an activation limit."
+      },
+      {
+        "term": "[Unyielding]",
+        "desc": "A survival effect that prevents the affected unit from being defeated under specified conditions."
+      },
+      {
+        "term": "[Instant DMG Evasion]",
+        "desc": "Causes Direct DMG, Extra DMG, Charge DMG, and Berserk DMG to deal only 1 point of DMG."
+      },
+      {
+        "term": "[Specialized Guard]",
+        "desc": "Negates received DMG and overwrites Extra HP effects. Its total amount cannot exceed 15 times the unit’s original HP. Effects of the same type can stack."
       }
     ],
     "classLevel": "Class_SS",
@@ -6667,12 +7452,28 @@
     ],
     "effects": [
       {
-        "term": "[Adhere]",
-        "desc": "Control status prevents the target from casting [Follow-up] and [Consecutive Follow-up], usually for 2 turns."
+        "term": "[Breakthrough]",
+        "desc": "Immediately removes DMG Ignoration granted by Unyielding-type effects. Can trigger once per attack on each target."
       },
       {
-        "term": "[Death Immunity]",
-        "desc": "Unfavorable effects negate the target's invincibility/anti-death effects, allowing it to be knocked down as normal."
+        "term": "[Ignore DMG]",
+        "desc": "An effect granted by certain Unyielding-type states that causes applicable incoming DMG to be ignored."
+      },
+      {
+        "term": "[Specialized Guard]",
+        "desc": "Negates incoming DMG and overwrites Bonus HP effects. Its total amount cannot exceed 15 times the unit's original Max HP."
+      },
+      {
+        "term": "[DMG Sharing]",
+        "desc": "An effect that distributes received DMG between affected units. Tank-Top Master removes this effect from all enemies at the beginning of each turn."
+      },
+      {
+        "term": "[Follow-up]",
+        "desc": "An additional attack triggered after an ally acts. Tank-Top Master's summoned assists prioritize enemies with DMG Ignoration and can trigger [Breakthrough]."
+      },
+      {
+        "term": "[Consecutive Follow-up]",
+        "desc": "A summoned assist whose ATK is based on 30% of Tank-Top Master's original Max HP and can perform [Follow-Up] attacks."
       }
     ],
     "keepsakeIcon": "/Keepsake/Tank Top Master (SSRplus)/Keepsake_SSRplus.png",
@@ -6799,28 +7600,32 @@
     ],
     "effects": [
       {
-        "term": "[Adhere]",
-        "desc": "Control status prevents the target from casting [Follow-up] and [Consecutive Follow-up], usually for 2 turns."
+        "term": "[Specialized Corrode]",
+        "desc": "Deals 100% ATK as Continuous DMG. After any character acts, transfers to another target that can take DMG. The number of activations depends on the skill that applies it."
+      },
+      {
+        "term": "[Evolve]",
+        "desc": "Immediately removes the target’s [Unyielding] and Ignore DMG statuses."
       },
       {
         "term": "[Unyielding]",
-        "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+        "desc": "A survival effect that prevents the affected unit from being defeated under specified conditions."
       },
       {
-        "term": "[Chain Follow-up]",
-        "desc": "Extra attacks outside of turn (usually after an ally acts) apply a portion of the ultimate's ST and effects to a random target, at no mana cost."
+        "term": "[Specialized Guard]",
+        "desc": "Negates received DMG and overwrites Extra HP effects. Its total amount cannot exceed 15 times the unit’s original HP."
       },
       {
-        "term": "[Ult Follow-up]",
-        "desc": "Out of turn attacks deal 70% of the ultimate's damage and effects, without consuming mana, up to 3 times per round."
+        "term": "[Adhesion]",
+        "desc": "Prevents the affected unit from initiating [Follow-Up] and [Continuous Follow-Up]."
       },
       {
-        "term": "[Truy Kích]",
-        "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+        "term": "[Follow-up]",
+        "desc": "An additional attack triggered after another action or when a specified condition is met."
       },
       {
-        "term": "[Corrode]",
-        "desc": "Corrosive damage over time effect, each turn dealing damage equal to a percentage of ST (e.g. 300%) to the target."
+        "term": "[Continuous Follow-Up]",
+        "desc": "A Follow-Up that can repeatedly trigger under specified conditions."
       }
     ],
     "keepsakeIcon": "/Keepsake/Deep Sea King (SSRplus)/Keepsake_SSRplus.png",
@@ -6945,24 +7750,20 @@
     ],
     "effects": [
       {
-        "term": "[Spec. Protect]",
-        "desc": "PvP shields reduce or negate damage to allies."
+        "term": "[Breakthrough]",
+        "desc": "Removes the target's [Unyielding] state. Can trigger only once on each target per attack."
       },
       {
         "term": "[Unyielding]",
-        "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+        "desc": "A survival effect that prevents the affected unit from being defeated under specified conditions."
       },
       {
-        "term": "[Heal Block]",
-        "desc": "The death immunity blocking debuff is applied to enemies that are not immune to death, preventing them from becoming immune to death or respawns."
+        "term": "[Specialized Protection]",
+        "desc": "Negates received DMG and can stack with Extra HP effects. The total amount of DMG negated cannot exceed 15 times the unit's original Max HP."
       },
       {
-        "term": "[Dodge]",
-        "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
-      },
-      {
-        "term": "[Spec. Burn]",
-        "desc": "Burning PvP tier — stronger burst damage, harder to deal with."
+        "term": "[Specialized Burn]",
+        "desc": "Deals ATK-based Continuous DMG. After any character acts, transfers to another enemy and disappears after transferring 3 times. It can stack up to 6 times."
       }
     ],
     "keepsakeIcon": "/Keepsake/Subterranean King (SSRplus)/Keepsake_SSRplus.png",
@@ -7100,7 +7901,7 @@
         "desc": "Out of turn attacks deal 70% of the ultimate's damage and effects, without consuming mana, up to 3 times per round."
       },
       {
-        "term": "[Truy Kích]",
+        "term": "[Follow-up]",
         "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
       },
       {
@@ -7244,8 +8045,28 @@
     ],
     "effects": [
       {
-        "term": "[Immortal]",
-        "desc": "Survival status keeps the bearer alive by drastically reducing damage taken (e.g. only taking 20%)."
+        "term": "[Devour]",
+        "desc": "Removes a target from the battlefield through Pig God's skill. Against enemies, it causes [Exit] for 1 round. Pig God's Awaken Passive can also use [Devour] on a defeated surrounding ally and later return that ally to battle."
+      },
+      {
+        "term": "[Exit]",
+        "desc": "Temporarily removes the affected unit from the battlefield for the specified duration."
+      },
+      {
+        "term": "[Specialized Guard]",
+        "desc": "Negates received DMG and can stack with Extra HP effects. The total amount of DMG negated cannot exceed 15 times the unit's original Max HP."
+      },
+      {
+        "term": "[Enhanced Unyielding]",
+        "desc": "An enhanced survival state measured by remaining actions. Pig God's Ultimate reduces its remaining duration by 2 actions after [Devour]."
+      },
+      {
+        "term": "[Off Battle]",
+        "desc": "An effect that causes a character to leave the battlefield. Pig God is immune to it, while allied [Disengage] can trigger his Awaken Passive."
+      },
+      {
+        "term": "[Specialized Corrode]",
+        "desc": "Deals 150% ATK as Continuous DMG. After any character acts, it transfers to a random enemy, up to 3 transfers."
       }
     ],
     "classLevel": "Class_SS",
@@ -7496,20 +8317,20 @@
     ],
     "effects": [
       {
-        "term": "[Unyielding]",
-        "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+        "term": "[Breakthrough]",
+        "desc": "Removes 1 instance of [Specialized Unyielding] from the affected target."
       },
       {
-        "term": "[Immortal]",
-        "desc": "Survival status keeps the bearer alive by drastically reducing damage taken (e.g. only taking 20%)."
+        "term": "[Specialized Unyielding]",
+        "desc": "A specialized survival state that prevents the affected unit from being defeated for a limited number of actions."
       },
       {
         "term": "[Stun]",
-        "desc": "The stun-type control effect prevents the target from taking action during the duration."
+        "desc": "Prevents the affected unit from taking action."
       },
       {
         "term": "[Immunity]",
-        "desc": "Status that causes the bearer to be unaffected by a certain effect or type of control, such as [Breakthrough], Stun, or Charm."
+        "desc": "A summoned unit that inherits HP based on Gouketsu’s initial Max HP and absorbs DMG for Gouketsu and allied units in its protected row. When defeated, it explodes and deals Max-HP-based DMG to enemies."
       }
     ],
     "keepsakeIcon": "/Keepsake/Gouketsu (SSRplus)/Keepsake_SSRplus.png",
@@ -7891,8 +8712,24 @@
     ],
     "effects": [
       {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Reduces DMG received from non-critical attacks."
+      },
+      {
         "term": "[Unyielding]",
-        "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+        "desc": "Prevents fatal DMG from immediately defeating the affected unit under specified conditions."
+      },
+      {
+        "term": "[Specialized Unyielding]",
+        "desc": "A specialized survival state that lasts for a limited number of character actions. Atomic Samurai can reduce or increase its action count."
+      },
+      {
+        "term": "[Enhanced Unyielding]",
+        "desc": "An effect that greatly increases the target’s Max HP. Atomic Samurai removes this effect before applying permanent Max HP reduction."
+      },
+      {
+        "term": "[Chase]",
+        "desc": "Performs the Ultimate as a follow-up attack against a random enemy column with a specified percentage of the Ultimate’s original DMG."
       }
     ],
     "keepsakeIcon": "/Keepsake/Atomic Samurai (SSRplus)/Keepsake_SSRplus.png",
@@ -8027,24 +8864,24 @@
     ],
     "effects": [
       {
-        "term": "[Energy Cut]",
-        "desc": "Debuff applies to all enemies when their Energy is reduced, blocking or destroying their Energy, making them unable to use their ultimate."
+        "term": "[Combo]",
+        "desc": "Causes Bomb to perform the same type of skill after Silverfang attacks. A Basic [Combo] attacks 1 random target, while an Ultimate [Combo] attacks all enemies with 3 consecutive strikes."
       },
       {
-        "term": "[Mark]",
-        "desc": "Mark a unit, unlocking a raid condition or bonus effect associated with the mark."
+        "term": "[Internal Injury]",
+        "desc": "When the affected target is attacked, it takes additional DMG based on Silverfang’s ATK. The effect disappears after triggering."
+      },
+      {
+        "term": "[Instant DMG Evasion]",
+        "desc": "Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG to 1 point of DMG."
+      },
+      {
+        "term": "[Fear]",
+        "desc": "An Energy-related negative effect associated with reducing or sealing the enemy team’s Energy."
       },
       {
         "term": "[Insta-Dodge]",
-        "desc": "Floors that each cause a direct, additional, charge, or berserk attack to only deal 1 damage."
-      },
-      {
-        "term": "[Collapse (Duelist)]",
-        "desc": "Unfavorable effects cause delayed damage, storing additional damage (600-800% of Gouketsu's ST), releasing when the target is hit or when [Detonate]."
-      },
-      {
-        "term": "[Cleanse]",
-        "desc": "Removes existing effects/buffs on all enemies."
+        "desc": "A battle resource reduced by 250 for each enemy affected by [Internal Injury] when Bomb performs an Ultimate [Combo]."
       }
     ],
     "classLevel": "Class_SS",
@@ -8281,16 +9118,20 @@
     ],
     "effects": [
       {
-        "term": "[Unyielding]",
-        "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+        "term": "[Fear]",
+        "desc": "Seals a specified amount of the enemy team’s Energy for 1 round."
       },
       {
-        "term": "[Panic]",
-        "desc": "Control status interrupts the target's actions."
+        "term": "[Resilience/Tenacity]",
+        "desc": "A defensive value reduced by King’s Ultimate."
       },
       {
         "term": "[Shield]",
-        "desc": "The shield absorbs damage up to a portion of the subject's Health; Charge DMG ignores it."
+        "desc": "A summoned unit that inherits stats from King, absorbs most incoming DMG for King, and performs Follow-Up attacks after allies act."
+      },
+      {
+        "term": "[Follow-up]",
+        "desc": "An additional attack triggered after an ally acts. King’s Drone targets 1 random enemy and deals 350% ATK DMG."
       }
     ],
     "keepsakeIcon": "/Keepsake/King (SSRplus)/Keepsake_SSRplus.png",
@@ -8963,7 +9804,7 @@
     "skills": [
       {
         "name": "Basic",
-        "desc": "Strikes a single target with a 3-hit combo, dealing 35% ATK(+3) damage.",
+        "desc": "Strikes a single target with a 3-hit combo, dealing 35% ATK damage.",
         "icon": "/Skill/Amai Mask (SSR)/Skill_base.png",
         "type": "Basic",
         "keepsakeIcon": null,
@@ -8972,7 +9813,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Attacks a single target in the back row 2 to 5 times, dealing up to 100% ATK(+2) damage.",
+        "desc": "Attacks a single target in the back row 2 to 5 times, dealing up to 100% ATK damage.",
         "icon": "/Skill/Amai Mask (SSR)/skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -8981,7 +9822,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Attacks a single target in the back row 3 to 5 times, dealing up to 100% ATK(+2) damage.",
+        "desc": "Attacks a single target in the back row 3 to 5 times, dealing up to 100% ATK damage.",
         "keepsakeIcon": "/Keepsake/Amai Mask (SSR)/Keepsake_SSR.png",
         "icon": "/Skill/Amai Mask (SSR)/skill_ult.png",
         "type": "Ultimate",
@@ -9111,8 +9952,12 @@
     ],
     "effects": [
       {
-        "term": "[Truy Kích]",
-        "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+        "term": "[Shatter]",
+        "desc": "Reduces DMG Reduction Rate by 30% for 2 turns."
+      },
+      {
+        "term": "[Follow-up]",
+        "desc": "An additional attack triggered after a Duelist ally attacks. Atomic Samurai's Follow-Up uses 80% of his Basic Attack's DMG and effects and can trigger up to 3 times per turn."
       }
     ],
     "keepsakeIcon": "/Keepsake/Atomic Samurai (SSR)/Keepsake_SSR.png",
@@ -9209,12 +10054,20 @@
     "keepsakeIcon": "/Keepsake/Bang (SSR)/Keepsake_SSR.png",
     "effects": [
       {
-        "term": "[Tenacity]",
-        "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+        "term": "[Berserk]",
+        "desc": "Increases DMG by 30% for 1 turn."
       },
       {
         "term": "[Internal Injury]",
-        "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+        "desc": "When the affected unit is attacked, takes DMG equal to 140% of Silverfang's ATK. Disappears after triggering once."
+      },
+      {
+        "term": "[Block]",
+        "desc": "A defensive trigger that can activate Silverfang's Passive and grant [Tenacity]."
+      },
+      {
+        "term": "[Tenacity]",
+        "desc": "Absorbs DMG equal to 7% of Max HP. Can trigger up to 3 times per turn."
       }
     ],
     "releaseDate": "01/11/2020",
@@ -9300,8 +10153,16 @@
     ],
     "effects": [
       {
+        "term": "[Heal Rate]",
+        "desc": "Reduces the effectiveness of HP recovery received by the affected unit."
+      },
+      {
         "term": "[Agility]",
-        "desc": "Evasion type buff; mutually exclusive with Non-Crit Damage Immunity."
+        "desc": "Reduces higher Direct DMG by 12%–60% depending on the number of incoming strikes. Cannot coexist with [Non-Crit DMG Reduction]."
+      },
+      {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "A defensive effect that reduces non-critical DMG and cannot coexist with [Agility]."
       }
     ],
     "keepsakeIcon": "/Keepsake/Bom/Bengpu (UR)/Keepsake_UR.png",
@@ -9654,12 +10515,12 @@
     "classIcon": "/Class/Dragon.png",
     "effects": [
       {
-        "term": "[Internal Injury]",
-        "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+        "term": "[Field]",
+        "desc": "Before taking action, the affected unit suffers Continuous DMG equal to 160% ATK."
       },
       {
-        "term": "[Weaken]",
-        "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
+        "term": "[Armed Collapse]",
+        "desc": "Damage-over-time that is applied separately from the initial attack."
       }
     ],
     "releaseDate": "01/01/2022",
@@ -9695,7 +10556,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals 3 combo strikes to a single target for 70% ATK (+3) DMG each, plus extra DMG equal to 50% of your own lost HP.",
+        "desc": "Deals 3 combo strikes to a single target for 70% ATK DMG each, plus extra DMG equal to 50% of your own lost HP.",
         "icon": "/Skill/Deep Sea King (SSR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -9704,7 +10565,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals 3 combo strikes to a single target for 88% ATK (+3) DMG each, plus extra DMG equal to 75% of your own lost HP.",
+        "desc": "Deals 3 combo strikes to a single target for 88% ATK DMG each, plus extra DMG equal to 75% of your own lost HP.",
         "icon": "/Skill/Deep Sea King (SSR)/Skill_ult.png",
         "keepsakeIcon": "/Keepsake/Deep Sea King (SSR)/Keepsake_SSR.png",
         "type": "Ultimate",
@@ -9835,8 +10696,28 @@
     ],
     "effects": [
       {
+        "term": "[Field]",
+        "desc": "Before taking action, the affected unit suffers Continuous DMG equal to 160% ATK."
+      },
+      {
+        "term": "[Charged]",
+        "desc": "Drive Knight transforms into this state when an enemy suffers [Field] DMG. While in this state, his Ultimate can apply [Charge DMG] to enemies in the target row."
+      },
+      {
+        "term": "[Charge]",
+        "desc": "A stack applied to targets affected by [Field]. Each layer deals 240% ATK as Charge DMG and reduces the Energy Gauge by 500 points. Can stack up to 4 layers."
+      },
+      {
+        "term": "[Charge DMG]",
+        "desc": "A specialized damage type generated through [Charge] stacks."
+      },
+      {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Permanently reduces all types of non-critical DMG received by 50%. Cannot coexist with [Agility]."
+      },
+      {
         "term": "[Agility]",
-        "desc": "Evasion type buff; mutually exclusive with Non-Crit Damage Immunity."
+        "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Reduction]."
       }
     ],
     "keepsakeIcon": "/Keepsake/Drive Knight (SSR)/Keepsake_SSR.png",
@@ -9924,7 +10805,7 @@
         "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
       },
       {
-        "term": "[Truy Kích]",
+        "term": "[Follow-up]",
         "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
       }
     ],
@@ -9965,7 +10846,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals 80% ATK (+3) DMG with 3 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 30%); triggering a Critical Strike inflicts [Weaken] on the target (ATK reduced by 25% for 1 turn).",
+        "desc": "Deals 80% ATK DMG with 3 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 30%); triggering a Critical Strike inflicts [Weaken] on the target (ATK reduced by 25% for 1 turn).",
         "icon": "/Skill/G4 (SSR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -9974,7 +10855,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals 100% ATK (+3) DMG with 3 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 40%); triggering a Critical Strike inflicts [Weaken] on the target (ATK reduced by 45% for 1 turn).",
+        "desc": "Deals 100% ATK DMG with 3 consecutive strikes to a single target. 100% chance to inflict [Shatter] on the target for 2 turns (reduces DMG Reduction Rate by 40%); triggering a Critical Strike inflicts [Weaken] on the target (ATK reduced by 45% for 1 turn).",
         "keepsakeIcon": "/Keepsake/G4 (SSR)/Keepsake_SSR.png",
         "icon": "/Skill/G4 (SSR)/Skill_ult.png",
         "type": "Ultimate",
@@ -10101,16 +10982,28 @@
     ],
     "effects": [
       {
-        "term": "[Stun]",
-        "desc": "The stun-type control effect prevents the target from taking action during the duration."
-      },
-      {
         "term": "[Internal Injury]",
-        "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+        "desc": "When the affected unit is attacked, takes DMG equal to 155% of Gale Wind's ATK. Disappears after triggering once."
       },
       {
-        "term": "[Truy Kích]",
-        "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+        "term": "[Stun]",
+        "desc": "Prevents the affected unit from acting. At most 4 characters on each team can be affected by [Stun] simultaneously. Gale Wind's Ultimate has a 50% chance to ignore Stun immunity."
+      },
+      {
+        "term": "[Energy Gauge]",
+        "desc": "A battle resource affected by Gale Wind's Ultimate. His Ultimate reduces it by 900 points, while Ultra-Ultimate reduces it by 950 points."
+      },
+      {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+      },
+      {
+        "term": "[Agility]",
+        "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Reduction]."
+      },
+      {
+        "term": "[Follow-up]",
+        "desc": "An additional attack launched against the enemy with the highest ATK after any character acts. It uses Gale Wind's Basic Attack DMG and retains the Basic Attack's effects."
       }
     ],
     "keepsakeIcon": "/Keepsake/Gale Wind (SSR)/Keepsake_SSR.png",
@@ -10197,12 +11090,28 @@
     ],
     "effects": [
       {
-        "term": "[Stun]",
-        "desc": "The stun-type control effect prevents the target from taking action during the duration."
+        "term": "[Lifesteal]",
+        "desc": "Restores HP based on a percentage of DMG dealt."
       },
       {
-        "term": "[Lifesteal]",
-        "desc": "Self-buff heals the bearer for a percentage (e.g. 50%) of the damage they deal."
+        "term": "[Stun]",
+        "desc": "Prevents the affected unit from acting. At most 4 characters can be affected by [Stun] simultaneously."
+      },
+      {
+        "term": "[Rage]",
+        "desc": "Increases ATK during the unit's next direct action."
+      },
+      {
+        "term": "[Injury]",
+        "desc": "A special damage effect."
+      },
+      {
+        "term": "[Internal Injury]",
+        "desc": "A special damage effect that triggers under specified conditions."
+      },
+      {
+        "term": "[Charge]",
+        "desc": "A special accumulated damage effect that can deal Charge DMG when triggered."
       }
     ],
     "keepsakeIcon": "/Keepsake/Eyesight (SSR)/Keepsake_SSR.png",
@@ -10250,7 +11159,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals 24% ATK (+2) DMG with 5 consecutive strikes to all targets. 100% chance to inflict [Internal Injury] on 4 random targets (when the target is hit, an added Internal Injury DMG equal to 145% of Garou's ATK is dealt; the effect is removed after triggering).",
+        "desc": "Deals 24% ATK DMG with 5 consecutive strikes to all targets. 100% chance to inflict [Internal Injury] on 4 random targets (when the target is hit, an added Internal Injury DMG equal to 145% of Garou's ATK is dealt; the effect is removed after triggering).",
         "keepsakeIcon": "/Keepsake/Garou (SSR)/Keepsake_SSR.png",
         "icon": "/Skill/Garou (SSR)/Skill_ult.png",
         "type": "Ultimate",
@@ -10288,11 +11197,11 @@
     "effects": [
       {
         "term": "[Internal Injury]",
-        "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+        "desc": "When the affected unit is hit, takes additional ATK-based DMG. The effect disappears after triggering once."
       },
       {
-        "term": "[Truy Kích]",
-        "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+        "term": "[Follow-up]",
+        "desc": "An additional attack triggered after an enemy acts. Garou's Follow-Up uses a percentage of his Basic Attack DMG and retains the Basic Attack's effects. It always triggers when the acting enemy is a Hero."
       }
     ],
     "keepsakeIcon": "/Keepsake/Garou (SSR)/Keepsake_SSR.png",
@@ -10381,12 +11290,12 @@
     "keepsakeIcon": "/Keepsake/Genos (SSR)/Keepsake_SSR.png",
     "effects": [
       {
-        "term": "[Thiêu Đốt]",
-        "desc": "Continuous fire damage over time to the target."
+        "term": "[Burn]",
+        "desc": "Deals ATK-based Continuous DMG for 2 turns. Ultimate deals 70% ATK as Continuous DMG, while Ultra-Ultimate deals 90% ATK."
       },
       {
         "term": "[Regeneration]",
-        "desc": "Restores Health over time or before the unit's next action."
+        "desc": "After receiving fatal DMG, restores HP before Genos' next action while at least 1 ally remains, allowing him to continue fighting."
       }
     ],
     "releaseDate": "01/06/2021",
@@ -10416,7 +11325,7 @@
     "skills": [
       {
         "name": "Basic",
-        "desc": "Deals 40% ATK (+3) damage to a single target in 3 hit combos. After acting, randomly puts one ally into the [Berserk] state (deals 30% more damage when attacking).",
+        "desc": "Deals 40% ATK damage to a single target in 3 hit combos. After acting, randomly puts one ally into the [Berserk] state (deals 30% more damage when attacking).",
         "icon": "/Skill/Geryuganshoop (SSR)/Skill_base.png",
         "type": "Basic",
         "keepsakeIcon": null,
@@ -10425,7 +11334,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals 26% ATK (+2) damage to each enemy in the entire row in 5 hit combos, and inflicts [Panic] on the enemy (seals the enemy's energy for several turns; when the same effect is present, the highest value takes effect).",
+        "desc": "Deals 26% ATK damage to each enemy in the entire row in 5 hit combos, and inflicts [Panic] on the enemy (seals the enemy's energy for several turns; when the same effect is present, the highest value takes effect).",
         "icon": "/Skill/Geryuganshoop (SSR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -10434,7 +11343,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals 33% ATK (+2) damage to each enemy in the entire row in 5 hit combos, and inflicts [Panic] on the enemy (seals the enemy's energy for several turns; when the same effect is present, the highest value takes effect).",
+        "desc": "Deals 33% ATK damage to each enemy in the entire row in 5 hit combos, and inflicts [Panic] on the enemy (seals the enemy's energy for several turns; when the same effect is present, the highest value takes effect).",
         "icon": "/Skill/Geryuganshoop (SSR)/Skill_ult.png",
         "keepsakeIcon": "/Keepsake/Geryuganshoop (SSR)/Keepsake_SSR.png",
         "type": "Ultimate",
@@ -10562,7 +11471,23 @@
     "effects": [
       {
         "term": "[Internal Injury]",
-        "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+        "desc": "When the affected unit is attacked, takes DMG equal to 100% of Gouketsu's ATK. Disappears after triggering once."
+      },
+      {
+        "term": "[Non-Crit DMG Reduction]",
+        "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+      },
+      {
+        "term": "[Agility]",
+        "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Reduction]."
+      },
+      {
+        "term": "[Heal Rate]",
+        "desc": "Increases the effectiveness of HP recovery."
+      },
+      {
+        "term": "[Tenacity]",
+        "desc": "Increases the effectiveness of generated shield-type effects."
       }
     ],
     "keepsakeIcon": "/Keepsake/Gouketsu (SSR)/Keepsake_SSR.png",
@@ -10738,8 +11663,12 @@
     ],
     "effects": [
       {
-        "term": "[Truy Kích]",
-        "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+        "term": "[Follow-up]",
+        "desc": "An additional attack performed by the ally with the highest ATK when triggered by Gyoro-Gyoro's Basic Attack."
+      },
+      {
+        "term": "[DMG Sharing]",
+        "desc": "Gyoro-Gyoro shares 50% of the DMG received by a Monster ally in the same column. The effect stops when that ally's HP falls below 20%."
       }
     ],
     "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSR)/Keepsake_SSR.png",
@@ -10830,7 +11759,7 @@
         "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
       },
       {
-        "term": "[Thiêu Đốt]",
+        "term": "[Burn]",
         "desc": "Continuous fire damage over time to the target."
       }
     ],
@@ -10862,7 +11791,7 @@
     "skills": [
       {
         "name": "Basic",
-        "desc": "Deals a 3-hit combo to a single target for 35% ATK (+3) damage.",
+        "desc": "Deals a 3-hit combo to a single target for 35% ATK damage.",
         "icon": "/Skill/Hellish Blizzard (SSR)/Skill_base.png",
         "type": "Basic",
         "keepsakeIcon": null,
@@ -10871,7 +11800,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals a 5-hit combo to all enemies for 17% ATK (+2) damage. If self is in the [Berserk] state, restore HP.",
+        "desc": "Deals a 5-hit combo to all enemies for 17% ATK damage. If self is in the [Berserk] state, restore HP.",
         "icon": "/Skill/Hellish Blizzard (SSR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -10880,7 +11809,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals a 5-hit combo to all enemies for 17% ATK (+2) damage, and directly restores own HP. At the same time, attacks from surrounding allies ignore 20% DEF for a duration.",
+        "desc": "Deals a 5-hit combo to all enemies for 17% ATK damage, and directly restores own HP. At the same time, attacks from surrounding allies ignore 20% DEF for a duration.",
         "icon": "/Skill/Hellish Blizzard (SSR)/Skill_ult.png",
         "keepsakeIcon": "/Keepsake/Hellish Blizzard (SSR)/Keepsake_SSR.png",
         "type": "Ultimate",
@@ -11128,7 +12057,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals 30% ATK (+2) damage to each enemy in the entire column in a 5-hit combo, with a 50% chance to inflict [Injured] on each target hit for 2 turns (takes additional Injured damage equal to 50% ATK when attacked), and grants self [Tenacity] (absorbs damage equal to 10% of own HP).",
+        "desc": "Deals 30% ATK damage to each enemy in the entire column in a 5-hit combo, with a 50% chance to inflict [Injured] on each target hit for 2 turns (takes additional Injured damage equal to 50% ATK when attacked), and grants self [Tenacity] (absorbs damage equal to 10% of own HP).",
         "icon": "/Skill/Metal Bat (SSR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -11137,7 +12066,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals 38% ATK (+2) damage to each enemy in the entire column in a 5-hit combo, with a 60% chance to inflict [Injured] on each target hit for 2 turns (takes additional Injured damage equal to 50% ATK when attacked), and grants self [Tenacity] (absorbs damage equal to 20% of own HP).",
+        "desc": "Deals 38% ATK damage to each enemy in the entire column in a 5-hit combo, with a 60% chance to inflict [Injured] on each target hit for 2 turns (takes additional Injured damage equal to 50% ATK when attacked), and grants self [Tenacity] (absorbs damage equal to 20% of own HP).",
         "icon": "/Skill/Metal Bat (SSR)/Skill_ult.png",
         "keepsakeIcon": "/Keepsake/Metal Bat (SSR)/Keepsake_SSR.png",
         "type": "Ultimate",
@@ -11184,7 +12113,7 @@
         "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
       },
       {
-        "term": "[Truy Kích]",
+        "term": "[Follow-up]",
         "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
       }
     ],
@@ -11273,7 +12202,7 @@
         "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
       },
       {
-        "term": "[Thiêu Đốt]",
+        "term": "[Burn]",
         "desc": "Continuous fire damage over time to the target."
       }
     ],
@@ -11388,7 +12317,7 @@
     "skills": [
       {
         "name": "Basic",
-        "desc": "Deals 40% ATK (+3) DMG to a single target over 3 hit combo.",
+        "desc": "Deals 40% ATK DMG to a single target over 3 hit combo.",
         "icon": "/Skill/Phoenix Man (SSR)/Skill_base.png",
         "type": "Basic",
         "keepsakeIcon": null,
@@ -11397,7 +12326,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals 50% ATK (+3) DMG to each enemy in the back row over 3 hit combo, with a 70% chance to inflict [Burn] on the target for 2 turns (DoT equal to 20% of max HP).",
+        "desc": "Deals 50% ATK DMG to each enemy in the back row over 3 hit combo, with a 70% chance to inflict [Burn] on the target for 2 turns (DoT equal to 20% of max HP).",
         "icon": "/Skill/Phoenix Man (SSR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -11406,7 +12335,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals 60% ATK (+3) DMG to each enemy in the back row over 3 hit combo, with a 100% chance to inflict [Burn] on the target for 2 turns (DoT equal to 25% of max HP).",
+        "desc": "Deals 60% ATK DMG to each enemy in the back row over 3 hit combo, with a 100% chance to inflict [Burn] on the target for 2 turns (DoT equal to 25% of max HP).",
         "keepsakeIcon": "/Keepsake/Phoenix Man (SSR)/Keepsake_SSR.png",
         "icon": "/Skill/Phoenix Man (SSR)/Skill_ult.png",
         "type": "Ultimate",
@@ -11443,7 +12372,7 @@
     ],
     "effects": [
       {
-        "term": "[Thiêu Đốt]",
+        "term": "[Burn]",
         "desc": "Continuous fire damage over time to the target."
       },
       {
@@ -11878,11 +12807,11 @@
     ],
     "effects": [
       {
-        "term": "[Thiêu Đốt]",
+        "term": "[Burn]",
         "desc": "Continuous fire damage over time to the target."
       },
       {
-        "term": "[Truy Kích]",
+        "term": "[Follow-up]",
         "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
       }
     ],
@@ -12321,12 +13250,24 @@
     "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado V2 (SSR)/Keepsake_SSR.png",
     "effects": [
       {
-        "term": "[Panic]",
-        "desc": "Control status interrupts the target's actions."
+        "term": "[Tenacity]",
+        "desc": "Absorbs DMG equal to 30% of own Max HP."
       },
       {
-        "term": "[Tenacity]",
-        "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
+        "term": "[Force Field]",
+        "desc": "Before taking action, the affected unit suffers Continuous DMG equal to 50% ATK. Has a 50% chance to ignore immunity."
+      },
+      {
+        "term": "[Panicked]",
+        "desc": "An Energy-sealing control effect. After sealed Energy is successfully removed by this Passive, the affected enemies cannot receive [Panicked] again during the same turn."
+      },
+      {
+        "term": "[Non-Crit DMG Free]",
+        "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+      },
+      {
+        "term": "[Agility]",
+        "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]."
       }
     ],
     "releaseDate": "01/09/2021",
@@ -12413,7 +13354,7 @@
     "classIcon": "/Class/Dragon.png",
     "effects": [
       {
-        "term": "[Thiêu Đốt]",
+        "term": "[Burn]",
         "desc": "Continuous fire damage over time to the target."
       }
     ],
@@ -12503,12 +13444,16 @@
     "classIcon": "/Class/Dragon.png",
     "effects": [
       {
-        "term": "[Detonate]",
-        "desc": "Activate a stack of damage over time or stored [Collapse] to instantly explode, turning it into an instant multiplier (e.g. 3 times the stored damage)."
+        "term": "[Field]",
+        "desc": "Before taking action, the affected unit suffers ATK-based Continuous DMG. Basic deals 150% ATK, Ultimate deals 160% ATK, and Ultra-Ultimate deals 230% ATK."
       },
       {
-        "term": "[Force Field]",
-        "desc": "Tatsumaki's damage over time area; Every time an enemy takes damage from the Field, it will accumulate a level of Charge (maximum 4 levels)."
+        "term": "[Detonation]",
+        "desc": "Immediately converts the original [Field] DMG into Detonation DMG. The conversion rate is 100% / 110% / 120% depending on Passive level."
+      },
+      {
+        "term": "[Giant]",
+        "desc": "A special state entered after triggering [Detonation]. While in this state, Ultimate and Ultra-Ultimate increase Continuous DMG Rate by 50%."
       }
     ],
     "releaseDate": "01/05/2022",
@@ -12548,7 +13493,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals a 5 hit combo of 5% (+2) of Watchdog Man's max HP as DMG to the entire target row, and inflicts [Panic] on enemies (seals their energy for a number of turns; when the same effect exists, the highest value applies).",
+        "desc": "Deals a 5 hit combo of 5% of Watchdog Man's max HP as DMG to the entire target row, and inflicts [Panic] on enemies (seals their energy for a number of turns; when the same effect exists, the highest value applies).",
         "icon": "/Skill/Watchdog Man (SSR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -12557,7 +13502,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals a 5 hit combo of 6% (+2) of Watchdog Man's max HP as DMG to the entire target row, and inflicts [Panic] on enemies (seals their energy for a number of turns; when the same effect exists, the highest value applies).",
+        "desc": "Deals a 5 hit combo of 6% of Watchdog Man's max HP as DMG to the entire target row, and inflicts [Panic] on enemies (seals their energy for a number of turns; when the same effect exists, the highest value applies).",
         "icon": "/Skill/Watchdog Man (SSR)/Skill_ult.png",
         "keepsakeIcon": "/Keepsake/Watchdog Man (SSR)/Keepsake_SSR.png",
         "type": "Ultimate",
@@ -12640,7 +13585,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals a 5-hit combo to a single target for 48% ATK (+2) damage, and simultaneously heals all allies for 100% ATK worth of HP.",
+        "desc": "Deals a 5-hit combo to a single target for 48% ATK damage, and simultaneously heals all allies for 100% ATK worth of HP.",
         "icon": "/Skill/Zombieman (SSR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -12649,7 +13594,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals a 5-hit combo to a single target for 60% ATK (+2) damage, and simultaneously heals all allies for 150% ATK worth of HP.",
+        "desc": "Deals a 5-hit combo to a single target for 60% ATK damage, and simultaneously heals all allies for 150% ATK worth of HP.",
         "icon": "/Skill/Zombieman (SSR)/Skill_ult.png",
         "keepsakeIcon": "/Keepsake/Zombieman (SSR)/Keepsake_SSR.png",
         "type": "Ultimate",
@@ -12716,7 +13661,7 @@
     "skills": [
       {
         "name": "Basic",
-        "desc": "Strikes a single target with a 3-hit combo, dealing 35% ATK(+3) damage.",
+        "desc": "Strikes a single target with a 3-hit combo, dealing 35% ATK damage.",
         "icon": "/Skill/Amai Mask (SR)/Skill_base.png",
         "type": "Basic",
         "keepsakeIcon": null,
@@ -12725,7 +13670,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Attacks a single target in the back row 2 to 5 times, dealing up to 100% ATK(+2) damage.",
+        "desc": "Attacks a single target in the back row 2 to 5 times, dealing up to 100% ATK damage.",
         "icon": "/Skill/Amai Mask (SR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -12734,7 +13679,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Attacks a single target in the back row 3 to 5 times, dealing up to 100% ATK(+2) damage.",
+        "desc": "Attacks a single target in the back row 3 to 5 times, dealing up to 100% ATK damage.",
         "icon": "/Skill/Amai Mask (SR)/Skill_ult.png",
         "keepsakeIcon": "/Keepsake/Amai Mask (SR)/Keepsake_SR.png",
         "type": "Ultimate",
@@ -12893,7 +13838,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals a 4-hit combo to a single back-row target for 35% ATK (+2) DMG, and reduces the target's chance to inflict [Force Field], [Stun], [Injured] and [Internal Injury] by 50% for 1 turn.",
+        "desc": "Deals a 4-hit combo to a single back-row target for 35% ATK DMG, and reduces the target's chance to inflict [Force Field], [Stun], [Injured] and [Internal Injury] by 50% for 1 turn.",
         "icon": "/Skill/Awakened Cockroach (SR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -12902,7 +13847,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals a 4-hit combo to a single back-row target for 40% ATK (+2) DMG, and reduces the target's chance to inflict [Force Field], [Stun], [Injured] and [Internal Injury] by 50% for 1 turn.",
+        "desc": "Deals a 4-hit combo to a single back-row target for 40% ATK DMG, and reduces the target's chance to inflict [Force Field], [Stun], [Injured] and [Internal Injury] by 50% for 1 turn.",
         "keepsakeIcon": "/Keepsake/Awakened Cockroach (SR)/Keepsake_SR.png",
         "icon": "/Skill/Awakened Cockroach (SR)/Skill_ult.png",
         "type": "Ultimate",
@@ -13135,7 +14080,7 @@
     ],
     "effects": [
       {
-        "term": "[Truy Kích]",
+        "term": "[Follow-up]",
         "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
       }
     ],
@@ -13183,7 +14128,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Strikes each enemy in the entire row with a 4-hit combo, dealing 30% ATK(+2) DMG per hit, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 80% ATK).",
+        "desc": "Strikes each enemy in the entire row with a 4-hit combo, dealing 30% ATK DMG per hit, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 80% ATK).",
         "icon": "/Skill/Blue Fire (SR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -13192,7 +14137,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Strikes each enemy in the entire row with a 4-hit combo, dealing 30% ATK(+2) DMG per hit, with a 100% chance to inflict [Burn] on the main target and a 50% chance on enemies in the main target's row for 2 turns (DoT equal to 80% ATK).",
+        "desc": "Strikes each enemy in the entire row with a 4-hit combo, dealing 30% ATK DMG per hit, with a 100% chance to inflict [Burn] on the main target and a 50% chance on enemies in the main target's row for 2 turns (DoT equal to 80% ATK).",
         "keepsakeIcon": "/Keepsake/Blue Fire (SR)/Keepsake_SR.png",
         "icon": "/Skill/Blue Fire (SR)/Skill_ult.png",
         "type": "Ultimate",
@@ -13229,7 +14174,7 @@
     ],
     "effects": [
       {
-        "term": "[Thiêu Đốt]",
+        "term": "[Burn]",
         "desc": "Continuous fire damage over time to the target."
       }
     ],
@@ -13372,7 +14317,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Strikes a single target with 3 combo hits, dealing 180% ATK (+2) DMG, with a 100% chance to inflict [Field] on the target for 1 turn (before acting, takes DoT equal to 60% ATK, with a 50% chance to penetrate immunity effects).",
+        "desc": "Strikes a single target with 3 combo hits, dealing 180% ATK DMG, with a 100% chance to inflict [Field] on the target for 1 turn (before acting, takes DoT equal to 60% ATK, with a 50% chance to penetrate immunity effects).",
         "icon": "/Skill/Butterfly DX (SR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -13381,7 +14326,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Strikes a single target with 3 combo hits, dealing 180% ATK (+2) DMG, with a 100% chance to inflict [Field] on the target for 1 turn (before acting, takes DoT equal to 70% ATK, with a 50% chance to penetrate immunity effects).",
+        "desc": "Strikes a single target with 3 combo hits, dealing 180% ATK DMG, with a 100% chance to inflict [Field] on the target for 1 turn (before acting, takes DoT equal to 70% ATK, with a 50% chance to penetrate immunity effects).",
         "icon": "/Skill/Butterfly DX (SR)/Skill_ult.png",
         "keepsakeIcon": "/Keepsake/Butterfly DX (SR)/Keepsake_SR.png",
         "type": "Ultimate",
@@ -13559,7 +14504,7 @@
     "skills": [
       {
         "name": "Basic",
-        "desc": "Attacks a single target with 3 combo strikes for 40% ATK (+3) DMG.",
+        "desc": "Attacks a single target with 3 combo strikes for 40% ATK DMG.",
         "icon": "/Skill/Death Gatling (SR)/Skill_base.png",
         "type": "Basic",
         "keepsakeIcon": null,
@@ -13568,7 +14513,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Attacks each enemy in the entire row with 5 combo strikes for 50% ATK (+2) DMG, with a 75% chance to inflict [Shatter] on the main target for 2 turn(s) (reduces DMG RED. Rate by 35%), and a 75% chance to inflict [Shatter] on the remaining targets in the same row for 2 turn(s) (reduces DMG RED. Rate by 30%).",
+        "desc": "Attacks each enemy in the entire row with 5 combo strikes for 50% ATK DMG, with a 75% chance to inflict [Shatter] on the main target for 2 turn(s) (reduces DMG RED. Rate by 35%), and a 75% chance to inflict [Shatter] on the remaining targets in the same row for 2 turn(s) (reduces DMG RED. Rate by 30%).",
         "icon": "/Skill/Death Gatling (SR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -13577,7 +14522,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Attacks each enemy in the entire row with 5 combo strikes for 55% ATK (+2) DMG, with a 100% chance to inflict [Shatter] on the main target for 2 turn(s) (reduces DMG RED. Rate by 35%), and a 100% chance to inflict [Shatter] on the remaining targets in the same row for 2 turn(s) (reduces DMG RED. Rate by 30%).",
+        "desc": "Attacks each enemy in the entire row with 5 combo strikes for 55% ATK DMG, with a 100% chance to inflict [Shatter] on the main target for 2 turn(s) (reduces DMG RED. Rate by 35%), and a 100% chance to inflict [Shatter] on the remaining targets in the same row for 2 turn(s) (reduces DMG RED. Rate by 30%).",
         "keepsakeIcon": "/Keepsake/Death Gatling (SR)/Keepsake_SR.png",
         "icon": "/Skill/Death Gatling (SR)/Skill_ult.png",
         "type": "Ultimate",
@@ -13926,7 +14871,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals 27% ATK (+3) damage to all enemies in 3 hit combos, with a 100% chance to inflict [Injured] on the main target for 2 turns (when attacked, adds Injury damage equal to 50% ATK).",
+        "desc": "Deals 27% ATK damage to all enemies in 3 hit combos, with a 100% chance to inflict [Injured] on the main target for 2 turns (when attacked, adds Injury damage equal to 50% ATK).",
         "icon": "/Skill/Fukegao (SR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -13935,7 +14880,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals 27% ATK (+3) damage to all enemies in 3 hit combos, with a 100% chance to inflict [Injured] on the main target and a 50% chance to inflict it on the main target's row for 2 turns (when attacked, adds Injury damage equal to 50% ATK).",
+        "desc": "Deals 27% ATK damage to all enemies in 3 hit combos, with a 100% chance to inflict [Injured] on the main target and a 50% chance to inflict it on the main target's row for 2 turns (when attacked, adds Injury damage equal to 50% ATK).",
         "icon": "/Skill/Fukegao (SR)/Skill_ult.png",
         "keepsakeIcon": "/Keepsake/Fukegao (SR)/Keepsake_SR.png",
         "type": "Ultimate",
@@ -14019,7 +14964,7 @@
     "skills": [
       {
         "name": "Basic",
-        "desc": "Deals 5 combo strikes to a single target for 20% ATK (+2) DMG each.",
+        "desc": "Deals 5 combo strikes to a single target for 20% ATK DMG each.",
         "icon": "/Skill/Genos (SR)/Skill_base.png",
         "type": "Basic",
         "keepsakeIcon": null,
@@ -14028,7 +14973,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals 4 combo strikes to each enemy in the entire row for 35% ATK (+2) DMG each, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 50% ATK).",
+        "desc": "Deals 4 combo strikes to each enemy in the entire row for 35% ATK DMG each, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 50% ATK).",
         "icon": "/Skill/Genos (SR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -14037,7 +14982,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals 4 combo strikes to each enemy in the entire row for 35% ATK (+2) DMG each, with a 100% chance to inflict [Burn] on the main target and a 50% chance to inflict [Burn] on enemies in the main target's column, for 2 turns (DoT equal to 50% ATK).",
+        "desc": "Deals 4 combo strikes to each enemy in the entire row for 35% ATK DMG each, with a 100% chance to inflict [Burn] on the main target and a 50% chance to inflict [Burn] on enemies in the main target's column, for 2 turns (DoT equal to 50% ATK).",
         "keepsakeIcon": "/Keepsake/Genos (SR)/Keepsake_SR.png",
         "icon": "/Skill/Genos (SR)/Skill_ult.png",
         "type": "Ultimate",
@@ -14074,7 +15019,7 @@
     ],
     "effects": [
       {
-        "term": "[Thiêu Đốt]",
+        "term": "[Burn]",
         "desc": "Continuous fire damage over time to the target."
       }
     ],
@@ -14123,7 +15068,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals 16% ATK (+2) damage to all enemies in a 5-hit combo, with a 100% chance to inflict [Collapse] on 2 random targets for 2 turns (DMG reduction rate lowered by 30%).",
+        "desc": "Deals 16% ATK damage to all enemies in a 5-hit combo, with a 100% chance to inflict [Collapse] on 2 random targets for 2 turns (DMG reduction rate lowered by 30%).",
         "icon": "/Skill/Golden Ball (SR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -14132,7 +15077,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals 16% ATK (+2) damage to all enemies in a 5-hit combo, with a 100% chance to inflict [Collapse] on 3 random targets for 2 turns (DMG reduction rate lowered by 30%).",
+        "desc": "Deals 16% ATK damage to all enemies in a 5-hit combo, with a 100% chance to inflict [Collapse] on 3 random targets for 2 turns (DMG reduction rate lowered by 30%).",
         "keepsakeIcon": "/Keepsake/Golden Ball (SR)/Keepsake_SR.png",
         "icon": "/Skill/Golden Ball (SR)/Skill_ult.png",
         "type": "Ultimate",
@@ -14288,7 +15233,7 @@
     "skills": [
       {
         "name": "Basic",
-        "desc": "Deals 40% ATK (+3) DMG to a single target in a 3-hit combo.",
+        "desc": "Deals 40% ATK DMG to a single target in a 3-hit combo.",
         "icon": "/Skill/Hamukichi (SR)/Skill_base.png",
         "type": "Basic",
         "keepsakeIcon": null,
@@ -14455,7 +15400,7 @@
     "skills": [
       {
         "name": "Basic",
-        "desc": "Deals a 3-hit combo to a single target for 35% ATK (+3) damage.",
+        "desc": "Deals a 3-hit combo to a single target for 35% ATK damage.",
         "icon": "/Skill/Hellish Blizzard (SR)/Skill_base.png",
         "type": "Basic",
         "keepsakeIcon": null,
@@ -14464,7 +15409,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals a 5-hit combo to all enemies for 17% ATK (+2) damage. If self is in the [Berserk] state, restore HP.",
+        "desc": "Deals a 5-hit combo to all enemies for 17% ATK damage. If self is in the [Berserk] state, restore HP.",
         "icon": "/Skill/Hellish Blizzard (SR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -14473,7 +15418,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals a 5-hit combo to all enemies for 17% ATK (+2) damage, and directly restores own HP. At the same time, attacks from surrounding allies ignore 20% DEF for a duration.",
+        "desc": "Deals a 5-hit combo to all enemies for 17% ATK damage, and directly restores own HP. At the same time, attacks from surrounding allies ignore 20% DEF for a duration.",
         "keepsakeIcon": "/Keepsake/Hellish Blizzard (SR)/Keepsake_SR.png",
         "icon": "/Skill/Hellish Blizzard (SR)/Skill_ult.png",
         "type": "Ultimate",
@@ -14700,7 +15645,7 @@
     "skills": [
       {
         "name": "Basic",
-        "desc": "Attacks a single target with 3 combo strikes for 40% ATK DMG (+3).",
+        "desc": "Attacks a single target with 3 combo strikes for 40% ATK DMG.",
         "icon": "/Skill/Lightning Genji (SR)/Skill_base.png",
         "type": "Basic",
         "keepsakeIcon": null,
@@ -14709,7 +15654,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Attacks targets in a cross-shaped area with 3 combo strikes for 50% ATK DMG (+3). Also grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 30% of own HP).",
+        "desc": "Attacks targets in a cross-shaped area with 3 combo strikes for 50% ATK DMG. Also grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 30% of own HP).",
         "icon": "/Skill/Lightning Genji (SR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -14718,7 +15663,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Attacks targets in a cross-shaped area with 3 combo strikes for 55% ATK DMG (+3). Also grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 35% of own HP).",
+        "desc": "Attacks targets in a cross-shaped area with 3 combo strikes for 55% ATK DMG. Also grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 35% of own HP).",
         "keepsakeIcon": "/Keepsake/Lightning Genji (SR)/Keepsake_SR.png",
         "icon": "/Skill/Lightning Genji (SR)/Skill_ult.png",
         "type": "Ultimate",
@@ -14843,7 +15788,7 @@
         "desc": "The stun-type control effect prevents the target from taking action during the duration."
       },
       {
-        "term": "[Thiêu Đốt]",
+        "term": "[Burn]",
         "desc": "Continuous fire damage over time to the target."
       }
     ],
@@ -14927,7 +15872,7 @@
     ],
     "effects": [
       {
-        "term": "[Thiêu Đốt]",
+        "term": "[Burn]",
         "desc": "Continuous fire damage over time to the target."
       }
     ],
@@ -15130,7 +16075,7 @@
     "skills": [
       {
         "name": "Basic",
-        "desc": "Deals 34% ATK (+3) DMG to a single target in a 3-hit combo. Has a 100% chance to inflict [Internal Injury] on the target (when struck, deals additional Internal Injury DMG equal to 100% of Ringring's ATK; the effect is consumed once triggered).",
+        "desc": "Deals 34% ATK DMG to a single target in a 3-hit combo. Has a 100% chance to inflict [Internal Injury] on the target (when struck, deals additional Internal Injury DMG equal to 100% of Ringring's ATK; the effect is consumed once triggered).",
         "icon": "/Skill/Rinrin (SR)/Skill_base.png",
         "type": "Basic",
         "keepsakeIcon": null,
@@ -15139,7 +16084,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals 35% ATK (+2) DMG to a single target in a 4-hit combo, and restores HP equal to 100% ATK to all allies.",
+        "desc": "Deals 35% ATK DMG to a single target in a 4-hit combo, and restores HP equal to 100% ATK to all allies.",
         "icon": "/Skill/Rinrin (SR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -15148,7 +16093,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals 35% ATK (+2) DMG to a single target in a 4-hit combo, and restores HP equal to 120% ATK to all allies.",
+        "desc": "Deals 35% ATK DMG to a single target in a 4-hit combo, and restores HP equal to 120% ATK to all allies.",
         "icon": "/Skill/Rinrin (SR)/Skill_ult.png",
         "keepsakeIcon": "/Keepsake/Rinrin (SR)/Keepsake_SR.png",
         "type": "Ultimate",
@@ -15225,7 +16170,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals 35% ATK (+2) damage to each enemy in the entire column in 4 hit combos, with a 50% chance to [Stun] the main target for 1 turn (cannot take actions; only 4 characters on each side can be in a stun-type state at the same time).",
+        "desc": "Deals 35% ATK damage to each enemy in the entire column in 4 hit combos, with a 50% chance to [Stun] the main target for 1 turn (cannot take actions; only 4 characters on each side can be in a stun-type state at the same time).",
         "icon": "/Skill/Sky King (SR)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -15234,7 +16179,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals 35% ATK (+2) damage to each enemy in the entire column in 4 hit combos, with a 50% chance to [Stun] the main target for 1 turn (cannot take actions; only 4 characters on each side can be in a stun-type state at the same time), and raises the Effect Resistance of allies in the same column by 40% for 2 turns.",
+        "desc": "Deals 35% ATK damage to each enemy in the entire column in 4 hit combos, with a 50% chance to [Stun] the main target for 1 turn (cannot take actions; only 4 characters on each side can be in a stun-type state at the same time), and raises the Effect Resistance of allies in the same column by 40% for 2 turns.",
         "keepsakeIcon": "/Keepsake/Sky King (SR)/Keepsake_SR.png",
         "icon": "/Skill/Sky King (SR)/Skill_ult.png",
         "type": "Ultimate",
@@ -15438,7 +16383,7 @@
         "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
       },
       {
-        "term": "[Truy Kích]",
+        "term": "[Follow-up]",
         "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
       }
     ],
@@ -15685,7 +16630,7 @@
     "classIcon": "/Class/Tiger.png",
     "effects": [
       {
-        "term": "[Truy Kích]",
+        "term": "[Follow-up]",
         "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
       }
     ],
@@ -15797,7 +16742,7 @@
     "skills": [
       {
         "name": "Basic",
-        "desc": "Strikes a single target with a 5-hit combo, dealing 18% ATK(+2) DMG.",
+        "desc": "Strikes a single target with a 5-hit combo, dealing 18% ATK DMG.",
         "icon": "/Skill/Bunbun Man (R)/Skill_base.png",
         "type": "Basic",
         "keepsakeIcon": null,
@@ -15806,7 +16751,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Strikes a single target with a 5-hit combo, dealing 38% ATK(+2) DMG. Has a 100% chance to increase self ATK by 10% for 2 turns.",
+        "desc": "Strikes a single target with a 5-hit combo, dealing 38% ATK DMG. Has a 100% chance to increase self ATK by 10% for 2 turns.",
         "icon": "/Skill/Bunbun Man (R)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -15815,7 +16760,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Strikes a single target with a 5-hit combo, dealing 38% ATK(+2) DMG. Has a 100% chance to increase self ATK% for 2 turns.",
+        "desc": "Strikes a single target with a 5-hit combo, dealing 38% ATK DMG. Has a 100% chance to increase self ATK% for 2 turns.",
         "keepsakeIcon": "/Keepsake/Bunbun Man (R)/Keepsake_R.png",
         "icon": "/Skill/Bunbun Man (R)/Skill_ult.png",
         "type": "Ultimate",
@@ -15880,7 +16825,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Strikes a single target with a 5-hit combo dealing 38% ATK(+2) DMG, and has a 100% chance to reduce DMG taken by self by 10% for 2 turns.",
+        "desc": "Strikes a single target with a 5-hit combo dealing 38% ATK DMG, and has a 100% chance to reduce DMG taken by self by 10% for 2 turns.",
         "icon": "/Skill/Crablante (R)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -15889,7 +16834,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Strikes a single target with a 5-hit combo dealing 38% ATK(+2) DMG. Has a 100% chance to reduce DMG taken by self% for 2 turns.",
+        "desc": "Strikes a single target with a 5-hit combo dealing 38% ATK DMG. Has a 100% chance to reduce DMG taken by self% for 2 turns.",
         "icon": "/Skill/Crablante (R)/Skill_ult.png",
         "keepsakeIcon": "/Keepsake/Crablante (R)/Keepsake_R.png",
         "type": "Ultimate",
@@ -16126,7 +17071,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals a 5-hit combo of 38% ATK (+2) DMG to a single target. Each hit has a 50% chance to deal 10% ATK DMG to enemies around the primary target.",
+        "desc": "Deals a 5-hit combo of 38% ATK DMG to a single target. Each hit has a 50% chance to deal 10% ATK DMG to enemies around the primary target.",
         "icon": "/Skill/Eyelashes (R)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -16135,7 +17080,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals a 5-hit combo of 38% ATK (+2) DMG to a single target. Each hit has a 50% chance to deal 15% ATK DMG to enemies around the primary target.",
+        "desc": "Deals a 5-hit combo of 38% ATK DMG to a single target. Each hit has a 50% chance to deal 15% ATK DMG to enemies around the primary target.",
         "keepsakeIcon": "/Keepsake/Eyelashes (R)/Keepsake_R.png",
         "icon": "/Skill/Eyelashes (R)/Skill_ult.png",
         "type": "Ultimate",
@@ -16534,7 +17479,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals 5 consecutive strikes to all targets for 24% ATK (+2) Direct Damage, and increases the DMG reflection rate of all allies%.",
+        "desc": "Deals 5 consecutive strikes to all targets for 24% ATK Direct Damage, and increases the DMG reflection rate of all allies%.",
         "icon": "/Skill/Maiko Plasma (R)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -16543,7 +17488,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals 5 consecutive strikes to all targets for 26% ATK (+2) Direct Damage, and increases the DMG reflection rate of all allies by 25%.",
+        "desc": "Deals 5 consecutive strikes to all targets for 26% ATK Direct Damage, and increases the DMG reflection rate of all allies by 25%.",
         "keepsakeIcon": "/Keepsake/Maiko Plasma (R)/Keepsake_R.png",
         "icon": "/Skill/Maiko Plasma (R)/Skill_ult.png",
         "type": "Ultimate",
@@ -16932,7 +17877,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals a 5-hit combo of 22% ATK (+2) DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 10% ATK extra DMG.",
+        "desc": "Deals a 5-hit combo of 22% ATK DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 10% ATK extra DMG.",
         "icon": "/Skill/Triple-Staff Lilly (R)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -16941,7 +17886,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals a 5-hit combo of 22% ATK (+2) DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 20% ATK extra DMG.",
+        "desc": "Deals a 5-hit combo of 22% ATK DMG to each enemy in the entire row. Each hit has a 50% chance to deal an additional 20% ATK extra DMG.",
         "keepsakeIcon": "/Keepsake/Triple-Staff Lilly (R)/Keepsake_R.png",
         "icon": "/Skill/Triple-Staff Lilly (R)/Skill_ult.png",
         "type": "Ultimate",
@@ -17317,7 +18262,7 @@
     "skills": [
       {
         "name": "Basic",
-        "desc": "Strike a single target with a 4-hit combo, dealing 20% ATK (+2) damage.",
+        "desc": "Strike a single target with a 4-hit combo, dealing 20% ATK damage.",
         "icon": "/Skill/Clone (N)/Skill_base.png",
         "type": "Basic",
         "keepsakeIcon": null,
@@ -17326,7 +18271,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Strike a single target with a 4-hit combo, dealing 45% ATK (+2) damage.",
+        "desc": "Strike a single target with a 4-hit combo, dealing 45% ATK damage.",
         "icon": "/Skill/Clone (N)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -17335,7 +18280,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Strike a single target with a 4-hit combo, dealing 50% ATK (+2) damage.",
+        "desc": "Strike a single target with a 4-hit combo, dealing 50% ATK damage.",
         "icon": "/Skill/Clone (N)/Skill_ult.png",
         "keepsakeIcon": "/Keepsake/Clone (N)/Keepsake_N.png",
         "type": "Ultimate",
@@ -17488,7 +18433,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Strikes the entire target column with a 3-hit combo for 40% ATK (+3) damage, with a 100% chance to inflict [Corrosion] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
+        "desc": "Strikes the entire target column with a 3-hit combo for 40% ATK damage, with a 100% chance to inflict [Corrosion] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
         "icon": "/Skill/Deep Sea Invader (N)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -17497,7 +18442,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Strikes the entire target column with a 3-hit combo for 45% ATK (+3) damage, with a 100% chance to inflict [Corrosion] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
+        "desc": "Strikes the entire target column with a 3-hit combo for 45% ATK damage, with a 100% chance to inflict [Corrosion] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
         "keepsakeIcon": "/Keepsake/Deep Sea Invader (N)/Keepsake_N.png",
         "icon": "/Skill/Deep Sea Invader (N)/Skill_ult.png",
         "type": "Ultimate",
@@ -17567,7 +18512,7 @@
       },
       {
         "name": "Ultimate",
-        "desc": "Deals 33% ATK(+3) DMG to the entire row with a 3-hit combo. Has a 100% chance to inflict [Corruption] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
+        "desc": "Deals 33% ATK DMG to the entire row with a 3-hit combo. Has a 100% chance to inflict [Corruption] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
         "icon": "/Skill/Deep Sea Ravager (N)/Skill_ult.png",
         "type": "Ultimate",
         "keepsakeIcon": null,
@@ -17576,7 +18521,7 @@
       },
       {
         "name": "Ultra-Ultimate",
-        "desc": "Deals 40% ATK(+3) DMG to the entire row with a 3-hit combo. Has a 100% chance to inflict [Corruption] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
+        "desc": "Deals 40% ATK DMG to the entire row with a 3-hit combo. Has a 100% chance to inflict [Corruption] on the main target for 2 turns (DMG reduction rate lowered by 30%).",
         "keepsakeIcon": "/Keepsake/Deep Sea Ravager (N)/Keepsake_N.png",
         "icon": "/Skill/Deep Sea Ravager (N)/Skill_ult.png",
         "type": "Ultimate",

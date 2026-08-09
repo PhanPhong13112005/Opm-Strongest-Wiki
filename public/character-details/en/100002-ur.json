@@ -102,28 +102,32 @@
   ],
   "effects": [
     {
-      "term": "[Energy Cut]",
-      "desc": "Debuff applies to all enemies when their Energy is reduced, blocking or destroying their Energy, making them unable to use their ultimate."
+      "term": "[Specialized HP]",
+      "desc": "A specialized HP pool gained separately from normal HP."
+    },
+    {
+      "term": "[Specialized Acceleration]",
+      "desc": "Increases SPD or raises an ally’s SPD to a specified percentage of Sonic’s SPD. If the ally’s original SPD is higher, it remains unchanged."
+    },
+    {
+      "term": "[Panic]",
+      "desc": "An Energy-related negative effect that cannot trigger during the same round after Sonic successfully removes Energy."
     },
     {
       "term": "[Encourage]",
-      "desc": "Power up at the beginning of each round for several rounds."
+      "desc": "Grants Energy to allies at the start of each round for a specified number of rounds."
     },
     {
-      "term": "[Dodge]",
-      "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+      "term": "[Specialized Burn]",
+      "desc": "Deals ATK-based DoT DMG during the next 3 actions, then disappears."
     },
     {
-      "term": "[Hyper Speed]",
-      "desc": "Speed ​​buff that while in effect allows the bearer and up to 6 allies to act against and overcome enemies with lower speed."
+      "term": "[True DMG]",
+      "desc": "Damage that ignores applicable conventional defensive effects."
     },
     {
-      "term": "[Smart DoT]",
-      "desc": "Damage over time effect, dealing ST-based damage to target over 3 turns."
-    },
-    {
-      "term": "[Spec. Speed Up]",
-      "desc": "Increases ally's speed to near deployer's speed (remains the same if ally is already faster)."
+      "term": "[Instant DMG Evasion]",
+      "desc": "Gives a chance for Direct DMG, True DMG, Charge DMG, and Berserk DMG to deal only 1 point of DMG."
     }
   ],
   "keepsakeIcon": "/Keepsake/Sonic V1 (UR)/Keepsake_UR.png",

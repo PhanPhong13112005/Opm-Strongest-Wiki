@@ -103,7 +103,7 @@
   "effects": [
     {
       "term": "[Giận Dữ]",
-      "desc": "Buff tấn công có sát thương tăng theo điều kiện (ví dụ mỗi kẻ địch bị đánh dấu), khuếch đại lượng sát thương loại Cuồng Nộ mà đơn vị gây ra."
+      "desc": "Attack buffs increase damage based on conditions (e.g. each marked enemy), amplifying the amount of Fury-type damage the unit deals."
     }
   ],
   "keepsakeIcon": "/Keepsake/Monsterized Bakuzan (SSRplus)/Keepsake_SSRplus.png",

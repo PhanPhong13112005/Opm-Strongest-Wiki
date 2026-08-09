@@ -101,24 +101,76 @@
   ],
   "effects": [
     {
+      "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
+      "desc": "Một loại sát thương trực tiếp đặc biệt chỉ bị ảnh hưởng bởi công cụ sửa đổi DMG tiên tiến."
+    },
+    {
+      "term": "[Khả Năng Né Tránh Chuyên Biệt]",
+      "desc": "Một hiệu ứng phòng thủ đặc biệt có thể bị bỏ qua một phần bởi một số kỹ năng nhất định."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm sát thương nhận được từ các đòn tấn công không quan trọng."
+    },
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Ngăn chặn đơn vị bị ảnh hưởng bị đánh bại trong các điều kiện cụ thể."
+    },
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Bất Khuất]."
+    },
+    {
       "term": "[Gây Mù]",
-      "desc": "Giảm 20% Arena DMG Free, không thể dùng chiêu cuối, không thể truy kích. Tối đa 2 lớp; tính là hiệu ứng loại choáng."
+      "desc": "Giảm [Giảm Sát Thương Đấu Trường], ngăn việc sử dụng Ultimates và vô hiệu hóa Theo dõi. Có thể xếp chồng tối đa 2 lần và được coi là [Hiệu Ứng Choáng]."
     },
     {
-      "term": "[Hồi Sinh]",
-      "desc": "Cơ chế hồi sinh/trở lại gắn với sự sống của đồng minh, đưa đơn vị trở lại trận đấu."
+      "term": "[Giảm Sát Thương Đấu Trường]",
+      "desc": "Giảm sát thương nhận được trong các trận đấu Arena."
     },
     {
-      "term": "[Liên Kết]",
-      "desc": "Gắn sự sống của người triển khai với một đồng minh; không thể bị hạ chừng nào đồng minh đó còn sống."
+      "term": "[Choáng/Choáng Chuyên Biệt]",
+      "desc": "Một loại hiệu ứng điều khiển nhằm ngăn chặn hoặc hạn chế một đơn vị hành động."
     },
     {
-      "term": "[Truy Kích]",
-      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+      "term": "[Giận Dữ]",
+      "desc": "Một cải tiến tấn công được cấp cho tất cả các đồng minh bởi Ultra-Tuyệt Kĩ."
+    },
+    {
+      "term": "[Phá Giáp]",
+      "desc": "Một hiệu ứng tấn công được cấp cho tất cả đồng minh bởi Ultra-Tuyệt Kĩ."
+    },
+    {
+      "term": "[Choáng]",
+      "desc": "Ngăn chặn đơn vị bị ảnh hưởng thực hiện hành động trong thời gian hiệu ứng."
+    },
+    {
+      "term": "[Choáng Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Choáng]."
+    },
+    {
+      "term": "[Sợ Hãi]",
+      "desc": "Một hiệu ứng khống chế có thể bị loại bỏ khỏi đồng minh bởi Nội tại này."
+    },
+    {
+      "term": "[Câm Lặng]",
+      "desc": "Ngăn chặn đơn vị bị ảnh hưởng sử dụng Tuyệt Kĩ của nó."
+    },
+    {
+      "term": "[Liên Kết Sinh Mệnh]",
+      "desc": "Hiệu ứng liên kết có thể ngăn chặn hoặc trì hoãn việc đơn vị được liên kết bị đánh bại trong khi đồng minh được liên kết của nó vẫn còn sống."
     },
     {
       "term": "[Hồi Phục Chuyên Biệt]",
-      "desc": "Khi vào trận, vĩnh viễn giảm sát thương; khi còn đồng minh, hồi đầy máu và tiếp tục chiến đấu một số lần giới hạn."
+      "desc": "Sau một đòn chí mạng, phục hồi 100% HP trước hành động tiếp theo trong khi đồng minh vẫn ở lại, cấp Sức tấn công có thể xếp chồng và HP tối đa, đồng thời giảm vĩnh viễn DMG phải chịu."
+    },
+    {
+      "term": "[Tái Chiến]",
+      "desc": "Cho phép đơn vị bị đánh bại quay trở lại trận chiến trong các điều kiện được chỉ định."
+    },
+    {
+      "term": "[Truy Kích Tụ Lực]",
+      "desc": "Một đòn tấn công Truy Kích đặc biệt được tung ra với một tỷ lệ phần trăm sức mạnh kỹ năng nhất định."
     }
   ],
   "keepsakeIcon": "/Keepsake/Zombieman (URplus)/Keepsake_URplus.png",

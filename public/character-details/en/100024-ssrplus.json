@@ -115,24 +115,24 @@
   ],
   "effects": [
     {
-      "term": "[Energy Cut]",
-      "desc": "Debuff applies to all enemies when their Energy is reduced, blocking or destroying their Energy, making them unable to use their ultimate."
+      "term": "[Combo]",
+      "desc": "Causes Bomb to perform the same type of skill after Silverfang attacks. A Basic [Combo] attacks 1 random target, while an Ultimate [Combo] attacks all enemies with 3 consecutive strikes."
     },
     {
-      "term": "[Mark]",
-      "desc": "Mark a unit, unlocking a raid condition or bonus effect associated with the mark."
+      "term": "[Internal Injury]",
+      "desc": "When the affected target is attacked, it takes additional DMG based on Silverfang’s ATK. The effect disappears after triggering."
+    },
+    {
+      "term": "[Instant DMG Evasion]",
+      "desc": "Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG to 1 point of DMG."
+    },
+    {
+      "term": "[Fear]",
+      "desc": "An Energy-related negative effect associated with reducing or sealing the enemy team’s Energy."
     },
     {
       "term": "[Insta-Dodge]",
-      "desc": "Floors that each cause a direct, additional, charge, or berserk attack to only deal 1 damage."
-    },
-    {
-      "term": "[Collapse (Duelist)]",
-      "desc": "Unfavorable effects cause delayed damage, storing additional damage (600-800% of Gouketsu's ST), releasing when the target is hit or when [Detonate]."
-    },
-    {
-      "term": "[Cleanse]",
-      "desc": "Removes existing effects/buffs on all enemies."
+      "desc": "A battle resource reduced by 250 for each enemy affected by [Internal Injury] when Bomb performs an Ultimate [Combo]."
     }
   ],
   "classLevel": "Class_SS",

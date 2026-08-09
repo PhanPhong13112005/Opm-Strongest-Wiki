@@ -101,24 +101,76 @@
   ],
   "effects": [
     {
+      "term": "[Specialized Direct DMG]",
+      "desc": "A specialized type of direct damage affected only by advanced DMG modifiers."
+    },
+    {
+      "term": "[Specialized Evasion]",
+      "desc": "A specialized defensive effect that can be partially ignored by certain skills."
+    },
+    {
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "Reduces damage received from non-critical attacks."
+    },
+    {
+      "term": "[Unyielding]",
+      "desc": "Prevents the affected unit from being defeated under specific conditions."
+    },
+    {
+      "term": "[Specialized Unyielding]",
+      "desc": "A specialized form of [Unyielding]."
+    },
+    {
       "term": "[Blind]",
-      "desc": "20% off Arena DMG Free, can't use ultimate, can't attack. Maximum 2 layers; Counts as a stun type effect."
+      "desc": "Reduces [Arena DMG Reduction], prevents the use of Ultimates, and disables Follow-Ups. Can stack up to 2 times and is treated as a [Stun-type effect]."
     },
     {
-      "term": "[Revive]",
-      "desc": "The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match."
+      "term": "[Arena DMG Reduction]",
+      "desc": "Reduces damage received in Arena battles."
     },
     {
-      "term": "[Link]",
-      "desc": "Attach deployer's life to an ally; cannot be defeated as long as that ally is alive."
+      "term": "[Stun/Specialized Stun]",
+      "desc": "A control-effect category that prevents or restricts a unit from acting."
     },
     {
-      "term": "[Truy Kích]",
-      "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+      "term": "[Berserk]",
+      "desc": "An offensive enhancement granted to all allies by the Ultra-Ultimate."
     },
     {
-      "term": "[Spec. Regeneration]",
-      "desc": "When entering battle, permanently reduces damage; While allies remain, heal to full health and continue fighting a limited number of times."
+      "term": "[Break Armor]",
+      "desc": "An offensive effect granted to all allies by the Ultra-Ultimate."
+    },
+    {
+      "term": "[Stun]",
+      "desc": "Prevents the affected unit from taking action during the effect's duration."
+    },
+    {
+      "term": "[Specialized Stun]",
+      "desc": "A specialized form of [Stun]."
+    },
+    {
+      "term": "[Fear]",
+      "desc": "A control effect that can be removed from allies by this Passive."
+    },
+    {
+      "term": "[Silence]",
+      "desc": "Prevents the affected unit from using its Ultimate."
+    },
+    {
+      "term": "[Life Link]",
+      "desc": "A linking effect that can prevent or delay a linked unit from being defeated while its linked ally remains alive."
+    },
+    {
+      "term": "[Specialized Regeneration]",
+      "desc": "After a fatal hit, restores 100% HP before the next action while an ally remains, grants stackable Attack and Max HP, and permanently reduces DMG taken."
+    },
+    {
+      "term": "[Re-battle]",
+      "desc": "Allows a defeated unit to return to battle under specified conditions."
+    },
+    {
+      "term": "[Charged Pursuit]",
+      "desc": "A special follow-up attack launched with a specified percentage of skill strength."
     }
   ],
   "keepsakeIcon": "/Keepsake/Zombieman (URplus)/Keepsake_URplus.png",

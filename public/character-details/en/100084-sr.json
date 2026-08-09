@@ -23,7 +23,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 27% ATK (+3) damage to all enemies in 3 hit combos, with a 100% chance to inflict [Injured] on the main target for 2 turns (when attacked, adds Injury damage equal to 50% ATK).",
+      "desc": "Deals 27% ATK damage to all enemies in 3 hit combos, with a 100% chance to inflict [Injured] on the main target for 2 turns (when attacked, adds Injury damage equal to 50% ATK).",
       "icon": "/Skill/Fukegao (SR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 27% ATK (+3) damage to all enemies in 3 hit combos, with a 100% chance to inflict [Injured] on the main target and a 50% chance to inflict it on the main target's row for 2 turns (when attacked, adds Injury damage equal to 50% ATK).",
+      "desc": "Deals 27% ATK damage to all enemies in 3 hit combos, with a 100% chance to inflict [Injured] on the main target and a 50% chance to inflict it on the main target's row for 2 turns (when attacked, adds Injury damage equal to 50% ATK).",
       "icon": "/Skill/Fukegao (SR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Fukegao (SR)/Keepsake_SR.png",
       "type": "Ultimate",

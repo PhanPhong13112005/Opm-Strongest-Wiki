@@ -14,7 +14,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Strike a single target with a 4-hit combo, dealing 20% ATK (+2) damage.",
+      "desc": "Strike a single target with a 4-hit combo, dealing 20% ATK damage.",
       "icon": "/Skill/Clone (N)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Strike a single target with a 4-hit combo, dealing 45% ATK (+2) damage.",
+      "desc": "Strike a single target with a 4-hit combo, dealing 45% ATK damage.",
       "icon": "/Skill/Clone (N)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Strike a single target with a 4-hit combo, dealing 50% ATK (+2) damage.",
+      "desc": "Strike a single target with a 4-hit combo, dealing 50% ATK damage.",
       "icon": "/Skill/Clone (N)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Clone (N)/Keepsake_N.png",
       "type": "Ultimate",

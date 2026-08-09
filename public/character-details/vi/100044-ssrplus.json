@@ -114,8 +114,20 @@
   ],
   "effects": [
     {
-      "term": "[Né Tức Thì]",
-      "desc": "Các tầng mà mỗi tầng khiến một đòn đánh trực tiếp, bổ sung, charge hoặc berserk chỉ gây 1 sát thương."
+      "term": "[Tiến Hóa]",
+      "desc": "Ngay lập tức xóa trạng thái [Bất Khuất] của mục tiêu và Bỏ qua trạng thái DMG. Nội tại của Hiệp Sĩ Cơ Động có thể kích hoạt hiệu ứng này mà không có giới hạn kích hoạt."
+    },
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Hiệu ứng sinh tồn giúp đơn vị bị ảnh hưởng không bị đánh bại trong các điều kiện cụ thể."
+    },
+    {
+      "term": "[Né Sát Thương Tức Thì]",
+      "desc": "Khiến Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG chỉ gây ra 1 điểm DMG."
+    },
+    {
+      "term": "[Phòng Hộ Chuyên Biệt]",
+      "desc": "Phủ định đã nhận được DMG và ghi đè các hiệu ứng Extra HP. Tổng số tiền của nó không thể vượt quá 15 lần HP ban đầu của thiết bị. Hiệu ứng cùng loại có thể xếp chồng lên nhau."
     }
   ],
   "classLevel": "Class_SS",

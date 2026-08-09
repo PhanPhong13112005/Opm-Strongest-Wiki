@@ -31,7 +31,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals a 5-hit combo to a single target for 48% ATK (+2) damage, and simultaneously heals all allies for 100% ATK worth of HP.",
+      "desc": "Deals a 5-hit combo to a single target for 48% ATK damage, and simultaneously heals all allies for 100% ATK worth of HP.",
       "icon": "/Skill/Zombieman (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -40,7 +40,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals a 5-hit combo to a single target for 60% ATK (+2) damage, and simultaneously heals all allies for 150% ATK worth of HP.",
+      "desc": "Deals a 5-hit combo to a single target for 60% ATK damage, and simultaneously heals all allies for 150% ATK worth of HP.",
       "icon": "/Skill/Zombieman (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Zombieman (SSR)/Keepsake_SSR.png",
       "type": "Ultimate",

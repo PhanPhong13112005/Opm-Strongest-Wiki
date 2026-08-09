@@ -101,20 +101,28 @@
   ],
   "effects": [
     {
-      "term": "[Bất Khuất]",
-      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+      "term": "[Gia Tốc Chuyên Biệt]",
+      "desc": "Tăng SPD của Zombie Man hoặc tăng SPD của đồng đội lên một tỷ lệ phần trăm nhất định so với SPD của Zombie Man. Nếu SPD ban đầu của họ cao hơn thì nó vẫn không thay đổi."
     },
     {
-      "term": "[Hồi Sinh]",
-      "desc": "Cơ chế hồi sinh/trở lại gắn với sự sống của đồng minh, đưa đơn vị trở lại trận đấu."
+      "term": "[Sợ Hãi Chuyên Biệt]",
+      "desc": "Khóa một lượng Năng lượng nhất định, ghi đè [Sợ Hãi] và khiến kẻ địch bị ảnh hưởng tiêu tốn thêm 1 Năng lượng khi sử dụng Tuyệt Kĩ, bao gồm cả Tuyệt Kĩ truy đuổi."
     },
     {
-      "term": "[Phản Kích]",
-      "desc": "Dấu phản đòn mà số lớp của nó làm tăng dần sát thương trực tiếp truy kích của người dùng lên các kẻ địch bị đánh dấu."
+      "term": "[Sợ Hãi]",
+      "desc": "Hiệu ứng tiêu cực liên quan đến năng lượng bị [Sợ Hãi Chuyên Biệt] ghi đè."
     },
     {
-      "term": "[Tăng Tốc Chuyên Biệt]",
-      "desc": "Tăng tốc độ của đồng minh tới gần tốc độ của người triển khai (giữ nguyên nếu đồng minh đã nhanh hơn)."
+      "term": "[Né Sát Thương Tức Thì]",
+      "desc": "Giảm Sát Thương Trực Tiếp, DMG bổ sung, DMG và Berserk DMG xuống 1 điểm."
+    },
+    {
+      "term": "[Hồi Phục]",
+      "desc": "Sau khi nhận được sát thương kết liễu, khôi phục HP trước hành động tiếp theo và cho phép Zombie Man tiếp tục chiến đấu trong khi vẫn còn ít nhất một đồng đội."
+    },
+    {
+      "term": "[Đột Phá Chuyên Biệt]",
+      "desc": "Ngay lập tức loại bỏ trạng thái Bất khuất hoặc phủ định DMG của mục tiêu và tạm thời tăng ATK của kẻ tấn công cho cuộc tấn công hiện tại."
     }
   ],
   "keepsakeIcon": "/Keepsake/Zombieman (UR)/Keepsake_UR.png",

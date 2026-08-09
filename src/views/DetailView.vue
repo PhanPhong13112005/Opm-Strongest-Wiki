@@ -445,7 +445,7 @@ onBeforeUnmount(() => {
         loading="eager"
         fetchpriority="high"
         decoding="async"
-        class="absolute right-0 bottom-0 h-[90%] w-[60%] lg:w-[50%] max-w-[600px] object-contain object-right-bottom opacity-60 z-0 pointer-events-none drop-shadow-2xl"
+        class="absolute right-0 bottom-0 h-[90%] w-[60%] lg:w-[50%] max-w-[600px] object-contain object-right-bottom opacity-60 z-0 pointer-events-none drop-shadow-2xl animate-detail-float"
         style="mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%), linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); mask-composite: intersect; -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%), linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); -webkit-mask-composite: source-in;"
         :alt="character.name"
       />
@@ -988,5 +988,18 @@ onBeforeUnmount(() => {
 .slide-right-leave-to {
   opacity: 0;
   transform: translateX(30px);
+}
+
+@keyframes detailFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.015);
+  }
+}
+
+.animate-detail-float {
+  animation: detailFloat 4s ease-in-out infinite;
 }
 </style>

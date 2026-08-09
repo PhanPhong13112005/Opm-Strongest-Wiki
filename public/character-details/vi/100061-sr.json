@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 35% ATK (+2) sát thương cho mỗi kẻ địch trong toàn cột trong 4 đòn combo, kèm theo 50% cơ hội khiến [Choáng] trở thành mục tiêu chính trong 1 lượt (không thể thực hiện hành động; chỉ 4 nhân vật mỗi bên có thể ở trạng thái choáng cùng lúc).",
+      "desc": "Gây 35% sát thương ATK cho mỗi kẻ địch trong toàn cột trong 4 đòn combo, với 50% cơ hội tấn công [Choáng] mục tiêu chính trong 1 lượt (không thể thực hiện hành động; chỉ 4 nhân vật mỗi bên có thể ở trạng thái choáng cùng lúc).",
       "icon": "/Skill/Sky King (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 35% ATK (+2) sát thương cho mỗi kẻ địch trong toàn cột trong 4 combo, có 50% cơ hội khiến [Choáng] trở thành mục tiêu chính trong 1 lượt (không thể hành động; chỉ 4 nhân vật mỗi bên có thể ở trạng thái choáng cùng lúc) và tăng Kháng hiệu ứng của đồng minh cùng cột lên 40% trong 2 lượt.",
+      "desc": "Gây 35% sát thương ATK cho mỗi kẻ địch trong toàn cột trong 4 đòn combo, với 50% cơ hội tấn công [Choáng] mục tiêu chính trong 1 lượt (không thể hành động; chỉ 4 nhân vật mỗi bên có thể ở trạng thái choáng cùng lúc) và tăng Kháng hiệu ứng của đồng minh trong cùng cột lên 40% trong 2 lượt.",
       "keepsakeIcon": "/Keepsake/Sky King (SR)/Keepsake_SR.png",
       "icon": "/Skill/Sky King (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -75,7 +75,7 @@
   "effects": [
     {
       "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
     }
   ],
   "keepsakeIcon": "/Keepsake/Sky King (SR)/Keepsake_SR.png",

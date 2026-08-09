@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Attacks a single target with 3 combo strikes for 40% ATK (+3) DMG.",
+      "desc": "Attacks a single target with 3 combo strikes for 40% ATK DMG.",
       "icon": "/Skill/Death Gatling (SR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Attacks each enemy in the entire row with 5 combo strikes for 50% ATK (+2) DMG, with a 75% chance to inflict [Shatter] on the main target for 2 turn(s) (reduces DMG RED. Rate by 35%), and a 75% chance to inflict [Shatter] on the remaining targets in the same row for 2 turn(s) (reduces DMG RED. Rate by 30%).",
+      "desc": "Attacks each enemy in the entire row with 5 combo strikes for 50% ATK DMG, with a 75% chance to inflict [Shatter] on the main target for 2 turn(s) (reduces DMG RED. Rate by 35%), and a 75% chance to inflict [Shatter] on the remaining targets in the same row for 2 turn(s) (reduces DMG RED. Rate by 30%).",
       "icon": "/Skill/Death Gatling (SR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Attacks each enemy in the entire row with 5 combo strikes for 55% ATK (+2) DMG, with a 100% chance to inflict [Shatter] on the main target for 2 turn(s) (reduces DMG RED. Rate by 35%), and a 100% chance to inflict [Shatter] on the remaining targets in the same row for 2 turn(s) (reduces DMG RED. Rate by 30%).",
+      "desc": "Attacks each enemy in the entire row with 5 combo strikes for 55% ATK DMG, with a 100% chance to inflict [Shatter] on the main target for 2 turn(s) (reduces DMG RED. Rate by 35%), and a 100% chance to inflict [Shatter] on the remaining targets in the same row for 2 turn(s) (reduces DMG RED. Rate by 30%).",
       "keepsakeIcon": "/Keepsake/Death Gatling (SR)/Keepsake_SR.png",
       "icon": "/Skill/Death Gatling (SR)/Skill_ult.png",
       "type": "Ultimate",

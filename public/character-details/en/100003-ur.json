@@ -117,16 +117,44 @@
   ],
   "effects": [
     {
-      "term": "[Berserk]",
-      "desc": "Attack buffs increase damage based on conditions (e.g. each marked enemy), amplifying the amount of Fury-type damage the unit deals."
+      "term": "[Charged Pursuit]",
+      "desc": "Adds Charge-type DMG based on the number of targets hit and the unit’s ATK."
+    },
+    {
+      "term": "[Specialized Fear]",
+      "desc": "A special effect associated with enemy-team Energy. This skill removes its Energy."
+    },
+    {
+      "term": "[Non-Crit DMG Free]",
+      "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+    },
+    {
+      "term": "[Agility]",
+      "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]. Exact effect details are currently unknown."
+    },
+    {
+      "term": "[Injury]",
+      "desc": "Increases [Injury], [Internal Injury], and [Charge] DMG."
+    },
+    {
+      "term": "[Internal Injury]",
+      "desc": "A damage effect that is usually triggered when the affected target is attacked."
+    },
+    {
+      "term": "[Charge]",
+      "desc": "A damage type increased by [Injury Boost]."
     },
     {
       "term": "[Encourage]",
-      "desc": "Power up at the beginning of each round for several rounds."
+      "desc": "Grants Energy at the start of each round for a specified number of rounds."
     },
     {
-      "term": "[Collapse]",
-      "desc": "Damage/disadvantage effect breaks target's defense."
+      "term": "[Specialized DMG Reflect]",
+      "desc": "Reduces Direct DMG and Additional DMG received, then returns a percentage of the original DMG to the attacker as Extra DMG."
+    },
+    {
+      "term": "[Instant DMG Evasion]",
+      "desc": "Increases the accuracy of Instant DMG effects."
     }
   ],
   "classLevel": "Demon",

@@ -74,12 +74,28 @@
   ],
   "effects": [
     {
-      "term": "[Stun]",
-      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+      "term": "[Lifesteal]",
+      "desc": "Restores HP based on a percentage of DMG dealt."
     },
     {
-      "term": "[Lifesteal]",
-      "desc": "Self-buff heals the bearer for a percentage (e.g. 50%) of the damage they deal."
+      "term": "[Stun]",
+      "desc": "Prevents the affected unit from acting. At most 4 characters can be affected by [Stun] simultaneously."
+    },
+    {
+      "term": "[Rage]",
+      "desc": "Increases ATK during the unit's next direct action."
+    },
+    {
+      "term": "[Injury]",
+      "desc": "A special damage effect."
+    },
+    {
+      "term": "[Internal Injury]",
+      "desc": "A special damage effect that triggers under specified conditions."
+    },
+    {
+      "term": "[Charge]",
+      "desc": "A special accumulated damage effect that can deal Charge DMG when triggered."
     }
   ],
   "keepsakeIcon": "/Keepsake/Eyesight (SSR)/Keepsake_SSR.png",

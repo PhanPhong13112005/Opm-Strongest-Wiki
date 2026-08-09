@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals a 4-hit combo to a single back-row target for 35% ATK (+2) DMG, and reduces the target's chance to inflict [Force Field], [Stun], [Injured] and [Internal Injury] by 50% for 1 turn.",
+      "desc": "Deals a 4-hit combo to a single back-row target for 35% ATK DMG, and reduces the target's chance to inflict [Force Field], [Stun], [Injured] and [Internal Injury] by 50% for 1 turn.",
       "icon": "/Skill/Awakened Cockroach (SR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals a 4-hit combo to a single back-row target for 40% ATK (+2) DMG, and reduces the target's chance to inflict [Force Field], [Stun], [Injured] and [Internal Injury] by 50% for 1 turn.",
+      "desc": "Deals a 4-hit combo to a single back-row target for 40% ATK DMG, and reduces the target's chance to inflict [Force Field], [Stun], [Injured] and [Internal Injury] by 50% for 1 turn.",
       "keepsakeIcon": "/Keepsake/Awakened Cockroach (SR)/Keepsake_SR.png",
       "icon": "/Skill/Awakened Cockroach (SR)/Skill_ult.png",
       "type": "Ultimate",

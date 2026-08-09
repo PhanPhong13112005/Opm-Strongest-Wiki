@@ -117,24 +117,52 @@
   ],
   "effects": [
     {
-      "term": "[Bất Khuất Chuyên Biệt]",
-      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
+      "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
+      "desc": "Một loại sát thương trực tiếp đặc biệt chỉ bị ảnh hưởng bởi các công cụ sửa đổi sát thương nâng cao."
+    },
+    {
+      "term": "[Khả Năng Né Tránh Chuyên Biệt]",
+      "desc": "Một hiệu ứng phòng thủ đặc biệt có thể bị bỏ qua một phần bởi một số kỹ năng nhất định."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm sát thương nhận được từ các đòn tấn công không quan trọng."
     },
     {
       "term": "[Bất Khuất]",
-      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+      "desc": "Ngăn chặn đơn vị bị ảnh hưởng bị đánh bại trong các điều kiện cụ thể."
     },
     {
-      "term": "[Hồi Sinh]",
-      "desc": "Cơ chế hồi sinh/trở lại gắn với sự sống của đồng minh, đưa đơn vị trở lại trận đấu."
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Bất Khuất]."
     },
     {
-      "term": "[Kiên Cường Năng Lượng]",
-      "desc": "Loại khiên chuyển giá trị tích lũy thành giảm sát thương, giới hạn theo bội số Máu tối đa của đơn vị và không dùng chung được với Hồi Sinh."
+      "term": "[Đột Phá]",
+      "desc": "Cho phép đòn tấn công bỏ qua một phần hiệu ứng phòng thủ của mục tiêu."
+    },
+    {
+      "term": "[Tái Sinh]",
+      "desc": "Một hiệu ứng có số lượng kích hoạt hạn chế cho phép đơn vị bị ảnh hưởng quay trở lại trận chiến."
     },
     {
       "term": "[Trả Thù]",
-      "desc": "Trạng thái phản đòn có thể kéo dài thời gian trên bản thân hoặc rút ngắn trên kẻ địch, cấp sức cho các hiệu ứng trả đũa."
+      "desc": "Một hiệu ứng có thời lượng giới hạn có thể bị giảm bớt bởi Nội tại của G5."
+    },
+    {
+      "term": "[Tập Hợp Lại]",
+      "desc": "Một hiệu ứng có thời lượng giới hạn có thể bị giảm bớt bởi Nội tại của G5."
+    },
+    {
+      "term": "[HP Chuyên Biệt]",
+      "desc": "Một nhóm HP chuyên dụng có thể gây sát thương riêng biệt với HP bình thường."
+    },
+    {
+      "term": "[Kiên Cường Năng Lượng]",
+      "desc": "Một lá chắn đặc biệt được tạo ra bằng cách chuyển đổi tỷ lệ phần trăm của DMG ban đầu nhận được."
+    },
+    {
+      "term": "[Truy Kích Tụ Lực]",
+      "desc": "Sử dụng Tuyệt Kĩ hồi phục loại DMG hoặc AoE dưới dạng Truy Kích. Mục tiêu là ngẫu nhiên và không tiêu tốn năng lượng."
     }
   ],
   "keepsakeIcon": "/Keepsake/G5 (URplus)/Keepsake_URplus.png",

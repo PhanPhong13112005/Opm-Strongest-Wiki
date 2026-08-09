@@ -23,7 +23,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 27% ATK (+3) sát thương cho tất cả kẻ địch trong 3 đòn combo, với 100% cơ hội gây [Bị Thương] lên mục tiêu chính trong 2 lượt (khi bị tấn công sẽ thêm sát thương Chấn thương bằng 50% ATK).",
+      "desc": "Gây 27% sát thương ATK cho tất cả kẻ địch trong 3 đòn combo, với 100% cơ hội gây [Bị Thương] lên mục tiêu chính trong 2 lượt (khi bị tấn công, thêm sát thương Chấn thương bằng 50% ATK).",
       "icon": "/Skill/Fukegao (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 27% ATK (+3) sát thương cho tất cả kẻ địch trong 3 đòn combo, với 100% cơ hội gây [Bị Thương] lên mục tiêu chính và 50% cơ hội gây ra nó trên hàng của mục tiêu chính trong 2 lượt (khi bị tấn công sẽ tăng sát thương bằng 50% ATK).",
+      "desc": "Gây 27% sát thương ATK cho tất cả kẻ địch trong 3 đòn combo, với 100% cơ hội gây [Bị Thương] lên mục tiêu chính và 50% cơ hội gây sát thương lên hàng của mục tiêu chính trong 2 lượt (khi bị tấn công sẽ tăng thêm sát thương bằng 50% ATK).",
       "icon": "/Skill/Fukegao (SR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Fukegao (SR)/Keepsake_SR.png",
       "type": "Tuyệt kĩ",
@@ -85,11 +85,11 @@
   "effects": [
     {
       "term": "[Làm Suy Yếu]",
-      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
     },
     {
       "term": "[Ăn Mòn]",
-      "desc": "Hiệu ứng sát thương theo thời gian dạng ăn mòn, mỗi lượt gây sát thương bằng một tỷ lệ ST (ví dụ 300%) lên mục tiêu."
+      "desc": "Corrosive damage over time effect, each turn dealing damage equal to a percentage of ST (e.g. 300%) to the target."
     }
   ],
   "classLevel": "Outlaw",

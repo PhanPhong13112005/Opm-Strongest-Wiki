@@ -101,40 +101,32 @@
   ],
   "effects": [
     {
-      "term": "[Spec. Protect]",
-      "desc": "PvP shields reduce or negate damage to allies."
-    },
-    {
-      "term": "[Spec. Stun]",
-      "desc": "PvP tier of Stun — harder to resist or resolve."
+      "term": "[Specialized Stun]",
+      "desc": "Prevents the affected unit from acting and permanently reduces its ATK by 30%. At most 4 characters can be affected by [Stun] or [Specialized Stun] simultaneously."
     },
     {
       "term": "[Stun]",
-      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+      "desc": "Prevents the affected unit from acting. Shares the 4-character simultaneous limit with [Specialized Stun]."
     },
     {
-      "term": "[Mark]",
-      "desc": "Mark a unit, unlocking a raid condition or bonus effect associated with the mark."
+      "term": "[Corrode]",
+      "desc": "A Continuous DMG effect. Metal Knight can grant allies immunity to it."
     },
     {
-      "term": "[Round]",
-      "desc": "One turn in a match; Many effects are limited to the current number of turns (e.g. only effective when Round < 6)."
+      "term": "[Specialized Corrode]",
+      "desc": "A specialized Continuous DMG effect. Metal Knight can grant allies immunity to it."
     },
     {
-      "term": "[Dodge]",
-      "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+      "term": "[Evade]",
+      "desc": "Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG."
     },
     {
-      "term": "[Counter]",
-      "desc": "A counter mark whose class number gradually increases the user's direct counter damage to marked enemies."
+      "term": "[Combo Follow-up]",
+      "desc": "A coordinated Follow-Up effect. Metal Knight’s Awaken Passive removes this effect from the entire enemy team for the whole battle."
     },
     {
-      "term": "[Smart Corrode DMG]",
-      "desc": "The enhanced Corrosion over Time damage variant has the ability to retarget itself, to which some units may be immune."
-    },
-    {
-      "term": "[Corrode DMG]",
-      "desc": "Continuous corrosive damage over time gradually erodes Health, which can be blocked by zone immunity."
+      "term": "[Specialized Protection]",
+      "desc": "A defensive effect increased by Metal Knight’s Awaken 2 Passive based on Metal Knight’s ATK."
     }
   ],
   "keepsakeIcon": "/Keepsake/Metal Knight (SSRplus)/Keepsake_SSRplus.png",

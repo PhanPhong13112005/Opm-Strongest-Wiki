@@ -118,28 +118,56 @@
   ],
   "effects": [
     {
-      "term": "[Spec. Unyielding]",
-      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "An undying effect with a limited duration that can be reduced by certain attacks."
+    },
+    {
+      "term": "[Specialized Direct DMG]",
+      "desc": "A specialized type of direct damage affected only by advanced damage modifiers or damage reduction."
+    },
+    {
+      "term": "[Specialized Evasion]",
+      "desc": "A specialized defensive effect that can be partially ignored by certain skills."
     },
     {
       "term": "[Unyielding]",
-      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+      "desc": "Prevents the affected unit from being defeated under specific conditions."
     },
     {
-      "term": "[Reduce Non-Crit DMG]",
-      "desc": "Reduced damage taken from non-critical attacks."
+      "term": "[Specialized Unyielding]",
+      "desc": "A specialized form of [Unyielding]."
     },
     {
-      "term": "[Spec. Dodge]",
-      "desc": "Evasion PvP tier — reduces specialized attacks to 1 damage; pierced by the ignore dodge effect."
+      "term": "[Specialized Acceleration]",
+      "desc": "Increases an ally’s Speed to a specified percentage of Nyan’s Speed. If the ally’s original Speed is higher, it remains unchanged."
     },
     {
-      "term": "[Spec. Direct DMG]",
-      "desc": "Advanced tier of direct damage, only affected by advanced damage increase/decrease and passes through normal defenses."
+      "term": "[Charm]",
+      "desc": "A control effect that forces the affected unit to act against its own team or otherwise lose control of its actions."
     },
     {
-      "term": "[Spec. Speed Up]",
-      "desc": "Increases ally's speed to near deployer's speed (remains the same if ally is already faster)."
+      "term": "[Specialized Charm]",
+      "desc": "Forces the target to temporarily leave combat, attack a random enemy, return to its original position, and skip its next active action. Also reduces [All DMG Reduction]% for 1 turn."
+    },
+    {
+      "term": "[All DMG Reduction]",
+      "desc": "Reduces all damage received by the affected unit."
+    },
+    {
+      "term": "[Monster Affinity]",
+      "desc": "Allows Nyan to count as a currently missing character of any element when activating the Core Skill of a Monster character."
+    },
+    {
+      "term": "[Specialized Speed]",
+      "desc": "A specialized effect that increases the unit’s action Speed."
+    },
+    {
+      "term": "[Life Link]",
+      "desc": "Prevents Nyan from being defeated while the linked teammate remains alive. The link transfers to another highest-ATK teammate when the linked unit is defeated, up to 3 times."
+    },
+    {
+      "term": "[Charged Pursuit]",
+      "desc": "Performs a DMG-type or AoE healing Ultimate as a follow-up attack against random targets without consuming Energy."
     }
   ],
   "classLevel": "Dragon",

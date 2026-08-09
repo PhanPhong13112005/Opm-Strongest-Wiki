@@ -79,12 +79,16 @@
   "classIcon": "/Class/Dragon.png",
   "effects": [
     {
-      "term": "[Kích Nổ]",
-      "desc": "Kích hoạt một tầng sát thương theo thời gian hoặc [Sụp Đổ] đang tích trữ để nổ ngay, biến nó thành một đòn tức thời nhân lên (ví dụ 3 lần sát thương tích trữ)."
+      "term": "[Lĩnh Vực]",
+      "desc": "Trước khi thực hiện hành động, thiết bị bị ảnh hưởng phải chịu DMG liên tục dựa trên ATK. Ưu đãi cơ bản 150% ATK, Ưu đãi Tuyệt Kĩ 160% ATK và Ưu đãi cực kỳ hấp dẫn 230% ATK."
     },
     {
-      "term": "[Trường Lực]",
-      "desc": "Vùng gây sát thương theo thời gian của Tatsumaki; mỗi khi kẻ địch chịu sát thương Lực Trường sẽ tích một tầng Charge (tối đa 4 tầng)."
+      "term": "[Kích Nổ]",
+      "desc": "Ngay lập tức chuyển đổi [Lĩnh Vực] DMG ban đầu thành Detonation DMG. Tỷ lệ chuyển đổi là 100%/110%/120% tùy theo cấp độ Bị động."
+    },
+    {
+      "term": "[Khổng Lồ]",
+      "desc": "Một trạng thái đặc biệt được đưa vào sau khi kích hoạt [Kích Nổ]. Khi ở trạng thái này, Tuyệt Kĩ và Ultra-Tuyệt Kĩ tăng Tỷ lệ DMG liên tục thêm 50%."
     }
   ],
   "releaseDate": "01/05/2022",

@@ -101,20 +101,40 @@
   ],
   "effects": [
     {
-      "term": "[Crit]",
-      "desc": "Đòn chí mạng gây thêm sát thương; Some units may be immune to [Crit]."
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "An undying effect with a limited duration that can be reduced by this character’s attacks."
     },
     {
-      "term": "[Revive]",
-      "desc": "The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match."
+      "term": "[Specialized Direct DMG]",
+      "desc": "A specialized type of direct damage affected only by advanced DMG modifiers."
+    },
+    {
+      "term": "[Specialized Dodge]",
+      "desc": "A specialized defensive effect that provides a chance to avoid applicable damage."
+    },
+    {
+      "term": "[Unyielding]",
+      "desc": "Prevents the affected unit from being defeated under specific conditions."
+    },
+    {
+      "term": "[Specialized Unyielding]",
+      "desc": "A specialized form of [Unyielding]."
+    },
+    {
+      "term": "[Rage]",
+      "desc": "Each stack allows the Ultimate to target 1 additional enemy."
+    },
+    {
+      "term": "[Rebirth]",
+      "desc": "When the unit is about to be defeated, absorbs incoming DMG and restores HP on the next turn."
     },
     {
       "term": "[Energy Tenacity]",
-      "desc": "The shield type converts its cumulative value into damage reduction, is limited to a multiple of the unit's maximum Health, and cannot be used with Resurrection."
+      "desc": "A special shield gained based on the total amount of DMG absorbed during [Rebirth]."
     },
     {
-      "term": "[Control DMG Immunity]",
-      "desc": "The defensive effect reduces damage taken (30–40%), increasing to a 150–170% reduction when the bearer's ST is higher than the attacker's."
+      "term": "[Suppression DMG Reduction]",
+      "desc": "Reduces DMG taken by a specified percentage. If the unit’s Attack is higher than the attacker’s, the DMG reduction multiplier is increased."
     }
   ],
   "keepsakeIcon": "/Keepsake/Boros (URplus)/Keepsake_URplus.png",

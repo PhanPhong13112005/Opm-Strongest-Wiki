@@ -75,8 +75,12 @@
   ],
   "effects": [
     {
+      "term": "[Nứt Vỡ]",
+      "desc": "Giảm 30% Tỷ lệ Giảm Sát Thương trong 2 lượt."
+    },
+    {
       "term": "[Truy Kích]",
-      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+      "desc": "Một cuộc tấn công bổ sung được kích hoạt sau khi một đồng minh Duelist tấn công. Samurai Nguyên Tử của Truy Kích sử dụng 80% DMG và các hiệu ứng của Đòn tấn công cơ bản, đồng thời có thể kích hoạt tối đa 3 lần mỗi lượt."
     }
   ],
   "keepsakeIcon": "/Keepsake/Atomic Samurai (SSR)/Keepsake_SSR.png",

@@ -111,8 +111,36 @@
   "dacTinh": [],
   "effects": [
     {
+      "term": "[Charm]",
+      "desc": "Causes the affected enemy to [Exit] the battlefield and use its own Ultimate or Passive to attack a random ally. The affected enemy returns after the round ends."
+    },
+    {
+      "term": "[Exit]",
+      "desc": "Temporarily removes the affected character from the battlefield."
+    },
+    {
       "term": "[Stun]",
-      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+      "desc": "Prevents the affected unit from acting for the specified duration."
+    },
+    {
+      "term": "[Paralysis]",
+      "desc": "Prevents the affected unit from triggering [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]."
+    },
+    {
+      "term": "[Follow-up]",
+      "desc": "An additional attack triggered after another action or when specified conditions are met."
+    },
+    {
+      "term": "[Continuous Follow-Up]",
+      "desc": "A Follow-Up effect that can trigger repeatedly under specified conditions."
+    },
+    {
+      "term": "[Combo Follow-up]",
+      "desc": "A coordinated Follow-Up attack triggered through a Combo-type effect."
+    },
+    {
+      "term": "[Non-Crit DMG Free]",
+      "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
     }
   ],
   "classLevel": "Class_S",

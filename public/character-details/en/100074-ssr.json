@@ -77,12 +77,12 @@
   "keepsakeIcon": "/Keepsake/Genos (SSR)/Keepsake_SSR.png",
   "effects": [
     {
-      "term": "[Thiêu Đốt]",
-      "desc": "Continuous fire damage over time to the target."
+      "term": "[Burn]",
+      "desc": "Deals ATK-based Continuous DMG for 2 turns. Ultimate deals 70% ATK as Continuous DMG, while Ultra-Ultimate deals 90% ATK."
     },
     {
       "term": "[Regeneration]",
-      "desc": "Restores Health over time or before the unit's next action."
+      "desc": "After receiving fatal DMG, restores HP before Genos' next action while at least 1 ally remains, allowing him to continue fighting."
     }
   ],
   "releaseDate": "01/06/2021",

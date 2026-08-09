@@ -74,7 +74,7 @@
   "effects": [
     {
       "term": "[Sụp Đổ]",
-      "desc": "Hiệu ứng sát thương/bất lợi phá vỡ phòng thủ của mục tiêu."
+      "desc": "Damage/disadvantage effect breaks target's defense."
     }
   ],
   "keepsakeIcon": "/Keepsake/Dark Matter Thief (R)/Keepsake_R.png",

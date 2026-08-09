@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 16% ATK (+2) damage to all enemies in a 5-hit combo, with a 100% chance to inflict [Collapse] on 2 random targets for 2 turns (DMG reduction rate lowered by 30%).",
+      "desc": "Deals 16% ATK damage to all enemies in a 5-hit combo, with a 100% chance to inflict [Collapse] on 2 random targets for 2 turns (DMG reduction rate lowered by 30%).",
       "icon": "/Skill/Golden Ball (SR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 16% ATK (+2) damage to all enemies in a 5-hit combo, with a 100% chance to inflict [Collapse] on 3 random targets for 2 turns (DMG reduction rate lowered by 30%).",
+      "desc": "Deals 16% ATK damage to all enemies in a 5-hit combo, with a 100% chance to inflict [Collapse] on 3 random targets for 2 turns (DMG reduction rate lowered by 30%).",
       "keepsakeIcon": "/Keepsake/Golden Ball (SR)/Keepsake_SR.png",
       "icon": "/Skill/Golden Ball (SR)/Skill_ult.png",
       "type": "Ultimate",

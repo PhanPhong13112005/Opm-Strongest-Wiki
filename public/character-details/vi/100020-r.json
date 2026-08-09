@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây combo 5 đòn 22% ATK (+2) DMG cho mỗi kẻ địch trong toàn hàng. Mỗi đòn đánh có 50% cơ hội gây thêm 10% ATK extra DMG.",
+      "desc": "Gây combo 5 đòn 22% ATK DMG cho mỗi kẻ địch trong toàn hàng. Mỗi đòn đánh có 50% cơ hội gây thêm 10% ATK extra DMG.",
       "icon": "/Skill/Triple-Staff Lilly (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây combo 5 đòn 22% ATK (+2) DMG cho mỗi kẻ địch trong toàn hàng. Mỗi đòn đánh có 50% cơ hội gây thêm 20% ATK extra DMG.",
+      "desc": "Gây combo 5 đòn 22% ATK DMG cho mỗi kẻ địch trong toàn hàng. Mỗi đòn đánh có 50% cơ hội gây thêm 20% ATK extra DMG.",
       "keepsakeIcon": "/Keepsake/Triple-Staff Lilly (R)/Keepsake_R.png",
       "icon": "/Skill/Triple-Staff Lilly (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
