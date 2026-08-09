@@ -101,28 +101,40 @@
   ],
   "effects": [
     {
-      "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
-    },
-    {
-      "term": "[Cổ Vũ]",
-      "desc": "Cấp năng lượng vào đầu mỗi vòng trong vài vòng."
-    },
-    {
-      "term": "[Né Tránh]",
-      "desc": "Trạng thái né giúp giảm sát thương Trực Tiếp, Thêm, Tích Lũy và Cuồng Nộ nhận vào chỉ còn 1 điểm trong thời gian hiệu lực."
-    },
-    {
       "term": "[Sụp Đổ Chuyên Biệt]",
-      "desc": "Debuff PvP giảm 10% Giảm Sát Thương của mục tiêu và gây 250% ST dạng Shatter mỗi khi mục tiêu bị tấn công."
+      "desc": "Giảm DMG Miễn phí và gây [Sát Thương Sụp Đổ] bất cứ khi nào mục tiêu bị ảnh hưởng bị tấn công. Cộng dồn tối đa 3 lần và không cộng dồn với [Sụp Đổ]."
+    },
+    {
+      "term": "[Nứt Vỡ Chuyên Biệt]",
+      "desc": "ATK bổ sung dựa trên DMG được kích hoạt khi một đơn vị bị ảnh hưởng bởi [Sụp Đổ Chuyên Biệt] bị tấn công."
     },
     {
       "term": "[Sụp Đổ]",
-      "desc": "Hiệu ứng sát thương/bất lợi phá vỡ phòng thủ của mục tiêu."
+      "desc": "Một hiệu ứng không thể cùng tồn tại với [Sụp Đổ Chuyên Biệt]. Chi tiết hiệu ứng chính xác hiện chưa được biết."
     },
     {
-      "term": "[Tăng Tốc Chuyên Biệt]",
-      "desc": "Tăng tốc độ của đồng minh tới gần tốc độ của người triển khai (giữ nguyên nếu đồng minh đã nhanh hơn)."
+      "term": "[Choáng]",
+      "desc": "Ngăn chặn các đơn vị bị ảnh hưởng hành động. Tối đa 4 nhân vật có thể bị choáng cùng lúc."
+    },
+    {
+      "term": "[Khả Năng Né Tránh]",
+      "desc": "Giảm Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG xuống còn 1 DMG."
+    },
+    {
+      "term": "[Gia Tốc Chuyên Biệt]",
+      "desc": "Tăng SPD của Gale Wind. Nếu SPD của mục tiêu chính thấp hơn SPD của Gale Wind, sẽ gây thêm ATK dựa trên Extra DMG."
+    },
+    {
+      "term": "[Sợ Hãi]",
+      "desc": "Một hiệu ứng khống chế mà Gale Wind miễn nhiễm."
+    },
+    {
+      "term": "[Xóa Năng Lượng]",
+      "desc": "Một hiệu ứng loại bỏ Năng lượng. Gale Wind miễn nhiễm với hiệu ứng này."
+    },
+    {
+      "term": "[Cổ Vũ]",
+      "desc": "Cung cấp Năng lượng khi bắt đầu mỗi hiệp trong 3 hiệp."
     }
   ],
   "keepsakeIcon": "/Keepsake/Gale Wind (UR)/Keepsake_UR.png",

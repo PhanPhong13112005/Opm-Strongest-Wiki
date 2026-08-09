@@ -116,16 +116,32 @@
   ],
   "effects": [
     {
-      "term": "[Immunity]",
-      "desc": "Status that causes the bearer to be unaffected by a certain effect or type of control, such as [Breakthrough], Stun, or Charm."
+      "term": "[Specialized Collapse]",
+      "desc": "Decreases DMG Free and deals ATK-based DMG when the affected target is attacked. Stacks up to 3 times and does not stack with [Shatter]."
     },
     {
-      "term": "[Hyper Speed]",
-      "desc": "Speed ​​buff that while in effect allows the bearer and up to 6 allies to act against and overcome enemies with lower speed."
+      "term": "[Specialized Disable]",
+      "desc": "Prevents the affected unit from launching Follow-Ups and Combo Follow-Ups, and reduces its DMG Rate."
     },
     {
-      "term": "[Nullify]",
-      "desc": "Disabled status applies to a target area/column, rendering affected units unable to act or be effective."
+      "term": "[Shatter]",
+      "desc": "An effect that cannot coexist with [Specialized Collapse]. Exact effect details are currently unknown."
+    },
+    {
+      "term": "[Instant DMG Evasion]",
+      "desc": "Causes Direct DMG, Extra DMG, Charge DMG, and Berserk DMG to deal only 1 point of DMG."
+    },
+    {
+      "term": "[Specialized Acceleration]",
+      "desc": "Increases Flashy Flash’s Speed by a specified percentage."
+    },
+    {
+      "term": "[Adhesion]",
+      "desc": "An effect that Flashy Flash is immune to. Exact effect details are currently unknown."
+    },
+    {
+      "term": "[Ultimate Follow-up]",
+      "desc": "Automatically performs the Ultimate as a follow-up attack at a specified percentage of its original DMG."
     }
   ],
   "classLevel": "Class_S",

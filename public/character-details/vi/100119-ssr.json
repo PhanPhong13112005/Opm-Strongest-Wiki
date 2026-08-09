@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 80% ATK (+3) DMG với 3 đòn đánh liên tiếp vào một mục tiêu. 100% cơ hội gây [Nứt Vỡ] lên mục tiêu trong 2 lượt (giảm 30% Tỷ lệ Giảm Sát Thương); kích hoạt Đòn tấn công chí mạng gây [Làm Suy Yếu] lên mục tiêu (ATK giảm 25% trong 1 lượt).",
+      "desc": "Gây 80% ATK DMG với 3 đòn đánh liên tiếp vào một mục tiêu. 100% cơ hội gây [Nứt Vỡ] lên mục tiêu trong 2 lượt (giảm 30% Tỷ lệ Giảm Sát Thương); kích hoạt Đòn tấn công chí mạng gây [Làm Suy Yếu] lên mục tiêu (ATK giảm 25% trong 1 lượt).",
       "icon": "/Skill/G4 (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 100% ATK (+3) DMG với 3 đòn đánh liên tiếp vào một mục tiêu. 100% cơ hội gây [Nứt Vỡ] lên mục tiêu trong 2 lượt (giảm Tỷ lệ Giảm Sát Thương đi 40%); kích hoạt Đòn tấn công chí mạng gây [Làm Suy Yếu] lên mục tiêu (ATK giảm 45% trong 1 lượt).",
+      "desc": "Gây 100% ATK DMG với 3 đòn đánh liên tiếp vào một mục tiêu. 100% cơ hội gây [Nứt Vỡ] lên mục tiêu trong 2 lượt (giảm Tỷ lệ Giảm Sát Thương đi 40%); kích hoạt Đòn tấn công chí mạng gây [Làm Suy Yếu] lên mục tiêu (ATK giảm 45% trong 1 lượt).",
       "keepsakeIcon": "/Keepsake/G4 (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/G4 (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -75,11 +75,11 @@
   "effects": [
     {
       "term": "[Lá Chắn]",
-      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
     },
     {
       "term": "[Làm Suy Yếu]",
-      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
     }
   ],
   "keepsakeIcon": "/Keepsake/G4 (SSR)/Keepsake_SSR.png",

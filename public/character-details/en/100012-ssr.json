@@ -24,7 +24,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 30% ATK (+2) damage to each enemy in the entire column in a 5-hit combo, with a 50% chance to inflict [Injured] on each target hit for 2 turns (takes additional Injured damage equal to 50% ATK when attacked), and grants self [Tenacity] (absorbs damage equal to 10% of own HP).",
+      "desc": "Deals 30% ATK damage to each enemy in the entire column in a 5-hit combo, with a 50% chance to inflict [Injured] on each target hit for 2 turns (takes additional Injured damage equal to 50% ATK when attacked), and grants self [Tenacity] (absorbs damage equal to 10% of own HP).",
       "icon": "/Skill/Metal Bat (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 38% ATK (+2) damage to each enemy in the entire column in a 5-hit combo, with a 60% chance to inflict [Injured] on each target hit for 2 turns (takes additional Injured damage equal to 50% ATK when attacked), and grants self [Tenacity] (absorbs damage equal to 20% of own HP).",
+      "desc": "Deals 38% ATK damage to each enemy in the entire column in a 5-hit combo, with a 60% chance to inflict [Injured] on each target hit for 2 turns (takes additional Injured damage equal to 50% ATK when attacked), and grants self [Tenacity] (absorbs damage equal to 20% of own HP).",
       "icon": "/Skill/Metal Bat (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Metal Bat (SSR)/Keepsake_SSR.png",
       "type": "Ultimate",
@@ -80,7 +80,7 @@
       "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
     },
     {
-      "term": "[Truy Kích]",
+      "term": "[Follow-up]",
       "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
     }
   ],

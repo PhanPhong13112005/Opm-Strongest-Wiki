@@ -78,12 +78,12 @@
   "classIcon": "/Class/Dragon.png",
   "effects": [
     {
-      "term": "[Internal Injury]",
-      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+      "term": "[Field]",
+      "desc": "Before taking action, the affected unit suffers Continuous DMG equal to 160% ATK."
     },
     {
-      "term": "[Weaken]",
-      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
+      "term": "[Armed Collapse]",
+      "desc": "Damage-over-time that is applied separately from the initial attack."
     }
   ],
   "releaseDate": "01/01/2022",

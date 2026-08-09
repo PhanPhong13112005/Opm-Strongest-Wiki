@@ -30,7 +30,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals a 5 hit combo of 5% (+2) of Watchdog Man's max HP as DMG to the entire target row, and inflicts [Panic] on enemies (seals their energy for a number of turns; when the same effect exists, the highest value applies).",
+      "desc": "Deals a 5 hit combo of 5% of Watchdog Man's max HP as DMG to the entire target row, and inflicts [Panic] on enemies (seals their energy for a number of turns; when the same effect exists, the highest value applies).",
       "icon": "/Skill/Watchdog Man (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -39,7 +39,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals a 5 hit combo of 6% (+2) of Watchdog Man's max HP as DMG to the entire target row, and inflicts [Panic] on enemies (seals their energy for a number of turns; when the same effect exists, the highest value applies).",
+      "desc": "Deals a 5 hit combo of 6% of Watchdog Man's max HP as DMG to the entire target row, and inflicts [Panic] on enemies (seals their energy for a number of turns; when the same effect exists, the highest value applies).",
       "icon": "/Skill/Watchdog Man (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Watchdog Man (SSR)/Keepsake_SSR.png",
       "type": "Ultimate",

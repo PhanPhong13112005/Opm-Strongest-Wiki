@@ -74,11 +74,11 @@
   ],
   "effects": [
     {
-      "term": "[Thiêu Đốt]",
+      "term": "[Burn]",
       "desc": "Continuous fire damage over time to the target."
     },
     {
-      "term": "[Truy Kích]",
+      "term": "[Follow-up]",
       "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
     }
   ],

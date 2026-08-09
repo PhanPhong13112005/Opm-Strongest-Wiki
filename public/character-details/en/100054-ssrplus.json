@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals damage to all targets with 4 Combos for 64% Max HP (+2663). After using Ultimate Skill, 2 defeated Characters will return to the battle with 100% HP. Can trigger up to 6 times per battle.",
+      "desc": "Deals damage to all targets with 4 Combos for 64% Max HP. After using Ultimate Skill, 2 defeated Characters will return to the battle with 100% HP. Can trigger up to 6 times per battle.",
       "keepsakeIcon": "/Keepsake/Melzargard (SSRplus)/Keepsake_SSRplus.png",
       "icon": "/Skill/Melzargard (SSR+)/Skill_ult.png",
       "type": "Ultimate",
@@ -109,12 +109,8 @@
       "desc": "The target cannot use his ultimate. Counts as a control effect."
     },
     {
-      "term": "[Mark]",
-      "desc": "Mark a unit, unlocking a raid condition or bonus effect associated with the mark."
-    },
-    {
-      "term": "[Resurrect]",
-      "desc": "Status returns downed units to battle, granting a limited number of respawns that anti-revive effects can remove."
+      "term": "[Reborn]",
+      "desc": "Returns the character to battle after taking fatal damage and restores a specified amount of HP."
     },
     {
       "term": "[Regeneration]",

@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 5 combo strikes to a single target for 20% ATK (+2) DMG each.",
+      "desc": "Deals 5 combo strikes to a single target for 20% ATK DMG each.",
       "icon": "/Skill/Genos (SR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 4 combo strikes to each enemy in the entire row for 35% ATK (+2) DMG each, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 50% ATK).",
+      "desc": "Deals 4 combo strikes to each enemy in the entire row for 35% ATK DMG each, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 50% ATK).",
       "icon": "/Skill/Genos (SR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 4 combo strikes to each enemy in the entire row for 35% ATK (+2) DMG each, with a 100% chance to inflict [Burn] on the main target and a 50% chance to inflict [Burn] on enemies in the main target's column, for 2 turns (DoT equal to 50% ATK).",
+      "desc": "Deals 4 combo strikes to each enemy in the entire row for 35% ATK DMG each, with a 100% chance to inflict [Burn] on the main target and a 50% chance to inflict [Burn] on enemies in the main target's column, for 2 turns (DoT equal to 50% ATK).",
       "keepsakeIcon": "/Keepsake/Genos (SR)/Keepsake_SR.png",
       "icon": "/Skill/Genos (SR)/Skill_ult.png",
       "type": "Ultimate",
@@ -74,7 +74,7 @@
   ],
   "effects": [
     {
-      "term": "[Thiêu Đốt]",
+      "term": "[Burn]",
       "desc": "Continuous fire damage over time to the target."
     }
   ],

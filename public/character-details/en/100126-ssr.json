@@ -74,16 +74,28 @@
   ],
   "effects": [
     {
-      "term": "[Stun]",
-      "desc": "The stun-type control effect prevents the target from taking action during the duration."
-    },
-    {
       "term": "[Internal Injury]",
-      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+      "desc": "When the affected unit is attacked, takes DMG equal to 155% of Gale Wind's ATK. Disappears after triggering once."
     },
     {
-      "term": "[Truy Kích]",
-      "desc": "Extra attack outside of turn. Disabled by [Lock] and [Blind]."
+      "term": "[Stun]",
+      "desc": "Prevents the affected unit from acting. At most 4 characters on each team can be affected by [Stun] simultaneously. Gale Wind's Ultimate has a 50% chance to ignore Stun immunity."
+    },
+    {
+      "term": "[Energy Gauge]",
+      "desc": "A battle resource affected by Gale Wind's Ultimate. His Ultimate reduces it by 900 points, while Ultra-Ultimate reduces it by 950 points."
+    },
+    {
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+    },
+    {
+      "term": "[Agility]",
+      "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Reduction]."
+    },
+    {
+      "term": "[Follow-up]",
+      "desc": "An additional attack launched against the enemy with the highest ATK after any character acts. It uses Gale Wind's Basic Attack DMG and retains the Basic Attack's effects."
     }
   ],
   "keepsakeIcon": "/Keepsake/Gale Wind (SSR)/Keepsake_SSR.png",

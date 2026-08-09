@@ -102,27 +102,27 @@
   "effects": [
     {
       "term": "[Bất Khuất]",
-      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
     },
     {
       "term": "[Câm Lặng]",
-      "desc": "Mục tiêu không thể dùng chiêu cuối. Được tính là hiệu ứng khống chế."
+      "desc": "The target cannot use his Tuyệt Kĩ. Counts as a control effect."
     },
     {
       "term": "[Sát Thương Bạo Kích]",
-      "desc": "Phần sát thương bổ sung do đòn chí mạng gây ra; thường bị điều chỉnh qua [Giảm Sát Thương Bạo Kích] để cắt giảm phần bổ sung này."
+      "desc": "Additional damage dealt by critical hits; is often adjusted via [Giảm Sát Thương Bạo Kích] to cut down on this addition."
     },
     {
       "term": "[Truy Kích Tuyệt Kỹ]",
-      "desc": "Đòn ngoài lượt gây 70% sát thương và hiệu ứng của chiêu cuối, không tốn năng lượng, tối đa 3 lần mỗi vòng."
+      "desc": "Out of turn attacks deal 70% of the Tuyệt Kĩ's damage and effects, without consuming mana, up to 3 times per round."
     },
     {
       "term": "[Truy Kích]",
-      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+      "desc": "Extra attack outside of turn. Disabled by [Khóa] and [Gây Mù]."
     },
     {
       "term": "[Tái Sinh]",
-      "desc": "Kích hoạt hồi sinh: sau khi nhận sát thương chí mạng, nếu có đồng minh, hồi 50% Máu trước khi hành động, giới hạn số lần nhất định."
+      "desc": "Activate revival: after receiving critical damage, if there are allies, restore 50% Health before acting, limited to a certain number of times."
     }
   ],
   "keepsakeIcon": "/Keepsake/Gyoro-Gyoro (SSRplus)/Keepsake_SSRplus.png",

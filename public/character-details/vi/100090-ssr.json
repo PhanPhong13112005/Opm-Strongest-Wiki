@@ -75,11 +75,11 @@
   "effects": [
     {
       "term": "[Lá Chắn]",
-      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
     },
     {
       "term": "[Làm Suy Yếu]",
-      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
     }
   ],
   "keepsakeIcon": "/Keepsake/Suiryu (SSR)/Keepsake_SSR.png",

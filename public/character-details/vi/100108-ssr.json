@@ -75,8 +75,16 @@
   ],
   "effects": [
     {
+      "term": "[Tỷ Lệ Hồi Máu]",
+      "desc": "Giảm hiệu quả phục hồi HP mà đơn vị bị ảnh hưởng nhận được."
+    },
+    {
       "term": "[Nhanh Nhẹn]",
-      "desc": "Buff loại né tránh; loại trừ lẫn nhau với Miễn Sát Thương Non-Crit."
+      "desc": "Giảm Sát Thương Trực Tiếp cao hơn từ 12%–60% tùy thuộc vào số lần tấn công sắp tới. Không thể cùng tồn tại với [Giảm Sát Thương Không Bạo Kích]."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Hiệu ứng phòng thủ làm giảm DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]."
     }
   ],
   "keepsakeIcon": "/Keepsake/Bom/Bengpu (UR)/Keepsake_UR.png",

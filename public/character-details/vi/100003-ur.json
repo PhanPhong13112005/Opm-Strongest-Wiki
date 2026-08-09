@@ -116,16 +116,44 @@
   ],
   "effects": [
     {
-      "term": "[Giận Dữ]",
-      "desc": "Buff tấn công có sát thương tăng theo điều kiện (ví dụ mỗi kẻ địch bị đánh dấu), khuếch đại lượng sát thương loại Cuồng Nộ mà đơn vị gây ra."
+      "term": "[Truy Kích Tụ Lực]",
+      "desc": "Thêm DMG loại sạc dựa trên số lượng mục tiêu bị bắn trúng và ATK của đơn vị."
+    },
+    {
+      "term": "[Sợ Hãi Chuyên Biệt]",
+      "desc": "Một hiệu ứng đặc biệt liên quan đến Năng lượng của đội địch. Kỹ năng này loại bỏ Năng lượng của nó."
+    },
+    {
+      "term": "[Miễn Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]."
+    },
+    {
+      "term": "[Nhanh Nhẹn]",
+      "desc": "Hiệu ứng phòng thủ không thể cùng tồn tại với [Miễn Sát Thương Không Bạo Kích]. Chi tiết hiệu ứng chính xác hiện chưa được biết."
+    },
+    {
+      "term": "[Trọng Thương]",
+      "desc": "Tăng [Trọng Thương], [Nội Thương] và [Tụ Lực] DMG."
+    },
+    {
+      "term": "[Nội Thương]",
+      "desc": "Hiệu ứng sát thương thường được kích hoạt khi mục tiêu bị ảnh hưởng bị tấn công."
+    },
+    {
+      "term": "[Tụ Lực]",
+      "desc": "Loại sát thương tăng thêm [Tăng Cường Trọng Thương]."
     },
     {
       "term": "[Cổ Vũ]",
-      "desc": "Cấp năng lượng vào đầu mỗi vòng trong vài vòng."
+      "desc": "Cung cấp Năng lượng khi bắt đầu mỗi vòng trong một số vòng nhất định."
     },
     {
-      "term": "[Sụp Đổ]",
-      "desc": "Hiệu ứng sát thương/bất lợi phá vỡ phòng thủ của mục tiêu."
+      "term": "[Phản Sát Thương Chuyên Biệt]",
+      "desc": "Giảm Sát Thương Trực Tiếp và DMG bổ sung đã nhận, sau đó trả lại tỷ lệ phần trăm của DMG ban đầu cho kẻ tấn công dưới dạng Extra DMG."
+    },
+    {
+      "term": "[Né Sát Thương Tức Thì]",
+      "desc": "Tăng độ chính xác của hiệu ứng DMG tức thì."
     }
   ],
   "classLevel": "Demon",

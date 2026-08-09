@@ -101,48 +101,36 @@
   ],
   "effects": [
     {
-      "term": "[Spec. Unyielding]",
-      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+      "term": "[Force Field]",
+      "desc": "A DoT effect applied to enemies for 1 turn. Before the affected enemy acts, it deals ATK-based DMG and has an 80% chance to bypass immunity."
     },
     {
-      "term": "[Unyielding]",
-      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+      "term": "[Detonation]",
+      "desc": "Immediately triggers the remaining DMG of [Force Field] or converts its effect into [Detonation DMG]."
     },
     {
-      "term": "[Energy Conversion]",
-      "desc": "When an enemy carrying [Energy Suppression] damages the carrier, the damage is reduced by 20% and the reduction is converted into energy."
+      "term": "[Specialized HP]",
+      "desc": "A specialized HP pool gained separately from normal HP."
     },
     {
-      "term": "[Shield]",
-      "desc": "The shield absorbs damage up to a portion of the subject's Health; Charge DMG ignores it."
+      "term": "[Ultimate Follow-up]",
+      "desc": "Performs the Ultimate as a follow-up with a specified percentage of its original DMG and its effects."
     },
     {
-      "term": "[Non-Crit DMG Immunity]",
-      "desc": "Reduces all non-critical damage (usually to 1). Cannot survive and avoid Agility."
+      "term": "[Adhesion]",
+      "desc": "A negative status removed from Tatsumaki when she uses her Ultimate."
     },
     {
-      "term": "[Spec. HP]",
-      "desc": "The PvP tier's unique health bar stacks on top of regular health, must also be depleted, and can be restored independently."
+      "term": "[Disable]",
+      "desc": "A negative status removed from Tatsumaki when she uses her Ultimate."
     },
     {
-      "term": "[Spec. Dodge]",
-      "desc": "Evasion PvP tier — reduces specialized attacks to 1 damage; pierced by the ignore dodge effect."
+      "term": "[Stun]",
+      "desc": "Prevents the affected unit from taking action."
     },
     {
-      "term": "[Shield Break]",
-      "desc": "While attacking, ignore the enemy's 30% Damage Immunity and Unique Defense to allow the attack to penetrate their shield."
-    },
-    {
-      "term": "[Wrath]",
-      "desc": "Attack buff increases unit damage, often accompanied by [Shield Break]."
-    },
-    {
-      "term": "[Formation]",
-      "desc": "The battlefield effect deals damage over time (100%) and can be detonated for a burst of damage, and helps the character recover from Stun after an action."
-    },
-    {
-      "term": "[Energy Suppression]",
-      "desc": "When dealing damage to health, forces the target to activate Energy Conversion, reducing the damage they deal and choking their mana source."
+      "term": "[Specialized Stun]",
+      "desc": "A specialized form of [Stun]."
     }
   ],
   "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (UR)/Keepsake_UR.png",

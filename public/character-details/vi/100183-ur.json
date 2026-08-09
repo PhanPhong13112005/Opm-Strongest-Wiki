@@ -100,20 +100,48 @@
   ],
   "effects": [
     {
-      "term": "[Bất Khuất Chuyên Biệt]",
-      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
-    },
-    {
-      "term": "[Phòng Hộ Chuyên Biệt]",
-      "desc": "Khiên bậc PvP hấp thụ sát thương nhận vào, được cấp theo giá trị dựa trên Tấn Công (ví dụ 400% ST)."
-    },
-    {
       "term": "[Nội Thương]",
-      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+      "desc": "Gây DMG dựa trên ATK của Suiryu khi mục tiêu bị ảnh hưởng bị tấn công, sau đó biến mất sau khi kích hoạt."
     },
     {
       "term": "[Đột Phá]",
-      "desc": "Hủy khiên Kiên Cường của mục tiêu và tăng tấn công cho đòn đó."
+      "desc": "Xóa 1 phiên bản [Bất Khuất] hoặc [Bất Khuất Chuyên Biệt] khỏi mục tiêu."
+    },
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Ngăn sát thương kết liễu đánh bại ngay đơn vị bị ảnh hưởng trong các điều kiện được chỉ định."
+    },
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Một phiên bản chuyên dụng của [Bất Khuất] có thể được gỡ bỏ bởi [Đột Phá]."
+    },
+    {
+      "term": "[Phòng Hộ Chuyên Biệt]",
+      "desc": "Giá trị phòng thủ chuyên dụng hấp thụ DMG nhận vào và được cấp dựa trên ATK của Suiryu."
+    },
+    {
+      "term": "[Trọng Thương]",
+      "desc": "Tăng DMG do hiệu ứng [Trọng Thương] và [Nội Thương] gây ra."
+    },
+    {
+      "term": "[Miễn Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]."
+    },
+    {
+      "term": "[Truy Kích Liên Tục]",
+      "desc": "Liên tục thực hiện Tuyệt Kĩ dưới dạng Truy Kích với DMG được chỉ định và tỷ lệ phần trăm hiệu ứng."
+    },
+    {
+      "term": "[Bám Dính]",
+      "desc": "Một hiệu ứng tiêu cực mà Suiryu miễn nhiễm khi thực hiện Truy Kích."
+    },
+    {
+      "term": "[Bám Dính/Tê Liệt]",
+      "desc": "Một hiệu ứng khống chế mà Suiryu miễn nhiễm khi thực hiện Truy Kích."
+    },
+    {
+      "term": "[Nhanh Nhẹn]",
+      "desc": "Hiệu ứng phòng thủ không thể cùng tồn tại với [Miễn Sát Thương Không Bạo Kích]."
     }
   ],
   "keepsakeIcon": "/Keepsake/Suiryu (UR)/Keepsake_UR.png",

@@ -101,32 +101,52 @@
   ],
   "effects": [
     {
-      "term": "[Vô Địch]",
-      "desc": "Sống sót trước các đòn không chí mạng gây chết (giữ khoảng 20% HP mà không gục) và kháng một số lượng giới hạn đòn chí mạng gây chết."
+      "term": "[Đột Phá Chuyên Biệt]",
+      "desc": "Ngay lập tức loại bỏ [Bất Khuất Chuyên Biệt] của mục tiêu."
     },
     {
-      "term": "[Choáng Tuyệt Đối]",
-      "desc": "Bậc choáng mạnh và cuối cùng của [Bất Tỉnh], chỉ có thể được gỡ bằng các đòn giải hiệu ứng chuyên biệt."
-    },
-    {
-      "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
-    },
-    {
-      "term": "[Miễn Nhiễm Đòn Không Bạo Kích]",
-      "desc": "Buff sinh tồn mà khi có, đơn vị không thể bị chí mạng và không thể chết, giữ lại 70% máu trong suốt thời gian hiệu lực."
-    },
-    {
-      "term": "[Miễn Tử Hỗn Hợp]",
-      "desc": "Hiệu ứng bất lợi gỡ bỏ trạng thái bất tử/miễn nhiễm của kẻ địch để chúng có thể bị tiêu diệt."
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Một hiệu ứng sinh tồn đặc biệt giúp ngăn đơn vị bị ảnh hưởng bị đánh bại trong những điều kiện cụ thể."
     },
     {
       "term": "[Sát Thương Chuẩn]",
-      "desc": "Loại sát thương thưởng gây thêm ngoài đòn đánh, bị giảm bởi các hiệu ứng kiểu Né và có thể được miễn nhiễm sau một số lượt nhất định."
+      "desc": "Không bị ảnh hưởng bởi Tỷ lệ DMG hoặc DMG miễn phí và giao dịch Sát Thương Trực Tiếp mà không có [Chia Sẻ Sát Thương] hoặc [Khả Năng Né Tránh]."
     },
     {
-      "term": "[Uy Hiếp]",
-      "desc": "Hiệu ứng khống chế dạng choáng khiến mục tiêu không thể hành động và giảm toàn bộ khả năng miễn sát thương của nó đi 30%."
+      "term": "[Chia Sẻ Sát Thương]",
+      "desc": "Phân phối DMG nhận vào giữa nhiều đơn vị bị ảnh hưởng. [Sát Thương Chuẩn] bỏ qua hiệu ứng này."
+    },
+    {
+      "term": "[Khả Năng Né Tránh]",
+      "desc": "Cho phép thiết bị bị ảnh hưởng tránh DMG có thể áp dụng. [Sát Thương Chuẩn] bỏ qua hiệu ứng này."
+    },
+    {
+      "term": "[Khả Năng Né Tránh Chuyên Biệt]",
+      "desc": "Sát Thương Trực Tiếp, DoT DMG, Đã nhận DMG và Tiền thưởng DMG chỉ chia 1 điểm DMG cho mỗi phiên bản."
+    },
+    {
+      "term": "[Sợ Hãi]",
+      "desc": "Một hiệu ứng khống chế mà nhân vật này miễn nhiễm."
+    },
+    {
+      "term": "[Choáng]",
+      "desc": "Ngăn chặn các đơn vị bị ảnh hưởng hành động."
+    },
+    {
+      "term": "[Choáng Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Choáng]."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Ngăn chặn DMG không chí mạng đánh bại nhân vật và chặn một số trường hợp có đòn chí mạng có giới hạn."
+    },
+    {
+      "term": "[Giảm Sát Thương Bạo Kích]",
+      "desc": "Giảm khả năng nhận được một đòn chí mạng."
+    },
+    {
+      "term": "[Miễn Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]."
     }
   ],
   "keepsakeIcon": "/Keepsake/Garou (UR)/Keepsake_UR.png",

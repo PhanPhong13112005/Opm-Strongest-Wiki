@@ -118,32 +118,44 @@
   ],
   "effects": [
     {
-      "term": "[Vô Địch]",
-      "desc": "Sống sót trước các đòn không chí mạng gây chết (giữ khoảng 20% HP mà không gục) và kháng một số lượng giới hạn đòn chí mạng gây chết."
-    },
-    {
-      "term": "[Bất Khuất Chuyên Biệt]",
-      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
-    },
-    {
-      "term": "[Kích Nổ]",
-      "desc": "Kích hoạt một tầng sát thương theo thời gian hoặc [Sụp Đổ] đang tích trữ để nổ ngay, biến nó thành một đòn tức thời nhân lên (ví dụ 3 lần sát thương tích trữ)."
-    },
-    {
-      "term": "[Miễn Nhiễm]",
-      "desc": "Trạng thái khiến người mang không bị ảnh hưởng bởi một hiệu ứng hoặc loại khống chế nhất định, như [Đột Phá], Choáng hay Mê Hoặc."
-    },
-    {
-      "term": "[Hồi Sinh]",
-      "desc": "Trạng thái đưa đơn vị bị hạ gục trở lại trận, cấp số lần hồi sinh giới hạn mà các hiệu ứng chống hồi sinh có thể gỡ bỏ."
-    },
-    {
       "term": "[Sụp Đổ Chuyên Biệt]",
-      "desc": "Debuff PvP giảm 10% Giảm Sát Thương của mục tiêu và gây 250% ST dạng Shatter mỗi khi mục tiêu bị tấn công."
+      "desc": "Giảm DMG Miễn phí và gây [Sát Thương Sụp Đổ] bất cứ khi nào mục tiêu bị ảnh hưởng bị tấn công. Cộng dồn tối đa 3 lần và không cộng dồn với [Sụp Đổ]."
+    },
+    {
+      "term": "[Nứt Vỡ Chuyên Biệt]",
+      "desc": "ATK bổ sung dựa trên DMG được kích hoạt khi một đơn vị bị ảnh hưởng bởi [Sụp Đổ Chuyên Biệt] bị tấn công."
     },
     {
       "term": "[Sụp Đổ]",
-      "desc": "Hiệu ứng sát thương/bất lợi phá vỡ phòng thủ của mục tiêu."
+      "desc": "Một hiệu ứng không thể cùng tồn tại với [Sụp Đổ Chuyên Biệt]. Chi tiết hiệu ứng chính xác hiện chưa được biết."
+    },
+    {
+      "term": "[Kích Nổ]",
+      "desc": "Chuyển đổi một phiên bản [Sát Thương Sụp Đổ] thành [Kích Nổ] DMG."
+    },
+    {
+      "term": "[Kích Nổ]",
+      "desc": "Hiệu ứng sát thương được tạo bằng cách chuyển đổi [Sát Thương Sụp Đổ]."
+    },
+    {
+      "term": "[Hồi Sinh]",
+      "desc": "Hiệu ứng hồi sinh bị loại bỏ khỏi kẻ thù bởi Nội tại của Melzargard trong toàn bộ trận chiến."
+    },
+    {
+      "term": "[Bất Bại]",
+      "desc": "Ngăn chặn CRIT DMG chí mạng đánh bại Melzargard, để lại cho anh ta 20% HP. Nó có thể chống lại một số lượng hạn chế các trường hợp CRIT DMG gây tử vong."
+    },
+    {
+      "term": "[Miễn Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG không quan trọng."
+    },
+    {
+      "term": "[Mê Hoặc]",
+      "desc": "Một hiệu ứng khống chế mà Melzargard trở nên miễn nhiễm."
+    },
+    {
+      "term": "[Mê Hoặc/Rời Trận]",
+      "desc": "Một hiệu ứng loại bỏ một nhân vật khỏi chiến đấu tích cực. Melzargard trở nên miễn nhiễm với nó."
     }
   ],
   "classLevel": "Dragon",

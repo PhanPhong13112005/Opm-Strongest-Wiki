@@ -100,24 +100,36 @@
   ],
   "effects": [
     {
-      "term": "[Enhance]",
-      "desc": "A general positive enhancing effect applies to the character, raising stats or granting benefits (e.g. increasing Hit Rate or damage dealt)."
+      "term": "[Lock]",
+      "desc": "Prevents [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]. Before any character acts, deals ATK-based DoT that can CRIT and cannot be [Evaded]."
     },
     {
-      "term": "[Lock Target]",
-      "desc": "The control state prevents the target from activating Charge, Continuous Charge, Link, and Special attacks."
+      "term": "[Follow-up]",
+      "desc": "An additional attack triggered after another action or when a specified condition is met."
     },
     {
-      "term": "[Chain Detonate]",
-      "desc": "The effect immediately spreads to surrounding targets, dealing 80% ST over Locked's duration."
+      "term": "[Continuous Follow-Up]",
+      "desc": "A Follow-Up that can continue triggering under specified conditions."
     },
     {
-      "term": "[Crit DMG]",
-      "desc": "Additional damage dealt by critical hits; is often adjusted via [Crit DMG Reduction] to cut down on this addition."
+      "term": "[Combo Follow-up]",
+      "desc": "A coordinated Follow-Up attack performed under specified conditions."
     },
     {
-      "term": "[Freeze]",
-      "desc": "Ice damage effects are added to attacks, dealing them to enemies along with the main attack."
+      "term": "[Evaded]",
+      "desc": "Causes applicable attacks or DMG effects to miss. [Lock] DoT cannot be evaded."
+    },
+    {
+      "term": "[Non-Crit DMG Free]",
+      "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+    },
+    {
+      "term": "[Agility]",
+      "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]. Exact effect details are currently unknown."
+    },
+    {
+      "term": "[Continuous Explosion]",
+      "desc": "When an enemy triggers [Lock], spreads a percentage of the [Lock] DMG and DoT DMG to surrounding targets or all enemies. This DMG can CRIT and cannot be dodged."
     }
   ],
   "keepsakeIcon": "/Keepsake/Hellish Blizzard (UR)/Keepsake_UR.png",

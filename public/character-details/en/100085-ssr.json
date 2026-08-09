@@ -79,12 +79,16 @@
   "classIcon": "/Class/Dragon.png",
   "effects": [
     {
-      "term": "[Detonate]",
-      "desc": "Activate a stack of damage over time or stored [Collapse] to instantly explode, turning it into an instant multiplier (e.g. 3 times the stored damage)."
+      "term": "[Field]",
+      "desc": "Before taking action, the affected unit suffers ATK-based Continuous DMG. Basic deals 150% ATK, Ultimate deals 160% ATK, and Ultra-Ultimate deals 230% ATK."
     },
     {
-      "term": "[Force Field]",
-      "desc": "Tatsumaki's damage over time area; Every time an enemy takes damage from the Field, it will accumulate a level of Charge (maximum 4 levels)."
+      "term": "[Detonation]",
+      "desc": "Immediately converts the original [Field] DMG into Detonation DMG. The conversion rate is 100% / 110% / 120% depending on Passive level."
+    },
+    {
+      "term": "[Giant]",
+      "desc": "A special state entered after triggering [Detonation]. While in this state, Ultimate and Ultra-Ultimate increase Continuous DMG Rate by 50%."
     }
   ],
   "releaseDate": "01/05/2022",

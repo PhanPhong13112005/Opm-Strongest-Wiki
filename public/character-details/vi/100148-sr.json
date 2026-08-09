@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 40% ATK (+3) DMG cho một mục tiêu trong combo 3 đòn.",
+      "desc": "Gây 40% ATK DMG cho một mục tiêu trong combo 3 đòn.",
       "icon": "/Skill/Hamukichi (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -74,7 +74,7 @@
   "effects": [
     {
       "term": "[Làm Suy Yếu]",
-      "desc": "Hiệu ứng bất lợi làm giảm 30% tỷ lệ giảm sát thương của mục tiêu trong thời gian hiệu lực."
+      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
     }
   ],
   "keepsakeIcon": "/Keepsake/Hamukichi (SR)/Keepsake_SR.png",

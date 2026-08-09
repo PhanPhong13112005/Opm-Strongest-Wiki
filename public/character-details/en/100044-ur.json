@@ -101,20 +101,44 @@
   ],
   "effects": [
     {
-      "term": "[DMG Immunity]",
-      "desc": "The bearer only takes a portion (e.g. 20%, or 0% when enhanced) of all damage taken."
-    },
-    {
-      "term": "[Resurrect]",
-      "desc": "Status returns downed units to battle, granting a limited number of respawns that anti-revive effects can remove."
-    },
-    {
       "term": "[True DMG]",
-      "desc": "This type of bonus damage is dealt on top of attacks, is reduced by Evasion-type effects, and can be immune after a certain number of turns."
+      "desc": "Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion]."
+    },
+    {
+      "term": "[DMG Sharing]",
+      "desc": "Distributes incoming DMG among multiple affected units. [True DMG] ignores this effect."
+    },
+    {
+      "term": "[Evasion]",
+      "desc": "Allows the affected unit to avoid applicable DMG. [True DMG] ignores this effect."
+    },
+    {
+      "term": "[Specialized Breakthrough]",
+      "desc": "Instantly removes [DMG Ignoration]."
+    },
+    {
+      "term": "[Ignore DMG]",
+      "desc": "An effect that allows applicable incoming DMG to be ignored."
+    },
+    {
+      "term": "[Buffer]",
+      "desc": "A buff associated with Hellfire UR that this Ultimate has an 80% chance to penetrate."
+    },
+    {
+      "term": "[Non-Crit DMG Free]",
+      "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+    },
+    {
+      "term": "[Agility]",
+      "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]. Exact effect details are currently unknown."
     },
     {
       "term": "[Revenge]",
-      "desc": "The counterattack state can extend the duration on yourself or shorten it on enemies, granting retaliatory effects."
+      "desc": "Allows the unit to resurrect immediately after a character is defeated following an action, restore HP, and perform a [Revenge Pursuit]."
+    },
+    {
+      "term": "[Specialized Fear]",
+      "desc": "A special effect whose additional consumption does not affect this unit’s [Revenge Pursuit]."
     }
   ],
   "keepsakeIcon": "/Keepsake/Drive Knight (UR)/Keepsake_UR.png",

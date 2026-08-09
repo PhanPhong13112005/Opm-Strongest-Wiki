@@ -101,32 +101,52 @@
   ],
   "effects": [
     {
-      "term": "[Invincible]",
-      "desc": "Survive non-fatal attacks (hold about 20% HP without collapsing) and resist a limited number of fatal attacks."
+      "term": "[Specialized Breakthrough]",
+      "desc": "Immediately removes the target’s [Specialized Unyielding]."
     },
     {
-      "term": "[Absolute Stun]",
-      "desc": "[Faint's] powerful and final stun, which can only be removed with specialized debuffs."
-    },
-    {
-      "term": "[Stun]",
-      "desc": "The stun-type control effect prevents the target from taking action during the duration."
-    },
-    {
-      "term": "[Non-Crit Immunity]",
-      "desc": "Survival buff that, when present, prevents the unit from being crited and cannot die, retaining 70% of its health for the duration of the effect."
-    },
-    {
-      "term": "[Mixed Death Immunity]",
-      "desc": "Unfavorable effects remove the enemy's invulnerability/immunity so they can be destroyed."
+      "term": "[Specialized Unyielding]",
+      "desc": "A specialized survival effect that prevents the affected unit from being defeated under specific conditions."
     },
     {
       "term": "[True DMG]",
-      "desc": "This type of bonus damage is dealt on top of attacks, is reduced by Evasion-type effects, and can be immune after a certain number of turns."
+      "desc": "Not affected by DMG Rate or DMG Free, and deals Direct DMG without [DMG Sharing] or [Evasion]."
     },
     {
-      "term": "[Threaten]",
-      "desc": "The stun control effect renders the target unable to act and reduces its overall damage immunity by 30%."
+      "term": "[DMG Sharing]",
+      "desc": "Distributes incoming DMG between multiple affected units. [True DMG] ignores this effect."
+    },
+    {
+      "term": "[Evasion]",
+      "desc": "Allows the affected unit to avoid applicable DMG. [True DMG] ignores this effect."
+    },
+    {
+      "term": "[Specialized Evasion]",
+      "desc": "Direct DMG, DoT DMG, Received DMG, and Bonus DMG only deal 1 point of DMG per instance."
+    },
+    {
+      "term": "[Fear]",
+      "desc": "A control effect that this character is immune to."
+    },
+    {
+      "term": "[Stun]",
+      "desc": "Prevents the affected unit from acting."
+    },
+    {
+      "term": "[Specialized Stun]",
+      "desc": "A specialized form of [Stun]."
+    },
+    {
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "Prevents fatal non-critical DMG from defeating the character and blocks a limited number of fatal critical-hit instances."
+    },
+    {
+      "term": "[Reduce Crit DMG]",
+      "desc": "Reduces the chance of receiving a critical hit."
+    },
+    {
+      "term": "[Non-Crit DMG Free]",
+      "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
     }
   ],
   "keepsakeIcon": "/Keepsake/Garou (UR)/Keepsake_UR.png",

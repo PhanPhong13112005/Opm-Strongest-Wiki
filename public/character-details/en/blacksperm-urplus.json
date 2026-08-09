@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 120% ATK (+10) DMG to a single target.",
+      "desc": "Deals 120% ATK DMG to a single target.",
       "icon": "/Skill/Source/blacksperm-urplus/basic.webp",
       "animation": null,
       "type": "Basic",
@@ -101,16 +101,56 @@
   ],
   "effects": [
     {
+      "term": "[Specialized Direct DMG]",
+      "desc": "A specialized type of direct damage affected only by advanced damage modifiers."
+    },
+    {
+      "term": "[Specialized Evasion]",
+      "desc": "A specialized defensive effect that this Ultimate partially ignores."
+    },
+    {
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "Reduces damage received from non-critical attacks."
+    },
+    {
+      "term": "[Unyielding]",
+      "desc": "Prevents the affected unit from being defeated under specific conditions."
+    },
+    {
+      "term": "[Specialized Unyielding]",
+      "desc": "A specialized form of [Unyielding]."
+    },
+    {
+      "term": "[All DMG Amplification]",
+      "desc": "Increases all damage dealt by the affected unit."
+    },
+    {
+      "term": "[All DMG Reduction]",
+      "desc": "Reduces all damage received by the affected unit."
+    },
+    {
+      "term": "[Specialized Extra DMG]",
+      "desc": "When the affected character uses an Ultimate, deals [Specialized Bonus DMG] equal to 800% of their Max HP to the enemy with the highest Max HP (can CRIT, PvP only)."
+    },
+    {
+      "term": "[Support Enhancement]",
+      "desc": "Enhances the unit's support-related effects."
+    },
+    {
       "term": "[Invincible]",
-      "desc": "Absorbs all damage received during this period, restoring HP on the next turn."
+      "desc": "Absorbs all incoming DMG while the state is active."
+    },
+    {
+      "term": "[Follow-up]",
+      "desc": "A summoned follower that inherits a percentage of Black Sperm's base Attack and can perform Follow-Up attacks."
     },
     {
       "term": "[Re-battle]",
-      "desc": "Triggers an extra action."
+      "desc": "A special effect that can trigger the additional effect of Awaken 2 Passive."
     },
     {
       "term": "[Charged Pursuit]",
-      "desc": "Attacks out of turn with a predetermined skill strength percentage."
+      "desc": "A special Follow-Up attack performed with the specified skill power."
     }
   ],
   "keepsakeIcon": "/Keepsake/Black Sperm (URplus)/Keepsake_URplus.webp",

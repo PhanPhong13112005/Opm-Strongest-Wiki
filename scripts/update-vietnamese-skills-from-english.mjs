@@ -454,6 +454,33 @@ async function main() {
       }
     }
 
+    if (enCharacter.effects && enCharacter.effects.length > 0) {
+      const oldEffects = headById.get(enCharacter.id)?.effects || []
+      viCharacter.effects = enCharacter.effects.map((eff, effIdx) => {
+        const termRaw = eff.term.replace(/^\[|\]$/g, '').trim()
+        const translatedTerm = glossary.get(termRaw.toLocaleLowerCase('en')) || termRaw
+        const oldDesc = String(oldEffects[effIdx]?.desc || '').trim()
+        return {
+          term: `[${translatedTerm}]`,
+          desc: eff.desc,
+          oldDesc,
+          rawDesc: eff.desc,
+        }
+      })
+      viCharacter.effects.forEach((eff, effIdx) => {
+        const desc = eff.rawDesc
+        const oldDesc = eff.oldDesc
+        delete eff.rawDesc
+        delete eff.oldDesc
+        if (desc && (TRANSLATE_ALL || desc !== oldDesc)) {
+          jobs.push({ type: 'effect', enCharacter, viCharacter, effIdx, desc })
+        } else if (desc) {
+          const { protectedText, replacements } = protectText(desc, glossary, characterNames)
+          eff.desc = restoreText(protectedText, replacements)
+        }
+      })
+    }
+
     if (viCharacter.skills.length !== enCharacter.skills.length) {
       throw new Error(`Skill count mismatch: ${enCharacter.id}`)
     }
@@ -475,12 +502,20 @@ async function main() {
   const workers = Array.from({ length: 6 }, async () => {
     while (jobs.length) {
       const job = jobs.shift()
-      const key = skillKey(job.enCharacter.id, job.skill, job.index)
-      const cacheKey = `${key}::${job.desc}`
-      const { protectedText, replacements } = protectText(job.desc, glossary, characterNames)
-      const translated = cache[cacheKey] || await translate(protectedText)
-      cache[cacheKey] = translated
-      job.viCharacter.skills[job.index].desc = restoreText(translated, replacements)
+      if (job.type === 'effect') {
+        const cacheKey = `effect::${job.enCharacter.id}::${job.effIdx}::${job.desc}`
+        const { protectedText, replacements } = protectText(job.desc, glossary, characterNames)
+        const translated = cache[cacheKey] || await translate(protectedText)
+        cache[cacheKey] = translated
+        job.viCharacter.effects[job.effIdx].desc = restoreText(translated, replacements)
+      } else {
+        const key = skillKey(job.enCharacter.id, job.skill, job.index)
+        const cacheKey = `${key}::${job.desc}`
+        const { protectedText, replacements } = protectText(job.desc, glossary, characterNames)
+        const translated = cache[cacheKey] || await translate(protectedText)
+        cache[cacheKey] = translated
+        job.viCharacter.skills[job.index].desc = restoreText(translated, replacements)
+      }
       completed += 1
       if (completed % 25 === 0) {
         await fs.writeFile(CACHE_FILE, `${JSON.stringify(cache)}\n`, 'utf8')

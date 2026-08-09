@@ -114,16 +114,56 @@
   ],
   "effects": [
     {
-      "term": "[Sức Bền]",
-      "desc": "Lá chắn hấp thụ sát thương bằng 100% Máu Tối đa của bản thân người mang."
+      "term": "[Khóa]",
+      "desc": "Ngăn chặn [Truy Kích], [Truy Kích Liên Tục] và [Truy Kích Liên Kích]. Trước khi bất kỳ nhân vật nào hành động, hãy chia DoT dựa trên ATK có thể là CRIT và không thể là [Đã Né Tránh]."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Một cuộc tấn công bổ sung được kích hoạt sau một hành động khác hoặc khi đáp ứng một điều kiện cụ thể."
+    },
+    {
+      "term": "[Truy Kích Liên Tục]",
+      "desc": "Truy Kích có thể tiếp tục kích hoạt trong các điều kiện được chỉ định."
+    },
+    {
+      "term": "[Truy Kích Liên Kích]",
+      "desc": "Truy Kích phối hợp được thực hiện trong các điều kiện được chỉ định."
+    },
+    {
+      "term": "[Ăn Mòn Chuyên Biệt]",
+      "desc": "Gây DMG liên tục bằng 300% ATK, biến mất sau khi kích hoạt 10 lần và chuyển sang mục tiêu hợp lệ khác sau khi bất kỳ nhân vật nào hành động."
+    },
+    {
+      "term": "[Bền Bỉ Chuyên Biệt]",
+      "desc": "Ảnh hưởng đến mức DMG [Bền Bỉ Chuyên Biệt] có thể hấp thụ cho mỗi điểm Khiên."
+    },
+    {
+      "term": "[Miễn Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]."
+    },
+    {
+      "term": "[Nhanh Nhẹn]",
+      "desc": "Hiệu ứng phòng thủ không thể cùng tồn tại với [Miễn Sát Thương Không Bạo Kích]."
+    },
+    {
+      "term": "[Bạo Nổ Lan Truyền]",
+      "desc": "Splash DMG được tạo khi hiệu ứng DMG liên tục kích hoạt."
     },
     {
       "term": "[Sát Thương Chuẩn]",
-      "desc": "Loại sát thương thưởng gây thêm ngoài đòn đánh, bị giảm bởi các hiệu ứng kiểu Né và có thể được miễn nhiễm sau một số lượt nhất định."
+      "desc": "Không bị ảnh hưởng bởi Tỷ lệ DMG hoặc DMG Miễn phí và giao dịch Sát Thương Trực Tiếp không có [Chia Sẻ Sát Thương] hoặc [Khả Năng Né Tránh]."
     },
     {
-      "term": "[Ăn Mòn]",
-      "desc": "Hiệu ứng sát thương theo thời gian dạng ăn mòn, mỗi lượt gây sát thương bằng một tỷ lệ ST (ví dụ 300%) lên mục tiêu."
+      "term": "[Chia Sẻ Sát Thương]",
+      "desc": "Phân phối DMG nhận vào cho nhiều đơn vị bị ảnh hưởng. [Sát Thương Chuẩn] bỏ qua hiệu ứng này."
+    },
+    {
+      "term": "[Khả Năng Né Tránh]",
+      "desc": "Cho phép thiết bị bị ảnh hưởng tránh DMG hiện hành. [Sát Thương Chuẩn] bỏ qua hiệu ứng này."
+    },
+    {
+      "term": "[Đã Né Tránh]",
+      "desc": "Làm cho đòn tấn công có thể áp dụng hoặc hiệu ứng DMG bị trượt. [Khóa] DoT không thể trốn tránh được."
     }
   ],
   "classLevel": "Class_SS",

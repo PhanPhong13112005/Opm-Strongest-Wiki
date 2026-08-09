@@ -31,7 +31,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây một đòn combo 5 đòn cho một mục tiêu, gây sát thương 48% ATK (+2), đồng thời hồi máu cho tất cả đồng minh với 100% ATK trị giá HP.",
+      "desc": "Gây một combo 5 đòn cho một mục tiêu duy nhất với 48% sát thương ATK, đồng thời hồi máu cho tất cả đồng minh với 100% ATK trị giá HP.",
       "icon": "/Skill/Zombieman (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -40,7 +40,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây một đòn kết hợp 5 đòn cho một mục tiêu, gây 60% ATK (+2) sát thương, đồng thời hồi máu cho tất cả đồng minh với giá trị 150% ATK trị giá HP.",
+      "desc": "Gây một đòn combo 5 đòn cho một mục tiêu duy nhất với 60% sát thương ATK, đồng thời hồi máu cho tất cả đồng minh với trị giá 150% ATK trị giá HP.",
       "icon": "/Skill/Zombieman (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Zombieman (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -81,7 +81,7 @@
   "effects": [
     {
       "term": "[Hồi Phục]",
-      "desc": "Hồi Máu theo thời gian hoặc trước hành động kế tiếp của đơn vị."
+      "desc": "Restores Health over time or before the unit's next action."
     }
   ],
   "releaseDate": "01/12/2020",

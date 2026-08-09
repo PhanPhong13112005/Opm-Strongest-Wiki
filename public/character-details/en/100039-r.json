@@ -23,7 +23,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Strikes a single target with a 5-hit combo dealing 38% ATK(+2) DMG, and has a 100% chance to reduce DMG taken by self by 10% for 2 turns.",
+      "desc": "Strikes a single target with a 5-hit combo dealing 38% ATK DMG, and has a 100% chance to reduce DMG taken by self by 10% for 2 turns.",
       "icon": "/Skill/Crablante (R)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Strikes a single target with a 5-hit combo dealing 38% ATK(+2) DMG. Has a 100% chance to reduce DMG taken by self% for 2 turns.",
+      "desc": "Strikes a single target with a 5-hit combo dealing 38% ATK DMG. Has a 100% chance to reduce DMG taken by self% for 2 turns.",
       "icon": "/Skill/Crablante (R)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Crablante (R)/Keepsake_R.png",
       "type": "Ultimate",

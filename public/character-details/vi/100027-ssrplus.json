@@ -101,8 +101,20 @@
   ],
   "effects": [
     {
-      "term": "[Bất Tử]",
-      "desc": "Trạng thái sinh tồn giữ người mang sống sót bằng cách giảm mạnh sát thương nhận vào (ví dụ chỉ chịu 20%)."
+      "term": "[Phòng Hộ Chuyên Biệt]",
+      "desc": "Phủ nhận đã nhận được DMG và ghi đè các hiệu ứng HP Tiền thưởng. Tổng số tiền không được vượt quá 15 lần HP tối đa ban đầu của thiết bị."
+    },
+    {
+      "term": "[Lá Chắn]",
+      "desc": "Tăng hiệu quả của [Lá Chắn] và [Phòng Hộ Chuyên Biệt] được tạo."
+    },
+    {
+      "term": "[Phản Sát Thương Chuyên Biệt]",
+      "desc": "Giảm Sát Thương Trực Tiếp và Extra DMG đã nhận và phản ánh một tỷ lệ phần trăm của DMG ban đầu trở lại kẻ tấn công dưới dạng Extra DMG."
+    },
+    {
+      "term": "[Cuồng Bạo Chuyên Biệt]",
+      "desc": "Khiến đòn đánh đầu tiên gây thêm [Sát Thương Cuồng Bạo] bằng 50% HP tối đa của Hợp Kim Đen Bóng. Kéo dài trong toàn bộ trận chiến."
     }
   ],
   "keepsakeIcon": "/Keepsake/Superalloy Darkshine (SSRplus)/Keepsake_SSRplus.png",

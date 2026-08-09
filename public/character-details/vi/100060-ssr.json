@@ -79,7 +79,7 @@
   "effects": [
     {
       "term": "[Thiêu Đốt]",
-      "desc": "Sát thương lửa liên tục theo thời gian lên mục tiêu."
+      "desc": "Continuous fire damage over time to the target."
     }
   ],
   "releaseDate": "16/06/2020",

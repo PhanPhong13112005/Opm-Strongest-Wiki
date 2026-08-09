@@ -102,28 +102,36 @@
   ],
   "effects": [
     {
-      "term": "[Chia Sẻ Sát Thương]",
-      "desc": "Hiệu ứng phân tán sát thương nhận vào cho các đồng minh; [Sát Thương Chuẩn] bỏ qua nó bằng cách đánh thẳng vào Máu."
+      "term": "[Thiêu Đốt Chuyên Biệt]",
+      "desc": "Ưu đãi ATK dựa trên DoT DMG. Sau khi bất kỳ nhân vật nào hành động, chuyển đến một mục tiêu ngẫu nhiên và biến mất sau khi được chuyển 3 lần."
     },
     {
       "term": "[Kích Nổ]",
-      "desc": "Kích hoạt một tầng sát thương theo thời gian hoặc [Sụp Đổ] đang tích trữ để nổ ngay, biến nó thành một đòn tức thời nhân lên (ví dụ 3 lần sát thương tích trữ)."
+      "desc": "Chuyển đổi tỷ lệ phần trăm của một phiên bản [Thiêu Đốt Chuyên Biệt] DMG thành [Kích Nổ] DMG."
+    },
+    {
+      "term": "[Kích Nổ]",
+      "desc": "Hiệu ứng sát thương được tạo bằng cách chuyển đổi [Thiêu Đốt Chuyên Biệt] DMG."
+    },
+    {
+      "term": "[Miễn Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]."
     },
     {
       "term": "[Nhanh Nhẹn]",
-      "desc": "Buff loại né tránh; loại trừ lẫn nhau với Miễn Sát Thương Non-Crit."
-    },
-    {
-      "term": "[Né Tránh]",
-      "desc": "Trạng thái né giúp giảm sát thương Trực Tiếp, Thêm, Tích Lũy và Cuồng Nộ nhận vào chỉ còn 1 điểm trong thời gian hiệu lực."
+      "desc": "Hiệu ứng phòng thủ không thể cùng tồn tại với [Miễn Sát Thương Không Bạo Kích]."
     },
     {
       "term": "[Sát Thương Chuẩn]",
-      "desc": "Loại sát thương thưởng gây thêm ngoài đòn đánh, bị giảm bởi các hiệu ứng kiểu Né và có thể được miễn nhiễm sau một số lượt nhất định."
+      "desc": "Không bị ảnh hưởng bởi Tỷ lệ DMG hoặc DMG miễn phí và giao dịch Sát Thương Trực Tiếp mà không có [Chia Sẻ Sát Thương] hoặc [Khả Năng Né Tránh]."
     },
     {
-      "term": "[Thiêu Đốt Chuyên Biệt]",
-      "desc": "Bậc PvP của Thiêu Đốt — sát thương liên tục mạnh hơn, khó giải hơn."
+      "term": "[Chia Sẻ Sát Thương]",
+      "desc": "Phân phối DMG nhận vào giữa nhiều đơn vị bị ảnh hưởng. [Sát Thương Chuẩn] bỏ qua hiệu ứng này."
+    },
+    {
+      "term": "[Khả Năng Né Tránh]",
+      "desc": "Cho phép thiết bị bị ảnh hưởng tránh DMG có thể áp dụng. [Sát Thương Chuẩn] bỏ qua hiệu ứng này."
     }
   ],
   "keepsakeIcon": "/Keepsake/Genos (UR)/Keepsake_UR.png",

@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 40% ATK (+3) DMG to a single target over 3 hit combo.",
+      "desc": "Deals 40% ATK DMG to a single target over 3 hit combo.",
       "icon": "/Skill/Phoenix Man (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 50% ATK (+3) DMG to each enemy in the back row over 3 hit combo, with a 70% chance to inflict [Burn] on the target for 2 turns (DoT equal to 20% of max HP).",
+      "desc": "Deals 50% ATK DMG to each enemy in the back row over 3 hit combo, with a 70% chance to inflict [Burn] on the target for 2 turns (DoT equal to 20% of max HP).",
       "icon": "/Skill/Phoenix Man (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 60% ATK (+3) DMG to each enemy in the back row over 3 hit combo, with a 100% chance to inflict [Burn] on the target for 2 turns (DoT equal to 25% of max HP).",
+      "desc": "Deals 60% ATK DMG to each enemy in the back row over 3 hit combo, with a 100% chance to inflict [Burn] on the target for 2 turns (DoT equal to 25% of max HP).",
       "keepsakeIcon": "/Keepsake/Phoenix Man (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Phoenix Man (SSR)/Skill_ult.png",
       "type": "Ultimate",
@@ -74,7 +74,7 @@
   ],
   "effects": [
     {
-      "term": "[Thiêu Đốt]",
+      "term": "[Burn]",
       "desc": "Continuous fire damage over time to the target."
     },
     {

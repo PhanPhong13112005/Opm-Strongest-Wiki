@@ -73,7 +73,7 @@
     },
     {
       "name": "Nội tại Thức tỉnh 1",
-      "desc": "Lõi cơ bản: Cung cấp 3 năng lượng mỗi vòng. Trong 3 hiệp đầu tiên, tất cả đồng minh đều nhận được 30% [Sát Thương Đấu Trường]. Yêu cầu: Triển khai 1 Grappler và 2 Esper. Advanced Core: Tất cả các nhân vật đồng minh nhận được [Hồi Phục Dư Thừa] vĩnh viễn khi tham gia trận chiến. Tất cả đồng minh đều nhận được 30% [Miễn Sát Thương Đấu Trường]. Vào đầu mỗi vòng, các đồng minh ở hàng đầu sẽ khôi phục HP bằng 80% HP tối đa của họ. Hiệu ứng này kéo dài trong 3 lượt. [Hồi Phục Dư Thừa]: Hồi máu và Hút máu quá mức được chuyển đổi thành một lượng [Khiên Sinh Lực] tương đương để hấp thụ DMG nhận vào. Tổng lượng DMG được hấp thụ không được vượt quá 20× HP ban đầu của thiết bị. Yêu cầu: Triển khai 1 Duelist, 1 Grappler và 2 Esper.",
+      "desc": "Lõi cơ bản: Cung cấp 3 năng lượng mỗi vòng. Trong 3 hiệp đầu tiên, tất cả đồng minh đều nhận được 30% [Sát Thương Đấu Trường]. Yêu cầu: Triển khai 1 Grappler và 2 Esper.\n\nAdvanced Core: Tất cả các nhân vật đồng minh nhận được [Hồi Phục Dư Thừa] vĩnh viễn khi tham gia trận chiến. Tất cả đồng minh đều nhận được 30% [Miễn Sát Thương Đấu Trường]. Vào đầu mỗi vòng, các đồng minh ở hàng đầu sẽ khôi phục HP bằng 80% HP tối đa của họ. Hiệu ứng này kéo dài trong 3 lượt. [Hồi Phục Dư Thừa]: Hồi máu và Hút máu quá mức được chuyển đổi thành một lượng [Khiên Sinh Lực] tương đương để hấp thụ DMG nhận vào. Tổng lượng DMG được hấp thụ không được vượt quá 20× HP ban đầu của thiết bị. Yêu cầu: Triển khai 1 Duelist, 1 Grappler và 2 Esper.",
       "icon": "/Skill/Source/100184-ur/awakened.webp",
       "type": "Thức tỉnh",
       "keepsakeIcon": null,
@@ -101,24 +101,48 @@
   ],
   "effects": [
     {
-      "term": "[Bất Khuất Chuyên Biệt]",
-      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
-    },
-    {
       "term": "[Bất Khuất]",
-      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+      "desc": "Ngăn chặn đơn vị bị ảnh hưởng bị đánh bại trong các điều kiện cụ thể."
     },
     {
-      "term": "[Miễn Nhiễm Đòn Không Bạo Kích]",
-      "desc": "Buff sinh tồn mà khi có, đơn vị không thể bị chí mạng và không thể chết, giữ lại 70% máu trong suốt thời gian hiệu lực."
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Một dạng [Bất Khuất] chuyên dụng có thể được [Đột Phá] loại bỏ ngay lập tức."
     },
     {
-      "term": "[Miễn Nhiễm Sát Thương Không Bạo Kích]",
-      "desc": "Giảm mọi sát thương không chí mạng (thường về 1). Không thể tồn tại cùng né tránh loại Agility."
+      "term": "[HP Chuyên Biệt]",
+      "desc": "Một nhóm HP chuyên dụng có thể nhận sát thương riêng biệt với HP bình thường."
     },
     {
-      "term": "[Kích Nổ]",
-      "desc": "Lớp nổ tích lũy mà mỗi lớp (đến giới hạn) thêm một mục tiêu cho kỹ năng Tối Thượng."
+      "term": "[Giận Dữ]",
+      "desc": "Tăng ATK của Boros cho hành động hoạt động tiếp theo của anh ta."
+    },
+    {
+      "term": "[Đột Phá]",
+      "desc": "Ngay lập tức loại bỏ [Bất Khuất Chuyên Biệt] khỏi tất cả mục tiêu trên chiến trường khi được kích hoạt."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm sát thương nhận được từ các đòn tấn công không quan trọng."
+    },
+    {
+      "term": "[Bạo Nổ]",
+      "desc": "Tăng sát thương gây ra trong các trận chiến Arena hoặc PvP."
+    },
+    {
+      "term": "[Miễn Sát Thương Không Bạo Kích]",
+      "desc": "Giảm sát thương Arena hoặc PvP nhận được theo tỷ lệ phần trăm được chỉ định."
+    },
+    {
+      "term": "[Hồi Phục Dư Thừa]",
+      "desc": "Chuyển đổi lượng Hồi máu và Hút máu dư thừa thành một lượng [Khiên Sinh Lực] tương đương."
+    },
+    {
+      "term": "[Khiên Sinh Lực]",
+      "desc": "Một lá chắn được tạo ra từ quá trình phục hồi vượt mức hấp thụ DMG nhận vào."
+    },
+    {
+      "term": "[Truy Kích Tụ Lực]",
+      "desc": "Cuộc tấn công Truy Kích được kích hoạt sau một hành động hoặc điều kiện được chỉ định khác."
     }
   ],
   "keepsakeIcon": "/Keepsake/Boros (UR)/Keepsake_UR.png",

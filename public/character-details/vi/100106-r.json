@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 5 đòn liên tiếp lên tất cả mục tiêu, gây 24% ATK (+2) sát thương trực tiếp và tăng tỷ lệ phản xạ DMG của tất cả đồng minh%.",
+      "desc": "Gây 5 đòn liên tiếp lên tất cả mục tiêu, gây 24% sát thương trực tiếp ATK và tăng tỷ lệ phản xạ DMG của tất cả đồng minh%.",
       "icon": "/Skill/Maiko Plasma (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 5 đòn đánh liên tiếp lên tất cả mục tiêu, gây 26% ATK (+2) sát thương trực tiếp và tăng tỷ lệ phản xạ DMG của tất cả đồng minh thêm 25%.",
+      "desc": "Gây 5 đòn đánh liên tiếp lên tất cả mục tiêu, gây 26% sát thương trực tiếp ATK và tăng tỷ lệ phản xạ DMG của tất cả đồng minh thêm 25%.",
       "keepsakeIcon": "/Keepsake/Maiko Plasma (R)/Keepsake_R.png",
       "icon": "/Skill/Maiko Plasma (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",

@@ -118,32 +118,44 @@
   ],
   "effects": [
     {
-      "term": "[Invincible]",
-      "desc": "Survive non-fatal attacks (hold about 20% HP without collapsing) and resist a limited number of fatal attacks."
+      "term": "[Specialized Collapse]",
+      "desc": "Decreases DMG Free and deals [Collapse DMG] whenever the affected target is attacked. Stacks up to 3 times and does not stack with [Collapse]."
     },
     {
-      "term": "[Spec. Unyielding]",
-      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
-    },
-    {
-      "term": "[Detonate]",
-      "desc": "Activate a stack of damage over time or stored [Collapse] to instantly explode, turning it into an instant multiplier (e.g. 3 times the stored damage)."
-    },
-    {
-      "term": "[Immunity]",
-      "desc": "Status that causes the bearer to be unaffected by a certain effect or type of control, such as [Breakthrough], Stun, or Charm."
-    },
-    {
-      "term": "[Resurrect]",
-      "desc": "Status returns downed units to battle, granting a limited number of respawns that anti-revive effects can remove."
-    },
-    {
-      "term": "[Spec. Collapse]",
-      "desc": "PvP debuff reduces target's Damage Reduction by 10% and deals 250% Shatter damage each time the target is attacked."
+      "term": "[Specialized Shatter]",
+      "desc": "Additional ATK-based DMG triggered when a unit affected by [Specialized Collapse] is attacked."
     },
     {
       "term": "[Collapse]",
-      "desc": "Damage/disadvantage effect breaks target's defense."
+      "desc": "An effect that cannot coexist with [Specialized Collapse]. Exact effect details are currently unknown."
+    },
+    {
+      "term": "[Detonate]",
+      "desc": "Converts a single [Collapse DMG] instance into [Detonation] DMG."
+    },
+    {
+      "term": "[Detonation]",
+      "desc": "A damage effect created by converting [Collapse DMG]."
+    },
+    {
+      "term": "[Revival]",
+      "desc": "A revival effect removed from enemies by Melzargard’s Passive for the entire battle."
+    },
+    {
+      "term": "[Undefeated]",
+      "desc": "Prevents fatal CRIT DMG from defeating Melzargard, leaving him with 20% HP. It can resist a limited number of fatal CRIT DMG instances."
+    },
+    {
+      "term": "[Non-Crit DMG Free]",
+      "desc": "Reduces all types of non-critical DMG."
+    },
+    {
+      "term": "[Charm]",
+      "desc": "A control effect that Melzargard becomes immune to."
+    },
+    {
+      "term": "[Charm/Off Battle]",
+      "desc": "An effect that removes a character from active combat. Melzargard becomes immune to it."
     }
   ],
   "classLevel": "Dragon",

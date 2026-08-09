@@ -101,16 +101,24 @@
   ],
   "effects": [
     {
-      "term": "[Dodge]",
-      "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+      "term": "[Specialized Guard]",
+      "desc": "Negates incoming DMG and overwrites Bonus HP effects. Its total amount cannot exceed 15 times the unit's original Max HP."
     },
     {
-      "term": "[Follow-up DMG]",
-      "desc": "This type of attack damage is dealt as Attack attacks in a series of rapid attacks, gradually increasing the number of consecutive attacks."
+      "term": "[Disabled]",
+      "desc": "Prevents the affected unit from triggering [Follow-Up] and [Continuous Follow-Up]."
     },
     {
-      "term": "[Nullify]",
-      "desc": "Disabled status applies to a target area/column, rendering affected units unable to act or be effective."
+      "term": "[Follow-up]",
+      "desc": "An additional attack triggered after another action or when specified conditions are met."
+    },
+    {
+      "term": "[Continuous Follow-Up]",
+      "desc": "A Follow-Up effect that can trigger repeatedly under specified conditions."
+    },
+    {
+      "term": "[Evasion]",
+      "desc": "Causes Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to deal only 1 point of DMG."
     }
   ],
   "keepsakeIcon": "/Keepsake/Watchdog Man (SSRplus)/Keepsake_SSRplus.png",

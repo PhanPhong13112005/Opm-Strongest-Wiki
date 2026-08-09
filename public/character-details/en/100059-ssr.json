@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 40% ATK (+3) damage to a single target in 3 hit combos. After acting, randomly puts one ally into the [Berserk] state (deals 30% more damage when attacking).",
+      "desc": "Deals 40% ATK damage to a single target in 3 hit combos. After acting, randomly puts one ally into the [Berserk] state (deals 30% more damage when attacking).",
       "icon": "/Skill/Geryuganshoop (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 26% ATK (+2) damage to each enemy in the entire row in 5 hit combos, and inflicts [Panic] on the enemy (seals the enemy's energy for several turns; when the same effect is present, the highest value takes effect).",
+      "desc": "Deals 26% ATK damage to each enemy in the entire row in 5 hit combos, and inflicts [Panic] on the enemy (seals the enemy's energy for several turns; when the same effect is present, the highest value takes effect).",
       "icon": "/Skill/Geryuganshoop (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 33% ATK (+2) damage to each enemy in the entire row in 5 hit combos, and inflicts [Panic] on the enemy (seals the enemy's energy for several turns; when the same effect is present, the highest value takes effect).",
+      "desc": "Deals 33% ATK damage to each enemy in the entire row in 5 hit combos, and inflicts [Panic] on the enemy (seals the enemy's energy for several turns; when the same effect is present, the highest value takes effect).",
       "icon": "/Skill/Geryuganshoop (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Geryuganshoop (SSR)/Keepsake_SSR.png",
       "type": "Ultimate",

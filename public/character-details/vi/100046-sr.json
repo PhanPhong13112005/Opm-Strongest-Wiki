@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng combo 4 đòn, gây 30% ATK(+2) DMG mỗi đòn, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính trong 2 lượt (DoT bằng 80% ATK).",
+      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng combo 4 đòn, gây 30% ATK DMG mỗi đòn, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính trong 2 lượt (DoT bằng 80% ATK).",
       "icon": "/Skill/Blue Fire (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng combo 4 đòn, gây 30% ATK(+2) DMG mỗi đòn, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính và 50% cơ hội lên kẻ địch trong hàng của mục tiêu chính trong 2 lượt (DoT bằng 80% ATK).",
+      "desc": "Tấn công từng kẻ địch trong toàn hàng bằng combo 4 đòn, gây 30% ATK DMG mỗi đòn, với 100% cơ hội gây [Thiêu Đốt] lên mục tiêu chính và 50% cơ hội lên kẻ địch trong hàng của mục tiêu chính trong 2 lượt (DoT bằng 80% ATK).",
       "keepsakeIcon": "/Keepsake/Blue Fire (SR)/Keepsake_SR.png",
       "icon": "/Skill/Blue Fire (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -74,7 +74,7 @@
   "effects": [
     {
       "term": "[Thiêu Đốt]",
-      "desc": "Sát thương lửa liên tục theo thời gian lên mục tiêu."
+      "desc": "Continuous fire damage over time to the target."
     }
   ],
   "keepsakeIcon": "/Keepsake/Blue Fire (SR)/Keepsake_SR.png",

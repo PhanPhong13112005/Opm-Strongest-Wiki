@@ -101,28 +101,60 @@
   ],
   "effects": [
     {
+      "term": "[Instant DMG Evasion]",
+      "desc": "Increases the accuracy of Instant DMG effects."
+    },
+    {
+      "term": "[Specialized Evasion]",
+      "desc": "Increases the accuracy of specialized effects or attacks."
+    },
+    {
+      "term": "[Evasion]",
+      "desc": "Allows the affected unit to avoid applicable DMG."
+    },
+    {
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "Reduces DMG received from non-critical attacks."
+    },
+    {
+      "term": "[Berserk]",
+      "desc": "An offensive state that grants the specified amount of ATK."
+    },
+    {
+      "term": "[Specialized Breakthrough]",
+      "desc": "A specialized breakthrough effect that can be triggered once by each hit. Exact effect details are currently unknown."
+    },
+    {
+      "term": "[Regroup]",
+      "desc": "Allows a defeated unit to return to the battlefield a limited number of times."
+    },
+    {
+      "term": "[Revenge]",
+      "desc": "Allows a defeated unit to return to battle and perform a pursuit attack under specified conditions."
+    },
+    {
+      "term": "[Specialized DMG Reflect]",
+      "desc": "A specialized counter-damage effect that is dispelled by this Passive."
+    },
+    {
+      "term": "[Fear]",
+      "desc": "A control effect that this character and allies in the same column become immune to."
+    },
+    {
       "term": "[Stun]",
-      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+      "desc": "Prevents the affected unit from acting."
     },
     {
-      "term": "[Mark]",
-      "desc": "Mark a unit, unlocking a raid condition or bonus effect associated with the mark."
+      "term": "[Specialized Stun]",
+      "desc": "A specialized form of [Stun]."
     },
     {
-      "term": "[Kinetic Recovery]",
-      "desc": "Revive effect: after all allies are down, the unit returns to battle with most of its maximum Health (110%–200%)."
+      "term": "[Momentum Return]",
+      "desc": "When all allies are defeated, returns the unit to the battlefield with restored HP. Excess recovery is converted into additional Max HP."
     },
     {
-      "term": "[Control DMG Immunity]",
-      "desc": "The defensive effect reduces damage taken (30–40%), increasing to a 150–170% reduction when the bearer's ST is higher than the attacker's."
-    },
-    {
-      "term": "[Counter]",
-      "desc": "A counter mark whose class number gradually increases the user's direct counter damage to marked enemies."
-    },
-    {
-      "term": "[Threaten]",
-      "desc": "The stun control effect renders the target unable to act and reduces its overall damage immunity by 30%."
+      "term": "[Suppression DMG Reduction]",
+      "desc": "Reduces DMG taken. The reduction is increased when the unit’s ATK is higher than the target’s."
     }
   ],
   "keepsakeIcon": "/Keepsake/Metal Bat V2 (UR)/Keepsake_UR.png",

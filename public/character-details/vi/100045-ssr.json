@@ -75,15 +75,15 @@
   "effects": [
     {
       "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
     },
     {
       "term": "[Giận Dữ]",
-      "desc": "Buff tấn công có sát thương tăng theo điều kiện (ví dụ mỗi kẻ địch bị đánh dấu), khuếch đại lượng sát thương loại Cuồng Nộ mà đơn vị gây ra."
+      "desc": "Attack buffs increase damage based on conditions (e.g. each marked enemy), amplifying the amount of Fury-type damage the unit deals."
     },
     {
       "term": "[Sụp Đổ]",
-      "desc": "Hiệu ứng sát thương/bất lợi phá vỡ phòng thủ của mục tiêu."
+      "desc": "Damage/disadvantage effect breaks target's defense."
     }
   ],
   "keepsakeIcon": "/Keepsake/Child Emperor (SSR)/Keepsake_SSR.png",

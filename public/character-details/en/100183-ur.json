@@ -100,20 +100,48 @@
   ],
   "effects": [
     {
-      "term": "[Spec. Unyielding]",
-      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
-    },
-    {
-      "term": "[Spec. Guard]",
-      "desc": "PvP-tier shields absorb incoming damage, granted at a value based on Attack (e.g. 400% ATK)."
-    },
-    {
       "term": "[Internal Injury]",
-      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
+      "desc": "Deals DMG based on Suiryu’s ATK when the affected target is attacked, then disappears after triggering."
     },
     {
       "term": "[Breakthrough]",
-      "desc": "Removes the target's Resilience shield and increases the attack for that attack."
+      "desc": "Removes 1 instance of [Unyielding] or [Specialized Unyielding] from the target."
+    },
+    {
+      "term": "[Unyielding]",
+      "desc": "Prevents fatal DMG from immediately defeating the affected unit under specified conditions."
+    },
+    {
+      "term": "[Specialized Unyielding]",
+      "desc": "A specialized version of [Unyielding] that can be removed by [Breakthrough]."
+    },
+    {
+      "term": "[Specialized Guard]",
+      "desc": "A specialized defensive value that absorbs incoming DMG and is granted based on Suiryu’s ATK."
+    },
+    {
+      "term": "[Injury]",
+      "desc": "Increases DMG dealt by [Injury] and [Internal Injury] effects."
+    },
+    {
+      "term": "[Non-Crit DMG Free]",
+      "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+    },
+    {
+      "term": "[Continuous Follow-Up]",
+      "desc": "Repeatedly performs the Ultimate as a Follow-Up with the specified DMG and effect percentages."
+    },
+    {
+      "term": "[Adhesion]",
+      "desc": "A negative effect that Suiryu is immune to while performing a Follow-Up."
+    },
+    {
+      "term": "[Adhesion/Paralyzed]",
+      "desc": "A control effect that Suiryu is immune to while performing a Follow-Up."
+    },
+    {
+      "term": "[Agility]",
+      "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]."
     }
   ],
   "keepsakeIcon": "/Keepsake/Suiryu (UR)/Keepsake_UR.png",

@@ -120,8 +120,44 @@
   ],
   "effects": [
     {
+      "term": "[Lock]",
+      "desc": "Prevents [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]. Before any character acts, deals ATK-based DoT that can CRIT and cannot be [Evaded]."
+    },
+    {
+      "term": "[Follow-up]",
+      "desc": "An additional attack triggered after another action or when a specified condition is met."
+    },
+    {
+      "term": "[Continuous Follow-Up]",
+      "desc": "A type of Follow-Up that can continue triggering under specified conditions."
+    },
+    {
+      "term": "[Combo Follow-up]",
+      "desc": "A coordinated Follow-Up performed together with another unit or attack."
+    },
+    {
+      "term": "[Evaded]",
+      "desc": "Causes an applicable attack or damage effect to miss. [Lock] DoT cannot be evaded."
+    },
+    {
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+    },
+    {
+      "term": "[Agility]",
+      "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Reduction]. Exact effect details are currently unknown."
+    },
+    {
+      "term": "[Extreme Energy Drain]",
+      "desc": "Removes 4 Energy once per turn. After a successful drain, prevents [Panic] and [Specialized Panic] from being applied during the same turn and reduces Total DMG Bonus by 25% for 1 turn."
+    },
+    {
       "term": "[Panic]",
-      "desc": "Control status interrupts the target's actions."
+      "desc": "An Energy-related negative effect. Exact effect details are currently unknown."
+    },
+    {
+      "term": "[Specialized Panic]",
+      "desc": "A specialized form of [Panic]."
     }
   ],
   "classLevel": "Dragon",

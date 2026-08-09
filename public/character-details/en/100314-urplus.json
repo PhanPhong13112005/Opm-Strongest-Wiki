@@ -117,24 +117,52 @@
   ],
   "effects": [
     {
-      "term": "[Spec. Unyielding]",
-      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+      "term": "[Specialized Direct DMG]",
+      "desc": "A specialized type of direct damage affected only by advanced damage modifiers."
+    },
+    {
+      "term": "[Specialized Evasion]",
+      "desc": "A specialized defensive effect that can be partially ignored by certain skills."
+    },
+    {
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "Reduces damage received from non-critical attacks."
     },
     {
       "term": "[Unyielding]",
-      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+      "desc": "Prevents the affected unit from being defeated under specific conditions."
     },
     {
-      "term": "[Revive]",
-      "desc": "The revive/return mechanism is tied to the life of the ally, bringing the unit back into the match."
+      "term": "[Specialized Unyielding]",
+      "desc": "A specialized form of [Unyielding]."
     },
     {
-      "term": "[Energy Tenacity]",
-      "desc": "The shield type converts its cumulative value into damage reduction, is limited to a multiple of the unit's maximum Health, and cannot be used with Resurrection."
+      "term": "[Breakthrough]",
+      "desc": "Allows an attack to ignore a portion of the target’s defensive effects."
+    },
+    {
+      "term": "[Rebirth]",
+      "desc": "An effect with a limited activation count that allows the affected unit to return to battle."
     },
     {
       "term": "[Revenge]",
-      "desc": "The counterattack state can extend the duration on yourself or shorten it on enemies, granting retaliatory effects."
+      "desc": "An effect with a limited duration that can be reduced by G5’s Passive."
+    },
+    {
+      "term": "[Regroup]",
+      "desc": "An effect with a limited duration that can be reduced by G5’s Passive."
+    },
+    {
+      "term": "[Specialized HP]",
+      "desc": "A specialized HP pool that can take damage separately from normal HP."
+    },
+    {
+      "term": "[Energy Tenacity]",
+      "desc": "A special shield created by converting a percentage of the original DMG received."
+    },
+    {
+      "term": "[Charged Pursuit]",
+      "desc": "Uses a DMG-type or AoE healing Ultimate as a follow-up. Targets are random and it does not consume Energy."
     }
   ],
   "keepsakeIcon": "/Keepsake/G5 (URplus)/Keepsake_URplus.png",

@@ -113,8 +113,28 @@
   ],
   "effects": [
     {
-      "term": "[Immortal]",
-      "desc": "Survival status keeps the bearer alive by drastically reducing damage taken (e.g. only taking 20%)."
+      "term": "[Devour]",
+      "desc": "Removes a target from the battlefield through Pig God's skill. Against enemies, it causes [Exit] for 1 round. Pig God's Awaken Passive can also use [Devour] on a defeated surrounding ally and later return that ally to battle."
+    },
+    {
+      "term": "[Exit]",
+      "desc": "Temporarily removes the affected unit from the battlefield for the specified duration."
+    },
+    {
+      "term": "[Specialized Guard]",
+      "desc": "Negates received DMG and can stack with Extra HP effects. The total amount of DMG negated cannot exceed 15 times the unit's original Max HP."
+    },
+    {
+      "term": "[Enhanced Unyielding]",
+      "desc": "An enhanced survival state measured by remaining actions. Pig God's Ultimate reduces its remaining duration by 2 actions after [Devour]."
+    },
+    {
+      "term": "[Off Battle]",
+      "desc": "An effect that causes a character to leave the battlefield. Pig God is immune to it, while allied [Disengage] can trigger his Awaken Passive."
+    },
+    {
+      "term": "[Specialized Corrode]",
+      "desc": "Deals 150% ATK as Continuous DMG. After any character acts, it transfers to a random enemy, up to 3 transfers."
     }
   ],
   "classLevel": "Class_SS",

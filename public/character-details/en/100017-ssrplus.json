@@ -102,24 +102,20 @@
   ],
   "effects": [
     {
-      "term": "[Spec. Protect]",
-      "desc": "PvP shields reduce or negate damage to allies."
+      "term": "[Breakthrough]",
+      "desc": "Removes the target's [Unyielding] state. Can trigger only once on each target per attack."
     },
     {
       "term": "[Unyielding]",
-      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+      "desc": "A survival effect that prevents the affected unit from being defeated under specified conditions."
     },
     {
-      "term": "[Heal Block]",
-      "desc": "The death immunity blocking debuff is applied to enemies that are not immune to death, preventing them from becoming immune to death or respawns."
+      "term": "[Specialized Protection]",
+      "desc": "Negates received DMG and can stack with Extra HP effects. The total amount of DMG negated cannot exceed 15 times the unit's original Max HP."
     },
     {
-      "term": "[Dodge]",
-      "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
-    },
-    {
-      "term": "[Spec. Burn]",
-      "desc": "Burning PvP tier — stronger burst damage, harder to deal with."
+      "term": "[Specialized Burn]",
+      "desc": "Deals ATK-based Continuous DMG. After any character acts, transfers to another enemy and disappears after transferring 3 times. It can stack up to 6 times."
     }
   ],
   "keepsakeIcon": "/Keepsake/Subterranean King (SSRplus)/Keepsake_SSRplus.png",

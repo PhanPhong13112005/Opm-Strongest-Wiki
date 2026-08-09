@@ -101,12 +101,28 @@
   ],
   "effects": [
     {
-      "term": "[Adhere]",
-      "desc": "Control status prevents the target from casting [Follow-up] and [Consecutive Follow-up], usually for 2 turns."
+      "term": "[Breakthrough]",
+      "desc": "Immediately removes DMG Ignoration granted by Unyielding-type effects. Can trigger once per attack on each target."
     },
     {
-      "term": "[Death Immunity]",
-      "desc": "Unfavorable effects negate the target's invincibility/anti-death effects, allowing it to be knocked down as normal."
+      "term": "[Ignore DMG]",
+      "desc": "An effect granted by certain Unyielding-type states that causes applicable incoming DMG to be ignored."
+    },
+    {
+      "term": "[Specialized Guard]",
+      "desc": "Negates incoming DMG and overwrites Bonus HP effects. Its total amount cannot exceed 15 times the unit's original Max HP."
+    },
+    {
+      "term": "[DMG Sharing]",
+      "desc": "An effect that distributes received DMG between affected units. Tank-Top Master removes this effect from all enemies at the beginning of each turn."
+    },
+    {
+      "term": "[Follow-up]",
+      "desc": "An additional attack triggered after an ally acts. Tank-Top Master's summoned assists prioritize enemies with DMG Ignoration and can trigger [Breakthrough]."
+    },
+    {
+      "term": "[Consecutive Follow-up]",
+      "desc": "A summoned assist whose ATK is based on 30% of Tank-Top Master's original Max HP and can perform [Follow-Up] attacks."
     }
   ],
   "keepsakeIcon": "/Keepsake/Tank Top Master (SSRplus)/Keepsake_SSRplus.png",

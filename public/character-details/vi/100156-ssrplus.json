@@ -103,7 +103,7 @@
   "effects": [
     {
       "term": "[Truy Kích Tuyệt Kỹ]",
-      "desc": "Đòn ngoài lượt gây 70% sát thương và hiệu ứng của chiêu cuối, không tốn năng lượng, tối đa 3 lần mỗi vòng."
+      "desc": "Out of turn attacks deal 70% of the Tuyệt Kĩ's damage and effects, without consuming mana, up to 3 times per round."
     }
   ],
   "keepsakeIcon": "/Keepsake/Carnage Kabuto (SSRplus)/Keepsake_SSRplus.png",

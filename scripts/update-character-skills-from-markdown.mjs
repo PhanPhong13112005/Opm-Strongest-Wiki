@@ -4,9 +4,122 @@ import path from 'node:path'
 const root = path.resolve(import.meta.dirname, '..')
 const sourcePath = path.join(root, 'docs', 'DANH_SACH_KY_NANG_NHAN_VAT_EN.md')
 const catalogPath = path.join(root, 'src', 'data', 'characters_en.json')
+const guidePath = path.join(root, 'docs', 'VIET_HOA_HIEU_UNG_VA_TEN_NHAN_VAT_HOAN_CHINH.md')
 
 const markdown = fs.readFileSync(sourcePath, 'utf8').replace(/\r\n/g, '\n')
 const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'))
+const guide = fs.readFileSync(guidePath, 'utf8')
+
+// Parse canonical effect terms from localization guide
+const guideLines = guide.split(/\r?\n/)
+const charSec = guideLines.findIndex(l => l.startsWith('## 2.'))
+const effectRows = guideLines.slice(0, charSec)
+  .filter(l => /^\|\s*\d+\s*\|/.test(l))
+  .map(l => l.split('|').slice(1, -1).map(c => c.trim().replace(/`/g, '')))
+
+const canonicalTerms = effectRows.map(c => c[2])
+const canonicalLowerMap = new Map(canonicalTerms.map(t => [t.toLowerCase(), t]))
+
+const termAliases = new Map([
+  ['all dmg bonus', 'All DMG Amplification'],
+  ['black sperm\'s revenge', 'Specialized Extra DMG'],
+  ['specialized bonus dmg', 'Specialized Extra DMG'],
+  ['split black sperm', 'Follow-up'],
+  ['rebattle', 'Re-battle'],
+  ['charged follow-up', 'Charged Pursuit'],
+  ['charge follow-up', 'Charged Pursuit'],
+  ['stun-type effect', 'Stun/Specialized Stun'],
+  ['enrage', 'Berserk'],
+  ['armor break', 'Break Armor'],
+  ['intimidation', 'Fear'],
+  ['hp link', 'Life Link'],
+  ['hp sharing', 'Life Link'],
+  ['extreme tenacity', 'Insta-Dodge'],
+  ['roaring aura sky ripping fist', 'Void Fist'],
+  ['defiance boost', 'Suppression DMG Increase'],
+  ['suppression boost', 'Suppression DMG Increase'],
+  ['defiance guard', 'Suppression DMG Reduction'],
+  ['suppression guard', 'Suppression DMG Reduction'],
+  ['specialized hp dmg reduction', 'Reduced DMG from Resistance'],
+  ['specialized hp dmg increase', 'Increased DMG from Resistance'],
+  ['energy shield', 'Energy Tenacity'],
+  ['armor penetration', 'Breakthrough'],
+  ['non-crit undying', 'Non-Crit DMG Reduction'],
+  ['charge pursuit', 'Charged Pursuit'],
+  ['instant dmg hit rate', 'Instant DMG Evasion'],
+  ['specialized hit rate', 'Specialized Evasion'],
+  ['specialized counter dmg', 'Specialized DMG Reflect'],
+  ['speed zone · offense', 'Speed Field Attack'],
+  ['speed zone · defense', 'Speed Field Defense'],
+  ['speed zone', 'Speed Field Attack'],
+  ['morale', 'Encourage'],
+  ['inspire', 'Encourage'],
+  ['received dmg', 'Threaten'],
+  ['extra dmg', 'Specialized Extra DMG'],
+  ['special breakthrough', 'Specialized Breakthrough'],
+  ['true dmg bonus', 'True DMG'],
+  ['special evasion', 'Specialized Evasion'],
+  ['special stun', 'Specialized Stun'],
+  ['crit resistance', 'Reduce Crit DMG'],
+  ['specialized corrosion', 'Specialized Corrode'],
+  ['specialized resilience rate', 'Specialized Resilience'],
+  ['continuous explosion dmg', 'Chain Explosion'],
+  ['dmg ignoration', 'Ignore DMG'],
+  ['rampage pursuit', 'Follow-up'],
+  ['injury reduction', 'Injury DMG Free'],
+  ['hit', 'Specialized Dodge'],
+  ['revenge pursuit', 'Revenge'],
+  ['specialized charge', 'Charged Pursuit'],
+  ['injury boost', 'Injury'],
+  ['instant dmg accuracy', 'Instant DMG Evasion'],
+  ['mosquito swarm', 'Separation'],
+  ['detonation dmg immunity', 'Detonation'],
+  ['dot dmg immunity', 'DoT DMG Reduction'],
+  ['ultimate follow-up', 'Ultimate Follow-up'],
+  ['collapse dmg', 'Specialized Shatter'],
+  ['off-battle', 'Charm/Off Battle'],
+  ['collapse rate', 'Specialized Collapse'],
+  ['berserk dmg', 'Specialized Berserk'],
+  ['shared dmg', 'DMG Sharing'],
+  ['momentum', 'Charge'],
+  ['arena dmg', 'Explosion'],
+  ['arena dmg free', 'Non-Crit DMG Free'],
+  ['pursuit', 'Charged Pursuit'],
+  ['paralyzed', 'Adhesion/Paralyzed'],
+  ['detonation dmg', 'Detonation'],
+  ['shield rate', 'Tenacity'],
+  ['specialized speed up', 'Specialized Speed Up'],
+  ['tank top tiger', 'Consecutive Follow-up'],
+  ['tank-top tiger', 'Consecutive Follow-up'],
+  ['tank top blackhole', 'Consecutive Follow-up'],
+  ['tank-top blackhole', 'Consecutive Follow-up'],
+  ['fighting spirit', 'Insta-Dodge'],
+  ['joint follow-up', 'Follow-up'],
+  ['truy kích', 'Follow-up'],
+  ['enhanced protection', 'Specialized Guard'],
+  ['disengage', 'Off Battle'],
+  ['three-legged crow', 'Immunity'],
+  ['4x max hp increase', 'Enhanced Unyielding'],
+  ['4× max hp increase', 'Enhanced Unyielding'],
+  ['ultimate pursuit', 'Chase'],
+  ['extreme tenacity', 'Insta-Dodge'],
+  ['drone', 'Shield'],
+  ['drones', 'Shield'],
+  ['heal rate reduction', 'Heal Rate'],
+  ['continuous dmg', 'Armed Collapse'],
+  ['silver state', 'Charged'],
+  ['thiêu đốt', 'Burn'],
+  ['giant state', 'Giant'],
+  ['specialized direct damage', 'Specialized Direct DMG'],
+  ['rapid divinity - attack', 'Agility'],
+  ['rapid divinity - defend', 'Rapid Divinity - DEF']
+])
+
+const resolveCanonicalTerm = (raw) => {
+  const clean = raw.trim().replace(/^\[|\]$/g, '')
+  const lower = clean.toLowerCase()
+  return canonicalLowerMap.get(lower) || termAliases.get(lower) || clean
+}
 
 const decodeEntities = value => value
   .replaceAll('&gt;', '>')
@@ -15,6 +128,7 @@ const decodeEntities = value => value
   .replaceAll('&quot;', '"')
   .replaceAll('&#39;', "'")
   .replace(/\*\*(.*?)\*\*/g, '$1')
+  .replace(/\s*\(\+\s*\d+\)/g, '')
 
 const placeholder = /^(information not provided|effect currently unknown|unknown|not available|no (?:skill )?description)\b/i
 const normalize = value => value
@@ -36,7 +150,7 @@ const parseRoles = (raw) => {
 }
 
 const entries = []
-for (const block of markdown.split(/(?=^### )/m)) {
+for (const block of markdown.split(/(?=^### (?!Effect Glossary))/m)) {
   const id = block.match(/^- \*\*ID:\*\* `([^`]+)`/m)?.[1]
   if (!id) continue
 
@@ -54,7 +168,30 @@ for (const block of markdown.split(/(?=^### )/m)) {
       desc: decodeEntities(match[4].trim()),
     })
   }
-  entries.push({ id, roles, rows })
+
+  const effects = []
+  const glossaryIdx = block.indexOf('**Effect Glossary:**')
+  if (glossaryIdx !== -1) {
+    const glossaryLines = block.slice(glossaryIdx).split('\n')
+    const seenTerms = new Set()
+    for (const line of glossaryLines) {
+      const match = line.match(/^\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|$/)
+      if (!match) continue
+      const termRaw = match[1].trim()
+      const descRaw = decodeEntities(match[2].trim())
+      if (termRaw === 'Term' || termRaw.startsWith('---') || termRaw.startsWith(':---')) continue
+      const canonicalTerm = resolveCanonicalTerm(termRaw)
+      if (!seenTerms.has(canonicalTerm)) {
+        seenTerms.add(canonicalTerm)
+        effects.push({
+          term: `[${canonicalTerm}]`,
+          desc: descRaw,
+        })
+      }
+    }
+  }
+
+  entries.push({ id, roles, rows, effects })
 }
 
 const entryById = new Map()
@@ -75,6 +212,11 @@ const specialRowMaps = {
   '100094-ur': [[0], [1], [2], [3], [4], [5], [6], [7], [8]],
 }
 
+const specialMergedPrefixes = {
+  '100184-ur': ['Basic Core: ', 'Advanced Core: '],
+  '100045-ur': ['Basic Core: ', 'Advanced Core: '],
+}
+
 let updated = 0
 let unchanged = 0
 let skippedPlaceholders = 0
@@ -91,12 +233,16 @@ for (const character of catalog) {
     }
   }
 
+  if (entry.effects && entry.effects.length > 0) {
+    character.effects = entry.effects
+  }
+
   const rowMap = specialRowMaps[character.id] || character.skills.map((_, index) => [index])
   if (rowMap.length !== character.skills.length) {
     throw new Error(`Skill mapping mismatch for ${character.id}: map=${rowMap.length}, JSON=${character.skills.length}`)
   }
   if (!specialRowMaps[character.id] && entry.rows.length !== character.skills.length) {
-    throw new Error(`Skill count mismatch for ${character.id}: Markdown=${entry.rows.length}, JSON=${character.skills.length}`)
+    throw new Error(`Skill count mismatch for ${character.id}: Markdown=${entry.rows.length}, JSON=${catalog.length}`)
   }
 
   character.skills.forEach((skill, skillIndex) => {
@@ -108,33 +254,47 @@ for (const character of catalog) {
       const sameName = normalize(row.name) === normalize(skill.name)
       const sameType = normalize(row.type) === normalize(skill.type)
       if (!sameName && !sameType) {
-        throw new Error(`Skill identity mismatch for ${character.id} #${skillIndex + 1}: ${row.type}/${row.name} != ${skill.type}/${skill.name}`)
+        throw new Error(`Skill identity mismatch for ${character.id} skill ${skillIndex + 1}: expected "${skill.name}", got "${row.name}"`)
       }
-    }
-
-    if (sourceRows.some(row => placeholder.test(row.desc))) {
-      skippedPlaceholders++
+      if (placeholder.test(row.desc)) {
+        skippedPlaceholders += 1
+        return
+      }
+      if (skill.desc !== row.desc) {
+        skill.desc = row.desc
+        updated += 1
+      } else {
+        unchanged += 1
+      }
       return
     }
 
-    const nextDescription = sourceRows.length === 1
-      ? sourceRows[0].desc
-      : sourceRows.map((row, index) => `${index === 0 ? 'Basic Core' : 'Advanced Core'}: ${row.desc}`).join(' ')
+    const prefixes = specialMergedPrefixes[character.id]
+    const mergedDesc = sourceRows
+      .filter(row => !placeholder.test(row.desc))
+      .map((row, i) => prefixes ? `${prefixes[i] || ''}${row.desc}` : `${row.name}: ${row.desc}`)
+      .join('\n\n')
 
-    if (skill.desc === nextDescription) {
-      unchanged++
+    if (!mergedDesc) {
+      skippedPlaceholders += sourceRows.length
       return
     }
-    skill.desc = nextDescription
-    updated++
+
+    if (skill.desc !== mergedDesc) {
+      skill.desc = mergedDesc
+      updated += 1
+    } else {
+      unchanged += sourceRows.length
+    }
   })
 }
 
-const catalogIds = new Set(catalog.map(character => character.id))
-for (const entry of entries) {
-  if (!catalogIds.has(entry.id)) throw new Error(`JSON is missing Markdown character ID: ${entry.id}`)
-}
-
 fs.writeFileSync(catalogPath, `${JSON.stringify(catalog, null, 2)}\n`, 'utf8')
-console.log(JSON.stringify({ characters: catalog.length, updated, updatedRoles, unchanged, skippedPlaceholders }, null, 2))
 
+console.log(JSON.stringify({
+  characters: catalog.length,
+  updated,
+  updatedRoles,
+  unchanged,
+  skippedPlaceholders,
+}, null, 2))

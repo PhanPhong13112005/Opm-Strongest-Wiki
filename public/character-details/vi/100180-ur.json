@@ -101,48 +101,36 @@
   ],
   "effects": [
     {
-      "term": "[Bất Khuất Chuyên Biệt]",
-      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
+      "term": "[Trường Lực]",
+      "desc": "Hiệu ứng DoT áp dụng lên kẻ địch trong 1 lượt. Trước khi kẻ địch bị ảnh hưởng hành động, nó gây ra DMG dựa trên ATK và có 80% cơ hội vượt qua khả năng miễn nhiễm."
     },
     {
-      "term": "[Bất Khuất]",
-      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
-    },
-    {
-      "term": "[Chuyển Hóa Năng Lượng]",
-      "desc": "Khi một kẻ địch mang [Áp Chế Năng Lượng] gây sát thương cho người mang, sát thương giảm 20% và phần bị giảm được chuyển hóa thành năng lượng."
-    },
-    {
-      "term": "[Khiên]",
-      "desc": "Khiên hấp thụ sát thương tới một phần Máu của chủ thể; Charge DMG bỏ qua nó."
-    },
-    {
-      "term": "[Miễn Nhiễm Sát Thương Không Bạo Kích]",
-      "desc": "Giảm mọi sát thương không chí mạng (thường về 1). Không thể tồn tại cùng né tránh loại Agility."
+      "term": "[Kích Nổ]",
+      "desc": "Ngay lập tức kích hoạt DMG còn lại của [Trường Lực] hoặc chuyển đổi hiệu ứng của nó thành [Sát Thương Kích Nổ]."
     },
     {
       "term": "[HP Chuyên Biệt]",
-      "desc": "Thanh máu riêng bậc PvP xếp chồng lên máu thường, cũng phải bị hạ và có thể được hồi độc lập."
+      "desc": "Nhóm HP chuyên biệt được tạo ra riêng biệt với HP thông thường."
     },
     {
-      "term": "[Né Tránh Chuyên Biệt]",
-      "desc": "Bậc PvP của Né Tránh — giảm đòn chuyên biệt về 1 sát thương; bị xuyên bởi hiệu ứng bỏ qua né tránh."
+      "term": "[Truy Kích Tuyệt Kỹ]",
+      "desc": "Thực hiện Tuyệt Kĩ dưới dạng Truy Kích với tỷ lệ phần trăm được chỉ định của DMG ban đầu và các hiệu ứng của nó."
     },
     {
-      "term": "[Phá Khiên]",
-      "desc": "Trong lúc tấn công, bỏ qua 30% Miễn Sát Thương và Phòng Thủ Đặc Hóa của kẻ địch để đòn đánh xuyên qua khiên của chúng."
+      "term": "[Bám Dính]",
+      "desc": "Một trạng thái tiêu cực bị loại bỏ khỏi Tatsumaki khi cô sử dụng Tuyệt Kĩ của mình."
     },
     {
-      "term": "[Phẫn Nộ]",
-      "desc": "Buff tấn công tăng sát thương gây ra của đơn vị, thường đi kèm với [Phá Khiên]."
+      "term": "[Vô Hiệu Hóa]",
+      "desc": "Một trạng thái tiêu cực bị loại bỏ khỏi Tatsumaki khi cô sử dụng Tuyệt Kĩ của mình."
     },
     {
-      "term": "[Trận Hình]",
-      "desc": "Hiệu ứng vùng chiến trường gây sát thương theo thời gian (100%) và có thể được kích nổ để bùng sát thương, đồng thời giúp nhân vật hồi phục khỏi Choáng sau khi hành động."
+      "term": "[Choáng]",
+      "desc": "Ngăn cản đơn vị bị ảnh hưởng thực hiện hành động."
     },
     {
-      "term": "[Áp Chế Năng Lượng]",
-      "desc": "Khi gây sát thương lên máu, buộc mục tiêu kích hoạt Chuyển Hóa Năng Lượng, làm giảm sát thương chúng gây ra và bóp nghẹt nguồn năng lượng của chúng."
+      "term": "[Choáng Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Choáng]."
     }
   ],
   "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (UR)/Keepsake_UR.png",

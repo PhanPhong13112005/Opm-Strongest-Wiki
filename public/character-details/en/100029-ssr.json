@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Strikes a single target with a 3-hit combo, dealing 35% ATK(+3) damage.",
+      "desc": "Strikes a single target with a 3-hit combo, dealing 35% ATK damage.",
       "icon": "/Skill/Amai Mask (SSR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Attacks a single target in the back row 2 to 5 times, dealing up to 100% ATK(+2) damage.",
+      "desc": "Attacks a single target in the back row 2 to 5 times, dealing up to 100% ATK damage.",
       "icon": "/Skill/Amai Mask (SSR)/skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Attacks a single target in the back row 3 to 5 times, dealing up to 100% ATK(+2) damage.",
+      "desc": "Attacks a single target in the back row 3 to 5 times, dealing up to 100% ATK damage.",
       "keepsakeIcon": "/Keepsake/Amai Mask (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Amai Mask (SSR)/skill_ult.png",
       "type": "Ultimate",

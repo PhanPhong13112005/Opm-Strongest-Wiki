@@ -23,7 +23,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công một mục tiêu bằng combo 5 đòn gây sát thương 38% ATK(+2) DMG và có 100% cơ hội giảm 10% DMG phải chịu cho bản thân trong 2 lượt.",
+      "desc": "Tấn công một mục tiêu bằng combo 5 đòn gây 38% ATK DMG và có 100% cơ hội giảm 10% DMG phải chịu cho bản thân trong 2 lượt.",
       "icon": "/Skill/Crablante (R)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -32,7 +32,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tấn công một mục tiêu bằng combo 5 đòn gây 38% ATK(+2) DMG. Có 100% cơ hội tự giảm DMG phải chịu% trong 2 lượt.",
+      "desc": "Tấn công một mục tiêu bằng combo 5 đòn gây sát thương 38% ATK DMG. Có 100% cơ hội tự giảm DMG phải chịu% trong 2 lượt.",
       "icon": "/Skill/Crablante (R)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Crablante (R)/Keepsake_R.png",
       "type": "Tuyệt kĩ",

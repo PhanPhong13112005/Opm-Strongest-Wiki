@@ -101,20 +101,20 @@
   ],
   "effects": [
     {
-      "term": "[Bất Khuất]",
-      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+      "term": "[Đột Phá]",
+      "desc": "Xóa 1 phiên bản [Bất Khuất Chuyên Biệt] khỏi mục tiêu bị ảnh hưởng."
     },
     {
-      "term": "[Bất Tử]",
-      "desc": "Trạng thái sinh tồn giữ người mang sống sót bằng cách giảm mạnh sát thương nhận vào (ví dụ chỉ chịu 20%)."
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Một trạng thái sinh tồn đặc biệt giúp đơn vị bị ảnh hưởng không bị đánh bại vì một số hành động hạn chế."
     },
     {
       "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "desc": "Ngăn cản đơn vị bị ảnh hưởng thực hiện hành động."
     },
     {
       "term": "[Miễn Nhiễm]",
-      "desc": "Trạng thái khiến người mang không bị ảnh hưởng bởi một hiệu ứng hoặc loại khống chế nhất định, như [Đột Phá], Choáng hay Mê Hoặc."
+      "desc": "Đơn vị được triệu hồi kế thừa HP dựa trên HP tối đa ban đầu của Gouketsu và hấp thụ DMG cho Gouketsu và các đơn vị đồng minh trong hàng được bảo vệ của nó. Khi bị đánh bại, nó phát nổ và gây DMG dựa trên Max-HP cho kẻ thù."
     }
   ],
   "keepsakeIcon": "/Keepsake/Gouketsu (SSRplus)/Keepsake_SSRplus.png",

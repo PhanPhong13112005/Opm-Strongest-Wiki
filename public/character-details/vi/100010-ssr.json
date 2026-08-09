@@ -75,11 +75,11 @@
   "effects": [
     {
       "term": "[Lá Chắn]",
-      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
     },
     {
       "term": "[Truy Kích]",
-      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+      "desc": "Extra attack outside of turn. Disabled by [Khóa] and [Gây Mù]."
     }
   ],
   "keepsakeIcon": "/Keepsake/Flashy Flash (SSR)/Keepsake_SSR.png",

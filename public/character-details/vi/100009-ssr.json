@@ -20,7 +20,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây combo 3 đòn vào một mục tiêu với 35% sát thương ATK (+3).",
+      "desc": "Gây combo 3 đòn vào một mục tiêu với 35% sát thương ATK.",
       "icon": "/Skill/Hellish Blizzard (SSR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây combo 5 đòn cho tất cả kẻ địch với 17% sát thương ATK (+2). Nếu self ở trạng thái [Giận Dữ], hãy khôi phục HP.",
+      "desc": "Gây combo 5 đòn cho tất cả kẻ địch với 17% sát thương ATK. Nếu self ở trạng thái [Giận Dữ], hãy khôi phục HP.",
       "icon": "/Skill/Hellish Blizzard (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây combo 5 đòn cho tất cả kẻ địch với 17% sát thương ATK (+2) và trực tiếp phục hồi HP của chính mình. Đồng thời, các đòn tấn công từ đồng minh xung quanh bỏ qua 20% DEF trong một thời gian.",
+      "desc": "Gây combo 5 đòn cho tất cả kẻ địch với 17% sát thương ATK và trực tiếp khôi phục HP của chính mình. Đồng thời, các đòn tấn công từ đồng minh xung quanh bỏ qua 20% DEF trong một thời gian.",
       "icon": "/Skill/Hellish Blizzard (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Hellish Blizzard (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -79,7 +79,7 @@
   "effects": [
     {
       "term": "[Lá Chắn]",
-      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
     }
   ],
   "releaseDate": "16/06/2020",

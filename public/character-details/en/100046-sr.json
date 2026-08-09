@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Strikes each enemy in the entire row with a 4-hit combo, dealing 30% ATK(+2) DMG per hit, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 80% ATK).",
+      "desc": "Strikes each enemy in the entire row with a 4-hit combo, dealing 30% ATK DMG per hit, with a 100% chance to inflict [Burn] on the main target for 2 turns (DoT equal to 80% ATK).",
       "icon": "/Skill/Blue Fire (SR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Strikes each enemy in the entire row with a 4-hit combo, dealing 30% ATK(+2) DMG per hit, with a 100% chance to inflict [Burn] on the main target and a 50% chance on enemies in the main target's row for 2 turns (DoT equal to 80% ATK).",
+      "desc": "Strikes each enemy in the entire row with a 4-hit combo, dealing 30% ATK DMG per hit, with a 100% chance to inflict [Burn] on the main target and a 50% chance on enemies in the main target's row for 2 turns (DoT equal to 80% ATK).",
       "keepsakeIcon": "/Keepsake/Blue Fire (SR)/Keepsake_SR.png",
       "icon": "/Skill/Blue Fire (SR)/Skill_ult.png",
       "type": "Ultimate",
@@ -73,7 +73,7 @@
   ],
   "effects": [
     {
-      "term": "[Thiêu Đốt]",
+      "term": "[Burn]",
       "desc": "Continuous fire damage over time to the target."
     }
   ],

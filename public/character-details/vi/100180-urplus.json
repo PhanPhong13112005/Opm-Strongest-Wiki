@@ -101,52 +101,48 @@
   ],
   "effects": [
     {
-      "term": "[Bất Khuất Chuyên Biệt]",
-      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
+      "term": "[Giận Dữ]",
+      "desc": "Một cải tiến được cấp cho bản thân bởi Ultra-Tuyệt Kĩ. Chi tiết hiệu ứng chính xác hiện chưa được biết."
+    },
+    {
+      "term": "[Phá Giáp]",
+      "desc": "Một hiệu ứng được cấp cho bản thân bởi Ultra-Tuyệt Kĩ. Chi tiết hiệu ứng chính xác hiện chưa được biết."
+    },
+    {
+      "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
+      "desc": "Một loại sát thương trực tiếp đặc biệt chỉ bị ảnh hưởng bởi công cụ sửa đổi DMG tiên tiến."
+    },
+    {
+      "term": "[Khả Năng Né Tránh Chuyên Biệt]",
+      "desc": "Một hiệu ứng phòng thủ đặc biệt có thể bị bỏ qua một phần bởi một số kỹ năng nhất định."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm sát thương nhận được từ các đòn tấn công không quan trọng."
     },
     {
       "term": "[Bất Khuất]",
-      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+      "desc": "Ngăn chặn đơn vị bị ảnh hưởng bị đánh bại trong các điều kiện cụ thể."
     },
     {
-      "term": "[Chuyển Hóa Năng Lượng]",
-      "desc": "Khi một kẻ địch mang [Áp Chế Năng Lượng] gây sát thương cho người mang, sát thương giảm 20% và phần bị giảm được chuyển hóa thành năng lượng."
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Bất Khuất]."
     },
     {
-      "term": "[Giảm Sát Thương Bạo Kích]",
-      "desc": "Giảm sát thương nhận từ đòn chí mạng theo một tỷ lệ phần trăm nhất định."
-    },
-    {
-      "term": "[Kiên Cường Năng Lượng]",
-      "desc": "Loại khiên chuyển giá trị tích lũy thành giảm sát thương, giới hạn theo bội số Máu tối đa của đơn vị và không dùng chung được với Hồi Sinh."
-    },
-    {
-      "term": "[Miễn Nhiễm Sát Thương Không Bạo Kích]",
-      "desc": "Giảm mọi sát thương không chí mạng (thường về 1). Không thể tồn tại cùng né tránh loại Agility."
+      "term": "[Áp Lực Năng Lượng]",
+      "desc": "Khi xử lý DMG thành HP hoặc [HP Chuyên Biệt], kích hoạt 1 phiên bản [Chuyển Hóa Năng Lượng] trên đơn vị kẻ địch bị ảnh hưởng."
     },
     {
       "term": "[HP Chuyên Biệt]",
-      "desc": "Thanh máu riêng bậc PvP xếp chồng lên máu thường, cũng phải bị hạ và có thể được hồi độc lập."
+      "desc": "Một nhóm HP chuyên dụng có thể nhận sát thương riêng biệt với HP bình thường."
     },
     {
-      "term": "[Né Tránh Chuyên Biệt]",
-      "desc": "Bậc PvP của Né Tránh — giảm đòn chuyên biệt về 1 sát thương; bị xuyên bởi hiệu ứng bỏ qua né tránh."
+      "term": "[Chuyển Hóa Năng Lượng]",
+      "desc": "Giảm DMG do kẻ địch bị ảnh hưởng bởi [Áp Lực Năng Lượng] gây ra và chuyển một phần trăm DMG ban đầu thành [Lá Chắn Năng Lượng]."
     },
     {
-      "term": "[Phá Khiên]",
-      "desc": "Trong lúc tấn công, bỏ qua 30% Miễn Sát Thương và Phòng Thủ Đặc Hóa của kẻ địch để đòn đánh xuyên qua khiên của chúng."
-    },
-    {
-      "term": "[Phẫn Nộ]",
-      "desc": "Buff tấn công tăng sát thương gây ra của đơn vị, thường đi kèm với [Phá Khiên]."
-    },
-    {
-      "term": "[Tạo Khiên]",
-      "desc": "Rào chắn hấp thụ, thường được tạo từ sát thương chuyển hóa, chịu đòn trước khi máu bị ảnh hưởng."
-    },
-    {
-      "term": "[Áp Chế Năng Lượng]",
-      "desc": "Khi gây sát thương lên máu, buộc mục tiêu kích hoạt Chuyển Hóa Năng Lượng, làm giảm sát thương chúng gây ra và bóp nghẹt nguồn năng lượng của chúng."
+      "term": "[Kiên Cường Năng Lượng]",
+      "desc": "Một lá chắn được tạo bằng cách chuyển đổi tỷ lệ phần trăm của DMG ban đầu nhận được."
     }
   ],
   "keepsakeIcon": "/Keepsake/Tatsumaki/Terrible Tornado (URplus)/Keepsake_URplus.png",

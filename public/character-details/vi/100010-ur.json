@@ -116,16 +116,32 @@
   ],
   "effects": [
     {
-      "term": "[Miễn Nhiễm]",
-      "desc": "Trạng thái khiến người mang không bị ảnh hưởng bởi một hiệu ứng hoặc loại khống chế nhất định, như [Đột Phá], Choáng hay Mê Hoặc."
+      "term": "[Sụp Đổ Chuyên Biệt]",
+      "desc": "Giảm DMG Miễn phí và gây ATK dựa trên DMG khi mục tiêu bị ảnh hưởng bị tấn công. Cộng dồn tối đa 3 lần và không cộng dồn với [Nứt Vỡ]."
     },
     {
-      "term": "[Siêu Tốc]",
-      "desc": "Buff tốc độ mà khi còn hiệu lực cho phép người mang và tối đa 6 đồng minh hành động lại và vượt qua kẻ địch có tốc độ thấp hơn."
+      "term": "[Vô Hiệu Hóa Chuyên Biệt]",
+      "desc": "Ngăn chặn thiết bị bị ảnh hưởng khởi chạy Theo dõi và Theo dõi kết hợp, đồng thời giảm Tỷ lệ DMG của nó."
     },
     {
-      "term": "[Vô Hiệu Hóa]",
-      "desc": "Trạng thái vô hiệu hóa áp lên một khu vực/cột mục tiêu, khiến các đơn vị bị ảnh hưởng không thể hành động hoặc phát huy tác dụng."
+      "term": "[Nứt Vỡ]",
+      "desc": "Một hiệu ứng không thể cùng tồn tại với [Sụp Đổ Chuyên Biệt]. Chi tiết hiệu ứng chính xác hiện chưa được biết."
+    },
+    {
+      "term": "[Né Sát Thương Tức Thì]",
+      "desc": "Khiến Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG chỉ gây ra 1 điểm DMG."
+    },
+    {
+      "term": "[Gia Tốc Chuyên Biệt]",
+      "desc": "Tăng Tốc độ của Tia Chớp Chói Lóa theo tỷ lệ phần trăm được chỉ định."
+    },
+    {
+      "term": "[Bám Dính]",
+      "desc": "Một hiệu ứng mà Tia Chớp Chói Lóa miễn nhiễm với. Chi tiết hiệu ứng chính xác hiện chưa được biết."
+    },
+    {
+      "term": "[Truy Kích Tuyệt Kỹ]",
+      "desc": "Tự động thực hiện Tuyệt Kĩ dưới dạng đòn tấn công Truy Kích theo tỷ lệ phần trăm được chỉ định so với DMG ban đầu của nó."
     }
   ],
   "classLevel": "Class_S",

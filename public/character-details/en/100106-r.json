@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 5 consecutive strikes to all targets for 24% ATK (+2) Direct Damage, and increases the DMG reflection rate of all allies%.",
+      "desc": "Deals 5 consecutive strikes to all targets for 24% ATK Direct Damage, and increases the DMG reflection rate of all allies%.",
       "icon": "/Skill/Maiko Plasma (R)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 5 consecutive strikes to all targets for 26% ATK (+2) Direct Damage, and increases the DMG reflection rate of all allies by 25%.",
+      "desc": "Deals 5 consecutive strikes to all targets for 26% ATK Direct Damage, and increases the DMG reflection rate of all allies by 25%.",
       "keepsakeIcon": "/Keepsake/Maiko Plasma (R)/Keepsake_R.png",
       "icon": "/Skill/Maiko Plasma (R)/Skill_ult.png",
       "type": "Ultimate",

@@ -103,19 +103,19 @@
   "effects": [
     {
       "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
     },
     {
       "term": "[Giận Dữ]",
-      "desc": "Buff tấn công có sát thương tăng theo điều kiện (ví dụ mỗi kẻ địch bị đánh dấu), khuếch đại lượng sát thương loại Cuồng Nộ mà đơn vị gây ra."
+      "desc": "Attack buffs increase damage based on conditions (e.g. each marked enemy), amplifying the amount of Fury-type damage the unit deals."
     },
     {
       "term": "[Miễn Nhiễm]",
-      "desc": "Trạng thái khiến người mang không bị ảnh hưởng bởi một hiệu ứng hoặc loại khống chế nhất định, như [Đột Phá], Choáng hay Mê Hoặc."
+      "desc": "Status that causes the bearer to be unaffected by a certain effect or type of control, such as [Đột Phá], Stun, or Charm."
     },
     {
       "term": "[Truy Kích Liên Hoàn]",
-      "desc": "Đòn tấn công thêm ngoài lượt (thường sau khi đồng minh hành động) gây một phần ST và hiệu ứng của chiêu cuối lên mục tiêu ngẫu nhiên, không tốn năng lượng."
+      "desc": "Extra attacks outside of turn (usually after an ally acts) apply a portion of the Tuyệt Kĩ's ST and effects to a random target, at no mana cost."
     }
   ],
   "keepsakeIcon": "/Keepsake/Metal Bat (SSRplus)/Keepsake_SSRplus.png",

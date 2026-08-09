@@ -101,28 +101,32 @@
   ],
   "effects": [
     {
-      "term": "[Detonate]",
-      "desc": "Activate a stack of damage over time or stored [Collapse] to instantly explode, turning it into an instant multiplier (e.g. 3 times the stored damage)."
-    },
-    {
-      "term": "[Immunity]",
-      "desc": "Status that causes the bearer to be unaffected by a certain effect or type of control, such as [Breakthrough], Stun, or Charm."
-    },
-    {
-      "term": "[Insta-Dodge]",
-      "desc": "Floors that each cause a direct, additional, charge, or berserk attack to only deal 1 damage."
+      "term": "[Internal Injury]",
+      "desc": "Deals DMG based on Gouketsu’s ATK when triggered, then disappears."
     },
     {
       "term": "[Weaken]",
-      "desc": "Unfavorable effect reduces the target's damage reduction rate by 30% for the duration."
+      "desc": "Decreases the affected target’s ATK by 50% for 2 rounds."
     },
     {
-      "term": "[Collapse (Duelist)]",
-      "desc": "Unfavorable effects cause delayed damage, storing additional damage (600-800% of Gouketsu's ST), releasing when the target is hit or when [Detonate]."
+      "term": "[Evasion]",
+      "desc": "Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG."
+    },
+    {
+      "term": "[Detonate]",
+      "desc": "Converts a single [Internal Injury] DMG instance into [Detonation] DMG."
+    },
+    {
+      "term": "[Detonation]",
+      "desc": "A damage effect created by converting [Internal Injury] DMG."
+    },
+    {
+      "term": "[Specialized Unyielding]",
+      "desc": "After receiving fatal DMG, keeps the affected unit in battle until 5 characters have acted, then restores 100% HP. Each character can activate it up to 2 times per battle."
     },
     {
       "term": "[Breakthrough]",
-      "desc": "Removes the target's Resilience shield and increases the attack for that attack."
+      "desc": "An effect capable of removing or countering survival effects. Allies granted [Specialized Unyielding] by this Awakening are immune to it."
     }
   ],
   "keepsakeIcon": "/Keepsake/Gouketsu (UR)/Keepsake_UR.png",

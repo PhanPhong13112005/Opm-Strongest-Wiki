@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Deals 40% ATK (+3) DMG to a single target in a 3-hit combo.",
+      "desc": "Deals 40% ATK DMG to a single target in a 3-hit combo.",
       "icon": "/Skill/Hamukichi (SR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,

@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 24% ATK (+2) DMG với 5 đòn đánh liên tiếp lên tất cả mục tiêu. 100% cơ hội gây [Nội Thương] cho 4 mục tiêu ngẫu nhiên (khi mục tiêu bị bắn trúng, DMG nội thương tăng thêm bằng 145% ATK của Garou sẽ được gây ra; hiệu ứng sẽ bị loại bỏ sau khi kích hoạt).",
+      "desc": "Gây 24% ATK DMG với 5 đòn đánh liên tiếp lên tất cả mục tiêu. 100% cơ hội gây [Nội Thương] cho 4 mục tiêu ngẫu nhiên (khi mục tiêu bị bắn trúng, DMG nội thương tăng thêm bằng 145% ATK của Garou sẽ được gây ra; hiệu ứng sẽ bị loại bỏ sau khi kích hoạt).",
       "keepsakeIcon": "/Keepsake/Garou (SSR)/Keepsake_SSR.png",
       "icon": "/Skill/Garou (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -75,11 +75,11 @@
   "effects": [
     {
       "term": "[Nội Thương]",
-      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+      "desc": "Khi đơn vị bị ảnh hưởng bị tấn công, hãy lấy thêm DMG dựa trên ATK. Hiệu ứng biến mất sau khi kích hoạt một lần."
     },
     {
       "term": "[Truy Kích]",
-      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+      "desc": "Một đòn tấn công bổ sung được kích hoạt sau khi kẻ địch hành động. Truy Kích của Garou sử dụng phần trăm đòn tấn công cơ bản DMG của anh ta và giữ nguyên hiệu ứng của đòn tấn công cơ bản. Nó luôn được kích hoạt khi kẻ thù hành động là Anh hùng."
     }
   ],
   "keepsakeIcon": "/Keepsake/Garou (SSR)/Keepsake_SSR.png",

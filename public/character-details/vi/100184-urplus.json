@@ -101,20 +101,40 @@
   ],
   "effects": [
     {
-      "term": "[Bạo Kích]",
-      "desc": "Đòn chí mạng gây thêm sát thương; một số đơn vị có thể miễn nhiễm [Bạo Kích]."
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Một hiệu ứng bất diệt với thời lượng giới hạn có thể bị giảm bớt bởi các đòn tấn công của nhân vật này."
     },
     {
-      "term": "[Hồi Sinh]",
-      "desc": "Cơ chế hồi sinh/trở lại gắn với sự sống của đồng minh, đưa đơn vị trở lại trận đấu."
+      "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
+      "desc": "Một loại sát thương trực tiếp đặc biệt chỉ bị ảnh hưởng bởi công cụ sửa đổi DMG tiên tiến."
+    },
+    {
+      "term": "[Né Tránh Chuyên Biệt]",
+      "desc": "Một hiệu ứng phòng thủ chuyên biệt mang đến cơ hội tránh được thiệt hại có thể xảy ra."
+    },
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Ngăn chặn đơn vị bị ảnh hưởng bị đánh bại trong các điều kiện cụ thể."
+    },
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Bất Khuất]."
+    },
+    {
+      "term": "[Cuồng Nộ]",
+      "desc": "Mỗi điểm cộng dồn cho phép Tuyệt Kĩ nhắm mục tiêu thêm 1 kẻ địch."
+    },
+    {
+      "term": "[Tái Sinh]",
+      "desc": "Khi đơn vị sắp bị đánh bại, hấp thụ DMG nhận vào và khôi phục HP ở lượt tiếp theo."
     },
     {
       "term": "[Kiên Cường Năng Lượng]",
-      "desc": "Loại khiên chuyển giá trị tích lũy thành giảm sát thương, giới hạn theo bội số Máu tối đa của đơn vị và không dùng chung được với Hồi Sinh."
+      "desc": "Một lá chắn đặc biệt nhận được dựa trên tổng lượng DMG được hấp thụ trong [Tái Sinh]."
     },
     {
-      "term": "[Miễn Nhiễm Sát Thương Khống Chế]",
-      "desc": "Hiệu ứng phòng thủ giảm sát thương nhận vào (30–40%), tăng lên mức giảm 150–170% khi ST của người mang cao hơn kẻ tấn công."
+      "term": "[Giảm Sát Thương Áp Chế]",
+      "desc": "Giảm DMG phải chịu theo tỷ lệ phần trăm được chỉ định. Nếu Tấn công của đơn vị cao hơn của kẻ tấn công, hệ số nhân Giảm Sát Thương sẽ tăng lên."
     }
   ],
   "keepsakeIcon": "/Keepsake/Boros (URplus)/Keepsake_URplus.png",

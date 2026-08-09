@@ -102,28 +102,32 @@
   ],
   "effects": [
     {
-      "term": "[Bám Dính]",
-      "desc": "Trạng thái khống chế ngăn mục tiêu tung [Truy Kích] và [Truy Kích Liên Tiếp], thường trong 2 lượt."
+      "term": "[Ăn Mòn Chuyên Biệt]",
+      "desc": "Gây 100% ATK dưới dạng DMG liên tục. Sau khi bất kỳ nhân vật nào hành động, hãy chuyển sang mục tiêu khác có thể lấy DMG. Số lần kích hoạt phụ thuộc vào kỹ năng áp dụng nó."
+    },
+    {
+      "term": "[Tiến Hóa]",
+      "desc": "Ngay lập tức xóa trạng thái [Bất Khuất] của mục tiêu và Bỏ qua trạng thái DMG."
     },
     {
       "term": "[Bất Khuất]",
-      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+      "desc": "Hiệu ứng sinh tồn giúp đơn vị bị ảnh hưởng không bị đánh bại trong các điều kiện cụ thể."
     },
     {
-      "term": "[Truy Kích Liên Hoàn]",
-      "desc": "Đòn tấn công thêm ngoài lượt (thường sau khi đồng minh hành động) gây một phần ST và hiệu ứng của chiêu cuối lên mục tiêu ngẫu nhiên, không tốn năng lượng."
+      "term": "[Phòng Hộ Chuyên Biệt]",
+      "desc": "Phủ định đã nhận được DMG và ghi đè các hiệu ứng Extra HP. Tổng số tiền của nó không thể vượt quá 15 lần HP ban đầu của thiết bị."
     },
     {
-      "term": "[Truy Kích Tuyệt Kỹ]",
-      "desc": "Đòn ngoài lượt gây 70% sát thương và hiệu ứng của chiêu cuối, không tốn năng lượng, tối đa 3 lần mỗi vòng."
+      "term": "[Bám Dính]",
+      "desc": "Ngăn chặn thiết bị bị ảnh hưởng khởi tạo [Truy Kích] và [Truy Kích Liên Tục]."
     },
     {
       "term": "[Truy Kích]",
-      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+      "desc": "Một cuộc tấn công bổ sung được kích hoạt sau một hành động khác hoặc khi đáp ứng một điều kiện cụ thể."
     },
     {
-      "term": "[Ăn Mòn]",
-      "desc": "Hiệu ứng sát thương theo thời gian dạng ăn mòn, mỗi lượt gây sát thương bằng một tỷ lệ ST (ví dụ 300%) lên mục tiêu."
+      "term": "[Truy Kích Liên Tục]",
+      "desc": "Truy Kích có thể kích hoạt liên tục trong các điều kiện được chỉ định."
     }
   ],
   "keepsakeIcon": "/Keepsake/Deep Sea King (SSRplus)/Keepsake_SSRplus.png",

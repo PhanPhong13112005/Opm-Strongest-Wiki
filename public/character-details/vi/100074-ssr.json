@@ -78,11 +78,11 @@
   "effects": [
     {
       "term": "[Thiêu Đốt]",
-      "desc": "Sát thương lửa liên tục theo thời gian lên mục tiêu."
+      "desc": "Gây ATK liên tục dựa trên DMG trong 2 lượt. Tuyệt Kĩ gây ra 70% ATK dưới dạng DMG liên tục, trong khi Ultra-Tuyệt Kĩ gây ra 90% ATK."
     },
     {
       "term": "[Hồi Phục]",
-      "desc": "Hồi Máu theo thời gian hoặc trước hành động kế tiếp của đơn vị."
+      "desc": "Sau khi nhận được sát thương kết liễu, khôi phục HP trước hành động tiếp theo của Genos trong khi vẫn còn ít nhất 1 đồng minh, cho phép anh ta tiếp tục chiến đấu."
     }
   ],
   "releaseDate": "01/06/2021",

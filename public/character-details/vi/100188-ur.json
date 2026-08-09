@@ -101,8 +101,28 @@
   ],
   "effects": [
     {
+      "term": "[Sụp Đổ]",
+      "desc": "Giảm DMG% miễn phí."
+    },
+    {
+      "term": "[Sụp Đổ Chuyên Biệt]",
+      "desc": "Giảm Tỷ lệ DMG và gây [Sát Thương Sụp Đổ] bất cứ khi nào đơn vị bị ảnh hưởng bị tấn công. Cộng dồn tối đa 3 lần và không cộng dồn với [Sụp Đổ]."
+    },
+    {
+      "term": "[Nứt Vỡ Chuyên Biệt]",
+      "desc": "Thiệt hại bổ sung dựa trên ATK được kích hoạt khi một đơn vị bị ảnh hưởng bởi [Sụp Đổ Chuyên Biệt] bị tấn công."
+    },
+    {
+      "term": "[Miễn Sát Thương Không Bạo Kích]",
+      "desc": "Có hiệu quả chống lại tất cả các loại DMG và không thể cùng tồn tại với [Nhanh Nhẹn]."
+    },
+    {
       "term": "[Nhanh Nhẹn]",
-      "desc": "Buff loại né tránh; loại trừ lẫn nhau với Miễn Sát Thương Non-Crit."
+      "desc": "Một hiệu ứng không thể cùng tồn tại với [Miễn Sát Thương Không Bạo Kích]. Chi tiết hiệu ứng chính xác hiện chưa được biết."
+    },
+    {
+      "term": "[Truy Kích Tuyệt Kỹ]",
+      "desc": "Tự động khởi chạy Tuyệt Kĩ dưới dạng Truy Kích với tỷ lệ phần trăm DMG được chỉ định và hiệu ứng 100%."
     }
   ],
   "keepsakeIcon": "/Keepsake/Atomic Samurai (UR)/Keepsake_UR.png",

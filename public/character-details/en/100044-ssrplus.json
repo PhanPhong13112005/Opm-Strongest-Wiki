@@ -114,8 +114,20 @@
   ],
   "effects": [
     {
-      "term": "[Insta-Dodge]",
-      "desc": "Floors that each cause a direct, additional, charge, or berserk attack to only deal 1 damage."
+      "term": "[Evolve]",
+      "desc": "Immediately removes the target’s [Unyielding] and Ignore DMG statuses. Drive Knight’s Passive can trigger this effect without an activation limit."
+    },
+    {
+      "term": "[Unyielding]",
+      "desc": "A survival effect that prevents the affected unit from being defeated under specified conditions."
+    },
+    {
+      "term": "[Instant DMG Evasion]",
+      "desc": "Causes Direct DMG, Extra DMG, Charge DMG, and Berserk DMG to deal only 1 point of DMG."
+    },
+    {
+      "term": "[Specialized Guard]",
+      "desc": "Negates received DMG and overwrites Extra HP effects. Its total amount cannot exceed 15 times the unit’s original HP. Effects of the same type can stack."
     }
   ],
   "classLevel": "Class_SS",

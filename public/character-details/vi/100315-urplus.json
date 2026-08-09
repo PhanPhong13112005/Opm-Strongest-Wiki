@@ -101,28 +101,64 @@
   ],
   "effects": [
     {
-      "term": "[Giảm Kháng Sát Thương]",
-      "desc": "Giảm 30% sát thương phải chịu, tăng lên 1.5 lần khi máu gốc của người mang cao hơn của kẻ tấn công."
+      "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
+      "desc": "Một loại sát thương trực tiếp đặc biệt chỉ bị ảnh hưởng bởi công cụ sửa đổi DMG tiên tiến."
     },
     {
-      "term": "[Giảm Sát Thương Bạo Kích]",
-      "desc": "Giảm sát thương nhận từ đòn chí mạng theo một tỷ lệ phần trăm nhất định."
+      "term": "[Khả Năng Né Tránh Chuyên Biệt]",
+      "desc": "Một hiệu ứng phòng thủ chuyên biệt mà Tuyệt Kĩ này bỏ qua một phần."
     },
     {
-      "term": "[Hồi Sinh]",
-      "desc": "Cơ chế hồi sinh/trở lại gắn với sự sống của đồng minh, đưa đơn vị trở lại trận đấu."
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm sát thương nhận được từ các đòn tấn công không quan trọng."
     },
     {
-      "term": "[Kiên Cường Năng Lượng]",
-      "desc": "Loại khiên chuyển giá trị tích lũy thành giảm sát thương, giới hạn theo bội số Máu tối đa của đơn vị và không dùng chung được với Hồi Sinh."
+      "term": "[Bất Khuất]",
+      "desc": "Ngăn chặn đơn vị bị ảnh hưởng bị đánh bại trong các điều kiện cụ thể."
+    },
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Bất Khuất]."
+    },
+    {
+      "term": "[Né Tức Thì]",
+      "desc": "Một trạng thái đặc biệt. Khi kẻ địch rời khỏi trạng thái này, [Bạo Khí Không Liệt Quyền] có thể được kích hoạt."
+    },
+    {
+      "term": "[Quyền Hư Vô]",
+      "desc": "Đòn tấn công Truy Kích được thực hiện bởi Bomb & Bang khi kẻ địch rời khỏi trạng thái [Kiên Cường Cực Hạn]."
+    },
+    {
+      "term": "[Chuyển Hóa Năng Lượng]",
+      "desc": "Hiệu ứng của kẻ địch bị Bomb & Bang loại bỏ vĩnh viễn khi bắt đầu trận chiến."
+    },
+    {
+      "term": "[Áp Lực Năng Lượng]",
+      "desc": "Một hiệu ứng mà tất cả đồng minh đều miễn nhiễm khi bắt đầu trận chiến."
     },
     {
       "term": "[HP Chuyên Biệt]",
-      "desc": "Thanh máu riêng bậc PvP xếp chồng lên máu thường, cũng phải bị hạ và có thể được hồi độc lập."
+      "desc": "Một nhóm HP đặc biệt có thể ngăn chặn việc phục hồi bằng một số hiệu ứng nhất định."
     },
     {
-      "term": "[Tăng Kháng Sát Thương]",
-      "desc": "Tăng 30% sát thương gây ra, tăng lên 1.5 lần khi HP gốc của người mang cao hơn của kẻ tấn công."
+      "term": "[Tăng Sát Thương Áp Chế]",
+      "desc": "Tăng DMG được xử lý theo tỷ lệ phần trăm nhất định. Nếu HP tối đa cơ bản của Bomb & Bang cao hơn của kẻ tấn công thì mức tăng DMG sẽ được tăng cường."
+    },
+    {
+      "term": "[Giảm Sát Thương Áp Chế]",
+      "desc": "Giảm DMG phải chịu theo tỷ lệ phần trăm được chỉ định. Nếu HP tối đa cơ sở của Bomb & Bang cao hơn của kẻ tấn công thì Giảm Sát Thương sẽ được nâng cao."
+    },
+    {
+      "term": "[Kiên Cường Năng Lượng]",
+      "desc": "Một lá chắn đặc biệt được tạo ra bằng cách chuyển đổi phần trăm DMG ban đầu mà đồng minh nhận được."
+    },
+    {
+      "term": "[Hồi Sinh]",
+      "desc": "Hiệu ứng hồi sinh không thể cùng tồn tại với hiệu ứng [Lá Chắn Năng Lượng] của kỹ năng này."
+    },
+    {
+      "term": "[Giảm Sát Thương Theo Kháng]",
+      "desc": "Giảm sát thương gây ra cho [HP Chuyên Biệt]. Hiệu ứng này bị vô hiệu hóa bởi Nội tại Đánh thức 2."
     }
   ],
   "keepsakeIcon": "/Keepsake/Bang & Bomb (URplus)/Keepsake_URplus.png",

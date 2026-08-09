@@ -114,16 +114,56 @@
   ],
   "effects": [
     {
-      "term": "[Endurance]",
-      "desc": "The shield absorbs damage equal to 100% of the wearer's Maximum Health."
+      "term": "[Lock]",
+      "desc": "Prevents [Follow-Up], [Continuous Follow-Up], and [Combo Follow-Up]. Before any character acts, deals ATK-based DoT that can CRIT and cannot be [Evaded]."
+    },
+    {
+      "term": "[Follow-up]",
+      "desc": "An additional attack triggered after another action or when a specified condition is met."
+    },
+    {
+      "term": "[Continuous Follow-Up]",
+      "desc": "A Follow-Up that can continue triggering under specified conditions."
+    },
+    {
+      "term": "[Combo Follow-up]",
+      "desc": "A coordinated Follow-Up performed under specified conditions."
+    },
+    {
+      "term": "[Specialized Corrode]",
+      "desc": "Deals Continuous DMG equal to 300% ATK, disappears after triggering 10 times, and transfers to another valid target after any character acts."
+    },
+    {
+      "term": "[Specialized Resilience]",
+      "desc": "Affects how much DMG [Specialized Resilience] can absorb for each Shield point."
+    },
+    {
+      "term": "[Non-Crit DMG Free]",
+      "desc": "Reduces all types of non-critical DMG and cannot coexist with [Agility]."
+    },
+    {
+      "term": "[Agility]",
+      "desc": "A defensive effect that cannot coexist with [Non-Crit DMG Free]."
+    },
+    {
+      "term": "[Chain Explosion]",
+      "desc": "Splash DMG generated when a Continuous DMG effect triggers."
     },
     {
       "term": "[True DMG]",
-      "desc": "This type of bonus damage is dealt on top of attacks, is reduced by Evasion-type effects, and can be immune after a certain number of turns."
+      "desc": "Not affected by DMG Rate or DMG Free and deals Direct DMG without [DMG Sharing] or [Evasion]."
     },
     {
-      "term": "[Corrode]",
-      "desc": "Corrosive damage over time effect, each turn dealing damage equal to a percentage of ST (e.g. 300%) to the target."
+      "term": "[DMG Sharing]",
+      "desc": "Distributes incoming DMG among multiple affected units. [True DMG] ignores this effect."
+    },
+    {
+      "term": "[Evasion]",
+      "desc": "Allows an affected unit to avoid applicable DMG. [True DMG] ignores this effect."
+    },
+    {
+      "term": "[Evaded]",
+      "desc": "Causes an applicable attack or DMG effect to miss. [Lock] DoT cannot be evaded."
     }
   ],
   "classLevel": "Class_SS",

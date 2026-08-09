@@ -101,56 +101,52 @@
   ],
   "effects": [
     {
-      "term": "[Bất Khuất Chuyên Biệt]",
-      "desc": "Bậc PvP (nâng cao) của Kiên Cường — khiên bỏ qua sát thương mạnh hơn, chỉ bị xuyên bởi breaker nâng cao."
+      "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
+      "desc": "Một loại sát thương trực tiếp đặc biệt chỉ chịu ảnh hưởng của Kháng Tăng Sát Thương Nâng Cao và DMG."
+    },
+    {
+      "term": "[Khả Năng Né Tránh Chuyên Biệt]",
+      "desc": "Một hiệu ứng phòng thủ chuyên dụng cho phép đơn vị tránh được sát thương có thể xảy ra."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm sát thương nhận được từ các đòn tấn công không quan trọng."
     },
     {
       "term": "[Bất Khuất]",
-      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+      "desc": "Ngăn chặn đơn vị bị đánh bại trong các điều kiện cụ thể."
     },
     {
-      "term": "[Choáng Chuyên Biệt]",
-      "desc": "Bậc PvP của Choáng — khó kháng hoặc giải hơn."
-    },
-    {
-      "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
-    },
-    {
-      "term": "[Giáp]",
-      "desc": "Buff cho 15% giảm sát thương và phòng thủ đặc hóa khi người mang bị tấn công."
-    },
-    {
-      "term": "[Miễn Nhiễm Sát Thương Kháng]",
-      "desc": "Giảm 30% sát thương nhận vào, tăng lên mức giảm 150% nếu HP gốc của người mang cao hơn của kẻ tấn công."
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Bất Khuất]."
     },
     {
       "term": "[HP Chuyên Biệt]",
-      "desc": "Thanh máu riêng bậc PvP xếp chồng lên máu thường, cũng phải bị hạ và có thể được hồi độc lập."
+      "desc": "Hiệu ứng phục hồi HP chuyên dụng. Sự phục hồi này có thể CRIT khi được chỉ định."
     },
     {
-      "term": "[Né Tránh Chuyên Biệt]",
-      "desc": "Bậc PvP của Né Tránh — giảm đòn chuyên biệt về 1 sát thương; bị xuyên bởi hiệu ứng bỏ qua né tránh."
+      "term": "[Nhanh Nhẹn]",
+      "desc": "Một hiệu ứng tấn công liên quan đến Thần tốc thần tốc."
     },
     {
-      "term": "[Nứt Vỡ]",
-      "desc": "Buff tấn công cho phép người mang bỏ qua một phần Giảm Sát Thương và Phòng Thủ Chuyên Biệt của kẻ địch khi tấn công."
+      "term": "[Thần Tốc - Phòng Thủ]",
+      "desc": "Một hiệu ứng phòng thủ gắn liền với Thần tốc thần tốc."
     },
     {
-      "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
-      "desc": "Bậc cao cấp của sát thương trực tiếp, chỉ chịu ảnh hưởng của tăng/giảm sát thương cao cấp và xuyên qua phòng thủ thường."
+      "term": "[Choáng]",
+      "desc": "Ngăn chặn đơn vị bị ảnh hưởng thực hiện hành động trong thời gian hiệu ứng."
     },
     {
-      "term": "[Lĩnh Vực Siêu Tốc: Tấn Công]",
-      "desc": "Chỉ số vùng tốc độ tấn công giúp tăng sát thương trong PvP; kẻ địch có thể bị giảm Hyperspeed Field·ATK (ví dụ 40–60%) để làm yếu đòn đánh."
+      "term": "[Choáng Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Choáng]."
     },
     {
-      "term": "[Lĩnh Vực Siêu Tốc: Phòng Thủ]",
-      "desc": "Vùng phòng thủ dựa trên tốc độ, giảm sát thương nhận vào trong PvP khi tốc độ của kẻ tấn công không cao hơn phe phòng thủ."
+      "term": "[Sợ Hãi]",
+      "desc": "Hiệu ứng kiểm soát có thể ngăn chặn hoặc hạn chế hành động của đơn vị bị ảnh hưởng."
     },
     {
-      "term": "[Uy Hiếp]",
-      "desc": "Hiệu ứng khống chế dạng choáng khiến mục tiêu không thể hành động và giảm toàn bộ khả năng miễn sát thương của nó đi 30%."
+      "term": "[Giảm Sát Thương Áp Chế]",
+      "desc": "Giảm DMG phải chịu theo tỷ lệ phần trăm được chỉ định. Nếu HP tối đa ban đầu của đơn vị cao hơn của kẻ tấn công thì hệ số nhân Giảm Sát Thương sẽ tăng lên."
     }
   ],
   "keepsakeIcon": "/Keepsake/Amai Mask (URplus)/Keepsake_URplus.png",

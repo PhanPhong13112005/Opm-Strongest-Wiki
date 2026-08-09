@@ -75,7 +75,7 @@
   "effects": [
     {
       "term": "[Lá Chắn]",
-      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
     }
   ],
   "keepsakeIcon": "/Keepsake/Speed-o-Sound Sonic V2 (SSR)/Keepsake_SSR.png",

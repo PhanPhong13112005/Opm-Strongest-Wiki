@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 3 đòn kết hợp vào một mục tiêu với 70% ATK (+3) DMG mỗi mục tiêu, cộng với extra DMG bằng 50% số HP mà bạn đã mất.",
+      "desc": "Gây 3 đòn kết hợp vào một mục tiêu với tổng sát thương bằng 70% ATK DMG mỗi mục tiêu, cộng với extra DMG bằng 50% số HP mà bạn đã mất.",
       "icon": "/Skill/Deep Sea King (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 3 đòn kết hợp vào một mục tiêu với tổng sát thương bằng 88% ATK (+3) DMG mỗi mục tiêu, cộng với extra DMG bằng 75% số HP mà bạn đã mất.",
+      "desc": "Gây 3 đòn kết hợp vào một mục tiêu với tổng sát thương bằng 88% ATK DMG mỗi mục tiêu, cộng với extra DMG bằng 75% số HP mà bạn đã mất.",
       "icon": "/Skill/Deep Sea King (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Deep Sea King (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -80,11 +80,11 @@
   "effects": [
     {
       "term": "[Lá Chắn]",
-      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
     },
     {
       "term": "[Ăn Mòn]",
-      "desc": "Hiệu ứng sát thương theo thời gian dạng ăn mòn, mỗi lượt gây sát thương bằng một tỷ lệ ST (ví dụ 300%) lên mục tiêu."
+      "desc": "Corrosive damage over time effect, each turn dealing damage equal to a percentage of ST (e.g. 300%) to the target."
     }
   ],
   "releaseDate": "16/06/2020",

@@ -101,20 +101,28 @@
   ],
   "effects": [
     {
-      "term": "[Choáng Tuyệt Đối]",
-      "desc": "Bậc choáng mạnh và cuối cùng của [Bất Tỉnh], chỉ có thể được gỡ bằng các đòn giải hiệu ứng chuyên biệt."
+      "term": "[Sợ Hãi]",
+      "desc": "Ngăn chặn hoạt động của thiết bị bị ảnh hưởng và giảm tất cả Miễn Sát Thương. Hiệu ứng này được coi là trạng thái [Choáng]."
+    },
+    {
+      "term": "[Né Tránh Chuyên Biệt]",
+      "desc": "Khiến Sát Thương Trực Tiếp, DMG liên tục, DMG bị thương và Extra DMG chỉ gây được 1 điểm DMG."
     },
     {
       "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "desc": "Ngăn chặn các đơn vị bị ảnh hưởng hành động."
+    },
+    {
+      "term": "[Choáng Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Choáng]."
     },
     {
       "term": "[Câm Lặng]",
-      "desc": "Mục tiêu không thể dùng chiêu cuối. Được tính là hiệu ứng khống chế."
+      "desc": "Ngăn chặn đơn vị bị ảnh hưởng sử dụng Tuyệt Kĩ của nó."
     },
     {
-      "term": "[Uy Hiếp]",
-      "desc": "Hiệu ứng khống chế dạng choáng khiến mục tiêu không thể hành động và giảm toàn bộ khả năng miễn sát thương của nó đi 30%."
+      "term": "[Hoảng Loạn Chuyên Biệt]",
+      "desc": "Một hiệu ứng chuyên biệt gây ra sự tiêu thụ bổ sung. Sự thức tỉnh này bỏ qua mức tiêu thụ bổ sung đó."
     }
   ],
   "keepsakeIcon": "/Keepsake/Subterranean King (UR)/Keepsake_UR.png",

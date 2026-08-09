@@ -115,24 +115,24 @@
   ],
   "effects": [
     {
-      "term": "[Cắt Giảm Năng Lượng]",
-      "desc": "Debuff áp lên toàn bộ kẻ địch khi Năng lượng của chúng giảm, chặn hoặc phá Năng lượng khiến chúng không thể dùng chiêu cuối."
+      "term": "[Liên Kích]",
+      "desc": "Khiến Bomb thực hiện cùng loại kỹ năng sau đòn tấn công của Silverfang. [Liên Kích] cơ bản tấn công 1 mục tiêu ngẫu nhiên, trong khi [Liên Kích] Tuyệt Kĩ tấn công tất cả kẻ thù bằng 3 đòn đánh liên tiếp."
     },
     {
-      "term": "[Đánh Dấu]",
-      "desc": "Đánh dấu một đơn vị, mở điều kiện truy kích hoặc hiệu ứng thưởng gắn với dấu."
+      "term": "[Nội Thương]",
+      "desc": "Khi mục tiêu bị ảnh hưởng bị tấn công, sẽ cần thêm DMG dựa trên ATK của Silverfang. Hiệu ứng biến mất sau khi kích hoạt."
+    },
+    {
+      "term": "[Né Sát Thương Tức Thì]",
+      "desc": "Giảm Sát Thương Trực Tiếp, Extra DMG, Charge DMG và Berserk DMG xuống 1 điểm DMG."
+    },
+    {
+      "term": "[Sợ Hãi]",
+      "desc": "Hiệu ứng tiêu cực liên quan đến Năng lượng liên quan đến việc giảm hoặc phong ấn Năng lượng của đội đối phương."
     },
     {
       "term": "[Né Tức Thì]",
-      "desc": "Các tầng mà mỗi tầng khiến một đòn đánh trực tiếp, bổ sung, charge hoặc berserk chỉ gây 1 sát thương."
-    },
-    {
-      "term": "[Sụp Đổ (Vũ Trang)]",
-      "desc": "Hiệu ứng bất lợi gây sát thương trì hoãn, tích trữ sát thương bổ sung (600-800% ST của Gouketsu), giải phóng khi mục tiêu bị đánh trúng hoặc khi bị [Kích Nổ]."
-    },
-    {
-      "term": "[Thanh Tẩy]",
-      "desc": "Xóa các hiệu ứng/buff đang có trên toàn bộ kẻ địch."
+      "desc": "Tài nguyên chiến đấu giảm 250 cho mỗi kẻ địch bị ảnh hưởng bởi [Nội Thương] khi Bomb thực hiện Tuyệt Kĩ [Liên Kích]."
     }
   ],
   "classLevel": "Class_SS",

@@ -101,56 +101,52 @@
   ],
   "effects": [
     {
-      "term": "[Spec. Unyielding]",
-      "desc": "PvP (advanced) tier of Resilience — shield ignores stronger damage, only penetrated by advanced breakers."
+      "term": "[Specialized Direct DMG]",
+      "desc": "A special type of direct damage influenced only by advanced DMG Boost and DMG Resistance."
+    },
+    {
+      "term": "[Specialized Evasion]",
+      "desc": "A specialized defensive effect that allows the unit to evade applicable damage."
+    },
+    {
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "Reduces damage received from non-critical attacks."
     },
     {
       "term": "[Unyielding]",
-      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+      "desc": "Prevents the unit from being defeated under specific conditions."
     },
     {
-      "term": "[Spec. Stun]",
-      "desc": "PvP tier of Stun — harder to resist or resolve."
+      "term": "[Specialized Unyielding]",
+      "desc": "A specialized form of [Unyielding]."
+    },
+    {
+      "term": "[Specialized HP]",
+      "desc": "A specialized HP recovery effect. This recovery can crit when specified."
+    },
+    {
+      "term": "[Agility]",
+      "desc": "An offensive effect associated with Rapid Divinity."
+    },
+    {
+      "term": "[Rapid Divinity - DEF]",
+      "desc": "A defensive effect associated with Rapid Divinity."
     },
     {
       "term": "[Stun]",
-      "desc": "The stun-type control effect prevents the target from taking action during the duration."
+      "desc": "Prevents the affected unit from taking action during the effect's duration."
     },
     {
-      "term": "[Armor]",
-      "desc": "Buff grants 15% damage reduction and condensed defense when the bearer is attacked."
+      "term": "[Specialized Stun]",
+      "desc": "A specialized form of [Stun]."
     },
     {
-      "term": "[Resist DMG Immunity]",
-      "desc": "Reduces damage taken by 30%, increasing to a 150% reduction if the bearer's base HP is higher than the attacker's."
+      "term": "[Fear]",
+      "desc": "A control effect that can prevent or restrict the affected unit's actions."
     },
     {
-      "term": "[Spec. HP]",
-      "desc": "The PvP tier's unique health bar stacks on top of regular health, must also be depleted, and can be restored independently."
-    },
-    {
-      "term": "[Spec. Dodge]",
-      "desc": "Evasion PvP tier — reduces specialized attacks to 1 damage; pierced by the ignore dodge effect."
-    },
-    {
-      "term": "[Shatter]",
-      "desc": "Attack buff allows the bearer to ignore a portion of the enemy's Damage Reduction and Specialized Defense when attacking."
-    },
-    {
-      "term": "[Spec. Direct DMG]",
-      "desc": "Advanced tier of direct damage, only affected by advanced damage increase/decrease and passes through normal defenses."
-    },
-    {
-      "term": "[Hyper Speed Field: ATK]",
-      "desc": "Attack speed area index helps increase damage in PvP; Enemies can have Hyperspeed Field·ATK reduced (e.g. 40–60%) to weaken attacks."
-    },
-    {
-      "term": "[Hyper Speed Field: DEF]",
-      "desc": "Defense zone is based on speed, reducing damage taken in PvP when the attacker's speed is no higher than the defender's."
-    },
-    {
-      "term": "[Threaten]",
-      "desc": "The stun control effect renders the target unable to act and reduces its overall damage immunity by 30%."
+      "term": "[Suppression DMG Reduction]",
+      "desc": "Reduces DMG taken by a specified percentage. If the unit's original Max HP is higher than the attacker's, the DMG reduction multiplier is increased."
     }
   ],
   "keepsakeIcon": "/Keepsake/Amai Mask (URplus)/Keepsake_URplus.png",

@@ -101,12 +101,36 @@
   ],
   "effects": [
     {
-      "term": "[Bám Dính]",
-      "desc": "Trạng thái khống chế ngăn mục tiêu tung [Truy Kích] và [Truy Kích Liên Tiếp], thường trong 2 lượt."
+      "term": "[Phá Vỡ]",
+      "desc": "Giảm% Tỷ lệ DMG của mục tiêu bị ảnh hưởng."
     },
     {
-      "term": "[Hồi Máu Vượt Mức]",
-      "desc": "Chuyển phần Máu dư từ hồi phục và hút máu thành Khiên Máu tương đương, tối đa theo giới hạn dựa trên Máu gốc."
+      "term": "[Cuồng Bạo Chuyên Biệt]",
+      "desc": "Tạo ra đòn tấn công đầu tiên gây ra [Sát Thương Cuồng Bạo] dựa trên HP tối đa của King. DMG có thể CRIT và tiêu tốn Năng lượng cho mỗi kẻ địch tấn công."
+    },
+    {
+      "term": "[Phòng Hộ Chuyên Biệt]",
+      "desc": "Hiệu ứng phòng thủ có giá trị HP tối đa đóng góp thêm DMG cho [Cuồng Bạo Chuyên Biệt] của Ultra-Tuyệt Kĩ."
+    },
+    {
+      "term": "[Hồi Phục Tràn]",
+      "desc": "Chuyển đổi lượng Hồi máu và Hút máu dư thừa thành một lượng [Khiên Sinh Mệnh] tương đương. DMG tích lũy đã loại bỏ không thể vượt quá 20× HP ban đầu của thiết bị."
+    },
+    {
+      "term": "[Khiên Sinh Mệnh]",
+      "desc": "Một lá chắn được tạo ra từ việc hồi máu và hút máu quá mức thông qua [Hồi Phục Tràn]."
+    },
+    {
+      "term": "[Tê Liệt]",
+      "desc": "Hiệu ứng khống chế tiêu cực bị loại bỏ khỏi King và đồng minh trong cùng hàng bởi Nội tại Đánh thức 2."
+    },
+    {
+      "term": "[Truy Kích Liên Kích]",
+      "desc": "Thực hiện Tuyệt Kĩ dưới dạng Truy Kích chống lại các mục tiêu ngẫu nhiên với tỷ lệ phần trăm DMG được chỉ định và 100% hiệu ứng của nó. Nó không bị ảnh hưởng bởi Tỷ lệ trúng hoặc Kháng hiệu ứng."
+    },
+    {
+      "term": "[Chia Sẻ Sát Thương]",
+      "desc": "Sát Thương Trực Tiếp được chuyển từ đồng minh cùng hàng sang King. DMG được chuyển sẽ bị giảm trước khi King nhận được."
     }
   ],
   "keepsakeIcon": "/Keepsake/King (UR)/Keepsake_UR.png",

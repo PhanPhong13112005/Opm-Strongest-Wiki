@@ -118,24 +118,48 @@
   ],
   "effects": [
     {
-      "term": "[Bất Khuất]",
-      "desc": "Khiên bỏ qua sát thương trong một số đòn nhất định. Phải bị xuyên bởi Breakthrough hoặc Charge/True DMG."
+      "term": "[Né Sát Thương Tức Thì]",
+      "desc": "Tăng độ chính xác của hiệu ứng DMG tức thì."
     },
     {
-      "term": "[Choáng Chuyên Biệt]",
-      "desc": "Bậc PvP của Choáng — khó kháng hoặc giải hơn."
+      "term": "[Đột Phá Chuyên Biệt]",
+      "desc": "Loại bỏ ngay lập tức [Bỏ Qua Sát Thương] và tăng ATK của Cô Gái Muỗi cho đến khi kết thúc cuộc tấn công hiện tại."
+    },
+    {
+      "term": "[Bỏ Qua Sát Thương]",
+      "desc": "Một hiệu ứng khiến DMG nhận vào hiện hành bị bỏ qua."
+    },
+    {
+      "term": "[Miễn Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG và không thể cùng tồn tại với [Nhanh Nhẹn]."
+    },
+    {
+      "term": "[Nhanh Nhẹn]",
+      "desc": "Hiệu ứng phòng thủ không thể cùng tồn tại với [Miễn Sát Thương Không Bạo Kích]. Chi tiết hiệu ứng chính xác hiện chưa được biết."
     },
     {
       "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "desc": "Ngăn chặn các đơn vị bị ảnh hưởng hành động."
+    },
+    {
+      "term": "[Choáng Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Choáng]."
     },
     {
       "term": "[Câm Lặng]",
-      "desc": "Mục tiêu không thể dùng chiêu cuối. Được tính là hiệu ứng khống chế."
+      "desc": "Ngăn chặn đơn vị bị ảnh hưởng sử dụng Tuyệt Kĩ của nó."
     },
     {
-      "term": "[Giảm Sát Thương Không Bạo Kích]",
-      "desc": "Giảm lượng sát thương nhận vào từ các đòn đánh không phải chí mạng."
+      "term": "[Phân Tách]",
+      "desc": "Chia sẻ 80% DMG mà toàn đội nhận được, ngoại trừ Biểu tượng DMG và giảm 80% DMG được chia sẻ."
+    },
+    {
+      "term": "[Kích Nổ]",
+      "desc": "Giảm hoặc ngăn chặn khả năng kích nổ DMG theo tỷ lệ phần trăm được chỉ định."
+    },
+    {
+      "term": "[Giảm Sát Thương Duy Trì]",
+      "desc": "Giảm hoặc ngăn chặn thiệt hại có thể xảy ra theo thời gian DMG theo tỷ lệ phần trăm được chỉ định."
     }
   ],
   "classLevel": "Demon",

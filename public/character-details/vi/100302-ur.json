@@ -101,24 +101,56 @@
   ],
   "effects": [
     {
-      "term": "[Làm Mới]",
-      "desc": "Hiệu ứng hồi sinh: sau khi bị hạ, quay lại trận với 80% Máu và nhận +20% ST trong 1 lượt, tối đa 7 lần."
+      "term": "[Sát Thương Chuẩn]",
+      "desc": "Không bị ảnh hưởng bởi Tỷ lệ DMG hoặc DMG miễn phí và giao dịch Sát Thương Trực Tiếp mà không có [Chia Sẻ Sát Thương] hoặc [Khả Năng Né Tránh]."
     },
     {
-      "term": "[Miễn Nhiễm Sát Thương Trọng Thương]",
-      "desc": "Hiệu ứng giảm sát thương Thương Tích, Nội Thương và Tích Lũy nhận vào."
+      "term": "[Chia Sẻ Sát Thương]",
+      "desc": "Phân phối thiệt hại giữa nhiều đơn vị bị ảnh hưởng. [Sát Thương Chuẩn] bỏ qua hiệu ứng này."
+    },
+    {
+      "term": "[Khả Năng Né Tránh]",
+      "desc": "Cho phép thiết bị bị ảnh hưởng tránh được thiệt hại có thể xảy ra. [Sát Thương Chuẩn] bỏ qua hiệu ứng này."
+    },
+    {
+      "term": "[Đột Phá Chuyên Biệt]",
+      "desc": "Loại bỏ ngay lập tức [Bỏ Qua Sát Thương]."
+    },
+    {
+      "term": "[Bỏ Qua Sát Thương]",
+      "desc": "Một hiệu ứng khiến sát thương nhận vào có thể bị bỏ qua."
     },
     {
       "term": "[Né Tránh Chuyên Biệt]",
-      "desc": "Bậc PvP của Né Tránh — giảm đòn chuyên biệt về 1 sát thương; bị xuyên bởi hiệu ứng bỏ qua né tránh."
+      "desc": "Sát Thương Trực Tiếp, DMG liên tục, Chấn thương DMG và Extra DMG chỉ gây được 1 điểm DMG."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Đòn tấn công Truy Kích gây sát thương 180% DMG Tuyệt Kĩ và ưu tiên hàng đầu của kẻ địch."
+    },
+    {
+      "term": "[Hoảng Loạn Chuyên Biệt]",
+      "desc": "Một hiệu ứng gây ra tiêu thụ bổ sung. [Truy Kích Cuồng Bạo] không bị ảnh hưởng bởi mức tiêu thụ bổ sung này."
+    },
+    {
+      "term": "[Tập Hợp Lại]",
+      "desc": "Cho phép Gouketsu quay trở lại trận chiến với HP được phục hồi và tăng ATK sau khi bị đánh bại."
+    },
+    {
+      "term": "[Miễn Sát Thương Trọng Thương]",
+      "desc": "Giảm [Trọng Thương], [Nội Thương] và [Tụ Lực] DMG."
+    },
+    {
+      "term": "[Trọng Thương]",
+      "desc": "Hiệu ứng sát thương giảm [Giảm Trọng Thương]."
     },
     {
       "term": "[Nội Thương]",
-      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+      "desc": "Hiệu ứng sát thương được kích hoạt khi mục tiêu bị ảnh hưởng bị tấn công."
     },
     {
-      "term": "[Sát Thương Chuẩn]",
-      "desc": "Loại sát thương thưởng gây thêm ngoài đòn đánh, bị giảm bởi các hiệu ứng kiểu Né và có thể được miễn nhiễm sau một số lượt nhất định."
+      "term": "[Tụ Lực]",
+      "desc": "Loại sát thương giảm [Giảm Trọng Thương]."
     }
   ],
   "keepsakeIcon": "/Keepsake/Carnage Kabuto (UR)/Keepsake_UR.png",

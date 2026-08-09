@@ -116,12 +116,24 @@
   ],
   "effects": [
     {
-      "term": "[Dodge]",
-      "desc": "The dodge status reduces Direct, Bonus, Charged, and Fury damage taken to just 1 point for the duration."
+      "term": "[Specialized Burn]",
+      "desc": "Deals ATK-based DoT DMG, disappears after triggering 3 times, and transfers to another valid target after any character acts."
     },
     {
-      "term": "[Spec. Burn]",
-      "desc": "Burning PvP tier — stronger burst damage, harder to deal with."
+      "term": "[Evasion]",
+      "desc": "Reduces Direct DMG, Extra DMG, Charge DMG, and Berserk DMG received to 1 DMG."
+    },
+    {
+      "term": "[Buffer]",
+      "desc": "Reduces DMG based on Max HP."
+    },
+    {
+      "term": "[Stun]",
+      "desc": "Prevents the affected unit from acting."
+    },
+    {
+      "term": "[Specialized Stun]",
+      "desc": "A specialized form of [Stun]."
     }
   ],
   "classLevel": "Demon",

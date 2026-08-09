@@ -28,7 +28,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 16% ATK (+2) sát thương cho tất cả kẻ địch trong một combo 5 đòn, với 100% cơ hội gây [Sụp Đổ] lên 2 mục tiêu ngẫu nhiên trong 2 lượt (tỷ lệ Giảm Sát Thương giảm 30%).",
+      "desc": "Gây 16% sát thương ATK cho tất cả kẻ địch trong một combo 5 đòn, với 100% cơ hội gây [Sụp Đổ] lên 2 mục tiêu ngẫu nhiên trong 2 lượt (tỷ lệ Giảm Sát Thương giảm 30%).",
       "icon": "/Skill/Golden Ball (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 16% ATK (+2) sát thương cho tất cả kẻ địch trong một combo 5 đòn, với 100% cơ hội gây [Sụp Đổ] lên 3 mục tiêu ngẫu nhiên trong 2 lượt (tỷ lệ Giảm Sát Thương giảm 30%).",
+      "desc": "Gây 16% sát thương ATK cho tất cả kẻ địch trong một combo 5 đòn, với 100% cơ hội gây [Sụp Đổ] lên 3 mục tiêu ngẫu nhiên trong 2 lượt (tỷ lệ Giảm Sát Thương giảm 30%).",
       "keepsakeIcon": "/Keepsake/Golden Ball (SR)/Keepsake_SR.png",
       "icon": "/Skill/Golden Ball (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",

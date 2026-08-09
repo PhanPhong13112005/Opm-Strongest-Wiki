@@ -28,7 +28,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Deals 3 combo strikes to a single target for 70% ATK (+3) DMG each, plus extra DMG equal to 50% of your own lost HP.",
+      "desc": "Deals 3 combo strikes to a single target for 70% ATK DMG each, plus extra DMG equal to 50% of your own lost HP.",
       "icon": "/Skill/Deep Sea King (SSR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Deals 3 combo strikes to a single target for 88% ATK (+3) DMG each, plus extra DMG equal to 75% of your own lost HP.",
+      "desc": "Deals 3 combo strikes to a single target for 88% ATK DMG each, plus extra DMG equal to 75% of your own lost HP.",
       "icon": "/Skill/Deep Sea King (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Deep Sea King (SSR)/Keepsake_SSR.png",
       "type": "Ultimate",

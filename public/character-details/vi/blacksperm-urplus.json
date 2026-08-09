@@ -19,7 +19,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Gây 120% ATK (+10) DMG cho một mục tiêu.",
+      "desc": "Gây 120% ATK DMG cho một mục tiêu.",
       "icon": "/Skill/Source/blacksperm-urplus/basic.webp",
       "animation": null,
       "type": "Kỹ năng thường",
@@ -101,16 +101,56 @@
   ],
   "effects": [
     {
+      "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
+      "desc": "Một loại sát thương trực tiếp đặc biệt chỉ bị ảnh hưởng bởi các công cụ sửa đổi sát thương nâng cao."
+    },
+    {
+      "term": "[Khả Năng Né Tránh Chuyên Biệt]",
+      "desc": "Một hiệu ứng phòng thủ chuyên biệt mà Tuyệt Kĩ này bỏ qua một phần."
+    },
+    {
+      "term": "[Giảm Sát Thương Không Bạo Kích]",
+      "desc": "Giảm sát thương nhận được từ các đòn tấn công không quan trọng."
+    },
+    {
+      "term": "[Bất Khuất]",
+      "desc": "Ngăn chặn đơn vị bị ảnh hưởng bị đánh bại trong các điều kiện cụ thể."
+    },
+    {
+      "term": "[Bất Khuất Chuyên Biệt]",
+      "desc": "Một dạng đặc biệt của [Bất Khuất]."
+    },
+    {
+      "term": "[Tăng Sát Thương Toàn Phần]",
+      "desc": "Tăng tất cả sát thương gây ra bởi đơn vị bị ảnh hưởng."
+    },
+    {
+      "term": "[Giảm Sát Thương Toàn Phần]",
+      "desc": "Giảm tất cả thiệt hại mà đơn vị bị ảnh hưởng nhận được."
+    },
+    {
+      "term": "[Sát Thương Bổ Sung Chuyên Biệt]",
+      "desc": "Khi nhân vật bị ảnh hưởng sử dụng Tuyệt Kĩ, gây [Sát Thương Bổ Sung Chuyên Biệt] bằng 800% HP tối đa của họ cho kẻ thù có HP tối đa cao nhất (chỉ có thể CRIT, PvP)."
+    },
+    {
+      "term": "[Tăng Cường Hỗ Trợ]",
+      "desc": "Tăng cường các hiệu ứng liên quan đến hỗ trợ của đơn vị."
+    },
+    {
       "term": "[Vô Địch]",
-      "desc": "Hấp thụ mọi sát thương nhận được trong thời gian này, phục hồi HP ở lượt tiếp theo."
+      "desc": "Hấp thụ tất cả DMG nhận vào khi trạng thái hoạt động."
+    },
+    {
+      "term": "[Truy Kích]",
+      "desc": "Một người theo dõi được triệu tập kế thừa phần trăm ATK cơ bản của Tinh Trùng Đen và có thể thực hiện các cuộc tấn công Truy Kích."
     },
     {
       "term": "[Tái Chiến]",
-      "desc": "Kích hoạt hành động phụ."
+      "desc": "Một hiệu ứng đặc biệt có thể kích hoạt hiệu ứng bổ sung của Awaken 2 Passive."
     },
     {
       "term": "[Truy Kích Tụ Lực]",
-      "desc": "Tấn công ngoài lượt với phần trăm sức mạnh kỹ năng định trước."
+      "desc": "Một đòn tấn công Truy Kích đặc biệt được thực hiện với sức mạnh kỹ năng được chỉ định."
     }
   ],
   "keepsakeIcon": "/Keepsake/Black Sperm (URplus)/Keepsake_URplus.webp",

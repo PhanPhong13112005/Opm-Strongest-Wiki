@@ -100,24 +100,36 @@
   ],
   "effects": [
     {
-      "term": "[Cường Hóa]",
-      "desc": "Hiệu ứng tăng cường tích cực chung áp lên nhân vật, nâng chỉ số hoặc trao lợi ích (ví dụ tăng Tỉ lệ Trúng hoặc ST gây ra)."
+      "term": "[Khóa]",
+      "desc": "Ngăn chặn [Truy Kích], [Truy Kích Liên Tục] và [Truy Kích Liên Kích]. Trước khi bất kỳ nhân vật nào hành động, hãy chia DoT dựa trên ATK có thể là CRIT và không thể là [Đã Né Tránh]."
     },
     {
-      "term": "[Khóa Mục Tiêu]",
-      "desc": "Trạng thái khống chế khiến mục tiêu không thể kích hoạt các đòn Truy Kích, Truy Kích Liên Tục, Liên Kết và Đặc Biệt."
+      "term": "[Truy Kích]",
+      "desc": "Một cuộc tấn công bổ sung được kích hoạt sau một hành động khác hoặc khi đáp ứng một điều kiện cụ thể."
     },
     {
-      "term": "[Kích Nổ Liên Hoàn]",
-      "desc": "Hiệu ứng ngay lập tức lan sang các mục tiêu xung quanh, gây 80% ST theo thời gian của Locked."
+      "term": "[Truy Kích Liên Tục]",
+      "desc": "Truy Kích có thể tiếp tục kích hoạt trong các điều kiện được chỉ định."
     },
     {
-      "term": "[Sát Thương Bạo Kích]",
-      "desc": "Phần sát thương bổ sung do đòn chí mạng gây ra; thường bị điều chỉnh qua [Giảm Sát Thương Bạo Kích] để cắt giảm phần bổ sung này."
+      "term": "[Truy Kích Liên Kích]",
+      "desc": "Một cuộc tấn công Truy Kích phối hợp được thực hiện trong các điều kiện được chỉ định."
     },
     {
-      "term": "[Đóng Băng]",
-      "desc": "Hiệu ứng sát thương hệ Băng thêm vào đòn đánh, gây lên kẻ địch kèm theo đòn chính."
+      "term": "[Đã Né Tránh]",
+      "desc": "Làm cho các đòn tấn công hoặc hiệu ứng DMG bị bỏ lỡ. [Khóa] DoT không thể trốn tránh được."
+    },
+    {
+      "term": "[Miễn Sát Thương Không Bạo Kích]",
+      "desc": "Giảm tất cả các loại DMG không quan trọng và không thể cùng tồn tại với [Nhanh Nhẹn]."
+    },
+    {
+      "term": "[Nhanh Nhẹn]",
+      "desc": "Hiệu ứng phòng thủ không thể cùng tồn tại với [Miễn Sát Thương Không Bạo Kích]. Chi tiết hiệu ứng chính xác hiện chưa được biết."
+    },
+    {
+      "term": "[Bạo Nổ Liên Tục]",
+      "desc": "Khi kẻ địch kích hoạt [Khóa], hãy lan truyền một phần trăm [Khóa] DMG và DoT DMG sang các mục tiêu xung quanh hoặc tất cả kẻ thù. DMG này có thể CRIT và không thể né được."
     }
   ],
   "keepsakeIcon": "/Keepsake/Hellish Blizzard (UR)/Keepsake_UR.png",

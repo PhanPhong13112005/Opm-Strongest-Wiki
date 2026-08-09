@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công toàn bộ cột mục tiêu bằng combo 3 đòn gây 40% sát thương ATK (+3), với 100% cơ hội gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (tỷ lệ Giảm Sát Thương giảm 30%).",
+      "desc": "Tấn công toàn bộ cột mục tiêu bằng combo 3 đòn gây 40% sát thương ATK, với 100% cơ hội gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (tỷ lệ Giảm Sát Thương giảm 30%).",
       "icon": "/Skill/Deep Sea Invader (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tấn công toàn bộ cột mục tiêu bằng combo 3 đòn gây 45% ATK (+3) sát thương, với 100% cơ hội gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (tỷ lệ Giảm Sát Thương giảm 30%).",
+      "desc": "Tấn công toàn bộ cột mục tiêu bằng combo 3 đòn gây 45% sát thương ATK, với 100% cơ hội gây [Ăn Mòn] lên mục tiêu chính trong 2 lượt (tỷ lệ Giảm Sát Thương giảm 30%).",
       "keepsakeIcon": "/Keepsake/Deep Sea Invader (N)/Keepsake_N.png",
       "icon": "/Skill/Deep Sea Invader (N)/Skill_ult.png",
       "type": "Tuyệt kĩ",

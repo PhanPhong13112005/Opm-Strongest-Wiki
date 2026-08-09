@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Strikes a single target with a 5-hit combo, dealing 18% ATK(+2) DMG.",
+      "desc": "Strikes a single target with a 5-hit combo, dealing 18% ATK DMG.",
       "icon": "/Skill/Bunbun Man (R)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Strikes a single target with a 5-hit combo, dealing 38% ATK(+2) DMG. Has a 100% chance to increase self ATK by 10% for 2 turns.",
+      "desc": "Strikes a single target with a 5-hit combo, dealing 38% ATK DMG. Has a 100% chance to increase self ATK by 10% for 2 turns.",
       "icon": "/Skill/Bunbun Man (R)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Strikes a single target with a 5-hit combo, dealing 38% ATK(+2) DMG. Has a 100% chance to increase self ATK% for 2 turns.",
+      "desc": "Strikes a single target with a 5-hit combo, dealing 38% ATK DMG. Has a 100% chance to increase self ATK% for 2 turns.",
       "keepsakeIcon": "/Keepsake/Bunbun Man (R)/Keepsake_R.png",
       "icon": "/Skill/Bunbun Man (R)/Skill_ult.png",
       "type": "Ultimate",

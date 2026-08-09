@@ -29,7 +29,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Strikes a single target with 3 combo hits, dealing 180% ATK (+2) DMG, with a 100% chance to inflict [Field] on the target for 1 turn (before acting, takes DoT equal to 60% ATK, with a 50% chance to penetrate immunity effects).",
+      "desc": "Strikes a single target with 3 combo hits, dealing 180% ATK DMG, with a 100% chance to inflict [Field] on the target for 1 turn (before acting, takes DoT equal to 60% ATK, with a 50% chance to penetrate immunity effects).",
       "icon": "/Skill/Butterfly DX (SR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Strikes a single target with 3 combo hits, dealing 180% ATK (+2) DMG, with a 100% chance to inflict [Field] on the target for 1 turn (before acting, takes DoT equal to 70% ATK, with a 50% chance to penetrate immunity effects).",
+      "desc": "Strikes a single target with 3 combo hits, dealing 180% ATK DMG, with a 100% chance to inflict [Field] on the target for 1 turn (before acting, takes DoT equal to 70% ATK, with a 50% chance to penetrate immunity effects).",
       "icon": "/Skill/Butterfly DX (SR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Butterfly DX (SR)/Keepsake_SR.png",
       "type": "Ultimate",

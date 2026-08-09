@@ -102,7 +102,23 @@
   "effects": [
     {
       "term": "[Nội Thương]",
-      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+      "desc": "Gây DMG dựa trên ATK của Bomb khi mục tiêu bị ảnh hưởng bị tấn công, sau đó biến mất sau khi kích hoạt."
+    },
+    {
+      "term": "[Né Tránh]",
+      "desc": "Giảm Trực tiếp, Extra, Charge và Berserk DMG nhận được xuống 1 DMG."
+    },
+    {
+      "term": "[Sát Thương Bổ Sung Chuyên Biệt]",
+      "desc": "Một loại sát thương bổ sung đặc biệt có thể CRIT và không bị ảnh hưởng bởi [Phản Sát Thương Chuyên Biệt]."
+    },
+    {
+      "term": "[Phản Sát Thương Chuyên Biệt]",
+      "desc": "Hiệu ứng phản xạ sát thương chuyên dụng không ảnh hưởng đến [Sát Thương Bổ Sung Chuyên Biệt]."
+    },
+    {
+      "term": "[Tấn Công Liên Kích]",
+      "desc": "Triệu hồi Silverfang để thực hiện một đòn tấn công bổ sung sử dụng kiểu tấn công tương tự như Bomb."
     }
   ],
   "keepsakeIcon": "/Keepsake/Bom/Bengpu (SSR)/Keepsake_SSR.png",

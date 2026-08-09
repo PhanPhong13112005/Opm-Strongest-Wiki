@@ -101,8 +101,24 @@
   ],
   "effects": [
     {
+      "term": "[Non-Crit DMG Reduction]",
+      "desc": "Reduces DMG received from non-critical attacks."
+    },
+    {
       "term": "[Unyielding]",
-      "desc": "Shield ignores damage from certain attacks. Must be penetrated by Breakthrough or Charge/True DMG."
+      "desc": "Prevents fatal DMG from immediately defeating the affected unit under specified conditions."
+    },
+    {
+      "term": "[Specialized Unyielding]",
+      "desc": "A specialized survival state that lasts for a limited number of character actions. Atomic Samurai can reduce or increase its action count."
+    },
+    {
+      "term": "[Enhanced Unyielding]",
+      "desc": "An effect that greatly increases the target’s Max HP. Atomic Samurai removes this effect before applying permanent Max HP reduction."
+    },
+    {
+      "term": "[Chase]",
+      "desc": "Performs the Ultimate as a follow-up attack against a random enemy column with a specified percentage of the Ultimate’s original DMG."
     }
   ],
   "keepsakeIcon": "/Keepsake/Atomic Samurai (SSRplus)/Keepsake_SSRplus.png",

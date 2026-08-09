@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây 30% ATK (+2) sát thương cho mỗi kẻ địch trong toàn bộ cột trong một combo 5 đòn, với 50% cơ hội gây [Bị Thương] cho mỗi mục tiêu bị trúng đòn trong 2 lượt (nhận thêm sát thương bị thương bằng 50% ATK khi bị tấn công) và tự cấp cho mình [Lá Chắn] (hấp thụ sát thương bằng 10% HP của riêng mình).",
+      "desc": "Gây 30% sát thương ATK cho mỗi kẻ địch trong toàn bộ cột trong một combo 5 đòn, với 50% cơ hội gây ra [Bị Thương] cho mỗi mục tiêu bị trúng đòn trong 2 lượt (nhận thêm sát thương bị thương bằng 50% ATK khi bị tấn công) và tự cấp cho mình [Lá Chắn] (hấp thụ sát thương bằng 10% của HP riêng).",
       "icon": "/Skill/Metal Bat (SSR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây 38% ATK (+2) sát thương cho mỗi kẻ địch trong toàn bộ cột trong một combo 5 đòn, với 60% cơ hội gây [Bị Thương] cho mỗi mục tiêu bị trúng đòn trong 2 lượt (nhận thêm sát thương bị thương bằng 50% ATK khi bị tấn công) và tự cấp cho mình [Lá Chắn] (hấp thụ sát thương bằng 20% HP của riêng mình).",
+      "desc": "Gây 38% ATK cho mỗi kẻ địch trong toàn bộ cột trong một combo 5 đòn, với 60% cơ hội gây [Bị Thương] cho mỗi mục tiêu bị trúng đòn trong 2 lượt (nhận thêm sát thương bị thương bằng 50% ATK khi bị tấn công) và tự cấp cho mình [Lá Chắn] (hấp thụ sát thương bằng 20% của HP riêng).",
       "icon": "/Skill/Metal Bat (SSR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Metal Bat (SSR)/Keepsake_SSR.png",
       "type": "Tuyệt kĩ",
@@ -77,11 +77,11 @@
   "effects": [
     {
       "term": "[Lá Chắn]",
-      "desc": "Khiên hấp thụ sát thương theo thời gian và các loại sát thương thương tổn (Thương Tổn, Nội Thương, Tích Lực)."
+      "desc": "The shield absorbs damage over time and damage types (Damage, Internal Damage, Charge)."
     },
     {
       "term": "[Truy Kích]",
-      "desc": "Đòn tấn công thêm ngoài lượt. Bị vô hiệu bởi [Khóa] và [Mù]."
+      "desc": "Extra attack outside of turn. Disabled by [Khóa] and [Gây Mù]."
     }
   ],
   "releaseDate": "01/10/2020",

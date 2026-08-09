@@ -15,7 +15,7 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Tấn công một mục tiêu bằng combo 3 đòn, gây 35% ATK(+3) sát thương.",
+      "desc": "Tấn công một mục tiêu bằng combo 3 đòn, gây 35% sát thương ATK.",
       "icon": "/Skill/Amai Mask (SR)/Skill_base.png",
       "type": "Kỹ năng thường",
       "keepsakeIcon": null,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Tấn công một mục tiêu ở hàng sau từ 2 đến 5 lần, gây sát thương lên tới 100% ATK(+2).",
+      "desc": "Tấn công một mục tiêu ở hàng sau từ 2 đến 5 lần, gây sát thương lên tới 100% ATK.",
       "icon": "/Skill/Amai Mask (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Tấn công một mục tiêu ở hàng sau từ 3 đến 5 lần, gây sát thương lên tới 100% ATK(+2).",
+      "desc": "Tấn công một mục tiêu ở hàng sau từ 3 đến 5 lần, gây sát thương lên tới 100% ATK.",
       "icon": "/Skill/Amai Mask (SR)/Skill_ult.png",
       "keepsakeIcon": "/Keepsake/Amai Mask (SR)/Keepsake_SR.png",
       "type": "Tuyệt kĩ",

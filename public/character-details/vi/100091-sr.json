@@ -75,7 +75,7 @@
   "effects": [
     {
       "term": "[Thiêu Đốt]",
-      "desc": "Sát thương lửa liên tục theo thời gian lên mục tiêu."
+      "desc": "Continuous fire damage over time to the target."
     }
   ],
   "keepsakeIcon": "/Keepsake/Magicman (SR)/Keepsake_SR.png",

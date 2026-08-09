@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Basic",
-      "desc": "Attacks a single target with 3 combo strikes for 40% ATK DMG (+3).",
+      "desc": "Attacks a single target with 3 combo strikes for 40% ATK DMG.",
       "icon": "/Skill/Lightning Genji (SR)/Skill_base.png",
       "type": "Basic",
       "keepsakeIcon": null,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ultimate",
-      "desc": "Attacks targets in a cross-shaped area with 3 combo strikes for 50% ATK DMG (+3). Also grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 30% of own HP).",
+      "desc": "Attacks targets in a cross-shaped area with 3 combo strikes for 50% ATK DMG. Also grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 30% of own HP).",
       "icon": "/Skill/Lightning Genji (SR)/Skill_ult.png",
       "type": "Ultimate",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ultra-Ultimate",
-      "desc": "Attacks targets in a cross-shaped area with 3 combo strikes for 55% ATK DMG (+3). Also grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 35% of own HP).",
+      "desc": "Attacks targets in a cross-shaped area with 3 combo strikes for 55% ATK DMG. Also grants [Tenacity] to self and allies in the same column (absorbs DMG equal to 35% of own HP).",
       "keepsakeIcon": "/Keepsake/Lightning Genji (SR)/Keepsake_SR.png",
       "icon": "/Skill/Lightning Genji (SR)/Skill_ult.png",
       "type": "Ultimate",

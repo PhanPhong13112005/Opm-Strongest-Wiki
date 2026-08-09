@@ -27,7 +27,7 @@
     },
     {
       "name": "Tuyệt kĩ",
-      "desc": "Gây combo 4 đòn cho một mục tiêu ở hàng sau với tổng sát thương bằng 35% ATK (+2) DMG, đồng thời giảm 50% khả năng mục tiêu gây ra [Trường Lực], [Choáng], [Bị Thương] và [Nội Thương] trong 1 lượt.",
+      "desc": "Gây combo 4 đòn cho một mục tiêu ở hàng sau với tổng sát thương bằng 35% ATK DMG, đồng thời giảm 50% khả năng mục tiêu gây ra [Trường Lực], [Choáng], [Bị Thương] và [Nội Thương] trong 1 lượt.",
       "icon": "/Skill/Awakened Cockroach (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
       "keepsakeIcon": null,
@@ -36,7 +36,7 @@
     },
     {
       "name": "Siêu tuyệt kĩ",
-      "desc": "Gây combo 4 đòn cho một mục tiêu ở hàng sau với 40% ATK (+2) DMG, đồng thời giảm 50% khả năng mục tiêu gây ra [Trường Lực], [Choáng], [Bị Thương] và [Nội Thương] trong 1 lượt.",
+      "desc": "Gây combo 4 đòn cho một mục tiêu ở hàng sau với 40% ATK DMG, đồng thời giảm 50% khả năng mục tiêu gây ra [Trường Lực], [Choáng], [Bị Thương] và [Nội Thương] trong 1 lượt.",
       "keepsakeIcon": "/Keepsake/Awakened Cockroach (SR)/Keepsake_SR.png",
       "icon": "/Skill/Awakened Cockroach (SR)/Skill_ult.png",
       "type": "Tuyệt kĩ",
@@ -74,15 +74,15 @@
   "effects": [
     {
       "term": "[Choáng]",
-      "desc": "Hiệu ứng khống chế kiểu choáng khiến mục tiêu không thể hành động trong thời gian hiệu lực."
+      "desc": "The stun-type control effect prevents the target from taking action during the duration."
     },
     {
       "term": "[Nội Thương]",
-      "desc": "Sát thương theo thời gian dựa trên ST, biến mất sau khi kích hoạt; có thể Detonate để bùng nổ."
+      "desc": "Damage over time based on ST, disappears after activation; Can Detonate to explode."
     },
     {
       "term": "[Hồi Phục]",
-      "desc": "Hồi Máu theo thời gian hoặc trước hành động kế tiếp của đơn vị."
+      "desc": "Restores Health over time or before the unit's next action."
     }
   ],
   "keepsakeIcon": "/Keepsake/Awakened Cockroach (SR)/Keepsake_SR.png",
