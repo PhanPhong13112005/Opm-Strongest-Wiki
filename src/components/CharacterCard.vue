@@ -39,7 +39,7 @@ const foregroundFrame = computed(() => {
 // Tier image icon
 const tierIcon = computed(() => {
   if (props.character.tier) {
-    const safeTier = props.character.tier.replace('UR+', 'URplus')
+    const safeTier = props.character.tier.replaceAll('+', 'plus')
     return `/Quality/${safeTier}.png`
   }
   return ''
