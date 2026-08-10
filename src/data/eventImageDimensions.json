@@ -1,0 +1,301 @@
+{
+  "version": 1,
+  "images": {
+    "/Event_other/Bingo/Detail.png": {
+      "width": 4496,
+      "height": 2452
+    },
+    "/Event_other/Bingo/Main.png": {
+      "width": 4572,
+      "height": 2568
+    },
+    "/Event_other/Carnival_Gift/Main.png": {
+      "width": 1504,
+      "height": 1552
+    },
+    "/Event_other/Carnival_Gift/Week1_1.png": {
+      "width": 4576,
+      "height": 2328
+    },
+    "/Event_other/Carnival_Gift/Week1_2.png": {
+      "width": 4560,
+      "height": 2340
+    },
+    "/Event_other/Carnival_Gift/Week1_3.png": {
+      "width": 4544,
+      "height": 2296
+    },
+    "/Event_other/Carnival_Gift/Week2_1.png": {
+      "width": 4588,
+      "height": 2572
+    },
+    "/Event_other/Carnival_Gift/Week2_2.png": {
+      "width": 4592,
+      "height": 2560
+    },
+    "/Event_other/Carnival_Gift/Week2_3.png": {
+      "width": 4544,
+      "height": 2216
+    },
+    "/Event_other/Carnival_Gift/Week3_1.png": {
+      "width": 4600,
+      "height": 2308
+    },
+    "/Event_other/Carnival_Gift/Week3_2.png": {
+      "width": 4564,
+      "height": 2336
+    },
+    "/Event_other/Carnival_Gift/Week3_3.png": {
+      "width": 4584,
+      "height": 2328
+    },
+    "/Event_other/Frenzy_Martial_Artist/Character details.png": {
+      "width": 1137,
+      "height": 580
+    },
+    "/Event_other/Frenzy_Martial_Artist/Detail_core.png": {
+      "width": 1136,
+      "height": 582
+    },
+    "/Event_other/Frenzy_Martial_Artist/Main.png": {
+      "width": 376,
+      "height": 396
+    },
+    "/Event_other/Frenzy_Martial_Artist/Week1_1.png": {
+      "width": 1136,
+      "height": 578
+    },
+    "/Event_other/Frenzy_Martial_Artist/Week1_2.png": {
+      "width": 1155,
+      "height": 571
+    },
+    "/Event_other/Frenzy_Martial_Artist/Week1_3.png": {
+      "width": 1149,
+      "height": 583
+    },
+    "/Event_other/Frenzy_Martial_Artist/Week2_1.png": {
+      "width": 1144,
+      "height": 591
+    },
+    "/Event_other/Frenzy_Martial_Artist/Week2_2.png": {
+      "width": 1148,
+      "height": 592
+    },
+    "/Event_other/Frenzy_Martial_Artist/Week2_3.png": {
+      "width": 1140,
+      "height": 598
+    },
+    "/Event_other/Gale Wind Special Traning/Main.png": {
+      "width": 352,
+      "height": 333
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 1_1.png": {
+      "width": 1138,
+      "height": 641
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 1_2.png": {
+      "width": 1140,
+      "height": 641
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 1_3.png": {
+      "width": 1148,
+      "height": 636
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 2_1.png": {
+      "width": 1142,
+      "height": 648
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 2_2.png": {
+      "width": 1147,
+      "height": 651
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 2_3.png": {
+      "width": 1139,
+      "height": 645
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 3_1.png": {
+      "width": 1146,
+      "height": 647
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 3_2.png": {
+      "width": 1145,
+      "height": 642
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 3_3.png": {
+      "width": 1142,
+      "height": 640
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 4_1.png": {
+      "width": 1141,
+      "height": 645
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 4_2.png": {
+      "width": 1138,
+      "height": 648
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 4_3.png": {
+      "width": 1147,
+      "height": 638
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 5_1.png": {
+      "width": 1139,
+      "height": 647
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 5_2.png": {
+      "width": 1146,
+      "height": 644
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 5_3.png": {
+      "width": 1140,
+      "height": 647
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 6_1.png": {
+      "width": 1145,
+      "height": 654
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 6_2.png": {
+      "width": 1141,
+      "height": 643
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 6_3.png": {
+      "width": 1151,
+      "height": 645
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 7_1.png": {
+      "width": 1139,
+      "height": 642
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 7_2.png": {
+      "width": 1141,
+      "height": 640
+    },
+    "/Event_other/Gale Wind Special Traning/Special_Training 7_3.png": {
+      "width": 1135,
+      "height": 641
+    },
+    "/Event_other/Monday_Gìts/Main.png": {
+      "width": 1124,
+      "height": 604
+    },
+    "/Event_other/Star_Wish_Sprint/Detail_1.png": {
+      "width": 1117,
+      "height": 559
+    },
+    "/Event_other/Star_Wish_Sprint/Detail_2.png": {
+      "width": 1124,
+      "height": 545
+    },
+    "/Event_other/Star_Wish_Sprint/Detail_3.png": {
+      "width": 1139,
+      "height": 575
+    },
+    "/Event_other/Star_Wish_Sprint/Detail_4.png": {
+      "width": 1143,
+      "height": 602
+    },
+    "/Event_other/Star_Wish_Sprint/Detail_5.png": {
+      "width": 1140,
+      "height": 598
+    },
+    "/Event_other/Star_Wish_Sprint/Main.png": {
+      "width": 1121,
+      "height": 561
+    },
+    "/Event_other/Supershare/Main.png": {
+      "width": 1125,
+      "height": 619
+    },
+    "/Event_other/Terrible_Tornado's_Blessing/Detail_1.png": {
+      "width": 4544,
+      "height": 2340
+    },
+    "/Event_other/Terrible_Tornado's_Blessing/Detail_2.png": {
+      "width": 4496,
+      "height": 2488
+    },
+    "/Event_other/Terrible_Tornado's_Blessing/Detail_3.png": {
+      "width": 4504,
+      "height": 2444
+    },
+    "/Event_other/Terrible_Tornado's_Blessing/Detail_4.png": {
+      "width": 4504,
+      "height": 2444
+    },
+    "/Event_other/Terrible_Tornado's_Blessing/Main.png": {
+      "width": 4544,
+      "height": 2340
+    },
+    "/Event_other/Whac-A_Mole/Detail.png": {
+      "width": 1150,
+      "height": 585
+    },
+    "/Event_other/Whac-A_Mole/Main.png": {
+      "width": 1114,
+      "height": 609
+    },
+    "/Event/Double_benefit.png": {
+      "width": 1135,
+      "height": 553
+    },
+    "/Event/House_of_Wishes.png": {
+      "width": 1127,
+      "height": 538
+    },
+    "/Event/keepsake/keepsake URplus Atomic Samurai.png": {
+      "width": 1133,
+      "height": 576
+    },
+    "/Event/Recruitment/Limited Recruitment URplus Atomic Samurai.png": {
+      "width": 1151,
+      "height": 588
+    },
+    "/Event/Recruitment/Limited Recruitment URplus Tornado.png": {
+      "width": 1264,
+      "height": 470
+    },
+    "/Event/Selection_Giftbox.png": {
+      "width": 1130,
+      "height": 549
+    },
+    "/Event/Special Elite Recruitment/Special Elite Recruitment (Gale Wind).png": {
+      "width": 1148,
+      "height": 572
+    },
+    "/Event/Star Wish Rush 2/Calm, Cruel, Defense, Assist.png": {
+      "width": 1136,
+      "height": 632
+    },
+    "/Event/Star Wish Rush 2/detail_1.png": {
+      "width": 1115,
+      "height": 602
+    },
+    "/Event/Star Wish Rush 2/detail_2.png": {
+      "width": 1115,
+      "height": 621
+    },
+    "/Event/Star Wish Rush 2/detail_3.png": {
+      "width": 1136,
+      "height": 640
+    },
+    "/Event/Star Wish Rush 2/detail_4.png": {
+      "width": 1143,
+      "height": 633
+    },
+    "/Event/Star Wish Rush 2/detail_5.png": {
+      "width": 1146,
+      "height": 640
+    },
+    "/Event/Star Wish Rush 2/detail_6.png": {
+      "width": 1142,
+      "height": 635
+    },
+    "/Event/Star Wish Rush 2/detail_7.png": {
+      "width": 1145,
+      "height": 639
+    },
+    "/Event/Surprise_Box.png": {
+      "width": 1125,
+      "height": 566
+    }
+  }
+}

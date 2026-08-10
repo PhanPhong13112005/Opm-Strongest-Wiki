@@ -3,6 +3,7 @@ import { ref, computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import eventsData from '../data/events.json'
+import eventImageDimensions from '../data/eventImageDimensions.json'
 import { getEventById } from '../services/eventApi'
 import EventComments from '../components/EventComments.vue'
 
@@ -14,6 +15,13 @@ const eventId = computed(() => String(route.params.id || ''))
 const localEvent = computed(() => eventsData.find(e => e.id === eventId.value) || null)
 const apiEvent = ref(null)
 const event = computed(() => apiEvent.value || localEvent.value)
+
+const getImageDimensions = (source) => {
+  const normalizedSource = String(source || '').split(/[?#]/, 1)[0]
+  return eventImageDimensions.images[normalizedSource] || null
+}
+
+const heroImageDimensions = computed(() => getImageDimensions(event.value?.imageUrl))
 
 const activeSection = ref(0)
 const selectedImage = ref(null)
@@ -113,6 +121,9 @@ const goBack = () => {
         <img 
           :src="event.imageUrl" 
           :alt="getTitle(event)"
+          :width="heroImageDimensions?.width"
+          :height="heroImageDimensions?.height"
+          decoding="async"
           class="w-full max-h-[400px] object-contain"
         />
       </div>
@@ -175,8 +186,11 @@ const goBack = () => {
                     <img 
                       :src="img" 
                       alt="Detail"
+                      :width="getImageDimensions(img)?.width"
+                      :height="getImageDimensions(img)?.height"
                       class="max-w-full h-auto object-contain group-hover:scale-[1.03] transition-transform duration-500 rounded-lg"
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div v-if="event.sections[activeSection].tasks && event.sections[activeSection].tasks[idx] && event.sections[activeSection].tasks[idx].length > 0" class="p-4 bg-gradient-to-b from-[#0a0b10] to-[#05060a] border-t border-white/5">
@@ -231,8 +245,11 @@ const goBack = () => {
             <img 
               :src="img" 
               alt="Detail"
+              :width="getImageDimensions(img)?.width"
+              :height="getImageDimensions(img)?.height"
               class="max-w-full h-auto object-contain group-hover:scale-[1.03] transition-transform duration-500 rounded-lg"
               loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
