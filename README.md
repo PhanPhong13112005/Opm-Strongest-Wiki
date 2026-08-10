@@ -4,7 +4,7 @@ OPM Strongest Wiki là dự án wiki phi lợi nhuận do người hâm mộ xâ
 **One Punch Man: The Strongest**. Website cung cấp dữ liệu song ngữ Việt/Anh về nhân vật,
 kỹ năng, sự kiện, lịch ra mắt CN/SEA và các hệ thống nâng cấp trong game.
 
-> Trạng thái cập nhật: 22/07/2026. Dự án vẫn dùng package version `0.0.0`; lịch sử bên dưới
+> Trạng thái cập nhật: 11/08/2026. Dự án vẫn dùng package version `0.0.0`; lịch sử bên dưới
 > được ghi theo ngày thay đổi thực tế thay vì Semantic Versioning.
 
 ## Tính năng chính
@@ -13,6 +13,9 @@ kỹ năng, sự kiện, lịch ra mắt CN/SEA và các hệ thống nâng cấ
 - Tìm nhân vật bằng tên Việt, tên Anh, tên cũ, ID hoặc tiếng Việt không dấu ở cả hai giao diện.
 - Lịch ra mắt nhân vật CN/SEA và lịch sự kiện song ngữ.
 - Core Skill, Tinh thông, Thẻ Hình nền, Chiến thuật và Huy chương.
+- Trang bị với sơ đồ tiến hóa, mô phỏng bốn vị trí, 20 bộ cơ bản/nâng cao và tính nguyên liệu nâng cấp.
+- Tinh Luyện Trung Tâm với hai nhánh độc lập, công cụ tính tài nguyên, khóa chỉ số và bảng phẩm chất theo cấp.
+- Tinh Thông với điều kiện nhân vật hỗ trợ theo từng nhánh, chi phí nâng bậc và mô phỏng Chuyên Công/Chuyên Thủ trong Đấu Trường.
 - Tài khoản cộng đồng với ba vai trò `User`, `Staff`, `Admin`.
 - Bình luận sự kiện, diễn đàn, trợ lý dữ liệu và nạp số dư ngân hàng qua VietQR/SePay.
 - Dashboard quản trị và CRUD Nhân vật, Kỷ vật, Sự kiện, Lịch ra mắt.
@@ -28,8 +31,9 @@ Vue 3 / Vite
    └─ Admin ─────────► Admin API ───► PostgreSQL / Neon
 ```
 
-- Production dùng Vercel Functions trong [`api/`](api/README.md) và Neon PostgreSQL.
-- Backend ASP.NET Core trong [`backend/`](backend/README.md) dùng cùng mô hình dữ liệu và hợp đồng API.
+- Production hiện dùng Vercel Functions trong [`api/`](api/README.md) và Neon PostgreSQL.
+- ASP.NET Core trong [`backend/`](backend/README.md) là backend mục tiêu cho quá trình cutover; chỉ trở thành backend
+  production chính thức sau khi staging, contract/parity test, migration release job, webhook SePay và routing API đạt yêu cầu.
 - Trang Nhân vật, Sự kiện và Lịch ra mắt ưu tiên dữ liệu API; JSON trong `src/data` là dữ liệu
   seed và fallback khi API/database không khả dụng.
 - Public GET được cache ngắn hạn ở client và CDN; cache client được xóa sau thao tác Admin.
@@ -100,8 +104,13 @@ Integration test Playwright dùng Chrome hệ thống và PostgreSQL PGlite cô 
 Admin qua API, sửa một nhân vật, mở trang chi tiết Vue công khai, xác nhận dữ liệu mới và hoàn
 nguyên fixture sau khi chạy.
 
+Mốc kiểm tra gần nhất ngày 11/08/2026: 92 Node tests đạt; Playwright có 50 test đạt và 1 test telemetry
+được cấu hình bỏ qua; production build thành công.
+
 ## Lịch sử phiên bản
 
+- **10–11/08/2026:** Hoàn thiện Trang bị và Tinh Luyện Trung Tâm; viết lại logic Tinh Thông theo dữ liệu đối chiếu,
+  bổ sung mô phỏng Chuyên Công/Chuyên Thủ, hoạt ảnh tương tác rõ ràng và kích thước ảnh sự kiện để hạn chế layout shift.
 - **04/08/2026:** Hoàn tất Việt hóa 318 hiệu ứng và 177 tên nhân vật; bổ sung tìm kiếm tên song ngữ.
 
 - **11–16/07/2026:** Nền tảng Vue, dữ liệu nhân vật, Core Skill, Sự kiện, Tactics, Huy chương,
