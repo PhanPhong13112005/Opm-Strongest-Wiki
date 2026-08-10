@@ -5,6 +5,7 @@ import test from 'node:test'
 
 const root = path.resolve(import.meta.dirname, '..')
 const data = JSON.parse(fs.readFileSync(path.join(root, 'src/data/coreRefinement.json'), 'utf8'))
+const view = fs.readFileSync(path.join(root, 'src/views/CoreRefinementView.vue'), 'utf8')
 
 const getPage = id => data.pages.find(page => page.id === id)
 const calculate = (page, from, to, locks) => {
@@ -95,4 +96,13 @@ test('optimized Core Refinement assets exist and are substantially smaller than 
     assert.ok(fs.existsSync(optimized), `${url} is missing`)
     assert.ok(fs.statSync(optimized).size < fs.statSync(source).size * 0.25, `${url} was not effectively optimized`)
   }
+})
+
+test('Core Refinement exposes visible directional interaction motion', () => {
+  assert.match(view, /const refinementDirection = ref\('next'\)/)
+  assert.match(view, /if \(page\.id === activePageId\.value\) return/)
+  assert.match(view, /@keyframes refinement-branch-activate/)
+  assert.match(view, /@keyframes refinement-row-enter/)
+  assert.match(view, /refinement-page--next \.refinement-fade-enter-from/)
+  assert.match(view, /prefers-reduced-motion: reduce/)
 })

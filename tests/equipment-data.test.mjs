@@ -6,6 +6,7 @@ import test from 'node:test'
 const root = path.resolve(import.meta.dirname, '..')
 const equipment = JSON.parse(fs.readFileSync(path.join(root, 'src/data/equipment.json'), 'utf8'))
 const workbench = fs.readFileSync(path.join(root, 'src/components/GearCatalogWorkbench.vue'), 'utf8')
+const workbenchCss = fs.readFileSync(path.join(root, 'src/components/GearCatalogWorkbench.css'), 'utf8')
 
 test('Gear catalog contains 20 unique sets and four complete slots per set', () => {
   assert.equal(equipment.sets.length, 20)
@@ -133,4 +134,15 @@ test('Gear stats and enhancement curves match the decoded reference model', () =
   assert.deepEqual(totalAt120(equipment.enhanceCurves.basic), { gold: 5_732_640, exp: 39_539, binding: 0 })
   assert.deepEqual(totalAt120(equipment.enhanceCurves.red), { gold: 6_696_000, exp: 47_110, binding: 6_275 })
   assert.deepEqual(totalAt120(equipment.enhanceCurves.redAccessory), { gold: 10_686_500, exp: 47_110, binding: 6_275 })
+})
+
+test('Gear interactions expose directional panels, modal motion and selection feedback', () => {
+  assert.match(workbench, /mode="out-in"/)
+  assert.equal((workbench.match(/<Transition name="gear-modal">/g) || []).length, 2)
+  assert.match(workbench, /:key="'inspector-' \+ activeSlot/)
+  assert.match(workbenchCss, /@keyframes gear-section-rise/)
+  assert.match(workbenchCss, /@keyframes gear-piece-activate/)
+  assert.match(workbenchCss, /@keyframes gear-star-pop/)
+  assert.match(workbenchCss, /\.gear-modal-enter-from \.gear-picker-dialog/)
+  assert.match(workbenchCss, /prefers-reduced-motion: reduce/)
 })

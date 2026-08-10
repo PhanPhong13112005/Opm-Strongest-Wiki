@@ -10,10 +10,11 @@ const toLevel = ref(Math.min(2, refinementData.pages[0].maxLevel))
 const lockedCount = ref(0)
 const expandedStat = ref('')
 const qualityCompareLevel = ref(1)
+const refinementDirection = ref('next')
 
 const isEnglish = computed(() => locale.value === 'en')
 const copy = computed(() => isEnglish.value ? {
-  eyebrow: 'ACCOUNT-WIDE GROWTH SYSTEM',
+  eyebrow: 'ACCOUNT-WIDE GROWTH FEATURE',
   title: 'Core Refinement',
   subtitle: 'Plan refinement levels, locks and resources before spending in game.',
   requirement: 'Account Lv. 78+',
@@ -27,7 +28,7 @@ const copy = computed(() => isEnglish.value ? {
     stats: 'Stat pool',
   },
   beginnerTitle: 'New to Core Refinement? Start here',
-  beginnerLead: 'This system permanently improves your whole account. You reroll stat slots, level the branch and may lock good stats you already own.',
+  beginnerLead: 'This feature permanently improves your whole account. You reroll stat slots, level the branch and may lock good stats you already own.',
   beginnerSteps: [
     ['Choose a branch', 'Energy is the first branch. Module opens after Energy Refinement reaches Lv. 11.'],
     ['Enter two levels', 'Use the level shown in game, then choose the level you want to reach.'],
@@ -42,7 +43,7 @@ const copy = computed(() => isEnglish.value ? {
     ['Pity', 'The maximum number of rolls before the listed quality is guaranteed.'],
   ],
   chooseBranch: 'Choose a refinement branch',
-  pageHint: 'If you just unlocked the system, choose Energy Refinement.',
+  pageHint: 'If you just unlocked the feature, choose Energy Refinement.',
   opensAt: 'Opens at account Lv. 78',
   unlocksModule: 'Unlocks Module Refinement at Lv. 11',
   maxLevel: 'Max level',
@@ -94,7 +95,7 @@ const copy = computed(() => isEnglish.value ? {
   noDescription: 'No additional in-game description is available.',
   sourceNote: 'The calculator and tables are reproduced from the reference logic and client data. This page is an independent implementation for planning purposes.',
 } : {
-  eyebrow: 'HỆ THỐNG TĂNG TRƯỞNG TOÀN TÀI KHOẢN',
+  eyebrow: 'TÍNH NĂNG TĂNG TRƯỞNG TOÀN TÀI KHOẢN',
   title: 'Tinh Luyện Trung Tâm',
   subtitle: 'Tính trước cấp tinh luyện, số ô khóa và nguyên liệu trước khi sử dụng trong game.',
   requirement: 'Tài khoản cấp 78+',
@@ -108,7 +109,7 @@ const copy = computed(() => isEnglish.value ? {
     stats: 'Kho chỉ số',
   },
   beginnerTitle: 'Mới chơi? Hãy hiểu 4 bước này trước',
-  beginnerLead: 'Tinh Luyện Trung Tâm tăng chỉ số vĩnh viễn cho toàn tài khoản. Bạn quay các ô chỉ số, tăng cấp nhánh và có thể khóa những chỉ số tốt đang sở hữu.',
+  beginnerLead: 'Tính năng Tinh Luyện Trung Tâm tăng chỉ số vĩnh viễn cho toàn tài khoản. Bạn quay các ô chỉ số, tăng cấp nhánh và có thể khóa những chỉ số tốt đang sở hữu.',
   beginnerSteps: [
     ['Chọn nhánh', 'Người mới bắt đầu bằng Tinh Luyện Năng Lượng. Nhánh Mô-đun mở khi Năng Lượng đạt cấp 11.'],
     ['Nhập hai cấp độ', 'Chọn đúng cấp đang thấy trong game, sau đó chọn cấp bạn muốn đạt tới.'],
@@ -228,6 +229,10 @@ const setTargetOffset = offset => {
 }
 
 const selectPage = page => {
+  if (page.id === activePageId.value) return
+  const currentIndex = refinementData.pages.findIndex(item => item.id === activePageId.value)
+  const nextIndex = refinementData.pages.findIndex(item => item.id === page.id)
+  refinementDirection.value = nextIndex >= currentIndex ? 'next' : 'previous'
   activePageId.value = page.id
   fromLevel.value = 1
   toLevel.value = Math.min(2, page.maxLevel)
@@ -242,14 +247,14 @@ watch(fromLevel, value => {
 </script>
 
 <template>
-  <main class="refinement-page" :class="`refinement-page--${activePage.theme}`">
+  <main class="refinement-page" :class="[`refinement-page--${activePage.theme}`, `refinement-page--${refinementDirection}`]">
     <section class="refinement-hero">
       <div>
         <p class="section-kicker">{{ copy.eyebrow }}</p>
         <h1>{{ copy.title }}</h1>
         <p class="refinement-hero__lead">{{ copy.subtitle }}</p>
       </div>
-      <div class="refinement-hero__facts" aria-label="System summary">
+      <div class="refinement-hero__facts" aria-label="Feature summary">
         <span>{{ copy.requirement }}</span>
         <span>{{ copy.branches }}</span>
         <span>{{ copy.levels }}</span>
@@ -766,22 +771,72 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   .slot-timeline { grid-template-columns: repeat(2, 1fr); }
 }
 .refinement-fade-enter-active {
-  will-change: opacity, transform;
-  transition: opacity .48s ease, transform .48s cubic-bezier(.16, 1, .3, 1);
+  will-change: opacity, transform, filter;
+  transition: opacity .48s ease, transform .48s cubic-bezier(.16, 1, .3, 1), filter .42s ease;
 }
 .refinement-fade-leave-active {
-  will-change: transform;
-  transition: transform .14s ease;
+  will-change: opacity, transform, filter;
+  transition: opacity .22s ease, transform .22s ease, filter .18s ease;
 }
 .refinement-fade-enter-from {
-  opacity: .9;
-  transform: translateY(38px) scale(.985);
+  opacity: 0;
+  transform: translateY(26px) scale(.975);
+  filter: blur(7px);
 }
+.refinement-page--next .refinement-fade-enter-from { transform: translateX(72px) scale(.975); }
+.refinement-page--previous .refinement-fade-enter-from { transform: translateX(-72px) scale(.975); }
 .refinement-fade-leave-to {
-  opacity: 1;
-  transform: translateY(-12px) scale(.995);
+  opacity: 0;
+  transform: translateY(-12px) scale(.99);
+  filter: blur(3px);
 }
 
+.branch-card.is-active {
+  animation: refinement-branch-activate .5s cubic-bezier(.16, 1, .3, 1);
+}
+.branch-card.is-active::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 15%, rgba(255,255,255,.14) 48%, transparent 78%);
+  transform: translateX(-115%);
+  animation: refinement-card-sweep .68s ease-out;
+}
+.branch-card.is-active .branch-card__status { animation: refinement-status-pop .46s cubic-bezier(.16, 1, .3, 1); }
+.calculation-grid article,
+.lock-ladder button,
+.quality-bar { animation: refinement-row-enter .46s cubic-bezier(.16, 1, .3, 1) both; }
+.calculation-grid article:nth-child(2),
+.lock-ladder button:nth-child(2),
+.quality-bar:nth-child(2) { animation-delay: .045s; }
+.calculation-grid article:nth-child(3),
+.lock-ladder button:nth-child(3),
+.quality-bar:nth-child(3) { animation-delay: .09s; }
+.calculation-grid article:nth-child(4),
+.lock-ladder button:nth-child(4),
+.quality-bar:nth-child(4) { animation-delay: .135s; }
+.lock-ladder button:nth-child(5),
+.quality-bar:nth-child(5) { animation-delay: .18s; }
+.lock-ladder button:nth-child(6),
+.quality-bar:nth-child(6) { animation-delay: .225s; }
+
+@keyframes refinement-branch-activate {
+  0% { transform: translateY(-2px) scale(.975); box-shadow: inset 3px 0 var(--accent), 0 0 0 rgba(81, 213, 245, 0); }
+  58% { transform: translateY(-4px) scale(1.012); box-shadow: inset 3px 0 var(--accent), 0 0 28px var(--accent-soft); }
+  100% { transform: translateY(-2px) scale(1); box-shadow: inset 3px 0 var(--accent); }
+}
+@keyframes refinement-card-sweep {
+  to { transform: translateX(115%); }
+}
+@keyframes refinement-status-pop {
+  0% { opacity: 0; transform: translateY(-8px) scale(.86); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes refinement-row-enter {
+  from { opacity: 0; transform: translateY(18px) scale(.97); filter: blur(5px); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
 @keyframes refinement-orbit {
   to { transform: rotate(360deg); }
 }
@@ -801,14 +856,24 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) {
   .branch-card,
   .stat-item__summary b,
-  .quick-targets button,
+  .quick-targets button { transition: none; }
   .refinement-fade-enter-active,
-  .refinement-fade-leave-active { transition: none; }
+  .refinement-fade-leave-active { transition-duration: .18s; transition-property: opacity; }
+  .refinement-fade-enter-from,
+  .refinement-page--next .refinement-fade-enter-from,
+  .refinement-page--previous .refinement-fade-enter-from,
+  .refinement-fade-leave-to { transform: none; filter: none; }
   .refinement-page::before,
   .refinement-hero::before,
   .refinement-hero,
   .beginner-guide,
   .branch-section,
+  .branch-card.is-active,
+  .branch-card.is-active::after,
+  .branch-card.is-active .branch-card__status,
+  .calculation-grid article,
+  .lock-ladder button,
+  .quality-bar,
   .stat-item__detail,
   .disclosure-section[open] > .disclosure-body { animation: none; }
 }
