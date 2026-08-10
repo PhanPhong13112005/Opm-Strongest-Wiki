@@ -257,7 +257,7 @@ const setPurpleStars = stars => {
       </button>
     </nav>
 
-    <Transition :name="gearTransitionName" mode="in-out" appear>
+    <Transition :name="gearTransitionName" mode="out-in" appear>
     <section v-if="activeTab === 'evolution'" id="gear-panel-evolution" class="gear-panel" role="tabpanel" aria-labelledby="gear-tab-evolution">
       <header class="section-heading"><div><span>EVOLUTION</span><h2>{{ words.evolutionTitle }}</h2></div><p>{{ words.evolutionDesc }}</p></header>
       <div class="evolution-grid">
@@ -313,7 +313,7 @@ const setPurpleStars = stars => {
               <button v-else type="button" class="empty-piece" @click="openPiecePicker(index)"><b aria-hidden="true">+</b><strong>{{ words.emptySlot }}</strong><small>{{ words.emptyHint }}</small></button>
             </article>
           </div>
-          <div class="set-bonus" :class="{ active: activeSet }" role="status">
+          <div :key="activeSet?.id || 'mixed'" class="set-bonus" :class="{ active: activeSet }" role="status">
             <div class="bonus-mark">
               <template v-if="activeSet">✓</template>
               <template v-else>4</template>
@@ -334,7 +334,7 @@ const setPurpleStars = stars => {
             </div>
           </div>
         </div>
-        <aside class="inspector">
+        <aside :key="'inspector-' + activeSlot + '-' + activeBuild.setId" class="inspector">
           <span class="editing-label">{{ words.editing }}: {{ words.slot }} {{ activeSlot + 1 }}</span>
           <template v-if="activeBuild.setId">
             <div class="set-identity"><img :src="pieceIcon(activeBuild.setId, activeSlot + 1)" :alt="localized(equippedSets[activeSlot])" width="180" height="180" /><div><span :class="equippedSets[activeSlot]?.category === 'red' ? 'rarity-red' : 'rarity-gold'">{{ equippedSets[activeSlot]?.category === 'red' ? words.red : words.basic }}</span><h3>{{ localized(equippedSets[activeSlot]) }}</h3><small>ID {{ activeBuild.setId }}</small></div></div>
@@ -345,7 +345,7 @@ const setPurpleStars = stars => {
         </aside>
       </div>
 
-      <div v-if="activeBuild.setId" class="upgrade-block">
+      <div v-if="activeBuild.setId" :key="'upgrade-' + activeSlot + '-' + activeBuild.setId" class="upgrade-block">
         <div class="upgrade-heading"><div><span>{{ words.editing }}: {{ words.slot }} {{ activeSlot + 1 }}</span><h3>{{ words.upgradeTitle }}</h3></div><img :src="pieceIcon(activeBuild.setId, activeSlot + 1)" :alt="localized(equippedSets[activeSlot])" width="64" height="64" /></div>
         <div class="upgrade-grid">
           <article class="upgrade-card">
@@ -412,6 +412,7 @@ const setPurpleStars = stars => {
 
     <p class="source-note">{{ words.source }}</p>
     <Teleport to="body">
+      <Transition name="gear-modal">
       <div v-if="setPickerOpen" class="gear-picker-overlay set-picker-overlay" @click.self="setPickerOpen = false">
         <section class="gear-picker-dialog set-picker-dialog" role="dialog" aria-modal="true" :aria-label="words.setToEquip">
           <header><div><span>LOADOUT SELECTOR</span><h2>{{ words.setToEquip }}</h2><p>{{ words.autoEquip }}</p></div><button type="button" :aria-label="words.close" @click="setPickerOpen = false">×</button></header>
@@ -439,8 +440,10 @@ const setPurpleStars = stars => {
           </div>
         </section>
       </div>
+      </Transition>
     </Teleport>
     <Teleport to="body">
+      <Transition name="gear-modal">
       <div v-if="pickerSlot !== null" class="gear-picker-overlay" @click.self="closePiecePicker">
         <section class="gear-picker-dialog" role="dialog" aria-modal="true" :aria-label="words.pickerTitle(pickerSlot + 1)">
           <header><div><span>{{ words.editing }} · {{ words.slot }} {{ pickerSlot + 1 }}</span><h2>{{ words.pickerTitle(pickerSlot + 1) }}</h2><p>{{ words.pickerDesc }}</p></div><button type="button" :aria-label="words.close" @click="closePiecePicker">×</button></header>
@@ -453,6 +456,7 @@ const setPurpleStars = stars => {
           </div>
         </section>
       </div>
+      </Transition>
     </Teleport>
   </div>
 </template>
