@@ -1,5 +1,21 @@
 # Lịch sử phiên bản OPM Strongest Wiki
 
+## 10–11/08/2026 — Hoàn thiện Tinh Thông, Tinh Luyện Trung Tâm và trải nghiệm Trang bị
+
+- Hoàn thiện trang **Tinh Luyện Trung Tâm** với hai nhánh Năng Lượng/Mô-đun, công cụ tính EXP và nguyên liệu,
+  cơ chế khóa ô chỉ số, bảng phẩm chất theo cấp, mốc mở ô và kho chỉ số song ngữ.
+- Viết lại logic **Tinh Thông** theo dữ liệu đã đối chiếu: điều kiện và số ô nhân vật hỗ trợ riêng cho Phe/Hệ/Cấp,
+  chi phí từng bậc, chỉ số tăng trưởng, buff nâng cao và quy tắc giữ/xóa lựa chọn khi đổi nhánh.
+- Bổ sung mô phỏng **Chuyên Công/Chuyên Thủ** trong Đấu Trường theo BP, bậc Tinh Thông, Backgear và chỉ số đối thủ.
+- Hoàn thiện bốn khu vực của **Trang bị**: sơ đồ tiến hóa, mô phỏng bộ bốn món, bộ Vàng cơ bản và bộ Đỏ nâng cao;
+  hỗ trợ chọn trọn bộ, phối từng vị trí, bỏ/thay món, nâng cấp, sao vàng, sao tím và tổng hợp nguyên liệu.
+- Đồng bộ cách gọi Tinh Thông và Tinh Luyện Trung Tâm là **Tính năng**, không phải nhóm Hệ thống.
+- Thêm hoạt ảnh có hướng khi đổi tab/nhánh, phản hồi khi chọn món, nâng sao, kích hoạt set và mở hộp chọn;
+  tôn trọng thiết lập `prefers-reduced-motion` và giữ giao diện không tràn ngang trên mobile 390 px.
+- Sinh manifest kích thước ảnh sự kiện và khai báo `width`/`height` trước khi ảnh tải để giảm layout shift trên trang chi tiết sự kiện.
+- Kiểm tra thành công 92 Node tests, 50 Playwright tests (1 test telemetry được cấu hình bỏ qua), production build
+  và `git diff --check`.
+
 ## 09/08/2026 — Đồng bộ Vai trò nhân vật từ Markdown và tối ưu Caching Local
 
 - Trích xuất tự động thuộc tính Vai trò (`Roles`) cho toàn bộ 177 nhân vật từ [DANH_SACH_KY_NANG_NHAN_VAT_EN.md](file:///d:/Code/OpmWiki/docs/DANH_SACH_KY_NANG_NHAN_VAT_EN.md).

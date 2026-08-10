@@ -18,7 +18,8 @@ const timelineVi = [
   { stage: 'Định hướng tính năng', title: 'Ý Tưởng Trang Bị & Thẻ Bổ Trợ', date: '03/08/2026', desc: 'Khởi động định hướng thiết kế và mô hình dữ liệu cho các hệ thống tính năng bổ trợ gồm Trang bị (Gear) và Thẻ Bổ trợ (Buff Gear).', domain: 'Thiết kế' },
   { stage: 'Dữ liệu song ngữ', title: 'Việt Hóa Hiệu Ứng & Tìm Kiếm Tên Song Ngữ', date: '04/08/2026', desc: 'Áp dụng bảng chuẩn hóa 318 hiệu ứng và 177 tên nhân vật vào catalog Tiếng Việt. Hỗ trợ tìm kiếm theo tên Việt, tên Anh, tên seed cũ, ID và tiếng Việt không dấu.', domain: 'Dữ liệu game' },
   { stage: 'Triển khai tính năng', title: 'Hệ Thống Trang Bị & Chuẩn Hóa Kỹ Năng', date: '08/08/2026', desc: 'Triển khai hoàn thành trang Trang bị (Gear) với 20 bộ trang bị, giả lập nâng cấp/tiến hóa/tinh luyện. Tiến hành phát triển trang Thẻ Bổ trợ (Buff Gear). Chỉnh sửa toàn bộ kỹ năng 177 nhân vật khớp dữ liệu thực tế in-game và bổ sung ý tưởng các trang Thiên phú, Chỉ số, Ấn ký, Trang bị Khuyên dùng.', domain: 'Tính năng' },
-  { stage: 'Đồng bộ hệ thống', title: 'Trích Xuất Vai Trò & Tối Ưu Caching Local', date: '09/08/2026', desc: 'Tự động trích xuất thuộc tính Vai trò (Roles) cho 177 nhân vật từ Markdown, dịch sang Tiếng Việt và loại bỏ thẻ Hạt Nhân thừa. Cập nhật characterApi.js và loadLocalCharacterDetail.js ưu tiên dữ liệu local mới nhất và vô hiệu đĩa cache khi Dev.', domain: 'Hệ thống' }
+  { stage: 'Đồng bộ hệ thống', title: 'Trích Xuất Vai Trò & Tối Ưu Caching Local', date: '09/08/2026', desc: 'Tự động trích xuất thuộc tính Vai trò (Roles) cho 177 nhân vật từ Markdown, dịch sang Tiếng Việt và loại bỏ thẻ Hạt Nhân thừa. Cập nhật characterApi.js và loadLocalCharacterDetail.js ưu tiên dữ liệu local mới nhất và vô hiệu đĩa cache khi Dev.', domain: 'Hệ thống' },
+  { stage: 'Hoàn thiện tính năng', title: 'Tinh Thông, Tinh Luyện Trung Tâm & Hoạt Ảnh Tương Tác', date: '10–11/08/2026', desc: 'Hoàn thiện logic Tinh Thông, mô phỏng Chuyên Công/Chuyên Thủ, hai nhánh Tinh Luyện Trung Tâm và trải nghiệm bốn khu vực Trang bị. Bổ sung chuyển động có hướng, phản hồi khi chọn/nâng cấp và kích thước ảnh sự kiện để giao diện ổn định hơn.', domain: 'Tính năng' }
 ]
 
 const timelineEn = [
@@ -34,7 +35,8 @@ const timelineEn = [
   { stage: 'Feature roadmap', title: 'Gear & Buff Gear Concepts', date: '03 Aug 2026', desc: 'Initiated design direction and data model definitions for Gear and Buff Gear systems.', domain: 'Design' },
   { stage: 'Bilingual data', title: 'Effect Localization & Bilingual Search', date: '04 Aug 2026', desc: 'Applied normalized effect glossary (318 terms) and character names (177 entries) to the Vietnamese catalog. Supported character searches by VI name, EN name, legacy seed name, ID, and accentless text.', domain: 'Game data' },
   { stage: 'Feature deployment', title: 'Gear System & Skill Realignment', date: '08 Aug 2026', desc: 'Deployed the complete Gear system with 20 set items, enhancement/evolution/refinement simulator, and in-game stat curves. Progressed Buff Gear implementation. Realigned all 177 character skills with actual in-game data, and outlined new Talents, Stats, Insignias, and Recommended Gear modules.', domain: 'Features' },
-  { stage: 'System sync', title: 'Role Extraction & Local Cache Optimization', date: '09 Aug 2026', desc: 'Extracted character Role attributes from Markdown for 177 characters, translated to Vietnamese, and pruned stale Core tags. Updated characterApi.js and loadLocalCharacterDetail.js to prioritize local data and bypass disk cache during DEV mode.', domain: 'System' }
+  { stage: 'System sync', title: 'Role Extraction & Local Cache Optimization', date: '09 Aug 2026', desc: 'Extracted character Role attributes from Markdown for 177 characters, translated to Vietnamese, and pruned stale Core tags. Updated characterApi.js and loadLocalCharacterDetail.js to prioritize local data and bypass disk cache during DEV mode.', domain: 'System' },
+  { stage: 'Feature completion', title: 'Mastery, Core Refinement & Interaction Motion', date: '10–11 Aug 2026', desc: 'Completed Mastery logic and the Specialized ATK/DEF simulator, both Core Refinement branches, and all four Gear workbench areas. Added directional transitions, upgrade feedback, and intrinsic event image dimensions for a more stable interface.', domain: 'Features' }
 ]
 
 const copy = computed(() => locale.value === 'vi'
@@ -50,7 +52,7 @@ const copy = computed(() => locale.value === 'vi'
       archiveHint: 'Các cột mốc được sắp xếp từ mới đến cũ để bạn nắm thay đổi gần nhất trước.',
       version: 'Phiên bản package',
       note: 'Dự án chưa áp dụng Semantic Versioning; ngày thay đổi Git được dùng làm mốc phát hành.',
-      updated: 'Cập nhật lần cuối 09/08/2026 · Bao gồm thay đổi đang chờ phát hành.'
+      updated: 'Cập nhật lần cuối 11/08/2026 · Bao gồm thay đổi đang chờ phát hành.'
     }
   : {
       eyebrow: 'Change archive // 2026',
@@ -64,12 +66,13 @@ const copy = computed(() => locale.value === 'vi'
       archiveHint: 'Milestones are ordered newest first so the most relevant changes are immediately visible.',
       version: 'Package version',
       note: 'Semantic Versioning is not in use yet; Git change dates act as release markers.',
-      updated: 'Last updated 09 Aug 2026 · Includes changes pending release.'
+      updated: 'Last updated 11 Aug 2026 · Includes changes pending release.'
     })
 
 const timeline = computed(() => [...(locale.value === 'vi' ? timelineVi : timelineEn)].reverse())
 const latest = computed(() => timeline.value[0])
 const archive = computed(() => timeline.value.slice(1))
+const buildDays = computed(() => new Set(timeline.value.map(item => item.date)).size)
 </script>
 
 <template>
@@ -86,7 +89,7 @@ const archive = computed(() => timeline.value.slice(1))
         </div>
         <div class="history-metrics" aria-label="Project history summary">
           <div><span>{{ timeline.length.toString().padStart(2, '0') }}</span><small>{{ copy.milestones }}</small></div>
-          <div><span>12</span><small>{{ copy.days }}</small></div>
+          <div><span>{{ buildDays }}</span><small>{{ copy.days }}</small></div>
           <div><span>0.0.0</span><small>{{ copy.version }}</small></div>
         </div>
       </header>
@@ -108,13 +111,13 @@ const archive = computed(() => timeline.value.slice(1))
             <span>NEON</span><i></i><span>VERCEL</span><i></i><span>PLAYWRIGHT</span>
           </div>
         </div>
-        <div class="latest-release__number">08</div>
+        <div class="latest-release__number">{{ String(timeline.length).padStart(2, '0') }}</div>
       </section>
 
       <section class="archive-section">
         <div class="section-heading">
           <div>
-            <p>ARCHIVE // 01—07</p>
+            <p>ARCHIVE // 01—{{ String(archive.length).padStart(2, '0') }}</p>
             <h2>{{ copy.archive }}</h2>
           </div>
           <p>{{ copy.archiveHint }}</p>
@@ -123,7 +126,7 @@ const archive = computed(() => timeline.value.slice(1))
         <div class="archive-grid">
           <article v-for="(item, index) in archive" :key="`${item.date}-${item.title}`" class="archive-card">
             <div class="archive-card__top">
-              <span class="archive-card__number">{{ String(7 - index).padStart(2, '0') }}</span>
+              <span class="archive-card__number">{{ String(archive.length - index).padStart(2, '0') }}</span>
               <time>{{ item.date }}</time>
             </div>
             <p class="archive-card__stage">{{ item.stage }}</p>
