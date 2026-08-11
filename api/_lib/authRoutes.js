@@ -286,12 +286,22 @@ export const createAuthRouteHandler = ({
   if (path === '/auth/login') {
     if (request.method !== 'POST') return methodNotAllowed(response, ['POST'])
     const { username = '', password = '' } = bodyOf(request)
-    if (!String(username).trim() || !String(password)) {
+    const normalizedName = String(username).trim().toLowerCase()
+    if (!normalizedName || !String(password)) {
       return json(response, 401, { message: 'Tên đăng nhập hoặc mật khẩu không đúng.' })
     }
 
-    if (validateAdminCredentials(username, password)) {
-      const adminUsername = process.env.ADMINAUTH__USERNAME || username || 'admin'
+    if (normalizedName === 'admin') {
+      // Purge any stale admin seed from user_accounts table
+      sqlProvider().query(
+        `DELETE FROM user_accounts WHERE LOWER("Username") = 'admin' OR "NormalizedUsername" = 'ADMIN'`,
+      ).catch(() => {})
+
+      if (!validateAdminCredentials(username, password)) {
+        return json(response, 401, { message: 'Tên đăng nhập hoặc mật khẩu không đúng.' })
+      }
+
+      const adminUsername = process.env.ADMINAUTH__USERNAME || 'admin'
       return json(response, 200, createAccessToken({
         userId: `admin:${adminUsername}`,
         username: adminUsername,
