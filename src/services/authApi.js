@@ -4,7 +4,7 @@ import { isSameOriginApiAvailable, requestApi } from './apiClient'
 const TOKEN_KEY = 'opmwiki.auth.token'
 const SESSION_KEY = 'opmwiki.auth.session'
 const AUTH_REQUEST_TIMEOUT_MS = 25_000
-const storage = () => typeof sessionStorage === 'undefined' ? null : sessionStorage
+const getStorage = () => typeof localStorage !== 'undefined' ? localStorage : (typeof sessionStorage !== 'undefined' ? sessionStorage : null)
 
 const decodePayload = (token) => {
   try {
@@ -17,7 +17,9 @@ const decodePayload = (token) => {
 
 const readStoredSession = () => {
   try {
-    return JSON.parse(storage()?.getItem(SESSION_KEY) || 'null')
+    const raw = (typeof localStorage !== 'undefined' && localStorage.getItem(SESSION_KEY)) ||
+                (typeof sessionStorage !== 'undefined' && sessionStorage.getItem(SESSION_KEY))
+    return JSON.parse(raw || 'null')
   } catch {
     return null
   }
@@ -25,7 +27,15 @@ const readStoredSession = () => {
 
 export const authState = reactive({ session: readStoredSession() })
 
-export const getAccessToken = () => storage()?.getItem(TOKEN_KEY) || ''
+export const getAccessToken = () => {
+  if (typeof localStorage !== 'undefined' && localStorage.getItem(TOKEN_KEY)) {
+    return localStorage.getItem(TOKEN_KEY)
+  }
+  if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem(TOKEN_KEY)) {
+    return sessionStorage.getItem(TOKEN_KEY)
+  }
+  return ''
+}
 
 export const hasValidSession = () => {
   const token = getAccessToken()
@@ -44,10 +54,18 @@ export const hasValidSession = () => {
 }
 
 export const clearSession = () => {
-  storage()?.removeItem(TOKEN_KEY)
-  storage()?.removeItem(SESSION_KEY)
-  storage()?.removeItem('opmwiki.admin.token')
-  storage()?.removeItem('opmwiki.admin.user')
+  if (typeof localStorage !== 'undefined') {
+    localStorage.removeItem(TOKEN_KEY)
+    localStorage.removeItem(SESSION_KEY)
+    localStorage.removeItem('opmwiki.admin.token')
+    localStorage.removeItem('opmwiki.admin.user')
+  }
+  if (typeof sessionStorage !== 'undefined') {
+    sessionStorage.removeItem(TOKEN_KEY)
+    sessionStorage.removeItem(SESSION_KEY)
+    sessionStorage.removeItem('opmwiki.admin.token')
+    sessionStorage.removeItem('opmwiki.admin.user')
+  }
   authState.session = null
 }
 
@@ -60,8 +78,8 @@ const saveSession = (result) => {
     balance: result.balance,
     expiresAt: result.expiresAt,
   }
-  storage()?.setItem(TOKEN_KEY, result.accessToken)
-  storage()?.setItem(SESSION_KEY, JSON.stringify(session))
+  getStorage()?.setItem(TOKEN_KEY, result.accessToken)
+  getStorage()?.setItem(SESSION_KEY, JSON.stringify(session))
   authState.session = session
   return result
 }
