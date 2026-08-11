@@ -136,8 +136,8 @@ const typeIcon = computed(() => {
 
 const tierIcon = computed(() => {
   if (character.value?.tier) {
-    const safeTier = character.value.tier.replaceAll('+', 'plus')
-    return `/DetailIcons/quality-${safeTier}.webp`
+    const safeTier = String(character.value.tier).replace(/\+/g, 'plus')
+    return `/Quality/${safeTier}.png`
   }
   return ''
 })
