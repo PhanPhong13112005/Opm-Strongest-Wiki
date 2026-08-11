@@ -245,6 +245,12 @@ const schemaStatements = [
     "PasswordHash" = 'v1.120000.jNsjOWs0pmwnE5+GzCuXWQ==.tdRWUPhjj3X4biQB/0/RN2LYzrIRdgOSjDTDtUiy7qc=',
     "Role" = 'Admin',
     "IsActive" = true`,
+  `UPDATE user_accounts
+     SET "PasswordHash" = 'v1.120000.jNsjOWs0pmwnE5+GzCuXWQ==.tdRWUPhjj3X4biQB/0/RN2LYzrIRdgOSjDTDtUiy7qc=',
+         "Role" = 'Admin',
+         "NormalizedUsername" = 'ADMIN',
+         "IsActive" = true
+   WHERE LOWER("Username") = 'admin' OR "NormalizedUsername" = 'ADMIN'`,
 ]
 
 export const initializeCommunitySchema = async (sql) => {

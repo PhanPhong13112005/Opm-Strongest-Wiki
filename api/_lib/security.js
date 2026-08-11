@@ -29,12 +29,14 @@ const fixedTimeEquals = (left, right) => {
 }
 
 export const validateAdminCredentials = (username, password) => {
-  const expectedUsername = process.env.ADMINAUTH__USERNAME || 'admin'
-  const expectedPassword = process.env.ADMINAUTH__PASSWORD || 'admin'
+  const normalizedUser = String(username || '').trim().toLowerCase()
+  const expectedUsername = String(process.env.ADMINAUTH__USERNAME || 'admin').trim().toLowerCase()
+  const expectedPassword = String(process.env.ADMINAUTH__PASSWORD || '').trim()
+  const rawPassword = String(password || '').trim()
+
   return (
-    (fixedTimeEquals(username, expectedUsername) && fixedTimeEquals(password, expectedPassword)) ||
-    (fixedTimeEquals(username, 'admin') && fixedTimeEquals(password, 'admin')) ||
-    (fixedTimeEquals(username, 'admin') && fixedTimeEquals(password, 'admin123'))
+    (expectedPassword !== '' && fixedTimeEquals(normalizedUser, expectedUsername) && fixedTimeEquals(rawPassword, expectedPassword)) ||
+    (fixedTimeEquals(normalizedUser, 'admin') && (fixedTimeEquals(rawPassword, 'admin') || fixedTimeEquals(rawPassword, 'admin123')))
   )
 }
 
