@@ -7,6 +7,7 @@ import { createCommunityRouteHandler, tierVoteMonthFor, tierVoteResetAt } from '
 import { initializeCommunitySchema } from '../api/_lib/database.js'
 import { createAccessToken } from '../api/_lib/security.js'
 import { groupCharactersByBand, isCoreCharacter, RANKING_BANDS, RANKING_BASELINE_STATS, VERIFIED_MONTHLY_VOTES_PER_RARITY, baseVotesForCharacter } from '../src/data/tierRankingModel.js'
+import { safeAssetUrl } from '../src/utils/assetUrl.js'
 
 process.env.ADMINAUTH__JWTSIGNINGKEY = 'tier-ranking-tests-use-a-long-isolated-signing-key'
 
@@ -329,4 +330,18 @@ test('editable base votes automatically promote characters through SS-D', () => 
       .sort((a, b) => b.votes - a.votes || a.baseOrder - b.baseOrder || a.id.localeCompare(b.id))
     assert.equal(groupCharactersByBand(reranked).SS[0].id, promoted.id, rarity + ' highest vote must move to SS')
   }
+})
+
+test('tier ranking encodes reserved characters in production asset URLs', () => {
+  const view = fs.readFileSync(new URL('../src/views/TierRankingView.vue', import.meta.url), 'utf8')
+  const encoded = safeAssetUrl('/Characters/Geryuganshoop (SSR+)/SSR+.png')
+
+  assert.match(encoded, /Geryuganshoop%20\(SSR%2B\)\/SSR%2B\.png/)
+  assert.match(view, /import \{ safeAssetUrl \} from '\.\.\/utils\/assetUrl'/)
+  assert.match(view, /:src="safeAssetUrl\(character\.imageURL\)"/)
+  assert.match(view, /const localizedBand = band => band === 'CORE'/)
+  assert.match(view, /const rarities = \['UR\+', 'UR', 'SSR\+', 'SSR', 'SR', 'R'\]/)
+  assert.match(view, /@click="stepRarity\(-1\)"/)
+  assert.match(view, /@click="stepRarity\(1\)"/)
+  assert.match(view, /scrollIntoView\(\{/)
 })

@@ -65,3 +65,13 @@ test('character details expose honest pending recommendation cards', () => {
   assert.match(detail, /to="\/insignias"/)
   assert.match(detail, /to="\/equipment"/)
 })
+
+test('AI advisor is clearly marked as experimental', () => {
+  const app = read('src/App.vue')
+  const advisor = read('src/views/AdvisorView.vue')
+
+  assert.match(app, /to: '\/advisor'.*badge: 'THỬ NGHIỆM'/)
+  assert.match(advisor, /AI DATA AUXILIARY \/ THỬ NGHIỆM/)
+  assert.match(advisor, /TRẠNG THÁI<br><b>THỬ NGHIỆM<\/b>/)
+  assert.doesNotMatch(advisor, /AI DATA AUXILIARY \/ BETA/)
+})

@@ -85,6 +85,7 @@ export const resetPassword = async (token, password) => requestApi('api/auth/res
 
 export const requestEmailVerification = async () => authorizedRequest('api/auth/email-verification/request', {
   method: 'POST',
+  timeoutMs: 25_000,
 })
 
 export const verifyEmail = async (token) => requestApi('api/auth/email-verification/confirm', null, {

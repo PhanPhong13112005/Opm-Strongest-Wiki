@@ -16,8 +16,13 @@ kỹ năng, sự kiện, lịch ra mắt CN/SEA và các hệ thống nâng cấ
 - Trang bị với sơ đồ tiến hóa, mô phỏng bốn vị trí, 20 bộ cơ bản/nâng cao và tính nguyên liệu nâng cấp.
 - Tinh Luyện Trung Tâm với hai nhánh độc lập, công cụ tính tài nguyên, khóa chỉ số và bảng phẩm chất theo cấp.
 - Tinh Thông với điều kiện nhân vật hỗ trợ theo từng nhánh, chi phí nâng bậc và mô phỏng Chuyên Công/Chuyên Thủ trong Đấu Trường.
+- Bảng Xếp Hạng Cộng Đồng cho các phẩm UR+, UR, SSR+, SSR, SR và R: giữ nhân vật Cốt Lõi ở hàng riêng,
+  tự xếp SS–D theo phiếu nền cộng phiếu cộng đồng và hỗ trợ điều hướng ngang trên mobile.
 - Tài khoản cộng đồng với ba vai trò `User`, `Staff`, `Admin`.
-- Bình luận sự kiện, diễn đàn, trợ lý dữ liệu và nạp số dư ngân hàng qua VietQR/SePay.
+- Xác minh Gmail bằng liên kết dùng một lần; tài khoản đã xác minh được bình chọn tối đa 8 nhân vật mỗi phẩm mỗi tháng,
+  tài khoản chưa xác minh được bình chọn 1 nhân vật mỗi phẩm mỗi tháng.
+- Bình luận sự kiện, diễn đàn và Trợ lý dữ liệu ở trạng thái **Thử nghiệm**. Dịch vụ nạp thẻ hiện được hiển thị là **Bảo trì**
+  và không nhận đơn/chuyển khoản mới.
 - Dashboard quản trị và CRUD Nhân vật, Kỷ vật, Sự kiện, Lịch ra mắt.
 - Giao diện responsive, hỗ trợ tiếng Việt/Anh, Vercel Analytics và Speed Insights.
 
@@ -92,6 +97,10 @@ docker compose -f backend/docker-compose.yml up --build
 Không commit `DATABASE_URL`, connection string, mật khẩu Admin hoặc JWT signing key vào Git.
 Xem [backend/DEPLOYMENT.md](backend/DEPLOYMENT.md) để biết cấu hình production.
 
+Email xác minh và đặt lại mật khẩu ở production sử dụng các biến `PUBLIC_APP_URL`,
+`EMAIL__RESENDAPIKEY` và `EMAIL__FROM`. Địa chỉ gửi phải thuộc domain đã xác minh; API key chỉ đặt
+ở môi trường server và không được đưa vào biến `VITE_*` hoặc mã nguồn phía client.
+
 ## Kiểm thử và build
 
 ```powershell
@@ -104,11 +113,14 @@ Integration test Playwright dùng Chrome hệ thống và PostgreSQL PGlite cô 
 Admin qua API, sửa một nhân vật, mở trang chi tiết Vue công khai, xác nhận dữ liệu mới và hoàn
 nguyên fixture sau khi chạy.
 
-Mốc kiểm tra gần nhất ngày 11/08/2026: 92 Node tests đạt; Playwright có 50 test đạt và 1 test telemetry
+Mốc kiểm tra gần nhất ngày 11/08/2026: 99 Node tests đạt; Playwright có 50 test đạt và 1 test telemetry
 được cấu hình bỏ qua; production build thành công.
 
 ## Lịch sử phiên bản
 
+- **11/08/2026:** Thêm Bảng Xếp Hạng Cộng Đồng và dữ liệu phiếu nền có thể chỉnh sửa; phân nhóm Cốt Lõi/SS–D,
+  lọc UR+ đến R, xác minh Gmail qua Resend, hạn mức bình chọn theo trạng thái xác minh và tự chuyển kỳ theo tháng
+  Việt Nam. Hoàn thiện giao diện mobile, đường dẫn ảnh production, favicon Saitama và nhãn Thử nghiệm cho Trợ lý dữ liệu.
 - **10–11/08/2026:** Hoàn thiện Trang bị và Tinh Luyện Trung Tâm; viết lại logic Tinh Thông theo dữ liệu đối chiếu,
   bổ sung mô phỏng Chuyên Công/Chuyên Thủ, hoạt ảnh tương tác rõ ràng và kích thước ảnh sự kiện để hạn chế layout shift.
 - **04/08/2026:** Hoàn tất Việt hóa 318 hiệu ứng và 177 tên nhân vật; bổ sung tìm kiếm tên song ngữ.
@@ -126,8 +138,9 @@ Chi tiết xem [`CHANGELOG.md`](CHANGELOG.md) hoặc trang `/history` trên webs
 ## Quyền riêng tư và an toàn
 
 - Việc đọc wiki công khai không yêu cầu tài khoản. Tài khoản chỉ cần cho bình luận, diễn đàn,
-  trợ lý, yêu cầu nạp và khu vực vận hành.
+  trợ lý, bình chọn cộng đồng và khu vực vận hành.
 - Hệ thống lưu tên đăng nhập, tên hiển thị, mật khẩu đã băm, vai trò và nội dung người dùng gửi.
+- Xác minh Gmail lưu trạng thái xác minh và token băm có thời hạn; liên kết chỉ dùng được một lần.
 - Yêu cầu nạp chỉ nhận mã tham chiếu và số tiền; webhook SePay được xác thực HMAC và ghi sổ số dư
   idempotent. Không nhập mật khẩu, OTP hoặc toàn bộ thông tin thẻ/ngân hàng.
 - JWT và thông tin phiên được lưu trong `sessionStorage`; production sử dụng HTTPS.

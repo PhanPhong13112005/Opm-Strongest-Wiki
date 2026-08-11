@@ -1,7 +1,8 @@
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, nextTick, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink, useRouter } from 'vue-router'
+import { safeAssetUrl } from '../utils/assetUrl'
 import catalog from '../data/tierRankingCatalog.json'
 import { groupCharactersByBand, RANKING_BANDS, RANKING_BASELINE_STATS, baseVotesForCharacter } from '../data/tierRankingModel'
 import { authState, hasValidSession } from '../services/authApi'
@@ -13,6 +14,7 @@ const rarities = ['UR+', 'UR', 'SSR+', 'SSR', 'SR', 'R']
 const tierBands = RANKING_BANDS
 
 const activeRarity = ref('UR+')
+const rarityTabsRef = ref(null)
 const summary = ref({ totalVoters: 0, totalVotes: 0, votes: [] })
 const myVotes = ref(new Set())
 const loading = ref(true)
@@ -27,6 +29,25 @@ const votePolicy = ref({
   phoneVerified: false,
 })
 
+const activeRarityIndex = computed(() => rarities.indexOf(activeRarity.value))
+const canGoToPreviousRarity = computed(() => activeRarityIndex.value > 0)
+const canGoToNextRarity = computed(() => activeRarityIndex.value < rarities.length - 1)
+
+const selectRarity = async rarity => {
+  activeRarity.value = rarity
+  await nextTick()
+  rarityTabsRef.value?.children?.[rarities.indexOf(rarity)]?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'nearest',
+    inline: 'center',
+  })
+}
+
+const stepRarity = direction => {
+  const nextIndex = Math.min(rarities.length - 1, Math.max(0, activeRarityIndex.value + direction))
+  if (nextIndex !== activeRarityIndex.value) selectRarity(rarities[nextIndex])
+}
+
 const messages = {
   vi: {
     eyebrow: 'COMMUNITY POWER INDEX',
@@ -35,8 +56,8 @@ const messages = {
     disclaimerTitle: 'Không phải kết luận tuyệt đối',
     disclaimer: 'Sức mạnh còn phụ thuộc tuổi server, đội hình, tài nguyên và meta. Bảng này dùng thứ tự trong ảnh làm dữ liệu mẫu rồi cộng thêm bình chọn thật.',
     modelTitle: 'Cách tính phiếu xếp hạng',
-    modelCopy: 'Nh\u00e2n v\u1eadt Core \u0111\u01b0\u1ee3c gi\u1eef trong h\u00e0ng ri\u00eang. C\u00e1c nh\u00e2n v\u1eadt c\u00f2n l\u1ea1i t\u1ef1 \u0111\u1ed9ng l\u00ean SS, S, A, B, C ho\u1eb7c D theo phi\u1ebfu n\u1ec1n c\u1ed9ng phi\u1ebfu c\u1ed9ng \u0111\u1ed3ng th\u1eadt.',
-    bandLabels: { CORE: 'Nh\u00e2n v\u1eadt Core', SS: 'Th\u1ed1ng tr\u1ecb', S: 'R\u1ea5t m\u1ea1nh', A: 'M\u1ea1nh', B: '\u1ed4n \u0111\u1ecbnh', C: 'T\u00ecnh hu\u1ed1ng', D: 'C\u1ea7n \u0111\u1ea7u t\u01b0' },
+    modelCopy: 'Nh\u00e2n v\u1eadt C\u1ed1t L\u00f5i \u0111\u01b0\u1ee3c gi\u1eef trong h\u00e0ng ri\u00eang. C\u00e1c nh\u00e2n v\u1eadt c\u00f2n l\u1ea1i t\u1ef1 \u0111\u1ed9ng l\u00ean SS, S, A, B, C ho\u1eb7c D theo phi\u1ebfu n\u1ec1n c\u1ed9ng phi\u1ebfu c\u1ed9ng \u0111\u1ed3ng th\u1eadt.',
+    bandLabels: { CORE: 'Nh\u00e2n v\u1eadt C\u1ed1t L\u00f5i', SS: 'Th\u1ed1ng tr\u1ecb', S: 'R\u1ea5t m\u1ea1nh', A: 'M\u1ea1nh', B: '\u1ed4n \u0111\u1ecbnh', C: 'T\u00ecnh hu\u1ed1ng', D: 'C\u1ea7n \u0111\u1ea7u t\u01b0' },
     participants: 'Người tham gia',
     totalVotes: 'Lượt bình chọn',
     confidence: 'Độ tin cậy',
@@ -159,6 +180,7 @@ const bandedCharacters = computed(() => groupCharactersByBand(rankedCharacters.v
 const localizedName = character => locale.value === 'en' ? character.nameEn : character.nameVi
 const localizedType = character => locale.value === 'en' ? character.typeEn : character.typeVi
 const localizedFaction = character => locale.value === 'en' ? character.factionEn : character.factionVi
+const localizedBand = band => band === 'CORE' && locale.value !== 'en' ? 'CỐT LÕI' : band
 const votePercent = character => Math.round((character.votes / leadingVotes.value) * 100)
 
 const scrollBand = (direction, event) => {
@@ -239,18 +261,27 @@ onMounted(loadRanking)
           <article :class="'confidence-' + confidenceLevel"><strong>{{ confidenceLabel }}</strong><span>{{ text.confidence }}</span></article>
         </div>
       </div>
-      <aside class="tier-disclaimer">
-        <span aria-hidden="true">!</span>
-        <div><strong>{{ text.disclaimerTitle }}</strong><p>{{ text.disclaimer }}</p></div>
-      </aside>
-    </section>
-
-    <section class="tier-control-panel">
-      <div class="ranking-model">
-        <span aria-hidden="true">100+</span>
-        <div><strong>{{ text.modelTitle }}</strong><p>{{ text.modelCopy }}</p></div>
+      <div class="tier-hero__side">
+        <aside class="tier-disclaimer">
+          <span aria-hidden="true">!</span>
+          <div><strong>{{ text.disclaimerTitle }}</strong><p>{{ text.disclaimer }}</p></div>
+        </aside>
+        <div class="ranking-model ranking-model--hero">
+          <span aria-hidden="true">100+</span>
+          <div><strong>{{ text.modelTitle }}</strong><p>{{ text.modelCopy }}</p></div>
+        </div>
+        <div v-if="isAuthenticated" class="tier-vote-policy tier-vote-policy--hero" role="status">
+          <strong>{{ activeRarity }} · {{ selectedInActiveRarity }}/{{ votePolicy.maxVotesPerRarity }}</strong>
+          <span>{{ votePolicyMessage }}</span>
+          <RouterLink
+            v-if="!votePolicy.hasVerifiedContact"
+            to="/account"
+            class="tier-vote-policy__verify"
+          >
+            Xác minh Gmail
+          </RouterLink>
+        </div>
       </div>
-
     </section>
 
     <div v-if="errorMessage" class="tier-error" role="status">
@@ -260,35 +291,45 @@ onMounted(loadRanking)
 
     <section class="tier-board">
       <header class="tier-board__header">
-        <div class="rarity-tabs" role="tablist" aria-label="Character rarity">
+        <div class="rarity-nav">
           <button
-            v-for="rarity in rarities"
-            :key="rarity"
             type="button"
-            role="tab"
-            :aria-selected="activeRarity === rarity"
-            :class="{ active: activeRarity === rarity }"
-            @click="activeRarity = rarity"
+            class="rarity-nav__arrow"
+            :aria-label="locale === 'en' ? 'Previous rarity' : 'Phẩm chất trước'"
+            :disabled="!canGoToPreviousRarity"
+            @click="stepRarity(-1)"
           >
-            {{ rarity }}
-            <small>{{ catalog.filter(character => character.tier === rarity).length }}</small>
+            <span aria-hidden="true">‹</span>
+          </button>
+          <div ref="rarityTabsRef" class="rarity-tabs" role="tablist" aria-label="Character rarity">
+            <button
+              v-for="rarity in rarities"
+              :key="rarity"
+              type="button"
+              role="tab"
+              :data-rarity="rarity"
+              :aria-selected="activeRarity === rarity"
+              :class="{ active: activeRarity === rarity }"
+              @click="selectRarity(rarity)"
+            >
+              {{ rarity }}
+              <small>{{ catalog.filter(character => character.tier === rarity).length }}</small>
+            </button>
+          </div>
+          <button
+            type="button"
+            class="rarity-nav__arrow"
+            :aria-label="locale === 'en' ? 'Next rarity' : 'Phẩm chất tiếp theo'"
+            :disabled="!canGoToNextRarity"
+            @click="stepRarity(1)"
+          >
+            <span aria-hidden="true">›</span>
           </button>
         </div>
         <p class="is-sample">
           <span class="status-pulse" />{{ text.sampleOrder }}
         </p>
       </header>
-      <div v-if="isAuthenticated" class="tier-vote-policy" role="status">
-        <strong>{{ activeRarity }} · {{ selectedInActiveRarity }}/{{ votePolicy.maxVotesPerRarity }}</strong>
-        <span>{{ votePolicyMessage }}</span>
-        <RouterLink
-          v-if="!votePolicy.hasVerifiedContact"
-          to="/account"
-          class="tier-vote-policy__verify"
-        >
-          Xác minh Gmail
-        </RouterLink>
-      </div>
 
       <Transition name="tier-board-swap" mode="out-in">
       <div v-if="loading" key="loading" class="tier-skeletons" aria-label="Loading">
@@ -302,9 +343,8 @@ onMounted(loadRanking)
           class="tier-row"
           :class="'tier-row--' + band.toLowerCase()"
         :style="{ '--tier-index': tierBands.indexOf(band) }">
-          <header class="tier-row__label">
-            <strong>{{ band }}</strong>
-            <span>{{ text.bandLabels[band] }}</span>
+          <header class="tier-row__label" :data-band-label="localizedBand(band)">
+            <strong>{{ localizedBand(band) }}</strong>
             <div v-if="bandedCharacters[band].length > 1" class="tier-row__arrows">
               <button
                 type="button"
@@ -340,15 +380,18 @@ onMounted(loadRanking)
               class="rank-card"
             :style="{ '--card-index': characterIndex, animationDelay: (characterIndex * 45) + 'ms' }">
               <RouterLink :to="'/character/' + character.id" class="rank-portrait" :aria-label="text.openDetail + ': ' + localizedName(character)">
-                <img :src="character.imageURL" :alt="localizedName(character)" width="160" height="160" loading="lazy" decoding="async">
-                <span>{{ character.tier }}</span>
+                <img :src="safeAssetUrl(character.imageURL)" :alt="localizedName(character)" width="160" height="160" loading="lazy" decoding="async">
+                <span :data-rarity="character.tier">{{ character.tier }}</span>
                 <Transition name="score-pop" mode="out-in">
                   <b :key="character.votes" class="rank-score" :title="character.votes + ' ' + text.votes">{{ character.votes }}</b>
                 </Transition>
               </RouterLink>
               <div class="rank-info">
                 <RouterLink :to="'/character/' + character.id">{{ localizedName(character) }}</RouterLink>
-                <p>{{ localizedType(character) }} <i /> {{ localizedFaction(character) }}</p>
+                <p class="rank-meta">
+                  <span class="rank-meta__tag rank-meta__tag--type">{{ localizedType(character) }}</span>
+                  <span class="rank-meta__tag rank-meta__tag--faction">{{ localizedFaction(character) }}</span>
+                </p>
                 <div class="vote-meter" aria-hidden="true"><span :style="{ width: votePercent(character) + '%' }" /></div>
                 <small>{{ character.votes }} {{ text.votes }}<b> · +{{ character.communityVotes }} {{ text.communityVotes }}</b></small>
               </div>
@@ -432,8 +475,8 @@ onMounted(loadRanking)
 /* CORE is a role category, not a raw-power tier. */
 .tier-row--core{--tier-accent:#f3c84b;background:linear-gradient(100deg,rgba(243,200,75,.12),#06131d 30%)}
 .tier-row--core .tier-row__label{background:linear-gradient(145deg,#ffe58a,#c99218);color:#171407;text-shadow:none}
-.tier-row--core .tier-row__label strong{font-size:1.3rem;letter-spacing:.08em}
-.tier-row--core .tier-row__label:after{content:"CORE";color:rgba(23,20,7,.13)}
+.tier-row--core .tier-row__label strong{font-size:1.05rem;line-height:1.15;letter-spacing:.04em}
+.tier-row--core .tier-row__label:after{content:attr(data-band-label);color:rgba(23,20,7,.13)}
 .tier-empty{display:flex;grid-column:span 3;align-items:center;gap:.7rem;min-height:92px;width:min(390px,100%);padding:1rem 1.1rem;border:1px dashed color-mix(in srgb,var(--tier-accent) 48%,#31566a);border-radius:12px;background:color-mix(in srgb,var(--tier-accent) 7%,#07141d);color:#93adbb;font-size:.78rem;line-height:1.5;list-style:none}
 .tier-empty>span{display:grid;place-items:center;flex:0 0 34px;height:34px;border-radius:10px;background:color-mix(in srgb,var(--tier-accent) 18%,#102633);color:var(--tier-accent);font-size:1.15rem}
 @media(max-width:680px){.tier-row--core .tier-row__label strong{font-size:.68rem;letter-spacing:.03em}.tier-empty{grid-column:auto;width:230px;min-height:82px;padding:.8rem;font-size:.69rem}}
@@ -532,5 +575,44 @@ onMounted(loadRanking)
 .tier-stats--hero article[class^="confidence-"] strong{font-size:clamp(1rem,1.45vw,1.35rem);line-height:1.15;letter-spacing:-.02em;text-wrap:balance}
 .tier-stats--hero article:not([class]) strong{font-variant-numeric:tabular-nums;line-height:1}
 @media(max-width:680px){.tier-stats--hero{grid-template-columns:repeat(2,minmax(0,1fr))}.tier-stats--hero article[class^="confidence-"]{grid-column:1/-1;min-height:54px}.tier-stats--hero article[class^="confidence-"] strong{font-size:1rem}}
+/* Readable, distinct Type and Faction badges on every character card. */
+.tier-row .rank-info .rank-meta{display:flex;flex-wrap:wrap;align-content:flex-start;gap:.25rem;width:100%;min-height:2.15rem;margin:.25rem 0 .35rem;overflow:visible;white-space:normal}
+.rank-meta__tag{display:inline-flex;align-items:center;min-height:22px;max-width:100%;padding:.2rem .4rem;border:1px solid rgba(255,255,255,.13);border-radius:6px;font-size:.67rem;font-weight:850;line-height:1.15;letter-spacing:.01em}
+.rank-meta__tag--type{border-color:rgba(90,221,250,.34);background:rgba(90,221,250,.1);color:#93edff}
+.rank-meta__tag--faction{border-color:rgba(255,201,92,.34);background:rgba(255,201,92,.1);color:#ffe19b}
+@media(max-width:680px){.tier-row .rank-info .rank-meta{display:flex;gap:.22rem;min-height:2rem;margin:.2rem 0 .28rem}.rank-meta__tag{min-height:21px;padding:.18rem .34rem;font-size:.63rem}}
+/* Surface the monthly vote allowance in the first viewport. */
+.tier-hero__side{align-self:center;display:grid;gap:.85rem;min-width:0}
+.tier-vote-policy--hero{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:.5rem .8rem;padding:1rem 1.1rem;border:1px solid rgba(90,221,250,.3);border-radius:16px;background:linear-gradient(115deg,rgba(8,47,63,.9),rgba(7,24,36,.92));color:#b9d7e5;font-size:.78rem;box-shadow:0 12px 30px rgba(0,0,0,.2)}
+.tier-vote-policy--hero strong{padding:.38rem .55rem;border-radius:9px;background:rgba(90,221,250,.11);color:#67e4ff;font-size:.84rem;white-space:nowrap}
+.tier-vote-policy--hero span{line-height:1.5}
+.tier-vote-policy--hero .tier-vote-policy__verify{margin:0;border-color:rgba(90,221,250,.48);border-radius:.6rem;padding:.55rem .75rem;font-size:.72rem;transition:background .18s ease,color .18s ease,transform .18s ease}
+.tier-vote-policy--hero .tier-vote-policy__verify:hover{transform:translateY(-1px)}
+@media(max-width:680px){.tier-hero__side{gap:.55rem}.tier-vote-policy--hero{grid-template-columns:1fr;gap:.4rem;padding:.75rem;border-radius:12px}.tier-vote-policy--hero strong{justify-self:start;font-size:.76rem}.tier-vote-policy--hero span{font-size:.68rem}.tier-vote-policy--hero .tier-vote-policy__verify{justify-self:stretch;margin-top:.1rem;text-align:center;font-size:.68rem}}
 @media(prefers-reduced-motion:reduce){.tier-hero:before,.tier-skeleton,.tier-board-swap-enter-active,.tier-board-swap-leave-active,.tier-board-swap-enter-active .tier-row,.rarity-tabs button.active,.rarity-tabs button.active:before,.tier-row__label strong,.status-pulse,.score-pop-enter-active,.rank-list-enter-active,.vote-button.active,.vote-button.active span{animation:none}.rank-card,.rank-list-enter-active,.rank-list-leave-active,.rank-list-move,.vote-meter span{transition:none}}
+/* Rarity navigation arrows keep SR and R reachable on narrow screens. */
+.rarity-nav{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:.4rem;min-width:0}
+.rarity-tabs::-webkit-scrollbar{display:none}
+.rarity-nav__arrow{display:grid;place-items:center;width:38px;height:38px;border:1px solid #31566a;border-radius:10px;background:#0b2837;color:#71e5ff;font-size:1.5rem;font-weight:950;line-height:1;transition:transform .18s ease,border-color .18s ease,background .18s ease,opacity .18s ease}
+.rarity-nav__arrow:hover:not(:disabled){transform:translateY(-1px);border-color:#5addfa;background:#104052}
+.rarity-nav__arrow:active:not(:disabled){transform:scale(.92)}
+.rarity-nav__arrow:disabled{cursor:default;opacity:.3}
+@media(max-width:680px){.rarity-nav{width:100%;gap:.3rem}.rarity-nav__arrow{width:38px;height:44px;border-radius:10px;font-size:1.45rem;touch-action:manipulation}.rarity-tabs{width:100%;scroll-snap-type:x proximity}.rarity-tabs button{scroll-snap-align:center}}
+@media(prefers-reduced-motion:reduce){.rarity-nav__arrow{transition:none}}
+.tier-row__label:after{display:none}
+.rarity-tabs button[data-rarity^="UR"],.tier-row .rank-portrait>span[data-rarity^="UR"]{color:#ff5b5b;text-shadow:0 0 10px rgba(255,91,91,.35)}
+.rarity-tabs button[data-rarity^="SSR"],.tier-row .rank-portrait>span[data-rarity^="SSR"]{color:#ffd45a;text-shadow:0 0 10px rgba(255,212,90,.3)}
+.rarity-tabs button[data-rarity="SR"],.tier-row .rank-portrait>span[data-rarity="SR"]{color:#c783ff;text-shadow:0 0 10px rgba(199,131,255,.35)}
+.rarity-tabs button[data-rarity="R"],.tier-row .rank-portrait>span[data-rarity="R"]{color:#5aaeff;text-shadow:0 0 10px rgba(90,174,255,.35)}
+.tier-hero__side{gap:.45rem}
+.tier-hero__side .tier-vote-policy--hero{align-items:start;gap:.7rem 1rem;padding:1.15rem 1.25rem;font-size:.95rem}
+.tier-hero__side .tier-vote-policy--hero strong{padding:.48rem .68rem;font-size:1rem}
+.tier-hero__side .tier-vote-policy--hero span{font-size:.95rem;line-height:1.65}
+.tier-hero__side .tier-vote-policy--hero .tier-vote-policy__verify{align-self:center;font-size:.82rem}
+@media(max-width:680px){.tier-hero__side{gap:.4rem}.tier-hero__side .tier-vote-policy--hero{gap:.55rem;padding:.9rem}.tier-hero__side .tier-vote-policy--hero strong{font-size:.9rem}.tier-hero__side .tier-vote-policy--hero span{font-size:.82rem;line-height:1.55}.tier-hero__side .tier-vote-policy--hero .tier-vote-policy__verify{font-size:.76rem}}
+.ranking-model--hero{align-items:center;padding:1rem 1.1rem;border-color:rgba(242,189,87,.38);border-radius:16px;background:linear-gradient(115deg,rgba(52,43,18,.82),rgba(7,24,36,.94))}
+.ranking-model--hero>span{flex-basis:58px;height:58px;font-size:1rem}
+.ranking-model--hero strong{font-size:1.05rem}
+.ranking-model--hero p{font-size:.9rem;line-height:1.55}
+@media(max-width:680px){.ranking-model--hero{padding:.85rem}.ranking-model--hero>span{flex-basis:48px;height:48px;font-size:.84rem}.ranking-model--hero strong{font-size:.92rem}.ranking-model--hero p{font-size:.78rem;line-height:1.5}}
 </style>
