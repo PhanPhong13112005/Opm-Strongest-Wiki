@@ -297,6 +297,7 @@ test('editable base votes automatically promote characters through SS-D', () => 
   assert.equal(config.characters.length, catalog.length)
   assert.equal(new Set(configIds).size, configIds.length, 'config character IDs must be unique')
   assert.deepEqual(new Set(configIds), new Set(catalog.map(character => character.id)))
+  assert.equal(configById.get('100029-sr')?.isCore, true, 'Amai Mask SR must stay in the Core row')
 
   for (const entry of config.characters) {
     assert.equal(typeof entry.isCore, 'boolean', entry.id + ' must declare isCore')
