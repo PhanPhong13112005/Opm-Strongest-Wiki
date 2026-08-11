@@ -37,6 +37,8 @@ const TalentsView = retryImport(() => import('../views/TalentsView.vue'))
 const EmailVerificationView = retryImport(() => import('../views/EmailVerificationView.vue'))
 const AdminLoginView = retryImport(() => import('../views/AdminLoginView.vue'))
 const AdminCharactersView = retryImport(() => import('../views/AdminCharactersView.vue'))
+const AdminTierRankingView = retryImport(() => import('../views/AdminTierRankingView.vue'))
+const AdminCommunityView = retryImport(() => import('../views/AdminCommunityView.vue'))
 const UserPortalView = retryImport(() => import('../views/UserPortalView.vue'))
 const ForumView = retryImport(() => import('../views/ForumView.vue'))
 const AdvisorView = retryImport(() => import('../views/AdvisorView.vue'))
@@ -263,6 +265,18 @@ const router = createRouter({
       path: '/admin/top-ups',
       name: 'admin-top-ups',
       component: AdminTopUpsView,
+      meta: { requiresAuth: true, roles: ['Admin'] }
+    },
+    {
+      path: '/admin/tier-ranking',
+      name: 'admin-tier-ranking',
+      component: AdminTierRankingView,
+      meta: { requiresAuth: true, roles: ['Admin'] }
+    },
+    {
+      path: '/admin/community',
+      name: 'admin-community',
+      component: AdminCommunityView,
       meta: { requiresAuth: true, roles: ['Admin'] }
     }
   ],

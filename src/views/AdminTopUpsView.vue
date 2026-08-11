@@ -14,6 +14,7 @@ const loading = ref(true)
 const reviewingId = ref(null)
 const error = ref('')
 const notice = ref('')
+const activeSubTab = ref('coupons')
 
 const filters = [
   { value: 'Pending', label: 'Chờ xử lý' },
@@ -158,7 +159,36 @@ onMounted(load)
     :navigation="adminPortalNavigation"
     @logout="logout"
   >
-    <section class="coupon-queue">
+    <!-- Sub Tabs Navigation -->
+    <div class="topup-subtabs">
+      <button
+        type="button"
+        class="subtab-btn"
+        :class="{ 'subtab-btn--active': activeSubTab === 'coupons' }"
+        @click="activeSubTab = 'coupons'"
+      >
+        Hàng đợi Coupon
+      </button>
+      <button
+        type="button"
+        class="subtab-btn"
+        :class="{ 'subtab-btn--active': activeSubTab === 'sepay' }"
+        @click="activeSubTab = 'sepay'"
+      >
+        Giao dịch SePay Tự động
+      </button>
+      <button
+        type="button"
+        class="subtab-btn"
+        :class="{ 'subtab-btn--active': activeSubTab === 'ledger' }"
+        @click="activeSubTab = 'ledger'"
+      >
+        Nhật ký Số dư (Ledger)
+      </button>
+    </div>
+
+    <!-- Section 1: Coupon Queue -->
+    <section v-if="activeSubTab === 'coupons'" class="coupon-queue">
       <header class="coupon-queue__header">
         <div>
           <span>Hàng đợi thủ công</span>
@@ -266,6 +296,22 @@ onMounted(load)
 </template>
 
 <style scoped>
+.topup-subtabs { display: flex; gap: 10px; margin-bottom: 20px; }
+.subtab-btn {
+  cursor: pointer;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, .1);
+  background: rgba(15, 23, 42, .6);
+  color: #94a3b8;
+  font-size: 13.5px;
+  font-weight: 850;
+  transition: all .2s ease;
+}
+.subtab-btn:hover { color: #f8fafc; border-color: rgba(255, 255, 255, .2); }
+.subtab-btn--active { background: #ffc700; border-color: #ffc700; color: #020617; box-shadow: 0 0 15px rgba(255, 199, 0, .3); }
+
 .coupon-queue { overflow: hidden; border: 1px solid rgba(255, 184, 77, .18); border-radius: 18px; background: rgba(8, 14, 23, .94); }
 .coupon-queue__header { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 22px; }
 .coupon-queue__header span { color: #ffb84d; font-size: 9px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
