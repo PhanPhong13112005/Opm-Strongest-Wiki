@@ -291,7 +291,7 @@ export const createAuthRouteHandler = ({
     }
 
     if (validateAdminCredentials(username, password)) {
-      const adminUsername = process.env.ADMINAUTH__USERNAME
+      const adminUsername = process.env.ADMINAUTH__USERNAME || username || 'admin'
       return json(response, 200, createAccessToken({
         userId: `admin:${adminUsername}`,
         username: adminUsername,
