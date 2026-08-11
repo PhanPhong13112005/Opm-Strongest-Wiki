@@ -1,10 +1,11 @@
 export const adminPortalNavigation = [
   { to: '/admin/dashboard', index: '01', label: 'Tổng quan', hint: 'Sức khỏe hệ thống', match: '/admin/dashboard' },
   { to: '/admin/characters', index: '02', label: 'Nhân vật', hint: 'Nhân vật và Kỷ vật', match: '/admin/characters' },
-  { to: '/admin/events', index: '03', label: 'Sự kiện', hint: 'Nội dung sự kiện', match: '/admin/events' },
+  { to: '/admin/tier-ranking', index: '03', label: 'Tier Ranking', hint: 'Xếp hạng & Bình chọn', match: '/admin/tier-ranking' },
   { to: '/admin/releases', index: '04', label: 'Lịch ra mắt', hint: 'Banner CN và SEA', match: '/admin/releases' },
-  { to: '/admin/top-ups', index: '05', label: 'Đơn Coupon', hint: 'Duyệt đơn nạp thủ công', match: '/admin/top-ups' },
-  { to: '/staff', index: '06', label: 'Khu nhân viên', hint: 'Kiểm duyệt cộng đồng', match: '/staff' },
+  { to: '/admin/events', index: '05', label: 'Sự kiện', hint: 'Nội dung sự kiện', match: '/admin/events' },
+  { to: '/admin/top-ups', index: '06', label: 'Đơn Coupon', hint: 'Nạp tiền & Số dư', match: '/admin/top-ups' },
+  { to: '/admin/community', index: '07', label: 'Diễn đàn', hint: 'Kiểm duyệt cộng đồng', match: '/admin/community' },
 ]
 
 export const staffPortalNavigation = [
