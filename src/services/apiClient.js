@@ -28,8 +28,11 @@ export const requestApi = async (path, params, options = {}) => {
   if (!url) throw new Error('API is not configured.')
 
   const controller = new AbortController()
-  const timeout = globalThis.setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS)
-  const { trackLoading = true, ...fetchOptions } = options
+  const { trackLoading = true, timeoutMs = REQUEST_TIMEOUT_MS, ...fetchOptions } = options
+  const timeout = globalThis.setTimeout(
+    () => controller.abort(),
+    Math.max(1000, Number(timeoutMs) || REQUEST_TIMEOUT_MS),
+  )
   const headers = new Headers(fetchOptions.headers || {})
   if (!headers.has('Accept')) headers.set('Accept', 'application/json')
   const shouldTrackLoading = trackLoading && String(fetchOptions.method || 'GET').toUpperCase() === 'GET'
@@ -56,6 +59,13 @@ export const requestApi = async (path, params, options = {}) => {
     }
     if (response.status === 204) return null
     return await response.json()
+  } catch (error) {
+    if (error?.name === 'AbortError') {
+      const timeoutError = new Error('Máy chủ phản hồi quá lâu. Vui lòng chờ vài giây rồi thử lại.')
+      timeoutError.status = 408
+      throw timeoutError
+    }
+    throw error
   } finally {
     globalThis.clearTimeout(timeout)
     if (shouldTrackLoading) {
