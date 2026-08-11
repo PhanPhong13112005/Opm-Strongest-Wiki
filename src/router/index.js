@@ -2,40 +2,51 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import { getPortalPath, hasRole, hasValidSession } from '../services/authApi'
 
+// Retry dynamic imports up to 2 times with a small delay. This prevents blank
+// pages when chunk loads fail due to race conditions during fast navigation or
+// flaky network conditions.
+const retryImport = (loader, retries = 2, delay = 800) => () =>
+  loader().catch((error) => {
+    if (retries <= 0) throw error
+    return new Promise((resolve) => globalThis.setTimeout(resolve, delay)).then(() =>
+      retryImport(loader, retries - 1, delay)()
+    )
+  })
+
 // Keep the landing page in the initial bundle and load feature pages only when
 // users visit them. This avoids downloading the large data catalogs and Spine
 // renderer on every first visit.
-const DetailView = () => import('../views/DetailView.vue')
-const CharacterListView = () => import('../views/CharacterListView.vue')
-const TierRankingView = () => import('../views/TierRankingView.vue')
-const MasteryView = () => import('../views/MasteryView.vue')
-const GearCatalogView = () => import('../views/GearCatalogView.vue')
-const BuffGearView = () => import('../views/BuffGearView.vue')
-const CoreLabView = () => import('../views/CoreLabView.vue')
-const CoreRefinementView = () => import('../views/CoreRefinementView.vue')
-const EquipmentView = () => import('../views/EquipmentView.vue')
-const EventsView = () => import('../views/EventsView.vue')
-const EventDetailView = () => import('../views/EventDetailView.vue')
-const PrivacyView = () => import('../views/PrivacyView.vue')
-const HistoryView = () => import('../views/HistoryView.vue')
-const MedalsView = () => import('../views/MedalsView.vue')
-const TacticsView = () => import('../views/TacticsView.vue')
-const BackgearView = () => import('../views/BackgearView.vue')
-const StatsView = () => import('../views/StatsView.vue')
-const TalentsView = () => import('../views/TalentsView.vue')
-const EmailVerificationView = () => import('../views/EmailVerificationView.vue')
-const AdminLoginView = () => import('../views/AdminLoginView.vue')
-const AdminCharactersView = () => import('../views/AdminCharactersView.vue')
-const UserPortalView = () => import('../views/UserPortalView.vue')
-const ForumView = () => import('../views/ForumView.vue')
-const AdvisorView = () => import('../views/AdvisorView.vue')
-const TopUpHubView = () => import('../views/TopUpHubView.vue')
-const BankPaymentView = () => import('../views/BankPaymentView.vue')
-const StaffDashboardView = () => import('../views/StaffDashboardView.vue')
-const AdminDashboardView = () => import('../views/AdminDashboardView.vue')
-const AdminEventsView = () => import('../views/AdminEventsView.vue')
-const AdminReleasesView = () => import('../views/AdminReleasesView.vue')
-const AdminTopUpsView = () => import('../views/AdminTopUpsView.vue')
+const DetailView = retryImport(() => import('../views/DetailView.vue'))
+const CharacterListView = retryImport(() => import('../views/CharacterListView.vue'))
+const TierRankingView = retryImport(() => import('../views/TierRankingView.vue'))
+const MasteryView = retryImport(() => import('../views/MasteryView.vue'))
+const GearCatalogView = retryImport(() => import('../views/GearCatalogView.vue'))
+const BuffGearView = retryImport(() => import('../views/BuffGearView.vue'))
+const CoreLabView = retryImport(() => import('../views/CoreLabView.vue'))
+const CoreRefinementView = retryImport(() => import('../views/CoreRefinementView.vue'))
+const EquipmentView = retryImport(() => import('../views/EquipmentView.vue'))
+const EventsView = retryImport(() => import('../views/EventsView.vue'))
+const EventDetailView = retryImport(() => import('../views/EventDetailView.vue'))
+const PrivacyView = retryImport(() => import('../views/PrivacyView.vue'))
+const HistoryView = retryImport(() => import('../views/HistoryView.vue'))
+const MedalsView = retryImport(() => import('../views/MedalsView.vue'))
+const TacticsView = retryImport(() => import('../views/TacticsView.vue'))
+const BackgearView = retryImport(() => import('../views/BackgearView.vue'))
+const StatsView = retryImport(() => import('../views/StatsView.vue'))
+const TalentsView = retryImport(() => import('../views/TalentsView.vue'))
+const EmailVerificationView = retryImport(() => import('../views/EmailVerificationView.vue'))
+const AdminLoginView = retryImport(() => import('../views/AdminLoginView.vue'))
+const AdminCharactersView = retryImport(() => import('../views/AdminCharactersView.vue'))
+const UserPortalView = retryImport(() => import('../views/UserPortalView.vue'))
+const ForumView = retryImport(() => import('../views/ForumView.vue'))
+const AdvisorView = retryImport(() => import('../views/AdvisorView.vue'))
+const TopUpHubView = retryImport(() => import('../views/TopUpHubView.vue'))
+const BankPaymentView = retryImport(() => import('../views/BankPaymentView.vue'))
+const StaffDashboardView = retryImport(() => import('../views/StaffDashboardView.vue'))
+const AdminDashboardView = retryImport(() => import('../views/AdminDashboardView.vue'))
+const AdminEventsView = retryImport(() => import('../views/AdminEventsView.vue'))
+const AdminReleasesView = retryImport(() => import('../views/AdminReleasesView.vue'))
+const AdminTopUpsView = retryImport(() => import('../views/AdminTopUpsView.vue'))
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

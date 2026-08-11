@@ -15,7 +15,7 @@ const telemetryReady = ref(false)
 let telemetryDelayTimer = null
 let telemetryIdleHandle = null
 const isRouteLoading = ref(false)
-const isGlobalLoading = computed(() => isRouteLoading.value || pendingApiRequests.value > 0)
+const isGlobalLoading = computed(() => isRouteLoading.value)
 const removeLoadingBeforeGuard = router.beforeEach(() => {
   isRouteLoading.value = true
   return true

@@ -12,8 +12,8 @@ test('Stats and Talents are lazy routes in the Systems and Features menus', () =
   const router = read('src/router/index.js')
   const app = read('src/App.vue')
 
-  assert.match(router, /const StatsView = \(\) => import\('\.\.\/views\/StatsView\.vue'\)/)
-  assert.match(router, /const TalentsView = \(\) => import\('\.\.\/views\/TalentsView\.vue'\)/)
+  assert.match(router, /const StatsView = retryImport\(\(\) => import\('\.\.\/views\/StatsView\.vue'\)\)/)
+  assert.match(router, /const TalentsView = retryImport\(\(\) => import\('\.\.\/views\/TalentsView\.vue'\)\)/)
   assert.match(router, /path: '\/stats'/)
   assert.match(router, /path: '\/talents'/)
   assert.equal((app.match(/to="\/stats"/g) || []).length, 2)
@@ -27,7 +27,7 @@ test('Core Refinement is a lazy route in the Features menu', () => {
   const router = read('src/router/index.js')
   const app = read('src/App.vue')
 
-  assert.match(router, /const CoreRefinementView = \(\) => import\('\.\.\/views\/CoreRefinementView\.vue'\)/)
+  assert.match(router, /const CoreRefinementView = retryImport\(\(\) => import\('\.\.\/views\/CoreRefinementView\.vue'\)\)/)
   assert.match(router, /path: '\/core-refinement'/)
   assert.equal((app.match(/to="\/core-refinement"/g) || []).length, 2)
   assert.match(app, /const featureRoutes = \[[^\]]*'\/core-refinement'/)
