@@ -28,6 +28,7 @@ const wait = milliseconds => new Promise(resolve => globalThis.setTimeout(resolv
 const shouldRetryRequest = error => (
   error?.name === 'TypeError' ||
   error?.status === 408 ||
+  error?.status === 429 ||
   error?.status === 502 ||
   error?.status === 503 ||
   error?.status === 504
