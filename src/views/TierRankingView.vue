@@ -20,6 +20,8 @@ const myVotes = ref(new Set())
 const loading = ref(true)
 const votingId = ref('')
 const errorMessage = ref('')
+const pendingVote = ref(null)
+const confirmVoteButtonRef = ref(null)
 const votePolicy = ref({
   voteMonth: '',
   resetsAt: '',
@@ -71,6 +73,11 @@ const messages = {
     voted: 'Đã bình chọn',
     vote: 'Bình chọn',
     voting: 'Đang lưu...',
+    confirmTitle: 'Xác nhận bình chọn',
+    confirmCopy: 'Bạn có chắc muốn bình chọn cho nhân vật này?',
+    confirmWarning: 'Sau khi xác nhận, phiếu này không thể hủy trong tháng hiện tại.',
+    cancelVote: 'Không, quay lại',
+    confirmVote: 'Có, bình chọn',
     loginToVote: 'Đăng nhập để bình chọn',
     retry: 'Thử tải lại',
     fallback: 'Chưa kết nối được dữ liệu bình chọn. Bạn vẫn có thể xem thứ tự mẫu.',
@@ -101,6 +108,11 @@ const messages = {
     voted: 'Voted',
     vote: 'Vote',
     voting: 'Saving...',
+    confirmTitle: 'Confirm your vote',
+    confirmCopy: 'Are you sure you want to vote for this character?',
+    confirmWarning: 'Once confirmed, this vote cannot be removed during the current month.',
+    cancelVote: 'No, go back',
+    confirmVote: 'Yes, vote',
     loginToVote: 'Sign in to vote',
     retry: 'Try again',
     fallback: 'Voting data is unavailable. You can still view the sample order.',
@@ -213,20 +225,30 @@ const loadRanking = async () => {
   }
 }
 
-const toggleVote = async character => {
+const requestVote = async character => {
   if (!isAuthenticated.value) {
     await router.push({ name: 'login', query: { redirect: '/tier-ranking' } })
     return
   }
-  if (votingId.value) return
+  if (votingId.value || myVotes.value.has(character.id)) return
+  pendingVote.value = character
+  await nextTick()
+  confirmVoteButtonRef.value?.focus()
+}
+
+const closeVoteConfirmation = () => {
+  if (!votingId.value) pendingVote.value = null
+}
+
+const confirmVote = async () => {
+  const character = pendingVote.value
+  if (!character || votingId.value || myVotes.value.has(character.id)) return
   votingId.value = character.id
   errorMessage.value = ''
   try {
-    const nextActive = !myVotes.value.has(character.id)
-    const result = await setTierVote(character.id, nextActive)
+    const result = await setTierVote(character.id)
     const nextMyVotes = new Set(myVotes.value)
-    if (nextActive) nextMyVotes.add(character.id)
-    else nextMyVotes.delete(character.id)
+    nextMyVotes.add(character.id)
     myVotes.value = nextMyVotes
 
     const nextVotes = summary.value.votes.filter(item => item.characterId !== character.id)
@@ -237,8 +259,10 @@ const toggleVote = async character => {
       votes: nextVotes,
     }
     applyVotePolicy(result)
+    pendingVote.value = null
   } catch (error) {
     errorMessage.value = error?.message || text.value.fallback
+    pendingVote.value = null
   } finally {
     votingId.value = ''
   }
@@ -400,8 +424,9 @@ onMounted(loadRanking)
                 class="vote-button"
                 :class="{ active: myVotes.has(character.id) }"
                 :aria-pressed="myVotes.has(character.id)"
-                :disabled="Boolean(votingId) || (!myVotes.has(character.id) && selectedInActiveRarity >= votePolicy.maxVotesPerRarity)"
-                @click="toggleVote(character)"
+                :disabled="Boolean(votingId) || myVotes.has(character.id) || selectedInActiveRarity >= votePolicy.maxVotesPerRarity"
+                :title="myVotes.has(character.id) ? text.confirmWarning : ''"
+                @click="requestVote(character)"
               >
                 <span aria-hidden="true">{{ myVotes.has(character.id) ? '✓' : '▲' }}</span>
                 {{ votingId === character.id ? text.voting : myVotes.has(character.id) ? text.voted : (!myVotes.has(character.id) && selectedInActiveRarity >= votePolicy.maxVotesPerRarity) ? text.limitReached : isAuthenticated ? text.vote : (locale === 'en' ? 'Sign in' : '\u0110\u0103ng nh\u1eadp') }}
@@ -413,6 +438,39 @@ onMounted(loadRanking)
       </Transition>
     </section>
   </main>
+
+  <Teleport to="body">
+    <Transition name="vote-confirm-dialog">
+      <div
+        v-if="pendingVote"
+        class="vote-confirm-backdrop"
+        role="presentation"
+        @click.self="closeVoteConfirmation"
+        @keydown.esc="closeVoteConfirmation"
+      >
+        <section class="vote-confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="vote-confirm-title" aria-describedby="vote-confirm-description">
+          <span class="vote-confirm-dialog__icon" aria-hidden="true">!</span>
+          <p class="vote-confirm-dialog__eyebrow">{{ pendingVote.tier }} · {{ text.vote }}</p>
+          <h2 id="vote-confirm-title">{{ text.confirmTitle }}</h2>
+          <div class="vote-confirm-character">
+            <img :src="safeAssetUrl(pendingVote.imageURL)" :alt="localizedName(pendingVote)" width="76" height="76">
+            <div>
+              <strong>{{ localizedName(pendingVote) }}</strong>
+              <span>{{ localizedType(pendingVote) }} · {{ localizedFaction(pendingVote) }}</span>
+            </div>
+          </div>
+          <p id="vote-confirm-description">{{ text.confirmCopy }}</p>
+          <div class="vote-confirm-warning"><span aria-hidden="true">🔒</span>{{ text.confirmWarning }}</div>
+          <footer>
+            <button type="button" class="vote-confirm-cancel" :disabled="Boolean(votingId)" @click="closeVoteConfirmation">{{ text.cancelVote }}</button>
+            <button ref="confirmVoteButtonRef" type="button" class="vote-confirm-submit" :disabled="Boolean(votingId)" @click="confirmVote">
+              {{ votingId ? text.voting : text.confirmVote }}
+            </button>
+          </footer>
+        </section>
+      </div>
+    </Transition>
+  </Teleport>
 </template>
 
 <style scoped>
@@ -426,7 +484,7 @@ onMounted(loadRanking)
 .tier-error{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin:1rem 0;padding:1rem 1.2rem;border:1px solid rgba(255,193,82,.38);border-radius:14px;background:rgba(255,193,82,.08);color:#ffe09a}.tier-error button{padding:.55rem .9rem;border:1px solid currentColor;border-radius:10px;font-weight:800}
 .tier-board{border:1px solid #1b3a4d;border-radius:24px;background:linear-gradient(180deg,#061722,#040d15);overflow:hidden}.tier-board__header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.2rem;border-bottom:1px solid #19384a}.rarity-tabs{display:flex;gap:.5rem;overflow:auto;scrollbar-width:none}.rarity-tabs button{display:flex;align-items:center;gap:.55rem;min-width:82px;padding:.8rem 1rem;border:1px solid #274355;border-radius:12px;color:#8da7b8;font-weight:950;transition:.2s}.rarity-tabs button.active{border-color:#5addfa;background:#0d3343;color:#fff;box-shadow:0 0 18px rgba(90,221,250,.12)}.rarity-tabs small{display:grid;place-items:center;min-width:24px;height:20px;padding:0 .35rem;border-radius:999px;background:#132b39;color:#5addfa;font-size:.68rem}.tier-board__header>p{display:flex;align-items:center;gap:.5rem;color:#7e9aab;font-size:.78rem}.tier-board__header>p.is-sample{color:#f2bd57}.status-pulse{width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 10px currentColor}
 .tier-vote-policy{display:flex;align-items:center;gap:.75rem;padding:.8rem 1.2rem;border-bottom:1px solid #19384a;background:rgba(90,221,250,.055);color:#89a9bb;font-size:.78rem}.tier-vote-policy strong{flex:0 0 auto;color:#5addfa;font-size:.82rem}.tier-vote-policy span{line-height:1.45}.tier-vote-policy__verify{flex:0 0 auto;margin-left:auto;border:1px solid rgba(90,221,250,.35);border-radius:.5rem;padding:.42rem .65rem;color:#5addfa;font-size:.7rem;font-weight:900;white-space:nowrap;transition:background .18s ease,color .18s ease}.tier-vote-policy__verify:hover{background:#5addfa;color:#041019}
-.ranking-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;padding:1.2rem;list-style:none}.rank-card{position:relative;display:grid;grid-template-columns:50px 112px minmax(0,1fr) auto;align-items:center;gap:1rem;min-height:138px;padding:1rem;border:1px solid #183748;border-radius:18px;background:rgba(7,23,33,.88);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}.rank-card:hover{transform:translateY(-3px);border-color:#39738c;box-shadow:0 16px 36px rgba(0,0,0,.25)}.rank-card--podium{border-color:rgba(255,190,61,.42);background:linear-gradient(115deg,rgba(255,185,48,.08),rgba(7,23,33,.9) 38%)}.rank-number{font:950 1.35rem/1 ui-monospace,monospace;color:#5addfa;text-align:center}.rank-card--podium .rank-number{color:#ffd166}.rank-portrait{position:relative;display:block;width:112px;height:112px;overflow:hidden;border:1px solid #31566a;border-radius:14px;background:#0e1b25}.rank-portrait img{width:100%;height:100%;object-fit:contain}.rank-portrait span{position:absolute;right:.35rem;top:.35rem;padding:.18rem .38rem;border-radius:6px;background:rgba(3,9,15,.86);color:#ffcf5a;font-size:.7rem;font-weight:950}.rank-info{min-width:0}.rank-info>a{display:block;overflow:hidden;color:#fff;font-size:1.08rem;font-weight:950;text-overflow:ellipsis;white-space:nowrap}.rank-info p{display:flex;align-items:center;gap:.45rem;margin:.35rem 0;color:#8ca8b9;font-size:.78rem}.rank-info p i{width:3px;height:3px;border-radius:50%;background:#4a6b7c}.vote-meter{height:5px;margin:.8rem 0 .4rem;overflow:hidden;border-radius:999px;background:#102b39}.vote-meter span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#45ccec,#9170ff);transition:width .4s ease}.rank-info small{color:#79a0b4}.rank-info small b{color:#b9d7e6}.vote-button{display:flex;align-items:center;justify-content:center;gap:.45rem;min-width:128px;padding:.75rem .85rem;border:1px solid #2a596f;border-radius:12px;color:#b7d7e5;font-size:.78rem;font-weight:900;transition:.2s}.vote-button:hover:not(:disabled){border-color:#5addfa;background:#0e3444;color:#fff}.vote-button.active{border-color:#70e1a8;background:rgba(66,204,135,.13);color:#7aefb5}.vote-button:disabled{cursor:wait;opacity:.6}
+.ranking-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;padding:1.2rem;list-style:none}.rank-card{position:relative;display:grid;grid-template-columns:50px 112px minmax(0,1fr) auto;align-items:center;gap:1rem;min-height:138px;padding:1rem;border:1px solid #183748;border-radius:18px;background:rgba(7,23,33,.88);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}.rank-card:hover{transform:translateY(-3px);border-color:#39738c;box-shadow:0 16px 36px rgba(0,0,0,.25)}.rank-card--podium{border-color:rgba(255,190,61,.42);background:linear-gradient(115deg,rgba(255,185,48,.08),rgba(7,23,33,.9) 38%)}.rank-number{font:950 1.35rem/1 ui-monospace,monospace;color:#5addfa;text-align:center}.rank-card--podium .rank-number{color:#ffd166}.rank-portrait{position:relative;display:block;width:112px;height:112px;overflow:hidden;border:1px solid #31566a;border-radius:14px;background:#0e1b25}.rank-portrait img{width:100%;height:100%;object-fit:contain}.rank-portrait span{position:absolute;right:.35rem;top:.35rem;padding:.18rem .38rem;border-radius:6px;background:rgba(3,9,15,.86);color:#ffcf5a;font-size:.7rem;font-weight:950}.rank-info{min-width:0}.rank-info>a{display:block;overflow:hidden;color:#fff;font-size:1.08rem;font-weight:950;text-overflow:ellipsis;white-space:nowrap}.rank-info p{display:flex;align-items:center;gap:.45rem;margin:.35rem 0;color:#8ca8b9;font-size:.78rem}.rank-info p i{width:3px;height:3px;border-radius:50%;background:#4a6b7c}.vote-meter{height:5px;margin:.8rem 0 .4rem;overflow:hidden;border-radius:999px;background:#102b39}.vote-meter span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#45ccec,#9170ff);transition:width .4s ease}.rank-info small{color:#79a0b4}.rank-info small b{color:#b9d7e6}.vote-button{display:flex;align-items:center;justify-content:center;gap:.45rem;min-width:128px;padding:.75rem .85rem;border:1px solid #2a596f;border-radius:12px;color:#b7d7e5;font-size:.78rem;font-weight:900;transition:.2s}.vote-button:hover:not(:disabled){border-color:#5addfa;background:#0e3444;color:#fff}.vote-button.active{border-color:#70e1a8;background:rgba(66,204,135,.13);color:#7aefb5}.vote-button:disabled{cursor:not-allowed;opacity:.6}.vote-button.active:disabled{cursor:default;opacity:1}
 .tier-skeletons{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;padding:1.2rem}.tier-skeleton{height:138px;border-radius:18px;background:linear-gradient(90deg,#081b27 25%,#102b3a 50%,#081b27 75%);background-size:200% 100%;animation:skeleton 1.4s infinite}
 .tier-list{display:grid;gap:1px;background:#173647}.tier-row{display:grid;grid-template-columns:116px minmax(0,1fr);min-height:180px;background:#06131d}.tier-row__label{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.45rem;padding:1rem;text-align:center;border-right:1px solid rgba(255,255,255,.1)}.tier-row__label strong{font-size:2rem;font-weight:950;line-height:1}.tier-row__label span{font-size:.7rem;font-weight:850;text-transform:uppercase;letter-spacing:.08em;opacity:.85}.tier-row--ss .tier-row__label{background:#7f1d3f;color:#ffd8e6}.tier-row--s .tier-row__label{background:#922f4f;color:#ffe0e9}.tier-row--a .tier-row__label{background:#b4533d;color:#fff0db}.tier-row--b .tier-row__label{background:#9a6a22;color:#fff1b8}.tier-row--c .tier-row__label{background:#376f67;color:#d9fff8}.tier-row--d .tier-row__label{background:#43546a;color:#e4efff}.tier-row__cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(245px,1fr));gap:.7rem;padding:.8rem;list-style:none}.tier-row .rank-card{grid-template-columns:86px minmax(0,1fr);align-items:center;gap:.75rem;min-height:150px;padding:.75rem}.tier-row .rank-portrait{width:86px;height:104px}.tier-row .rank-info>a{font-size:.95rem}.tier-row .vote-button{grid-column:1/3;width:100%;min-width:0;padding:.58rem .7rem}.rank-list-enter-active,.rank-list-leave-active,.rank-list-move{transition:all .35s ease}.rank-list-enter-from,.rank-list-leave-to{opacity:0;transform:translateY(14px)}
 @keyframes radar-spin{to{transform:rotate(360deg)}}@keyframes skeleton{to{background-position:-200% 0}}
@@ -615,4 +673,31 @@ onMounted(loadRanking)
 .ranking-model--hero strong{font-size:1.05rem}
 .ranking-model--hero p{font-size:.9rem;line-height:1.55}
 @media(max-width:680px){.ranking-model--hero{padding:.85rem}.ranking-model--hero>span{flex-basis:48px;height:48px;font-size:.84rem}.ranking-model--hero strong{font-size:.92rem}.ranking-model--hero p{font-size:.78rem;line-height:1.5}}
+.vote-confirm-backdrop{position:fixed;z-index:2000;inset:0;display:grid;place-items:center;padding:1rem;background:rgba(1,7,12,.82);backdrop-filter:blur(9px)}
+.vote-confirm-dialog{position:relative;width:min(100%,480px);overflow:hidden;border:1px solid rgba(255,190,61,.48);border-radius:22px;background:linear-gradient(145deg,#0b1c28,#071019);box-shadow:0 28px 90px rgba(0,0,0,.58);padding:1.45rem;color:#eaf7ff}
+.vote-confirm-dialog:before{position:absolute;inset:0;background:radial-gradient(circle at 100% 0,rgba(255,190,61,.12),transparent 38%);content:"";pointer-events:none}
+.vote-confirm-dialog>*{position:relative}
+.vote-confirm-dialog__icon{display:grid;width:44px;height:44px;place-items:center;border-radius:13px;background:#ffb526;color:#07111a;font-size:1.15rem;font-weight:950}
+.vote-confirm-dialog__eyebrow{margin:1rem 0 .35rem;color:#ffd166;font:850 .7rem/1.3 ui-monospace,monospace;letter-spacing:.13em;text-transform:uppercase}
+.vote-confirm-dialog h2{margin:0;font-size:clamp(1.45rem,5vw,2rem);font-weight:950;letter-spacing:-.03em}
+.vote-confirm-character{display:flex;align-items:center;gap:.85rem;margin:1.1rem 0;padding:.7rem;border:1px solid #234355;border-radius:14px;background:#081722}
+.vote-confirm-character img{width:76px;height:76px;object-fit:contain;border-radius:10px;background:#040a10}
+.vote-confirm-character div{display:grid;gap:.25rem}
+.vote-confirm-character strong{font-size:1.05rem}
+.vote-confirm-character span{color:#8eacbd;font-size:.78rem}
+.vote-confirm-dialog>p:not(.vote-confirm-dialog__eyebrow){margin:.7rem 0;color:#b4cbd8;line-height:1.6}
+.vote-confirm-warning{display:flex;align-items:flex-start;gap:.6rem;border:1px solid rgba(255,128,102,.34);border-radius:12px;background:rgba(255,101,76,.08);padding:.75rem;color:#ffd2c8;font-size:.83rem;font-weight:750;line-height:1.5}
+.vote-confirm-dialog footer{display:grid;grid-template-columns:1fr 1.35fr;gap:.65rem;margin-top:1.2rem}
+.vote-confirm-dialog footer button{min-height:46px;border-radius:11px;font-size:.82rem;font-weight:900;transition:transform .18s ease,background .18s ease,border-color .18s ease}
+.vote-confirm-cancel{border:1px solid #365363;color:#b9d0dc}
+.vote-confirm-submit{border:1px solid #ffd166;background:#ffd166;color:#101014}
+.vote-confirm-dialog footer button:hover:not(:disabled){transform:translateY(-1px)}
+.vote-confirm-dialog footer button:disabled{cursor:wait;opacity:.65}
+.vote-confirm-dialog-enter-active,.vote-confirm-dialog-leave-active{transition:opacity .22s ease}
+.vote-confirm-dialog-enter-active .vote-confirm-dialog,.vote-confirm-dialog-leave-active .vote-confirm-dialog{transition:transform .28s cubic-bezier(.16,1,.3,1),opacity .22s ease}
+.vote-confirm-dialog-enter-from,.vote-confirm-dialog-leave-to{opacity:0}
+.vote-confirm-dialog-enter-from .vote-confirm-dialog{opacity:0;transform:translateY(18px) scale(.96)}
+.vote-confirm-dialog-leave-to .vote-confirm-dialog{opacity:0;transform:translateY(8px) scale(.98)}
+@media(max-width:480px){.vote-confirm-dialog{padding:1.1rem;border-radius:18px}.vote-confirm-dialog footer{grid-template-columns:1fr}.vote-confirm-character img{width:66px;height:66px}.vote-confirm-cancel{order:2}}
+@media(prefers-reduced-motion:reduce){.vote-confirm-dialog-enter-active,.vote-confirm-dialog-leave-active,.vote-confirm-dialog-enter-active .vote-confirm-dialog,.vote-confirm-dialog-leave-active .vote-confirm-dialog,.vote-confirm-dialog footer button{transition:none}}
 </style>

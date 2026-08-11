@@ -20,7 +20,8 @@ kỹ năng, sự kiện, lịch ra mắt CN/SEA và các hệ thống nâng cấ
   tự xếp SS–D theo phiếu nền cộng phiếu cộng đồng và hỗ trợ điều hướng ngang trên mobile.
 - Tài khoản cộng đồng với ba vai trò `User`, `Staff`, `Admin`.
 - Xác minh Gmail bằng liên kết dùng một lần; tài khoản đã xác minh được bình chọn tối đa 8 nhân vật mỗi phẩm mỗi tháng,
-  tài khoản chưa xác minh được bình chọn 1 nhân vật mỗi phẩm mỗi tháng.
+  tài khoản chưa xác minh được bình chọn 1 nhân vật mỗi phẩm mỗi tháng. Mỗi phiếu phải được xác nhận và không thể hủy
+  trong kỳ tháng hiện tại.
 - Bình luận sự kiện, diễn đàn và Trợ lý dữ liệu ở trạng thái **Thử nghiệm**. Dịch vụ nạp thẻ hiện được hiển thị là **Bảo trì**
   và không nhận đơn/chuyển khoản mới.
 - Dashboard quản trị và CRUD Nhân vật, Kỷ vật, Sự kiện, Lịch ra mắt.

@@ -85,6 +85,35 @@ test('registration requires a unique Gmail and login accepts Gmail', async () =>
   assert.equal(login.payload.username, 'email-user')
 })
 
+test('verified legacy account can login by Gmail when normalized email is missing', async () => {
+  const registered = await invoke('/auth/register', {
+    username: 'legacy-email-user',
+    email: 'Legacy.User@gmail.com',
+    password: 'legacy-password',
+  })
+  assert.equal(registered.statusCode, 201)
+
+  await sql.query(
+    `UPDATE user_accounts
+        SET "NormalizedEmail" = '', "EmailVerified" = true
+      WHERE "Username" = $1`,
+    ['legacy-email-user'],
+  )
+
+  const gmailLogin = await invoke('/auth/login', {
+    username: '  LEGACY.USER@GMAIL.COM  ',
+    password: 'legacy-password',
+  })
+  assert.equal(gmailLogin.statusCode, 200)
+  assert.equal(gmailLogin.payload.username, 'legacy-email-user')
+
+  const usernameLogin = await invoke('/auth/login', {
+    username: 'legacy-email-user',
+    password: 'legacy-password',
+  })
+  assert.equal(usernameLogin.statusCode, 200)
+})
+
 test('email verification uses a hashed expiring one-time token', async () => {
   const registered = await invoke('/auth/register', {
     username: 'verification-user',

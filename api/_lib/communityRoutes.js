@@ -321,11 +321,12 @@ export const createCommunityRouteHandler = ({
         })
       }
     } else {
-      await sql.query(
-        `DELETE FROM tier_ranking_votes
-          WHERE "UserId" = $1 AND "CharacterId" = $2 AND "VoteMonth" = $3`,
-        [user.userId, characterId, voteMonth],
-      )
+      return json(response, 409, {
+        message: 'Phiếu bình chọn đã xác nhận và không thể hủy trong tháng hiện tại.',
+        voteMonth,
+        rarity,
+        ...policy,
+      })
     }
 
     const [rows, totals, currentRows] = await Promise.all([

@@ -36,18 +36,30 @@ const accountResponse = (row) => ({
   createdAt: row.createdAt,
 })
 
+const accountLookupSelect = `SELECT "Id" AS id, "Username" AS username, "DisplayName" AS "displayName",
+       "PasswordHash" AS "passwordHash", "Role" AS role, "Balance" AS balance,
+       "IsActive" AS "isActive", "CreatedAt" AS "createdAt"
+  FROM user_accounts`
+
 const findAccountByIdentifier = async (sql, identifier) => {
   const value = String(identifier || '').trim()
+  const normalizedEmail = gmailPattern.test(value) ? normalizeGmail(value) : ''
   const rows = await sql.query(
-    `SELECT "Id" AS id, "Username" AS username, "DisplayName" AS "displayName",
-            "PasswordHash" AS "passwordHash", "Role" AS role, "Balance" AS balance,
-            "IsActive" AS "isActive", "CreatedAt" AS "createdAt"
-       FROM user_accounts
-      WHERE "NormalizedUsername" = $1 OR "NormalizedEmail" = $2
+    `${accountLookupSelect}
+      WHERE "NormalizedUsername" = $1 OR ($2 <> '' AND "NormalizedEmail" = $2)
       LIMIT 1`,
-    [value.toUpperCase(), gmailPattern.test(value) ? normalizeGmail(value) : value.toLowerCase()],
+    [value.toUpperCase(), normalizedEmail],
   )
-  return rows[0]
+  if (rows[0] || !normalizedEmail) return rows[0]
+
+  // Compatibility for verified accounts created before NormalizedEmail was populated.
+  const legacyRows = await sql.query(
+    `${accountLookupSelect}
+      WHERE "EmailVerified" = true AND LOWER(BTRIM("Email")) = LOWER(BTRIM($1))
+      LIMIT 1`,
+    [value],
+  )
+  return legacyRows[0]
 }
 
 export const createAuthRouteHandler = ({
