@@ -106,23 +106,6 @@ onMounted(load)
     <p v-if="notice" class="admin-message admin-message--success" role="status">{{ notice }}</p>
     <p v-if="error" class="admin-message admin-message--error" role="alert">{{ error }}</p>
 
-    <div class="admin-section-heading">
-      <div>
-        <span>Công cụ quản trị</span>
-        <h2>Quản lý nội dung</h2>
-      </div>
-      <p>Chọn khu vực cần chỉnh sửa</p>
-    </div>
-
-    <nav class="admin-module-grid" aria-label="Công cụ quản trị nội dung">
-      <RouterLink v-for="module in modules" :key="module.to" :to="module.to" class="admin-module" :class="`admin-module--${module.color}`">
-        <span>{{ module.code }}</span>
-        <h3>{{ module.title }}</h3>
-        <p>{{ module.description }}</p>
-        <b>Quản lý <i>→</i></b>
-      </RouterLink>
-    </nav>
-
     <section class="admin-users">
       <header class="admin-users__header">
         <div>

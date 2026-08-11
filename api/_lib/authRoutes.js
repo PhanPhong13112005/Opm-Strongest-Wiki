@@ -363,7 +363,7 @@ export const createAuthRouteHandler = ({
     return json(response, 200, rows.map(accountResponse))
   }
 
-  const roleMatch = /^\/admin\/users\/([0-9a-f-]{36})\/role$/i.exec(path)
+  const roleMatch = /^\/admin\/users\/([^/]+)\/role$/i.exec(path)
   if (roleMatch) {
     if (request.method !== 'PUT') return methodNotAllowed(response, ['PUT'])
     const sql = sqlProvider()
@@ -388,7 +388,7 @@ export const createAuthRouteHandler = ({
     return rows[0] ? json(response, 200, accountResponse(rows[0])) : json(response, 404, { message: 'Không tìm thấy tài khoản.' })
   }
 
-  const statusMatch = /^\/admin\/users\/([0-9a-f-]{36})\/status$/i.exec(path)
+  const statusMatch = /^\/admin\/users\/([^/]+)\/status$/i.exec(path)
   if (statusMatch) {
     if (request.method !== 'PUT') return methodNotAllowed(response, ['PUT'])
     const sql = sqlProvider()
