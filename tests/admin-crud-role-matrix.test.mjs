@@ -750,6 +750,7 @@ test('Admin dashboard reports live PostgreSQL counts', async () => {
   assert.equal(dashboard.payload.releaseEntries, adminSeedCounts.releases)
   assert.equal(dashboard.payload.users, 1)
   assert.equal(dashboard.payload.staff, 1)
+  assert.equal(dashboard.payload.admins, 3)
 })
 
 test('Admin character and keepsake CRUD preserves the frontend contract', async () => {
