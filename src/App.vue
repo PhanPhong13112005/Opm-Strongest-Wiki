@@ -317,14 +317,14 @@ onBeforeUnmount(() => {
       </aside>
       <div class="workspace-content">
         <RouterView v-slot="{ Component, route: currentRoute }">
-          <transition name="page" mode="out-in"><component :is="Component" :key="currentRoute.path" /></transition>
+          <transition name="page"><component :is="Component" :key="currentRoute.path" /></transition>
         </RouterView>
       </div>
     </div>
 
     <div v-else class="flex-grow">
       <RouterView v-slot="{ Component, route: currentRoute }">
-        <transition name="page" mode="out-in"><component :is="Component" :key="currentRoute.path" /></transition>
+        <transition name="page"><component :is="Component" :key="currentRoute.path" /></transition>
       </RouterView>
     </div>
 

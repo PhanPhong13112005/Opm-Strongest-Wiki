@@ -41,6 +41,11 @@ test('Core Refinement is a lazy route in the Features menu', () => {
   assert.ok(en.nav.coreRefinement)
 })
 
+test('RouterView does not use mode="out-in" on page transitions to prevent interrupted blank states', () => {
+  const app = read('src/App.vue')
+  assert.doesNotMatch(app, /<transition name="page" mode="out-in">/, 'RouterView transitions must not use mode="out-in"')
+})
+
 test('new page and recommendation translation keys remain bilingual', () => {
   for (const locale of [vi, en]) {
     assert.ok(locale.nav.stats)
