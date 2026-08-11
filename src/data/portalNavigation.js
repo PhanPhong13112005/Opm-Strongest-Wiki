@@ -6,6 +6,7 @@ export const adminPortalNavigation = [
   { to: '/admin/events', index: '05', label: 'Sự kiện', hint: 'Nội dung sự kiện', match: '/admin/events' },
   { to: '/admin/top-ups', index: '06', label: 'Đơn Coupon', hint: 'Nạp tiền & Số dư', match: '/admin/top-ups' },
   { to: '/admin/community', index: '07', label: 'Diễn đàn', hint: 'Kiểm duyệt cộng đồng', match: '/admin/community' },
+  { to: '/admin/systems', index: '08', label: 'Tính năng Game', hint: 'Catalog Core, Tactics, Gear', match: '/admin/systems' },
 ]
 
 export const staffPortalNavigation = [
