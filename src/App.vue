@@ -168,6 +168,9 @@ onBeforeUnmount(() => {
         <nav class="ml-auto hidden items-center gap-1 xl:flex" aria-label="Điều hướng chính">
           <RouterLink to="/characters" class="site-nav-link">{{ t('nav.characters') }}</RouterLink>
           <RouterLink to="/tier-ranking" class="site-nav-link">{{ t('nav.tierRanking') }}</RouterLink>
+          <RouterLink to="/lineup-builder" class="site-nav-link">⚡ Đội Hình</RouterLink>
+          <RouterLink to="/compare" class="site-nav-link">⚔️ So Sánh</RouterLink>
+          <RouterLink to="/tier-maker" class="site-nav-link">🎨 Tạo Tier List</RouterLink>
           <div class="group relative">
             <button class="site-nav-link flex items-center gap-2" :class="{ 'is-active': isFeaturesRoute }">
               {{ t('nav.features') }}

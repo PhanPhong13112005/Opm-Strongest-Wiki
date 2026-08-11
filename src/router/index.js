@@ -40,6 +40,9 @@ const AdminCharactersView = retryImport(() => import('../views/AdminCharactersVi
 const AdminTierRankingView = retryImport(() => import('../views/AdminTierRankingView.vue'))
 const AdminCommunityView = retryImport(() => import('../views/AdminCommunityView.vue'))
 const AdminSystemsView = retryImport(() => import('../views/AdminSystemsView.vue'))
+const LineupBuilderView = retryImport(() => import('../views/LineupBuilderView.vue'))
+const CharacterCompareView = retryImport(() => import('../views/CharacterCompareView.vue'))
+const TierMakerView = retryImport(() => import('../views/TierMakerView.vue'))
 const UserPortalView = retryImport(() => import('../views/UserPortalView.vue'))
 const ForumView = retryImport(() => import('../views/ForumView.vue'))
 const AdvisorView = retryImport(() => import('../views/AdvisorView.vue'))
@@ -285,6 +288,21 @@ const router = createRouter({
       name: 'admin-systems',
       component: AdminSystemsView,
       meta: { requiresAuth: true, roles: ['Admin'] }
+    },
+    {
+      path: '/lineup-builder',
+      name: 'lineup-builder',
+      component: LineupBuilderView
+    },
+    {
+      path: '/compare',
+      name: 'compare',
+      component: CharacterCompareView
+    },
+    {
+      path: '/tier-maker',
+      name: 'tier-maker',
+      component: TierMakerView
     }
   ],
   scrollBehavior(to, from, savedPosition) {
