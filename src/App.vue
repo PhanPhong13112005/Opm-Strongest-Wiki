@@ -167,6 +167,7 @@ onBeforeUnmount(() => {
 
         <nav class="ml-auto hidden items-center gap-1 xl:flex" aria-label="Điều hướng chính">
           <RouterLink to="/characters" class="site-nav-link">{{ t('nav.characters') }}</RouterLink>
+          <RouterLink to="/tier-ranking" class="site-nav-link">{{ t('nav.tierRanking') }}</RouterLink>
           <div class="group relative">
             <button class="site-nav-link flex items-center gap-2" :class="{ 'is-active': isFeaturesRoute }">
               {{ t('nav.features') }}
@@ -256,6 +257,7 @@ onBeforeUnmount(() => {
         <nav v-if="isMobileMenuOpen" class="mobile-command-menu" aria-label="Mobile navigation">
           <div class="mobile-command-menu__primary">
             <RouterLink to="/characters">{{ t('nav.characters') }}</RouterLink>
+            <RouterLink to="/tier-ranking">{{ t('nav.tierRanking') }}</RouterLink>
             <RouterLink to="/events">{{ t('nav.events') }}</RouterLink>
             <RouterLink to="/top-up">{{ t('nav.topup') }}</RouterLink>
           </div>

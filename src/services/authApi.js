@@ -83,6 +83,16 @@ export const resetPassword = async (token, password) => requestApi('api/auth/res
   body: JSON.stringify({ token, password }),
 })
 
+export const requestEmailVerification = async () => authorizedRequest('api/auth/email-verification/request', {
+  method: 'POST',
+})
+
+export const verifyEmail = async (token) => requestApi('api/auth/email-verification/confirm', null, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ token }),
+})
+
 export const authorizedRequest = async (path, options = {}, params) => {
   if (!hasValidSession()) {
     const error = new Error('Phiên đăng nhập đã hết hạn.')

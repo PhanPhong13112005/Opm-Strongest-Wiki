@@ -1,0 +1,1285 @@
+{
+  "_huongDan": [
+    "Sửa baseVotes để thay đổi số phiếu nền ban đầu của nhân vật.",
+    "Tổng phiếu xếp hạng = baseVotes + phiếu cộng đồng thật.",
+    "sampleParticipants là số người tham gia mẫu; giao diện sẽ cộng số này với người bình chọn thật.",
+    "Nhân vật có tổng phiếu cao hơn sẽ tự động lên SS, sau đó là S, A, B, C và D.",
+    "isCore = true để giữ nhân vật trong hàng CORE riêng; isCore = false để xếp hạng tự động theo phiếu.",
+    "Không đổi id, không thêm một id hai lần và không xóa nhân vật khỏi danh sách."
+  ],
+  "sampleParticipants": 22,
+  "characters": [
+    {
+      "id": "blacksperm-urplus",
+      "nameVi": "Tinh Trùng Đen",
+      "nameEn": "Black Sperm",
+      "rarity": "UR+",
+      "isCore": false,
+      "baseVotes": 8
+    },
+    {
+      "id": "100013-urplus",
+      "nameVi": "Zombieman",
+      "nameEn": "Zombieman",
+      "rarity": "UR+",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100316-urplus",
+      "nameVi": "Overgrown Rover",
+      "nameEn": "Overgrown Rover",
+      "rarity": "UR+",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100315-urplus",
+      "nameVi": "Bang & Bomb",
+      "nameEn": "Bang & Bomb",
+      "rarity": "UR+",
+      "isCore": false,
+      "baseVotes": 8
+    },
+    {
+      "id": "100314-urplus",
+      "nameVi": "G5",
+      "nameEn": "G5",
+      "rarity": "UR+",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100313-urplus",
+      "nameVi": "Samurai Nguyên Tử",
+      "nameEn": "Atomic Samurai",
+      "rarity": "UR+",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100312-urplus",
+      "nameVi": "Nyan",
+      "nameEn": "Nyan",
+      "rarity": "UR+",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100180-urplus",
+      "nameVi": "Lốc Xoáy Kinh Hoàng",
+      "nameEn": "Tatsumaki/Terrible Tornado",
+      "rarity": "UR+",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100029-urplus",
+      "nameVi": "Mặt Nạ Ngọt Ngào",
+      "nameEn": "Amai Mask",
+      "rarity": "UR+",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100184-urplus",
+      "nameVi": "Boros",
+      "nameEn": "Boros",
+      "rarity": "UR+",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100308-urplus",
+      "nameVi": "Genos",
+      "nameEn": "Genos",
+      "rarity": "UR+",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100109-ur",
+      "nameVi": "Gyoro-Gyoro",
+      "nameEn": "Gyoro-Gyoro",
+      "rarity": "UR",
+      "isCore": true,
+      "baseVotes": 6
+    },
+    {
+      "id": "100045-ur",
+      "nameVi": "Đồng Đế",
+      "nameEn": "Child Emperor",
+      "rarity": "UR",
+      "isCore": true,
+      "baseVotes": 5
+    },
+    {
+      "id": "100184-ur",
+      "nameVi": "Boros",
+      "nameEn": "Boros",
+      "rarity": "UR",
+      "isCore": true,
+      "baseVotes": 3
+    },
+    {
+      "id": "100157-ur",
+      "nameVi": "Chày Sắt V2",
+      "nameEn": "Metal Bat V2",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100069-ur",
+      "nameVi": "Sonic Siêu Thanh V2",
+      "nameEn": "Sonic V2",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100094-ur",
+      "nameVi": "Garou",
+      "nameEn": "Garou",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 8
+    },
+    {
+      "id": "100057-ur",
+      "nameVi": "Thần Heo",
+      "nameEn": "Pig God",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100302-ur",
+      "nameVi": "Hung Thần Kabuto",
+      "nameEn": "Carnage Kabuto",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 7
+    },
+    {
+      "id": "100017-ur",
+      "nameVi": "Vua Lòng Đất",
+      "nameEn": "Subterranean King",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 6
+    },
+    {
+      "id": "100044-ur",
+      "nameVi": "Hiệp Sĩ Cơ động",
+      "nameEn": "Drive Knight",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 7
+    },
+    {
+      "id": "100009-ur",
+      "nameVi": "Bão Tuyết Địa Ngục",
+      "nameEn": "Hellish Blizzard",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100003-ur",
+      "nameVi": "Vua Biển Sâu",
+      "nameEn": "Deep Sea King",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100013-ur",
+      "nameVi": "Zombieman",
+      "nameEn": "Zombieman",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100008-ur",
+      "nameVi": "Cô Gái Muỗi",
+      "nameEn": "Mosquito Girl",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100010-ur",
+      "nameVi": "Tia Chớp Chói Lóa",
+      "nameEn": "Flashy Flash",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100089-ur",
+      "nameVi": "Gouketsu",
+      "nameEn": "Gouketsu",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100192-ur",
+      "nameVi": "Genos",
+      "nameEn": "Genos",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 6
+    },
+    {
+      "id": "100191-ur",
+      "nameVi": "Hellfire Flame",
+      "nameEn": "Hellfire Flame",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100190-ur",
+      "nameVi": "Melzargard",
+      "nameEn": "Melzargard",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 6
+    },
+    {
+      "id": "100189-ur",
+      "nameVi": "Gale Wind",
+      "nameEn": "Gale Wind",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100188-ur",
+      "nameVi": "Samurai Nguyên Tử",
+      "nameEn": "Atomic Samurai",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100187-ur",
+      "nameVi": "King",
+      "nameEn": "King",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100186-ur",
+      "nameVi": "Bomb/Bengpu",
+      "nameEn": "Bom/Bengpu",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100185-ur",
+      "nameVi": "Chày Sắt",
+      "nameEn": "Metal Bat",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100183-ur",
+      "nameVi": "Suiryu",
+      "nameEn": "Suiryu",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100182-ur",
+      "nameVi": "G4",
+      "nameEn": "G4",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100002-ur",
+      "nameVi": "Sonic Siêu Thanh V1",
+      "nameEn": "Sonic V1",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100180-ur",
+      "nameVi": "Lốc Xoáy Kinh Hoàng",
+      "nameEn": "Tatsumaki/Terrible Tornado",
+      "rarity": "UR",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100044-ssrplus",
+      "nameVi": "Hiệp Sĩ Cơ động",
+      "nameEn": "Drive Knight",
+      "rarity": "SSR+",
+      "isCore": true,
+      "baseVotes": 6
+    },
+    {
+      "id": "100059-ssrplus",
+      "nameVi": "Geryuganshoop",
+      "nameEn": "Geryuganshoop",
+      "rarity": "SSR+",
+      "isCore": true,
+      "baseVotes": 8
+    },
+    {
+      "id": "100027-ssrplus",
+      "nameVi": "Hợp Kim Đen Bóng",
+      "nameEn": "Superalloy Darkshine",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 8
+    },
+    {
+      "id": "100075-ssrplus",
+      "nameVi": "Hiệp Sĩ Kim Loại",
+      "nameEn": "Metal Knight",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 6
+    },
+    {
+      "id": "100006-ssrplus",
+      "nameVi": "Tù Nhân Du Hí",
+      "nameEn": "Puri-Puri Prisoner",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 7
+    },
+    {
+      "id": "100013-ssrplus",
+      "nameVi": "Zombieman",
+      "nameEn": "Zombieman",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100062-ssrplus",
+      "nameVi": "Groribas",
+      "nameEn": "Groribas",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 7
+    },
+    {
+      "id": "100025-ssrplus",
+      "nameVi": "Người Chó Canh",
+      "nameEn": "Watchdog Man",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100054-ssrplus",
+      "nameVi": "Melzargard",
+      "nameEn": "Melzargard",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 7
+    },
+    {
+      "id": "100028-ssrplus",
+      "nameVi": "Cao Thủ Ba Lỗ",
+      "nameEn": "Tank Top Master",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 6
+    },
+    {
+      "id": "100003-ssrplus",
+      "nameVi": "Vua Biển Sâu",
+      "nameEn": "Deep Sea King",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 8
+    },
+    {
+      "id": "100017-ssrplus",
+      "nameVi": "Vua Lòng Đất",
+      "nameEn": "Subterranean King",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100109-ssrplus",
+      "nameVi": "Gyoro-Gyoro",
+      "nameEn": "Gyoro-Gyoro",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100057-ssrplus",
+      "nameVi": "Thần Heo",
+      "nameEn": "Pig God",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100010-ssrplus",
+      "nameVi": "Tia Chớp Chói Lóa",
+      "nameEn": "Flashy Flash",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100089-ssrplus",
+      "nameVi": "Gouketsu",
+      "nameEn": "Gouketsu",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 6
+    },
+    {
+      "id": "100103-ssrplus",
+      "nameVi": "Phượng Hoàng",
+      "nameEn": "Phoenix Man",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 7
+    },
+    {
+      "id": "100094-ssrplus",
+      "nameVi": "Garou",
+      "nameEn": "Garou",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100011-ssrplus",
+      "nameVi": "Samurai Nguyên Tử",
+      "nameEn": "Atomic Samurai",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100024-ssrplus",
+      "nameVi": "Bang",
+      "nameEn": "Bang",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100056-ssrplus",
+      "nameVi": "King",
+      "nameEn": "King",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100055-ssrplus",
+      "nameVi": "Boros",
+      "nameEn": "Boros",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100156-ssrplus",
+      "nameVi": "Hung Thần Kabuto",
+      "nameEn": "Carnage Kabuto",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100045-ssrplus",
+      "nameVi": "Đồng Đế",
+      "nameEn": "Child Emperor",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100012-ssrplus",
+      "nameVi": "Chày Sắt",
+      "nameEn": "Metal Bat",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100092-ssrplus",
+      "nameVi": "Bakuzan Quái Nhân",
+      "nameEn": "Monsterized Bakuzan",
+      "rarity": "SSR+",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100108-ssr",
+      "nameVi": "Bomb/Bengpu",
+      "nameEn": "Bom/Bengpu",
+      "rarity": "SSR",
+      "isCore": true,
+      "baseVotes": 8
+    },
+    {
+      "id": "100045-ssr",
+      "nameVi": "Đồng Đế",
+      "nameEn": "Child Emperor",
+      "rarity": "SSR",
+      "isCore": true,
+      "baseVotes": 4
+    },
+    {
+      "id": "100003-ssr",
+      "nameVi": "Vua Biển Sâu",
+      "nameEn": "Deep Sea King",
+      "rarity": "SSR",
+      "isCore": true,
+      "baseVotes": 2
+    },
+    {
+      "id": "100109-ssr",
+      "nameVi": "Gyoro-Gyoro",
+      "nameEn": "Gyoro-Gyoro",
+      "rarity": "SSR",
+      "isCore": true,
+      "baseVotes": 6
+    },
+    {
+      "id": "100013-ssr",
+      "nameVi": "Zombieman",
+      "nameEn": "Zombieman",
+      "rarity": "SSR",
+      "isCore": true,
+      "baseVotes": 4
+    },
+    {
+      "id": "100029-ssr",
+      "nameVi": "Mặt Nạ Ngọt Ngào",
+      "nameEn": "Amai Mask",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 6
+    },
+    {
+      "id": "100011-ssr",
+      "nameVi": "Samurai Nguyên Tử",
+      "nameEn": "Atomic Samurai",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100024-ssr",
+      "nameVi": "Bang",
+      "nameEn": "Bang",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100055-ssr",
+      "nameVi": "Boros",
+      "nameEn": "Boros",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100043-ssr",
+      "nameVi": "Hung Thần Kabuto",
+      "nameEn": "Carnage Kabuto",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100095-ssr",
+      "nameVi": "Choze",
+      "nameEn": "Choze",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100044-ssr",
+      "nameVi": "Hiệp Sĩ Cơ Động",
+      "nameEn": "Drive Knight",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100010-ssr",
+      "nameVi": "Tia Chớp Chói Lóa",
+      "nameEn": "Flashy Flash",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100119-ssr",
+      "nameVi": "G4",
+      "nameEn": "G4",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100126-ssr",
+      "nameVi": "Gale Wind",
+      "nameEn": "Gale Wind",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 7
+    },
+    {
+      "id": "100149-ssr",
+      "nameVi": "Eyesight",
+      "nameEn": "Eyesight",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 6
+    },
+    {
+      "id": "100094-ssr",
+      "nameVi": "Garou",
+      "nameEn": "Garou",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100074-ssr",
+      "nameVi": "Genos",
+      "nameEn": "Genos",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100059-ssr",
+      "nameVi": "Geryuganshoop",
+      "nameEn": "Geryuganshoop",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 1
+    },
+    {
+      "id": "100089-ssr",
+      "nameVi": "Gouketsu",
+      "nameEn": "Gouketsu",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100062-ssr",
+      "nameVi": "Groribas",
+      "nameEn": "Groribas",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100125-ssr",
+      "nameVi": "Hellfire Flame",
+      "nameEn": "Hellfire Flame",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100009-ssr",
+      "nameVi": "Bão Tuyết Địa Ngục",
+      "nameEn": "Hellish Blizzard",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100056-ssr",
+      "nameVi": "King",
+      "nameEn": "King",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100054-ssr",
+      "nameVi": "Melzargard",
+      "nameEn": "Melzargard",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100012-ssr",
+      "nameVi": "Chày Sắt",
+      "nameEn": "Metal Bat",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100075-ssr",
+      "nameVi": "Hiệp Sĩ Kim Loại",
+      "nameEn": "Metal Knight",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100008-ssr",
+      "nameVi": "Cô Gái Muỗi",
+      "nameEn": "Mosquito Girl",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 7
+    },
+    {
+      "id": "100103-ssr",
+      "nameVi": "Phượng Hoàng",
+      "nameEn": "Phoenix Man",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100057-ssr",
+      "nameVi": "Thần Heo",
+      "nameEn": "Pig God",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100006-ssr",
+      "nameVi": "Tù Nhân Du Hí",
+      "nameEn": "Puri-Puri Prisoner",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 1
+    },
+    {
+      "id": "100002-ssr",
+      "nameVi": "Sonic Siêu Thanh V1",
+      "nameEn": "Speed-o-Sound Sonic V1",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100069-ssr",
+      "nameVi": "Sonic Siêu Thanh V2",
+      "nameEn": "Speed-o-Sound Sonic V2",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 8
+    },
+    {
+      "id": "100017-ssr",
+      "nameVi": "Vua Lòng Đất",
+      "nameEn": "Subterranean King",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100090-ssr",
+      "nameVi": "Suiryu",
+      "nameEn": "Suiryu",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100027-ssr",
+      "nameVi": "Hợp Kim Đen Bóng",
+      "nameEn": "Superalloy Darkshine",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100028-ssr",
+      "nameVi": "Cao Thủ Ba Lỗ",
+      "nameEn": "Tank Top Master",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100004-ssr",
+      "nameVi": "Lốc Xoáy Kinh Hoàng V1",
+      "nameEn": "Tatsumaki/Terrible Tornado V1",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100151-ssr",
+      "nameVi": "Lốc Xoáy Kinh Hoàng V2",
+      "nameEn": "Tatsumaki/Terrible Tornado V2",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 9
+    },
+    {
+      "id": "100060-ssr",
+      "nameVi": "Vaccine Man V1",
+      "nameEn": "Vaccine Man V1",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100085-ssr",
+      "nameVi": "Vaccine Man V2",
+      "nameEn": "Vaccine Man V2",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 8
+    },
+    {
+      "id": "100025-ssr",
+      "nameVi": "Người Chó Canh",
+      "nameEn": "Watchdog Man",
+      "rarity": "SSR",
+      "isCore": false,
+      "baseVotes": 6
+    },
+    {
+      "id": "100029-sr",
+      "nameVi": "Mặt Nạ Ngọt Ngào",
+      "nameEn": "Amai Mask",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100047-sr",
+      "nameVi": "Khỉ Đột Bọc Giáp",
+      "nameEn": "Armored Gorilla",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100135-sr",
+      "nameVi": "Gián Thức Tỉnh",
+      "nameEn": "Awakened Cockroach",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100092-sr",
+      "nameVi": "Bakuzan",
+      "nameEn": "Bakuzan",
+      "rarity": "SR",
+      "isCore": true,
+      "baseVotes": 6
+    },
+    {
+      "id": "100049-sr",
+      "nameVi": "Vua Thú",
+      "nameEn": "Beast King",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100046-sr",
+      "nameVi": "Lửa Xanh",
+      "nameEn": "Blue Fire",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100096-sr",
+      "nameVi": "Bushidoriru",
+      "nameEn": "Bushidoriru",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 1
+    },
+    {
+      "id": "100154-sr",
+      "nameVi": "Bướm DX",
+      "nameEn": "Butterfly DX",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100095-sr",
+      "nameVi": "Choze",
+      "nameEn": "Choze",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100136-sr",
+      "nameVi": "Gatling Tử Thần",
+      "nameEn": "Death Gatling",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100083-sr",
+      "nameVi": "Tiến Sĩ Genus",
+      "nameEn": "Doctor Genus",
+      "rarity": "SR",
+      "isCore": true,
+      "baseVotes": 7
+    },
+    {
+      "id": "100111-sr",
+      "nameVi": "Kẻ Xé Mặt",
+      "nameEn": "Face Ripper",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100097-sr",
+      "nameVi": "Ma Thần Quyền Đấu",
+      "nameEn": "Fist Fight Djinn",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100084-sr",
+      "nameVi": "Fukegao",
+      "nameEn": "Fukegao",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100001-sr",
+      "nameVi": "Genos",
+      "nameEn": "Genos",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 1
+    },
+    {
+      "id": "100015-sr",
+      "nameVi": "Bi Vàng",
+      "nameEn": "Golden Ball",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100007-sr",
+      "nameVi": "Đầu Búa",
+      "nameEn": "Hammerhead",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100148-sr",
+      "nameVi": "Hamukichi",
+      "nameEn": "Hamukichi",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100110-sr",
+      "nameVi": "Khố Xe Tăng Hạng Nặng",
+      "nameEn": "Heavy Tank Loincloth",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100009-sr",
+      "nameVi": "Bão Tuyết Địa Ngục",
+      "nameEn": "Hellish Blizzard",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100018-sr",
+      "nameVi": "Iairon",
+      "nameEn": "Iairon",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100063-sr",
+      "nameVi": "Rong Biển",
+      "nameEn": "Konbu Infinity",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100051-sr",
+      "nameVi": "Genji Sấm Sét",
+      "nameEn": "Lightning Genji",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 4
+    },
+    {
+      "id": "100005-sr",
+      "nameVi": "Max Chân Điện",
+      "nameEn": "Lightning Max",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100091-sr",
+      "nameVi": "Ảo Thuật Gia",
+      "nameEn": "Magicman",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100034-sr",
+      "nameVi": "Sứ Giả Biển Sâu",
+      "nameEn": "Messenger of the Seafolk",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100008-sr",
+      "nameVi": "Cô Gái Muỗi",
+      "nameEn": "Mosquito Girl",
+      "rarity": "SR",
+      "isCore": true,
+      "baseVotes": 0
+    },
+    {
+      "id": "100120-sr",
+      "nameVi": "Rinrin",
+      "nameEn": "Rinrin",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100061-sr",
+      "nameVi": "Vua Bầu Trời",
+      "nameEn": "Sky King",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100019-sr",
+      "nameVi": "Smile Man",
+      "nameEn": "Smile Man",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100030-sr",
+      "nameVi": "Snek",
+      "nameEn": "Snek",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100016-sr",
+      "nameVi": "Ria Mép Mùa Xuân",
+      "nameEn": "Spring Mustachio",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100014-sr",
+      "nameVi": "Stinger",
+      "nameEn": "Stinger",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 1
+    },
+    {
+      "id": "100086-sr",
+      "nameVi": "Người Lòng Đất",
+      "nameEn": "Subterranean",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100104-sr",
+      "nameVi": "Ba Lỗ Ăn Chay",
+      "nameEn": "Tank Top Vegan",
+      "rarity": "SR",
+      "isCore": false,
+      "baseVotes": 5
+    },
+    {
+      "id": "100038-r",
+      "nameVi": "Bunbun Man",
+      "nameEn": "Bunbun Man",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100039-r",
+      "nameVi": "Cua Càng Bựa",
+      "nameEn": "Crablante",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100032-r",
+      "nameVi": "D-pad",
+      "nameEn": "D-pad",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100068-r",
+      "nameVi": "Dark Matter Thief",
+      "nameEn": "Dark Matter Thief",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100021-r",
+      "nameVi": "Mi Mắt",
+      "nameEn": "Eyelashes",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100033-r",
+      "nameVi": "Funeral Suspenders",
+      "nameEn": "Funeral Suspenders",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100065-r",
+      "nameVi": "Chuột Chũi",
+      "nameEn": "Ground Dragon",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 1
+    },
+    {
+      "id": "100050-r",
+      "nameVi": "Đấm Bốc",
+      "nameEn": "Jet Niceguy",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 1
+    },
+    {
+      "id": "100064-r",
+      "nameVi": "Kamakyuri",
+      "nameEn": "Kamakyuri",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100106-r",
+      "nameVi": "Maiko Plasma",
+      "nameEn": "Maiko Plasma",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 3
+    },
+    {
+      "id": "100031-r",
+      "nameVi": "Xe đạp Thầm lặng",
+      "nameEn": "Mumen Rider",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 2
+    },
+    {
+      "id": "100093-r",
+      "nameVi": "Sourface",
+      "nameEn": "Sourface",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100035-r",
+      "nameVi": "Hố Đen Ba Lỗ",
+      "nameEn": "Tank Top Blackhole",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100041-r",
+      "nameVi": "Hổ Ba Lỗ",
+      "nameEn": "Tank Top Tiger",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100020-r",
+      "nameVi": "Lily",
+      "nameEn": "Triple-Staff Lilly",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100036-r",
+      "nameVi": "Khỉ Hoang",
+      "nameEn": "Wild Monkey",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
+      "id": "100053-r",
+      "nameVi": "YO649Z Mk. II",
+      "nameEn": "YO649Z Mk. II",
+      "rarity": "R",
+      "isCore": false,
+      "baseVotes": 0
+    }
+  ]
+}

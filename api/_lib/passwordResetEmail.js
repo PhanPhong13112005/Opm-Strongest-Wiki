@@ -68,3 +68,63 @@ export const sendPasswordResetEmail = async ({ email, resetUrl, idempotencyKey, 
   }
   return { delivered: true }
 }
+export const buildEmailVerificationUrl = (request, token) => {
+  const configuredOrigin = configuredAppUrl()
+  if (process.env.NODE_ENV === 'production' && !configuredOrigin) {
+    throw new Error('PUBLIC_APP_URL is not configured.')
+  }
+  const origin = configuredOrigin || requestOrigin(request)
+  if (!origin) throw new Error('PUBLIC_APP_URL is not configured.')
+  return origin + '/verify-email?token=' + encodeURIComponent(token)
+}
+
+export const sendEmailVerificationEmail = async ({
+  email,
+  verificationUrl,
+  idempotencyKey,
+  lifetimeMinutes = 30,
+}) => {
+  const apiKey = String(process.env.EMAIL__RESENDAPIKEY || '').trim()
+  const from = String(process.env.EMAIL__FROM || '').trim()
+  if (!apiKey || !from) {
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('Email verification is not configured.')
+    }
+    return { delivered: false }
+  }
+
+  const response = await fetch(resendEndpoint, {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + apiKey,
+      'Content-Type': 'application/json',
+      'Idempotency-Key': idempotencyKey,
+      'User-Agent': 'opmwiki-email-verification/1.0',
+    },
+    body: JSON.stringify({
+      from,
+      to: [email],
+      subject: 'Xác minh Gmail OPM Strongest Wiki',
+      text: [
+        'Bạn vừa yêu cầu xác minh Gmail cho tài khoản OPM Strongest Wiki.',
+        'Mở liên kết sau trong vòng ' + lifetimeMinutes + ' phút: ' + verificationUrl,
+        'Nếu bạn không thực hiện yêu cầu này, hãy bỏ qua email.',
+      ].join('\n\n'),
+      html: [
+        '<div style="font-family:Arial,sans-serif;line-height:1.6;color:#17202a">',
+        '<h2>Xác minh Gmail</h2>',
+        '<p>Nhấn nút bên dưới để xác minh Gmail cho tài khoản OPM Strongest Wiki.</p>',
+        '<p><a href="' + verificationUrl + '" style="display:inline-block;padding:12px 18px;border-radius:8px;background:#42c9f5;color:#061019;text-decoration:none;font-weight:700">Xác minh Gmail</a></p>',
+        '<p>Liên kết có hiệu lực trong ' + lifetimeMinutes + ' phút và chỉ dùng được một lần.</p>',
+        '<p>Nếu bạn không thực hiện yêu cầu này, hãy bỏ qua email.</p>',
+        '</div>',
+      ].join(''),
+    }),
+  })
+
+  if (!response.ok) {
+    const detail = await response.text()
+    throw new Error('Resend returned ' + response.status + ': ' + detail.slice(0, 300))
+  }
+  return { delivered: true }
+}
