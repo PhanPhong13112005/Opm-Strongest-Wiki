@@ -74,7 +74,7 @@ const isWorkspaceRoute = computed(() => isAuthenticated.value && (
 const workspaceLinks = computed(() => {
   const community = [
     { to: '/forum', code: 'DD', label: 'Diễn đàn' },
-    { to: '/advisor', code: 'AI', label: 'Trợ lý AI' },
+    { to: '/advisor', code: 'AI', label: 'Trợ lý AI', badge: 'THỬ NGHIỆM' },
   ]
   if (hasRole('Admin')) {
     return [
@@ -310,7 +310,7 @@ onBeforeUnmount(() => {
         <p class="workspace-label">KHU VỰC LÀM VIỆC</p>
         <nav>
           <RouterLink v-for="item in workspaceLinks" :key="item.to" :to="item.to" class="workspace-link">
-            <span>{{ item.code }}</span><b>{{ item.label }}</b>
+            <span>{{ item.code }}</span><b>{{ item.label }}<small v-if="item.badge">{{ item.badge }}</small></b>
           </RouterLink>
         </nav>
         <RouterLink to="/" class="workspace-exit">← Trở về trang Wiki</RouterLink>

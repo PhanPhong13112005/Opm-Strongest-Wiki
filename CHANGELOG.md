@@ -1,5 +1,28 @@
 # Lịch sử phiên bản OPM Strongest Wiki
 
+## 11/08/2026 — Bảng Xếp Hạng Cộng Đồng và xác minh tài khoản
+
+- Thêm trang **Bảng Xếp Hạng Cộng Đồng** cho UR+, UR, SSR+, SSR, SR và R, dùng dữ liệu phiếu nền có thể
+  chỉnh sửa trong `BANG_XEP_HANG_NHAN_VAT.json` rồi cộng phiếu thật từ cộng đồng.
+- Giữ nhân vật **Cốt Lõi** ở hàng riêng; các nhân vật còn lại tự phân vào SS, S, A, B, C và D theo tổng phiếu,
+  vì vậy nhân vật có nhiều phiếu hơn sẽ tự di chuyển lên nhóm cao hơn.
+- Hiển thị số người tham gia và tổng lượt bình chọn từ dữ liệu mẫu cộng dữ liệu API; nêu rõ bảng chỉ mang tính
+  tham khảo vì sức mạnh còn phụ thuộc tuổi server, đội hình, tài nguyên và meta.
+- Thêm bình chọn theo tài khoản và theo phẩm: tài khoản chưa xác minh được chọn 1 nhân vật mỗi phẩm mỗi tháng;
+  tài khoản đã xác minh Gmail hoặc số điện thoại được chọn tối đa 8 nhân vật mỗi phẩm mỗi tháng.
+- Tách dữ liệu bình chọn bằng khóa tháng theo múi giờ `Asia/Ho_Chi_Minh`. Khi sang tháng, API chỉ đọc kỳ mới nên
+  hạn mức tự làm mới lúc 00:00 ngày đầu tháng mà không cần cron xóa lịch sử cũ.
+- Thêm luồng gửi email xác minh bằng Resend, liên kết có thời hạn, token lưu dạng băm, dùng một lần và có giới hạn
+  tần suất gửi lại. Production yêu cầu domain gửi đã xác minh và cấu hình server đầy đủ.
+- Sửa đường dẫn ảnh nhân vật để hoạt động trên production, thêm nút mũi tên cho thanh phẩm và từng hàng nhân vật,
+  tối ưu thẻ xếp hạng trên mobile, Việt hóa `CORE` thành `CỐT LÕI` và chuẩn hóa màu nhãn phẩm.
+- Đưa thông tin cách tính phiếu và hạn mức tháng lên vùng đầu trang, tăng cỡ chữ cảnh báo và bỏ mô tả nhỏ dưới nhãn Tier.
+- Đổi favicon trình duyệt sang biểu tượng Saitama với biến thể 64 px và Apple Touch Icon 180 px.
+- Đánh dấu **Trợ lý dữ liệu** là tính năng **Thử nghiệm** tại menu và trong trang; trang Nạp thẻ tiếp tục ở trạng thái
+  **Bảo trì**, không nhận đơn hoặc yêu cầu chuyển khoản mới.
+- Bổ sung kiểm thử API cho khóa tháng, giới hạn 1/8 lượt, idempotency, nâng hạng theo phiếu, xác minh Gmail,
+  asset production và điều hướng responsive. Toàn bộ 99 Node tests và production build đều đạt.
+
 ## 10–11/08/2026 — Hoàn thiện Tinh Thông, Tinh Luyện Trung Tâm và trải nghiệm Trang bị
 
 - Hoàn thiện trang **Tinh Luyện Trung Tâm** với hai nhánh Năng Lượng/Mô-đun, công cụ tính EXP và nguyên liệu,
