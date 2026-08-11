@@ -15,14 +15,36 @@ const notice = ref('')
 const loading = ref(true)
 const updatingUserId = ref(null)
 const userSearch = ref('')
+const roleFilter = ref('ALL')
+const statusFilter = ref('ALL')
+const currentPage = ref(1)
+const pageSize = 10
 
 const isCurrentAccount = user => String(user.id).toLowerCase() === String(authState.session?.userId || '').toLowerCase()
 
 const filteredUsers = computed(() => {
+  let list = users.value
+  if (roleFilter.value !== 'ALL') {
+    list = list.filter(u => u.role === roleFilter.value)
+  }
+  if (statusFilter.value === 'ACTIVE') {
+    list = list.filter(u => u.isActive !== false)
+  } else if (statusFilter.value === 'INACTIVE') {
+    list = list.filter(u => u.isActive === false)
+  }
   const keyword = userSearch.value.trim().toLocaleLowerCase('vi')
-  if (!keyword) return users.value
-  return users.value.filter(user => [user.username, user.displayName, user.role]
-    .some(value => String(value || '').toLocaleLowerCase('vi').includes(keyword)))
+  if (keyword) {
+    list = list.filter(user => [user.username, user.displayName, user.role]
+      .some(value => String(value || '').toLocaleLowerCase('vi').includes(keyword)))
+  }
+  return list
+})
+
+const totalPages = computed(() => Math.max(1, Math.ceil(filteredUsers.value.length / pageSize)))
+
+const paginatedUsers = computed(() => {
+  const start = (currentPage.value - 1) * pageSize
+  return filteredUsers.value.slice(start, start + pageSize)
 })
 
 const modules = [
@@ -113,10 +135,23 @@ onMounted(load)
           <h2>Quản lý người dùng</h2>
           <p>Thay đổi vai trò hoặc trạng thái để kiểm soát quyền truy cập của từng tài khoản.</p>
         </div>
-        <label class="admin-user-search">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M16 16l4 4" /></svg>
-          <input v-model="userSearch" type="search" placeholder="Tìm tài khoản hoặc tên…" />
-        </label>
+        <div class="admin-users__controls">
+          <select v-model="roleFilter" class="admin-filter-select" aria-label="Lọc theo vai trò">
+            <option value="ALL">Tất cả Vai trò</option>
+            <option value="Admin">Admin</option>
+            <option value="Staff">Staff</option>
+            <option value="User">User</option>
+          </select>
+          <select v-model="statusFilter" class="admin-filter-select" aria-label="Lọc theo trạng thái">
+            <option value="ALL">Tất cả Trạng thái</option>
+            <option value="ACTIVE">Đang hoạt động</option>
+            <option value="INACTIVE">Đã vô hiệu hóa</option>
+          </select>
+          <label class="admin-user-search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M16 16l4 4" /></svg>
+            <input v-model="userSearch" type="search" placeholder="Tìm tài khoản hoặc tên…" />
+          </label>
+        </div>
       </header>
 
       <div class="admin-table-wrap">
@@ -133,7 +168,7 @@ onMounted(load)
             </tr>
           </thead>
           <tbody>
-            <tr v-for="user in filteredUsers" :key="user.id">
+            <tr v-for="user in paginatedUsers" :key="user.id">
               <td>
                 <div class="admin-user-cell">
                   <span>{{ user.displayName?.slice(0, 1).toUpperCase() }}</span>
@@ -178,14 +213,58 @@ onMounted(load)
         </table>
         <div v-if="loading" class="admin-users__empty">Đang tải tài khoản…</div>
         <div v-else-if="filteredUsers.length === 0" class="admin-users__empty">
-          {{ userSearch ? 'Không tìm thấy tài khoản phù hợp.' : 'Chưa có tài khoản cộng đồng.' }}
+          Không tìm thấy tài khoản phù hợp với tìm kiếm hoặc bộ lọc.
         </div>
       </div>
+
+      <footer v-if="totalPages > 1" class="admin-pagination">
+        <button
+          type="button"
+          class="btn-page"
+          :disabled="currentPage === 1"
+          @click="currentPage--"
+        >
+          « Trang trước
+        </button>
+        <span class="page-info">Trang <strong>{{ currentPage }}</strong> / {{ totalPages }} (Tổng {{ filteredUsers.length }} tài khoản)</span>
+        <button
+          type="button"
+          class="btn-page"
+          :disabled="currentPage === totalPages"
+          @click="currentPage++"
+        >
+          Trang sau »
+        </button>
+      </footer>
     </section>
   </RolePortalShell>
 </template>
 
 <style scoped>
+.admin-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+}
+.btn-page {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 255, 255, .1);
+  color: #e2e8f0;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all .2s;
+}
+.btn-page:hover:not(:disabled) { background: rgba(255, 255, 255, .1); border-color: #ffc700; }
+.btn-page:disabled { opacity: 0.3; cursor: not-allowed; }
+.page-info { color: #94a3b8; font-size: 12px; font-weight: 600; }
+.page-info strong { color: #f8fafc; }
+
 .admin-section-heading span, .admin-users__header > div > span {
   color: #ffc700;
   font-size: 11px;
@@ -303,17 +382,26 @@ onMounted(load)
   box-shadow: 0 20px 60px rgba(0, 0, 0, .4);
 }
 
-.admin-users__header {
+.admin-users__controls {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, .08);
-  padding: 22px 26px;
-  background: rgba(15, 23, 42, .3);
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.admin-users__header p { margin: 6px 0 0; color: #94a3b8; font-size: 13.5px; line-height: 1.5; }
+.admin-filter-select {
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  background: rgba(15, 23, 42, .8);
+  color: #f8fafc;
+  font-size: 12.5px;
+  font-weight: 800;
+  outline: none;
+  cursor: pointer;
+}
+.admin-filter-select:focus { border-color: #ffc700; }
 
 .admin-user-search {
   display: flex;
