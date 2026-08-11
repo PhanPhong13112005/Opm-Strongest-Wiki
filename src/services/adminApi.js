@@ -13,9 +13,6 @@ export const hasValidAdminToken = () => hasValidSession() && hasRole('Admin')
 export const clearAdminSession = clearSession
 export const loginAdmin = login
 
-export const getAdminCharacters = (query = {}) =>
-  authorizedRequest('api/admin/characters', {}, query)
-
 const mutateAndInvalidate = async (path, options, cachePrefix) => {
   const result = await authorizedRequest(path, options)
   invalidateApiCache(cachePrefix)
@@ -83,19 +80,47 @@ export const getAdminUsers = async () => {
     throw error
   }
 }
+
 export const updateAdminUserRole = (id, role) => authorizedRequest(`api/admin/users/${id}/role`, {
   method: 'PUT', body: JSON.stringify({ role }),
 })
+
 export const updateAdminUserStatus = (id, isActive) => authorizedRequest(`api/admin/users/${id}/status`, {
   method: 'PUT', body: JSON.stringify({ isActive }),
 })
-export const getAdminTopUps = (status = '') =>
-  authorizedRequest('api/admin/top-ups', {}, { status })
+
+export const getAdminCharacters = async (query = {}) => {
+  try {
+    return await authorizedRequest('api/admin/characters', {}, query)
+  } catch (error) {
+    if (import.meta.env?.DEV) return []
+    throw error
+  }
+}
+
+export const getAdminTopUps = async (status = '') => {
+  try {
+    return await authorizedRequest('api/admin/top-ups', {}, { status })
+  } catch (error) {
+    if (import.meta.env?.DEV) return []
+    throw error
+  }
+}
+
 export const reviewAdminTopUp = (id, status, staffNote = '') =>
   authorizedRequest(`api/admin/top-ups/${encodeURIComponent(id)}/review`, {
     method: 'PUT', body: JSON.stringify({ status, staffNote }),
   })
-export const getAdminEvents = () => authorizedRequest('api/admin/events')
+
+export const getAdminEvents = async () => {
+  try {
+    return await authorizedRequest('api/admin/events')
+  } catch (error) {
+    if (import.meta.env?.DEV) return []
+    throw error
+  }
+}
+
 export const createAdminEvent = (event) => mutateAndInvalidate('api/admin/events', {
   method: 'POST', body: JSON.stringify(event),
 }, 'api/events')
@@ -105,7 +130,15 @@ export const updateAdminEvent = (event) => mutateAndInvalidate(`api/admin/events
 export const deleteAdminEvent = (id) => mutateAndInvalidate(`api/admin/events/${encodeURIComponent(id)}`, {
   method: 'DELETE',
 }, 'api/events')
-export const getAdminReleases = () => authorizedRequest('api/admin/releases')
+
+export const getAdminReleases = async () => {
+  try {
+    return await authorizedRequest('api/admin/releases')
+  } catch (error) {
+    if (import.meta.env?.DEV) return []
+    throw error
+  }
+}
 export const createAdminRelease = (release) => mutateAndInvalidate('api/admin/releases', {
   method: 'POST', body: JSON.stringify(release),
 }, 'api/releases')
