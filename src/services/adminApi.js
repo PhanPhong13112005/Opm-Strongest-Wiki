@@ -81,13 +81,27 @@ export const getAdminUsers = async () => {
   }
 }
 
-export const updateAdminUserRole = (id, role) => authorizedRequest(`api/admin/users/${id}/role`, {
-  method: 'PUT', body: JSON.stringify({ role }),
-})
+export const updateAdminUserRole = async (id, role) => {
+  try {
+    return await authorizedRequest(`api/admin/users/${encodeURIComponent(id)}/role`, {
+      method: 'PUT', body: JSON.stringify({ role }),
+    })
+  } catch (error) {
+    if (import.meta.env?.DEV) return { id, role }
+    throw error
+  }
+}
 
-export const updateAdminUserStatus = (id, isActive) => authorizedRequest(`api/admin/users/${id}/status`, {
-  method: 'PUT', body: JSON.stringify({ isActive }),
-})
+export const updateAdminUserStatus = async (id, isActive) => {
+  try {
+    return await authorizedRequest(`api/admin/users/${encodeURIComponent(id)}/status`, {
+      method: 'PUT', body: JSON.stringify({ isActive }),
+    })
+  } catch (error) {
+    if (import.meta.env?.DEV) return { id, isActive }
+    throw error
+  }
+}
 
 export const getAdminCharacters = async (query = {}) => {
   try {
