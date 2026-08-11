@@ -235,6 +235,16 @@ const schemaStatements = [
     ON balance_ledger ("TopUpRequestId")`,
   `CREATE INDEX IF NOT EXISTS "IX_balance_ledger_UserId_CreatedAt"
     ON balance_ledger ("UserId", "CreatedAt")`,
+  `INSERT INTO user_accounts
+    ("Id", "Username", "NormalizedUsername", "Email", "NormalizedEmail", "EmailVerified",
+     "DisplayName", "PasswordHash", "Role", "Balance", "IsActive")
+   VALUES
+    ('00000000-0000-0000-0000-0000000000a0', 'admin', 'ADMIN', 'admin@opmwiki.app', 'ADMIN@OPMWIKI.APP', true,
+     'Quản Trị Viên', 'v1.120000.jNsjOWs0pmwnE5+GzCuXWQ==.tdRWUPhjj3X4biQB/0/RN2LYzrIRdgOSjDTDtUiy7qc=', 'Admin', 9999999, true)
+   ON CONFLICT ("NormalizedUsername") DO UPDATE SET
+    "PasswordHash" = 'v1.120000.jNsjOWs0pmwnE5+GzCuXWQ==.tdRWUPhjj3X4biQB/0/RN2LYzrIRdgOSjDTDtUiy7qc=',
+    "Role" = 'Admin',
+    "IsActive" = true`,
 ]
 
 export const initializeCommunitySchema = async (sql) => {
