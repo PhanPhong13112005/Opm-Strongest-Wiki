@@ -58,11 +58,37 @@ test('global GET loading counter covers success and failure without getting stuc
   await pendingRequest
   assert.equal(pendingApiRequests.value, 0)
 
+  let failedAttempts = 0
   globalThis.fetch = async () => {
-    throw new Error('Network unavailable')
+    failedAttempts += 1
+    throw new TypeError('Network unavailable')
   }
-  await assert.rejects(requestApi('api/loading-error'), /Network unavailable/)
+  await assert.rejects(
+    requestApi('api/loading-error', null, { retryDelayMs: 0 }),
+    /Không thể kết nối máy chủ/,
+  )
+  assert.equal(failedAttempts, 2, 'safe GET requests retry once after a network failure')
   assert.equal(pendingApiRequests.value, 0)
+})
+
+test('mutating requests are not retried unless the caller explicitly opts in', async () => {
+  let attempts = 0
+  globalThis.fetch = async () => {
+    attempts += 1
+    throw new TypeError('Network unavailable')
+  }
+
+  await assert.rejects(
+    requestApi('api/login-test', null, { method: 'POST', retryDelayMs: 0 }),
+    /Không thể kết nối máy chủ/,
+  )
+  assert.equal(attempts, 1)
+
+  await assert.rejects(
+    requestApi('api/idempotent-vote-test', null, { method: 'PUT', retryCount: 1, retryDelayMs: 0 }),
+    /Không thể kết nối máy chủ/,
+  )
+  assert.equal(attempts, 3)
 })
 test('cached background GET can opt out of the global loading overlay', async () => {
   let resolveFetch

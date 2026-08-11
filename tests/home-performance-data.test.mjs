@@ -51,6 +51,14 @@ test('home boot shell matches the default August featured release', () => {
   assert.match(indexHtml, /Black_Sperm_Ur_plus\.webp/)
   assert.match(indexHtml, /08 \/ 2026/)
 })
+test('tier ranking has a route-specific boot shell while its async chunk loads', () => {
+  const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8')
+
+  assert.match(indexHtml, /id="tier-ranking-boot-template"/)
+  assert.ok(indexHtml.includes("else if (/^\\/tier-ranking\\/?$/.test(location.pathname))"))
+  assert.match(indexHtml, /BẢNG XẾP HẠNG CỘNG ĐỒNG/)
+  assert.match(indexHtml, /tier-boot__stage\{[^}]*min-height:calc\(100vh - 72px\)/)
+})
 test('home never loads the full character catalogs after first paint', () => {
   const homeView = fs.readFileSync(path.join(root, 'src/views/HomeView.vue'), 'utf8')
 
