@@ -157,7 +157,7 @@ export const authorizedRequest = async (path, options = {}, params) => {
       },
     })
   } catch (error) {
-    if (error.status === 401) clearSession()
+    if (error.status === 401 && !import.meta.env?.DEV) clearSession()
     throw error
   }
 }
