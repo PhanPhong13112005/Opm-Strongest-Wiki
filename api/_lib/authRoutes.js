@@ -1,7 +1,12 @@
 import { randomUUID } from 'node:crypto'
 import { ensureCommunitySchema, getSql } from './database.js'
 import { bodyOf, json, methodNotAllowed, requireCurrentUser } from './http.js'
-import { buildPasswordResetUrl, sendPasswordResetEmail } from './passwordResetEmail.js'
+import {
+  buildEmailVerificationUrl,
+  buildPasswordResetUrl,
+  sendEmailVerificationEmail,
+  sendPasswordResetEmail,
+} from './passwordResetEmail.js'
 import {
   createAccessToken,
   createPasswordHash,
@@ -26,6 +31,8 @@ const accountResponse = (row) => ({
   role: row.role,
   balance: Number(row.balance || 0),
   isActive: row.isActive !== false,
+  emailVerified: row.emailVerified === true,
+  phoneVerified: row.phoneVerified === true,
   createdAt: row.createdAt,
 })
 
@@ -102,6 +109,97 @@ export const createAuthRouteHandler = ({
     }
   }
 
+  if (path === '/auth/email-verification/request') {
+    if (request.method !== 'POST') return methodNotAllowed(response, ['POST'])
+    const sql = sqlProvider()
+    const user = await requireCurrentUser(request, response, sql, ['User', 'Staff'])
+    if (!user) return true
+
+    const accounts = await sql.query(
+      `SELECT "Id" AS id, "Email" AS email, "EmailVerified" AS "emailVerified"
+         FROM user_accounts
+        WHERE "Id" = $1 AND "IsActive" = true
+        LIMIT 1`,
+      [user.userId],
+    )
+    const account = accounts[0]
+    if (!account) return json(response, 401, { message: 'Tài khoản không tồn tại hoặc đã bị khóa.' })
+    if (account.emailVerified) {
+      return json(response, 200, { verified: true, message: 'Gmail của bạn đã được xác minh.' })
+    }
+
+    const token = createPasswordResetToken()
+    const tokenHash = hashPasswordResetToken(token)
+    const lifetime = Math.min(60, Math.max(10, Number(process.env.EMAILVERIFICATION__TOKENLIFETIMEMINUTES || 30)))
+    const updated = await sql.query(
+      `UPDATE user_accounts
+          SET "EmailVerificationTokenHash" = $2,
+              "EmailVerificationExpiresAt" = CURRENT_TIMESTAMP + ($3 * INTERVAL '1 minute'),
+              "UpdatedAt" = CURRENT_TIMESTAMP
+        WHERE "Id" = $1
+          AND "EmailVerified" = false
+          AND (
+            "EmailVerificationExpiresAt" IS NULL
+            OR "EmailVerificationExpiresAt" < CURRENT_TIMESTAMP + (($3 - 1) * INTERVAL '1 minute')
+          )
+        RETURNING "Id" AS id, "Email" AS email`,
+      [account.id, tokenHash, lifetime],
+    )
+    if (!updated[0]) {
+      return json(response, 429, { message: 'Email xác minh vừa được gửi. Vui lòng chờ một phút trước khi gửi lại.' })
+    }
+
+    let verificationUrl
+    try {
+      verificationUrl = buildEmailVerificationUrl(request, token)
+      await sendEmailVerificationEmail({
+        email: updated[0].email,
+        verificationUrl,
+        idempotencyKey: `email-verification-${updated[0].id}-${tokenHash.slice(0, 20)}`,
+        lifetimeMinutes: lifetime,
+      })
+    } catch (error) {
+      console.error('Email verification delivery failed', { message: error?.message })
+      await sql.query(
+        `UPDATE user_accounts
+            SET "EmailVerificationTokenHash" = NULL,
+                "EmailVerificationExpiresAt" = NULL,
+                "UpdatedAt" = CURRENT_TIMESTAMP
+          WHERE "Id" = $1 AND "EmailVerificationTokenHash" = $2`,
+        [account.id, tokenHash],
+      )
+      return json(response, 503, { message: 'Chưa thể gửi email xác minh. Vui lòng thử lại sau.' })
+    }
+
+    return json(response, 200, {
+      verified: false,
+      message: 'Đã gửi liên kết xác minh. Vui lòng kiểm tra Gmail của bạn.',
+      ...(process.env.NODE_ENV !== 'production' ? { verificationUrl } : {}),
+    })
+  }
+
+  if (path === '/auth/email-verification/confirm') {
+    if (request.method !== 'POST') return methodNotAllowed(response, ['POST'])
+    const { token = '' } = bodyOf(request)
+    if (String(token).length < 32 || String(token).length > 200) {
+      return json(response, 400, { message: 'Liên kết xác minh Gmail không hợp lệ hoặc đã hết hạn.' })
+    }
+    const rows = await sqlProvider().query(
+      `UPDATE user_accounts
+          SET "EmailVerified" = true,
+              "EmailVerificationTokenHash" = NULL,
+              "EmailVerificationExpiresAt" = NULL,
+              "UpdatedAt" = CURRENT_TIMESTAMP
+        WHERE "EmailVerificationTokenHash" = $1
+          AND "EmailVerificationExpiresAt" > CURRENT_TIMESTAMP
+          AND "IsActive" = true
+        RETURNING "Id" AS id`,
+      [hashPasswordResetToken(token)],
+    )
+    return rows[0]
+      ? json(response, 200, { verified: true, message: 'Gmail đã được xác minh thành công.' })
+      : json(response, 400, { message: 'Liên kết xác minh Gmail không hợp lệ hoặc đã hết hạn.' })
+  }
   if (path === '/auth/forgot-password') {
     if (request.method !== 'POST') return methodNotAllowed(response, ['POST'])
     const { email = '' } = bodyOf(request)
@@ -160,6 +258,7 @@ export const createAuthRouteHandler = ({
           SET "PasswordHash" = $2,
               "PasswordResetTokenHash" = NULL,
               "PasswordResetExpiresAt" = NULL,
+              "EmailVerified" = true,
               "UpdatedAt" = CURRENT_TIMESTAMP
         WHERE "PasswordResetTokenHash" = $1
           AND "PasswordResetExpiresAt" > CURRENT_TIMESTAMP
@@ -220,6 +319,7 @@ export const createAuthRouteHandler = ({
     const rows = await sql.query(
       `SELECT "Id" AS id, "Username" AS username, "DisplayName" AS "displayName",
               "Role" AS role, "Balance" AS balance, "IsActive" AS "isActive",
+              "EmailVerified" AS "emailVerified", "PhoneVerified" AS "phoneVerified",
               "CreatedAt" AS "createdAt"
          FROM user_accounts WHERE "Id" = $1 AND "IsActive" = true LIMIT 1`,
       [user.userId],
@@ -234,6 +334,7 @@ export const createAuthRouteHandler = ({
     const rows = await sql.query(
       `SELECT "Id" AS id, "Username" AS username, "DisplayName" AS "displayName",
               "Role" AS role, "Balance" AS balance, "IsActive" AS "isActive",
+              "EmailVerified" AS "emailVerified", "PhoneVerified" AS "phoneVerified",
               "CreatedAt" AS "createdAt"
          FROM user_accounts ORDER BY "CreatedAt" DESC`,
     )
@@ -258,6 +359,7 @@ export const createAuthRouteHandler = ({
         WHERE "Id" = $1
         RETURNING "Id" AS id, "Username" AS username, "DisplayName" AS "displayName",
                   "Role" AS role, "Balance" AS balance, "IsActive" AS "isActive",
+              "EmailVerified" AS "emailVerified", "PhoneVerified" AS "phoneVerified",
                   "CreatedAt" AS "createdAt"`,
       [roleMatch[1], role],
     )
@@ -282,6 +384,7 @@ export const createAuthRouteHandler = ({
         WHERE "Id" = $1
         RETURNING "Id" AS id, "Username" AS username, "DisplayName" AS "displayName",
                   "Role" AS role, "Balance" AS balance, "IsActive" AS "isActive",
+              "EmailVerified" AS "emailVerified", "PhoneVerified" AS "phoneVerified",
                   "CreatedAt" AS "createdAt"`,
       [statusMatch[1], isActive],
     )

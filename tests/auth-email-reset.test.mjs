@@ -35,11 +35,14 @@ const responseMock = () => ({
   setHeader(name, value) { this.headers[name] = value },
 })
 
-const invoke = async (path, body) => {
+const invoke = async (path, body, { token = '', method = 'POST' } = {}) => {
   const response = responseMock()
   await handler({
-    method: 'POST',
-    headers: { host: 'localhost:5173' },
+    method,
+    headers: {
+      host: 'localhost:5173',
+      ...(token ? { authorization: `Bearer ${token}` } : {}),
+    },
     body,
     query: {},
     url: `/api${path}`,
@@ -82,6 +85,63 @@ test('registration requires a unique Gmail and login accepts Gmail', async () =>
   assert.equal(login.payload.username, 'email-user')
 })
 
+test('email verification uses a hashed expiring one-time token', async () => {
+  const registered = await invoke('/auth/register', {
+    username: 'verification-user',
+    email: 'verification.user@gmail.com',
+    password: 'initial-password',
+  })
+  assert.equal(registered.statusCode, 201)
+
+  const requested = await invoke('/auth/email-verification/request', {}, {
+    token: registered.payload.accessToken,
+  })
+  assert.equal(requested.statusCode, 200)
+  assert.equal(requested.payload.verified, false)
+  assert.match(requested.payload.verificationUrl, /^http:\/\/localhost:5173\/verify-email\?token=/)
+
+  const token = new URL(requested.payload.verificationUrl).searchParams.get('token')
+  const [stored] = await sql.query(
+    `SELECT "EmailVerificationTokenHash" AS hash,
+            "EmailVerificationExpiresAt" AS "expiresAt",
+            "EmailVerified" AS "emailVerified"
+       FROM user_accounts WHERE "NormalizedEmail" = $1`,
+    ['verificationuser@gmail.com'],
+  )
+  assert.ok(stored.hash)
+  assert.notEqual(stored.hash, token)
+  assert.ok(stored.expiresAt)
+  assert.equal(stored.emailVerified, false)
+
+  const throttled = await invoke('/auth/email-verification/request', {}, {
+    token: registered.payload.accessToken,
+  })
+  assert.equal(throttled.statusCode, 429)
+
+  const confirmed = await invoke('/auth/email-verification/confirm', { token })
+  assert.equal(confirmed.statusCode, 200)
+  assert.equal(confirmed.payload.verified, true)
+
+  const [verified] = await sql.query(
+    `SELECT "EmailVerified" AS "emailVerified",
+            "EmailVerificationTokenHash" AS hash,
+            "EmailVerificationExpiresAt" AS "expiresAt"
+       FROM user_accounts WHERE "NormalizedEmail" = $1`,
+    ['verificationuser@gmail.com'],
+  )
+  assert.equal(verified.emailVerified, true)
+  assert.equal(verified.hash, null)
+  assert.equal(verified.expiresAt, null)
+
+  const replay = await invoke('/auth/email-verification/confirm', { token })
+  assert.equal(replay.statusCode, 400)
+
+  const requestedAgain = await invoke('/auth/email-verification/request', {}, {
+    token: registered.payload.accessToken,
+  })
+  assert.equal(requestedAgain.statusCode, 200)
+  assert.equal(requestedAgain.payload.verified, true)
+})
 test('password reset token is hashed, expires and can only be used once', async () => {
   const forgot = await invoke('/auth/forgot-password', { email: 'email.user@gmail.com' })
   assert.equal(forgot.statusCode, 200)
@@ -102,6 +162,12 @@ test('password reset token is hashed, expires and can only be used once', async 
     password: 'replacement-password',
   })
   assert.equal(reset.statusCode, 200)
+  const [verifiedAccount] = await sql.query(
+    `SELECT "EmailVerified" AS "emailVerified" FROM user_accounts WHERE "NormalizedEmail" = $1`,
+    ['emailuser@gmail.com'],
+  )
+  assert.equal(verifiedAccount.emailVerified, true, 'using the emailed token verifies Gmail ownership')
+
 
   const replay = await invoke('/auth/reset-password', {
     token,

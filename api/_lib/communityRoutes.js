@@ -19,6 +19,51 @@ const mapAdminTopUp = (row) => ({
   ...mapTopUp(row),
   reviewedBySubject: String(row.reviewedBySubject || ''),
 })
+const rankedCharacterTiers = new Set(['UR+', 'UR', 'SSR+', 'SSR', 'SR', 'R'])
+const rankedCharacters = characters.filter(character => rankedCharacterTiers.has(character.tier))
+const rankedCharacterIds = new Set(rankedCharacters.map(character => character.id))
+const rankedCharacterById = new Map(rankedCharacters.map(character => [character.id, character]))
+const verifiedMonthlyVoteLimit = 8
+const unverifiedMonthlyVoteLimit = 1
+
+export const tierVoteMonthFor = (date = new Date()) => {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Asia/Ho_Chi_Minh',
+    year: 'numeric',
+    month: '2-digit',
+  }).formatToParts(date)
+  const year = parts.find(part => part.type === 'year')?.value
+  const month = parts.find(part => part.type === 'month')?.value
+  return `${year}-${month}`
+}
+
+export const tierVoteResetAt = (voteMonth) => {
+  const [year, month] = String(voteMonth).split('-').map(Number)
+  if (!Number.isInteger(year) || !Number.isInteger(month) || month < 1 || month > 12) return ''
+  return new Date(Date.UTC(year, month, 1, -7)).toISOString()
+}
+
+const defaultVoteMonth = () => tierVoteMonthFor()
+
+const readVotePolicy = async (sql, userId) => {
+  const rows = await sql.query(
+    `SELECT "EmailVerified" AS "emailVerified", "PhoneVerified" AS "phoneVerified"
+       FROM user_accounts
+      WHERE "Id" = $1 AND "IsActive" = true
+      LIMIT 1`,
+    [userId],
+  )
+  const emailVerified = rows[0]?.emailVerified === true
+  const phoneVerified = rows[0]?.phoneVerified === true
+  const hasVerifiedContact = emailVerified || phoneVerified
+  return {
+    emailVerified,
+    phoneVerified,
+    hasVerifiedContact,
+    maxVotesPerRarity: hasVerifiedContact ? verifiedMonthlyVoteLimit : unverifiedMonthlyVoteLimit,
+  }
+}
+
 const couponOrderProvider = 'Coupon Order'
 const couponUnitPrice = 13_000
 const couponReferencePattern = /^UID:\d{5,20}\|SID:[A-Za-z0-9_-]{1,20}\|CP:6\|QTY:(10|[1-9])\|[A-Z0-9]+$/
@@ -101,14 +146,226 @@ export const createCommunityRouteHandler = ({
   ensureSchema = ensureCommunitySchema,
   ensureContentSchema = ensureAdminSchema,
   sqlProvider = getSql,
+  voteMonthProvider = defaultVoteMonth,
 } = {}) => async (request, response, path) => {
   const isCommunityPath = path.startsWith('/events/') || path.startsWith('/forum/') ||
     path.startsWith('/moderation/') || path.startsWith('/top-ups') ||
     path.startsWith('/staff/top-ups') || path.startsWith('/admin/top-ups') ||
+    path.startsWith('/tier-rankings') ||
     path === '/admin/dashboard' || path === '/advisor/ask'
   if (!isCommunityPath) return false
   await ensureSchema()
   const sql = sqlProvider()
+
+  const voteMonth = path.startsWith('/tier-rankings') ? String(voteMonthProvider()) : ''
+  const resetsAt = voteMonth ? tierVoteResetAt(voteMonth) : ''
+  if (voteMonth && !/^\d{4}-(0[1-9]|1[0-2])$/.test(voteMonth)) {
+    throw new Error('Invalid tier ranking vote month.')
+  }
+  if (voteMonth) {
+    await sql.query(
+      `UPDATE tier_ranking_votes
+          SET "VoteMonth" = $1
+        WHERE "VoteMonth" = ''`,
+      [voteMonth],
+    )
+  }
+
+  if (path === '/tier-rankings') {
+    if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
+    const rows = await sql.query(
+      `SELECT "CharacterId" AS "characterId", COUNT(*)::int AS votes
+         FROM tier_ranking_votes
+        WHERE "VoteMonth" = $1
+        GROUP BY "CharacterId"
+        ORDER BY votes DESC, "CharacterId"`,
+      [voteMonth],
+    )
+    const totals = await sql.query(
+      `SELECT COUNT(*)::int AS "totalVotes",
+              COUNT(DISTINCT "UserId")::int AS "totalVoters"
+         FROM tier_ranking_votes
+        WHERE "VoteMonth" = $1`,
+      [voteMonth],
+    )
+    return json(response, 200, {
+      voteMonth,
+      resetsAt,
+      totalVotes: Number(totals[0]?.totalVotes || 0),
+      totalVoters: Number(totals[0]?.totalVoters || 0),
+      votes: rows.map(row => ({
+        characterId: row.characterId,
+        votes: Number(row.votes || 0),
+      })),
+    })
+  }
+
+  if (path === '/tier-rankings/mine') {
+    if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
+    const user = await requireCurrentUser(request, response, sql)
+    if (!user) return true
+    if (String(user.userId).startsWith('admin:')) {
+      return json(response, 200, {
+        characterIds: [],
+        voteMonth,
+        resetsAt,
+        maxVotesPerRarity: 0,
+        hasVerifiedContact: false,
+        emailVerified: false,
+        phoneVerified: false,
+      })
+    }
+    const [rows, policy] = await Promise.all([
+      sql.query(
+        `SELECT "CharacterId" AS "characterId"
+           FROM tier_ranking_votes
+          WHERE "UserId" = $1 AND "VoteMonth" = $2
+          ORDER BY "CharacterId"`,
+        [user.userId, voteMonth],
+      ),
+      readVotePolicy(sql, user.userId),
+    ])
+    return json(response, 200, {
+      characterIds: rows.map(row => row.characterId),
+      voteMonth,
+      resetsAt,
+      ...policy,
+    })
+  }
+
+  const tierVoteMatch = /^\/tier-rankings\/votes\/([^/]+)$/.exec(path)
+  if (tierVoteMatch) {
+    if (request.method !== 'PUT') return methodNotAllowed(response, ['PUT'])
+    const active = bodyOf(request).active
+    const characterId = decodeURIComponent(tierVoteMatch[1])
+    const rankedCharacter = rankedCharacterById.get(characterId)
+    if (!rankedCharacter) {
+      return json(response, 400, { message: 'Nhân vật không thuộc bảng xếp hạng.' })
+    }
+    if (typeof active !== 'boolean') {
+      return json(response, 400, { message: 'Trạng thái bình chọn không hợp lệ.' })
+    }
+    const user = await requireCurrentUser(request, response, sql)
+    if (!user) return true
+    if (String(user.userId).startsWith('admin:')) {
+      return json(response, 400, { message: 'Hãy dùng tài khoản người dùng để bình chọn.' })
+    }
+
+    const policy = await readVotePolicy(sql, user.userId)
+    const rarity = rankedCharacter.tier
+
+    if (active) {
+      let voteSaved = false
+      for (let attempt = 0; attempt <= policy.maxVotesPerRarity + 1; attempt += 1) {
+        const currentRows = await sql.query(
+          `SELECT "CharacterId" AS "characterId", "VoteSlot" AS "voteSlot"
+             FROM tier_ranking_votes
+            WHERE "UserId" = $1 AND "VoteMonth" = $2`,
+          [user.userId, voteMonth],
+        )
+        if (currentRows.some(row => row.characterId === characterId)) {
+          voteSaved = true
+          break
+        }
+
+        const sameRarityRows = currentRows.filter(
+          row => rankedCharacterById.get(row.characterId)?.tier === rarity,
+        )
+        if (sameRarityRows.length >= policy.maxVotesPerRarity) {
+          return json(response, 409, {
+            message: `Bạn đã chọn đủ ${policy.maxVotesPerRarity} nhân vật phẩm ${rarity} trong tháng này.`,
+            voteMonth,
+            rarity,
+            ...policy,
+          })
+        }
+
+        const legacyVoteCount = sameRarityRows.filter(row => row.voteSlot == null).length
+        const usedSlots = new Set(sameRarityRows.map(row => Number(row.voteSlot)).filter(Number.isInteger))
+        let voteSlot = 0
+        for (let slot = legacyVoteCount + 1; slot <= policy.maxVotesPerRarity; slot += 1) {
+          if (!usedSlots.has(slot)) {
+            voteSlot = slot
+            break
+          }
+        }
+        if (!voteSlot) {
+          return json(response, 409, {
+            message: `Bạn đã chọn đủ ${policy.maxVotesPerRarity} nhân vật phẩm ${rarity} trong tháng này.`,
+            voteMonth,
+            rarity,
+            ...policy,
+          })
+        }
+
+        try {
+          await sql.query(
+            `INSERT INTO tier_ranking_votes
+                ("UserId", "CharacterId", "VoteMonth", "Rarity", "VoteSlot", "CreatedAt")
+             VALUES ($1, $2, $3, $4, $5, CURRENT_TIMESTAMP)
+             ON CONFLICT ("UserId", "CharacterId", "VoteMonth") DO NOTHING`,
+            [user.userId, characterId, voteMonth, rarity, voteSlot],
+          )
+          voteSaved = true
+          break
+        } catch (error) {
+          if (error?.code !== '23505') throw error
+        }
+      }
+      if (!voteSaved) {
+        return json(response, 409, {
+          message: 'Lượt bình chọn vừa thay đổi. Vui lòng thử lại.',
+          voteMonth,
+          rarity,
+          ...policy,
+        })
+      }
+    } else {
+      await sql.query(
+        `DELETE FROM tier_ranking_votes
+          WHERE "UserId" = $1 AND "CharacterId" = $2 AND "VoteMonth" = $3`,
+        [user.userId, characterId, voteMonth],
+      )
+    }
+
+    const [rows, totals, currentRows] = await Promise.all([
+      sql.query(
+        `SELECT COUNT(*)::int AS votes
+           FROM tier_ranking_votes
+          WHERE "CharacterId" = $1 AND "VoteMonth" = $2`,
+        [characterId, voteMonth],
+      ),
+      sql.query(
+        `SELECT COUNT(*)::int AS "totalVotes",
+                COUNT(DISTINCT "UserId")::int AS "totalVoters"
+           FROM tier_ranking_votes
+          WHERE "VoteMonth" = $1`,
+        [voteMonth],
+      ),
+      sql.query(
+        `SELECT "CharacterId" AS "characterId"
+           FROM tier_ranking_votes
+          WHERE "UserId" = $1 AND "VoteMonth" = $2`,
+        [user.userId, voteMonth],
+      ),
+    ])
+    const selectedInRarity = currentRows.filter(
+      row => rankedCharacterById.get(row.characterId)?.tier === rarity,
+    ).length
+    return json(response, 200, {
+      characterId,
+      active,
+      voteMonth,
+      resetsAt,
+      rarity,
+      votes: Number(rows[0]?.votes || 0),
+      totalVotes: Number(totals[0]?.totalVotes || 0),
+      totalVoters: Number(totals[0]?.totalVoters || 0),
+      selectedInRarity,
+      remainingInRarity: Math.max(0, policy.maxVotesPerRarity - selectedInRarity),
+      ...policy,
+    })
+  }
 
   const commentsMatch = /^\/events\/([^/]+)\/comments$/.exec(path)
   if (commentsMatch) {

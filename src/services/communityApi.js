@@ -1,9 +1,24 @@
 import { authorizedRequest, getAccessToken, hasValidSession } from './authApi'
-import { requestApi } from './apiClient'
+import { invalidateApiCache, requestApi, requestApiCached } from './apiClient'
 
 const optionalAuthHeaders = () => hasValidSession()
   ? { Authorization: `Bearer ${getAccessToken()}` }
   : {}
+
+export const getTierRankings = () =>
+  requestApiCached('api/tier-rankings', null, { ttlMs: 15_000 })
+
+export const getMyTierVotes = () =>
+  authorizedRequest('api/tier-rankings/mine')
+
+export const setTierVote = async (characterId, active) => {
+  const result = await authorizedRequest('api/tier-rankings/votes/' + encodeURIComponent(characterId), {
+    method: 'PUT',
+    body: JSON.stringify({ active }),
+  })
+  invalidateApiCache('api/tier-rankings')
+  return result
+}
 
 export const getEventComments = (eventId) =>
   requestApi(`api/events/${encodeURIComponent(eventId)}/comments`)

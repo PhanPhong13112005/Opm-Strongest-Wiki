@@ -7,6 +7,7 @@ import { getPortalPath, hasRole, hasValidSession } from '../services/authApi'
 // renderer on every first visit.
 const DetailView = () => import('../views/DetailView.vue')
 const CharacterListView = () => import('../views/CharacterListView.vue')
+const TierRankingView = () => import('../views/TierRankingView.vue')
 const MasteryView = () => import('../views/MasteryView.vue')
 const GearCatalogView = () => import('../views/GearCatalogView.vue')
 const BuffGearView = () => import('../views/BuffGearView.vue')
@@ -22,6 +23,7 @@ const TacticsView = () => import('../views/TacticsView.vue')
 const BackgearView = () => import('../views/BackgearView.vue')
 const StatsView = () => import('../views/StatsView.vue')
 const TalentsView = () => import('../views/TalentsView.vue')
+const EmailVerificationView = () => import('../views/EmailVerificationView.vue')
 const AdminLoginView = () => import('../views/AdminLoginView.vue')
 const AdminCharactersView = () => import('../views/AdminCharactersView.vue')
 const UserPortalView = () => import('../views/UserPortalView.vue')
@@ -77,6 +79,11 @@ const router = createRouter({
       path: '/characters',
       name: 'characters',
       component: CharacterListView
+    },
+    {
+      path: '/tier-ranking',
+      name: 'tier-ranking',
+      component: TierRankingView
     },
     {
       path: '/mastery',
@@ -164,6 +171,10 @@ const router = createRouter({
       path: '/reset-password',
       name: 'reset-password',
       component: AdminLoginView
+    },    {
+      path: '/verify-email',
+      name: 'verify-email',
+      component: EmailVerificationView
     },
     {
       path: '/admin/login',

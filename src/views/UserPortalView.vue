@@ -1,10 +1,14 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 import RolePortalShell from '../components/RolePortalShell.vue'
-import { authState, clearSession, refreshSession } from '../services/authApi'
+import { authState, clearSession, refreshSession, requestEmailVerification } from '../services/authApi'
 
 const router = useRouter()
+const verificationSending = ref(false)
+const verificationNotice = ref('')
+const verificationError = ref('')
+const developmentVerificationUrl = ref('')
 
 const navigation = [
   { to: '/account', index: '01', label: 'Tổng quan', hint: 'Trang cá nhân của bạn' },
@@ -53,6 +57,22 @@ const modules = [
   },
 ]
 
+const sendVerification = async () => {
+  verificationSending.value = true
+  verificationNotice.value = ''
+  verificationError.value = ''
+  developmentVerificationUrl.value = ''
+  try {
+    const result = await requestEmailVerification()
+    verificationNotice.value = result.message || 'Đã gửi liên kết xác minh Gmail.'
+    developmentVerificationUrl.value = result.verificationUrl || ''
+    if (result.verified) await refreshSession()
+  } catch (error) {
+    verificationError.value = error?.message || 'Chưa thể gửi email xác minh. Vui lòng thử lại.'
+  } finally {
+    verificationSending.value = false
+  }
+}
 const logout = async () => {
   clearSession()
   await router.replace('/')
@@ -87,6 +107,47 @@ onMounted(() => refreshSession().catch(() => {}))
       </div>
     </section>
 
+    <section class="verification-panel" aria-labelledby="verification-title">
+      <div class="verification-panel__heading">
+        <div>
+          <span>BẢO MẬT TÀI KHOẢN</span>
+          <h2 id="verification-title">Xác minh liên hệ</h2>
+        </div>
+        <p>Xác minh Gmail hoặc số điện thoại để được bình chọn tối đa 8 nhân vật mỗi phẩm trong tháng.</p>
+      </div>
+      <div class="verification-grid">
+        <article class="verification-method" :class="{ 'is-verified': authState.session?.emailVerified }">
+          <div class="verification-method__icon" aria-hidden="true">@</div>
+          <div class="verification-method__copy">
+            <span>Gmail</span>
+            <strong>{{ authState.session?.emailVerified ? 'Đã xác minh' : 'Chưa xác minh' }}</strong>
+            <small>{{ authState.session?.emailVerified ? 'Tài khoản đã được mở giới hạn bình chọn.' : 'Nhận liên kết dùng một lần qua Gmail.' }}</small>
+          </div>
+          <button
+            v-if="!authState.session?.emailVerified"
+            type="button"
+            :disabled="verificationSending"
+            @click="sendVerification"
+          >
+            {{ verificationSending ? 'Đang gửi...' : 'Gửi email xác minh' }}
+          </button>
+          <span v-else class="verification-method__badge">✓ Đã xác minh</span>
+        </article>
+
+        <article class="verification-method verification-method--disabled" :class="{ 'is-verified': authState.session?.phoneVerified }">
+          <div class="verification-method__icon" aria-hidden="true">#</div>
+          <div class="verification-method__copy">
+            <span>Số điện thoại</span>
+            <strong>{{ authState.session?.phoneVerified ? 'Đã xác minh' : 'Chưa khả dụng' }}</strong>
+            <small>{{ authState.session?.phoneVerified ? 'Số điện thoại đã được xác minh.' : 'Chưa có nhà cung cấp SMS OTP; hệ thống không tự đánh dấu xác minh.' }}</small>
+          </div>
+          <span class="verification-method__badge">{{ authState.session?.phoneVerified ? '✓ Đã xác minh' : 'Sắp có' }}</span>
+        </article>
+      </div>
+      <p v-if="verificationNotice" class="verification-feedback verification-feedback--success" role="status">{{ verificationNotice }}</p>
+      <p v-if="verificationError" class="verification-feedback verification-feedback--error" role="alert">{{ verificationError }}</p>
+      <a v-if="developmentVerificationUrl" class="verification-development-link" :href="developmentVerificationUrl">Mở liên kết xác minh trong môi trường phát triển</a>
+    </section>
     <div class="portal-section-heading">
       <div>
         <span>Tiện ích của bạn</span>
@@ -150,6 +211,10 @@ onMounted(() => refreshSession().catch(() => {}))
 .balance-card a { flex: 0 0 auto; border-radius: 9px; background: #55d8ff; padding: 10px 12px; color: #04111a; font-size: 11px; font-weight: 900; }
 .balance-card a span { margin-left: 4px; color: inherit; font-size: inherit; }
 
+.verification-panel{margin-top:16px;border:1px solid rgba(85,216,255,.18);border-radius:18px;background:linear-gradient(135deg,rgba(9,27,42,.92),rgba(8,15,24,.94));padding:22px}
+.verification-panel__heading{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:15px}.verification-panel__heading span{color:#55d8ff;font-size:9px;font-weight:900;letter-spacing:.14em}.verification-panel__heading h2{margin:4px 0 0;color:#f1f7fc;font-size:20px}.verification-panel__heading p{max-width:510px;margin:0;color:#7890a5;font-size:11px;line-height:1.6}
+.verification-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.verification-method{display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:12px;border:1px solid rgba(125,158,185,.16);border-radius:14px;background:rgba(3,12,20,.42);padding:15px}.verification-method.is-verified{border-color:rgba(83,225,169,.3);background:rgba(83,225,169,.045)}.verification-method--disabled{opacity:.72}.verification-method__icon{display:grid;width:44px;height:44px;place-items:center;border-radius:11px;background:rgba(85,216,255,.1);color:#55d8ff;font:900 17px ui-monospace,monospace}.verification-method.is-verified .verification-method__icon{background:rgba(83,225,169,.11);color:#53e1a9}.verification-method__copy span{display:block;color:#71889b;font-size:9px;font-weight:850;letter-spacing:.09em;text-transform:uppercase}.verification-method__copy strong{display:block;margin-top:3px;color:#edf6fc;font-size:14px}.verification-method__copy small{display:block;margin-top:3px;color:#6f8496;font-size:10px;line-height:1.45}.verification-method button{border:0;border-radius:9px;background:#55d8ff;padding:10px 12px;color:#031019;font-size:10px;font-weight:900;cursor:pointer}.verification-method button:disabled{cursor:wait;opacity:.55}.verification-method__badge{color:#53e1a9;font-size:10px;font-weight:900}.verification-method--disabled:not(.is-verified) .verification-method__badge{color:#8093a4}
+.verification-feedback{margin:12px 0 0;border-radius:9px;padding:10px 12px;font-size:11px;line-height:1.5}.verification-feedback--success{background:rgba(83,225,169,.08);color:#79e8bd}.verification-feedback--error{background:rgba(255,107,126,.08);color:#ff8998}.verification-development-link{display:inline-flex;margin-top:10px;color:#55d8ff;font-size:11px;font-weight:850;text-decoration:underline}
 .portal-section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin: 28px 2px 13px; }
 .portal-section-heading span { color: #55d8ff; font-size: 10px; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
 .portal-section-heading h2 { margin: 4px 0 0; color: #edf5fc; font-size: 20px; font-weight: 900; }
@@ -179,11 +244,17 @@ onMounted(() => refreshSession().catch(() => {}))
 .user-help a { color: #5de0b8; font-size: 10px; font-weight: 850; }
 
 @media (max-width: 850px) {
+  .verification-panel__heading { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .verification-grid { grid-template-columns: 1fr; }
   .user-welcome { grid-template-columns: 1fr; }
   .user-module-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
+  .verification-panel { padding: 16px; }
+  .verification-method { grid-template-columns: 38px minmax(0, 1fr); }
+  .verification-method__icon { width: 38px; height: 38px; }
+  .verification-method button, .verification-method__badge { grid-column: 2; justify-self: start; }
   .user-welcome { padding: 19px; }
   .balance-card { align-items: flex-start; flex-direction: column; }
   .portal-section-heading p { display: none; }
