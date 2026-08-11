@@ -870,7 +870,7 @@
       "nameVi": "Mặt Nạ Ngọt Ngào",
       "nameEn": "Amai Mask",
       "rarity": "SR",
-      "isCore": false,
+      "isCore": true,
       "baseVotes": 4
     },
     {
