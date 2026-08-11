@@ -29,7 +29,11 @@ export const getAccessToken = () => storage()?.getItem(TOKEN_KEY) || ''
 
 export const hasValidSession = () => {
   const token = getAccessToken()
-  if (token === 'dev-admin-mock-access-token-12345') return Boolean(authState.session)
+  if (token === 'dev-admin-mock-access-token-12345') {
+    if (import.meta.env?.DEV) return Boolean(authState.session)
+    clearSession()
+    return false
+  }
   const payload = token ? decodePayload(token) : null
   if (!payload?.exp || payload.exp * 1000 <= Date.now()) {
     clearSession()
