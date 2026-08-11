@@ -11,10 +11,10 @@ export const getTierRankings = () =>
 export const getMyTierVotes = () =>
   authorizedRequest('api/tier-rankings/mine')
 
-export const setTierVote = async (characterId, active) => {
+export const setTierVote = async characterId => {
   const result = await authorizedRequest('api/tier-rankings/votes/' + encodeURIComponent(characterId), {
     method: 'PUT',
-    body: JSON.stringify({ active }),
+    body: JSON.stringify({ active: true }),
   })
   invalidateApiCache('api/tier-rankings')
   return result

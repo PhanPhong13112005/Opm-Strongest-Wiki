@@ -154,8 +154,11 @@ test('tier votes use one shared ranking and remain idempotent per account', asyn
     token: tokens.one,
     body: { active: false },
   })
-  assert.equal(response.payload.votes, 1)
-  assert.equal(response.payload.totalVotes, 1)
+  assert.equal(response.statusCode, 409)
+  assert.match(response.payload.message, /không thể hủy/)
+
+  response = await invoke({ path: '/tier-rankings' })
+  assert.equal(response.payload.totalVotes, 2, 'an irreversible vote must not be deleted')
 
   response = await invoke({
     path: '/tier-rankings/votes/not-a-character',
@@ -182,7 +185,7 @@ test('tier votes use one shared ranking and remain idempotent per account', asyn
     token: tokens.one,
     body: { active: true },
   })
-  assert.equal(response.statusCode, 200)
+  assert.equal(response.statusCode, 409)
   assert.equal(response.payload.maxVotesPerRarity, 1)
   assert.equal(response.payload.hasVerifiedContact, false)
 
@@ -212,7 +215,7 @@ test('tier votes use one shared ranking and remain idempotent per account', asyn
   await sql.query('UPDATE user_accounts SET "EmailVerified" = true WHERE "Id" = $1',
     ['00000000-0000-0000-0000-000000000011'])
   const remainingVerifiedPicks = urPlusIds
-    .filter(id => id !== firstUnverifiedPick)
+    .filter(id => id !== characterId)
     .slice(0, 7)
   for (const id of remainingVerifiedPicks) {
     response = await invoke({
@@ -227,7 +230,7 @@ test('tier votes use one shared ranking and remain idempotent per account', asyn
   }
 
   const ninthPick = urPlusIds.find(id =>
-    id !== firstUnverifiedPick && !remainingVerifiedPicks.includes(id))
+    id !== characterId && !remainingVerifiedPicks.includes(id))
   response = await invoke({
     path: '/tier-rankings/votes/' + ninthPick,
     method: 'PUT',
@@ -248,7 +251,7 @@ test('tier votes use one shared ranking and remain idempotent per account', asyn
   assert.equal(response.payload.resetsAt, '2026-09-30T17:00:00.000Z')
 
   response = await invoke({
-    path: '/tier-rankings/votes/' + firstUnverifiedPick,
+    path: '/tier-rankings/votes/' + characterId,
     method: 'PUT',
     token: tokens.one,
     body: { active: true },
@@ -256,13 +259,13 @@ test('tier votes use one shared ranking and remain idempotent per account', asyn
   assert.equal(response.statusCode, 200, 'the same character can be selected again in a new month')
 
   response = await invoke({ path: '/tier-rankings/mine', token: tokens.one })
-  assert.deepEqual(new Set(response.payload.characterIds), new Set([ninthPick, firstUnverifiedPick]))
+  assert.deepEqual(new Set(response.payload.characterIds), new Set([ninthPick, characterId]))
   assert.equal(response.payload.maxVotesPerRarity, 8)
   assert.equal(response.payload.resetsAt, '2026-09-30T17:00:00.000Z')
 
   const historyRows = await sql.query(
     'SELECT "VoteMonth" AS "voteMonth" FROM tier_ranking_votes WHERE "UserId" = $1 AND "CharacterId" = $2 ORDER BY "VoteMonth"',
-    ['00000000-0000-0000-0000-000000000011', firstUnverifiedPick],
+    ['00000000-0000-0000-0000-000000000011', characterId],
   )
   assert.deepEqual(historyRows.map(row => row.voteMonth), ['2026-08', '2026-09'])
 
@@ -344,4 +347,8 @@ test('tier ranking encodes reserved characters in production asset URLs', () => 
   assert.match(view, /@click="stepRarity\(-1\)"/)
   assert.match(view, /@click="stepRarity\(1\)"/)
   assert.match(view, /scrollIntoView\(\{/)
+  assert.match(view, /text\.confirmWarning/)
+  assert.match(view, /role="dialog"/)
+  assert.match(view, /@click="confirmVote"/)
+  assert.match(view, /myVotes\.has\(character\.id\) \|\| selectedInActiveRarity/)
 })

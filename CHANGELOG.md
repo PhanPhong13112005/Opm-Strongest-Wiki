@@ -10,6 +10,7 @@
   tham khảo vì sức mạnh còn phụ thuộc tuổi server, đội hình, tài nguyên và meta.
 - Thêm bình chọn theo tài khoản và theo phẩm: tài khoản chưa xác minh được chọn 1 nhân vật mỗi phẩm mỗi tháng;
   tài khoản đã xác minh Gmail hoặc số điện thoại được chọn tối đa 8 nhân vật mỗi phẩm mỗi tháng.
+- Thêm hộp xác nhận trước khi gửi phiếu; phiếu đã xác nhận là bất biến trong kỳ tháng hiện tại và API từ chối yêu cầu hủy.
 - Tách dữ liệu bình chọn bằng khóa tháng theo múi giờ `Asia/Ho_Chi_Minh`. Khi sang tháng, API chỉ đọc kỳ mới nên
   hạn mức tự làm mới lúc 00:00 ngày đầu tháng mà không cần cron xóa lịch sử cũ.
 - Thêm luồng gửi email xác minh bằng Resend, liên kết có thời hạn, token lưu dạng băm, dùng một lần và có giới hạn
