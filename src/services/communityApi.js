@@ -6,14 +6,16 @@ const optionalAuthHeaders = () => hasValidSession()
   : {}
 
 export const getTierRankings = () =>
-  requestApiCached('api/tier-rankings', null, { ttlMs: 15_000 })
+  requestApiCached('api/tier-rankings', null, { ttlMs: 15_000, timeoutMs: 20_000, retryCount: 1 })
 
 export const getMyTierVotes = () =>
-  authorizedRequest('api/tier-rankings/mine')
+  authorizedRequest('api/tier-rankings/mine', { timeoutMs: 20_000, retryCount: 1 })
 
 export const setTierVote = async characterId => {
   const result = await authorizedRequest('api/tier-rankings/votes/' + encodeURIComponent(characterId), {
     method: 'PUT',
+    timeoutMs: 25_000,
+    retryCount: 1,
     body: JSON.stringify({ active: true }),
   })
   invalidateApiCache('api/tier-rankings')

@@ -3,6 +3,7 @@ import { isSameOriginApiAvailable, requestApi } from './apiClient'
 
 const TOKEN_KEY = 'opmwiki.auth.token'
 const SESSION_KEY = 'opmwiki.auth.session'
+const AUTH_REQUEST_TIMEOUT_MS = 25_000
 const storage = () => typeof sessionStorage === 'undefined' ? null : sessionStorage
 
 const decodePayload = (token) => {
@@ -61,24 +62,28 @@ const saveSession = (result) => {
 
 export const login = async (username, password) => saveSession(await requestApi('api/auth/login', null, {
   method: 'POST',
+  timeoutMs: AUTH_REQUEST_TIMEOUT_MS,
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ username, password }),
 }))
 
 export const register = async (username, email, password) => saveSession(await requestApi('api/auth/register', null, {
   method: 'POST',
+  timeoutMs: AUTH_REQUEST_TIMEOUT_MS,
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ username, email, password }),
 }))
 
 export const requestPasswordReset = async (email) => requestApi('api/auth/forgot-password', null, {
   method: 'POST',
+  timeoutMs: AUTH_REQUEST_TIMEOUT_MS,
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ email }),
 })
 
 export const resetPassword = async (token, password) => requestApi('api/auth/reset-password', null, {
   method: 'POST',
+  timeoutMs: AUTH_REQUEST_TIMEOUT_MS,
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ token, password }),
 })
@@ -90,6 +95,7 @@ export const requestEmailVerification = async () => authorizedRequest('api/auth/
 
 export const verifyEmail = async (token) => requestApi('api/auth/email-verification/confirm', null, {
   method: 'POST',
+  timeoutMs: AUTH_REQUEST_TIMEOUT_MS,
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ token }),
 })
