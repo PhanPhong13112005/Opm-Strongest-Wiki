@@ -47,8 +47,42 @@ export const deleteAdminKeepsake = (characterId) =>
     method: 'DELETE',
   }, 'api/characters')
 
-export const getAdminDashboard = () => authorizedRequest('api/admin/dashboard')
-export const getAdminUsers = () => authorizedRequest('api/admin/users')
+export const getAdminDashboard = async () => {
+  try {
+    return await authorizedRequest('api/admin/dashboard')
+  } catch (error) {
+    if (import.meta.env?.DEV) {
+      return {
+        characters: 154,
+        events: 18,
+        releaseEntries: 12,
+        eventComments: 45,
+        forumTopics: 28,
+        forumPosts: 92,
+        users: 120,
+        staff: 5,
+        admins: 2,
+        pendingTopUps: 0,
+      }
+    }
+    throw error
+  }
+}
+
+export const getAdminUsers = async () => {
+  try {
+    return await authorizedRequest('api/admin/users')
+  } catch (error) {
+    if (import.meta.env?.DEV) {
+      return [
+        { id: '1', username: 'admin', displayName: 'Quản Trị Viên (Dev)', role: 'Admin', balance: 999999, isActive: true, createdAt: '2026-01-01T00:00:00Z' },
+        { id: '2', username: 'staff1', displayName: 'Kiểm Duyệt Viên 1', role: 'Staff', balance: 50000, isActive: true, createdAt: '2026-02-15T00:00:00Z' },
+        { id: '3', username: 'user_qa', displayName: 'Người Dùng QA', role: 'User', balance: 10000, isActive: true, createdAt: '2026-03-20T00:00:00Z' },
+      ]
+    }
+    throw error
+  }
+}
 export const updateAdminUserRole = (id, role) => authorizedRequest(`api/admin/users/${id}/role`, {
   method: 'PUT', body: JSON.stringify({ role }),
 })
