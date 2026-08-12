@@ -74,10 +74,9 @@ const dateStr = (iso) => new Date(iso).toLocaleDateString('vi-VN', { hour: '2-di
 .notif-wrapper { position: relative; display: inline-block; }
 .btn-bell {
   cursor: pointer;
-  position: relative;
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, .1);
   background: rgba(15, 23, 42, .6);
   color: #cbd5e1;
@@ -86,7 +85,7 @@ const dateStr = (iso) => new Date(iso).toLocaleDateString('vi-VN', { hour: '2-di
   transition: all .2s;
 }
 .btn-bell:hover { border-color: #ffc700; color: #ffc700; }
-.btn-bell svg { width: 18px; height: 18px; }
+.btn-bell svg { width: 16px; height: 16px; }
 
 .bell-badge {
   position: absolute;
