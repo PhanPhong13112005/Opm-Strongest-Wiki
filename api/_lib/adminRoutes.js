@@ -1,6 +1,6 @@
 import { ensureAdminSchema } from './adminDatabase.js'
 import { getSql } from './database.js'
-import { bodyOf, json, methodNotAllowed, noContent, requireCurrentUser } from './http.js'
+import { bodyOf, json, methodNotAllowed, noContent, publicCache, requireCurrentUser, serverTiming } from './http.js'
 
 const text = (value) => String(value ?? '').trim()
 const list = (value) => Array.isArray(value)
@@ -14,10 +14,6 @@ const dateValue = (value) => {
 }
 
 const isEnglish = (language) => String(language || '').toLowerCase() === 'en'
-const publicCache = (response) => {
-  response.setHeader('Cache-Control', 'public, max-age=60, s-maxage=300, stale-while-revalidate=3600')
-  response.setHeader('Vary', 'Accept-Encoding')
-}
 
 const validationResponse = (response, errors) => json(response, 400, {
   title: 'One or more validation errors occurred.',
@@ -589,8 +585,11 @@ const handleEvents = async (request, response, path, sql) => {
 const handleReleases = async (request, response, path, sql) => {
   if (path === '/release-schedule') {
     if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
+    const t0 = performance.now()
     const rows = await sql.query(`${releaseSelect} ORDER BY "Date", "Server", "SortOrder"`)
+    const tQuery = performance.now()
     publicCache(response)
+    serverTiming(response, { 'db-releases': tQuery - t0, total: tQuery - t0 })
     return json(response, 200, rows.map((row) => mapRelease(row, request.query?.language)))
   }
   const match = /^\/admin\/releases\/(\d+)$/.exec(path)
@@ -670,7 +669,9 @@ export const createAdminDataRouteHandler = ({
 
   const sql = sqlProvider()
   if (isAdminData && !await requireCurrentUser(request, response, sql, ['Admin'])) return true
-  await ensureSchema()
+  // Schema migration is handled by POST /api/migrate — not on every request.
+  // Admin-only writes call ensureSchema() to guarantee tables exist before mutations.
+  if (isAdminData) await ensureSchema()
 
   if (path === '/release-schedule' || path.startsWith('/admin/releases')) return handleReleases(request, response, path, sql)
   if (path === '/characters' || path.startsWith('/characters/')) return handlePublicCharacters(request, response, path, sql)

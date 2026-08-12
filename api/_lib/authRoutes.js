@@ -67,6 +67,7 @@ export const createAuthRouteHandler = ({
   sqlProvider = getSql,
 } = {}) => async (request, response, path) => {
   if (!path.startsWith('/auth/') && !path.startsWith('/admin/users')) return false
+  // Auth routes are always writes or authenticated reads — schema must exist.
   await ensureSchema()
 
   if (path === '/auth/register') {
