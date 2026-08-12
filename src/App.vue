@@ -68,7 +68,8 @@ const toggleMobileMenu = () => {
   }
 }
 const isWorkspaceRoute = computed(() => isAuthenticated.value && (
-  ['/account', '/forum', '/advisor'].includes(route.path)
+  ['/account', '/forum', '/advisor', '/staff'].includes(route.path)
+  || route.path.startsWith('/admin/')
 ))
 
 const workspaceLinks = computed(() => {
