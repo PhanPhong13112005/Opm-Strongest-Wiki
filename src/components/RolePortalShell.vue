@@ -89,12 +89,12 @@ const isActive = item => {
   --accent-gold: #ffc700;
   --accent-cyan: #38bdf8;
   position: relative;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 72px);
   background:
-    radial-gradient(circle at 10% 10%, rgba(255, 199, 0, 0.04), transparent 40%),
-    radial-gradient(circle at 90% 90%, rgba(56, 189, 248, 0.04), transparent 40%),
+    radial-gradient(circle at 10% 10%, rgba(255, 199, 0, 0.03), transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(56, 189, 248, 0.03), transparent 40%),
     #05080e;
-  padding: 20px 24px 60px;
+  padding: 12px 16px 40px;
 }
 .role-portal__wrap { max-width: 1440px; margin: 0 auto; }
 
@@ -103,82 +103,82 @@ const isActive = item => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 16px 22px;
+  gap: 12px;
+  padding: 10px 16px;
   border: 1px solid rgba(255, 255, 255, .08);
-  border-radius: 18px;
+  border-radius: 12px;
   background: linear-gradient(145deg, rgba(12, 19, 32, .95), rgba(6, 10, 18, .98));
 }
 
-.role-portal__brand { display: flex; align-items: center; gap: 12px; }
+.role-portal__brand { display: flex; align-items: center; gap: 10px; }
 .role-pill {
   display: inline-block;
-  padding: 4px 10px;
-  border-radius: 8px;
+  padding: 3px 8px;
+  border-radius: 6px;
   background: rgba(255, 199, 0, .12);
   border: 1px solid rgba(255, 199, 0, .3);
   color: #ffc700;
-  font-size: 10.5px;
+  font-size: 9.5px;
   font-weight: 900;
-  letter-spacing: .12em;
+  letter-spacing: .1em;
   text-transform: uppercase;
 }
-.role-title { margin: 0; color: #f8fafc; font-size: 20px; font-weight: 950; letter-spacing: -.01em; }
+.role-title { margin: 0; color: #f8fafc; font-size: 15px; font-weight: 900; letter-spacing: -.01em; }
 
-.role-portal__user { display: flex; align-items: center; gap: 14px; }
-.user-badge { display: flex; align-items: center; gap: 10px; }
+.role-portal__user { display: flex; align-items: center; gap: 10px; }
+.user-badge { display: flex; align-items: center; gap: 8px; }
 .avatar-circle {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
   background: linear-gradient(135deg, #ffc700, #f59e0b);
   color: #020617;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 950;
   display: grid;
   place-items: center;
 }
-.user-meta strong { display: block; color: #f8fafc; font-size: 13px; font-weight: 850; }
-.user-meta small { color: #64748b; font-size: 11px; }
+.user-meta strong { display: block; color: #f8fafc; font-size: 11.5px; font-weight: 850; line-height: 1.1; }
+.user-meta small { color: #64748b; font-size: 9.5px; }
 
 .btn-logout {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 8px;
-  height: 36px;
-  padding: 0 14px;
-  border-radius: 10px;
+  gap: 6px;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 8px;
   border: 1px solid rgba(244, 63, 94, .3);
   background: rgba(244, 63, 94, .08);
   color: #fb7185;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 850;
   transition: all .2s ease;
 }
 .btn-logout:hover { background: rgba(244, 63, 94, .2); border-color: rgba(244, 63, 94, .6); }
-.btn-logout svg { width: 14px; height: 14px; }
+.btn-logout svg { width: 12px; height: 12px; }
 
 /* Tabstrip Navigation */
 .role-portal__tabstrip {
   display: flex;
-  gap: 8px;
-  margin-top: 14px;
+  gap: 6px;
+  margin-top: 8px;
   overflow-x: auto;
   border-bottom: 1px solid rgba(255, 255, 255, .08);
-  padding-bottom: 10px;
+  padding-bottom: 6px;
 }
 .nav-tab {
   display: flex;
   align-items: center;
-  gap: 8px;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 12px;
+  gap: 6px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, .06);
   background: rgba(12, 19, 32, .6);
   color: #8194a6;
-  font-size: 13px;
+  font-size: 11.5px;
   font-weight: 850;
   text-decoration: none;
   white-space: nowrap;
@@ -189,15 +189,15 @@ const isActive = item => {
   background: #ffc700;
   border-color: #ffc700;
   color: #020617;
-  box-shadow: 0 0 14px rgba(255, 199, 0, .25);
+  box-shadow: 0 0 10px rgba(255, 199, 0, .25);
 }
 .nav-tab__num {
-  font-size: 10px;
+  font-size: 9.5px;
   font-weight: 900;
   opacity: .7;
 }
 
-.role-portal__content { margin-top: 16px; }
+.role-portal__content { margin-top: 10px; }
 
 @media (max-width: 768px) {
   .role-portal__topbar { flex-direction: column; align-items: flex-start; }
