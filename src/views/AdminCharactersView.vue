@@ -27,6 +27,14 @@ const editingId = ref('')
 const showForm = ref(false)
 
 const emptyStats = () => ({ atk: 0, hp: 0, def: 0, spd: 0 })
+const emptySkill = () => ({
+  name: '',
+  type: 'Tuyệt kĩ',
+  desc: '',
+  icon: '',
+  cost: 0,
+  keepsakeIcon: '',
+})
 const emptyCharacter = () => ({
   id: '', nameVi: '', nameEn: '', imageUrl: '', tier: '',
   typeVi: '', typeEn: '', factionVi: '', factionEn: '',
@@ -34,6 +42,7 @@ const emptyCharacter = () => ({
   keepsakeIcon: '', traitsVi: '', traitsEn: '', bondListVi: '', bondListEn: '',
   classLevel: '', releaseSea: '', releaseChina: '',
   baseStats: emptyStats(), pvpStats: emptyStats(),
+  skills: [],
 })
 const form = ref(emptyCharacter())
 const isEditing = computed(() => Boolean(editingId.value))
@@ -42,6 +51,17 @@ const splitList = (value) => value
   .split(',')
   .map(item => item.trim())
   .filter(Boolean)
+
+const addSkill = () => {
+  if (!Array.isArray(form.value.skills)) form.value.skills = []
+  form.value.skills.push(emptySkill())
+}
+
+const removeSkill = (index) => {
+  if (Array.isArray(form.value.skills)) {
+    form.value.skills.splice(index, 1)
+  }
+}
 
 const toPayload = () => ({
   ...form.value,
@@ -54,6 +74,14 @@ const toPayload = () => ({
   releaseChina: form.value.releaseChina || null,
   baseStats: Object.fromEntries(Object.entries(form.value.baseStats).map(([key, value]) => [key, Number(value) || 0])),
   pvpStats: Object.fromEntries(Object.entries(form.value.pvpStats).map(([key, value]) => [key, Number(value) || 0])),
+  skills: (form.value.skills || []).map(s => ({
+    name: (s.name || '').trim(),
+    type: (s.type || 'Tuyệt kĩ').trim(),
+    desc: (s.desc || s.description || '').trim(),
+    icon: (s.icon || '').trim() || null,
+    cost: Number(s.cost) || 0,
+    keepsakeIcon: (s.keepsakeIcon || '').trim() || null,
+  })),
 })
 
 const load = async () => {
@@ -93,6 +121,16 @@ const startEdit = (character) => {
     releaseChina: character.releaseChina || '',
     baseStats: { ...emptyStats(), ...(character.baseStats || {}) },
     pvpStats: { ...emptyStats(), ...(character.pvpStats || {}) },
+    skills: Array.isArray(character.skills)
+      ? character.skills.map(s => ({
+          name: s.name || '',
+          type: s.type || 'Tuyệt kĩ',
+          desc: s.desc || s.description || '',
+          icon: s.icon || '',
+          cost: Number(s.cost) || 0,
+          keepsakeIcon: s.keepsakeIcon || '',
+        }))
+      : [],
   }
   showForm.value = true
   notice.value = ''
@@ -232,6 +270,42 @@ onMounted(load)
                 <label v-for="stat in ['atk', 'hp', 'def', 'spd']" :key="stat" class="admin-field"><span>{{ stat }}</span><input v-model.number="form[group][stat]" type="number" min="0" /></label>
               </div>
             </div>
+          </div>
+
+          <!-- Skill Management Section -->
+          <div class="rounded-xl border border-white/10 bg-black/20 p-4 sm:p-5">
+            <div class="mb-4 flex items-center justify-between">
+              <div>
+                <h3 class="text-sm font-black uppercase tracking-wider text-opm-gold">Danh sách Kỹ năng ({{ form.skills?.length || 0 }})</h3>
+                <p class="mt-1 text-xs text-gray-400">Thêm, chỉnh sửa mô tả, chỉ số tiêu hao NL và icon của từng kỹ năng nhân vật.</p>
+              </div>
+              <button type="button" class="rounded-lg border border-opm-gold/40 px-3 py-1.5 text-xs font-bold text-opm-gold hover:bg-opm-gold/10" @click="addSkill">+ Thêm kỹ năng</button>
+            </div>
+
+            <div v-if="form.skills && form.skills.length" class="space-y-4">
+              <div v-for="(skill, idx) in form.skills" :key="idx" class="rounded-xl border border-white/10 bg-black/40 p-4">
+                <div class="mb-3 flex items-center justify-between border-b border-white/5 pb-2">
+                  <span class="text-xs font-bold text-sky-400">Kỹ năng #{{ idx + 1 }} - {{ skill.name || 'Chưa đặt tên' }}</span>
+                  <button type="button" class="text-xs font-bold text-red-400 hover:underline" @click="removeSkill(idx)">Xóa skill này</button>
+                </div>
+                <div class="grid gap-3 md:grid-cols-3">
+                  <label class="admin-field"><span>Tên kỹ năng</span><input v-model="skill.name" required placeholder="Tên skill (vd: Tuyệt kĩ / Cơ bản)" /></label>
+                  <label class="admin-field"><span>Phân loại</span>
+                    <select v-model="skill.type" class="w-full rounded-xl border border-white/10 bg-black/30 px-3 py-2.5 text-sm text-white outline-none">
+                      <option value="Kỹ năng thường">Kỹ năng thường</option>
+                      <option value="Tuyệt kĩ">Tuyệt kĩ</option>
+                      <option value="Nội tại">Nội tại</option>
+                      <option value="Thức tỉnh">Thức tỉnh</option>
+                      <option value="Cốt Lõi">Cốt Lõi</option>
+                    </select>
+                  </label>
+                  <label class="admin-field"><span>Tiêu hao NL (Cost)</span><input v-model.number="skill.cost" type="number" min="0" max="10" /></label>
+                  <label class="admin-field md:col-span-3"><span>Đường dẫn Icon Skill</span><input v-model="skill.icon" placeholder="/Skill/..." /></label>
+                  <label class="admin-field md:col-span-3"><span>Mô tả kỹ năng</span><textarea v-model="skill.desc" rows="3" placeholder="Mô tả chi tiết hiệu ứng, sát thương, tỷ lệ..." required /></label>
+                </div>
+              </div>
+            </div>
+            <div v-else class="py-6 text-center text-xs text-gray-500">Chưa có kỹ năng nào. Nhấn "+ Thêm kỹ năng" để nhập skill.</div>
           </div>
 
           <div class="grid gap-4 md:grid-cols-2">
