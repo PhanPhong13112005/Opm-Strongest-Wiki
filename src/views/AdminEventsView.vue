@@ -171,7 +171,7 @@ onMounted(load)
 .admin-field input, .admin-field textarea, .admin-field select { width: 100%; border: 1px solid rgba(120, 152, 181, .18); border-radius: 10px; background: rgba(0, 0, 0, .24); padding: 10px 11px; color: #e4edf4; font-size: 12px; outline: none; }
 .admin-field textarea { resize: vertical; line-height: 1.55; }
 .admin-field input:focus, .admin-field textarea:focus, .admin-field select:focus { border-color: rgba(255, 184, 77, .5); }
-.code-input { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+.code-input { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Consolas, monospace; }
 .editor-panel footer { display: flex; justify-content: flex-end; gap: 9px; border-top: 1px solid rgba(120, 152, 181, .1); padding: 15px 20px; }
 .secondary-action, .row-actions button { border: 1px solid rgba(120, 152, 181, .2); border-radius: 9px; padding: 9px 12px; color: #b7c5d0; font-size: 10px; font-weight: 850; }
 .content-panel { margin-top: 14px; overflow: hidden; }
