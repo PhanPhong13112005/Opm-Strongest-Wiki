@@ -369,7 +369,7 @@ onBeforeUnmount(clearTimers)
 }
 
 .payment-shell { width: min(100%, 960px); margin: 0 auto; }
-.payment-page { font-family: Inter, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; }
+.payment-page { font-family: 'Inter', "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; }
 .payment-back { display: inline-flex; align-items: center; gap: 8px; color: #91a4ad; font-size: 13px; font-weight: 750; }
 .payment-back:hover { color: #78e5c4; }
 .payment-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 22px; margin-top: 24px; border-bottom: 1px solid rgba(101, 147, 177, .15); padding-bottom: 22px; }

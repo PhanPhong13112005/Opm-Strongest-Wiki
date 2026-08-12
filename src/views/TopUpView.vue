@@ -269,7 +269,7 @@ onMounted(load)
 }
 
 .topup-shell { width: min(100%, 1120px); margin: 0 auto; }
-.topup-page { font-family: Inter, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; }
+.topup-page { font-family: 'Inter', "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; }
 .topup-hero { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; border-bottom: 1px solid rgba(104, 151, 190, .16); padding-bottom: 25px; }
 .topup-hero p, .topup-history > header span { margin: 0; color: #55d8ff; font: 900 11px ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .11em; }
 .topup-hero h1 { margin: 6px 0 0; color: #f4f9fc; font-size: clamp(36px, 5vw, 52px); font-weight: 900; line-height: 1.12; letter-spacing: -.03em; }

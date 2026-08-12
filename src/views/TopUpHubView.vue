@@ -65,7 +65,7 @@ const copy = computed(() => locale.value === 'en'
     radial-gradient(circle at 86% 80%, rgba(255, 179, 71, .08), transparent 32%),
     #050a11;
   padding: clamp(24px, 6vw, 72px) 18px;
-  font-family: Inter, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Inter', "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .maintenance-card {
