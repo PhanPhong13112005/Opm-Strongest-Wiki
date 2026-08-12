@@ -1,6 +1,6 @@
 import { ensureCommunitySchema, getSql } from './database.js'
 import { ensureAdminSchema } from './adminDatabase.js'
-import { bodyOf, json, methodNotAllowed, noContent, requireCurrentUser } from './http.js'
+import { bodyOf, json, methodNotAllowed, noContent, publicCache, requireCurrentUser, serverTiming } from './http.js'
 import { createRequire } from 'node:module'
 import { randomUUID } from 'node:crypto'
 
@@ -154,7 +154,12 @@ export const createCommunityRouteHandler = ({
     path.startsWith('/tier-rankings') ||
     path === '/admin/dashboard' || path === '/advisor/ask'
   if (!isCommunityPath) return false
-  await ensureSchema()
+
+  // Schema migration is handled by POST /api/migrate — not on every request.
+  // Only authenticated write paths call ensureSchema() to guarantee tables exist.
+  const isWritePath = request.method !== 'GET' || path === '/admin/dashboard'
+  if (isWritePath) await ensureSchema()
+
   const sql = sqlProvider()
 
   const voteMonth = path.startsWith('/tier-rankings') ? String(voteMonthProvider()) : ''
@@ -162,17 +167,11 @@ export const createCommunityRouteHandler = ({
   if (voteMonth && !/^\d{4}-(0[1-9]|1[0-2])$/.test(voteMonth)) {
     throw new Error('Invalid tier ranking vote month.')
   }
-  if (voteMonth) {
-    await sql.query(
-      `UPDATE tier_ranking_votes
-          SET "VoteMonth" = $1
-        WHERE "VoteMonth" = ''`,
-      [voteMonth],
-    )
-  }
+  // VoteMonth backfill is handled by POST /api/migrate — not on GET requests.
 
   if (path === '/tier-rankings') {
     if (request.method !== 'GET') return methodNotAllowed(response, ['GET'])
+    const t0 = performance.now()
     const rows = await sql.query(
       `SELECT "CharacterId" AS "characterId", COUNT(*)::int AS votes
          FROM tier_ranking_votes
@@ -181,6 +180,7 @@ export const createCommunityRouteHandler = ({
         ORDER BY votes DESC, "CharacterId"`,
       [voteMonth],
     )
+    const tVotes = performance.now()
     const totals = await sql.query(
       `SELECT COUNT(*)::int AS "totalVotes",
               COUNT(DISTINCT "UserId")::int AS "totalVoters"
@@ -188,6 +188,13 @@ export const createCommunityRouteHandler = ({
         WHERE "VoteMonth" = $1`,
       [voteMonth],
     )
+    const tTotals = performance.now()
+    publicCache(response, { maxAge: 10, sMaxAge: 30, staleWhileRevalidate: 60 })
+    serverTiming(response, {
+      'db-votes': tVotes - t0,
+      'db-totals': tTotals - tVotes,
+      total: tTotals - t0,
+    })
     return json(response, 200, {
       voteMonth,
       resetsAt,

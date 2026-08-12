@@ -78,3 +78,14 @@ export const routePath = (request) => {
 
 export const parseId = (value) => /^\d+$/.test(String(value || '')) ? Number(value) : null
 
+export const publicCache = (response, { maxAge = 60, sMaxAge = 300, staleWhileRevalidate = 3600 } = {}) => {
+  response.setHeader('Cache-Control', `public, max-age=${maxAge}, s-maxage=${sMaxAge}, stale-while-revalidate=${staleWhileRevalidate}`)
+  response.setHeader('Vary', 'Accept-Encoding')
+}
+
+export const serverTiming = (response, entries) => {
+  const value = Object.entries(entries)
+    .map(([name, ms]) => `${name};dur=${ms.toFixed(1)}`)
+    .join(', ')
+  if (value) response.setHeader('Server-Timing', value)
+}
