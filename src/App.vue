@@ -3,6 +3,7 @@ import { computed, defineAsyncComponent, onBeforeUnmount, onMounted, ref, watch 
 import { RouterView, RouterLink, useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import GlobalDataLoader from './components/GlobalDataLoader.vue'
+import NotificationBell from './components/NotificationBell.vue'
 import { pendingApiRequests } from './services/apiClient'
 import { authState, clearSession, hasRole, hasValidSession } from './services/authApi'
 
@@ -201,6 +202,7 @@ onBeforeUnmount(() => {
         </nav>
 
         <div class="ml-auto flex items-center gap-2 xl:ml-3">
+          <NotificationBell />
           <button class="lang-control" :aria-label="`Language ${lang}`" @click="toggleLang">
             <span :class="{ active: lang === 'VI' }">VI</span><span :class="{ active: lang === 'EN' }">EN</span>
           </button>
