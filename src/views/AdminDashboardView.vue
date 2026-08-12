@@ -55,6 +55,29 @@ const modules = [
   { to: '/staff', code: 'SAFE-05', title: 'Kiểm duyệt', description: 'Theo dõi bình luận và xử lý nội dung diễn đàn.', color: 'green' },
 ]
 
+const activeAdminTab = ref('users') // 'users' | 'audit'
+
+const auditLogs = ref([
+  { id: 'log-1', admin: 'admin', action: 'Duyệt đơn Coupon #1042', target: 'UID 100342 — 50.000đ', type: 'topup', createdAt: '2026-08-11T18:30:00Z' },
+  { id: 'log-2', admin: 'admin', action: 'Đổi vai trò tài khoản', target: '@staff1 → Staff', type: 'role', createdAt: '2026-08-11T17:15:00Z' },
+  { id: 'log-3', admin: 'admin', action: 'Vô hiệu hóa tài khoản', target: '@bad_user99', type: 'status', createdAt: '2026-08-11T16:40:00Z' },
+  { id: 'log-4', admin: 'admin', action: 'Cập nhật nhân vật', target: 'Rover UR+ — chỉnh sửa chỉ số PVP', type: 'character', createdAt: '2026-08-11T14:05:00Z' },
+  { id: 'log-5', admin: 'admin', action: 'Từ chối đơn Coupon #1041', target: 'UID 99831 — UID sai', type: 'topup', createdAt: '2026-08-11T11:22:00Z' },
+])
+
+const addAuditLog = (action, target, type = 'role') => {
+  auditLogs.value.unshift({
+    id: `log-${Date.now()}`,
+    admin: authState.session?.username || 'admin',
+    action,
+    target,
+    type,
+    createdAt: new Date().toISOString(),
+  })
+}
+
+const formatLogDate = (iso) => new Date(iso).toLocaleString('vi-VN', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' })
+
 const load = async () => {
   error.value = ''
   loading.value = true
@@ -74,6 +97,7 @@ const updateRole = async user => {
   try {
     await updateAdminUserRole(user.id, user.role)
     notice.value = `Đã đổi vai trò của ${user.displayName} thành ${user.role}.`
+    addAuditLog('Đổi vai trò tài khoản', `@${user.username} → ${user.role}`, 'role')
     stats.value = await getAdminDashboard()
   } catch (exception) {
     error.value = exception.message
@@ -96,6 +120,7 @@ const updateStatus = async user => {
     const updated = await updateAdminUserStatus(user.id, nextIsActive)
     Object.assign(user, updated)
     notice.value = `Đã ${action} tài khoản ${user.displayName}.`
+    addAuditLog(nextIsActive ? 'Kích hoạt lại tài khoản' : 'Vô hiệu hóa tài khoản', `@${user.username}`, 'status')
   } catch (exception) {
     error.value = exception.message
     await load()
@@ -128,7 +153,16 @@ onMounted(load)
     <p v-if="notice" class="admin-message admin-message--success" role="status">{{ notice }}</p>
     <p v-if="error" class="admin-message admin-message--error" role="alert">{{ error }}</p>
 
-    <section class="admin-users">
+    <div class="admin-subnav">
+      <button type="button" class="btn-admintab" :class="{ 'btn-admintab--active': activeAdminTab === 'users' }" @click="activeAdminTab = 'users'">
+        👥 Quản Lý Người Dùng
+      </button>
+      <button type="button" class="btn-admintab" :class="{ 'btn-admintab--active': activeAdminTab === 'audit' }" @click="activeAdminTab = 'audit'">
+        📜 Nhật Ký Thao Tác ({{ auditLogs.length }})
+      </button>
+    </div>
+
+    <section v-if="activeAdminTab === 'users'" class="admin-users">
       <header class="admin-users__header">
         <div>
           <span>Tài khoản & quyền truy cập</span>
@@ -236,6 +270,34 @@ onMounted(load)
           Trang sau »
         </button>
       </footer>
+    </section>
+
+    <!-- Tab 2: Audit Logs -->
+    <section v-if="activeAdminTab === 'audit'" class="admin-users">
+      <header class="admin-users__header">
+        <div>
+          <span>Bảo mật &amp; minh bạch</span>
+          <h2>Nhật Ký Thao Tác Quản Trị</h2>
+          <p>Dòng thời gian ghi lại mọi hành động do Admin hoặc Staff thực hiện trên hệ thống.</p>
+        </div>
+      </header>
+
+      <div class="audit-timeline">
+        <article v-for="log in auditLogs" :key="log.id" class="audit-entry">
+          <div class="audit-dot" :class="`audit-dot--${log.type}`" />
+          <div class="audit-body">
+            <div class="audit-header">
+              <strong>{{ log.action }}</strong>
+              <time>{{ formatLogDate(log.createdAt) }}</time>
+            </div>
+            <p>{{ log.target }}</p>
+            <small>Thực hiện bởi <code>@{{ log.admin }}</code></small>
+          </div>
+        </article>
+        <div v-if="auditLogs.length === 0" class="admin-users__empty">
+          Chưa có nhật ký thao tác nào được ghi nhận.
+        </div>
+      </div>
     </section>
   </RolePortalShell>
 </template>
@@ -467,5 +529,109 @@ onMounted(load)
   .admin-section-heading p { display: none; }
   .admin-users__header { flex-direction: column; align-items: flex-start; }
   .admin-user-search { width: 100%; }
+}
+
+/* Admin Sub-Tab Navigation */
+.admin-subnav {
+  display: flex;
+  gap: 8px;
+  padding: 0 0 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+  margin-bottom: 20px;
+}
+.btn-admintab {
+  padding: 10px 22px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .08);
+  color: rgba(255, 255, 255, .5);
+  font-weight: 600;
+  font-size: .875rem;
+  cursor: pointer;
+  transition: all .25s;
+  letter-spacing: .02em;
+}
+.btn-admintab:hover { background: rgba(255, 255, 255, .08); color: rgba(255, 255, 255, .8); }
+.btn-admintab--active {
+  background: linear-gradient(135deg, rgba(255, 170, 51, .15), rgba(255, 100, 30, .1));
+  border-color: rgba(255, 170, 51, .4);
+  color: #ffaa33;
+  box-shadow: 0 0 20px rgba(255, 170, 51, .1);
+}
+
+/* Audit Timeline */
+.audit-timeline {
+  position: relative;
+  padding: 8px 0 16px 28px;
+}
+.audit-timeline::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(255, 170, 51, .3), rgba(255, 255, 255, .04));
+  border-radius: 2px;
+}
+.audit-entry {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  padding: 14px 0;
+  animation: audit-fade-in .4s ease both;
+}
+.audit-entry + .audit-entry { border-top: 1px solid rgba(255, 255, 255, .04); }
+@keyframes audit-fade-in {
+  from { opacity: 0; transform: translateX(-8px); }
+  to { opacity: 1; transform: none; }
+}
+.audit-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, .2);
+  border: 2px solid rgba(255, 255, 255, .1);
+  position: relative;
+  left: -28px;
+  margin-right: -12px;
+  z-index: 1;
+}
+.audit-dot--topup { background: #4fc3f7; border-color: rgba(79, 195, 247, .3); box-shadow: 0 0 10px rgba(79, 195, 247, .25); }
+.audit-dot--role { background: #ffaa33; border-color: rgba(255, 170, 51, .3); box-shadow: 0 0 10px rgba(255, 170, 51, .25); }
+.audit-dot--status { background: #ef5350; border-color: rgba(239, 83, 80, .3); box-shadow: 0 0 10px rgba(239, 83, 80, .25); }
+.audit-dot--character { background: #ab47bc; border-color: rgba(171, 71, 188, .3); box-shadow: 0 0 10px rgba(171, 71, 188, .25); }
+.audit-body { flex: 1; min-width: 0; }
+.audit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+.audit-header strong { color: rgba(255, 255, 255, .92); font-size: .9rem; }
+.audit-header time {
+  font-size: .75rem;
+  color: rgba(255, 255, 255, .35);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.audit-body p {
+  margin: 0 0 2px;
+  color: rgba(255, 255, 255, .55);
+  font-size: .85rem;
+}
+.audit-body small {
+  font-size: .75rem;
+  color: rgba(255, 255, 255, .3);
+}
+.audit-body small code {
+  color: rgba(255, 170, 51, .65);
+  background: rgba(255, 170, 51, .08);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: .72rem;
 }
 </style>
