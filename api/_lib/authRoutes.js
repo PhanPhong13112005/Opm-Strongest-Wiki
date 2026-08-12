@@ -291,9 +291,12 @@ export const createAuthRouteHandler = ({
       return json(response, 401, { message: 'Tên đăng nhập hoặc mật khẩu không đúng.' })
     }
 
-    if (normalizedName === 'admin') {
+    const configuredAdminUsername = String(process.env.ADMINAUTH__USERNAME || 'admin').trim().toLowerCase()
+    const isAdminUser = normalizedName === 'admin' || normalizedName === configuredAdminUsername
+
+    if (isAdminUser) {
       if (validateAdminCredentials(username, password)) {
-        const adminUsername = process.env.ADMINAUTH__USERNAME || 'admin'
+        const adminUsername = process.env.ADMINAUTH__USERNAME || username || 'admin'
         return json(response, 200, createAccessToken({
           userId: `admin:${adminUsername}`,
           username: adminUsername,
