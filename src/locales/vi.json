@@ -36,22 +36,213 @@
     "pendingDesc": "Vui lòng chờ hoàn thành để đọc nội dung."
   },
   "buffGear": {
-    "eyebrow": "KHO DỮ LIỆU THẺ BỔ TRỢ",
+    "eyebrow": "HƯỚNG DẪN BUFF GEAR / DROP BUFF",
     "title": "Thẻ Bổ Trợ",
-    "description": "Danh mục Thẻ Bổ Trợ được phân loại riêng theo Hệ, Cấp và Phe.",
-    "pendingStatus": "ĐANG PHÁT TRIỂN",
-    "pendingTitle": "Tính năng này đang được phát triển",
-    "pendingDesc": "Vui lòng chờ hoàn thành để đọc nội dung.",
-    "systemCards": "Thẻ Hệ",
-    "systemCardsDesc": "Phân loại theo bốn Hệ chiến đấu của nhân vật.",
-    "gradeCards": "Thẻ Cấp",
-    "gradeCardsDesc": "Phân loại theo cấp chữ và cấp thảm họa.",
-    "factionCards": "Thẻ Phe",
-    "factionCardsDesc": "Phân loại theo hai Phe chính trong đội hình.",
-    "plannedStatus": "ĐANG PHÁT TRIỂN",
-    "dragon": "Rồng",
-    "demon": "Quỷ",
-    "tiger": "Hổ"
+    "description": "Hiểu đúng ba ô Phe, Hệ và Cấp; so sánh chỉ số và theo dõi từng hệ thống phát triển thẻ mà không suy diễn công thức chưa được xác minh.",
+    "heroFacts": {
+      "slots": "Loại thẻ",
+      "systems": "Hệ thống",
+      "skills": "Skill Stat"
+    },
+    "tabs": {
+      "label": "Nội dung Thẻ Bổ Trợ",
+      "overview": "Tổng quan",
+      "comparison": "3 loại thẻ",
+      "progression": "Nâng cấp",
+      "skills": "22 Skill Stat"
+    },
+    "overview": {
+      "title": "Một nhân vật dùng ba loại thẻ",
+      "intro": "Mỗi loại kiểm tra một điều kiện tương thích riêng và có nhóm chỉ số khác nhau.",
+      "compatibility": "Điều kiện tương thích",
+      "compatibilityNote": "Nhân vật chỉ có thể trang bị thẻ khớp với Phe, Hệ và Cấp/Lớp tương ứng."
+    },
+    "slots": {
+      "faction": {
+        "name": "Thẻ Phe",
+        "description": "Khớp với Phe của nhân vật; ví dụ đã xác nhận: Anh Hùng.",
+        "example": "Anh Hùng",
+        "focus": "Thiên về tốc độ, chí mạng và khả năng tạo nhịp tấn công."
+      },
+      "type": {
+        "name": "Thẻ Hệ",
+        "description": "Khớp với Hệ chiến đấu; ví dụ đã xác nhận: Công Nghệ.",
+        "example": "Công Nghệ",
+        "focus": "Thiên về đỡ đòn, hiệu ứng và các lựa chọn phòng thủ/tiện ích."
+      },
+      "level": {
+        "name": "Thẻ Cấp",
+        "description": "Khớp với Cấp/Lớp; ví dụ đã xác nhận: Cấp S.",
+        "example": "Cấp S",
+        "focus": "Thiên về sát thương kỹ năng, sát thương cộng thêm và giảm sát thương."
+      }
+    },
+    "concepts": {
+      "main": {
+        "title": "Main Stat",
+        "description": "Mỗi thẻ ban đầu có 1 Main Stat. Ascension tập trung tăng mạnh chỉ số này."
+      },
+      "bonus": {
+        "title": "Bonus Stat",
+        "description": "Ban đầu có 0 hoặc 1 dòng; Transformation có thể đưa tổng số lên tối đa 5."
+      },
+      "skill": {
+        "title": "Skill Stat",
+        "description": "Thẻ Rare và Excellent có cơ hội nhận 1 Skill Stat; tỉ lệ xuất hiện chưa rõ."
+      }
+    },
+    "example": {
+      "badge": "VÍ DỤ ĐÃ XÁC NHẬN",
+      "title": "Ba dòng HP Buff 5%",
+      "warning": "Nguồn chỉ xác nhận từng thẻ có một dòng HP Buff 5%. Không đủ căn cứ kết luận HP cuối cùng được cộng thành +15%."
+    },
+    "assets": {
+      "title": "Thư viện ảnh nguồn",
+      "description": "Ảnh chỉ tải khi bạn mở thư viện. Chưa gán ảnh cho loại thẻ vì tên file không đủ chứng minh ý nghĩa.",
+      "show": "Mở thư viện ảnh",
+      "hide": "Đóng thư viện",
+      "unverified": "Chưa xác minh ngữ nghĩa"
+    },
+    "comparison": {
+      "title": "Pool chỉ số của từng loại",
+      "intro": "Đặt chuột lên tên chỉ số để đọc tooltip. Khoảng Tẩy luyện hiển thị rõ min–max.",
+      "system": "Hệ thống",
+      "transformation": "Transformation",
+      "purification": "Purification",
+      "refine": "Refine",
+      "analysisNote": "Vai trò gợi ý từ pool chỉ số chỉ là phân tích: Thẻ Phe thiên tốc độ/chí mạng, Thẻ Hệ thiên utility/phòng thủ, Thẻ Cấp thiên sát thương/giảm sát thương. Đây không phải meta bắt buộc.",
+      "focus": "Nhóm nổi bật",
+      "fullPool": "Xem chi tiết toàn bộ pool chỉ số",
+      "fullPoolHint": "Mở khi bạn cần tra từng dòng của Transformation, Purification và Refine."
+    },
+    "progression": {
+      "title": "Năm hệ thống, năm mục tiêu riêng",
+      "intro": "Chọn từng bước để xem quy tắc. Transformation không thay thế Ascension; Purification không phải Refine.",
+      "unknownLimit": "Giới hạn Purification tổng thể chưa được nguồn cho biết; không suy ra 12 là giới hạn tối đa."
+    },
+    "pipeline": {
+      "label": "Luồng phát triển Buff Gear",
+      "startLabel": "BẮT ĐẦU",
+      "start": "Buff Gear",
+      "startDesc": "Thẻ Cam ban đầu",
+      "redLabel": "SAU ADVANCE",
+      "red": "Red Drop Buff",
+      "redDesc": "Rẽ nhánh thành hai hệ thống độc lập"
+    },
+    "stages": {
+      "transformation": {
+        "name": "Transformation",
+        "target": "Xử lý Bonus Stat",
+        "description": "Thay đổi giá trị hoặc cấp thêm loại Bonus Stat mới. Reset đưa Bonus Stat về trạng thái ban đầu."
+      },
+      "ascension": {
+        "name": "Ascension",
+        "target": "Tăng Main Stat",
+        "description": "Tập trung tăng mạnh Main Stat, khác với Transformation vốn xử lý Bonus Stat."
+      },
+      "advance": {
+        "name": "Advance",
+        "target": "Cam → Đỏ ở Lv.90",
+        "description": "Thẻ Cam có thể thành Red Drop Buff, kế thừa Transformation và Ascension rồi nhận một Refinement Attribute ngẫu nhiên."
+      },
+      "purification": {
+        "name": "Purification",
+        "target": "Mở/reroll effect & skill",
+        "description": "Mở thêm effect hoặc skill tại các mốc; effect và bonus đã mở có thể bị reroll theo quy tắc khóa."
+      },
+      "refine": {
+        "name": "Refine",
+        "target": "Tăng Refine Stat",
+        "description": "Cần Ascend trước. Secondary effect đổi ngẫu nhiên nhưng mức refinement của effect gốc được giữ."
+      }
+    },
+    "rules": {
+      "changeBonusValue": "Thay đổi giá trị Bonus Stat.",
+      "grantNewBonusType": "Có thể cấp thêm loại Bonus Stat mới.",
+      "resetToInitial": "Reset đưa Bonus Stat về trạng thái ban đầu.",
+      "retainLockedBonus": "Dòng đã khóa được giữ khi Reset.",
+      "lockMaximumTwo": "Mỗi thẻ khóa tối đa 2 Bonus Stat.",
+      "increaseMainStat": "Tăng mạnh Main Stat.",
+      "inheritTransformation": "Kế thừa toàn bộ dòng Transformation.",
+      "inheritAscension": "Kế thừa Ascension.",
+      "gainRandomRefinementAttribute": "Nhận một Refinement Attribute ngẫu nhiên.",
+      "unlockPurification": "Mở hệ thống Purification.",
+      "unlockRefine": "Mở hệ thống Refine.",
+      "rerollUnlockedEffect": "Effect đã mở có thể bị reroll ngẫu nhiên.",
+      "rerollUnlockedBonus": "Stat bonus đã mở có thể bị reroll ngẫu nhiên.",
+      "lockedEffectRetainsEffect": "Khóa effect sẽ giữ effect, chỉ stat bonus của effect bị reroll.",
+      "lockedSkillRetainsSkill": "Skill đã khóa không đổi sau Purification.",
+      "sameKindTransfer": "Red Drop Buff cùng loại có thể chuyển effect và skill.",
+      "randomSecondaryEffect": "Secondary effect thay đổi ngẫu nhiên.",
+      "retainOriginalMagnitude": "Giữ mức refinement của effect gốc."
+    },
+    "metrics": {
+      "maxBonus": "Bonus Stat tối đa",
+      "maxIdentical": "Dòng trùng loại tối đa",
+      "maxLocks": "Dòng khóa tối đa",
+      "playerRequirement": "Cấp người chơi",
+      "purificationTimes": "lần",
+      "refineLimit": "Cấp Refine tối đa",
+      "milestones": "Các mốc Purification",
+      "skillLimit": "Skill Stat tối đa"
+    },
+    "skills": {
+      "title": "Từ điển 22 Skill Stat",
+      "intro": "Tìm bằng tên tiếng Việt hoặc tiếng Anh, sau đó lọc theo vai trò dễ hiểu.",
+      "searchLabel": "Tìm kỹ năng",
+      "searchPlaceholder": "Ví dụ: Burning, Khiên, SPD…",
+      "confidenceLabel": "Nguồn",
+      "tagLabel": "Nhóm",
+      "allTags": "Tất cả nhóm",
+      "resultCount": "{count} kỹ năng",
+      "sourceText": "Xem nguyên văn nguồn EN",
+      "trigger": "Điều kiện",
+      "empty": "Không tìm thấy Skill Stat phù hợp.",
+      "categoryLabel": "Lọc kỹ năng theo vai trò",
+      "technicalDetails": "Điều kiện và nguồn kỹ thuật",
+      "categories": {
+        "all": "Tất cả",
+        "offense": "Tấn công",
+        "defense": "Phòng thủ",
+        "sustain": "Hồi phục",
+        "status": "Hiệu ứng",
+        "spd": "Tốc độ",
+        "utility": "Tiện ích"
+      }
+    },
+    "confidence": {
+      "all": "Tất cả",
+      "confirmed": "Đã xác nhận",
+      "partial": "Nguồn chưa đầy đủ",
+      "analysis": "Phân tích"
+    },
+    "notes": {
+      "title": "Lưu ý dữ liệu",
+      "formulas": "Không tự suy diễn công thức cộng dồn, tỉ lệ roll hoặc chi phí nguyên liệu.",
+      "partial": "Mô tả bị ảnh cắt, như Burning Boost, được đánh dấu nguồn chưa đầy đủ.",
+      "server": "Tên và bản dịch có thể thay đổi giữa các server."
+    },
+    "guide": {
+      "quickFacts": "Thông tin nhanh",
+      "startHere": "Bắt đầu tại đây",
+      "character": "Nhân vật",
+      "characterLoadout": "Bộ thẻ của một nhân vật",
+      "characterHint": "Mỗi ô kiểm tra một điều kiện khác nhau.",
+      "exampleLabel": "Ví dụ",
+      "confirmed": "Đã xác nhận từ ví dụ",
+      "anatomyLabel": "CẤU TẠO MỘT THẺ",
+      "anatomyTitle": "Đọc một thẻ theo thứ tự 1 + 5 + 1",
+      "anatomyIntro": "Main là nền tảng, Bonus là các dòng phát triển và Skill là hiệu ứng đặc biệt có điều kiện.",
+      "orangePhase": "GIAI ĐOẠN THẺ CAM",
+      "orangeHint": "Ba hệ thống đầu phát triển độc lập trên thẻ Cam.",
+      "redPhase": "GIAI ĐOẠN THẺ ĐỎ",
+      "independentBranches": "Sau Advance, Purification và Refine là hai nhánh độc lập.",
+      "whatChanges": "ĐIỀU GÌ THAY ĐỔI?",
+      "inherited": "Kế thừa",
+      "independent": "NHÁNH ĐỘC LẬP",
+      "systemDetailsLabel": "ĐỌC CHI TIẾT",
+      "systemDetailsTitle": "Mỗi hệ thống chỉ có một mục tiêu chính"
+    }
   },
   "nav": {
     "tierRanking": "Bảng Xếp Hạng",

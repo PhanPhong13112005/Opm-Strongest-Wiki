@@ -36,22 +36,213 @@
     "pendingDesc": "Please wait until it is complete to read the content."
   },
   "buffGear": {
-    "eyebrow": "BUFF GEAR DATA ARCHIVE",
+    "eyebrow": "BUFF GEAR / DROP BUFF GUIDE",
     "title": "Buff Gear",
-    "description": "Browse the planned Buff Gear groups organized by combat type, grade, and faction.",
-    "pendingStatus": "IN DEVELOPMENT",
-    "pendingTitle": "This feature is under development",
-    "pendingDesc": "Please wait until it is complete to read the content.",
-    "systemCards": "Type Cards",
-    "systemCardsDesc": "Grouped by the four character combat types.",
-    "gradeCards": "Grade Cards",
-    "gradeCardsDesc": "Grouped by letter grade and disaster level.",
-    "factionCards": "Faction Cards",
-    "factionCardsDesc": "Grouped by the two primary lineup factions.",
-    "plannedStatus": "IN DEVELOPMENT",
-    "dragon": "Dragon",
-    "demon": "Demon",
-    "tiger": "Tiger"
+    "description": "Understand the Faction, Type, and Level slots, compare their stat pools, and follow each progression system without inventing unverified formulas.",
+    "heroFacts": {
+      "slots": "Gear types",
+      "systems": "Systems",
+      "skills": "Skill Stats"
+    },
+    "tabs": {
+      "label": "Buff Gear content",
+      "overview": "Overview",
+      "comparison": "3 gear types",
+      "progression": "Upgrade",
+      "skills": "22 Skill Stats"
+    },
+    "overview": {
+      "title": "One character, three gear types",
+      "intro": "Each type checks a separate compatibility condition and has a different stat pool.",
+      "compatibility": "Compatibility",
+      "compatibilityNote": "A character can only equip Buff Gear matching their Faction, Type, and Level/Class."
+    },
+    "slots": {
+      "faction": {
+        "name": "Faction Buff Gear",
+        "description": "Matches the character's Faction; confirmed example: Hero.",
+        "example": "Hero",
+        "focus": "Leans toward speed, critical hits, and controlling attack tempo."
+      },
+      "type": {
+        "name": "Type Buff Gear",
+        "description": "Matches the combat Type; confirmed example: Hi-Tech.",
+        "example": "Hi-Tech",
+        "focus": "Leans toward blocking, effects, and defensive or utility choices."
+      },
+      "level": {
+        "name": "Level Buff Gear",
+        "description": "Matches Level/Class; confirmed example: S-Class.",
+        "example": "S-Class",
+        "focus": "Leans toward skill damage, bonus damage, and damage reduction."
+      }
+    },
+    "concepts": {
+      "main": {
+        "title": "Main Stat",
+        "description": "Each gear starts with one Main Stat. Ascension focuses on increasing it."
+      },
+      "bonus": {
+        "title": "Bonus Stats",
+        "description": "Starts with zero or one line; Transformation can raise the total to five."
+      },
+      "skill": {
+        "title": "Skill Stat",
+        "description": "Rare and Excellent gear can have a chance to grant one Skill Stat; the chance is unknown."
+      }
+    },
+    "example": {
+      "badge": "CONFIRMED EXAMPLE",
+      "title": "Three HP Buff 5% lines",
+      "warning": "The source only confirms one HP Buff 5% line on each gear. It does not prove the final HP formula is +15%."
+    },
+    "assets": {
+      "title": "Source image library",
+      "description": "Images load only when opened. They are not mapped to gear types because filenames do not prove their meaning.",
+      "show": "Open image library",
+      "hide": "Close image library",
+      "unverified": "Meaning not verified"
+    },
+    "comparison": {
+      "title": "Stat pools by gear type",
+      "intro": "Hover stat names for tooltips. Purification ranges show explicit min–max values.",
+      "system": "System",
+      "transformation": "Transformation",
+      "purification": "Purification",
+      "refine": "Refine",
+      "analysisNote": "Role hints based on stat pools are analysis only: Faction leans speed/crit, Type leans utility/defense, and Level leans damage/reduction. This is not mandatory meta.",
+      "focus": "Notable focus",
+      "fullPool": "View the complete stat pools",
+      "fullPoolHint": "Open this only when you need every Transformation, Purification, and Refine entry."
+    },
+    "progression": {
+      "title": "Five systems with distinct goals",
+      "intro": "Select a step to inspect its rules. Transformation is not Ascension, and Purification is not Refine.",
+      "unknownLimit": "The overall Purification limit is not shown by the source; 12 must not be presented as the maximum."
+    },
+    "pipeline": {
+      "label": "Buff Gear progression flow",
+      "startLabel": "START",
+      "start": "Buff Gear",
+      "startDesc": "Initial Orange gear",
+      "redLabel": "AFTER ADVANCE",
+      "red": "Red Drop Buff",
+      "redDesc": "Branches into two independent systems"
+    },
+    "stages": {
+      "transformation": {
+        "name": "Transformation",
+        "target": "Bonus Stats",
+        "description": "Changes values or grants a new Bonus Stat type. Reset returns Bonus Stats to their initial state."
+      },
+      "ascension": {
+        "name": "Ascension",
+        "target": "Main Stat",
+        "description": "Greatly increases the Main Stat, unlike Transformation which handles Bonus Stats."
+      },
+      "advance": {
+        "name": "Advance",
+        "target": "Orange → Red at Lv.90",
+        "description": "Orange gear becomes Red Drop Buff, inherits Transformation and Ascension, then gains a random Refinement Attribute."
+      },
+      "purification": {
+        "name": "Purification",
+        "target": "Effects and skill",
+        "description": "Unlocks effects or a skill at milestones; unlocked effects and bonuses can reroll under lock rules."
+      },
+      "refine": {
+        "name": "Refine",
+        "target": "Refine Stats",
+        "description": "Requires Ascension. Secondary effects change randomly while the original effect's refinement magnitude is retained."
+      }
+    },
+    "rules": {
+      "changeBonusValue": "Changes a Bonus Stat value.",
+      "grantNewBonusType": "May grant a new Bonus Stat type.",
+      "resetToInitial": "Reset returns Bonus Stats to their initial state.",
+      "retainLockedBonus": "Locked lines remain during Reset.",
+      "lockMaximumTwo": "Up to two Bonus Stats can be locked per gear.",
+      "increaseMainStat": "Greatly increases the Main Stat.",
+      "inheritTransformation": "Fully inherits Transformation entries.",
+      "inheritAscension": "Fully inherits Ascension.",
+      "gainRandomRefinementAttribute": "Gains a random Refinement Attribute.",
+      "unlockPurification": "Unlocks Purification.",
+      "unlockRefine": "Unlocks Refine.",
+      "rerollUnlockedEffect": "Unlocked effects can reroll randomly.",
+      "rerollUnlockedBonus": "Unlocked bonus stats can reroll randomly.",
+      "lockedEffectRetainsEffect": "A locked effect stays while its bonus stat rerolls.",
+      "lockedSkillRetainsSkill": "A locked skill stays after Purification.",
+      "sameKindTransfer": "Same-kind Red Drop Buffs can transfer effects and skills.",
+      "randomSecondaryEffect": "Secondary effects change randomly.",
+      "retainOriginalMagnitude": "Retains the original effect's refinement magnitude."
+    },
+    "metrics": {
+      "maxBonus": "Maximum Bonus Stats",
+      "maxIdentical": "Maximum same-type lines",
+      "maxLocks": "Maximum locks",
+      "playerRequirement": "Player requirement",
+      "purificationTimes": "times",
+      "refineLimit": "Maximum Refine level",
+      "milestones": "Purification milestones",
+      "skillLimit": "Maximum Skill Stats"
+    },
+    "skills": {
+      "title": "22 Skill Stat glossary",
+      "intro": "Search in Vietnamese or English, then filter by a beginner-friendly role.",
+      "searchLabel": "Search skills",
+      "searchPlaceholder": "Try Burning, Shield, SPD…",
+      "confidenceLabel": "Source",
+      "tagLabel": "Tag",
+      "allTags": "All tags",
+      "resultCount": "{count} skills",
+      "sourceText": "View original English source",
+      "trigger": "Trigger",
+      "empty": "No matching Skill Stat.",
+      "categoryLabel": "Filter skills by role",
+      "technicalDetails": "Trigger and technical source",
+      "categories": {
+        "all": "All",
+        "offense": "Offense",
+        "defense": "Defense",
+        "sustain": "Sustain",
+        "status": "Status",
+        "spd": "SPD",
+        "utility": "Utility"
+      }
+    },
+    "confidence": {
+      "all": "All",
+      "confirmed": "Confirmed",
+      "partial": "Partial source",
+      "analysis": "Analysis"
+    },
+    "notes": {
+      "title": "Data notes",
+      "formulas": "Do not infer stacking formulas, roll rates, or material costs.",
+      "partial": "Cropped descriptions, such as Burning Boost, are marked as partial source.",
+      "server": "Names and translations may vary by server."
+    },
+    "guide": {
+      "quickFacts": "Quick facts",
+      "startHere": "Start here",
+      "character": "Character",
+      "characterLoadout": "One character loadout",
+      "characterHint": "Each slot checks a different compatibility condition.",
+      "exampleLabel": "Example",
+      "confirmed": "Confirmed by the example",
+      "anatomyLabel": "GEAR ANATOMY",
+      "anatomyTitle": "Read one gear as 1 + 5 + 1",
+      "anatomyIntro": "Main is the foundation, Bonus lines grow over time, and Skill is a conditional special effect.",
+      "orangePhase": "ORANGE GEAR PHASE",
+      "orangeHint": "The first three systems progress independently on Orange gear.",
+      "redPhase": "RED GEAR PHASE",
+      "independentBranches": "After Advance, Purification and Refine are two independent branches.",
+      "whatChanges": "WHAT CHANGES?",
+      "inherited": "Inherited",
+      "independent": "INDEPENDENT BRANCH",
+      "systemDetailsLabel": "DETAILS",
+      "systemDetailsTitle": "Each system has one primary goal"
+    }
   },
   "nav": {
     "tierRanking": "Tier Ranking",
