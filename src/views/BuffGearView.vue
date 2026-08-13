@@ -5,6 +5,7 @@ import { buffGearSlots, buffGearSourceAssets } from '../data/buffGear/slots.js'
 import { buffGearStructure, buffGearProgression, buffGearConfirmedExample } from '../data/buffGear/progression.js'
 import { buffGearSkills, buffGearSkillCategoryIds, getBuffGearSkillCategories } from '../data/buffGear/skills.js'
 import { buffGearTermById } from '../data/buffGear/terminology.js'
+import BuffGearWorkbench from '../components/buffGear/BuffGearWorkbench.vue'
 
 const { t, locale } = useI18n()
 const activeTab = ref('overview')
@@ -61,6 +62,14 @@ const selectStage = async (id) => {
     block: 'nearest',
   })
 }
+const openSkillLibrary = async () => {
+  activeTab.value = 'skills'
+  await nextTick()
+  document.querySelector('#panel-skills')?.scrollIntoView({
+    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+    block: 'start',
+  })
+}
 </script>
 
 <template>
@@ -81,6 +90,8 @@ const selectStage = async (id) => {
         <i></i><strong>1 + 5 + 1</strong>
       </div>
     </section>
+
+    <BuffGearWorkbench @open-skills="openSkillLibrary" />
 
     <nav class="tabs" role="tablist" :aria-label="t('buffGear.tabs.label')">
       <button v-for="(tab, index) in tabs" :id="`tab-${tab}`" :key="tab" type="button" role="tab"
