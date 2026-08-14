@@ -328,18 +328,14 @@ const openSkillLibrary = async () => {
               </div>
               <div class="advance-items-list">
                 <div class="advance-item-row">
-                  <div class="advance-item-placeholder" title="Ảnh thẻ tiến cấp Phe">
-                    <span class="ph-label">Thẻ Phe</span>
-                  </div>
+                  <img src="/Buff Gear/card_transform_faction.png" alt="Thẻ tiến cấp Phe" class="advance-item-img" />
                   <div class="advance-item-info">
                     <strong>35 Thẻ / Mảnh</strong>
                     <small>Thẻ tiến cấp Phe</small>
                   </div>
                 </div>
                 <div class="advance-item-row">
-                  <div class="advance-item-placeholder" title="Ảnh hộp linh kiện">
-                    <span class="ph-label">Hộp Kit</span>
-                  </div>
+                  <img src="/Buff Gear/item_component_box.png" alt="Hộp linh kiện" class="advance-item-img" />
                   <div class="advance-item-info">
                     <strong>80 Hộp</strong>
                     <small>Hộp linh kiện nâng cấp</small>
@@ -363,18 +359,14 @@ const openSkillLibrary = async () => {
               </div>
               <div class="advance-items-list">
                 <div class="advance-item-row">
-                  <div class="advance-item-placeholder" title="Ảnh thẻ tiến cấp Hệ">
-                    <span class="ph-label">Thẻ Hệ</span>
-                  </div>
+                  <img src="/Buff Gear/card_transform_type.png" alt="Thẻ tiến cấp Hệ" class="advance-item-img" />
                   <div class="advance-item-info">
                     <strong>35 Thẻ / Mảnh</strong>
                     <small>Thẻ tiến cấp Hệ</small>
                   </div>
                 </div>
                 <div class="advance-item-row">
-                  <div class="advance-item-placeholder" title="Ảnh hộp linh kiện">
-                    <span class="ph-label">Hộp Kit</span>
-                  </div>
+                  <img src="/Buff Gear/item_component_box.png" alt="Hộp linh kiện" class="advance-item-img" />
                   <div class="advance-item-info">
                     <strong>80 Hộp</strong>
                     <small>Hộp linh kiện nâng cấp</small>
@@ -398,18 +390,14 @@ const openSkillLibrary = async () => {
               </div>
               <div class="advance-items-list">
                 <div class="advance-item-row">
-                  <div class="advance-item-placeholder" title="Ảnh thẻ tiến cấp Cấp">
-                    <span class="ph-label">Thẻ Cấp</span>
-                  </div>
+                  <img src="/Buff Gear/card_transform_level.png" alt="Thẻ tiến cấp Cấp" class="advance-item-img" />
                   <div class="advance-item-info">
                     <strong>35 Thẻ / Mảnh</strong>
                     <small>Thẻ tiến cấp Cấp</small>
                   </div>
                 </div>
                 <div class="advance-item-row">
-                  <div class="advance-item-placeholder" title="Ảnh hộp linh kiện">
-                    <span class="ph-label">Hộp Kit</span>
-                  </div>
+                  <img src="/Buff Gear/item_component_box.png" alt="Hộp linh kiện" class="advance-item-img" />
                   <div class="advance-item-info">
                     <strong>80 Hộp</strong>
                     <small>Hộp linh kiện nâng cấp</small>
@@ -1007,35 +995,40 @@ const openSkillLibrary = async () => {
   background: rgba(255, 255, 255, 0.03);
 }
 
-.advance-item-placeholder {
-  width: 36px;
-  height: 36px;
+.advance-item-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
   border-radius: 8px;
-  background: rgba(142, 100, 255, 0.12);
-  border: 1px dashed rgba(173, 130, 255, 0.45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 3px;
   flex-shrink: 0;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s;
 }
 
-.ph-label {
-  font-size: 9px;
-  font-weight: 850;
-  color: #cbb4ff;
-  text-transform: uppercase;
+.advance-item-row:hover .advance-item-img {
+  transform: scale(1.1);
+  border-color: rgba(89, 220, 248, 0.5);
 }
 
 .advance-gold-badge {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 8px;
   background: rgba(239, 188, 71, 0.15);
+  border: 1px solid rgba(239, 188, 71, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 20px;
   flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.advance-item-row:hover .advance-gold-badge {
+  transform: scale(1.1);
 }
 
 .advance-item-info {
