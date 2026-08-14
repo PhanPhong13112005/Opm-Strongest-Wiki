@@ -33,7 +33,9 @@ export const buffGearWorkbenchLocale = {
       title: 'Ba loại Buff Gear',
       locked: 'Khóa theo nhân vật',
       characterSource: 'Tự động lấy từ nhân vật đang chọn.',
+      characterMapping: '{source} → dùng thẻ {compatibility}',
       manualSource: 'Có thể thay đổi độc lập trong chế độ khám phá.',
+      catalogHint: 'Phe có 2 thẻ, Hệ có 4 thẻ và Cấp có 8 thẻ. Phân loại nhân vật sẽ được đổi sang đúng thẻ trong game.',
     },
     preview: {
       title: 'Bộ ba đang xem',
@@ -43,6 +45,24 @@ export const buffGearWorkbenchLocale = {
     rarity: {
       gold: 'Buff Gear Vàng',
       red: 'Buff Gear Đỏ',
+    },
+    stars: {
+      gold: 'Sao vàng · Thăng sao',
+      purple: 'Sao tím · Tinh luyện',
+      setGold: 'Đặt sao vàng ở mức {star}',
+      setPurple: 'Đặt sao tím ở mức {star}',
+      mainValue: 'Chỉ số chính hiện tại',
+    },
+    materials: {
+      title: 'Nguyên liệu nâng cấp cho cả 3 thẻ',
+      description: 'Tự động cộng dồn theo số sao vàng và sao tím bạn đang chọn ở cả ba thẻ.',
+      crystalS: 'Tinh thể [S]',
+      crystalCore: 'Lõi tinh thể',
+      referenceOnly: 'Icon tham chiếu từ dữ liệu nguồn',
+      gold: 'Vàng',
+      ascensionCards: 'Thẻ Thăng Sao',
+      refinementCards: 'Thẻ Tinh Luyện',
+      advanceExcluded: 'Số liệu lấy từ cấu hình công khai của mô phỏng tham chiếu. Chưa cộng chi phí Tiến cấp từ Vàng lên Đỏ.',
     },
     inspector: {
       eyebrow: 'Trình khám phá cơ chế',
@@ -56,7 +76,9 @@ export const buffGearWorkbenchLocale = {
       ascension: 'Thăng cấp',
       advance: 'Tiến cấp',
       purification: 'Thanh tẩy',
+      transfer: 'Chuyển Chỉ Số',
       refine: 'Tinh luyện',
+      clarify: 'Đổi chỉ số chính',
     },
     main: {
       title: 'Chỉ số chính của thẻ',
@@ -154,7 +176,9 @@ export const buffGearWorkbenchLocale = {
       title: 'Three Buff Gear identities',
       locked: 'Locked by character',
       characterSource: 'Automatically sourced from the selected character.',
+      characterMapping: '{source} → equips {compatibility} card',
       manualSource: 'Can be changed independently in Explore mode.',
+      catalogHint: 'Faction has 2 cards, Type has 4 cards, and Level has 8 cards. Character classifications map to the verified card in game.',
     },
     preview: {
       title: 'Current loadout',
@@ -164,6 +188,24 @@ export const buffGearWorkbenchLocale = {
     rarity: {
       gold: 'Gold Buff Gear',
       red: 'Red Buff Gear',
+    },
+    stars: {
+      gold: 'Gold Stars · Ascension',
+      purple: 'Purple Stars · Refine',
+      setGold: 'Set gold stars to {star}',
+      setPurple: 'Set purple stars to {star}',
+      mainValue: 'Current Main Stat',
+    },
+    materials: {
+      title: 'Star upgrade resources for all 3 cards',
+      description: 'Calculated from the gold and purple star ranks selected across all three cards.',
+      crystalS: 'Crystal [S]',
+      crystalCore: 'Crystal Core',
+      referenceOnly: 'Reference icons from source data',
+      gold: 'Gold',
+      ascensionCards: 'Star Ascension Cards',
+      refinementCards: 'Refinement Cards',
+      advanceExcluded: 'Cost values are decoded from reference configs. Gold to Red Advance cost is not counted yet.',
     },
     inspector: {
       eyebrow: 'Mechanic explorer',
@@ -177,7 +219,9 @@ export const buffGearWorkbenchLocale = {
       ascension: 'Ascension',
       advance: 'Advance',
       purification: 'Purification',
+      transfer: 'Transfer',
       refine: 'Refine',
+      clarify: 'Clarify',
     },
     main: {
       title: 'Card Main Stat',

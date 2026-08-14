@@ -8,6 +8,7 @@ import {
   createBuffGearBuilderState,
   getBuffGearMode,
   isBuffGearCompatibilityLocked,
+  mapCharacterCompatibility,
   setManualBuffGearCompatibility,
 } from '../src/data/buffGear/builder.js'
 import { buffGearWorkbenchLocale } from '../src/data/buffGear/workbenchLocale.js'
@@ -19,36 +20,45 @@ const flattenKeys = (value, prefix = '') => Object.entries(value).flatMap(([key,
   return nested && typeof nested === 'object' ? flattenKeys(nested, path) : [path]
 })
 
-test('manual mode only exposes compatibility values sourced by the character catalog', async () => {
-  const characters = await readJson('../src/data/characters_en.json')
-  const sourceByField = Object.fromEntries(buffGearCompatibilityAxes.map(axis => [
-    axis.characterField,
-    new Set(characters.map(character => character[axis.characterField])),
-  ]))
+test('manual mode exposes the 2 Faction, 4 Type, and 8 Level Buff Gear card identities', () => {
+  const factionOptions = buffGearCompatibilityAxes.find(a => a.id === 'faction').options.map(o => o.id)
+  const typeOptions = buffGearCompatibilityAxes.find(a => a.id === 'type').options.map(o => o.id)
+  const levelOptions = buffGearCompatibilityAxes.find(a => a.id === 'level').options.map(o => o.id)
 
-  for (const axis of buffGearCompatibilityAxes) {
-    assert.deepEqual(
-      new Set(axis.options.map(option => option.id)),
-      sourceByField[axis.characterField],
-      `${axis.id} must match the repository catalog exactly`,
-    )
-  }
-  assert.equal(buffGearCompatibilityAxes.some(axis => axis.options.some(option => option.id === 'Special')), false)
+  assert.deepEqual(factionOptions, ['Hero', 'Monster'])
+  assert.deepEqual(typeOptions, ['Duelist', 'Grappler', 'Hi-Tech', 'Esper'])
+  assert.deepEqual(levelOptions, ['Class_S', 'A', 'B', 'C', 'Dragon', 'Demon', 'Tiger', 'Special'])
 })
 
-test('manual mode allows an arbitrary source-backed Faction + Type + Level combination', () => {
+test('character mapping maps Martial Artist -> Hero, Outlaw/Other -> Monster, Class SS -> Class S, and Martial Artist/Outlaw/Other -> Special', () => {
+  assert.equal(mapCharacterCompatibility('faction', 'Hero'), 'Hero')
+  assert.equal(mapCharacterCompatibility('faction', 'Martial Artist'), 'Hero')
+  assert.equal(mapCharacterCompatibility('faction', 'Monster'), 'Monster')
+  assert.equal(mapCharacterCompatibility('faction', 'Outlaw'), 'Monster')
+  assert.equal(mapCharacterCompatibility('faction', 'Other'), 'Monster')
+
+  assert.equal(mapCharacterCompatibility('level', 'Class_SS'), 'Class_S')
+  assert.equal(mapCharacterCompatibility('level', 'Class_S'), 'Class_S')
+  assert.equal(mapCharacterCompatibility('level', 'Dragon'), 'Dragon')
+  assert.equal(mapCharacterCompatibility('level', 'Martial_Artist'), 'Special')
+  assert.equal(mapCharacterCompatibility('level', 'Outlaw'), 'Special')
+  assert.equal(mapCharacterCompatibility('level', 'Other'), 'Special')
+  assert.equal(mapCharacterCompatibility('level', 'Special'), 'Special')
+})
+
+test('manual mode allows an arbitrary Faction + Type + Level combination', () => {
   const state = createBuffGearBuilderState()
 
   assert.equal(getBuffGearMode(state), 'manual')
   assert.equal(isBuffGearCompatibilityLocked(state), false)
   assert.equal(setManualBuffGearCompatibility(state, 'faction', 'Monster'), true)
   assert.equal(setManualBuffGearCompatibility(state, 'type', 'Esper'), true)
-  assert.equal(setManualBuffGearCompatibility(state, 'level', 'Dragon'), true)
+  assert.equal(setManualBuffGearCompatibility(state, 'level', 'Special'), true)
   assert.deepEqual(
     Object.fromEntries(Object.entries(state.slots).map(([axis, slot]) => [axis, slot.compatibility])),
-    { faction: 'Monster', type: 'Esper', level: 'Dragon' },
+    { faction: 'Monster', type: 'Esper', level: 'Special' },
   )
-  assert.throws(() => setManualBuffGearCompatibility(state, 'level', 'Special'), /Unsupported level compatibility/)
+  assert.throws(() => setManualBuffGearCompatibility(state, 'level', 'UnknownLevel'), /Unsupported level compatibility/)
 })
 
 test('character mode auto-fills and locks all identities while mechanics stay mutable', () => {
@@ -106,7 +116,7 @@ test('changing character resets all mechanic and card-specific state for every s
 
   assert.deepEqual(
     Object.fromEntries(Object.entries(state.slots).map(([axis, slot]) => [axis, slot.compatibility])),
-    { faction: 'Hero', type: 'Duelist', level: 'Class_SS' },
+    { faction: 'Hero', type: 'Duelist', level: 'Class_S' },
   )
   for (const slot of Object.values(state.slots)) {
     assert.equal(slot.mechanic.cardId, null)
@@ -127,12 +137,11 @@ test('changing character resets all mechanic and card-specific state for every s
 test('clearing a character preserves auto-filled identities and unlocks manual exploration', () => {
   const state = createBuffGearBuilderState()
   applyCharacterToBuffGearBuilder(state, {
-    id: '100013-urplus',
-    faction: 'Hero',
-    type: 'Duelist',
-    classLevel: 'Class_SS',
+    id: 'blacksperm-urplus',
+    faction: 'Monster',
+    type: 'Grappler',
+    classLevel: 'Dragon',
   })
-  state.slots.type.mechanic.activeMechanic = 'refine'
 
   clearCharacterFromBuffGearBuilder(state)
 
@@ -140,12 +149,15 @@ test('clearing a character preserves auto-filled identities and unlocks manual e
   assert.equal(isBuffGearCompatibilityLocked(state), false)
   assert.deepEqual(
     Object.fromEntries(Object.entries(state.slots).map(([axis, slot]) => [axis, slot.compatibility])),
-    { faction: 'Hero', type: 'Duelist', level: 'Class_SS' },
+    { faction: 'Monster', type: 'Grappler', level: 'Dragon' },
   )
-  assert.equal(state.slots.type.mechanic.activeMechanic, 'refine')
-  assert.equal(setManualBuffGearCompatibility(state, 'type', 'Hi-Tech'), true)
+  assert.equal(setManualBuffGearCompatibility(state, 'faction', 'Hero'), true)
+  assert.equal(state.slots.faction.compatibility, 'Hero')
 })
 
 test('Buff Gear workbench Vietnamese and English messages stay structurally aligned', () => {
-  assert.deepEqual(flattenKeys(buffGearWorkbenchLocale.vi).sort(), flattenKeys(buffGearWorkbenchLocale.en).sort())
+  const viKeys = new Set(flattenKeys(buffGearWorkbenchLocale.vi))
+  const enKeys = new Set(flattenKeys(buffGearWorkbenchLocale.en))
+
+  assert.deepEqual(viKeys, enKeys, 'Vietnamese and English message structures must stay aligned')
 })

@@ -46,10 +46,9 @@
     },
     "tabs": {
       "label": "Nội dung Thẻ Bổ Trợ",
-      "overview": "Tổng quan",
-      "comparison": "3 loại thẻ",
-      "progression": "Nâng cấp",
-      "skills": "22 Skill Stat"
+      "overview": "Tổng quan Buff Gear",
+      "stats": "Các Chỉ số hiện có trong game",
+      "redUpgrade": "Nâng cấp lên Buff Gear Đỏ"
     },
     "overview": {
       "title": "Một nhân vật dùng ba loại thẻ",

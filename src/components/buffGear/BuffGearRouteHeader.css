@@ -1,0 +1,164 @@
+.buff-page > .hero {
+  grid-template-columns: 1fr;
+  min-height: 0;
+  justify-items: center;
+  padding: 24px clamp(20px, 4vw, 48px);
+  text-align: center;
+}
+
+.buff-page > .hero .hero-copy {
+  display: grid;
+  justify-items: center;
+}
+
+.buff-page > .hero h1 {
+  margin: 6px 0;
+  font-size: clamp(34px, 4.2vw, 52px);
+  line-height: 1;
+}
+
+.buff-page > .hero p {
+  max-width: 780px;
+  margin: 4px auto 0;
+}
+
+.buff-page > .hero .hero-facts {
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.buff-page > .hero .mini-system {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .buff-page > .hero {
+    min-height: 0;
+    padding: 20px 16px;
+  }
+
+  .buff-page > .hero h1 {
+    font-size: 36px;
+  }
+
+  .buff-page > .hero p {
+    max-width: 100%;
+    font-size: 11px;
+  }
+
+  .buff-page > .hero .hero-facts {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .buff-page > .hero .hero-facts span {
+    flex: 1 1 92px;
+    justify-content: center;
+  }
+}
+
+/* Compact route introduction */
+.buff-page > .hero {
+  padding-block: 18px;
+}
+
+.buff-page > .hero h1 {
+  font-size: clamp(30px, 3.6vw, 44px);
+}
+
+.buff-page > .hero .hero-facts {
+  margin-top: 8px;
+}
+
+@media (max-width: 680px) {
+  .buff-page > .hero {
+    padding: 12px;
+  }
+
+  .buff-page > .hero h1 {
+    margin-block: 3px;
+    font-size: 29px;
+  }
+
+  .buff-page > .hero p {
+    display: -webkit-box;
+    overflow: hidden;
+    font-size: 10px;
+    line-height: 1.4;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .buff-page > .hero .hero-facts {
+    gap: 5px;
+    margin-top: 7px;
+    flex-wrap: nowrap;
+  }
+
+  .buff-page > .hero .hero-facts span {
+    min-width: 0;
+    padding: 6px;
+    font-size: 8px;
+  }
+
+  .buff-page > .hero .hero-facts b {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 680px) {
+  .buff-page > .hero {
+    padding-block: 9px;
+  }
+
+  .buff-page > .hero h1 {
+    font-size: 27px;
+  }
+
+  .buff-page > .hero .hero-copy > p {
+    display: none;
+  }
+
+  .buff-page > .hero .hero-facts span {
+    min-height: 38px;
+  }
+}
+
+.buff-page > section.hero {
+  min-height: 0 !important;
+}
+
+/* Route intro stays compact, but its facts remain readable on a phone. */
+.buff-page > .hero .eyebrow {
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.buff-page > .hero .hero-facts span {
+  font-size: 10px;
+  line-height: 1.25;
+}
+
+@media (max-width: 680px) {
+  .buff-page > .hero .hero-facts {
+    gap: 7px;
+  }
+
+  .buff-page > .hero .hero-facts span {
+    min-height: 42px;
+    padding: 7px 8px;
+    font-size: 10px;
+    white-space: normal;
+  }
+
+  .buff-page > .hero .hero-facts b {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 680px) {
+  .buff-page > section.hero {
+    padding: 9px 12px !important;
+  }
+}

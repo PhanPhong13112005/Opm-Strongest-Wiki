@@ -2,70 +2,104 @@
 import { computed, nextTick, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { buffGearSlots, buffGearSourceAssets } from '../data/buffGear/slots.js'
-import { buffGearStructure, buffGearProgression, buffGearConfirmedExample } from '../data/buffGear/progression.js'
-import { buffGearSkills, buffGearSkillCategoryIds, getBuffGearSkillCategories } from '../data/buffGear/skills.js'
-import { buffGearTermById } from '../data/buffGear/terminology.js'
+import { buffGearProgression, buffGearStructure, buffGearConfirmedExample } from '../data/buffGear/progression.js'
+import { buffGearSkills } from '../data/buffGear/skills.js'
+import { buffGearTerminology, buffGearTermById } from '../data/buffGear/terminology.js'
+import { buffGearGoldStarCosts, buffGearPurpleStarCosts } from '../data/buffGear/simulator.js'
 import BuffGearWorkbench from '../components/buffGear/BuffGearWorkbench.vue'
 
 const { t, locale } = useI18n()
 const activeTab = ref('overview')
-const openStage = ref('transformation')
-const search = ref('')
-const skillCategory = ref('all')
-const showAssets = ref(false)
-const tabs = ['overview', 'comparison', 'progression', 'skills']
+const tabs = ['overview', 'stats', 'redUpgrade']
+
 const heroFacts = Object.freeze({
   slots: buffGearSlots.length,
   systems: buffGearProgression.length,
   skills: buffGearSkills.length,
 })
-const skillStatLimit = buffGearProgression.find(stage => stage.id === 'purification')?.skillLimit ?? 0
-const matrixSystems = Object.freeze(['transformation', 'purification', 'refine'])
+
+const statSearch = ref('')
+const currentStatPage = ref(1)
+const statsPerPage = 10
+const showAssets = ref(false)
+
+const filteredStats = computed(() => {
+  const query = statSearch.value.trim().toLowerCase()
+  if (!query) return buffGearTerminology
+  return buffGearTerminology.filter(item =>
+    item.id.toLowerCase().includes(query) ||
+    item.vi.toLowerCase().includes(query) ||
+    item.en.toLowerCase().includes(query) ||
+    item.explanationVi.toLowerCase().includes(query)
+  )
+})
+
+const totalStatPages = computed(() => Math.max(1, Math.ceil(filteredStats.value.length / statsPerPage)))
+
+const paginatedStats = computed(() => {
+  const start = (currentStatPage.value - 1) * statsPerPage
+  return filteredStats.value.slice(start, start + statsPerPage)
+})
+
+const goToStatPage = (page) => {
+  if (page >= 1 && page <= totalStatPages.value) {
+    currentStatPage.value = page
+  }
+}
+
+const onSearchInput = () => {
+  currentStatPage.value = 1
+}
+
 const statLabel = id => buffGearTermById[id]?.[locale.value === 'vi' ? 'vi' : 'en'] || id
 const statHelp = id => buffGearTermById[id]?.[locale.value === 'vi' ? 'explanationVi' : 'explanationEn'] || ''
-const slotName = id => t(`buffGear.slots.${id}.name`)
-const slotExample = id => t(`buffGear.slots.${id}.example`)
-const stageName = id => t(`buffGear.stages.${id}.name`)
-const stageTarget = id => t(`buffGear.stages.${id}.target`)
-const stageById = id => buffGearProgression.find(stage => stage.id === id)
-const formatRange = item => `${item.min.toLocaleString(locale.value)} – ${item.max.toLocaleString(locale.value)}${item.unit === 'percent' ? '%' : ''}`
-const skillName = skill => locale.value === 'vi' ? skill.name.vi : skill.name.en
-const secondarySkillName = skill => locale.value === 'vi' ? skill.name.en : skill.name.vi
-const poolFor = (slot, system) => system === 'purification' ? slot.purificationStats : slot[`${system}Stats`]
-const stageMetrics = (stage) => {
-  if (stage.id === 'transformation') return [
-    [buffGearStructure.transformedBonusStatLimit, 'buffGear.metrics.maxBonus'],
-    [buffGearStructure.identicalBonusStatLimit, 'buffGear.metrics.maxIdentical'],
-    [buffGearStructure.resetLockLimit, 'buffGear.metrics.maxLocks'],
-  ]
-  if (stage.id === 'advance') return [[`Lv.${stage.playerLevel}`, 'buffGear.metrics.playerRequirement']]
-  if (stage.id === 'purification') return [
-    [stage.milestones.join(' / '), 'buffGear.metrics.milestones'],
-    [stage.skillLimit, 'buffGear.metrics.skillLimit'],
-  ]
-  if (stage.id === 'refine') return [[stage.limit, 'buffGear.metrics.refineLimit']]
-  return []
-}
-const filteredSkills = computed(() => {
-  const query = search.value.trim().toLocaleLowerCase(locale.value)
-  return buffGearSkills.filter((item) => {
-    const matchesText = !query || [item.name.vi, item.name.en, item.summaryVi, item.sourceText]
-      .some(value => value.toLocaleLowerCase(locale.value).includes(query))
-    return matchesText && (skillCategory.value === 'all' || getBuffGearSkillCategories(item).includes(skillCategory.value))
-  })
-})
-const selectStage = async (id) => {
-  openStage.value = id
-  await nextTick()
-  document.querySelector(`#stage-${id}`)?.scrollIntoView({
-    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
-    block: 'nearest',
-  })
-}
+
+const slotCardsData = Object.freeze([
+  {
+    id: 'faction',
+    num: '01',
+    nameVi: 'Thẻ Phe (Faction Card)',
+    nameEn: 'Faction Buff Gear',
+    asset: '/Buff Gear/optimized/equipcard_1_1.webp',
+    color: '#efbc47',
+    compatVi: 'Anh Hùng & Quái Nhân (Võ thuật gộp vào Anh Hùng; Tội phạm & Khác gộp vào Quái Nhân)',
+    mainStats: ['% Tấn công (+5% ~ +35%)', '% Máu (+5% ~ +35%)', '% Phòng thủ (+5% ~ +35%)'],
+    transformation: ['ATK (Công)', 'HP (Máu)', 'DEF (Thủ)', 'RED_DEF (Xuyên DEF)', 'ATK_BONUS (% Công)', 'HP_BONUS (% Máu)', 'DEF_BONUS (% Thủ)', 'SPD_BONUS (Tốc độ)'],
+    purification: ['Công (600–2000)', 'Thủ (150–500)', 'Máu (2400–12000)', '% Công (1–10%)', '% Thủ (1–10%)', '% Máu (1–10%)', 'Chính xác HIT (1–10%)', 'Kháng RES (1–10%)'],
+    refine: ['% Công', '% Thủ', '% Máu', 'Tỉ lệ chí mạng (CRIT)', 'Tỉ lệ đỡ đòn (BLOCK_RATE)', 'Sát thương chí mạng (CRIT_DMG)', 'Tốc độ (SPD)'],
+  },
+  {
+    id: 'type',
+    num: '02',
+    nameVi: 'Thẻ Hệ (Type Card)',
+    nameEn: 'Type Buff Gear',
+    asset: '/Buff Gear/optimized/equipcard_2_1.webp',
+    color: '#58d9f5',
+    compatVi: 'Vũ Trang, Giác Đấu, Công Nghệ, Tâm Linh',
+    mainStats: ['% Tấn công (+5% ~ +35%)', '% Máu (+5% ~ +35%)', '% Phòng thủ (+5% ~ +35%)'],
+    transformation: ['ATK (Công)', 'HP (Máu)', 'DEF (Thủ)', 'RED_DEF (Xuyên DEF)', 'CRIT (Chí mạng)', 'BLOCK (Đỡ đòn)', 'EFFECT_HIT (Chính xác hiệu ứng)', 'EFFECT_RESIST (Kháng hiệu ứng)'],
+    purification: ['Công (600–2000)', 'Thủ (150–500)', 'Máu (2400–12000)', '% Công (1–10%)', '% Thủ (1–10%)', '% Máu (1–10%)', 'Tăng ST Phe (1–10%)', 'Giảm ST Phe (1–10%)'],
+    refine: ['% Công', '% Thủ', '% Máu', 'Kháng chí mạng (CRIT_RES)', 'Đỡ đòn (BLOCK)', 'Phản sát thương (DMG_REFLECT)'],
+  },
+  {
+    id: 'level',
+    num: '03',
+    nameVi: 'Thẻ Cấp (Level Card)',
+    nameEn: 'Level Buff Gear',
+    asset: '/Buff Gear/optimized/equipcard_3_1.webp',
+    color: '#ad82ff',
+    compatVi: 'Hạng S (S & SS), Hạng A, B, C, Cấp Rồng, Quỷ, Hổ, Đặc Biệt',
+    mainStats: ['% Tấn công (+5% ~ +35%)', '% Máu (+5% ~ +35%)', '% Phòng thủ (+5% ~ +35%)'],
+    transformation: ['ATK (Công)', 'HP (Máu)', 'DEF (Thủ)', 'RED_DEF (Xuyên DEF)', 'SKILL_DMG (ST Kỹ năng)', 'DMG_FREE (Giảm ST)', 'BONUS_DMG (ST Cộng thêm)', 'BONUS_DMG_FREE (Giảm ST Cộng thêm)'],
+    purification: ['Công (600–2000)', 'Thủ (150–500)', 'Máu (2400–12000)', '% Công (1–10%)', '% Thủ (1–10%)', '% Máu (1–10%)', 'Tăng ST Đấu trường (1–10%)', 'Giảm ST Đấu trường (1–10%)'],
+    refine: ['% Công', '% Thủ', '% Máu', 'Tăng DMG Rate', 'Giảm sát thương (DMG_FREE)'],
+  },
+])
+
 const openSkillLibrary = async () => {
-  activeTab.value = 'skills'
+  activeTab.value = 'stats'
   await nextTick()
-  document.querySelector('#panel-skills')?.scrollIntoView({
+  document.querySelector('#panel-stats')?.scrollIntoView({
     behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
     block: 'start',
   })
@@ -91,222 +125,1056 @@ const openSkillLibrary = async () => {
       </div>
     </section>
 
+    <!-- Interactive Workbench Simulator -->
     <BuffGearWorkbench @open-skills="openSkillLibrary" />
 
+    <!-- Bottom Navigation Tabs -->
     <nav class="tabs" role="tablist" :aria-label="t('buffGear.tabs.label')">
-      <button v-for="(tab, index) in tabs" :id="`tab-${tab}`" :key="tab" type="button" role="tab"
-        :aria-selected="activeTab === tab" :aria-controls="`panel-${tab}`" :class="{ active: activeTab === tab }"
-        @click="activeTab = tab">
-        <small>0{{ index + 1 }}</small><span>{{ t(`buffGear.tabs.${tab}`) }}</span>
+      <button
+        v-for="(tab, index) in tabs"
+        :id="`tab-${tab}`"
+        :key="tab"
+        type="button"
+        role="tab"
+        :aria-selected="activeTab === tab"
+        :aria-controls="`panel-${tab}`"
+        :class="{ active: activeTab === tab }"
+        @click="activeTab = tab"
+      >
+        <small>0{{ index + 1 }}</small>
+        <span>{{ t(`buffGear.tabs.${tab}`) }}</span>
       </button>
     </nav>
 
+    <!-- TAB 1: TỔNG QUAN BUFF GEAR -->
     <section v-if="activeTab === 'overview'" id="panel-overview" class="panel" role="tabpanel" aria-labelledby="tab-overview">
       <header class="section-head">
-        <div><span class="eyebrow">01 // {{ t('buffGear.guide.startHere') }}</span><h2>{{ t('buffGear.overview.title') }}</h2></div>
-        <p>{{ t('buffGear.overview.intro') }}</p>
+        <div>
+          <span class="eyebrow">01 // TỔNG QUAN BA LOẠI THẺ</span>
+          <h2>Tổng quan Buff Gear</h2>
+        </div>
+        <p>Hệ thống Buff Gear gồm 3 loại thẻ độc lập: <strong>Thẻ Phe</strong>, <strong>Thẻ Hệ</strong>, và <strong>Thẻ Cấp</strong>. Mỗi thẻ có nhóm chỉ số ngẫu nhiên riêng biệt khi Chuyển hóa, Thanh tẩy và Tinh luyện.</p>
       </header>
 
-      <div class="learning-section mental-model">
-        <div class="character-map">
-          <div class="character-node"><span>{{ t('buffGear.guide.character') }}</span><strong>{{ t('buffGear.guide.characterLoadout') }}</strong><small>{{ t('buffGear.guide.characterHint') }}</small></div>
-          <div class="map-connector" aria-hidden="true"><i></i><i></i><i></i></div>
-          <div class="slot-stack">
-            <article v-for="(slot, index) in buffGearSlots" :key="slot.id" :class="['slot-card', `slot--${slot.id}`]">
-              <span class="slot-code">{{ slot.code }}</span>
-              <div><small>0{{ index + 1 }} · {{ t('buffGear.guide.exampleLabel') }}</small><h3>{{ slotName(slot.id) }}</h3><p>{{ t(`buffGear.slots.${slot.id}.description`) }}</p></div>
-              <strong>{{ slotExample(slot.id) }}</strong>
-            </article>
+      <div class="slot-overview-grid">
+        <article v-for="card in slotCardsData" :key="card.id" class="slot-overview-card" :style="{ '--accent': card.color }">
+          <div class="card-head">
+            <img :src="card.asset" :alt="card.nameVi" class="card-thumb" loading="lazy" />
+            <div>
+              <span class="card-badge">{{ card.num }} // {{ card.id.toUpperCase() }}</span>
+              <h3>{{ card.nameVi }}</h3>
+              <p class="compat-text">🎯 <strong>Tương thích:</strong> {{ card.compatVi }}</p>
+            </div>
           </div>
-        </div>
-        <aside class="notice compatibility-note"><b>!</b><p>{{ t('buffGear.overview.compatibilityNote') }}</p></aside>
-      </div>
 
-      <section class="hp-example">
-        <header>
-          <div><span class="eyebrow">{{ t('buffGear.example.badge') }}</span><h2>{{ t('buffGear.example.title') }}</h2></div>
-          <b>{{ t('buffGear.guide.confirmed') }}</b>
-        </header>
-        <div class="hp-lines">
-          <article v-for="item in buffGearConfirmedExample.slots" :key="item.slot" :class="`slot--${item.slot}`">
-            <span>{{ slotName(item.slot) }}</span><strong>{{ item.compatibility }}</strong><em>{{ statLabel(item.stat) }} +{{ item.value }}%</em>
-          </article>
-        </div>
-        <p><b>!</b>{{ t('buffGear.example.warning') }}</p>
-      </section>
+          <div class="stat-pool-group">
+            <div class="pool-box main-pool">
+              <h4>⭐ Chỉ số chính (Main Stat)</h4>
+              <div class="tag-row">
+                <span v-for="ms in card.mainStats" :key="ms" class="tag tag-gold">{{ ms }}</span>
+              </div>
+            </div>
 
-      <section class="learning-section anatomy">
-        <header class="subhead"><span class="eyebrow">{{ t('buffGear.guide.anatomyLabel') }}</span><h2>{{ t('buffGear.guide.anatomyTitle') }}</h2><p>{{ t('buffGear.guide.anatomyIntro') }}</p></header>
-        <div class="anatomy-composition">
-          <div class="gear-object" aria-hidden="true"><span>MAIN</span><i v-for="index in 5" :key="index">BONUS</i><b>SKILL</b></div>
-          <div class="anatomy-list">
-            <article><span>01</span><div><small>MAIN</small><h3>{{ t('buffGear.concepts.main.title') }}</h3><p>{{ t('buffGear.concepts.main.description') }}</p></div><b>{{ buffGearStructure.initialMainStats }}</b></article>
-            <article><span>02</span><div><small>BONUS</small><h3>{{ t('buffGear.concepts.bonus.title') }}</h3><p>{{ t('buffGear.concepts.bonus.description') }}</p></div><b>{{ buffGearStructure.transformedBonusStatLimit }}</b></article>
-            <article><span>03</span><div><small>SKILL</small><h3>{{ t('buffGear.concepts.skill.title') }}</h3><p>{{ t('buffGear.concepts.skill.description') }}</p></div><b>{{ skillStatLimit }}</b></article>
+            <div class="pool-box trans-pool">
+              <h4>🌀 Chỉ số Chuyển hóa ngẫu nhiên (5 dòng phụ)</h4>
+              <div class="tag-row">
+                <span v-for="ts in card.transformation" :key="ts" class="tag tag-blue">{{ ts }}</span>
+              </div>
+            </div>
+
+            <div class="pool-box pur-pool">
+              <h4>🔮 Chỉ số Thanh tẩy (Khi lên Buff Gear Đỏ)</h4>
+              <div class="tag-row">
+                <span v-for="ps in card.purification" :key="ps" class="tag tag-purple">{{ ps }}</span>
+              </div>
+            </div>
+
+            <div class="pool-box ref-pool">
+              <h4>⚡ Chỉ số Tinh luyện dòng (Khi lên Buff Gear Đỏ)</h4>
+              <div class="tag-row">
+                <span v-for="rs in card.refine" :key="rs" class="tag tag-red">{{ rs }}</span>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section class="asset-audit">
-        <header><div><h2>{{ t('buffGear.assets.title') }}</h2><p>{{ t('buffGear.assets.description') }}</p></div>
-          <button type="button" :aria-expanded="showAssets" @click="showAssets = !showAssets">{{ t(showAssets ? 'buffGear.assets.hide' : 'buffGear.assets.show') }}</button>
-        </header>
-        <div v-if="showAssets" class="asset-grid">
-          <figure v-for="asset in buffGearSourceAssets" :key="asset.id">
-            <img :src="asset.optimized" :alt="`${t('buffGear.assets.unverified')}: ${asset.id}`" width="320" height="320" loading="lazy" decoding="async">
-            <figcaption><strong>{{ asset.id }}</strong><span>{{ t('buffGear.assets.unverified') }}</span></figcaption>
-          </figure>
-        </div>
-      </section>
-    </section>
-
-    <section v-else-if="activeTab === 'comparison'" id="panel-comparison" class="panel" role="tabpanel" aria-labelledby="tab-comparison">
-      <header class="section-head"><div><span class="eyebrow">02 // {{ t('buffGear.tabs.comparison') }}</span><h2>{{ t('buffGear.comparison.title') }}</h2></div><p>{{ t('buffGear.comparison.intro') }}</p></header>
-      <div class="comparison-cards">
-        <article v-for="slot in buffGearSlots" :key="slot.id" :class="['comparison-card', `slot--${slot.id}`]">
-          <header><span>{{ slot.code }}</span><div><small>{{ t('buffGear.guide.exampleLabel') }}</small><h3>{{ slotName(slot.id) }}</h3></div><strong>{{ slotExample(slot.id) }}</strong></header>
-          <p>{{ t(`buffGear.slots.${slot.id}.focus`) }}</p>
-          <div><small>{{ t('buffGear.comparison.focus') }}</small><span v-for="id in slot.focusStats" :key="id" :title="statHelp(id)">{{ statLabel(id) }}</span></div>
         </article>
       </div>
-      <aside class="notice analysis"><b>i</b><p>{{ t('buffGear.comparison.analysisNote') }}</p></aside>
-      <details class="stat-matrix">
-        <summary><span>{{ t('buffGear.comparison.fullPool') }}</span><small>{{ t('buffGear.comparison.fullPoolHint') }}</small></summary>
-        <div class="matrix-content">
-          <section v-for="system in matrixSystems" :key="system" class="matrix-system">
-            <header><small>{{ stageName(system) }}</small><h3>{{ t(`buffGear.comparison.${system}`) }}</h3></header>
-            <div class="matrix-slots">
-              <article v-for="slot in buffGearSlots" :key="slot.id" :class="`slot--${slot.id}`">
-                <strong>{{ slotName(slot.id) }}</strong>
-                <div>
-                  <span v-for="item in poolFor(slot, system)" :key="item.id || item" :title="statHelp(item.id || item)">
-                    {{ statLabel(item.id || item) }}<em v-if="item.min !== undefined">{{ formatRange(item) }}</em>
-                  </span>
-                </div>
-              </article>
-            </div>
-          </section>
-        </div>
-      </details>
     </section>
 
-    <section v-else-if="activeTab === 'progression'" id="panel-progression" class="panel" role="tabpanel" aria-labelledby="tab-progression">
-      <header class="section-head"><div><span class="eyebrow">03 // {{ t('buffGear.tabs.progression') }}</span><h2>{{ t('buffGear.progression.title') }}</h2></div><p>{{ t('buffGear.progression.intro') }}</p></header>
-      <div class="progression-map">
-        <section class="phase phase-orange">
-          <header><span>01</span><div><small>{{ t('buffGear.guide.orangePhase') }}</small><h3>{{ t('buffGear.pipeline.start') }}</h3><p>{{ t('buffGear.guide.orangeHint') }}</p></div></header>
-          <div class="orange-systems">
-            <button v-for="stage in buffGearProgression.slice(0, 3)" :key="stage.id" type="button" :class="{ active: openStage === stage.id }" @click="selectStage(stage.id)">
-              <small>0{{ stage.order }}</small><strong>{{ stageName(stage.id) }}</strong><span>{{ stageTarget(stage.id) }}</span>
-            </button>
+    <!-- TAB 2: CÁC CHỈ SỐ HIỆN CÓ TRONG GAME (10 CHỈ SỐ / TRANG CÓ NÚT TAB 1, 2, 3...) -->
+    <section v-else-if="activeTab === 'stats'" id="panel-stats" class="panel" role="tabpanel" aria-labelledby="tab-stats">
+      <header class="section-head">
+        <div>
+          <span class="eyebrow">02 // TỪ ĐIỂN CHỈ SỐ</span>
+          <h2>Các Chỉ số hiện tại đang có trong game</h2>
+        </div>
+        <p>Tra cứu nhanh ý nghĩa, tác dụng và phân loại của tất cả các chỉ số Buff Gear. Bấm các số trang 1, 2, 3 bên dưới để chuyển trang gọn gàng.</p>
+      </header>
+
+      <div class="stat-filter-bar">
+        <div class="search-input-wrap">
+          <input
+            v-model="statSearch"
+            type="search"
+            placeholder="Tìm theo tên chỉ số hoặc mã code (ví dụ: DEF, CRIT, Sát thương...)"
+            @input="onSearchInput"
+          />
+        </div>
+        <div class="stat-count-badge">
+          Hiển thị {{ paginatedStats.length }} / {{ filteredStats.length }} chỉ số
+        </div>
+      </div>
+
+      <!-- 10 Stat Cards List -->
+      <div class="stat-cards-list">
+        <article v-for="stat in paginatedStats" :key="stat.id" class="stat-glossary-card">
+          <div class="stat-card-header">
+            <div class="stat-title-group">
+              <span class="stat-code-pill">{{ stat.id }}</span>
+              <h3>{{ stat.vi }}</h3>
+              <small class="stat-en-name">({{ stat.en }})</small>
+            </div>
+            <span class="stat-badge-type">Thuộc tính Buff Gear</span>
           </div>
-        </section>
-        <button type="button" class="advance-gate" :class="{ active: openStage === 'advance' }" @click="selectStage('advance')">
-          <span>02</span><div><small>{{ t('buffGear.pipeline.redLabel') }}</small><strong>{{ stageName('advance') }}</strong><em>{{ stageTarget('advance') }}</em></div><b>→</b>
+          <p class="stat-desc">{{ locale === 'vi' ? stat.explanationVi : stat.explanationEn }}</p>
+        </article>
+      </div>
+
+      <!-- Pagination Buttons (1, 2, 3...) -->
+      <div class="pagination-bar">
+        <button
+          type="button"
+          class="page-nav-btn"
+          :disabled="currentStatPage === 1"
+          @click="goToStatPage(currentStatPage - 1)"
+        >
+          ‹ Trang trước
         </button>
-        <section class="phase phase-red">
-          <header><span>03</span><div><small>{{ t('buffGear.guide.redPhase') }}</small><h3>{{ t('buffGear.pipeline.red') }}</h3><p>{{ t('buffGear.guide.independentBranches') }}</p></div></header>
-          <div class="red-branches">
-            <button v-for="stage in buffGearProgression.slice(3)" :key="stage.id" type="button" :class="{ active: openStage === stage.id }" @click="selectStage(stage.id)">
-              <small>{{ t('buffGear.guide.independent') }}</small><strong>{{ stageName(stage.id) }}</strong><span>{{ stageTarget(stage.id) }}</span>
-            </button>
-          </div>
-        </section>
-      </div>
 
-      <section class="system-details">
-        <header class="subhead"><span class="eyebrow">{{ t('buffGear.guide.systemDetailsLabel') }}</span><h2>{{ t('buffGear.guide.systemDetailsTitle') }}</h2></header>
-        <article v-for="stage in buffGearProgression" :id="`stage-${stage.id}`" :key="stage.id" :class="{ open: openStage === stage.id }">
-          <button type="button" :aria-expanded="openStage === stage.id" @click="openStage = openStage === stage.id ? '' : stage.id">
-            <span>0{{ stage.order }}</span><div><strong>{{ stageName(stage.id) }}</strong><small>{{ stageTarget(stage.id) }}</small></div><b>⌄</b>
-          </button>
-          <div v-if="openStage === stage.id" class="stage-body">
-            <div class="change-summary"><small>{{ t('buffGear.guide.whatChanges') }}</small><p>{{ t(`buffGear.stages.${stage.id}.description`) }}</p></div>
-            <div class="stage-metrics">
-              <span v-for="metric in stageMetrics(stage)" :key="metric[1]"><b>{{ metric[0] }}</b>{{ t(metric[1]) }}</span>
-            </div>
-            <ul><li v-for="rule in stage.rules" :key="rule">{{ t(`buffGear.rules.${rule}`) }}</li></ul>
-            <p v-if="stage.id === 'purification'" class="unknown-limit">{{ t('buffGear.progression.unknownLimit') }}</p>
-          </div>
-        </article>
-      </section>
-    </section>
-
-    <section v-else id="panel-skills" class="panel" role="tabpanel" aria-labelledby="tab-skills">
-      <header class="section-head"><div><span class="eyebrow">04 // {{ t('buffGear.tabs.skills') }}</span><h2>{{ t('buffGear.skills.title') }}</h2></div><p>{{ t('buffGear.skills.intro') }}</p></header>
-      <div class="skill-tools">
-        <label><span>{{ t('buffGear.skills.searchLabel') }}</span><input v-model="search" type="search" :placeholder="t('buffGear.skills.searchPlaceholder')"></label>
-        <div class="category-filter" :aria-label="t('buffGear.skills.categoryLabel')">
-          <button v-for="item in ['all', ...buffGearSkillCategoryIds]" :key="item" type="button" :class="{ active: skillCategory === item }" @click="skillCategory = item">
-            {{ t(`buffGear.skills.categories.${item}`) }}
+        <div class="page-numbers">
+          <button
+            v-for="p in totalStatPages"
+            :key="p"
+            type="button"
+            class="page-num-btn"
+            :class="{ active: currentStatPage === p }"
+            @click="goToStatPage(p)"
+          >
+            {{ p }}
           </button>
         </div>
+
+        <button
+          type="button"
+          class="page-nav-btn"
+          :disabled="currentStatPage === totalStatPages"
+          @click="goToStatPage(currentStatPage + 1)"
+        >
+          Trang sau ›
+        </button>
       </div>
-      <p class="count">{{ t('buffGear.skills.resultCount', { count: filteredSkills.length }) }}</p>
-      <div class="skill-grid">
-        <article v-for="skill in filteredSkills" :key="skill.id" :class="['skill-card', `skill-card--${skill.confidence}`]">
-          <header>
-            <div><span v-for="category in getBuffGearSkillCategories(skill)" :key="category">{{ t(`buffGear.skills.categories.${category}`) }}</span></div>
-            <b v-if="skill.confidence !== 'confirmed'" class="confidence-badge">{{ t(`buffGear.confidence.${skill.confidence}`) }}</b>
+    </section>
+
+    <!-- TAB 3: NÂNG CẤP LÊN GEAR ĐỎ CẦN NGUYÊN LIỆU GÌ -->
+    <section v-else-if="activeTab === 'redUpgrade'" id="panel-redUpgrade" class="panel" role="tabpanel" aria-labelledby="tab-redUpgrade">
+      <header class="section-head">
+        <div>
+          <span class="eyebrow">03 // LỘ TRÌNH VÀ NGUYÊN LIỆU</span>
+          <h2>Nâng cấp lên Gear Đỏ cần nguyên liệu gì</h2>
+        </div>
+        <p>Điều kiện mở khóa Buff Gear phẩm chất Đỏ, quy tắc kế thừa chỉ số và bảng chi tiết toàn bộ nguyên liệu cần chuẩn bị.</p>
+      </header>
+
+      <div class="red-upgrade-sections">
+        <!-- Section 1: Conditions & Rules -->
+        <div class="upgrade-rule-grid">
+          <div class="rule-card">
+            <div class="rule-icon">🏆</div>
+            <h3>1. Điều kiện mở khóa</h3>
+            <p>Nhân vật đạt <strong>Cấp 90 (Lv.90)</strong> trở lên.</p>
+            <p>Trang bị thẻ Buff Gear Vàng và nhấn nút <strong>"Tiến Cấp (Advance)"</strong> để mở khóa phẩm chất Đỏ.</p>
+          </div>
+
+          <div class="rule-card">
+            <div class="rule-icon">🔄</div>
+            <h3>2. Quy tắc Kế thừa</h3>
+            <p><strong>Bảo lưu 100%:</strong> Giữ nguyên vẹn 5 dòng Chuyển hóa và số Sao Vàng / Sao Tím hiện có của thẻ Vàng.</p>
+            <p>Không bị reset cấp sao hay mất các dòng chỉ số đã chuyển hóa.</p>
+          </div>
+
+          <div class="rule-card">
+            <div class="rule-icon">✨</div>
+            <h3>3. Quyền lợi khi lên Đỏ</h3>
+            <p><strong>Mở Thanh Tẩy (Purification):</strong> 4 mốc (×1, ×3, ×6, ×12) với dòng chỉ số độc quyền và 22 kỹ năng đặc biệt.</p>
+            <p><strong>Mở Tinh Luyện Dòng (Refine):</strong> 1 dòng cao cấp nâng từ cấp 0 lên cấp 6 theo sao tím.</p>
+          </div>
+        </div>
+
+        <!-- Section 2: Drop Buff Advance Requirements (Direct from in-game) -->
+        <div class="advance-mats-panel">
+          <header class="advance-mats-head">
+            <div class="advance-title-row">
+              <span class="advance-tag-badge">TIẾN CẤP THẺ ĐỎ (DROP BUFF ADVANCE)</span>
+              <h3>🔥 Chi tiết Nguyên liệu Tiến Cấp Buff Gear Đỏ (Từng Thẻ)</h3>
+            </div>
+            <p>Sau khi nhân vật đạt Lv.90, mỗi thẻ Buff Gear cần lượng nguyên liệu riêng biệt sau đây để tiến cấp lên phẩm chất Đỏ:</p>
           </header>
-          <h3>{{ skillName(skill) }}</h3><small>{{ secondarySkillName(skill) }}</small>
-          <p>{{ locale === 'vi' ? skill.summaryVi : skill.sourceText }}</p>
-          <details><summary>{{ t('buffGear.skills.technicalDetails') }}</summary><dl><div><dt>{{ t('buffGear.skills.trigger') }}</dt><dd>{{ skill.trigger }}</dd></div></dl><blockquote>{{ skill.sourceText }}</blockquote></details>
-        </article>
+
+          <div class="advance-card-mats-grid">
+            <!-- Thẻ Phe -->
+            <div class="advance-mat-card" style="--accent: #efbc47;">
+              <div class="advance-mat-card-header">
+                <span class="card-slot-badge">Thẻ 01</span>
+                <h4>Thẻ Phe (Hero / Monster)</h4>
+              </div>
+              <div class="advance-items-list">
+                <div class="advance-item-row">
+                  <div class="advance-item-placeholder" title="Ảnh thẻ tiến cấp Phe">
+                    <span class="ph-label">Thẻ Phe</span>
+                  </div>
+                  <div class="advance-item-info">
+                    <strong>35 Thẻ / Mảnh</strong>
+                    <small>Thẻ tiến cấp Phe</small>
+                  </div>
+                </div>
+                <div class="advance-item-row">
+                  <div class="advance-item-placeholder" title="Ảnh hộp linh kiện">
+                    <span class="ph-label">Hộp Kit</span>
+                  </div>
+                  <div class="advance-item-info">
+                    <strong>80 Hộp</strong>
+                    <small>Hộp linh kiện nâng cấp</small>
+                  </div>
+                </div>
+                <div class="advance-item-row">
+                  <div class="advance-gold-badge">🪙</div>
+                  <div class="advance-item-info">
+                    <strong>100.000</strong>
+                    <small>Vàng</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Thẻ Hệ -->
+            <div class="advance-mat-card" style="--accent: #58d9f5;">
+              <div class="advance-mat-card-header">
+                <span class="card-slot-badge">Thẻ 02</span>
+                <h4>Thẻ Hệ (Type Buff Gear)</h4>
+              </div>
+              <div class="advance-items-list">
+                <div class="advance-item-row">
+                  <div class="advance-item-placeholder" title="Ảnh thẻ tiến cấp Hệ">
+                    <span class="ph-label">Thẻ Hệ</span>
+                  </div>
+                  <div class="advance-item-info">
+                    <strong>35 Thẻ / Mảnh</strong>
+                    <small>Thẻ tiến cấp Hệ</small>
+                  </div>
+                </div>
+                <div class="advance-item-row">
+                  <div class="advance-item-placeholder" title="Ảnh hộp linh kiện">
+                    <span class="ph-label">Hộp Kit</span>
+                  </div>
+                  <div class="advance-item-info">
+                    <strong>80 Hộp</strong>
+                    <small>Hộp linh kiện nâng cấp</small>
+                  </div>
+                </div>
+                <div class="advance-item-row">
+                  <div class="advance-gold-badge">🪙</div>
+                  <div class="advance-item-info">
+                    <strong>100.000</strong>
+                    <small>Vàng</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Thẻ Cấp -->
+            <div class="advance-mat-card" style="--accent: #ad82ff;">
+              <div class="advance-mat-card-header">
+                <span class="card-slot-badge">Thẻ 03</span>
+                <h4>Thẻ Cấp (Level Buff Gear)</h4>
+              </div>
+              <div class="advance-items-list">
+                <div class="advance-item-row">
+                  <div class="advance-item-placeholder" title="Ảnh thẻ tiến cấp Cấp">
+                    <span class="ph-label">Thẻ Cấp</span>
+                  </div>
+                  <div class="advance-item-info">
+                    <strong>35 Thẻ / Mảnh</strong>
+                    <small>Thẻ tiến cấp Cấp</small>
+                  </div>
+                </div>
+                <div class="advance-item-row">
+                  <div class="advance-item-placeholder" title="Ảnh hộp linh kiện">
+                    <span class="ph-label">Hộp Kit</span>
+                  </div>
+                  <div class="advance-item-info">
+                    <strong>80 Hộp</strong>
+                    <small>Hộp linh kiện nâng cấp</small>
+                  </div>
+                </div>
+                <div class="advance-item-row">
+                  <div class="advance-gold-badge">🪙</div>
+                  <div class="advance-item-info">
+                    <strong>100.000</strong>
+                    <small>Vàng</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Total Advance Summary Banner -->
+          <div class="advance-total-banner">
+            <strong>📌 Tổng nguyên liệu tiến cấp CẢ 3 THẺ lên Đỏ:</strong>
+            <span>105 Thẻ tiến cấp (35 thẻ mỗi loại) + 240 Hộp linh kiện + 300.000 Vàng</span>
+          </div>
+        </div>
+
+        <!-- Section 3: Detailed Material Tables (Stars & Purple Stars) -->
+        <div class="material-tables-wrap">
+          <!-- Star Ascension Table -->
+          <div class="mat-table-card">
+            <div class="table-header">
+              <img src="/Buff Gear/Item_213001.png" alt="Thẻ tăng sao" class="mat-icon-sm" />
+              <div>
+                <h3>⭐ Bảng Nguyên liệu Thăng Sao Vàng (★ 1 – 6)</h3>
+                <small>Tăng chỉ số chính từ +10% lên tối đa +35%</small>
+              </div>
+            </div>
+            <div class="table-scroll">
+              <table class="mat-table">
+                <thead>
+                  <tr>
+                    <th>Mốc Sao</th>
+                    <th>🪙 Vàng</th>
+                    <th>⭐ Thẻ thăng sao</th>
+                    <th>💎 Tinh thể [S]</th>
+                    <th>🔮 Lõi Tinh Thể</th>
+                    <th>Chỉ số chính</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(cost, idx) in buffGearGoldStarCosts.slice(1)" :key="idx">
+                    <td><strong>{{ idx + 1 }} ★</strong></td>
+                    <td>{{ (cost.gold).toLocaleString('vi-VN') }}</td>
+                    <td>{{ cost.ascensionCards }} thẻ</td>
+                    <td>{{ (cost.crystalS).toLocaleString('vi-VN') }}</td>
+                    <td>{{ (cost.crystalCore).toLocaleString('vi-VN') }}</td>
+                    <td class="stat-highlight">+{{ (idx + 2) * 5 }}%</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td><strong>Tổng (1 Thẻ)</strong></td>
+                    <td><strong>270.000</strong></td>
+                    <td><strong>96 thẻ</strong></td>
+                    <td><strong>6.200</strong></td>
+                    <td><strong>3.600</strong></td>
+                    <td class="stat-highlight"><strong>+35% (Max)</strong></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+
+          <!-- Purple Star Refinement Table -->
+          <div class="mat-table-card">
+            <div class="table-header">
+              <img src="/Buff Gear/Item_212008.png" alt="Thẻ tinh luyện" class="mat-icon-sm" />
+              <div>
+                <h3>🛡️ Bảng Nguyên liệu Tinh Luyện Sao Tím (★ 1 – 6)</h3>
+                <small>Mở khóa và nâng cấp dòng Tinh Luyện trên Buff Gear Đỏ</small>
+              </div>
+            </div>
+            <div class="table-scroll">
+              <table class="mat-table">
+                <thead>
+                  <tr>
+                    <th>Mốc Sao Tím</th>
+                    <th>🪙 Vàng</th>
+                    <th>🛡️ Thẻ tinh luyện</th>
+                    <th>Điều kiện Sao Vàng</th>
+                    <th>Cấp dòng Tinh Luyện</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(cost, idx) in buffGearPurpleStarCosts.slice(1)" :key="idx">
+                    <td><strong>{{ idx + 1 }} ★ tím</strong></td>
+                    <td>{{ (cost.gold).toLocaleString('vi-VN') }}</td>
+                    <td>{{ cost.refinementCards }} thẻ</td>
+                    <td>≥ {{ idx + 1 }} ★ vàng</td>
+                    <td class="stat-highlight">Cấp {{ idx + 1 }}</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td><strong>Tổng (1 Thẻ)</strong></td>
+                    <td><strong>600.000</strong></td>
+                    <td><strong>48 thẻ</strong></td>
+                    <td><strong>6 ★ vàng</strong></td>
+                    <td class="stat-highlight"><strong>Cấp 6 (Max)</strong></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
-      <div v-if="filteredSkills.length === 0" class="empty">{{ t('buffGear.skills.empty') }}</div>
-      <aside class="data-notes"><b>!</b><div><h2>{{ t('buffGear.notes.title') }}</h2><ul><li>{{ t('buffGear.notes.formulas') }}</li><li>{{ t('buffGear.notes.partial') }}</li><li>{{ t('buffGear.notes.server') }}</li></ul></div></aside>
     </section>
   </main>
 </template>
 
 <style scoped>
-.buff-page{
-  --cyan:#59dcf8;--ink:#edf7ff;--muted:#8fa9ba;--surface:#071722;--surface-2:#0a1d2a;
-  --line:rgba(105,174,207,.22);--faction:#efbc47;--type:#58d9f5;--level:#ad82ff;
-  max-width:1460px;margin:auto;padding:28px clamp(12px,2.2vw,28px) 84px;color:var(--ink)
+.buff-page {
+  --cyan: #59dcf8;
+  --ink: #edf7ff;
+  --muted: #8fa9ba;
+  --surface: #071722;
+  --surface-2: #0a1d2a;
+  --line: rgba(105, 174, 207, 0.22);
+  --faction: #efbc47;
+  --type: #58d9f5;
+  --level: #ad82ff;
+  max-width: 1460px;
+  margin: auto;
+  padding: 24px clamp(12px, 2.2vw, 28px) 84px;
+  color: var(--ink);
 }
-.hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 260px;min-height:218px;align-items:center;overflow:hidden;border:1px solid rgba(97,187,225,.24);border-radius:25px;padding:30px clamp(26px,4.5vw,58px);background:radial-gradient(circle at 88% 20%,rgba(157,92,255,.18),transparent 34%),linear-gradient(118deg,#092332,#07121f 62%,#151127)}
-.hero:before{content:"";position:absolute;inset:-50%;background:repeating-radial-gradient(circle at 9% 58%,transparent 0 64px,rgba(91,218,246,.055) 65px 66px);animation:drift 18s ease-in-out infinite alternate}
-.hero-copy,.mini-system{position:relative;z-index:1}.eyebrow{color:var(--cyan);font:900 10px/1.3 ui-monospace,monospace;letter-spacing:.17em;text-transform:uppercase}
-.hero h1{margin:10px 0 9px;color:#f5f9ff;font-size:clamp(42px,5.3vw,70px);font-weight:950;line-height:.92;letter-spacing:-.055em;text-transform:uppercase}
-.hero p{max-width:760px;color:#a8c0d0;font-size:14px;line-height:1.62}
-.hero-facts{display:flex;gap:8px;margin-top:18px}.hero-facts span{display:flex;align-items:center;gap:7px;border-radius:10px;background:rgba(3,19,30,.68);padding:8px 11px;color:#839eaf;font-size:9px;font-weight:850;text-transform:uppercase}.hero-facts b{color:var(--cyan);font-size:18px}
-.mini-system{display:grid;width:184px;height:148px;grid-template-columns:repeat(3,44px);align-content:center;justify-content:center;gap:12px;justify-self:center}.mini-system:before,.mini-system:after{content:"";position:absolute;inset:12px 0;border:1px solid rgba(102,185,224,.18);border-radius:50%;transform:rotate(-10deg)}.mini-system:after{inset:30px -14px;transform:rotate(14deg)}
-.mini-system span{z-index:1;display:grid;width:44px;height:44px;place-items:center;border:1px solid currentColor;border-radius:13px;background:#091927;font-weight:950}.mini-system .slot--faction{color:var(--faction)}.mini-system .slot--type{color:var(--type)}.mini-system .slot--level{color:var(--level)}.mini-system i{position:absolute;left:50%;top:45%;width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 20px var(--cyan)}.mini-system strong{grid-column:1/-1;color:#b8ccd9;font:800 11px ui-monospace,monospace;text-align:center}
-.tabs{position:sticky;top:0;z-index:8;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:14px 0;background:rgba(4,15,25,.93);border-radius:15px;padding:6px;backdrop-filter:blur(14px)}
-.tabs button{display:flex;min-height:50px;align-items:center;justify-content:center;gap:9px;border:0;border-radius:10px;background:transparent;color:#829aab;font:850 13px inherit;cursor:pointer;transition:background .2s,color .2s,transform .2s}
-.tabs button:hover{color:#dff8ff}.tabs button.active{background:#0d2c3c;color:#f2fbff;box-shadow:inset 0 -2px var(--cyan)}.tabs small{color:var(--cyan);font:900 9px ui-monospace,monospace}
-.panel{border-radius:22px;background:linear-gradient(150deg,rgba(8,25,37,.96),rgba(4,15,24,.96));padding:clamp(18px,3vw,36px);animation:panel-in .28s ease both}
-.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,520px);align-items:end;gap:24px;margin-bottom:26px}.section-head h2,.subhead h2{margin-top:7px;font-size:clamp(27px,3.8vw,44px);font-weight:930;letter-spacing:-.04em}.section-head>p,.subhead p{color:var(--muted);font-size:13px;line-height:1.7}
-.learning-section,.hp-example,.asset-audit,.stat-matrix,.system-details{border-radius:18px;background:rgba(10,29,42,.68)}
-.mental-model{padding:22px}.character-map{display:grid;grid-template-columns:minmax(170px,.75fr) 70px minmax(0,1.7fr);align-items:center;gap:18px}
-.character-node{display:grid;min-height:175px;align-content:center;border-radius:16px;background:linear-gradient(145deg,#102c3e,#091823);padding:24px}.character-node span{color:var(--cyan);font:900 10px ui-monospace,monospace}.character-node strong{margin:10px 0;font-size:23px;line-height:1.15}.character-node small{color:var(--muted);line-height:1.5}
-.map-connector{position:relative;display:grid;gap:32px}.map-connector:before{content:"";position:absolute;left:0;top:50%;width:100%;height:1px;background:var(--line)}.map-connector i{z-index:1;width:9px;height:9px;justify-self:end;border:2px solid #071722;border-radius:50%;background:var(--cyan)}
-.slot-stack{display:grid;gap:8px}.slot-card{--accent:var(--cyan);display:grid;grid-template-columns:48px minmax(0,1fr) auto;align-items:center;gap:15px;border-left:3px solid var(--accent);border-radius:13px;background:rgba(5,19,29,.76);padding:14px 16px}.slot--faction{--accent:var(--faction)}.slot--type{--accent:var(--type)}.slot--level{--accent:var(--level)}
-.slot-code{display:grid;width:44px;height:44px;place-items:center;border-radius:12px;background:color-mix(in srgb,var(--accent) 13%,transparent);color:var(--accent);font-weight:950}.slot-card small{color:#69879a;font:800 9px ui-monospace,monospace;text-transform:uppercase}.slot-card h3{margin:3px 0;font-size:17px}.slot-card p{color:#8ea7b7;font-size:11px;line-height:1.45}.slot-card>strong{border-radius:999px;background:color-mix(in srgb,var(--accent) 12%,transparent);padding:7px 11px;color:var(--accent);font-size:11px}
-.notice,.data-notes{display:flex;align-items:flex-start;gap:12px;border-radius:13px;background:rgba(255,180,45,.075);padding:14px 16px;color:#d6c49f;font-size:12px;line-height:1.55}.notice>b,.data-notes>b{display:grid;min-width:30px;height:30px;place-items:center;border-radius:9px;background:#ffb529;color:#111722}.compatibility-note{margin-top:12px}
-.hp-example{margin-top:14px;padding:20px}.hp-example header,.asset-audit header{display:flex;align-items:center;justify-content:space-between;gap:14px}.hp-example h2,.asset-audit h2{margin-top:5px;font-size:20px}.hp-example header>b{border-radius:999px;background:rgba(69,222,158,.1);padding:6px 10px;color:#53e3a2;font-size:9px}
-.hp-lines{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}.hp-lines article{--accent:var(--cyan);display:grid;gap:5px;border-top:2px solid var(--accent);border-radius:11px;background:rgba(3,15,24,.7);padding:13px}.hp-lines span{color:#748fa2;font-size:9px}.hp-lines strong{font-size:14px}.hp-lines em{color:var(--accent);font-size:12px;font-style:normal;font-weight:850}.hp-example>p{display:flex;gap:8px;color:#f3c86f;font-size:11px}
-.anatomy{display:grid;grid-template-columns:minmax(230px,.7fr) minmax(0,1.4fr);gap:28px;margin-top:14px;padding:25px}.subhead{align-self:center}.anatomy-composition{display:grid;grid-template-columns:200px minmax(0,1fr);align-items:center;gap:20px}
-.gear-object{display:grid;grid-template-columns:repeat(5,1fr);overflow:hidden;border-radius:18px;background:#06121c;box-shadow:inset 0 0 0 1px var(--line)}.gear-object span,.gear-object b{grid-column:1/-1;padding:19px;text-align:center}.gear-object span{background:rgba(85,218,248,.14);color:var(--cyan)}.gear-object i{padding:14px 2px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:#8b72d0;font:700 7px ui-monospace,monospace;text-align:center}.gear-object b{background:rgba(169,125,255,.13);color:#c4a6ff}
-.anatomy-list{display:grid;gap:7px}.anatomy-list article{display:grid;grid-template-columns:30px minmax(0,1fr) 48px;align-items:center;gap:12px;border-radius:11px;background:rgba(4,16,25,.64);padding:11px 13px}.anatomy-list article>span{color:#607e92;font:800 9px ui-monospace,monospace}.anatomy-list small{color:var(--cyan);font:800 8px ui-monospace,monospace}.anatomy-list h3{margin:2px 0;font-size:14px}.anatomy-list p{color:#829dad;font-size:10px;line-height:1.4}.anatomy-list article>b{color:var(--cyan);font-size:24px;text-align:right}
-.asset-audit{margin-top:14px;padding:19px}.asset-audit header p{margin-top:4px;color:#7f98aa;font-size:11px}.asset-audit button,.category-filter button{min-height:44px;border:0;border-radius:10px;background:#103246;padding:0 14px;color:var(--cyan);font-weight:850;cursor:pointer}.asset-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:16px}.asset-grid figure{overflow:hidden;border-radius:12px;background:#040e16}.asset-grid img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}.asset-grid figcaption{padding:8px}.asset-grid figcaption>*{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.asset-grid figcaption strong{font-size:10px}.asset-grid figcaption span{color:#eab257;font-size:8px}
-.comparison-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.comparison-card{--accent:var(--cyan);border-top:3px solid var(--accent);border-radius:15px;background:rgba(9,29,42,.72);padding:18px}.comparison-card header{display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:10px}.comparison-card header>span{display:grid;width:40px;height:40px;place-items:center;border-radius:11px;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);font-weight:950}.comparison-card header small,.comparison-card>div>small{color:#708da0;font-size:8px;text-transform:uppercase}.comparison-card h3{font-size:17px}.comparison-card header strong{color:var(--accent);font-size:11px}.comparison-card>p{min-height:58px;margin:16px 0;color:#91a9b8;font-size:11px;line-height:1.55}.comparison-card>div{display:flex;align-items:center;flex-wrap:wrap;gap:5px}.comparison-card>div small{flex-basis:100%}.comparison-card>div span{border-radius:7px;background:color-mix(in srgb,var(--accent) 9%,transparent);padding:5px 7px;color:var(--accent);font-size:9px}.analysis{margin-top:11px;background:rgba(168,125,255,.07);color:#c7b8dd}
-.stat-matrix{margin-top:11px;overflow:hidden}.stat-matrix>summary{display:flex;min-height:64px;align-items:center;justify-content:space-between;gap:20px;padding:12px 18px;cursor:pointer}.stat-matrix>summary span{font-weight:900}.stat-matrix>summary small{color:#829aaa;text-align:right}.matrix-content{display:grid;gap:10px;border-top:1px solid var(--line);padding:15px}.matrix-system{border-radius:13px;background:#06131e;padding:15px}.matrix-system>header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.matrix-system header small{color:var(--cyan)}.matrix-system h3{font-size:16px}.matrix-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.matrix-slots article{--accent:var(--cyan);border-top:2px solid var(--accent);border-radius:10px;background:#081a26;padding:11px}.matrix-slots article>strong{color:var(--accent);font-size:11px}.matrix-slots article>div{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}.matrix-slots span{display:flex;flex-direction:column;border-radius:6px;background:rgba(255,255,255,.035);padding:5px 6px;color:#adbfca;font-size:8px}.matrix-slots em{margin-top:2px;color:var(--accent);font-style:normal}
-.progression-map{display:grid;grid-template-columns:1fr 190px 1fr;align-items:stretch;gap:12px}.phase{border-radius:17px;background:#081c29;padding:18px}.phase>header{display:grid;grid-template-columns:34px 1fr;gap:11px}.phase>header>span,.advance-gate>span{display:grid;width:32px;height:32px;place-items:center;border-radius:9px;background:#123549;color:var(--cyan);font:900 9px ui-monospace,monospace}.phase header small{color:#6d8a9c;font:800 8px ui-monospace,monospace}.phase h3{margin:3px 0;font-size:18px}.phase header p{color:#7895a8;font-size:10px}.orange-systems,.red-branches{display:grid;gap:6px;margin-top:14px}.phase button,.advance-gate{min-height:68px;border:0;border-radius:11px;background:#06141f;padding:12px;color:#91a8b7;text-align:left;cursor:pointer;transition:transform .18s,background .18s}.phase button:hover,.phase button.active,.advance-gate:hover,.advance-gate.active{transform:translateY(-2px);background:#103145;color:#f1faff}.phase button small,.phase button strong,.phase button span{display:block}.phase button small{color:var(--cyan);font:800 8px ui-monospace,monospace}.phase button strong{margin:4px 0;font-size:13px}.phase button span{font-size:9px}.red-branches{grid-template-columns:1fr 1fr}.phase-red{background:linear-gradient(140deg,rgba(97,24,38,.3),rgba(45,28,77,.38))}.phase-red button{border-top:2px solid #ff6478}.advance-gate{display:grid;grid-template-columns:34px 1fr 20px;align-content:center;align-items:center;gap:10px;background:linear-gradient(140deg,rgba(239,184,65,.15),rgba(202,77,91,.13))}.advance-gate small,.advance-gate strong,.advance-gate em{display:block}.advance-gate small{color:#efa943;font-size:8px}.advance-gate strong{margin:5px 0}.advance-gate em{color:#bd9b89;font-size:9px;font-style:normal}.advance-gate b{color:#ffbd53;font-size:20px}
-.system-details{margin-top:14px;padding:20px}.system-details>.subhead{margin-bottom:14px}.system-details article{overflow:hidden;border-top:1px solid var(--line)}.system-details article:first-of-type{border-top:0}.system-details article>button{display:grid;width:100%;min-height:66px;grid-template-columns:38px 1fr 24px;align-items:center;gap:12px;border:0;background:transparent;color:var(--ink);text-align:left;cursor:pointer}.system-details article>button>span{display:grid;width:34px;height:34px;place-items:center;border-radius:9px;background:#102b3c;color:var(--cyan);font-size:9px}.system-details article>button strong,.system-details article>button small{display:block}.system-details article>button small{color:#7692a4}.system-details article>button>b{transition:transform .2s}.system-details article.open>button>b{transform:rotate(180deg)}.stage-body{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr);gap:16px;padding:0 0 18px 50px}.change-summary small{color:var(--cyan);font:800 8px ui-monospace,monospace}.change-summary p{margin-top:6px;color:#9db1bf;font-size:12px;line-height:1.6}.stage-metrics{display:flex;align-content:flex-start;flex-wrap:wrap;gap:6px}.stage-metrics span{display:flex;align-items:center;gap:6px;border-radius:9px;background:#06141f;padding:8px 10px;color:#7f99aa;font-size:9px}.stage-metrics b{color:var(--cyan);font-size:16px}.stage-body ul{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,1fr);gap:5px;margin:0;padding:0;list-style:none}.stage-body li{border-left:2px solid #9c75ec;background:rgba(152,100,255,.055);padding:8px 10px;color:#93a9b7;font-size:10px}.unknown-limit{grid-column:1/-1;color:#f0bc63;font-size:10px}
-.skill-tools{display:grid;grid-template-columns:minmax(220px,380px) 1fr;align-items:end;gap:14px}.skill-tools label span{display:block;margin-bottom:6px;color:#7f99ab;font-size:9px;font-weight:900;text-transform:uppercase}.skill-tools input{width:100%;height:46px;border:0;border-radius:11px;background:#0a2231;padding:0 13px;color:var(--ink)}.category-filter{display:flex;flex-wrap:wrap;gap:5px}.category-filter button{min-height:44px;background:#091d2a;color:#8fa7b6;font-size:10px}.category-filter button:hover,.category-filter button.active{background:#124058;color:#eaffff}.count{margin:13px 0;color:#6f8b9f;font-size:10px}
-.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.skill-card{display:flex;min-height:225px;flex-direction:column;border-radius:14px;background:#071a27;padding:17px}.skill-card--partial{box-shadow:inset 3px 0 #eeb44e}.skill-card header{display:flex;min-height:25px;align-items:flex-start;justify-content:space-between;gap:8px}.skill-card header>div{display:flex;flex-wrap:wrap;gap:4px}.skill-card header span,.confidence-badge{border-radius:999px;background:#0d3042;padding:4px 7px;color:var(--cyan);font-size:7px;text-transform:uppercase}.confidence-badge{background:rgba(239,178,72,.11);color:#efbc5b}.skill-card h3{margin:11px 0 2px;font-size:17px}.skill-card>small{color:#9d82ed;font-size:9px}.skill-card>p{flex:1;margin-top:10px;color:#9aafbc;font-size:11px;line-height:1.58}.skill-card details{margin-top:11px}.skill-card summary{min-height:44px;color:var(--cyan);font-size:9px;line-height:44px;cursor:pointer}.skill-card dl,.skill-card blockquote{margin:0}.skill-card dl div{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:9px;color:#7e98a8;font-size:9px}.skill-card dd{color:#c3d0d8}.skill-card blockquote{margin-top:8px;border-left:2px solid #9f77ed;padding-left:9px;color:#7f96a5;font-size:9px;line-height:1.5}.empty{border-radius:13px;background:#06141f;padding:30px;color:#7891a2;text-align:center}.data-notes{margin-top:12px}.data-notes h2{font-size:14px}.data-notes ul{margin:6px 0 0;padding-left:16px;color:#a99e88;font-size:10px}
-@keyframes drift{to{transform:translate3d(3%,2%,0) rotate(2deg)}}@keyframes panel-in{from{opacity:.3;transform:translateY(7px)}to{opacity:1;transform:none}}
-@media(max-width:980px){
-  .hero{grid-template-columns:1fr 200px}.character-map{grid-template-columns:1fr 48px 1.8fr}.anatomy{grid-template-columns:1fr}.comparison-cards{grid-template-columns:1fr}.comparison-card>p{min-height:0}.progression-map{grid-template-columns:1fr 150px 1fr}.skill-tools{grid-template-columns:1fr}.asset-grid{grid-template-columns:repeat(3,1fr)}
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  min-height: 180px;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(97, 187, 225, 0.24);
+  border-radius: 20px;
+  padding: 24px clamp(20px, 3.5vw, 44px);
+  background: radial-gradient(circle at 88% 20%, rgba(157, 92, 255, 0.18), transparent 34%), linear-gradient(118deg, #092332, #07121f 62%, #151127);
+  margin-bottom: 20px;
 }
-@media(max-width:680px){
-  .buff-page{padding:10px 8px 56px}.hero{min-height:210px;grid-template-columns:1fr;border-radius:19px;padding:23px 20px}.hero h1{font-size:clamp(38px,12vw,54px)}.hero p{max-width:78%;font-size:12px}.hero-facts{gap:5px}.hero-facts span{padding:7px 8px;font-size:7px}.hero-facts b{font-size:15px}.mini-system{position:absolute;right:-30px;bottom:-16px;width:130px;opacity:.55;transform:scale(.75)}
-  .tabs{position:static;grid-template-columns:repeat(2,1fr);margin:9px 0}.tabs button{min-height:48px;justify-content:flex-start;padding:0 12px;font-size:11px}.panel{border-radius:16px;padding:17px 12px}.section-head{grid-template-columns:1fr;gap:8px;margin-bottom:18px}.section-head h2,.subhead h2{font-size:27px}
-  .mental-model,.hp-example,.anatomy,.asset-audit,.system-details{padding:15px}.character-map{grid-template-columns:1fr;gap:9px}.character-node{min-height:116px;padding:17px}.map-connector{height:28px;grid-template-columns:repeat(3,1fr);gap:0}.map-connector:before{left:50%;top:0;width:1px;height:100%}.map-connector i{align-self:end;justify-self:center}.slot-card{grid-template-columns:44px minmax(0,1fr);gap:10px;padding:12px}.slot-card>strong{grid-column:2;width:max-content}.slot-card p{font-size:10px}.hp-example header{align-items:flex-start;flex-direction:column}.hp-lines{grid-template-columns:1fr}.anatomy-composition{grid-template-columns:1fr}.gear-object{max-width:250px;margin:auto}.anatomy-list article{grid-template-columns:26px minmax(0,1fr) 35px}.asset-audit header{align-items:flex-start;flex-direction:column}.asset-grid{grid-template-columns:repeat(2,1fr)}
-  .comparison-card header{grid-template-columns:38px 1fr}.comparison-card header>strong{grid-column:2}.stat-matrix>summary{align-items:flex-start;flex-direction:column;gap:4px}.stat-matrix>summary small{text-align:left}.matrix-slots{grid-template-columns:1fr}.progression-map{grid-template-columns:1fr}.advance-gate{min-height:74px}.advance-gate b{transform:rotate(90deg)}.red-branches{grid-template-columns:1fr}.stage-body{grid-template-columns:1fr;padding:0 0 16px}.stage-body ul{grid-template-columns:1fr}.skill-grid{grid-template-columns:1fr}.category-filter{display:grid;grid-template-columns:repeat(3,1fr)}.category-filter button{padding:0 6px}.skill-card{min-height:210px}
+
+.hero-copy, .mini-system { position: relative; z-index: 1; }
+.eyebrow { color: var(--cyan); font: 900 11px/1.3 ui-monospace, monospace; letter-spacing: 0.17em; text-transform: uppercase; }
+.hero h1 { margin: 8px 0; color: #f5f9ff; font-size: clamp(32px, 4vw, 54px); font-weight: 950; line-height: 0.95; letter-spacing: -0.04em; text-transform: uppercase; }
+.hero p { max-width: 760px; color: #a8c0d0; font-size: 14px; line-height: 1.6; }
+.hero-facts { display: flex; gap: 8px; margin-top: 14px; }
+.hero-facts span { display: flex; align-items: center; gap: 7px; border-radius: 10px; background: rgba(3, 19, 30, 0.68); padding: 6px 12px; color: #839eaf; font-size: 12px; font-weight: 850; text-transform: uppercase; }
+.hero-facts b { color: var(--cyan); font-size: 17px; }
+
+.mini-system { display: grid; width: 170px; height: 130px; grid-template-columns: repeat(3, 40px); align-content: center; justify-content: center; gap: 10px; justify-self: center; }
+.mini-system span { z-index: 1; display: grid; width: 40px; height: 40px; place-items: center; border: 1px solid currentColor; border-radius: 11px; background: #091927; font-weight: 950; font-size: 13px; }
+.mini-system .slot--faction { color: var(--faction); }
+.mini-system .slot--type { color: var(--type); }
+.mini-system .slot--level { color: var(--level); }
+.mini-system strong { grid-column: 1/-1; color: #b8ccd9; font: 800 12px ui-monospace, monospace; text-align: center; margin-top: 4px; }
+
+.tabs {
+  position: sticky;
+  top: 10px;
+  z-index: 8;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 18px 0;
+  background: rgba(4, 15, 25, 0.94);
+  border: 1px solid rgba(89, 220, 248, 0.18);
+  border-radius: 14px;
+  padding: 6px;
+  backdrop-filter: blur(14px);
 }
-@media(prefers-reduced-motion:reduce){.hero:before,.panel{animation:none}.tabs button,.phase button,.advance-gate,.system-details article>button>b{transition:none}}
+
+.tabs button {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #829aab;
+  font: 850 14px inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tabs button:hover { color: #dff8ff; background: rgba(13, 44, 60, 0.4); }
+.tabs button.active { background: #0d2c3c; color: #f2fbff; box-shadow: inset 0 -2px var(--cyan); }
+.tabs small { color: var(--cyan); font: 900 11px ui-monospace, monospace; }
+
+.panel {
+  border: 1px solid rgba(89, 220, 248, 0.16);
+  border-radius: 20px;
+  background: linear-gradient(150deg, rgba(8, 25, 37, 0.96), rgba(4, 15, 24, 0.96));
+  padding: clamp(18px, 2.8vw, 32px);
+  animation: panel-in 0.25s ease both;
+}
+
+.section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 500px);
+  align-items: end;
+  gap: 20px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 16px;
+}
+
+.section-head h2 { margin-top: 6px; font-size: clamp(24px, 3.2vw, 36px); font-weight: 930; letter-spacing: -0.03em; color: #fff; }
+.section-head p { color: var(--muted); font-size: 13.5px; line-height: 1.6; }
+
+/* TAB 1: 3 CARDS OVERVIEW */
+.slot-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.slot-overview-card {
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: 16px;
+  background: rgba(9, 29, 42, 0.72);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card-head {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.card-thumb {
+  width: 58px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  background: #040e16;
+  flex-shrink: 0;
+}
+
+.card-badge {
+  display: inline-block;
+  color: var(--accent);
+  font: 900 10.5px ui-monospace, monospace;
+  text-transform: uppercase;
+}
+
+.card-head h3 {
+  margin: 2px 0 4px;
+  font-size: 16px;
+  font-weight: 850;
+  color: #fff;
+}
+
+.compat-text {
+  color: #8fa9ba;
+  font-size: 12px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.stat-pool-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pool-box {
+  border-radius: 10px;
+  background: rgba(4, 15, 23, 0.6);
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pool-box h4 {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #cbdbe5;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 3px 7px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.tag-gold { background: rgba(239, 188, 71, 0.12); color: #efbc47; border: 1px solid rgba(239, 188, 71, 0.25); }
+.tag-blue { background: rgba(88, 217, 245, 0.1); color: #58d9f5; border: 1px solid rgba(88, 217, 245, 0.2); }
+.tag-purple { background: rgba(173, 130, 255, 0.1); color: #ad82ff; border: 1px solid rgba(173, 130, 255, 0.2); }
+.tag-red { background: rgba(255, 99, 120, 0.1); color: #ff6378; border: 1px solid rgba(255, 99, 120, 0.2); }
+
+/* TAB 2: GLOSSARY STATS WITH PAGINATION (10 PER PAGE) */
+.stat-filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.search-input-wrap {
+  flex: 1;
+  max-width: 460px;
+}
+
+.search-input-wrap input {
+  width: 100%;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #092130;
+  padding: 0 14px;
+  color: #fff;
+  font-size: 13px;
+  outline: none;
+}
+
+.search-input-wrap input:focus {
+  border-color: var(--cyan);
+}
+
+.stat-count-badge {
+  font-size: 12.5px;
+  color: #7b99ab;
+  font-weight: 750;
+}
+
+.stat-cards-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.stat-glossary-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(9, 27, 39, 0.7);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-title-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-code-pill {
+  border-radius: 5px;
+  background: rgba(89, 220, 248, 0.12);
+  color: var(--cyan);
+  font: 900 10.5px ui-monospace, monospace;
+  padding: 3px 6px;
+}
+
+.stat-title-group h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 850;
+  color: #f1f8fc;
+}
+
+.stat-en-name {
+  color: #7896a7;
+  font-size: 12px;
+}
+
+.stat-badge-type {
+  font-size: 10.5px;
+  color: #92abbc;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.stat-desc {
+  margin: 0;
+  color: #a4bccb;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.pagination-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.page-numbers {
+  display: flex;
+  gap: 6px;
+}
+
+.page-num-btn {
+  min-width: 38px;
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #092232;
+  color: #8da4b4;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.page-num-btn:hover {
+  background: #0e344d;
+  color: #fff;
+}
+
+.page-num-btn.active {
+  background: var(--cyan);
+  color: #031520;
+  border-color: var(--cyan);
+  font-weight: 900;
+}
+
+.page-nav-btn {
+  height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #092232;
+  color: #8da4b4;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.page-nav-btn:hover:not(:disabled) {
+  background: #0e344d;
+  color: #fff;
+}
+
+.page-nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* TAB 3: RED UPGRADE & ADVANCE MATERIALS */
+.upgrade-rule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.rule-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(9, 29, 42, 0.65);
+  padding: 16px;
+}
+
+.rule-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.rule-card h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 850;
+  color: #fff;
+}
+
+.rule-card p {
+  margin: 0 0 6px;
+  color: #97b0c0;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+/* Advance Materials Section */
+.advance-mats-panel {
+  border: 1px solid rgba(255, 99, 120, 0.3);
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(25, 10, 20, 0.8), rgba(10, 18, 28, 0.85));
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.advance-mats-head {
+  margin-bottom: 16px;
+}
+
+.advance-tag-badge {
+  display: inline-block;
+  font: 900 11px ui-monospace, monospace;
+  color: #ff6378;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+
+.advance-mats-head h3 {
+  margin: 2px 0 6px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.advance-mats-head p {
+  margin: 0;
+  color: #9db1bf;
+  font-size: 13px;
+}
+
+.advance-card-mats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.advance-mat-card {
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: 12px;
+  background: rgba(5, 15, 23, 0.8);
+  padding: 14px;
+}
+
+.advance-mat-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-slot-badge {
+  font: 900 10.5px ui-monospace, monospace;
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.advance-mat-card-header h4 {
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.advance-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.advance-item-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.advance-item-placeholder {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(142, 100, 255, 0.12);
+  border: 1px dashed rgba(173, 130, 255, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ph-label {
+  font-size: 9px;
+  font-weight: 850;
+  color: #cbb4ff;
+  text-transform: uppercase;
+}
+
+.advance-gold-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(239, 188, 71, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.advance-item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.advance-item-info strong {
+  font-size: 13px;
+  color: #fff;
+  font-weight: 850;
+}
+
+.advance-item-info small {
+  font-size: 10.5px;
+  color: #8fa9ba;
+}
+
+.advance-total-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: rgba(255, 99, 120, 0.08);
+  border: 1px solid rgba(255, 99, 120, 0.25);
+  font-size: 13px;
+}
+
+.advance-total-banner strong {
+  color: #ff8595;
+}
+
+.advance-total-banner span {
+  color: #fff;
+  font-weight: 800;
+}
+
+/* Material Tables */
+.material-tables-wrap {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 16px;
+}
+
+.mat-table-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(6, 20, 30, 0.8);
+  padding: 16px;
+}
+
+.table-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.mat-icon-sm {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.table-header h3 {
+  margin: 0;
+  font-size: 14.5px;
+  font-weight: 850;
+  color: #fff;
+}
+
+.table-header small {
+  color: #7b99ab;
+  font-size: 11.5px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.mat-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  text-align: left;
+}
+
+.mat-table th, .mat-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mat-table th {
+  background: rgba(255, 255, 255, 0.03);
+  color: #7b99ab;
+  font-weight: 800;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.mat-table td {
+  color: #c0d3df;
+}
+
+.mat-table tfoot td {
+  border-top: 1px solid var(--cyan);
+  border-bottom: 0;
+  background: rgba(89, 220, 248, 0.05);
+  color: #fff;
+  font-weight: 800;
+}
+
+.stat-highlight {
+  color: var(--cyan) !important;
+  font-weight: 850;
+}
+
+@keyframes panel-in {
+  from { opacity: 0.3; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 980px) {
+  .hero { grid-template-columns: 1fr; }
+  .slot-overview-grid { grid-template-columns: 1fr; }
+  .stat-cards-list { grid-template-columns: 1fr; }
+  .upgrade-rule-grid { grid-template-columns: 1fr; }
+  .advance-card-mats-grid { grid-template-columns: 1fr; }
+  .advance-total-banner { flex-direction: column; align-items: flex-start; }
+  .material-tables-wrap { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 680px) {
+  .buff-page { padding: 12px 8px 56px; }
+  .tabs { grid-template-columns: 1fr; }
+  .tabs button { min-height: 42px; font-size: 13px; }
+  .section-head { grid-template-columns: 1fr; gap: 8px; }
+  .card-head { flex-direction: column; }
+}
 </style>

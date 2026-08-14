@@ -45,11 +45,10 @@
       "skills": "Skill Stats"
     },
     "tabs": {
-      "label": "Buff Gear content",
-      "overview": "Overview",
-      "comparison": "3 gear types",
-      "progression": "Upgrade",
-      "skills": "22 Skill Stats"
+      "label": "Buff Gear Content",
+      "overview": "Buff Gear Overview",
+      "stats": "Current In-Game Stats",
+      "redUpgrade": "Red Buff Gear Upgrade"
     },
     "overview": {
       "title": "One character, three gear types",

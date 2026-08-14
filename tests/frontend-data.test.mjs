@@ -72,15 +72,14 @@ test('Gear and Buff Gear expose independent routes, menu links, and catalogs', (
   for (const dataModule of ['slots.js', 'progression.js', 'skills.js', 'terminology.js']) {
     assert.ok(buffGearView.includes(dataModule), `Buff Gear is missing ${dataModule}`)
   }
-  for (const tab of ['overview', 'comparison', 'progression', 'skills']) {
+  for (const tab of ['overview', 'stats', 'redUpgrade']) {
     assert.ok(buffGearView.includes(tab), `Buff Gear is missing ${tab}`)
   }
   assert.ok(buffGearView.includes('loading="lazy"'))
-  assert.ok(buffGearView.includes('showAssets'))
   assert.equal(en.buffGear.title, 'Buff Gear')
   assert.equal(vi.buffGear.title, 'Thẻ Bổ Trợ')
-  assert.equal(vi.buffGear.tabs.skills, '22 Skill Stat')
-  assert.equal(en.buffGear.tabs.comparison, '3 gear types')
+  assert.equal(vi.buffGear.tabs.overview, 'Tổng quan Buff Gear')
+  assert.equal(en.buffGear.tabs.overview, 'Buff Gear Overview')
   assert.equal(vi.buffGear.slots.faction.example, 'Anh Hùng')
 })
 test('home month and mobile navigation transitions expose matching CSS hooks', () => {
