@@ -6,8 +6,7 @@ export default {
                           "Atomic Samurai"
                       ],
     "blacksperm-urplus":  [
-                              "Black Sperm",
-                              "Tinh TrÃ¹ng Äen"
+                              "Black Sperm"
                           ],
     "100180-urplus":  [
                           "Tatsumaki/Terrible Tornado"

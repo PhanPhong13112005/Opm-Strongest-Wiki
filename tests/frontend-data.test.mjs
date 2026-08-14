@@ -69,14 +69,18 @@ test('Gear and Buff Gear expose independent routes, menu links, and catalogs', (
   assert.equal(new Set(equipment.sets.map(item => item.id)).size, 20)
   assert.equal(equipment.groups.length, 4)
   assert.equal(equipment.slots.length, 4)
-  assert.ok(buffGearView.includes("t('buffGear.pendingTitle')"))
-  assert.equal(vi.equipmentCatalog.pendingTitle, 'Tính năng này đang được phát triển')
-  assert.equal(vi.buffGear.pendingTitle, 'Tính năng này đang được phát triển')
-  assert.equal(en.equipmentCatalog.pendingTitle, 'This feature is under development')
-  assert.equal(en.buffGear.pendingTitle, 'This feature is under development')
-  for (const group of ['systemCards', 'gradeCards', 'factionCards']) {
-    assert.ok(buffGearView.includes(`buffGear.${group}`), `Buff Gear is missing ${group}`)
+  for (const dataModule of ['slots.js', 'progression.js', 'skills.js', 'terminology.js']) {
+    assert.ok(buffGearView.includes(dataModule), `Buff Gear is missing ${dataModule}`)
   }
+  for (const tab of ['overview', 'stats', 'redUpgrade']) {
+    assert.ok(buffGearView.includes(tab), `Buff Gear is missing ${tab}`)
+  }
+  assert.ok(buffGearView.includes('loading="lazy"'))
+  assert.equal(en.buffGear.title, 'Buff Gear')
+  assert.equal(vi.buffGear.title, 'Thẻ Bổ Trợ')
+  assert.equal(vi.buffGear.tabs.overview, 'Tổng quan Buff Gear')
+  assert.equal(en.buffGear.tabs.overview, 'Buff Gear Overview')
+  assert.equal(vi.buffGear.slots.faction.example, 'Anh Hùng')
 })
 test('home month and mobile navigation transitions expose matching CSS hooks', () => {
   const appSource = fs.readFileSync(path.join(root, 'src/App.vue'), 'utf8')
