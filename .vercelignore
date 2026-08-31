@@ -1,0 +1,13 @@
+/*
+!.nvmrc
+!index.html
+!package.json
+!package-lock.json
+!postcss.config.js
+!tailwind.config.js
+!vercel.json
+!vite.config.js
+!public/
+!public/**
+!src/
+!src/**

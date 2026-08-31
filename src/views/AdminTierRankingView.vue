@@ -9,6 +9,8 @@ import { getAdminTierRankingStats, updateAdminBaseVotes } from '../services/admi
 const router = useRouter()
 const stats = ref(null)
 const loading = ref(true)
+const page = ref(1)
+const pageSize = 25
 const search = ref('')
 const selectedTier = ref('ALL')
 const editingCharacter = ref(null)
@@ -16,12 +18,12 @@ const saving = ref(false)
 const notice = ref('')
 const error = ref('')
 
-const currentMonth = computed(() => {
+const currentMonth = computed(() => stats.value?.voteMonth || (() => {
   const d = new Date()
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`
-})
+})())
 
-const tiers = ['ALL', 'SS+', 'SS', 'S', 'A', 'B', 'C', 'D']
+const tiers = ['ALL', 'CORE', 'SS', 'S', 'A', 'B', 'C', 'D']
 
 const characters = computed(() => stats.value?.characters || [])
 
@@ -35,7 +37,7 @@ const filteredCharacters = computed(() => {
     result = result.filter(c =>
       String(c.nameVi || '').toLowerCase().includes(kw) ||
       String(c.nameEn || '').toLowerCase().includes(kw) ||
-      String(c.id || '').toLowerCase().includes(kw)
+      String(c.characterId || '').toLowerCase().includes(kw)
     )
   }
   return result
@@ -45,7 +47,7 @@ const load = async () => {
   loading.value = true
   error.value = ''
   try {
-    stats.value = await getAdminTierRankingStats()
+    stats.value = await getAdminTierRankingStats({ page: page.value, pageSize })
   } catch (err) {
     error.value = err.message || 'Không thể tải dữ liệu Tier Ranking.'
   } finally {
@@ -67,7 +69,11 @@ const saveBaseVotes = async () => {
   notice.value = ''
   error.value = ''
   try {
-    await updateAdminBaseVotes(editingCharacter.value.id, Number(editingCharacter.value.baseVotes) || 0)
+    await updateAdminBaseVotes(
+      editingCharacter.value.characterId,
+      Number(editingCharacter.value.baseVotes) || 0,
+      editingCharacter.value.version,
+    )
     notice.value = `Đã cập nhật Vote cơ bản cho ${editingCharacter.value.nameVi || editingCharacter.value.nameEn}.`
     closeEditModal()
     await load()
@@ -76,6 +82,12 @@ const saveBaseVotes = async () => {
   } finally {
     saving.value = false
   }
+}
+
+const totalPages = computed(() => Math.max(1, Math.ceil(Number(stats.value?.totalItems || 0) / pageSize)))
+const changePage = async nextPage => {
+  page.value = Math.min(totalPages.value, Math.max(1, nextPage))
+  await load()
 }
 
 const logout = async () => {
@@ -114,8 +126,8 @@ onMounted(load)
       </article>
       <article class="tier-kpi-card">
         <span>Nhân vật được Vote</span>
-        <strong>{{ loading ? '—' : (stats?.votedCount || characters.length) }}</strong>
-        <small>Nhân vật có tương tác vote</small>
+        <strong>{{ loading ? '—' : Number(stats?.totalVoters || 0).toLocaleString('vi-VN') }}</strong>
+        <small>Tài khoản tham gia trong tháng</small>
       </article>
     </div>
 
@@ -153,13 +165,12 @@ onMounted(load)
             </tr>
           </thead>
           <tbody>
-            <tr v-for="char in filteredCharacters" :key="char.id">
+            <tr v-for="char in filteredCharacters" :key="char.characterId">
               <td>
                 <div class="char-cell">
-                  <img :src="char.imageUrl || '/placeholder.png'" :alt="char.nameVi" class="char-avatar" />
                   <div>
                     <strong>{{ char.nameVi }}</strong>
-                    <small>{{ char.nameEn }}</small>
+                    <small>{{ char.nameEn }} · {{ char.rarity }}</small>
                   </div>
                 </div>
               </td>
@@ -170,7 +181,7 @@ onMounted(load)
               </td>
               <td><code>{{ char.baseVotes || 0 }}</code></td>
               <td><b class="vote-count">{{ Number(char.communityVotes || 0).toLocaleString('vi-VN') }}</b></td>
-              <td><strong class="vote-total">{{ Number((char.baseVotes || 0) + (char.communityVotes || 0)).toLocaleString('vi-VN') }}</strong></td>
+              <td><strong class="vote-total">{{ Number(char.totalScore || 0).toLocaleString('vi-VN') }}</strong></td>
               <td>
                 <button type="button" class="btn-action" @click="openEditModal(char)">
                   Sửa Vote cơ bản
@@ -185,6 +196,11 @@ onMounted(load)
           Không tìm thấy nhân vật nào phù hợp.
         </div>
       </div>
+      <nav class="tier-pagination" aria-label="Phân trang Tier Ranking">
+        <button type="button" :disabled="page <= 1 || loading" @click="changePage(page - 1)">Trang trước</button>
+        <span>Trang {{ page }} / {{ totalPages }}</span>
+        <button type="button" :disabled="page >= totalPages || loading" @click="changePage(page + 1)">Trang sau</button>
+      </nav>
     </section>
 
     <!-- Modal Edit Base Votes -->
@@ -195,7 +211,7 @@ onMounted(load)
 
         <label class="modal-label">
           <span>Số Vote cơ bản bổ sung:</span>
-          <input v-model.number="editingCharacter.baseVotes" type="number" min="0" max="999999" class="modal-input" />
+          <input v-model.number="editingCharacter.baseVotes" type="number" min="0" max="2147483647" class="modal-input" />
         </label>
 
         <div class="modal-actions">
@@ -303,6 +319,9 @@ onMounted(load)
 .btn-action { cursor: pointer; padding: 6px 14px; border-radius: 8px; border: 1px solid rgba(255, 199, 0, .3); background: rgba(255, 199, 0, .08); color: #ffc700; font-size: 12px; font-weight: 850; transition: all .2s ease; }
 .btn-action:hover { background: rgba(255, 199, 0, .2); border-color: rgba(255, 199, 0, .6); }
 .tier-empty { display: grid; min-height: 140px; place-items: center; padding: 24px; color: #94a3b8; font-size: 13.5px; font-weight: 700; }
+.tier-pagination { display:flex;align-items:center;justify-content:flex-end;gap:12px;border-top:1px solid rgba(255,255,255,.08);padding:14px 22px;color:#94a3b8;font-size:12px;font-weight:800 }
+.tier-pagination button { cursor:pointer;border:1px solid rgba(255,255,255,.14);border-radius:9px;background:#0f172a;padding:7px 11px;color:#e2e8f0;font-weight:800 }
+.tier-pagination button:disabled { cursor:not-allowed;opacity:.45 }
 
 /* Modal */
 .modal-backdrop { position: fixed; inset: 0; z-index: 99; display: grid; place-items: center; background: rgba(0, 0, 0, .75); backdrop-filter: blur(8px); }

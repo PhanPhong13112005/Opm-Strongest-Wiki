@@ -1,6 +1,8 @@
 # OPM Strongest Wiki Backend
 
-Backend ASP.NET Core cung cấp API dữ liệu cho frontend Vue hiện tại. Frontend vẫn tiếp tục đọc JSON cho đến khi từng màn hình được chuyển sang API.
+Backend ASP.NET Core là **authoritative production backend target** của OpmWiki. Frontend Vue/Vite được host trên Vercel và sau cutover mọi dynamic service gọi một ASP.NET origin qua `VITE_API_BASE_URL`.
+
+Node/Vercel Functions trong `api/` là **LEGACY / TRANSITIONAL / ROLLBACK ONLY** cho đến cutover; permanent split bị từ chối. EF Core là migration owner duy nhất, còn ASP.NET là auth/payment/ledger owner duy nhất sau cutover. Production hiện **NOT READY TO DEPLOY**.
 
 ## Kiến trúc
 
@@ -40,6 +42,7 @@ Swagger: `http://localhost:5180/swagger`
 
 Hướng dẫn production: [`DEPLOYMENT.md`](DEPLOYMENT.md).
 Đánh giá và runbook Giai đoạn 1: [`../docs/BACKEND_PRODUCTION_PHASE_1.md`](../docs/BACKEND_PRODUCTION_PHASE_1.md).
+Kiến trúc và contract đã freeze: [`../docs/PRODUCTION_ARCHITECTURE.md`](../docs/PRODUCTION_ARCHITECTURE.md), [`../docs/API_OWNERSHIP.md`](../docs/API_OWNERSHIP.md), [`../docs/AUTH_CONTRACT.md`](../docs/AUTH_CONTRACT.md), [`../docs/PAYMENT_OWNERSHIP.md`](../docs/PAYMENT_OWNERSHIP.md).
 
 Nếu muốn chạy cả API và PostgreSQL bằng Docker:
 
@@ -136,6 +139,8 @@ BankTransfer__AccountName=<tên chủ tài khoản>
 SePay__WebhookSecret=<bí mật HMAC giống cấu hình trong SePay, tối thiểu 32 ký tự>
 ```
 
+`PublicAppUrl` là exact key cho direct ASP.NET deployment. Local Docker Compose nhận wrapper `PUBLIC_APP_URL` rồi map vào container thành `PublicAppUrl`; không dùng wrapper đó như direct runtime key.
+
 ## Cổng người dùng, nhân viên và quản trị
 
 - `User`: bình luận sự kiện, diễn đàn, tư vấn Wiki/AI và gửi yêu cầu nạp.
@@ -171,5 +176,6 @@ Kỷ vật tiếp tục là thuộc tính của Nhân vật thay vì một bản
 toàn như `SSRplus` để cùng hoạt động trên Vite và Vercel.
 
 `--seed-data`, `Database__MigrateOnStartup` và `Database__SeedWhenEmpty` chỉ dành cho môi trường không phải
-Production. Ứng dụng sẽ từ chối khởi động ở Production nếu một trong các tùy chọn này được bật; migration
-Production phải chạy bằng release job riêng.
+Production. Production bắt buộc `Database__MigrateOnStartup=false` và `Database__SeedWhenEmpty=false`;
+ứng dụng từ chối khởi động nếu startup migration/seed được bật. Migration production chỉ chạy bằng CI/CD
+release migration job với credential `MIGRATOR` riêng; API dùng credential `APPLICATION` không có quyền DDL.

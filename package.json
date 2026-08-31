@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": "24.x",
+    "npm": "11.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,6 +15,7 @@
     "test": "node --test tests/*.test.mjs",
     "test:integration": "playwright test",
     "test:frontend": "node --test tests/frontend-data.test.mjs",
+    "validate:config": "node scripts/validate-config.mjs",
     "test:production:admin-crud": "node scripts/production-admin-crud.mjs"
   },
   "dependencies": {

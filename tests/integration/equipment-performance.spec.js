@@ -78,18 +78,27 @@ test('equipment navigation does not collapse the public route stage', async ({ p
   await installPerformanceObservers(page)
   await page.goto('/', { waitUntil: 'networkidle' })
   await expect(page.locator('.release-hero h1')).toBeVisible()
+  const stageBefore = await page.locator('.public-route-stage').evaluate(stage => stage.getBoundingClientRect().height)
+  const headerBefore = await page.locator('.site-header').evaluate(header => header.getBoundingClientRect().height)
+  expect(stageBefore).toBeGreaterThanOrEqual(900 - headerBefore - 1)
 
   await page.evaluate(() => {
     window.__equipmentVitals.cls = 0
     window.__equipmentVitals.shifts = []
-    document.querySelector('a[href="/equipment"]')?.click()
   })
+  const desktopNavigation = page.getByRole('navigation', { name: 'Điều hướng chính' })
+  await desktopNavigation.getByRole('button', { name: 'Hệ Thống' }).hover()
+  const equipmentLink = desktopNavigation.getByRole('link', { name: 'Trang bị', exact: true })
+  await expect(equipmentLink).toBeVisible()
+  await equipmentLink.click()
   await expect(page).toHaveURL(/\/equipment$/)
   await expect(page.locator('.equipment-hero h1')).toBeVisible()
   await page.waitForTimeout(500)
 
   const vitals = await readVitals(page)
+  const stageAfter = await page.locator('.public-route-stage').evaluate(stage => stage.getBoundingClientRect().height)
   console.log(`EQUIPMENT_NAVIGATION_VITALS ${JSON.stringify(vitals)}`)
+  expect(stageAfter).toBeGreaterThanOrEqual(900 - vitals.headerHeight - 1)
   expect(vitals.cls).toBeLessThan(0.1)
 })
 test('equipment redesign keeps simulator, picker, and catalog actions usable', async ({ page }) => {

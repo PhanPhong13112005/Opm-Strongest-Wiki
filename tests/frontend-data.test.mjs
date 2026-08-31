@@ -3,6 +3,11 @@ import fs from 'node:fs'
 import path from 'node:path'
 import test from 'node:test'
 import { decodeAssetUrlForLocalServer, safeAssetUrl } from '../src/utils/assetUrl.js'
+import {
+  getCoreLabHeroPortrait,
+  getCoreLabItemIcon,
+  getCoreLabMilestoneIcon,
+} from '../src/utils/coreLabAssetPaths.js'
 import { getSkillEnergyCost } from '../src/utils/skillPresentation.js'
 import { mapCharacterSummary, mergeCharacterDetail, reconcileCharacterPage } from '../src/services/characterApi.js'
 import { mergeKeepsakeCatalog } from '../src/services/keepsakeApi.js'
@@ -34,6 +39,41 @@ const leafKeys = (value, prefix = '', output = []) => {
   }
   return output
 }
+
+test('effective Core Lab runtime asset paths resolve to existing public files', () => {
+  const effectivePaths = new Set()
+
+  for (const hero of coreLab.heroes) {
+    effectivePaths.add(getCoreLabHeroPortrait(hero))
+    for (const part of hero.parts || []) {
+      effectivePaths.add(getCoreLabItemIcon(part.code, hero, coreLab.items))
+    }
+    for (const level of hero.levels || []) {
+      for (const [itemId] of [...(level.cost || []), ...(level.comp || [])]) {
+        effectivePaths.add(getCoreLabItemIcon(itemId, hero, coreLab.items))
+      }
+      if (level.milestoneIcon) {
+        effectivePaths.add(getCoreLabMilestoneIcon(level.milestoneIcon, hero))
+      }
+    }
+  }
+
+  effectivePaths.delete('')
+  for (const assetUrl of effectivePaths) {
+    const assetPath = path.join(root, 'public', decodeURIComponent(assetUrl.replace(/^\//, '')))
+    assert.ok(fs.existsSync(assetPath), `effective Core Lab path is missing: ${assetUrl}`)
+  }
+
+  const childEmperorV2 = coreLab.heroes.find(hero => hero.iconSuffix === '196')
+  const milestonePaths = childEmperorV2.levels
+    .filter(level => level.milestoneIcon)
+    .map(level => getCoreLabMilestoneIcon(level.milestoneIcon, childEmperorV2))
+  assert.deepEqual(milestonePaths, [
+    '/Core_Skill/Child_Emperor/045_c1.png',
+    '/Core_Skill/Child_Emperor/045_c2.png',
+    '/Core_Skill/Child_Emperor/045_c3.png',
+  ])
+})
 
 test('Vietnamese and English locale files expose the same keys', () => {
   assert.deepEqual(leafKeys(vi).sort(), leafKeys(en).sort())

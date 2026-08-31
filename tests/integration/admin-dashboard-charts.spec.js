@@ -15,8 +15,8 @@ const installAdminSession = async page => {
     expiresAt: new Date(Date.now() + 3600_000).toISOString(),
   }
   await page.addInitScript(({ token, storedSession }) => {
-    sessionStorage.setItem('opmwiki.auth.token', token)
-    sessionStorage.setItem('opmwiki.auth.session', JSON.stringify(storedSession))
+    localStorage.setItem('opmwiki.auth.token', token)
+    localStorage.setItem('opmwiki.auth.session', JSON.stringify(storedSession))
   }, { token: futureToken('Admin'), storedSession: session })
   await page.route('**/api/auth/me', route => route.fulfill({ json: session }))
 }
@@ -58,8 +58,8 @@ test('Admin overview turns live metrics into readable responsive charts', async 
   await expect(page.getByRole('img', { name: /Biểu đồ vai trò: Người dùng 18, Nhân viên 2, Quản trị viên 1/ })).toBeVisible()
 
   const desktopTypography = await page.evaluate(() => ({
-    navigation: parseFloat(getComputedStyle(document.querySelector('.role-portal__nav-copy strong')).fontSize),
-    moduleDescription: parseFloat(getComputedStyle(document.querySelector('.admin-module p')).fontSize),
+    navigation: parseFloat(getComputedStyle(document.querySelector('.nav-tab__label')).fontSize),
+    moduleDescription: parseFloat(getComputedStyle(document.querySelector('.admin-users__header p')).fontSize),
     chartLabel: parseFloat(getComputedStyle(document.querySelector('.bar-row__label span')).fontSize),
   }))
   expect(desktopTypography.navigation).toBeGreaterThanOrEqual(13)

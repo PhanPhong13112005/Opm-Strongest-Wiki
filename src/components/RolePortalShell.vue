@@ -178,7 +178,7 @@ const isActive = item => {
   border: 1px solid rgba(255, 255, 255, .06);
   background: rgba(12, 19, 32, .6);
   color: #8194a6;
-  font-size: 11.5px;
+  font-size: 13px;
   font-weight: 850;
   text-decoration: none;
   white-space: nowrap;

@@ -1335,6 +1335,98 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                     b.ToTable("tactic_frames", (string)null);
                 });
 
+            modelBuilder.Entity("OpmWiki.Domain.Entities.TierRankingBaseline", b =>
+                {
+                    b.Property<string>("CharacterId")
+                        .HasMaxLength(80)
+                        .HasColumnType("character varying(80)");
+
+                    b.Property<int>("BaseOrder")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0);
+
+                    b.Property<int>("BaseVotes")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0);
+
+                    b.Property<bool>("IsCore")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false);
+
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("UpdatedBySubject")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
+
+                    b.Property<long>("Version")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasDefaultValue(1L);
+
+                    b.HasKey("CharacterId");
+
+                    b.HasIndex("IsCore", "BaseOrder", "CharacterId");
+
+                    b.ToTable("tier_ranking_baselines", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_tier_ranking_baselines_BaseOrder", "\"BaseOrder\" >= 0");
+
+                            t.HasCheckConstraint("CK_tier_ranking_baselines_BaseVotes", "\"BaseVotes\" >= 0");
+
+                            t.HasCheckConstraint("CK_tier_ranking_baselines_Version", "\"Version\" >= 1");
+                        });
+                });
+
+            modelBuilder.Entity("OpmWiki.Domain.Entities.TierRankingVote", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CharacterId")
+                        .HasMaxLength(80)
+                        .HasColumnType("character varying(80)");
+
+                    b.Property<string>("VoteMonth")
+                        .HasColumnType("character(7)");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Rarity")
+                        .IsRequired()
+                        .HasMaxLength(4)
+                        .HasColumnType("character varying(4)");
+
+                    b.Property<int>("VoteSlot")
+                        .HasColumnType("integer");
+
+                    b.HasKey("UserId", "CharacterId", "VoteMonth");
+
+                    b.HasIndex("CharacterId");
+
+                    b.HasIndex("VoteMonth", "CharacterId");
+
+                    b.HasIndex("VoteMonth", "UserId");
+
+                    b.HasIndex("UserId", "VoteMonth", "Rarity", "VoteSlot")
+                        .IsUnique();
+
+                    b.ToTable("tier_ranking_votes", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_tier_ranking_votes_Rarity", "\"Rarity\" IN ('UR+', 'UR', 'SSR+', 'SSR', 'SR', 'R')");
+
+                            t.HasCheckConstraint("CK_tier_ranking_votes_VoteMonth", "\"VoteMonth\" ~ '^[0-9]{4}-(0[1-9]|1[0-2])$'");
+
+                            t.HasCheckConstraint("CK_tier_ranking_votes_VoteSlot", "\"VoteSlot\" BETWEEN 1 AND 8");
+                        });
+                });
+
             modelBuilder.Entity("OpmWiki.Domain.Entities.TopUpRequest", b =>
                 {
                     b.Property<long>("Id")
@@ -1440,6 +1532,18 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                         .HasMaxLength(254)
                         .HasColumnType("character varying(254)");
 
+                    b.Property<DateTimeOffset?>("EmailVerificationExpiresAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("EmailVerificationTokenHash")
+                        .HasMaxLength(64)
+                        .HasColumnType("character varying(64)");
+
+                    b.Property<bool>("EmailVerified")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false);
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("boolean");
 
@@ -1465,6 +1569,11 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                         .HasMaxLength(64)
                         .HasColumnType("character varying(64)");
 
+                    b.Property<bool>("PhoneVerified")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false);
+
                     b.Property<string>("Role")
                         .IsRequired()
                         .HasMaxLength(20)
@@ -1482,6 +1591,10 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("EmailVerificationTokenHash")
+                        .IsUnique()
+                        .HasFilter("\"EmailVerificationTokenHash\" IS NOT NULL");
+
                     b.HasIndex("NormalizedEmail")
                         .IsUnique()
                         .HasFilter("\"NormalizedEmail\" <> ''");
@@ -1491,7 +1604,12 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
 
                     b.HasIndex("Role");
 
-                    b.ToTable("user_accounts", (string)null);
+                    b.ToTable("user_accounts", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_user_accounts_EmailVerificationTokenHash", "\"EmailVerificationTokenHash\" IS NULL OR \"EmailVerificationTokenHash\" ~ '^[0-9a-f]{64}$'");
+
+                            t.HasCheckConstraint("CK_user_accounts_EmailVerificationTokenPair", "(\"EmailVerificationTokenHash\" IS NULL AND \"EmailVerificationExpiresAt\" IS NULL) OR (\"EmailVerificationTokenHash\" IS NOT NULL AND \"EmailVerificationExpiresAt\" IS NOT NULL)");
+                        });
                 });
 
             modelBuilder.Entity("OpmWiki.Domain.Entities.BalanceLedgerEntry", b =>
@@ -1684,6 +1802,30 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("TopUpRequest");
+                });
+
+            modelBuilder.Entity("OpmWiki.Domain.Entities.TierRankingBaseline", b =>
+                {
+                    b.HasOne("OpmWiki.Domain.Entities.Character", null)
+                        .WithOne()
+                        .HasForeignKey("OpmWiki.Domain.Entities.TierRankingBaseline", "CharacterId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("OpmWiki.Domain.Entities.TierRankingVote", b =>
+                {
+                    b.HasOne("OpmWiki.Domain.Entities.Character", null)
+                        .WithMany()
+                        .HasForeignKey("CharacterId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("OpmWiki.Domain.Entities.UserAccount", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("OpmWiki.Domain.Entities.TopUpRequest", b =>

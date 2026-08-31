@@ -9,7 +9,10 @@ public sealed record AccountDto(
     string Role,
     decimal Balance,
     bool IsActive,
-    DateTimeOffset CreatedAt);
+    DateTimeOffset CreatedAt,
+    bool EmailVerified = false,
+    bool PhoneVerified = false,
+    bool HasVerifiedContact = false);
 
 public sealed record RegisterRequest(string Username, string Email, string Password);
 public sealed record LoginRequest(string Username, string Password);

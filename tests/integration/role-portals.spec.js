@@ -17,8 +17,8 @@ const installSession = async (page, role, overrides = {}) => {
   }
 
   await page.addInitScript(({ token, storedSession }) => {
-    sessionStorage.setItem('opmwiki.auth.token', token)
-    sessionStorage.setItem('opmwiki.auth.session', JSON.stringify(storedSession))
+    localStorage.setItem('opmwiki.auth.token', token)
+    localStorage.setItem('opmwiki.auth.session', JSON.stringify(storedSession))
   }, { token: futureToken(role), storedSession: session })
 
   return session
@@ -32,20 +32,9 @@ const assertNoHorizontalOverflow = async page => {
   expect(dimensions.content).toBeLessThanOrEqual(dimensions.viewport)
 }
 
-test('Public mobile menu exposes every wiki feature and requires login only when ordering', async ({ page }) => {
-  const session = {
-    userId: 'public-top-up-test',
-    username: 'public-top-up',
-    displayName: 'Public Top-up Test',
-    role: 'User',
-    balance: 0,
-    accessToken: futureToken('User'),
-    expiresAt: new Date(Date.now() + 3600_000).toISOString(),
-  }
+test('Public mobile menu exposes every wiki feature and the passive top-up maintenance route', async ({ page }) => {
   let topUpHistoryReads = 0
 
-  await page.route('**/api/auth/login', route => route.fulfill({ json: session }))
-  await page.route('**/api/auth/me', route => route.fulfill({ json: session }))
   await page.route('**/api/top-ups/mine', route => {
     topUpHistoryReads += 1
     return route.fulfill({ json: [] })
@@ -61,6 +50,7 @@ test('Public mobile menu exposes every wiki feature and requires login only when
   await mobileSections.nth(1).click()
   const expectedFeaturePaths = [
     '/characters',
+    '/tier-ranking',
     '/mastery',
     '/core-lab',
     '/core-refinement',
@@ -86,17 +76,11 @@ test('Public mobile menu exposes every wiki feature and requires login only when
   await topUpLink.click()
 
   await expect(page).toHaveURL('/top-up')
-  await expect(page.getByRole('heading', { name: 'Nạp One Punch Man: The Strongest' })).toBeVisible()
-  await expect(page.getByText('Gói 6 Coupon')).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Nạp thẻ đang bảo trì' })).toBeVisible()
+  await expect(page.getByText(/Tạm thời không tạo đơn hoặc chuyển khoản/)).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Về trang chủ' })).toHaveAttribute('href', '/')
+  await expect(page.getByRole('link', { name: 'Xem thư viện nhân vật' })).toHaveAttribute('href', '/characters')
   expect(topUpHistoryReads).toBe(0)
-  await page.getByRole('button', { name: /Đăng nhập để đặt hàng · 13\.000đ/ }).click()
-
-  await expect(page).toHaveURL(/\/login\?redirect=\/top-up$/)
-  await page.getByLabel('Tên đăng nhập').fill(session.username)
-  await page.locator('input[autocomplete="current-password"]').fill('password-test')
-  await page.getByRole('button', { name: 'Đăng nhập', exact: true }).click()
-
-  await expect(page).toHaveURL('/top-up')
   await assertNoHorizontalOverflow(page)
 })
 
@@ -122,10 +106,14 @@ test('User session is cleared when the backend rejects an inactive or stale acco
 
   await page.goto('/account')
 
-  await expect.poll(() => page.evaluate(() => sessionStorage.getItem('opmwiki.auth.session'))).toBeNull()
+  await expect.poll(() => page.evaluate(() => localStorage.getItem('opmwiki.auth.session'))).toBeNull()
   await expect(page.getByRole('link', { name: 'Đăng nhập' })).toBeVisible()
 })
 
+test.describe.skip('retired public top-up UI contract', () => {
+// Kept as executable history for a possible service reopening. The active
+// contract is the passive maintenance page above; backend payment contracts
+// remain covered by the Node/PGlite suites without making real transactions.
 test('User can prepare a Coupon order with UID, server, quantity, and total price', async ({ page }) => {
   await installSession(page, 'User', { displayName: 'Coupon Test' })
   await page.route('**/api/top-ups/mine', route => route.fulfill({ json: [] }))
@@ -414,6 +402,8 @@ test('Coupon retry reuses the same reference after a timed-out response', async 
   expect(submissions[0].referenceCode).toMatch(/\|[A-F0-9]{32}$/)
   await expect.poll(() => page.evaluate(() => sessionStorage.getItem('opmwiki.coupon.pending-request'))).toBeNull()
 })
+})
+
 test('Staff portal makes moderation queues easy to scan on mobile', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await installSession(page, 'Staff', { displayName: 'Nhân viên thử nghiệm' })
@@ -428,9 +418,11 @@ test('Staff portal makes moderation queues easy to scan on mobile', async ({ pag
   await page.goto('/staff')
 
   await expect(page.getByRole('heading', { name: 'Trung tâm kiểm duyệt' })).toBeVisible()
-  await expect(page.getByText(/Thanh toán được hệ thống đối soát tự động/)).toBeVisible()
+  await expect(page.getByRole('button', { name: /Bình Luận Sự Kiện/ })).toBeVisible()
+  await expect(page.getByRole('button', { name: /Hàng Đợi Báo Cáo/ })).toBeVisible()
+  await expect(page.getByRole('button', { name: /Kiểm Duyệt Diễn Đàn/ })).toBeVisible()
   await expect(page.getByRole('heading', { name: 'Yêu cầu nạp & Coupon' })).toHaveCount(0)
-  await expect(page.getByRole('button', { name: /Duyệt|Đã nạp/ })).toHaveCount(0)
+  await expect(page.getByRole('button', { name: /Duyệt đơn|Đã nạp/ })).toHaveCount(0)
   await expect(page.getByText('Bình luận cần kiểm tra.')).toBeVisible()
   await assertNoHorizontalOverflow(page)
 })
@@ -474,11 +466,11 @@ test('Admin portal groups live metrics, tools, and account access management', a
   await expect(page.getByRole('heading', { name: 'Tình hình hiện tại' })).toBeVisible()
   await expect(page.getByRole('heading', { name: 'Quản lý người dùng' })).toBeVisible()
   await expect(page.getByText('Thành viên trực quan')).toBeVisible()
-  await expect(page.getByText('Đang hoạt động', { exact: true })).toBeVisible()
+  await expect(page.getByRole('table').getByText('Đang hoạt động', { exact: true })).toBeVisible()
   await page.evaluate(() => { window.confirm = () => true })
   await page.getByRole('button', { name: 'Vô hiệu hóa tài khoản Thành viên trực quan' }).click()
   await expect.poll(() => statusPayload).toEqual({ isActive: false })
-  await expect(page.getByText('Đã vô hiệu hóa', { exact: true })).toBeVisible()
+  await expect(page.getByRole('table').getByText('Đã vô hiệu hóa', { exact: true })).toBeVisible()
   await assertNoHorizontalOverflow(page)
 })
 
@@ -709,7 +701,7 @@ for (const account of [
     await page.getByRole('button', { name: 'Đăng nhập', exact: true }).click()
 
     await expect(page).toHaveURL('/')
-    await expect.poll(() => page.evaluate(() => JSON.parse(sessionStorage.getItem('opmwiki.auth.session') || 'null')?.role || null)).toBe(account.role)
+    await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('opmwiki.auth.session') || 'null')?.role || null)).toBe(account.role)
     await page.locator('.account-control--signed-in').click()
     await expect(page.getByRole('menuitem', { name: new RegExp(account.label) })).toHaveAttribute('href', account.path)
     if (account.hint) await expect(page.getByText(account.hint, { exact: true })).toBeVisible()

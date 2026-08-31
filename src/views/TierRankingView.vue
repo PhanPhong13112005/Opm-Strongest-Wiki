@@ -437,8 +437,6 @@ onMounted(loadRanking)
       </div>
       </Transition>
     </section>
-  </main>
-
   <Teleport to="body">
     <Transition name="vote-confirm-dialog">
       <div
@@ -471,6 +469,7 @@ onMounted(loadRanking)
       </div>
     </Transition>
   </Teleport>
+  </main>
 </template>
 
 <style scoped>

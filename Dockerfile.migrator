@@ -1,0 +1,38 @@
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+WORKDIR /source
+
+COPY backend/OpmWiki.sln backend/
+COPY backend/src/OpmWiki.Domain/OpmWiki.Domain.csproj backend/src/OpmWiki.Domain/
+COPY backend/src/OpmWiki.Application/OpmWiki.Application.csproj backend/src/OpmWiki.Application/
+COPY backend/src/OpmWiki.Infrastructure/OpmWiki.Infrastructure.csproj backend/src/OpmWiki.Infrastructure/
+COPY backend/src/OpmWiki.Api/OpmWiki.Api.csproj backend/src/OpmWiki.Api/
+
+RUN dotnet restore backend/src/OpmWiki.Api/OpmWiki.Api.csproj
+RUN dotnet tool install --tool-path /tools dotnet-ef --version 10.0.0
+
+COPY backend/src/ backend/src/
+
+# The design-time factory requires a syntactically valid connection string while
+# building the bundle. It does not connect at build time. Railway injects the
+# real staging-only migrator connection as ConnectionStrings__OpmWiki at runtime.
+RUN ConnectionStrings__OpmWiki='Host=127.0.0.1;Database=opmwiki_bundle_build;Username=bundle' \
+    /tools/dotnet-ef migrations bundle \
+      --project backend/src/OpmWiki.Infrastructure/OpmWiki.Infrastructure.csproj \
+      --startup-project backend/src/OpmWiki.Api/OpmWiki.Api.csproj \
+      --configuration Release \
+      --self-contained \
+      --target-runtime linux-x64 \
+      --output /out/efbundle
+
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS runtime
+WORKDIR /app
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends libgssapi-krb5-2 \
+    && rm -rf /var/lib/apt/lists/*
+COPY --from=build /out/efbundle /app/efbundle
+RUN chmod 0555 /app/efbundle
+USER $APP_UID
+
+# This image is a one-shot release job. It applies the existing EF migrations
+# and exits; it never starts the API and never seeds application data.
+ENTRYPOINT ["/app/efbundle", "--no-color", "--prefix-output"]

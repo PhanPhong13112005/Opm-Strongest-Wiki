@@ -29,17 +29,21 @@ kỹ năng, sự kiện, lịch ra mắt CN/SEA và các hệ thống nâng cấ
 
 ## Kiến trúc và luồng dữ liệu
 
+> Production architecture đã freeze: frontend Vue/Vite trên Vercel, authoritative backend ASP.NET Core,
+> PostgreSQL, EF Core là migration owner duy nhất, ASP.NET là auth/payment/ledger owner duy nhất.
+> Node/Vercel Functions là **LEGACY / TRANSITIONAL / ROLLBACK ONLY** cho đến cutover; permanent split bị từ chối.
+> Trạng thái hiện tại: **NOT READY TO DEPLOY**.
+
 ```text
-Vue 3 / Vite
-   ├─ Public pages ──► Public API ──► PostgreSQL / Neon
-   │                       └────────► JSON fallback khi API lỗi
-   ├─ Community ─────► JWT API ─────► PostgreSQL / Neon
-   └─ Admin ─────────► Admin API ───► PostgreSQL / Neon
+Vercel Vue 3 / Vite
+   ├─ VITE_API_BASE_URL ─────────────► ASP.NET Core ──► PostgreSQL
+   └─ Public content fallback ───────► bundled JSON (chỉ nơi đã thiết kế rõ)
 ```
 
-- Production hiện dùng Vercel Functions trong [`api/`](api/README.md) và Neon PostgreSQL.
-- ASP.NET Core trong [`backend/`](backend/README.md) là backend mục tiêu cho quá trình cutover; chỉ trở thành backend
-  production chính thức sau khi staging, contract/parity test, migration release job, webhook SePay và routing API đạt yêu cầu.
+- ASP.NET Core trong [`backend/`](backend/README.md) là final authoritative backend target. Chỉ cutover sau khi toàn bộ
+  gate Tier/email/Admin, staging, migration release job, database role, webhook, rollback và routing đạt.
+- Vercel Functions trong [`api/`](api/README.md) chỉ giữ inventory/transition/rollback tạm thời; mọi Node writer phải
+  bị disable trước khi ASP.NET writer được enable.
 - Trang Nhân vật, Sự kiện và Lịch ra mắt ưu tiên dữ liệu API; JSON trong `src/data` là dữ liệu
   seed và fallback khi API/database không khả dụng.
 - Public GET được cache ngắn hạn ở client và CDN; cache client được xóa sau thao tác Admin.
@@ -48,9 +52,10 @@ Vue 3 / Vite
 ## Công nghệ
 
 - Frontend: Vue 3, Vue Router, Vue I18n, Vite, Tailwind CSS.
-- API production: Node.js Vercel Functions.
-- Backend: .NET / ASP.NET Core, Entity Framework Core.
-- Database: PostgreSQL, Neon Serverless Postgres.
+- Final API production target: .NET / ASP.NET Core.
+- Legacy/transitional API: Node.js Vercel Functions.
+- Schema/migration: Entity Framework Core only.
+- Database: PostgreSQL (provider production sẽ được xác nhận ở release gate).
 - Kiểm thử: Node Test Runner, PGlite và Playwright.
 - Triển khai và quan sát: Vercel, Vercel Analytics, Speed Insights.
 
@@ -58,8 +63,8 @@ Vue 3 / Vite
 
 ```text
 OpmWiki/
-├── api/                    # Vercel Functions và schema/seed PostgreSQL
-├── backend/                # ASP.NET Core API, migrations và unit tests
+├── api/                    # LEGACY/TRANSITIONAL Node Functions; không phải final authority
+├── backend/                # Authoritative ASP.NET Core API, EF migrations và unit tests
 ├── public/                 # Ảnh, icon, GIF/video và tài nguyên game
 ├── src/
 │   ├── components/         # Component Vue dùng chung
@@ -96,11 +101,12 @@ docker compose -f backend/docker-compose.yml up --build
 ```
 
 Không commit `DATABASE_URL`, connection string, mật khẩu Admin hoặc JWT signing key vào Git.
-Xem [backend/DEPLOYMENT.md](backend/DEPLOYMENT.md) để biết cấu hình production.
+Xem [docs/PRODUCTION_ARCHITECTURE.md](docs/PRODUCTION_ARCHITECTURE.md) và
+[docs/DEPLOYMENT_RUNBOOK.md](docs/DEPLOYMENT_RUNBOOK.md) trước [backend/DEPLOYMENT.md](backend/DEPLOYMENT.md).
 
-Email xác minh và đặt lại mật khẩu ở production sử dụng các biến `PUBLIC_APP_URL`,
-`EMAIL__RESENDAPIKEY` và `EMAIL__FROM`. Địa chỉ gửi phải thuộc domain đã xác minh; API key chỉ đặt
-ở môi trường server và không được đưa vào biến `VITE_*` hoặc mã nguồn phía client.
+Direct ASP.NET deployment dùng exact key `PublicAppUrl` cùng cấu hình email server; Docker Compose local
+nhận wrapper `PUBLIC_APP_URL` và map vào `PublicAppUrl`. Địa chỉ gửi phải thuộc domain đã xác minh; API key
+chỉ đặt ở môi trường server và không được đưa vào biến `VITE_*` hoặc mã nguồn phía client.
 
 ## Kiểm thử và build
 

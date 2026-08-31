@@ -1,0 +1,973 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "legacy-tier-baseline-inventory",
+  "importApproved": false,
+  "description": "Immutable inventory of the legacy configured/sample Tier baseline. This artifact is not authorization to import.",
+  "source": {
+    "configFile": "BANG_XEP_HANG_NHAN_VAT.json",
+    "configRevision": "8889f8d5c1a62a977e7fe5c90a34d7b729382114",
+    "configSha256": "7ce08e501f926a7eab6a19474e54ee9508056ebd01d5d368566571504177758d",
+    "catalogFile": "src/data/tierRankingCatalog.json",
+    "catalogRevision": "1b09d64cf9c0d004b2a95abfb297e172e68392f0",
+    "catalogSha256": "cd5045ebbf52a0f4fc44cd43fdfc2867b024050139e48a56cef250db6a23a333",
+    "repositoryHeadAtInventory": "266eea31fca90ba85d1363ac74d3023f24909b73"
+  },
+  "rowCount": 159,
+  "dataSha256": "fdeb6c3cc75487fb99237920c083a4eed612c9cf5a9e9c61329dc601d54208fc",
+  "records": [
+    {
+      "characterId": "blacksperm-urplus",
+      "baseVotes": 8,
+      "isCore": false,
+      "baseOrder": 0
+    },
+    {
+      "characterId": "100013-urplus",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 1
+    },
+    {
+      "characterId": "100316-urplus",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 2
+    },
+    {
+      "characterId": "100315-urplus",
+      "baseVotes": 8,
+      "isCore": false,
+      "baseOrder": 3
+    },
+    {
+      "characterId": "100314-urplus",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 4
+    },
+    {
+      "characterId": "100313-urplus",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 5
+    },
+    {
+      "characterId": "100312-urplus",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 6
+    },
+    {
+      "characterId": "100180-urplus",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 7
+    },
+    {
+      "characterId": "100029-urplus",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 8
+    },
+    {
+      "characterId": "100184-urplus",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 9
+    },
+    {
+      "characterId": "100308-urplus",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 10
+    },
+    {
+      "characterId": "100109-ur",
+      "baseVotes": 6,
+      "isCore": true,
+      "baseOrder": 0
+    },
+    {
+      "characterId": "100045-ur",
+      "baseVotes": 5,
+      "isCore": true,
+      "baseOrder": 11
+    },
+    {
+      "characterId": "100184-ur",
+      "baseVotes": 3,
+      "isCore": true,
+      "baseOrder": 23
+    },
+    {
+      "characterId": "100157-ur",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 1
+    },
+    {
+      "characterId": "100069-ur",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 2
+    },
+    {
+      "characterId": "100094-ur",
+      "baseVotes": 8,
+      "isCore": false,
+      "baseOrder": 3
+    },
+    {
+      "characterId": "100057-ur",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 4
+    },
+    {
+      "characterId": "100302-ur",
+      "baseVotes": 7,
+      "isCore": false,
+      "baseOrder": 5
+    },
+    {
+      "characterId": "100017-ur",
+      "baseVotes": 6,
+      "isCore": false,
+      "baseOrder": 6
+    },
+    {
+      "characterId": "100044-ur",
+      "baseVotes": 7,
+      "isCore": false,
+      "baseOrder": 7
+    },
+    {
+      "characterId": "100009-ur",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 8
+    },
+    {
+      "characterId": "100003-ur",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 9
+    },
+    {
+      "characterId": "100013-ur",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 10
+    },
+    {
+      "characterId": "100008-ur",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 12
+    },
+    {
+      "characterId": "100010-ur",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 13
+    },
+    {
+      "characterId": "100089-ur",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 14
+    },
+    {
+      "characterId": "100192-ur",
+      "baseVotes": 6,
+      "isCore": false,
+      "baseOrder": 15
+    },
+    {
+      "characterId": "100191-ur",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 16
+    },
+    {
+      "characterId": "100190-ur",
+      "baseVotes": 6,
+      "isCore": false,
+      "baseOrder": 17
+    },
+    {
+      "characterId": "100189-ur",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 18
+    },
+    {
+      "characterId": "100188-ur",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 19
+    },
+    {
+      "characterId": "100187-ur",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 20
+    },
+    {
+      "characterId": "100186-ur",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 21
+    },
+    {
+      "characterId": "100185-ur",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 22
+    },
+    {
+      "characterId": "100183-ur",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 24
+    },
+    {
+      "characterId": "100182-ur",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 25
+    },
+    {
+      "characterId": "100002-ur",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 26
+    },
+    {
+      "characterId": "100180-ur",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 27
+    },
+    {
+      "characterId": "100044-ssrplus",
+      "baseVotes": 6,
+      "isCore": true,
+      "baseOrder": 7
+    },
+    {
+      "characterId": "100059-ssrplus",
+      "baseVotes": 8,
+      "isCore": true,
+      "baseOrder": 19
+    },
+    {
+      "characterId": "100027-ssrplus",
+      "baseVotes": 8,
+      "isCore": false,
+      "baseOrder": 0
+    },
+    {
+      "characterId": "100075-ssrplus",
+      "baseVotes": 6,
+      "isCore": false,
+      "baseOrder": 1
+    },
+    {
+      "characterId": "100006-ssrplus",
+      "baseVotes": 7,
+      "isCore": false,
+      "baseOrder": 2
+    },
+    {
+      "characterId": "100013-ssrplus",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 3
+    },
+    {
+      "characterId": "100062-ssrplus",
+      "baseVotes": 7,
+      "isCore": false,
+      "baseOrder": 4
+    },
+    {
+      "characterId": "100025-ssrplus",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 5
+    },
+    {
+      "characterId": "100054-ssrplus",
+      "baseVotes": 7,
+      "isCore": false,
+      "baseOrder": 6
+    },
+    {
+      "characterId": "100028-ssrplus",
+      "baseVotes": 6,
+      "isCore": false,
+      "baseOrder": 8
+    },
+    {
+      "characterId": "100003-ssrplus",
+      "baseVotes": 8,
+      "isCore": false,
+      "baseOrder": 9
+    },
+    {
+      "characterId": "100017-ssrplus",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 10
+    },
+    {
+      "characterId": "100109-ssrplus",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 11
+    },
+    {
+      "characterId": "100057-ssrplus",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 12
+    },
+    {
+      "characterId": "100010-ssrplus",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 13
+    },
+    {
+      "characterId": "100089-ssrplus",
+      "baseVotes": 6,
+      "isCore": false,
+      "baseOrder": 14
+    },
+    {
+      "characterId": "100103-ssrplus",
+      "baseVotes": 7,
+      "isCore": false,
+      "baseOrder": 15
+    },
+    {
+      "characterId": "100094-ssrplus",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 16
+    },
+    {
+      "characterId": "100011-ssrplus",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 17
+    },
+    {
+      "characterId": "100024-ssrplus",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 18
+    },
+    {
+      "characterId": "100056-ssrplus",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 20
+    },
+    {
+      "characterId": "100055-ssrplus",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 21
+    },
+    {
+      "characterId": "100156-ssrplus",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 22
+    },
+    {
+      "characterId": "100045-ssrplus",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 23
+    },
+    {
+      "characterId": "100012-ssrplus",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 24
+    },
+    {
+      "characterId": "100092-ssrplus",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 25
+    },
+    {
+      "characterId": "100108-ssr",
+      "baseVotes": 8,
+      "isCore": true,
+      "baseOrder": 3
+    },
+    {
+      "characterId": "100045-ssr",
+      "baseVotes": 4,
+      "isCore": true,
+      "baseOrder": 6
+    },
+    {
+      "characterId": "100003-ssr",
+      "baseVotes": 2,
+      "isCore": true,
+      "baseOrder": 8
+    },
+    {
+      "characterId": "100109-ssr",
+      "baseVotes": 6,
+      "isCore": true,
+      "baseOrder": 19
+    },
+    {
+      "characterId": "100013-ssr",
+      "baseVotes": 4,
+      "isCore": true,
+      "baseOrder": 41
+    },
+    {
+      "characterId": "100029-ssr",
+      "baseVotes": 6,
+      "isCore": false,
+      "baseOrder": 0
+    },
+    {
+      "characterId": "100011-ssr",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 1
+    },
+    {
+      "characterId": "100024-ssr",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 2
+    },
+    {
+      "characterId": "100055-ssr",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 4
+    },
+    {
+      "characterId": "100043-ssr",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 5
+    },
+    {
+      "characterId": "100095-ssr",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 7
+    },
+    {
+      "characterId": "100044-ssr",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 9
+    },
+    {
+      "characterId": "100010-ssr",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 10
+    },
+    {
+      "characterId": "100119-ssr",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 11
+    },
+    {
+      "characterId": "100126-ssr",
+      "baseVotes": 7,
+      "isCore": false,
+      "baseOrder": 12
+    },
+    {
+      "characterId": "100149-ssr",
+      "baseVotes": 6,
+      "isCore": false,
+      "baseOrder": 13
+    },
+    {
+      "characterId": "100094-ssr",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 14
+    },
+    {
+      "characterId": "100074-ssr",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 15
+    },
+    {
+      "characterId": "100059-ssr",
+      "baseVotes": 1,
+      "isCore": false,
+      "baseOrder": 16
+    },
+    {
+      "characterId": "100089-ssr",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 17
+    },
+    {
+      "characterId": "100062-ssr",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 18
+    },
+    {
+      "characterId": "100125-ssr",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 20
+    },
+    {
+      "characterId": "100009-ssr",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 21
+    },
+    {
+      "characterId": "100056-ssr",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 22
+    },
+    {
+      "characterId": "100054-ssr",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 23
+    },
+    {
+      "characterId": "100012-ssr",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 24
+    },
+    {
+      "characterId": "100075-ssr",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 25
+    },
+    {
+      "characterId": "100008-ssr",
+      "baseVotes": 7,
+      "isCore": false,
+      "baseOrder": 26
+    },
+    {
+      "characterId": "100103-ssr",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 27
+    },
+    {
+      "characterId": "100057-ssr",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 28
+    },
+    {
+      "characterId": "100006-ssr",
+      "baseVotes": 1,
+      "isCore": false,
+      "baseOrder": 29
+    },
+    {
+      "characterId": "100002-ssr",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 30
+    },
+    {
+      "characterId": "100069-ssr",
+      "baseVotes": 8,
+      "isCore": false,
+      "baseOrder": 31
+    },
+    {
+      "characterId": "100017-ssr",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 32
+    },
+    {
+      "characterId": "100090-ssr",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 33
+    },
+    {
+      "characterId": "100027-ssr",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 34
+    },
+    {
+      "characterId": "100028-ssr",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 35
+    },
+    {
+      "characterId": "100004-ssr",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 36
+    },
+    {
+      "characterId": "100151-ssr",
+      "baseVotes": 9,
+      "isCore": false,
+      "baseOrder": 37
+    },
+    {
+      "characterId": "100060-ssr",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 38
+    },
+    {
+      "characterId": "100085-ssr",
+      "baseVotes": 8,
+      "isCore": false,
+      "baseOrder": 39
+    },
+    {
+      "characterId": "100025-ssr",
+      "baseVotes": 6,
+      "isCore": false,
+      "baseOrder": 40
+    },
+    {
+      "characterId": "100029-sr",
+      "baseVotes": 4,
+      "isCore": true,
+      "baseOrder": 0
+    },
+    {
+      "characterId": "100047-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 1
+    },
+    {
+      "characterId": "100135-sr",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 2
+    },
+    {
+      "characterId": "100092-sr",
+      "baseVotes": 6,
+      "isCore": true,
+      "baseOrder": 3
+    },
+    {
+      "characterId": "100049-sr",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 4
+    },
+    {
+      "characterId": "100046-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 5
+    },
+    {
+      "characterId": "100096-sr",
+      "baseVotes": 1,
+      "isCore": false,
+      "baseOrder": 6
+    },
+    {
+      "characterId": "100154-sr",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 7
+    },
+    {
+      "characterId": "100095-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 8
+    },
+    {
+      "characterId": "100136-sr",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 9
+    },
+    {
+      "characterId": "100083-sr",
+      "baseVotes": 7,
+      "isCore": true,
+      "baseOrder": 10
+    },
+    {
+      "characterId": "100111-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 11
+    },
+    {
+      "characterId": "100097-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 12
+    },
+    {
+      "characterId": "100084-sr",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 13
+    },
+    {
+      "characterId": "100001-sr",
+      "baseVotes": 1,
+      "isCore": false,
+      "baseOrder": 14
+    },
+    {
+      "characterId": "100015-sr",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 15
+    },
+    {
+      "characterId": "100007-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 16
+    },
+    {
+      "characterId": "100148-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 17
+    },
+    {
+      "characterId": "100110-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 18
+    },
+    {
+      "characterId": "100009-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 19
+    },
+    {
+      "characterId": "100018-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 20
+    },
+    {
+      "characterId": "100063-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 21
+    },
+    {
+      "characterId": "100051-sr",
+      "baseVotes": 4,
+      "isCore": false,
+      "baseOrder": 22
+    },
+    {
+      "characterId": "100005-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 23
+    },
+    {
+      "characterId": "100091-sr",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 24
+    },
+    {
+      "characterId": "100034-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 25
+    },
+    {
+      "characterId": "100008-sr",
+      "baseVotes": 0,
+      "isCore": true,
+      "baseOrder": 26
+    },
+    {
+      "characterId": "100120-sr",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 27
+    },
+    {
+      "characterId": "100061-sr",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 28
+    },
+    {
+      "characterId": "100019-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 29
+    },
+    {
+      "characterId": "100030-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 30
+    },
+    {
+      "characterId": "100016-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 31
+    },
+    {
+      "characterId": "100014-sr",
+      "baseVotes": 1,
+      "isCore": false,
+      "baseOrder": 32
+    },
+    {
+      "characterId": "100086-sr",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 33
+    },
+    {
+      "characterId": "100104-sr",
+      "baseVotes": 5,
+      "isCore": false,
+      "baseOrder": 34
+    },
+    {
+      "characterId": "100038-r",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 0
+    },
+    {
+      "characterId": "100039-r",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 1
+    },
+    {
+      "characterId": "100032-r",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 2
+    },
+    {
+      "characterId": "100068-r",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 3
+    },
+    {
+      "characterId": "100021-r",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 4
+    },
+    {
+      "characterId": "100033-r",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 5
+    },
+    {
+      "characterId": "100065-r",
+      "baseVotes": 1,
+      "isCore": false,
+      "baseOrder": 6
+    },
+    {
+      "characterId": "100050-r",
+      "baseVotes": 1,
+      "isCore": false,
+      "baseOrder": 7
+    },
+    {
+      "characterId": "100064-r",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 8
+    },
+    {
+      "characterId": "100106-r",
+      "baseVotes": 3,
+      "isCore": false,
+      "baseOrder": 9
+    },
+    {
+      "characterId": "100031-r",
+      "baseVotes": 2,
+      "isCore": false,
+      "baseOrder": 10
+    },
+    {
+      "characterId": "100093-r",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 11
+    },
+    {
+      "characterId": "100035-r",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 12
+    },
+    {
+      "characterId": "100041-r",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 13
+    },
+    {
+      "characterId": "100020-r",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 14
+    },
+    {
+      "characterId": "100036-r",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 15
+    },
+    {
+      "characterId": "100053-r",
+      "baseVotes": 0,
+      "isCore": false,
+      "baseOrder": 16
+    }
+  ]
+}
