@@ -125,7 +125,7 @@ onMounted(load)
         <small>Bình chọn từ tài khoản thành viên</small>
       </article>
       <article class="tier-kpi-card">
-        <span>Nhân vật được Vote</span>
+        <span>TÀI KHOẢN THAM GIA</span>
         <strong>{{ loading ? '—' : Number(stats?.totalVoters || 0).toLocaleString('vi-VN') }}</strong>
         <small>Tài khoản tham gia trong tháng</small>
       </article>

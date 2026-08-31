@@ -353,3 +353,12 @@ test('tier ranking encodes reserved characters in production asset URLs', () => 
   assert.match(view, /@click="confirmVote"/)
   assert.match(view, /myVotes\.has\(character\.id\) \|\| selectedInActiveRarity/)
 })
+
+test('admin tier ranking labels total voters as participating accounts', () => {
+  const view = fs.readFileSync(new URL('../src/views/AdminTierRankingView.vue', import.meta.url), 'utf8')
+
+  assert.match(view, /<span>TÀI KHOẢN THAM GIA<\/span>/)
+  assert.match(view, /stats\?\.totalVoters/)
+  assert.match(view, /<small>Tài khoản tham gia trong tháng<\/small>/)
+  assert.doesNotMatch(view, /<span>Nhân vật được Vote<\/span>/)
+})
