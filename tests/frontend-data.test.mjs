@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { execFileSync } from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
 import test from 'node:test'
@@ -15,6 +16,24 @@ import characterNameAliases from '../src/data/characterNameAliases.js'
 
 const root = path.resolve(import.meta.dirname, '..')
 const readJson = (relativePath) => JSON.parse(fs.readFileSync(path.join(root, relativePath), 'utf8'))
+const trackedPublicPaths = new Set(
+  execFileSync('git', ['ls-files', '-z', '--', 'public'], { cwd: root, encoding: 'utf8' })
+    .split('\0')
+    .filter(Boolean)
+    .map(filePath => filePath.replaceAll('\\', '/')),
+)
+const publicGitPath = (assetUrl) => {
+  const pathWithoutQuery = String(assetUrl).split(/[?#]/, 1)[0]
+  return `public/${decodeURIComponent(pathWithoutQuery.replace(/^\/+/, ''))}`
+}
+const assertPublicAssetExists = (assetUrl, message) => {
+  const gitPath = publicGitPath(assetUrl)
+  assert.ok(
+    trackedPublicPaths.has(gitPath),
+    `${message} (missing exact-case Git path: ${gitPath})`,
+  )
+  assert.ok(fs.existsSync(path.join(root, ...gitPath.split('/'))), message)
+}
 
 const charactersVi = readJson('src/data/characters.json')
 const charactersEn = readJson('src/data/characters_en.json')
@@ -60,8 +79,7 @@ test('effective Core Lab runtime asset paths resolve to existing public files', 
 
   effectivePaths.delete('')
   for (const assetUrl of effectivePaths) {
-    const assetPath = path.join(root, 'public', decodeURIComponent(assetUrl.replace(/^\//, '')))
-    assert.ok(fs.existsSync(assetPath), `effective Core Lab path is missing: ${assetUrl}`)
+    assertPublicAssetExists(assetUrl, `effective Core Lab path is missing: ${assetUrl}`)
   }
 
   const childEmperorV2 = coreLab.heroes.find(hero => hero.iconSuffix === '196')
@@ -359,21 +377,14 @@ test('character, skill, and Keepsake catalogs only reference existing assets', (
   )
 
   for (const character of charactersVi) {
-    const characterImage = path.join(
-      root,
-      'public',
-      decodeURIComponent(character.imageURL.replace(/^\//, '')),
-    )
-    assert.ok(fs.existsSync(characterImage), `${character.id} references missing character image`)
+    assertPublicAssetExists(character.imageURL, `${character.id} references missing character image`)
 
     if (character.keepsakeIcon) {
-      const keepsakeImage = path.join(root, 'public', character.keepsakeIcon.replace(/^\//, ''))
-      assert.ok(fs.existsSync(keepsakeImage), `${character.id} references missing Keepsake image`)
+      assertPublicAssetExists(character.keepsakeIcon, `${character.id} references missing Keepsake image`)
     }
 
     for (const [index, skill] of character.skills.entries()) {
-      const skillImage = path.join(root, 'public', decodeURIComponent(skill.icon.replace(/^\//, '')))
-      assert.ok(fs.existsSync(skillImage), `${character.id}/${index} references missing skill image`)
+      assertPublicAssetExists(skill.icon, `${character.id}/${index} references missing skill image`)
     }
   }
 })
@@ -386,13 +397,11 @@ test('English character catalog only references existing assets', () => {
     ]
     for (const [kind, assetUrl] of assets) {
       if (!assetUrl) continue
-      const assetPath = path.join(root, 'public', decodeURIComponent(assetUrl.replace(/^\//, '')))
-      assert.ok(fs.existsSync(assetPath), `en/${character.id} references missing ${kind} image`)
+      assertPublicAssetExists(assetUrl, `en/${character.id} references missing ${kind} image`)
     }
 
     for (const [index, skill] of character.skills.entries()) {
-      const skillPath = path.join(root, 'public', decodeURIComponent(skill.icon.replace(/^\//, '')))
-      assert.ok(fs.existsSync(skillPath), `en/${character.id}/${index} references missing skill image`)
+      assertPublicAssetExists(skill.icon, `en/${character.id}/${index} references missing skill image`)
     }
   }
 })
@@ -477,8 +486,7 @@ test('event images are either valid public assets or use the translated placehol
 
   for (const event of events) {
     if (!event.imageUrl) continue
-    const assetPath = path.join(root, 'public', decodeURIComponent(event.imageUrl.replace(/^\//, '')))
-    assert.ok(fs.existsSync(assetPath), `${event.id} references missing image ${event.imageUrl}`)
+    assertPublicAssetExists(event.imageUrl, `${event.id} references missing image ${event.imageUrl}`)
   }
 })
 
@@ -486,10 +494,7 @@ test('Mirage Trial milestone illustrations are wired to existing public assets',
   const medalsView = fs.readFileSync(path.join(root, 'src/views/MedalsView.vue'), 'utf8')
   for (const stage of ['5', '20', '40', '65', '90']) {
     const imageUrl = `/Feature/medals/Mirage_trial/ai_${stage}.png`
-    assert.ok(
-      fs.existsSync(path.join(root, 'public', imageUrl.replace(/^\//, ''))),
-      `Mirage Trial stage ${stage} is missing ${imageUrl}`,
-    )
+    assertPublicAssetExists(imageUrl, `Mirage Trial stage ${stage} is missing ${imageUrl}`)
     assert.ok(medalsView.includes(imageUrl), `Mirage Trial stage ${stage} is not wired to ${imageUrl}`)
   }
 })
@@ -508,7 +513,7 @@ test('release schedule fallback is bilingual and covers both servers', () => {
     blackSpermRelease.bannerImage,
     '/Characters/Full_Background/Black_Sperm_Ur_plus.png',
   )
-  assert.ok(fs.existsSync(path.join(root, 'public', blackSpermRelease.bannerImage.replace(/^\//, ''))))
+  assertPublicAssetExists(blackSpermRelease.bannerImage, 'Black Sperm release image is missing')
   const septemberRelease = releaseSchedule.find((entry) => (
     entry.server === 'SEA' &&
     entry.date === '2026-09-01' &&
@@ -516,7 +521,7 @@ test('release schedule fallback is bilingual and covers both servers', () => {
   ))
   assert.ok(septemberRelease)
   assert.equal(septemberRelease.isReturn, false)
-  assert.ok(fs.existsSync(path.join(root, 'public', septemberRelease.bannerImage.replace(/^\//, ''))))
+  assertPublicAssetExists(septemberRelease.bannerImage, 'September release image is missing')
   const septemberMystery = releaseSchedule.find((entry) => (
     entry.server === 'CN' &&
     entry.date === '2026-09-01' &&
@@ -525,14 +530,14 @@ test('release schedule fallback is bilingual and covers both servers', () => {
   assert.ok(septemberMystery)
   assert.ok(septemberMystery.overrideNameVi)
   assert.ok(septemberMystery.overrideNameEn)
-  assert.ok(fs.existsSync(path.join(root, 'public', septemberMystery.bannerImage.replace(/^\//, ''))))
+  assertPublicAssetExists(septemberMystery.bannerImage, 'September mystery release image is missing')
   const septemberReturns = releaseSchedule
     .filter((entry) => entry.date === '2026-09-15')
     .sort((left, right) => left.server.localeCompare(right.server))
   assert.deepEqual(septemberReturns.map((entry) => entry.characterId), ['100013-urplus', '100313-urplus'])
   for (const entry of septemberReturns) {
     assert.equal(entry.isReturn, true)
-    assert.ok(fs.existsSync(path.join(root, 'public', entry.bannerImage.replace(/^\//, ''))))
+    assertPublicAssetExists(entry.bannerImage, `${entry.characterId} return image is missing`)
   }
 })
 
@@ -551,8 +556,10 @@ test('Keepsake assets exist and reserved path characters are encoded safely', ()
   assert.equal(keepsakes.length, 177)
 
   for (const keepsake of keepsakes) {
-    const assetPath = path.join(root, 'public', keepsake.keepsakeIcon.replace(/^\//, ''))
-    assert.ok(fs.existsSync(assetPath), `${keepsake.id} references missing Keepsake ${keepsake.keepsakeIcon}`)
+    assertPublicAssetExists(
+      keepsake.keepsakeIcon,
+      `${keepsake.id} references missing Keepsake ${keepsake.keepsakeIcon}`,
+    )
     assert.ok(!keepsake.keepsakeIcon.includes('+'), `${keepsake.id} uses a deploy-unsafe + in its Keepsake path`)
     const browserUrl = safeAssetUrl(keepsake.keepsakeIcon)
     assert.ok(!browserUrl.includes(' '), `${keepsake.id} contains an unescaped space in its browser URL`)
