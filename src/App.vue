@@ -324,7 +324,7 @@ onBeforeUnmount(() => {
       </div>
     </div>
 
-    <div v-else class="flex-grow">
+    <div v-else class="public-route-stage flex-grow">
       <RouterView v-slot="{ Component, route: currentRoute }">
         <transition name="page"><component :is="Component" :key="currentRoute.path" /></transition>
       </RouterView>
@@ -382,4 +382,6 @@ onBeforeUnmount(() => {
 
 <style>
 .page-enter-active,.page-leave-active{transition:opacity .22s ease,transform .22s ease}.page-enter-from{opacity:0;transform:translateY(8px)}.page-leave-to{opacity:0;transform:translateY(-5px)}
+.public-route-stage{min-height:calc(100svh - 77px)}
+@media(max-width:639px){.public-route-stage{min-height:calc(100svh - 73px)}}
 </style>

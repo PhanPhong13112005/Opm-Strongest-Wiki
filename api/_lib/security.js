@@ -6,6 +6,11 @@ import {
   randomUUID,
   timingSafeEqual,
 } from 'node:crypto'
+import {
+  assertNodeAdminConfiguration,
+  assertNodeJwtConfiguration,
+  isProductionRuntime,
+} from './runtimeConfig.js'
 
 const ISSUER = 'OpmWiki.Api'
 const AUDIENCE = 'OpmWiki.Web'
@@ -17,6 +22,10 @@ const encode = (value) => Buffer.from(value).toString('base64url')
 const decodeJson = (value) => JSON.parse(Buffer.from(value, 'base64url').toString('utf8'))
 
 const signingKey = () => {
+  if (isProductionRuntime()) {
+    assertNodeJwtConfiguration()
+    return String(process.env.ADMINAUTH__JWTSIGNINGKEY || process.env.JWT_SIGNING_KEY).trim()
+  }
   const key = process.env.ADMINAUTH__JWTSIGNINGKEY || process.env.JWT_SIGNING_KEY || 'opmwiki-default-secret-signing-key-with-at-least-32-characters'
   if (!key || key.length < 32) throw new Error('ADMINAUTH__JWTSIGNINGKEY must contain at least 32 characters.')
   return key
@@ -29,6 +38,13 @@ const fixedTimeEquals = (left, right) => {
 }
 
 export const validateAdminCredentials = (username, password) => {
+  if (isProductionRuntime()) {
+    assertNodeAdminConfiguration()
+    const expectedUsername = String(process.env.ADMINAUTH__USERNAME).trim().toLowerCase()
+    const expectedPassword = String(process.env.ADMINAUTH__PASSWORD).trim()
+    return fixedTimeEquals(String(username || '').trim().toLowerCase(), expectedUsername) &&
+      fixedTimeEquals(String(password || '').trim(), expectedPassword)
+  }
   const normalizedUser = String(username || '').trim().toLowerCase()
   const expectedUsername = String(process.env.ADMINAUTH__USERNAME || 'admin').trim().toLowerCase()
   const expectedPassword = String(process.env.ADMINAUTH__PASSWORD || 'admin123').trim()

@@ -29,6 +29,10 @@ public sealed class UserAccount
     public string PasswordHash { get; set; } = string.Empty;
     public string? PasswordResetTokenHash { get; set; }
     public DateTimeOffset? PasswordResetExpiresAt { get; set; }
+    public bool EmailVerified { get; set; }
+    public bool PhoneVerified { get; set; }
+    public string? EmailVerificationTokenHash { get; set; }
+    public DateTimeOffset? EmailVerificationExpiresAt { get; set; }
     public string Role { get; set; } = AccountRoles.User;
     public decimal Balance { get; set; }
     public bool IsActive { get; set; } = true;

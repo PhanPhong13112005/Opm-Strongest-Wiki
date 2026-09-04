@@ -11,6 +11,10 @@ AGENTS.md
 !.env.example
 .DS_Store
 *.log
+*.dump
+*.backup
+*.bak
+*.pgdump
 scratch/
 RawData/
 File_Mẫu/

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import EquipmentRouteView from '../views/EquipmentRouteView.vue'
 import { getPortalPath, hasRole, hasValidSession } from '../services/authApi'
 
 // Retry dynamic imports up to 2 times with a small delay. This prevents blank
@@ -20,7 +21,6 @@ const DetailView = retryImport(() => import('../views/DetailView.vue'))
 const CharacterListView = retryImport(() => import('../views/CharacterListView.vue'))
 const TierRankingView = retryImport(() => import('../views/TierRankingView.vue'))
 const MasteryView = retryImport(() => import('../views/MasteryView.vue'))
-const GearCatalogView = retryImport(() => import('../views/GearCatalogView.vue'))
 const BuffGearView = retryImport(() => import('../views/BuffGearView.vue'))
 const CoreLabView = retryImport(() => import('../views/CoreLabView.vue'))
 const CoreRefinementView = retryImport(() => import('../views/CoreRefinementView.vue'))
@@ -117,7 +117,7 @@ const router = createRouter({
     {
       path: '/equipment',
       name: 'equipment',
-      component: GearCatalogView
+      component: EquipmentRouteView
     },
     {
       path: '/buff-gear',

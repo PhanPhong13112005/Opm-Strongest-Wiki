@@ -10,7 +10,7 @@ namespace OpmWiki.Api.Controllers;
 public sealed class AdminAuthController(AdminTokenService tokenService) : ControllerBase
 {
     [AllowAnonymous]
-    [EnableRateLimiting("admin-login")]
+    [EnableRateLimiting(SensitiveRateLimitPolicies.Login)]
     [HttpPost("login")]
     [ProducesResponseType<AdminLoginResponse>(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]

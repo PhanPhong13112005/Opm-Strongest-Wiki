@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.RateLimiting;
 using OpmWiki.Api.Security;
 using OpmWiki.Api.Services;
 using OpmWiki.Application.Abstractions;
+using OpmWiki.Application.Common;
 using OpmWiki.Application.Community;
+using OpmWiki.Application.EmailVerification;
 
 namespace OpmWiki.Api.Controllers;
 
@@ -16,11 +18,13 @@ public sealed partial class AuthController(
     PasswordHasher passwordHasher,
     AdminTokenService tokenService,
     PasswordResetEmailService passwordResetEmail,
+    IEmailVerificationRepository verificationRepository,
+    ISchemaCapabilityService schemaCapabilities,
     IWebHostEnvironment environment,
     ILogger<AuthController> logger) : ControllerBase
 {
     [AllowAnonymous]
-    [EnableRateLimiting("admin-login")]
+    [EnableRateLimiting(SensitiveRateLimitPolicies.Login)]
     [HttpPost("login")]
     public async Task<ActionResult<AdminLoginResponse>> Login(
         LoginRequest request,
@@ -49,7 +53,7 @@ public sealed partial class AuthController(
     }
 
     [AllowAnonymous]
-    [EnableRateLimiting("admin-login")]
+    [EnableRateLimiting(SensitiveRateLimitPolicies.Register)]
     [HttpPost("register")]
     public async Task<ActionResult<AdminLoginResponse>> Register(
         RegisterRequest request,
@@ -75,7 +79,7 @@ public sealed partial class AuthController(
     }
 
     [AllowAnonymous]
-    [EnableRateLimiting("admin-login")]
+    [EnableRateLimiting(SensitiveRateLimitPolicies.ForgotPassword)]
     [HttpPost("forgot-password")]
     public async Task<IActionResult> ForgotPassword(
         ForgotPasswordRequest request,
@@ -120,7 +124,7 @@ public sealed partial class AuthController(
     }
 
     [AllowAnonymous]
-    [EnableRateLimiting("admin-login")]
+    [EnableRateLimiting(SensitiveRateLimitPolicies.ForgotPassword)]
     [HttpPost("reset-password")]
     public async Task<IActionResult> ResetPassword(
         ResetPasswordRequest request,
@@ -158,11 +162,23 @@ public sealed partial class AuthController(
         }
 
         var account = await repository.FindUserByIdAsync(id, cancellationToken);
+        ContactVerificationState? contact = null;
+        if (account is not null)
+        {
+            var capability = await schemaCapabilities.CheckAsync(
+                SchemaCapability.EmailVerification,
+                cancellationToken);
+            if (capability.IsAvailable)
+                contact = await verificationRepository.GetStateAsync(id, cancellationToken);
+        }
         return account is null || !account.IsActive
             ? Unauthorized()
             : Ok(new AccountDto(
                 account.Id, account.Username, account.DisplayName, account.Role, account.Balance,
-                account.IsActive, account.CreatedAt));
+                account.IsActive, account.CreatedAt,
+                contact?.EmailVerified ?? false,
+                contact?.PhoneVerified ?? false,
+                contact?.HasVerifiedContact ?? false));
     }
 
     private static Dictionary<string, string[]> Validate(RegisterRequest request)

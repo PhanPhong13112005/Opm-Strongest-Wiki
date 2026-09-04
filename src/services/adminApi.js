@@ -163,19 +163,24 @@ export const deleteAdminRelease = (id) => mutateAndInvalidate(`api/admin/release
   method: 'DELETE',
 }, 'api/releases')
 
-export const getAdminTierRankingStats = async () => {
+export const getAdminTierRankingStats = async ({ voteMonth = '', page = 1, pageSize = 25 } = {}) => {
   try {
-    return await authorizedRequest('api/admin/tier-ranking/stats')
+    return await authorizedRequest('api/admin/tier-ranking/stats', {}, { voteMonth, page, pageSize })
   } catch (error) {
     if (import.meta.env?.DEV) {
       return {
+        voteMonth: voteMonth || new Date().toISOString().slice(0, 7),
+        resetsAt: new Date().toISOString(),
+        page,
+        pageSize,
+        totalItems: 4,
         totalVotes: 1240,
-        votedCount: 42,
+        totalVoters: 42,
         characters: [
-          { id: '100316-urplus', nameVi: 'Rover UR+', nameEn: 'Rover UR+', tier: 'SS+', baseVotes: 100, communityVotes: 450 },
-          { id: '100314-urplus', nameVi: 'G5 UR+', nameEn: 'G5 UR+', tier: 'SS+', baseVotes: 80, communityVotes: 320 },
-          { id: '100312-urplus', nameVi: 'Nyan UR+', nameEn: 'Nyan UR+', tier: 'SS', baseVotes: 50, communityVotes: 210 },
-          { id: '100029-urplus', nameVi: 'Amai Mask UR+', nameEn: 'Amai Mask UR+', tier: 'S', baseVotes: 30, communityVotes: 180 },
+          { characterId: '100316-urplus', nameVi: 'Rover UR+', nameEn: 'Rover UR+', rarity: 'UR+', tier: 'SS', baseVotes: 100, communityVotes: 450, totalScore: 550, version: 's1.AAAAAAAAAAE' },
+          { characterId: '100314-urplus', nameVi: 'G5 UR+', nameEn: 'G5 UR+', rarity: 'UR+', tier: 'SS', baseVotes: 80, communityVotes: 320, totalScore: 400, version: 's1.AAAAAAAAAAE' },
+          { characterId: '100312-urplus', nameVi: 'Nyan UR+', nameEn: 'Nyan UR+', rarity: 'UR+', tier: 'S', baseVotes: 50, communityVotes: 210, totalScore: 260, version: 's1.AAAAAAAAAAE' },
+          { characterId: '100029-urplus', nameVi: 'Amai Mask UR+', nameEn: 'Amai Mask UR+', rarity: 'UR+', tier: 'A', baseVotes: 30, communityVotes: 180, totalScore: 210, version: 's1.AAAAAAAAAAE' },
         ],
       }
     }
@@ -183,30 +188,38 @@ export const getAdminTierRankingStats = async () => {
   }
 }
 
-export const updateAdminBaseVotes = async (characterId, baseVotes) => {
+export const updateAdminBaseVotes = async (characterId, baseVotes, expectedVersion) => {
   try {
     return await authorizedRequest(`api/admin/tier-ranking/${encodeURIComponent(characterId)}/base-votes`, {
-      method: 'PUT', body: JSON.stringify({ baseVotes }),
+      method: 'PUT', body: JSON.stringify({ baseVotes, expectedVersion }),
     })
   } catch (error) {
-    if (import.meta.env?.DEV) return { success: true, baseVotes }
+    if (import.meta.env?.DEV) return { characterId, baseVotes, version: expectedVersion }
     throw error
   }
 }
 
-export const getAdminCommunityFeed = async () => {
+export const getAdminCommunityFeed = async ({ kind = 'all', page = 1, pageSize = 25 } = {}) => {
   try {
-    return await authorizedRequest('api/admin/community/feed')
+    return await authorizedRequest('api/admin/community/feed', {}, { kind, page, pageSize })
   } catch (error) {
     if (import.meta.env?.DEV) {
       return {
+        kind,
+        page,
+        pageSize,
+        totalItems: 4,
         topics: [
-          { id: 1, title: 'Thảo luận xây dựng đội hình Rover UR+', author: 'user_qa', postCount: 14, isLocked: false, createdAt: new Date().toISOString(), contentSnippet: 'Rover UR+ có khả năng chống chịu cực mạnh khi kết hợp với bộ ấn...' },
-          { id: 2, title: 'Hướng dẫn tham gia sự kiện Mirage Trial', author: 'staff1', postCount: 8, isLocked: true, createdAt: new Date().toISOString(), contentSnippet: 'Tổng hợp các mẹo vượt ải Mirage Trial nhận phần thưởng tối đa...' },
+          ...(kind === 'comments' ? [] : [
+            { id: 1, title: 'Thảo luận xây dựng đội hình Rover UR+', author: 'user_qa', postCount: 14, isLocked: false, createdAt: new Date().toISOString(), contentSnippet: 'Rover UR+ có khả năng chống chịu cực mạnh khi kết hợp với bộ ấn...', version: 't1.AAAA' },
+            { id: 2, title: 'Hướng dẫn tham gia sự kiện Mirage Trial', author: 'staff1', postCount: 8, isLocked: true, createdAt: new Date().toISOString(), contentSnippet: 'Tổng hợp các mẹo vượt ải Mirage Trial nhận phần thưởng tối đa...', version: 't1.AAAA' },
+          ]),
         ],
         comments: [
-          { id: 101, author: 'user_qa', content: 'Sự kiện này quà ngon thật!', eventId: 'event-mirage-2026', createdAt: new Date().toISOString() },
-          { id: 102, author: 'gamer99', content: 'Bao giờ ra mắt banner Tatsumaki UR+ vậy mọi người?', eventId: 'event-banner-jul', createdAt: new Date().toISOString() },
+          ...(kind === 'topics' ? [] : [
+            { id: 101, author: 'user_qa', content: 'Sự kiện này quà ngon thật!', eventId: 'event-mirage-2026', createdAt: new Date().toISOString(), version: 't1.AAAA' },
+            { id: 102, author: 'gamer99', content: 'Bao giờ ra mắt banner Tatsumaki UR+ vậy mọi người?', eventId: 'event-banner-jul', createdAt: new Date().toISOString(), version: 't1.AAAA' },
+          ]),
         ],
       }
     }
@@ -214,21 +227,22 @@ export const getAdminCommunityFeed = async () => {
   }
 }
 
-export const toggleAdminForumTopicLock = async (id, isLocked) => {
+export const toggleAdminForumTopicLock = async (id, isLocked, expectedVersion) => {
   try {
     return await authorizedRequest(`api/admin/community/topics/${id}/lock`, {
-      method: 'PUT', body: JSON.stringify({ isLocked }),
+      method: 'PUT', body: JSON.stringify({ isLocked, expectedVersion }),
     })
   } catch (error) {
-    if (import.meta.env?.DEV) return { success: true, isLocked }
+    if (import.meta.env?.DEV) return { id, isLocked, version: expectedVersion }
     throw error
   }
 }
 
-export const deleteAdminForumTopic = async (id) => {
+export const deleteAdminForumTopic = async (id, version) => {
   try {
     return await authorizedRequest(`api/admin/community/topics/${id}`, {
       method: 'DELETE',
+      headers: { 'If-Match': `"${version}"` },
     })
   } catch (error) {
     if (import.meta.env?.DEV) return { success: true }
@@ -236,10 +250,11 @@ export const deleteAdminForumTopic = async (id) => {
   }
 }
 
-export const deleteAdminEventComment = async (id) => {
+export const deleteAdminEventComment = async (id, version) => {
   try {
     return await authorizedRequest(`api/admin/community/comments/${id}`, {
       method: 'DELETE',
+      headers: { 'If-Match': `"${version}"` },
     })
   } catch (error) {
     if (import.meta.env?.DEV) return { success: true }

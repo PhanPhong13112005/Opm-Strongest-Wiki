@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import RolePortalShell from '../components/RolePortalShell.vue'
 import { adminPortalNavigation } from '../data/portalNavigation'
@@ -15,6 +15,8 @@ const router = useRouter()
 const activeTab = ref('topics') // 'topics' | 'comments'
 const feed = ref({ topics: [], comments: [] })
 const loading = ref(true)
+const page = ref(1)
+const pageSize = 25
 const search = ref('')
 const notice = ref('')
 const error = ref('')
@@ -24,7 +26,11 @@ const load = async () => {
   loading.value = true
   error.value = ''
   try {
-    feed.value = await getAdminCommunityFeed()
+    feed.value = await getAdminCommunityFeed({
+      kind: activeTab.value,
+      page: page.value,
+      pageSize,
+    })
   } catch (err) {
     error.value = err.message || 'Không thể tải danh sách cộng đồng.'
   } finally {
@@ -56,8 +62,8 @@ const toggleLock = async (topic) => {
   error.value = ''
   try {
     const nextLocked = !topic.isLocked
-    await toggleAdminForumTopicLock(topic.id, nextLocked)
-    topic.isLocked = nextLocked
+    const updated = await toggleAdminForumTopicLock(topic.id, nextLocked, topic.version)
+    Object.assign(topic, updated)
     notice.value = `Đã ${nextLocked ? 'khóa' : 'mở khóa'} chủ đề "${topic.title}".`
   } catch (err) {
     error.value = err.message || 'Lỗi thay đổi trạng thái chủ đề.'
@@ -72,7 +78,7 @@ const deleteTopic = async (topic) => {
   notice.value = ''
   error.value = ''
   try {
-    await deleteAdminForumTopic(topic.id)
+    await deleteAdminForumTopic(topic.id, topic.version)
     feed.value.topics = feed.value.topics.filter(t => t.id !== topic.id)
     notice.value = `Đã xóa chủ đề "${topic.title}".`
   } catch (err) {
@@ -88,7 +94,7 @@ const deleteComment = async (comment) => {
   notice.value = ''
   error.value = ''
   try {
-    await deleteAdminEventComment(comment.id)
+    await deleteAdminEventComment(comment.id, comment.version)
     feed.value.comments = feed.value.comments.filter(c => c.id !== comment.id)
     notice.value = 'Đã xóa bình luận sự kiện.'
   } catch (err) {
@@ -98,11 +104,22 @@ const deleteComment = async (comment) => {
   }
 }
 
+const totalPages = computed(() => Math.max(1, Math.ceil(Number(feed.value?.totalItems || 0) / pageSize)))
+const changePage = async nextPage => {
+  page.value = Math.min(totalPages.value, Math.max(1, nextPage))
+  await load()
+}
+
 const logout = async () => {
   clearSession()
   await router.replace('/')
 }
 
+watch(activeTab, async () => {
+  page.value = 1
+  search.value = ''
+  await load()
+})
 onMounted(load)
 </script>
 
@@ -207,6 +224,11 @@ onMounted(load)
         <div v-if="loading" class="comm-empty">Đang tải chủ đề diễn đàn…</div>
         <div v-else-if="filteredTopics.length === 0" class="comm-empty">Không tìm thấy chủ đề nào.</div>
       </div>
+      <nav class="comm-pagination" aria-label="Phân trang chủ đề">
+        <button type="button" :disabled="page <= 1 || loading" @click="changePage(page - 1)">Trang trước</button>
+        <span>Trang {{ page }} / {{ totalPages }}</span>
+        <button type="button" :disabled="page >= totalPages || loading" @click="changePage(page + 1)">Trang sau</button>
+      </nav>
     </section>
 
     <!-- Comments Tab -->
@@ -257,6 +279,11 @@ onMounted(load)
         <div v-if="loading" class="comm-empty">Đang tải bình luận sự kiện…</div>
         <div v-else-if="filteredComments.length === 0" class="comm-empty">Không tìm thấy bình luận nào.</div>
       </div>
+      <nav class="comm-pagination" aria-label="Phân trang bình luận">
+        <button type="button" :disabled="page <= 1 || loading" @click="changePage(page - 1)">Trang trước</button>
+        <span>Trang {{ page }} / {{ totalPages }}</span>
+        <button type="button" :disabled="page >= totalPages || loading" @click="changePage(page + 1)">Trang sau</button>
+      </nav>
     </section>
   </RolePortalShell>
 </template>
@@ -342,6 +369,9 @@ onMounted(load)
 .btn-del { border: 1px solid rgba(244, 63, 94, .3); background: rgba(244, 63, 94, .08); color: #fb7185; }
 .btn-del:hover { border-color: rgba(244, 63, 94, .6); background: rgba(244, 63, 94, .2); }
 .comm-empty { display: grid; min-height: 140px; place-items: center; padding: 24px; color: #94a3b8; font-size: 13.5px; font-weight: 700; }
+.comm-pagination { display:flex;align-items:center;justify-content:flex-end;gap:12px;border-top:1px solid rgba(255,255,255,.08);padding:14px 22px;color:#94a3b8;font-size:12px;font-weight:800 }
+.comm-pagination button { cursor:pointer;border:1px solid rgba(255,255,255,.14);border-radius:9px;background:#0f172a;padding:7px 11px;color:#e2e8f0;font-weight:800 }
+.comm-pagination button:disabled { cursor:not-allowed;opacity:.45 }
 
 @media (max-width: 768px) {
   .comm-panel__header { flex-direction: column; align-items: flex-start; }
