@@ -1,5 +1,6 @@
 import { ensureCommunitySchema, getSql } from './_lib/database.js'
 import { processSePayWebhook, readRawBody } from './_lib/sepayWebhook.js'
+import { enforceStandaloneWriterFence } from './_lib/writerFence.js'
 
 export const config = {
   api: {
@@ -13,6 +14,8 @@ export default async function handler(request, response) {
     response.setHeader('Allow', 'POST')
     return response.status(405).json({ success: false })
   }
+
+  if (enforceStandaloneWriterFence(response, { provider: true })) return
 
   const webhookSecret = String(process.env.SEPAY__WEBHOOKSECRET || '').trim()
   const receivingAccount = String(process.env.BANKTRANSFER__ACCOUNTNUMBER || '').trim()
