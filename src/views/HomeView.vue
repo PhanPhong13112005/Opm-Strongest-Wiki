@@ -34,6 +34,7 @@ watch(locale, loadReleaseSchedule, { immediate: true })
 const safeUrl = safeAssetUrl
 const optimizedHomeImages = new Map([
   ['/Characters/Full_Background/Black_Sperm_Ur_plus.png', '/Characters/Full_Background/Black_Sperm_Ur_plus.webp'],
+  ['/Characters/Full_Background/Homeless_Emperor_URplus.png', '/Characters/Full_Background/Homeless_Emperor_URplus.webp'],
 ])
 
 const getCharacterImage = (filename) => {
@@ -45,7 +46,7 @@ const getCharacterImage = (filename) => {
 
 const getChar = (id) => charactersData.value.find(c => c.id === id) || {}
 
-const currentDate = ref(new Date(2026, 7)) // Starts at August 2026 (0-indexed month)
+const currentDate = ref(new Date(2026, 8)) // Starts at September 2026 (0-indexed month)
 
 const currentMonthStr = computed(() => {
   const y = currentDate.value.getFullYear()
@@ -261,13 +262,8 @@ const fallbackScheduleData = computed(() => ({
       serverColor: '#00d8b6',
       items: [
         {
-          id: 'unknown',
-          overrideName: t('home.unknownCharacter'),
-          overrideTier: 'UR+',
-          overrideFaction: 'UNKNOWN',
-          overrideType: 'UNKNOWN',
-          overrideRole: t('home.hiddenPotential'),
-          bannerImage: '/Characters/Full_Background/Nhan_Vat_Bi_An.jpg',
+          id: 'homeless-emperor-urplus',
+          bannerImage: '/Characters/Full_Background/Homeless_Emperor_URplus.png',
           tag: t('home.release'),
           tagBg: 'bg-opm-gold text-black',
           tagText: 'text-opm-gold',

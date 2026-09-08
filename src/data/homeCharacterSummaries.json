@@ -1,5 +1,15 @@
 {
   "vi": {
+    "homeless-emperor-urplus": {
+      "id": "homeless-emperor-urplus",
+      "name": "Vua Không Nhà",
+      "tier": "UR+",
+      "type": "Tâm Linh",
+      "faction": "Quái Nhân",
+      "roles": [
+        "Gia Tốc Cực Hạn - Sức Mạnh Hủy Diệt"
+      ]
+    },
     "100316-urplus": {
       "id": "100316-urplus",
       "name": "Overgrown Rover",
@@ -100,6 +110,16 @@
     }
   },
   "en": {
+    "homeless-emperor-urplus": {
+      "id": "homeless-emperor-urplus",
+      "name": "Homeless Emperor",
+      "tier": "UR+",
+      "type": "Esper",
+      "faction": "Monster",
+      "roles": [
+        "Extreme Acceleration - Power Of Destruction"
+      ]
+    },
     "100316-urplus": {
       "id": "100316-urplus",
       "name": "Overgrown Rover",

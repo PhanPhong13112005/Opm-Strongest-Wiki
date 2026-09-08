@@ -23,7 +23,11 @@ const mergeReleaseSchedule = (apiRows, language) => {
     const placeholderWasRevealed = localRow &&
       row.characterId === 'unknown' &&
       localRow.characterId !== 'unknown'
-    return placeholderWasRevealed ? { ...row, ...localRow } : row
+    if (placeholderWasRevealed) return { ...row, ...localRow }
+    if (localRow?.characterId === row.characterId && localRow.bannerImage) {
+      return { ...row, bannerImage: localRow.bannerImage }
+    }
+    return row
   })
 
   for (const localRow of localRows) {

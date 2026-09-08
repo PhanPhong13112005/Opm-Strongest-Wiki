@@ -103,8 +103,8 @@ const createdPayload = {
 }
 
 try {
-  console.log(`[1/7] Logging in to ${parsedBaseUrl.hostname} as ${username}...`)
-  const login = await request('/api/auth/login', {
+  console.log(`[1/7] Logging in to the Production Admin endpoint on ${parsedBaseUrl.hostname}...`)
+  const login = await request('/api/admin/auth/login', {
     method: 'POST',
     body: JSON.stringify({ username, password }),
     expected: 200,

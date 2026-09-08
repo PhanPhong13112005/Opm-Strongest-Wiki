@@ -82,7 +82,7 @@ test('home keeps throttled Mobile first paint and interaction within budget', as
 
   expect(vitals.cls).toBeLessThan(0.1)
   expect(vitals.loaderVisible).toBe(false)
-  expect(vitals.lcp?.url).toContain('Black_Sperm_Ur_plus.webp')
+  expect(vitals.lcp?.url).toContain('Homeless_Emperor_URplus.webp')
   expect(vitals.resources.some(resource => /characters(?:_en)?-/.test(resource.name))).toBe(false)
   expect(vitals.resources.some(resource => resource.name.startsWith('/_vercel/'))).toBe(false)
   expect(warnings).toEqual([])
@@ -113,7 +113,7 @@ test('home LCP stays below 2.5 seconds on production preview', async ({ page }, 
   const vitals = await readVitals(page)
   console.log(`HOME_PRODUCTION_LCP ${JSON.stringify(vitals.lcp)}`)
   expect(vitals.lcp?.element).toBe('IMG')
-  expect(vitals.lcp?.url).toContain('Black_Sperm_Ur_plus.webp')
+  expect(vitals.lcp?.url).toContain('Homeless_Emperor_URplus.webp')
   if (testInfo.config.metadata?.homeProduction) {
     expect(vitals.lcp?.startTime ?? Infinity).toBeLessThan(2_500)
   }

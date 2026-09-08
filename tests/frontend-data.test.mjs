@@ -10,7 +10,7 @@ import {
   getCoreLabMilestoneIcon,
 } from '../src/utils/coreLabAssetPaths.js'
 import { getSkillEnergyCost } from '../src/utils/skillPresentation.js'
-import { mapCharacterSummary, mergeCharacterDetail, reconcileCharacterPage } from '../src/services/characterApi.js'
+import { mapCharacterSummary, matchesCharacterSearch, mergeCharacterDetail, reconcileCharacterPage } from '../src/services/characterApi.js'
 import { mergeKeepsakeCatalog } from '../src/services/keepsakeApi.js'
 import characterNameAliases from '../src/data/characterNameAliases.js'
 
@@ -166,7 +166,7 @@ test('home month and mobile navigation transitions expose matching CSS hooks', (
   assert.doesNotMatch(homeRadar, /\.energy-ring[^}]*animation:none!important/)
 })
 test('localized character catalogs share stable IDs', () => {
-  assert.equal(charactersVi.length, 177)
+  assert.equal(charactersVi.length, 178)
   assert.equal(charactersEn.length, charactersVi.length)
   assert.equal(new Set(charactersVi.map(character => character.id)).size, charactersVi.length)
   assert.deepEqual(
@@ -195,8 +195,8 @@ test('Vietnamese character names and effects match the completed localization gu
   assert.notEqual(characterSection, -1)
   const effectRows = parseRows(lines.slice(0, characterSection))
   const characterRows = parseRows(lines.slice(characterSection))
-  assert.equal(effectRows.length, 318)
-  assert.equal(characterRows.length, 177)
+  assert.equal(effectRows.length, 329)
+  assert.equal(characterRows.length, 178)
   assert.ok(effectRows.every(cells => /\[x\]/i.test(cells[1]) && cells[2] && cells[3]))
   assert.ok(characterRows.every(cells => /\[x\]/i.test(cells[1]) && cells[2] && cells[6]))
 
@@ -205,8 +205,8 @@ test('Vietnamese character names and effects match the completed localization gu
   const characterNames = new Map(characterRows.map(cells => [cells[2], cells[6]]))
   const englishById = new Map(charactersEn.map(character => [character.id, character]))
 
-  assert.equal(effectMappings.size, 318)
-  assert.equal(characterNames.size, 177)
+  assert.equal(effectMappings.size, 329)
+  assert.equal(characterNames.size, 178)
   for (const [id, aliases] of Object.entries(characterNameAliases)) {
     assert.ok(characterNames.has(id), id + ' alias references an unknown character')
     assert.ok(Array.isArray(aliases) && aliases.length > 0, id + ' must expose at least one legacy name')
@@ -281,7 +281,8 @@ test('character pages restore local entries missing from a stale production API'
 
   assert.equal(reconciled.source, 'hybrid')
   assert.equal(reconciled.totalCount, charactersVi.length)
-  assert.equal(reconciled.items[0].id, 'blacksperm-urplus')
+  assert.equal(reconciled.items[0].id, 'homeless-emperor-urplus')
+  assert.ok(reconciled.items.some(character => character.id === 'blacksperm-urplus'))
   assert.equal(reconciled.items.find(character => character.id === '100013-urplus').name, 'Zombieman do Admin chỉnh sửa')
 
   const searched = reconcileCharacterPage({
@@ -351,6 +352,117 @@ test('Vietnamese ultimate labels and explicit energy costs stay accurate', () =>
   assert.equal(getSkillEnergyCost({ name: 'Tuyệt kĩ', type: 'Tuyệt kĩ', cost: null }), 0)
   assert.equal(getSkillEnergyCost({ name: 'Ultimate', type: 'Ultimate' }), 0)
 })
+test('Homeless Emperor UR+ preserves supplied stats, assets, and upgrade semantics without invented metadata', () => {
+  const vietnamese = charactersVi.find(character => character.id === 'homeless-emperor-urplus')
+  const english = charactersEn.find(character => character.id === 'homeless-emperor-urplus')
+
+  assert.ok(vietnamese)
+  assert.ok(english)
+  assert.equal(vietnamese.name, 'Vua Không Nhà')
+  assert.equal(english.name, 'Homeless Emperor')
+  assert.deepEqual(vietnamese.baseStats, { atk: 683, hp: 4095, def: 173, spd: 141 })
+  assert.equal(vietnamese.type, 'Tâm Linh')
+  assert.equal(vietnamese.faction, 'Quái Nhân')
+  assert.equal(english.type, 'Esper')
+  assert.equal(english.faction, 'Monster')
+  assert.deepEqual(vietnamese.roles, ['Gia Tốc Cực Hạn - Sức Mạnh Hủy Diệt'])
+  assert.equal(vietnamese.duyen, 'Hyper-Sense Burst')
+  assert.deepEqual(english.roles, ['Extreme Acceleration - Power Of Destruction'])
+  assert.equal(english.duyen, 'Hyper-Sense Burst')
+  assert.equal(vietnamese.imageURL, '/Characters/Homeless Emperor (URplus)/URplus.png')
+  assert.equal(english.imageURL, '/Characters/Homeless Emperor (URplus)/URplus.png')
+  assert.equal(vietnamese.keepsakeIcon, '/Skill/Homeless Emperor (URplus)/Keepsake-URplus.png')
+  assert.deepEqual(
+    vietnamese.skills.map(skill => skill.name),
+    [
+      'Cơ bản',
+      'Tuyệt kĩ',
+      'Siêu tuyệt kĩ',
+      'Bị động — Base',
+      'Bị động — 5★ vàng',
+      'Bị động — 5★ tím',
+      'Nội tại Thức tỉnh — A1',
+      'Nội tại Thức tỉnh — A2',
+      'Nội tại Thức tỉnh — A3',
+    ],
+  )
+  assert.deepEqual(
+    english.skills.slice(6).map(skill => skill.name),
+    ['Awaken Passive — A1', 'Awaken Passive — A2', 'Awaken Passive — A3'],
+  )
+  assert.ok(vietnamese.skills.slice(6).every(skill => !skill.name.includes('★')))
+  assert.equal(english.skills[0].desc, 'Deals 120% ATK DMG to a single target.')
+  assert.match(english.skills[1].desc, /4500% ATK \[Specialized Direct DMG\]/)
+  assert.match(english.skills[1].desc, /5-hit combo/)
+  assert.match(english.skills[1].desc, /ignores 45% \[Specialized Evasion\]/)
+  assert.match(english.skills[1].desc, /penetrates \[Unyielding\] and \[Specialized Unyielding\]/)
+  assert.match(english.skills[1].desc, /allies outside the same row/)
+  assert.match(english.skills[1].desc, /\[Specialized Acceleration\]\/\[Speed Domain\]/)
+  assert.match(english.skills[1].desc, /94% of Homeless Emperor's speed/)
+  assert.match(english.skills[1].desc, /all DMG received by the target is increased by 30%/)
+  assert.ok(english.skills[1].desc.length > 650)
+  assert.match(english.skills[2].desc, /Increase ATK of all allies by 30%/)
+  assert.match(english.skills[2].desc, /6000% ATK \[Specialized Direct DMG\]/)
+  assert.match(english.skills[2].desc, /ignores 60% \[Specialized Evasion\]/)
+  assert.match(english.skills[2].desc, /98% of Homeless Emperor's speed/)
+  assert.ok(english.skills[2].desc.length > 700)
+  assert.deepEqual(english.skills.slice(3, 6).map(skill => skill.desc.match(/gains (\d+%)/)?.[1]), [
+    '80%',
+    '85%',
+    '90%',
+  ])
+  assert.ok(english.skills.slice(3, 6).every(skill => skill.desc.includes('[Energy Erosion]')))
+  assert.ok(english.skills.slice(3, 6).every(skill => skill.desc.includes('[Specialized Speed-Up]')))
+  assert.ok(english.skills.slice(3, 6).every(skill => skill.desc.includes('[normal Speed-Up]')))
+  assert.ok(english.skills.slice(3, 6).every(skill => skill.desc.includes('[Specialized Non-Crit Hit DMG Reduction]:')))
+  assert.ok(english.skills.slice(3, 6).every(skill => skill.desc.includes('[Specialized Critical Hit]:')))
+  assert.ok(english.skills.slice(3, 6).every(skill => skill.desc.length > 700))
+  assert.match(english.skills[6].desc, /grants self 60% \[Extreme Speed-Up\]/)
+  assert.match(english.skills[6].desc, /by 0\.5x/)
+  assert.doesNotMatch(english.skills[6].desc, /Destructive Momentum: Defense|energy consumption is reduced by 1|68%|1\.5x/)
+  assert.ok(english.skills[6].desc.length > 400)
+  assert.match(english.skills[7].desc, /grants self 68% \[Extreme Speed-Up\]/)
+  assert.match(english.skills[7].desc, /\[Destructive Momentum: Defense\]/)
+  assert.match(english.skills[7].desc, /by 1\.5x/)
+  assert.match(english.skills[7].desc, /energy consumption is reduced by 1/)
+  assert.ok(english.skills[7].desc.length > 700)
+  assert.equal(english.skills[8].desc, 'Restores 150 Energy Gauge when attacking.')
+  const generatedEnglishDetail = readJson('public/character-details/en/homeless-emperor-urplus.json')
+  assert.deepEqual(
+    generatedEnglishDetail.skills.map(skill => skill.desc),
+    english.skills.map(skill => skill.desc),
+  )
+  const detailViewSource = fs.readFileSync(path.join(root, 'src/views/DetailView.vue'), 'utf8')
+  assert.match(detailViewSource, /whitespace-pre-line[^>]*v-html="formatSkillDesc\(skill\.desc\)"/)
+  assert.match(detailViewSource, /safeUrl\(character\.classIcon\)/)
+  assert.match(detailViewSource, /const hasPvpStats = computed/)
+  assert.match(detailViewSource, /v-if="hasPvpStats"/)
+  assert.doesNotMatch(detailViewSource, /pvpStats\?\.(?:atk|hp|def|spd) \|\|/)
+  assert.deepEqual(english.effects.map(effect => effect.term), [
+    '[Energy Erosion]',
+    '[Specialized Non-Crit Hit DMG Reduction]',
+    '[Specialized Critical Hit]',
+    '[Destructive Momentum: Assault]',
+    '[Destructive Momentum: Defense]',
+  ])
+  assert.equal(vietnamese.releaseTrung, '01/09/2026')
+  assert.equal(vietnamese.releaseSea, '01/01/2027')
+  assert.equal(english.releaseTrung, '01/09/2026')
+  assert.equal(english.releaseSea, '01/01/2027')
+  assert.equal(vietnamese.classLevel, 'Dragon')
+  assert.equal(english.classLevel, 'Dragon')
+  assert.equal(vietnamese.classIcon, '/Class/Dragon.png')
+  assert.equal(english.classIcon, '/Class/Dragon.png')
+  assert.ok(fs.existsSync(path.join(root, 'public', vietnamese.classIcon.replace(/^\//, ''))))
+  assert.equal(matchesCharacterSearch(vietnamese, 'homeless emperor', english), true)
+  const routerSource = fs.readFileSync(path.join(root, 'src/router/index.js'), 'utf8')
+  assert.match(routerSource, /path: '\/character\/:id'/)
+  for (const field of ['pvpStats']) {
+    assert.equal(Object.hasOwn(vietnamese, field), false, field + ' must stay absent until sourced')
+    assert.equal(Object.hasOwn(english, field), false, 'en/' + field + ' must stay absent until sourced')
+  }
+})
+
 test('character, skill, and Keepsake catalogs only reference existing assets', () => {
   const blackSpermImageUrl = '/Characters/Black%20Sperm%20(UR%2B)/Black_Sperm.png?v=20260801-1'
   assert.equal(
@@ -504,7 +616,7 @@ test('Mirage Trial milestone illustrations are wired to existing public assets',
 })
 
 test('release schedule fallback is bilingual and covers both servers', () => {
-  assert.equal(releaseSchedule.length, 16)
+  assert.equal(releaseSchedule.length, 19)
   assert.deepEqual(new Set(releaseSchedule.map((entry) => entry.server)), new Set(['CN', 'SEA']))
   const blackSpermRelease = releaseSchedule.find((entry) => (
     entry.server === 'CN' &&
@@ -526,15 +638,36 @@ test('release schedule fallback is bilingual and covers both servers', () => {
   assert.ok(septemberRelease)
   assert.equal(septemberRelease.isReturn, false)
   assertPublicAssetExists(septemberRelease.bannerImage, 'September release image is missing')
-  const septemberMystery = releaseSchedule.find((entry) => (
+  const homelessEmperorRelease = releaseSchedule.find((entry) => (
     entry.server === 'CN' &&
     entry.date === '2026-09-01' &&
-    entry.characterId === 'unknown'
+    entry.characterId === 'homeless-emperor-urplus'
   ))
-  assert.ok(septemberMystery)
-  assert.ok(septemberMystery.overrideNameVi)
-  assert.ok(septemberMystery.overrideNameEn)
-  assertPublicAssetExists(septemberMystery.bannerImage, 'September mystery release image is missing')
+  assert.ok(homelessEmperorRelease)
+  assert.equal(homelessEmperorRelease.isReturn, false)
+  assert.equal(homelessEmperorRelease.sortOrder, 1)
+  assert.equal(homelessEmperorRelease.bannerImage, '/Characters/Full_Background/Homeless_Emperor_URplus.png')
+  assert.equal(Object.keys(homelessEmperorRelease).some(key => key.startsWith('override')), false)
+  assert.equal(releaseSchedule.some(entry => entry.characterId === 'unknown'), false)
+  assertPublicAssetExists(homelessEmperorRelease.bannerImage, 'Homeless Emperor release image is missing')
+  assert.deepEqual(
+    releaseSchedule
+      .filter(entry => entry.characterId === 'homeless-emperor-urplus')
+      .map(entry => [entry.server, entry.date, entry.isReturn]),
+    [
+      ['CN', '2026-09-01', false],
+      ['CN', '2026-11-01', true],
+      ['SEA', '2027-01-01', false],
+      ['SEA', '2027-03-01', true],
+    ],
+  )
+  assert.ok(
+    releaseSchedule
+      .filter(entry => entry.characterId === 'homeless-emperor-urplus')
+      .every(entry => entry.bannerImage === '/Characters/Full_Background/Homeless_Emperor_URplus.png'),
+  )
+  const releaseApiSource = fs.readFileSync(path.join(root, 'src/services/releaseScheduleApi.js'), 'utf8')
+  assert.match(releaseApiSource, /localRow\?\.characterId === row\.characterId && localRow\.bannerImage/)
   const septemberReturns = releaseSchedule
     .filter((entry) => entry.date === '2026-09-15')
     .sort((left, right) => left.server.localeCompare(right.server))
@@ -557,7 +690,7 @@ test('Backgear catalog contains nine unique cards and one collection set', () =>
 
 test('Keepsake assets exist and reserved path characters are encoded safely', () => {
   const keepsakes = charactersVi.filter(character => character.keepsakeIcon)
-  assert.equal(keepsakes.length, 177)
+  assert.equal(keepsakes.length, 178)
 
   for (const keepsake of keepsakes) {
     assertPublicAssetExists(
@@ -581,7 +714,7 @@ test('local Keepsake catalog fills entries missing from a stale API', () => {
   const merged = mergeKeepsakeCatalog(apiKeepsakes, charactersVi)
   const blackSperm = merged.find(character => character.id === 'blacksperm-urplus')
 
-  assert.equal(merged.length, 177)
+  assert.equal(merged.length, 178)
   assert.ok(blackSperm)
   assert.equal(
     blackSperm.keepsakeIcon,

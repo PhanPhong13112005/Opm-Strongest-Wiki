@@ -32,24 +32,28 @@ test('home character summaries cover the release schedule and match both catalog
     }
   }
 })
-test('home LCP uses the optimized Black Sperm image', () => {
-  const optimizedImage = path.join(
-    root,
-    'public/Characters/Full_Background/Black_Sperm_Ur_plus.webp',
-  )
-  assert.ok(fs.existsSync(optimizedImage))
-  assert.ok(fs.statSync(optimizedImage).size < 25_000)
+test('Homeless Emperor keeps character and schedule artwork in their canonical folders', () => {
+  const characterImage = path.join(root, 'public/Characters/Homeless Emperor (URplus)/URplus.png')
+  const scheduleImage = path.join(root, 'public/Characters/Full_Background/Homeless_Emperor_URplus.png')
+  const optimizedScheduleImage = path.join(root, 'public/Characters/Full_Background/Homeless_Emperor_URplus.webp')
+  assert.ok(fs.existsSync(characterImage))
+  assert.ok(fs.existsSync(scheduleImage))
+  assert.ok(fs.existsSync(optimizedScheduleImage))
+  assert.ok(fs.statSync(optimizedScheduleImage).size < fs.statSync(scheduleImage).size)
 })
-test('home boot shell matches the default August featured release', () => {
+test('home boot shell defaults to the September release schedule', () => {
   const schedule = readJson('src/data/releaseSchedule.json')
-  const summaries = readJson('src/data/homeCharacterSummaries.json')
-  const featured = schedule.find(row => row.server === 'CN' && row.date === '2026-08-01')
+  const septemberRows = schedule.filter(row => row.date.startsWith('2026-09-'))
   const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8')
 
-  assert.ok(featured)
-  assert.match(indexHtml, new RegExp(summaries.vi[featured.characterId].name.toUpperCase()))
-  assert.match(indexHtml, /Black_Sperm_Ur_plus\.webp/)
-  assert.match(indexHtml, /08 \/ 2026/)
+  assert.equal(septemberRows.length, 4)
+  assert.match(indexHtml, /RADAR RA MẮT/)
+  assert.match(indexHtml, /09 \/ 2026/)
+  assert.match(indexHtml, /Vua Không Nhà UR\+ ra mắt máy chủ CN/)
+  assert.match(indexHtml, /Full_Background\/Homeless_Emperor_URplus\.webp/)
+  const homeView = fs.readFileSync(path.join(root, 'src/views/HomeView.vue'), 'utf8')
+  assert.match(homeView, /new Date\(2026, 8\)/)
+  assert.doesNotMatch(homeView, /id: 'unknown'/)
 })
 test('tier ranking has a route-specific boot shell while its async chunk loads', () => {
   const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8')

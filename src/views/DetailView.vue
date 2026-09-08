@@ -3,6 +3,7 @@ import { ref, computed, onBeforeUnmount, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { loadLocalCharacterDetail } from '../data/loadCharacterDetail'
+import releaseSchedule from '../data/releaseSchedule.json'
 import { safeAssetUrl } from '../utils/assetUrl'
 import { getSkillEnergyCost } from '../utils/skillPresentation'
 import { getCharacterById } from '../services/characterApi'
@@ -21,6 +22,10 @@ const { t, locale } = useI18n()
 const localCharacter = ref(null)
 const apiCharacter = ref(null)
 const character = computed(() => apiCharacter.value || localCharacter.value)
+const hasPvpStats = computed(() => {
+  const stats = character.value?.pvpStats
+  return stats && ['atk', 'hp', 'def', 'spd'].some((key) => Number(stats[key]) > 0)
+})
 const activeRecommendationTab = ref('insignia')
 const coreLabData = ref(null)
 let activeDetailRequest = 0
@@ -200,6 +205,11 @@ const releaseDates = computed(() => {
     return `${date.toString().padStart(2, '0')}/${newM.toString().padStart(2, '0')}/${newY}`;
   }
 
+  const formatScheduleDate = (value) => {
+    const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value || '')
+    return match ? `${match[3]}/${match[2]}/${match[1]}` : null
+  }
+
   const trungStr = character.value.releaseTrung;
   let tRelease = 'Không xác định';
   let tReturn = 'Không xác định';
@@ -246,6 +256,14 @@ const releaseDates = computed(() => {
       sReturn = 'Không xác định';
     }
   }
+
+  const scheduledReturns = releaseSchedule.filter(row => (
+    row.characterId === character.value.id && row.isReturn
+  ))
+  const scheduledTrungReturn = scheduledReturns.find(row => row.server === 'CN')
+  const scheduledSeaReturn = scheduledReturns.find(row => row.server === 'SEA')
+  tReturn = formatScheduleDate(scheduledTrungReturn?.date) || tReturn
+  sReturn = formatScheduleDate(scheduledSeaReturn?.date) || sReturn
 
   // If BOTH are completely empty, maybe we shouldn't even show the history block
   if (!trungStr && !explicitSea) {
@@ -326,6 +344,29 @@ const formatSkillDesc = (desc) => {
 }
 
 const getSkillCost = (skill) => getSkillEnergyCost(skill, character.value?.skills)
+const isSuperUltimate = (skill) => {
+  const name = String(skill?.name || '').toLocaleLowerCase()
+  return name.includes('siêu tuyệt kĩ') || name.includes('super ultimate')
+}
+
+const getSkillTitleClass = (skill) => {
+  if (isSuperUltimate(skill)) return 'text-red-400'
+  return expandedSkills.value.includes(skill.name)
+    ? 'text-[color:var(--theme-color)]'
+    : 'text-gray-300'
+}
+
+const getPassiveUpgradeTone = (skill) => {
+  const type = String(skill?.type || '').toLocaleLowerCase()
+  if (!['nội tại', 'bị động', 'passive', 'extreme passive', '5-star passive', 'core'].includes(type)) return ''
+
+  const name = String(skill?.name || '').toLocaleLowerCase()
+  if (name.includes('5★ vàng') || name.includes('5★ gold') || name.includes('cực hạn') || name.includes('extreme')) return 'gold'
+  if (name.includes('5★ tím') || name.includes('5★ purple') || name.includes('5 sao') || name.includes('5 stars') || name.includes('5 star')) return 'purple'
+  if (name === 'bị động' || name === 'passive') return 'base-stars'
+  return ''
+}
+
 const getKeepsakeImage = (skill) => {
   if (character.value?.keepsakeIcon) {
     return character.value.keepsakeIcon
@@ -482,6 +523,14 @@ onBeforeUnmount(() => {
               <span class="text-white font-bold text-lg drop-shadow-md">{{ character.faction }}</span>
             </div>
           </div>
+
+          <div v-if="character.classLevel" class="flex items-center space-x-4">
+            <span class="bg-[color:var(--theme-color)] text-[#000000] font-black text-xs tracking-widest px-3 py-1 rounded shadow-sm w-[84px] text-center antialiased flex items-center justify-center leading-none" style="font-family: Arial, sans-serif;">{{ locale === 'en' ? 'CLASS' : 'CẤP' }}</span>
+            <div class="flex items-center gap-2.5">
+              <img v-if="character.classIcon" :src="safeUrl(character.classIcon)" :alt="character.classLevel" width="24" height="24" decoding="async" class="h-6 w-6 object-contain drop-shadow-md" />
+              <span class="text-white font-bold text-lg drop-shadow-md">{{ character.classLevel }}</span>
+            </div>
+          </div>
           
           <div class="flex items-center space-x-4">
             <span class="bg-[color:var(--theme-color)] text-[#000000] font-black text-xs tracking-widest px-3 py-1 rounded shadow-sm w-[84px] text-center antialiased flex items-center justify-center leading-none" style="font-family: Arial, sans-serif;">{{ t("detail.roleLabel") }}</span>
@@ -628,26 +677,26 @@ onBeforeUnmount(() => {
         </div>
 
         <!-- PVP STATS -->
-        <div class="bg-[#12131a] rounded-xl border border-gray-800 p-6 flex flex-col">
+        <div v-if="hasPvpStats" class="bg-[#12131a] rounded-xl border border-gray-800 p-6 flex flex-col">
           <div class="flex items-center mb-6">
             <span class="text-[#ffb300] font-bold text-xs tracking-widest uppercase">{{ t("detail.pvpStatsLabel") }}</span>
             <div class="flex-grow h-px bg-gray-800 ml-4"></div>
           </div>
           <div class="grid grid-cols-4 gap-2 mb-6">
             <div class="border border-gray-700 rounded-lg p-2 text-center">
-              <span class="text-white font-black text-xl lg:text-2xl block">{{ character.pvpStats?.atk || 30 }}</span>
+              <span class="text-white font-black text-xl lg:text-2xl block">{{ character.pvpStats?.atk ?? 0 }}</span>
               <span class="text-gray-400 text-[11px] font-bold tracking-widest uppercase">ATK</span>
             </div>
             <div class="border border-gray-700 rounded-lg p-2 text-center">
-              <span class="text-white font-black text-xl lg:text-2xl block">{{ character.pvpStats?.hp || 30 }}</span>
+              <span class="text-white font-black text-xl lg:text-2xl block">{{ character.pvpStats?.hp ?? 0 }}</span>
               <span class="text-gray-400 text-[11px] font-bold tracking-widest uppercase">HP</span>
             </div>
             <div class="border border-gray-700 rounded-lg p-2 text-center">
-              <span class="text-white font-black text-xl lg:text-2xl block">{{ character.pvpStats?.def || 30 }}</span>
+              <span class="text-white font-black text-xl lg:text-2xl block">{{ character.pvpStats?.def ?? 0 }}</span>
               <span class="text-gray-400 text-[11px] font-bold tracking-widest uppercase">DEF</span>
             </div>
             <div class="border border-gray-700 rounded-lg p-2 text-center">
-              <span class="text-white font-black text-xl lg:text-2xl block">{{ character.pvpStats?.spd || 1 }}</span>
+              <span class="text-white font-black text-xl lg:text-2xl block">{{ character.pvpStats?.spd ?? 0 }}</span>
               <span class="text-gray-400 text-[11px] font-bold tracking-widest uppercase">SPD</span>
             </div>
           </div>
@@ -786,7 +835,7 @@ onBeforeUnmount(() => {
                     <span v-else class="text-2xl opacity-80">💥</span>
                   </div>
                   <div class="flex flex-wrap items-center gap-2">
-                    <h3 class="font-bold text-lg transition-colors" :class="expandedSkills.includes(skill.name) ? 'text-[color:var(--theme-color)]' : 'text-gray-300'">{{ skill.name }}</h3>
+                    <h3 class="font-bold text-lg transition-colors" :class="getSkillTitleClass(skill)">{{ skill.name }}</h3>
                     
                     <!-- KEEPSAKE BADGE -->
                     <router-link v-if="skill.keepsakeIcon || (skill.name.toLowerCase().includes('siêu') && character?.keepsakeIcon)" :to="`/keepsake/${character.id}`" class="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-red-900/80 to-red-600/50 border border-red-500/50 rounded-full ml-2 shadow-[0_0_10px_rgba(255,0,0,0.4)] cursor-pointer hover:scale-105 hover:shadow-[0_0_15px_rgba(255,0,0,0.6)] transition-all duration-300">
@@ -795,9 +844,9 @@ onBeforeUnmount(() => {
                     </router-link>
 
                     <!-- Stars for Extreme Passives -->
-                    <div v-if="['bị động', 'passive'].includes(skill.name.toLowerCase())" class="inline-flex items-center gap-3 bg-yellow-900/30 border border-yellow-500/50 rounded-full px-4 py-1.5"><span class="text-xs text-yellow-100 uppercase tracking-wider font-bold">{{ t("detail.unlockedBy") }}</span><div class="text-[#ffb300] text-xs drop-shadow-[0_0_5px_rgba(255,179,0,0.8)]">★★</div></div>
-                    <div v-if="skill.name.toLowerCase().includes('cực hạn') || skill.name.toLowerCase().includes('extreme')" class="inline-flex items-center gap-3 bg-yellow-900/30 border border-yellow-500/50 rounded-full px-4 py-1.5"><span class="text-xs text-yellow-100 uppercase tracking-wider font-bold">{{ t("detail.unlockedBy") }}</span><div class="text-[#ffb300] text-xs drop-shadow-[0_0_5px_rgba(255,179,0,0.8)]">★★★★★</div></div>
-                    <div v-if="skill.name.toLowerCase().includes('5 sao') || skill.name.toLowerCase().includes('5 stars') || skill.name.toLowerCase().includes('5 star')" class="inline-flex items-center gap-3 bg-purple-900/30 border border-purple-500/50 rounded-full px-4 py-1.5"><span class="text-xs text-purple-100 uppercase tracking-wider font-bold">{{ t("detail.unlockedBy") }}</span><div class="text-purple-400 text-xs drop-shadow-[0_0_5px_rgba(168,85,247,0.8)]">★★★★★</div></div>
+                    <div v-if="getPassiveUpgradeTone(skill) === 'base-stars'" class="inline-flex items-center gap-3 bg-yellow-900/30 border border-yellow-500/50 rounded-full px-4 py-1.5"><span class="text-xs text-yellow-100 uppercase tracking-wider font-bold">{{ t("detail.unlockedBy") }}</span><div class="text-[#ffb300] text-xs drop-shadow-[0_0_5px_rgba(255,179,0,0.8)]">★★</div></div>
+                    <div v-if="getPassiveUpgradeTone(skill) === 'gold'" class="inline-flex items-center gap-3 bg-yellow-900/30 border border-yellow-500/50 rounded-full px-4 py-1.5"><span class="text-xs text-yellow-100 uppercase tracking-wider font-bold">{{ t("detail.unlockedBy") }}</span><div class="text-[#ffb300] text-xs drop-shadow-[0_0_5px_rgba(255,179,0,0.8)]">★★★★★</div></div>
+                    <div v-if="getPassiveUpgradeTone(skill) === 'purple'" class="inline-flex items-center gap-3 bg-purple-900/30 border border-purple-500/50 rounded-full px-4 py-1.5"><span class="text-xs text-purple-100 uppercase tracking-wider font-bold">{{ t("detail.unlockedBy") }}</span><div class="text-purple-400 text-xs drop-shadow-[0_0_5px_rgba(168,85,247,0.8)]">★★★★★</div></div>
                   </div>
                 </div>
                 
@@ -820,7 +869,7 @@ onBeforeUnmount(() => {
                 :class="expandedSkills.includes(skill.name) ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'"
               >
                 <div class="p-4 pt-0 border-t border-gray-800/50 mt-2">
-                  <p class="text-sm text-gray-300 leading-relaxed mt-4" v-html="formatSkillDesc(skill.desc)"></p>
+                  <p class="text-sm text-gray-300 leading-relaxed mt-4 whitespace-pre-line" v-html="formatSkillDesc(skill.desc)"></p>
                 </div>
               </div>
 

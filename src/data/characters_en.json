@@ -1,5 +1,108 @@
 [
   {
+    "id": "homeless-emperor-urplus",
+    "name": "Homeless Emperor",
+    "imageURL": "/Characters/Homeless Emperor (URplus)/URplus.png",
+    "tier": "UR+",
+    "type": "Esper",
+    "faction": "Monster",
+    "roles": [
+      "Extreme Acceleration - Power Of Destruction"
+    ],
+    "duyen": "Hyper-Sense Burst",
+    "baseStats": {
+      "atk": 683,
+      "hp": 4095,
+      "def": 173,
+      "spd": 141
+    },
+    "releaseSea": "01/01/2027",
+    "releaseTrung": "01/09/2026",
+    "classLevel": "Dragon",
+    "classIcon": "/Class/Dragon.png",
+    "skills": [
+      {
+        "name": "Basic",
+        "desc": "Deals 120% ATK DMG to a single target.",
+        "icon": "/Skill/Homeless Emperor (URplus)/Skill_base.png",
+        "type": "Basic"
+      },
+      {
+        "name": "Ultimate",
+        "desc": "Deals 4500% ATK [Specialized Direct DMG] to the entire row in a 5-hit combo (affected only by advanced DMG reduction), ignores 45% [Specialized Evasion] and [Non-Crit DMG Reduction], and penetrates [Unyielding] and [Specialized Unyielding].\n\nGrants permanent [Extreme Speed-Up] to allies outside the same row.\n\n[Extreme Speed-Up]: When active, overrides [Specialized Acceleration]/[Speed Domain], increasing speed to 94% of Homeless Emperor's speed (this effect does not apply if the user's speed is higher than the amplified speed).\n\nWhen dealing DMG, if the target's speed is not higher than the user's, all DMG received by the target is increased by 30%.",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_ult.png",
+        "type": "Ultimate"
+      },
+      {
+        "name": "Super Ultimate",
+        "desc": "Increase ATK of all allies by 30% (cannot be dispelled).\n\nDeals 6000% ATK [Specialized Direct DMG] to the entire row in a 5-hit combo (affected only by advanced DMG reduction), ignores 60% [Specialized Evasion] and [Non-Crit DMG Reduction], and penetrates [Unyielding] and [Specialized Unyielding].\n\nGrants permanent [Extreme Speed-Up] to allies outside the same row.\n\n[Extreme Speed-Up]: When active, overrides [Specialized Acceleration]/[Speed Domain], increasing speed to 98% of Homeless Emperor's speed (this effect does not apply if the user's speed is higher than the amplified speed).\n\nWhen dealing DMG, if the target's speed is not higher than the user's, all DMG received by the target is increased by 30%.",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_ult.png",
+        "type": "Ultimate",
+        "keepsakeIcon": "/Skill/Homeless Emperor (URplus)/Keepsake-URplus.png"
+      },
+      {
+        "name": "Passive — Base",
+        "desc": "At battle start, gains 80% [Specialized Non-Crit DMG Reduction].\n\nUpon entering the battlefield, permanently inflicts [Energy Erosion] on all enemies (undispellable).\n\nAt the start of combat and after any character takes action, removes all [Specialized Speed-Up] and [normal Speed-Up] effects from all enemies.\n\n[Specialized Non-Crit Hit DMG Reduction]: Reduces all incoming DMG from non-[Specialized Critical Hits].\n\n[Specialized Critical Hit]: When dealing [Specialized Direct DMG], triggers a Critical Hit based on the portion of the Final Critical Rate that exceeds 200%.\n\n[Energy Erosion]: Immune to gaining [Energy Tenacity] when taking hits; any [Energy Tenacity] gained cannot be converted into [Specialized HP].",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_pas.png",
+        "type": "Passive"
+      },
+      {
+        "name": "Passive — 5★ Gold",
+        "desc": "At battle start, gains 85% [Specialized Non-Crit DMG Reduction].\n\nUpon entering the battlefield, permanently inflicts [Energy Erosion] on all enemies (undispellable).\n\nAt the start of combat and after any character takes action, removes all [Specialized Speed-Up] and [normal Speed-Up] effects from all enemies.\n\n[Specialized Non-Crit Hit DMG Reduction]: Reduces all incoming DMG from non-[Specialized Critical Hits].\n\n[Specialized Critical Hit]: When dealing [Specialized Direct DMG], triggers a Critical Hit based on the portion of the Final Critical Rate that exceeds 200%.\n\n[Energy Erosion]: Immune to gaining [Energy Tenacity] when taking hits; any [Energy Tenacity] gained cannot be converted into [Specialized HP].",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_pas.png",
+        "type": "Passive"
+      },
+      {
+        "name": "Passive — 5★ Purple",
+        "desc": "At battle start, gains 90% [Specialized Non-Crit DMG Reduction].\n\nUpon entering the battlefield, permanently inflicts [Energy Erosion] on all enemies (undispellable).\n\nAt the start of combat and after any character takes action, removes all [Specialized Speed-Up] and [normal Speed-Up] effects from all enemies.\n\n[Specialized Non-Crit Hit DMG Reduction]: Reduces all incoming DMG from non-[Specialized Critical Hits].\n\n[Specialized Critical Hit]: When dealing [Specialized Direct DMG], triggers a Critical Hit based on the portion of the Final Critical Rate that exceeds 200%.\n\n[Energy Erosion]: Immune to gaining [Energy Tenacity] when taking hits; any [Energy Tenacity] gained cannot be converted into [Specialized HP].",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_pas.png",
+        "type": "Passive"
+      },
+      {
+        "name": "Awaken Passive — A1",
+        "desc": "Immune to [Charm] / [Specialized Charm].\n\nUpon entering the battlefield, grants self 60% [Extreme Speed-Up] for the first 3 turns.\n\nFor the first 3 turns, grants [Destructive Momentum: Assault] to allies with [Extreme Speed-Up].\n\n[Destructive Momentum: Assault]: Increases the DMG bonus effect of [Extreme Speed-Up] by 0.5x, and enemies retain 50% of its current value each time they return to the field (PVP only).",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_awk.png",
+        "type": "Awakened Passive"
+      },
+      {
+        "name": "Awaken Passive — A2",
+        "desc": "Immune to [Charm] / [Specialized Charm].\n\nUpon entering the battlefield, grants self 68% [Extreme Speed-Up] for the first 3 turns.\n\nFor the first 3 turns, grants [Destructive Momentum: Assault] to allies with [Extreme Speed-Up].\n\nFor the first 3 turns, grants [Destructive Momentum: Defense] to allies with [Extreme Speed-Up].\n\nWhen allies with [Extreme Speed-Up] unleash skills during the first 3 turns, energy consumption is reduced by 1.\n\n[Destructive Momentum: Assault]: Increases the DMG bonus effect of [Extreme Speed-Up] by 1.5x, and enemies retain 50% of its current value each time they return to the field (PVP only).\n\n[Destructive Momentum: Defense]: Reduces the DMG bonus of the enemy's [Extreme Speed-Up] by 30%.",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_awk.png",
+        "type": "Awakened Passive"
+      },
+      {
+        "name": "Awaken Passive — A3",
+        "desc": "Restores 150 Energy Gauge when attacking.",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_awk.png",
+        "type": "Awakened Passive"
+      }
+    ],
+    "effects": [
+      {
+        "term": "[Energy Erosion]",
+        "desc": "Immune to gaining [Energy Tenacity] when taking hits; any [Energy Tenacity] gained cannot be converted into [Specialized HP]."
+      },
+      {
+        "term": "[Specialized Non-Crit Hit DMG Reduction]",
+        "desc": "Reduces all incoming DMG from non-[Specialized Critical Hits]."
+      },
+      {
+        "term": "[Specialized Critical Hit]",
+        "desc": "When dealing [Specialized Direct DMG], triggers a Critical Hit based on the portion of the Final Critical Rate that exceeds 200%."
+      },
+      {
+        "term": "[Destructive Momentum: Assault]",
+        "desc": "A1: Increases the DMG bonus effect of [Extreme Speed-Up] by 0.5x, and enemies retain 50% of its current value each time they return to the field (PVP only). A2: The multiplier increases to 1.5x."
+      },
+      {
+        "term": "[Destructive Momentum: Defense]",
+        "desc": "Reduces the DMG bonus of the enemy's [Extreme Speed-Up] by 30%."
+      }
+    ],
+    "keepsakeIcon": "/Skill/Homeless Emperor (URplus)/Keepsake-URplus.png",
+    "dacTinh": []
+  },
+  {
     "id": "blacksperm-urplus",
     "name": "Black Sperm",
     "imageURL": "/Characters/Black Sperm (UR+)/Black_Sperm.png",
