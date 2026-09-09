@@ -595,8 +595,19 @@
   "statsPage": {
     "eyebrow": "CƠ SỞ DỮ LIỆU CHỈ SỐ",
     "title": "Chỉ Số",
-    "status": "ĐANG PHÁT TRIỂN",
-    "description": "Tính năng này đang được hoàn thiện. Vui lòng quay lại sau để tra cứu công thức và chỉ số trong game."
+    "description": "Tra cứu ý nghĩa các chỉ số chiến đấu theo mô tả chính thức hiển thị trong game. Có thể tìm bằng cả tên tiếng Việt và thuật ngữ tiếng Anh.",
+    "verifiedEntries": "MỤC ĐÃ ĐỐI CHIẾU",
+    "libraryLabel": "Thư viện chỉ số",
+    "searchLabel": "Tìm kiếm chỉ số",
+    "searchPlaceholder": "Tìm HP, Bạo Kích, S.ATK, Energy...",
+    "filterLabel": "Lọc theo nhóm chỉ số",
+    "all": "Tất Cả",
+    "category": "NHÓM CHỈ SỐ",
+    "entries": "mục",
+    "noResults": "Không tìm thấy chỉ số phù hợp",
+    "noResultsHint": "Hãy thử tên tiếng Việt, thuật ngữ tiếng Anh hoặc chọn nhóm khác.",
+    "sourceLabel": "Nguồn dữ liệu:",
+    "sourceText": "16 ảnh chụp mục Info trong game do chủ sở hữu cung cấp. Các dòng bị cắt và không thể xác nhận đầy đủ không được tự bổ sung."
   },
   "talentsPage": {
     "eyebrow": "HỆ THỐNG PHÁT TRIỂN",

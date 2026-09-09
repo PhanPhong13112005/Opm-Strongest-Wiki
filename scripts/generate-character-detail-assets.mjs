@@ -7,7 +7,9 @@ const dataRoot = path.join(root, 'src', 'data')
 const publicRoot = path.join(root, 'public')
 const detailRoot = path.join(publicRoot, 'character-details')
 const characterImageRoot = path.join(publicRoot, 'Characters', 'optimized')
+const cardIconRoot = path.join(publicRoot, 'Characters', 'card-icons')
 const iconRoot = path.join(publicRoot, 'DetailIcons')
+const characterSummaryFile = path.join(dataRoot, 'characterSummaries.json')
 
 const readJson = async (file) => JSON.parse(await fs.readFile(file, 'utf8'))
 const writeJson = async (file, value) => {
@@ -36,6 +38,28 @@ const safeId = (id) => {
 
 const publicFile = (url) => path.join(publicRoot, ...decodeURIComponent(url).replace(/^\/+/, '').split('/'))
 const publicUrl = (...segments) => `/${segments.map(segment => encodeURIComponent(segment)).join('/')}`
+
+const resolveClassIcon = (character) => {
+  if (character.classIcon) return character.classIcon
+
+  const faction = String(character.faction || '').toLowerCase()
+  const classLevel = String(character.classLevel || '').toLowerCase()
+  if (faction.includes('quái vật') || faction.includes('quái nhân') || faction.includes('monster')) {
+    const monsterClass = { dragon: 'Dragon', demon: 'Demon', tiger: 'Tiger' }[classLevel]
+    if (monsterClass) return `/Class/${monsterClass}.png`
+  }
+  if (faction.includes('võ thuật') || faction.includes('martial')) return '/Class/Martial_Artist.png'
+  if (faction.includes('tội phạm') || faction.includes('outlaw')) return '/Class/Outlaw.png'
+  if (!classLevel) return null
+
+  const tier = String(character.tier || '').toUpperCase()
+  if (tier.includes('UR+')) return '/Class/Class_SS.png'
+  if (tier.includes('UR')) return '/Class/Class_S.png'
+  if (tier.includes('SSR')) return '/Class/A.png'
+  if (tier.includes('SR')) return '/Class/B.png'
+  if (tier.includes('R')) return '/Class/C.png'
+  return '/Class/Villain.png'
+}
 
 const resizeCharacterImage = async (character) => {
   const id = safeId(character.id)
@@ -72,13 +96,45 @@ const optimizeIcon = async ({ input, output, width }) => {
     .toFile(path.join(iconRoot, output))
 }
 
+const optimizeCardIcon = async ({ inputUrl, output }) => {
+  await sharp(publicFile(inputUrl))
+    .resize({ width: 64, height: 64, fit: 'contain', withoutEnlargement: true })
+    .webp({ quality: 86, alphaQuality: 100, smartSubsample: true })
+    .toFile(path.join(cardIconRoot, output))
+}
+
+const characterSummary = (character) => {
+  const id = safeId(character.id)
+  const classIcon = resolveClassIcon(character)
+  return {
+    id,
+    name: character.name,
+    imageURL: publicUrl('Characters', 'optimized', `${id}-360.webp`),
+    tier: character.tier,
+    type: character.type,
+    faction: character.faction,
+    roles: character.roles,
+    classLevel: character.classLevel,
+    classIcon: character.classIcon,
+    keepsakeIcon: character.keepsakeIcon,
+    cardClassIcon: classIcon ? publicUrl('Characters', 'card-icons', `${id}-class.webp`) : null,
+    cardKeepsakeIcon: character.keepsakeIcon
+      ? publicUrl('Characters', 'card-icons', `${id}-keepsake.webp`)
+      : null,
+    releaseSea: character.releaseSea,
+    releaseTrung: character.releaseTrung,
+  }
+}
+
 await fs.rm(detailRoot, { recursive: true, force: true })
 await fs.rm(characterImageRoot, { recursive: true, force: true })
+await fs.rm(cardIconRoot, { recursive: true, force: true })
 await fs.rm(iconRoot, { recursive: true, force: true })
 await Promise.all([
   fs.mkdir(path.join(detailRoot, 'vi'), { recursive: true }),
   fs.mkdir(path.join(detailRoot, 'en'), { recursive: true }),
   fs.mkdir(characterImageRoot, { recursive: true }),
+  fs.mkdir(cardIconRoot, { recursive: true }),
   fs.mkdir(iconRoot, { recursive: true }),
 ])
 
@@ -105,4 +161,21 @@ const iconJobs = [
 ]
 await Promise.all(iconJobs.map(optimizeIcon))
 
-console.log(`Generated ${charactersVi.length} localized character detail pairs and responsive image assets.`)
+const cardIconJobs = charactersVi.flatMap(character => {
+  const id = safeId(character.id)
+  const jobs = []
+  const classIcon = resolveClassIcon(character)
+  if (classIcon) jobs.push({ inputUrl: classIcon, output: `${id}-class.webp` })
+  if (character.keepsakeIcon) {
+    jobs.push({ inputUrl: character.keepsakeIcon, output: `${id}-keepsake.webp` })
+  }
+  return jobs
+})
+await Promise.all(cardIconJobs.map(optimizeCardIcon))
+
+await writeJson(characterSummaryFile, {
+  vi: charactersVi.map(characterSummary),
+  en: charactersEn.map(characterSummary),
+})
+
+console.log(`Generated ${charactersVi.length} localized character detail pairs, list summaries, and responsive assets.`)

@@ -10,7 +10,6 @@ import { authState, clearSession, hasRole, hasValidSession } from './services/au
 const { t, locale } = useI18n()
 const route = useRoute()
 const router = useRouter()
-const DeferredAnalytics = defineAsyncComponent(() => import('@vercel/analytics/vue').then(module => module.Analytics))
 const DeferredSpeedInsights = defineAsyncComponent(() => import('@vercel/speed-insights/vue').then(module => module.SpeedInsights))
 const telemetryReady = ref(false)
 let telemetryDelayTimer = null
@@ -374,7 +373,6 @@ onBeforeUnmount(() => {
     </footer>
 
     <template v-if="telemetryReady">
-      <DeferredAnalytics />
       <DeferredSpeedInsights />
     </template>
   </div>

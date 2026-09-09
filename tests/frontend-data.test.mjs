@@ -615,6 +615,58 @@ test('Mirage Trial milestone illustrations are wired to existing public assets',
   }
 })
 
+test('Ultimate Emblems keep the curated order and sourced Reviving Wind data', () => {
+  const medalsView = fs.readFileSync(path.join(root, 'src/views/MedalsView.vue'), 'utf8')
+  assertPublicAssetExists('/Feature/medals/inlay/3_lo.png', 'Reviving Wind inlay image is missing')
+  const expectedOrder = [
+    'undying_shield',
+    'sharp_blade',
+    'distorted_field',
+    'eternal_heart',
+    'reviving_wind',
+    'piercing_sword',
+    'wall_sanctuary',
+  ]
+
+  const orderSource = medalsView.slice(
+    medalsView.indexOf('const emblemSkillOrder'),
+    medalsView.indexOf('const emblemSkillsData'),
+  )
+  assert.deepEqual(
+    [...orderSource.matchAll(/'([a-z_]+)'/g)].map(match => match[1]),
+    expectedOrder,
+  )
+
+  const revivingWindSource = medalsView.slice(
+    medalsView.indexOf("id: 'reviving_wind'"),
+    medalsView.indexOf('].sort((left, right)'),
+  )
+  assert.match(revivingWindSource, /inlay: 3/)
+  assert.doesNotMatch(revivingWindSource, /Đang cập nhật|TBD/)
+  for (const value of [
+    'All ATK +10%',
+    'All Arena DMG Free +5%',
+    'All HP +10%',
+    'All Arena DMG +8%',
+  ]) {
+    assert.ok(revivingWindSource.includes(value), `Reviving Wind is missing ${value}`)
+  }
+  assert.equal(
+    revivingWindSource.match(/All Arena DMG Free \+5%/g)?.length,
+    2,
+  )
+})
+
+test('Vercel Analytics is initialized exactly once outside the deferred Vue tree', () => {
+  const app = fs.readFileSync(path.join(root, 'src/App.vue'), 'utf8')
+  const main = fs.readFileSync(path.join(root, 'src/main.js'), 'utf8')
+
+  assert.doesNotMatch(app, /@vercel\/analytics/)
+  assert.match(main, /import \{ inject \} from '@vercel\/analytics'/)
+  assert.equal((main.match(/\binject\(\)/g) || []).length, 1)
+})
+
+
 test('release schedule fallback is bilingual and covers both servers', () => {
   assert.equal(releaseSchedule.length, 19)
   assert.deepEqual(new Set(releaseSchedule.map((entry) => entry.server)), new Set(['CN', 'SEA']))

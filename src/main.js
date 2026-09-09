@@ -3,6 +3,9 @@ import './assets/style.css'
 import App from './App.vue'
 import router from './router'
 import i18n from './i18n'
+import { inject } from '@vercel/analytics'
+
+inject()
 
 const app = createApp(App)
 app.use(router)

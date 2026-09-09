@@ -595,8 +595,19 @@
   "statsPage": {
     "eyebrow": "STAT DATABASE",
     "title": "Stats",
-    "status": "IN DEVELOPMENT",
-    "description": "This feature is being developed. Please check back later for in-game stats and formulas."
+    "description": "Look up combat stat meanings using the official descriptions shown in game. Search works with both Vietnamese names and English terms.",
+    "verifiedEntries": "VERIFIED ENTRIES",
+    "libraryLabel": "Stats library",
+    "searchLabel": "Search stats",
+    "searchPlaceholder": "Search HP, CRIT, S.ATK, Energy...",
+    "filterLabel": "Filter by stat category",
+    "all": "All",
+    "category": "STAT CATEGORY",
+    "entries": "entries",
+    "noResults": "No matching stat found",
+    "noResultsHint": "Try a Vietnamese name, an English term, or another category.",
+    "sourceLabel": "Data source:",
+    "sourceText": "16 screenshots of the in-game Info panel supplied by the owner. Cropped lines that could not be fully verified were not inferred."
   },
   "talentsPage": {
     "eyebrow": "PROGRESSION SYSTEM",

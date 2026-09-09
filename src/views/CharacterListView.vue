@@ -1,16 +1,15 @@
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import charactersDataVi from '../data/characters.json'
-import charactersDataEn from '../data/characters_en.json'
+import characterSummaries from '../data/characterSummaries.json'
 import CharacterCard from '../components/CharacterCard.vue'
 import { safeAssetUrl } from '../utils/assetUrl'
 import { getCharacters, matchesCharacterSearch } from '../services/characterApi'
 
 const { t, locale } = useI18n()
 
-const localCharacters = computed(() => locale.value === 'en' ? charactersDataEn : charactersDataVi)
-const searchCharacters = computed(() => locale.value === 'en' ? charactersDataVi : charactersDataEn)
+const localCharacters = computed(() => characterSummaries[locale.value === 'en' ? 'en' : 'vi'])
+const searchCharacters = computed(() => characterSummaries[locale.value === 'en' ? 'vi' : 'en'])
 const searchCharactersById = computed(() => new Map(
   searchCharacters.value.map(character => [character.id, character]),
 ))
@@ -196,23 +195,6 @@ const goToPage = (page) => {
 }
 
 const safeUrl = safeAssetUrl
-
-const preloadedDetails = new Set()
-
-watch(paginatedCharacters, (newChars) => {
-  setTimeout(() => {
-    newChars.forEach(char => {
-      if (!preloadedDetails.has(char.id)) {
-        preloadedDetails.add(char.id);
-        const url = char.imageURL;
-        if (url) {
-          const img = new Image();
-          img.src = safeUrl(url);
-        }
-      }
-    })
-  }, 500)
-}, { immediate: true })
 
 onMounted(() => {
   loadCharacters()
