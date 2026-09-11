@@ -206,11 +206,11 @@ const currentImageIndex = ref(0)
 const illustrations = {
   mirage: [
     '/Feature/medals/Mirage_trial/Main.png',
-    '/Feature/medals/Mirage_trial/Ảnh chụp màn hình 2026-07-14 153422.png',
-    '/Feature/medals/Mirage_trial/Ảnh chụp màn hình 2026-07-14 153429.png',
-    '/Feature/medals/Mirage_trial/Ảnh chụp màn hình 2026-07-14 153440.png',
-    '/Feature/medals/Mirage_trial/Ảnh chụp màn hình 2026-07-14 153446.png',
-    '/Feature/medals/Mirage_trial/Ảnh chụp màn hình 2026-07-14 153457.png'
+    '/Feature/medals/Mirage_trial/screenshot-2026-07-14-153422.png',
+    '/Feature/medals/Mirage_trial/screenshot-2026-07-14-153429.png',
+    '/Feature/medals/Mirage_trial/screenshot-2026-07-14-153440.png',
+    '/Feature/medals/Mirage_trial/screenshot-2026-07-14-153446.png',
+    '/Feature/medals/Mirage_trial/screenshot-2026-07-14-153457.png'
   ],
   gems: [
     '/Feature/medals/Gem/TSG_00_1.png',
