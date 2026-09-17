@@ -54,6 +54,10 @@ test('character list uses compact summaries and optimized card assets', () => {
   const card = fs.readFileSync(path.join(root, 'src/components/CharacterCard.vue'), 'utf8')
 
   assert.match(listView, /characterSummaries\.json/)
+  assert.match(listView, /applyLocalFallback\(\)\s*\n\s*isSyncing\.value = true\s*\n\s*\n\s*try \{\s*\n\s*const result = await getCharacters/)
+  assert.match(listView, /data-testid="character-count"/)
+  assert.match(listView, /data-testid="character-sync-status"/)
+  assert.match(listView, /if \(requestId !== activeRequest\) return/)
   assert.doesNotMatch(listView, /data\/characters(?:_en)?\.json/)
   assert.doesNotMatch(listView, /new Image\(\)/)
   assert.doesNotMatch(card, /preloadDetails/)

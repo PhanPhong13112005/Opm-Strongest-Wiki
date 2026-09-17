@@ -25,6 +25,7 @@ const currentPage = ref(1)
 const itemsPerPage = 12
 const paginatedCharacters = ref([])
 const totalItems = ref(0)
+const isSyncing = ref(false)
 let activeRequest = 0
 let refreshTimer
 
@@ -147,6 +148,9 @@ const loadCharacters = async () => {
   const typeMap = locale.value === 'en' ? TYPE_MAP_EN : TYPE_MAP_VI
   const factionMap = locale.value === 'en' ? FACTION_MAP_EN : FACTION_MAP_VI
 
+  applyLocalFallback()
+  isSyncing.value = true
+
   try {
     const result = await getCharacters({
       language: locale.value,
@@ -167,14 +171,20 @@ const loadCharacters = async () => {
   } catch {
     if (requestId !== activeRequest) return
     applyLocalFallback()
+  } finally {
+    if (requestId === activeRequest) isSyncing.value = false
   }
 }
 
 const scheduleLoad = (delay = 0) => {
   activeRequest += 1
   window.clearTimeout(refreshTimer)
+  applyLocalFallback()
+  isSyncing.value = true
   refreshTimer = window.setTimeout(loadCharacters, delay)
 }
+
+applyLocalFallback()
 
 watch([locale, searchQuery, selectedTier, selectedType, selectedFaction], () => {
   transitionName.value = 'fade'
@@ -202,6 +212,8 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
+  activeRequest += 1
+  window.clearTimeout(refreshTimer)
   document.removeEventListener('click', handleDocumentClick)
 })
 </script>
@@ -310,12 +322,24 @@ onBeforeUnmount(() => {
           </select>
         </div>
       </div>
-      <div class="text-gray-500 text-sm mb-6">{{ totalItems }}/{{ localCharacters.length }}</div>
+      <div class="mb-6 flex min-h-5 flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+        <span data-testid="character-count" class="text-gray-500">{{ totalItems }}/{{ localCharacters.length }}</span>
+        <span
+          v-if="isSyncing"
+          data-testid="character-sync-status"
+          class="inline-flex items-center gap-1.5 text-xs text-cyan-300/75"
+          role="status"
+          aria-live="polite"
+        >
+          <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan-300/80" aria-hidden="true"></span>
+          {{ locale === 'en' ? 'Syncing server data...' : 'Đang đồng bộ dữ liệu máy chủ...' }}
+        </span>
+      </div>
     </div>
 
     <!-- Character Grid -->
     <transition :name="transitionName" mode="out-in">
-      <div :key="currentPage" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 min-h-[600px] content-start">
+      <div data-testid="character-grid" :key="currentPage" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 min-h-[600px] content-start">
         <router-link 
           v-for="char in paginatedCharacters" 
           :key="char.id" 
