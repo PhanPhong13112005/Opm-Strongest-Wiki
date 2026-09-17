@@ -6,6 +6,7 @@ import { loadLocalCharacterDetail } from '../data/loadCharacterDetail'
 import releaseSchedule from '../data/releaseSchedule.json'
 import { safeAssetUrl } from '../utils/assetUrl'
 import { getSkillEnergyCost } from '../utils/skillPresentation'
+import { resolveCharacterClassPresentation } from '../utils/characterClassPresentation'
 import { getCharacterById } from '../services/characterApi'
 
 const props = defineProps({
@@ -22,6 +23,7 @@ const { t, locale } = useI18n()
 const localCharacter = ref(null)
 const apiCharacter = ref(null)
 const character = computed(() => apiCharacter.value || localCharacter.value)
+const classPresentation = computed(() => resolveCharacterClassPresentation(character.value, locale.value))
 const hasPvpStats = computed(() => {
   const stats = character.value?.pvpStats
   return stats && ['atk', 'hp', 'def', 'spd'].some((key) => Number(stats[key]) > 0)
@@ -524,11 +526,11 @@ onBeforeUnmount(() => {
             </div>
           </div>
 
-          <div v-if="character.classLevel" class="flex items-center space-x-4">
+          <div v-if="classPresentation.classLevel" class="flex items-center space-x-4">
             <span class="bg-[color:var(--theme-color)] text-[#000000] font-black text-xs tracking-widest px-3 py-1 rounded shadow-sm w-[84px] text-center antialiased flex items-center justify-center leading-none" style="font-family: Arial, sans-serif;">{{ locale === 'en' ? 'CLASS' : 'CẤP' }}</span>
             <div class="flex items-center gap-2.5">
-              <img v-if="character.classIcon" :src="safeUrl(character.classIcon)" :alt="character.classLevel" width="24" height="24" decoding="async" class="h-6 w-6 object-contain drop-shadow-md" />
-              <span class="text-white font-bold text-lg drop-shadow-md">{{ character.classLevel }}</span>
+              <img v-if="classPresentation.icon" :src="safeUrl(classPresentation.icon)" :alt="classPresentation.label" width="24" height="24" decoding="async" class="h-6 w-6 object-contain drop-shadow-md" />
+              <span class="text-white font-bold text-lg drop-shadow-md">{{ classPresentation.label }}</span>
             </div>
           </div>
           

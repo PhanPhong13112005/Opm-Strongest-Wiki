@@ -10,6 +10,7 @@ import {
   getCoreLabMilestoneIcon,
 } from '../src/utils/coreLabAssetPaths.js'
 import { getSkillEnergyCost } from '../src/utils/skillPresentation.js'
+import { resolveCharacterClassPresentation } from '../src/utils/characterClassPresentation.js'
 import { mapCharacterSummary, matchesCharacterSearch, mergeCharacterDetail, reconcileCharacterPage } from '../src/services/characterApi.js'
 import { mergeKeepsakeCatalog } from '../src/services/keepsakeApi.js'
 import characterNameAliases from '../src/data/characterNameAliases.js'
@@ -262,6 +263,70 @@ test('stale seeded names localize while Admin custom names stay intact', () => {
   assert.equal(adminSummary.name, 'Samurai do Admin chỉnh sửa')
   assert.equal(englishSummary.name, 'Atomic Samurai')
 })
+test('Monster disaster levels use localized labels and an atomic class icon', () => {
+  const g5Vi = charactersVi.find(character => character.id === '100314-urplus')
+  const g5En = charactersEn.find(character => character.id === '100314-urplus')
+  assert.ok(g5Vi)
+  assert.ok(g5En)
+  assert.equal(g5Vi.classLevel, 'Demon')
+  assert.equal(g5Vi.classIcon, '/Class/Demon.png')
+
+  const expected = [
+    ['Tiger', 'Hổ', 'Tiger', '/Class/Tiger.png'],
+    ['Demon', 'Quỷ', 'Demon', '/Class/Demon.png'],
+    ['Dragon', 'Rồng', 'Dragon', '/Class/Dragon.png'],
+    ['God', 'Thần', 'God', ''],
+    ['Wolf', 'Sói', 'Wolf', ''],
+  ]
+  for (const [classLevel, viLabel, enLabel, icon] of expected) {
+    const viPresentation = resolveCharacterClassPresentation({ classLevel, faction: 'Quái Nhân' }, 'vi')
+    const enPresentation = resolveCharacterClassPresentation({ classLevel, faction: 'Monster' }, 'en')
+    assert.equal(viPresentation.label, viLabel)
+    assert.equal(enPresentation.label, enLabel)
+    assert.equal(viPresentation.icon, icon)
+    assert.equal(enPresentation.icon, icon)
+  }
+
+  const staleApi = {
+    ...g5En,
+    classLevel: 'Dragon',
+    classIcon: undefined,
+    cardClassIcon: undefined,
+  }
+  const staleSummary = mapCharacterSummary(staleApi, g5En, 'en')
+  const staleDetail = mergeCharacterDetail(staleApi, g5En, 'en')
+  for (const merged of [staleSummary, staleDetail]) {
+    assert.equal(merged.classLevel, 'Dragon')
+    assert.equal(merged.classIcon, '/Class/Dragon.png')
+    assert.equal(merged.cardClassIcon, '/Class/Dragon.png')
+    assert.notEqual(merged.classIcon, g5En.classIcon)
+  }
+
+  const correctedApi = { ...g5En, classLevel: 'Demon' }
+  const correctedSummary = mapCharacterSummary(correctedApi, g5En, 'en')
+  const correctedDetail = mergeCharacterDetail(correctedApi, g5En, 'en')
+  for (const merged of [correctedSummary, correctedDetail]) {
+    assert.equal(merged.classLevel, 'Demon')
+    assert.equal(merged.classIcon, '/Class/Demon.png')
+    assert.equal(merged.cardClassIcon, '/Class/Demon.png')
+  }
+
+  assert.equal(resolveCharacterClassPresentation(g5Vi, 'vi').label, 'Quỷ')
+  assert.equal(resolveCharacterClassPresentation(g5En, 'en').label, 'Demon')
+
+  const nonMonster = resolveCharacterClassPresentation({
+    classLevel: 'Class_SS',
+    faction: 'Hero',
+    classIcon: '/Class/Class_SS.png',
+  }, 'vi')
+  assert.deepEqual(nonMonster, {
+    classLevel: 'Class_SS',
+    label: 'Class_SS',
+    icon: '/Class/Class_SS.png',
+    classIcon: '/Class/Class_SS.png',
+    cardClassIcon: undefined,
+  })
+})
 test('character pages restore local entries missing from a stale production API', () => {
   const staleApiItems = charactersVi
     .filter(character => character.id !== 'blacksperm-urplus')
@@ -434,7 +499,7 @@ test('Homeless Emperor UR+ preserves supplied stats, assets, and upgrade semanti
   )
   const detailViewSource = fs.readFileSync(path.join(root, 'src/views/DetailView.vue'), 'utf8')
   assert.match(detailViewSource, /whitespace-pre-line[^>]*v-html="formatSkillDesc\(skill\.desc\)"/)
-  assert.match(detailViewSource, /safeUrl\(character\.classIcon\)/)
+  assert.match(detailViewSource, /safeUrl\(classPresentation\.icon\)/)
   assert.match(detailViewSource, /const hasPvpStats = computed/)
   assert.match(detailViewSource, /v-if="hasPvpStats"/)
   assert.doesNotMatch(detailViewSource, /pvpStats\?\.(?:atk|hp|def|spd) \|\|/)
