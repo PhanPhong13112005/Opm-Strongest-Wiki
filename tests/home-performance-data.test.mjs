@@ -3,6 +3,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import test from 'node:test'
 import { fileURLToPath } from 'node:url'
+import sharp from 'sharp'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const readJson = relativePath => JSON.parse(fs.readFileSync(path.join(root, relativePath), 'utf8'))
@@ -50,10 +51,60 @@ test('home boot shell defaults to the September release schedule', () => {
   assert.match(indexHtml, /RADAR RA MẮT/)
   assert.match(indexHtml, /09 \/ 2026/)
   assert.match(indexHtml, /Vua Không Nhà UR\+ ra mắt máy chủ CN/)
-  assert.match(indexHtml, /Full_Background\/Homeless_Emperor_URplus\.webp/)
+  assert.match(indexHtml, /Full_Background\/optimized\/homeless-emperor-urplus-960\.webp\?v=20260801-1/)
   const homeView = fs.readFileSync(path.join(root, 'src/views/HomeView.vue'), 'utf8')
   assert.match(homeView, /new Date\(2026, 8\)/)
   assert.doesNotMatch(homeView, /id: 'unknown'/)
+})
+
+test('Home responsive generator produces only the approved 20 transparent WebP variants', async () => {
+  const outputDir = path.join(root, 'public/Characters/Full_Background/optimized')
+  const widths = [320, 640, 960, 1600, 2400]
+  const variants = [
+    { slug: 'homeless-emperor-urplus', source: 'Homeless_Emperor_URplus.png', heights: [196, 393, 589, 982, 1473] },
+    { slug: 'zombieman-urplus', source: 'ZombIeMan_URplus.png', heights: [211, 422, 634, 1056, 1584] },
+    { slug: 'bang-bomb-urplus', source: 'Bang&Bomb_Urplus.png', heights: [136, 273, 409, 682, 1023] },
+    { slug: 'atomic-samurai-urplus', source: 'Atomic Samurai_URplus.png', heights: [136, 273, 409, 682, 1023] },
+  ]
+  const expectedFiles = variants.flatMap(variant => widths.map(width => `${variant.slug}-${width}.webp`)).sort()
+  const actualFiles = fs.readdirSync(outputDir).filter(file => file.endsWith('.webp')).sort()
+
+  assert.deepEqual(actualFiles, expectedFiles)
+  for (const variant of variants) {
+    const masterSize = fs.statSync(path.join(root, 'public/Characters/Full_Background', variant.source)).size
+    for (const [index, width] of widths.entries()) {
+      const outputFile = path.join(outputDir, `${variant.slug}-${width}.webp`)
+      const metadata = await sharp(outputFile).metadata()
+      assert.equal(metadata.format, 'webp')
+      assert.equal(metadata.width, width)
+      assert.equal(metadata.height, variant.heights[index])
+      assert.equal(metadata.hasAlpha, true)
+      assert.ok(fs.statSync(outputFile).size < masterSize)
+      assert.ok(fs.statSync(outputFile).size < 500_000)
+    }
+  }
+
+  const generator = fs.readFileSync(path.join(root, 'scripts/generate-home-responsive-assets.mjs'), 'utf8')
+  assert.match(generator, /const widths = \[320, 640, 960, 1600, 2400\]/)
+  assert.match(generator, /quality: 90/)
+  assert.match(generator, /alphaQuality: 100/)
+  assert.match(generator, /smartSubsample: true/)
+  assert.doesNotMatch(generator, /\b(?:rm|unlink|rmdir)\b/)
+})
+
+test('Home boot shell and Vue use the same versioned responsive Homeless Emperor candidates', () => {
+  const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8')
+  const homeView = fs.readFileSync(path.join(root, 'src/views/HomeView.vue'), 'utf8')
+  const radar = fs.readFileSync(path.join(root, 'src/components/HomeRadar.vue'), 'utf8')
+
+  for (const width of [320, 640, 960, 1600, 2400]) {
+    assert.match(indexHtml, new RegExp(`homeless-emperor-urplus-${width}\\.webp\\?v=20260801-1`))
+  }
+  assert.match(homeView, /responsiveHomeWidths = \[320, 640, 960, 1600, 2400\]/)
+  assert.match(homeView, /getCharacterImageSet/)
+  assert.match(radar, /:srcset="feature\.image\.srcset \|\| undefined"/)
+  assert.match(radar, /:fetchpriority="featureIndex === 0 \? 'high' : 'low'"/)
+  assert.match(radar, /class="card-float-img"[^>]*loading="lazy" fetchpriority="low"/)
 })
 
 test('home hero renders CN and SEA spotlights across one responsive diagonal split', () => {

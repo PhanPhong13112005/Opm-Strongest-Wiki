@@ -10,6 +10,7 @@ const props = defineProps({
   hasPrevious: Boolean,
   hasNext: Boolean,
   transitionName: { type: String, default: 'fade' },
+  getCharacterImageSet: { type: Function, required: true },
   getCharacterImage: { type: Function, required: true },
   getCharacter: { type: Function, required: true },
 })
@@ -30,9 +31,18 @@ const featuredItems = computed(() => ['CN', 'SEA'].map((serverCode) => {
     character,
     name: item.overrideName || character.name || t('home.title'),
     role: item.overrideRole || character.roles?.[0] || character.type || '',
-    image: props.getCharacterImage(item.bannerImage || character.imageURL),
+    image: props.getCharacterImageSet(item.bannerImage || character.imageURL),
   }
 }).filter(Boolean))
+
+const featuredImageSizes = {
+  CN: '(max-width: 430px) 70vw, (max-width: 700px) 78vw, (max-width: 1100px) 60vw, min(52vw, 750px)',
+  SEA: '(max-width: 430px) 70vw, (max-width: 700px) 78vw, (max-width: 1100px) 66vw, min(58vw, 850px)',
+}
+const releaseImageSizes = '(max-width: 700px) 66vw, (max-width: 1000px) 58vw, min(29vw, 405px)'
+const getReleaseImage = item => props.getCharacterImageSet(
+  item.bannerImage || props.getCharacter(item.id).imageURL,
+)
 
 const isReturning = item => item.isReturn || item.tag === t('home.return')
 const getTypeAccent = (item) => {
@@ -109,10 +119,14 @@ const getFactionAccent = (item) => {
             <span class="visual-code">{{ feature.server }} // {{ feature.item.id }}</span>
             <img
               class="hero-float-img"
-              :src="feature.image"
+              :src="feature.image.src"
+              :srcset="feature.image.srcset || undefined"
+              :sizes="feature.image.srcset ? featuredImageSizes[feature.server] : undefined"
+              :width="feature.image.width"
+              :height="feature.image.height"
               :alt="feature.name"
               loading="eager"
-              :fetchpriority="featureIndex === 0 ? 'high' : 'auto'"
+              :fetchpriority="featureIndex === 0 ? 'high' : 'low'"
               decoding="async"
               onerror="this.style.display='none'"
             />
@@ -162,7 +176,7 @@ const getFactionAccent = (item) => {
                 <div v-if="item.id !== 'unknown'" class="card-link">{{ t('home.viewDetails') }} <b>→</b></div>
               </div>
               <div class="release-card__image">
-                <img class="card-float-img" :src="getCharacterImage(item.bannerImage || getCharacter(item.id).imageURL)" :alt="item.overrideName || getCharacter(item.id).name" loading="lazy" fetchpriority="low" decoding="async" onerror="this.style.display='none'" />
+                <img class="card-float-img" :src="getReleaseImage(item).src" :srcset="getReleaseImage(item).srcset || undefined" :sizes="getReleaseImage(item).srcset ? releaseImageSizes : undefined" :width="getReleaseImage(item).width" :height="getReleaseImage(item).height" :alt="item.overrideName || getCharacter(item.id).name" loading="lazy" fetchpriority="low" decoding="async" onerror="this.style.display='none'" />
               </div>
               <div class="card-shine" />
             </component>
