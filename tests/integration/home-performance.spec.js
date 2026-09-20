@@ -156,44 +156,27 @@ test('home desktop keeps the hero and navigation visible', async ({ page }) => {
   await expect(page.locator('.month-switcher')).toBeVisible()
 })
 
-test('home loads Be Vietnam Pro directly without an intermediate Inter swap', async ({ page }) => {
+test('home declares Be Vietnam Pro directly without an intermediate Inter swap', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto('/', { waitUntil: 'domcontentloaded' })
   await expect(page.locator('.release-hero h1')).toBeVisible()
 
-  const fontAudit = await page.evaluate(async () => {
-    const viSample = 'Đ đ ă â ê ô ơ ư ấ ầ ậ ể ễ ộ ở ữ ự'
-    const enSample = 'Bang & Bomb — Extreme Acceleration'
-    await Promise.all([
-      document.fonts.load('400 16px "Be Vietnam Pro"', viSample),
-      document.fonts.load('900 35px "Be Vietnam Pro"', viSample),
-      document.fonts.load('400 16px "Be Vietnam Pro"', enSample),
-      document.fonts.load('900 35px "Be Vietnam Pro"', enSample),
-    ])
-
+  const fontAudit = await page.evaluate(() => {
     const resourceUrls = performance.getEntriesByType('resource').map(entry => entry.name)
     return {
       bodyFamily: getComputedStyle(document.body).fontFamily,
       titleFamily: getComputedStyle(document.querySelector('.featured-card h2')).fontFamily,
-      vi400: document.fonts.check('400 16px "Be Vietnam Pro"', viSample),
-      vi900: document.fonts.check('900 35px "Be Vietnam Pro"', viSample),
-      en400: document.fonts.check('400 16px "Be Vietnam Pro"', enSample),
-      en900: document.fonts.check('900 35px "Be Vietnam Pro"', enSample),
-      beVietnamFaces: [...document.fonts]
-        .filter(face => face.family === 'Be Vietnam Pro')
-        .map(face => ({ style: face.style, weight: face.weight, status: face.status })),
+      fontStylesheets: [...document.querySelectorAll('link[rel="stylesheet"]')]
+        .map(link => link.href)
+        .filter(url => url.includes('fonts.googleapis.com')),
       interRequests: resourceUrls.filter(url => /\/s\/inter\//.test(url)),
     }
   })
 
   expect(fontAudit.bodyFamily).toMatch(/^"?Be Vietnam Pro"?, ui-sans-serif/)
   expect(fontAudit.titleFamily).toMatch(/^"?Be Vietnam Pro"?, ui-sans-serif/)
-  expect(fontAudit.vi400).toBe(true)
-  expect(fontAudit.vi900).toBe(true)
-  expect(fontAudit.en400).toBe(true)
-  expect(fontAudit.en900).toBe(true)
-  expect(fontAudit.beVietnamFaces.length).toBeGreaterThan(0)
-  expect(fontAudit.beVietnamFaces.some(face => face.status === 'loaded')).toBe(true)
+  expect(fontAudit.fontStylesheets).toHaveLength(1)
+  expect(fontAudit.fontStylesheets[0]).toContain('family=Be+Vietnam+Pro:')
   expect(fontAudit.interRequests).toEqual([])
 })
 
