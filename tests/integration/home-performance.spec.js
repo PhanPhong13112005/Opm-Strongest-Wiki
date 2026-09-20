@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test'
 
 const responsiveHomeImagePattern = /\/Characters\/Full_Background\/optimized\/(?:homeless-emperor|zombieman|bang-bomb|atomic-samurai)-urplus-\d+\.webp/
+const currentMonthSpotlightImagePattern = /\/Characters\/Full_Background\/optimized\/(?:homeless-emperor|bang-bomb)-urplus-\d+\.webp/
 
 const installPerformanceObservers = async (page) => {
   await page.addInitScript(() => {
@@ -84,7 +85,7 @@ test('home keeps throttled Mobile first paint and interaction within budget', as
 
   expect(vitals.cls).toBeLessThan(0.1)
   expect(vitals.loaderVisible).toBe(false)
-  expect(vitals.lcp?.url).toContain('/optimized/homeless-emperor-urplus-')
+  expect(vitals.lcp?.url).toMatch(currentMonthSpotlightImagePattern)
   expect(vitals.resources.some(resource => /characters(?:_en)?-/.test(resource.name))).toBe(false)
   expect(vitals.resources.some(resource => resource.name.startsWith('/_vercel/'))).toBe(false)
   expect(warnings).toEqual([])
@@ -115,7 +116,7 @@ test('home LCP stays below 2.5 seconds on production preview', async ({ page }, 
   const vitals = await readVitals(page)
   console.log(`HOME_PRODUCTION_LCP ${JSON.stringify(vitals.lcp)}`)
   expect(vitals.lcp?.element).toBe('IMG')
-  expect(vitals.lcp?.url).toContain('/optimized/homeless-emperor-urplus-')
+  expect(vitals.lcp?.url).toMatch(currentMonthSpotlightImagePattern)
   if (testInfo.config.metadata?.homeProduction) {
     expect(vitals.lcp?.startTime ?? Infinity).toBeLessThan(2_500)
   }
