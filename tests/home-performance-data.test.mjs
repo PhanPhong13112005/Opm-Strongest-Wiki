@@ -57,6 +57,22 @@ test('home boot shell defaults to the September release schedule', () => {
   assert.doesNotMatch(homeView, /id: 'unknown'/)
 })
 
+test('home boot shell and Vue share one Be Vietnam Pro fallback chain', () => {
+  const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8')
+  const globalCss = fs.readFileSync(path.join(root, 'src/assets/style.css'), 'utf8')
+  const sharedStack = `'Be Vietnam Pro',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif`
+  const bodyRule = globalCss.match(/body \{[\s\S]*?\n\}/)?.[0] || ''
+
+  assert.ok(indexHtml.includes(`.home-boot{min-height:100vh;background:#040a12;color:#edf7ff;font-family:${sharedStack}`))
+  assert.ok(globalCss.includes(`font-family: 'Be Vietnam Pro', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;`))
+  assert.doesNotMatch(indexHtml, /\.home-boot\{[^}]*font-family:Inter/)
+  assert.doesNotMatch(bodyRule, /font-family:[^;]*'Inter'/)
+
+  // Inter remains declared for route-specific workbenches and payment screens,
+  // but it is no longer a Home fallback and therefore is not fetched on Home.
+  assert.match(indexHtml, /family=Inter:/)
+})
+
 test('Home responsive generator produces only the approved 20 transparent WebP variants', async () => {
   const outputDir = path.join(root, 'public/Characters/Full_Background/optimized')
   const widths = [320, 640, 960, 1600, 2400]

@@ -156,6 +156,47 @@ test('home desktop keeps the hero and navigation visible', async ({ page }) => {
   await expect(page.locator('.month-switcher')).toBeVisible()
 })
 
+test('home loads Be Vietnam Pro directly without an intermediate Inter swap', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('/', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.release-hero h1')).toBeVisible()
+
+  const fontAudit = await page.evaluate(async () => {
+    const viSample = 'Đ đ ă â ê ô ơ ư ấ ầ ậ ể ễ ộ ở ữ ự'
+    const enSample = 'Bang & Bomb — Extreme Acceleration'
+    await Promise.all([
+      document.fonts.load('400 16px "Be Vietnam Pro"', viSample),
+      document.fonts.load('900 35px "Be Vietnam Pro"', viSample),
+      document.fonts.load('400 16px "Be Vietnam Pro"', enSample),
+      document.fonts.load('900 35px "Be Vietnam Pro"', enSample),
+    ])
+
+    const resourceUrls = performance.getEntriesByType('resource').map(entry => entry.name)
+    return {
+      bodyFamily: getComputedStyle(document.body).fontFamily,
+      titleFamily: getComputedStyle(document.querySelector('.featured-card h2')).fontFamily,
+      vi400: document.fonts.check('400 16px "Be Vietnam Pro"', viSample),
+      vi900: document.fonts.check('900 35px "Be Vietnam Pro"', viSample),
+      en400: document.fonts.check('400 16px "Be Vietnam Pro"', enSample),
+      en900: document.fonts.check('900 35px "Be Vietnam Pro"', enSample),
+      beVietnamFaces: [...document.fonts]
+        .filter(face => face.family === 'Be Vietnam Pro')
+        .map(face => ({ style: face.style, weight: face.weight, status: face.status })),
+      interRequests: resourceUrls.filter(url => /\/s\/inter\//.test(url)),
+    }
+  })
+
+  expect(fontAudit.bodyFamily).toMatch(/^"?Be Vietnam Pro"?, ui-sans-serif/)
+  expect(fontAudit.titleFamily).toMatch(/^"?Be Vietnam Pro"?, ui-sans-serif/)
+  expect(fontAudit.vi400).toBe(true)
+  expect(fontAudit.vi900).toBe(true)
+  expect(fontAudit.en400).toBe(true)
+  expect(fontAudit.en900).toBe(true)
+  expect(fontAudit.beVietnamFaces.length).toBeGreaterThan(0)
+  expect(fontAudit.beVietnamFaces.some(face => face.status === 'loaded')).toBe(true)
+  expect(fontAudit.interRequests).toEqual([])
+})
+
 test('home uses sharp responsive artwork without duplicate boot-shell transfer', async ({ browser }) => {
   for (const viewport of [
     { name: 'desktop', width: 1440, height: 900, deviceScaleFactor: 1, minimumDensity: 1 },
@@ -254,7 +295,10 @@ if (profileRuns > 0) {
         const page = await context.newPage()
         const cdp = await context.newCDPSession(page)
         const requestPriorities = []
+        const networkRequests = new Map()
+        const completedResources = []
         await cdp.send('Network.enable')
+        await cdp.send('Performance.enable')
         await cdp.send('Network.setCacheDisabled', { cacheDisabled: true })
         if (profile.throttled) {
           await cdp.send('Network.emulateNetworkConditions', {
@@ -267,9 +311,18 @@ if (profileRuns > 0) {
           await cdp.send('Emulation.setCPUThrottlingRate', { rate: 4 })
         }
         cdp.on('Network.requestWillBeSent', (event) => {
+          networkRequests.set(event.requestId, { url: event.request.url, type: event.type })
           if (/\/Characters\/Full_Background\//.test(event.request.url)) {
             requestPriorities.push({ url: event.request.url, priority: event.request.initialPriority })
           }
+        })
+        cdp.on('Network.responseReceived', (event) => {
+          const request = networkRequests.get(event.requestId)
+          if (request) request.type = event.type
+        })
+        cdp.on('Network.loadingFinished', (event) => {
+          const request = networkRequests.get(event.requestId)
+          if (request) completedResources.push({ ...request, transferSize: event.encodedDataLength })
         })
         await installPerformanceObservers(page)
         await page.goto(targetUrl, { waitUntil: 'domcontentloaded', timeout: 90_000 })
@@ -277,7 +330,12 @@ if (profileRuns > 0) {
           const images = [...document.querySelectorAll('.featured-card img')]
           return images.length === 2 && images.every(image => image.complete && image.naturalWidth > 0)
         }, null, { timeout: 90_000 })
-        await page.waitForTimeout(700)
+        await page.evaluate(() => document.fonts.ready)
+        await page.waitForTimeout(300)
+
+        const performanceMetrics = Object.fromEntries(
+          (await cdp.send('Performance.getMetrics')).metrics.map(metric => [metric.name, metric.value]),
+        )
 
         const metrics = await page.evaluate(async () => {
           const decodeStart = performance.now()
@@ -302,13 +360,147 @@ if (profileRuns > 0) {
             imageTransfer: resources.filter(entry => /\.(?:avif|gif|jpe?g|png|webp)(?:\?|$)/i.test(entry.name)).reduce((total, entry) => total + entry.transferSize, 0),
             totalTransfer: resources.reduce((total, entry) => total + entry.transferSize, 0),
             decodeWait,
+            fontFamilies: [...new Set([...document.fonts]
+              .filter(face => face.status === 'loaded')
+              .map(face => face.family))],
+            longTaskCount: window.__homeVitals.longTasks.length,
+            maxLongTask: Math.max(0, ...window.__homeVitals.longTasks.map(entry => entry.duration)),
             images,
           }
         })
-        samples.push({ run: run + 1, ...metrics, requestPriorities })
+        const fontResources = completedResources.filter(resource => resource.type === 'Font')
+        samples.push({
+          run: run + 1,
+          ...metrics,
+          fontRequestCount: fontResources.length,
+          fontTransfer: fontResources.reduce((total, resource) => total + resource.transferSize, 0),
+          layoutDuration: performanceMetrics.LayoutDuration * 1_000,
+          recalcStyleDuration: performanceMetrics.RecalcStyleDuration * 1_000,
+          scriptDuration: performanceMetrics.ScriptDuration * 1_000,
+          requestPriorities,
+        })
         await context.close()
       }
       console.log(`HOME_COLD_PROFILE ${JSON.stringify({ label, profile: profile.name, samples })}`)
     }
   })
+}
+
+const fontScenarioTarget = process.env.HOME_FONT_SCENARIO_TARGET
+const expectOptimizedFontChain = process.env.HOME_FONT_EXPECT_OPTIMIZED !== '0'
+if (fontScenarioTarget) {
+  test('validates slow, blocked, warm-cache, VI and EN font scenarios', async ({ browser }) => {
+    test.setTimeout(180_000)
+    const results = []
+
+    for (const scenario of ['slow-font', 'blocked-font', 'warm-cache', 'warm-cache-desktop', 'vi', 'en']) {
+      const desktop = scenario === 'warm-cache-desktop'
+      const context = await browser.newContext({
+        viewport: desktop ? { width: 1440, height: 900 } : { width: 390, height: 844 },
+        deviceScaleFactor: desktop ? 1 : 3,
+      })
+      const page = await context.newPage()
+      const cdp = await context.newCDPSession(page)
+      await cdp.send('Performance.enable')
+      await installPerformanceObservers(page)
+
+      if (scenario === 'slow-font') {
+        await page.route(/fonts\.(?:googleapis|gstatic)\.com/, async (route) => {
+          await new Promise(resolve => setTimeout(resolve, 2_500))
+          await route.continue()
+        })
+      } else if (scenario === 'blocked-font') {
+        await page.route(/fonts\.(?:googleapis|gstatic)\.com/, route => route.abort())
+      }
+
+      await page.goto(fontScenarioTarget, { waitUntil: 'domcontentloaded', timeout: 90_000 })
+      await expect(page.locator('.release-hero h1')).toBeVisible()
+      if (scenario === 'en') {
+        await page.getByRole('button', { name: /Language VI/ }).click()
+        await expect(page.getByText(/View details/i).first()).toBeVisible()
+      }
+      if (scenario !== 'blocked-font') await page.evaluate(() => document.fonts.ready)
+      if (scenario.startsWith('warm-cache')) {
+        await page.reload({ waitUntil: 'domcontentloaded' })
+        await expect(page.locator('.release-hero h1')).toBeVisible()
+        await page.evaluate(() => document.fonts.ready)
+      }
+      await page.waitForTimeout(300)
+
+      const audit = await page.evaluate(() => {
+        const viSample = 'Đ đ ă â ê ô ơ ư ấ ầ ậ ể ễ ộ ở ữ ự'
+        const enSample = 'Bang & Bomb — Extreme Acceleration'
+        const paints = Object.fromEntries(performance.getEntriesByType('paint')
+          .map(entry => [entry.name, entry.startTime]))
+        return {
+          cls: window.__homeVitals.cls,
+          fcp: paints['first-contentful-paint'] || null,
+          lcp: window.__homeVitals.lcp?.startTime || null,
+          tbt: window.__homeVitals.longTasks
+            .reduce((total, entry) => total + Math.max(0, entry.duration - 50), 0),
+          locale: document.documentElement.lang,
+          bodyFamily: getComputedStyle(document.body).fontFamily,
+          vi: document.fonts.check('900 35px "Be Vietnam Pro"', viSample),
+          en: document.fonts.check('900 35px "Be Vietnam Pro"', enSample),
+          loadedFamilies: [...new Set([...document.fonts]
+            .filter(face => face.status === 'loaded')
+            .map(face => face.family))],
+          interRequests: performance.getEntriesByType('resource')
+            .filter(entry => /\/s\/inter\//.test(entry.name)).length,
+        }
+      })
+      const performanceMetrics = Object.fromEntries(
+        (await cdp.send('Performance.getMetrics')).metrics.map(metric => [metric.name, metric.value]),
+      )
+      results.push({ scenario, ...audit, layoutDuration: performanceMetrics.LayoutDuration * 1_000 })
+
+      if (expectOptimizedFontChain) {
+        expect(audit.bodyFamily).toMatch(/^"?Be Vietnam Pro"?, ui-sans-serif/)
+      } else {
+        expect(audit.bodyFamily).toMatch(/^"?Be Vietnam Pro"?, Inter, ui-sans-serif/)
+      }
+      expect(audit.cls).toBeLessThan(0.01)
+      if (expectOptimizedFontChain) expect(audit.interRequests).toBe(0)
+      if (scenario !== 'blocked-font') {
+        expect(audit.vi).toBe(true)
+        expect(audit.en).toBe(true)
+        expect(audit.loadedFamilies).toContain('Be Vietnam Pro')
+      }
+      if (scenario === 'en') expect(audit.locale).toBe('en')
+      if (scenario === 'vi') expect(audit.locale).toBe('vi')
+      await context.close()
+    }
+
+    console.log(`HOME_FONT_SCENARIOS ${JSON.stringify(results)}`)
+  })
+}
+
+const visualBaselineUrl = process.env.HOME_FONT_VISUAL_BASELINE_URL
+const visualOptimizedUrl = process.env.HOME_FONT_VISUAL_OPTIMIZED_URL
+if (visualBaselineUrl && visualOptimizedUrl) {
+  for (const viewport of [
+    { name: 'mobile', width: 390, height: 844, deviceScaleFactor: 3 },
+    { name: 'desktop', width: 1440, height: 900, deviceScaleFactor: 1 },
+  ]) {
+    test(`font-only final render matches baseline at ${viewport.name}`, async ({ browser }) => {
+      const screenshots = []
+      for (const target of [visualBaselineUrl, visualOptimizedUrl]) {
+        const context = await browser.newContext({
+          viewport: { width: viewport.width, height: viewport.height },
+          deviceScaleFactor: viewport.deviceScaleFactor,
+          reducedMotion: 'reduce',
+        })
+        const page = await context.newPage()
+        await page.goto(target, { waitUntil: 'domcontentloaded' })
+        await expect(page.locator('.release-hero h1')).toBeVisible()
+        await page.evaluate(() => document.fonts.ready)
+        await page.waitForFunction(() => [...document.querySelectorAll('.featured-card img')]
+          .every(image => image.complete && image.naturalWidth > 0))
+        await page.waitForTimeout(200)
+        screenshots.push(await page.screenshot({ fullPage: true, animations: 'disabled' }))
+        await context.close()
+      }
+      expect(screenshots[1]).toEqual(screenshots[0])
+    })
+  }
 }
