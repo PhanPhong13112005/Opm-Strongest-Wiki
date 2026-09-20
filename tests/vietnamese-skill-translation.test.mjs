@@ -41,7 +41,7 @@ function readTranslationGlossary() {
 const translationGlossary = readTranslationGlossary()
 
 test('Vietnamese descriptions stay aligned with every English skill row', () => {
-  assert.equal(viCatalog.length, 177)
+  assert.equal(viCatalog.length, 178)
   assert.equal(enCatalog.length, viCatalog.length)
 
   for (const englishCharacter of enCatalog) {

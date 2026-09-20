@@ -1,4 +1,7 @@
 export default {
+    "homeless-emperor-urplus":  [
+                                      "Homeless Emperor"
+                                  ],
     "100029-urplus":  [
                           "Amai Mask"
                       ],

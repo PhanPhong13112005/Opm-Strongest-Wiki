@@ -1,5 +1,11 @@
 # Backend production — Giai đoạn 1
 
+> **LEGACY / SUPERSEDED PRE-DECISION DOCUMENT (2026-08-28).** Tài liệu này được giữ làm lịch sử audit,
+> không phải production runbook hiện hành. Quyết định mới chọn ASP.NET Core authoritative, EF Core là
+> migration owner duy nhất, ASP.NET là auth/payment/ledger owner duy nhất, và permanent split bị từ chối.
+> Dùng [`PRODUCTION_ARCHITECTURE.md`](PRODUCTION_ARCHITECTURE.md) và
+> [`DEPLOYMENT_RUNBOOK.md`](DEPLOYMENT_RUNBOOK.md) cho mọi release decision.
+
 ## Quyết định backend chính
 
 ASP.NET Core là backend mục tiêu cho quá trình cutover. Backend này chỉ trở thành backend production chính thức sau
@@ -67,7 +73,11 @@ Rủi ro đã xác nhận:
 Không thay đổi runtime DDL trong Giai đoạn 1. Việc baseline hoặc chuyển schema production chỉ được thực hiện sau schema
 diff, backup, staging rehearsal và kiểm thử rollback.
 
-## Thiết kế migration có phiên bản cho Vercel
+## Thiết kế migration có phiên bản cho Vercel — HISTORICAL / DO NOT IMPLEMENT
+
+Phương án dưới đây là lựa chọn đã được cân nhắc trước architecture decision và nay đã bị supersede.
+Không tạo `api/migrations`, Node migration runner hoặc migration authority thứ hai. Final schema chỉ thay đổi
+bằng reviewed EF migration từ CI/CD release migration job.
 
 - Thư mục: `api/migrations/`.
 - Tên file: `YYYYMMDDHHMMSS_<slug>.up.sql`; chỉ thêm `.down.sql` khi đường lùi đã được kiểm thử.

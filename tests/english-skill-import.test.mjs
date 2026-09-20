@@ -8,7 +8,7 @@ const catalog = JSON.parse(fs.readFileSync(path.join(root, 'src/data/characters_
 const byId = new Map(catalog.map(character => [character.id, character]))
 
 test('English skill import preserves the complete character catalog and valid Unicode', () => {
-  assert.equal(catalog.length, 177)
+  assert.equal(catalog.length, 178)
   assert.equal(byId.size, catalog.length)
 
   for (const character of catalog) {

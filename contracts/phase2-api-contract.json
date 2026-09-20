@@ -1,0 +1,32 @@
+{
+  "timeZone": "Asia/Ho_Chi_Minh",
+  "eligibleRarities": ["UR+", "UR", "SSR+", "SSR", "SR", "R"],
+  "quota": { "unverified": 1, "verified": 8 },
+  "routes": {
+    "tierPublic": "/api/tier-rankings",
+    "tierMine": "/api/tier-rankings/mine",
+    "tierVote": "/api/tier-rankings/votes/{characterId}",
+    "verificationRequest": "/api/auth/email-verification/request",
+    "verificationConfirm": "/api/auth/email-verification/confirm",
+    "adminTierStats": "/api/admin/tier-ranking/stats",
+    "adminTierBaseVotes": "/api/admin/tier-ranking/{characterId}/base-votes",
+    "adminCommunityFeed": "/api/admin/community/feed",
+    "adminCommunityLock": "/api/admin/community/topics/{id}/lock",
+    "adminCommunityDeleteTopic": "/api/admin/community/topics/{id}",
+    "adminCommunityDeleteComment": "/api/admin/community/comments/{id}"
+  },
+  "fields": {
+    "tierPublic": ["voteMonth", "resetsAt", "totalVotes", "totalVoters", "votes"],
+    "tierMine": ["characterIds", "voteMonth", "resetsAt", "maxVotesPerRarity", "hasVerifiedContact", "emailVerified", "phoneVerified"],
+    "tierVote": ["characterId", "active", "voteMonth", "resetsAt", "rarity", "votes", "totalVotes", "totalVoters", "selectedInRarity", "remainingInRarity", "maxVotesPerRarity", "hasVerifiedContact", "emailVerified", "phoneVerified"],
+    "adminTierCharacter": ["characterId", "nameVi", "nameEn", "rarity", "tier", "baseVotes", "communityVotes", "totalScore", "version"],
+    "adminCommunityTopic": ["id", "title", "contentSnippet", "author", "postCount", "isLocked", "createdAt", "version"],
+    "adminCommunityComment": ["id", "eventId", "content", "author", "createdAt", "version"]
+  },
+  "verification": {
+    "tokenBytes": 32,
+    "hash": "SHA-256",
+    "singleUse": true,
+    "requestAuthenticated": true
+  }
+}

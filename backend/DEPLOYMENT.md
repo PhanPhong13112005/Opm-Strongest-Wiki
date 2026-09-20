@@ -1,27 +1,19 @@
 # Triển khai backend production
 
-Backend được đóng gói bằng `Dockerfile` ở thư mục gốc repository để image nhận được cả source .NET và dữ liệu seed trong `src/data`.
+> Trạng thái: **KHÔNG ĐƯỢC DEPLOY** cho đến khi toàn bộ production cutover gate trong [`../docs/DEPLOYMENT_RUNBOOK.md`](../docs/DEPLOYMENT_RUNBOOK.md) đạt. Tài liệu này mô tả target ASP.NET cuối cùng; không phải lệnh triển khai đã được phê duyệt.
 
-## 1. Dịch vụ cần có
+ASP.NET Core là authoritative production backend của OpmWiki. Frontend Vue/Vite tiếp tục được host trên Vercel; PostgreSQL là database; EF Core là schema/migration owner duy nhất. Node/Vercel Functions là **LEGACY / TRANSITIONAL / ROLLBACK ONLY** trong thời gian cutover và không phải backend authority cuối cùng.
 
-- Một nền tảng chạy Docker container và cấp HTTPS công khai.
-- PostgreSQL có lưu trữ bền vững.
-- Vercel tiếp tục phục vụ frontend Vue.
+## 1. Topology mục tiêu
 
-Health check dùng `GET /api/health`. Kiểm tra cả PostgreSQL bằng `GET /api/health/database`.
+```text
+Vercel Vue/Vite
+  -> VITE_API_BASE_URL
+  -> ASP.NET Core HTTPS origin
+  -> PostgreSQL
+```
 
-### Phương án miễn phí không cần thẻ: Back4app Containers + Neon
-
-Back4app Containers có thể build API trực tiếp từ GitHub repository bằng
-Dockerfile. Khi tạo app, chọn repository này, đặt root là thư mục gốc (`/`),
-port `8080` và nhập các biến production trong phần **Environment Variables**.
-
-Với `ConnectionStrings__OpmWiki`, chọn **Direct connection** và định dạng
-**.NET / Npgsql** trên Neon (`Host=...;Port=5432;Database=...;Username=...;Password=...;SSL Mode=VerifyFull;Channel Binding=Require`).
-Không commit connection string, mật khẩu Admin hoặc JWT signing key.
-
-Sau khi deploy thành công, sao chép public Back4app URL rồi đặt URL đó làm
-`VITE_API_BASE_URL` trên Vercel.
+Backend được đóng gói bằng `Dockerfile` ở thư mục gốc repository. Health check API là `GET /api/health`; kiểm tra kết nối PostgreSQL là `GET /api/health/database`.
 
 ## 2. Build image
 
@@ -31,63 +23,101 @@ Chạy từ thư mục gốc repository:
 docker build -t opmwiki-api .
 ```
 
-Container lắng nghe cổng `8080`, chạy bằng user không phải root và chứa sẵn JSON dùng để seed lần đầu.
+Container lắng nghe port do nền tảng cấu hình/forward. Việc build image không được chạy migration hoặc seed production.
 
-## 3. Biến môi trường bắt buộc
+## 3. Runtime configuration
 
-```text
-ASPNETCORE_ENVIRONMENT=Production
-ASPNETCORE_URLS=http://+:8080
-ConnectionStrings__OpmWiki=Host=<host>;Port=5432;Database=<database>;Username=<user>;Password=<password>;SSL Mode=Require;Trust Server Certificate=true
-Database__MigrateOnStartup=true
-Database__SeedWhenEmpty=true
-AdminAuth__Username=<admin username>
-AdminAuth__Password=<strong admin password>
-AdminAuth__JwtSigningKey=<random secret of at least 32 characters>
-Cors__AllowedOrigins__0=https://opmts-wiki.vercel.app
-```
-
-Nếu cần kiểm thử từ Vercel Preview, thêm URL Preview chính xác:
+Chỉ cấu hình tên biến trong secret/config store của nền tảng; không ghi giá trị vào Git hoặc tài liệu.
 
 ```text
-Cors__AllowedOrigins__1=https://opm-strongest-wiki-git-codex-community-role-portals-beater3.vercel.app
+ASPNETCORE_ENVIRONMENT
+ASPNETCORE_URLS (hoặc PORT của nền tảng)
+ConnectionStrings__OpmWiki
+Database__MigrateOnStartup=false
+Database__SeedWhenEmpty=false
+AdminAuth__Username
+AdminAuth__Password
+AdminAuth__JwtSigningKey
+PublicAppUrl
+Cors__AllowedOrigins__0
 ```
 
-`Database__SeedWhenEmpty=true` chỉ seed khi bảng Nhân vật chưa có dữ liệu. Các lần restart sau không ghi đè nội dung Admin đã chỉnh sửa.
-
-Các biến AI là tùy chọn và nên để tắt cho đến khi có nhà cung cấp:
+Các nhóm chỉ cấu hình khi feature tương ứng được bật:
 
 ```text
-AiAdvisor__Enabled=false
-AiAdvisor__Endpoint=
-AiAdvisor__ApiKey=
-AiAdvisor__Model=
+Email__ResendApiKey
+Email__From
+PasswordReset__TokenLifetimeMinutes
+BankTransfer__BankId
+BankTransfer__AccountNumber
+BankTransfer__AccountName
+SePay__WebhookSecret
+AiAdvisor__Enabled
+AiAdvisor__Endpoint
+AiAdvisor__ApiKey
+AiAdvisor__Model
 ```
 
-## 4. Cấu hình Vercel
+`PublicAppUrl` là key runtime trực tiếp mà `Program.cs` đọc. `backend/docker-compose.yml` chỉ dành cho local Development: nó nhận wrapper phía host `PUBLIC_APP_URL` rồi map vào container thành `PublicAppUrl`. Không dùng tên wrapper làm key của direct ASP.NET deployment.
 
-Sau khi backend có URL HTTPS, tạo biến cho cả Preview và Production:
-
-```text
-VITE_API_BASE_URL=https://<backend-domain>
-```
-
-Vite nhúng biến này tại thời điểm build, vì vậy phải Redeploy frontend sau khi thay đổi.
-
-## 5. Kiểm tra sau triển khai
+Kiểm tra tên biến mà không in giá trị:
 
 ```powershell
-Invoke-RestMethod https://<backend-domain>/api/health
-Invoke-RestMethod https://<backend-domain>/api/health/database
-Invoke-RestMethod "https://<backend-domain>/api/characters?page=1&pageSize=1&language=vi"
+npm run validate:config -- --target=dotnet
 ```
 
-Sau đó kiểm tra theo thứ tự: đăng ký User, đăng nhập User, đăng nhập Staff, đăng nhập Admin, tạo bình luận, tạo yêu cầu nạp và duyệt yêu cầu.
+## 4. Migration và seed production
 
-## 6. Nguyên tắc an toàn
+Production bắt buộc:
 
-- Không dùng `dev-only-change-me` hoặc signing key development ở production.
-- Không commit connection string, mật khẩu Admin hoặc API key.
-- Chỉ khai báo đúng domain frontend trong CORS.
-- Sao lưu PostgreSQL trước khi chạy migration mới.
-- Giữ `Database__SeedWhenEmpty=true`; không chạy `--seed-data` trên database đang vận hành nếu không chủ động muốn JSON ghi đè dữ liệu tra cứu.
+```text
+Database__MigrateOnStartup=false
+Database__SeedWhenEmpty=false
+```
+
+`Program.cs` chủ động từ chối khởi động Production nếu startup migration, startup seed hoặc `--seed-data` được bật. Giữ behavior fail-closed này.
+
+Migration production chỉ chạy một lần từ **CI/CD release migration job** dùng credential `MIGRATOR` riêng, sau khi migration SQL được review, target database được inventory, backup/PITR được xác nhận và rehearsal trên staging hoàn tất. API runtime dùng credential `APPLICATION` chỉ có DML và không được sửa `__EFMigrationsHistory`.
+
+Không chạy `--seed-data` trên production hoặc historical database. Không dùng seed để chữa lỗi cutover.
+
+## 5. Cấu hình Vercel frontend
+
+Frontend production phải build với:
+
+```text
+VITE_API_BASE_URL
+```
+
+Giá trị runtime do platform quản lý phải trỏ tới ASP.NET HTTPS origin. Mọi dynamic frontend service dùng origin duy nhất này. Same-origin Vercel `/api` Node rewrite chỉ là đường transitional trước cutover, không phải thiết kế permanent split.
+
+## 6. Database roles
+
+- `MIGRATOR`: DDL/schema migration và write `__EFMigrationsHistory` cho release job.
+- `APPLICATION`: `SELECT`/`INSERT`/`UPDATE`/`DELETE`, không DDL và không write migration history.
+- `READ_ONLY_AUDIT`: `SELECT`/catalog inventory only.
+
+Task Phase 1 không tạo hoặc cấp quyền cho role thật.
+
+## 7. Verification và cutover
+
+Trước staging/production phải hoàn thành toàn bộ gate trong [`../docs/DEPLOYMENT_RUNBOOK.md`](../docs/DEPLOYMENT_RUNBOOK.md), gồm Tier Ranking, email verification, Admin Tier/Community, migration review/rehearsal, backup/PITR, role separation, config, CORS, email, payment sandbox, single webhook, rollback và xác nhận không có dual writer.
+
+Các smoke check read-only sau deploy được phép trong một release đã phê duyệt:
+
+```text
+GET /api/health
+GET /api/health/database
+GET /api/characters?page=1&pageSize=1&language=vi
+```
+
+Không dùng production smoke để tự động đăng ký account, tạo comment/top-up, gọi webhook hoặc mutate Admin data nếu chưa có phê duyệt dữ liệu riêng.
+
+## 8. Nguyên tắc an toàn
+
+- Không commit connection string, password, signing material, provider key hoặc webhook secret.
+- Không dùng development defaults ở production.
+- Chỉ allow đúng frontend origins trong CORS.
+- Chỉ một ASP.NET SePay webhook và một ASP.NET payment/ledger writer sau cutover.
+- Node writer phải bị disable trước khi ASP.NET writer được enable.
+- Không migrate/seed trên API startup; không blind-restore hoặc ghi đè dữ liệu lịch sử.

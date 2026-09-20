@@ -16,7 +16,7 @@ const heroStats = computed(() => locale.value === 'en' ? [
 </script>
 
 <template>
-  <main class="equipment-page">
+  <div class="equipment-content">
     <section class="equipment-hero">
       <div class="equipment-hero__copy">
         <span class="equipment-eyebrow"><i />{{ t('equipmentCatalog.eyebrow') }}</span>
@@ -35,17 +35,10 @@ const heroStats = computed(() => locale.value === 'en' ? [
     </section>
 
     <GearCatalogWorkbench />
-  </main>
+  </div>
 </template>
 
 <style scoped>
-.equipment-page {
-  width: min(1240px, 100%);
-  margin: 0 auto;
-  padding: 24px clamp(12px, 2.4vw, 30px) 80px;
-  color: #edf7fb;
-}
-
 .equipment-hero {
   position: relative;
   display: grid;
@@ -184,7 +177,6 @@ const heroStats = computed(() => locale.value === 'en' ? [
 }
 
 @media (max-width: 760px) {
-  .equipment-page { padding: 14px 9px 56px; }
   .equipment-hero { min-height: 0; grid-template-columns: 1fr; border-radius: 18px; }
   .equipment-hero__copy { justify-content: flex-start; padding: 22px 17px 14px; }
   .equipment-hero h1 { max-width: 100%; margin-top: 14px; font-size: clamp(35px, 11vw, 46px); line-height: .96; }

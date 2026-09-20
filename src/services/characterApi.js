@@ -1,5 +1,6 @@
 import { isApiConfigured, requestApiCached } from './apiClient.js'
 import characterNameAliases from '../data/characterNameAliases.js'
+import { resolveMergedCharacterClass } from '../utils/characterClassPresentation.js'
 
 const formatLegacyDate = (value) => {
   if (!value) return value
@@ -38,19 +39,22 @@ const resolveCharacterName = (character, localCharacter, language = 'vi') => {
   return apiName
 }
 
-export const mapCharacterSummary = (character, localCharacter = {}, language = 'vi') => ({
-  id: character.id,
-  name: resolveCharacterName(character, localCharacter, language),
-  imageURL: localCharacter.imageURL || character.imageUrl,
-  tier: character.tier,
-  type: character.type,
-  faction: character.faction,
-  roles: localCharacter.roles?.length ? localCharacter.roles : (character.roles || []),
-  classLevel: character.classLevel,
-  keepsakeIcon: localCharacter.keepsakeIcon || character.keepsakeIcon,
-  releaseSea: formatLegacyDate(character.releaseSea),
-  releaseTrung: formatLegacyDate(character.releaseChina),
-})
+export const mapCharacterSummary = (character, localCharacter = {}, language = 'vi') => {
+  const classFields = resolveMergedCharacterClass(character, localCharacter, language)
+  return {
+    id: character.id,
+    name: resolveCharacterName(character, localCharacter, language),
+    imageURL: localCharacter.imageURL || character.imageUrl,
+    tier: character.tier,
+    type: character.type,
+    faction: character.faction,
+    roles: localCharacter.roles?.length ? localCharacter.roles : (character.roles || []),
+    ...classFields,
+    keepsakeIcon: localCharacter.keepsakeIcon || character.keepsakeIcon,
+    releaseSea: formatLegacyDate(character.releaseSea),
+    releaseTrung: formatLegacyDate(character.releaseChina),
+  }
+}
 
 const mapApiSkill = (skill) => ({
   name: skill.name,
@@ -124,29 +128,32 @@ const mergeCharacterEffects = (characterEffects, localEffects) => {
   return merged
 }
 
-export const mergeCharacterDetail = (character, localCharacter = {}, language = 'vi') => ({
-  ...localCharacter,
-  id: character.id,
-  name: resolveCharacterName(character, localCharacter, language),
-  imageURL: localCharacter.imageURL || character.imageUrl,
-  tier: character.tier,
-  type: character.type,
-  faction: character.faction,
-  roles: localCharacter.roles?.length ? localCharacter.roles : (character.roles || []),
-  duyen: character.duyen,
-  bio: character.bio,
-  keepsakeIcon: localCharacter.keepsakeIcon || character.keepsakeIcon,
-  dacTinh: localCharacter.dacTinh !== undefined ? localCharacter.dacTinh : (character.traits || []),
-  bondList: character.bondList,
-  classLevel: character.classLevel,
-  releaseSea: formatLegacyDate(character.releaseSea) || localCharacter.releaseSea,
-  releaseTrung: formatLegacyDate(character.releaseChina) || localCharacter.releaseTrung,
-  baseStats: character.baseStats,
-  pvpStats: character.pvpStats,
-  skills: mergeCharacterSkills(character.skills, localCharacter.skills),
-  effects: mergeCharacterEffects(character.effects, localCharacter.effects),
-  updatedAt: character.updatedAt,
-})
+export const mergeCharacterDetail = (character, localCharacter = {}, language = 'vi') => {
+  const classFields = resolveMergedCharacterClass(character, localCharacter, language)
+  return {
+    ...localCharacter,
+    id: character.id,
+    name: resolveCharacterName(character, localCharacter, language),
+    imageURL: localCharacter.imageURL || character.imageUrl,
+    tier: character.tier,
+    type: character.type,
+    faction: character.faction,
+    roles: localCharacter.roles?.length ? localCharacter.roles : (character.roles || []),
+    duyen: character.duyen,
+    bio: character.bio,
+    keepsakeIcon: localCharacter.keepsakeIcon || character.keepsakeIcon,
+    dacTinh: localCharacter.dacTinh !== undefined ? localCharacter.dacTinh : (character.traits || []),
+    bondList: character.bondList,
+    ...classFields,
+    releaseSea: formatLegacyDate(character.releaseSea) || localCharacter.releaseSea,
+    releaseTrung: formatLegacyDate(character.releaseChina) || localCharacter.releaseTrung,
+    baseStats: character.baseStats,
+    pvpStats: character.pvpStats,
+    skills: mergeCharacterSkills(character.skills, localCharacter.skills),
+    effects: mergeCharacterEffects(character.effects, localCharacter.effects),
+    updatedAt: character.updatedAt,
+  }
+}
 
 const releaseTime = (character) => {
   const value = character.releaseSea || character.releaseDate || character.releaseTrung

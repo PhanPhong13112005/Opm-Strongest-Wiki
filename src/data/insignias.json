@@ -8,8 +8,8 @@
       "descriptionVi": "Hoàn thành các Yêu cầu hằng ngày có phần thưởng mảnh Huy Hiệu Rồng, Huy Hiệu Quỷ hoặc Rương Mảnh Huy Hiệu.",
       "descriptionEn": "Complete Daily Requests that reward Dragon or Demon Insignia shards, or an Insignia Shard Box.",
       "images": [
-        "/Class/Hướng dẫn/Request_1.webp",
-        "/Class/Hướng dẫn/Request_2.webp"
+        "/Class/guides/Request_1.webp",
+        "/Class/guides/Request_2.webp"
       ]
     },
     {
@@ -18,7 +18,7 @@
       "titleEn": "Random Insignia Shard Box",
       "descriptionVi": "Mở rương để nhận ngẫu nhiên mảnh Huy Hiệu Hổ, Huy Hiệu B hoặc Huy Hiệu C.",
       "descriptionEn": "Open the box to randomly receive Tiger, B-Class, or C-Class Insignia shards.",
-      "images": ["/Class/Hướng dẫn/Chest.webp"]
+      "images": ["/Class/guides/Chest.webp"]
     },
     {
       "id": "class-a-shop",
@@ -26,7 +26,7 @@
       "titleEn": "Club Shop",
       "descriptionVi": "Mua mảnh Huy Hiệu A trong Cửa hàng Bang hội bằng tiền tệ tương ứng. Tích lũy đủ 50 mảnh để nhận 1 Huy Hiệu A.",
       "descriptionEn": "Purchase A Insignia shards from the Club Shop with the corresponding currency. Collect 50 shards to obtain one A Insignia.",
-      "images": ["/Class/Hướng dẫn/Shop_3.webp"]
+      "images": ["/Class/guides/Shop_3.webp"]
     },
     {
       "id": "general-shop",
@@ -34,7 +34,7 @@
       "titleEn": "General Store",
       "descriptionVi": "Mảnh Huy Hiệu Quỷ có thể xuất hiện trong Cửa hàng thường và được mua bằng đơn vị tiền tệ tương ứng.",
       "descriptionEn": "Demon Insignia shards may appear in the General Store and can be purchased with the corresponding currency.",
-      "images": ["/Class/Hướng dẫn/Shop.webp"]
+      "images": ["/Class/guides/Shop.webp"]
     },
     {
       "id": "insignia-shard-box-ii",
@@ -43,8 +43,8 @@
       "descriptionVi": "Hộp cho phép chọn một trong các mảnh Huy Hiệu SS, S, Rồng, Tội Phạm hoặc Võ Thuật.",
       "descriptionEn": "Select one shard type: SS-Class, S-Class, Dragon, Outlaw, or Martial Artist.",
       "images": [
-        "/Class/Hướng dẫn/Shop_2.webp",
-        "/Class/Hướng dẫn/Detal_Shop_2.webp"
+        "/Class/guides/Shop_2.webp",
+        "/Class/guides/Detal_Shop_2.webp"
       ]
     },
     {
@@ -53,7 +53,7 @@
       "titleEn": "Association Backup monthly card",
       "descriptionVi": "Gói tháng tặng Hộp Mảnh Huy Hiệu để chọn mảnh SS, S, Rồng, Tội Phạm hoặc Võ Thuật.",
       "descriptionEn": "The monthly card provides an Insignia Shard Box for SS-Class, S-Class, Dragon, Outlaw, or Martial Artist shards.",
-      "images": ["/Class/Hướng dẫn/Nap.webp"]
+      "images": ["/Class/guides/Nap.webp"]
     },
     {
       "id": "mystery-shop",
@@ -61,7 +61,7 @@
       "titleEn": "Mystery Shop",
       "descriptionVi": "Cửa hàng Bí ẩn có thể bán các loại Huy Hiệu đang có trong game. Vật phẩm xuất hiện tùy theo lượt làm mới cửa hàng.",
       "descriptionEn": "The Mystery Shop may sell any Insignia currently available in the game. Stock depends on each shop refresh.",
-      "images": ["/Class/Hướng dẫn/Mystery_Shop.png"]
+      "images": ["/Class/guides/Mystery_Shop.png"]
     }
   ],
   "items": [

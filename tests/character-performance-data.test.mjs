@@ -9,6 +9,7 @@ const catalogs = {
   vi: readJson('src/data/characters.json'),
   en: readJson('src/data/characters_en.json'),
 }
+const summaries = readJson('src/data/characterSummaries.json')
 
 test('generated character detail files preserve both localized catalogs one character at a time', () => {
   for (const [locale, characters] of Object.entries(catalogs)) {
@@ -46,6 +47,55 @@ test('optimized character and detail icon assets exist and use WebP payloads', (
   const detailIcons = fs.readdirSync(path.join(root, 'public', 'DetailIcons'))
   assert.equal(detailIcons.length, 16)
   assert.ok(detailIcons.every(file => file.endsWith('.webp')))
+})
+
+test('character list uses compact summaries and optimized card assets', () => {
+  const listView = fs.readFileSync(path.join(root, 'src/views/CharacterListView.vue'), 'utf8')
+  const card = fs.readFileSync(path.join(root, 'src/components/CharacterCard.vue'), 'utf8')
+
+  assert.match(listView, /characterSummaries\.json/)
+  assert.match(listView, /applyLocalFallback\(\)\s*\n\s*isSyncing\.value = true\s*\n\s*\n\s*try \{\s*\n\s*const result = await getCharacters/)
+  assert.match(listView, /data-testid="character-count"/)
+  assert.match(listView, /data-testid="character-sync-status"/)
+  assert.match(listView, /if \(requestId !== activeRequest\) return/)
+  assert.doesNotMatch(listView, /data\/characters(?:_en)?\.json/)
+  assert.doesNotMatch(listView, /new Image\(\)/)
+  assert.doesNotMatch(card, /preloadDetails/)
+  assert.match(card, /decoding="async"/)
+  assert.match(card, /quality-\$\{safeTier\}\.webp/)
+  assert.doesNotMatch(card, /quality-\$\{safeTier\.toLowerCase\(\)\}\.webp/)
+
+  const detailIcons = new Set(fs.readdirSync(path.join(root, 'public', 'DetailIcons')))
+  for (const tier of ['URplus', 'UR', 'SSRplus', 'SSR', 'SR', 'R', 'N']) {
+    assert.ok(detailIcons.has(`quality-${tier}.webp`), `missing exact-case tier icon for ${tier}`)
+  }
+
+  for (const locale of ['vi', 'en']) {
+    assert.equal(summaries[locale].length, catalogs[locale].length)
+    for (const character of summaries[locale]) {
+      assert.equal(Object.hasOwn(character, 'skills'), false)
+      assert.equal(Object.hasOwn(character, 'effects'), false)
+      assert.match(character.imageURL, /^\/Characters\/optimized\/.+-360\.webp$/)
+      assert.ok(fs.existsSync(path.join(root, 'public', character.imageURL.slice(1))))
+      if (character.cardClassIcon) {
+        assert.ok(fs.existsSync(path.join(root, 'public', character.cardClassIcon.slice(1))))
+      }
+      if (character.cardKeepsakeIcon) {
+        assert.ok(fs.existsSync(path.join(root, 'public', character.cardKeepsakeIcon.slice(1))))
+      }
+    }
+  }
+
+  assert.ok(
+    fs.statSync(path.join(root, 'src/data/characterSummaries.json')).size < 250 * 1024,
+    'character summary catalog should stay below 250 KiB',
+  )
+  const firstPageAssetBytes = summaries.vi.slice(0, 12).reduce((total, character) => (
+    total + [character.imageURL, character.cardClassIcon, character.cardKeepsakeIcon]
+      .filter(Boolean)
+      .reduce((subtotal, url) => subtotal + fs.statSync(path.join(root, 'public', url.slice(1))).size, 0)
+  ), 0)
+  assert.ok(firstPageAssetBytes < 500 * 1024, 'first-page character art should stay below 500 KiB')
 })
 
 test('character route defers catalogs, Core Lab, and below-fold media', () => {

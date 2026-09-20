@@ -1,5 +1,108 @@
 [
   {
+    "id": "homeless-emperor-urplus",
+    "name": "Vua Không Nhà",
+    "imageURL": "/Characters/Homeless Emperor (URplus)/URplus.png",
+    "tier": "UR+",
+    "type": "Tâm Linh",
+    "faction": "Quái Nhân",
+    "roles": [
+      "Gia Tốc Cực Hạn - Sức Mạnh Hủy Diệt"
+    ],
+    "duyen": "Hyper-Sense Burst",
+    "baseStats": {
+      "atk": 683,
+      "hp": 4095,
+      "def": 173,
+      "spd": 141
+    },
+    "releaseSea": "01/01/2027",
+    "releaseTrung": "01/09/2026",
+    "classLevel": "Dragon",
+    "classIcon": "/Class/Dragon.png",
+    "skills": [
+      {
+        "name": "Cơ bản",
+        "desc": "Gây 120% ATK DMG lên một mục tiêu.",
+        "icon": "/Skill/Homeless Emperor (URplus)/Skill_base.png",
+        "type": "Kỹ năng thường"
+      },
+      {
+        "name": "Tuyệt kĩ",
+        "desc": "Gây 4500% ATK [Sát Thương Trực Tiếp Chuyên Biệt] lên toàn bộ một hàng trong chuỗi 5 đòn (chỉ chịu ảnh hưởng bởi giảm sát thương nâng cao), bỏ qua 45% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt].\n\nBan vĩnh viễn [Tăng Tốc Cực Hạn] cho đồng minh ngoài cùng hàng.\n\n[Tăng Tốc Cực Hạn]: Khi có hiệu lực, ghi đè [Gia Tốc Chuyên Biệt]/[Lĩnh Vực Tốc Độ], tăng tốc độ lên bằng 94% tốc độ của Vua Không Nhà (hiệu ứng này không áp dụng nếu tốc độ của người dùng cao hơn tốc độ sau khi được tăng).\n\nKhi gây DMG, nếu tốc độ của mục tiêu không cao hơn tốc độ của người dùng, toàn bộ DMG mục tiêu phải nhận tăng 30%.",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_ult.png",
+        "type": "Tuyệt kĩ"
+      },
+      {
+        "name": "Siêu tuyệt kĩ",
+        "desc": "Tăng 30% ATK cho toàn bộ đồng minh (không thể bị giải trừ).\n\nGây 6000% ATK [Sát Thương Trực Tiếp Chuyên Biệt] lên toàn bộ một hàng trong chuỗi 5 đòn (chỉ chịu ảnh hưởng bởi giảm sát thương nâng cao), bỏ qua 60% [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt].\n\nBan vĩnh viễn [Tăng Tốc Cực Hạn] cho đồng minh ngoài cùng hàng.\n\n[Tăng Tốc Cực Hạn]: Khi có hiệu lực, ghi đè [Gia Tốc Chuyên Biệt]/[Lĩnh Vực Tốc Độ], tăng tốc độ lên bằng 98% tốc độ của Vua Không Nhà (hiệu ứng này không áp dụng nếu tốc độ của người dùng cao hơn tốc độ sau khi được tăng).\n\nKhi gây DMG, nếu tốc độ của mục tiêu không cao hơn tốc độ của người dùng, toàn bộ DMG mục tiêu phải nhận tăng 30%.",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_ult.png",
+        "type": "Tuyệt kĩ",
+        "keepsakeIcon": "/Skill/Homeless Emperor (URplus)/Keepsake-URplus.png"
+      },
+      {
+        "name": "Bị động — Base",
+        "desc": "Khi bắt đầu trận đấu, nhận 80% [Giảm Sát Thương Không Bạo Kích Chuyên Biệt].\n\nKhi vào chiến trường, gây vĩnh viễn [Xói Mòn Năng Lượng] lên toàn bộ kẻ địch (không thể giải trừ).\n\nKhi bắt đầu chiến đấu và sau khi bất kỳ nhân vật nào hành động, xóa toàn bộ hiệu ứng [Tăng Tốc Chuyên Biệt] và [Tăng Tốc thường] khỏi tất cả kẻ địch.\n\n[Giảm Sát Thương Đòn Đánh Không Bạo Kích Chuyên Biệt]: Giảm toàn bộ DMG nhận vào từ các đòn không phải [Bạo Kích Chuyên Biệt].\n\n[Bạo Kích Chuyên Biệt]: Khi gây [Sát Thương Trực Tiếp Chuyên Biệt], kích hoạt Bạo Kích dựa trên phần Tỷ Lệ Bạo Kích Cuối Cùng vượt quá 200%.\n\n[Xói Mòn Năng Lượng]: Miễn nhận [Kiên Cường Năng Lượng] khi bị đánh; mọi [Kiên Cường Năng Lượng] nhận được đều không thể chuyển hóa thành [HP Chuyên Biệt].",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_pas.png",
+        "type": "Nội tại"
+      },
+      {
+        "name": "Bị động — 5★ vàng",
+        "desc": "Khi bắt đầu trận đấu, nhận 85% [Giảm Sát Thương Không Bạo Kích Chuyên Biệt].\n\nKhi vào chiến trường, gây vĩnh viễn [Xói Mòn Năng Lượng] lên toàn bộ kẻ địch (không thể giải trừ).\n\nKhi bắt đầu chiến đấu và sau khi bất kỳ nhân vật nào hành động, xóa toàn bộ hiệu ứng [Tăng Tốc Chuyên Biệt] và [Tăng Tốc thường] khỏi tất cả kẻ địch.\n\n[Giảm Sát Thương Đòn Đánh Không Bạo Kích Chuyên Biệt]: Giảm toàn bộ DMG nhận vào từ các đòn không phải [Bạo Kích Chuyên Biệt].\n\n[Bạo Kích Chuyên Biệt]: Khi gây [Sát Thương Trực Tiếp Chuyên Biệt], kích hoạt Bạo Kích dựa trên phần Tỷ Lệ Bạo Kích Cuối Cùng vượt quá 200%.\n\n[Xói Mòn Năng Lượng]: Miễn nhận [Kiên Cường Năng Lượng] khi bị đánh; mọi [Kiên Cường Năng Lượng] nhận được đều không thể chuyển hóa thành [HP Chuyên Biệt].",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_pas.png",
+        "type": "Nội tại"
+      },
+      {
+        "name": "Bị động — 5★ tím",
+        "desc": "Khi bắt đầu trận đấu, nhận 90% [Giảm Sát Thương Không Bạo Kích Chuyên Biệt].\n\nKhi vào chiến trường, gây vĩnh viễn [Xói Mòn Năng Lượng] lên toàn bộ kẻ địch (không thể giải trừ).\n\nKhi bắt đầu chiến đấu và sau khi bất kỳ nhân vật nào hành động, xóa toàn bộ hiệu ứng [Tăng Tốc Chuyên Biệt] và [Tăng Tốc thường] khỏi tất cả kẻ địch.\n\n[Giảm Sát Thương Đòn Đánh Không Bạo Kích Chuyên Biệt]: Giảm toàn bộ DMG nhận vào từ các đòn không phải [Bạo Kích Chuyên Biệt].\n\n[Bạo Kích Chuyên Biệt]: Khi gây [Sát Thương Trực Tiếp Chuyên Biệt], kích hoạt Bạo Kích dựa trên phần Tỷ Lệ Bạo Kích Cuối Cùng vượt quá 200%.\n\n[Xói Mòn Năng Lượng]: Miễn nhận [Kiên Cường Năng Lượng] khi bị đánh; mọi [Kiên Cường Năng Lượng] nhận được đều không thể chuyển hóa thành [HP Chuyên Biệt].",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_pas.png",
+        "type": "Nội tại"
+      },
+      {
+        "name": "Nội tại Thức tỉnh — A1",
+        "desc": "Miễn nhiễm [Mê Hoặc] / [Mê Hoặc Chuyên Biệt].\n\nKhi vào chiến trường, tự nhận 60% [Tăng Tốc Cực Hạn] trong 3 lượt đầu.\n\nTrong 3 lượt đầu, ban [Động Lực Hủy Diệt: Công Kích] cho đồng minh có [Tăng Tốc Cực Hạn].\n\n[Động Lực Hủy Diệt: Công Kích]: Tăng hiệu ứng cộng DMG của [Tăng Tốc Cực Hạn] thêm 0.5x, và mỗi lần trở lại chiến trường, kẻ địch giữ lại 50% giá trị hiện tại của hiệu ứng này (chỉ PVP).",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_awk.png",
+        "type": "Thức tỉnh"
+      },
+      {
+        "name": "Nội tại Thức tỉnh — A2",
+        "desc": "Miễn nhiễm [Mê Hoặc] / [Mê Hoặc Chuyên Biệt].\n\nKhi vào chiến trường, tự nhận 68% [Tăng Tốc Cực Hạn] trong 3 lượt đầu.\n\nTrong 3 lượt đầu, ban [Động Lực Hủy Diệt: Công Kích] cho đồng minh có [Tăng Tốc Cực Hạn].\n\nTrong 3 lượt đầu, ban [Động Lực Hủy Diệt: Phòng Thủ] cho đồng minh có [Tăng Tốc Cực Hạn].\n\nKhi đồng minh có [Tăng Tốc Cực Hạn] tung kỹ năng trong 3 lượt đầu, tiêu hao Năng Lượng giảm 1.\n\n[Động Lực Hủy Diệt: Công Kích]: Tăng hiệu ứng cộng DMG của [Tăng Tốc Cực Hạn] thêm 1.5x, và mỗi lần trở lại chiến trường, kẻ địch giữ lại 50% giá trị hiện tại của hiệu ứng này (chỉ PVP).\n\n[Động Lực Hủy Diệt: Phòng Thủ]: Giảm 30% cộng DMG từ [Tăng Tốc Cực Hạn] của kẻ địch.",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_awk.png",
+        "type": "Thức tỉnh"
+      },
+      {
+        "name": "Nội tại Thức tỉnh — A3",
+        "desc": "Khôi phục 150 Thanh Năng Lượng khi tấn công.",
+        "icon": "/Skill/Homeless Emperor (URplus)/skill_awk.png",
+        "type": "Thức tỉnh"
+      }
+    ],
+    "effects": [
+      {
+        "term": "[Xói Mòn Năng Lượng]",
+        "desc": "Miễn nhận [Kiên Cường Năng Lượng] khi bị đánh; mọi [Kiên Cường Năng Lượng] nhận được đều không thể chuyển hóa thành [HP Chuyên Biệt]."
+      },
+      {
+        "term": "[Giảm Sát Thương Đòn Đánh Không Bạo Kích Chuyên Biệt]",
+        "desc": "Giảm toàn bộ DMG nhận vào từ các đòn không phải [Bạo Kích Chuyên Biệt]."
+      },
+      {
+        "term": "[Bạo Kích Chuyên Biệt]",
+        "desc": "Khi gây [Sát Thương Trực Tiếp Chuyên Biệt], kích hoạt Bạo Kích dựa trên phần Tỷ Lệ Bạo Kích Cuối Cùng vượt quá 200%."
+      },
+      {
+        "term": "[Động Lực Hủy Diệt: Công Kích]",
+        "desc": "A1: Tăng hiệu ứng cộng DMG của [Tăng Tốc Cực Hạn] thêm 0.5x, và mỗi lần trở lại chiến trường, kẻ địch giữ lại 50% giá trị hiện tại của hiệu ứng này (chỉ PVP). A2: Hệ số tăng lên 1.5x."
+      },
+      {
+        "term": "[Động Lực Hủy Diệt: Phòng Thủ]",
+        "desc": "Giảm 30% cộng DMG từ [Tăng Tốc Cực Hạn] của kẻ địch."
+      }
+    ],
+    "keepsakeIcon": "/Skill/Homeless Emperor (URplus)/Keepsake-URplus.png",
+    "dacTinh": []
+  },
+  {
     "id": "blacksperm-urplus",
     "name": "Tinh Trùng Đen",
     "imageURL": "/Characters/Black Sperm (UR+)/Black_Sperm.png",

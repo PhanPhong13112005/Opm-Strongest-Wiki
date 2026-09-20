@@ -1,4 +1,3 @@
-using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +6,8 @@ using Microsoft.OpenApi;
 using OpmWiki.Api.Security;
 using OpmWiki.Api.Services;
 using OpmWiki.Application.Abstractions;
+using OpmWiki.Application.EmailVerification;
+using OpmWiki.Application.TierRanking;
 using OpmWiki.Infrastructure;
 using OpmWiki.Infrastructure.Persistence;
 
@@ -25,6 +26,12 @@ builder.Logging.AddConsole();
 builder.Logging.AddDebug();
 builder.Services.AddControllers();
 builder.Services.AddProblemDetails();
+builder.Services.AddHsts(options =>
+{
+    options.MaxAge = TimeSpan.FromDays(365);
+    options.IncludeSubDomains = true;
+    options.Preload = true;
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -58,12 +65,25 @@ else if (string.IsNullOrWhiteSpace(adminAuthOptions.Username) ||
 builder.Services.AddSingleton(adminAuthOptions);
 builder.Services.AddSingleton<AdminTokenService>();
 builder.Services.AddSingleton<PasswordHasher>();
+builder.Services.AddSingleton(TimeProvider.System);
+builder.Services.AddScoped<TierRankingService>();
 var passwordResetOptions = builder.Configuration.GetSection("PasswordReset").Get<PasswordResetOptions>() ?? new();
 passwordResetOptions.ResendApiKey = builder.Configuration["Email:ResendApiKey"] ?? string.Empty;
 passwordResetOptions.From = builder.Configuration["Email:From"] ?? string.Empty;
 passwordResetOptions.PublicAppUrl = builder.Configuration["PublicAppUrl"] ?? string.Empty;
 builder.Services.AddSingleton(passwordResetOptions);
 builder.Services.AddHttpClient<PasswordResetEmailService>(client => client.Timeout = TimeSpan.FromSeconds(15));
+var emailVerificationOptions = builder.Configuration
+    .GetSection("EmailVerification")
+    .Get<EmailVerificationOptions>() ?? new();
+emailVerificationOptions.PublicAppUrl = builder.Configuration["PublicAppUrl"] ?? string.Empty;
+emailVerificationOptions.ExposeTestUrl = !builder.Environment.IsProduction();
+builder.Services.AddSingleton(emailVerificationOptions);
+builder.Services.AddScoped<EmailVerificationService>();
+builder.Services.AddHttpClient<EmailVerificationEmailService>(
+    client => client.Timeout = TimeSpan.FromSeconds(15));
+builder.Services.AddScoped<IEmailVerificationDelivery>(
+    services => services.GetRequiredService<EmailVerificationEmailService>());
 var aiAdvisorOptions = builder.Configuration.GetSection(AiAdvisorOptions.SectionName).Get<AiAdvisorOptions>() ?? new();
 builder.Services.AddSingleton(aiAdvisorOptions);
 builder.Services.AddHttpClient<AiAdvisorClient>(client => client.Timeout = TimeSpan.FromSeconds(20));
@@ -106,20 +126,7 @@ builder.Services.Configure<ForwardedHeadersOptions>(options =>
     options.KnownIPNetworks.Clear();
     options.KnownProxies.Clear();
 });
-builder.Services.AddRateLimiter(options =>
-{
-    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
-    options.AddPolicy("admin-login", context =>
-        RateLimitPartition.GetFixedWindowLimiter(
-            context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
-            _ => new FixedWindowRateLimiterOptions
-            {
-                PermitLimit = 5,
-                Window = TimeSpan.FromMinutes(1),
-                QueueLimit = 0,
-                AutoReplenishment = true,
-            }));
-});
+builder.Services.AddRateLimiter(SensitiveRateLimitPolicies.Configure);
 
 var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>()
     ?? ["http://localhost:5173"];
@@ -171,13 +178,28 @@ if (app.Environment.IsDevelopment())
 else
 {
     app.UseExceptionHandler();
+    app.UseHsts();
 }
 
 app.UseForwardedHeaders();
+if (!app.Environment.IsDevelopment())
+{
+    app.Use(async (context, next) =>
+    {
+        context.Response.Headers["Content-Security-Policy"] =
+            "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'";
+        context.Response.Headers["Permissions-Policy"] =
+            "camera=(), microphone=(), geolocation=()";
+        context.Response.Headers["Referrer-Policy"] = "no-referrer";
+        context.Response.Headers["X-Content-Type-Options"] = "nosniff";
+        context.Response.Headers["X-Frame-Options"] = "DENY";
+        await next();
+    });
+}
 app.UseHttpsRedirection();
 app.UseCors("Frontend");
-app.UseRateLimiter();
 app.UseAuthentication();
+app.UseRateLimiter();
 app.UseAuthorization();
 app.MapControllers();
 app.MapGet("/api/health", () => Results.Ok(new
@@ -195,7 +217,9 @@ app.MapGet("/api/health/database", async (
     {
         await using var scope = scopeFactory.CreateAsyncScope();
         var dbContext = scope.ServiceProvider.GetRequiredService<OpmWikiDbContext>();
-        var canConnect = await dbContext.Database.CanConnectAsync(cancellationToken);
+        using var timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
+        timeout.CancelAfter(TimeSpan.FromSeconds(5));
+        var canConnect = await dbContext.Database.CanConnectAsync(timeout.Token);
         return canConnect
             ? Results.Ok(new { status = "healthy", database = "connected" })
             : Results.Json(

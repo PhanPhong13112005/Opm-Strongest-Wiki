@@ -10,6 +10,14 @@
   "sampleParticipants": 22,
   "characters": [
     {
+      "id": "homeless-emperor-urplus",
+      "nameVi": "Homeless Emperor",
+      "nameEn": "Homeless Emperor",
+      "rarity": "UR+",
+      "isCore": false,
+      "baseVotes": 0
+    },
+    {
       "id": "blacksperm-urplus",
       "nameVi": "Tinh Trùng Đen",
       "nameEn": "Black Sperm",

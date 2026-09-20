@@ -15,8 +15,8 @@ const installStaffSession = async page => {
     expiresAt: new Date(Date.now() + 3600_000).toISOString(),
   }
   await page.addInitScript(({ token, storedSession }) => {
-    sessionStorage.setItem('opmwiki.auth.token', token)
-    sessionStorage.setItem('opmwiki.auth.session', JSON.stringify(storedSession))
+    localStorage.setItem('opmwiki.auth.token', token)
+    localStorage.setItem('opmwiki.auth.session', JSON.stringify(storedSession))
   }, { token: futureToken('Staff'), storedSession: session })
   await page.route('**/api/auth/me', route => route.fulfill({ json: session }))
 }
@@ -83,6 +83,7 @@ test('Staff reviews forum context and removes posts or whole topics on mobile', 
 
   await page.goto('/staff')
 
+  await page.getByRole('button', { name: /Kiểm Duyệt Diễn Đàn/ }).click()
   await expect(page.getByRole('heading', { name: 'Chủ đề và phản hồi' })).toBeVisible()
   await expect(page.getByText('Nội dung mở đầu cần được xem trong ngữ cảnh.')).toBeVisible()
   await expect(page.getByText('Phản hồi vi phạm cần xóa.')).toBeVisible()

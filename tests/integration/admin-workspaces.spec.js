@@ -15,8 +15,8 @@ const installAdminSession = async page => {
     expiresAt: new Date(Date.now() + 3600_000).toISOString(),
   }
   await page.addInitScript(({ token, storedSession }) => {
-    sessionStorage.setItem('opmwiki.auth.token', token)
-    sessionStorage.setItem('opmwiki.auth.session', JSON.stringify(storedSession))
+    localStorage.setItem('opmwiki.auth.token', token)
+    localStorage.setItem('opmwiki.auth.session', JSON.stringify(storedSession))
   }, { token: futureToken('Admin'), storedSession: session })
   await page.route('**/api/auth/me', route => route.fulfill({ json: session }))
 }

@@ -2,12 +2,15 @@ import { ensureCommunitySchema, getSql } from './_lib/database.js'
 import { ensureAdminSchema } from './_lib/adminDatabase.js'
 import { json, requireUser } from './_lib/http.js'
 import { tierVoteMonthFor } from './_lib/communityRoutes.js'
+import { enforceStandaloneWriterFence } from './_lib/writerFence.js'
 
 export default async function handler(request, response) {
   if (request.method !== 'POST') {
     response.setHeader('Allow', 'POST')
     return json(response, 405, { message: 'Use POST to run migrations.' })
   }
+
+  if (enforceStandaloneWriterFence(response)) return
 
   // Require Admin role to run migrations
   const user = requireUser(request, response, ['Admin'])

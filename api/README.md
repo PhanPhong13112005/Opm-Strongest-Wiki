@@ -1,8 +1,13 @@
-# Vercel Functions API
+# Vercel Functions API — LEGACY / TRANSITIONAL
 
-Thư mục này thay thế phần API cộng đồng của ASP.NET Core khi chạy production trên
-Vercel Hobby. Frontend và API dùng chung domain nên không cần cấu hình CORS hay
-`VITE_API_BASE_URL` ở production.
+Thư mục này ghi lại Node/Vercel Functions đang tồn tại để hỗ trợ transition và rollback có kiểm soát.
+Nó **không phải authoritative production backend cuối cùng**. Kiến trúc đã freeze chọn ASP.NET Core
+làm final backend, EF Core làm migration owner duy nhất, và ASP.NET làm auth/payment/ledger owner duy nhất.
+Permanent split bị từ chối; final frontend dùng `VITE_API_BASE_URL` trỏ tới một ASP.NET origin.
+
+Các route dưới đây là inventory implementation hiện tại, không phải cam kết rằng Node sẽ còn nhận traffic
+sau cutover. Xem [`docs/PRODUCTION_ARCHITECTURE.md`](../docs/PRODUCTION_ARCHITECTURE.md) và
+[`docs/API_OWNERSHIP.md`](../docs/API_OWNERSHIP.md).
 
 ## Endpoint đã chuyển
 
@@ -32,9 +37,9 @@ Nhân vật, Sự kiện và Lịch ra mắt CN/SEA được đọc trực tiế
 công khai trả cache header cho trình duyệt và CDN; frontend vẫn giữ JSON tĩnh làm fallback khi
 API hoặc cơ sở dữ liệu tạm thời không khả dụng.
 
-## Biến môi trường trên Vercel
+## Biến môi trường Node/Vercel trong giai đoạn transition
 
-Thiết lập cho cả Production và Preview:
+Chỉ khi một transitional Vercel deployment được phê duyệt, thiết lập cho scope tương ứng:
 
 ```text
 DATABASE_URL=postgresql://<user>:<password>@<neon-host>/<database>?sslmode=require
@@ -55,11 +60,17 @@ xác minh; local không gửi email thật và có thể trả `resetUrl` để 
 Có thể dùng connection string kiểu .NET qua `CONNECTIONSTRINGS__OPMWIKI` thay cho
 `DATABASE_URL`. Không cần đặt đồng thời cả hai.
 
-Không thêm tiền tố `VITE_` cho các secret trên. Vercel Function sẽ tự tạo các bảng
-cộng đồng còn thiếu trong Neon ở yêu cầu đầu tiên. Schema dùng cùng tên bảng/cột và
-định dạng PBKDF2/JWT tương thích với backend .NET hiện có.
+Không thêm tiền tố `VITE_` cho secret server. Các biến Node này chỉ áp dụng nếu một transition/rollback
+được phê duyệt; direct ASP.NET deployment dùng matrix trong [`docs/CONFIGURATION.md`](../docs/CONFIGURATION.md),
+bao gồm exact key `PublicAppUrl`.
 
-## Kiểm tra sau khi deploy
+Public `GET` Node hiện không tự thay đổi schema, nhưng một số write route legacy vẫn có logic bảo đảm bảng.
+Đây không phải migration authority cuối cùng. Trước cutover, Node runtime DDL và mọi Node writer phải bị
+loại khỏi request path; schema production chỉ thay đổi bằng EF migration từ CI/CD release migration job.
+Các bảng dùng chung giữ định dạng PBKDF2/JWT tương thích trong transition; xem
+[`docs/BACKEND_PARITY.md`](../docs/BACKEND_PARITY.md).
+
+## Kiểm tra transitional deployment đã được phê duyệt
 
 ```text
 GET  https://<domain>/api/health
@@ -70,4 +81,6 @@ POST https://<domain>/api/auth/forgot-password
 POST https://<domain>/api/auth/reset-password
 ```
 
-Không commit connection string, mật khẩu hoặc JWT signing key vào Git.
+Không dùng checklist này để deploy Node như backend authority mới. Không commit connection string, mật khẩu
+hoặc JWT signing key vào Git. Final cutover verification nằm trong
+[`docs/DEPLOYMENT_RUNBOOK.md`](../docs/DEPLOYMENT_RUNBOOK.md).

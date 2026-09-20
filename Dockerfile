@@ -16,10 +16,11 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 COPY --from=build /app .
 COPY src/data /frontend-data
-ENV ASPNETCORE_URLS=http://+:8080 \
+ENV PORT=8080 \
+    ASPNETCORE_URLS=http://0.0.0.0:8080 \
     SeedData__FrontendDataPath=/frontend-data
 EXPOSE 8080
 HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=3 \
-    CMD curl --fail --silent http://localhost:8080/api/health || exit 1
+    CMD curl --fail --silent "http://127.0.0.1:${PORT}/api/health" || exit 1
 USER $APP_UID
 ENTRYPOINT ["dotnet", "OpmWiki.Api.dll"]

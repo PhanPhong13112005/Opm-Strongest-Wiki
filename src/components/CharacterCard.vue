@@ -40,17 +40,17 @@ const foregroundFrame = computed(() => {
 const tierIcon = computed(() => {
   if (props.character?.tier) {
     const safeTier = String(props.character.tier).replace(/\+/g, 'plus')
-    return `/Quality/${safeTier}.png`
+    return `/DetailIcons/quality-${safeTier}.webp`
   }
   return ''
 })
 
 const typeIcon = computed(() => {
   const t = props.character.type?.toLowerCase() || ''
-  if (t.includes('vũ trang') || t.includes('duelist')) return '/Series/Duelist.png'
-  if (t.includes('giác đấu') || t.includes('grappler')) return '/Series/Grappler.png'
-  if (t.includes('tâm linh') || t.includes('esper')) return '/Series/Esper.png'
-  if (t.includes('công nghệ') || t.includes('hi-tech')) return '/Series/Hi-Tech.png'
+  if (t.includes('vũ trang') || t.includes('duelist')) return '/DetailIcons/series-duelist.webp'
+  if (t.includes('giác đấu') || t.includes('grappler')) return '/DetailIcons/series-grappler.webp'
+  if (t.includes('tâm linh') || t.includes('esper')) return '/DetailIcons/series-esper.webp'
+  if (t.includes('công nghệ') || t.includes('hi-tech')) return '/DetailIcons/series-hi-tech.webp'
   return ''
 })
 
@@ -65,11 +65,11 @@ const typeBgColor = computed(() => {
 
 const factionIcon = computed(() => {
   const f = props.character.faction?.toLowerCase() || ''
-  if (f.includes('anh hùng') || f.includes('hero')) return '/Faction/Hero.png'
-  if (f.includes('quái vật') || f.includes('quái nhân') || f.includes('monster')) return '/Faction/Monster.png'
-  if (f.includes('võ thuật') || f.includes('martial')) return '/Faction/Martial_Artist.png'
-  if (f.includes('tội phạm') || f.includes('outlaw')) return '/Faction/Outlaw.png'
-  if (f.includes('khác') || f.includes('other')) return '/Faction/Other.png'
+  if (f.includes('anh hùng') || f.includes('hero')) return '/DetailIcons/faction-hero.webp'
+  if (f.includes('quái vật') || f.includes('quái nhân') || f.includes('monster')) return '/DetailIcons/faction-monster.webp'
+  if (f.includes('võ thuật') || f.includes('martial')) return '/DetailIcons/faction-martial_artist.webp'
+  if (f.includes('tội phạm') || f.includes('outlaw')) return '/DetailIcons/faction-outlaw.webp'
+  if (f.includes('khác') || f.includes('other')) return '/DetailIcons/faction-other.webp'
   return ''
 })
 
@@ -84,6 +84,7 @@ const factionBgColor = computed(() => {
 })
 
 const classIcon = computed(() => {
+  if (props.character.cardClassIcon) return props.character.cardClassIcon
   if (props.character.classIcon) return props.character.classIcon
   
   const f = props.character.faction?.toLowerCase() || ''
@@ -97,6 +98,7 @@ const classIcon = computed(() => {
   
   if (isMartialArtist) return '/Class/Martial_Artist.png'
   if (isOutlaw) return '/Class/Outlaw.png'
+  if (!props.character.classLevel) return ''
   
   // Fallback for Heroes and others
   const tier = props.character.tier?.toUpperCase() || ''
@@ -109,21 +111,12 @@ const classIcon = computed(() => {
 })
 
 const keepsakeIcon = computed(() => {
-  return props.character.keepsakeIcon || null
+  return props.character.cardKeepsakeIcon || props.character.keepsakeIcon || null
 })
-
-const preloadDetails = () => {
-  if (!props.character) return;
-  const url = props.character.imageURL;
-  if (url) {
-    const img = new Image();
-    img.src = safeUrl(url);
-  }
-}
 </script>
 
 <template>
-  <div @mouseenter="preloadDetails" class="relative group cursor-pointer w-full bg-[#161719] border border-white/5 rounded-xl p-2 transition-transform duration-300 hover:scale-[1.03] hover:border-white/10 hover:shadow-xl">
+  <div class="relative group cursor-pointer w-full bg-[#161719] border border-white/5 rounded-xl p-2 transition-transform duration-300 hover:scale-[1.03] hover:border-white/10 hover:shadow-xl">
     
     <div class="flex gap-2">
       <!-- Left side: Avatar with frame -->
@@ -143,6 +136,9 @@ const preloadDetails = () => {
             :src="resolvedImage" 
             :alt="character.name" 
             loading="lazy"
+            decoding="async"
+            width="360"
+            height="360"
             class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
             onerror="this.src='https://placehold.co/400x400/222/555?text=OPM'"
           />

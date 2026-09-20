@@ -353,3 +353,29 @@ test('tier ranking encodes reserved characters in production asset URLs', () => 
   assert.match(view, /@click="confirmVote"/)
   assert.match(view, /myVotes\.has\(character\.id\) \|\| selectedInActiveRarity/)
 })
+
+test('public tier ranking remains independent from account vote policy loading', () => {
+  const view = fs.readFileSync(new URL('../src/views/TierRankingView.vue', import.meta.url), 'utf8')
+  const loadRanking = view.slice(view.indexOf('const loadRanking = async () => {'), view.indexOf('\nconst requestVote ='))
+  const mineGuardIndex = loadRanking.indexOf('if (!canLoadMyTierVotes.value) return')
+  const publicSummaryIndex = loadRanking.indexOf('summary.value = publicResult')
+  const mineRequestIndex = loadRanking.indexOf('const mine = await getMyTierVotes()')
+  const mineCatch = loadRanking.slice(loadRanking.indexOf('  } catch {', mineRequestIndex))
+
+  assert.match(view, /authState\.session\?\.role === 'User'/, 'Admin and Staff sessions must not request /mine')
+  assert.ok(publicSummaryIndex >= 0 && publicSummaryIndex < mineGuardIndex, 'public totals must be applied before loading /mine')
+  assert.ok(mineGuardIndex < mineRequestIndex, 'only User sessions may load /mine')
+  assert.match(loadRanking, /applyVotePolicy\(mine\)/, 'a verified User must still receive the /mine vote policy')
+  assert.match(mineCatch, /myVotes\.value = new Set\(\)/)
+  assert.doesNotMatch(mineCatch, /summary\.value\s*=/, 'a /mine failure must not reset public totals')
+  assert.match(loadRanking, /summary\.value = \{ totalVoters: 0, totalVotes: 0, votes: \[\] \}/, 'a public API failure must keep the baseline fallback')
+})
+
+test('admin tier ranking labels total voters as participating accounts', () => {
+  const view = fs.readFileSync(new URL('../src/views/AdminTierRankingView.vue', import.meta.url), 'utf8')
+
+  assert.match(view, /<span>TÀI KHOẢN THAM GIA<\/span>/)
+  assert.match(view, /stats\?\.totalVoters/)
+  assert.match(view, /<small>Tài khoản tham gia trong tháng<\/small>/)
+  assert.doesNotMatch(view, /<span>Nhân vật được Vote<\/span>/)
+})

@@ -3,6 +3,7 @@ import { isSameOriginApiAvailable, requestApi } from './apiClient'
 
 const TOKEN_KEY = 'opmwiki.auth.token'
 const SESSION_KEY = 'opmwiki.auth.session'
+const DEV_ADMIN_TOKEN = 'dev-admin-mock-access-token-12345'
 const AUTH_REQUEST_TIMEOUT_MS = 25_000
 const getStorage = () => typeof localStorage !== 'undefined' ? localStorage : (typeof sessionStorage !== 'undefined' ? sessionStorage : null)
 
@@ -40,7 +41,7 @@ export const getAccessToken = () => {
 export const hasValidSession = () => {
   const token = getAccessToken()
   if (!token) return false
-  if (token === 'dev-admin-mock-access-token-12345') {
+  if (token === DEV_ADMIN_TOKEN) {
     if (import.meta.env?.DEV) return Boolean(authState.session)
     clearSession()
     return false
@@ -95,7 +96,7 @@ export const login = async (username, password) => {
   } catch (error) {
     if (import.meta.env?.DEV && String(username).trim().toLowerCase() === 'admin' && (password === 'admin123' || password === 'admin')) {
       return saveSession({
-        accessToken: 'dev-admin-mock-access-token-12345',
+        accessToken: DEV_ADMIN_TOKEN,
         userId: 'admin:dev-local-admin',
         username: 'admin',
         displayName: 'Administrator (Local Dev)',
@@ -157,7 +158,7 @@ export const authorizedRequest = async (path, options = {}, params) => {
       },
     })
   } catch (error) {
-    if (error.status === 401 && !import.meta.env?.DEV) clearSession()
+    if (error.status === 401 && getAccessToken() !== DEV_ADMIN_TOKEN) clearSession()
     throw error
   }
 }
@@ -166,7 +167,7 @@ export const refreshSession = async () => {
   const account = await authorizedRequest('api/auth/me')
   if (authState.session) {
     authState.session = { ...authState.session, ...account }
-    storage()?.setItem(SESSION_KEY, JSON.stringify(authState.session))
+    getStorage()?.setItem(SESSION_KEY, JSON.stringify(authState.session))
   }
   return account
 }

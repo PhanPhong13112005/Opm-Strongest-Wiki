@@ -10,7 +10,6 @@ import { authState, clearSession, hasRole, hasValidSession } from './services/au
 const { t, locale } = useI18n()
 const route = useRoute()
 const router = useRouter()
-const DeferredAnalytics = defineAsyncComponent(() => import('@vercel/analytics/vue').then(module => module.Analytics))
 const DeferredSpeedInsights = defineAsyncComponent(() => import('@vercel/speed-insights/vue').then(module => module.SpeedInsights))
 const telemetryReady = ref(false)
 let telemetryDelayTimer = null
@@ -324,7 +323,7 @@ onBeforeUnmount(() => {
       </div>
     </div>
 
-    <div v-else class="flex-grow">
+    <div v-else class="public-route-stage flex-grow">
       <RouterView v-slot="{ Component, route: currentRoute }">
         <transition name="page"><component :is="Component" :key="currentRoute.path" /></transition>
       </RouterView>
@@ -374,7 +373,6 @@ onBeforeUnmount(() => {
     </footer>
 
     <template v-if="telemetryReady">
-      <DeferredAnalytics />
       <DeferredSpeedInsights />
     </template>
   </div>
@@ -382,4 +380,6 @@ onBeforeUnmount(() => {
 
 <style>
 .page-enter-active,.page-leave-active{transition:opacity .22s ease,transform .22s ease}.page-enter-from{opacity:0;transform:translateY(8px)}.page-leave-to{opacity:0;transform:translateY(-5px)}
+.public-route-stage{min-height:calc(100svh - 77px)}
+@media(max-width:639px){.public-route-stage{min-height:calc(100svh - 73px)}}
 </style>

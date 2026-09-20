@@ -25,6 +25,8 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
     public DbSet<PaymentTransaction> PaymentTransactions => Set<PaymentTransaction>();
     public DbSet<BalanceLedgerEntry> BalanceLedgerEntries => Set<BalanceLedgerEntry>();
     public DbSet<ReleaseScheduleEntry> ReleaseScheduleEntries => Set<ReleaseScheduleEntry>();
+    public DbSet<TierRankingVote> TierRankingVotes => Set<TierRankingVote>();
+    public DbSet<TierRankingBaseline> TierRankingBaselines => Set<TierRankingBaseline>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -35,6 +37,7 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
         ConfigureBackgears(modelBuilder);
         ConfigureTactics(modelBuilder);
         ConfigureCommunity(modelBuilder);
+        ConfigureTierRanking(modelBuilder);
     }
 
     public override int SaveChanges()
@@ -285,7 +288,17 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
     {
         modelBuilder.Entity<UserAccount>(entity =>
         {
-            entity.ToTable("user_accounts");
+            entity.ToTable("user_accounts", table =>
+            {
+                table.HasCheckConstraint(
+                    "CK_user_accounts_EmailVerificationTokenPair",
+                    "(\"EmailVerificationTokenHash\" IS NULL AND \"EmailVerificationExpiresAt\" IS NULL) OR " +
+                    "(\"EmailVerificationTokenHash\" IS NOT NULL AND \"EmailVerificationExpiresAt\" IS NOT NULL)");
+                table.HasCheckConstraint(
+                    "CK_user_accounts_EmailVerificationTokenHash",
+                    "\"EmailVerificationTokenHash\" IS NULL OR " +
+                    "\"EmailVerificationTokenHash\" ~ '^[0-9a-f]{64}$'");
+            });
             entity.HasKey(x => x.Id);
             entity.Property(x => x.Username).HasMaxLength(30);
             entity.Property(x => x.NormalizedUsername).HasMaxLength(30);
@@ -294,6 +307,9 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
             entity.Property(x => x.DisplayName).HasMaxLength(60);
             entity.Property(x => x.PasswordHash).HasMaxLength(500);
             entity.Property(x => x.PasswordResetTokenHash).HasMaxLength(64);
+            entity.Property(x => x.EmailVerified).HasDefaultValue(false);
+            entity.Property(x => x.PhoneVerified).HasDefaultValue(false);
+            entity.Property(x => x.EmailVerificationTokenHash).HasMaxLength(64);
             entity.Property(x => x.Role).HasMaxLength(20);
             entity.Property(x => x.Balance).HasPrecision(18, 2);
             entity.Property(x => x.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
@@ -302,6 +318,9 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
             entity.HasIndex(x => x.NormalizedEmail)
                 .IsUnique()
                 .HasFilter("\"NormalizedEmail\" <> ''");
+            entity.HasIndex(x => x.EmailVerificationTokenHash)
+                .IsUnique()
+                .HasFilter("\"EmailVerificationTokenHash\" IS NOT NULL");
             entity.HasIndex(x => x.Role);
         });
 
@@ -472,6 +491,70 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
         });
     }
 
+    private static void ConfigureTierRanking(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<TierRankingVote>(entity =>
+        {
+            entity.ToTable("tier_ranking_votes", table =>
+            {
+                table.HasCheckConstraint(
+                    "CK_tier_ranking_votes_VoteMonth",
+                    "\"VoteMonth\" ~ '^[0-9]{4}-(0[1-9]|1[0-2])$'");
+                table.HasCheckConstraint(
+                    "CK_tier_ranking_votes_Rarity",
+                    "\"Rarity\" IN ('UR+', 'UR', 'SSR+', 'SSR', 'SR', 'R')");
+                table.HasCheckConstraint(
+                    "CK_tier_ranking_votes_VoteSlot",
+                    "\"VoteSlot\" BETWEEN 1 AND 8");
+            });
+            entity.HasKey(x => new { x.UserId, x.CharacterId, x.VoteMonth });
+            entity.Property(x => x.CharacterId).HasMaxLength(80);
+            entity.Property(x => x.VoteMonth).HasColumnType("character(7)");
+            entity.Property(x => x.Rarity).HasMaxLength(4);
+            entity.HasIndex(x => new { x.UserId, x.VoteMonth, x.Rarity, x.VoteSlot })
+                .IsUnique();
+            entity.HasIndex(x => x.CharacterId);
+            entity.HasIndex(x => new { x.VoteMonth, x.CharacterId });
+            entity.HasIndex(x => new { x.VoteMonth, x.UserId });
+            entity.HasOne<UserAccount>()
+                .WithMany()
+                .HasForeignKey(x => x.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+            entity.HasOne<Character>()
+                .WithMany()
+                .HasForeignKey(x => x.CharacterId)
+                .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        modelBuilder.Entity<TierRankingBaseline>(entity =>
+        {
+            entity.ToTable("tier_ranking_baselines", table =>
+            {
+                table.HasCheckConstraint(
+                    "CK_tier_ranking_baselines_BaseVotes",
+                    "\"BaseVotes\" >= 0");
+                table.HasCheckConstraint(
+                    "CK_tier_ranking_baselines_BaseOrder",
+                    "\"BaseOrder\" >= 0");
+                table.HasCheckConstraint(
+                    "CK_tier_ranking_baselines_Version",
+                    "\"Version\" >= 1");
+            });
+            entity.HasKey(x => x.CharacterId);
+            entity.Property(x => x.CharacterId).HasMaxLength(80);
+            entity.Property(x => x.BaseVotes).HasDefaultValue(0);
+            entity.Property(x => x.IsCore).HasDefaultValue(false);
+            entity.Property(x => x.BaseOrder).HasDefaultValue(0);
+            entity.Property(x => x.Version).HasDefaultValue(1L);
+            entity.Property(x => x.UpdatedBySubject).HasMaxLength(200);
+            entity.HasIndex(x => new { x.IsCore, x.BaseOrder, x.CharacterId });
+            entity.HasOne<Character>()
+                .WithOne()
+                .HasForeignKey<TierRankingBaseline>(x => x.CharacterId)
+                .OnDelete(DeleteBehavior.Restrict);
+        });
+    }
+
     private static ReleaseScheduleEntry ReleaseSeed(
         long id, string server, int year, int month, int day, string characterId, string bannerImage,
         bool isReturn, int sortOrder, DateTimeOffset seededAt,
@@ -596,6 +679,16 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
         foreach (var entry in ChangeTracker.Entries<ReleaseScheduleEntry>())
         {
             if (entry.State == EntityState.Added) entry.Entity.CreatedAt = now;
+            if (entry.State is EntityState.Added or EntityState.Modified) entry.Entity.UpdatedAt = now;
+        }
+
+        foreach (var entry in ChangeTracker.Entries<TierRankingVote>())
+        {
+            if (entry.State == EntityState.Added) entry.Entity.CreatedAt = now;
+        }
+
+        foreach (var entry in ChangeTracker.Entries<TierRankingBaseline>())
+        {
             if (entry.State is EntityState.Added or EntityState.Modified) entry.Entity.UpdatedAt = now;
         }
     }

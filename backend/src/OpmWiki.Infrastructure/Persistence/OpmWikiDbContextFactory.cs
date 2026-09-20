@@ -7,8 +7,13 @@ public sealed class OpmWikiDbContextFactory : IDesignTimeDbContextFactory<OpmWik
 {
     public OpmWikiDbContext CreateDbContext(string[] args)
     {
-        var connectionString = Environment.GetEnvironmentVariable("ConnectionStrings__OpmWiki")
-            ?? "Host=localhost;Port=5432;Database=opmwiki;Username=opmwiki;Password=opmwiki";
+        var connectionString = Environment.GetEnvironmentVariable("ConnectionStrings__OpmWiki");
+        if (string.IsNullOrWhiteSpace(connectionString))
+        {
+            throw new InvalidOperationException(
+                "ConnectionStrings__OpmWiki is required for design-time database operations.");
+        }
+
         var options = new DbContextOptionsBuilder<OpmWikiDbContext>()
             .UseNpgsql(connectionString)
             .Options;

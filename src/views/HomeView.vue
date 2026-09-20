@@ -34,7 +34,15 @@ watch(locale, loadReleaseSchedule, { immediate: true })
 const safeUrl = safeAssetUrl
 const optimizedHomeImages = new Map([
   ['/Characters/Full_Background/Black_Sperm_Ur_plus.png', '/Characters/Full_Background/Black_Sperm_Ur_plus.webp'],
+  ['/Characters/Full_Background/Homeless_Emperor_URplus.png', '/Characters/Full_Background/Homeless_Emperor_URplus.webp'],
 ])
+const responsiveHomeImages = new Map([
+  ['/Characters/Full_Background/Homeless_Emperor_URplus.png', { slug: 'homeless-emperor-urplus', width: 2400, height: 1473 }],
+  ['/Characters/Full_Background/ZombIeMan_URplus.png', { slug: 'zombieman-urplus', width: 2400, height: 1584 }],
+  ['/Characters/Full_Background/Bang&Bomb_Urplus.png', { slug: 'bang-bomb-urplus', width: 2400, height: 1023 }],
+  ['/Characters/Full_Background/Atomic Samurai_URplus.png', { slug: 'atomic-samurai-urplus', width: 2400, height: 1023 }],
+])
+const responsiveHomeWidths = [320, 640, 960, 1600, 2400]
 
 const getCharacterImage = (filename) => {
   if (!filename) return ''
@@ -43,9 +51,24 @@ const getCharacterImage = (filename) => {
   return safeUrl(new URL(`../assets/characters/${optimizedFilename}`, import.meta.url).href)
 }
 
+const getCharacterImageSet = (filename) => {
+  const responsiveImage = responsiveHomeImages.get(filename)
+  if (!responsiveImage) return { src: getCharacterImage(filename), srcset: '' }
+
+  const basePath = `/Characters/Full_Background/optimized/${responsiveImage.slug}`
+  return {
+    src: safeUrl(`${basePath}-960.webp`),
+    srcset: responsiveHomeWidths
+      .map(width => `${safeUrl(`${basePath}-${width}.webp`)} ${width}w`)
+      .join(', '),
+    width: responsiveImage.width,
+    height: responsiveImage.height,
+  }
+}
+
 const getChar = (id) => charactersData.value.find(c => c.id === id) || {}
 
-const currentDate = ref(new Date(2026, 7)) // Starts at August 2026 (0-indexed month)
+const currentDate = ref(new Date(2026, 8)) // Starts at September 2026 (0-indexed month)
 
 const currentMonthStr = computed(() => {
   const y = currentDate.value.getFullYear()
@@ -261,13 +284,8 @@ const fallbackScheduleData = computed(() => ({
       serverColor: '#00d8b6',
       items: [
         {
-          id: 'unknown',
-          overrideName: t('home.unknownCharacter'),
-          overrideTier: 'UR+',
-          overrideFaction: 'UNKNOWN',
-          overrideType: 'UNKNOWN',
-          overrideRole: t('home.hiddenPotential'),
-          bannerImage: '/Characters/Full_Background/Nhan_Vat_Bi_An.jpg',
+          id: 'homeless-emperor-urplus',
+          bannerImage: '/Characters/Full_Background/Homeless_Emperor_URplus.png',
           tag: t('home.release'),
           tagBg: 'bg-opm-gold text-black',
           tagText: 'text-opm-gold',
@@ -439,6 +457,7 @@ const servers = computed(() => {
     :has-previous="hasPrevMonth"
     :has-next="hasNextMonth"
     :transition-name="transitionName"
+    :get-character-image-set="getCharacterImageSet"
     :get-character-image="getCharacterImage"
     :get-character="getChar"
     @previous="prevMonth"

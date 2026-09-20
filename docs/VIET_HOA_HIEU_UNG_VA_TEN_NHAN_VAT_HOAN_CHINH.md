@@ -3,7 +3,7 @@
 > **Trạng thái triển khai — 04/08/2026**
 >
 > - Đây là bảng chốt chuẩn đang được dùng để kiểm tra dữ liệu Việt hóa.
-> - Đã áp dụng đủ **318 thuật ngữ/hiệu ứng** và **177 tên nhân vật** vào `src/data/characters.json`.
+> - Đã áp dụng đủ **329 thuật ngữ/hiệu ứng** và **178 tên nhân vật** vào `src/data/characters.json`.
 > - Website không đọc Markdown này ở runtime; test tự động dùng bảng để phát hiện bản dịch thiếu hoặc bị lệch.
 > - Tìm kiếm nhân vật hỗ trợ tên Việt, tên Anh, tên cũ, ID và tiếng Việt không dấu ở cả hai giao diện VI/EN.
 > - Lần xác minh gần nhất: `npm.cmd test` đạt **46/46**, `npm.cmd run build` thành công.
@@ -18,7 +18,7 @@ File này là phiếu biên tập. Chưa được đọc tự động bởi webs
 - Nếu muốn giữ nguyên tên tiếng Anh, hãy chép nguyên tên đó vào cột Việt.
 - Ví dụ: `Specialized Direct DMG` → `Sát Thương Trực Tiếp Chuyên Biệt`.
 
-## 1. Thuật ngữ và hiệu ứng (318 mục)
+## 1. Thuật ngữ và hiệu ứng (329 mục)
 
 | STT | Đã chốt | Thuật ngữ EN nguồn | Tên Việt bạn chốt | Nhân vật đang sử dụng |
 |---:|:---:|---|---|---|
@@ -340,8 +340,19 @@ File này là phiếu biên tập. Chưa được đọc tự động bởi webs
 | 316 | [x] | `Wild` | `Cuồng Dã` | Carnage Kabuto (100156-ssrplus) |
 | 317 | [x] | `Wild Follow-up` | `Truy Kích Cuồng Dã` | Carnage Kabuto (100302-ur) |
 | 318 | [x] | `Wrath` | `Phẫn Nộ` | Tatsumaki/Terrible Tornado (100180-ur), Tatsumaki/Terrible Tornado (100180-urplus) |
+| 319 | [x] | `Destructive Momentum: Assault` | `Động Lực Hủy Diệt: Công Kích` | Homeless Emperor (homeless-emperor-urplus) |
+| 320 | [x] | `Destructive Momentum: Defense` | `Động Lực Hủy Diệt: Phòng Thủ` | Homeless Emperor (homeless-emperor-urplus) |
+| 321 | [x] | `Energy Erosion` | `Xói Mòn Năng Lượng` | Homeless Emperor (homeless-emperor-urplus) |
+| 322 | [x] | `Extreme Speed-Up` | `Tăng Tốc Cực Hạn` | Homeless Emperor (homeless-emperor-urplus) |
+| 323 | [x] | `normal Speed-Up` | `Tăng Tốc thường` | Homeless Emperor (homeless-emperor-urplus) |
+| 324 | [x] | `Specialized Critical Hit` | `Bạo Kích Chuyên Biệt` | Homeless Emperor (homeless-emperor-urplus) |
+| 325 | [x] | `Specialized Critical Hits` | `Bạo Kích Chuyên Biệt` | Homeless Emperor (homeless-emperor-urplus) |
+| 326 | [x] | `Specialized Non-Crit Hit DMG Reduction` | `Giảm Sát Thương Đòn Đánh Không Bạo Kích Chuyên Biệt` | Homeless Emperor (homeless-emperor-urplus) |
+| 327 | [x] | `Specialized Speed-Up` | `Tăng Tốc Chuyên Biệt` | Homeless Emperor (homeless-emperor-urplus) |
+| 328 | [x] | `Speed Domain` | `Lĩnh Vực Tốc Độ` | Homeless Emperor (homeless-emperor-urplus) |
+| 329 | [x] | `Specialized Non-Crit DMG Reduction` | `Giảm Sát Thương Không Bạo Kích Chuyên Biệt` | Homeless Emperor (homeless-emperor-urplus) |
 
-## 2. Tên nhân vật (177 mục)
+## 2. Tên nhân vật (178 mục)
 
 | STT | Đã chốt | ID | Bậc | Tên EN hiện tại | Tên VI hiện tại | Tên Việt bạn chốt |
 |---:|:---:|---|:---:|---|---|---|
@@ -522,6 +533,7 @@ File này là phiếu biên tập. Chưa được đọc tự động bởi webs
 | 175 | [x] | `100023-n` | N | Slugrus | Slugrus | Slugrus |
 | 176 | [x] | `200011-n` | N | Subterranean Brute | Subterranean Brute | Kẻ Hung Bạo Lòng Đất |
 | 177 | [x] | `200027-n` | N | Subterranean Champion | Subterranean Champion | Nhà Vô Địch Lòng Đất |
+| 178 | [x] | `homeless-emperor-urplus` | UR+ | Homeless Emperor | Homeless Emperor | Vua Không Nhà |
 
 ## Ghi chú sau khi hoàn tất
 

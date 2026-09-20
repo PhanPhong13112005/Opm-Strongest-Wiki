@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OpmWiki.Application.Abstractions;
+using OpmWiki.Application.Common;
 using OpmWiki.Infrastructure.Persistence;
 using OpmWiki.Infrastructure.Repositories;
 using OpmWiki.Infrastructure.Seeding;
@@ -33,6 +34,10 @@ public static class DependencyInjection
         services.AddScoped<IBackgearRepository, BackgearRepository>();
         services.AddScoped<ITacticRepository, TacticRepository>();
         services.AddScoped<ICommunityRepository, CommunityRepository>();
+        services.AddScoped<IAdminCommunityRepository, AdminCommunityRepository>();
+        services.AddScoped<ITierRankingRepository, PostgresTierRankingRepository>();
+        services.AddScoped<IEmailVerificationRepository, PostgresEmailVerificationRepository>();
+        services.AddScoped<ISchemaCapabilityService, PostgresSchemaCapabilityService>();
         services.AddScoped<IDataSeeder, JsonDataSeeder>();
 
         var configuredDataPath = configuration["SeedData:FrontendDataPath"] ?? "../../../src/data";

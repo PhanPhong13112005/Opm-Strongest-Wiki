@@ -216,6 +216,11 @@ import { ref, computed, watch, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import coreLabData from '@/data/coreLab.json'
+import {
+  getCoreLabHeroPortrait,
+  getCoreLabItemIcon,
+  getCoreLabMilestoneIcon,
+} from '@/utils/coreLabAssetPaths'
 
 const { t, locale } = useI18n()
 const route = useRoute()
@@ -226,24 +231,6 @@ const selectedHeroId = ref(route.query.hero || (heroes.length > 0 ? heroes[0].co
 const coreTransition = ref('fade')
 const fromLevel = ref(0)
 const toLevel = ref(4)
-
-const suffixToFolder = {
-  '307': 'Psykos_V2',
-  '196': 'Child_Emperor_V2',
-  '184': 'Boros',
-  '078': 'Drive_Knight',
-  '159': 'Geryuganshoop',
-  '108': 'Bomb',
-  '045': 'Child_Emperor',
-  '003': 'SeaKing',
-  '109': 'Psykos',
-  '013': 'Zombie_Man',
-  '029': 'Amai',
-  '092': 'Bakuzan',
-  '083': 'Genus',
-  '001': 'Genos',
-  '008': 'Mosquito_Girl'
-}
 
 // Helper: Format number with commas
 const formatNumber = (num) => {
@@ -377,44 +364,15 @@ const formatCoreEffect = (text, basicCondition, advancedCondition) => {
 }
 
 const getItemIcon = (itemId, hero) => {
-  if (!hero) return '';
-  const folder = suffixToFolder[hero.iconSuffix];
-  if (!folder) return '';
-  
-  if (itemId === '0') return '/Core_Skill/Items/gold.png'; // Gold
-  
-  if (itemId.startsWith('it_215')) {
-    const filename = itemId.replace('it_', 'Item_');
-    return `/Core_Skill/${folder}/${filename}.png`;
-  }
-
-  // Generic items like Tâm Đắc (it_214001) and Ghi Chép (it_214002)
-  if (itemId.startsWith('it_214')) {
-    const filename = itemId.replace('it_', 'Item_');
-    return `/Core_Skill/Items/${filename}.png`;
-  }
-  
-  const item = items[itemId]
-  return item?.icon || '';
+  return getCoreLabItemIcon(itemId, hero, items)
 }
 
 const getMilestoneIcon = (milestoneIconPath, hero) => {
-  if (!milestoneIconPath || !hero) return '';
-  const folder = suffixToFolder[hero.iconSuffix];
-  if (!folder) return milestoneIconPath;
-  
-  const match = milestoneIconPath.match(/\/([^/]+)\.webp$/);
-  if (match) {
-    return `/Core_Skill/${folder}/${match[1]}.png`;
-  }
-  return milestoneIconPath;
+  return getCoreLabMilestoneIcon(milestoneIconPath, hero)
 }
 
 const getHeroPortrait = (hero) => {
-  if (!hero) return '';
-  const folder = suffixToFolder[hero.iconSuffix];
-  if (!folder) return hero.portrait || '';
-  return `/Core_Skill/${folder}/${hero.iconSuffix}_c.png`;
+  return getCoreLabHeroPortrait(hero)
 }
 
 const getItemName = (itemId) => {

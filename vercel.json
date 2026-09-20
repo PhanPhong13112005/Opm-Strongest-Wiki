@@ -1,19 +1,9 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/api/webhooks/sepay", "destination": "/api/sepay-webhook" },
-    { "source": "/api/migrate", "destination": "/api/migrate" },
-    { "source": "/api/:path*", "destination": "/api?path=:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "functions": {
-    "api/index.js": {
-      "maxDuration": 30
-    },
-    "api/sepay-webhook.js": {
-      "maxDuration": 30
-    },
-    "api/migrate.js": {
-      "maxDuration": 60
-    }
-  }
+  ]
 }

@@ -95,10 +95,9 @@ test.describe('Client-side Navigation Race Condition Regression Tests', () => {
         await expect(page.locator('.site-header')).toBeVisible()
         await expect(page.locator('.site-footer')).toBeVisible()
 
-        const mainContent = page.locator('main')
-        await expect(mainContent).toBeVisible()
-        const text = await mainContent.textContent()
-        expect(text.trim().length).toBeGreaterThan(0)
+        const routeContent = page.locator('.public-route-stage > *').last()
+        await expect(routeContent).toBeVisible()
+        await expect(routeContent).toContainText(/\S/)
       }
     }
 

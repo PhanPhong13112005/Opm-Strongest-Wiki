@@ -40,6 +40,16 @@ for (const milestone of mirageData) {
 }
 
 // Emblem Ultimate Skills Data
+const emblemSkillOrder = [
+  'undying_shield',
+  'sharp_blade',
+  'distorted_field',
+  'eternal_heart',
+  'reviving_wind',
+  'piercing_sword',
+  'wall_sanctuary'
+]
+
 const emblemSkillsData = [
   // Ultimate Emblems
   {
@@ -169,7 +179,7 @@ const emblemSkillsData = [
     id: 'reviving_wind',
     nameVi: 'Ngọn Gió Phục Sinh', nameEn: 'Reviving Wind',
     type: 'Passive',
-    inlay: 2,
+    inlay: 3,
     skillEffectVi: 'Bắt đầu hiệp, hàng trước nhận Hồi máu bằng 100% HP Tối đa. Kích hoạt 1 lần mỗi trận.',
     skillEffectEn: 'At the beginning of the round, Front Row characters receive 100% Max HP Healing. Triggers once.',
     enhance: [
@@ -179,16 +189,16 @@ const emblemSkillsData = [
       { level: 4, descVi: 'Tăng hiệu ứng hồi máu lên 150% HP Tối đa.', descEn: 'Healing Effect increased to 150% of Max HP.' }
     ],
     ascend: [
-      { star: 1, descVi: 'Đang cập nhật...', descEn: 'TBD' },
-      { star: 2, descVi: 'Đang cập nhật...', descEn: 'TBD' },
-      { star: 3, descVi: 'Đang cập nhật...', descEn: 'TBD' },
-      { star: 4, descVi: 'Đang cập nhật...', descEn: 'TBD' },
-      { star: 5, descVi: 'Đang cập nhật...', descEn: 'TBD' }
+      { star: 1, descVi: 'Tất cả tăng 10% ATK', descEn: 'All ATK +10%' },
+      { star: 2, descVi: 'Tất cả tăng 5% Miễn ST Đấu Trường', descEn: 'All Arena DMG Free +5%' },
+      { star: 3, descVi: 'Tất cả tăng 10% HP', descEn: 'All HP +10%' },
+      { star: 4, descVi: 'Tất cả tăng 5% Miễn ST Đấu Trường', descEn: 'All Arena DMG Free +5%' },
+      { star: 5, descVi: 'Tất cả tăng 8% ST Đấu Trường', descEn: 'All Arena DMG +8%' }
     ]
   }
-]
+].sort((left, right) => emblemSkillOrder.indexOf(left.id) - emblemSkillOrder.indexOf(right.id))
 
-const activeEmblemId = ref('eternal_heart')
+const activeEmblemId = ref(emblemSkillOrder[0])
 const activeEmblem = computed(() => emblemSkillsData.find(e => e.id === activeEmblemId.value) || emblemSkillsData[0])
 
 // Carousel Logic
@@ -196,11 +206,11 @@ const currentImageIndex = ref(0)
 const illustrations = {
   mirage: [
     '/Feature/medals/Mirage_trial/Main.png',
-    '/Feature/medals/Mirage_trial/Ảnh chụp màn hình 2026-07-14 153422.png',
-    '/Feature/medals/Mirage_trial/Ảnh chụp màn hình 2026-07-14 153429.png',
-    '/Feature/medals/Mirage_trial/Ảnh chụp màn hình 2026-07-14 153440.png',
-    '/Feature/medals/Mirage_trial/Ảnh chụp màn hình 2026-07-14 153446.png',
-    '/Feature/medals/Mirage_trial/Ảnh chụp màn hình 2026-07-14 153457.png'
+    '/Feature/medals/Mirage_trial/screenshot-2026-07-14-153422.png',
+    '/Feature/medals/Mirage_trial/screenshot-2026-07-14-153429.png',
+    '/Feature/medals/Mirage_trial/screenshot-2026-07-14-153440.png',
+    '/Feature/medals/Mirage_trial/screenshot-2026-07-14-153446.png',
+    '/Feature/medals/Mirage_trial/screenshot-2026-07-14-153457.png'
   ],
   gems: [
     '/Feature/medals/Gem/TSG_00_1.png',

@@ -3,10 +3,13 @@ import { handleAuthRoute } from './_lib/authRoutes.js'
 import { handleAdminDataRoute } from './_lib/adminRoutes.js'
 import { handleCommunityRoute } from './_lib/communityRoutes.js'
 import { json, routePath } from './_lib/http.js'
+import { enforceApiWriterFence } from './_lib/writerFence.js'
 
 export default async function handler(request, response) {
   response.setHeader('Cache-Control', 'no-store')
   const path = routePath(request)
+
+  if (enforceApiWriterFence(request, response, path)) return
 
   try {
     if (path === '/health') {

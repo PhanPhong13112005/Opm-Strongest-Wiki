@@ -1,5 +1,17 @@
 [
   {
+    "id": "homeless-emperor-urplus",
+    "tier": "UR+",
+    "imageURL": "/Characters/Homeless Emperor (URplus)/URplus.png",
+    "nameVi": "Vua Không Nhà",
+    "nameEn": "Homeless Emperor",
+    "typeVi": "Tâm Linh",
+    "typeEn": "Esper",
+    "factionVi": "Quái Nhân",
+    "factionEn": "Monster",
+    "baseOrder": 11
+  },
+  {
     "id": "blacksperm-urplus",
     "tier": "UR+",
     "imageURL": "/Characters/Black Sperm (UR+)/Black_Sperm.png",

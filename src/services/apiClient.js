@@ -146,9 +146,9 @@ export const invalidateApiCache = (pathPrefix = '') => {
 
 export const isApiConfigured = () => Boolean(API_BASE_URL)
 
-// Authentication, community and public read APIs are deployed as same-origin
-// Vercel Functions in production. Public services keep their bundled JSON as
-// an offline fallback when the API or database is unavailable.
+// Final production uses one configured ASP.NET origin via VITE_API_BASE_URL.
+// Same-origin Vercel Functions remain transitional only. Public services may
+// keep their explicitly designed bundled JSON fallback; dynamic writes do not.
 export const isSameOriginApiAvailable = () => Boolean(
   API_BASE_URL || (typeof globalThis.location?.origin === 'string' && globalThis.location.origin),
 )

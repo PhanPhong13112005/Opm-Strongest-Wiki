@@ -26,7 +26,7 @@ public sealed class PasswordResetEmailService(
     {
         var configuredOrigin = options.PublicAppUrl.Trim().TrimEnd('/');
         if (environment.IsProduction() && string.IsNullOrWhiteSpace(configuredOrigin))
-            throw new InvalidOperationException("PUBLIC_APP_URL must be configured for password reset emails.");
+            throw new InvalidOperationException("PublicAppUrl must be configured for password reset emails.");
 
         var origin = !string.IsNullOrWhiteSpace(configuredOrigin)
             ? configuredOrigin

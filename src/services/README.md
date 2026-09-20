@@ -38,7 +38,7 @@ giao diện trong `events.json`, ví dụ ngày mở server và nội dung nhi�
 `tacticApi.js` tải 19 Thẻ Chiến thuật và 13 Khung, bao gồm toàn bộ chỉ số từ 0 đến 7 sao;
 `tactics.json` là nguồn seed PostgreSQL và fallback cho giao diện.
 
-`adminApi.js` quản lý phiên JWT trong `sessionStorage` và cung cấp các lệnh đăng nhập, tìm kiếm,
+`authApi.js` quản lý phiên JWT chính trong `localStorage`, đồng thời đọc/xóa `sessionStorage` cũ để tương thích, và cung cấp các lệnh đăng nhập, tìm kiếm,
 thêm/sửa/xóa Nhân vật, cùng thao tác gắn/đổi/gỡ Kỷ vật. API quản trị không dùng JSON fallback:
 backend và `VITE_API_BASE_URL` phải được cấu hình để tránh ghi nhầm vào dữ liệu tĩnh.
 

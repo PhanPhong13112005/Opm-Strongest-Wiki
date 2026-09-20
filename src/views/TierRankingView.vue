@@ -22,14 +22,15 @@ const votingId = ref('')
 const errorMessage = ref('')
 const pendingVote = ref(null)
 const confirmVoteButtonRef = ref(null)
-const votePolicy = ref({
-  voteMonth: '',
-  resetsAt: '',
+const safeVotePolicy = (result = {}) => ({
+  voteMonth: String(result.voteMonth || ''),
+  resetsAt: String(result.resetsAt || ''),
   maxVotesPerRarity: 1,
   hasVerifiedContact: false,
   emailVerified: false,
   phoneVerified: false,
 })
+const votePolicy = ref(safeVotePolicy())
 
 const activeRarityIndex = computed(() => rarities.indexOf(activeRarity.value))
 const canGoToPreviousRarity = computed(() => activeRarityIndex.value > 0)
@@ -125,6 +126,7 @@ const messages = {
 
 const text = computed(() => messages[locale.value === 'en' ? 'en' : 'vi'])
 const isAuthenticated = computed(() => Boolean(authState.session) && hasValidSession())
+const canLoadMyTierVotes = computed(() => isAuthenticated.value && authState.session?.role === 'User')
 const voteMap = computed(() => new Map(summary.value.votes.map(item => [item.characterId, Number(item.votes || 0)])))
 const activeRarityCharacterIds = computed(() => new Set(
   catalog.filter(character => character.tier === activeRarity.value).map(character => character.id),
@@ -205,23 +207,28 @@ const scrollBand = (direction, event) => {
 const loadRanking = async () => {
   loading.value = true
   errorMessage.value = ''
+  myVotes.value = new Set()
   try {
     const publicResult = await getTierRankings()
     summary.value = publicResult
-    votePolicy.value = { ...votePolicy.value, voteMonth: publicResult.voteMonth || '', resetsAt: publicResult.resetsAt || '' }
-    if (isAuthenticated.value) {
-      const mine = await getMyTierVotes()
-      myVotes.value = new Set(mine.characterIds || [])
-      applyVotePolicy(mine)
-    } else {
-      myVotes.value = new Set()
-    }
+    votePolicy.value = safeVotePolicy(publicResult)
   } catch (error) {
     errorMessage.value = error?.status ? (error.message || text.value.fallback) : text.value.fallback
     summary.value = { totalVoters: 0, totalVotes: 0, votes: [] }
-    myVotes.value = new Set()
+    votePolicy.value = safeVotePolicy()
+    return
   } finally {
     loading.value = false
+  }
+
+  if (!canLoadMyTierVotes.value) return
+
+  try {
+    const mine = await getMyTierVotes()
+    myVotes.value = new Set(mine.characterIds || [])
+    applyVotePolicy(mine)
+  } catch {
+    myVotes.value = new Set()
   }
 }
 
@@ -437,8 +444,6 @@ onMounted(loadRanking)
       </div>
       </Transition>
     </section>
-  </main>
-
   <Teleport to="body">
     <Transition name="vote-confirm-dialog">
       <div
@@ -471,6 +476,7 @@ onMounted(loadRanking)
       </div>
     </Transition>
   </Teleport>
+  </main>
 </template>
 
 <style scoped>
