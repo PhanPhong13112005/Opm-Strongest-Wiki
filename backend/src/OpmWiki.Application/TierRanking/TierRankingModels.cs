@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
+using System.Text.Json.Serialization;
+
 namespace OpmWiki.Application.TierRanking;
 
 public static class TierVotePolicy
@@ -15,12 +17,48 @@ public static class TierVotePolicy
 
 public sealed record TierRankingVoteCountDto(string CharacterId, int Votes);
 
+public sealed record TierRankingAggregatesDto(
+    int EligibleCharacterCount,
+    int BaselineScoreTotal,
+    int BaselineReferenceSize,
+    int CommunityVoteTotal,
+    int CommunityVoterCount,
+    int CombinedScoreTotal);
+
+public sealed record TierRankingEntryDto(
+    string CharacterId,
+    string Tier,
+    int BaseVotes,
+    int CommunityVotes,
+    int TotalScore,
+    int BaseOrder,
+    bool IsCore,
+    string Band,
+    int Rank,
+    int BandRank);
+
+public sealed record TierRankingScoreInput(
+    string CharacterId,
+    string Tier,
+    int BaseVotes,
+    int CommunityVotes,
+    int BaseOrder,
+    bool IsCore);
+
 public sealed record TierRankingPublicDto(
     string VoteMonth,
     DateTimeOffset ResetsAt,
     int TotalVotes,
     int TotalVoters,
-    IReadOnlyList<TierRankingVoteCountDto> Votes);
+    IReadOnlyList<TierRankingVoteCountDto> Votes)
+{
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int? SchemaVersion { get; init; }
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public TierRankingAggregatesDto? Aggregates { get; init; }
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public IReadOnlyList<TierRankingEntryDto>? Rankings { get; init; }
+}
 
 public sealed record TierRankingMineDto(
     IReadOnlyList<string> CharacterIds,

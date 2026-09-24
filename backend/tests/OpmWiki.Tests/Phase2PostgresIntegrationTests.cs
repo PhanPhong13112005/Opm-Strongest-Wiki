@@ -165,8 +165,8 @@ public sealed class Phase2PostgresIntegrationTests
         var service = new TierRankingService(new PostgresTierRankingRepository(context), time);
         var stats = (await service.GetAdminStatsAsync("2026-08", 1, 25)).Value!;
 
-        Assert.Equal(11, stats.TotalItems);
-        Assert.Equal(11, stats.Characters.Count);
+        Assert.Equal(160, stats.TotalItems);
+        Assert.Equal(25, stats.Characters.Count);
         Assert.True(stats.TotalVotes >= 11);
         Assert.True(stats.TotalVoters >= 3);
         Assert.All(stats.Characters, row =>
@@ -452,12 +452,43 @@ public sealed class Phase2PostgresIntegrationTests
             ('ur-9', 'UR Chín', 'UR Nine', 'UR'), ('ur-10', 'UR Mười', 'UR Ten', 'UR'),
             ('sr-1', 'SR Một', 'SR One', 'SR'), ('ineligible', 'Không hợp lệ', 'Ineligible', 'N');
 
+        INSERT INTO characters ("Id", "NameVi", "NameEn", "Tier")
+        SELECT 'fixture-urplus-' || lpad(i::text, 2, '0'), 'UR+ Fixture ' || i, 'UR+ Fixture ' || i, 'UR+'
+          FROM generate_series(1, 12) AS i
+        UNION ALL
+        SELECT 'fixture-ur-' || lpad(i::text, 2, '0'), 'UR Fixture ' || i, 'UR Fixture ' || i, 'UR'
+          FROM generate_series(1, 18) AS i
+        UNION ALL
+        SELECT 'fixture-ssrplus-' || lpad(i::text, 2, '0'), 'SSR+ Fixture ' || i, 'SSR+ Fixture ' || i, 'SSR+'
+          FROM generate_series(1, 26) AS i
+        UNION ALL
+        SELECT 'fixture-ssr-' || lpad(i::text, 2, '0'), 'SSR Fixture ' || i, 'SSR Fixture ' || i, 'SSR'
+          FROM generate_series(1, 42) AS i
+        UNION ALL
+        SELECT 'fixture-sr-' || lpad(i::text, 2, '0'), 'SR Fixture ' || i, 'SR Fixture ' || i, 'SR'
+          FROM generate_series(1, 34) AS i
+        UNION ALL
+        SELECT 'fixture-r-' || lpad(i::text, 2, '0'), 'R Fixture ' || i, 'R Fixture ' || i, 'R'
+          FROM generate_series(1, 17) AS i;
+
         INSERT INTO tier_ranking_baselines
             ("CharacterId", "BaseVotes", "IsCore", "BaseOrder", "Version", "UpdatedBySubject")
-        SELECT "Id", CASE WHEN "Id" = 'ur-1' THEN 10 ELSE 0 END,
-               "Id" = 'ur-2', ROW_NUMBER() OVER (ORDER BY "Id")::integer, 1, 'test-fixture'
+        SELECT "Id",
+               CASE
+                   WHEN "Tier" IN ('UR+', 'SSR+', 'SSR') THEN 4
+                   WHEN "Tier" = 'UR' AND "Id" = 'ur-1' THEN 10
+                   WHEN "Tier" = 'UR' AND "Id" LIKE 'fixture-%' THEN 4
+                   WHEN "Tier" = 'SR' AND "Id" LIKE 'fixture-%' THEN 3
+                   WHEN "Tier" = 'R' AND "Id" = 'fixture-r-01' THEN 4
+                   WHEN "Tier" = 'R' THEN 2
+                   ELSE 0
+               END,
+               "Id" = 'ur-2',
+               ROW_NUMBER() OVER (PARTITION BY "Tier" ORDER BY "Id")::integer,
+               1,
+               'test-fixture'
           FROM characters
-         WHERE "Tier" IN ('UR', 'SR');
+         WHERE "Tier" IN ('UR+', 'UR', 'SSR+', 'SSR', 'SR', 'R');
 
         INSERT INTO forum_topics
             ("Id", "UserId", "Title", "Content", "IsLocked", "IsDeleted", "CreatedAt", "UpdatedAt")

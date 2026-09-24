@@ -25,4 +25,10 @@
     <ProjectReference Include="..\..\src\OpmWiki.Infrastructure\OpmWiki.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="..\..\..\mobile\test\fixtures\api\tier_rankings_v2_parity.json"
+          Link="Fixtures\tier_rankings_v2_parity.json"
+          CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>

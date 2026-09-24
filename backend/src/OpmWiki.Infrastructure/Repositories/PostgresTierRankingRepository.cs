@@ -20,7 +20,10 @@ public sealed class PostgresTierRankingRepository(OpmWikiDbContext dbContext)
         var shouldClose = await OpenIfNeededAsync(connection, cancellationToken);
         try
         {
-            await using var totalsCommand = CreateCommand(connection, null, """
+            await using var transaction = await connection.BeginTransactionAsync(
+                IsolationLevel.RepeatableRead,
+                cancellationToken);
+            await using var totalsCommand = CreateCommand(connection, transaction, """
                 SELECT COUNT(*)::integer,
                        COUNT(DISTINCT "UserId")::integer
                   FROM tier_ranking_votes
@@ -33,7 +36,7 @@ public sealed class PostgresTierRankingRepository(OpmWikiDbContext dbContext)
             var totalVoters = totalsReader.GetInt32(1);
             await totalsReader.DisposeAsync();
 
-            await using var rowsCommand = CreateCommand(connection, null, """
+            await using var rowsCommand = CreateCommand(connection, transaction, """
                 SELECT "CharacterId", COUNT(*)::integer AS votes
                   FROM tier_ranking_votes
                  WHERE "VoteMonth" = @voteMonth
@@ -45,13 +48,55 @@ public sealed class PostgresTierRankingRepository(OpmWikiDbContext dbContext)
             await using var rowsReader = await rowsCommand.ExecuteReaderAsync(cancellationToken);
             while (await rowsReader.ReadAsync(cancellationToken))
                 rows.Add(new(rowsReader.GetString(0), rowsReader.GetInt32(1)));
+            await rowsReader.DisposeAsync();
 
-            return new TierRankingPublicDto(
+            await using var rankingsCommand = CreateCommand(connection, transaction, """
+                SELECT b."CharacterId",
+                       c."Tier",
+                       b."BaseVotes",
+                       COALESCE(v.community_votes, 0)::integer AS community_votes,
+                       b."BaseOrder",
+                       b."IsCore"
+                  FROM tier_ranking_baselines b
+                  INNER JOIN characters c ON c."Id" = b."CharacterId"
+                  LEFT JOIN (
+                      SELECT "CharacterId", COUNT(*)::integer AS community_votes
+                        FROM tier_ranking_votes
+                       WHERE "VoteMonth" = @voteMonth
+                       GROUP BY "CharacterId"
+                  ) v ON v."CharacterId" = b."CharacterId"
+                 ORDER BY b."CharacterId";
+                """);
+            AddParameter(rankingsCommand, "voteMonth", voteMonth.Value);
+            var scoreInputs = new List<TierRankingScoreInput>();
+            await using var rankingsReader = await rankingsCommand.ExecuteReaderAsync(cancellationToken);
+            while (await rankingsReader.ReadAsync(cancellationToken))
+            {
+                scoreInputs.Add(new TierRankingScoreInput(
+                    rankingsReader.GetString(0),
+                    rankingsReader.GetString(1),
+                    rankingsReader.GetInt32(2),
+                    rankingsReader.GetInt32(3),
+                    rankingsReader.GetInt32(4),
+                    rankingsReader.GetBoolean(5)));
+            }
+            await rankingsReader.DisposeAsync();
+
+            var projection = TierRankingV2Projection.Build(scoreInputs, totalVotes, totalVoters);
+
+            var result = new TierRankingPublicDto(
                 voteMonth.Value,
                 voteMonth.ResetsAt,
                 totalVotes,
                 totalVoters,
-                rows);
+                rows)
+            {
+                SchemaVersion = TierRankingV2Projection.SchemaVersion,
+                Aggregates = projection.Aggregates,
+                Rankings = projection.Rankings,
+            };
+            await transaction.CommitAsync(cancellationToken);
+            return result;
         }
         finally
         {
