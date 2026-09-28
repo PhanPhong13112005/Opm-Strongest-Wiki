@@ -10,6 +10,19 @@
   "homeSubtitle": "Browse One Punch Man: The Strongest data quickly, clearly, and consistently.",
   "homeFoundation": "M1 foundation",
   "homeFoundationBody": "App shell, navigation, environment configuration, and read-only networking are ready.",
+  "releaseScheduleTitle": "Character release schedule",
+  "releaseScheduleCount": "{count} entries from the OPM Wiki API",
+  "@releaseScheduleCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "releaseScheduleNew": "Release",
+  "releaseScheduleReturn": "Return",
+  "releaseScheduleCached": "Showing the last successfully loaded API data because the current connection is unavailable.",
+  "releaseScheduleEmpty": "No release schedule is available from the server.",
   "wikiTitle": "Wiki library",
   "wikiSubtitle": "Character content and searchable data will be connected in M2.",
   "wikiSearchHint": "Search characters...",
@@ -23,5 +36,80 @@
   "loadingLabel": "Loading...",
   "errorTitle": "Unable to load data",
   "emptyTitle": "No data yet",
-  "retryLabel": "Retry"
+  "retryLabel": "Retry",
+  "noCharactersFound": "No matching characters found",
+  "charactersCount": "{count} characters",
+  "@charactersCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "characterDetailTitle": "Character Detail",
+  "characterNotFound": "Character not found",
+  "characterNotFoundDescription": "This character may not exist or has been removed.",
+  "characterBio": "Biography",
+  "characterSkills": "Skills",
+  "characterEffects": "Skill Effects",
+  "characterStats": "Stats",
+  "baseStats": "Base Stats",
+  "pvpStats": "PvP Stats",
+  "characterBonds": "Bonds",
+  "releaseSeaLabel": "SEA Release",
+  "releaseChinaLabel": "China Release",
+  "rolesLabel": "Roles",
+  "classLevelLabel": "Class",
+  "statAtk": "ATK",
+  "statHp": "HP",
+  "statDef": "DEF",
+  "statSpd": "SPD",
+  "backLabel": "Back",
+  "charactersTab": "Characters",
+  "tierListTab": "Tier List",
+  "tierListTitle": "Community Tier List",
+  "tierListSubtitle": "Monthly character power rankings",
+  "voteMonthLabel": "Month: {month}",
+  "@voteMonthLabel": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "totalVotesLabel": "{count} votes cast",
+  "@totalVotesLabel": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "totalVotersLabel": "{count} participants",
+  "@totalVotersLabel": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "votesCount": "{count} votes",
+  "@votesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rankLabel": "#{rank}",
+  "@rankLabel": {
+    "placeholders": {
+      "rank": {
+        "type": "int"
+      }
+    }
+  },
+  "noTierRankingsFound": "No ranking data available for this month",
+  "allTiers": "All",
+  "viewCharacterDetail": "View character"
 }

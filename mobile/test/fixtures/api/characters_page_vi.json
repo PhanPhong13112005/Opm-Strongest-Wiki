@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": "homeless-emperor-urplus",
+      "name": "Vua Không Nhà",
+      "imageUrl": "/Characters/optimized/homeless-emperor-urplus-600.webp",
+      "tier": "UR+",
+      "type": "Tâm Linh",
+      "faction": "Quái Nhân",
+      "roles": ["Gia Tốc Cực Hạn - Sức Mạnh Hủy Diệt"],
+      "classLevel": "Dragon",
+      "keepsakeIcon": "/Skill/Homeless Emperor (URplus)/Keepsake-URplus.png",
+      "releaseSea": "2027-01-01",
+      "releaseChina": "2026-09-01"
+    },
+    {
+      "id": "blacksperm-urplus",
+      "name": "Tinh Trùng Đen",
+      "imageUrl": "/Characters/Black Sperm (UR+)/Black_Sperm.png",
+      "tier": "UR+",
+      "type": "Giác Đấu",
+      "faction": "Quái Nhân",
+      "roles": ["Phân Chia Vô Hạn", "Một Người Thành Một Đội Quân"],
+      "classLevel": "Dragon",
+      "keepsakeIcon": "/Keepsake/Black Sperm (URplus)/Keepsake_URplus.webp",
+      "releaseSea": "2026-12-01",
+      "releaseChina": "2026-08-01"
+    }
+  ],
+  "page": 1,
+  "pageSize": 2,
+  "totalCount": 178,
+  "totalPages": 89
+}

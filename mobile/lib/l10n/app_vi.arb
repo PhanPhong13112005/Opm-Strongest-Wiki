@@ -10,6 +10,19 @@
   "homeSubtitle": "Tra cứu dữ liệu One Punch Man: The Strongest nhanh, rõ ràng và nhất quán.",
   "homeFoundation": "Nền tảng M1",
   "homeFoundationBody": "Khung ứng dụng, điều hướng, cấu hình môi trường và lớp mạng chỉ đọc đã sẵn sàng.",
+  "releaseScheduleTitle": "Lịch ra mắt nhân vật",
+  "releaseScheduleCount": "{count} lịch từ API OPM Wiki",
+  "@releaseScheduleCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "releaseScheduleNew": "Ra mắt",
+  "releaseScheduleReturn": "Trở lại",
+  "releaseScheduleCached": "Đang hiển thị dữ liệu API đã tải gần nhất vì kết nối hiện tại không khả dụng.",
+  "releaseScheduleEmpty": "Chưa có lịch ra mắt nào từ máy chủ.",
   "wikiTitle": "Thư viện Wiki",
   "wikiSubtitle": "Nội dung nhân vật và dữ liệu tra cứu sẽ được kết nối trong M2.",
   "wikiSearchHint": "Tìm nhân vật...",
@@ -23,5 +36,80 @@
   "loadingLabel": "Đang tải...",
   "errorTitle": "Không thể tải dữ liệu",
   "emptyTitle": "Chưa có dữ liệu",
-  "retryLabel": "Thử lại"
+  "retryLabel": "Thử lại",
+  "noCharactersFound": "Không tìm thấy nhân vật nào phù hợp",
+  "charactersCount": "{count} nhân vật",
+  "@charactersCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "characterDetailTitle": "Chi tiết nhân vật",
+  "characterNotFound": "Không tìm thấy thông tin nhân vật",
+  "characterNotFoundDescription": "Nhân vật này có thể không tồn tại hoặc đã bị xóa.",
+  "characterBio": "Tiểu sử",
+  "characterSkills": "Kỹ năng",
+  "characterEffects": "Hiệu ứng kỹ năng",
+  "characterStats": "Chỉ số",
+  "baseStats": "Chỉ số cơ bản",
+  "pvpStats": "Chỉ số PvP",
+  "characterBonds": "Duyên phận",
+  "releaseSeaLabel": "Phát hành SEA",
+  "releaseChinaLabel": "Phát hành Trung Quốc",
+  "rolesLabel": "Vai trò",
+  "classLevelLabel": "Xếp lớp",
+  "statAtk": "Công",
+  "statHp": "Máu",
+  "statDef": "Thủ",
+  "statSpd": "Tốc",
+  "backLabel": "Quay lại",
+  "charactersTab": "Nhân vật",
+  "tierListTab": "Bảng xếp hạng",
+  "tierListTitle": "Bảng xếp hạng cộng đồng",
+  "tierListSubtitle": "Bình chọn sức mạnh nhân vật theo tháng",
+  "voteMonthLabel": "Tháng: {month}",
+  "@voteMonthLabel": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "totalVotesLabel": "{count} lượt bình chọn",
+  "@totalVotesLabel": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "totalVotersLabel": "{count} người tham gia",
+  "@totalVotersLabel": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "votesCount": "{count} phiếu",
+  "@votesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rankLabel": "#{rank}",
+  "@rankLabel": {
+    "placeholders": {
+      "rank": {
+        "type": "int"
+      }
+    }
+  },
+  "noTierRankingsFound": "Chưa có dữ liệu bình chọn cho tháng này",
+  "allTiers": "Tất cả",
+  "viewCharacterDetail": "Xem nhân vật"
 }

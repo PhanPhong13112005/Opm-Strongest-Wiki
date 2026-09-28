@@ -1,0 +1,4 @@
+storeFile=C:\\path\\to\\opmwiki-release.jks
+storePassword=<DO_NOT_COMMIT>
+keyAlias=<YOUR_ALIAS>
+keyPassword=<DO_NOT_COMMIT>

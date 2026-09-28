@@ -15,6 +15,7 @@ class AppConfig {
     required Uri apiBaseUri,
     required Uri assetBaseUri,
     this.rewardsEnabled = false,
+    String localeCode = 'vi',
   }) : apiBaseUri = _validateBaseUri(
          apiBaseUri,
          environment: environment,
@@ -24,12 +25,14 @@ class AppConfig {
          assetBaseUri,
          environment: environment,
          fieldName: 'assetBaseUri',
-       );
+       ),
+       localeCode = _validateLocaleCode(localeCode);
 
   final AppEnvironment environment;
   final Uri apiBaseUri;
   final Uri assetBaseUri;
   final bool rewardsEnabled;
+  final String localeCode;
 
   bool get isProduction => environment == AppEnvironment.production;
 
@@ -50,12 +53,25 @@ class AppConfig {
       'OPMWIKI_REWARDS_ENABLED',
       defaultValue: false,
     );
+    const localeCode = String.fromEnvironment(
+      'OPMWIKI_LOCALE',
+      defaultValue: 'vi',
+    );
     return AppConfig(
       environment: AppEnvironment.parse(environmentValue),
       apiBaseUri: Uri.parse(apiBaseUrl),
       assetBaseUri: Uri.parse(assetBaseUrl),
       rewardsEnabled: rewardsEnabled,
+      localeCode: localeCode,
     );
+  }
+
+  static String _validateLocaleCode(String value) {
+    final normalized = value.trim().toLowerCase();
+    if (!{'vi', 'en'}.contains(normalized)) {
+      throw ArgumentError.value(value, 'localeCode', 'Must be vi or en');
+    }
+    return normalized;
   }
 
   static Uri _validateBaseUri(

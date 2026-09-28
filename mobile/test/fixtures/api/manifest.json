@@ -1,0 +1,17 @@
+{
+  "capturedAt": "2026-09-23",
+  "apiOrigin": "https://api.opmwiki.app",
+  "assetOrigin": "https://opmwiki.app",
+  "policy": "Small sanitized snapshots for deterministic offline contract tests; never refresh during a test run.",
+  "fixtures": {
+    "characters_page_vi.json": "GET /api/characters?language=vi&page=1&pageSize=2",
+    "character_detail_vi.json": "GET /api/characters/100029-sr?language=vi",
+    "events_page_vi.json": "GET /api/events?language=vi&page=1&pageSize=2",
+    "release_schedule_api_vi.json": "GET /api/release-schedule?language=vi after M2.3C migration (complete 22-row response)",
+    "release_schedule_api_en.json": "GET /api/release-schedule?language=en after M2.3C migration (complete 22-row response)",
+    "catalog_samples_vi.json": "One actual item from each public mastery/keepsake/insignia/backgear/tactic response",
+    "tier_rankings_shape.json": "GET /api/tier-rankings with voter counts, votes and reset timestamp sanitized",
+    "tier_rankings_v2_parity.json": "M2.3D deterministic test-only v2 golden generated from the reviewed 160-row baseline and base-order sources; contains IDs and ranking fields only, not Mobile runtime catalog data",
+    "error_samples.json": "Observed ProblemDetails/empty-body shapes plus documented capability-unavailable shape"
+  }
+}

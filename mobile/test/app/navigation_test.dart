@@ -40,4 +40,20 @@ void main() {
     expect(find.byType(NavigationRail), findsOneWidget);
     expect(find.byType(NavigationBar), findsNothing);
   });
+
+  testWidgets('keeps bottom navigation on a short landscape phone', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(915, 412);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(createRootWidget(config));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(NavigationBar), findsOneWidget);
+    expect(find.byType(NavigationRail), findsNothing);
+    expect(tester.takeException(), isNull);
+  });
 }

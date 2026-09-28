@@ -5,6 +5,7 @@ import '../../features/home/presentation/home_page.dart';
 import '../../features/play/presentation/play_page.dart';
 import '../../features/profile/presentation/profile_page.dart';
 import '../../features/rewards/presentation/rewards_page.dart';
+import '../../features/wiki/presentation/character_detail_page.dart';
 import '../../features/wiki/presentation/wiki_page.dart';
 import 'navigation_shell.dart';
 import 'route_names.dart';
@@ -32,6 +33,16 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                 path: '/wiki',
                 name: RouteNames.wiki,
                 builder: (_, _) => const WikiPage(),
+                routes: [
+                  GoRoute(
+                    path: 'characters/:id',
+                    name: RouteNames.characterDetail,
+                    builder: (context, state) {
+                      final characterId = state.pathParameters['id']!;
+                      return CharacterDetailPage(characterId: characterId);
+                    },
+                  ),
+                ],
               ),
             ],
           ),

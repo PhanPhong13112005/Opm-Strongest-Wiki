@@ -1,0 +1,33 @@
+{
+  "id": "100029-sr",
+  "name": "Amai Mask",
+  "imageUrl": "/Characters/Amai Mask (SR)/sr.png",
+  "tier": "SR",
+  "type": "Giác Đấu",
+  "faction": "Anh Hùng",
+  "roles": ["Hỗ Trợ", "Hạt Nhân"],
+  "duyen": "",
+  "bio": "",
+  "keepsakeIcon": "/Keepsake/Amai Mask (SR)/Keepsake_SR.png",
+  "traits": [],
+  "bondList": "",
+  "classLevel": "A",
+  "releaseSea": null,
+  "releaseChina": null,
+  "baseStats": {"atk": 183, "hp": 1099, "def": 46, "spd": 94},
+  "pvpStats": {"atk": 0, "hp": 0, "def": 0, "spd": 0},
+  "skills": [
+    {
+      "id": "7ca9a9f7-6cb2-465f-a0ce-03761ffa4995",
+      "sortOrder": 0,
+      "name": "Cơ bản",
+      "description": "Tung liên kích 3 đòn lên mục tiêu đơn, gây 35% ST(+3) sát thương.",
+      "type": "Kỹ năng thường",
+      "iconUrl": "/Skill/Amai Mask (SR)/Skill_base.png",
+      "animationUrl": null,
+      "keepsakeIconUrl": null
+    }
+  ],
+  "effects": [],
+  "updatedAt": "2026-07-22T17:54:00.243836+07:00"
+}

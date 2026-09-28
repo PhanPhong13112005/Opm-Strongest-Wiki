@@ -158,6 +158,42 @@ abstract class AppLocalizations {
   /// **'Khung ứng dụng, điều hướng, cấu hình môi trường và lớp mạng chỉ đọc đã sẵn sàng.'**
   String get homeFoundationBody;
 
+  /// No description provided for @releaseScheduleTitle.
+  ///
+  /// In vi, this message translates to:
+  /// **'Lịch ra mắt nhân vật'**
+  String get releaseScheduleTitle;
+
+  /// No description provided for @releaseScheduleCount.
+  ///
+  /// In vi, this message translates to:
+  /// **'{count} lịch từ API OPM Wiki'**
+  String releaseScheduleCount(int count);
+
+  /// No description provided for @releaseScheduleNew.
+  ///
+  /// In vi, this message translates to:
+  /// **'Ra mắt'**
+  String get releaseScheduleNew;
+
+  /// No description provided for @releaseScheduleReturn.
+  ///
+  /// In vi, this message translates to:
+  /// **'Trở lại'**
+  String get releaseScheduleReturn;
+
+  /// No description provided for @releaseScheduleCached.
+  ///
+  /// In vi, this message translates to:
+  /// **'Đang hiển thị dữ liệu API đã tải gần nhất vì kết nối hiện tại không khả dụng.'**
+  String get releaseScheduleCached;
+
+  /// No description provided for @releaseScheduleEmpty.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chưa có lịch ra mắt nào từ máy chủ.'**
+  String get releaseScheduleEmpty;
+
   /// No description provided for @wikiTitle.
   ///
   /// In vi, this message translates to:
@@ -241,6 +277,204 @@ abstract class AppLocalizations {
   /// In vi, this message translates to:
   /// **'Thử lại'**
   String get retryLabel;
+
+  /// No description provided for @noCharactersFound.
+  ///
+  /// In vi, this message translates to:
+  /// **'Không tìm thấy nhân vật nào phù hợp'**
+  String get noCharactersFound;
+
+  /// No description provided for @charactersCount.
+  ///
+  /// In vi, this message translates to:
+  /// **'{count} nhân vật'**
+  String charactersCount(int count);
+
+  /// No description provided for @characterDetailTitle.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chi tiết nhân vật'**
+  String get characterDetailTitle;
+
+  /// No description provided for @characterNotFound.
+  ///
+  /// In vi, this message translates to:
+  /// **'Không tìm thấy thông tin nhân vật'**
+  String get characterNotFound;
+
+  /// No description provided for @characterNotFoundDescription.
+  ///
+  /// In vi, this message translates to:
+  /// **'Nhân vật này có thể không tồn tại hoặc đã bị xóa.'**
+  String get characterNotFoundDescription;
+
+  /// No description provided for @characterBio.
+  ///
+  /// In vi, this message translates to:
+  /// **'Tiểu sử'**
+  String get characterBio;
+
+  /// No description provided for @characterSkills.
+  ///
+  /// In vi, this message translates to:
+  /// **'Kỹ năng'**
+  String get characterSkills;
+
+  /// No description provided for @characterEffects.
+  ///
+  /// In vi, this message translates to:
+  /// **'Hiệu ứng kỹ năng'**
+  String get characterEffects;
+
+  /// No description provided for @characterStats.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chỉ số'**
+  String get characterStats;
+
+  /// No description provided for @baseStats.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chỉ số cơ bản'**
+  String get baseStats;
+
+  /// No description provided for @pvpStats.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chỉ số PvP'**
+  String get pvpStats;
+
+  /// No description provided for @characterBonds.
+  ///
+  /// In vi, this message translates to:
+  /// **'Duyên phận'**
+  String get characterBonds;
+
+  /// No description provided for @releaseSeaLabel.
+  ///
+  /// In vi, this message translates to:
+  /// **'Phát hành SEA'**
+  String get releaseSeaLabel;
+
+  /// No description provided for @releaseChinaLabel.
+  ///
+  /// In vi, this message translates to:
+  /// **'Phát hành Trung Quốc'**
+  String get releaseChinaLabel;
+
+  /// No description provided for @rolesLabel.
+  ///
+  /// In vi, this message translates to:
+  /// **'Vai trò'**
+  String get rolesLabel;
+
+  /// No description provided for @classLevelLabel.
+  ///
+  /// In vi, this message translates to:
+  /// **'Xếp lớp'**
+  String get classLevelLabel;
+
+  /// No description provided for @statAtk.
+  ///
+  /// In vi, this message translates to:
+  /// **'Công'**
+  String get statAtk;
+
+  /// No description provided for @statHp.
+  ///
+  /// In vi, this message translates to:
+  /// **'Máu'**
+  String get statHp;
+
+  /// No description provided for @statDef.
+  ///
+  /// In vi, this message translates to:
+  /// **'Thủ'**
+  String get statDef;
+
+  /// No description provided for @statSpd.
+  ///
+  /// In vi, this message translates to:
+  /// **'Tốc'**
+  String get statSpd;
+
+  /// No description provided for @backLabel.
+  ///
+  /// In vi, this message translates to:
+  /// **'Quay lại'**
+  String get backLabel;
+
+  /// No description provided for @charactersTab.
+  ///
+  /// In vi, this message translates to:
+  /// **'Nhân vật'**
+  String get charactersTab;
+
+  /// No description provided for @tierListTab.
+  ///
+  /// In vi, this message translates to:
+  /// **'Bảng xếp hạng'**
+  String get tierListTab;
+
+  /// No description provided for @tierListTitle.
+  ///
+  /// In vi, this message translates to:
+  /// **'Bảng xếp hạng cộng đồng'**
+  String get tierListTitle;
+
+  /// No description provided for @tierListSubtitle.
+  ///
+  /// In vi, this message translates to:
+  /// **'Bình chọn sức mạnh nhân vật theo tháng'**
+  String get tierListSubtitle;
+
+  /// No description provided for @voteMonthLabel.
+  ///
+  /// In vi, this message translates to:
+  /// **'Tháng: {month}'**
+  String voteMonthLabel(String month);
+
+  /// No description provided for @totalVotesLabel.
+  ///
+  /// In vi, this message translates to:
+  /// **'{count} lượt bình chọn'**
+  String totalVotesLabel(int count);
+
+  /// No description provided for @totalVotersLabel.
+  ///
+  /// In vi, this message translates to:
+  /// **'{count} người tham gia'**
+  String totalVotersLabel(int count);
+
+  /// No description provided for @votesCount.
+  ///
+  /// In vi, this message translates to:
+  /// **'{count} phiếu'**
+  String votesCount(int count);
+
+  /// No description provided for @rankLabel.
+  ///
+  /// In vi, this message translates to:
+  /// **'#{rank}'**
+  String rankLabel(int rank);
+
+  /// No description provided for @noTierRankingsFound.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chưa có dữ liệu bình chọn cho tháng này'**
+  String get noTierRankingsFound;
+
+  /// No description provided for @allTiers.
+  ///
+  /// In vi, this message translates to:
+  /// **'Tất cả'**
+  String get allTiers;
+
+  /// No description provided for @viewCharacterDetail.
+  ///
+  /// In vi, this message translates to:
+  /// **'Xem nhân vật'**
+  String get viewCharacterDetail;
 }
 
 class _AppLocalizationsDelegate

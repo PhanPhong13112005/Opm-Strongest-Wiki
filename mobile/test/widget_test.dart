@@ -17,10 +17,20 @@ void main() {
     expect(find.text('OPM Wiki trên di động'), findsOneWidget);
     expect(find.text('Trang chủ'), findsOneWidget);
   });
+
+  testWidgets('can bootstrap with the supported English locale', (
+    tester,
+  ) async {
+    await tester.pumpWidget(createRootWidget(_testConfig(localeCode: 'en')));
+    await tester.pumpAndSettle();
+    expect(find.text('OPM Wiki on mobile'), findsOneWidget);
+    expect(find.text('Home'), findsOneWidget);
+  });
 }
 
-AppConfig _testConfig() => AppConfig(
+AppConfig _testConfig({String localeCode = 'vi'}) => AppConfig(
   environment: AppEnvironment.development,
   apiBaseUri: Uri.parse('https://api.example.test'),
   assetBaseUri: Uri.parse('https://assets.example.test'),
+  localeCode: localeCode,
 );

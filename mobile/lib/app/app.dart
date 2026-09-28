@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../core/config/app_config.dart';
 import '../l10n/generated/app_localizations.dart';
 import 'routing/app_router.dart';
 import 'theme/app_theme.dart';
@@ -11,10 +12,11 @@ class OpmWikiApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final config = ref.watch(appConfigProvider);
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       onGenerateTitle: (context) => AppLocalizations.of(context).appTitle,
-      locale: const Locale('vi'),
+      locale: Locale(config.localeCode),
       supportedLocales: AppLocalizations.supportedLocales,
       localizationsDelegates: const [
         AppLocalizations.delegate,

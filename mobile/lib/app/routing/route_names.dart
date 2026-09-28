@@ -4,4 +4,5 @@ abstract final class RouteNames {
   static const play = 'play';
   static const rewards = 'rewards';
   static const profile = 'profile';
+  static const characterDetail = 'characterDetail';
 }

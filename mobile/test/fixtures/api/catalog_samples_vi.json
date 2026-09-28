@@ -1,0 +1,47 @@
+{
+  "mastery": {
+    "version": 1,
+    "categories": {"cap": [{"tier": 0, "stats": {"atk": 0, "hp": 0}, "costs": {}, "requirements": []}]}
+  },
+  "keepsake": {
+    "id": "100042-n",
+    "characterName": "Allback-man",
+    "iconUrl": "/Keepsake/Allback-man (N)/Keepsake_N.png",
+    "tier": "N",
+    "type": "Giác Đấu",
+    "faction": "Anh Hùng",
+    "acquisitionType": "related-event"
+  },
+  "insignia": {
+    "id": "insignia-A",
+    "classLevel": "A",
+    "name": "Huy Hiệu A",
+    "imageUrl": "/Class/A.png",
+    "sortOrder": 1
+  },
+  "backgear": {
+    "id": "BD_P1",
+    "name": "Đồng Cỏ Anh Đào",
+    "theme": "spring",
+    "rarity": "Siêu Hạng",
+    "acquire": "Sự kiện mùa xuân — 30 tiền sự kiện",
+    "levelMax": 5,
+    "icon": "/BackGear/optimized/pic_beishi_bstp_1_display.webp",
+    "thumbnail": "/BackGear/optimized/pic_beishi_bstp_1_thumb.webp",
+    "seniorIcon": "/BackGear/optimized/pic_beishi_bstp_1_display.webp",
+    "changeLevel": null,
+    "levels": [{"level": 1, "senior": false, "cost": "mở khoá", "effects": [{"type": "combatoa_up", "name": "Đặc Công", "text": "+3%"}]}],
+    "sortOrder": 0,
+    "updatedAt": "2026-07-16T17:04:42+07:00"
+  },
+  "tactic": {
+    "id": "tc_01",
+    "name": "Cường Công",
+    "icon": "pic_tactic_atk.png",
+    "count": 144,
+    "effect": "+15% Tấn công cho Phe/Hệ đang kích hoạt",
+    "scaling": {"metric": "stat", "statType": "attack_rate", "label": "Tấn công", "unit": "%", "summable": true, "rarities": [{"key": "blue", "quality": 3, "name": "Xanh", "tiers": [{"star": 0, "value": 2}]}]},
+    "sortOrder": 0,
+    "updatedAt": "2026-07-18T22:11:22+07:00"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "id": "e_july_228",
+      "title": "Đặc quyền Cuối tháng",
+      "description": "Sự kiện Đặc quyền Cuối tháng đang diễn ra.",
+      "category": "other",
+      "imageUrl": "",
+      "startDate": "2026-07-29",
+      "endDate": "2026-07-31"
+    },
+    {
+      "id": "e_july_227",
+      "title": "Máy Gắp Thú (Kỷ vật [SG] UR Atomic, [UW] UR MetalBat)",
+      "description": "Sự kiện Máy Gắp Thú (Kỷ vật [SG] UR Atomic, [UW] UR MetalBat) đang diễn ra.",
+      "category": "other",
+      "imageUrl": "",
+      "startDate": "2026-07-28",
+      "endDate": "2026-07-31"
+    }
+  ],
+  "page": 1,
+  "pageSize": 2,
+  "totalCount": 46,
+  "totalPages": 23
+}

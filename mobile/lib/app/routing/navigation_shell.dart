@@ -7,6 +7,7 @@ class NavigationShell extends StatelessWidget {
   const NavigationShell({super.key, required this.navigationShell});
 
   static const railBreakpoint = 840.0;
+  static const railMinHeight = 600.0;
   final StatefulNavigationShell navigationShell;
 
   @override
@@ -42,7 +43,8 @@ class NavigationShell extends StatelessWidget {
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth >= railBreakpoint) {
+        if (constraints.maxWidth >= railBreakpoint &&
+            constraints.maxHeight >= railMinHeight) {
           return Scaffold(
             body: Row(
               children: [

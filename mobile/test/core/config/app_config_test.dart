@@ -29,4 +29,30 @@ void main() {
     expect(AppEnvironment.parse('staging'), AppEnvironment.staging);
     expect(() => AppEnvironment.parse('preview'), throwsArgumentError);
   });
+
+  test('defaults to Vietnamese and validates the scoped locale', () {
+    final defaultConfig = AppConfig(
+      environment: AppEnvironment.development,
+      apiBaseUri: Uri.parse('https://api.example.test'),
+      assetBaseUri: Uri.parse('https://assets.example.test'),
+    );
+    final englishConfig = AppConfig(
+      environment: AppEnvironment.development,
+      apiBaseUri: Uri.parse('https://api.example.test'),
+      assetBaseUri: Uri.parse('https://assets.example.test'),
+      localeCode: 'EN',
+    );
+
+    expect(defaultConfig.localeCode, 'vi');
+    expect(englishConfig.localeCode, 'en');
+    expect(
+      () => AppConfig(
+        environment: AppEnvironment.development,
+        apiBaseUri: Uri.parse('https://api.example.test'),
+        assetBaseUri: Uri.parse('https://assets.example.test'),
+        localeCode: 'ja',
+      ),
+      throwsArgumentError,
+    );
+  });
 }
