@@ -356,6 +356,7 @@ const apiScheduleData = computed(() => {
     }
     const isPurpleReturn = row.isReturn && row.server === 'SEA'
     const [year, monthNumber, day] = String(row.date).split('-')
+    const isMonthOnly = row.datePrecision === 'month' || !day
     server.items.push({
       id: row.characterId,
       bannerImage: row.bannerImage,
@@ -367,8 +368,8 @@ const apiScheduleData = computed(() => {
       tag: row.isReturn ? t('home.return') : t('home.release'),
       tagBg: row.isReturn ? (isPurpleReturn ? 'bg-[#b861ff] text-black' : 'bg-opm-red text-black') : 'bg-opm-gold text-black',
       tagText: row.isReturn ? (isPurpleReturn ? 'text-[#b861ff]' : 'text-opm-red') : 'text-opm-gold',
-      period: Number(day) <= 7 ? t('home.earlyMonth') : t('home.midMonth'),
-      date: `${day} / ${monthNumber} / ${year}`,
+      period: isMonthOnly ? t('home.datePending') : (Number(day) <= 7 ? t('home.earlyMonth') : t('home.midMonth')),
+      date: isMonthOnly ? `${monthNumber} / ${year}` : `${day} / ${monthNumber} / ${year}`,
       borderColor: row.isReturn ? (isPurpleReturn ? 'border-[#b861ff]' : 'border-opm-red') : 'border-opm-gold',
       shadowColor: row.isReturn ? (isPurpleReturn ? 'shadow-[0_0_15px_rgba(184,97,255,0.3)]' : 'shadow-glow-red') : 'shadow-glow-gold',
       sortOrder: row.sortOrder,

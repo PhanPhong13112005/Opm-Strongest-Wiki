@@ -128,6 +128,15 @@
     "sortOrder": 2
   },
   {
+    "server": "CN",
+    "date": "2026-10",
+    "datePrecision": "month",
+    "characterId": "100320-urplus",
+    "bannerImage": "/Characters/Child Emperor (UR)/UR.png",
+    "isReturn": false,
+    "sortOrder": 1
+  },
+  {
     "server": "SEA",
     "date": "2026-10-01",
     "characterId": "100316-urplus",

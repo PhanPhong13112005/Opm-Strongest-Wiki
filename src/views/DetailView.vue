@@ -61,8 +61,7 @@ const coreData = computed(() => {
 
 const coreLevels = computed(() => {
   if (!coreData.value) return []
-  const milestones = coreData.value.levels.filter(l => l.lv === 1 || l.isMilestone)
-  return milestones.slice(0, 2)
+  return coreData.value.levels.filter(l => l.lv === 0 || l.isMilestone)
 })
 
 const suffixToFolder = {
@@ -232,7 +231,7 @@ const releaseDates = computed(() => {
     } else if (tParts.length === 2) {
       tm = parseInt(tParts[0], 10);
       ty = parseInt(tParts[1], 10);
-      tRelease = format(1, tm, ty);
+      tRelease = `${String(tm).padStart(2, '0')}/${ty} · ${t('home.datePending')}`;
       tReturn = format(15, tm + 2, ty);
     } else {
       tRelease = trungStr;
@@ -252,7 +251,7 @@ const releaseDates = computed(() => {
     } else if (sParts.length === 2) {
       const sm = parseInt(sParts[0], 10);
       const sy = parseInt(sParts[1], 10);
-      sRelease = format(1, sm, sy);
+      sRelease = `${String(sm).padStart(2, '0')}/${sy} · ${t('home.datePending')}`;
       sReturn = format(15, sm + 2, sy);
     } else {
       sReturn = 'Không xác định';

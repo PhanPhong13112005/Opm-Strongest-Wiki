@@ -1,0 +1,59 @@
+{
+  "id": "100320-urplus",
+  "name": "Đồng Đế",
+  "imageURL": "/Characters/optimized/100320-urplus-600.webp",
+  "tier": "UR+",
+  "type": "Công Nghệ",
+  "faction": "Anh Hùng",
+  "roles": [
+    "Strike Core – Ready For Battle"
+  ],
+  "mechanicsLanguage": "en",
+  "baseStats": {
+    "atk": 683,
+    "hp": 4095,
+    "def": 173,
+    "spd": 118
+  },
+  "releaseTrung": "10 / 2026",
+  "classLevel": "Mecha Overlord",
+  "skills": [
+    {
+      "name": "Basic",
+      "desc": "Updating.",
+      "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__basic.png",
+      "type": "Basic",
+      "cost": 0
+    },
+    {
+      "name": "Ultimate",
+      "desc": "Deals 5000% [7000%] [Specialized Direct DMG] to targets in a cross-shaped area (affected only by advanced DMG Reduction), ignoring [Specialized Evasion] and [Non-crit DMG Reduction], and penetrates [Unyielding], [Specialized Unyielding].\n\nReduces the number of [Re-Battle] uses for all enemies by 3 [4] when the skill is released. (Cannot be stacked)",
+      "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__ultimate.png",
+      "type": "Ultimate",
+      "cost": 0
+    },
+    {
+      "name": "Passive",
+      "desc": "At battle start, gains 80% [85%] [90%] [Specialized Non-Crit DMG Reduction].\n\nGrants all allies permanent immunity to [Energy Reduction] and [Energy Lock] effects upon entering the battlefield.",
+      "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__passive.png",
+      "type": "Passive",
+      "cost": 0
+    },
+    {
+      "name": "Awaken Passive",
+      "desc": "Gain 3 [4] energy points per turn. Upon entering the battlefield, grant all allies a permanent 92% [95%] [98%] [True DMG Reduction].",
+      "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__awaken1.png",
+      "type": "Awakening",
+      "cost": 0
+    }
+  ],
+  "effects": [
+    {
+      "term": "[Ready for Battle]",
+      "desc": "Only one of the following effects can be active at a time: resurrection or invincibility. After any character's turn, if they are defeated, they will immediately revive, recovering 100% of their health and continuing the battle (considered as 'Resurrected')."
+    }
+  ],
+  "imageSrcset": "/Characters/optimized/100320-urplus-360.webp 360w, /Characters/optimized/100320-urplus-600.webp 600w",
+  "imageWidth": 600,
+  "imageHeight": 720
+}

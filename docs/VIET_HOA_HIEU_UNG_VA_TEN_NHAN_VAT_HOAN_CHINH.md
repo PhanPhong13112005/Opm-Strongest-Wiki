@@ -534,6 +534,7 @@ File này là phiếu biên tập. Chưa được đọc tự động bởi webs
 | 176 | [x] | `200011-n` | N | Subterranean Brute | Subterranean Brute | Kẻ Hung Bạo Lòng Đất |
 | 177 | [x] | `200027-n` | N | Subterranean Champion | Subterranean Champion | Nhà Vô Địch Lòng Đất |
 | 178 | [x] | `homeless-emperor-urplus` | UR+ | Homeless Emperor | Homeless Emperor | Vua Không Nhà |
+| 179 | [x] | `100320-urplus` | UR+ | Child Emperor | Child Emperor | Đồng Đế |
 
 ## Ghi chú sau khi hoàn tất
 

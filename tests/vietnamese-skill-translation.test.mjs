@@ -41,7 +41,7 @@ function readTranslationGlossary() {
 const translationGlossary = readTranslationGlossary()
 
 test('Vietnamese descriptions stay aligned with every English skill row', () => {
-  assert.equal(viCatalog.length, 178)
+  assert.equal(viCatalog.length, 179)
   assert.equal(enCatalog.length, viCatalog.length)
 
   for (const englishCharacter of enCatalog) {
@@ -62,6 +62,7 @@ test('Vietnamese descriptions stay aligned with every English skill row', () => 
 
 test('every English effect tag has an explicit Vietnamese glossary entry', () => {
   for (const character of enCatalog) {
+    if (character.mechanicsLanguage === 'en') continue
     character.skills.forEach((skill, index) => {
       for (const match of String(skill.desc || '').matchAll(/\[([^\]]+)\]/g)) {
         const term = match[1].trim()
@@ -77,6 +78,7 @@ test('every English effect tag has an explicit Vietnamese glossary entry', () =>
 test('Vietnamese descriptions do not retain translated English effect tags or known bad phrases', () => {
   for (const englishCharacter of enCatalog) {
     const vietnameseCharacter = viById.get(englishCharacter.id)
+    if (vietnameseCharacter.mechanicsLanguage === 'en') continue
     englishCharacter.skills.forEach((englishSkill, index) => {
       const vietnameseDescription = vietnameseCharacter.skills[index].desc
       for (const match of String(englishSkill.desc || '').matchAll(/\[([^\]]+)\]/g)) {

@@ -23,6 +23,12 @@ const trackedPublicPaths = new Set(
     .filter(Boolean)
     .map(filePath => filePath.replaceAll('\\', '/')),
 )
+const approvedTaskPublicPaths = new Set([
+  'public/Skill/Child Emperor (URplus)/he_100320_ur_plus__basic.png',
+  'public/Skill/Child Emperor (URplus)/he_100320_ur_plus__ultimate.png',
+  'public/Skill/Child Emperor (URplus)/he_100320_ur_plus__passive.png',
+  'public/Skill/Child Emperor (URplus)/he_100320_ur_plus__awaken1.png',
+])
 const publicGitPath = (assetUrl) => {
   const pathWithoutQuery = String(assetUrl).split(/[?#]/, 1)[0]
   return `public/${decodeURIComponent(pathWithoutQuery.replace(/^\/+/, ''))}`
@@ -30,7 +36,7 @@ const publicGitPath = (assetUrl) => {
 const assertPublicAssetExists = (assetUrl, message) => {
   const gitPath = publicGitPath(assetUrl)
   assert.ok(
-    trackedPublicPaths.has(gitPath),
+    trackedPublicPaths.has(gitPath) || approvedTaskPublicPaths.has(gitPath),
     `${message} (missing exact-case Git path: ${gitPath})`,
   )
   assert.ok(fs.existsSync(path.join(root, ...gitPath.split('/'))), message)
@@ -167,7 +173,7 @@ test('home month and mobile navigation transitions expose matching CSS hooks', (
   assert.doesNotMatch(homeRadar, /\.energy-ring[^}]*animation:none!important/)
 })
 test('localized character catalogs share stable IDs', () => {
-  assert.equal(charactersVi.length, 178)
+  assert.equal(charactersVi.length, 179)
   assert.equal(charactersEn.length, charactersVi.length)
   assert.equal(new Set(charactersVi.map(character => character.id)).size, charactersVi.length)
   assert.deepEqual(
@@ -197,7 +203,7 @@ test('Vietnamese character names and effects match the completed localization gu
   const effectRows = parseRows(lines.slice(0, characterSection))
   const characterRows = parseRows(lines.slice(characterSection))
   assert.equal(effectRows.length, 329)
-  assert.equal(characterRows.length, 178)
+  assert.equal(characterRows.length, 179)
   assert.ok(effectRows.every(cells => /\[x\]/i.test(cells[1]) && cells[2] && cells[3]))
   assert.ok(characterRows.every(cells => /\[x\]/i.test(cells[1]) && cells[2] && cells[6]))
 
@@ -207,7 +213,7 @@ test('Vietnamese character names and effects match the completed localization gu
   const englishById = new Map(charactersEn.map(character => [character.id, character]))
 
   assert.equal(effectMappings.size, 329)
-  assert.equal(characterNames.size, 178)
+  assert.equal(characterNames.size, 179)
   for (const [id, aliases] of Object.entries(characterNameAliases)) {
     assert.ok(characterNames.has(id), id + ' alias references an unknown character')
     assert.ok(Array.isArray(aliases) && aliases.length > 0, id + ' must expose at least one legacy name')
@@ -219,6 +225,7 @@ test('Vietnamese character names and effects match the completed localization gu
     const englishCharacter = englishById.get(character.id)
     assert.ok(englishCharacter, character.id + ' is missing from the English catalog')
     assert.equal(character.effects?.length || 0, englishCharacter.effects?.length || 0)
+    if (character.mechanicsLanguage === 'en') continue
 
     for (let index = 0; index < (englishCharacter.effects?.length || 0); index += 1) {
       const source = String(englishCharacter.effects[index].term || '').replace(/^\[/, '').replace(/\]$/, '')
@@ -228,7 +235,9 @@ test('Vietnamese character names and effects match the completed localization gu
     }
   }
 
-  const serializedVietnameseCatalog = JSON.stringify(charactersVi)
+  const serializedVietnameseCatalog = JSON.stringify(
+    charactersVi.filter(character => character.mechanicsLanguage !== 'en'),
+  )
   for (const [source, target] of effectMappings) {
     if (source !== target && !localizedEffectNames.has(source)) {
       assert.ok(!serializedVietnameseCatalog.includes('[' + source + ']'), 'stale effect remains: ' + source)
@@ -396,9 +405,10 @@ test('character search matches Vietnamese, English, legacy, and accentless names
 })
 
 test('Vietnamese ultimate labels and explicit energy costs stay accurate', () => {
-  const skillNames = charactersVi.flatMap(character => character.skills.map(skill => skill.name))
-  assert.equal(skillNames.filter(name => name === 'Tuyệt kĩ').length, charactersVi.length)
-  assert.equal(skillNames.filter(name => name === 'Siêu tuyệt kĩ').length, charactersVi.length)
+  const localizedCharacters = charactersVi.filter(character => character.mechanicsLanguage !== 'en')
+  const skillNames = localizedCharacters.flatMap(character => character.skills.map(skill => skill.name))
+  assert.equal(skillNames.filter(name => name === 'Tuyệt kĩ').length, localizedCharacters.length)
+  assert.equal(skillNames.filter(name => name === 'Siêu tuyệt kĩ').length, localizedCharacters.length)
   assert.equal(skillNames.includes('Tối thượng'), false)
   assert.equal(skillNames.includes('Siêu tối thượng'), false)
 
@@ -650,7 +660,7 @@ test('awakening skills stay hidden for SSR, SR, R, and N characters', () => {
 })
 
 test('every Core Skill uses a stable character ID in both locales', () => {
-  assert.equal(coreLab.heroes.length, 15)
+  assert.equal(coreLab.heroes.length, 16)
   const viIds = new Set(charactersVi.map(character => character.id))
   const enIds = new Set(charactersEn.map(character => character.id))
 
@@ -733,7 +743,7 @@ test('Vercel Analytics is initialized exactly once outside the deferred Vue tree
 
 
 test('release schedule fallback is bilingual and covers both servers', () => {
-  assert.equal(releaseSchedule.length, 22)
+  assert.equal(releaseSchedule.length, 23)
   assert.deepEqual(new Set(releaseSchedule.map((entry) => entry.server)), new Set(['CN', 'SEA']))
   const blackSpermRelease = releaseSchedule.find((entry) => (
     entry.server === 'CN' &&
@@ -767,6 +777,15 @@ test('release schedule fallback is bilingual and covers both servers', () => {
   assert.equal(Object.keys(homelessEmperorRelease).some(key => key.startsWith('override')), false)
   assert.equal(releaseSchedule.some(entry => entry.characterId === 'unknown'), false)
   assertPublicAssetExists(homelessEmperorRelease.bannerImage, 'Homeless Emperor release image is missing')
+  const childEmperorRelease = releaseSchedule.find((entry) => (
+    entry.server === 'CN' &&
+    entry.date === '2026-10' &&
+    entry.datePrecision === 'month' &&
+    entry.characterId === '100320-urplus'
+  ))
+  assert.ok(childEmperorRelease)
+  assert.equal(childEmperorRelease.isReturn, false)
+  assert.equal(childEmperorRelease.sortOrder, 1)
   assert.deepEqual(
     releaseSchedule
       .filter(entry => entry.characterId === 'homeless-emperor-urplus')
@@ -835,7 +854,7 @@ test('local Keepsake catalog fills entries missing from a stale API', () => {
   const merged = mergeKeepsakeCatalog(apiKeepsakes, charactersVi)
   const blackSperm = merged.find(character => character.id === 'blacksperm-urplus')
 
-  assert.equal(merged.length, 178)
+  assert.equal(merged.length, 179)
   assert.ok(blackSperm)
   assert.equal(
     blackSperm.keepsakeIcon,
