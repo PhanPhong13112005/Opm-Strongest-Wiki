@@ -733,7 +733,7 @@ test('Vercel Analytics is initialized exactly once outside the deferred Vue tree
 
 
 test('release schedule fallback is bilingual and covers both servers', () => {
-  assert.equal(releaseSchedule.length, 19)
+  assert.equal(releaseSchedule.length, 22)
   assert.deepEqual(new Set(releaseSchedule.map((entry) => entry.server)), new Set(['CN', 'SEA']))
   const blackSpermRelease = releaseSchedule.find((entry) => (
     entry.server === 'CN' &&
@@ -784,7 +784,11 @@ test('release schedule fallback is bilingual and covers both servers', () => {
       .every(entry => entry.bannerImage === '/Characters/Full_Background/Homeless_Emperor_URplus.png'),
   )
   const releaseApiSource = fs.readFileSync(path.join(root, 'src/services/releaseScheduleApi.js'), 'utf8')
-  assert.match(releaseApiSource, /localRow\?\.characterId === row\.characterId && localRow\.bannerImage/)
+  const releasePolicySource = fs.readFileSync(path.join(root, 'src/services/releaseSchedulePolicy.js'), 'utf8')
+  assert.match(releaseApiSource, /loadReleaseScheduleWithFallback/)
+  assert.doesNotMatch(releaseApiSource, /mergeReleaseSchedule/)
+  assert.match(releasePolicySource, /return rows/)
+  assert.match(releasePolicySource, /localizeReleaseScheduleFallback\(fallbackRows, language\)/)
   const septemberReturns = releaseSchedule
     .filter((entry) => entry.date === '2026-09-15')
     .sort((left, right) => left.server.localeCompare(right.server))

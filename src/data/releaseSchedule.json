@@ -128,6 +128,30 @@
     "sortOrder": 2
   },
   {
+    "server": "SEA",
+    "date": "2026-10-01",
+    "characterId": "100316-urplus",
+    "bannerImage": "/Characters/Full_Background/Rover_URplus.png",
+    "isReturn": false,
+    "sortOrder": 1
+  },
+  {
+    "server": "CN",
+    "date": "2026-10-15",
+    "characterId": "blacksperm-urplus",
+    "bannerImage": "/Characters/Full_Background/Black_Sperm_Ur_plus.png",
+    "isReturn": true,
+    "sortOrder": 2
+  },
+  {
+    "server": "SEA",
+    "date": "2026-10-15",
+    "characterId": "100314-urplus",
+    "bannerImage": "/Characters/Full_Background/G5_URplus.png",
+    "isReturn": true,
+    "sortOrder": 2
+  },
+  {
     "server": "CN",
     "date": "2026-11-01",
     "characterId": "homeless-emperor-urplus",
