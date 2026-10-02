@@ -455,10 +455,16 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
 
         modelBuilder.Entity<ReleaseScheduleEntry>(entity =>
         {
-            entity.ToTable("release_schedule");
+            entity.ToTable("release_schedule", table => table.HasCheckConstraint(
+                "CK_release_schedule_DatePrecision",
+                "(\"DatePrecision\" = 'day' AND \"Date\" IS NOT NULL AND \"ReleaseMonth\" IS NULL) OR " +
+                "(\"DatePrecision\" = 'month' AND \"Date\" IS NULL AND \"ReleaseMonth\" IS NOT NULL AND " +
+                "\"ReleaseMonth\" ~ '^[0-9]{4}-(0[1-9]|1[0-2])$' AND left(\"ReleaseMonth\", 4) <> '0000')"));
             entity.HasKey(x => x.Id);
             entity.Property(x => x.Server).HasMaxLength(10);
             entity.Property(x => x.Date).HasColumnType("date");
+            entity.Property(x => x.DatePrecision).HasMaxLength(5).HasDefaultValue("day");
+            entity.Property(x => x.ReleaseMonth).HasMaxLength(7);
             entity.Property(x => x.CharacterId).HasMaxLength(80);
             entity.Property(x => x.BannerImage).HasMaxLength(500);
             entity.Property(x => x.OverrideNameVi).HasMaxLength(200);
@@ -473,6 +479,9 @@ public sealed class OpmWikiDbContext(DbContextOptions<OpmWikiDbContext> options)
             entity.Property(x => x.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
             entity.Property(x => x.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
             entity.HasIndex(x => new { x.Date, x.Server, x.SortOrder }).IsUnique();
+            entity.HasIndex(x => new { x.ReleaseMonth, x.Server, x.SortOrder })
+                .IsUnique()
+                .HasFilter("\"DatePrecision\" = 'month'");
 
             var seededAt = new DateTimeOffset(2026, 6, 1, 0, 0, 0, TimeSpan.Zero);
             entity.HasData(

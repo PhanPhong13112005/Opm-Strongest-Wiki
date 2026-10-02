@@ -7,8 +7,10 @@ export const isValidReleaseScheduleResponse = (rows) => {
   for (const row of rows) {
     if (!row || typeof row !== 'object') return false
     if (!['CN', 'SEA'].includes(row.server)) return false
-    const hasFullDate = /^\d{4}-\d{2}-\d{2}$/.test(row.date || '')
-    const hasMonthPrecision = row.datePrecision === 'month' && /^\d{4}-\d{2}$/.test(row.date || '')
+    const hasFullDate = (row.datePrecision === undefined || row.datePrecision === 'day')
+      && /^\d{4}-\d{2}-\d{2}$/.test(row.date || '')
+    const hasMonthPrecision = row.datePrecision === 'month'
+      && /^(?!0000)\d{4}-(0[1-9]|1[0-2])$/.test(row.date || '')
     if (!hasFullDate && !hasMonthPrecision) return false
     if (!Number.isInteger(row.sortOrder) || row.sortOrder < 1) return false
     if (typeof row.characterId !== 'string' || !row.characterId.trim()) return false

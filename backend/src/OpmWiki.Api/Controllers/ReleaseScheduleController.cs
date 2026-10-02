@@ -12,10 +12,13 @@ public sealed class ReleaseScheduleController(ICommunityRepository repository) :
 {
     [AllowAnonymous]
     [HttpGet]
-    public async Task<ActionResult<IReadOnlyList<ReleaseScheduleDto>>> List(
+    public async Task<IActionResult> List(
         [FromQuery] string language = "vi",
+        [FromQuery] bool includeMonthPrecision = false,
         CancellationToken cancellationToken = default) =>
-        Ok(await repository.ListReleaseScheduleAsync(language, cancellationToken));
+        includeMonthPrecision
+            ? Ok(await repository.ListReleaseScheduleWithMonthPrecisionAsync(language, cancellationToken))
+            : Ok(await repository.ListReleaseScheduleAsync(language, cancellationToken));
 }
 
 [ApiController]
@@ -24,9 +27,36 @@ public sealed class ReleaseScheduleController(ICommunityRepository repository) :
 public sealed class AdminReleaseScheduleController(ICommunityRepository repository) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult<IReadOnlyList<ReleaseScheduleDto>>> List(
-        CancellationToken cancellationToken) =>
-        Ok(await repository.ListReleaseScheduleAsync("vi", cancellationToken));
+    public async Task<IActionResult> List(
+        CancellationToken cancellationToken,
+        [FromQuery] bool includeMonthPrecision = false) =>
+        includeMonthPrecision
+            ? Ok(await repository.ListReleaseScheduleWithMonthPrecisionAsync("vi", cancellationToken))
+            : Ok(await repository.ListReleaseScheduleAsync("vi", cancellationToken));
+
+    [HttpPost("month")]
+    public async Task<ActionResult<ReleaseScheduleMonthAwareDto>> CreateMonth(
+        ReleaseScheduleMonthWriteRequest request,
+        CancellationToken cancellationToken)
+    {
+        if (!ReleaseScheduleMonth.IsValid(request.Date))
+            return BadRequest(new { message = "Tháng phát hành phải có dạng YYYY-MM hợp lệ." });
+        if (request.SortOrder is < 1 or > 100)
+            return BadRequest(new { message = "Thứ tự phải từ 1 đến 100." });
+        var error = ValidateFields(request.Server, request.CharacterId, request.BannerImage, request.SortOrder);
+        if (error is not null) return BadRequest(new { message = error });
+        if (string.IsNullOrWhiteSpace(request.BannerImage))
+            return BadRequest(new { message = "Đường dẫn banner là bắt buộc." });
+        try
+        {
+            var result = await repository.CreateMonthReleaseScheduleAsync(request, cancellationToken);
+            return Created($"/api/admin/releases/{result.Id}", result);
+        }
+        catch (DbUpdateException)
+        {
+            return Conflict(new { message = "Đã có một mốc cùng tháng, máy chủ và thứ tự." });
+        }
+    }
 
     [HttpPost]
     public async Task<ActionResult<ReleaseScheduleDto>> Create(
@@ -70,11 +100,14 @@ public sealed class AdminReleaseScheduleController(ICommunityRepository reposito
         await repository.DeleteReleaseScheduleAsync(id, cancellationToken) ? NoContent() : NotFound();
 
     private static string? Validate(ReleaseScheduleWriteRequest request)
+        => ValidateFields(request.Server, request.CharacterId, request.BannerImage, request.SortOrder);
+
+    private static string? ValidateFields(string server, string characterId, string? bannerImage, int sortOrder)
     {
-        if (request.Server is not ("CN" or "SEA")) return "Máy chủ phải là CN hoặc SEA.";
-        if (string.IsNullOrWhiteSpace(request.CharacterId) || request.CharacterId.Length > 80) return "ID nhân vật không hợp lệ.";
-        if ((request.BannerImage?.Length ?? 0) > 500) return "Đường dẫn banner quá dài.";
-        if (request.SortOrder is < 0 or > 100) return "Thứ tự phải từ 0 đến 100.";
+        if (server is not ("CN" or "SEA")) return "Máy chủ phải là CN hoặc SEA.";
+        if (string.IsNullOrWhiteSpace(characterId) || characterId.Length > 80) return "ID nhân vật không hợp lệ.";
+        if ((bannerImage?.Length ?? 0) > 500) return "Đường dẫn banner quá dài.";
+        if (sortOrder is < 0 or > 100) return "Thứ tự phải từ 0 đến 100.";
         return null;
     }
 }

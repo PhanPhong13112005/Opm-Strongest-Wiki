@@ -140,7 +140,9 @@ public sealed class ReleaseScheduleEntry
 {
     public long Id { get; set; }
     public string Server { get; set; } = "SEA";
-    public DateOnly Date { get; set; }
+    public DateOnly? Date { get; set; }
+    public string DatePrecision { get; set; } = "day";
+    public string? ReleaseMonth { get; set; }
     public string CharacterId { get; set; } = string.Empty;
     public string BannerImage { get; set; } = string.Empty;
     public bool IsReturn { get; set; }

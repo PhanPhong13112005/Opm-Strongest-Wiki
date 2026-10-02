@@ -896,8 +896,19 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                         .HasColumnType("timestamp with time zone")
                         .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
-                    b.Property<DateOnly>("Date")
+                    b.Property<DateOnly?>("Date")
                         .HasColumnType("date");
+
+                    b.Property<string>("DatePrecision")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(5)
+                        .HasColumnType("character varying(5)")
+                        .HasDefaultValue("day");
+
+                    b.Property<string>("ReleaseMonth")
+                        .HasMaxLength(7)
+                        .HasColumnType("character varying(7)");
 
                     b.Property<bool>("IsReturn")
                         .HasColumnType("boolean");
@@ -965,7 +976,12 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                     b.HasIndex("Date", "Server", "SortOrder")
                         .IsUnique();
 
-                    b.ToTable("release_schedule", (string)null);
+                    b.HasIndex("ReleaseMonth", "Server", "SortOrder")
+                        .IsUnique()
+                        .HasFilter("\"DatePrecision\" = 'month'");
+
+                    b.ToTable("release_schedule", (string)null, t =>
+                        t.HasCheckConstraint("CK_release_schedule_DatePrecision", "(\"DatePrecision\" = 'day' AND \"Date\" IS NOT NULL AND \"ReleaseMonth\" IS NULL) OR (\"DatePrecision\" = 'month' AND \"Date\" IS NULL AND \"ReleaseMonth\" IS NOT NULL AND \"ReleaseMonth\" ~ '^[0-9]{4}-(0[1-9]|1[0-2])$' AND left(\"ReleaseMonth\", 4) <> '0000')"));
 
                     b.HasData(
                         new
@@ -975,6 +991,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                             CharacterId = "100316-urplus",
                             CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             Date = new DateOnly(2026, 6, 1),
+                            DatePrecision = "day",
                             IsReturn = false,
                             OverrideFactionEn = "",
                             OverrideFactionVi = "",
@@ -996,6 +1013,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                             CharacterId = "100314-urplus",
                             CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             Date = new DateOnly(2026, 6, 15),
+                            DatePrecision = "day",
                             IsReturn = true,
                             OverrideFactionEn = "",
                             OverrideFactionVi = "",
@@ -1017,6 +1035,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                             CharacterId = "100312-urplus",
                             CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             Date = new DateOnly(2026, 6, 1),
+                            DatePrecision = "day",
                             IsReturn = false,
                             OverrideFactionEn = "",
                             OverrideFactionVi = "",
@@ -1038,6 +1057,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                             CharacterId = "100029-urplus",
                             CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             Date = new DateOnly(2026, 6, 15),
+                            DatePrecision = "day",
                             IsReturn = true,
                             OverrideFactionEn = "",
                             OverrideFactionVi = "",
@@ -1059,6 +1079,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                             CharacterId = "100013-urplus",
                             CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             Date = new DateOnly(2026, 7, 1),
+                            DatePrecision = "day",
                             IsReturn = false,
                             OverrideFactionEn = "",
                             OverrideFactionVi = "",
@@ -1080,6 +1101,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                             CharacterId = "100315-urplus",
                             CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             Date = new DateOnly(2026, 7, 15),
+                            DatePrecision = "day",
                             IsReturn = true,
                             OverrideFactionEn = "",
                             OverrideFactionVi = "",
@@ -1101,6 +1123,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                             CharacterId = "100313-urplus",
                             CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             Date = new DateOnly(2026, 7, 1),
+                            DatePrecision = "day",
                             IsReturn = false,
                             OverrideFactionEn = "",
                             OverrideFactionVi = "",
@@ -1122,6 +1145,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                             CharacterId = "100180-urplus",
                             CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             Date = new DateOnly(2026, 7, 15),
+                            DatePrecision = "day",
                             IsReturn = true,
                             OverrideFactionEn = "",
                             OverrideFactionVi = "",
@@ -1143,6 +1167,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                             CharacterId = "unknown",
                             CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             Date = new DateOnly(2026, 8, 1),
+                            DatePrecision = "day",
                             IsReturn = false,
                             OverrideFactionEn = "UNKNOWN",
                             OverrideFactionVi = "UNKNOWN",
@@ -1164,6 +1189,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                             CharacterId = "100316-urplus",
                             CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             Date = new DateOnly(2026, 8, 15),
+                            DatePrecision = "day",
                             IsReturn = true,
                             OverrideFactionEn = "",
                             OverrideFactionVi = "",
@@ -1185,6 +1211,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                             CharacterId = "100314-urplus",
                             CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             Date = new DateOnly(2026, 8, 1),
+                            DatePrecision = "day",
                             IsReturn = false,
                             OverrideFactionEn = "",
                             OverrideFactionVi = "",
@@ -1206,6 +1233,7 @@ namespace OpmWiki.Infrastructure.Persistence.Migrations
                             CharacterId = "100312-urplus",
                             CreatedAt = new DateTimeOffset(new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             Date = new DateOnly(2026, 8, 15),
+                            DatePrecision = "day",
                             IsReturn = true,
                             OverrideFactionEn = "",
                             OverrideFactionVi = "",

@@ -701,12 +701,58 @@ public sealed class CommunityRepository(OpmWikiDbContext dbContext) : ICommunity
         CancellationToken cancellationToken = default)
     {
         var entries = await dbContext.ReleaseScheduleEntries.AsNoTracking()
+            .Where(x => x.DatePrecision == "day" && x.Date != null)
             .OrderBy(x => x.Date)
             .ThenBy(x => x.Server)
             .ThenBy(x => x.SortOrder)
             .ToListAsync(cancellationToken);
         var isEnglish = string.Equals(language, "en", StringComparison.OrdinalIgnoreCase);
         return entries.Select(x => MapRelease(x, isEnglish)).ToArray();
+    }
+
+    public async Task<IReadOnlyList<ReleaseScheduleMonthAwareDto>> ListReleaseScheduleWithMonthPrecisionAsync(
+        string language,
+        CancellationToken cancellationToken = default)
+    {
+        var entries = await dbContext.ReleaseScheduleEntries.AsNoTracking().ToListAsync(cancellationToken);
+        var isEnglish = string.Equals(language, "en", StringComparison.OrdinalIgnoreCase);
+        // ISO month/day strings sort chronologically without inventing a day for month-only entries.
+        return entries.Select(x => MapMonthAwareRelease(x, isEnglish))
+            .OrderBy(x => x.Date, StringComparer.Ordinal)
+            .ThenBy(x => x.Server, StringComparer.Ordinal)
+            .ThenBy(x => x.SortOrder)
+            .ToArray();
+    }
+
+    public async Task<ReleaseScheduleMonthAwareDto> CreateMonthReleaseScheduleAsync(
+        ReleaseScheduleMonthWriteRequest request,
+        CancellationToken cancellationToken = default)
+    {
+        if (!ReleaseScheduleMonth.IsValid(request.Date))
+            throw new ArgumentException("Release month must be a valid YYYY-MM.", nameof(request));
+        var entry = new ReleaseScheduleEntry
+        {
+            Date = null,
+            DatePrecision = "month",
+            ReleaseMonth = request.Date,
+            Server = request.Server.Trim().ToUpperInvariant(),
+            CharacterId = request.CharacterId.Trim(),
+            BannerImage = request.BannerImage.Trim(),
+            IsReturn = request.IsReturn,
+            OverrideNameVi = request.OverrideNameVi?.Trim() ?? string.Empty,
+            OverrideNameEn = request.OverrideNameEn?.Trim() ?? string.Empty,
+            OverrideTier = request.OverrideTier?.Trim() ?? string.Empty,
+            OverrideFactionVi = request.OverrideFactionVi?.Trim() ?? string.Empty,
+            OverrideFactionEn = request.OverrideFactionEn?.Trim() ?? string.Empty,
+            OverrideTypeVi = request.OverrideTypeVi?.Trim() ?? string.Empty,
+            OverrideTypeEn = request.OverrideTypeEn?.Trim() ?? string.Empty,
+            OverrideRoleVi = request.OverrideRoleVi?.Trim() ?? string.Empty,
+            OverrideRoleEn = request.OverrideRoleEn?.Trim() ?? string.Empty,
+            SortOrder = request.SortOrder,
+        };
+        dbContext.ReleaseScheduleEntries.Add(entry);
+        await dbContext.SaveChangesAsync(cancellationToken);
+        return MapMonthAwareRelease(entry, false);
     }
 
     public async Task<ReleaseScheduleDto> CreateReleaseScheduleAsync(
@@ -863,7 +909,7 @@ public sealed class CommunityRepository(OpmWikiDbContext dbContext) : ICommunity
         new(
             x.Id,
             x.Server,
-            x.Date,
+            x.Date ?? throw new InvalidOperationException("Legacy release projection requires an exact date."),
             x.CharacterId,
             x.BannerImage,
             x.IsReturn,
@@ -882,10 +928,31 @@ public sealed class CommunityRepository(OpmWikiDbContext dbContext) : ICommunity
             x.OverrideRoleEn,
             x.SortOrder);
 
+    private static ReleaseScheduleMonthAwareDto MapMonthAwareRelease(ReleaseScheduleEntry x, bool isEnglish)
+    {
+        var date = x.DatePrecision switch
+        {
+            "day" when x.Date.HasValue && x.ReleaseMonth is null =>
+                x.Date.Value.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture),
+            "month" when x.Date is null && ReleaseScheduleMonth.IsValid(x.ReleaseMonth) => x.ReleaseMonth!,
+            _ => throw new InvalidOperationException("Release schedule date precision is inconsistent."),
+        };
+        return new(x.Id, x.Server, date, x.CharacterId, x.BannerImage, x.IsReturn,
+            isEnglish ? x.OverrideNameEn : x.OverrideNameVi, x.OverrideTier,
+            isEnglish ? x.OverrideFactionEn : x.OverrideFactionVi,
+            isEnglish ? x.OverrideTypeEn : x.OverrideTypeVi,
+            isEnglish ? x.OverrideRoleEn : x.OverrideRoleVi,
+            x.OverrideNameVi, x.OverrideNameEn, x.OverrideFactionVi, x.OverrideFactionEn,
+            x.OverrideTypeVi, x.OverrideTypeEn, x.OverrideRoleVi, x.OverrideRoleEn,
+            x.SortOrder, x.DatePrecision);
+    }
+
     private static void ApplyRelease(ReleaseScheduleEntry entry, ReleaseScheduleWriteRequest request)
     {
         entry.Server = request.Server.Trim().ToUpperInvariant();
         entry.Date = request.Date;
+        entry.DatePrecision = "day";
+        entry.ReleaseMonth = null;
         entry.CharacterId = request.CharacterId.Trim();
         entry.BannerImage = request.BannerImage.Trim();
         entry.IsReturn = request.IsReturn;

@@ -25,4 +25,10 @@
     <ProjectReference Include="..\..\src\OpmWiki.Infrastructure\OpmWiki.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="..\..\..\mobile\test\fixtures\api\release_schedule_api_vi.json"
+          Link="Fixtures\release_schedule_api_vi.json"
+          CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>

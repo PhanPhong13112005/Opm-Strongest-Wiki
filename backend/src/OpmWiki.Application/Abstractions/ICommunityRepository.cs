@@ -47,6 +47,8 @@ public interface ICommunityRepository
     Task<bool> DeleteAdminEventAsync(string id, CancellationToken cancellationToken = default);
 
     Task<IReadOnlyList<ReleaseScheduleDto>> ListReleaseScheduleAsync(string language, CancellationToken cancellationToken = default);
+    Task<IReadOnlyList<ReleaseScheduleMonthAwareDto>> ListReleaseScheduleWithMonthPrecisionAsync(string language, CancellationToken cancellationToken = default);
+    Task<ReleaseScheduleMonthAwareDto> CreateMonthReleaseScheduleAsync(ReleaseScheduleMonthWriteRequest request, CancellationToken cancellationToken = default);
     Task<ReleaseScheduleDto> CreateReleaseScheduleAsync(ReleaseScheduleWriteRequest request, CancellationToken cancellationToken = default);
     Task<ReleaseScheduleDto?> UpdateReleaseScheduleAsync(long id, ReleaseScheduleWriteRequest request, CancellationToken cancellationToken = default);
     Task<bool> DeleteReleaseScheduleAsync(long id, CancellationToken cancellationToken = default);
