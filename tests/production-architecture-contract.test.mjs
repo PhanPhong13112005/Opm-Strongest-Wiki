@@ -217,7 +217,14 @@ test('public staging artifacts keep Vercel static-only and EF migrations separat
   assert.match(vercelIgnore, /^\/\*$/m)
   assert.match(vercelIgnore, /^!src\/\*\*$/m)
   assert.doesNotMatch(vercelIgnore, /^!api(?:\/|$)/m)
-  assert.deepEqual(viteEnvironmentNames, ['VITE_API_BASE_URL'])
+  assert.deepEqual(viteEnvironmentNames, [
+    'VITE_API_BASE_URL',
+    'VITE_OPMWIKI_APK_URL',
+    'VITE_OPMWIKI_APK_VERSION',
+    'VITE_OPMWIKI_APK_SIZE',
+    'VITE_OPMWIKI_APK_SHA256',
+    'VITE_OPMWIKI_APK_MIN_ANDROID'
+  ])
 
   assert.match(dockerIgnore, /^\.env\.\*$/m)
   assert.match(dockerIgnore, /^api$/m)
@@ -227,7 +234,7 @@ test('public staging artifacts keep Vercel static-only and EF migrations separat
   assert.match(apiDockerfile, /USER \$APP_UID/)
   assert.match(apiDockerfile, /ENTRYPOINT \["dotnet", "OpmWiki\.Api\.dll"\]/)
 
-  assert.equal(migrations.length, 11)
+  assert.equal(migrations.length, 12)
   assert.match(migratorDockerfile, /dotnet-ef migrations bundle/)
   assert.match(migratorDockerfile, /--self-contained/)
   assert.match(migratorDockerfile, /ENTRYPOINT \["\/app\/efbundle"/)
