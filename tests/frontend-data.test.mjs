@@ -24,6 +24,8 @@ const trackedPublicPaths = new Set(
     .map(filePath => filePath.replaceAll('\\', '/')),
 )
 const approvedTaskPublicPaths = new Set([
+  'public/Characters/Child Emperor (URplus)/URplus.png',
+  'public/Characters/Full_Background/Child_URplus.png',
   'public/Skill/Child Emperor (URplus)/he_100320_ur_plus__basic.png',
   'public/Skill/Child Emperor (URplus)/he_100320_ur_plus__ultimate.png',
   'public/Skill/Child Emperor (URplus)/he_100320_ur_plus__passive.png',

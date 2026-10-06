@@ -359,7 +359,9 @@ const apiScheduleData = computed(() => {
     const isMonthOnly = row.datePrecision === 'month' || !day
     server.items.push({
       id: row.characterId,
-      bannerImage: row.bannerImage,
+      bannerImage: row.characterId === '100320-urplus'
+        ? '/Characters/Full_Background/Child_URplus.png'
+        : row.bannerImage,
       overrideName: row.overrideName || undefined,
       overrideTier: row.overrideTier || undefined,
       overrideFaction: row.overrideFaction || undefined,

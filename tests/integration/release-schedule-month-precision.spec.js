@@ -45,6 +45,7 @@ for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 
         await expect(card.locator('.card-meta')).toContainText('ĐANG CẬP NHẬT NGÀY · 10 / 2026')
         await expect(card).not.toContainText('01 / 10 / 2026')
         const image = card.locator('img').first()
+        await expect(image).toHaveAttribute('src', /^\/Characters\/Full_Background\/Child_URplus\.png(?:\?|$)/)
         await card.scrollIntoViewIfNeeded()
         await expect.poll(() => image.evaluate(img => img.naturalWidth)).toBeGreaterThan(0)
       }

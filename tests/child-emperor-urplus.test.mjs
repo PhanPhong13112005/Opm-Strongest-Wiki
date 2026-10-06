@@ -21,6 +21,37 @@ const expectedAssets = new Map([
   ['/Skill/Child Emperor (URplus)/he_100320_ur_plus__awaken1.png', 'D6E12BFDA567C292C7E7ED093FD1B52AA63F9C01D99EE5EA58FC69317DE364E0'],
 ])
 
+test('Child Emperor UR+ visuals use the approved portrait and retain responsive transparency', async () => {
+  const portrait = '/Characters/Child Emperor (URplus)/URplus.png'
+  const background = '/Characters/Full_Background/Child_URplus.png'
+  for (const characters of [charactersVi, charactersEn]) {
+    assert.equal(characters.find(character => character.id === id).imageURL, portrait)
+  }
+  for (const asset of [portrait, background]) {
+    const bytes = fs.readFileSync(path.join(root, 'public', asset.slice(1)))
+    assert.equal(crypto.createHash('sha256').update(bytes).digest('hex').toUpperCase(),
+      '1E160D4FB20286648EEEF62A73C736228DCC60BB3062430838FF768B08253E22')
+    const metadata = await sharp(bytes).metadata()
+    assert.equal(metadata.format, 'png')
+    assert.equal(metadata.hasAlpha, true)
+    assert.deepEqual([metadata.width, metadata.height], [1298, 1212])
+  }
+  for (const width of [360, 600]) {
+    const image = sharp(path.join(root, 'public/Characters/optimized', `${id}-${width}.webp`))
+    const metadata = await image.metadata()
+    assert.equal(metadata.width, width)
+    assert.equal(metadata.height, Math.round(width * 1212 / 1298))
+    assert.equal(metadata.hasAlpha, true)
+    assert.equal((await image.stats()).isOpaque, false)
+    await image.raw().toBuffer()
+  }
+  for (const language of ['vi', 'en']) {
+    const detail = readJson(`public/character-details/${language}/${id}.json`)
+    assert.equal(detail.imageURL, `/Characters/optimized/${id}-600.webp`)
+    assert.deepEqual([detail.imageWidth, detail.imageHeight], [1298, 1212])
+  }
+})
+
 test('Child Emperor UR+ is a unique bilingual catalog record with sourced identity and stats', () => {
   const vietnamese = charactersVi.filter(character => character.id === id)
   const english = charactersEn.filter(character => character.id === id)
