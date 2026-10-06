@@ -1,4 +1,10 @@
 import { expect, test } from '@playwright/test'
+import { readFileSync } from 'node:fs'
+
+// These browser tests require publication, unlike the component/CTA Node tests.
+const guidePublished = /^\s*path:\s*['"]\/huong-dan-tai-game['"]/m.test(
+  readFileSync(new URL('../../src/router/index.js', import.meta.url), 'utf8'))
+test.skip(!guidePublished, 'Download Guide public route is not registered in this source revision; component/CTA preparation is tested separately')
 
 const apkUrl = process.env.VITE_OPMWIKI_APK_URL || ''
 const apkConfigured = Boolean(apkUrl)

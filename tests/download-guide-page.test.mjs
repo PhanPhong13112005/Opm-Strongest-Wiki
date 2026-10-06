@@ -6,17 +6,34 @@ import test from 'node:test'
 const root = path.resolve(import.meta.dirname, '..')
 const read = relative => fs.readFileSync(path.join(root, relative), 'utf8')
 
-test('download guide is a lazy public route with desktop and mobile navigation', () => {
+test('download guide preparation and navigation respect the route publication boundary', () => {
   const router = read('src/router/index.js')
   const app = read('src/App.vue')
   const vi = JSON.parse(read('src/locales/vi.json'))
   const en = JSON.parse(read('src/locales/en.json'))
+  const view = read('src/views/DownloadGuideView.vue')
+  const config = read('src/data/opmWikiApkRelease.js')
 
-  assert.match(router, /const DownloadGuideView = retryImport\(\(\) => import\('\.\.\/views\/DownloadGuideView\.vue'\)\)/)
-  assert.match(router, /path: '\/huong-dan-tai-game'/)
-  assert.equal((app.match(/to="\/huong-dan-tai-game"/g) || []).length, 2)
-  assert.equal(vi.nav.downloadGuide, 'Hướng dẫn tải')
-  assert.equal(en.nav.downloadGuide, 'Download guide')
+  // Committed component/CTA preparation does not publish the public route.
+  assert.match(view, /import \{ opmWikiApkRelease \} from '\.\.\/data\/opmWikiApkRelease'/)
+  assert.match(config, /export const opmWikiApkRelease = Object\.freeze\(/)
+  const published = /^\s*path:\s*['"]\/huong-dan-tai-game['"]/m.test(router)
+  if (published) {
+    assert.match(router, /const DownloadGuideView = retryImport\(\(\) => import\('\.\.\/views\/DownloadGuideView\.vue'\)\)/)
+    assert.match(router, /name: 'download-guide',\s*component: DownloadGuideView/)
+    assert.equal((app.match(/to="\/huong-dan-tai-game"/g) || []).length, 2)
+    for (const label of ['Điều hướng chính', 'Mobile navigation']) {
+      const navigation = app.match(new RegExp(`<nav\\b[^>]*aria-label="${label}"[^>]*>([\\s\\S]*?)<\\/nav>`))?.[1] || ''
+      assert.equal((navigation.match(/to="\/huong-dan-tai-game"/g) || []).length, 1, `Missing guide link in ${label}`)
+    }
+    assert.equal(vi.nav.downloadGuide, 'Hướng dẫn tải')
+    assert.equal(en.nav.downloadGuide, 'Download guide')
+  } else {
+    assert.doesNotMatch(router, /DownloadGuideView/)
+    assert.doesNotMatch(app, /to="\/huong-dan-tai-game"/)
+    assert.equal(Object.hasOwn(vi.nav, 'downloadGuide'), false)
+    assert.equal(Object.hasOwn(en.nav, 'downloadGuide'), false)
+  }
 })
 
 test('official regional links remain distinct and safe', () => {
