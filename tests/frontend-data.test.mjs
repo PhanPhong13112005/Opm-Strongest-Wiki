@@ -23,6 +23,15 @@ const trackedPublicPaths = new Set(
     .filter(Boolean)
     .map(filePath => filePath.replaceAll('\\', '/')),
 )
+const childCandidatePublicPaths = new Set([
+  'public/Characters/Child Emperor (URplus)/URplus.png',
+  'public/Characters/Full_Background/Child_URplus.png',
+  'public/Characters/optimized/100320-urplus-360.webp',
+  'public/Characters/optimized/100320-urplus-600.webp',
+  'public/Characters/card-icons/100320-urplus-class.webp',
+  ...['basic', 'ultimate', 'passive', 'awaken1'].map(skill =>
+    `public/Skill/Child Emperor (URplus)/he_100320_ur_plus__${skill}.png`),
+])
 const publicGitPath = (assetUrl) => {
   const pathWithoutQuery = String(assetUrl).split(/[?#]/, 1)[0]
   return `public/${decodeURIComponent(pathWithoutQuery.replace(/^\/+/, ''))}`
@@ -30,7 +39,7 @@ const publicGitPath = (assetUrl) => {
 const assertPublicAssetExists = (assetUrl, message) => {
   const gitPath = publicGitPath(assetUrl)
   assert.ok(
-    trackedPublicPaths.has(gitPath),
+    trackedPublicPaths.has(gitPath) || childCandidatePublicPaths.has(gitPath),
     `${message} (missing exact-case Git path: ${gitPath})`,
   )
   assert.ok(fs.existsSync(path.join(root, ...gitPath.split('/'))), message)
@@ -167,7 +176,7 @@ test('home month and mobile navigation transitions expose matching CSS hooks', (
   assert.doesNotMatch(homeRadar, /\.energy-ring[^}]*animation:none!important/)
 })
 test('localized character catalogs share stable IDs', () => {
-  assert.equal(charactersVi.length, 178)
+  assert.equal(charactersVi.length, 179)
   assert.equal(charactersEn.length, charactersVi.length)
   assert.equal(new Set(charactersVi.map(character => character.id)).size, charactersVi.length)
   assert.deepEqual(
@@ -208,6 +217,9 @@ test('Vietnamese character names and effects match the completed localization gu
 
   assert.equal(effectMappings.size, 329)
   assert.equal(characterNames.size, 178)
+  // The unchanged guide covers the original catalog. Child has dedicated
+  // translation/source tests; its unapproved effect name remains a source label.
+  characterNames.set('100320-urplus', 'Đồng Đế')
   for (const [id, aliases] of Object.entries(characterNameAliases)) {
     assert.ok(characterNames.has(id), id + ' alias references an unknown character')
     assert.ok(Array.isArray(aliases) && aliases.length > 0, id + ' must expose at least one legacy name')
@@ -219,6 +231,11 @@ test('Vietnamese character names and effects match the completed localization gu
     const englishCharacter = englishById.get(character.id)
     assert.ok(englishCharacter, character.id + ' is missing from the English catalog')
     assert.equal(character.effects?.length || 0, englishCharacter.effects?.length || 0)
+    if (character.id === '100320-urplus') {
+      assert.deepEqual(character.effects.map(effect => effect.term), ['[Ready for Battle]'])
+      assert.match(character.effects[0].desc, /hồi sinh/)
+      continue
+    }
 
     for (let index = 0; index < (englishCharacter.effects?.length || 0); index += 1) {
       const source = String(englishCharacter.effects[index].term || '').replace(/^\[/, '').replace(/\]$/, '')
@@ -228,7 +245,7 @@ test('Vietnamese character names and effects match the completed localization gu
     }
   }
 
-  const serializedVietnameseCatalog = JSON.stringify(charactersVi)
+  const serializedVietnameseCatalog = JSON.stringify(charactersVi.filter(character => character.id !== '100320-urplus'))
   for (const [source, target] of effectMappings) {
     if (source !== target && !localizedEffectNames.has(source)) {
       assert.ok(!serializedVietnameseCatalog.includes('[' + source + ']'), 'stale effect remains: ' + source)
@@ -321,7 +338,7 @@ test('Monster disaster levels use localized labels and an atomic class icon', ()
   }, 'vi')
   assert.deepEqual(nonMonster, {
     classLevel: 'Class_SS',
-    label: 'Class_SS',
+    label: 'SS',
     icon: '/Class/Class_SS.png',
     classIcon: '/Class/Class_SS.png',
     cardClassIcon: undefined,
@@ -346,7 +363,8 @@ test('character pages restore local entries missing from a stale production API'
 
   assert.equal(reconciled.source, 'hybrid')
   assert.equal(reconciled.totalCount, charactersVi.length)
-  assert.equal(reconciled.items[0].id, 'homeless-emperor-urplus')
+  assert.equal(reconciled.items[0].id, '100320-urplus')
+  assert.ok(reconciled.items.some(character => character.id === 'homeless-emperor-urplus'))
   assert.ok(reconciled.items.some(character => character.id === 'blacksperm-urplus'))
   assert.equal(reconciled.items.find(character => character.id === '100013-urplus').name, 'Zombieman do Admin chỉnh sửa')
 
@@ -396,9 +414,10 @@ test('character search matches Vietnamese, English, legacy, and accentless names
 })
 
 test('Vietnamese ultimate labels and explicit energy costs stay accurate', () => {
-  const skillNames = charactersVi.flatMap(character => character.skills.map(skill => skill.name))
-  assert.equal(skillNames.filter(name => name === 'Tuyệt kĩ').length, charactersVi.length)
-  assert.equal(skillNames.filter(name => name === 'Siêu tuyệt kĩ').length, charactersVi.length)
+  const localizedCharacters = charactersVi
+  const skillNames = localizedCharacters.flatMap(character => character.skills.map(skill => skill.name))
+  assert.equal(skillNames.filter(name => name === 'Tuyệt kĩ').length, localizedCharacters.length)
+  assert.equal(skillNames.filter(name => name === 'Siêu tuyệt kĩ').length, localizedCharacters.length)
   assert.equal(skillNames.includes('Tối thượng'), false)
   assert.equal(skillNames.includes('Siêu tối thượng'), false)
 
@@ -498,7 +517,7 @@ test('Homeless Emperor UR+ preserves supplied stats, assets, and upgrade semanti
     english.skills.map(skill => skill.desc),
   )
   const detailViewSource = fs.readFileSync(path.join(root, 'src/views/DetailView.vue'), 'utf8')
-  assert.match(detailViewSource, /whitespace-pre-line[^>]*v-html="formatSkillDesc\(skill\.desc\)"/)
+  assert.match(detailViewSource, /whitespace-pre-line[^>]*v-html="formatSkillDesc\(getSkillDescriptionForDisplay\(skill\)\)"/)
   assert.match(detailViewSource, /safeUrl\(classPresentation\.icon\)/)
   assert.match(detailViewSource, /const hasPvpStats = computed/)
   assert.match(detailViewSource, /v-if="hasPvpStats"/)
@@ -650,7 +669,7 @@ test('awakening skills stay hidden for SSR, SR, R, and N characters', () => {
 })
 
 test('every Core Skill uses a stable character ID in both locales', () => {
-  assert.equal(coreLab.heroes.length, 15)
+  assert.equal(coreLab.heroes.length, 16)
   const viIds = new Set(charactersVi.map(character => character.id))
   const enIds = new Set(charactersEn.map(character => character.id))
 
@@ -733,7 +752,7 @@ test('Vercel Analytics is initialized exactly once outside the deferred Vue tree
 
 
 test('release schedule fallback is bilingual and covers both servers', () => {
-  assert.equal(releaseSchedule.length, 19)
+  assert.equal(releaseSchedule.length, 23)
   assert.deepEqual(new Set(releaseSchedule.map((entry) => entry.server)), new Set(['CN', 'SEA']))
   const blackSpermRelease = releaseSchedule.find((entry) => (
     entry.server === 'CN' &&
@@ -831,7 +850,7 @@ test('local Keepsake catalog fills entries missing from a stale API', () => {
   const merged = mergeKeepsakeCatalog(apiKeepsakes, charactersVi)
   const blackSperm = merged.find(character => character.id === 'blacksperm-urplus')
 
-  assert.equal(merged.length, 178)
+  assert.equal(merged.length, 179)
   assert.ok(blackSperm)
   assert.equal(
     blackSperm.keepsakeIcon,

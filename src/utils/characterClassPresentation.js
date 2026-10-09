@@ -23,7 +23,7 @@ export const resolveCharacterClassPresentation = (character = {}, language = 'vi
   if (!disasterLevel) {
     return {
       classLevel,
-      label: classLevel,
+      label: classLevel === 'Class_SS' ? 'SS' : classLevel,
       icon: character.classIcon || character.cardClassIcon || '',
       classIcon: character.classIcon,
       cardClassIcon: character.cardClassIcon,

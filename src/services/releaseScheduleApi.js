@@ -25,7 +25,12 @@ const mergeReleaseSchedule = (apiRows, language) => {
       localRow.characterId !== 'unknown'
     if (placeholderWasRevealed) return { ...row, ...localRow }
     if (localRow?.characterId === row.characterId && localRow.bannerImage) {
-      return { ...row, bannerImage: localRow.bannerImage }
+      return {
+        ...row, bannerImage: localRow.bannerImage,
+        ...(localRow.source === 'owner' ? {
+          source: localRow.source, verificationStatus: localRow.verificationStatus, status: localRow.status,
+        } : {}),
+      }
     }
     return row
   })
@@ -42,6 +47,10 @@ export const getReleaseSchedule = async (language = 'vi') => {
     const rows = await requestApiCached('api/release-schedule', { language })
     return mergeReleaseSchedule(rows, language)
   } catch {
-    return fallbackSchedule.map((row) => localize(row, language))
+    return getBundledReleaseSchedule(language)
   }
 }
+
+export const getBundledReleaseSchedule = (language = 'vi') => (
+  fallbackSchedule.map(row => localize(row, language))
+)

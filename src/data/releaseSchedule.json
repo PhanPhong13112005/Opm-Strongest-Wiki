@@ -1,6 +1,50 @@
 [
   {
     "server": "CN",
+    "date": "2026-10-01",
+    "characterId": "100320-urplus",
+    "bannerImage": "/Characters/Full_Background/Child_URplus.png",
+    "isReturn": false,
+    "sortOrder": 1,
+    "verificationStatus": "owner-confirmed",
+    "source": "owner",
+    "status": "planned"
+  },
+  {
+    "server": "CN",
+    "date": "2026-12-01",
+    "characterId": "100320-urplus",
+    "bannerImage": "/Characters/Full_Background/Child_URplus.png",
+    "isReturn": true,
+    "sortOrder": 1,
+    "verificationStatus": "owner-confirmed",
+    "source": "owner",
+    "status": "planned"
+  },
+  {
+    "server": "SEA",
+    "date": "2027-02-01",
+    "characterId": "100320-urplus",
+    "bannerImage": "/Characters/Full_Background/Child_URplus.png",
+    "isReturn": false,
+    "sortOrder": 1,
+    "verificationStatus": "owner-confirmed",
+    "source": "owner",
+    "status": "planned"
+  },
+  {
+    "server": "SEA",
+    "date": "2027-04-01",
+    "characterId": "100320-urplus",
+    "bannerImage": "/Characters/Full_Background/Child_URplus.png",
+    "isReturn": true,
+    "sortOrder": 1,
+    "verificationStatus": "owner-confirmed",
+    "source": "owner",
+    "status": "planned"
+  },
+  {
+    "server": "CN",
     "date": "2026-06-01",
     "characterId": "100316-urplus",
     "bannerImage": "/Characters/Full_Background/Rover_URplus.png",

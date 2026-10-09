@@ -46,7 +46,7 @@
           </span>
         </h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 w-full">
+        <div class="grid grid-cols-1 gap-4 mt-4 w-full" :class="activeHero['bonusStats_' + $i18n.locale]?.length ? 'md:grid-cols-2 xl:grid-cols-4' : 'md:grid-cols-3'">
           <div class="bg-[#05060a]/50 p-3 rounded-lg border border-gray-800/50 backdrop-blur-sm">
             <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-1">{{ $t('corelab.coreSkill') }}</div>
             <div class="text-sm font-bold text-opm-gold">{{ activeHero['coreName_' + $i18n.locale] || activeHero.coreName }}</div>
@@ -58,6 +58,10 @@
           <div class="bg-[#05060a]/50 p-3 rounded-lg border border-gray-800/50 backdrop-blur-sm">
             <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-1">{{ $t('corelab.advancedCondition') }}</div>
             <div class="text-sm text-gray-300">{{ formatUnlockCondition(activeHero['gate_advanced_' + $i18n.locale]) }}</div>
+          </div>
+          <div v-if="activeHero['bonusStats_' + $i18n.locale]?.length" class="bg-[#05060a]/50 p-3 rounded-lg border border-gray-800/50 backdrop-blur-sm">
+            <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-1">{{ $t('corelab.bonusStats') }}</div>
+            <div class="text-sm text-gray-300">{{ activeHero['bonusStats_' + $i18n.locale].join(' · ') }}</div>
           </div>
         </div>
       </div>
@@ -321,7 +325,7 @@ watch([fromLevel, toLevel], ([newFrom, newTo]) => {
 const unlockedLevels = computed(() => {
   if (!activeHero.value || fromLevel.value >= toLevel.value) return []
   return activeHero.value.levels.filter(
-    lvl => lvl.lv > fromLevel.value && lvl.lv <= toLevel.value
+    lvl => (lvl.lv === 0 && lvl.isMilestone ? fromLevel.value === 0 : lvl.lv > fromLevel.value) && lvl.lv <= toLevel.value
   )
 })
 

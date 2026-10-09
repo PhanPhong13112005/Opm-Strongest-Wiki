@@ -1,6 +1,23 @@
 {
   "vi": [
     {
+      "id": "100320-urplus",
+      "name": "Đồng Đế",
+      "imageURL": "/Characters/optimized/100320-urplus-360.webp",
+      "tier": "UR+",
+      "type": "Công Nghệ",
+      "faction": "Anh Hùng",
+      "roles": [
+        "Strike Core – Ready For Battle"
+      ],
+      "classLevel": "Class_SS",
+      "cardClassIcon": "/Characters/card-icons/100320-urplus-class.webp",
+      "cardKeepsakeIcon": null,
+      "releaseTrung": "01/10/2026",
+      "classIcon": "/Class/Class_SS.png",
+      "releaseSea": "01/02/2027"
+    },
+    {
       "id": "homeless-emperor-urplus",
       "name": "Vua Không Nhà",
       "imageURL": "/Characters/optimized/homeless-emperor-urplus-360.webp",
@@ -3205,6 +3222,23 @@
     }
   ],
   "en": [
+    {
+      "id": "100320-urplus",
+      "name": "Child Emperor",
+      "imageURL": "/Characters/optimized/100320-urplus-360.webp",
+      "tier": "UR+",
+      "type": "Hi-Tech",
+      "faction": "Hero",
+      "roles": [
+        "Strike Core – Ready For Battle"
+      ],
+      "classLevel": "Class_SS",
+      "cardClassIcon": "/Characters/card-icons/100320-urplus-class.webp",
+      "cardKeepsakeIcon": null,
+      "releaseTrung": "01/10/2026",
+      "classIcon": "/Class/Class_SS.png",
+      "releaseSea": "01/02/2027"
+    },
     {
       "id": "homeless-emperor-urplus",
       "name": "Homeless Emperor",

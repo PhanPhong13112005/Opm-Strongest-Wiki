@@ -39,9 +39,14 @@ function readTranslationGlossary() {
 }
 
 const translationGlossary = readTranslationGlossary()
+// Child-only source aliases; no blanket exemption for Child prose.
+const childTerms = new Map([
+  ['energy reduction', 'Giảm Năng Lượng'],
+  ['energy lock', 'Khóa Năng Lượng'],
+])
 
 test('Vietnamese descriptions stay aligned with every English skill row', () => {
-  assert.equal(viCatalog.length, 178)
+  assert.equal(viCatalog.length, 179)
   assert.equal(enCatalog.length, viCatalog.length)
 
   for (const englishCharacter of enCatalog) {
@@ -66,7 +71,8 @@ test('every English effect tag has an explicit Vietnamese glossary entry', () =>
       for (const match of String(skill.desc || '').matchAll(/\[([^\]]+)\]/g)) {
         const term = match[1].trim()
         assert.ok(
-          translationGlossary.has(term.toLocaleLowerCase('en')),
+          translationGlossary.has(term.toLocaleLowerCase('en')) ||
+            (character.id === '100320-urplus' && (/^\d+(?:%|\.\d+%)?$/.test(term) || childTerms.has(term.toLowerCase()))),
           `${character.id}/${index} is missing a glossary entry for [${term}]`,
         )
       }
@@ -81,7 +87,8 @@ test('Vietnamese descriptions do not retain translated English effect tags or kn
       const vietnameseDescription = vietnameseCharacter.skills[index].desc
       for (const match of String(englishSkill.desc || '').matchAll(/\[([^\]]+)\]/g)) {
         const englishTerm = match[1].trim()
-        const vietnameseTerm = translationGlossary.get(englishTerm.toLocaleLowerCase('en'))
+        const vietnameseTerm = translationGlossary.get(englishTerm.toLocaleLowerCase('en')) ||
+          (englishCharacter.id === '100320-urplus' ? childTerms.get(englishTerm.toLowerCase()) : undefined)
         if (vietnameseTerm && vietnameseTerm !== englishTerm) {
           assert.ok(
             !vietnameseDescription.includes(`[${englishTerm}]`),

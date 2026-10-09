@@ -5,7 +5,8 @@ import { useI18n } from 'vue-i18n'
 import { loadLocalCharacterDetail } from '../data/loadCharacterDetail'
 import releaseSchedule from '../data/releaseSchedule.json'
 import { safeAssetUrl } from '../utils/assetUrl'
-import { getSkillEnergyCost } from '../utils/skillPresentation'
+import { getSkillDescriptionForDisplay, getSkillEnergyCost, getPassiveUpgradeTone } from '../utils/skillPresentation'
+import { getCharacterReleaseDates } from '../utils/characterReleaseDates'
 import { resolveCharacterClassPresentation } from '../utils/characterClassPresentation'
 import { getCharacterById } from '../services/characterApi'
 
@@ -61,6 +62,9 @@ const coreData = computed(() => {
 
 const coreLevels = computed(() => {
   if (!coreData.value) return []
+  if (coreData.value.levels.some(level => level.lv === 0 && level.isMilestone)) {
+    return coreData.value.levels.filter(l => l.lv === 0 || l.isMilestone)
+  }
   const milestones = coreData.value.levels.filter(l => l.lv === 1 || l.isMilestone)
   return milestones.slice(0, 2)
 })
@@ -194,91 +198,13 @@ const currentExpandedSkillObj = computed(() => {
   return character.value.skills.find(s => s.name === lastOpened)
 })
 
-const releaseDates = computed(() => {
-  if (!character.value) return null;
-  
-  const format = (date, month, year) => {
-    let newM = month;
-    let newY = year;
-    while (newM > 12) {
-      newM -= 12;
-      newY += 1;
-    }
-    return `${date.toString().padStart(2, '0')}/${newM.toString().padStart(2, '0')}/${newY}`;
-  }
+const releaseDates = computed(() => getCharacterReleaseDates(
+  character.value, releaseSchedule, t('detail.recommendationPending'),
+))
 
-  const formatScheduleDate = (value) => {
-    const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value || '')
-    return match ? `${match[3]}/${match[2]}/${match[1]}` : null
-  }
-
-  const trungStr = character.value.releaseTrung;
-  let tRelease = 'Không xác định';
-  let tReturn = 'Không xác định';
-  let sRelease = 'Không xác định';
-  let sReturn = 'Không xác định';
-
-  if (trungStr) {
-    const cleanTrung = trungStr.replace(/\s+/g, '');
-    const tParts = cleanTrung.split(/[\/\-]/);
-    
-    let tm = 0, ty = 0;
-    if (tParts.length === 3) {
-      const td = parseInt(tParts[0], 10);
-      tm = parseInt(tParts[1], 10);
-      ty = parseInt(tParts[2], 10);
-      tRelease = format(td, tm, ty);
-      tReturn = format(15, tm + 2, ty);
-    } else if (tParts.length === 2) {
-      tm = parseInt(tParts[0], 10);
-      ty = parseInt(tParts[1], 10);
-      tRelease = format(1, tm, ty);
-      tReturn = format(15, tm + 2, ty);
-    } else {
-      tRelease = trungStr;
-    }
-  }
-
-  const explicitSea = character.value.releaseDate || character.value.releaseSea;
-  if (explicitSea) {
-    sRelease = explicitSea;
-    const cleanSea = sRelease.replace(/\s+/g, '');
-    const sParts = cleanSea.split(/[\/\-]/);
-    
-    if (sParts.length === 3) {
-      const sm = parseInt(sParts[1], 10);
-      const sy = parseInt(sParts[2], 10);
-      sReturn = format(15, sm + 2, sy);
-    } else if (sParts.length === 2) {
-      const sm = parseInt(sParts[0], 10);
-      const sy = parseInt(sParts[1], 10);
-      sRelease = format(1, sm, sy);
-      sReturn = format(15, sm + 2, sy);
-    } else {
-      sReturn = 'Không xác định';
-    }
-  }
-
-  const scheduledReturns = releaseSchedule.filter(row => (
-    row.characterId === character.value.id && row.isReturn
-  ))
-  const scheduledTrungReturn = scheduledReturns.find(row => row.server === 'CN')
-  const scheduledSeaReturn = scheduledReturns.find(row => row.server === 'SEA')
-  tReturn = formatScheduleDate(scheduledTrungReturn?.date) || tReturn
-  sReturn = formatScheduleDate(scheduledSeaReturn?.date) || sReturn
-
-  // If BOTH are completely empty, maybe we shouldn't even show the history block
-  if (!trungStr && !explicitSea) {
-    return null; // This will hide the LỊCH SỬ block entirely
-  }
-
-  return {
-    trungRelease: tRelease,
-    trungReturn: tReturn,
-    seaRelease: sRelease,
-    seaReturn: sReturn
-  }
-})
+const hasOwnerSchedule = computed(() => releaseSchedule.some(row =>
+  row.characterId === character.value?.id && row.source === 'owner',
+))
 
 const getSkillsByType = (category) => {
   if (!character.value || !character.value.skills) return []
@@ -356,17 +282,6 @@ const getSkillTitleClass = (skill) => {
   return expandedSkills.value.includes(skill.name)
     ? 'text-[color:var(--theme-color)]'
     : 'text-gray-300'
-}
-
-const getPassiveUpgradeTone = (skill) => {
-  const type = String(skill?.type || '').toLocaleLowerCase()
-  if (!['nội tại', 'bị động', 'passive', 'extreme passive', '5-star passive', 'core'].includes(type)) return ''
-
-  const name = String(skill?.name || '').toLocaleLowerCase()
-  if (name.includes('5★ vàng') || name.includes('5★ gold') || name.includes('cực hạn') || name.includes('extreme')) return 'gold'
-  if (name.includes('5★ tím') || name.includes('5★ purple') || name.includes('5 sao') || name.includes('5 stars') || name.includes('5 star')) return 'purple'
-  if (name === 'bị động' || name === 'passive') return 'base-stars'
-  return ''
 }
 
 const getKeepsakeImage = (skill) => {
@@ -639,6 +554,7 @@ onBeforeUnmount(() => {
             <div class="flex-grow h-px bg-gray-800 ml-4"></div>
           </div>
           
+          <p v-if="hasOwnerSchedule" class="text-xs text-gray-400 mb-4" data-testid="history-evidence">{{ t('detail.ownerScheduleNote') }}</p>
           <div class="flex flex-col gap-4">
             <!-- TRUNG -->
             <div>
@@ -670,7 +586,7 @@ onBeforeUnmount(() => {
                   <span class="text-white font-black text-sm lg:text-base tracking-widest text-right">{{ releaseDates.seaRelease }}</span>
                 </div>
                 <div class="flex justify-between items-center gap-2">
-                  <span class="text-gray-400 font-bold text-xs uppercase tracking-widest whitespace-nowrap flex-shrink-0">Trở Lại</span>
+                  <span class="text-gray-400 font-bold text-xs uppercase tracking-widest whitespace-nowrap flex-shrink-0">{{ t('detail.returnDate') }}</span>
                   <span class="text-white font-black text-sm lg:text-base tracking-widest text-right">{{ releaseDates.seaReturn }}</span>
                 </div>
               </div>
@@ -787,6 +703,7 @@ onBeforeUnmount(() => {
         <!-- RIGHT: SKILL CARDS LIST -->
         <div
           class="flex flex-col gap-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar"
+          data-testid="character-skills-content"
           :class="activeSkillTab === 'core' ? 'lg:col-span-5' : 'lg:col-span-3'"
         >
           <template v-if="activeSkillTab === 'core' && coreData">
@@ -806,7 +723,7 @@ onBeforeUnmount(() => {
                   </h3>
                 </div>
                 <div class="bg-gray-800 border border-gray-700 text-gray-400 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest">
-                  Level {{ lvl.lv }}
+                  LV {{ lvl.lv }}
                 </div>
               </div>
               <div class="p-4 pt-2">
@@ -871,7 +788,7 @@ onBeforeUnmount(() => {
                 :class="expandedSkills.includes(skill.name) ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'"
               >
                 <div class="p-4 pt-0 border-t border-gray-800/50 mt-2">
-                  <p class="text-sm text-gray-300 leading-relaxed mt-4 whitespace-pre-line" v-html="formatSkillDesc(skill.desc)"></p>
+                  <p class="text-sm text-gray-300 leading-relaxed mt-4 whitespace-pre-line" v-html="formatSkillDesc(getSkillDescriptionForDisplay(skill))"></p>
                 </div>
               </div>
 

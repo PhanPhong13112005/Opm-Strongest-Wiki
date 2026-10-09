@@ -1,5 +1,86 @@
 [
   {
+    "id": "100320-urplus",
+    "name": "Đồng Đế",
+    "imageURL": "/Characters/Child Emperor (URplus)/URplus.png",
+    "tier": "UR+",
+    "type": "Công Nghệ",
+    "faction": "Anh Hùng",
+    "roles": [
+      "Strike Core – Ready For Battle"
+    ],
+    "mechanicsLanguage": "vi",
+    "baseStats": {
+      "atk": 683,
+      "hp": 4095,
+      "def": 173,
+      "spd": 118
+    },
+    "releaseTrung": "01/10/2026",
+    "classLevel": "Class_SS",
+    "skills": [
+      {
+        "name": "Cơ bản",
+        "desc": "Đang cập nhật mô tả.",
+        "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__basic.png",
+        "type": "Basic",
+        "cost": 0
+      },
+      {
+        "name": "Tuyệt kĩ",
+        "desc": "Gây 5000% [Sát Thương Trực Tiếp Chuyên Biệt] lên các mục tiêu trong vùng hình chữ thập (chỉ chịu ảnh hưởng bởi Giảm Sát Thương nâng cao), bỏ qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt].\n\nKhi tung kỹ năng, giảm 3 lần sử dụng [Tái Chiến] của toàn bộ kẻ địch. (Không cộng dồn)",
+        "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__ultimate.png",
+        "type": "Ultimate",
+        "cost": 0
+      },
+      {
+        "name": "Siêu tuyệt kĩ",
+        "desc": "Gây 7000% [Sát Thương Trực Tiếp Chuyên Biệt] lên các mục tiêu trong vùng hình chữ thập (chỉ chịu ảnh hưởng bởi Giảm Sát Thương nâng cao), bỏ qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt].\n\nKhi tung kỹ năng, giảm 4 lần sử dụng [Tái Chiến] của toàn bộ kẻ địch. (Không cộng dồn)",
+        "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__ultimate.png",
+        "type": "Ultimate",
+        "cost": 0
+      },
+      {
+        "name": "Bị động",
+        "desc": "Khi bắt đầu trận đấu, nhận 80% [Giảm Sát Thương Không Bạo Kích Chuyên Biệt].\n\nKhi vào chiến trường, toàn bộ đồng minh được miễn nhiễm vĩnh viễn với các hiệu ứng [Giảm Năng Lượng] và [Khóa Năng Lượng].",
+        "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__passive.png",
+        "type": "Passive",
+        "cost": 0
+      },
+      {
+        "name": "Bị động — 5★ vàng",
+        "desc": "Khi bắt đầu trận đấu, nhận 85% [Giảm Sát Thương Không Bạo Kích Chuyên Biệt].\n\nKhi vào chiến trường, toàn bộ đồng minh được miễn nhiễm vĩnh viễn với các hiệu ứng [Giảm Năng Lượng] và [Khóa Năng Lượng].",
+        "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__passive.png",
+        "type": "Passive",
+        "cost": 0
+      },
+      {
+        "name": "Bị động — 5★ tím",
+        "desc": "Khi bắt đầu trận đấu, nhận 90% [Giảm Sát Thương Không Bạo Kích Chuyên Biệt].\n\nKhi vào chiến trường, toàn bộ đồng minh được miễn nhiễm vĩnh viễn với các hiệu ứng [Giảm Năng Lượng] và [Khóa Năng Lượng].",
+        "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__passive.png",
+        "type": "Passive",
+        "cost": 0
+      },
+      {
+        "name": "Nội tại Thức tỉnh",
+        "desc": "Mỗi lượt nhận 3 [4] điểm Năng Lượng. Khi vào chiến trường, toàn bộ đồng minh nhận vĩnh viễn 92% [95%] [98%] [Giảm Sát Thương Chuẩn].",
+        "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__awaken1.png",
+        "type": "Awakening",
+        "cost": 0
+      }
+    ],
+    "effects": [
+      {
+        "term": "[Ready for Battle]",
+        "desc": "Chỉ một trong hai hiệu ứng có thể có hiệu lực tại một thời điểm: hồi sinh hoặc vô địch. Sau lượt của bất kỳ nhân vật nào, nếu bị hạ gục, nhân vật lập tức hồi sinh, hồi phục 100% HP và tiếp tục chiến đấu (được tính là đã hồi sinh).\n\nTên hiệu ứng [Ready for Battle] giữ theo nguồn, chờ duyệt tên tiếng Việt."
+      }
+    ],
+    "releaseSea": "01/02/2027",
+    "classIcon": "/Class/Class_SS.png",
+    "returnTrung": "01/12/2026",
+    "returnSea": "01/04/2027"
+  },
+  {
     "id": "homeless-emperor-urplus",
     "name": "Vua Không Nhà",
     "imageURL": "/Characters/Homeless Emperor (URplus)/URplus.png",

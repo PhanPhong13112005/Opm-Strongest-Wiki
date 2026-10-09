@@ -127,7 +127,8 @@ test('home hero renders CN and SEA spotlights across one responsive diagonal spl
   const radar = fs.readFileSync(path.join(root, 'src/components/HomeRadar.vue'), 'utf8')
 
   assert.match(radar, /const featuredItems = computed\(\(\) => \['CN', 'SEA'\]/)
-  assert.match(radar, /serverGroup\.items\.find\(candidate => candidate\.tag !== t\('home\.return'\)\) \|\| serverGroup\.items\[0\]/)
+  // Planned labels must not turn a rerun into an initial-release spotlight.
+  assert.match(radar, /serverGroup\.items\.find\(candidate => !\(candidate\.isReturn \|\| candidate\.tag === t\('home\.return'\)\)\) \|\| serverGroup\.items\[0\]/)
   assert.match(radar, /class="featured-grid"/)
   assert.match(radar, /v-for="\(feature, featureIndex\) in featuredItems"/)
   assert.match(radar, /:data-character="feature\.item\.id"/)

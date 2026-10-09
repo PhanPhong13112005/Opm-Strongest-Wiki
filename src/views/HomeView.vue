@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed, onBeforeUnmount, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { getReleaseSchedule } from '../services/releaseScheduleApi'
+import { getReleaseSchedule, getBundledReleaseSchedule } from '../services/releaseScheduleApi'
 import HomeRadar from '../components/HomeRadar.vue'
 import homeCharacterSummaries from '../data/homeCharacterSummaries.json'
 import { loadLocalCharacterDetail } from '../data/loadCharacterDetail'
@@ -21,11 +21,13 @@ let activeCharacterRequest = 0
 
 const loadReleaseSchedule = async () => {
   const requestId = ++activeScheduleRequest
+  // Month navigation must not wait for the remote request or its bounded retry.
+  releaseScheduleRows.value = getBundledReleaseSchedule(locale.value)
   try {
     const rows = await getReleaseSchedule(locale.value)
     if (requestId === activeScheduleRequest) releaseScheduleRows.value = rows
   } catch {
-    if (requestId === activeScheduleRequest) releaseScheduleRows.value = []
+    if (requestId === activeScheduleRequest) releaseScheduleRows.value = getBundledReleaseSchedule(locale.value)
   }
 }
 
@@ -52,6 +54,14 @@ const getCharacterImage = (filename) => {
 }
 
 const getCharacterImageSet = (filename) => {
+  if (filename === '/Characters/Full_Background/Child_URplus.png') {
+    return {
+      src: safeUrl('/Characters/optimized/100320-urplus-600.webp'),
+      srcset: [360, 600].map(width => `${safeUrl(`/Characters/optimized/100320-urplus-${width}.webp`)} ${width}w`).join(', '),
+      width: 1298,
+      height: 1212,
+    }
+  }
   const responsiveImage = responsiveHomeImages.get(filename)
   if (!responsiveImage) return { src: getCharacterImage(filename), srcset: '' }
 
@@ -358,13 +368,14 @@ const apiScheduleData = computed(() => {
     const [year, monthNumber, day] = String(row.date).split('-')
     server.items.push({
       id: row.characterId,
+      isReturn: row.isReturn,
       bannerImage: row.bannerImage,
       overrideName: row.overrideName || undefined,
       overrideTier: row.overrideTier || undefined,
       overrideFaction: row.overrideFaction || undefined,
       overrideType: row.overrideType || undefined,
       overrideRole: row.overrideRole || undefined,
-      tag: row.isReturn ? t('home.return') : t('home.release'),
+      tag: `${row.isReturn ? t('home.return') : t('home.release')}${row.status === 'planned' ? ` · ${t('home.planned')}` : ''}`,
       tagBg: row.isReturn ? (isPurpleReturn ? 'bg-[#b861ff] text-black' : 'bg-opm-red text-black') : 'bg-opm-gold text-black',
       tagText: row.isReturn ? (isPurpleReturn ? 'text-[#b861ff]' : 'text-opm-red') : 'text-opm-gold',
       period: Number(day) <= 7 ? t('home.earlyMonth') : t('home.midMonth'),

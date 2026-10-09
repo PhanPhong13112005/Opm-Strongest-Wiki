@@ -5,6 +5,7 @@ playwright-report/
 test-results/
 .codex/
 AGENTS.md
+!/AGENTS.md
 *.local
 .env
 .env.*
