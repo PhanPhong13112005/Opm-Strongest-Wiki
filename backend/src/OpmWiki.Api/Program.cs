@@ -42,24 +42,23 @@ builder.Services.AddSwaggerGen(options =>
         Description = "API dữ liệu nhân vật, sự kiện và hệ thống tra cứu cho OPM Strongest Wiki."
     });
 });
+if (string.IsNullOrWhiteSpace(builder.Configuration.GetConnectionString("OpmWiki")))
+{
+    throw new InvalidOperationException("ConnectionStrings:OpmWiki must be configured explicitly.");
+}
+
 builder.Services.AddInfrastructure(builder.Configuration, builder.Environment.ContentRootPath);
 
 var adminAuthOptions = builder.Configuration
     .GetSection(AdminAuthOptions.SectionName)
     .Get<AdminAuthOptions>() ?? new AdminAuthOptions();
-if (builder.Environment.IsDevelopment())
-{
-    if (string.IsNullOrWhiteSpace(adminAuthOptions.Username)) adminAuthOptions.Username = "admin";
-    if (string.IsNullOrWhiteSpace(adminAuthOptions.Password)) adminAuthOptions.Password = "dev-only-change-me";
-    if (string.IsNullOrWhiteSpace(adminAuthOptions.JwtSigningKey))
-        adminAuthOptions.JwtSigningKey = "development-only-opmwiki-admin-signing-key-change-me";
-}
-else if (string.IsNullOrWhiteSpace(adminAuthOptions.Username) ||
-         string.IsNullOrWhiteSpace(adminAuthOptions.Password) ||
-         adminAuthOptions.JwtSigningKey.Length < 32)
+if (string.IsNullOrWhiteSpace(adminAuthOptions.Username) ||
+    string.IsNullOrWhiteSpace(adminAuthOptions.Password) ||
+    string.IsNullOrWhiteSpace(adminAuthOptions.JwtSigningKey) ||
+    adminAuthOptions.JwtSigningKey.Length < 32)
 {
     throw new InvalidOperationException(
-        "AdminAuth username, password and a JWT signing key of at least 32 characters must be configured.");
+        "AdminAuth:Username, AdminAuth:Password and AdminAuth:JwtSigningKey (at least 32 characters) must be configured explicitly.");
 }
 
 builder.Services.AddSingleton(adminAuthOptions);

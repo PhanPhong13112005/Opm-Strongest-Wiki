@@ -8,7 +8,7 @@ namespace OpmWiki.Api.Controllers;
 
 [ApiController]
 [Route("api/events/{eventId}/comments")]
-public sealed class EventCommentsController(ICommunityRepository repository) : ControllerBase
+public sealed class EventCommentsController(ICommunityRepository repository, IConfiguration? configuration = null) : ControllerBase
 {
     [AllowAnonymous]
     [HttpGet]
@@ -24,6 +24,9 @@ public sealed class EventCommentsController(ICommunityRepository repository) : C
         CreateCommentRequest request,
         CancellationToken cancellationToken)
     {
+        if (CommunityReadOnlyMode.IsEnabled(configuration))
+            return CommunityReadOnlyMode.Reject(Response);
+
         var content = request.Content?.Trim() ?? string.Empty;
         if (content.Length is < 1 or > 1000)
             return BadRequest(new { message = "Bình luận phải có 1-1000 ký tự." });

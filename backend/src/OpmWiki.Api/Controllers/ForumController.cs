@@ -9,8 +9,16 @@ namespace OpmWiki.Api.Controllers;
 [ApiController]
 [Authorize]
 [Route("api/forum")]
-public sealed class ForumController(ICommunityRepository repository) : ControllerBase
+public sealed class ForumController(ICommunityRepository repository, IConfiguration? configuration = null) : ControllerBase
 {
+    [AllowAnonymous]
+    [HttpGet("capabilities")]
+    public IActionResult Capabilities()
+    {
+        Response.Headers.CacheControl = "no-store";
+        return Ok(new { communityReadOnly = CommunityReadOnlyMode.IsEnabled(configuration) });
+    }
+
     [HttpGet("topics")]
     public async Task<ActionResult<IReadOnlyList<ForumTopicSummaryDto>>> ListTopics(
         CancellationToken cancellationToken) =>
@@ -28,6 +36,9 @@ public sealed class ForumController(ICommunityRepository repository) : Controlle
         CreateForumTopicRequest request,
         CancellationToken cancellationToken)
     {
+        if (CommunityReadOnlyMode.IsEnabled(configuration))
+            return CommunityReadOnlyMode.Reject(Response);
+
         var title = request.Title?.Trim() ?? string.Empty;
         var content = request.Content?.Trim() ?? string.Empty;
         if (title.Length is < 3 or > 160 || content.Length is < 3 or > 5000)
@@ -44,6 +55,9 @@ public sealed class ForumController(ICommunityRepository repository) : Controlle
         CreateForumPostRequest request,
         CancellationToken cancellationToken)
     {
+        if (CommunityReadOnlyMode.IsEnabled(configuration))
+            return CommunityReadOnlyMode.Reject(Response);
+
         var content = request.Content?.Trim() ?? string.Empty;
         if (content.Length is < 1 or > 3000)
             return BadRequest(new { message = "Tin nhắn phải có 1-3000 ký tự." });
@@ -51,6 +65,25 @@ public sealed class ForumController(ICommunityRepository repository) : Controlle
         if (userId == Guid.Empty) return BadRequest(new { message = "Hãy dùng tài khoản cộng đồng để trò chuyện." });
         var post = await repository.AddForumPostAsync(id, userId, content, cancellationToken);
         return post is null ? NotFound(new { message = "Chủ đề không tồn tại hoặc đã bị khóa." }) : Ok(post);
+    }
+}
+
+internal static class CommunityReadOnlyMode
+{
+    private const string Code = "COMMUNITY_READ_ONLY";
+
+    public static bool IsEnabled(IConfiguration? configuration) =>
+        new[] { configuration?[Code], configuration?["Community:ReadOnly"] }
+            .Any(value => value?.Trim() is { } flag &&
+                (flag.Equals("true", StringComparison.OrdinalIgnoreCase) || flag == "1"));
+
+    public static ObjectResult Reject(HttpResponse response)
+    {
+        response.Headers.CacheControl = "no-store";
+        return new ObjectResult(new { code = Code, message = Code })
+        {
+            StatusCode = StatusCodes.Status503ServiceUnavailable,
+        };
     }
 }
 
