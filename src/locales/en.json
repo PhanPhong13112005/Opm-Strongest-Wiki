@@ -1,4 +1,10 @@
 {
+  "communityReadOnly": {
+    "message": "New forum posts and comments are temporarily disabled. Existing content remains available to read.",
+    "checking": "Checking whether new content can be submitted. Existing content remains available to read.",
+    "unavailable": "Posting availability could not be confirmed. New submissions are temporarily unavailable; existing content remains readable.",
+    "draftPreserved": "Your draft has not been sent and is still kept in this tab."
+  },
   "loading": {
     "eyebrow": "CONNECTING TO DATA ARCHIVE",
     "title": "Loading data",

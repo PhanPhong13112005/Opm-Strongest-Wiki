@@ -25,19 +25,38 @@ export const setTierVote = async characterId => {
 export const getEventComments = (eventId) =>
   requestApi(`api/events/${encodeURIComponent(eventId)}/comments`)
 
-export const createEventComment = (eventId, content) =>
-  authorizedRequest(`api/events/${encodeURIComponent(eventId)}/comments`, {
-    method: 'POST', body: JSON.stringify({ content }),
+const communityReadOnlyCode = 'COMMUNITY_READ_ONLY'
+export const isCommunityReadOnlyError = error => error?.code === communityReadOnlyCode
+
+export const getCommunityCapabilities = async () => {
+  const capability = await requestApi('api/forum/capabilities', null, {
+    cache: 'no-store', retryCount: 0, trackLoading: false,
   })
+  if (typeof capability?.communityReadOnly !== 'boolean') {
+    throw new Error('Invalid community capability response.')
+  }
+  return capability
+}
+
+const postCommunityContent = async (path, body) => {
+  try {
+    return await authorizedRequest(path, { method: 'POST', retryCount: 0, body: JSON.stringify(body) })
+  } catch (error) {
+    // apiClient preserves the API message, not its code. Normalize only these posts.
+    if (error?.status === 503 && error.message === communityReadOnlyCode) {
+      error.code = communityReadOnlyCode
+    }
+    throw error
+  }
+}
+
+export const createEventComment = (eventId, content) =>
+  postCommunityContent(`api/events/${encodeURIComponent(eventId)}/comments`, { content })
 
 export const getForumTopics = () => authorizedRequest('api/forum/topics')
 export const getForumTopic = (id) => authorizedRequest(`api/forum/topics/${id}`)
-export const createForumTopic = (title, content) => authorizedRequest('api/forum/topics', {
-  method: 'POST', body: JSON.stringify({ title, content }),
-})
-export const createForumPost = (topicId, content) => authorizedRequest(`api/forum/topics/${topicId}/posts`, {
-  method: 'POST', body: JSON.stringify({ content }),
-})
+export const createForumTopic = (title, content) => postCommunityContent('api/forum/topics', { title, content })
+export const createForumPost = (topicId, content) => postCommunityContent(`api/forum/topics/${topicId}/posts`, { content })
 export const deleteForumPost = (postId) => authorizedRequest(`api/moderation/forum/posts/${postId}`, {
   method: 'DELETE',
 })

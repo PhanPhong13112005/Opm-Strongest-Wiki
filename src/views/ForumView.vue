@@ -1,8 +1,10 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { authState, hasRole } from '../services/authApi'
-import { createForumPost, createForumTopic, deleteForumPost, deleteForumTopic, getForumTopic, getForumTopics } from '../services/communityApi'
+import { createForumPost, createForumTopic, deleteForumPost, deleteForumTopic, getCommunityCapabilities, getForumTopic, getForumTopics, isCommunityReadOnlyError } from '../services/communityApi'
 
+const { t } = useI18n()
 const topics = ref([])
 const activeTopic = ref(null)
 const title = ref('')
@@ -11,6 +13,26 @@ const reply = ref('')
 const showCreate = ref(false)
 const loading = ref(false)
 const error = ref('')
+const communityReadOnly = ref(null)
+const capabilityFailed = ref(false)
+const posting = ref(false)
+const draftPreserved = ref(false)
+const canPost = computed(() => communityReadOnly.value === false)
+const capabilityMessage = computed(() => t(communityReadOnly.value === true
+  ? 'communityReadOnly.message'
+  : capabilityFailed.value ? 'communityReadOnly.unavailable' : 'communityReadOnly.checking'))
+
+const loadCapability = async () => {
+  try { communityReadOnly.value = (await getCommunityCapabilities()).communityReadOnly }
+  catch { communityReadOnly.value = null; capabilityFailed.value = true }
+}
+const handlePostError = exception => {
+  if (isCommunityReadOnlyError(exception)) {
+    communityReadOnly.value = true
+    draftPreserved.value = true
+    error.value = ''
+  } else { error.value = exception.message }
+}
 
 const loadTopics = async () => {
   loading.value = true
@@ -24,18 +46,23 @@ const openTopic = async (id) => {
   catch (exception) { error.value = exception.message }
 }
 const submitTopic = async () => {
+  if (!canPost.value || posting.value) return
+  posting.value = true
   try {
     activeTopic.value = await createForumTopic(title.value, topicContent.value)
     title.value = ''; topicContent.value = ''; showCreate.value = false
     await loadTopics()
-  } catch (exception) { error.value = exception.message }
+  } catch (exception) { handlePostError(exception) }
+  finally { posting.value = false }
 }
 const submitReply = async () => {
-  if (!reply.value.trim()) return
+  if (!canPost.value || posting.value || !reply.value.trim()) return
+  posting.value = true
   try {
     const post = await createForumPost(activeTopic.value.id, reply.value.trim())
     activeTopic.value.posts.push(post); reply.value = ''; await loadTopics()
-  } catch (exception) { error.value = exception.message }
+  } catch (exception) { handlePostError(exception) }
+  finally { posting.value = false }
 }
 const removePost = async (post) => {
   if (!globalThis.confirm('Xóa nội dung không hợp lệ này?')) return
@@ -51,7 +78,7 @@ const removeTopic = async () => {
   } catch (exception) { error.value = exception.message }
 }
 const formatDate = (value) => new Date(value).toLocaleString('vi-VN')
-onMounted(loadTopics)
+onMounted(() => { loadTopics(); loadCapability() })
 </script>
 
 <template>
@@ -59,13 +86,17 @@ onMounted(loadTopics)
     <div class="mx-auto max-w-7xl">
       <header class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div><p class="text-xs font-black uppercase tracking-[0.24em] text-opm-gold">Cộng đồng</p><h1 class="mt-2 text-4xl font-black text-white">Diễn đàn OPM</h1><p class="mt-2 text-gray-400">Chào {{ authState.session?.displayName }}, cùng trao đổi và tư vấn chiến thuật.</p></div>
-        <button class="rounded-xl bg-opm-gold px-5 py-3 text-sm font-black text-black" @click="showCreate = !showCreate">+ Chủ đề mới</button>
+        <button v-if="canPost" data-testid="new-topic" class="rounded-xl bg-opm-gold px-5 py-3 text-sm font-black text-black" @click="showCreate = !showCreate">+ Chủ đề mới</button>
       </header>
+      <p v-if="!canPost" data-testid="community-status" role="status" class="mb-5 rounded-xl border border-opm-gold/30 bg-opm-gold/5 p-4 text-sm text-gray-300">{{ capabilityMessage }}</p>
+      <p v-if="draftPreserved" data-testid="community-draft-preserved" class="mb-5 text-sm text-gray-300">{{ t('communityReadOnly.draftPreserved') }}</p>
       <p v-if="error" class="mb-5 rounded-xl border border-red-500/20 bg-red-500/10 p-3 text-red-300">{{ error }}</p>
-      <form v-if="showCreate" class="mb-7 space-y-4 rounded-2xl border border-opm-gold/30 bg-[#0b0d13] p-5" @submit.prevent="submitTopic">
+      <form v-if="showCreate" v-show="canPost" data-testid="create-topic-form" class="mb-7 rounded-2xl border border-opm-gold/30 bg-[#0b0d13] p-5" @submit.prevent="submitTopic">
+        <fieldset :disabled="!canPost || posting" class="space-y-4">
         <input v-model="title" minlength="3" maxlength="160" required placeholder="Tiêu đề chủ đề" class="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none focus:border-opm-gold" />
         <textarea v-model="topicContent" minlength="3" maxlength="5000" rows="4" required placeholder="Nội dung cần trao đổi…" class="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none focus:border-opm-gold" />
         <div class="flex justify-end"><button class="rounded-xl bg-opm-gold px-5 py-2 font-black text-black">Đăng chủ đề</button></div>
+        </fieldset>
       </form>
       <div class="grid gap-6 lg:grid-cols-[360px_1fr]">
         <aside class="rounded-2xl border border-white/10 bg-[#0b0d13] p-3">
@@ -88,7 +119,7 @@ onMounted(loadTopics)
                 <p class="mt-2 whitespace-pre-line text-sm leading-6 text-gray-300">{{ post.content }}</p><time class="mt-2 block text-[11px] text-gray-600">{{ formatDate(post.createdAt) }}</time>
               </article>
             </div>
-            <form class="mt-6" @submit.prevent="submitReply"><textarea v-model="reply" maxlength="3000" rows="3" required placeholder="Nhập phản hồi…" class="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none focus:border-opm-gold" /><div class="mt-3 flex justify-end"><button class="rounded-xl bg-opm-gold px-5 py-2 font-black text-black">Gửi</button></div></form>
+            <form v-show="canPost" data-testid="reply-form" class="mt-6" @submit.prevent="submitReply"><fieldset :disabled="!canPost || posting"><textarea v-model="reply" maxlength="3000" rows="3" required placeholder="Nhập phản hồi…" class="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none focus:border-opm-gold" /><div class="mt-3 flex justify-end"><button class="rounded-xl bg-opm-gold px-5 py-2 font-black text-black">Gửi</button></div></fieldset></form>
           </template>
         </section>
       </div>

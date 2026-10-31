@@ -1,15 +1,29 @@
 <script setup>
-import { onMounted, ref, watch } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
 import { authState, hasRole, hasValidSession } from '../services/authApi'
-import { createEventComment, deleteEventComment, getEventComments } from '../services/communityApi'
+import { createEventComment, deleteEventComment, getCommunityCapabilities, getEventComments, isCommunityReadOnlyError } from '../services/communityApi'
 
+const { t } = useI18n()
 const props = defineProps({ eventId: { type: String, required: true } })
 const comments = ref([])
 const content = ref('')
 const loading = ref(false)
 const submitting = ref(false)
 const error = ref('')
+const communityReadOnly = ref(null)
+const capabilityFailed = ref(false)
+const draftPreserved = ref(false)
+const canPost = computed(() => communityReadOnly.value === false)
+const capabilityMessage = computed(() => t(communityReadOnly.value === true
+  ? 'communityReadOnly.message'
+  : capabilityFailed.value ? 'communityReadOnly.unavailable' : 'communityReadOnly.checking'))
+
+const loadCapability = async () => {
+  try { communityReadOnly.value = (await getCommunityCapabilities()).communityReadOnly }
+  catch { communityReadOnly.value = null; capabilityFailed.value = true }
+}
 
 const load = async () => {
   loading.value = true
@@ -20,13 +34,18 @@ const load = async () => {
 }
 
 const submit = async () => {
-  if (!content.value.trim()) return
+  if (!canPost.value || submitting.value || !content.value.trim()) return
   submitting.value = true
   error.value = ''
   try {
     comments.value.push(await createEventComment(props.eventId, content.value.trim()))
     content.value = ''
-  } catch (exception) { error.value = exception.message }
+  } catch (exception) {
+    if (isCommunityReadOnlyError(exception)) {
+      communityReadOnly.value = true
+      draftPreserved.value = true
+    } else { error.value = exception.message }
+  }
   finally { submitting.value = false }
 }
 
@@ -40,7 +59,7 @@ const remove = async (comment) => {
 
 const formatDate = (value) => new Date(value).toLocaleString('vi-VN')
 watch(() => props.eventId, load)
-onMounted(load)
+onMounted(() => { load(); loadCapability() })
 </script>
 
 <template>
@@ -53,13 +72,17 @@ onMounted(load)
       <span class="rounded-full bg-white/5 px-3 py-1 text-xs font-bold text-gray-400">{{ comments.length }} bình luận</span>
     </div>
 
-    <form v-if="hasValidSession() && authState.session?.userId && !String(authState.session.userId).startsWith('admin:')" class="mb-6" @submit.prevent="submit">
+    <p v-if="!canPost" data-testid="community-status" role="status" class="mb-6 rounded-xl border border-opm-gold/30 bg-opm-gold/5 p-4 text-sm text-gray-300">{{ capabilityMessage }}</p>
+    <p v-if="draftPreserved" data-testid="community-draft-preserved" class="mb-6 text-sm text-gray-300">{{ t('communityReadOnly.draftPreserved') }}</p>
+    <form v-if="hasValidSession() && authState.session?.userId && !String(authState.session.userId).startsWith('admin:')" v-show="canPost" data-testid="comment-form" class="mb-6" @submit.prevent="submit">
+      <fieldset :disabled="!canPost || submitting">
       <textarea v-model="content" maxlength="1000" rows="3" required placeholder="Chia sẻ nhận xét về sự kiện…" class="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none focus:border-opm-gold" />
       <div class="mt-3 flex justify-end">
         <button :disabled="submitting" class="rounded-xl bg-opm-gold px-5 py-2 text-sm font-black text-black disabled:opacity-50">{{ submitting ? 'Đang gửi…' : 'Gửi bình luận' }}</button>
       </div>
+      </fieldset>
     </form>
-    <div v-else class="mb-6 rounded-xl border border-opm-gold/20 bg-opm-gold/5 p-4 text-sm text-gray-300">
+    <div v-else-if="canPost" class="mb-6 rounded-xl border border-opm-gold/20 bg-opm-gold/5 p-4 text-sm text-gray-300">
       <RouterLink :to="{ path: '/login', query: { redirect: `/events/${eventId}` } }" class="font-black text-opm-gold hover:underline">Đăng nhập</RouterLink>
       bằng tài khoản cộng đồng để bình luận.
     </div>

@@ -1,4 +1,10 @@
 {
+  "communityReadOnly": {
+    "message": "Diễn đàn và bình luận đang tạm ngừng tiếp nhận nội dung mới. Bạn vẫn có thể xem các nội dung đã đăng.",
+    "checking": "Đang kiểm tra khả năng gửi nội dung. Các nội dung đã đăng vẫn có thể xem được.",
+    "unavailable": "Chưa xác định được khả năng gửi nội dung. Tạm thời chưa thể gửi mới; bạn vẫn có thể xem nội dung đã đăng.",
+    "draftPreserved": "Nội dung nháp chưa được gửi và vẫn được giữ trong tab này."
+  },
   "loading": {
     "eyebrow": "ĐANG KẾT NỐI KHO DỮ LIỆU",
     "title": "Đang lấy dữ liệu",
