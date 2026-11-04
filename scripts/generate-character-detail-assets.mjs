@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import sharp from 'sharp'
+import { getReviewedDetailImage } from './lib/reviewed-detail-image.mjs'
 
 const root = process.cwd()
 const dataRoot = path.join(root, 'src', 'data')
@@ -63,6 +64,8 @@ const resolveClassIcon = (character) => {
 
 const resizeCharacterImage = async (character) => {
   const id = safeId(character.id)
+  const reviewed = await getReviewedDetailImage(character, url => sharp(publicFile(url)).metadata())
+  if (reviewed) return reviewed
   const input = publicFile(character.imageURL)
   const metadata = await sharp(input).metadata()
   if (!metadata.width || !metadata.height) throw new Error(`Image dimensions unavailable for ${id}`)
@@ -127,7 +130,8 @@ const characterSummary = (character) => {
 }
 
 await fs.rm(detailRoot, { recursive: true, force: true })
-await fs.rm(characterImageRoot, { recursive: true, force: true })
+// Keep reviewed artwork and existing portrait variants; regeneration replaces only its own outputs.
+// Deleting this directory would destroy the source assets referenced by reviewed srcsets.
 await fs.rm(cardIconRoot, { recursive: true, force: true })
 await fs.rm(iconRoot, { recursive: true, force: true })
 await Promise.all([

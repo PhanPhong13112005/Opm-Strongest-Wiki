@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n'
 import characterSummaries from '../data/characterSummaries.json'
 import CharacterCard from '../components/CharacterCard.vue'
 import { safeAssetUrl } from '../utils/assetUrl'
-import { getCharacters, matchesCharacterSearch } from '../services/characterApi'
+import { getCharacters, matchesCharacterSearch, compareLibraryFeatured } from '../services/characterApi'
 
 const { t, locale } = useI18n()
 
@@ -124,6 +124,8 @@ const filteredLocalCharacters = computed(() => {
     
     return true
   }).sort((left, right) => {
+    const featured = compareLibraryFeatured(left, right)
+    if (featured) return featured
     const leftRelease = getReleaseTime(left)
     const rightRelease = getReleaseTime(right)
 

@@ -1,0 +1,84 @@
+{
+  "100320-urplus": {
+    "source": "https://opm-ts-wiki.vercel.app/vi/character-info/100320-urplus",
+    "sourceType": "COMMUNITY_SOURCED_NOT_PUBLISHER_VERIFIED",
+    "observedOn": "2026-11-04",
+    "effects": {
+      "vi": [
+        {
+          "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
+          "desc": "Sát thương có công thức riêng; không đồng nhất với sát thương trực tiếp thường."
+        },
+        {
+          "term": "[Giảm Sát Thương Không Bạo Kích Chuyên Biệt]",
+          "desc": "Giảm sát thương không phải bạo kích chuyên biệt. Mức giảm theo kỹ năng; không dùng đồng thời mức giảm không bạo kích thường."
+        },
+        {
+          "term": "[Giảm Sát Thương Chuẩn]",
+          "desc": "Giảm sát thương theo HP gốc. Trong trạng thái này, không nhận thêm Hộ Thể Chuyên Biệt, Giáp HP hay HP Chuyên Biệt; HP tối đa không bị hiệu ứng khác thay đổi."
+        },
+        {
+          "term": "[Hộ Thể Chuyên Biệt]",
+          "desc": "Triệt tiêu sát thương; thay thế hiệu ứng HP bổ sung, tổng lượng không vượt 15 lần HP gốc."
+        }
+      ],
+      "en": [
+        {
+          "term": "[Specialized Direct DMG]",
+          "desc": "A separate damage formula; not ordinary direct damage."
+        },
+        {
+          "term": "[Specialized Non-Crit DMG Reduction]",
+          "desc": "Reduces damage other than specialized critical hits. Its skill-specific reduction supersedes ordinary non-critical reduction."
+        },
+        {
+          "term": "[True DMG Reduction]",
+          "desc": "Reduces damage using original HP. Specialized Guard, HP Armor and Specialized HP cannot be added, and other effects cannot alter maximum HP."
+        },
+        {
+          "term": "[Specialized Guard]",
+          "desc": "Absorbs damage and replaces extra-HP effects, capped at fifteen times original HP."
+        }
+      ]
+    },
+    "coreDisplayName": {
+      "vi": "Đồng Đế",
+      "en": "Child Emperor"
+    }
+  },
+  "100321-urplus": {
+    "source": "https://opm-ts-wiki.vercel.app/vi/character-info/100321-urplus",
+    "sourceType": "COMMUNITY_SOURCED_NOT_PUBLISHER_VERIFIED",
+    "observedOn": "2026-11-04",
+    "effects": {
+      "vi": [
+        {
+          "term": "[Sát Thương Trực Tiếp Chuyên Biệt]",
+          "desc": "Sát thương có công thức riêng; không đồng nhất với sát thương trực tiếp thường."
+        },
+        {
+          "term": "[Giảm Sát Thương Không Bạo Kích Chuyên Biệt]",
+          "desc": "Giảm sát thương không phải bạo kích chuyên biệt. Mức giảm theo kỹ năng; không dùng đồng thời mức giảm không bạo kích thường."
+        },
+        {
+          "term": "[Song Cực Sát Trận]",
+          "desc": "Đòn phối hợp 5 hit vào một hàng ngẫu nhiên sau Tuyệt kỹ. Hai trạng thái kỹ năng đã đối chiếu lần lượt 11000% và 15000%."
+        }
+      ],
+      "en": [
+        {
+          "term": "[Specialized Direct DMG]",
+          "desc": "A separate damage formula; not ordinary direct damage."
+        },
+        {
+          "term": "[Specialized Non-Crit DMG Reduction]",
+          "desc": "Reduces damage other than specialized critical hits. Its skill-specific reduction supersedes ordinary non-critical reduction."
+        },
+        {
+          "term": "[Dual Extreme Kill Formation]",
+          "desc": "A five-hit coordinated strike against a random row after the Ultimate. The two reviewed skill states use 11000% and 15000%."
+        }
+      ]
+    }
+  }
+}

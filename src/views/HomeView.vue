@@ -1,13 +1,18 @@
 <script setup>
 import { ref, computed, onBeforeUnmount, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { getReleaseSchedule, getBundledReleaseSchedule } from '../services/releaseScheduleApi'
 import HomeRadar from '../components/HomeRadar.vue'
 import homeCharacterSummaries from '../data/homeCharacterSummaries.json'
 import { loadLocalCharacterDetail } from '../data/loadCharacterDetail'
 import { safeAssetUrl } from '../utils/assetUrl'
+import { getResponsiveHomeImage } from '../utils/homeHeroImage.js'
+import { initialScheduleMonth, scheduleMonthDate, shiftScheduleMonth } from '../utils/homeScheduleMonth'
 
 const { t, locale } = useI18n()
+const route = useRoute()
+const router = useRouter()
 const supplementalCharacters = ref([])
 const compactCharacters = computed(() => Object.values(homeCharacterSummaries[locale.value] || {}))
 const charactersData = computed(() => {
@@ -38,12 +43,6 @@ const optimizedHomeImages = new Map([
   ['/Characters/Full_Background/Black_Sperm_Ur_plus.png', '/Characters/Full_Background/Black_Sperm_Ur_plus.webp'],
   ['/Characters/Full_Background/Homeless_Emperor_URplus.png', '/Characters/Full_Background/Homeless_Emperor_URplus.webp'],
 ])
-const responsiveHomeImages = new Map([
-  ['/Characters/Full_Background/Homeless_Emperor_URplus.png', { slug: 'homeless-emperor-urplus', width: 2400, height: 1473 }],
-  ['/Characters/Full_Background/ZombIeMan_URplus.png', { slug: 'zombieman-urplus', width: 2400, height: 1584 }],
-  ['/Characters/Full_Background/Bang&Bomb_Urplus.png', { slug: 'bang-bomb-urplus', width: 2400, height: 1023 }],
-  ['/Characters/Full_Background/Atomic Samurai_URplus.png', { slug: 'atomic-samurai-urplus', width: 2400, height: 1023 }],
-])
 const responsiveHomeWidths = [320, 640, 960, 1600, 2400]
 
 const getCharacterImage = (filename) => {
@@ -54,31 +53,16 @@ const getCharacterImage = (filename) => {
 }
 
 const getCharacterImageSet = (filename) => {
-  if (filename === '/Characters/Full_Background/Child_URplus.png') {
-    return {
-      src: safeUrl('/Characters/optimized/100320-urplus-600.webp'),
-      srcset: [360, 600].map(width => `${safeUrl(`/Characters/optimized/100320-urplus-${width}.webp`)} ${width}w`).join(', '),
-      width: 1298,
-      height: 1212,
-    }
-  }
-  const responsiveImage = responsiveHomeImages.get(filename)
-  if (!responsiveImage) return { src: getCharacterImage(filename), srcset: '' }
-
-  const basePath = `/Characters/Full_Background/optimized/${responsiveImage.slug}`
-  return {
-    src: safeUrl(`${basePath}-960.webp`),
-    srcset: responsiveHomeWidths
-      .map(width => `${safeUrl(`${basePath}-${width}.webp`)} ${width}w`)
-      .join(', '),
-    width: responsiveImage.width,
-    height: responsiveImage.height,
-  }
+  return getResponsiveHomeImage(filename, responsiveHomeWidths) || { src: getCharacterImage(filename), srcset: '' }
 }
 
 const getChar = (id) => charactersData.value.find(c => c.id === id) || {}
 
-const currentDate = ref(new Date(2026, 8)) // Starts at September 2026 (0-indexed month)
+// A valid URL month is an explicit choice; no selection is persisted in storage.
+const currentDate = ref(scheduleMonthDate(initialScheduleMonth(route.query.month)))
+watch(() => route.query.month, month => {
+  currentDate.value = scheduleMonthDate(initialScheduleMonth(month))
+})
 
 const currentMonthStr = computed(() => {
   const y = currentDate.value.getFullYear()
@@ -358,7 +342,7 @@ const apiScheduleData = computed(() => {
     if (!server) {
       server = {
         server: row.server,
-        serverName: row.server === 'CN' ? t('home.serverTrungFull') : t('home.serverSeaFull'),
+        serverName: row.server === 'CN' ? t('home.serverTrungFull') : row.server === 'SEA' ? t('home.serverSeaFull') : row.server,
         serverColor: row.server === 'CN' ? '#00d8b6' : '#ff4da6',
         items: [],
       }
@@ -435,8 +419,8 @@ onBeforeUnmount(() => {
   activeCharacterRequest += 1
 })
 
-const hasNextMonth = computed(() => !!scheduleData.value[nextMonthStr.value])
-const hasPrevMonth = computed(() => !!scheduleData.value[prevMonthStr.value])
+const hasNextMonth = computed(() => !!shiftScheduleMonth(currentMonthStr.value, 1))
+const hasPrevMonth = computed(() => !!shiftScheduleMonth(currentMonthStr.value, -1))
 
 const transitionName = ref('fade')
 
@@ -444,6 +428,7 @@ const nextMonth = () => {
   if (hasNextMonth.value) {
     transitionName.value = 'slide-left'
     currentDate.value = new Date(currentDate.value.getFullYear(), currentDate.value.getMonth() + 1)
+    router.replace({ query: { ...route.query, month: currentMonthStr.value } })
   }
 }
 
@@ -451,6 +436,7 @@ const prevMonth = () => {
   if (hasPrevMonth.value) {
     transitionName.value = 'slide-right'
     currentDate.value = new Date(currentDate.value.getFullYear(), currentDate.value.getMonth() - 1)
+    router.replace({ query: { ...route.query, month: currentMonthStr.value } })
   }
 }
 

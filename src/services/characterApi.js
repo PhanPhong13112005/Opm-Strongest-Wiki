@@ -164,6 +164,8 @@ const releaseTime = (character) => {
   return Number.isNaN(timestamp) ? null : timestamp
 }
 
+export const compareLibraryFeatured = (left, right) => Number(right.libraryFeatured === true) - Number(left.libraryFeatured === true)
+
 const fallbackCharacters = (localCharacters, query, searchCharacters = []) => {
   const alternateById = new Map(searchCharacters.map(character => [character.id, character]))
   return localCharacters
@@ -176,6 +178,8 @@ const fallbackCharacters = (localCharacters, query, searchCharacters = []) => {
     })
     .sort((left, right) => {
       if (query.sort === 'name_asc') return left.name.localeCompare(right.name)
+      const featured = compareLibraryFeatured(left, right)
+      if (featured) return featured
       const leftRelease = releaseTime(left)
       const rightRelease = releaseTime(right)
       if (leftRelease === null && rightRelease !== null) return 1

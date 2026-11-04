@@ -48,6 +48,7 @@ export const getPassiveUpgradeTone = (skill) => {
   const type = String(skill?.type || '').toLocaleLowerCase()
   if (!['nội tại', 'bị động', 'passive', 'extreme passive', '5-star passive', 'core'].includes(type)) return ''
   const name = String(skill?.name || '').toLocaleLowerCase()
+  if (name.includes('2★ vàng') || name.includes('2★ gold')) return 'base-stars'
   if (name.includes('5★ vàng') || name.includes('5★ gold') || name.includes('cực hạn') || name.includes('extreme')) return 'gold'
   if (name.includes('5★ tím') || name.includes('5★ purple') || name.includes('5 sao') || name.includes('5 stars') || name.includes('5 star') || name.includes('5★ passive')) return 'purple'
   if (name === 'bị động' || name === 'passive' || name.endsWith('— base')) return 'base-stars'

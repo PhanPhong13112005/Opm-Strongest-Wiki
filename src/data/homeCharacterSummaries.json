@@ -7,7 +7,7 @@
       "type": "Công Nghệ",
       "faction": "Anh Hùng",
       "roles": [
-        "Strike Core – Ready For Battle"
+        "Hạt Nhân Tấn Công — Sẵn Sàng Chiến Đấu"
       ]
     },
     "homeless-emperor-urplus": {
@@ -117,6 +117,19 @@
         "Phân Chia Vô Hạn",
         "Một Người Thành Một Đội Quân"
       ]
+    },
+    "100321-urplus": {
+      "id": "100321-urplus",
+      "name": "GaleWind & Hellfire Flame",
+      "tier": "UR+",
+      "type": "Vũ Trang",
+      "faction": "Quái Nhân",
+      "roles": [
+        "Tấn Công Kép – Bảo Hộ Quái Nhân"
+      ],
+      "libraryFeatured": true,
+      "classLevel": "Dragon",
+      "classIcon": "/Class/Dragon.png"
     }
   },
   "en": {
@@ -237,6 +250,19 @@
         "Infinity Split",
         "One-Man Army"
       ]
+    },
+    "100321-urplus": {
+      "id": "100321-urplus",
+      "name": "GaleWind & Hellfire Flame",
+      "tier": "UR+",
+      "type": "Duelist",
+      "faction": "Monster",
+      "roles": [
+        "Double Strike – Monster's Protection"
+      ],
+      "libraryFeatured": true,
+      "classLevel": "Dragon",
+      "classIcon": "/Class/Dragon.png"
     }
   }
 }

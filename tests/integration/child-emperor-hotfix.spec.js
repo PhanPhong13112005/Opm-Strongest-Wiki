@@ -57,12 +57,13 @@ for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 
       for (const stat of ['683', /4[,.]095/, '173', '118']) await expect(page.getByText(stat, { exact: true }).first()).toBeVisible()
       await expect(page.getByText('SS', { exact: true })).toBeVisible()
       await expect.poll(() => page.locator('img[src^="/Class/Class_SS.png"]').evaluate(image=>image.complete && image.naturalWidth>0)).toBe(true)
-      await expect(page.getByText('Strike Core – Ready For Battle', { exact: true }).first()).toBeVisible()
+      await expect(page.getByText(language === 'vi' ? 'Hạt Nhân Tấn Công — Sẵn Sàng Chiến Đấu' : 'Strike Core – Ready For Battle', { exact: true }).first()).toBeVisible()
       await expect(page.getByText('01/10/2026', { exact: true })).toBeVisible()
       await expect(page.getByText('01/12/2026', { exact: true })).toBeVisible()
       await expect(page.getByText('01/02/2027', { exact: true })).toBeVisible()
       await expect(page.getByText('01/04/2027', { exact: true })).toBeVisible()
-      await expect(page.getByTestId('history-evidence')).toContainText(language==='vi'?'dự kiến':'planned')
+      await expect(page.getByTestId('history-evidence')).toHaveCount(0)
+      await expect(page.getByText(language === 'vi' ? /^lịch sử$/i : /^history$/i).first()).toBeVisible()
       await expect(page.getByText('15/12/2026', { exact: true })).toHaveCount(0)
       await page.screenshot({path:testInfo.outputPath('detail-info-history.png'),fullPage:true})
       const skills = page.getByTestId('character-skills')
@@ -81,7 +82,7 @@ for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 
         ? [['TUYỆT KĨ', 'Tuyệt kĩ'], ['NỘI TẠI', 'Bị động'], ['THỨC TỈNH', 'Nội tại Thức tỉnh']]
         : [['ULTIMATE', 'Ultimate'], ['PASSIVE', 'Passive'], ['AWAKENING', 'Awakened Passive']]) {
         await skills.getByRole('button', { name: tab, exact: true }).click()
-        await expect(skills.getByRole('heading', { name: skill, exact: true })).toBeVisible()
+        await expect(skills.getByRole('heading', { name: tab === 'THỨC TỈNH' || tab === 'AWAKENING' ? `${skill} — A1` : skill, exact: true })).toBeVisible()
         await expect(page.locator('main')).not.toContainText(unsupportedSkill)
         await expect(skills.locator('img[src*="he_100320_ur_plus__"]').first()).toHaveJSProperty('naturalWidth', 512)
         if (tab === 'TUYỆT KĨ' || tab === 'ULTIMATE') {
@@ -130,22 +131,29 @@ for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 
           await page.screenshot({path:testInfo.outputPath('detail-passive.png'),fullPage:true})
         }
         if (tab === 'THỨC TỈNH' || tab === 'AWAKENING') {
-          await expect(skills.getByRole('heading', {level:3})).toHaveCount(1)
-          const awakeningDescription = skills.getByTestId('character-skills-content').locator('p').first()
-          await expect(awakeningDescription).toContainText('92% → 95% → 98%')
-          await expect(awakeningDescription).toContainText(language==='vi'
-            ? 'Mỗi lượt nhận 3 → 4 điểm Năng Lượng.'
-            : 'Gain 3 → 4 energy points per turn.')
-          await expect(awakeningDescription).not.toContainText('92% [95%] [98%]')
-          await expect(awakeningDescription).not.toContainText('3 [4]')
-          await expect(skills).not.toContainText(/Awaken [123]|Thức tỉnh [123]|A[123]/)
-          await expect(skills).not.toContainText(language==='vi'?'Thức tỉnh 1':'Awaken 1')
+          const headings = skills.getByRole('heading', {level:3})
+          await expect(headings).toHaveCount(3)
+          await expect(skills.locator('[data-skill-numeric-progression]')).toHaveCount(0)
+          for(const [index,value] of ['92%','95%','98%'].entries()) {
+            const heading = headings.nth(index)
+            await expect(heading).toHaveText(skill+' — A'+(index+1))
+            if(index>0) {await headings.nth(index-1).click();await heading.click()}
+            const card = heading.locator('xpath=ancestor::div[@class and contains(@class,"flex-shrink-0")][1]')
+            const paragraph=card.locator('p').first()
+            await expect(paragraph).toContainText(value)
+            for(const other of ['92%','95%','98%'].filter(candidate=>candidate!==value)) await expect(paragraph).not.toContainText(other)
+            await expect(paragraph).toContainText(language==='vi'
+              ? 'Mỗi lượt nhận '+(index===2?4:3)+' điểm Năng Lượng.' : 'Gain '+(index===2?4:3)+' energy points per turn.')
+            await expect(paragraph).not.toContainText(/92% \[95%\] \[98%\]|3 \[4\]/)
+          }
+          await expect(skills.locator('[data-stage-unlock-note]')).toContainText(language==='vi'?'chưa được xác minh':'remain unverified')
+          await expect(skills).not.toContainText(/Awaken [123]|Thức tỉnh [123]/)
           await expect(skills.getByTestId('character-skills-content')).not.toContainText(language==='vi'?'Đang cập nhật':'Updating')
-          await expect(skills.locator('img[src*="__awaken1.png"]')).toHaveCount(1)
+          await expect(skills.locator('img[src*="__awaken1.png"]')).toHaveCount(3)
           await expect(skills.locator('img[src*="__ultimate.png"]')).toHaveCount(0)
           await expect(skills.locator('[data-testid^="child-"]')).toHaveCount(0)
-          const heading = skills.getByRole('heading', {name: skill, exact: true})
-          const description = skills.getByTestId('character-skills-content').locator('p').first().locator('xpath=../..')
+          const heading = headings.nth(2)
+          const description = heading.locator('xpath=ancestor::div[@class and contains(@class,"flex-shrink-0")][1]').locator('div.overflow-hidden.transition-all')
           await heading.click()
           await expect(description).toHaveCSS('max-height', '0px')
           await expect(description).toHaveCSS('opacity', '0')
@@ -158,9 +166,17 @@ for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 
       }
       await skills.getByRole('button', { name: language === 'vi' ? 'Cốt Lõi' : 'Core', exact: true }).click()
       await expect(skills.getByText('LV 0', { exact: true })).toBeVisible()
-      for (const milestone of ['Giant Soldier Power', 'Giant Soldier Power II', 'Giant Soldier Power III', 'Eccentric Power IV']) {
+      for (const milestone of ['Giant Soldier Power', 'Giant Soldier Power II', 'Giant Soldier Power III']) {
         await expect(skills.getByRole('heading', { name: milestone, exact: true })).toBeAttached()
       }
+      // Owner deferred the disputed Lv17 name/effect, not the level itself.
+      await expect(skills.locator('[data-core-level]')).toHaveCount(4)
+      const pendingCore = skills.locator('[data-core-level="17"]')
+      await expect(pendingCore.getByRole('heading')).toHaveText('Core — Lv 17')
+      await expect(pendingCore.locator('[data-core-effect-pending]')).toHaveText(language === 'vi'
+        ? 'Thông tin hiệu ứng cấp này đang được xác minh.'
+        : "This level's effect information is being verified.")
+      await expect(skills).not.toContainText('Eccentric Power IV')
       await checkLayout(page)
       await page.screenshot({ path: testInfo.outputPath('detail-core.png'), fullPage: true })
       await expect.poll(() => apiResponses.length).toBeGreaterThan(0)
@@ -219,7 +235,7 @@ for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 
         if(response.url().includes('/api/release-schedule?') && response.ok()) schedules.push(await response.json())
       })
       await page.route('https://api.opmwiki.app/**',route=>route.request().method()==='GET'?route.continue():route.abort())
-      await page.goto('/')
+      await page.goto('/?month=2026-09')
       if(language==='en') await page.getByRole('button',{name:'Language VI',exact:true}).click()
       await expect(page.locator('.featured-overview strong')).toHaveText('09 / 2026')
       await page.getByRole('button',{name:/Tháng sau|Next Month/i}).click()
@@ -257,7 +273,7 @@ for (const viewport of [{width:1440,height:900},{width:390,height:844}]) {
       await page.setViewportSize(viewport)
       const errors=[]
       page.on('pageerror',error=>errors.push(error.message))
-      await page.goto('/')
+      await page.goto('/?month=2026-09')
       if(language==='en') await page.getByRole('button',{name:'Language VI',exact:true}).click()
       let currentMonth=9
       for (const event of [

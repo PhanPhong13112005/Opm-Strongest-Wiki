@@ -96,11 +96,24 @@ nhân vật khác phải được xác minh riêng, không sao chép ví dụ n�
 
 Đọc từng dòng thức tỉnh độc lập với Nội tại thường. Đồng Đế UR+ có
 `92% [95%] [98%]` Giảm Sát Thương Chuẩn và `3 [4]` Năng Lượng mỗi lượt.
-UI generic của cùng một Nội tại thức tỉnh hiển thị `92% → 95% → 98%` cho
-Giảm Sát Thương Chuẩn và độc lập `3 → 4` Năng Lượng mỗi lượt. Giữ nguyên hai
-chuỗi trong dữ liệu nguồn: chưa có mapping xác minh tới A1/A2/A3 hoặc mốc mở
-khóa/nâng cấp cụ thể. Không tự gán 92/95/98 cho A1/A2/A3; không tạo card A1/A2/A3
-giả hoặc bịa giá trị Năng Lượng thứ ba. Dữ liệu nguồn đã có vẫn hiển thị; bỏ cơ
+Owner chốt bổ sung ngày 13/10/2026: dùng dữ liệu wiki cộng đồng được owner
+chấp nhận tại `https://opm-ts-wiki.vercel.app/en/character-info/100320-urplus`,
+mục Game data CN 5148: `sk_core016a1` = A1, 92%, 3 Năng Lượng;
+`sk_core016a2` = A2, 95%, 3 Năng Lượng; `sk_core016a3` = A3, 98%, 4 Năng Lượng.
+Theo mẫu generic hiện có của G5 UR+ và Vua Không Nhà UR+, trình bày ba
+card/accordion nâng cấp A1/A2/A3 của cùng một Nội tại thức tỉnh, không tạo ba
+kỹ năng nguồn hay ba nút ngang riêng. Mỗi card dùng nguyên layout, typography,
+icon và hành vi collapse/scroll chung, hiển thị cả hai hiệu ứng theo cấp. Đây là
+**owner-confirmed từ wiki cộng đồng**, không phải publisher-confirmed. Giữ
+nguyên chuỗi nguồn; phần trăm tiến triển độc lập `92% → 95% → 98%`,
+Năng Lượng tiến triển `3 → 4`; không bịa giá
+trị thứ ba khác 3/3/4 đã được owner chấp nhận. Điều kiện mở khóa từng cấp vẫn
+INCONCLUSIVE; không suy từ tên ID hoặc sao ở bảng nâng cấp khác. Metadata
+trình bày chỉ kích hoạt khi chuỗi trên chính dòng nguồn và các giá trị mapping
+khớp; không áp dụng sang nhân vật khác khi chưa có nhu cầu/bằng chứng. Không
+tự gán A1/A2/A3 cho nhân vật khác chỉ vì có ba giá trị. Không tạo card A1/A2/A3
+giả hoặc thêm điều kiện mở khóa chưa xác minh. Dữ liệu nguồn đã có
+vẫn hiển thị; bỏ cơ
 chế placeholder không có nguồn. Nếu một mô tả nguồn thực sự bị thiếu/thu gọn,
 đánh dấu đúng phần thiếu là `Đang cập nhật` / `Updating`, không suy từ kỹ năng khác.
 
@@ -139,7 +152,7 @@ dưới đây do owner xác nhận, không suy chỉ từ ngoặc:
 - Các hiệu ứng chung còn lại giữ theo nguồn; Nội tại thường theo mục 4,
   Nội tại thức tỉnh giữ chuỗi riêng theo mục 5. `ENERGY_MINUS_2_VERIFIED=NO`: không thêm −2 Nộ.
 - Lịch owner-confirmed, planned giữ nguyên: CN ra mắt 01/10/2026, trở lại
-  01/12/2026; SEA ra mắt 01/02/2027, trở lại 01/04/2027. Không nâng trạng thái xác minh.
+  15/12/2026; SEA ra mắt 01/02/2027, trở lại 15/04/2027. Không nâng trạng thái xác minh.
 
 #### Kiểm tra trước khi bàn giao
 
@@ -154,6 +167,22 @@ là deploy hoặc kiểm chứng production.
 
 ## Bắt buộc đồng bộ lịch sử khi cập nhật nhân vật
 
+### Đồng Đế UR+ — nguyên liệu Core đã đối chiếu (12/10/2026)
+
+`coreMaterialCosts.json` bổ sung riêng số lượng nguyên liệu cho `100320-urplus` /
+`he_100320`, không đổi hiệu ứng đã chốt trong `coreLab.json`. Nguồn:
+https://opm-ts-wiki.vercel.app/vi/core-lab (đúng UR+, liên kết ID 100320-urplus).
+20 tổng tích lũy Lv0→Lv1…20 được đọc từ UI nguồn: SOURCE_VERIFIED; mỗi bước là
+hiệu hai tổng liên tiếp: DERIVED_VERIFIED. Không dùng công thức ước lượng.
+Lv0→Lv0 không nâng cấp nên không trả phí; thiếu bước phải báo chưa đủ dữ liệu,
+không cộng tổng giả. Owner đã cho phép dùng số lượng, chưa xác nhận 6 icon
+Item_215091…215096 hoặc mapping 320_c1/c2/c3: giữ INCONCLUSIVE, không lấy ảnh
+bên thứ ba/nhân vật khác. Nguồn tham khảo khác dữ liệu hiệu ứng Core hiện tại
+(bao gồm tên Lv17); chờ owner đối chiếu, không tự sửa hiệu ứng/mốc thức tỉnh.
+Kỷ vật owner cung cấp chỉ xác nhận icon và mở Siêu tuyệt kỹ, không xác nhận
+tên/chỉ số riêng. Lịch vẫn giữ nguyên bốn mốc owner-confirmed/planned; chưa có
+nguồn đầy đủ cho các sự kiện VN/SEA/CN khác tháng 10/2026: NEED_OWNER_SOURCE.
+
 Every character addition or update must include a character-history synchronization check. Release events must be updated in the canonical history source whenever new verified release information is added or corrected. Do not invent events. Keep editorial change history separate from in-game release history.
 
 - Tìm theo ID ổn định, không theo tên VI/EN. Kiểm tra `releaseSchedule.json` (lịch ISO CN/SEA), các trường ngày legacy trong catalog/detail VI/EN, `characterReleaseDates.js`, và luồng merge API/local trong `releaseScheduleApi.js`.
@@ -162,3 +191,21 @@ Every character addition or update must include a character-history synchronizat
 - Schema sự kiện: `characterId`, `server` (CN/SEA), `date` (YYYY-MM-DD), `isReturn`, `sortOrder`, `bannerImage`. Metadata tùy chọn tương thích: `source: owner`, `verificationStatus: owner-confirmed`, `status: planned`; đây không phải xác nhận độc lập của nhà phát hành. Home hiện hỗ trợ ra mắt và trở lại; Detail dùng timeline chung. API cùng composite key không được tạo dòng bổ sung trùng.
 - Kiểm tra ID, ngày hợp lệ, server, event/composite key trùng; đối chiếu các sự kiện có nguồn, VI/EN và Home/Detail. Chạy `tests/character-history.test.mjs`, các test Child/Home/locale và Playwright tương ứng.
 - Mỗi báo cáo cập nhật nhân vật phải có `CHARACTER_HISTORY_SYNC=PASS/FAIL`, ID, file nguồn đã kiểm tra, event thêm/sửa/giữ nguyên, lý do không đổi lịch nếu chỉ sửa nội dung, duplicate count và kết quả Home/Detail.
+
+### Lịch chỉ xác nhận tháng — owner 04/11/2026
+
+Gale/Hellfire100321-urplus: CN2026-11, SEA2027-03. Canonical releaseSchedule.json ghi date:null, yearMonth:YYYY-MM, datePrecision:month, source:owner. Không đổi thành ngày01 hoặc suy ngày tái xuất. Detail hiển thị MM/YYYY; daily Home schedule và hero preload bỏ qua record month-only cho tới khi có ngày chính xác. Basic owner-confirmed: Gale3hit, Child2hit, cùng một mục tiêu và120%ATK; không thêm flat damage hoặc hiệu ứng.
+
+Owner bổ sung cùng ngày: mỗi server trở lại sau2tháng, CN2027-01 vàSEA2027-05; giữ datePrecision:month, không suy ngày.
+
+### Owner sửa ngày cụ thể —04/11/2026
+
+Thay thế lịch chỉ-tháng trước: Gale/Hellfire CN01/11/2026→15/01/2027; SEA15/03/2027→15/05/2027. Đồng Đế giữ ngày ra mắt CN01/10/2026, SEA01/02/2027; trở lại CN15/12/2026, SEA15/04/2027. Canonical history, catalog và payload VI/EN đồng bộ; Home tháng10/11 dùng các ngày này. Đây là owner-confirmed, không phải xác nhận độc lập của nhà phát hành.
+
+### Home đồng bộ lịch sử CN/SEA tháng10–11 —04/11/2026
+
+Theo yêu cầu owner, thêm5mốc đang hiển thị trong Detail: CN Tinh Trùng Đen trở lại15/10; SEA Rover ra mắt01/10, G5 trở lại15/10, Zombieman ra mắt01/11, Bang/Bomb trở lại15/11. Nguồn là catalog/payloadVI/EN và helper lịch sử hiện có; các ngày trở lại này là convention local15ngày,+2tháng, không phải nguồn game độc lập. Gắn source:character-history, verificationStatus:existing-local-history, status:planned; không gọi chúng publisher-verified. Giữ nguyên toàn bộ27event trước, kể cả Vua Không Nhà trở lại01/11 theo canonical hiện có; không tự sửa thành15/11. Toàn bộ180Detail history và dữ liệu nhân vật giữ nguyên.
+
+### Owner sửa lịch trở lại Vua Không Nhà —04/11/2026
+
+Thay thế mốc canonical cũ: CN trở lại15/11/2026; SEA trở lại15/03/2027 theo yêu cầu sửa cùng ngày15. Giữ nguyên ra mắtCN01/09/2026 vàSEA01/01/2027. Nguồn là quyết định owner (SEA theo ngữ cảnh cùng quy tắc), không phải kiểm chứng publisher. Hai event cósortOrder không trùng với Gale để Home không mất hoặc nhân đôi banner; tháng11 hiển thịra mắt trước rồi trở lại. Không thaycatalog/payload, vì Detail lấyreturntừ canonical theoID; không thay Basic/gameplay/Core/ảnh.

@@ -1,4 +1,6 @@
 <script setup>
+import reviewedEffectNotes from '../data/reviewedEffectNotes.json'
+import { formatAnnotatedSkill, effectAnchorId } from '../utils/effectAnnotations'
 import { ref, computed, onBeforeUnmount, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
@@ -7,6 +9,10 @@ import releaseSchedule from '../data/releaseSchedule.json'
 import { safeAssetUrl } from '../utils/assetUrl'
 import { getSkillDescriptionForDisplay, getSkillEnergyCost, getPassiveUpgradeTone } from '../utils/skillPresentation'
 import { getCharacterReleaseDates } from '../utils/characterReleaseDates'
+import { getCharacterBackground, getCharacterPresentation, getCharacterKeepsakeIcon, getSkillKeepsakeUnlock, isCoreLevelEffectPending } from '../utils/characterPresentation'
+import { resolveSkillNumericView, getSkillUpgradeStates } from '../utils/skillNumericView'
+import SkillNumericProgression from '../components/SkillNumericProgression.vue'
+import { RouterLink } from 'vue-router'
 import { resolveCharacterClassPresentation } from '../utils/characterClassPresentation'
 import { getCharacterById } from '../services/characterApi'
 
@@ -24,6 +30,13 @@ const { t, locale } = useI18n()
 const localCharacter = ref(null)
 const apiCharacter = ref(null)
 const character = computed(() => apiCharacter.value || localCharacter.value)
+const presentedSkills = computed(() => getSkillUpgradeStates(
+  character.value?.skills || [],
+  getCharacterPresentation(character.value).skillNumericViews, locale.value,
+))
+const hasBaseStats = computed(() => ['atk', 'hp', 'def', 'spd'].every(key => Number.isFinite(character.value?.baseStats?.[key])))
+const showSkillMedia = computed(() => activeSkillTab.value !== 'core' &&
+  (!getCharacterPresentation(character.value).hideMissingSkillAnimation || !!currentExpandedSkillObj.value?.animation))
 const classPresentation = computed(() => resolveCharacterClassPresentation(character.value, locale.value))
 const hasPvpStats = computed(() => {
   const stats = character.value?.pvpStats
@@ -195,15 +208,11 @@ const currentExpandedSkillObj = computed(() => {
   if (!character.value || !character.value.skills) return null
   const lastOpened = expandedSkills.value[expandedSkills.value.length - 1]
   if (!lastOpened) return null
-  return character.value.skills.find(s => s.name === lastOpened)
+  return presentedSkills.value.find(s => s.name === lastOpened)
 })
 
 const releaseDates = computed(() => getCharacterReleaseDates(
   character.value, releaseSchedule, t('detail.recommendationPending'),
-))
-
-const hasOwnerSchedule = computed(() => releaseSchedule.some(row =>
-  row.characterId === character.value?.id && row.source === 'owner',
 ))
 
 const getSkillsByType = (category) => {
@@ -215,8 +224,15 @@ const getSkillsByType = (category) => {
     'awaken': ['Thức tỉnh', 'Bị động thức tỉnh', 'Thức tỉnh 2', 'Thức tỉnh 3', 'Awaken', 'Awakening', 'Awakened Passive', 'Awaken 2', 'Awaken 3']
   }
   const allowed = map[category] || []
-  return character.value.skills.filter(s => allowed.includes(s.type))
+  return presentedSkills.value.filter(s => allowed.includes(s.type))
 }
+
+const hasPendingOwnerStageUnlock = computed(() => {
+  const types = new Set(getSkillsByType(activeSkillTab.value).map(skill => skill.type))
+  return (getCharacterPresentation(character.value).skillNumericViews || []).some(view =>
+    types.has(view.skillType) && view.stageMapping?.status === 'owner-confirmed'
+    && view.stageMapping.unlockConditionsStatus === 'INCONCLUSIVE')
+})
 
 const skillCategories = computed(() => {
   const tabs = [
@@ -257,21 +273,15 @@ const switchTab = (category) => {
 }
 
 const chuThichHieuUng = computed(() => {
-  if (character.value?.effects && character.value.effects.length > 0) {
-    return character.value.effects
-  }
-  return []
+  const effects = character.value?.effects || []
+  const reviewed = reviewedEffectNotes[character.value?.id]?.effects?.[locale.value] || []
+  return [...effects, ...reviewed.filter(note => !effects.some(effect => effect.term === note.term))]
 })
+const formatSkillDesc = desc => formatAnnotatedSkill(desc, chuThichHieuUng.value, locale.value)
 
-const formatSkillDesc = (desc) => {
-  if (!desc) return ''
-  return desc.replace(/\[(.*?)\]/g, (match, p1) => {
-    const safeTerm = p1.replace(/'/g, "\\'")
-    return `<a href="javascript:void(0)" class="text-[color:var(--theme-color)] font-bold hover:text-white transition-colors cursor-pointer border-b border-[color:var(--theme-color)] border-dashed" onclick="event.preventDefault(); event.stopPropagation(); if(window.scrollToEffectDetail) window.scrollToEffectDetail('${safeTerm}')">[${p1}]</a>`
-  })
-}
-
-const getSkillCost = (skill) => getSkillEnergyCost(skill, character.value?.skills)
+const getSkillCost = (skill) => getSkillEnergyCost(skill, presentedSkills.value)
+const numericSkillView = skill => resolveSkillNumericView(skill, getCharacterPresentation(character.value).skillNumericViews, locale.value)
+const numericSkillId = skill => `skill-${character.value.id}-${presentedSkills.value.indexOf(skill)}`
 const isSuperUltimate = (skill) => {
   const name = String(skill?.name || '').toLocaleLowerCase()
   return name.includes('siêu tuyệt kĩ') || name.includes('super ultimate')
@@ -314,7 +324,7 @@ watch(() => character.value, (newChar) => {
 
 onMounted(() => {
   window.scrollToEffectDetail = (rawTerm) => {
-    const cleanSearch = rawTerm.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
+    const cleanSearch = effectAnchorId(rawTerm).replace('effect-', '')
     let el = document.getElementById('effect-' + cleanSearch)
     
     if (!el) {
@@ -391,7 +401,7 @@ onBeforeUnmount(() => {
     </div>
 
     <!-- HEADER HERO SECTION -->
-    <div v-if="character" class="relative w-full rounded-2xl overflow-hidden mb-8 border border-white/5 bg-gradient-to-br from-[#12131a] to-[#0b0c10] shadow-2xl pb-16 pt-8 pl-10 pr-10">
+    <div v-if="character" class="relative w-full rounded-2xl overflow-hidden mb-8 border border-white/5 bg-gradient-to-br from-[#12131a] to-[#0b0c10] shadow-2xl pb-16 pt-8 pl-10 pr-10 character-hero" :class="{ 'has-character-background': getCharacterBackground(character) }" :style="{ '--character-background': getCharacterBackground(character) }">
       
       <!-- Background Character Image -->
       <img
@@ -483,6 +493,14 @@ onBeforeUnmount(() => {
       </div>
     </div>
 
+    <section v-if="character && getCharacterPresentation(character).keepsakeImageOnly" class="mb-8 flex items-center gap-4 rounded-xl border border-white/10 bg-[#12131a] p-4" data-keepsake-image-only>
+      <img :src="safeUrl(getCharacterKeepsakeIcon(character))" :alt="locale === 'en' ? 'Keepsake' : 'Kỷ vật'" width="80" height="80" loading="lazy" decoding="async" class="h-20 w-20 shrink-0 object-contain" />
+      <div class="min-w-0">
+        <h2 class="font-bold text-white">{{ locale === 'en' ? 'Keepsake' : 'Kỷ vật' }}</h2>
+
+      </div>
+    </section>
+
     <template v-if="character">
     <!-- STATS & BIO SECTION -->
     <div class="flex flex-col xl:flex-row gap-6 mb-12">
@@ -496,7 +514,8 @@ onBeforeUnmount(() => {
             <div class="flex-grow h-px bg-gray-800 ml-4"></div>
           </div>
           
-          <div class="space-y-4">
+          <p v-if="!hasBaseStats" data-base-stats-pending class="text-sm text-gray-400">{{ locale === 'en' ? 'ATK, HP, DEF and SPD await character-specific source verification.' : 'Công, Máu, Thủ và Tốc đang chờ nguồn xác minh riêng cho nhân vật.' }}</p>
+          <div v-else class="space-y-4">
             <div>
               <div class="flex justify-between items-end mb-1">
                 <span class="text-white text-sm font-bold flex items-center gap-2">
@@ -548,14 +567,14 @@ onBeforeUnmount(() => {
         </div>
 
         <!-- HISTORY (LICH SU) -->
-        <div class="bg-[#12131a] rounded-xl border border-gray-800 p-6 flex flex-col" v-if="releaseDates">
+        <div class="bg-[#12131a] rounded-xl border border-gray-800 p-6 flex flex-col" v-if="releaseDates || character.provenance?.releaseStatus === 'UNKNOWN_NO_EVENTS_ADDED'">
           <div class="flex items-center mb-6">
             <span class="text-[#ffb300] font-bold text-xs tracking-widest uppercase">{{ t('detail.history') }}</span>
             <div class="flex-grow h-px bg-gray-800 ml-4"></div>
           </div>
           
-          <p v-if="hasOwnerSchedule" class="text-xs text-gray-400 mb-4" data-testid="history-evidence">{{ t('detail.ownerScheduleNote') }}</p>
-          <div class="flex flex-col gap-4">
+          <p v-if="character.provenance?.releaseStatus === 'UNKNOWN_NO_EVENTS_ADDED'" data-history-pending class="text-sm text-gray-400">{{ locale === 'en' ? 'Banner dates and servers are not yet verified.' : 'Ngày banner và máy chủ chưa được xác minh.' }}</p>
+          <div v-if="releaseDates" class="flex flex-col gap-4">
             <!-- TRUNG -->
             <div>
               <div class="text-[#ef4444] font-bold text-xs tracking-widest uppercase mb-4 flex items-center gap-2">
@@ -563,11 +582,11 @@ onBeforeUnmount(() => {
               </div>
               <div class="flex flex-col gap-3 pl-4 border-l-2 border-[#ef4444]/30 ml-1">
                 <div class="flex justify-between items-center gap-2">
-                  <span class="text-gray-400 font-bold text-xs uppercase tracking-widest whitespace-nowrap flex-shrink-0">{{ t('detail.releaseDate') }}</span>
+                  <span class="text-gray-400 font-bold text-xs uppercase tracking-widest whitespace-nowrap flex-shrink-0">{{ releaseDates.precision === 'month' ? (locale === 'en' ? 'Release month' : 'Tháng ra mắt') : t('detail.releaseDate') }}</span>
                   <span class="text-white font-black text-sm lg:text-base tracking-widest text-right">{{ releaseDates.trungRelease }}</span>
                 </div>
                 <div class="flex justify-between items-center gap-2">
-                  <span class="text-gray-400 font-bold text-xs uppercase tracking-widest whitespace-nowrap flex-shrink-0">{{ t('detail.returnDate') }}</span>
+                  <span class="text-gray-400 font-bold text-xs uppercase tracking-widest whitespace-nowrap flex-shrink-0">{{ releaseDates.precision === 'month' ? (locale === 'en' ? 'Return month' : 'Tháng trở lại') : t('detail.returnDate') }}</span>
                   <span class="text-white font-black text-sm lg:text-base tracking-widest text-right">{{ releaseDates.trungReturn }}</span>
                 </div>
               </div>
@@ -582,11 +601,11 @@ onBeforeUnmount(() => {
               </div>
               <div class="flex flex-col gap-3 pl-4 border-l-2 border-[#3b82f6]/30 ml-1">
                 <div class="flex justify-between items-center gap-2">
-                  <span class="text-gray-400 font-bold text-xs uppercase tracking-widest whitespace-nowrap flex-shrink-0">{{ t('detail.releaseDate') }}</span>
+                  <span class="text-gray-400 font-bold text-xs uppercase tracking-widest whitespace-nowrap flex-shrink-0">{{ releaseDates.precision === 'month' ? (locale === 'en' ? 'Release month' : 'Tháng ra mắt') : t('detail.releaseDate') }}</span>
                   <span class="text-white font-black text-sm lg:text-base tracking-widest text-right">{{ releaseDates.seaRelease }}</span>
                 </div>
                 <div class="flex justify-between items-center gap-2">
-                  <span class="text-gray-400 font-bold text-xs uppercase tracking-widest whitespace-nowrap flex-shrink-0">{{ t('detail.returnDate') }}</span>
+                  <span class="text-gray-400 font-bold text-xs uppercase tracking-widest whitespace-nowrap flex-shrink-0">{{ releaseDates.precision === 'month' ? (locale === 'en' ? 'Return month' : 'Tháng trở lại') : t('detail.returnDate') }}</span>
                   <span class="text-white font-black text-sm lg:text-base tracking-widest text-right">{{ releaseDates.seaReturn }}</span>
                 </div>
               </div>
@@ -679,7 +698,7 @@ onBeforeUnmount(() => {
         <div :key="activeSkillTab" class="grid grid-cols-1 lg:grid-cols-5 gap-8 bg-[#0d0e14] p-6 rounded-2xl border border-gray-800 shadow-inner">
         
         <!-- LEFT: ANIMATION PLAYER -->
-        <div v-if="activeSkillTab !== 'core'" class="lg:col-span-2 relative w-full aspect-video bg-[#05060a] rounded-xl border border-gray-800 overflow-hidden shadow-2xl flex items-center justify-center group">
+        <div v-if="showSkillMedia" data-skill-media class="lg:col-span-2 relative w-full aspect-video bg-[#05060a] rounded-xl border border-gray-800 overflow-hidden shadow-2xl flex items-center justify-center group">
           
           <template v-if="skillsMediaReady && currentExpandedSkillObj?.animation">
             <video v-if="currentExpandedSkillObj.animation.endsWith('.mp4')" :src="safeUrl(currentExpandedSkillObj.animation.startsWith('/') ? currentExpandedSkillObj.animation : getCharacterImage(currentExpandedSkillObj.animation))" autoplay loop muted playsinline preload="metadata" class="absolute inset-0 w-full h-full object-cover z-0"></video>
@@ -702,14 +721,15 @@ onBeforeUnmount(() => {
 
         <!-- RIGHT: SKILL CARDS LIST -->
         <div
-          class="flex flex-col gap-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar"
+          class="flex flex-col gap-4 overflow-y-auto pr-2 custom-scrollbar"
           data-testid="character-skills-content"
-          :class="activeSkillTab === 'core' ? 'lg:col-span-5' : 'lg:col-span-3'"
+          :class="[!showSkillMedia ? 'lg:col-span-5' : 'lg:col-span-3', !showSkillMedia && getCharacterPresentation(character).hideMissingSkillAnimation ? '' : 'max-h-[400px]']"
         >
           <template v-if="activeSkillTab === 'core' && coreData">
             <div 
               v-for="(lvl, index) in coreLevels" 
               :key="lvl.lv" 
+              :data-core-level="lvl.lv"
               class="border border-[color:var(--theme-color)]/30 rounded-lg flex flex-col relative overflow-hidden transition-all duration-300 bg-[#12131a] flex-shrink-0"
             >
               <div class="p-4 flex justify-between items-center bg-gradient-to-r from-[color:var(--theme-color)]/10 to-transparent">
@@ -719,7 +739,7 @@ onBeforeUnmount(() => {
                     <span v-else class="text-[color:var(--theme-color)] font-black text-2xl">{{ lvl.lv }}</span>
                   </div>
                   <h3 class="font-bold text-lg text-[color:var(--theme-color)]">
-                    {{ lvl['coreName_' + $i18n.locale] || lvl.coreName_vi || (index === 0 ? t('detail.coreBase') : t('detail.coreMilestone', { level: lvl.lv })) }}
+                    {{ isCoreLevelEffectPending(coreData, lvl) ? `Core — Lv ${lvl.lv}` : (lvl['coreName_' + $i18n.locale] || lvl.coreName_vi || (index === 0 ? t('detail.coreBase') : t('detail.coreMilestone', { level: lvl.lv }))) }}
                   </h3>
                 </div>
                 <div class="bg-gray-800 border border-gray-700 text-gray-400 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest">
@@ -727,7 +747,8 @@ onBeforeUnmount(() => {
                 </div>
               </div>
               <div class="p-4 pt-2">
-                <p class="text-sm text-gray-300 leading-relaxed" v-html="formatSkillDesc(lvl['coreEffect_' + $i18n.locale] || lvl.coreEffect_vi || lvl['reward_' + $i18n.locale] || lvl.reward_vi)"></p>
+                <p v-if="isCoreLevelEffectPending(coreData, lvl)" class="text-sm text-gray-400 leading-relaxed" data-core-effect-pending>{{ t('corelab.effectVerificationPending') }}</p>
+                <p v-else class="text-sm text-gray-300 leading-relaxed" v-html="formatSkillDesc(lvl['coreEffect_' + $i18n.locale] || lvl.coreEffect_vi || lvl['reward_' + $i18n.locale] || lvl.reward_vi)"></p>
               </div>
             </div>
             
@@ -747,20 +768,24 @@ onBeforeUnmount(() => {
             >
               
               <!-- Skill Header -->
-              <div class="p-4 flex justify-between items-center">
-                <div class="flex items-center gap-4">
+              <div class="p-4 flex justify-between items-center gap-2" :class="{ 'has-pending-upgrade': getSkillKeepsakeUnlock(skill, character)?.status === 'PENDING' }">
+                <div class="flex items-center gap-3 min-w-0">
                   <div class="w-14 h-14 flex-shrink-0 rounded-full border-2 border-[color:var(--theme-color)] flex items-center justify-center bg-gray-900 shadow-[0_0_10px_rgba(var(--theme-color-rgb),0.3)] overflow-hidden">
                     <img v-if="skill.icon" :src="safeUrl(skill.icon)" width="56" height="56" loading="lazy" fetchpriority="low" decoding="async" class="w-full h-full object-cover transform scale-110" alt="" />
                     <span v-else class="text-2xl opacity-80">💥</span>
                   </div>
-                  <div class="flex flex-wrap items-center gap-2">
+                  <div class="flex flex-wrap items-center gap-2 min-w-0">
                     <h3 class="font-bold text-lg transition-colors" :class="getSkillTitleClass(skill)">{{ skill.name }}</h3>
                     
                     <!-- KEEPSAKE BADGE -->
-                    <router-link v-if="skill.keepsakeIcon || (skill.name.toLowerCase().includes('siêu') && character?.keepsakeIcon)" :to="`/keepsake/${character.id}`" class="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-red-900/80 to-red-600/50 border border-red-500/50 rounded-full ml-2 shadow-[0_0_10px_rgba(255,0,0,0.4)] cursor-pointer hover:scale-105 hover:shadow-[0_0_15px_rgba(255,0,0,0.6)] transition-all duration-300">
+                    <span v-if="getSkillKeepsakeUnlock(skill, character)?.status === 'PENDING'" class="flex flex-wrap items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-red-900/80 to-red-600/50 border border-red-500/50 rounded-full max-w-full shadow-[0_0_10px_rgba(255,0,0,0.4)]" data-super-upgrade-pending @click.stop>
+                      <span class="text-xs text-red-100 uppercase tracking-wider font-bold">{{ t('detail.unlockedBy') }}</span>
+                      <img v-if="getSkillKeepsakeUnlock(skill, character).icon" :src="safeUrl(getSkillKeepsakeUnlock(skill, character).icon)" width="40" height="40" loading="lazy" decoding="async" class="h-10 w-10 object-contain flex-shrink-0" :alt="locale === 'en' ? 'Keepsake' : 'Kỷ vật'" />
+                    </span>
+                    <component :is="getSkillKeepsakeUnlock(skill, character)?.detailAvailable ? RouterLink : 'span'" v-else-if="getSkillKeepsakeUnlock(skill, character)" :to="getSkillKeepsakeUnlock(skill, character).detailAvailable ? `/keepsake/${character.id}` : undefined" class="flex flex-wrap items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-red-900/80 to-red-600/50 border border-red-500/50 rounded-full max-w-full shadow-[0_0_10px_rgba(255,0,0,0.4)]" data-keepsake-unlock @click.stop>
                       <span class="text-xs text-red-100 uppercase tracking-wider font-bold">{{ t("detail.unlockedBy") }}</span>
-                      <img :src="safeUrl(getKeepsakeImage(skill))" width="80" height="40" loading="lazy" fetchpriority="low" decoding="async" class="h-10 w-auto object-contain drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] animate-pulse" alt="Keepsake" title="Xem chi tiết Vũ Khí Duyên" />
-                    </router-link>
+                      <img :src="safeUrl(getSkillKeepsakeUnlock(skill, character).icon)" width="40" height="40" loading="lazy" fetchpriority="low" decoding="async" class="h-10 w-10 object-contain flex-shrink-0" :alt="locale === 'en' ? 'Keepsake' : 'Kỷ vật'" />
+                    </component>
 
                     <!-- Stars for Extreme Passives -->
                     <div v-if="getPassiveUpgradeTone(skill) === 'base-stars'" class="inline-flex items-center gap-3 bg-yellow-900/30 border border-yellow-500/50 rounded-full px-4 py-1.5"><span class="text-xs text-yellow-100 uppercase tracking-wider font-bold">{{ t("detail.unlockedBy") }}</span><div class="text-[#ffb300] text-xs drop-shadow-[0_0_5px_rgba(255,179,0,0.8)]">★★</div></div>
@@ -788,11 +813,14 @@ onBeforeUnmount(() => {
                 :class="expandedSkills.includes(skill.name) ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'"
               >
                 <div class="p-4 pt-0 border-t border-gray-800/50 mt-2">
-                  <p class="text-sm text-gray-300 leading-relaxed mt-4 whitespace-pre-line" v-html="formatSkillDesc(getSkillDescriptionForDisplay(skill))"></p>
+                  <SkillNumericProgression v-if="numericSkillView(skill)" :view="numericSkillView(skill)" :id="numericSkillId(skill)" :format-description="formatSkillDesc" />
+                  <p v-else class="text-sm text-gray-300 leading-relaxed mt-4 whitespace-pre-line" v-html="formatSkillDesc(getSkillDescriptionForDisplay(skill))"></p>
                 </div>
               </div>
 
             </div>
+            <p v-if="getSkillsByType(activeSkillTab).some(skill => skill.presentationSource === 'source-verified')" class="text-xs text-gray-400 leading-relaxed flex-shrink-0" data-source-stage-note>{{ t('detail.sourceProgressionPendingUnlock') }}</p>
+            <p v-if="hasPendingOwnerStageUnlock" class="text-xs text-gray-400 leading-relaxed flex-shrink-0" data-stage-unlock-note>{{ t('detail.communityAwakeningSource') }}</p>
           </template>
           
           <template v-else>
@@ -886,7 +914,7 @@ onBeforeUnmount(() => {
         <div 
           v-for="effect in chuThichHieuUng" 
           :key="effect.term"
-          :id="'effect-' + effect.term.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()"
+          :id="effectAnchorId(effect.term)"
           class="bg-[#12131a] p-4 rounded-xl border border-gray-800 transition-colors duration-500"
         >
           <span class="text-[color:var(--theme-color)] font-bold mb-2 block">{{ effect.term }}</span>
@@ -899,6 +927,19 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
+/* Keep the standard skill header, but give an unresolved upgrade its own row on phones. */
+@media (max-width: 639px) {
+  .has-pending-upgrade { display:grid; grid-template-columns:3.5rem minmax(0,1fr) auto; align-items:center; }
+  .has-pending-upgrade > div:first-child,
+  .has-pending-upgrade > div:first-child > div:last-child { display:contents; }
+  .has-pending-upgrade > div:first-child > div:first-child { grid-column:1; grid-row:1; }
+  .has-pending-upgrade h3 { grid-column:2; grid-row:1; }
+  .has-pending-upgrade > div:last-child { grid-column:3; grid-row:1; }
+  .has-pending-upgrade [data-super-upgrade-pending] { grid-column:1 / -1; grid-row:2; width:auto; justify-self:start; }
+}
+
+.character-hero.has-character-background{background:var(--character-background);background-image:none}
+.character-hero.has-character-background > .bg-gradient-to-r{background:linear-gradient(90deg,var(--character-background),rgba(0,0,0,.8),transparent)}
 .deferred-detail-section {
   content-visibility: auto;
   contain-intrinsic-size: auto 720px;

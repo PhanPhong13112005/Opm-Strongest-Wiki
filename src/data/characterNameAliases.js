@@ -1,4 +1,5 @@
 export default {
+  '100321-urplus': ['Gale Wind & Hellfire Flame'],
     "homeless-emperor-urplus":  [
                                       "Homeless Emperor"
                                   ],

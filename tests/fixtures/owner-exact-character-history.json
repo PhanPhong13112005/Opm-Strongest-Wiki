@@ -1,0 +1,26 @@
+{
+  "source": "OWNER_CONFIRMED_2026_11_04",
+  "supersedes": "month-only history and Child return dates01/12 and01/04",
+  "characters": {
+    "100320-urplus": {
+      "CN": {
+        "release": "2026-10-01",
+        "return": "2026-12-15"
+      },
+      "SEA": {
+        "release": "2027-02-01",
+        "return": "2027-04-15"
+      }
+    },
+    "100321-urplus": {
+      "CN": {
+        "release": "2026-11-01",
+        "return": "2027-01-15"
+      },
+      "SEA": {
+        "release": "2027-03-15",
+        "return": "2027-05-15"
+      }
+    }
+  }
+}

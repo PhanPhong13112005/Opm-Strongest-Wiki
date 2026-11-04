@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import { execFileSync } from 'node:child_process'
 import fs from 'node:fs'
+import { createHash } from 'node:crypto'
 import path from 'node:path'
 import test from 'node:test'
 import { decodeAssetUrlForLocalServer, safeAssetUrl } from '../src/utils/assetUrl.js'
@@ -47,6 +48,57 @@ const assertPublicAssetExists = (assetUrl, message) => {
 
 const charactersVi = readJson('src/data/characters.json')
 const charactersEn = readJson('src/data/characters_en.json')
+
+// Frozen IDs from verified commit beb2b46ecf8fe448f49a20e46dabc8c481994dad.
+// Do not derive the expected set from the catalog being tested.
+const originalCharacterIds = [
+  "100001-sr", "100002-ssr", "100002-ur", "100003-ssr", "100003-ssrplus",
+  "100003-ur", "100004-ssr", "100005-sr", "100006-ssr", "100006-ssrplus",
+  "100007-sr", "100008-sr", "100008-ssr", "100008-ur", "100009-sr",
+  "100009-ssr", "100009-ur", "100010-ssr", "100010-ssrplus", "100010-ur",
+  "100011-ssr", "100011-ssrplus", "100012-ssr", "100012-ssrplus", "100013-ssr",
+  "100013-ssrplus", "100013-ur", "100013-urplus", "100014-sr", "100015-sr",
+  "100016-sr", "100017-ssr", "100017-ssrplus", "100017-ur", "100018-sr",
+  "100019-sr", "100020-r", "100021-r", "100022-n", "100023-n",
+  "100024-ssr", "100024-ssrplus", "100025-ssr", "100025-ssrplus", "100027-ssr",
+  "100027-ssrplus", "100028-ssr", "100028-ssrplus", "100029-sr", "100029-ssr",
+  "100029-urplus", "100030-sr", "100031-r", "100032-r", "100033-r",
+  "100034-sr", "100035-r", "100036-r", "100038-r", "100039-r",
+  "100041-r", "100042-n", "100043-ssr", "100044-ssr", "100044-ssrplus",
+  "100044-ur", "100045-ssr", "100045-ssrplus", "100045-ur", "100046-sr",
+  "100047-sr", "100049-sr", "100050-r", "100051-sr", "100053-r",
+  "100054-ssr", "100054-ssrplus", "100055-ssr", "100055-ssrplus", "100056-ssr",
+  "100056-ssrplus", "100057-ssr", "100057-ssrplus", "100057-ur", "100059-ssr",
+  "100059-ssrplus", "100060-ssr", "100061-sr", "100062-ssr", "100062-ssrplus",
+  "100063-sr", "100064-r", "100065-r", "100067-n", "100068-r",
+  "100069-ssr", "100069-ur", "100074-ssr", "100075-ssr", "100075-ssrplus",
+  "100083-sr", "100084-sr", "100085-ssr", "100086-sr", "100089-ssr",
+  "100089-ssrplus", "100089-ur", "100090-ssr", "100091-sr", "100092-sr",
+  "100092-ssrplus", "100093-r", "100094-ssr", "100094-ssrplus", "100094-ur",
+  "100095-sr", "100095-ssr", "100096-sr", "100097-sr", "100103-ssr",
+  "100103-ssrplus", "100104-sr", "100106-r", "100108-ssr", "100109-ssr",
+  "100109-ssrplus", "100109-ur", "100110-sr", "100111-sr", "100119-ssr",
+  "100120-sr", "100125-ssr", "100126-ssr", "100135-sr", "100136-sr",
+  "100148-sr", "100149-ssr", "100151-ssr", "100154-sr", "100156-ssrplus",
+  "100157-ur", "100180-ur", "100180-urplus", "100182-ur", "100183-ur",
+  "100184-ur", "100184-urplus", "100185-ur", "100186-ur", "100187-ur",
+  "100188-ur", "100189-ur", "100190-ur", "100191-ur", "100192-ur",
+  "100302-ur", "100308-urplus", "100312-urplus", "100313-urplus", "100314-urplus",
+  "100315-urplus", "100316-urplus", "100320-urplus", "200001-n", "200007-n",
+  "200008-n", "200009-n", "200010-n", "200011-n", "200013-n",
+  "200017-n", "200018-n", "200026-n", "200027-n", "200030-n",
+  "200031-n", "200033-n", "blacksperm-urplus", "homeless-emperor-urplus",
+]
+const approvedNewCharacterId = '100321-urplus'
+const expectedCharacterIds = [...originalCharacterIds, approvedNewCharacterId].sort()
+const assertCharacterCatalogIds = records => {
+  const ids = records.map(record => record.id)
+  assert.equal(originalCharacterIds.length, 179)
+  assert.equal(new Set(originalCharacterIds).size, 179)
+  assert.equal(new Set(ids).size, ids.length, 'duplicate character ID')
+  assert.deepEqual([...ids].sort(), expectedCharacterIds, 'original IDs plus exactly the approved new ID')
+  assert.equal(ids.filter(id => id === approvedNewCharacterId).length, 1)
+}
 
 const coreLab = readJson('src/data/coreLab.json')
 const events = readJson('src/data/events.json')
@@ -176,7 +228,8 @@ test('home month and mobile navigation transitions expose matching CSS hooks', (
   assert.doesNotMatch(homeRadar, /\.energy-ring[^}]*animation:none!important/)
 })
 test('localized character catalogs share stable IDs', () => {
-  assert.equal(charactersVi.length, 179)
+  assertCharacterCatalogIds(charactersVi)
+  assertCharacterCatalogIds(charactersEn)
   assert.equal(charactersEn.length, charactersVi.length)
   assert.equal(new Set(charactersVi.map(character => character.id)).size, charactersVi.length)
   assert.deepEqual(
@@ -185,41 +238,77 @@ test('localized character catalogs share stable IDs', () => {
   )
 })
 
+// Read only numeric table rows from the matching level-two Markdown section.
+// Later effect tables must never be interpreted as historical character records.
+const parseLocalizationGuide = guide => {
+  const lines = guide.split(/\r?\n/)
+  const section = prefix => {
+    const start = lines.findIndex(line => line.startsWith(prefix))
+    if (start < 0) return []
+    const next = lines.findIndex((line, index) => index > start && /^## /.test(line))
+    return lines.slice(start + 1, next < 0 ? lines.length : next)
+  }
+  const parseRows = rows => rows.filter(line => /^\|\s*\d+\s*\|/.test(line)).map(line => {
+    const cells = line.split('|').slice(1)
+    if (cells.at(-1)?.trim() === '') cells.pop()
+    return cells.map(cell => cell.trim().replaceAll(String.fromCharCode(96), ''))
+  })
+  assert.ok(lines.some(line => line.startsWith('## 1.')), 'effect section missing')
+  assert.ok(lines.some(line => line.startsWith('## 2.')), 'character section missing')
+  return {
+    effectRows: parseRows(section('## 1.')),
+    characterRows: parseRows(section('## 2.')),
+    editorialEffects: parseRows(section('## Bổ sung biên tập do owner duyệt')),
+  }
+}
+
+test('editorial effect rows never become characters and preserve all historical localization mappings', () => {
+  const file = 'docs/VIET_HOA_HIEU_UNG_VA_TEN_NHAN_VAT_HOAN_CHINH.md'
+  const guide = fs.readFileSync(path.join(root, file), 'utf8')
+  const parsed = parseLocalizationGuide(guide)
+  const historical = parseLocalizationGuide(execFileSync('git', ['show', 'fec0437890a88d3a37857d7a310af41b8b6ba1cd:' + file], {cwd:root, encoding:'utf8'}))
+  assert.equal(parsed.effectRows.length, 329)
+  assert.equal(parsed.characterRows.length, 178)
+  assert.deepEqual(parsed.effectRows, historical.effectRows)
+  assert.deepEqual(parsed.characterRows, historical.characterRows)
+  assert.deepEqual(parsed.editorialEffects.map(cells => [cells[2], cells[3]]), [['Protection','Bảo Hộ'],['Base HP Increase','Tăng HP Cơ Bản'],['Dual Extreme Kill Formation','Song Cực Sát Trận']])
+  assert.ok(parsed.editorialEffects.every(cells => /\[x\]/i.test(cells[1]) && /Owner, 03\/11\/2026/.test(cells[4])))
+  assert.match(guide, /OWNER_APPROVED_EDITORIAL/)
+  const withoutEditorial = parseLocalizationGuide(guide.slice(0, guide.indexOf('## Bổ sung biên tập do owner duyệt')))
+  assert.deepEqual(parsed.characterRows, withoutEditorial.characterRows)
+  assert.deepEqual(parsed.effectRows, withoutEditorial.effectRows)
+  assert.deepEqual(withoutEditorial.editorialEffects, [])
+})
+
 test('Vietnamese character names and effects match the completed localization guide', () => {
   const guide = fs.readFileSync(
     path.join(root, 'docs/VIET_HOA_HIEU_UNG_VA_TEN_NHAN_VAT_HOAN_CHINH.md'),
     'utf8',
   )
-  const lines = guide.split(/\r?\n/)
-  const characterSection = lines.findIndex(line => line.startsWith('## 2.'))
-  const tick = String.fromCharCode(96)
-  const parseCells = (line) => {
-    const cells = line.split('|').slice(1)
-    if (cells.at(-1)?.trim() === '') cells.pop()
-    return cells.map(cell => cell.trim().replaceAll(tick, ''))
-  }
-  const parseRows = rows => rows
-    .filter(line => /^\|\s*\d+\s*\|/.test(line))
-    .map(parseCells)
-
-  assert.notEqual(characterSection, -1)
-  const effectRows = parseRows(lines.slice(0, characterSection))
-  const characterRows = parseRows(lines.slice(characterSection))
+  const { effectRows, characterRows, editorialEffects } = parseLocalizationGuide(guide)
   assert.equal(effectRows.length, 329)
   assert.equal(characterRows.length, 178)
   assert.ok(effectRows.every(cells => /\[x\]/i.test(cells[1]) && cells[2] && cells[3]))
   assert.ok(characterRows.every(cells => /\[x\]/i.test(cells[1]) && cells[2] && cells[6]))
 
-  const effectMappings = new Map(effectRows.map(cells => [cells[2], cells[3]]))
+  assert.equal(editorialEffects.length, 3)
+  assert.ok(editorialEffects.every(cells => /\[x\]/i.test(cells[1]) && cells[2] && cells[3]))
+  const effectMappings = new Map([...effectRows, ...editorialEffects].map(cells => [cells[2], cells[3]]))
   const localizedEffectNames = new Set(effectMappings.values())
   const characterNames = new Map(characterRows.map(cells => [cells[2], cells[6]]))
   const englishById = new Map(charactersEn.map(character => [character.id, character]))
 
-  assert.equal(effectMappings.size, 329)
+  assert.equal(effectMappings.size, 332)
+  assert.equal(effectMappings.get('Protection'), 'Bảo Hộ')
+  assert.equal(effectMappings.get('Base HP Increase'), 'Tăng HP Cơ Bản')
+  assert.equal(effectMappings.get('Dual Extreme Kill Formation'), 'Song Cực Sát Trận')
   assert.equal(characterNames.size, 178)
   // The unchanged guide covers the original catalog. Child has dedicated
   // translation/source tests; its unapproved effect name remains a source label.
   characterNames.set('100320-urplus', 'Đồng Đế')
+  // Owner-approved temporary English name, scoped to this ID only.
+  characterNames.set(approvedNewCharacterId, 'GaleWind & Hellfire Flame')
+  assert.equal(englishById.get(approvedNewCharacterId)?.name, 'GaleWind & Hellfire Flame')
   for (const [id, aliases] of Object.entries(characterNameAliases)) {
     assert.ok(characterNames.has(id), id + ' alias references an unknown character')
     assert.ok(Array.isArray(aliases) && aliases.length > 0, id + ' must expose at least one legacy name')
@@ -240,6 +329,22 @@ test('Vietnamese character names and effects match the completed localization gu
     for (let index = 0; index < (englishCharacter.effects?.length || 0); index += 1) {
       const source = String(englishCharacter.effects[index].term || '').replace(/^\[/, '').replace(/\]$/, '')
       const target = effectMappings.get(source) || (localizedEffectNames.has(source) ? source : '')
+      // The name is owner-approved editorial VI; its gameplay definition remains pending.
+      // Keep both locale labels and every pending damage/source guard explicit.
+      if (character.id === approvedNewCharacterId && source === 'Protection') {
+        assert.equal(target, 'Bảo Hộ')
+        assert.equal(character.effects.length, 1)
+        assert.equal(character.effects[index].term, '[Bảo Hộ]')
+        assert.equal(englishCharacter.effects[index].term, '[Protection]')
+        assert.match(character.effects[index].desc, /^PENDING:/)
+        assert.match(englishCharacter.effects[index].desc, /^PENDING:/)
+        assert.equal(character.provenance.protectionDamageStatus,
+          'PENDING_OWNER_CONFIRMED_DO_NOT_SELECT_EITHER_SOURCE')
+        assert.equal(englishCharacter.provenance.protectionDamageStatus,
+          character.provenance.protectionDamageStatus)
+        assert.doesNotMatch(character.effects[index].desc + englishCharacter.effects[index].desc, /\d+%/)
+        continue
+      }
       assert.ok(target, character.id + ' is missing a localization for ' + source)
       assert.equal(character.effects[index].term, '[' + target + ']')
     }
@@ -363,7 +468,8 @@ test('character pages restore local entries missing from a stale production API'
 
   assert.equal(reconciled.source, 'hybrid')
   assert.equal(reconciled.totalCount, charactersVi.length)
-  assert.equal(reconciled.items[0].id, '100320-urplus')
+  assert.equal(reconciled.items[0].id, '100321-urplus')
+  assert.equal(reconciled.items[1].id, '100320-urplus')
   assert.ok(reconciled.items.some(character => character.id === 'homeless-emperor-urplus'))
   assert.ok(reconciled.items.some(character => character.id === 'blacksperm-urplus'))
   assert.equal(reconciled.items.find(character => character.id === '100013-urplus').name, 'Zombieman do Admin chỉnh sửa')
@@ -417,7 +523,20 @@ test('Vietnamese ultimate labels and explicit energy costs stay accurate', () =>
   const localizedCharacters = charactersVi
   const skillNames = localizedCharacters.flatMap(character => character.skills.map(skill => skill.name))
   assert.equal(skillNames.filter(name => name === 'Tuyệt kĩ').length, localizedCharacters.length)
-  assert.equal(skillNames.filter(name => name === 'Siêu tuyệt kĩ').length, localizedCharacters.length)
+  const originalCharacters = localizedCharacters.filter(character => character.id !== approvedNewCharacterId)
+  for (const character of originalCharacters) {
+    assert.equal(character.skills.filter(skill => skill.name === 'Siêu tuyệt kĩ').length, 1, character.id)
+  }
+  assert.equal(skillNames.filter(name => name === 'Siêu tuyệt kĩ').length, originalCharacterIds.length + 1)
+  const newCharacter = localizedCharacters.find(character => character.id === approvedNewCharacterId)
+  assert.ok(newCharacter)
+  assert.equal(newCharacter.skills.filter(skill => skill.name === 'Tuyệt kĩ').length, 1)
+  assert.equal(getSkillEnergyCost(newCharacter.skills.find(skill => skill.type === 'Ultimate'), newCharacter.skills), 2)
+  assert.equal(newCharacter.skills.filter(skill => skill.name === 'Siêu tuyệt kĩ').length, 1)
+  assert.equal(getSkillEnergyCost(newCharacter.skills.find(skill => skill.name === 'Siêu tuyệt kĩ'), newCharacter.skills), 2)
+  assert.equal(newCharacter.skills.length, 5)
+  assert.equal(newCharacter.keepsakeIcon, undefined)
+  assert.equal(newCharacter.provenance.keepsakeStatus, 'PENDING_NO_UPGRADE_MAPPING')
   assert.equal(skillNames.includes('Tối thượng'), false)
   assert.equal(skillNames.includes('Siêu tối thượng'), false)
 
@@ -544,6 +663,118 @@ test('Homeless Emperor UR+ preserves supplied stats, assets, and upgrade semanti
   for (const field of ['pvpStats']) {
     assert.equal(Object.hasOwn(vietnamese, field), false, field + ' must stay absent until sourced')
     assert.equal(Object.hasOwn(english, field), false, 'en/' + field + ' must stay absent until sourced')
+  }
+})
+
+test('100321 candidate image bytes and mappings match the reviewed manifest (not Git provenance)', async () => {
+  const { default: sharp } = await import('sharp')
+  const reviewedAssets = [
+  {
+    "path": "public/Characters/optimized/100321-urplus-360.webp",
+    "sha256": "6CE50C4D8AA8EE49F3A3BE4B7A271B3A733786B1E7DE149DA990FDF9AF2F9055",
+    "bytes": 140824,
+    "width": 360,
+    "height": 434,
+    "alpha": false
+  },
+  {
+    "path": "public/Characters/optimized/100321-urplus-600.webp",
+    "sha256": "B4D624FD28EE5B757D06AF2B64D0CC9887B76C5A73A6E6C27C9EC935F27FDDC1",
+    "bytes": 341992,
+    "width": 600,
+    "height": 723,
+    "alpha": false
+  },
+  {
+    "path": "public/Skill/Gale Wind & Hellfire Flame (URplus)/basic.png",
+    "sha256": "B127FD7A612B6E11D0E00611F07AD00FE77A91440926A970EC25ACE7900152D0",
+    "bytes": 250010,
+    "width": 360,
+    "height": 360,
+    "alpha": true,
+    "format": "png"
+  },
+  {
+    "path": "public/Skill/Gale Wind & Hellfire Flame (URplus)/ultimate.png",
+    "sha256": "133E234F35D59BA8A61E794B8D451E22D21D31CF8DED4105E1F283D868F1DCEC",
+    "bytes": 288679,
+    "width": 360,
+    "height": 360,
+    "alpha": true,
+    "format": "png"
+  },
+  {
+    "path": "public/Skill/Gale Wind & Hellfire Flame (URplus)/passive.png",
+    "sha256": "433A1EEBE7DAF05C03CDC237184DA0BEC0ECFBFE492096805C5533A1EFDECD57",
+    "bytes": 312583,
+    "width": 360,
+    "height": 360,
+    "alpha": true,
+    "format": "png"
+  },
+  {
+    "path": "public/Skill/Gale Wind & Hellfire Flame (URplus)/awaken1.png",
+    "sha256": "A204A92240AE90DFBDF1118D317018797C77B6FAD2DD8E62E632CC3DAEBDB9C4",
+    "bytes": 281407,
+    "width": 360,
+    "height": 360,
+    "alpha": true,
+    "format": "png"
+  },
+  {
+    "path": "public/Characters/optimized/100321-urplus-artwork-600.webp",
+    "sha256": "699F27E0DF16E1D88646B919982AF109E41E8C4865670833B02D64F7657BB143",
+    "bytes": 181842,
+    "width": 600,
+    "height": 304,
+    "alpha": true
+  },
+  {
+    "path": "public/Characters/optimized/100321-urplus-artwork-1200.webp",
+    "sha256": "FD98237A15E3213DBDB96D8EC98C1280BC2F39E2ECAE269CC1D2DCC37E068CC0",
+    "bytes": 615704,
+    "width": 1200,
+    "height": 607,
+    "alpha": true
+  }
+]
+  for (const asset of reviewedAssets) {
+    let exactPath = root
+    for (const part of asset.path.split('/')) {
+      assert.ok(fs.readdirSync(exactPath).includes(part), asset.path + ' exact case')
+      exactPath = path.join(exactPath, part)
+    }
+    const bytes = fs.readFileSync(exactPath)
+    assert.equal(bytes.length, asset.bytes)
+    assert.equal(createHash('sha256').update(bytes).digest('hex').toUpperCase(), asset.sha256, asset.path)
+    const expectedFormat = asset.format || 'webp'
+    assert.ok(['png', 'webp'].includes(expectedFormat))
+    if (expectedFormat === 'png') {
+      assert.equal(bytes.subarray(0, 8).toString('hex'), '89504e470d0a1a0a')
+    } else {
+      assert.equal(bytes.toString('ascii', 0, 4), 'RIFF')
+      assert.equal(bytes.toString('ascii', 8, 12), 'WEBP')
+    }
+    const metadata = await sharp(bytes).metadata()
+    assert.equal(metadata.format, expectedFormat)
+    assert.equal(metadata.width, asset.width)
+    assert.equal(metadata.height, asset.height)
+    assert.equal(metadata.hasAlpha, asset.alpha)
+  }
+  const expectedIcons = reviewedAssets.slice(2, 6).map(asset => asset.path.replace(/^public/, ''))
+  for (const [locale, catalog] of [['vi', charactersVi], ['en', charactersEn]]) {
+    const character = catalog.find(item => item.id === approvedNewCharacterId)
+    assert.ok(character)
+    assert.equal(character.imageURL, reviewedAssets[7].path.replace(/^public/, ''))
+    assert.equal(character.avatarURL, reviewedAssets[1].path.replace(/^public/, ''))
+    assert.deepEqual(character.skills.map(skill => skill.icon), [expectedIcons[0], expectedIcons[1], expectedIcons[1], expectedIcons[2], expectedIcons[3]])
+    assert.deepEqual(character.skills.map(skill => skill.type), ['Basic', 'Ultimate', 'Ultimate', 'Passive', 'Awakening'])
+    const summary = readJson('src/data/characterSummaries.json')[locale].find(item => item.id === approvedNewCharacterId)
+    assert.equal(summary.imageURL, reviewedAssets[0].path.replace(/^public/, ''))
+    assert.deepEqual(readJson(`public/character-details/${locale}/${approvedNewCharacterId}.json`), character)
+    const awakening = character.skills.find(skill => skill.type === 'Awakening')
+    assert.match(awakening.desc, /PENDING/)
+    assert.doesNotMatch(awakening.desc + JSON.stringify(character.effects), /5000%|7000%|15000%|70000%/)
   }
 })
 
@@ -752,7 +983,12 @@ test('Vercel Analytics is initialized exactly once outside the deferred Vue tree
 
 
 test('release schedule fallback is bilingual and covers both servers', () => {
-  assert.equal(releaseSchedule.length, 23)
+  assert.equal(releaseSchedule.length, 32)
+  assert.equal(releaseSchedule.filter(row => row.datePrecision !== 'month').length, 32)
+  assert.deepEqual(releaseSchedule.filter(row => row.characterId === '100321-urplus').map(row => [row.server,row.date,row.isReturn]), [
+    ['CN','2026-11-01',false], ['SEA','2027-03-15',false],
+    ['CN','2027-01-15',true], ['SEA','2027-05-15',true],
+  ])
   assert.deepEqual(new Set(releaseSchedule.map((entry) => entry.server)), new Set(['CN', 'SEA']))
   const blackSpermRelease = releaseSchedule.find((entry) => (
     entry.server === 'CN' &&
@@ -792,9 +1028,9 @@ test('release schedule fallback is bilingual and covers both servers', () => {
       .map(entry => [entry.server, entry.date, entry.isReturn]),
     [
       ['CN', '2026-09-01', false],
-      ['CN', '2026-11-01', true],
+      ['CN', '2026-11-15', true],
       ['SEA', '2027-01-01', false],
-      ['SEA', '2027-03-01', true],
+      ['SEA', '2027-03-15', true],
     ],
   )
   assert.ok(
@@ -850,7 +1086,7 @@ test('local Keepsake catalog fills entries missing from a stale API', () => {
   const merged = mergeKeepsakeCatalog(apiKeepsakes, charactersVi)
   const blackSperm = merged.find(character => character.id === 'blacksperm-urplus')
 
-  assert.equal(merged.length, 179)
+  assertCharacterCatalogIds(merged)
   assert.ok(blackSperm)
   assert.equal(
     blackSperm.keepsakeIcon,

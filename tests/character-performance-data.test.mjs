@@ -2,6 +2,8 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import path from 'node:path'
 import test from 'node:test'
+import sharp from 'sharp'
+import { getReviewedDetailImage } from '../scripts/lib/reviewed-detail-image.mjs'
 
 const root = path.resolve(import.meta.dirname, '..')
 const readJson = relativePath => JSON.parse(fs.readFileSync(path.join(root, relativePath), 'utf8'))
@@ -11,7 +13,7 @@ const catalogs = {
 }
 const summaries = readJson('src/data/characterSummaries.json')
 
-test('generated character detail files preserve both localized catalogs one character at a time', () => {
+test('generated character detail files preserve both localized catalogs one character at a time', async () => {
   for (const [locale, characters] of Object.entries(catalogs)) {
     for (const source of characters) {
       const relativePath = path.join('public', 'character-details', locale, source.id + '.json')
@@ -24,8 +26,14 @@ test('generated character detail files preserve both localized catalogs one char
       assert.equal(generated.faction, source.faction)
       assert.deepEqual(generated.skills, source.skills)
       assert.deepEqual(generated.effects, source.effects)
-      assert.equal(generated.imageURL, '/Characters/optimized/' + source.id + '-600.webp')
-      assert.match(generated.imageSrcset, new RegExp(source.id + '-360\\.webp 360w'))
+      const reviewed = await getReviewedDetailImage(source, url => sharp(path.join(root, 'public', decodeURIComponent(url))).metadata())
+      if (reviewed) {
+        for (const [key, value] of Object.entries(reviewed)) assert.equal(generated[key], value, source.id + '/' + key)
+        assert.ok(fs.existsSync(path.join(root, 'public', source.avatarURL)), source.id + '/portrait fallback')
+      } else {
+        assert.equal(generated.imageURL, '/Characters/optimized/' + source.id + '-600.webp')
+        assert.match(generated.imageSrcset, new RegExp(source.id + '-360\\.webp 360w'))
+      }
       assert.ok(generated.imageWidth > 0)
       assert.ok(generated.imageHeight > 0)
     }

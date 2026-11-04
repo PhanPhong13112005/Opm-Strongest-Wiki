@@ -1,6 +1,22 @@
 {
   "vi": [
     {
+      "id": "100321-urplus",
+      "name": "GaleWind & Hellfire Flame",
+      "tier": "UR+",
+      "type": "Vũ Trang",
+      "faction": "Quái Nhân",
+      "roles": [
+        "Tấn Công Kép – Bảo Hộ Quái Nhân"
+      ],
+      "classLevel": "Dragon",
+      "imageURL": "/Characters/optimized/100321-urplus-360.webp",
+      "cardClassIcon": null,
+      "cardKeepsakeIcon": null,
+      "libraryFeatured": true,
+      "classIcon": "/Class/Dragon.png"
+    },
+    {
       "id": "100320-urplus",
       "name": "Đồng Đế",
       "imageURL": "/Characters/optimized/100320-urplus-360.webp",
@@ -3222,6 +3238,22 @@
     }
   ],
   "en": [
+    {
+      "id": "100321-urplus",
+      "name": "GaleWind & Hellfire Flame",
+      "tier": "UR+",
+      "type": "Duelist",
+      "faction": "Monster",
+      "roles": [
+        "Double Strike – Monster's Protection"
+      ],
+      "classLevel": "Dragon",
+      "imageURL": "/Characters/optimized/100321-urplus-360.webp",
+      "cardClassIcon": null,
+      "cardKeepsakeIcon": null,
+      "libraryFeatured": true,
+      "classIcon": "/Class/Dragon.png"
+    },
     {
       "id": "100320-urplus",
       "name": "Child Emperor",

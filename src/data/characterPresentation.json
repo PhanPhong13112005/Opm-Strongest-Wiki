@@ -1,0 +1,197 @@
+{
+  "100320-urplus": {
+    "background": "#000000",
+    "keepsakeIcon": "/Keepsake/Child Emperor (URplus)/Keepsake_URplus.png",
+    "keepsakeDetailAvailable": false,
+    "coreEffectReview": {
+      "coreHeId": "he_100320",
+      "unverifiedLevels": [
+        1,
+        17
+      ],
+      "source": "owner-decision",
+      "originalDataPreserved": true
+    },
+    "skillNumericViews": [
+      {
+        "skillType": "Awakening",
+        "presentation": "upgrade-cards",
+        "sequence": "92% [95%] [98%]",
+        "stageMapping": {
+          "status": "owner-confirmed",
+          "url": "https://opm-ts-wiki.vercel.app/en/character-info/100320-urplus",
+          "sourceKind": "community-published-game-data",
+          "acceptedOn": "2026-10-13",
+          "unlockConditionsStatus": "INCONCLUSIVE",
+          "states": [
+            {
+              "label": "A1",
+              "value": "92%",
+              "sourceSkillId": "sk_core016a1"
+            },
+            {
+              "label": "A2",
+              "value": "95%",
+              "sourceSkillId": "sk_core016a2"
+            },
+            {
+              "label": "A3",
+              "value": "98%",
+              "sourceSkillId": "sk_core016a3"
+            }
+          ]
+        },
+        "independentEffects": [
+          {
+            "label": {
+              "vi": "Năng Lượng mỗi lượt",
+              "en": "Energy per turn"
+            },
+            "sourceText": {
+              "vi": "Mỗi lượt nhận 3 [4] điểm Năng Lượng.",
+              "en": "Gain 3 [4] energy points per turn."
+            },
+            "stageMapping": "owner-confirmed",
+            "sourceSequence": "3 [4]",
+            "stageValues": [
+              "3",
+              "3",
+              "4"
+            ]
+          }
+        ],
+        "source": "owner-confirmed"
+      }
+    ],
+    "source": "owner-confirmed"
+  },
+  "100321-urplus": {
+    "keepsakeIcon": "/Keepsake/Gale Wind & Hellfire Flame(URPlus)/Keepsake.png",
+    "keepsakeDetailAvailable": false,
+    "keepsakeImageOnly": false,
+    "keepsakeImageReview": {
+      "identity": "OWNER_CONFIRMED",
+      "mapping": "CONFIRMED",
+      "effects": "PENDING",
+      "unlockCondition": "PENDING",
+      "superUltimate": "OWNER_CONFIRMED_EXISTS",
+      "publicAssetRights": "LICENSE_UNVERIFIED"
+    },
+    "source": "COMMUNITY_SOURCED",
+    "skillNumericViews": [
+      {
+        "skillType": "Passive",
+        "sequence": "80% [85%] [90%]",
+        "independentEffects": [
+          {
+            "label": {
+              "vi": "Tỷ lệ đỡ đòn — chuỗi giá trị độc lập",
+              "en": "Block Rate — independent progression"
+            },
+            "sourceText": {
+              "vi": "Khi vào trận, các đồng minh Quái Nhân nhận vĩnh viễn 45% [50%] [55%] [Tỷ Lệ Đỡ Đòn].",
+              "en": "Grants allied monster characters a permanent 45% [50%] [55%] [Block Rate] upon entering the battlefield."
+            },
+            "stageMapping": "owner-confirmed",
+            "sourceSequence": "45% [50%] [55%]",
+            "stageValues": [
+              "45%",
+              "50%",
+              "55%"
+            ]
+          }
+        ],
+        "presentation": "upgrade-cards",
+        "stageMapping": {
+          "status": "owner-confirmed",
+          "url": "https://opm-ts-wiki.vercel.app/vi/character-info/100321-urplus",
+          "sourceKind": "community-published-game-data",
+          "sourceRevision": "CN 5169",
+          "unlockConditionsStatus": "OWNER_CONFIRMED_STAR_THRESHOLDS",
+          "states": [
+            {
+              "label": {
+                "vi": "2★ vàng",
+                "en": "2★ gold"
+              },
+              "value": "80%",
+              "sourceSkillId": "sk_hero321_p"
+            },
+            {
+              "label": {
+                "vi": "5★ vàng",
+                "en": "5★ gold"
+              },
+              "value": "85%",
+              "sourceSkillId": "sk_hero321_pp"
+            },
+            {
+              "label": {
+                "vi": "5★ tím",
+                "en": "5★ purple"
+              },
+              "value": "90%",
+              "sourceSkillId": "sk_hero321_ppp"
+            }
+          ],
+          "acceptedOn": "2026-11-04",
+          "ownerConfirmation": "Owner explicitly mapped the three pictured Passive cards to 2 gold stars,5 gold stars,5 purple stars, in that order."
+        }
+      },
+      {
+        "skillType": "Awakening",
+        "presentation": "source-stage-cards",
+        "sourceText": {
+          "vi": "Khi vào trận, bản thân và các đồng minh Quái Nhân cùng hàng nhận [Bảo Hộ] vĩnh viễn.\n\nMỗi lượt khi nhân vật dùng kỹ năng, hiệu ứng [Bảo Hộ] tăng thêm 1x, tối đa 3x.\n\nĐịnh nghĩa hồi HP và sát thương bổ sung của Bảo Hộ: PENDING, đang chờ đối chiếu chủ thể và nguồn. Không suy toàn bộ hiệu ứng được nhân ba.",
+          "en": "Upon entering the field, grants permanent [Protection] buff to self and all monster characters in the same row.\n\nThe [Protection] effect increases by 1x each turn when the character uses a skill, up to a maximum of 3x.\n\nProtection healing and additional-damage definition: PENDING subject and source reconciliation. Do not assume every effect is tripled."
+        },
+        "stageMapping": {
+          "status": "source-verified",
+          "url": "https://opm-ts-wiki.vercel.app/vi/character-info/100321-urplus",
+          "sourceKind": "community-published-game-data",
+          "sourceRevision": "CN 5169",
+          "unlockConditionsStatus": "INCONCLUSIVE",
+          "states": [
+            {
+              "label": "A1",
+              "sourceSkillId": "sk_hero321_h",
+              "pendingDescription": {
+                "vi": "Chi tiết riêng về hồi HP, sát thương Bảo Hộ và điều kiện mở khóa A1: PENDING.",
+                "en": "Stage-specific Protection recovery, damage and A1 unlock conditions: PENDING."
+              }
+            },
+            {
+              "label": "A2",
+              "sourceSkillId": "sk_hero321_hh",
+              "pendingDescription": {
+                "vi": "Chi tiết riêng về hồi HP, sát thương Bảo Hộ và điều kiện mở khóa A2: PENDING.",
+                "en": "Stage-specific Protection recovery, damage and A2 unlock conditions: PENDING."
+              }
+            },
+            {
+              "label": "A3",
+              "sourceSkillId": "sk_hero321_hhh",
+              "pendingDescription": {
+                "vi": "Chi tiết riêng về hồi HP, sát thương Bảo Hộ và điều kiện mở khóa A3: PENDING.",
+                "en": "Stage-specific Protection recovery, damage and A3 unlock conditions: PENDING."
+              }
+            }
+          ]
+        },
+        "sharedMechanicsSource": "All three public Game data rows contain the same entry/same-row Protection and 1x-per-round/up-to-3x clauses. No disputed coefficient or new Energy Gauge effect imported."
+      }
+    ],
+    "hideMissingSkillAnimation": true,
+    "superUltimateUpgradeReview": {
+      "status": "PENDING",
+      "imageIdentity": "OWNER_CONFIRMED_AND_COMMUNITY_SUPER_HEADER_MATCH",
+      "source": "https://opm-ts-wiki.vercel.app/vi/character-info/100321-urplus",
+      "sourceAssetUrl": "https://opm-assets.pages.dev/game-icons/equips/eq_hero321_atk.webp",
+      "sourceAssetKey": "eq_hero321_atk",
+      "gameItemId": null,
+      "unlockCondition": "PENDING",
+      "quantity": "PENDING",
+      "publicAssetRights": "LICENSE_UNVERIFIED"
+    }
+  }
+}

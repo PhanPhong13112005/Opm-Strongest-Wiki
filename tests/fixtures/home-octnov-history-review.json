@@ -1,0 +1,1844 @@
+{
+  "source": "Existing local character History; not independent game verification",
+  "collectedOn": "2026-11-04",
+  "previousSchedule": [
+    {
+      "server": "CN",
+      "date": "2026-10-01",
+      "characterId": "100320-urplus",
+      "bannerImage": "/Characters/Full_Background/Child_URplus.png",
+      "isReturn": false,
+      "sortOrder": 1,
+      "verificationStatus": "owner-confirmed",
+      "source": "owner",
+      "status": "planned",
+      "confirmedOn": "2026-11-04"
+    },
+    {
+      "server": "CN",
+      "date": "2026-12-15",
+      "characterId": "100320-urplus",
+      "bannerImage": "/Characters/Full_Background/Child_URplus.png",
+      "isReturn": true,
+      "sortOrder": 1,
+      "verificationStatus": "owner-confirmed",
+      "source": "owner",
+      "status": "planned",
+      "confirmedOn": "2026-11-04"
+    },
+    {
+      "server": "SEA",
+      "date": "2027-02-01",
+      "characterId": "100320-urplus",
+      "bannerImage": "/Characters/Full_Background/Child_URplus.png",
+      "isReturn": false,
+      "sortOrder": 1,
+      "verificationStatus": "owner-confirmed",
+      "source": "owner",
+      "status": "planned",
+      "confirmedOn": "2026-11-04"
+    },
+    {
+      "server": "SEA",
+      "date": "2027-04-15",
+      "characterId": "100320-urplus",
+      "bannerImage": "/Characters/Full_Background/Child_URplus.png",
+      "isReturn": true,
+      "sortOrder": 1,
+      "verificationStatus": "owner-confirmed",
+      "source": "owner",
+      "status": "planned",
+      "confirmedOn": "2026-11-04"
+    },
+    {
+      "server": "CN",
+      "date": "2026-06-01",
+      "characterId": "100316-urplus",
+      "bannerImage": "/Characters/Full_Background/Rover_URplus.png",
+      "isReturn": false,
+      "sortOrder": 1
+    },
+    {
+      "server": "CN",
+      "date": "2026-06-15",
+      "characterId": "100314-urplus",
+      "bannerImage": "/Characters/Full_Background/G5_URplus.png",
+      "isReturn": true,
+      "sortOrder": 2
+    },
+    {
+      "server": "SEA",
+      "date": "2026-06-01",
+      "characterId": "100312-urplus",
+      "bannerImage": "/Characters/Full_Background/Nyan_URplus.png",
+      "isReturn": false,
+      "sortOrder": 1
+    },
+    {
+      "server": "SEA",
+      "date": "2026-06-15",
+      "characterId": "100029-urplus",
+      "bannerImage": "/Characters/Full_Background/Amai_Mask_Urplus.png",
+      "isReturn": true,
+      "sortOrder": 2
+    },
+    {
+      "server": "CN",
+      "date": "2026-07-01",
+      "characterId": "100013-urplus",
+      "bannerImage": "/Characters/Full_Background/ZombIeMan_URplus.png",
+      "isReturn": false,
+      "sortOrder": 1
+    },
+    {
+      "server": "CN",
+      "date": "2026-07-15",
+      "characterId": "100315-urplus",
+      "bannerImage": "/Characters/Full_Background/Bang&Bomb_Urplus.png",
+      "isReturn": true,
+      "sortOrder": 2
+    },
+    {
+      "server": "SEA",
+      "date": "2026-07-01",
+      "characterId": "100313-urplus",
+      "bannerImage": "/Characters/Full_Background/Atomic Samurai_URplus.png",
+      "isReturn": false,
+      "sortOrder": 1
+    },
+    {
+      "server": "SEA",
+      "date": "2026-07-15",
+      "characterId": "100180-urplus",
+      "bannerImage": "/Characters/Full_Background/Tatsumaki_URplus.png",
+      "isReturn": true,
+      "sortOrder": 2
+    },
+    {
+      "server": "CN",
+      "date": "2026-08-01",
+      "characterId": "blacksperm-urplus",
+      "bannerImage": "/Characters/Full_Background/Black_Sperm_Ur_plus.png",
+      "isReturn": false,
+      "sortOrder": 1
+    },
+    {
+      "server": "CN",
+      "date": "2026-08-15",
+      "characterId": "100316-urplus",
+      "bannerImage": "/Characters/Full_Background/Rover_URplus.png",
+      "isReturn": true,
+      "sortOrder": 2
+    },
+    {
+      "server": "SEA",
+      "date": "2026-08-01",
+      "characterId": "100314-urplus",
+      "bannerImage": "/Characters/Full_Background/G5_URplus.png",
+      "isReturn": false,
+      "sortOrder": 1
+    },
+    {
+      "server": "SEA",
+      "date": "2026-08-15",
+      "characterId": "100312-urplus",
+      "bannerImage": "/Characters/Full_Background/Nyan_URplus.png",
+      "isReturn": true,
+      "sortOrder": 2
+    },
+    {
+      "server": "SEA",
+      "date": "2026-09-01",
+      "characterId": "100315-urplus",
+      "bannerImage": "/Characters/Full_Background/Bang&Bomb_Urplus.png",
+      "isReturn": false,
+      "sortOrder": 1
+    },
+    {
+      "server": "CN",
+      "date": "2026-09-01",
+      "characterId": "homeless-emperor-urplus",
+      "bannerImage": "/Characters/Full_Background/Homeless_Emperor_URplus.png",
+      "isReturn": false,
+      "sortOrder": 1
+    },
+    {
+      "server": "CN",
+      "date": "2026-09-15",
+      "characterId": "100013-urplus",
+      "bannerImage": "/Characters/Full_Background/ZombIeMan_URplus.png",
+      "isReturn": true,
+      "sortOrder": 2
+    },
+    {
+      "server": "SEA",
+      "date": "2026-09-15",
+      "characterId": "100313-urplus",
+      "bannerImage": "/Characters/Full_Background/Atomic Samurai_URplus.png",
+      "isReturn": true,
+      "sortOrder": 2
+    },
+    {
+      "server": "CN",
+      "date": "2026-11-01",
+      "characterId": "homeless-emperor-urplus",
+      "bannerImage": "/Characters/Full_Background/Homeless_Emperor_URplus.png",
+      "isReturn": true,
+      "sortOrder": 1
+    },
+    {
+      "server": "SEA",
+      "date": "2027-01-01",
+      "characterId": "homeless-emperor-urplus",
+      "bannerImage": "/Characters/Full_Background/Homeless_Emperor_URplus.png",
+      "isReturn": false,
+      "sortOrder": 1
+    },
+    {
+      "server": "SEA",
+      "date": "2027-03-01",
+      "characterId": "homeless-emperor-urplus",
+      "bannerImage": "/Characters/Full_Background/Homeless_Emperor_URplus.png",
+      "isReturn": true,
+      "sortOrder": 1
+    },
+    {
+      "server": "CN",
+      "date": "2026-11-01",
+      "characterId": "100321-urplus",
+      "bannerImage": "/Characters/optimized/100321-urplus-artwork-1200.webp",
+      "isReturn": false,
+      "sortOrder": 2,
+      "verificationStatus": "owner-confirmed",
+      "source": "owner",
+      "status": "planned",
+      "confirmedOn": "2026-11-04"
+    },
+    {
+      "server": "SEA",
+      "date": "2027-03-15",
+      "characterId": "100321-urplus",
+      "bannerImage": "/Characters/optimized/100321-urplus-artwork-1200.webp",
+      "isReturn": false,
+      "sortOrder": 1,
+      "verificationStatus": "owner-confirmed",
+      "source": "owner",
+      "status": "planned",
+      "confirmedOn": "2026-11-04"
+    },
+    {
+      "server": "CN",
+      "date": "2027-01-15",
+      "characterId": "100321-urplus",
+      "bannerImage": "/Characters/optimized/100321-urplus-artwork-1200.webp",
+      "isReturn": true,
+      "sortOrder": 1,
+      "verificationStatus": "owner-confirmed",
+      "source": "owner",
+      "status": "planned",
+      "confirmedOn": "2026-11-04"
+    },
+    {
+      "server": "SEA",
+      "date": "2027-05-15",
+      "characterId": "100321-urplus",
+      "bannerImage": "/Characters/optimized/100321-urplus-artwork-1200.webp",
+      "isReturn": true,
+      "sortOrder": 1,
+      "verificationStatus": "owner-confirmed",
+      "source": "owner",
+      "status": "planned",
+      "confirmedOn": "2026-11-04"
+    }
+  ],
+  "historyBefore": {
+    "vi": {
+      "100321-urplus": {
+        "trungRelease": "01/11/2026",
+        "trungReturn": "15/01/2027",
+        "seaRelease": "15/03/2027",
+        "seaReturn": "15/05/2027"
+      },
+      "100320-urplus": {
+        "trungRelease": "01/10/2026",
+        "trungReturn": "15/12/2026",
+        "seaRelease": "01/02/2027",
+        "seaReturn": "15/04/2027"
+      },
+      "homeless-emperor-urplus": {
+        "trungRelease": "01/09/2026",
+        "trungReturn": "01/11/2026",
+        "seaRelease": "01/01/2027",
+        "seaReturn": "01/03/2027"
+      },
+      "blacksperm-urplus": {
+        "trungRelease": "01/08/2026",
+        "trungReturn": "15/10/2026",
+        "seaRelease": "01/12/2026",
+        "seaReturn": "15/02/2027"
+      },
+      "100013-urplus": {
+        "trungRelease": "01/07/2026",
+        "trungReturn": "15/09/2026",
+        "seaRelease": "01/11/2026",
+        "seaReturn": "15/01/2027"
+      },
+      "100316-urplus": {
+        "trungRelease": "01/06/2026",
+        "trungReturn": "15/08/2026",
+        "seaRelease": "01/10/2026",
+        "seaReturn": "15/12/2026"
+      },
+      "100315-urplus": {
+        "trungRelease": "01/05/2026",
+        "trungReturn": "15/07/2026",
+        "seaRelease": "01/09/2026",
+        "seaReturn": "15/11/2026"
+      },
+      "100314-urplus": {
+        "trungRelease": "01/04/2026",
+        "trungReturn": "15/06/2026",
+        "seaRelease": "01/08/2026",
+        "seaReturn": "15/10/2026"
+      },
+      "100313-urplus": {
+        "trungRelease": "01/03/2026",
+        "trungReturn": "15/05/2026",
+        "seaRelease": "01/07/2026",
+        "seaReturn": "15/09/2026"
+      },
+      "100312-urplus": {
+        "trungRelease": "01/02/2026",
+        "trungReturn": "15/04/2026",
+        "seaRelease": "01/06/2026",
+        "seaReturn": "15/08/2026"
+      },
+      "100180-urplus": {
+        "trungRelease": "01/01/2026",
+        "trungReturn": "15/03/2026",
+        "seaRelease": "01/05/2026",
+        "seaReturn": "15/07/2026"
+      },
+      "100029-urplus": {
+        "trungRelease": "01/12/2025",
+        "trungReturn": "15/02/2026",
+        "seaRelease": "01/04/2026",
+        "seaReturn": "15/06/2026"
+      },
+      "100184-urplus": {
+        "trungRelease": "01/11/2025",
+        "trungReturn": "15/01/2026",
+        "seaRelease": "01/03/2026",
+        "seaReturn": "15/05/2026"
+      },
+      "100308-urplus": {
+        "trungRelease": "01/10/2025",
+        "trungReturn": "15/12/2025",
+        "seaRelease": "01/02/2026",
+        "seaReturn": "15/04/2026"
+      },
+      "100109-ur": {
+        "trungRelease": "01/09/2025",
+        "trungReturn": "15/11/2025",
+        "seaRelease": "01/01/2026",
+        "seaReturn": "15/03/2026"
+      },
+      "100157-ur": {
+        "trungRelease": "01/08/2025",
+        "trungReturn": "15/10/2025",
+        "seaRelease": "01/12/2025",
+        "seaReturn": "15/02/2026"
+      },
+      "100069-ur": {
+        "trungRelease": "01/07/2025",
+        "trungReturn": "15/09/2025",
+        "seaRelease": "01/11/2025",
+        "seaReturn": "15/01/2026"
+      },
+      "100094-ur": {
+        "trungRelease": "01/06/2025",
+        "trungReturn": "15/08/2025",
+        "seaRelease": "01/10/2025",
+        "seaReturn": "15/12/2025"
+      },
+      "100057-ur": {
+        "trungRelease": "01/05/2025",
+        "trungReturn": "15/07/2025",
+        "seaRelease": "01/09/2025",
+        "seaReturn": "15/11/2025"
+      },
+      "100302-ur": {
+        "trungRelease": "01/04/2025",
+        "trungReturn": "15/06/2025",
+        "seaRelease": "01/08/2025",
+        "seaReturn": "15/10/2025"
+      },
+      "100017-ur": {
+        "trungRelease": "01/03/2025",
+        "trungReturn": "15/05/2025",
+        "seaRelease": "01/07/2025",
+        "seaReturn": "15/09/2025"
+      },
+      "100044-ur": {
+        "trungRelease": "01/02/2025",
+        "trungReturn": "15/04/2025",
+        "seaRelease": "01/06/2025",
+        "seaReturn": "15/08/2025"
+      },
+      "100009-ur": {
+        "trungRelease": "01/01/2025",
+        "trungReturn": "15/03/2025",
+        "seaRelease": "01/05/2025",
+        "seaReturn": "15/07/2025"
+      },
+      "100003-ur": {
+        "trungRelease": "01/12/2024",
+        "trungReturn": "15/02/2025",
+        "seaRelease": "01/04/2025",
+        "seaReturn": "15/06/2025"
+      },
+      "100013-ur": {
+        "trungRelease": "01/05/2024",
+        "trungReturn": "15/07/2024",
+        "seaRelease": "01/09/2024",
+        "seaReturn": "15/11/2024"
+      },
+      "100045-ur": {
+        "trungRelease": "01/04/2024",
+        "trungReturn": "15/06/2024",
+        "seaRelease": "01/08/2024",
+        "seaReturn": "15/10/2024"
+      },
+      "100008-ur": {
+        "trungRelease": "01/03/2024",
+        "trungReturn": "15/05/2024",
+        "seaRelease": "01/07/2024",
+        "seaReturn": "15/09/2024"
+      },
+      "100010-ur": {
+        "trungRelease": "01/02/2024",
+        "trungReturn": "15/04/2024",
+        "seaRelease": "01/06/2024",
+        "seaReturn": "15/08/2024"
+      },
+      "100089-ur": {
+        "trungRelease": "01/01/2024",
+        "trungReturn": "15/03/2024",
+        "seaRelease": "01/05/2024",
+        "seaReturn": "15/07/2024"
+      },
+      "100192-ur": {
+        "trungRelease": "01/12/2023",
+        "trungReturn": "15/02/2024",
+        "seaRelease": "01/04/2024",
+        "seaReturn": "15/06/2024"
+      },
+      "100191-ur": {
+        "trungRelease": "01/11/2024",
+        "trungReturn": "15/01/2025",
+        "seaRelease": "01/03/2025",
+        "seaReturn": "15/05/2025"
+      },
+      "100190-ur": {
+        "trungRelease": "01/10/2024",
+        "trungReturn": "15/12/2024",
+        "seaRelease": "01/02/2025",
+        "seaReturn": "15/04/2025"
+      },
+      "100189-ur": {
+        "trungRelease": "01/09/2024",
+        "trungReturn": "15/11/2024",
+        "seaRelease": "01/01/2025",
+        "seaReturn": "15/03/2025"
+      },
+      "100188-ur": {
+        "trungRelease": "01/08/2024",
+        "trungReturn": "15/10/2024",
+        "seaRelease": "01/12/2024",
+        "seaReturn": "15/02/2025"
+      },
+      "100187-ur": {
+        "trungRelease": "01/01/2024",
+        "trungReturn": "15/03/2024",
+        "seaRelease": "Không xác định",
+        "seaReturn": "Không xác định"
+      },
+      "100186-ur": {
+        "trungRelease": "01/06/2024",
+        "trungReturn": "15/08/2024",
+        "seaRelease": "01/10/2024",
+        "seaReturn": "15/12/2024"
+      },
+      "100185-ur": {
+        "trungRelease": "01/11/2023",
+        "trungReturn": "15/01/2024",
+        "seaRelease": "01/03/2024",
+        "seaReturn": "15/05/2024"
+      },
+      "100184-ur": {
+        "trungRelease": "01/10/2023",
+        "trungReturn": "15/12/2023",
+        "seaRelease": "01/02/2024",
+        "seaReturn": "15/04/2024"
+      },
+      "100183-ur": {
+        "trungRelease": "01/09/2023",
+        "trungReturn": "15/11/2023",
+        "seaRelease": "01/01/2024",
+        "seaReturn": "15/03/2024"
+      },
+      "100182-ur": {
+        "trungRelease": "01/08/2023",
+        "trungReturn": "15/10/2023",
+        "seaRelease": "01/12/2023",
+        "seaReturn": "15/02/2024"
+      },
+      "100002-ur": {
+        "trungRelease": "01/07/2023",
+        "trungReturn": "15/09/2023",
+        "seaRelease": "01/11/2023",
+        "seaReturn": "15/01/2024"
+      },
+      "100180-ur": {
+        "trungRelease": "01/06/2023",
+        "trungReturn": "15/08/2023",
+        "seaRelease": "01/10/2023",
+        "seaReturn": "15/12/2023"
+      },
+      "100027-ssrplus": {
+        "trungRelease": "01/05/2023",
+        "trungReturn": "15/07/2023",
+        "seaRelease": "01/09/2023",
+        "seaReturn": "15/11/2023"
+      },
+      "100075-ssrplus": {
+        "trungRelease": "01/04/2023",
+        "trungReturn": "15/06/2023",
+        "seaRelease": "01/08/2023",
+        "seaReturn": "15/10/2023"
+      },
+      "100006-ssrplus": {
+        "trungRelease": "01/03/2023",
+        "trungReturn": "15/05/2023",
+        "seaRelease": "Không xác định",
+        "seaReturn": "Không xác định"
+      },
+      "100013-ssrplus": {
+        "trungRelease": "01/03/2023",
+        "trungReturn": "15/05/2023",
+        "seaRelease": "01/07/2023",
+        "seaReturn": "15/09/2023"
+      },
+      "100062-ssrplus": {
+        "trungRelease": "01/02/2023",
+        "trungReturn": "15/04/2023",
+        "seaRelease": "01/06/2023",
+        "seaReturn": "15/08/2023"
+      },
+      "100025-ssrplus": {
+        "trungRelease": "01/01/2023",
+        "trungReturn": "15/03/2023",
+        "seaRelease": "01/05/2023",
+        "seaReturn": "15/07/2023"
+      },
+      "100054-ssrplus": {
+        "trungRelease": "01/12/2022",
+        "trungReturn": "15/02/2023",
+        "seaRelease": "01/04/2023",
+        "seaReturn": "15/06/2023"
+      },
+      "100044-ssrplus": {
+        "trungRelease": "01/11/2022",
+        "trungReturn": "15/01/2023",
+        "seaRelease": "01/03/2023",
+        "seaReturn": "15/05/2023"
+      },
+      "100028-ssrplus": {
+        "trungRelease": "01/10/2022",
+        "trungReturn": "15/12/2022",
+        "seaRelease": "01/02/2023",
+        "seaReturn": "15/04/2023"
+      },
+      "100003-ssrplus": {
+        "trungRelease": "01/09/2022",
+        "trungReturn": "15/11/2022",
+        "seaRelease": "01/01/2023",
+        "seaReturn": "15/03/2023"
+      },
+      "100017-ssrplus": {
+        "trungRelease": "01/07/2022",
+        "trungReturn": "15/09/2022",
+        "seaRelease": "Không xác định",
+        "seaReturn": "Không xác định"
+      },
+      "100109-ssrplus": {
+        "trungRelease": "01/08/2022",
+        "trungReturn": "15/10/2022",
+        "seaRelease": "01/12/2022",
+        "seaReturn": "15/02/2023"
+      },
+      "100057-ssrplus": {
+        "trungRelease": "01/06/2022",
+        "trungReturn": "15/08/2022",
+        "seaRelease": "Không xác định",
+        "seaReturn": "Không xác định"
+      },
+      "100010-ssrplus": {
+        "trungRelease": "01/07/2022",
+        "trungReturn": "15/09/2022",
+        "seaRelease": "01/11/2022",
+        "seaReturn": "15/01/2023"
+      },
+      "100089-ssrplus": {
+        "trungRelease": "01/06/2022",
+        "trungReturn": "15/08/2022",
+        "seaRelease": "01/10/2022",
+        "seaReturn": "15/12/2022"
+      },
+      "100103-ssrplus": {
+        "trungRelease": "01/03/2022",
+        "trungReturn": "15/05/2022",
+        "seaRelease": "Không xác định",
+        "seaReturn": "Không xác định"
+      },
+      "100094-ssrplus": {
+        "trungRelease": "01/05/2022",
+        "trungReturn": "15/07/2022",
+        "seaRelease": "01/09/2022",
+        "seaReturn": "15/11/2022"
+      },
+      "100011-ssrplus": {
+        "trungRelease": "01/04/2022",
+        "trungReturn": "15/06/2022",
+        "seaRelease": "01/08/2022",
+        "seaReturn": "15/10/2022"
+      },
+      "100024-ssrplus": {
+        "trungRelease": "01/03/2022",
+        "trungReturn": "15/05/2022",
+        "seaRelease": "01/07/2022",
+        "seaReturn": "15/09/2022"
+      },
+      "100059-ssrplus": {
+        "trungRelease": "01/02/2022",
+        "trungReturn": "15/04/2022",
+        "seaRelease": "01/06/2022",
+        "seaReturn": "15/08/2022"
+      },
+      "100056-ssrplus": {
+        "trungRelease": "01/10/2021",
+        "trungReturn": "15/12/2021",
+        "seaRelease": "Không xác định",
+        "seaReturn": "Không xác định"
+      },
+      "100055-ssrplus": {
+        "trungRelease": "01/11/2021",
+        "trungReturn": "15/01/2022",
+        "seaRelease": "01/03/2022",
+        "seaReturn": "15/05/2022"
+      },
+      "100156-ssrplus": {
+        "trungRelease": "01/12/2021",
+        "trungReturn": "15/02/2022",
+        "seaRelease": "01/04/2022",
+        "seaReturn": "15/06/2022"
+      },
+      "100045-ssrplus": {
+        "trungRelease": "01/10/2021",
+        "trungReturn": "15/12/2021",
+        "seaRelease": "01/02/2022",
+        "seaReturn": "15/04/2022"
+      },
+      "100012-ssrplus": {
+        "trungRelease": "01/01/2022",
+        "trungReturn": "15/03/2022",
+        "seaRelease": "01/05/2022",
+        "seaReturn": "15/07/2022"
+      },
+      "100092-ssrplus": null,
+      "100029-ssr": {
+        "trungRelease": "01/05/2021",
+        "trungReturn": "15/07/2021",
+        "seaRelease": "01/06/2022",
+        "seaReturn": "15/08/2022"
+      },
+      "100011-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100024-ssr": {
+        "trungRelease": "01/06/2020",
+        "trungReturn": "15/08/2020",
+        "seaRelease": "01/11/2020",
+        "seaReturn": "15/01/2021"
+      },
+      "100108-ssr": {
+        "trungRelease": "01/06/2021",
+        "trungReturn": "15/08/2021",
+        "seaRelease": "01/11/2021",
+        "seaReturn": "15/01/2022"
+      },
+      "100055-ssr": {
+        "trungRelease": "01/03/2020",
+        "trungReturn": "15/05/2020",
+        "seaRelease": "01/08/2020",
+        "seaReturn": "15/10/2020"
+      },
+      "100043-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100045-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100095-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "01/01/2022",
+        "seaReturn": "15/03/2022"
+      },
+      "100003-ssr": {
+        "trungRelease": "01/04/2020",
+        "trungReturn": "15/06/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100044-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "01/02/2022",
+        "seaReturn": "15/04/2022"
+      },
+      "100010-ssr": {
+        "trungRelease": "01/09/2019",
+        "trungReturn": "15/11/2019",
+        "seaRelease": "01/02/2021",
+        "seaReturn": "15/04/2021"
+      },
+      "100119-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "01/10/2021",
+        "seaReturn": "15/12/2021"
+      },
+      "100126-ssr": {
+        "trungRelease": "01/09/2021",
+        "trungReturn": "15/11/2021",
+        "seaRelease": "01/04/2022",
+        "seaReturn": "15/06/2022"
+      },
+      "100149-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100094-ssr": {
+        "trungRelease": "01/08/2020",
+        "trungReturn": "15/10/2020",
+        "seaRelease": "01/01/2021",
+        "seaReturn": "15/03/2021"
+      },
+      "100074-ssr": {
+        "trungRelease": "01/01/2021",
+        "trungReturn": "15/03/2021",
+        "seaRelease": "01/06/2021",
+        "seaReturn": "15/08/2021"
+      },
+      "100059-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100089-ssr": {
+        "trungRelease": "01/10/2019",
+        "trungReturn": "15/12/2019",
+        "seaRelease": "01/03/2021",
+        "seaReturn": "15/05/2021"
+      },
+      "100062-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100109-ssr": {
+        "trungRelease": "01/12/2020",
+        "trungReturn": "15/02/2021",
+        "seaRelease": "01/05/2021",
+        "seaReturn": "15/07/2021"
+      },
+      "100125-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "01/07/2022",
+        "seaReturn": "15/09/2022"
+      },
+      "100009-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100056-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "01/09/2020",
+        "seaReturn": "15/11/2020"
+      },
+      "100054-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100012-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "01/10/2020",
+        "seaReturn": "15/12/2020"
+      },
+      "100075-ssr": {
+        "trungRelease": "01/05/2020",
+        "trungReturn": "15/07/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100008-ssr": {
+        "trungRelease": "01/03/2021",
+        "trungReturn": "15/05/2021",
+        "seaRelease": "01/08/2021",
+        "seaReturn": "15/10/2021"
+      },
+      "100103-ssr": {
+        "trungRelease": "01/11/2020",
+        "trungReturn": "15/01/2021",
+        "seaRelease": "01/04/2021",
+        "seaReturn": "15/06/2021"
+      },
+      "100057-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100006-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100002-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100069-ssr": {
+        "trungRelease": "01/07/2021",
+        "trungReturn": "15/09/2021",
+        "seaRelease": "01/12/2021",
+        "seaReturn": "15/02/2022"
+      },
+      "100017-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100090-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "01/03/2022",
+        "seaReturn": "15/05/2022"
+      },
+      "100027-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100028-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100004-ssr": {
+        "trungRelease": "01/04/2021",
+        "trungReturn": "15/06/2021",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100151-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "01/09/2021",
+        "seaReturn": "15/11/2021"
+      },
+      "100060-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100085-ssr": {
+        "trungRelease": "01/08/2021",
+        "trungReturn": "15/10/2021",
+        "seaRelease": "01/05/2022",
+        "seaReturn": "15/07/2022"
+      },
+      "100025-ssr": {
+        "trungRelease": "01/02/2021",
+        "trungReturn": "15/04/2021",
+        "seaRelease": "01/07/2021",
+        "seaReturn": "15/09/2021"
+      },
+      "100013-ssr": {
+        "trungRelease": "01/07/2020",
+        "trungReturn": "15/09/2020",
+        "seaRelease": "01/12/2020",
+        "seaReturn": "15/02/2021"
+      },
+      "100029-sr": null,
+      "100047-sr": null,
+      "100135-sr": null,
+      "100092-sr": null,
+      "100049-sr": null,
+      "100046-sr": null,
+      "100096-sr": null,
+      "100154-sr": null,
+      "100095-sr": null,
+      "100136-sr": null,
+      "100083-sr": null,
+      "100111-sr": null,
+      "100097-sr": null,
+      "100084-sr": null,
+      "100001-sr": null,
+      "100015-sr": null,
+      "100007-sr": null,
+      "100148-sr": null,
+      "100110-sr": null,
+      "100009-sr": null,
+      "100018-sr": null,
+      "100063-sr": null,
+      "100051-sr": null,
+      "100005-sr": null,
+      "100091-sr": null,
+      "100034-sr": null,
+      "100008-sr": null,
+      "100120-sr": null,
+      "100061-sr": null,
+      "100019-sr": null,
+      "100030-sr": null,
+      "100016-sr": null,
+      "100014-sr": null,
+      "100086-sr": null,
+      "100104-sr": null,
+      "100038-r": null,
+      "100039-r": null,
+      "100032-r": null,
+      "100068-r": null,
+      "100021-r": null,
+      "100033-r": null,
+      "100065-r": null,
+      "100050-r": null,
+      "100064-r": null,
+      "100106-r": null,
+      "100031-r": null,
+      "100093-r": null,
+      "100035-r": null,
+      "100041-r": null,
+      "100020-r": null,
+      "100036-r": null,
+      "100053-r": null,
+      "100042-n": null,
+      "100067-n": null,
+      "200007-n": null,
+      "200010-n": null,
+      "200033-n": null,
+      "200031-n": null,
+      "200008-n": null,
+      "100022-n": null,
+      "200013-n": null,
+      "200001-n": null,
+      "200026-n": null,
+      "200030-n": null,
+      "200009-n": null,
+      "200018-n": null,
+      "200017-n": null,
+      "100023-n": null,
+      "200011-n": null,
+      "200027-n": null
+    },
+    "en": {
+      "100321-urplus": {
+        "trungRelease": "01/11/2026",
+        "trungReturn": "15/01/2027",
+        "seaRelease": "15/03/2027",
+        "seaReturn": "15/05/2027"
+      },
+      "100320-urplus": {
+        "trungRelease": "01/10/2026",
+        "trungReturn": "15/12/2026",
+        "seaRelease": "01/02/2027",
+        "seaReturn": "15/04/2027"
+      },
+      "homeless-emperor-urplus": {
+        "trungRelease": "01/09/2026",
+        "trungReturn": "01/11/2026",
+        "seaRelease": "01/01/2027",
+        "seaReturn": "01/03/2027"
+      },
+      "blacksperm-urplus": {
+        "trungRelease": "01/08/2026",
+        "trungReturn": "15/10/2026",
+        "seaRelease": "01/12/2026",
+        "seaReturn": "15/02/2027"
+      },
+      "100013-urplus": {
+        "trungRelease": "01/07/2026",
+        "trungReturn": "15/09/2026",
+        "seaRelease": "01/11/2026",
+        "seaReturn": "15/01/2027"
+      },
+      "100316-urplus": {
+        "trungRelease": "01/06/2026",
+        "trungReturn": "15/08/2026",
+        "seaRelease": "01/10/2026",
+        "seaReturn": "15/12/2026"
+      },
+      "100315-urplus": {
+        "trungRelease": "01/05/2026",
+        "trungReturn": "15/07/2026",
+        "seaRelease": "01/09/2026",
+        "seaReturn": "15/11/2026"
+      },
+      "100314-urplus": {
+        "trungRelease": "01/04/2026",
+        "trungReturn": "15/06/2026",
+        "seaRelease": "01/08/2026",
+        "seaReturn": "15/10/2026"
+      },
+      "100313-urplus": {
+        "trungRelease": "01/03/2026",
+        "trungReturn": "15/05/2026",
+        "seaRelease": "01/07/2026",
+        "seaReturn": "15/09/2026"
+      },
+      "100312-urplus": {
+        "trungRelease": "01/02/2026",
+        "trungReturn": "15/04/2026",
+        "seaRelease": "01/06/2026",
+        "seaReturn": "15/08/2026"
+      },
+      "100180-urplus": {
+        "trungRelease": "01/01/2026",
+        "trungReturn": "15/03/2026",
+        "seaRelease": "01/05/2026",
+        "seaReturn": "15/07/2026"
+      },
+      "100029-urplus": {
+        "trungRelease": "01/12/2025",
+        "trungReturn": "15/02/2026",
+        "seaRelease": "01/04/2026",
+        "seaReturn": "15/06/2026"
+      },
+      "100184-urplus": {
+        "trungRelease": "01/11/2025",
+        "trungReturn": "15/01/2026",
+        "seaRelease": "01/03/2026",
+        "seaReturn": "15/05/2026"
+      },
+      "100308-urplus": {
+        "trungRelease": "01/10/2025",
+        "trungReturn": "15/12/2025",
+        "seaRelease": "01/02/2026",
+        "seaReturn": "15/04/2026"
+      },
+      "100109-ur": {
+        "trungRelease": "01/09/2025",
+        "trungReturn": "15/11/2025",
+        "seaRelease": "01/01/2026",
+        "seaReturn": "15/03/2026"
+      },
+      "100157-ur": {
+        "trungRelease": "01/08/2025",
+        "trungReturn": "15/10/2025",
+        "seaRelease": "01/12/2025",
+        "seaReturn": "15/02/2026"
+      },
+      "100069-ur": {
+        "trungRelease": "01/07/2025",
+        "trungReturn": "15/09/2025",
+        "seaRelease": "01/11/2025",
+        "seaReturn": "15/01/2026"
+      },
+      "100094-ur": {
+        "trungRelease": "01/06/2025",
+        "trungReturn": "15/08/2025",
+        "seaRelease": "01/10/2025",
+        "seaReturn": "15/12/2025"
+      },
+      "100057-ur": {
+        "trungRelease": "01/05/2025",
+        "trungReturn": "15/07/2025",
+        "seaRelease": "01/09/2025",
+        "seaReturn": "15/11/2025"
+      },
+      "100302-ur": {
+        "trungRelease": "01/04/2025",
+        "trungReturn": "15/06/2025",
+        "seaRelease": "01/08/2025",
+        "seaReturn": "15/10/2025"
+      },
+      "100017-ur": {
+        "trungRelease": "01/03/2025",
+        "trungReturn": "15/05/2025",
+        "seaRelease": "01/07/2025",
+        "seaReturn": "15/09/2025"
+      },
+      "100044-ur": {
+        "trungRelease": "01/02/2025",
+        "trungReturn": "15/04/2025",
+        "seaRelease": "01/06/2025",
+        "seaReturn": "15/08/2025"
+      },
+      "100009-ur": {
+        "trungRelease": "01/01/2025",
+        "trungReturn": "15/03/2025",
+        "seaRelease": "01/05/2025",
+        "seaReturn": "15/07/2025"
+      },
+      "100003-ur": {
+        "trungRelease": "01/12/2024",
+        "trungReturn": "15/02/2025",
+        "seaRelease": "01/04/2025",
+        "seaReturn": "15/06/2025"
+      },
+      "100013-ur": {
+        "trungRelease": "01/05/2024",
+        "trungReturn": "15/07/2024",
+        "seaRelease": "01/09/2024",
+        "seaReturn": "15/11/2024"
+      },
+      "100045-ur": {
+        "trungRelease": "01/04/2024",
+        "trungReturn": "15/06/2024",
+        "seaRelease": "01/08/2024",
+        "seaReturn": "15/10/2024"
+      },
+      "100008-ur": {
+        "trungRelease": "01/03/2024",
+        "trungReturn": "15/05/2024",
+        "seaRelease": "01/07/2024",
+        "seaReturn": "15/09/2024"
+      },
+      "100010-ur": {
+        "trungRelease": "01/02/2024",
+        "trungReturn": "15/04/2024",
+        "seaRelease": "01/06/2024",
+        "seaReturn": "15/08/2024"
+      },
+      "100089-ur": {
+        "trungRelease": "01/01/2024",
+        "trungReturn": "15/03/2024",
+        "seaRelease": "01/05/2024",
+        "seaReturn": "15/07/2024"
+      },
+      "100192-ur": {
+        "trungRelease": "01/12/2023",
+        "trungReturn": "15/02/2024",
+        "seaRelease": "01/04/2024",
+        "seaReturn": "15/06/2024"
+      },
+      "100191-ur": {
+        "trungRelease": "01/11/2024",
+        "trungReturn": "15/01/2025",
+        "seaRelease": "01/03/2025",
+        "seaReturn": "15/05/2025"
+      },
+      "100190-ur": {
+        "trungRelease": "01/10/2024",
+        "trungReturn": "15/12/2024",
+        "seaRelease": "01/02/2025",
+        "seaReturn": "15/04/2025"
+      },
+      "100189-ur": {
+        "trungRelease": "01/09/2024",
+        "trungReturn": "15/11/2024",
+        "seaRelease": "01/01/2025",
+        "seaReturn": "15/03/2025"
+      },
+      "100188-ur": {
+        "trungRelease": "01/08/2024",
+        "trungReturn": "15/10/2024",
+        "seaRelease": "01/12/2024",
+        "seaReturn": "15/02/2025"
+      },
+      "100187-ur": {
+        "trungRelease": "01/01/2024",
+        "trungReturn": "15/03/2024",
+        "seaRelease": "Không xác định",
+        "seaReturn": "Không xác định"
+      },
+      "100186-ur": {
+        "trungRelease": "01/06/2024",
+        "trungReturn": "15/08/2024",
+        "seaRelease": "01/10/2024",
+        "seaReturn": "15/12/2024"
+      },
+      "100185-ur": {
+        "trungRelease": "01/11/2023",
+        "trungReturn": "15/01/2024",
+        "seaRelease": "01/03/2024",
+        "seaReturn": "15/05/2024"
+      },
+      "100184-ur": {
+        "trungRelease": "01/10/2023",
+        "trungReturn": "15/12/2023",
+        "seaRelease": "01/02/2024",
+        "seaReturn": "15/04/2024"
+      },
+      "100183-ur": {
+        "trungRelease": "01/09/2023",
+        "trungReturn": "15/11/2023",
+        "seaRelease": "01/01/2024",
+        "seaReturn": "15/03/2024"
+      },
+      "100182-ur": {
+        "trungRelease": "01/08/2023",
+        "trungReturn": "15/10/2023",
+        "seaRelease": "01/12/2023",
+        "seaReturn": "15/02/2024"
+      },
+      "100002-ur": {
+        "trungRelease": "01/07/2023",
+        "trungReturn": "15/09/2023",
+        "seaRelease": "01/11/2023",
+        "seaReturn": "15/01/2024"
+      },
+      "100180-ur": {
+        "trungRelease": "01/06/2023",
+        "trungReturn": "15/08/2023",
+        "seaRelease": "01/10/2023",
+        "seaReturn": "15/12/2023"
+      },
+      "100027-ssrplus": {
+        "trungRelease": "01/05/2023",
+        "trungReturn": "15/07/2023",
+        "seaRelease": "01/09/2023",
+        "seaReturn": "15/11/2023"
+      },
+      "100075-ssrplus": {
+        "trungRelease": "01/04/2023",
+        "trungReturn": "15/06/2023",
+        "seaRelease": "01/08/2023",
+        "seaReturn": "15/10/2023"
+      },
+      "100006-ssrplus": {
+        "trungRelease": "01/03/2023",
+        "trungReturn": "15/05/2023",
+        "seaRelease": "Không xác định",
+        "seaReturn": "Không xác định"
+      },
+      "100013-ssrplus": {
+        "trungRelease": "01/03/2023",
+        "trungReturn": "15/05/2023",
+        "seaRelease": "01/07/2023",
+        "seaReturn": "15/09/2023"
+      },
+      "100062-ssrplus": {
+        "trungRelease": "01/02/2023",
+        "trungReturn": "15/04/2023",
+        "seaRelease": "01/06/2023",
+        "seaReturn": "15/08/2023"
+      },
+      "100025-ssrplus": {
+        "trungRelease": "01/01/2023",
+        "trungReturn": "15/03/2023",
+        "seaRelease": "01/05/2023",
+        "seaReturn": "15/07/2023"
+      },
+      "100054-ssrplus": {
+        "trungRelease": "01/12/2022",
+        "trungReturn": "15/02/2023",
+        "seaRelease": "01/04/2023",
+        "seaReturn": "15/06/2023"
+      },
+      "100044-ssrplus": {
+        "trungRelease": "01/11/2022",
+        "trungReturn": "15/01/2023",
+        "seaRelease": "01/03/2023",
+        "seaReturn": "15/05/2023"
+      },
+      "100028-ssrplus": {
+        "trungRelease": "01/10/2022",
+        "trungReturn": "15/12/2022",
+        "seaRelease": "01/02/2023",
+        "seaReturn": "15/04/2023"
+      },
+      "100003-ssrplus": {
+        "trungRelease": "01/09/2022",
+        "trungReturn": "15/11/2022",
+        "seaRelease": "01/01/2023",
+        "seaReturn": "15/03/2023"
+      },
+      "100017-ssrplus": {
+        "trungRelease": "01/07/2022",
+        "trungReturn": "15/09/2022",
+        "seaRelease": "Không xác định",
+        "seaReturn": "Không xác định"
+      },
+      "100109-ssrplus": {
+        "trungRelease": "01/08/2022",
+        "trungReturn": "15/10/2022",
+        "seaRelease": "01/12/2022",
+        "seaReturn": "15/02/2023"
+      },
+      "100057-ssrplus": {
+        "trungRelease": "01/06/2022",
+        "trungReturn": "15/08/2022",
+        "seaRelease": "Không xác định",
+        "seaReturn": "Không xác định"
+      },
+      "100010-ssrplus": {
+        "trungRelease": "01/07/2022",
+        "trungReturn": "15/09/2022",
+        "seaRelease": "01/11/2022",
+        "seaReturn": "15/01/2023"
+      },
+      "100089-ssrplus": {
+        "trungRelease": "01/06/2022",
+        "trungReturn": "15/08/2022",
+        "seaRelease": "01/10/2022",
+        "seaReturn": "15/12/2022"
+      },
+      "100103-ssrplus": {
+        "trungRelease": "01/03/2022",
+        "trungReturn": "15/05/2022",
+        "seaRelease": "Không xác định",
+        "seaReturn": "Không xác định"
+      },
+      "100094-ssrplus": {
+        "trungRelease": "01/05/2022",
+        "trungReturn": "15/07/2022",
+        "seaRelease": "01/09/2022",
+        "seaReturn": "15/11/2022"
+      },
+      "100011-ssrplus": {
+        "trungRelease": "01/04/2022",
+        "trungReturn": "15/06/2022",
+        "seaRelease": "01/08/2022",
+        "seaReturn": "15/10/2022"
+      },
+      "100024-ssrplus": {
+        "trungRelease": "01/03/2022",
+        "trungReturn": "15/05/2022",
+        "seaRelease": "01/07/2022",
+        "seaReturn": "15/09/2022"
+      },
+      "100059-ssrplus": {
+        "trungRelease": "01/02/2022",
+        "trungReturn": "15/04/2022",
+        "seaRelease": "01/06/2022",
+        "seaReturn": "15/08/2022"
+      },
+      "100056-ssrplus": {
+        "trungRelease": "01/10/2021",
+        "trungReturn": "15/12/2021",
+        "seaRelease": "Không xác định",
+        "seaReturn": "Không xác định"
+      },
+      "100055-ssrplus": {
+        "trungRelease": "01/11/2021",
+        "trungReturn": "15/01/2022",
+        "seaRelease": "01/03/2022",
+        "seaReturn": "15/05/2022"
+      },
+      "100156-ssrplus": {
+        "trungRelease": "01/12/2021",
+        "trungReturn": "15/02/2022",
+        "seaRelease": "01/04/2022",
+        "seaReturn": "15/06/2022"
+      },
+      "100045-ssrplus": {
+        "trungRelease": "01/10/2021",
+        "trungReturn": "15/12/2021",
+        "seaRelease": "01/02/2022",
+        "seaReturn": "15/04/2022"
+      },
+      "100012-ssrplus": {
+        "trungRelease": "01/01/2022",
+        "trungReturn": "15/03/2022",
+        "seaRelease": "01/05/2022",
+        "seaReturn": "15/07/2022"
+      },
+      "100092-ssrplus": null,
+      "100029-ssr": {
+        "trungRelease": "01/05/2021",
+        "trungReturn": "15/07/2021",
+        "seaRelease": "01/06/2022",
+        "seaReturn": "15/08/2022"
+      },
+      "100011-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100024-ssr": {
+        "trungRelease": "01/06/2020",
+        "trungReturn": "15/08/2020",
+        "seaRelease": "01/11/2020",
+        "seaReturn": "15/01/2021"
+      },
+      "100108-ssr": {
+        "trungRelease": "01/06/2021",
+        "trungReturn": "15/08/2021",
+        "seaRelease": "01/11/2021",
+        "seaReturn": "15/01/2022"
+      },
+      "100055-ssr": {
+        "trungRelease": "01/03/2020",
+        "trungReturn": "15/05/2020",
+        "seaRelease": "01/08/2020",
+        "seaReturn": "15/10/2020"
+      },
+      "100043-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100045-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100095-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "01/01/2022",
+        "seaReturn": "15/03/2022"
+      },
+      "100003-ssr": {
+        "trungRelease": "01/04/2020",
+        "trungReturn": "15/06/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100044-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "01/02/2022",
+        "seaReturn": "15/04/2022"
+      },
+      "100010-ssr": {
+        "trungRelease": "01/09/2019",
+        "trungReturn": "15/11/2019",
+        "seaRelease": "01/02/2021",
+        "seaReturn": "15/04/2021"
+      },
+      "100119-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "01/10/2021",
+        "seaReturn": "15/12/2021"
+      },
+      "100126-ssr": {
+        "trungRelease": "01/09/2021",
+        "trungReturn": "15/11/2021",
+        "seaRelease": "01/04/2022",
+        "seaReturn": "15/06/2022"
+      },
+      "100149-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100094-ssr": {
+        "trungRelease": "01/08/2020",
+        "trungReturn": "15/10/2020",
+        "seaRelease": "01/01/2021",
+        "seaReturn": "15/03/2021"
+      },
+      "100074-ssr": {
+        "trungRelease": "01/01/2021",
+        "trungReturn": "15/03/2021",
+        "seaRelease": "01/06/2021",
+        "seaReturn": "15/08/2021"
+      },
+      "100059-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100089-ssr": {
+        "trungRelease": "01/10/2019",
+        "trungReturn": "15/12/2019",
+        "seaRelease": "01/03/2021",
+        "seaReturn": "15/05/2021"
+      },
+      "100062-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100109-ssr": {
+        "trungRelease": "01/12/2020",
+        "trungReturn": "15/02/2021",
+        "seaRelease": "01/05/2021",
+        "seaReturn": "15/07/2021"
+      },
+      "100125-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "01/07/2022",
+        "seaReturn": "15/09/2022"
+      },
+      "100009-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100056-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "01/09/2020",
+        "seaReturn": "15/11/2020"
+      },
+      "100054-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100012-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "01/10/2020",
+        "seaReturn": "15/12/2020"
+      },
+      "100075-ssr": {
+        "trungRelease": "01/05/2020",
+        "trungReturn": "15/07/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100008-ssr": {
+        "trungRelease": "01/03/2021",
+        "trungReturn": "15/05/2021",
+        "seaRelease": "01/08/2021",
+        "seaReturn": "15/10/2021"
+      },
+      "100103-ssr": {
+        "trungRelease": "01/11/2020",
+        "trungReturn": "15/01/2021",
+        "seaRelease": "01/04/2021",
+        "seaReturn": "15/06/2021"
+      },
+      "100057-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100006-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100002-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100069-ssr": {
+        "trungRelease": "01/07/2021",
+        "trungReturn": "15/09/2021",
+        "seaRelease": "01/12/2021",
+        "seaReturn": "15/02/2022"
+      },
+      "100017-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100090-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "01/03/2022",
+        "seaReturn": "15/05/2022"
+      },
+      "100027-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100028-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100004-ssr": {
+        "trungRelease": "01/04/2021",
+        "trungReturn": "15/06/2021",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100151-ssr": {
+        "trungRelease": "Không xác định",
+        "trungReturn": "Không xác định",
+        "seaRelease": "01/09/2021",
+        "seaReturn": "15/11/2021"
+      },
+      "100060-ssr": {
+        "trungRelease": "16/02/2020",
+        "trungReturn": "15/04/2020",
+        "seaRelease": "16/06/2020",
+        "seaReturn": "15/08/2020"
+      },
+      "100085-ssr": {
+        "trungRelease": "01/08/2021",
+        "trungReturn": "15/10/2021",
+        "seaRelease": "01/05/2022",
+        "seaReturn": "15/07/2022"
+      },
+      "100025-ssr": {
+        "trungRelease": "01/02/2021",
+        "trungReturn": "15/04/2021",
+        "seaRelease": "01/07/2021",
+        "seaReturn": "15/09/2021"
+      },
+      "100013-ssr": {
+        "trungRelease": "01/07/2020",
+        "trungReturn": "15/09/2020",
+        "seaRelease": "01/12/2020",
+        "seaReturn": "15/02/2021"
+      },
+      "100029-sr": null,
+      "100047-sr": null,
+      "100135-sr": null,
+      "100092-sr": null,
+      "100049-sr": null,
+      "100046-sr": null,
+      "100096-sr": null,
+      "100154-sr": null,
+      "100095-sr": null,
+      "100136-sr": null,
+      "100083-sr": null,
+      "100111-sr": null,
+      "100097-sr": null,
+      "100084-sr": null,
+      "100001-sr": null,
+      "100015-sr": null,
+      "100007-sr": null,
+      "100148-sr": null,
+      "100110-sr": null,
+      "100009-sr": null,
+      "100018-sr": null,
+      "100063-sr": null,
+      "100051-sr": null,
+      "100005-sr": null,
+      "100091-sr": null,
+      "100034-sr": null,
+      "100008-sr": null,
+      "100120-sr": null,
+      "100061-sr": null,
+      "100019-sr": null,
+      "100030-sr": null,
+      "100016-sr": null,
+      "100014-sr": null,
+      "100086-sr": null,
+      "100104-sr": null,
+      "100038-r": null,
+      "100039-r": null,
+      "100032-r": null,
+      "100068-r": null,
+      "100021-r": null,
+      "100033-r": null,
+      "100065-r": null,
+      "100050-r": null,
+      "100064-r": null,
+      "100106-r": null,
+      "100031-r": null,
+      "100093-r": null,
+      "100035-r": null,
+      "100041-r": null,
+      "100020-r": null,
+      "100036-r": null,
+      "100053-r": null,
+      "100042-n": null,
+      "100067-n": null,
+      "200007-n": null,
+      "200010-n": null,
+      "200033-n": null,
+      "200031-n": null,
+      "200008-n": null,
+      "100022-n": null,
+      "200013-n": null,
+      "200001-n": null,
+      "200026-n": null,
+      "200030-n": null,
+      "200009-n": null,
+      "200018-n": null,
+      "200017-n": null,
+      "100023-n": null,
+      "200011-n": null,
+      "200027-n": null
+    }
+  },
+  "selectedEvidence": [
+    {
+      "id": "blacksperm-urplus",
+      "name": "Tinh Trùng Đen",
+      "server": "CN",
+      "date": "2026-10-15",
+      "isReturn": true,
+      "field": "trungReturn",
+      "display": "15/10/2026",
+      "basis": "Existing Detail return convention: 15th, two months after release",
+      "releaseField": "releaseTrung",
+      "releaseValue": "01/08/2026"
+    },
+    {
+      "id": "100013-urplus",
+      "name": "Zombieman",
+      "server": "SEA",
+      "date": "2026-11-01",
+      "isReturn": false,
+      "field": "seaRelease",
+      "display": "01/11/2026",
+      "basis": "Existing explicit release field",
+      "releaseField": "releaseSea",
+      "releaseValue": "01/11/2026"
+    },
+    {
+      "id": "100316-urplus",
+      "name": "Overgrown Rover",
+      "server": "SEA",
+      "date": "2026-10-01",
+      "isReturn": false,
+      "field": "seaRelease",
+      "display": "01/10/2026",
+      "basis": "Existing explicit release field",
+      "releaseField": "releaseSea",
+      "releaseValue": "01/10/2026"
+    },
+    {
+      "id": "100315-urplus",
+      "name": "Bang & Bomb",
+      "server": "SEA",
+      "date": "2026-11-15",
+      "isReturn": true,
+      "field": "seaReturn",
+      "display": "15/11/2026",
+      "basis": "Existing Detail return convention: 15th, two months after release",
+      "releaseField": "releaseSea",
+      "releaseValue": "01/09/2026"
+    },
+    {
+      "id": "100314-urplus",
+      "name": "G5",
+      "server": "SEA",
+      "date": "2026-10-15",
+      "isReturn": true,
+      "field": "seaReturn",
+      "display": "15/10/2026",
+      "basis": "Existing Detail return convention: 15th, two months after release",
+      "releaseField": "releaseSea",
+      "releaseValue": "01/08/2026"
+    }
+  ],
+  "additions": [
+    {
+      "server": "CN",
+      "date": "2026-10-15",
+      "characterId": "blacksperm-urplus",
+      "bannerImage": "/Characters/Full_Background/Black_Sperm_Ur_plus.png",
+      "isReturn": true,
+      "sortOrder": 2,
+      "source": "character-history",
+      "verificationStatus": "existing-local-history",
+      "status": "planned",
+      "historyField": "trungReturn",
+      "historyDate": "15/10/2026",
+      "historyBasis": "Existing Detail return convention: 15th, two months after release"
+    },
+    {
+      "server": "SEA",
+      "date": "2026-11-01",
+      "characterId": "100013-urplus",
+      "bannerImage": "/Characters/Full_Background/ZombIeMan_URplus.png",
+      "isReturn": false,
+      "sortOrder": 1,
+      "source": "character-history",
+      "verificationStatus": "existing-local-history",
+      "status": "planned",
+      "historyField": "seaRelease",
+      "historyDate": "01/11/2026",
+      "historyBasis": "Existing explicit release field"
+    },
+    {
+      "server": "SEA",
+      "date": "2026-10-01",
+      "characterId": "100316-urplus",
+      "bannerImage": "/Characters/Full_Background/Rover_URplus.png",
+      "isReturn": false,
+      "sortOrder": 1,
+      "source": "character-history",
+      "verificationStatus": "existing-local-history",
+      "status": "planned",
+      "historyField": "seaRelease",
+      "historyDate": "01/10/2026",
+      "historyBasis": "Existing explicit release field"
+    },
+    {
+      "server": "SEA",
+      "date": "2026-11-15",
+      "characterId": "100315-urplus",
+      "bannerImage": "/Characters/Full_Background/Bang&Bomb_Urplus.png",
+      "isReturn": true,
+      "sortOrder": 2,
+      "source": "character-history",
+      "verificationStatus": "existing-local-history",
+      "status": "planned",
+      "historyField": "seaReturn",
+      "historyDate": "15/11/2026",
+      "historyBasis": "Existing Detail return convention: 15th, two months after release"
+    },
+    {
+      "server": "SEA",
+      "date": "2026-10-15",
+      "characterId": "100314-urplus",
+      "bannerImage": "/Characters/Full_Background/G5_URplus.png",
+      "isReturn": true,
+      "sortOrder": 2,
+      "source": "character-history",
+      "verificationStatus": "existing-local-history",
+      "status": "planned",
+      "historyField": "seaReturn",
+      "historyDate": "15/10/2026",
+      "historyBasis": "Existing Detail return convention: 15th, two months after release"
+    }
+  ]
+}

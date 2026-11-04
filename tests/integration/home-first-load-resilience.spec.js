@@ -8,6 +8,11 @@ const summaries = read('src/data/characterSummaries.json')
 const next = page => page.getByRole('button', { name: /Tháng sau|Next Month/i })
 const child = page => page.locator(`.featured-card[data-character="${id}"]`)
 const heading = page => page.getByRole('heading', { level: 1, name: /^(Đồng Đế|Child Emperor)$/ })
+// These scenarios navigate September -> October; current-month behavior has
+// separate timezone/reload coverage in october-local-update.spec.js.
+test.beforeEach(async ({ page }) => {
+  await page.clock.install({ time: new Date('2026-09-12T05:00:00Z') })
+})
 const faults = async (page, mode) => {
   await page.addInitScript(({ mode }) => {
     const fetch = window.fetch.bind(window)

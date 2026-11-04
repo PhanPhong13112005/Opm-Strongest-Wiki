@@ -18,9 +18,9 @@
           @click="selectHero(hero)"
           class="relative w-12 h-12 sm:w-14 sm:h-14 rounded-lg overflow-hidden border-2 transition-all duration-200 focus:outline-none bg-[#05060a]"
           :class="selectedHeroId === hero.coreHeId ? 'border-opm-gold scale-110 shadow-[0_0_10px_rgba(255,215,0,0.5)] z-10' : 'border-gray-700 opacity-60 hover:opacity-100 hover:border-gray-500'"
-          :title="hero.name"
+          :title="heroName(hero)"
         >
-          <img :src="getHeroPortrait(hero)" :alt="hero.name" class="w-full h-full object-cover">
+          <img :src="getHeroPortrait(hero)" :alt="heroName(hero)" class="w-full h-full object-cover">
         </button>
       </div>
     </div>
@@ -33,11 +33,11 @@
       <div class="absolute -top-20 -left-20 w-64 h-64 bg-opm-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div class="w-24 h-24 sm:w-32 sm:h-32 flex-shrink-0 border-2 border-gray-700 rounded-xl overflow-hidden shadow-lg bg-[#05060a]">
-        <img :src="getHeroPortrait(activeHero)" :alt="activeHero.name" class="w-full h-full object-cover">
+        <img :src="getHeroPortrait(activeHero)" :alt="heroName(activeHero)" class="w-full h-full object-cover">
       </div>
       <div class="flex-grow text-center sm:text-left z-10 w-full">
         <h2 class="text-2xl font-bold text-white uppercase tracking-wider mb-2 flex flex-wrap items-center justify-center sm:justify-start gap-2">
-          {{ activeHero.name }}
+          {{ heroName(activeHero) }}
           <span v-if="activeHero.type" class="px-2 py-0.5 rounded text-[10px] font-bold tracking-widest bg-gray-800 border border-gray-600 text-gray-300">
             {{ getTypeTranslation(activeHero.type) }}
           </span>
@@ -45,6 +45,7 @@
             {{ getFactionTranslation(activeHero.faction) }}
           </span>
         </h2>
+        <RouterLink v-if="activeHero.characterId" :to="`/character/${activeHero.characterId}`" class="text-sm text-opm-gold underline" data-core-detail-link>{{ $t('home.viewDetails') }}</RouterLink>
         
         <div class="grid grid-cols-1 gap-4 mt-4 w-full" :class="activeHero['bonusStats_' + $i18n.locale]?.length ? 'md:grid-cols-2 xl:grid-cols-4' : 'md:grid-cols-3'">
           <div class="bg-[#05060a]/50 p-3 rounded-lg border border-gray-800/50 backdrop-blur-sm">
@@ -84,7 +85,7 @@
               <label class="block text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-2">{{ $t('corelab.fromLevel') }}</label>
               <div class="flex items-center bg-[#05060a] rounded-lg border border-gray-700 overflow-hidden">
                 <button @click="fromLevel = Math.max(0, fromLevel - 1)" class="px-2 sm:px-3 py-2 text-gray-400 hover:text-white hover:bg-gray-800 transition-colors">-</button>
-                <input type="number" v-model.number="fromLevel" class="w-full bg-transparent text-center text-white font-bold py-2 focus:outline-none" min="0" :max="toLevel">
+                <input type="number" v-model.number="fromLevel" :aria-label="$t('corelab.fromLevel')" class="w-full min-w-0 bg-transparent text-center text-white font-bold py-2 focus:outline-none" min="0" :max="activeHero.maxLv">
                 <button @click="fromLevel = Math.min(toLevel, fromLevel + 1)" class="px-2 sm:px-3 py-2 text-gray-400 hover:text-white hover:bg-gray-800 transition-colors">+</button>
               </div>
             </div>
@@ -93,7 +94,7 @@
               <label class="block text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-2">{{ $t('corelab.toLevel') }}</label>
               <div class="flex items-center bg-[#05060a] rounded-lg border border-gray-700 overflow-hidden">
                 <button @click="toLevel = Math.max(fromLevel, toLevel - 1)" class="px-2 sm:px-3 py-2 text-gray-400 hover:text-white hover:bg-gray-800 transition-colors">-</button>
-                <input type="number" v-model.number="toLevel" class="w-full bg-transparent text-center text-white font-bold py-2 focus:outline-none" :min="fromLevel" :max="activeHero.maxLv">
+                <input type="number" v-model.number="toLevel" :aria-label="$t('corelab.toLevel')" class="w-full min-w-0 bg-transparent text-center text-white font-bold py-2 focus:outline-none" :min="fromLevel" :max="activeHero.maxLv">
                 <button @click="toLevel = Math.min(activeHero.maxLv, toLevel + 1)" class="px-2 sm:px-3 py-2 text-gray-400 hover:text-white hover:bg-gray-800 transition-colors">+</button>
               </div>
             </div>
@@ -107,7 +108,8 @@
                 v-for="lv in [...activeHero.milestones, activeHero.maxLv]" 
                 :key="lv"
                 @click="toLevel = lv"
-                class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all border"
+                :disabled="!Number.isInteger(fromLevel) || lv < fromLevel"
+                class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all border disabled:opacity-40 disabled:cursor-not-allowed"
                 :class="toLevel === lv ? 'bg-opm-gold/20 text-opm-gold border-opm-gold' : 'bg-[#05060a] text-gray-400 border-gray-700 hover:border-gray-500 hover:text-white'"
               >
                 Lv {{ lv }}
@@ -117,25 +119,27 @@
         </div>
 
         <!-- Total Resources -->
-        <div class="bg-[#1a1c23] rounded-2xl p-6 border border-gray-800 shadow-xl">
+        <div class="bg-[#1a1c23] rounded-2xl p-6 border border-gray-800 shadow-xl" data-core-resources>
           <h3 class="text-sm font-black uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2">
             <div class="w-1.5 h-1.5 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.8)]"></div>
             {{ $t('corelab.totalResources') }}
           </h3>
           
-          <div v-if="totalResources.length === 0" class="text-center py-8 text-sm text-gray-500">
-            {{ $t('corelab.noResources') }}
+          <p v-if="calculation.status === 'INVALID_RANGE'" role="status" class="text-sm text-amber-300">{{ $t('corelab.invalidRange', { max: activeHero.maxLv }) }}</p>
+          <p v-else-if="calculation.status === 'INCOMPLETE'" role="status" class="text-sm text-amber-300">{{ $t('corelab.incompleteCosts', { levels: calculation.missingLevels.join(', ') }) }}</p>
+          <div v-else-if="totalResources.length === 0" class="text-center py-8 text-sm text-gray-500">
+            {{ $t('corelab.zeroResources') }}
           </div>
           
           <div v-else class="grid grid-cols-2 gap-3">
-            <div v-for="res in totalResources" :key="res.id" class="flex items-center gap-2 sm:gap-3 bg-[#05060a] p-2 rounded-lg border border-gray-800/50 group hover:border-gray-600 transition-colors">
-              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded bg-gray-800 border border-gray-700 p-0.5 overflow-hidden flex-shrink-0 flex items-center justify-center">
-                <img v-if="res.icon" :src="res.icon" :alt="res.name" class="w-full h-full object-contain group-hover:scale-110 transition-transform">
-                <div v-else class="w-full h-full bg-yellow-600/30 rounded flex items-center justify-center text-yellow-500 font-bold text-xs">G</div>
+            <div v-for="res in totalResources" :key="res.id" :data-material-id="res.id" :data-material-amount="res.amount" class="flex items-center gap-2 sm:gap-3 bg-[#05060a] p-2 rounded-lg border border-gray-800/50 group hover:border-gray-600 transition-colors" :class="{ 'col-span-2': res.id === '0' }">
+              <div v-if="res.icon" class="w-8 h-8 sm:w-10 sm:h-10 rounded bg-gray-800 border border-gray-700 p-0.5 overflow-hidden flex-shrink-0 flex items-center justify-center">
+                <img :src="res.icon" :alt="res.name" class="w-full h-full object-contain group-hover:scale-110 transition-transform">
               </div>
               <div class="flex flex-col min-w-0">
-                <span class="text-[9px] sm:text-[10px] text-gray-500 truncate" :title="res.name">{{ res.name }}</span>
-                <span class="text-xs sm:text-sm font-black text-white truncate">{{ formatNumber(res.amount) }}</span>
+                <span class="text-[10px] text-gray-400 leading-tight break-words" :title="res.name">{{ res.name }}</span>
+                <span class="text-sm font-black text-white break-all">{{ formatNumber(res.amount) }}</span>
+                <span v-if="!res.icon" class="text-[10px] text-amber-300" data-material-image-status>{{ $t('corelab.textOnlyMaterial') }}</span>
               </div>
             </div>
           </div>
@@ -149,11 +153,13 @@
           </h3>
           
           <div class="grid grid-cols-3 gap-3">
-            <div v-for="part in activeHero.parts" :key="part.code" class="flex flex-col items-center gap-2 bg-[#05060a] p-2.5 rounded-lg border border-gray-800/50">
-              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded bg-gray-800 border border-gray-700 p-1 flex items-center justify-center">
+            <div v-for="part in activeParts" :key="part.code" class="flex flex-col items-center gap-2 bg-[#05060a] p-2.5 rounded-lg border border-gray-800/50" data-core-part>
+              <div v-if="getItemIcon(part.code, activeHero)" class="w-10 h-10 sm:w-12 sm:h-12 rounded bg-gray-800 border border-gray-700 p-1 flex items-center justify-center">
                 <img :src="getItemIcon(part.code, activeHero)" :alt="getItemName(part.code)" class="w-full h-full object-contain">
               </div>
-              <div class="text-[9px] sm:text-[10px] text-gray-500 text-center truncate w-full" :title="getItemName(part.code)">{{ getItemName(part.code) }}</div>
+              <div class="text-xs text-gray-300 text-center break-words w-full" :title="getItemName(part.code)">{{ getItemName(part.code) }}</div>
+              <span v-if="calculation.status === 'VERIFIED'" class="text-sm font-bold">{{ formatNumber(calculation.totals[part.code] || 0) }}</span>
+              <span v-if="materialProfile?.items[part.code]?.iconStatus === 'INCONCLUSIVE'" class="text-[10px] text-amber-300 text-center">{{ $t('corelab.iconPending') }}</span>
             </div>
           </div>
         </div>
@@ -175,6 +181,7 @@
             <div 
               v-for="lvl in unlockedLevels" 
               :key="lvl.lv"
+              :data-core-level="lvl.lv"
               class="relative rounded-xl p-4 overflow-hidden border transition-all"
               :class="lvl.isMilestone ? 'bg-gradient-to-r from-purple-900/40 to-[#05060a] border-purple-500/50 shadow-[0_0_15px_rgba(168,85,247,0.15)]' : 'bg-[#05060a] border-gray-800 hover:border-gray-600'"
             >
@@ -189,10 +196,11 @@
                 <div class="flex-grow min-w-0">
                   <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2 mb-1">
                     <div class="flex items-center gap-2 sm:gap-3">
-                      <div v-if="lvl.isMilestone && lvl.milestoneIcon" class="w-8 h-8 rounded bg-gray-900 border border-gray-700 flex items-center justify-center overflow-hidden flex-shrink-0 shadow-[0_0_8px_rgba(168,85,247,0.3)]">
+                      <div v-if="!isCoreLevelEffectPending(activeHero, lvl) && lvl.isMilestone && lvl.milestoneIcon" class="w-8 h-8 rounded bg-gray-900 border border-gray-700 flex items-center justify-center overflow-hidden flex-shrink-0 shadow-[0_0_8px_rgba(168,85,247,0.3)]">
                         <img :src="getMilestoneIcon(lvl.milestoneIcon, activeHero)" :alt="lvl['coreName_' + $i18n.locale] || lvl.coreName_vi" class="w-full h-full object-cover">
                       </div>
-                      <span class="font-bold text-sm sm:text-base" :class="lvl.isMilestone ? 'text-purple-300' : 'text-gray-300'">
+                      <span v-if="isCoreLevelEffectPending(activeHero, lvl)" class="text-sm text-gray-400 leading-relaxed" data-core-effect-pending>{{ $t('corelab.effectVerificationPending') }}</span>
+                      <span v-else class="font-bold text-sm sm:text-base" :class="lvl.isMilestone ? 'text-purple-300' : 'text-gray-300'">
                         {{ lvl['reward_' + $i18n.locale] || lvl.reward_vi }}
                       </span>
                     </div>
@@ -202,7 +210,7 @@
                   </div>
 
                   <!-- Description Box -->
-                  <div v-if="lvl['coreEffect_' + $i18n.locale] || lvl.coreEffect_vi" class="mt-3 text-[13px] sm:text-sm text-[#d1d5db] bg-[#121318] p-3 sm:p-4 rounded border border-gray-700/60 leading-relaxed shadow-inner break-words" v-html="formatCoreEffect(lvl['coreEffect_' + $i18n.locale] || lvl.coreEffect_vi, activeHero['gate_basic_' + $i18n.locale], activeHero['gate_advanced_' + $i18n.locale])"></div>
+                  <div v-if="!isCoreLevelEffectPending(activeHero, lvl) && (lvl['coreEffect_' + $i18n.locale] || lvl.coreEffect_vi)" class="mt-3 text-[13px] sm:text-sm text-[#d1d5db] bg-[#121318] p-3 sm:p-4 rounded border border-gray-700/60 leading-relaxed shadow-inner break-words" v-html="formatCoreEffect(lvl['coreEffect_' + $i18n.locale] || lvl.coreEffect_vi, activeHero['gate_basic_' + $i18n.locale], activeHero['gate_advanced_' + $i18n.locale])"></div>
                 </div>
               </div>
             </div>
@@ -217,9 +225,13 @@
 
 <script setup>
 import { ref, computed, watch, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import reviewedNotes from '@/data/reviewedEffectNotes.json'
 import coreLabData from '@/data/coreLab.json'
+import materialCosts from '@/data/coreMaterialCosts.json'
+import { calculateCoreMaterials, getMaterialProfile } from '@/utils/coreMaterialCalculator'
+import { isCoreLevelEffectPending } from '@/utils/characterPresentation'
 import {
   getCoreLabHeroPortrait,
   getCoreLabItemIcon,
@@ -228,6 +240,7 @@ import {
 
 const { t, locale } = useI18n()
 const route = useRoute()
+const heroName = hero => reviewedNotes[hero?.characterId]?.coreDisplayName?.[locale.value] || hero?.name || ''
 const heroes = coreLabData.heroes || []
 const items = coreLabData.items || {}
 
@@ -243,6 +256,14 @@ const formatNumber = (num) => {
 
 const activeHero = computed(() => {
   return heroes.find(h => h.coreHeId === selectedHeroId.value) || null
+})
+const materialProfile = computed(() => getMaterialProfile(activeHero.value, materialCosts.profiles))
+const activeParts = computed(() => materialProfile.value
+  ? materialProfile.value.materialOrder.filter(id => materialProfile.value.items[id].type === 'component').map(code => ({ code }))
+  : activeHero.value?.parts || [])
+const calculation = computed(() => calculateCoreMaterials(activeHero.value, fromLevel.value, toLevel.value, materialCosts.profiles))
+watch(() => route.query.hero, id => {
+  if (heroes.some(hero => hero.coreHeId === id)) selectedHeroId.value = id
 })
 
 const selectHero = (hero) => {
@@ -262,37 +283,16 @@ watch(activeHero, (newHero) => {
   }
 })
 
-watch([fromLevel, toLevel], ([newFrom, newTo]) => {
-  if (newFrom > newTo) {
-    toLevel.value = newFrom
-  }
-  if (activeHero.value && newTo > activeHero.value.maxLv) {
-    toLevel.value = activeHero.value.maxLv
-  }
-  if (newFrom < 0) fromLevel.value = 0
+// Invalid typed values stay visible with an explicit error, never a fake total.
+watch(fromLevel, newFrom => {
+  if (Number.isInteger(newFrom) && newFrom >= 0 && newFrom <= activeHero.value?.maxLv && newFrom > toLevel.value) toLevel.value = newFrom
 })
 
 // Calculate total resources for the selected level range
     const totalResources = computed(() => {
-      if (!activeHero.value || fromLevel.value >= toLevel.value) return []
+      if (calculation.value.status !== 'VERIFIED') return []
       
-      const resourceMap = {}
-      
-      unlockedLevels.value.forEach(lvl => {
-        // Add up Gold and general resources
-        if (lvl.cost) {
-          lvl.cost.forEach(([itemId, amount]) => {
-            resourceMap[itemId] = (resourceMap[itemId] || 0) + amount
-          })
-        }
-        
-        // Add up specific component costs
-        if (lvl.comp) {
-          lvl.comp.forEach(([itemId, amount]) => {
-            resourceMap[itemId] = (resourceMap[itemId] || 0) + amount
-          })
-        }
-      })
+      const resourceMap = calculation.value.totals
 
       const result = Object.keys(resourceMap).map(itemId => {
         if (itemId === '0') {
@@ -304,7 +304,7 @@ watch([fromLevel, toLevel], ([newFrom, newTo]) => {
           }
         }
         
-        const itemData = items[itemId] || {}
+        const itemData = materialProfile.value?.items[itemId] || items[itemId] || {}
         return {
           id: itemId,
           name: itemData[locale.value] || itemData.vi || `Item ${itemId}`,
@@ -323,7 +323,7 @@ watch([fromLevel, toLevel], ([newFrom, newTo]) => {
 
 
 const unlockedLevels = computed(() => {
-  if (!activeHero.value || fromLevel.value >= toLevel.value) return []
+  if (!activeHero.value || calculation.value.status !== 'VERIFIED' || fromLevel.value >= toLevel.value) return []
   return activeHero.value.levels.filter(
     lvl => (lvl.lv === 0 && lvl.isMilestone ? fromLevel.value === 0 : lvl.lv > fromLevel.value) && lvl.lv <= toLevel.value
   )
@@ -368,6 +368,7 @@ const formatCoreEffect = (text, basicCondition, advancedCondition) => {
 }
 
 const getItemIcon = (itemId, hero) => {
+  if (materialProfile.value?.items[itemId]) return materialProfile.value.items[itemId].icon || ''
   return getCoreLabItemIcon(itemId, hero, items)
 }
 
@@ -381,7 +382,7 @@ const getHeroPortrait = (hero) => {
 
 const getItemName = (itemId) => {
   if (itemId === '0') return t('corelab.gold');
-  const item = items[itemId];
+  const item = materialProfile.value?.items[itemId] || items[itemId];
   return item?.[locale.value] || item?.vi || `Item ${itemId}`;
 }
 

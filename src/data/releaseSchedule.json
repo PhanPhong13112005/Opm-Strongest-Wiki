@@ -8,18 +8,20 @@
     "sortOrder": 1,
     "verificationStatus": "owner-confirmed",
     "source": "owner",
-    "status": "planned"
+    "status": "planned",
+    "confirmedOn": "2026-11-04"
   },
   {
     "server": "CN",
-    "date": "2026-12-01",
+    "date": "2026-12-15",
     "characterId": "100320-urplus",
     "bannerImage": "/Characters/Full_Background/Child_URplus.png",
     "isReturn": true,
     "sortOrder": 1,
     "verificationStatus": "owner-confirmed",
     "source": "owner",
-    "status": "planned"
+    "status": "planned",
+    "confirmedOn": "2026-11-04"
   },
   {
     "server": "SEA",
@@ -30,18 +32,20 @@
     "sortOrder": 1,
     "verificationStatus": "owner-confirmed",
     "source": "owner",
-    "status": "planned"
+    "status": "planned",
+    "confirmedOn": "2026-11-04"
   },
   {
     "server": "SEA",
-    "date": "2027-04-01",
+    "date": "2027-04-15",
     "characterId": "100320-urplus",
     "bannerImage": "/Characters/Full_Background/Child_URplus.png",
     "isReturn": true,
     "sortOrder": 1,
     "verificationStatus": "owner-confirmed",
     "source": "owner",
-    "status": "planned"
+    "status": "planned",
+    "confirmedOn": "2026-11-04"
   },
   {
     "server": "CN",
@@ -173,11 +177,16 @@
   },
   {
     "server": "CN",
-    "date": "2026-11-01",
+    "date": "2026-11-15",
     "characterId": "homeless-emperor-urplus",
     "bannerImage": "/Characters/Full_Background/Homeless_Emperor_URplus.png",
     "isReturn": true,
-    "sortOrder": 1
+    "sortOrder": 3,
+    "source": "owner",
+    "verificationStatus": "owner-confirmed",
+    "status": "planned",
+    "confirmedOn": "2026-11-04",
+    "confirmationNote": "Owner explicitly supplied15/11/2026"
   },
   {
     "server": "SEA",
@@ -189,10 +198,133 @@
   },
   {
     "server": "SEA",
-    "date": "2027-03-01",
+    "date": "2027-03-15",
     "characterId": "homeless-emperor-urplus",
     "bannerImage": "/Characters/Full_Background/Homeless_Emperor_URplus.png",
     "isReturn": true,
-    "sortOrder": 1
+    "sortOrder": 2,
+    "source": "owner",
+    "verificationStatus": "owner-context-correction",
+    "status": "planned",
+    "confirmedOn": "2026-11-04",
+    "confirmationNote": "Owner reported SEA wrong too; same15th-day return correction; release01/01/2027 retained"
+  },
+  {
+    "server": "CN",
+    "date": "2026-11-01",
+    "characterId": "100321-urplus",
+    "bannerImage": "/Characters/optimized/100321-urplus-artwork-1200.webp",
+    "isReturn": false,
+    "sortOrder": 2,
+    "verificationStatus": "owner-confirmed",
+    "source": "owner",
+    "status": "planned",
+    "confirmedOn": "2026-11-04"
+  },
+  {
+    "server": "SEA",
+    "date": "2027-03-15",
+    "characterId": "100321-urplus",
+    "bannerImage": "/Characters/optimized/100321-urplus-artwork-1200.webp",
+    "isReturn": false,
+    "sortOrder": 1,
+    "verificationStatus": "owner-confirmed",
+    "source": "owner",
+    "status": "planned",
+    "confirmedOn": "2026-11-04"
+  },
+  {
+    "server": "CN",
+    "date": "2027-01-15",
+    "characterId": "100321-urplus",
+    "bannerImage": "/Characters/optimized/100321-urplus-artwork-1200.webp",
+    "isReturn": true,
+    "sortOrder": 1,
+    "verificationStatus": "owner-confirmed",
+    "source": "owner",
+    "status": "planned",
+    "confirmedOn": "2026-11-04"
+  },
+  {
+    "server": "SEA",
+    "date": "2027-05-15",
+    "characterId": "100321-urplus",
+    "bannerImage": "/Characters/optimized/100321-urplus-artwork-1200.webp",
+    "isReturn": true,
+    "sortOrder": 1,
+    "verificationStatus": "owner-confirmed",
+    "source": "owner",
+    "status": "planned",
+    "confirmedOn": "2026-11-04"
+  },
+  {
+    "server": "CN",
+    "date": "2026-10-15",
+    "characterId": "blacksperm-urplus",
+    "bannerImage": "/Characters/Full_Background/Black_Sperm_Ur_plus.png",
+    "isReturn": true,
+    "sortOrder": 2,
+    "source": "character-history",
+    "verificationStatus": "existing-local-history",
+    "status": "planned",
+    "historyField": "trungReturn",
+    "historyDate": "15/10/2026",
+    "historyBasis": "Existing Detail return convention: 15th, two months after release"
+  },
+  {
+    "server": "SEA",
+    "date": "2026-11-01",
+    "characterId": "100013-urplus",
+    "bannerImage": "/Characters/Full_Background/ZombIeMan_URplus.png",
+    "isReturn": false,
+    "sortOrder": 1,
+    "source": "character-history",
+    "verificationStatus": "existing-local-history",
+    "status": "planned",
+    "historyField": "seaRelease",
+    "historyDate": "01/11/2026",
+    "historyBasis": "Existing explicit release field"
+  },
+  {
+    "server": "SEA",
+    "date": "2026-10-01",
+    "characterId": "100316-urplus",
+    "bannerImage": "/Characters/Full_Background/Rover_URplus.png",
+    "isReturn": false,
+    "sortOrder": 1,
+    "source": "character-history",
+    "verificationStatus": "existing-local-history",
+    "status": "planned",
+    "historyField": "seaRelease",
+    "historyDate": "01/10/2026",
+    "historyBasis": "Existing explicit release field"
+  },
+  {
+    "server": "SEA",
+    "date": "2026-11-15",
+    "characterId": "100315-urplus",
+    "bannerImage": "/Characters/Full_Background/Bang&Bomb_Urplus.png",
+    "isReturn": true,
+    "sortOrder": 2,
+    "source": "character-history",
+    "verificationStatus": "existing-local-history",
+    "status": "planned",
+    "historyField": "seaReturn",
+    "historyDate": "15/11/2026",
+    "historyBasis": "Existing Detail return convention: 15th, two months after release"
+  },
+  {
+    "server": "SEA",
+    "date": "2026-10-15",
+    "characterId": "100314-urplus",
+    "bannerImage": "/Characters/Full_Background/G5_URplus.png",
+    "isReturn": true,
+    "sortOrder": 2,
+    "source": "character-history",
+    "verificationStatus": "existing-local-history",
+    "status": "planned",
+    "historyField": "seaReturn",
+    "historyDate": "15/10/2026",
+    "historyBasis": "Existing Detail return convention: 15th, two months after release"
   }
 ]

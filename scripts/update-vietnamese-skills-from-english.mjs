@@ -25,6 +25,7 @@ Armor Break|Phá Giáp
 Armor Penetration|Xuyên Giáp
 Basic Effect|Hiệu Ứng Cơ Bản
 Berserk DMG|Sát Thương Cuồng Bạo
+Block Rate|Tỷ Lệ Đỡ Đòn
 Black Sperm's Revenge|Sự Trả Thù Của Tinh Trùng Đen
 Charge Follow-Up|Truy Kích Tích Lực
 Charge Pursuit|Truy Kích Tích Lực

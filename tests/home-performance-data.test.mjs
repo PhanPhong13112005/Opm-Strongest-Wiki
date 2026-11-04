@@ -11,7 +11,7 @@ const readJson = relativePath => JSON.parse(fs.readFileSync(path.join(root, rela
 test('home character summaries cover the release schedule and match both catalogs', () => {
   const schedule = readJson('src/data/releaseSchedule.json')
   const summaries = readJson('src/data/homeCharacterSummaries.json')
-  const scheduleIds = new Set(schedule.map(row => row.characterId).filter(id => id !== 'unknown'))
+  const scheduleIds = new Set(schedule.filter(row => row.datePrecision !== 'month').map(row => row.characterId).filter(id => id !== 'unknown'))
 
   for (const [language, catalogFile] of [['vi', 'characters.json'], ['en', 'characters_en.json']]) {
     const catalog = readJson(`src/data/${catalogFile}`)
@@ -29,6 +29,7 @@ test('home character summaries cover the release schedule and match both catalog
         type: character.type,
         faction: character.faction,
         roles: character.roles,
+        ...(id === '100321-urplus' ? { libraryFeatured: true, classLevel: character.classLevel, classIcon: character.classIcon } : {}),
       })
     }
   }
@@ -42,18 +43,19 @@ test('Homeless Emperor keeps character and schedule artwork in their canonical f
   assert.ok(fs.existsSync(optimizedScheduleImage))
   assert.ok(fs.statSync(optimizedScheduleImage).size < fs.statSync(scheduleImage).size)
 })
-test('home boot shell defaults to the September release schedule', () => {
+test('home boot shell is neutral while Home resolves the current Vietnam month or explicit URL month', () => {
   const schedule = readJson('src/data/releaseSchedule.json')
-  const septemberRows = schedule.filter(row => row.date.startsWith('2026-09-'))
+  const septemberRows = schedule.filter(row => row.datePrecision !== 'month' && row.date.startsWith('2026-09-'))
   const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8')
 
   assert.equal(septemberRows.length, 4)
   assert.match(indexHtml, /RADAR RA MẮT/)
-  assert.match(indexHtml, /09 \/ 2026/)
-  assert.match(indexHtml, /Vua Không Nhà UR\+ ra mắt máy chủ CN/)
-  assert.match(indexHtml, /Full_Background\/optimized\/homeless-emperor-urplus-960\.webp\?v=20260801-1/)
+  assert.match(indexHtml, /id="home-boot-month"/)
+  assert.match(indexHtml, /timeZone: 'Asia\/Ho_Chi_Minh'/)
+  assert.doesNotMatch(indexHtml, /Vua Không Nhà UR\+ ra mắt máy chủ CN/)
   const homeView = fs.readFileSync(path.join(root, 'src/views/HomeView.vue'), 'utf8')
-  assert.match(homeView, /new Date\(2026, 8\)/)
+  assert.match(homeView, /initialScheduleMonth\(route.query.month\)/)
+  assert.doesNotMatch(homeView, /new Date\(2026, 8\)/)
   assert.doesNotMatch(homeView, /id: 'unknown'/)
 })
 
@@ -108,14 +110,13 @@ test('Home responsive generator produces only the approved 20 transparent WebP v
   assert.doesNotMatch(generator, /\b(?:rm|unlink|rmdir)\b/)
 })
 
-test('Home boot shell and Vue use the same versioned responsive Homeless Emperor candidates', () => {
+test('neutral Home boot avoids a wrong-month image while Vue retains responsive candidates', () => {
   const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8')
   const homeView = fs.readFileSync(path.join(root, 'src/views/HomeView.vue'), 'utf8')
   const radar = fs.readFileSync(path.join(root, 'src/components/HomeRadar.vue'), 'utf8')
 
-  for (const width of [320, 640, 960, 1600, 2400]) {
-    assert.match(indexHtml, new RegExp(`homeless-emperor-urplus-${width}\\.webp\\?v=20260801-1`))
-  }
+  const bootTemplate = indexHtml.match(/<template id="home-boot-template">([\s\S]*?)<\/template>/)[1]
+  assert.doesNotMatch(bootTemplate, /<img\b/)
   assert.match(homeView, /responsiveHomeWidths = \[320, 640, 960, 1600, 2400\]/)
   assert.match(homeView, /getCharacterImageSet/)
   assert.match(radar, /:srcset="feature\.image\.srcset \|\| undefined"/)

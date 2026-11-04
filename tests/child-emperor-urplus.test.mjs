@@ -69,7 +69,10 @@ test('Child Emperor UR+ is a unique bilingual catalog record with sourced identi
   assert.equal(english[0].type, 'Hi-Tech')
   assert.equal(vietnamese[0].classLevel, 'Class_SS')
   assert.equal(vietnamese[0].classIcon, '/Class/Class_SS.png')
-  assert.deepEqual(vietnamese[0].roles, ['Strike Core – Ready For Battle'])
+  assert.deepEqual(vietnamese[0].roles, ['Hạt Nhân Tấn Công — Sẵn Sàng Chiến Đấu'])
+  assert.deepEqual(english[0].roles, ['Strike Core – Ready For Battle'])
+  assert.deepEqual(readJson(`public/character-details/vi/${id}.json`).roles, vietnamese[0].roles)
+  assert.deepEqual(readJson(`public/character-details/en/${id}.json`).roles, english[0].roles)
   assert.equal(vietnamese[0].mechanicsLanguage, 'vi')
   assert.equal(vietnamese[0].releaseTrung, '01/10/2026')
   assert.equal(vietnamese[0].releaseSea, '01/02/2027')
@@ -78,7 +81,7 @@ test('Child Emperor UR+ is a unique bilingual catalog record with sourced identi
 test('Child Emperor UR+ keeps authoritative prose and maps icons without fabricated A2/A3 assets', async () => {
   const character = charactersEn.find(item => item.id === id)
   assert.deepEqual(new Set(character.skills.map(skill => skill.icon)), new Set(expectedAssets.keys()))
-  assert.equal(character.skills[0].desc, 'Updating.')
+  assert.equal(character.skills[0].desc, 'Deals 120% ATK damage to a single target in 2 consecutive hits.')
   assert.match(character.skills[1].desc, /5000% \[Specialized Direct DMG\]/)
   assert.match(character.skills[1].desc, /\[Re-Battle\] uses for all enemies by 3 when/)
   assert.match(character.skills[2].desc, /\[Re-Battle\] uses for all enemies by 4 when/)
@@ -125,18 +128,25 @@ test('Child revision preserves every other catalog row and English source mechan
   const base = '8506f7b7ea3cca8d934d86e071c72af327860e97'
   const approved = '3f838ff9dd5145e2257b20d51b59da604c558c4a'
   for (const relativePath of ['src/data/characters.json', 'src/data/characters_en.json']) {
-    const rows = readJson(relativePath)
+    const currentRows = readJson(relativePath)
+    assert.equal(currentRows.length, 180)
+    assert.equal(new Set(currentRows.map(row => row.id)).size, 180)
+    assert.equal(currentRows.filter(row => row.id === '100321-urplus').length, 1)
+    assert.deepEqual(new Set(currentRows.map(row => row.id)), new Set(readJson(relativePath.endsWith('characters_en.json') ? 'src/data/characters.json' : 'src/data/characters_en.json').map(row => row.id)))
+    const rows = currentRows.filter(row => row.id !== '100321-urplus')
     assert.equal(rows.length, 179)
     assert.equal(new Set(rows.map(row => row.id)).size, 179)
     assert.deepEqual(rows.filter(row => row.id !== id), gitJson(base, relativePath))
     const child = rows.find(row => row.id === id)
     const source = gitJson(approved, relativePath).find(row => row.id === id)
+    assert.equal(child.skills[0].desc, relativePath.endsWith('characters_en.json') ? 'Deals 120% ATK damage to a single target in 2 consecutive hits.' : 'Gây sát thương lên một mục tiêu đơn với 2 đòn liên tiếp, bằng 120% ATK.')
+    assert.equal(child.skills[0].verificationStatus, 'OWNER_CONFIRMED_2026_11_04')
     assert.deepEqual(child.baseStats, source.baseStats)
     assert.equal(child.imageURL, source.imageURL)
     assert.equal(child.tier, source.tier)
     assert.equal(child.classLevel, 'Class_SS')
     if (relativePath.endsWith('characters_en.json')) {
-      for (const [sourceIndex, currentIndex] of [[0,0],[3,6]]) {
+      for (const [sourceIndex, currentIndex] of [[3,6]]) {
         assert.equal(child.skills[currentIndex].desc, source.skills[sourceIndex].desc)
       }
       for (const [index, value] of ['80%', '85%', '90%'].entries()) {
@@ -150,7 +160,7 @@ test('Child revision preserves every other catalog row and English source mechan
     }
   }
   for (const language of ['vi', 'en']) {
-    const rows = readJson('src/data/characterSummaries.json')[language]
+    const rows = readJson('src/data/characterSummaries.json')[language].filter(row => row.id !== '100321-urplus')
     assert.equal(rows.length, 179)
     assert.deepEqual(rows.filter(row => row.id !== id), gitJson(base, 'src/data/characterSummaries.json')[language])
     const summary = rows.find(row => row.id === id)
@@ -170,6 +180,16 @@ test('Child revision preserves every other catalog row and English source mechan
   const withoutVi = value => JSON.parse(JSON.stringify(value, (key, child) => key.endsWith('_vi') ? undefined : child))
   assert.deepEqual(withoutVi(coreLab.heroes.find(row => row.characterId === id)), withoutVi(approvedCore))
   const oldCore = gitJson(base, 'src/data/coreLab.json')
+  const verifiedCosts = readJson('tests/fixtures/core-lab-legacy-insights-gold.json')
+  assert.deepEqual(new Set(oldCore.heroes.map(hero => hero.characterId)), new Set(verifiedCosts.legacyCharacterIds))
+  for (const hero of oldCore.heroes) for (const level of hero.levels) {
+    const step = verifiedCosts.steps.find(step => step.to === level.lv)
+    assert.ok(step)
+    for (const item of level.cost) {
+      if (item[0] === 'it_214001') item[1] = step.insights
+      if (item[0] === '0') item[1] = step.gold
+    }
+  }
   assert.deepEqual({ ...coreLab, heroes: coreLab.heroes.filter(row => row.characterId !== id) }, oldCore)
 })
 
@@ -241,7 +261,7 @@ test('Child detail retains the production hybrid local fallback instead of requi
   assert.match(detail, /apiCharacter\.value \|\| localCharacter\.value/)
   assert.match(detail, /loadLocalCharacterDetail\(id, language\)/)
   assert.match(detail, /getCharacterReleaseDates/)
-  assert.deepEqual(getCharacterReleaseDates(charactersVi.find(row => row.id === id), [], 'pending'), {trungRelease:'01/10/2026',trungReturn:'01/12/2026',seaRelease:'01/02/2027',seaReturn:'01/04/2027'})
+  assert.deepEqual(getCharacterReleaseDates(charactersVi.find(row => row.id === id), [], 'pending'), {trungRelease:'01/10/2026',trungReturn:'15/12/2026',seaRelease:'01/02/2027',seaReturn:'15/04/2027'})
   assert.match(api, /if \(resolvedLocalCharacter\) return resolvedLocalCharacter/)
 })
 
@@ -251,9 +271,10 @@ test('revised Child detail bypasses the old payload cache without changing other
   globalThis.fetch = async (url, options) => {
     requests.push({ url, options })
     const language = url.includes('/en/') ? 'en' : 'vi'
-    const oldChild = { id, classLevel: 'Mecha Overlord', releaseTrung: '10/2026' }
+    const oldChild = { id, classLevel: 'Mecha Overlord', releaseTrung: '10/2026', roles: ['Strike Core – Ready For Battle'] }
+    const revision = language === 'vi' ? '?v=child-owner-exact-history-20261104-vi' : '?v=child-owner-exact-history-20261104-en'
     const payload = url.includes(id)
-      ? (url.includes('?v=child-skill-rules-20261008') ? readJson(`public/character-details/${language}/${id}.json`) : oldChild)
+      ? (url.includes(revision) ? readJson(`public/character-details/${language}/${id}.json`) : oldChild)
       : { id: '100045-ur' }
     return { ok: true, json: async () => payload }
   }
@@ -264,11 +285,12 @@ test('revised Child detail bypasses the old payload cache without changing other
       assert.equal(detail.classLevel, 'Class_SS')
       assert.equal(detail.releaseTrung, '01/10/2026')
       assert.equal(detail.skills.length, 7)
+      assert.deepEqual(detail.roles, [language === 'vi' ? 'Hạt Nhân Tấn Công — Sẵn Sàng Chiến Đấu' : 'Strike Core – Ready For Battle'])
     }
     await loadLocalCharacterDetail('100045-ur', 'vi')
     assert.deepEqual(requests.map(request => request.url), [
-      `/character-details/vi/${id}.json?v=child-skill-rules-20261008`,
-      `/character-details/en/${id}.json?v=child-skill-rules-20261008`,
+      `/character-details/vi/${id}.json?v=child-owner-exact-history-20261104-vi`,
+      `/character-details/en/${id}.json?v=child-owner-exact-history-20261104-en`,
       '/character-details/vi/100045-ur.json',
     ])
     assert.ok(requests.every(request => request.options.cache === 'force-cache'))
@@ -282,10 +304,12 @@ test('revised Child detail bypasses the old payload cache without changing other
 test('Child four canonical history events preserve every other bundled record unchanged', () => {
   const schedule=readJson('src/data/releaseSchedule.json')
   const base=JSON.parse(execFileSync('git',['show','8506f7b7ea3cca8d934d86e071c72af327860e97:src/data/releaseSchedule.json'],{cwd:root,encoding:'utf8'}))
-  assert.deepEqual(schedule.filter(row=>row.characterId!==id),base)
-  assert.deepEqual(schedule.filter(row=>row.characterId===id).map(row=>[row.server,row.date,row.isReturn]),[['CN','2026-10-01',false],['CN','2026-12-01',true],['SEA','2027-02-01',false],['SEA','2027-04-01',true]])
-  assert.equal(schedule.length,23)
-  assert.equal(new Set(schedule.map(row=>`${row.server}|${row.date}|${row.sortOrder}`)).size,23)
+  assert.deepEqual(schedule.filter(row=>row.characterId!==id && row.characterId!=='100321-urplus'),base.concat(readJson('tests/fixtures/home-octnov-history-review.json').additions).map(row=>readJson('tests/fixtures/homeless-return-owner-correction.json').transitions.find(t=>t.characterId===row.characterId&&t.server===row.server&&t.isReturn===row.isReturn)?.after||row))
+  assert.deepEqual(schedule.filter(row=>row.characterId==='100321-urplus').map(row=>[row.server,row.date,row.isReturn]),[['CN','2026-11-01',false],['SEA','2027-03-15',false],['CN','2027-01-15',true],['SEA','2027-05-15',true]])
+  assert.deepEqual(schedule.filter(row=>row.characterId===id).map(row=>[row.server,row.date,row.isReturn]),[['CN','2026-10-01',false],['CN','2026-12-15',true],['SEA','2027-02-01',false],['SEA','2027-04-15',true]])
+  assert.equal(schedule.length,32)
+  assert.equal(schedule.filter(row=>row.datePrecision!=='month').length,32)
+  assert.equal(new Set(schedule.map(row=>`${row.server}|${row.datePrecision==='month'?row.yearMonth:row.date}|${row.sortOrder}`)).size,32)
 })
 
 test('production-base schedule merge appends Child once and deduplicates an API-provided Child key', () => {
@@ -295,11 +319,12 @@ test('production-base schedule merge appends Child once and deduplicates an API-
   const merge=new Function('fallbackSchedule',implementation+'\nreturn mergeReleaseSchedule')(schedule)
   // Synthetic API rows exercise the real merge; not a production snapshot.
   const api=schedule.filter(row=>row.characterId!==id).concat([1,2,3].map(n=>({server:'CN',date:`2028-0${n}-01`,sortOrder:1,characterId:'synthetic-api-only',isReturn:false})))
-  assert.equal(api.length,22)
+  assert.equal(api.length,31)
+  assert.equal(api.filter(row=>row.datePrecision!=='month').length,31)
   const merged=merge(api,'vi')
-  assert.equal(merged.length,26)
+  assert.equal(merged.length,35)
   assert.equal(merged.filter(row=>row.characterId===id).length,4)
   const alreadyPresent=merge([...api,schedule.find(row=>row.characterId===id)],'en')
-  assert.equal(alreadyPresent.length,26)
+  assert.equal(alreadyPresent.length,35)
   assert.equal(alreadyPresent.filter(row=>row.characterId===id).length,4)
 })

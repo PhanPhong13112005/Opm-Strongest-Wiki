@@ -1,0 +1,64 @@
+{
+  "source": "Owner correction2026-11-04",
+  "transitions": [
+    {
+      "characterId": "homeless-emperor-urplus",
+      "server": "CN",
+      "isReturn": true,
+      "before": {
+        "server": "CN",
+        "date": "2026-11-01",
+        "characterId": "homeless-emperor-urplus",
+        "bannerImage": "/Characters/Full_Background/Homeless_Emperor_URplus.png",
+        "isReturn": true,
+        "sortOrder": 1
+      },
+      "after": {
+        "server": "CN",
+        "date": "2026-11-15",
+        "characterId": "homeless-emperor-urplus",
+        "bannerImage": "/Characters/Full_Background/Homeless_Emperor_URplus.png",
+        "isReturn": true,
+        "sortOrder": 3,
+        "source": "owner",
+        "verificationStatus": "owner-confirmed",
+        "status": "planned",
+        "confirmedOn": "2026-11-04",
+        "confirmationNote": "Owner explicitly supplied15/11/2026"
+      },
+      "mode": "Owner explicitly supplied15/11/2026"
+    },
+    {
+      "characterId": "homeless-emperor-urplus",
+      "server": "SEA",
+      "isReturn": true,
+      "before": {
+        "server": "SEA",
+        "date": "2027-03-01",
+        "characterId": "homeless-emperor-urplus",
+        "bannerImage": "/Characters/Full_Background/Homeless_Emperor_URplus.png",
+        "isReturn": true,
+        "sortOrder": 1
+      },
+      "after": {
+        "server": "SEA",
+        "date": "2027-03-15",
+        "characterId": "homeless-emperor-urplus",
+        "bannerImage": "/Characters/Full_Background/Homeless_Emperor_URplus.png",
+        "isReturn": true,
+        "sortOrder": 2,
+        "source": "owner",
+        "verificationStatus": "owner-context-correction",
+        "status": "planned",
+        "confirmedOn": "2026-11-04",
+        "confirmationNote": "Owner reported SEA wrong too; same15th-day return correction; release01/01/2027 retained"
+      },
+      "mode": "Owner reported SEA wrong too; same15th-day return correction; release01/01/2027 retained"
+    }
+  ],
+  "unchangedReleaseDates": {
+    "CN": "2026-09-01",
+    "SEA": "2027-01-01"
+  },
+  "independentPublisherVerification": false
+}

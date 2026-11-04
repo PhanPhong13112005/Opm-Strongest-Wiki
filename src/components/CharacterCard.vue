@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import { safeAssetUrl } from '../utils/assetUrl'
+import { getCharacterBackground, getCharacterKeepsakeIcon } from '../utils/characterPresentation'
 
 const props = defineProps({
   character: {
@@ -99,6 +100,8 @@ const classIcon = computed(() => {
   if (isMartialArtist) return '/Class/Martial_Artist.png'
   if (isOutlaw) return '/Class/Outlaw.png'
   if (!props.character.classLevel) return ''
+  // Do not turn a community class without a verified badge into Hero SS.
+  if (isMonster && props.character.classLevel === 'Heavy Vanguard') return ''
   
   // Fallback for Heroes and others
   const tier = props.character.tier?.toUpperCase() || ''
@@ -111,7 +114,7 @@ const classIcon = computed(() => {
 })
 
 const keepsakeIcon = computed(() => {
-  return props.character.cardKeepsakeIcon || props.character.keepsakeIcon || null
+  return props.character.cardKeepsakeIcon || getCharacterKeepsakeIcon(props.character) || null
 })
 </script>
 
@@ -131,7 +134,7 @@ const keepsakeIcon = computed(() => {
         />
         
         <!-- Character Avatar (z-10) wrapped to prevent zoom spill -->
-        <div class="absolute w-[88%] h-[88%] overflow-hidden rounded-sm z-10">
+        <div class="absolute w-[88%] h-[88%] overflow-hidden rounded-sm z-10" :style="{ backgroundColor: getCharacterBackground(character) }" data-character-artwork>
           <img 
             :src="resolvedImage" 
             :alt="character.name" 

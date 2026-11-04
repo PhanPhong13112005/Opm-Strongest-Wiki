@@ -78,7 +78,17 @@ export const getCharacterReleaseDates = (character, releaseSchedule = [], pendin
   // Explicit owner-approved ISO events override legacy/inferred fields by stable ID.
   // Other characters retain the existing legacy timeline behavior.
   const events = releaseSchedule.filter(row => row.characterId === character.id && row.source === 'owner')
-  const eventDate = (server, isReturn) => formatScheduleDate(events.find(row => row.server === server && row.isReturn === isReturn)?.date)
+  const monthEvents = events.filter(row => row.datePrecision === 'month' && /^[1-9]\d{3}-(0[1-9]|1[0-2])$/.test(row.yearMonth || '') && !row.date)
+  const eventDate = (server, isReturn) => {
+    const exact = events.find(row => row.server === server && row.isReturn === isReturn && formatScheduleDate(row.date))
+    if (exact) return formatScheduleDate(exact.date)
+    const month = monthEvents.find(row => row.server === server && row.isReturn === isReturn)?.yearMonth
+    return month ? month.slice(5) + '/' + month.slice(0, 4) : null
+  }
+  if (monthEvents.length) {
+    if (!eventDate('CN', true)) tReturn = pending
+    if (!eventDate('SEA', true)) sReturn = pending
+  }
   tRelease = eventDate('CN', false) || tRelease
   tReturn = eventDate('CN', true) || tReturn
   sRelease = eventDate('SEA', false) || sRelease
@@ -93,6 +103,7 @@ export const getCharacterReleaseDates = (character, releaseSchedule = [], pendin
     trungRelease: tRelease,
     trungReturn: tReturn,
     seaRelease: sRelease,
-    seaReturn: sReturn
+    seaReturn: sReturn,
+    ...(monthEvents.length ? { precision: 'month' } : {})
   }
 }

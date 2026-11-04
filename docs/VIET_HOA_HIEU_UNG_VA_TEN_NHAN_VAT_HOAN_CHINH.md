@@ -540,3 +540,16 @@ File này là phiếu biên tập. Chưa được đọc tự động bởi webs
 - Không xóa các dòng chưa muốn sửa; để trống cột Việt là được.
 - Có thể chốt từng nhóm rồi yêu cầu Codex áp dụng từng phần.
 - Khi áp dụng, cần cập nhật cả dữ liệu kỹ năng, chú thích hiệu ứng, tên nhân vật và kiểm thử song ngữ.
+
+
+## Bổ sung biên tập do owner duyệt — 03/11/2026
+
+Ba mapping sau được owner duyệt cho OpmWiki (OWNER_APPROVED_EDITORIAL).
+Không ghi nhận là bản dịch chính thức của trò chơi. Việc duyệt tên không xác nhận
+định nghĩa, sát thương, điều kiện hoặc thông số gameplay còn PENDING.
+
+| STT | Duyệt | EN | VI | Nguồn xác nhận |
+| --- | --- | --- | --- | --- |
+| 330 | [x] | `Protection` | `Bảo Hộ` | Owner, 03/11/2026; Gale/Hellfire 100321-urplus; bản dịch biên tập OpmWiki |
+| 331 | [x] | `Base HP Increase` | `Tăng HP Cơ Bản` | Owner, 03/11/2026; Gale/Hellfire 100321-urplus; bản dịch biên tập OpmWiki |
+| 332 | [x] | `Dual Extreme Kill Formation` | `Song Cực Sát Trận` | Owner, 03/11/2026; Gale/Hellfire 100321-urplus; bản dịch biên tập OpmWiki |

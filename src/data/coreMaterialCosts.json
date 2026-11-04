@@ -1,0 +1,311 @@
+{
+  "profiles": [
+    {
+      "characterId": "100320-urplus",
+      "coreHeId": "he_100320",
+      "source": "https://opm-ts-wiki.vercel.app/vi/core-lab",
+      "observedOn": "2026-10-12",
+      "quantityStatus": "SOURCE_VERIFIED",
+      "stepStatus": "DERIVED_VERIFIED",
+      "milestoneIconMappingStatus": "INCONCLUSIVE",
+      "materialOrder": [
+        "it_214001",
+        "it_214002",
+        "it_215091",
+        "it_215092",
+        "it_215093",
+        "it_215094",
+        "it_215095",
+        "it_215096",
+        "0"
+      ],
+      "items": {
+        "it_214001": {
+          "vi": "Tâm Đắc Nghiên Cứu",
+          "en": "Research Notes",
+          "type": "general",
+          "icon": "/Core_Skill/Items/Item_214001.png",
+          "iconStatus": "SOURCE_VERIFIED"
+        },
+        "it_214002": {
+          "vi": "Ghi Chép Nghiên Cứu",
+          "en": "Research Materials",
+          "type": "general",
+          "icon": "/Core_Skill/Items/Item_214002.png",
+          "iconStatus": "SOURCE_VERIFIED"
+        },
+        "it_215091": {
+          "vi": "Chip I",
+          "en": "Chip I",
+          "type": "component",
+          "icon": "/Core_Skill/Child_Emperor_URPlus/Item_215091.png",
+          "iconStatus": "SOURCE_VERIFIED_VISUAL_MATCH"
+        },
+        "it_215092": {
+          "vi": "Chip II",
+          "en": "Chip II",
+          "type": "component",
+          "icon": "/Core_Skill/Child_Emperor_URPlus/Item_215092.png",
+          "iconStatus": "SOURCE_VERIFIED_VISUAL_MATCH"
+        },
+        "it_215093": {
+          "vi": "Ấn Ký I",
+          "en": "Sigil I",
+          "type": "component",
+          "icon": "/Core_Skill/Child_Emperor_URPlus/Item_215093.png",
+          "iconStatus": "SOURCE_VERIFIED_VISUAL_MATCH"
+        },
+        "it_215094": {
+          "vi": "Ấn Ký II",
+          "en": "Sigil II",
+          "type": "component",
+          "icon": "/Core_Skill/Child_Emperor_URPlus/Item_215094.png",
+          "iconStatus": "SOURCE_VERIFIED_VISUAL_MATCH"
+        },
+        "it_215095": {
+          "vi": "Hồn",
+          "en": "Soul",
+          "type": "component",
+          "icon": "/Core_Skill/Child_Emperor_URPlus/Item_215095.png",
+          "iconStatus": "SOURCE_VERIFIED_VISUAL_MATCH"
+        },
+        "it_215096": {
+          "vi": "Lõi",
+          "en": "Core",
+          "type": "component",
+          "icon": "/Core_Skill/Child_Emperor_URPlus/Item_215096.png",
+          "iconStatus": "SOURCE_VERIFIED_VISUAL_MATCH"
+        },
+        "0": {
+          "vi": "Vàng",
+          "en": "Gold",
+          "type": "currency",
+          "icon": "/Core_Skill/Items/gold.png",
+          "iconStatus": "SOURCE_VERIFIED"
+        }
+      },
+      "cumulative": {
+        "1": [
+          65,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          7000
+        ],
+        "2": [
+          193,
+          15,
+          4,
+          3,
+          3,
+          3,
+          2,
+          2,
+          14000
+        ],
+        "3": [
+          386,
+          30,
+          9,
+          5,
+          5,
+          5,
+          3,
+          3,
+          21000
+        ],
+        "4": [
+          642,
+          50,
+          17,
+          10,
+          9,
+          9,
+          6,
+          6,
+          42000
+        ],
+        "5": [
+          1006,
+          80,
+          25,
+          15,
+          13,
+          13,
+          9,
+          9,
+          63000
+        ],
+        "6": [
+          1488,
+          120,
+          33,
+          20,
+          17,
+          17,
+          12,
+          12,
+          84000
+        ],
+        "7": [
+          2088,
+          170,
+          48,
+          30,
+          25,
+          25,
+          17,
+          17,
+          119000
+        ],
+        "8": [
+          2851,
+          230,
+          63,
+          40,
+          33,
+          33,
+          22,
+          22,
+          154000
+        ],
+        "9": [
+          3775,
+          300,
+          78,
+          50,
+          41,
+          41,
+          27,
+          27,
+          189000
+        ],
+        "10": [
+          4912,
+          390,
+          108,
+          70,
+          56,
+          56,
+          37,
+          37,
+          259000
+        ],
+        "11": [
+          6393,
+          500,
+          138,
+          90,
+          71,
+          71,
+          47,
+          47,
+          329000
+        ],
+        "12": [
+          8218,
+          630,
+          168,
+          110,
+          86,
+          86,
+          57,
+          57,
+          399000
+        ],
+        "13": [
+          10387,
+          780,
+          228,
+          150,
+          116,
+          116,
+          73,
+          73,
+          539000
+        ],
+        "14": [
+          12855,
+          950,
+          288,
+          190,
+          146,
+          146,
+          89,
+          89,
+          679000
+        ],
+        "15": [
+          15624,
+          1150,
+          348,
+          230,
+          176,
+          176,
+          105,
+          105,
+          819000
+        ],
+        "16": [
+          18692,
+          1375,
+          408,
+          270,
+          206,
+          206,
+          121,
+          121,
+          959000
+        ],
+        "17": [
+          22061,
+          1625,
+          558,
+          370,
+          256,
+          256,
+          146,
+          146,
+          1169000
+        ],
+        "18": [
+          25774,
+          1900,
+          708,
+          470,
+          306,
+          306,
+          171,
+          171,
+          1379000
+        ],
+        "19": [
+          29831,
+          2200,
+          858,
+          570,
+          356,
+          356,
+          196,
+          196,
+          1589000
+        ],
+        "20": [
+          34232,
+          2525,
+          1008,
+          670,
+          406,
+          406,
+          221,
+          221,
+          1799000
+        ]
+      }
+    }
+  ]
+}

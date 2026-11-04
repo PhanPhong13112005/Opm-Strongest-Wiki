@@ -2,6 +2,8 @@
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import { getCharacterBackground } from '@/utils/characterPresentation'
+import { featuredImageSizes } from '@/utils/homeHeroImage.js'
 
 const props = defineProps({
   servers: { type: Array, default: () => [] },
@@ -35,10 +37,6 @@ const featuredItems = computed(() => ['CN', 'SEA'].map((serverCode) => {
   }
 }).filter(Boolean))
 
-const featuredImageSizes = {
-  CN: '(max-width: 430px) 70vw, (max-width: 700px) 78vw, (max-width: 1100px) 60vw, min(52vw, 750px)',
-  SEA: '(max-width: 430px) 70vw, (max-width: 700px) 78vw, (max-width: 1100px) 66vw, min(58vw, 850px)',
-}
 const releaseImageSizes = '(max-width: 700px) 66vw, (max-width: 1000px) 58vw, min(29vw, 405px)'
 const getReleaseImage = item => props.getCharacterImageSet(
   item.bannerImage || props.getCharacter(item.id).imageURL,
@@ -90,7 +88,7 @@ const getFactionAccent = (item) => {
         <span>{{ t('home.eyebrow') }}</span>
         <div><strong>{{ displayDate }}</strong><i>{{ recordCount }} {{ t('home.records') }} · {{ servers.length }} {{ t('home.servers') }}</i></div>
       </div>
-      <div class="featured-grid">
+      <div class="featured-grid" :class="{ 'is-single-feature': featuredItems.length === 1, 'is-empty-feature': !featuredItems.length }">
         <component
           :is="feature.item.id === 'unknown' ? 'article' : RouterLink"
           v-for="(feature, featureIndex) in featuredItems"
@@ -99,6 +97,7 @@ const getFactionAccent = (item) => {
           class="featured-card"
           :data-server="feature.server"
           :data-character="feature.item.id"
+          :data-black-surface="!!getCharacterBackground(feature.character)"
           :style="{ '--hero-accent': getTypeAccent(feature.item), '--tier-accent': getTierAccent(feature.item), '--faction-accent': getFactionAccent(feature.item) }"
           :aria-label="feature.item.id === 'unknown' ? undefined : `${t('home.viewDetails')}: ${feature.name}`"
         >
@@ -165,6 +164,7 @@ const getFactionAccent = (item) => {
               :to="item.id === 'unknown' ? undefined : `/character/${item.id}`"
               class="release-card"
               :class="{ 'is-return': isReturning(item) }"
+              :data-black-surface="!!getCharacterBackground(getCharacter(item.id))"
               :style="{ '--delay': `${index * 90}ms`, '--accent': getTypeAccent(item), '--tier-accent': getTierAccent(item), '--faction-accent': getFactionAccent(item) }"
             >
               <div class="card-light" />
@@ -282,4 +282,20 @@ const getFactionAccent = (item) => {
   .featured-card[data-server="CN"][data-character="100320-urplus"] .featured-card__visual img{inset:-18% 18% auto auto;height:82%;width:54%;object-position:center top}
 }
 @media(prefers-reduced-motion:reduce){.ambient,.hero-pill i,.hero-scan,.card-light,.featured-grid::after,.featured-card__copy,.featured-card__visual::after,.featured-card .hero-float-img{animation:none!important}.release-card{animation-duration:.01s!important}.release-card,.release-card__image img,.featured-card,.featured-card .hero-float-img{transition:none!important}.featured-card[href]:hover .hero-float-img{scale:1}.fade-enter-active,.fade-leave-active,.slide-left-enter-active,.slide-left-leave-active,.slide-right-enter-active,.slide-right-leave-active{transition:opacity .16s linear!important}.fade-enter-from,.fade-leave-to,.slide-left-enter-from,.slide-left-leave-to,.slide-right-enter-from,.slide-right-leave-to{opacity:0;filter:none;transform:none}}
+/* Metadata-driven surfaces preserve the original artwork and rarity frames. */
+.featured-card[data-black-surface="true"],.release-card[data-black-surface="true"]{background:#000}
+.featured-card[data-black-surface="true"]::before{background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.75) 35%,transparent 72%)}
+.featured-card[data-black-surface="true"] .visual-glow{display:none}
+.featured-grid.is-empty-feature{display:none}
+.featured-grid.is-single-feature{height:480px;grid-template-rows:none;background:#000}
+.featured-grid.is-single-feature::after{display:none}
+.is-single-feature .featured-card{min-height:480px;clip-path:none}
+.is-single-feature .featured-card .featured-card__copy{inset:28px auto 28px 28px;width:46%;align-items:flex-start;text-align:left}
+.featured-grid.is-single-feature .featured-card[data-server] .featured-card__visual img{inset:5% 0 auto auto;height:90%;width:60%;object-position:center;filter:drop-shadow(0 12px 25px #000)}
+@media(max-width:700px){
+  .featured-grid.is-single-feature{height:auto;grid-template-rows:minmax(440px,auto)}
+  .is-single-feature .featured-card{min-height:440px;grid-row:1}
+  .is-single-feature .featured-card .featured-card__copy{inset:18px auto 18px 18px;width:67%;height:calc(100% - 36px)}
+  .featured-grid.is-single-feature .featured-card[data-server] .featured-card__visual img{inset:5% 0 auto auto;width:88%;object-position:right center}
+}
 </style>

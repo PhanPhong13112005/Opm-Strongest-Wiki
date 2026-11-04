@@ -66,7 +66,7 @@ const readVitals = page => page.evaluate(() => {
   }
 })
 
-test('home keeps throttled Mobile first paint and interaction within budget', async ({ page }, testInfo) => {
+test('September fixture keeps throttled Mobile first paint and interaction within budget', async ({ page }, testInfo) => {
   const warnings = []
   page.on('console', (message) => {
     if (/hydration|mismatch/i.test(message.text())) warnings.push(message.text())
@@ -75,7 +75,10 @@ test('home keeps throttled Mobile first paint and interaction within budget', as
   await page.setViewportSize({ width: 390, height: 844 })
   await emulateMobile(page)
   await installPerformanceObservers(page)
-  await page.goto('/', { waitUntil: 'domcontentloaded' })
+  // This benchmark asserts September's verified artwork, not the wall-clock
+  // month. Current Vietnam-month selection has separate boundary coverage.
+  await page.goto('/?month=2026-09', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.month-switcher strong')).toHaveText('09 / 2026')
   await expect(page.locator('.release-hero h1')).toBeVisible()
   await page.waitForFunction(() => document.querySelector('.release-hero img')?.complete)
   await page.waitForTimeout(300)
@@ -105,22 +108,30 @@ test('home keeps throttled Mobile first paint and interaction within budget', as
   }
 })
 
-test('home LCP stays below 2.5 seconds on production preview', async ({ page }, testInfo) => {
-  await page.setViewportSize({ width: 390, height: 844 })
-  await installPerformanceObservers(page)
-  await page.goto('/', { waitUntil: 'domcontentloaded' })
-  await expect(page.locator('.release-hero h1')).toBeVisible()
-  await page.waitForFunction(() => document.querySelector('.release-hero img')?.complete)
-  await page.waitForTimeout(300)
+for (const [month, expectedHero] of [
+  ['2026-09', /\/Characters\/Full_Background\/optimized\/homeless-emperor-urplus-\d+\.webp(?:\?|$)/],
+  ['2026-10', /\/Characters\/optimized\/100320-urplus-(?:360|600)\.webp(?:\?|$)/],
+]) {
+  test(`home LCP stays below 2.5 seconds on production preview: ${month}`, async ({ page }, testInfo) => {
+    await page.setViewportSize({ width: 390, height: 844 })
+    await installPerformanceObservers(page)
+    // The artwork assertion follows this explicit fixture month, not the clock.
+    // Default Vietnam-month behavior is covered separately at month boundaries.
+    await page.goto(`/?month=${month}`, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator('.month-switcher strong')).toHaveText(`${month.slice(5)} / ${month.slice(0, 4)}`)
+    await expect(page.locator('.release-hero h1')).toBeVisible()
+    await page.waitForFunction(() => document.querySelector('.release-hero img')?.complete)
+    await page.waitForTimeout(300)
 
-  const vitals = await readVitals(page)
-  console.log(`HOME_PRODUCTION_LCP ${JSON.stringify(vitals.lcp)}`)
-  expect(vitals.lcp?.element).toBe('IMG')
-  expect(vitals.lcp?.url).toMatch(currentMonthSpotlightImagePattern)
-  if (testInfo.config.metadata?.homeProduction) {
-    expect(vitals.lcp?.startTime ?? Infinity).toBeLessThan(2_500)
-  }
-})
+    const vitals = await readVitals(page)
+    console.log(`HOME_PRODUCTION_LCP ${JSON.stringify(vitals.lcp)}`)
+    expect(vitals.lcp?.element).toBe('IMG')
+    expect(vitals.lcp?.url).toMatch(expectedHero)
+    if (testInfo.config.metadata?.homeProduction) {
+      expect(vitals.lcp?.startTime ?? Infinity).toBeLessThan(2_500)
+    }
+  })
+}
 test('home defers but does not disable Vercel telemetry', async ({ page }, testInfo) => {
   test.skip(!testInfo.config.metadata?.homeProduction, 'Vercel telemetry only injects scripts in production mode.')
   await page.setViewportSize({ width: 390, height: 844 })
@@ -181,7 +192,7 @@ test('home declares Be Vietnam Pro directly without an intermediate Inter swap',
   expect(fontAudit.interRequests).toEqual([])
 })
 
-test('home uses sharp responsive artwork without duplicate boot-shell transfer', async ({ browser }) => {
+test('September two-spotlight fixture uses sharp responsive artwork without duplicate boot-shell transfer', async ({ browser }) => {
   for (const viewport of [
     { name: 'desktop', width: 1440, height: 900, deviceScaleFactor: 1, minimumDensity: 1 },
     { name: 'mobile', width: 390, height: 844, deviceScaleFactor: 3, minimumDensity: 2.5 },
@@ -200,7 +211,9 @@ test('home uses sharp responsive artwork without duplicate boot-shell transfer',
       }
     })
 
-    await page.goto('/', { waitUntil: 'domcontentloaded' })
+    // Keep the real two-card priority/density/duplicate-request coverage.
+    await page.goto('/?month=2026-09', { waitUntil: 'domcontentloaded' })
+    await expect(page.locator('.month-switcher strong')).toHaveText('09 / 2026')
     await expect(page.locator('.featured-card')).toHaveCount(2)
     await page.waitForFunction(() => [...document.querySelectorAll('.featured-card img')].every(image => image.complete && image.naturalWidth > 0))
 
@@ -241,6 +254,28 @@ test('home uses sharp responsive artwork without duplicate boot-shell transfer',
     await context.close()
   }
 })
+
+for (const width of [1440, 390]) for (const language of ['vi', 'en']) {
+  test(`verified October single spotlight remains complete: ${language} ${width}`, async ({ page }, testInfo) => {
+    await page.setViewportSize({ width, height: width === 1440 ? 900 : 844 })
+    // Exercise the existing verified bundled schedule; do not manufacture a
+    // second October event to satisfy the multi-card benchmark above.
+    await page.route('**/api/release-schedule?*', route => route.fulfill({ status: 404, json: {} }))
+    await page.goto('/?month=2026-10', { waitUntil: 'domcontentloaded' })
+    if (language === 'en') await page.getByRole('button', { name: 'Language VI', exact: true }).click()
+    await expect(page.locator('.month-switcher strong')).toHaveText('10 / 2026')
+    const spotlight = page.locator('.featured-card')
+    await expect(spotlight).toHaveCount(1)
+    await expect(spotlight).toHaveAttribute('data-character', '100320-urplus')
+    await expect(spotlight.locator('h2')).toHaveText(language === 'vi' ? 'Đồng Đế' : 'Child Emperor')
+    const image = spotlight.locator('img').first()
+    await expect.poll(() => image.evaluate(el => el.complete && el.naturalWidth > 0)).toBe(true)
+    expect(await image.evaluate(el => new URL(el.currentSrc).pathname)).toMatch(/\/Characters\/optimized\/100320-urplus-(?:360|600)\.webp$/)
+    await expect(page.locator('.release-card[href="/character/100320-urplus"]')).toHaveCount(1)
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(1)
+    await page.screenshot({ path: testInfo.outputPath('october-single-spotlight.png'), fullPage: true })
+  })
+}
 
 test('home keeps VI, EN and direct routes healthy with responsive artwork', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })

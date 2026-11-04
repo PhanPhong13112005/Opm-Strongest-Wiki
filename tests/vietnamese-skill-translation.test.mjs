@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import path from 'node:path'
 import test from 'node:test'
+import { isNumericSkillBracket, effectTerms } from './helpers/skill-brackets.mjs'
 
 const root = path.resolve(import.meta.dirname, '..')
 const viCatalog = JSON.parse(fs.readFileSync(path.join(root, 'src/data/characters.json'), 'utf8'))
@@ -46,7 +47,7 @@ const childTerms = new Map([
 ])
 
 test('Vietnamese descriptions stay aligned with every English skill row', () => {
-  assert.equal(viCatalog.length, 179)
+  assert.equal(viCatalog.length, 180)
   assert.equal(enCatalog.length, viCatalog.length)
 
   for (const englishCharacter of enCatalog) {
@@ -66,18 +67,26 @@ test('Vietnamese descriptions stay aligned with every English skill row', () => 
 })
 
 test('every English effect tag has an explicit Vietnamese glossary entry', () => {
-  for (const character of enCatalog) {
-    character.skills.forEach((skill, index) => {
-      for (const match of String(skill.desc || '').matchAll(/\[([^\]]+)\]/g)) {
-        const term = match[1].trim()
-        assert.ok(
-          translationGlossary.has(term.toLocaleLowerCase('en')) ||
-            (character.id === '100320-urplus' && (/^\d+(?:%|\.\d+%)?$/.test(term) || childTerms.has(term.toLowerCase()))),
-          `${character.id}/${index} is missing a glossary entry for [${term}]`,
-        )
+  const missing = []
+  for (const character of enCatalog) character.skills.forEach((skill, index) => {
+    for (const term of effectTerms(skill.desc)) {
+      if (!translationGlossary.has(term.toLocaleLowerCase('en')) &&
+          !(character.id === '100320-urplus' && childTerms.has(term.toLowerCase()))) {
+        missing.push(`${character.id}/${index}: [${term}]`)
       }
-    })
-  }
+    }
+  })
+  assert.deepEqual(missing, [], 'NEEDS_OWNER_TRANSLATION_APPROVAL: ' + missing.join('; '))
+})
+
+test('numeric progression brackets are not effects, but named and mixed numeric effects still require glossary entries', () => {
+  for (const value of ['12000%', '15000%', '85%', '90%', '50%', '55%', '3', '4', '2.5%']) assert.equal(isNumericSkillBracket(value), true, value)
+  for (const value of ['Protection', 'Block Rate', 'Base HP Increase', 'Dual Extreme Kill Formation', '4× Max HP Increase', '100% ATK']) assert.equal(isNumericSkillBracket(value), false, value)
+  assert.deepEqual(effectTerms('9000% [12000%] [Protection] 45% [50%] [Block Rate] [4× Max HP Increase]'), ['Protection', 'Block Rate', '4× Max HP Increase'])
+  assert.equal(translationGlossary.get('block rate'), 'Tỷ Lệ Đỡ Đòn')
+  assert.equal(translationGlossary.get('energy shield'), 'Lá Chắn Năng Lượng')
+  // A missing real term must remain visible to the strict coverage gate, never filtered as numeric.
+  assert.deepEqual(effectTerms('[12000%] [Unapproved Fixture Effect]').filter(term => !translationGlossary.has(term.toLowerCase())), ['Unapproved Fixture Effect'])
 })
 
 test('Vietnamese descriptions do not retain translated English effect tags or known bad phrases', () => {
@@ -129,4 +138,39 @@ test('skill translation changes descriptions without changing skill media metada
       }
     })
   }
+})
+
+
+test('owner-approved editorial effect translations are synchronized without resolving pending gameplay', () => {
+  const mapping = new Map([['Protection', 'Bảo Hộ'], ['Base HP Increase', 'Tăng HP Cơ Bản'], ['Dual Extreme Kill Formation', 'Song Cực Sát Trận']])
+  const vi = viById.get('100321-urplus')
+  const en = enCatalog.find(character => character.id === vi.id)
+  const payload = JSON.parse(fs.readFileSync(path.join(root, 'public/character-details/vi/100321-urplus.json'), 'utf8'))
+  assert.deepEqual(payload, vi)
+  assert.match(glossaryMarkdown, /OWNER_APPROVED_EDITORIAL/)
+  assert.match(glossaryMarkdown, /Không ghi nhận là bản dịch chính thức của trò chơi/)
+  for (const [english, vietnamese] of mapping) {
+    assert.equal(translationGlossary.get(english.toLowerCase()), vietnamese)
+    assert.ok(vi.skills.some(skill => skill.desc.includes('[' + vietnamese + ']')))
+    assert.ok(en.skills.some(skill => skill.desc.includes('[' + english + ']')))
+    for (const skill of vi.skills) assert.ok(!skill.desc.includes('[' + english + ']'))
+  }
+  assert.equal(vi.effects[0].term, '[Bảo Hộ]')
+  assert.match(vi.effects[0].desc, /PENDING/)
+  assert.equal(vi.provenance.protectionDamageStatus, 'PENDING_OWNER_CONFIRMED_DO_NOT_SELECT_EITHER_SOURCE')
+  assert.equal(vi.provenance.protectionDefinitionStatus, 'PENDING_SUBJECT_AND_DAMAGE_SOURCE_RECONCILIATION')
+  assert.equal(vi.provenance.licenseStatus, 'LICENSE_UNVERIFIED')
+  assert.deepEqual(vi.skills.map(skill => skill.type), ['Basic', 'Ultimate', 'Ultimate', 'Passive', 'Awakening'])
+})
+
+test('owner-approved VI payload cache revision changes reviewed Gale VI/EN only, preserving unrelated URLs', async () => {
+  const previous = globalThis.fetch, seen = []
+  try {
+    globalThis.fetch = async url => { seen.push(url); return {ok:true, json:async()=>({id:'fixture'})} }
+    const {loadLocalCharacterDetail} = await import('../src/data/loadCharacterDetail.js?owner-approved-vi-glossary-contract')
+    for (const [id, locale] of [['100321-urplus','vi'],['100321-urplus','en'],['100320-urplus','vi'],['100320-urplus','en'],['100189-ur','vi']]) await loadLocalCharacterDetail(id, locale)
+    assert.deepEqual(seen, ['/character-details/vi/100321-urplus.json?v=gale-owner-exact-history-20261104-vi', '/character-details/en/100321-urplus.json?v=gale-owner-exact-history-20261104-en', '/character-details/vi/100320-urplus.json?v=child-owner-exact-history-20261104-vi', '/character-details/en/100320-urplus.json?v=child-owner-exact-history-20261104-en', '/character-details/vi/100189-ur.json'])
+    await loadLocalCharacterDetail('100321-urplus', 'vi')
+    assert.equal(seen.length, 5)
+  } finally { globalThis.fetch = previous }
 })

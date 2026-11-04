@@ -318,6 +318,11 @@
     }
   },
   "detail": {
+    "numericProgression": "Các mốc giá trị của cùng kỹ năng",
+    "numericState": "Mốc {level}",
+    "numericSourceProgression": "Tiến trình nguồn: {values}",
+    "communityAwakeningSource": "Nguồn wiki cộng đồng đã được chủ trang chấp nhận. Điều kiện mở khóa từng cấp chưa được xác minh.",
+    "independentMappingUnknown": "Tiến trình độc lập; chưa xác định mốc chuyển đổi. Không gán theo ba mốc phần trăm ở trên.",
     "back": "Quay lại",
     "skills": "Kỹ Năng",
     "stats": "Chỉ Số",
@@ -375,9 +380,23 @@
     "recommendationPending": "Đang cập nhật",
     "recommendationEmpty": "Chưa có dữ liệu khuyến nghị cho nhân vật này.",
     "browseInsignias": "Xem tất cả Ấn ký",
-    "browseGear": "Xem tất cả Trang bị"
+    "browseGear": "Xem tất cả Trang bị",
+    "superUpgradeMaterials": "Mở Khóa",
+    "upgradeItemIdPending": "ID vật phẩm / số lượng: PENDING",
+    "upgradeConditionsPending": "Điều kiện nâng cấp: PENDING",
+    "sourceProgressionPendingUnlock": "Các mốc có trong dữ liệu wiki cộng đồng; điều kiện mở khóa và chi tiết ghi PENDING chưa được xác minh."
   },
   "corelab": {
+    "effectVerificationPending": "Thông tin hiệu ứng cấp này đang được xác minh.",
+    "textOnlyMaterial": "Dùng tên vật liệu · ảnh chưa xác minh",
+    "zeroResources": "Cùng cấp: không cần nguyên liệu (0).",
+    "invalidRange": "Chọn cấp nguyên từ 0 đến {max}, cấp đích không thấp hơn cấp đầu.",
+    "incompleteCosts": "Chưa đủ dữ liệu nguyên liệu cho cấp: {levels}. Chưa thể tính tổng.",
+    "stepsIncluded": "Các bước nâng đã tính",
+    "verifiedQuantities": "Số lượng đã đối chiếu từ nguồn tham khảo; chi phí mỗi bước được suy ra từ tổng tích lũy.",
+    "iconPending": "Ảnh chưa xác minh",
+    "iconMappingPending": "Đã xác minh và tích hợp 6 ảnh nguyên liệu Core. Biểu tượng theo mốc Core và một số hiệu ứng vẫn đang chờ xác minh.",
+    "effectsPreserved": "Hiệu ứng Core giữ theo dữ liệu OpmWiki hiện tại; khác biệt với nguồn tham khảo đang chờ đối chiếu.",
     "title": "Phòng Nghiên Cứu",
     "desc": "Tính toán nguyên liệu nâng cấp Phòng Nghiên Cứu (Core Skill).",
     "coreSkill": "Kỹ năng Cốt Lõi",

@@ -1,5 +1,102 @@
 [
   {
+    "id": "100321-urplus",
+    "name": "GaleWind & Hellfire Flame",
+    "imageURL": "/Characters/optimized/100321-urplus-artwork-1200.webp",
+    "avatarURL": "/Characters/optimized/100321-urplus-600.webp",
+    "imageSrcset": "/Characters/optimized/100321-urplus-artwork-600.webp 600w, /Characters/optimized/100321-urplus-artwork-1200.webp 1200w",
+    "imageWidth": 1200,
+    "imageHeight": 607,
+    "tier": "UR+",
+    "classLevel": "Dragon",
+    "roles": [
+      "Tấn Công Kép – Bảo Hộ Quái Nhân"
+    ],
+    "provenance": {
+      "status": "COMMUNITY_SOURCED",
+      "sourceUrl": "https://opm-the-strongest.vercel.app/character-detail/41",
+      "catalogIdSourceUrl": "https://opm-ts-wiki.vercel.app/en/character-info/100321-urplus",
+      "catalogIdStatus": "OWNER_PROVIDED_URL_NOT_INDEPENDENT_GAME_ID",
+      "licenseStatus": "LICENSE_UNVERIFIED",
+      "localizedNameStatus": "PENDING_USING_ENGLISH",
+      "statsStatus": "OWNER_CONFIRMED_2026_11_04",
+      "releaseStatus": "OWNER_CONFIRMED_EXACT_DATES_2026_11_04",
+      "keepsakeStatus": "PENDING_NO_UPGRADE_MAPPING",
+      "coreStatus": "UNKNOWN_NOT_CREATED",
+      "protectionDefinitionStatus": "PENDING_SUBJECT_AND_DAMAGE_SOURCE_RECONCILIATION",
+      "protectionDamageStatus": "PENDING_OWNER_CONFIRMED_DO_NOT_SELECT_EITHER_SOURCE",
+      "passiveDiscrepancy": "Direct HTML: Energy Shield; indexed text: Energy Resilience Conversion; not assumed equivalent.",
+      "classLevelSource": "https://opm-ts-wiki.vercel.app/vi/character-info/100321-urplus — 龙级怪人",
+      "ultimateVariantMapping": "OWNER_CONFIRMED_9000_12000; COMMUNITY_GAME_DATA_CN5169_11000_15000; UNLOCK_PENDING",
+      "hpRecoveryBlockStatus": "PENDING_OWNER_APPROVED_20261104_BASIC_VS_ALL_AND_VARIANT_SCOPE",
+      "statsSource": "Owner direct confirmation: ATK683 DEF173 HP4095 SPD118; no other stats added",
+      "passiveStarMapping": "OWNER_CONFIRMED_2026_11_04_2_GOLD_5_GOLD_5_PURPLE",
+      "releaseSource": "Owner 2026-11-04: CN debut 01/11/2026, return 15/01/2027; SEA debut 15/03/2027, return 15/05/2027. Supersedes earlier month-only history."
+    },
+    "type": "Vũ Trang",
+    "faction": "Quái Nhân",
+    "mechanicsLanguage": "vi",
+    "skills": [
+      {
+        "name": "Cơ bản",
+        "type": "Basic",
+        "desc": "Gây sát thương lên một mục tiêu đơn với 3 đòn liên tiếp, 120% ATK.",
+        "icon": "/Skill/Gale Wind & Hellfire Flame (URplus)/basic.png",
+        "cost": 0,
+        "verificationStatus": "OWNER_CONFIRMED_2026_11_04",
+        "source": "owner"
+      },
+      {
+        "name": "Tuyệt kĩ",
+        "type": "Ultimate",
+        "desc": "Gây 9000% [Sát Thương Trực Tiếp Chuyên Biệt] lên toàn bộ cột của mục tiêu bằng 5 hit.\n\nSau khi tung kỹ năng, thực hiện 5 hit [Song Cực Sát Trận] vào một hàng ngẫu nhiên, gây 11000% [Sát Thương Trực Tiếp Chuyên Biệt].\n\nPhạm vi chặn hồi HP từ lượt 3 và dạng kỹ năng áp dụng: PENDING, đang chờ đối chiếu nguồn.",
+        "icon": "/Skill/Gale Wind & Hellfire Flame (URplus)/ultimate.png",
+        "cost": 2,
+        "sourceSkillId": "sk_hero321_f"
+      },
+      {
+        "name": "Siêu tuyệt kĩ",
+        "type": "Ultimate",
+        "desc": "Gây 12000% [Sát Thương Trực Tiếp Chuyên Biệt] lên toàn bộ cột của mục tiêu bằng 5 hit.\n\nSau khi tung kỹ năng, thực hiện 5 hit [Song Cực Sát Trận] vào một hàng ngẫu nhiên, gây 15000% [Sát Thương Trực Tiếp Chuyên Biệt].\n\nPhạm vi chặn hồi HP từ lượt 3 và dạng kỹ năng áp dụng: PENDING, đang chờ đối chiếu nguồn.",
+        "icon": "/Skill/Gale Wind & Hellfire Flame (URplus)/ultimate.png",
+        "cost": 2,
+        "sourceSkillId": "sk_hero321_ff"
+      },
+      {
+        "name": "Nội tại",
+        "type": "Passive",
+        "desc": "Khi bắt đầu trận, nhận 80% [85%] [90%] [Giảm Sát Thương Không Bạo Kích Chuyên Biệt].\n\nKhi vào trận, các đồng minh Quái Nhân nhận vĩnh viễn 45% [50%] [55%] [Tỷ Lệ Đỡ Đòn].\n\nKhi vào trận, xóa [Lá Chắn Năng Lượng] và [Tăng HP Cơ Bản] của toàn bộ kẻ địch.",
+        "icon": "/Skill/Gale Wind & Hellfire Flame (URplus)/passive.png",
+        "cost": 0
+      },
+      {
+        "name": "Nội tại thức tỉnh",
+        "type": "Awakening",
+        "desc": "Khi vào trận, bản thân và các đồng minh Quái Nhân cùng hàng nhận [Bảo Hộ] vĩnh viễn.\n\nMỗi lượt khi nhân vật dùng kỹ năng, hiệu ứng [Bảo Hộ] tăng thêm 1x, tối đa 3x.\n\nĐịnh nghĩa hồi HP và sát thương bổ sung của Bảo Hộ: PENDING, đang chờ đối chiếu chủ thể và nguồn. Không suy toàn bộ hiệu ứng được nhân ba.",
+        "icon": "/Skill/Gale Wind & Hellfire Flame (URplus)/awaken1.png",
+        "cost": 0
+      }
+    ],
+    "effects": [
+      {
+        "term": "[Bảo Hộ]",
+        "desc": "PENDING: chưa chốt chủ thể hồi HP và sát thương bổ sung; không chọn số liệu đang mâu thuẫn giữa prompt và nguồn HTML."
+      }
+    ],
+    "libraryFeatured": true,
+    "classIcon": "/Class/Dragon.png",
+    "baseStats": {
+      "atk": 683,
+      "def": 173,
+      "hp": 4095,
+      "spd": 118
+    },
+    "releaseTrung": "01/11/2026",
+    "returnTrung": "15/01/2027",
+    "releaseSea": "15/03/2027",
+    "returnSea": "15/05/2027"
+  },
+  {
     "id": "100320-urplus",
     "name": "Đồng Đế",
     "imageURL": "/Characters/Child Emperor (URplus)/URplus.png",
@@ -7,7 +104,7 @@
     "type": "Công Nghệ",
     "faction": "Anh Hùng",
     "roles": [
-      "Strike Core – Ready For Battle"
+      "Hạt Nhân Tấn Công — Sẵn Sàng Chiến Đấu"
     ],
     "mechanicsLanguage": "vi",
     "baseStats": {
@@ -21,10 +118,12 @@
     "skills": [
       {
         "name": "Cơ bản",
-        "desc": "Đang cập nhật mô tả.",
+        "desc": "Gây sát thương lên một mục tiêu đơn với 2 đòn liên tiếp, bằng 120% ATK.",
         "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__basic.png",
         "type": "Basic",
-        "cost": 0
+        "cost": 0,
+        "verificationStatus": "OWNER_CONFIRMED_2026_11_04",
+        "source": "owner"
       },
       {
         "name": "Tuyệt kĩ",
@@ -77,8 +176,8 @@
     ],
     "releaseSea": "01/02/2027",
     "classIcon": "/Class/Class_SS.png",
-    "returnTrung": "01/12/2026",
-    "returnSea": "01/04/2027"
+    "returnTrung": "15/12/2026",
+    "returnSea": "15/04/2027"
   },
   {
     "id": "homeless-emperor-urplus",

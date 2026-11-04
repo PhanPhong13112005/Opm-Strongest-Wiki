@@ -6,7 +6,7 @@
   "type": "Công Nghệ",
   "faction": "Anh Hùng",
   "roles": [
-    "Strike Core – Ready For Battle"
+    "Hạt Nhân Tấn Công — Sẵn Sàng Chiến Đấu"
   ],
   "mechanicsLanguage": "vi",
   "baseStats": {
@@ -20,10 +20,12 @@
   "skills": [
     {
       "name": "Cơ bản",
-      "desc": "Đang cập nhật mô tả.",
+      "desc": "Gây sát thương lên một mục tiêu đơn với 2 đòn liên tiếp, bằng 120% ATK.",
       "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__basic.png",
       "type": "Basic",
-      "cost": 0
+      "cost": 0,
+      "verificationStatus": "OWNER_CONFIRMED_2026_11_04",
+      "source": "owner"
     },
     {
       "name": "Tuyệt kĩ",
@@ -79,6 +81,6 @@
   "imageSrcset": "/Characters/optimized/100320-urplus-360.webp 360w, /Characters/optimized/100320-urplus-600.webp 600w",
   "imageWidth": 1298,
   "imageHeight": 1212,
-  "returnTrung": "01/12/2026",
-  "returnSea": "01/04/2027"
+  "returnTrung": "15/12/2026",
+  "returnSea": "15/04/2027"
 }

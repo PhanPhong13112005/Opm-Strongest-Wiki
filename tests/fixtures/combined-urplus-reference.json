@@ -1,0 +1,624 @@
+{
+  "source_commit": "beb2b46ecf8fe448f49a20e46dabc8c481994dad",
+  "child_records": {
+    "vi": {
+      "id": "100320-urplus",
+      "name": "Đồng Đế",
+      "imageURL": "/Characters/Child Emperor (URplus)/URplus.png",
+      "tier": "UR+",
+      "type": "Công Nghệ",
+      "faction": "Anh Hùng",
+      "roles": [
+        "Hạt Nhân Tấn Công — Sẵn Sàng Chiến Đấu"
+      ],
+      "mechanicsLanguage": "vi",
+      "baseStats": {
+        "atk": 683,
+        "hp": 4095,
+        "def": 173,
+        "spd": 118
+      },
+      "releaseTrung": "01/10/2026",
+      "classLevel": "Class_SS",
+      "skills": [
+        {
+          "name": "Cơ bản",
+          "desc": "Gây sát thương lên một mục tiêu đơn với 2 đòn liên tiếp, bằng 120% ATK.",
+          "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__basic.png",
+          "type": "Basic",
+          "cost": 0,
+          "verificationStatus": "OWNER_CONFIRMED_2026_11_04",
+          "source": "owner"
+        },
+        {
+          "name": "Tuyệt kĩ",
+          "desc": "Gây 5000% [Sát Thương Trực Tiếp Chuyên Biệt] lên các mục tiêu trong vùng hình chữ thập (chỉ chịu ảnh hưởng bởi Giảm Sát Thương nâng cao), bỏ qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt].\n\nKhi tung kỹ năng, giảm 3 lần sử dụng [Tái Chiến] của toàn bộ kẻ địch. (Không cộng dồn)",
+          "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__ultimate.png",
+          "type": "Ultimate",
+          "cost": 0
+        },
+        {
+          "name": "Siêu tuyệt kĩ",
+          "desc": "Gây 7000% [Sát Thương Trực Tiếp Chuyên Biệt] lên các mục tiêu trong vùng hình chữ thập (chỉ chịu ảnh hưởng bởi Giảm Sát Thương nâng cao), bỏ qua [Khả Năng Né Tránh Chuyên Biệt] và [Giảm Sát Thương Không Bạo Kích], đồng thời xuyên [Bất Khuất] và [Bất Khuất Chuyên Biệt].\n\nKhi tung kỹ năng, giảm 4 lần sử dụng [Tái Chiến] của toàn bộ kẻ địch. (Không cộng dồn)",
+          "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__ultimate.png",
+          "type": "Ultimate",
+          "cost": 0
+        },
+        {
+          "name": "Bị động",
+          "desc": "Khi bắt đầu trận đấu, nhận 80% [Giảm Sát Thương Không Bạo Kích Chuyên Biệt].\n\nKhi vào chiến trường, toàn bộ đồng minh được miễn nhiễm vĩnh viễn với các hiệu ứng [Giảm Năng Lượng] và [Khóa Năng Lượng].",
+          "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__passive.png",
+          "type": "Passive",
+          "cost": 0
+        },
+        {
+          "name": "Bị động — 5★ vàng",
+          "desc": "Khi bắt đầu trận đấu, nhận 85% [Giảm Sát Thương Không Bạo Kích Chuyên Biệt].\n\nKhi vào chiến trường, toàn bộ đồng minh được miễn nhiễm vĩnh viễn với các hiệu ứng [Giảm Năng Lượng] và [Khóa Năng Lượng].",
+          "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__passive.png",
+          "type": "Passive",
+          "cost": 0
+        },
+        {
+          "name": "Bị động — 5★ tím",
+          "desc": "Khi bắt đầu trận đấu, nhận 90% [Giảm Sát Thương Không Bạo Kích Chuyên Biệt].\n\nKhi vào chiến trường, toàn bộ đồng minh được miễn nhiễm vĩnh viễn với các hiệu ứng [Giảm Năng Lượng] và [Khóa Năng Lượng].",
+          "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__passive.png",
+          "type": "Passive",
+          "cost": 0
+        },
+        {
+          "name": "Nội tại Thức tỉnh",
+          "desc": "Mỗi lượt nhận 3 [4] điểm Năng Lượng. Khi vào chiến trường, toàn bộ đồng minh nhận vĩnh viễn 92% [95%] [98%] [Giảm Sát Thương Chuẩn].",
+          "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__awaken1.png",
+          "type": "Awakening",
+          "cost": 0
+        }
+      ],
+      "effects": [
+        {
+          "term": "[Ready for Battle]",
+          "desc": "Chỉ một trong hai hiệu ứng có thể có hiệu lực tại một thời điểm: hồi sinh hoặc vô địch. Sau lượt của bất kỳ nhân vật nào, nếu bị hạ gục, nhân vật lập tức hồi sinh, hồi phục 100% HP và tiếp tục chiến đấu (được tính là đã hồi sinh).\n\nTên hiệu ứng [Ready for Battle] giữ theo nguồn, chờ duyệt tên tiếng Việt."
+        }
+      ],
+      "releaseSea": "01/02/2027",
+      "classIcon": "/Class/Class_SS.png",
+      "returnTrung": "15/12/2026",
+      "returnSea": "15/04/2027"
+    },
+    "en": {
+      "id": "100320-urplus",
+      "name": "Child Emperor",
+      "imageURL": "/Characters/Child Emperor (URplus)/URplus.png",
+      "tier": "UR+",
+      "type": "Hi-Tech",
+      "faction": "Hero",
+      "roles": [
+        "Strike Core – Ready For Battle"
+      ],
+      "mechanicsLanguage": "en",
+      "baseStats": {
+        "atk": 683,
+        "hp": 4095,
+        "def": 173,
+        "spd": 118
+      },
+      "releaseTrung": "01/10/2026",
+      "classLevel": "Class_SS",
+      "skills": [
+        {
+          "name": "Basic",
+          "desc": "Deals 120% ATK damage to a single target in 2 consecutive hits.",
+          "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__basic.png",
+          "type": "Basic",
+          "cost": 0,
+          "verificationStatus": "OWNER_CONFIRMED_2026_11_04",
+          "source": "owner"
+        },
+        {
+          "name": "Ultimate",
+          "desc": "Deals 5000% [Specialized Direct DMG] to targets in a cross-shaped area (affected only by advanced DMG Reduction), ignoring [Specialized Evasion] and [Non-crit DMG Reduction], and penetrates [Unyielding], [Specialized Unyielding].\n\nReduces the number of [Re-Battle] uses for all enemies by 3 when the skill is released. (Cannot be stacked)",
+          "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__ultimate.png",
+          "type": "Ultimate",
+          "cost": 0
+        },
+        {
+          "name": "Super Ultimate",
+          "desc": "Deals 7000% [Specialized Direct DMG] to targets in a cross-shaped area (affected only by advanced DMG Reduction), ignoring [Specialized Evasion] and [Non-crit DMG Reduction], and penetrates [Unyielding], [Specialized Unyielding].\n\nReduces the number of [Re-Battle] uses for all enemies by 4 when the skill is released. (Cannot be stacked)",
+          "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__ultimate.png",
+          "type": "Ultimate",
+          "cost": 0
+        },
+        {
+          "name": "Passive",
+          "desc": "At battle start, gains 80% [Specialized Non-Crit DMG Reduction].\n\nGrants all allies permanent immunity to [Energy Reduction] and [Energy Lock] effects upon entering the battlefield.",
+          "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__passive.png",
+          "type": "Passive",
+          "cost": 0
+        },
+        {
+          "name": "Passive — 5★ gold",
+          "desc": "At battle start, gains 85% [Specialized Non-Crit DMG Reduction].\n\nGrants all allies permanent immunity to [Energy Reduction] and [Energy Lock] effects upon entering the battlefield.",
+          "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__passive.png",
+          "type": "Passive",
+          "cost": 0
+        },
+        {
+          "name": "Passive — 5★ purple",
+          "desc": "At battle start, gains 90% [Specialized Non-Crit DMG Reduction].\n\nGrants all allies permanent immunity to [Energy Reduction] and [Energy Lock] effects upon entering the battlefield.",
+          "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__passive.png",
+          "type": "Passive",
+          "cost": 0
+        },
+        {
+          "name": "Awakened Passive",
+          "desc": "Gain 3 [4] energy points per turn. Upon entering the battlefield, grant all allies a permanent 92% [95%] [98%] [True DMG Reduction].",
+          "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__awaken1.png",
+          "type": "Awakening",
+          "cost": 0
+        }
+      ],
+      "effects": [
+        {
+          "term": "[Ready for Battle]",
+          "desc": "Only one of the following effects can be active at a time: resurrection or invincibility. After any character's turn, if they are defeated, they will immediately revive, recovering 100% of their health and continuing the battle (considered as 'Resurrected')."
+        }
+      ],
+      "releaseSea": "01/02/2027",
+      "classIcon": "/Class/Class_SS.png",
+      "returnTrung": "15/12/2026",
+      "returnSea": "15/04/2027"
+    }
+  },
+  "child_presentation": {
+    "background": "#000000",
+    "keepsakeIcon": "/Keepsake/Child Emperor (URplus)/Keepsake_URplus.png",
+    "keepsakeDetailAvailable": false,
+    "coreEffectReview": {
+      "coreHeId": "he_100320",
+      "unverifiedLevels": [
+        1,
+        17
+      ],
+      "source": "owner-decision",
+      "originalDataPreserved": true
+    },
+    "skillNumericViews": [
+      {
+        "skillType": "Awakening",
+        "presentation": "upgrade-cards",
+        "sequence": "92% [95%] [98%]",
+        "stageMapping": {
+          "status": "owner-confirmed",
+          "url": "https://opm-ts-wiki.vercel.app/en/character-info/100320-urplus",
+          "sourceKind": "community-published-game-data",
+          "acceptedOn": "2026-10-13",
+          "unlockConditionsStatus": "INCONCLUSIVE",
+          "states": [
+            {
+              "label": "A1",
+              "value": "92%",
+              "sourceSkillId": "sk_core016a1"
+            },
+            {
+              "label": "A2",
+              "value": "95%",
+              "sourceSkillId": "sk_core016a2"
+            },
+            {
+              "label": "A3",
+              "value": "98%",
+              "sourceSkillId": "sk_core016a3"
+            }
+          ]
+        },
+        "independentEffects": [
+          {
+            "label": {
+              "vi": "Năng Lượng mỗi lượt",
+              "en": "Energy per turn"
+            },
+            "sourceText": {
+              "vi": "Mỗi lượt nhận 3 [4] điểm Năng Lượng.",
+              "en": "Gain 3 [4] energy points per turn."
+            },
+            "stageMapping": "owner-confirmed",
+            "sourceSequence": "3 [4]",
+            "stageValues": [
+              "3",
+              "3",
+              "4"
+            ]
+          }
+        ],
+        "source": "owner-confirmed"
+      }
+    ],
+    "source": "owner-confirmed"
+  },
+  "core_material_costs": {
+    "profiles": [
+      {
+        "characterId": "100320-urplus",
+        "coreHeId": "he_100320",
+        "source": "https://opm-ts-wiki.vercel.app/vi/core-lab",
+        "observedOn": "2026-10-12",
+        "quantityStatus": "SOURCE_VERIFIED",
+        "stepStatus": "DERIVED_VERIFIED",
+        "milestoneIconMappingStatus": "INCONCLUSIVE",
+        "materialOrder": [
+          "it_214001",
+          "it_214002",
+          "it_215091",
+          "it_215092",
+          "it_215093",
+          "it_215094",
+          "it_215095",
+          "it_215096",
+          "0"
+        ],
+        "items": {
+          "it_214001": {
+            "vi": "Tâm Đắc Nghiên Cứu",
+            "en": "Research Notes",
+            "type": "general",
+            "icon": "/Core_Skill/Items/Item_214001.png",
+            "iconStatus": "SOURCE_VERIFIED"
+          },
+          "it_214002": {
+            "vi": "Ghi Chép Nghiên Cứu",
+            "en": "Research Materials",
+            "type": "general",
+            "icon": "/Core_Skill/Items/Item_214002.png",
+            "iconStatus": "SOURCE_VERIFIED"
+          },
+          "it_215091": {
+            "vi": "Chip I",
+            "en": "Chip I",
+            "type": "component",
+            "icon": "/Core_Skill/Child_Emperor_URPlus/Item_215091.png",
+            "iconStatus": "SOURCE_VERIFIED_VISUAL_MATCH"
+          },
+          "it_215092": {
+            "vi": "Chip II",
+            "en": "Chip II",
+            "type": "component",
+            "icon": "/Core_Skill/Child_Emperor_URPlus/Item_215092.png",
+            "iconStatus": "SOURCE_VERIFIED_VISUAL_MATCH"
+          },
+          "it_215093": {
+            "vi": "Ấn Ký I",
+            "en": "Sigil I",
+            "type": "component",
+            "icon": "/Core_Skill/Child_Emperor_URPlus/Item_215093.png",
+            "iconStatus": "SOURCE_VERIFIED_VISUAL_MATCH"
+          },
+          "it_215094": {
+            "vi": "Ấn Ký II",
+            "en": "Sigil II",
+            "type": "component",
+            "icon": "/Core_Skill/Child_Emperor_URPlus/Item_215094.png",
+            "iconStatus": "SOURCE_VERIFIED_VISUAL_MATCH"
+          },
+          "it_215095": {
+            "vi": "Hồn",
+            "en": "Soul",
+            "type": "component",
+            "icon": "/Core_Skill/Child_Emperor_URPlus/Item_215095.png",
+            "iconStatus": "SOURCE_VERIFIED_VISUAL_MATCH"
+          },
+          "it_215096": {
+            "vi": "Lõi",
+            "en": "Core",
+            "type": "component",
+            "icon": "/Core_Skill/Child_Emperor_URPlus/Item_215096.png",
+            "iconStatus": "SOURCE_VERIFIED_VISUAL_MATCH"
+          },
+          "0": {
+            "vi": "Vàng",
+            "en": "Gold",
+            "type": "currency",
+            "icon": "/Core_Skill/Items/gold.png",
+            "iconStatus": "SOURCE_VERIFIED"
+          }
+        },
+        "cumulative": {
+          "1": [
+            65,
+            5,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            7000
+          ],
+          "2": [
+            193,
+            15,
+            4,
+            3,
+            3,
+            3,
+            2,
+            2,
+            14000
+          ],
+          "3": [
+            386,
+            30,
+            9,
+            5,
+            5,
+            5,
+            3,
+            3,
+            21000
+          ],
+          "4": [
+            642,
+            50,
+            17,
+            10,
+            9,
+            9,
+            6,
+            6,
+            42000
+          ],
+          "5": [
+            1006,
+            80,
+            25,
+            15,
+            13,
+            13,
+            9,
+            9,
+            63000
+          ],
+          "6": [
+            1488,
+            120,
+            33,
+            20,
+            17,
+            17,
+            12,
+            12,
+            84000
+          ],
+          "7": [
+            2088,
+            170,
+            48,
+            30,
+            25,
+            25,
+            17,
+            17,
+            119000
+          ],
+          "8": [
+            2851,
+            230,
+            63,
+            40,
+            33,
+            33,
+            22,
+            22,
+            154000
+          ],
+          "9": [
+            3775,
+            300,
+            78,
+            50,
+            41,
+            41,
+            27,
+            27,
+            189000
+          ],
+          "10": [
+            4912,
+            390,
+            108,
+            70,
+            56,
+            56,
+            37,
+            37,
+            259000
+          ],
+          "11": [
+            6393,
+            500,
+            138,
+            90,
+            71,
+            71,
+            47,
+            47,
+            329000
+          ],
+          "12": [
+            8218,
+            630,
+            168,
+            110,
+            86,
+            86,
+            57,
+            57,
+            399000
+          ],
+          "13": [
+            10387,
+            780,
+            228,
+            150,
+            116,
+            116,
+            73,
+            73,
+            539000
+          ],
+          "14": [
+            12855,
+            950,
+            288,
+            190,
+            146,
+            146,
+            89,
+            89,
+            679000
+          ],
+          "15": [
+            15624,
+            1150,
+            348,
+            230,
+            176,
+            176,
+            105,
+            105,
+            819000
+          ],
+          "16": [
+            18692,
+            1375,
+            408,
+            270,
+            206,
+            206,
+            121,
+            121,
+            959000
+          ],
+          "17": [
+            22061,
+            1625,
+            558,
+            370,
+            256,
+            256,
+            146,
+            146,
+            1169000
+          ],
+          "18": [
+            25774,
+            1900,
+            708,
+            470,
+            306,
+            306,
+            171,
+            171,
+            1379000
+          ],
+          "19": [
+            29831,
+            2200,
+            858,
+            570,
+            356,
+            356,
+            196,
+            196,
+            1589000
+          ],
+          "20": [
+            34232,
+            2525,
+            1008,
+            670,
+            406,
+            406,
+            221,
+            221,
+            1799000
+          ]
+        }
+      }
+    ]
+  },
+  "child_art_sha256": {
+    "public/Characters/Child Emperor (URplus)/URplus.png": "1E160D4FB20286648EEEF62A73C736228DCC60BB3062430838FF768B08253E22",
+    "public/Characters/Full_Background/Child_URplus.png": "1E160D4FB20286648EEEF62A73C736228DCC60BB3062430838FF768B08253E22"
+  },
+  "child_basic_owner_revision": [
+    {
+      "locale": "vi",
+      "before": {
+        "name": "Cơ bản",
+        "desc": "Đang cập nhật mô tả.",
+        "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__basic.png",
+        "type": "Basic",
+        "cost": 0
+      },
+      "after": {
+        "name": "Cơ bản",
+        "desc": "Gây sát thương lên một mục tiêu đơn với 2 đòn liên tiếp, bằng 120% ATK.",
+        "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__basic.png",
+        "type": "Basic",
+        "cost": 0,
+        "verificationStatus": "OWNER_CONFIRMED_2026_11_04",
+        "source": "owner"
+      },
+      "approval": "OWNER_CONFIRMED_2026_11_04_BASIC_2_HITS_120_PERCENT_SINGLE_TARGET"
+    },
+    {
+      "locale": "en",
+      "before": {
+        "name": "Basic",
+        "desc": "Updating.",
+        "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__basic.png",
+        "type": "Basic",
+        "cost": 0
+      },
+      "after": {
+        "name": "Basic",
+        "desc": "Deals 120% ATK damage to a single target in 2 consecutive hits.",
+        "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__basic.png",
+        "type": "Basic",
+        "cost": 0,
+        "verificationStatus": "OWNER_CONFIRMED_2026_11_04",
+        "source": "owner"
+      },
+      "approval": "OWNER_CONFIRMED_2026_11_04_BASIC_2_HITS_120_PERCENT_SINGLE_TARGET"
+    }
+  ],
+  "child_history_owner_revision": [
+    {
+      "language": "vi",
+      "field": "returnTrung",
+      "before": "01/12/2026",
+      "after": "15/12/2026",
+      "approval": "OWNER_CONFIRMED_2026_11_04"
+    },
+    {
+      "language": "vi",
+      "field": "returnSea",
+      "before": "01/04/2027",
+      "after": "15/04/2027",
+      "approval": "OWNER_CONFIRMED_2026_11_04"
+    },
+    {
+      "language": "en",
+      "field": "returnTrung",
+      "before": "01/12/2026",
+      "after": "15/12/2026",
+      "approval": "OWNER_CONFIRMED_2026_11_04"
+    },
+    {
+      "language": "en",
+      "field": "returnSea",
+      "before": "01/04/2027",
+      "after": "15/04/2027",
+      "approval": "OWNER_CONFIRMED_2026_11_04"
+    }
+  ]
+}

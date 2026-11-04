@@ -318,6 +318,11 @@
     }
   },
   "detail": {
+    "numericProgression": "Numerical states of the same skill",
+    "numericState": "State {level}",
+    "numericSourceProgression": "Source progression: {values}",
+    "communityAwakeningSource": "Community wiki source accepted by the site owner. Unlock requirements for each stage remain unverified.",
+    "independentMappingUnknown": "Independent progression; transition stage is unverified. Not mapped to the three percentage states above.",
     "back": "Back",
     "skills": "Skills",
     "stats": "Stats",
@@ -375,9 +380,23 @@
     "recommendationPending": "Updating",
     "recommendationEmpty": "Recommendations for this character are not available yet.",
     "browseInsignias": "Browse all Sigils",
-    "browseGear": "Browse all Gear"
+    "browseGear": "Browse all Gear",
+    "superUpgradeMaterials": "Unlock",
+    "upgradeItemIdPending": "Item ID / quantity: PENDING",
+    "upgradeConditionsPending": "Upgrade conditions: PENDING",
+    "sourceProgressionPendingUnlock": "Stages appear in community-published game data; unlock conditions and details marked PENDING are unverified."
   },
   "corelab": {
+    "effectVerificationPending": "This level's effect information is being verified.",
+    "textOnlyMaterial": "Text-only · image unverified",
+    "zeroResources": "Same level: no materials required (0).",
+    "invalidRange": "Choose integer levels from 0 to {max}, with target at or above the starting level.",
+    "incompleteCosts": "Missing material data for levels: {levels}. A total cannot be calculated yet.",
+    "stepsIncluded": "Upgrade steps included",
+    "verifiedQuantities": "Quantities checked against the reference; individual step costs are derived from cumulative totals.",
+    "iconPending": "Image unverified",
+    "iconMappingPending": "Verified and integrated 6 Core material images. Core milestone icons and some effects are still pending verification.",
+    "effectsPreserved": "Core effects retain existing OpmWiki data; differences from the reference await review.",
     "title": "Core Skill",
     "desc": "Calculate materials for Core Skill upgrades.",
     "coreSkill": "Core Skill",

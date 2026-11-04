@@ -49,6 +49,9 @@ export const getCoreLabMilestoneIcon = (milestoneIconPath, hero) => {
 
 export const getCoreLabHeroPortrait = (hero) => {
   if (!hero) return ''
+  if (hero.characterId === '100320-urplus') {
+    return '/Core_Skill/Child_Emperor_URPlus/320_c.png'
+  }
   const folder = coreLabFolderBySuffix[hero.iconSuffix]
   return folder ? `/Core_Skill/${folder}/${hero.iconSuffix}_c.png` : hero.portrait || ''
 }

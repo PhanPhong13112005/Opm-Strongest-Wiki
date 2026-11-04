@@ -1,0 +1,908 @@
+{
+  "sourceUrl": "https://opm-ts-wiki.vercel.app/vi/core-lab",
+  "observedAt": "2026-11-02T15:16:43.032Z",
+  "semantics": "PER_DESTINATION_LEVEL_STEP_UI_CONFIRMED",
+  "rootCause": "OMITTED_ADDITIVE_COMP_COST_INSIGHTS_AND_GOLD",
+  "sourceHtmlSha256": "2F008BF8CDF901AE5807DA16623E0AE359B22A99884ADC03CF1DB397CBC94179",
+  "sourceModelPath": "5/3/children/3/children/1/3/data",
+  "representative": {
+    "slug": "100001-sr",
+    "coreHeId": "he_100001",
+    "tier": "SR"
+  },
+  "crossCheck": [
+    {
+      "slug": "100184-ur",
+      "coreHeId": "he_100184",
+      "from": 0,
+      "to": 1,
+      "insights": 65,
+      "gold": 7000
+    },
+    {
+      "slug": "100184-ur",
+      "coreHeId": "he_100184",
+      "from": 9,
+      "to": 10,
+      "insights": 1137,
+      "gold": 70000
+    },
+    {
+      "slug": "100184-ur",
+      "coreHeId": "he_100184",
+      "from": 19,
+      "to": 20,
+      "insights": 4401,
+      "gold": 210000
+    }
+  ],
+  "legacyCharacterIds": [
+    "100109-ur",
+    "100045-ur",
+    "100184-ur",
+    "100044-ssrplus",
+    "100059-ssrplus",
+    "100108-ssr",
+    "100045-ssr",
+    "100003-ssr",
+    "100109-ssr",
+    "100013-ssr",
+    "100029-sr",
+    "100092-sr",
+    "100083-sr",
+    "100001-sr",
+    "100008-sr"
+  ],
+  "legacyCoreIds": [
+    "he_100307",
+    "he_100196",
+    "he_100184",
+    "he_100078",
+    "he_100159",
+    "he_100108",
+    "he_100045",
+    "he_100003",
+    "he_100109",
+    "he_100013",
+    "he_100029",
+    "he_100092",
+    "he_100083",
+    "he_100001",
+    "he_100008"
+  ],
+  "beforeSemanticSha256": "880124A66FCD714CB6016D2AA3AC5CC6DCFEEAF26AFBBD3419463D42B5FEE9B7",
+  "beforeSteps": [
+    {
+      "to": 1,
+      "insights": 20,
+      "gold": 1000
+    },
+    {
+      "to": 2,
+      "insights": 40,
+      "gold": 1000
+    },
+    {
+      "to": 3,
+      "insights": 60,
+      "gold": 1000
+    },
+    {
+      "to": 4,
+      "insights": 80,
+      "gold": 3000
+    },
+    {
+      "to": 5,
+      "insights": 100,
+      "gold": 3000
+    },
+    {
+      "to": 6,
+      "insights": 130,
+      "gold": 3000
+    },
+    {
+      "to": 7,
+      "insights": 160,
+      "gold": 5000
+    },
+    {
+      "to": 8,
+      "insights": 190,
+      "gold": 5000
+    },
+    {
+      "to": 9,
+      "insights": 220,
+      "gold": 5000
+    },
+    {
+      "to": 10,
+      "insights": 300,
+      "gold": 10000
+    },
+    {
+      "to": 11,
+      "insights": 380,
+      "gold": 10000
+    },
+    {
+      "to": 12,
+      "insights": 460,
+      "gold": 10000
+    },
+    {
+      "to": 13,
+      "insights": 540,
+      "gold": 20000
+    },
+    {
+      "to": 14,
+      "insights": 620,
+      "gold": 20000
+    },
+    {
+      "to": 15,
+      "insights": 700,
+      "gold": 20000
+    },
+    {
+      "to": 16,
+      "insights": 780,
+      "gold": 20000
+    },
+    {
+      "to": 17,
+      "insights": 860,
+      "gold": 30000
+    },
+    {
+      "to": 18,
+      "insights": 940,
+      "gold": 30000
+    },
+    {
+      "to": 19,
+      "insights": 1020,
+      "gold": 30000
+    },
+    {
+      "to": 20,
+      "insights": 1100,
+      "gold": 30000
+    }
+  ],
+  "steps": [
+    {
+      "from": 0,
+      "to": 1,
+      "insights": 65,
+      "gold": 7000
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "insights": 128,
+      "gold": 7000
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "insights": 193,
+      "gold": 7000
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "insights": 256,
+      "gold": 21000
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "insights": 364,
+      "gold": 21000
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "insights": 482,
+      "gold": 21000
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "insights": 600,
+      "gold": 35000
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "insights": 763,
+      "gold": 35000
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "insights": 924,
+      "gold": 35000
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "insights": 1137,
+      "gold": 70000
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "insights": 1481,
+      "gold": 70000
+    },
+    {
+      "from": 11,
+      "to": 12,
+      "insights": 1825,
+      "gold": 70000
+    },
+    {
+      "from": 12,
+      "to": 13,
+      "insights": 2169,
+      "gold": 140000
+    },
+    {
+      "from": 13,
+      "to": 14,
+      "insights": 2468,
+      "gold": 140000
+    },
+    {
+      "from": 14,
+      "to": 15,
+      "insights": 2769,
+      "gold": 140000
+    },
+    {
+      "from": 15,
+      "to": 16,
+      "insights": 3068,
+      "gold": 140000
+    },
+    {
+      "from": 16,
+      "to": 17,
+      "insights": 3369,
+      "gold": 210000
+    },
+    {
+      "from": 17,
+      "to": 18,
+      "insights": 3713,
+      "gold": 210000
+    },
+    {
+      "from": 18,
+      "to": 19,
+      "insights": 4057,
+      "gold": 210000
+    },
+    {
+      "from": 19,
+      "to": 20,
+      "insights": 4401,
+      "gold": 210000
+    }
+  ],
+  "sourceComponentCosts": [
+    {
+      "to": 1,
+      "cost": [
+        [
+          "it_214001",
+          20
+        ],
+        [
+          "it_214002",
+          5
+        ],
+        [
+          "0",
+          1000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          45
+        ],
+        [
+          "0",
+          6000
+        ]
+      ]
+    },
+    {
+      "to": 2,
+      "cost": [
+        [
+          "it_214001",
+          40
+        ],
+        [
+          "it_214002",
+          10
+        ],
+        [
+          "0",
+          1000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          88
+        ],
+        [
+          "0",
+          6000
+        ]
+      ]
+    },
+    {
+      "to": 3,
+      "cost": [
+        [
+          "it_214001",
+          60
+        ],
+        [
+          "it_214002",
+          15
+        ],
+        [
+          "0",
+          1000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          133
+        ],
+        [
+          "0",
+          6000
+        ]
+      ]
+    },
+    {
+      "to": 4,
+      "cost": [
+        [
+          "it_214001",
+          80
+        ],
+        [
+          "it_214002",
+          20
+        ],
+        [
+          "0",
+          3000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          176
+        ],
+        [
+          "0",
+          18000
+        ]
+      ]
+    },
+    {
+      "to": 5,
+      "cost": [
+        [
+          "it_214001",
+          100
+        ],
+        [
+          "it_214002",
+          30
+        ],
+        [
+          "0",
+          3000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          264
+        ],
+        [
+          "0",
+          18000
+        ]
+      ]
+    },
+    {
+      "to": 6,
+      "cost": [
+        [
+          "it_214001",
+          130
+        ],
+        [
+          "it_214002",
+          40
+        ],
+        [
+          "0",
+          3000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          352
+        ],
+        [
+          "0",
+          18000
+        ]
+      ]
+    },
+    {
+      "to": 7,
+      "cost": [
+        [
+          "it_214001",
+          160
+        ],
+        [
+          "it_214002",
+          50
+        ],
+        [
+          "0",
+          5000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          440
+        ],
+        [
+          "0",
+          30000
+        ]
+      ]
+    },
+    {
+      "to": 8,
+      "cost": [
+        [
+          "it_214001",
+          190
+        ],
+        [
+          "it_214002",
+          60
+        ],
+        [
+          "0",
+          5000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          573
+        ],
+        [
+          "0",
+          30000
+        ]
+      ]
+    },
+    {
+      "to": 9,
+      "cost": [
+        [
+          "it_214001",
+          220
+        ],
+        [
+          "it_214002",
+          70
+        ],
+        [
+          "0",
+          5000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          704
+        ],
+        [
+          "0",
+          30000
+        ]
+      ]
+    },
+    {
+      "to": 10,
+      "cost": [
+        [
+          "it_214001",
+          300
+        ],
+        [
+          "it_214002",
+          90
+        ],
+        [
+          "0",
+          10000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          837
+        ],
+        [
+          "0",
+          60000
+        ]
+      ]
+    },
+    {
+      "to": 11,
+      "cost": [
+        [
+          "it_214001",
+          380
+        ],
+        [
+          "it_214002",
+          110
+        ],
+        [
+          "0",
+          10000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          1101
+        ],
+        [
+          "0",
+          60000
+        ]
+      ]
+    },
+    {
+      "to": 12,
+      "cost": [
+        [
+          "it_214001",
+          460
+        ],
+        [
+          "it_214002",
+          130
+        ],
+        [
+          "0",
+          10000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          1365
+        ],
+        [
+          "0",
+          60000
+        ]
+      ]
+    },
+    {
+      "to": 13,
+      "cost": [
+        [
+          "it_214001",
+          540
+        ],
+        [
+          "it_214002",
+          150
+        ],
+        [
+          "0",
+          20000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          1629
+        ],
+        [
+          "0",
+          120000
+        ]
+      ]
+    },
+    {
+      "to": 14,
+      "cost": [
+        [
+          "it_214001",
+          620
+        ],
+        [
+          "it_214002",
+          170
+        ],
+        [
+          "0",
+          20000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          1848
+        ],
+        [
+          "0",
+          120000
+        ]
+      ]
+    },
+    {
+      "to": 15,
+      "cost": [
+        [
+          "it_214001",
+          700
+        ],
+        [
+          "it_214002",
+          200
+        ],
+        [
+          "0",
+          20000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          2069
+        ],
+        [
+          "0",
+          120000
+        ]
+      ]
+    },
+    {
+      "to": 16,
+      "cost": [
+        [
+          "it_214001",
+          780
+        ],
+        [
+          "it_214002",
+          225
+        ],
+        [
+          "0",
+          20000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          2288
+        ],
+        [
+          "0",
+          120000
+        ]
+      ]
+    },
+    {
+      "to": 17,
+      "cost": [
+        [
+          "it_214001",
+          860
+        ],
+        [
+          "it_214002",
+          250
+        ],
+        [
+          "0",
+          30000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          2509
+        ],
+        [
+          "0",
+          180000
+        ]
+      ]
+    },
+    {
+      "to": 18,
+      "cost": [
+        [
+          "it_214001",
+          940
+        ],
+        [
+          "it_214002",
+          275
+        ],
+        [
+          "0",
+          30000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          2773
+        ],
+        [
+          "0",
+          180000
+        ]
+      ]
+    },
+    {
+      "to": 19,
+      "cost": [
+        [
+          "it_214001",
+          1020
+        ],
+        [
+          "it_214002",
+          300
+        ],
+        [
+          "0",
+          30000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          3037
+        ],
+        [
+          "0",
+          180000
+        ]
+      ]
+    },
+    {
+      "to": 20,
+      "cost": [
+        [
+          "it_214001",
+          1100
+        ],
+        [
+          "it_214002",
+          325
+        ],
+        [
+          "0",
+          30000
+        ]
+      ],
+      "compCost": [
+        [
+          "it_214001",
+          3301
+        ],
+        [
+          "0",
+          180000
+        ]
+      ]
+    }
+  ],
+  "materialImages": [
+    {
+      "id": "it_215091",
+      "path": "public/Core_Skill/Child_Emperor_URPlus/Item_215091.png",
+      "sha256": "CED6E5A06ED6A0C916837C3F8D57117080C290A3714040E3C6EBC4576B5E6FB2",
+      "source_url": "https://opm-assets.pages.dev/game-icons/items/Item_215091.webp",
+      "reference_sha256": "930A8C1F6B9C76702B9B51EEB5ECD4C9C2C1175E798936DFF81CE1E731466179",
+      "identity": "SOURCE_VISUAL_MATCH",
+      "public_rights": "LICENSE_UNVERIFIED",
+      "previous_owner_sha256": "F2B5F53C3B381F1BD87C1031720FE522DB4257C23C6C5849D541AF9D888D210A",
+      "image_revision_status": "OWNER_APPROVED_TRANSPARENT_VARIANT_2026_11_04"
+    },
+    {
+      "id": "it_215092",
+      "path": "public/Core_Skill/Child_Emperor_URPlus/Item_215092.png",
+      "sha256": "CF66D168CB393E77EA94B384B3619B5C2E7A8C6157843C85FDE27491419D291E",
+      "source_url": "https://opm-assets.pages.dev/game-icons/items/Item_215092.webp",
+      "reference_sha256": "4ADC55CE7B42E2323ABA23711D8F9FF035B9C7723FD5581EA898BB1CE840BA95",
+      "identity": "SOURCE_VISUAL_MATCH",
+      "public_rights": "LICENSE_UNVERIFIED",
+      "previous_owner_sha256": "A084CEDFDD72FD6A1B113DA91405A195C7C7468D30673777A4B7D20F93947C48",
+      "image_revision_status": "OWNER_APPROVED_TRANSPARENT_VARIANT_2026_11_04"
+    },
+    {
+      "id": "it_215093",
+      "path": "public/Core_Skill/Child_Emperor_URPlus/Item_215093.png",
+      "sha256": "DE5188AE55BAC1515E68A0EB35A46F999F438FFE559F631F51AD82D7CAE5F7F3",
+      "source_url": "https://opm-assets.pages.dev/game-icons/items/Item_215093.webp",
+      "reference_sha256": "A6939DA9284D12E7D3C23DCC4C77C5210F8EE31EE23FF3AF1A0D4C50C0CB4B35",
+      "identity": "SOURCE_VISUAL_MATCH",
+      "public_rights": "LICENSE_UNVERIFIED",
+      "previous_owner_sha256": "92A7D6CC413D0ED31277A3B84F1943AD7EA9BC38D2BA3660575699D3E5DD5839",
+      "image_revision_status": "OWNER_APPROVED_TRANSPARENT_VARIANT_2026_11_04"
+    },
+    {
+      "id": "it_215094",
+      "path": "public/Core_Skill/Child_Emperor_URPlus/Item_215094.png",
+      "sha256": "39CBC2A23576BFBFD1CFB05679D4114306421F33393B9F3172B15360A42465B6",
+      "source_url": "https://opm-assets.pages.dev/game-icons/items/Item_215094.webp",
+      "reference_sha256": "A322844EACCDAF0C3A2556C1B711DC23DCA43E32DFEEBC7198D56945E90A78F2",
+      "identity": "SOURCE_VISUAL_MATCH",
+      "public_rights": "LICENSE_UNVERIFIED",
+      "previous_owner_sha256": "FA0B9CF8DEA27CBB864AE25AC5606C3F1E09D75E85ACCB024C573AF07F497F9C",
+      "image_revision_status": "OWNER_APPROVED_TRANSPARENT_VARIANT_2026_11_04"
+    },
+    {
+      "id": "it_215095",
+      "path": "public/Core_Skill/Child_Emperor_URPlus/Item_215095.png",
+      "sha256": "57015A83623E4DED2F6DB8DD72A5C1FF0E72625CBD3FA4F06AF10B5B8679B38E",
+      "source_url": "https://opm-assets.pages.dev/game-icons/items/Item_215095.webp",
+      "reference_sha256": "2BE33CBD706C5D55CDFDBF147714BFC6D8030C7618F7CBE7A1B233B13129635C",
+      "identity": "SOURCE_VISUAL_MATCH",
+      "public_rights": "LICENSE_UNVERIFIED",
+      "previous_owner_sha256": "27854ADCB78A7A1B94C50BFA5D168731C6DBAC0443EA883858D6749CADE0D31B",
+      "image_revision_status": "OWNER_APPROVED_TRANSPARENT_VARIANT_2026_11_04"
+    },
+    {
+      "id": "it_215096",
+      "path": "public/Core_Skill/Child_Emperor_URPlus/Item_215096.png",
+      "sha256": "119F8A48E514F71CDC180B9D634CC8C13B31D10F1891EDE9C4A5F3C7347E1D09",
+      "source_url": "https://opm-assets.pages.dev/game-icons/items/Item_215096.webp",
+      "reference_sha256": "9FD14B206B14067234FA3BFD42ABED9904EE4EE23EB54CFD404C07A91388F589",
+      "identity": "SOURCE_VISUAL_MATCH",
+      "public_rights": "LICENSE_UNVERIFIED",
+      "previous_owner_sha256": "6C611ACCE7DD52747A3AF576CCE7A78BE93AAA28E9CD489659714A3CAAB479D5",
+      "image_revision_status": "OWNER_APPROVED_TRANSPARENT_VARIANT_2026_11_04"
+    }
+  ]
+}

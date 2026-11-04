@@ -1,5 +1,102 @@
 [
   {
+    "id": "100321-urplus",
+    "name": "GaleWind & Hellfire Flame",
+    "imageURL": "/Characters/optimized/100321-urplus-artwork-1200.webp",
+    "avatarURL": "/Characters/optimized/100321-urplus-600.webp",
+    "imageSrcset": "/Characters/optimized/100321-urplus-artwork-600.webp 600w, /Characters/optimized/100321-urplus-artwork-1200.webp 1200w",
+    "imageWidth": 1200,
+    "imageHeight": 607,
+    "tier": "UR+",
+    "classLevel": "Dragon",
+    "roles": [
+      "Double Strike – Monster's Protection"
+    ],
+    "provenance": {
+      "status": "COMMUNITY_SOURCED",
+      "sourceUrl": "https://opm-the-strongest.vercel.app/character-detail/41",
+      "catalogIdSourceUrl": "https://opm-ts-wiki.vercel.app/en/character-info/100321-urplus",
+      "catalogIdStatus": "OWNER_PROVIDED_URL_NOT_INDEPENDENT_GAME_ID",
+      "licenseStatus": "LICENSE_UNVERIFIED",
+      "localizedNameStatus": "PENDING_USING_ENGLISH",
+      "statsStatus": "OWNER_CONFIRMED_2026_11_04",
+      "releaseStatus": "OWNER_CONFIRMED_EXACT_DATES_2026_11_04",
+      "keepsakeStatus": "PENDING_NO_UPGRADE_MAPPING",
+      "coreStatus": "UNKNOWN_NOT_CREATED",
+      "protectionDefinitionStatus": "PENDING_SUBJECT_AND_DAMAGE_SOURCE_RECONCILIATION",
+      "protectionDamageStatus": "PENDING_OWNER_CONFIRMED_DO_NOT_SELECT_EITHER_SOURCE",
+      "passiveDiscrepancy": "Direct HTML: Energy Shield; indexed text: Energy Resilience Conversion; not assumed equivalent.",
+      "classLevelSource": "https://opm-ts-wiki.vercel.app/vi/character-info/100321-urplus — 龙级怪人",
+      "ultimateVariantMapping": "OWNER_CONFIRMED_9000_12000; COMMUNITY_GAME_DATA_CN5169_11000_15000; UNLOCK_PENDING",
+      "hpRecoveryBlockStatus": "PENDING_OWNER_APPROVED_20261104_BASIC_VS_ALL_AND_VARIANT_SCOPE",
+      "statsSource": "Owner direct confirmation: ATK683 DEF173 HP4095 SPD118; no other stats added",
+      "passiveStarMapping": "OWNER_CONFIRMED_2026_11_04_2_GOLD_5_GOLD_5_PURPLE",
+      "releaseSource": "Owner 2026-11-04: CN debut 01/11/2026, return 15/01/2027; SEA debut 15/03/2027, return 15/05/2027. Supersedes earlier month-only history."
+    },
+    "type": "Duelist",
+    "faction": "Monster",
+    "mechanicsLanguage": "en",
+    "skills": [
+      {
+        "name": "Basic",
+        "type": "Basic",
+        "desc": "Deals 120% ATK damage to a single target in 3 consecutive hits.",
+        "icon": "/Skill/Gale Wind & Hellfire Flame (URplus)/basic.png",
+        "cost": 0,
+        "verificationStatus": "OWNER_CONFIRMED_2026_11_04",
+        "source": "owner"
+      },
+      {
+        "name": "Ultimate",
+        "type": "Ultimate",
+        "desc": "Deals 9000% [Specialized Direct DMG] to the entire target's column in a 5-hit combo.\n\nAfter releasing the skill, unleashes a 5-hit combo of [Dual Extreme Kill Formation] on a random row, dealing 11000% [Specialized Direct DMG].\n\nHP-recovery blocking from round 3: scope and applicable skill variant are PENDING source reconciliation.",
+        "icon": "/Skill/Gale Wind & Hellfire Flame (URplus)/ultimate.png",
+        "cost": 2,
+        "sourceSkillId": "sk_hero321_f"
+      },
+      {
+        "name": "Super Ultimate",
+        "type": "Ultimate",
+        "desc": "Deals 12000% [Specialized Direct DMG] to the entire target's column in a 5-hit combo.\n\nAfter releasing the skill, unleashes a 5-hit combo of [Dual Extreme Kill Formation] on a random row, dealing 15000% [Specialized Direct DMG].\n\nHP-recovery blocking from round 3: scope and applicable skill variant are PENDING source reconciliation.",
+        "icon": "/Skill/Gale Wind & Hellfire Flame (URplus)/ultimate.png",
+        "cost": 2,
+        "sourceSkillId": "sk_hero321_ff"
+      },
+      {
+        "name": "Passive",
+        "type": "Passive",
+        "desc": "Battle start, gains 80% [85%] [90%] [Specialized Non-Crit DMG Reduction].\n\nGrants allied monster characters a permanent 45% [50%] [55%] [Block Rate] upon entering the battlefield.\n\nRemoves [Energy Shield] and [Base HP Increase] effects from all enemies upon entering the battlefield.",
+        "icon": "/Skill/Gale Wind & Hellfire Flame (URplus)/passive.png",
+        "cost": 0
+      },
+      {
+        "name": "Awakened Passive",
+        "type": "Awakening",
+        "desc": "Upon entering the field, grants permanent [Protection] buff to self and all monster characters in the same row.\n\nThe [Protection] effect increases by 1x each turn when the character uses a skill, up to a maximum of 3x.\n\nProtection healing and additional-damage definition: PENDING subject and source reconciliation. Do not assume every effect is tripled.",
+        "icon": "/Skill/Gale Wind & Hellfire Flame (URplus)/awaken1.png",
+        "cost": 0
+      }
+    ],
+    "effects": [
+      {
+        "term": "[Protection]",
+        "desc": "PENDING: the healing subject and additional-damage definition await source reconciliation; neither conflicting damage value has been selected."
+      }
+    ],
+    "libraryFeatured": true,
+    "classIcon": "/Class/Dragon.png",
+    "baseStats": {
+      "atk": 683,
+      "def": 173,
+      "hp": 4095,
+      "spd": 118
+    },
+    "releaseTrung": "01/11/2026",
+    "returnTrung": "15/01/2027",
+    "releaseSea": "15/03/2027",
+    "returnSea": "15/05/2027"
+  },
+  {
     "id": "100320-urplus",
     "name": "Child Emperor",
     "imageURL": "/Characters/Child Emperor (URplus)/URplus.png",
@@ -21,10 +118,12 @@
     "skills": [
       {
         "name": "Basic",
-        "desc": "Updating.",
+        "desc": "Deals 120% ATK damage to a single target in 2 consecutive hits.",
         "icon": "/Skill/Child Emperor (URplus)/he_100320_ur_plus__basic.png",
         "type": "Basic",
-        "cost": 0
+        "cost": 0,
+        "verificationStatus": "OWNER_CONFIRMED_2026_11_04",
+        "source": "owner"
       },
       {
         "name": "Ultimate",
@@ -77,8 +176,8 @@
     ],
     "releaseSea": "01/02/2027",
     "classIcon": "/Class/Class_SS.png",
-    "returnTrung": "01/12/2026",
-    "returnSea": "01/04/2027"
+    "returnTrung": "15/12/2026",
+    "returnSea": "15/04/2027"
   },
   {
     "id": "homeless-emperor-urplus",

@@ -13,6 +13,13 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fetch character regression snapshots
+        run: >-
+          git fetch --no-tags --depth=1 origin
+          8506f7b7ea3cca8d934d86e071c72af327860e97
+          3f838ff9dd5145e2257b20d51b59da604c558c4a
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
