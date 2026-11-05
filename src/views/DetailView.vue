@@ -46,6 +46,18 @@ const activeRecommendationTab = ref('insignia')
 const coreLabData = ref(null)
 let activeDetailRequest = 0
 
+const hasCompleteLocalGaleDetail = (detail) => (
+  detail?.id === '100321-urplus' &&
+  detail.tier === 'UR+' &&
+  ['name', 'imageURL', 'type', 'faction'].every(key =>
+    typeof detail[key] === 'string' && detail[key].trim().length > 0) &&
+  Array.isArray(detail.skills) &&
+  ['Basic', 'Ultimate', 'Passive', 'Awakening'].every(type =>
+    detail.skills.some(skill => skill.type === type &&
+      typeof skill.desc === 'string' && skill.desc.trim().length > 0 &&
+      typeof skill.icon === 'string' && skill.icon.trim().length > 0))
+)
+
 const loadCharacter = async () => {
   const requestId = ++activeDetailRequest
   const id = props.id
@@ -59,6 +71,12 @@ const loadCharacter = async () => {
   })
 
   try {
+    // This reviewed local-only unit is not guaranteed to exist in the server catalog.
+    if (id === '100321-urplus') {
+      const localDetail = await localCharacterPromise
+      if (requestId !== activeDetailRequest) return
+      if (hasCompleteLocalGaleDetail(localDetail)) return
+    }
     const result = await getCharacterById(id, language, localCharacterPromise, { trackLoading: false })
     if (requestId === activeDetailRequest) apiCharacter.value = result
   } catch {

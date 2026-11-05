@@ -47,7 +47,7 @@ export const getEventById = async (id, language, localEvent) => {
   try {
     const result = await requestApiCached(`api/events/${encodeURIComponent(id)}`, { language })
     return {
-      ...mergeLocalizedEvent(result, localEvent, language),
+      ...mergeLocalizedEvent(result, localEvent ?? {}, language),
       detailImages: result.detailImages || [],
       sections: Array.isArray(result.sections) ? result.sections : [],
       updatedAt: result.updatedAt,
